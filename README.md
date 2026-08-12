@@ -1,4 +1,4 @@
-# DSA positions and Democratic primary contrasts
+# Democratic Socialists of America (DSA) positions and Democratic Party Positions Contrast
 
 This project is a source-first study of what the Democratic Socialists of America, the
 Democratic Party, and candidates in Democratic primaries have said since 2016.
