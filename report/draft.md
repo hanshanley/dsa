@@ -46,15 +46,15 @@ Milwaukee DSA. It is not yet a complete nationwide local-endorsement census.
 - Endorsement-like first-party pages discovered: 1927
 - Reviewable endorsement mentions extracted: 4619
 - High-confidence candidate/office leads extracted: 100
-- Independently verified local candidate endorsements: 547
+- Independently verified local candidate endorsements: 558
 - Rejected candidate-level false positives: 24
 - Chapter-year coverage units: 2640
-- Unresolved chapter-year units: 1054
-- National and local endorsed candidacies queued: 869
-- Endorsed candidacies with resolved roster research: 793
-- Candidate rows in verified primary rosters: 2109
-- Exact candidate evidence rows: 2274
-- Derived primary sticking-point rows: 326
+- Unresolved chapter-year units: 993
+- National and local endorsed candidacies queued: 880
+- Endorsed candidacies with resolved roster research: 864
+- Candidate rows in verified primary rosters: 2249
+- Exact candidate evidence rows: 2662
+- Derived primary sticking-point rows: 406
 
 The analysis is not complete until `uv run dsa-analysis validate --strict` passes. That gate
 requires every chapter-year unit to be resolved, every local endorsement lead to be verified or
@@ -120,19 +120,19 @@ not claims about every endorsed candidate.
 The following counts come only from currently verified candidate evidence and are not yet
 nationwide frequency estimates:
 
-- Housing: 81
-- Public Safety: 57
-- Education: 36
-- Climate Energy: 34
-- Healthcare: 24
-- Political Strategy: 21
-- Immigration: 18
-- Labor: 15
-- Tax Budget: 13
-- Civil Rights: 11
-- Economic Ownership: 7
-- Democracy: 7
-- Foreign Policy: 2
+- Housing: 107
+- Public Safety: 62
+- Climate Energy: 45
+- Healthcare: 40
+- Education: 39
+- Political Strategy: 24
+- Immigration: 20
+- Labor: 19
+- Tax Budget: 17
+- Civil Rights: 12
+- Economic Ownership: 8
+- Democracy: 8
+- Foreign Policy: 5
 
 ## What cannot yet be concluded
 
@@ -144,15 +144,16 @@ claims about nationwide primary sticking points or a comprehensive platform matr
 
 - candidate_statement_evidence.csv:606: unusually short quote
 - candidate_statement_evidence.csv:655: unusually short quote
-- candidate_statement_evidence.csv:921: unusually short quote
-- candidate_statement_evidence.csv:1066: unusually short quote
-- candidate_statement_evidence.csv:1182: unusually short quote
-- candidate_statement_evidence.csv:1341: unusually short quote
-- candidate_statement_evidence.csv:1479: unusually short quote
-- candidate_statement_evidence.csv:1480: unusually short quote
-- candidate_statement_evidence.csv:1483: unusually short quote
-- candidate_statement_evidence.csv:1596: unusually short quote
-- candidate_statement_evidence.csv:1597: unusually short quote
-- candidate_statement_evidence.csv:1598: unusually short quote
+- candidate_statement_evidence.csv:969: unusually short quote
+- candidate_statement_evidence.csv:1154: unusually short quote
+- candidate_statement_evidence.csv:1270: unusually short quote
+- candidate_statement_evidence.csv:1493: unusually short quote
+- candidate_statement_evidence.csv:1631: unusually short quote
+- candidate_statement_evidence.csv:1632: unusually short quote
+- candidate_statement_evidence.csv:1635: unusually short quote
+- candidate_statement_evidence.csv:1748: unusually short quote
+- candidate_statement_evidence.csv:1749: unusually short quote
+- candidate_statement_evidence.csv:1750: unusually short quote
+- candidate_statement_evidence.csv:2413: unusually short quote
 
 Generated 2026-08-13. See `docs/methodology.md` for evidence rules.
