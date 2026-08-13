@@ -296,4 +296,8 @@ Generated {date.today().isoformat()}. See `docs/methodology.md` for evidence rul
 
 def _optional_csv(name: str) -> list[dict[str, str]]:
     path = PROCESSED_DIR / name
-    return read_csv(path) if path.exists() else []
+    return (
+        read_csv(path)
+        if path.exists() or path.with_suffix(path.suffix + ".gz").exists()
+        else []
+    )

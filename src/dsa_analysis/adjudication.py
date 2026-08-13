@@ -366,13 +366,23 @@ def import_chapter_history(
         if missing:
             raise ValueError(f"chapter history missing columns {sorted(missing)}")
         rows = list(reader)
+    covered_years = {
+        row["election_year"].strip()
+        for row in rows
+        if len(row["election_year"].strip()) == 4
+    }
     verified_path = PROCESSED_DIR / "local_endorsements_verified.csv"
     existing = []
     if verified_path.exists():
         with verified_path.open(newline="", encoding="utf-8") as handle:
             existing = list(csv.DictReader(handle))
     if replace_chapter:
-        existing = [row for row in existing if row["chapter"] != chapter]
+        existing = [
+            row
+            for row in existing
+            if row["chapter"] != chapter
+            or row["election_year"] not in covered_years
+        ]
     combined = {
         (
             row["chapter"],
@@ -448,7 +458,12 @@ def import_chapter_history(
             with gap_path.open(newline="", encoding="utf-8") as handle:
                 prior = list(csv.DictReader(handle))
         if replace_chapter:
-            prior = [row for row in prior if row["chapter"] != chapter]
+            prior = [
+                row
+                for row in prior
+                if row["chapter"] != chapter
+                or row["election_year"] not in covered_years
+            ]
         write_csv(
             gap_path,
             prior + gaps,
