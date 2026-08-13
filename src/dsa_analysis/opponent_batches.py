@@ -102,10 +102,13 @@ def merge_opponent_reviews(
     if uncovered and require_complete:
         raise ValueError(f"{len(uncovered)} opponent queue rows remain unreviewed")
 
-    roster_rows = _canonicalize_races(roster_rows)
     queue_path = PROCESSED_DIR / "opponent_research_queue.csv"
     with queue_path.open(newline="", encoding="utf-8") as handle:
         queue_rows = list(csv.DictReader(handle))
+    valid_queue_ids = {row["queue_id"] for row in queue_rows}
+    roster_rows = _canonicalize_races(
+        [row for row in roster_rows if row["queue_id"] in valid_queue_ids]
+    )
     by_queue: dict[str, list[dict[str, str]]] = {}
     for row in roster_rows:
         by_queue.setdefault(row["queue_id"], []).append(row)

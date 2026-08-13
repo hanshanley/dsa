@@ -18,11 +18,13 @@ def build_coverage_ledger() -> tuple[int, int]:
     evidence_years: dict[str, set[str]] = defaultdict(set)
     undated_evidence: set[str] = set()
     verified_years: dict[str, set[str]] = defaultdict(set)
+    history_gaps: dict[str, set[str]] = defaultdict(set)
     evidence_urls: dict[tuple[str, str], set[str]] = defaultdict(set)
 
     _add_page_evidence(evidence_years, evidence_urls, undated_evidence)
     _add_wayback_evidence(evidence_years, evidence_urls)
     _add_verified_endorsements(chapters, verified_years, evidence_urls)
+    _add_history_gaps(chapters, history_gaps, evidence_urls)
 
     rows = []
     unresolved = 0
@@ -36,6 +38,9 @@ def build_coverage_ledger() -> tuple[int, int]:
         if year in verified_years[chapter_id]:
             status = "verified"
             method = "verified_first_party_endorsement"
+        elif year in history_gaps[chapter_id]:
+            status = "source_unavailable"
+            method = "documented_chapter_history_gap"
         elif year in evidence_years[chapter_id]:
             status = "found_unverified"
             method = "chapter_site_or_wayback"
@@ -156,6 +161,29 @@ def _add_verified_endorsements(
             continue
         verified_years[chapter_id].add(year)
         for url in row["source_url"].split(" | "):
+            if url:
+                evidence_urls[(chapter_id, year)].add(url)
+
+
+def _add_history_gaps(
+    chapters: dict[str, dict[str, str]],
+    history_gaps: dict[str, set[str]],
+    evidence_urls: dict[tuple[str, str], set[str]],
+) -> None:
+    path = PROCESSED_DIR / "chapter_history_gaps.csv"
+    if not path.exists():
+        return
+    chapter_ids = {
+        row.get("Name", "").strip().lower(): chapter_id
+        for chapter_id, row in chapters.items()
+    }
+    for row in read_csv(path):
+        year = row["election_year"].strip()
+        chapter_id = chapter_ids.get(row["chapter"].strip().lower(), "")
+        if not chapter_id or len(year) != 4 or not year.isdigit():
+            continue
+        history_gaps[chapter_id].add(year)
+        for url in (row["source_url"], row["archive_url"]):
             if url:
                 evidence_urls[(chapter_id, year)].add(url)
 

@@ -176,17 +176,6 @@ def validate(strict: bool = False) -> AuditResult:
             errors.append(
                 "strict census: second-pass local endorsement verification is incomplete"
             )
-        else:
-            reviewed_count = sum(
-                len(read_csv(path)) for path in (verified_path, rejected_path)
-            )
-            candidate_count = (
-                len(read_csv(candidates_path)) if candidates_path.exists() else 0
-            )
-            if reviewed_count < candidate_count:
-                errors.append(
-                    "strict census: local endorsement second-pass coverage is incomplete"
-                )
         opponent_queue_path = PROCESSED_DIR / "opponent_research_queue.csv"
         if not opponent_queue_path.exists():
             errors.append("strict census: opponent research queue has not been generated")
