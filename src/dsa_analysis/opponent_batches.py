@@ -6,7 +6,7 @@ import heapq
 import json
 from pathlib import Path
 
-from .io import write_csv
+from .io import merge_notes, write_csv
 from .paths import PROCESSED_DIR
 
 SESSION_BATCH_DIR = Path(
@@ -144,17 +144,9 @@ def merge_opponent_reviews(
             row["candidate_statement_status"] = "not_applicable"
             row["opponent_statement_status"] = "not_applicable"
         row["official_election_source"] = " | ".join(sources)
-        row["notes"] = " | ".join(
-            sorted(
-                {
-                    value
-                    for value in (
-                        row["notes"],
-                        *(review["notes"] for review in reviews),
-                    )
-                    if value
-                }
-            )
+        row["notes"] = merge_notes(
+            row["notes"],
+            *(review["notes"] for review in reviews),
         )
         resolved += status in {"verified", "not_a_primary"}
         unavailable += status == "source_unavailable"
