@@ -46,15 +46,15 @@ Milwaukee DSA. It is not yet a complete nationwide local-endorsement census.
 - Endorsement-like first-party pages discovered: 1927
 - Reviewable endorsement mentions extracted: 4619
 - High-confidence candidate/office leads extracted: 100
-- Independently verified local candidate endorsements: 679
+- Independently verified local candidate endorsements: 417
 - Rejected candidate-level false positives: 24
 - Chapter-year coverage units: 2640
-- Unresolved chapter-year units: 1224
-- National and local endorsed candidacies queued: 997
-- Endorsed candidacies with resolved roster research: 721
-- Candidate rows in verified primary rosters: 1998
-- Exact candidate evidence rows: 1086
-- Derived primary sticking-point rows: 61
+- Unresolved chapter-year units: 1208
+- National and local endorsed candidacies queued: 742
+- Endorsed candidacies with resolved roster research: 557
+- Candidate rows in verified primary rosters: 1373
+- Exact candidate evidence rows: 1078
+- Derived primary sticking-point rows: 165
 
 The analysis is not complete until `uv run dsa-analysis validate --strict` passes. That gate
 requires every chapter-year unit to be resolved, every local endorsement lead to be verified or
@@ -120,15 +120,19 @@ not claims about every endorsed candidate.
 The following counts come only from currently verified candidate evidence and are not yet
 nationwide frequency estimates:
 
-- Housing: 26
-- Public Safety: 12
-- Healthcare: 8
-- Immigration: 7
-- Political Strategy: 3
-- Education: 2
-- Labor: 1
-- Tax Budget: 1
-- Economic Ownership: 1
+- Housing: 50
+- Public Safety: 38
+- Healthcare: 13
+- Climate Energy: 13
+- Political Strategy: 9
+- Immigration: 9
+- Labor: 9
+- Tax Budget: 7
+- Civil Rights: 5
+- Education: 4
+- Economic Ownership: 4
+- Democracy: 3
+- Foreign Policy: 1
 
 ## What cannot yet be concluded
 
@@ -138,6 +142,9 @@ claims about nationwide primary sticking points or a comprehensive platform matr
 
 ## Audit warnings
 
-- candidate_statement_evidence.csv:754: unusually short quote
+- candidate_statement_evidence.csv:405: unusually short quote
+- candidate_statement_evidence.csv:783: unusually short quote
+- candidate_statement_evidence.csv:847: unusually short quote
+- candidate_statement_evidence.csv:1011: unusually short quote
 
 Generated 2026-08-12. See `docs/methodology.md` for evidence rules.

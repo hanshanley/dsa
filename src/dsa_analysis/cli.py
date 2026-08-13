@@ -106,6 +106,7 @@ def main() -> None:
     history_parser.add_argument("--path", required=True)
     history_parser.add_argument("--chapter", required=True)
     history_parser.add_argument("--state", required=True)
+    history_parser.add_argument("--replace", action="store_true")
     subparsers.add_parser(
         "enrich-endorsement-years",
         help="Backfill years only when linked source mentions unanimously identify one.",
@@ -229,6 +230,7 @@ def main() -> None:
             Path(args.path),
             args.chapter,
             args.state,
+            replace_chapter=args.replace,
         )
         print(f"Imported {imported} endorsements; recorded {gaps} gaps.")
         return

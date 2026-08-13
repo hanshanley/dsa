@@ -348,6 +348,7 @@ def import_chapter_history(
     path: Path,
     chapter: str,
     state: str,
+    replace_chapter: bool = False,
 ) -> tuple[int, int]:
     required = {
         "election_year",
@@ -370,6 +371,8 @@ def import_chapter_history(
     if verified_path.exists():
         with verified_path.open(newline="", encoding="utf-8") as handle:
             existing = list(csv.DictReader(handle))
+    if replace_chapter:
+        existing = [row for row in existing if row["chapter"] != chapter]
     combined = {
         (
             row["chapter"],
@@ -444,6 +447,8 @@ def import_chapter_history(
         if gap_path.exists():
             with gap_path.open(newline="", encoding="utf-8") as handle:
                 prior = list(csv.DictReader(handle))
+        if replace_chapter:
+            prior = [row for row in prior if row["chapter"] != chapter]
         write_csv(
             gap_path,
             prior + gaps,

@@ -4,7 +4,7 @@ import heapq
 import json
 from pathlib import Path
 
-from .io import read_json, write_csv
+from .io import read_csv, read_json, write_csv
 from .paths import CONFIG_DIR, PROCESSED_DIR
 
 SESSION_BATCH_DIR = Path(
@@ -152,6 +152,13 @@ def merge_statement_reviews(
     uncovered = expected - covered
     if uncovered and require_complete:
         raise ValueError(f"{len(uncovered)} primary candidates lack evidence review")
+    queue_path = PROCESSED_DIR / "opponent_research_queue.csv"
+    valid_queue_ids = {
+        row["queue_id"] for row in read_csv(queue_path)
+    } if queue_path.exists() else set()
+    evidence = [
+        row for row in evidence if not valid_queue_ids or row["queue_id"] in valid_queue_ids
+    ]
     _remap_canonical_races(evidence)
     write_csv(
         PROCESSED_DIR / "candidate_statement_evidence.csv",
