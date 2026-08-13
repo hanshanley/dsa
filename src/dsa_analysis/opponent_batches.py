@@ -86,6 +86,8 @@ def merge_opponent_reviews(
             if missing:
                 raise ValueError(f"{path.name}: missing columns {sorted(missing)}")
             for row in reader:
+                if row["resolution_status"] == "resolved":
+                    row["resolution_status"] = "verified"
                 if row["queue_id"] not in expected:
                     raise ValueError(f"{path.name}: unknown queue_id")
                 if row["resolution_status"] not in {

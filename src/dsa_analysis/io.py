@@ -1,11 +1,23 @@
 import csv
+import gzip
 import json
 from pathlib import Path
 from typing import Any
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
-    with path.open(newline="", encoding="utf-8") as handle:
+    if path.exists():
+        handle = path.open(newline="", encoding="utf-8")
+    elif path.with_suffix(path.suffix + ".gz").exists():
+        handle = gzip.open(
+            path.with_suffix(path.suffix + ".gz"),
+            mode="rt",
+            newline="",
+            encoding="utf-8",
+        )
+    else:
+        raise FileNotFoundError(path)
+    with handle:
         return list(csv.DictReader(handle))
 
 

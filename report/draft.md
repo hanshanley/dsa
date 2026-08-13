@@ -46,15 +46,15 @@ Milwaukee DSA. It is not yet a complete nationwide local-endorsement census.
 - Endorsement-like first-party pages discovered: 1927
 - Reviewable endorsement mentions extracted: 4619
 - High-confidence candidate/office leads extracted: 100
-- Independently verified local candidate endorsements: 419
+- Independently verified local candidate endorsements: 547
 - Rejected candidate-level false positives: 24
 - Chapter-year coverage units: 2640
-- Unresolved chapter-year units: 1205
-- National and local endorsed candidacies queued: 745
-- Endorsed candidacies with resolved roster research: 550
-- Candidate rows in verified primary rosters: 1479
-- Exact candidate evidence rows: 1199
-- Derived primary sticking-point rows: 184
+- Unresolved chapter-year units: 1054
+- National and local endorsed candidacies queued: 869
+- Endorsed candidacies with resolved roster research: 793
+- Candidate rows in verified primary rosters: 2109
+- Exact candidate evidence rows: 2274
+- Derived primary sticking-point rows: 326
 
 The analysis is not complete until `uv run dsa-analysis validate --strict` passes. That gate
 requires every chapter-year unit to be resolved, every local endorsement lead to be verified or
@@ -120,18 +120,18 @@ not claims about every endorsed candidate.
 The following counts come only from currently verified candidate evidence and are not yet
 nationwide frequency estimates:
 
-- Housing: 54
-- Public Safety: 41
-- Climate Energy: 18
-- Healthcare: 13
-- Political Strategy: 10
-- Immigration: 9
-- Labor: 9
-- Tax Budget: 8
-- Economic Ownership: 6
-- Education: 6
-- Civil Rights: 5
-- Democracy: 3
+- Housing: 81
+- Public Safety: 57
+- Education: 36
+- Climate Energy: 34
+- Healthcare: 24
+- Political Strategy: 21
+- Immigration: 18
+- Labor: 15
+- Tax Budget: 13
+- Civil Rights: 11
+- Economic Ownership: 7
+- Democracy: 7
 - Foreign Policy: 2
 
 ## What cannot yet be concluded
@@ -142,9 +142,17 @@ claims about nationwide primary sticking points or a comprehensive platform matr
 
 ## Audit warnings
 
-- candidate_statement_evidence.csv:469: unusually short quote
-- candidate_statement_evidence.csv:846: unusually short quote
-- candidate_statement_evidence.csv:968: unusually short quote
-- candidate_statement_evidence.csv:1132: unusually short quote
+- candidate_statement_evidence.csv:606: unusually short quote
+- candidate_statement_evidence.csv:655: unusually short quote
+- candidate_statement_evidence.csv:921: unusually short quote
+- candidate_statement_evidence.csv:1066: unusually short quote
+- candidate_statement_evidence.csv:1182: unusually short quote
+- candidate_statement_evidence.csv:1341: unusually short quote
+- candidate_statement_evidence.csv:1479: unusually short quote
+- candidate_statement_evidence.csv:1480: unusually short quote
+- candidate_statement_evidence.csv:1483: unusually short quote
+- candidate_statement_evidence.csv:1596: unusually short quote
+- candidate_statement_evidence.csv:1597: unusually short quote
+- candidate_statement_evidence.csv:1598: unusually short quote
 
-Generated 2026-08-12. See `docs/methodology.md` for evidence rules.
+Generated 2026-08-13. See `docs/methodology.md` for evidence rules.
