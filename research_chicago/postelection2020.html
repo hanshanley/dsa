@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=2N_sDSC0" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://www.chicagodsa.org/2020/11/02/2020-post-election-update/","20201103185734","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1604429854");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+	
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-973fc32efb53d87d6ad",applicationID:"575736596"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="nMoA2w67xDVuk3IICtUxVm11wcvSSPPOYFvCjzhZrCg"/>
+	<link rel="pingback" href="https://www.chicagodsa.org/xmlrpc.php">
+
+
+    <!-- WP 4.3 adds the favicon via customizer, so we don't need it via redux theme option  -->
+    
+
+
+	<!-- wordpress head functions -->
+	<title>2020 Post-Election Update &#8211; Chicago DSA</title>
+<link rel="dns-prefetch" href="//web.archive.org/web/20201103185734/https://www.googletagmanager.com/"/>
+<link rel="dns-prefetch" href="//web.archive.org/web/20201103185734/https://fonts.googleapis.com/"/>
+<link rel="dns-prefetch" href="//web.archive.org/web/20201103185734/https://s.w.org/"/>
+<link rel="alternate" type="application/rss+xml" title="Chicago DSA » Feed" href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/feed/"/>
+<link rel="alternate" type="text/calendar" title="Chicago DSA » iCal Feed" href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/events/?ical=1"/>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/web.archive.org\/web\/20201103185734\/https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/web.archive.org\/web\/20201103185734\/https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/web.archive.org\/web\/20201103185734\/https:\/\/www.chicagodsa.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="tribe-common-skeleton-style-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.12.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="tribe-tooltip-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.12.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="wp-block-library-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-includes/css/dist/block-library/style.min.css?ver=5.4.4" type="text/css" media="all"/>
+<link rel="stylesheet" id="wppoliticalz-fonts-css" href="https://web.archive.org/web/20201103185734cs_/https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C900%7CRoboto+Slab%3A100%2C300%2C400%2C700&amp;subset=latin%2Clatin-ext&amp;ver=1.0.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="magnific-popup-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/vendor/maginificpopup/magnific-popup.min.css?ver=1.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="owl-carousel-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/vendor/owl/owl.carousel.min.css?ver=1.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="wppoliticalz-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/css/style-red.min.css?ver=1.0.8" type="text/css" media="all"/>
+<link rel="stylesheet" id="wppoliticalz-custom-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/css/custom.css?ver=1.0.0" type="text/css" media="all"/>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/js/css3-mediaqueries.min.js?ver=1.0'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/js/html5shiv.min.js?ver=3.7'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/js/html5shiv-printshiv.min.js?ver=3.7'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/js/respond.min.js?ver=1.4.2'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/js/respond.matchmedia.addListener.min.js?ver=1.4.2'></script>
+<![endif]-->
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/vendor/modernizer/modernizr.js?ver=3.3.1"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/vendor/bootstrap/dist/js/bootstrap.min.js?ver=3.3.7"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/vendor/owl/owl.carousel.min.js?ver=1.2"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/vendor/smooth-scrool/jquery.smooth-scroll.min.js?ver=1.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/vendor/maginificpopup/jquery.magnific-popup.min.js?ver=1.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/vendor/wow/wow.min.js?ver=1.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-content/themes/wppoliticalz/library/assets/js/wppoliticalz.min.js?ver=1.2"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.googletagmanager.com/gtag/js?id=UA-181307591-1"></script>
+<script type="text/javascript">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-181307591-1', {"anonymize_ip":true} );
+</script>
+<link rel="https://api.w.org/" href="https://www.chicagodsa.org/wp-json/"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.chicagodsa.org/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.chicagodsa.org/wp-includes/wlwmanifest.xml"/> 
+<link rel="prev" title="This Week In The Chicago DSA (March 8 – 15)" href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/2020/03/08/this-week-in-the-chicago-dsa-march-8-15/"/>
+<meta name="generator" content="WordPress 5.4.4"/>
+<link rel="canonical" href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/2020/11/02/2020-post-election-update/"/>
+<link rel="shortlink" href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/?p=12514"/>
+<link rel="alternate" type="application/json+oembed" href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.chicagodsa.org%2F2020%2F11%2F02%2F2020-post-election-update%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.chicagodsa.org%2F2020%2F11%2F02%2F2020-post-election-update%2F&amp;format=xml"/>
+<meta name="generator" content="Site Kit by Google 1.12.0"/><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.chicagodsa.org"><link rel="https://theeventscalendar.com/" href="https://www.chicagodsa.org/wp-json/tribe/events/v1/"/>
+						<style type="text/css">
+
+							#cbx-event {
+							   background: url("/web/20201103185734im_/https://www.chicagodsa.org/2020/11/02/2020-post-election-update/") center center no-repeat fixed;
+							}
+
+							#cbx-footer {
+							  background: url("/web/20201103185734im_/https://www.chicagodsa.org/2020/11/02/2020-post-election-update/") center center no-repeat;
+							}
+
+							#cbx-testimonial {
+								 background: url("https://web.archive.org/web/20201103185734im_/https://www.chicagodsa.org/wp-content/uploads/2016/03/event-bg-1.jpg") center center no-repeat fixed;
+							}
+
+					</style>
+					<link rel="icon" href="https://web.archive.org/web/20201103185734im_/https://www.chicagodsa.org/wp-content/uploads/2015/05/DSAlogo-favicon-150x150.png" sizes="32x32"/>
+<link rel="icon" href="https://web.archive.org/web/20201103185734im_/https://www.chicagodsa.org/wp-content/uploads/2015/05/DSAlogo-favicon-300x300.png" sizes="192x192"/>
+<link rel="apple-touch-icon" href="https://web.archive.org/web/20201103185734im_/https://www.chicagodsa.org/wp-content/uploads/2015/05/DSAlogo-favicon-180x180.png"/>
+<meta name="msapplication-TileImage" content="https://www.chicagodsa.org/wp-content/uploads/2015/05/DSAlogo-favicon-300x300.png"/>
+		<style type="text/css" id="wp-custom-css">
+			/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+#cbx-header-top .cbx-inner {
+	background: #e2e2e2;
+}
+
+.cbx-heading span {
+	color: #ec1f27;
+}
+
+.cbx-read-more, .more-link {
+	color: #ec1f27;
+}
+
+.cbx-read-more:hover, .cbx-read-more:hover i, .more-link:hover, .more-link:hover i {
+	color: #ec1f27;
+}
+
+#cbx-event .cbx-heading span {
+	color: #ec1f27;
+}
+
+#cbx-event .cbx-event-text .cbx-read-more-event {
+	color: #ec1f27;
+}
+
+#cbx-event .cbx-event-text .cbx-read-more-event:hover {
+  background:#fff;
+}
+
+#cbx-header .cbx-onscroll {
+	background: #ec1f27;
+}
+
+#cbx-header .cbx-inner {
+	background:#fff;
+}
+
+#cbx-event .cbx-event-list-area .cbx-event-list li .event-date .event-date-day {
+    font-size: 2rem;
+	color: #ec1f27;
+}
+
+#cbx-event .cbx-event-list-area .cbx-event-list li .event-date span {
+    font-size: 1.1rem;
+}
+
+#cbx-event .cbx-event-list-area .cbx-event-list li .event-date {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#cbx-news .cbx-inner {
+    background: #e2e2e2;
+}
+
+.menu-item.active {
+	background: #ec1f27;
+}
+
+/***** Stuff added by Roger October 2019 ******/
+
+/* Fix for disappearing menu text after scrolling down */
+#cbx-header .cbx-onscroll .cbx-navbar #navbar li a {
+	color: #666;
+}
+
+/* Fix for wonky calendar end time */
+#tribe-events .tribe-events-schedule h2 .tribe-event-date-end, #tribe-events .tribe-events-schedule h2 {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #e74c3c;
+}
+
+/* Monthly calendar thumbnail text-wrapping fix */
+.tribe-events-tooltip .tribe-events-event-thumb {
+	width: 100%
+}
+
+.tribe-events-tooltip .tribe-events-event-thumb > img {
+	margin: 0 auto;
+	display: block;
+}
+
+.tribe-events-tooltip:not(.tribe-event-featured) .tribe-events-event-thumb {
+	padding: 1em
+}
+
+#tribe-events-list-widget-2 ol, #tribe-events-list-widget-2 ol li {
+	padding-left: 0;
+}
+
+#tribe-events-list-widget-2 ol  li.tribe-events-list-widget-events h4 > a {
+	color: #cecece;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: "Roboto Slab", serif;
+}
+
+#tribe-events-list-widget-2 .event-thumb-img {
+	display: none;
+}
+
+#cbx-footer .single-footer #tribe-events-list-widget-2 a {
+	color: #cecece;
+}
+
+#cbx-footer .single-footer #tribe-events-list-widget-2 a:hover {
+	color: white;
+	transition: color 0.3s;
+}
+
+#tribe-events-list-widget-2 .tribe-event-duration {
+	color: #eb695c;
+	font-size: 1.4rem;
+	font-weight: 400;
+}		</style>
+			<!-- end of wordpress head -->
+
+
+</head>
+<body class="post-template-default single single-post postid-12514 single-format-standard tribe-no-js elementor-default">
+
+
+
+<div class="cbx-container">
+		<header>
+		<div id="cbx-header-top" class="cbx-header-top">
+			<div class="cbx-inner">
+				<div class="container-fluid">
+					<div class="cbx-header-top-inner">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4  cbx-slogan text-right sm-text-center"></div>
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4  text-center brand-logo"><a class="cbx-title" href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/"><img src="/web/20201103185734im_/https://www.chicagodsa.org/wp-content/uploads/2016/10/Design-Element-Black.png"></a></a></div>
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 cbx-slogan sm-text-center"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cbx-header" class="cbx-header">
+			<div class="cbx-inner " id="cbx-menuscroll">
+				<div class="container">
+					<nav class="navbar navbar-default cbx-navbar">
+						<div class="cbx-nav-container">
+							<div class="navbar-header">
+								<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+																<!--<a href="" class="navbar-brand  ">
+									<i class="fa fa-home"></i> <span class="sr-only">()</span>
+								</a>-->
+							</div>
+							<div class="navbar-collapse collapse" id="navbar">
+								<ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-11672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/">Home</a></li>
+<li id="menu-item-7370" class="menu-item menu-item-type-post_type_archive menu-item-object-tribe_events"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/events/">Events</a></li>
+<li id="menu-item-7385" class="dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#" data-toggle="dropdown">Our Work<b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li id="menu-item-11349" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/campaigns/">Campaigns</a></li>
+	<li id="menu-item-11894" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/working-groups/">Working Groups</a></li>
+	<li id="menu-item-7373" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/coalitions/">Coalitions</a></li>
+</ul>
+</li>
+<li id="menu-item-7383" class="dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#" data-toggle="dropdown">About<b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li id="menu-item-7371" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/about-us/">Who We Are</a></li>
+	<li id="menu-item-7372" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/faq/">FAQ</a></li>
+</ul>
+</li>
+<li id="menu-item-7377" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/donate/">Join / Donate</a></li>
+<li id="menu-item-690" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://web.archive.org/web/20201103185734/https://soundcloud.com/midwestsocialist/">Podcast</a></li>
+<li id="menu-item-606" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://web.archive.org/web/20201103185734/http://www.midwestsocialist.com/">Magazine</a></li>
+<li id="menu-item-7381" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://web.archive.org/web/20201103185734/https://chicagodsa.square.site/">Store</a></li>
+</ul>							</div><!--/.nav-collapse -->
+
+							<div id="search-popup" class="cbx-popup ">
+								<button type="button" class="close" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+								<form role="search" method="get" class="search-form" action="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s"/>
+				</label>
+				<input type="submit" class="search-submit" value="Search"/>
+			</form>							</div>
+						</div><!--/.nav container-->
+					</nav>
+				</div> <!--//.container-->
+			</div>
+		</div>
+	</header>
+		<div class="container">
+	<div id="content" class="clearfix row">
+
+		<div id="main" class="col-xs-12 clearfix" role="main">
+
+			
+				<article id="post-12514" class="clearfix post-12514 post type-post status-publish format-standard hentry category-uncategorized">
+
+					<header>
+						<h1 class="h2"><a href="javascript:void(0);">2020 Post-Election Update</a></h1>
+						<div class="cbx-singlefigure">
+													</div>
+
+						<p class="meta">Posted							<time datetime="2020-11-2" pubdate>November 2nd, 2020</time> By <a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/author/rtuan/" title="Posts by Roger" rel="author">Roger</a>							<span class="amp">|</span> Categories															<a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/category/uncategorized/"><span class="">Uncategorized</span></a>
+													</p>
+
+
+
+
+					</header>
+					<!-- end article header -->
+
+					<div class="post_content clearfix">
+						<h2>Statement from DSA</h2>
+<p><span style="font-weight: 400;">We’ve known for months that the winner of this year’s election wasn’t going to make our priorities their focus. It is now more important than ever that we make the case for our vision of the world, one in which human dignity is prioritized. As a national organization we will continue our efforts to grow and strengthen our connections between chapters, fighting for a world where survival is decommodified and working class people can thrive. On the local level we are expanding our housing justice work, taking on the corrupt business interests that control our power grid and demanding a budget that moves money from the bloated CPD budget to services that help people.</span></p>
+<p><span style="font-weight: 400;">This is just the beginning for us.</span></p>
+<h2><b>Mass Actions<br/>
+</b><b>November 4 </b><span style="font-weight: 400;">and </span><b>November 7</b></h2>
+<p><span style="font-weight: 400;">A wide range of leftist organizations and unions, under the umbrella of the Illinois Election Defense Action Council (IEDAC), have called for two mass actions after the election. We may not know who the winner of the election is by that time, but we will know that—whoever they are—they will not be champions of the working class. We will show up because we know that whether it is the white nationalism of Trump, or the neoliberalism of Biden, we will have a fight on our hands to build the world we deserve. </span></p>
+<p><span style="font-weight: 400;">Chicago DSA has endorsed the </span><b>Wednesday,</b> <b>November 4 Rally to Defend the Election</b><span style="font-weight: 400;">. The rally will begin with a short program at </span><b>Daley Plaza at 5 pm</b><span style="font-weight: 400;">, followed by a march (approximately 2 miles) to a final congregation point. If you plan to attend, the organizers have asked that you text “We defend” to 787753 for updates in the event of police interference or other last minute changes. Chicago DSA has also endorsed the follow-up action on </span><b>Saturday, November 7</b><span style="font-weight: 400;">.</span> <span style="font-weight: 400;">That action will start at </span><b>Union Park at 1 pm</b><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">We encourage all members to show up if they can safely do so. Comrades will be in attendance collecting contact information from attendees for follow-up about CDSA and our campaigns. More information for members to pass literature and collect petition signatures at the action will be available on the chapter Slack</span><i><span style="font-weight: 400;">. </span></i><span style="font-weight: 400;">If you are not able to attend in person, keep an eye on the chapter Slack for how you can provide support from home. Not sure what the chapter Slack is? Email </span><a href="/web/20201103185734/https://www.chicagodsa.org/cdn-cgi/l/email-protection#24474b4949514a4d4745504d4b4a5764474c4d4745434b4057450a4b5643"><span style="font-weight: 400;"><span class="__cf_email__" data-cfemail="ccafa3a1a1b9a2a5afadb8a5a3a2bf8cafa4a5afadaba3a8bfade2a3beab">[email&#160;protected]</span></span></a><span style="font-weight: 400;">. </span></p>
+<h2><b>Post Election Branch Meetings and Chapter Meeting</b></h2>
+<p><span style="font-weight: 400;">Over the next few weeks, all of our geographic branches will be holding branch-wide meetings to discuss the outcomes of the election and what comes next for us as socialists. This will lead up to a chapter-wide call (details TBD, keep an eye on your emails and chicagodsa.org/events). Our ongoing work of Defund CPD, Democratize ComEd, and Lifting the Ban on Rent Control continues as pivotal moments quickly approach through the end of the year with the city budget fight, the ILGA Veto Session, the city’s contract with ComEd, and ongoing organizing to support a socialist movement in our workplaces, streets, and homes. </span></p>
+<p><span style="font-weight: 400;">Will you join your geographic branch meeting? Register for your branch meeting’s zoom call at the hyperlinked registration. Not sure which geographic branch you belong to? Check out </span><a href="https://web.archive.org/web/20201103185734/https://www.google.com/maps/d/u/0/viewer?mid=1K_oj_p3dVTxHI_t5HaF4Mx1heju03cLa&amp;ll=41.80121271162764%2C-87.7278095&amp;z=9"><span style="font-weight: 400;">this map</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">🌹</span> <span style="font-weight: 400;">Northside Red Line Branch Meeting: Monday, November 9th at 7 pm</span></p>
+<p><span style="font-weight: 400;">🌹</span> <span style="font-weight: 400;">Northside Blue Line Branch Meeting: Monday, November 9th at 7 pm</span></p>
+<p><span style="font-weight: 400;">🌹</span> <span style="font-weight: 400;">West Cook Branch Meeting: Sunday, November 8th at 1 pm</span></p>
+<p><span style="font-weight: 400;">🌹</span> <span style="font-weight: 400;">Southside Branch Meeting: Monday, November 9th at 7 pm</span></p>
+<p><span style="font-weight: 400;">Meeting details can always be found at </span><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/events/"><span style="font-weight: 400;">chicagodsa.org/events</span></a><span style="font-weight: 400;">.</span></p>
+<h2><b>Still Not a DSA Member?</b></h2>
+<p style="text-align: center;"><span style="font-weight: 400;">What are you waiting for? Join us </span><a href="https://web.archive.org/web/20201103185734/http://dsausa.org/join?source=Chicago%20IL"><span style="font-weight: 400;">today</span></a><span style="font-weight: 400;">.</span></p>
+<p style="text-align: center;"><span style="font-weight: 400;">Have questions? Email us at <a href="/web/20201103185734/https://www.chicagodsa.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="026b6c646d42616a6b6163656d6671632c6d70652c">[email&#160;protected]</a></span></p>
+					</div>
+					<!-- end article section -->
+
+					<footer>
+						
+												
+	<nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/2020/03/08/this-week-in-the-chicago-dsa-march-8-15/" rel="prev"><span class="tags-title label cbx-cat-label" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">This Week In The Chicago DSA (March 8 &#8211; 15)</span></a></div></div>
+	</nav>
+						
+					</footer>
+					<!-- end article footer -->
+
+				</article> <!-- end article -->
+								
+				
+			
+			
+		</div>
+		<!-- end #main -->
+	</div> <!-- end #content -->
+
+
+</div> <!--// CONTAINER -->
+
+<footer>
+    	<div id="cbx-footer" class="cbx-footer">
+		<div class="cbx-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+                                                    <div class="single-footer">
+                                <div id="text-2" class="footer-widget widget_text"><h4 class="footer-widgettitle">Get in Touch</h4>			<div class="textwidget"> <p class="footer-about">
+The greater Chicago chapter of the Democratic Socialists of America.
+                                    </p>
+                                    <div class="contact-info">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fa fa-phone"></i>773.384.0327</li>                                            <li><i class="fa fa-map-marker"></i>3411 W. Diversey Ave, Room 7, Chicago
+                                                IL 60647</li>
+                                        </ul>
+                                    </div></div>
+		</div>                            </div>
+                        					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+                                                    <div class="single-footer">
+                            		<div id="recent-posts-3" class="footer-widget widget_recent_entries">		<h4 class="footer-widgettitle">Latest News</h4>		<ul>
+											<li>
+					<a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/2020/11/02/2020-post-election-update/" aria-current="page">2020 Post-Election Update</a>
+											<span class="post-date">November 2, 2020</span>
+									</li>
+											<li>
+					<a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/2020/03/08/this-week-in-the-chicago-dsa-march-8-15/">This Week In The Chicago DSA (March 8 &#8211; 15)</a>
+											<span class="post-date">March 8, 2020</span>
+									</li>
+											<li>
+					<a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/2020/02/09/this-week-in-the-chicago-dsa-february-9-16/">This Week In The Chicago DSA (February 9 &#8211; 16)</a>
+											<span class="post-date">February 9, 2020</span>
+									</li>
+					</ul>
+		</div>                            </div>
+											</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+                                                    <div class="single-footer">
+                                <div id="tribe-events-list-widget-2" class="footer-widget tribe-events-list-widget"><h4 class="footer-widgettitle">Upcoming Events</h4>
+	<ol class="tribe-list-widget">
+					<li class="tribe-events-list-widget-events type-tribe_events post-12500 tribe-clearfix">
+				
+								<!-- Event Title -->
+				<h4 class="tribe-event-title">
+					<a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/event/election-day-canvassing/" rel="bookmark">Election Day Canvassing!</a>
+				</h4>
+
+								<!-- Event Time -->
+
+				
+				<div class="tribe-event-duration">
+					<span class="tribe-event-date-start">November 3 @ 6:00 am</span> - <span class="tribe-event-time">7:00 pm</span> <span class="timezone"> CST </span>				</div>
+
+							</li>
+					<li class="tribe-events-list-widget-events type-tribe_events post-12494 tribe-clearfix">
+				
+								<!-- Event Title -->
+				<h4 class="tribe-event-title">
+					<a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/event/dsa-national-election-watch-party/" rel="bookmark">DSA National Election Watch Party</a>
+				</h4>
+
+								<!-- Event Time -->
+
+				
+				<div class="tribe-event-duration">
+					<span class="tribe-event-date-start">November 3 @ 9:00 pm</span> - <span class="tribe-event-time">11:59 pm</span> <span class="timezone"> CST </span>				</div>
+
+							</li>
+					<li class="tribe-events-list-widget-events type-tribe_events post-12518 tribe-clearfix tribe-events-venue-11830">
+				
+								<!-- Event Title -->
+				<h4 class="tribe-event-title">
+					<a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/event/rally-to-defend-the-election/" rel="bookmark">Rally to Defend the Election</a>
+				</h4>
+
+								<!-- Event Time -->
+
+				
+				<div class="tribe-event-duration">
+					<span class="tribe-event-date-start">November 4 @ 5:00 pm</span> <span class="timezone"> CST </span>				</div>
+
+							</li>
+			</ol><!-- .tribe-list-widget -->
+
+	<p class="tribe-events-widget-link">
+		<a href="https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/events/" rel="bookmark">View All Events</a>
+	</p>
+
+</div><script data-cfasync="false" src="/web/20201103185734js_/https://www.chicagodsa.org/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+[{"@context":"https://web.archive.org/web/20201103185734/http://schema.org","@type":"Event","name":"Election Day Canvassing!","description":"&lt;p&gt;It\\'s our final day to push for #FairTax and #TossToomin! Sign up here (http://bit.ly/CDSAEDAY2020) for a shift in your area (http://bit.ly/CDSAEDAYMAP).&lt;/p&gt;\\n","url":"https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/event/election-day-canvassing/","startDate":"2020-11-03T06:00:00-06:00","endDate":"2020-11-03T19:00:00-06:00","performer":"Organization"},{"@context":"https://web.archive.org/web/20201103185734/http://schema.org","@type":"Event","name":"DSA National Election Watch Party","description":"&lt;p&gt;DSA members from across the country are coming together (virtually) to watch the election results roll in! Special guests and details TBA. Streaming on Zoom, Facebook and Youtube. Zoom details to come. RSVP here: https://act.dsausa.org/survey/DSA-Socialist-and-Distanced-Election-Night-Livestream/&lt;/p&gt;\\n","url":"https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/event/dsa-national-election-watch-party/","startDate":"2020-11-03T21:00:00-06:00","endDate":"2020-11-03T23:59:00-06:00","performer":"Organization"},{"@context":"https://web.archive.org/web/20201103185734/http://schema.org","@type":"Event","name":"Rally to Defend the Election","description":"&lt;p&gt;Join the Illinois Election Defense Action Council the day after the election as we exercise our people power and make sure every vote is counted and every voice is heard! &gt;&gt;&gt;bit.ly/DefendDemocracyNov4&lt;&lt;&lt; Practice safety: Bring your face masks and maintain your distance. We will be outdoors. Co-hosts: American Friends Service Committee, Arab American Action Network, Black...  &lt;a href=&quot;https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/event/rally-to-defend-the-election/&quot; class=&quot;more-link&quot; title=&quot;Rally to Defend the Election&quot;&gt;Read More&lt;/a&gt;&lt;/p&gt;\\n","url":"https://web.archive.org/web/20201103185734/https://www.chicagodsa.org/event/rally-to-defend-the-election/","startDate":"2020-11-04T17:00:00-06:00","endDate":"2020-11-04T17:00:00-06:00","location":{"@type":"Place","name":"Richard J. Daley Center","description":"","url":false,"address":{"@type":"PostalAddress","streetAddress":"50 W. Washington St.","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60602","addressCountry":"United States"},"telephone":"","sameAs":""},"performer":"Organization"}]
+</script>                            </div>
+                        					</div>
+				</div> <!--//.row-->
+			</div>
+		</div>
+	</div> <!--//.cbx-Footer-->
+    
+	<div id="cbx-footer-bottom" class="cbx-footer-bottom">
+		<div class="cbx-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-7">
+						<p class="footer-bottom-text"></p>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-5">
+						<div class="footer-social">
+															<a class="tw" href="https://web.archive.org/web/20201103185734/https://www.facebook.com/ChicagoDemSocialists/"><i class="fa fa-twitter"></i></a>
+							
+															<a class="fb" href="https://web.archive.org/web/20201103185734/https://www.facebook.com/ChicagoDemSocialists/"><i class="fa fa-facebook"></i></a>
+							
+							
+							
+							
+						</div>
+					</div>
+				</div> <!--//.row-->
+			</div> <!--//.container-->
+		</div>
+	</div> <!--//.cbx-footer-bottom-->
+
+</footer>
+
+
+</div> <!--//SITE CONTAINER-->
+
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><link rel="stylesheet" id="tribe-events-custom-jquery-styles-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/plugins/the-events-calendar/vendor/jquery/smoothness/jquery-ui-1.8.23.custom.css?ver=5.1.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="tribe-events-bootstrap-datepicker-css-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/plugins/the-events-calendar/vendor/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css?ver=5.1.0" type="text/css" media="all"/>
+<link rel="stylesheet" id="tribe-events-calendar-style-css" href="https://web.archive.org/web/20201103185734cs_/https://www.chicagodsa.org/wp-content/plugins/the-events-calendar/src/resources/css/tribe-events-theme.min.css?ver=5.1.0" type="text/css" media="all"/>
+<script type="text/javascript" src="https://web.archive.org/web/20201103185734js_/https://www.chicagodsa.org/wp-includes/js/wp-embed.min.js?ver=5.4.4"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-973fc32efb53d87d6ad","applicationID":"575736596","transactionName":"ZVBaYBcFVhYFWxEKDVwaeVcRDVcLS0sMDQVeUA==","queueTime":0,"applicationTime":362,"atts":"SRdZFl8fRRg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html><!--
+     FILE ARCHIVED ON 18:57:34 Nov 03, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:19:05 Aug 13, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.535
+  exclusion.robots: 0.046
+  exclusion.robots.policy: 0.036
+  esindex: 0.006
+  cdx.remote: 5.491
+  LoadShardBlock: 358.501 (3)
+  PetaboxLoader3.datanode: 63.609 (4)
+  PetaboxLoader3.resolve: 66.223 (2)
+  load_resource: 107.535
+-->
