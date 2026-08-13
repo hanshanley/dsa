@@ -3,7 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from .io import read_csv, write_csv
+from .io import merge_notes, read_csv, write_csv
 from .paths import PROCESSED_DIR
 
 SESSION_BATCH_DIR = Path(
@@ -202,9 +202,7 @@ def _preserve_queue_status(
     ):
         new_row[field] = existing[field]
     if existing["notes"]:
-        new_row["notes"] = " | ".join(
-            dict.fromkeys((new_row["notes"], existing["notes"]))
-        )
+        new_row["notes"] = merge_notes(new_row["notes"], existing["notes"])
     return new_row
 
 

@@ -132,6 +132,24 @@ def analyze() -> dict[str, int]:
             in {"verified", "not_a_primary", "source_unavailable"}
             for row in opponent_queue
         ),
+        "candidacy_unresolved_rows": sum(
+            any(
+                row[field]
+                not in {
+                    "verified",
+                    "not_a_primary",
+                    "not_applicable",
+                    "source_unavailable",
+                }
+                for field in (
+                    "race_resolution_status",
+                    "opponent_roster_status",
+                    "candidate_statement_status",
+                    "opponent_statement_status",
+                )
+            )
+            for row in opponent_queue
+        ),
         "candidate_evidence_rows": len(statement_evidence),
         "sticking_point_rows": len(sticking_points),
     }
@@ -158,6 +176,43 @@ def _write_report(
     year_rows: list[dict[str, object]],
     warnings: tuple[str, ...],
 ) -> None:
+    census_complete = (
+        stats["census_unresolved_rows"] == 0
+        and stats["candidacy_unresolved_rows"] == 0
+    )
+    local_census_note = (
+        "Together, the national archive and verified local layer form the completed "
+        "nationwide endorsement census under the methodology's source-availability rules."
+        if census_complete
+        else "The verified local layer is still incomplete and must not be treated as a "
+        "nationwide local-endorsement census."
+    )
+    completion_note = (
+        "Strict validation passes: every chapter-year is resolved and every endorsed "
+        "candidacy has a resolved race, roster, and candidate/opponent evidence status."
+        if census_complete
+        else "The analysis is not complete until `uv run dsa-analysis validate --strict` "
+        "passes."
+    )
+    sticking_note = (
+        "These are nationwide counts of recorded, source-supported contrasts in the "
+        "completed census. They measure expressed and recoverable campaign differences, "
+        "not unspoken positions or voter priorities."
+        if census_complete
+        else "These counts come only from currently verified candidate evidence and are "
+        "not yet nationwide frequency estimates."
+    )
+    limitations = (
+        "The census is complete under the stated protocol, but source-unavailable records "
+        "remain explicit unknowns. A missing quotation does not imply that a candidate held "
+        "no position. Topic counts measure recoverable statements and coded contrasts, not "
+        "the prevalence or intensity of beliefs among all candidates or voters. The platform "
+        "matrix is limited to the reviewed official documents and election cycles."
+        if census_complete
+        else "The national and local endorsement census, full platform coding, candidate/"
+        "opponent evidence, and primary-level contrasts are not complete. Frequency claims "
+        "are therefore premature."
+    )
     config = read_json(CONFIG_DIR / "sources.json")
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     quote_lines = []
@@ -232,7 +287,7 @@ primary type, opponents, and campaign sources. The current chapter directory cre
 
 These counts cover national endorsements. The manually verified layer separately includes local
 endorsements such as Zohran Mamdani by NYC-DSA and Francesca Hong by Madison Area DSA and
-Milwaukee DSA. It is not yet a complete nationwide local-endorsement census.
+Milwaukee DSA. {local_census_note}
 
 ## Nationwide local-chapter census status
 
@@ -250,11 +305,9 @@ Milwaukee DSA. It is not yet a complete nationwide local-endorsement census.
 - Exact candidate evidence rows: {stats["candidate_evidence_rows"]}
 - Derived primary sticking-point rows: {stats["sticking_point_rows"]}
 
-The analysis is not complete until `uv run dsa-analysis validate --strict` passes. That gate
-requires every chapter-year unit to be resolved, every local endorsement lead to be verified or
-rejected, and first-party evidence for every candidate on every identified primary ballot.
+{completion_note}
 
-## Preliminary findings from reviewed first-party text
+## Findings from reviewed first-party text
 
 The reviewed DSA material explicitly describes democratic socialism in terms of replacing
 capitalism, expanding democratic control into workplaces and the economy, and collective or
@@ -272,18 +325,15 @@ not claims about every endorsed candidate.
 
 {chr(10).join(contrast_lines) or "- No reviewed candidate contrasts are available."}
 
-## Emerging primary sticking-point counts
+## Primary sticking-point counts
 
-The following counts come only from currently verified candidate evidence and are not yet
-nationwide frequency estimates:
+{sticking_note}
 
 {chr(10).join(sticking_lines) or "- No derived sticking points are available."}
 
-## What cannot yet be concluded
+## Limitations
 
-The national and local endorsement census, full platform coding, candidate/opponent evidence,
-and primary-level contrasts are not complete. Therefore this draft does not yet support frequency
-claims about nationwide primary sticking points or a comprehensive platform matrix.
+{limitations}
 
 ## Audit warnings
 

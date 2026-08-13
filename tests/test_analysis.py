@@ -11,7 +11,7 @@ class AnalysisTests(unittest.TestCase):
         self.assertEqual(stats["endorsements"], 4)
         self.assertEqual(stats["tracked_races"], 3)
         self.assertEqual(stats["opponent_candidates"], 20)
-        self.assertIn("What cannot yet be concluded", report)
+        self.assertIn("## Limitations", report)
         self.assertIn("direct textual observations", report)
         self.assertIn("mo01-dem-primary-2026", report)
 

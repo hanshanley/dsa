@@ -2,6 +2,8 @@ import csv
 import hashlib
 import heapq
 import json
+import re
+import unicodedata
 from pathlib import Path
 
 from .io import read_csv, read_json, write_csv
@@ -156,10 +158,9 @@ def merge_statement_reviews(
     valid_queue_ids = {
         row["queue_id"] for row in read_csv(queue_path)
     } if queue_path.exists() else set()
-    evidence = [
-        row for row in evidence if not valid_queue_ids or row["queue_id"] in valid_queue_ids
-    ]
-    _remap_canonical_races(evidence)
+    roster_path = PROCESSED_DIR / "race_rosters_discovered.csv"
+    roster = read_csv(roster_path) if roster_path.exists() else []
+    evidence = _expand_to_active_queues(evidence, roster, valid_queue_ids)
     write_csv(
         PROCESSED_DIR / "candidate_statement_evidence.csv",
         evidence,
@@ -192,19 +193,80 @@ def merge_statement_reviews(
     return len(covered), verified, unavailable
 
 
-def _remap_canonical_races(evidence: list[dict[str, str]]) -> None:
-    roster_path = PROCESSED_DIR / "race_rosters_discovered.csv"
-    if not roster_path.exists():
-        return
-    canonical_by_queue = {}
-    with roster_path.open(newline="", encoding="utf-8") as handle:
-        for row in csv.DictReader(handle):
-            if row["resolution_status"] == "verified":
-                canonical_by_queue[row["queue_id"]] = row["race_id"]
+def _expand_to_active_queues(
+    evidence: list[dict[str, str]],
+    roster: list[dict[str, str]],
+    valid_queue_ids: set[str],
+) -> list[dict[str, str]]:
+    canonical_by_queue = {
+        row["queue_id"]: row["race_id"]
+        for row in roster
+        if row["resolution_status"] == "verified"
+    }
     for row in evidence:
         canonical = canonical_by_queue.get(row["queue_id"])
         if canonical:
             row["race_id"] = canonical
+    if not valid_queue_ids:
+        return evidence
+
+    targets_by_race: dict[tuple[str, str], list[dict[str, str]]] = {}
+    targets_by_date: dict[tuple[str, str], list[dict[str, str]]] = {}
+    for row in roster:
+        if (
+            row["resolution_status"] != "verified"
+            or row["queue_id"] not in valid_queue_ids
+        ):
+            continue
+        identity = _identity_name(row["candidate_name"])
+        targets_by_race.setdefault((row["race_id"], identity), []).append(row)
+        targets_by_date.setdefault((row["election_date"], identity), []).append(row)
+
+    expanded = []
+    seen = set()
+    for row in evidence:
+        identity = _identity_name(row["candidate_name"])
+        targets = [
+            *targets_by_race.get((row["race_id"], identity), []),
+            *targets_by_date.get((row["election_date"], identity), []),
+        ]
+        for target in targets:
+            clone = {
+                **row,
+                "queue_id": target["queue_id"],
+                "race_id": target["race_id"],
+                "primary_type": target["primary_type"],
+                "election_date": target["election_date"],
+                "candidate_name": target["candidate_name"],
+                "party": target["party"],
+                "role": target["role"],
+                "official_election_source": target["official_election_source"],
+            }
+            dedupe_key = (
+                clone["queue_id"],
+                clone["race_id"],
+                _identity_name(clone["candidate_name"]),
+                clone["evidence_status"],
+                clone["source_url"],
+                clone["quote"],
+                clone["locator"],
+            )
+            if dedupe_key not in seen:
+                seen.add(dedupe_key)
+                expanded.append(clone)
+    return expanded
+
+
+def _identity_name(value: str) -> str:
+    value = unicodedata.normalize("NFKD", value)
+    value = (
+        value.replace("“", '"')
+        .replace("”", '"')
+        .replace("’", "'")
+        .replace("–", "-")
+        .replace("—", "-")
+    )
+    return re.sub(r"\s+", " ", value).strip().casefold()
 
 
 def _expected(

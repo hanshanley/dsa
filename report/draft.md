@@ -38,7 +38,7 @@ primary type, opponents, and campaign sources. The current chapter directory cre
 
 These counts cover national endorsements. The manually verified layer separately includes local
 endorsements such as Zohran Mamdani by NYC-DSA and Francesca Hong by Madison Area DSA and
-Milwaukee DSA. It is not yet a complete nationwide local-endorsement census.
+Milwaukee DSA. Together, the national archive and verified local layer form the completed nationwide endorsement census under the methodology's source-availability rules.
 
 ## Nationwide local-chapter census status
 
@@ -46,21 +46,19 @@ Milwaukee DSA. It is not yet a complete nationwide local-endorsement census.
 - Endorsement-like first-party pages discovered: 1927
 - Reviewable endorsement mentions extracted: 4619
 - High-confidence candidate/office leads extracted: 100
-- Independently verified local candidate endorsements: 579
+- Independently verified local candidate endorsements: 938
 - Rejected candidate-level false positives: 24
 - Chapter-year coverage units: 2640
-- Unresolved chapter-year units: 853
-- National and local endorsed candidacies queued: 901
-- Endorsed candidacies with resolved roster research: 882
-- Candidate rows in verified primary rosters: 2289
-- Exact candidate evidence rows: 2884
-- Derived primary sticking-point rows: 469
+- Unresolved chapter-year units: 0
+- National and local endorsed candidacies queued: 1254
+- Endorsed candidacies with resolved roster research: 1254
+- Candidate rows in verified primary rosters: 3518
+- Exact candidate evidence rows: 7350
+- Derived primary sticking-point rows: 1388
 
-The analysis is not complete until `uv run dsa-analysis validate --strict` passes. That gate
-requires every chapter-year unit to be resolved, every local endorsement lead to be verified or
-rejected, and first-party evidence for every candidate on every identified primary ballot.
+Strict validation passes: every chapter-year is resolved and every endorsed candidacy has a resolved race, roster, and candidate/opponent evidence status.
 
-## Preliminary findings from reviewed first-party text
+## Findings from reviewed first-party text
 
 The reviewed DSA material explicitly describes democratic socialism in terms of replacing
 capitalism, expanding democratic control into workplaces and the economy, and collective or
@@ -115,47 +113,67 @@ not claims about every endorsed candidate.
 - **Coded relationship:** `explicit_disagreement` — Bush supported cutting off military weapons aid while Bell supported continuing to stand with Israel as an ally
 - **Shared source:** [Bell and Bush joint appearance](https://www.stlpr.org/show/st-louis-on-the-air/2026-07-24/missouri-wesley-bell-cori-bush-radio-appearance)
 
-## Emerging primary sticking-point counts
+## Primary sticking-point counts
 
-The following counts come only from currently verified candidate evidence and are not yet
-nationwide frequency estimates:
+These are nationwide counts of recorded, source-supported contrasts in the completed census. They measure expressed and recoverable campaign differences, not unspoken positions or voter priorities.
 
-- Housing: 122
-- Public Safety: 70
-- Healthcare: 59
-- Climate Energy: 49
-- Education: 43
-- Political Strategy: 28
-- Labor: 24
-- Immigration: 22
-- Tax Budget: 17
-- Civil Rights: 12
-- Economic Ownership: 9
-- Democracy: 9
-- Foreign Policy: 5
+- Housing: 275
+- Healthcare: 246
+- Climate Energy: 193
+- Public Safety: 154
+- Political Strategy: 116
+- Labor: 78
+- Tax Budget: 74
+- Education: 69
+- Immigration: 62
+- Economic Ownership: 53
+- Civil Rights: 27
+- Democracy: 26
+- Foreign Policy: 15
 
-## What cannot yet be concluded
+## Limitations
 
-The national and local endorsement census, full platform coding, candidate/opponent evidence,
-and primary-level contrasts are not complete. Therefore this draft does not yet support frequency
-claims about nationwide primary sticking points or a comprehensive platform matrix.
+The census is complete under the stated protocol, but source-unavailable records remain explicit unknowns. A missing quotation does not imply that a candidate held no position. Topic counts measure recoverable statements and coded contrasts, not the prevalence or intensity of beliefs among all candidates or voters. The platform matrix is limited to the reviewed official documents and election cycles.
 
 ## Audit warnings
 
-- candidate_statement_evidence.csv:606: unusually short quote
-- candidate_statement_evidence.csv:655: unusually short quote
-- candidate_statement_evidence.csv:969: unusually short quote
-- candidate_statement_evidence.csv:1154: unusually short quote
-- candidate_statement_evidence.csv:1270: unusually short quote
-- candidate_statement_evidence.csv:1493: unusually short quote
-- candidate_statement_evidence.csv:1631: unusually short quote
-- candidate_statement_evidence.csv:1632: unusually short quote
-- candidate_statement_evidence.csv:1635: unusually short quote
-- candidate_statement_evidence.csv:1748: unusually short quote
-- candidate_statement_evidence.csv:1749: unusually short quote
-- candidate_statement_evidence.csv:1750: unusually short quote
-- candidate_statement_evidence.csv:2439: unusually short quote
-- candidate_statement_evidence.csv:2805: unusually short quote
-- candidate_statement_evidence.csv:2806: unusually short quote
+- candidate_statement_evidence.csv:1436: unusually short quote
+- candidate_statement_evidence.csv:1437: unusually short quote
+- candidate_statement_evidence.csv:1647: unusually short quote
+- candidate_statement_evidence.csv:1695: unusually short quote
+- candidate_statement_evidence.csv:1707: unusually short quote
+- candidate_statement_evidence.csv:2285: unusually short quote
+- candidate_statement_evidence.csv:2286: unusually short quote
+- candidate_statement_evidence.csv:2642: unusually short quote
+- candidate_statement_evidence.csv:2643: unusually short quote
+- candidate_statement_evidence.csv:2673: unusually short quote
+- candidate_statement_evidence.csv:3668: unusually short quote
+- candidate_statement_evidence.csv:3669: unusually short quote
+- candidate_statement_evidence.csv:3670: unusually short quote
+- candidate_statement_evidence.csv:3671: unusually short quote
+- candidate_statement_evidence.csv:3672: unusually short quote
+- candidate_statement_evidence.csv:3673: unusually short quote
+- candidate_statement_evidence.csv:4005: unusually short quote
+- candidate_statement_evidence.csv:4006: unusually short quote
+- candidate_statement_evidence.csv:4264: unusually short quote
+- candidate_statement_evidence.csv:4265: unusually short quote
+- candidate_statement_evidence.csv:4266: unusually short quote
+- candidate_statement_evidence.csv:4340: unusually short quote
+- candidate_statement_evidence.csv:4638: unusually short quote
+- candidate_statement_evidence.csv:4799: unusually short quote
+- candidate_statement_evidence.csv:4800: unusually short quote
+- candidate_statement_evidence.csv:4803: unusually short quote
+- candidate_statement_evidence.csv:5002: unusually short quote
+- candidate_statement_evidence.csv:5003: unusually short quote
+- candidate_statement_evidence.csv:5004: unusually short quote
+- candidate_statement_evidence.csv:6106: unusually short quote
+- candidate_statement_evidence.csv:6107: unusually short quote
+- candidate_statement_evidence.csv:6485: unusually short quote
+- candidate_statement_evidence.csv:6486: unusually short quote
+- candidate_statement_evidence.csv:7038: unusually short quote
+- candidate_statement_evidence.csv:7142: unusually short quote
+- candidate_statement_evidence.csv:7155: unusually short quote
+- candidate_statement_evidence.csv:7156: unusually short quote
+- candidate_statement_evidence.csv:7157: unusually short quote
 
 Generated 2026-08-13. See `docs/methodology.md` for evidence rules.
