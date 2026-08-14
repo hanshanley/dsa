@@ -9,6 +9,27 @@ positions align or diverge. The resulting data supports a report on the policy a
 differences between DSA, Democratic Party platforms, DSA-endorsed candidates, and their primary
 opponents.
 
+## At a glance: where the language differs
+
+The completed, strictly validated census contains **2,640 chapter-years**, **1,254 endorsed
+candidacies**, **3,518 official roster rows**, **7,350 exact evidence rows**, and **1,388
+source-supported candidate/opponent contrasts**.
+
+| DSA / DSA-endorsed emphasis | Democratic platform / opponent emphasis |
+| --- | --- |
+| Housing as a right; tenants; rent control; social and public housing | Business, opportunity, market mechanisms, and administrative delivery |
+| Single-payer and Medicare for All | Public-option and incremental coverage mechanisms |
+| Living wages, unions, workers, and collective power | Training, pathways, small business, and labor-market opportunity |
+| Movement-building and working-class political power | Governing competence, coalition breadth, and institutional implementation |
+| Collective/public ownership and decommodification | Regulated, competitive capitalism |
+
+![Most informative DSA-endorsed and Democratic-opponent language](outputs/figures/text_analysis/candidate_mpif_terms.svg)
+
+The MPIF graph above uses normalized phrases and weighted log-odds. Red terms occur
+disproportionately in DSA-endorsed candidate documents; blue terms occur disproportionately in
+Democratic opponent documents. See the [full text-analysis report](report/text_analysis.md) for
+TF-IDF, robustness checks, issue shares, similarity, evidence coverage, and limitations.
+
 ## What the project does
 
 - Collects current and historical endorsements from DSA National and local chapters.
