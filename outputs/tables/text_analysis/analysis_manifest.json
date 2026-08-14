@@ -1,22 +1,26 @@
 {
   "candidate_documents": 997,
-  "candidate_mpif_features": 2570,
-  "candidate_tfidf_terms": 6630,
+  "candidate_mpif_features": 2249,
+  "candidate_tfidf_terms": 5865,
   "candidate_verified_excerpts": 3438,
+  "figure_count": 10,
   "input_hashes": {
     "data/manual/excerpts.csv": "03edd6b2528f354b46940856cc4c116684a8f918b7258a5eea97cd6d7db63869",
     "data/processed/candidate_statement_evidence.csv": "18c3d26e858cdf69b144cd6ac56ec0f6072d3231cffba3cbbe3eaf1471f5b8f8",
     "data/processed/primary_sticking_points.csv": "14ace0b546893c3bed10b7d45dac5425c504adf88ee9ad663d4b8b21967f2453"
   },
   "official_documents": 12,
-  "official_mpif_features": 199,
+  "official_mpif_features": 176,
   "parameters": {
     "candidate_min_feature_count": 5,
+    "domain_stopwords": 34,
     "mpif_ngram": "unigram+bigrams",
     "mpif_prior_mass": 1000.0,
     "official_min_feature_count": 1,
+    "phrase_rules": 19,
     "tfidf_ngram": "unigram"
   },
+  "prevalence_features": 1009,
   "sticking_points": 1251,
   "topics": 13
 }

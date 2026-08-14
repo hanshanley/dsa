@@ -82,9 +82,12 @@ uv run dsa-analysis analyze-text
   primary opponents.
 
 It generates mean TF-IDF, weighted log-odds most-informative-feature (MPIF) scores, topic shares,
-within-topic cosine similarity, and sticking-point counts by topic and cycle. Identical candidate
-quotes repeated through multiple endorsement queues are deduplicated by candidate and election.
-The generated `analysis_manifest.json` records input hashes and method parameters.
+document-level feature prevalence, within-topic cosine similarity, evidence coverage, and
+sticking-point counts by topic and cycle. Policy phrases such as `Medicare for All`,
+`rent control`, and `public option` are normalized before scoring. Common plural variants are
+lightly lemmatized. Identical candidate quotes repeated through multiple endorsement queues are
+deduplicated by candidate and election. The generated `analysis_manifest.json` records input
+hashes and method parameters.
 
 ## Text-analysis graph gallery
 
@@ -105,7 +108,15 @@ Democratic blue for opponent/DNC text, charcoal labels, and a warm neutral backg
 
 ![Candidate topic shares](outputs/figures/text_analysis/candidate_topic_shares.svg)
 
+![Topic emphasis difference](outputs/figures/text_analysis/topic_emphasis_difference.svg)
+
 ![Topic cosine similarity](outputs/figures/text_analysis/topic_cosine_similarity.svg)
+
+### Robustness and evidence coverage
+
+![Candidate feature prevalence](outputs/figures/text_analysis/candidate_feature_prevalence.svg)
+
+![Candidate evidence coverage](outputs/figures/text_analysis/candidate_evidence_coverage.svg)
 
 ### Primary sticking points
 

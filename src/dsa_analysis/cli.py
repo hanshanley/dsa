@@ -316,6 +316,6 @@ def main() -> None:
             "Text analysis complete: "
             f"candidate_documents={stats['candidate_documents']}, "
             f"candidate_verified_excerpts={stats['candidate_verified_excerpts']}, "
-            f"figures=7."
+            f"figures={stats['figure_count']}."
         )
         return
