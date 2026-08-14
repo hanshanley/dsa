@@ -150,9 +150,20 @@ Democratic blue for opponent/DNC text, charcoal labels, and a warm neutral backg
 
 ### Local-model policy emphasis
 
-Run `uv run dsa-analysis classify-topics` to generate the model-classified row-level output,
-validation diagnostics, and `model_topic_emphasis_difference.svg`. The model chart is not
-published unless those real artifacts have been generated successfully.
+![Local-model policy emphasis difference](outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
+
+This chart was generated from **3,448 exact candidate quotations** with the pinned local
+`all-MiniLM-L6-v2` model and CAP topic descriptions:
+
+- 3,086 classified at cosine similarity ≥ 0.20
+- 362 explicitly unclassified below threshold
+- 951 low-margin rows (< 0.03 between the top two topics)
+- 58.7% agreement with the existing reviewed-code crosswalk
+- 65.2% agreement with the transparent keyword baseline where it produced a prediction
+
+Every plotted classification is auditable in
+[`data/analysis/model_topic_classifications.csv`](data/analysis/model_topic_classifications.csv),
+which retains the exact quotation, source URL, similarity, runner-up topic, and margin.
 
 ### Direct evidence and explicit conflicts
 
