@@ -340,6 +340,8 @@ The full TF-IDF, MPIF, topic-share, similarity, and cycle analysis is generated 
 
 ![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
+![Local-model policy emphasis](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
+
 ![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
 
 ![Source type difference](../outputs/figures/text_analysis/source_type_difference.svg)

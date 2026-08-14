@@ -467,7 +467,10 @@ def group_tfidf(documents: list[dict[str, str]]) -> list[dict[str, str]]:
                 "difference": f"{endorsed - opponent:.8f}",
             }
         )
-    return sorted(rows, key=lambda row: abs(float(row["difference"])), reverse=True)
+    return sorted(
+        rows,
+        key=lambda row: (-abs(float(row["difference"])), row["term"]),
+    )
 
 
 def mpif_rows(
@@ -513,7 +516,10 @@ def mpif_rows(
                 "favored_group": group_a if z_score >= 0 else group_b,
             }
         )
-    return sorted(rows, key=lambda row: abs(float(row["z_score"])), reverse=True)
+    return sorted(
+        rows,
+        key=lambda row: (-abs(float(row["z_score"])), row["feature"]),
+    )
 
 
 def topic_comparison(rows: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -575,7 +581,10 @@ def feature_prevalence(documents: list[dict[str, str]]) -> list[dict[str, str]]:
                 "difference": f"{endorsed_share - opponent_share:.6f}",
             }
         )
-    return sorted(rows, key=lambda row: abs(float(row["difference"])), reverse=True)
+    return sorted(
+        rows,
+        key=lambda row: (-abs(float(row["difference"])), row["feature"]),
+    )
 
 
 def evidence_coverage(evidence: list[dict[str, str]]) -> list[dict[str, str]]:

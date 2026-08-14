@@ -41,9 +41,9 @@ are counted once per candidate and election.
 ## Main language differences
 
 - DSA-endorsed candidate features: Human Right, Tenant, Rent Control, Single Payer, Social Housing, Eviction, Guarantee, Living Wage, Medicare For All, Rent.
-- Democratic opponent features: Business, Small Business, Opportunity, Children, Trump, Citizen, Bike, Training, Market, Border.
-- Official DSA features: Democratic, Society, Party, Defunding, Refunding, Defunding Police, Police Refunding, Replace.
-- Official Democratic platform features: American, Able, Public Option, Affordable, Capitalism, Access, Coverage, Opt.
+- Democratic opponent features: Business, Small Business, Opportunity, Children, Citizen, Trump, Bike, Training, Market, Border.
+- Official DSA features: Democratic, Defunding, Defunding Police, Party, Police Refunding, Refunding, Society, Abolition.
+- Official Democratic platform features: Able, Affordable, American, Capitalism, Public Option, Abide, Abide Value, Able Access.
 
 ![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
