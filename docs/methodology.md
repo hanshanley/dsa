@@ -52,3 +52,24 @@ PDF, audio, or video. Generated summaries are never evidence.
 
 The dataset distinguishes `not_searched`, `searched_not_found`, `source_unavailable`,
 `found_unverified`, and `verified`. No-position-found is not interpreted as opposition or support.
+## Reproducible lexical comparison
+
+Run `uv run dsa-analysis analyze-text` after the reviewed evidence and sticking-point datasets
+have been rebuilt.
+
+The command creates two text comparisons:
+
+1. official DSA statements versus Democratic National Committee platform excerpts; and
+2. DSA-endorsed candidate statements versus statements by Democratic primary opponents.
+
+Candidate quotations duplicated because multiple DSA bodies endorsed the same candidate in the
+same election are counted once. TF-IDF uses document-normalized unigram frequencies and smoothed
+inverse document frequency. MPIF uses weighted log-odds z-scores with an informative Dirichlet
+prior over unigrams and adjacent bigrams. Topic shares use reviewed excerpt counts. Topic
+similarity uses cosine similarity over token-frequency vectors. Sticking-point graphs deduplicate
+by stable contrast ID.
+
+These measures describe recoverable language. They do not infer positions from missing sources,
+measure sincerity or policy quality, or prove that a lexical difference caused an election
+outcome. The official DSA/DNC corpus is intentionally limited to manually reviewed exact
+excerpts, so its MPIF results should be read as descriptive rather than exhaustive.
