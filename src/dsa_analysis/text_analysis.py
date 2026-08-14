@@ -183,7 +183,8 @@ def analyze_text() -> dict[str, int | float]:
     TABLE_DIR.mkdir(parents=True, exist_ok=True)
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
     for old_figure in FIGURE_DIR.glob("*.svg"):
-        old_figure.unlink()
+        if old_figure.name != "model_topic_emphasis_difference.svg":
+            old_figure.unlink()
     for obsolete_table in (
         "candidate_topic_comparison.csv",
         "topic_excerpt_provenance.csv",
