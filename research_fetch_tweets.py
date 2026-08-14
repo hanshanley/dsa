@@ -1,8 +1,11 @@
 import json,re,time,html
+from pathlib import Path
 from urllib.request import Request,urlopen
 from urllib.parse import quote
 from concurrent.futures import ThreadPoolExecutor,as_completed
-rows=json.load(open('research_cdx_twitter.json'))[1:]
+archive_dir=Path(__file__).resolve().parent/'files'/'research_archive'
+archive_dir.mkdir(parents=True,exist_ok=True)
+rows=json.load((archive_dir/'research_cdx_twitter.json').open())[1:]
 ids={re.search(r'/status/(\d+)',r[1]).group(1) for r in rows if re.search(r'/status/(\d+)',r[1])}
 
 def fetch(i):
@@ -30,5 +33,10 @@ with ThreadPoolExecutor(max_workers=12) as ex:
   out.append(f.result())
   if n%100==0: print(n,flush=True)
 out.sort(key=lambda x:int(x['id']))
-json.dump(out,open('research_tweets.json','w'),ensure_ascii=False,indent=2)
+json.dump(
+ out,
+ (archive_dir/'research_tweets.json').open('w'),
+ ensure_ascii=False,
+ indent=2,
+)
 print('done',len(out),'errors',sum('error'in x for x in out))
