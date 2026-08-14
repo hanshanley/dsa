@@ -13,12 +13,15 @@ from .paths import MANUAL_DIR, OUTPUT_DIR, PROCESSED_DIR, REPORT_DIR
 FIGURE_DIR = OUTPUT_DIR / "figures" / "text_analysis"
 TABLE_DIR = OUTPUT_DIR / "tables" / "text_analysis"
 
-DSA_RED = "#D9272E"
-DEMOCRATIC_BLUE = "#2F6DB0"
-DARK = "#20242A"
-MID = "#65707C"
-LIGHT = "#D9DEE5"
-BACKGROUND = "#FAF8F4"
+DSA_RED = "#C85A3D"
+DEMOCRATIC_BLUE = "#3D6F8C"
+GOLD = "#C2993E"
+GREEN = "#4A7C59"
+DARK = "#1A1A1A"
+MID = "#6B6B6B"
+LIGHT = "#D6D3CC"
+BACKGROUND = "#F7F5F0"
+CARD = "#EFEDE8"
 
 STOPWORDS = {
     "about",
@@ -829,10 +832,10 @@ def _mpif_chart(
 
 def _topic_share_chart(rows: list[dict[str, str]]) -> None:
     selected = rows[:13]
-    width = 1100
-    height = 180 + len(selected) * 42
-    plot_left = 285
-    plot_width = 720
+    width = 1200
+    height = 205 + len(selected) * 42
+    plot_left = 315
+    plot_width = 760
     max_value = max(
         (
             max(float(row["endorsed_share"]), float(row["opponent_share"]))
@@ -840,18 +843,33 @@ def _topic_share_chart(rows: list[dict[str, str]]) -> None:
         ),
         default=1,
     )
-    body = [_svg_header(width, height, "Issue emphasis by candidate group", "Share of verified excerpts coded to each topic")]
+    body = [
+        _svg_header(
+            width,
+            height,
+            "Issue emphasis by candidate group",
+            "Share of verified excerpts coded to each topic",
+        )
+    ]
+    for tick in range(5):
+        value = max_value * tick / 4
+        x = plot_left + plot_width * tick / 4
+        body.append(_line(x, 106, x, height - 58, LIGHT))
+        body.append(_text(x, 94, f"{value:.0%}", "middle", MID, "11px"))
     for index, row in enumerate(selected):
         y = 120 + index * 42
         endorsed = float(row["endorsed_share"])
         opponent = float(row["opponent_share"])
-        body.append(_text(270, y + 13, _label(row["topic"]), "end"))
-        body.append(_rect(plot_left, y, plot_width * endorsed / max_value, 13, DSA_RED))
-        body.append(_rect(plot_left, y + 17, plot_width * opponent / max_value, 13, DEMOCRATIC_BLUE))
+        x_endorsed = plot_left + plot_width * endorsed / max_value
+        x_opponent = plot_left + plot_width * opponent / max_value
+        body.append(_text(plot_left - 22, y + 9, _label(row["topic"]), "end", DARK, "13px"))
+        body.append(_line(min(x_endorsed, x_opponent), y + 5, max(x_endorsed, x_opponent), y + 5, LIGHT))
+        body.append(_circle(x_endorsed, y + 5, 6, DSA_RED))
+        body.append(_circle(x_opponent, y + 5, 6, DEMOCRATIC_BLUE))
     body.extend(
         [
-            _legend(790, 72, DSA_RED, "DSA-endorsed"),
-            _legend(925, 72, DEMOCRATIC_BLUE, "Democratic opponents"),
+            _legend(770, 70, DSA_RED, "DSA-endorsed"),
+            _legend(930, 70, DEMOCRATIC_BLUE, "Democratic opponents"),
             _svg_footer(width, height, "Source: verified first-party candidate statements; duplicate queue copies removed."),
         ]
     )
@@ -909,10 +927,10 @@ def _prevalence_chart(rows: list[dict[str, str]]) -> None:
 
 
 def _coverage_chart(rows: list[dict[str, str]]) -> None:
-    width = 900
-    height = 300
-    plot_left = 210
-    plot_width = 590
+    width = 1100
+    height = 365
+    plot_left = 230
+    plot_width = 720
     maximum = max(
         (
             int(row["verified_documents"]) + int(row["source_unavailable_documents"])
@@ -928,27 +946,34 @@ def _coverage_chart(rows: list[dict[str, str]]) -> None:
             "Candidate/election documents with verified text versus documented source gaps",
         )
     ]
+    for tick in range(5):
+        value = maximum * tick / 4
+        x = plot_left + plot_width * tick / 4
+        body.append(_line(x, 112, x, 270, LIGHT))
+        body.append(_text(x, 100, f"{value:.0f}", "middle", MID, "11px"))
     for index, row in enumerate(rows):
-        y = 115 + index * 65
+        y = 132 + index * 82
         verified = int(row["verified_documents"])
         unavailable = int(row["source_unavailable_documents"])
         verified_width = plot_width * verified / maximum
         unavailable_width = plot_width * unavailable / maximum
-        body.append(_text(195, y + 16, _label(row["group"]), "end"))
-        body.append(_rect(plot_left, y, verified_width, 24, DSA_RED))
-        body.append(_rect(plot_left + verified_width, y, unavailable_width, 24, LIGHT))
-        body.append(_text(plot_left + verified_width - 7, y + 17, str(verified), "end", "#FFFFFF"))
+        body.append(_text(plot_left - 24, y + 20, _label(row["group"]), "end", DARK, "14px", "700"))
+        body.append(_rect(plot_left, y, verified_width, 30, DSA_RED))
+        body.append(_rect(plot_left + verified_width, y, unavailable_width, 30, "#C9CED3"))
+        if verified_width > 45:
+            body.append(_text(plot_left + verified_width - 9, y + 20, str(verified), "end", "#FFFFFF", "12px", "700"))
         body.append(
             _text(
                 plot_left + verified_width + unavailable_width + 8,
-                y + 17,
+                y + 20,
                 f"{float(row['verified_share']):.0%} verified",
+                size="12px",
             )
         )
     body.extend(
         [
-            _legend(555, 72, DSA_RED, "Verified text"),
-            _legend(670, 72, LIGHT, "Source unavailable"),
+            _legend(710, 72, DSA_RED, "Verified text"),
+            _legend(845, 72, "#C9CED3", "Source unavailable"),
             _svg_footer(width, height, "Coverage status is explicit; unavailable text is not treated as no position."),
         ]
     )
@@ -958,26 +983,31 @@ def _coverage_chart(rows: list[dict[str, str]]) -> None:
 def _stacked_chart(
     rows: list[dict[str, str]], path: Path, title: str, subtitle: str, label_key: str
 ) -> None:
-    width = 1100
-    height = 170 + len(rows) * 38
-    plot_left = 270
-    plot_width = 725
+    width = 1200
+    height = 205 + len(rows) * 42
+    plot_left = 315
+    plot_width = 760
     maximum = max((int(row["total"]) for row in rows), default=1)
     body = [_svg_header(width, height, title, subtitle)]
+    for tick in range(5):
+        value = maximum * tick / 4
+        x = plot_left + plot_width * tick / 4
+        body.append(_line(x, 106, x, height - 58, LIGHT))
+        body.append(_text(x, 94, f"{value:.0f}", "middle", MID, "11px"))
     for index, row in enumerate(rows):
-        y = 115 + index * 38
+        y = 120 + index * 42
         explicit = int(row["explicit_conflict"])
         coded = int(row["coded_divergence"])
         explicit_width = plot_width * explicit / maximum
         coded_width = plot_width * coded / maximum
-        body.append(_text(255, y + 14, _label(row[label_key]), "end"))
-        body.append(_rect(plot_left, y, explicit_width, 18, DSA_RED))
-        body.append(_rect(plot_left + explicit_width, y, coded_width, 18, DEMOCRATIC_BLUE))
-        body.append(_text(plot_left + explicit_width + coded_width + 8, y + 14, row["total"]))
+        body.append(_text(plot_left - 22, y + 17, _label(row[label_key]), "end", DARK, "13px"))
+        body.append(_rect(plot_left, y, explicit_width, 24, DSA_RED))
+        body.append(_rect(plot_left + explicit_width, y, coded_width, 24, DEMOCRATIC_BLUE))
+        body.append(_text(plot_left + explicit_width + coded_width + 9, y + 17, row["total"], size="12px", weight="700"))
     body.extend(
         [
-            _legend(805, 72, DSA_RED, "Explicit conflict"),
-            _legend(935, 72, DEMOCRATIC_BLUE, "Coded divergence"),
+            _legend(805, 70, DSA_RED, "Explicit conflict"),
+            _legend(955, 70, DEMOCRATIC_BLUE, "Coded divergence"),
             _svg_footer(width, height, "Counts are source-supported contrasts, not inferred positions."),
         ]
     )
@@ -993,25 +1023,33 @@ def _diverging_svg(
     positive_label: str,
     negative_label: str,
 ) -> None:
-    width = 1100
-    height = 170 + len(labels) * 32
-    center = 550
-    half_width = 390
+    width = 1240
+    height = 215 + len(labels) * 36
+    plot_left = 320
+    plot_right = 1160
+    center = 740
+    half_width = 400
     maximum = max((abs(value) for value in values), default=1)
-    body = [_svg_header(width, height, title, subtitle), _line(center, 102, center, height - 48, LIGHT)]
+    body = [_svg_header(width, height, title, subtitle)]
+    for fraction in (-1, -0.5, 0, 0.5, 1):
+        x = center + half_width * fraction
+        body.append(_line(x, 112, x, height - 60, LIGHT if fraction else MID))
+        if fraction:
+            body.append(_text(x, 99, f"{abs(maximum * fraction):.2f}", "middle", MID, "10px"))
     for index, (label, value) in enumerate(zip(labels, values, strict=True)):
-        y = 112 + index * 32
+        y = 126 + index * 36
         bar_width = half_width * abs(value) / maximum
+        body.append(_text(plot_left - 20, y + 17, _label(label), "end", DARK, "13px"))
         if value >= 0:
-            body.append(_rect(center, y, bar_width, 18, DSA_RED))
-            body.append(_text(center - 10, y + 14, label, "end"))
+            body.append(_rect(center, y, bar_width, 24, DSA_RED))
+            body.append(_text(center + bar_width + 8, y + 17, f"{value:.2f}", size="11px"))
         else:
-            body.append(_rect(center - bar_width, y, bar_width, 18, DEMOCRATIC_BLUE))
-            body.append(_text(center + 10, y + 14, label))
+            body.append(_rect(center - bar_width, y, bar_width, 24, DEMOCRATIC_BLUE))
+            body.append(_text(center - bar_width - 8, y + 17, f"{abs(value):.2f}", "end", size="11px"))
     body.extend(
         [
-            _text(center + 200, 86, positive_label, "middle", DSA_RED, "12px"),
-            _text(center - 200, 86, negative_label, "middle", DEMOCRATIC_BLUE, "12px"),
+            _text((center + plot_right) / 2, 84, positive_label, "middle", DSA_RED, "12px", "700"),
+            _text((plot_left + center) / 2, 84, negative_label, "middle", DEMOCRATIC_BLUE, "12px", "700"),
             _svg_footer(width, height, "Positive scores favor the red group; negative scores favor the blue group."),
         ]
     )
@@ -1027,17 +1065,21 @@ def _horizontal_svg(
     color: str,
     maximum: float | None = None,
 ) -> None:
-    width = 1050
-    height = 170 + len(labels) * 36
-    plot_left = 280
-    plot_width = 650
+    width = 1150
+    height = 205 + len(labels) * 40
+    plot_left = 315
+    plot_width = 740
     maximum = maximum or max(values, default=1)
     body = [_svg_header(width, height, title, subtitle)]
+    for tick in range(5):
+        x = plot_left + plot_width * tick / 4
+        body.append(_line(x, 106, x, height - 58, LIGHT))
+        body.append(_text(x, 94, f"{maximum * tick / 4:.2f}", "middle", MID, "10px"))
     for index, (label, value) in enumerate(zip(labels, values, strict=True)):
-        y = 110 + index * 36
-        body.append(_text(265, y + 14, label, "end"))
-        body.append(_rect(plot_left, y, plot_width * value / maximum, 18, color))
-        body.append(_text(plot_left + plot_width * value / maximum + 8, y + 14, f"{value:.2f}"))
+        y = 120 + index * 40
+        body.append(_text(plot_left - 22, y + 17, label, "end", DARK, "13px"))
+        body.append(_rect(plot_left, y, plot_width * value / maximum, 24, color))
+        body.append(_text(plot_left + plot_width * value / maximum + 9, y + 17, f"{value:.2f}", size="11px", weight="700"))
     body.append(_svg_footer(width, height, "Similarity ranges from 0 (no shared vocabulary) to 1 (identical term proportions)."))
     _write_svg(path, width, height, body)
 
@@ -1045,19 +1087,26 @@ def _horizontal_svg(
 def _svg_header(width: int, height: int, title: str, subtitle: str) -> str:
     return (
         _rect(0, 0, width, height, BACKGROUND)
-        + _text(42, 42, title, color=DARK, size="24px", weight="700")
-        + _text(42, 68, subtitle, color=MID, size="13px")
+        + _text(48, 47, title, color=DARK, size="27px", weight="700")
+        + _text(48, 74, subtitle, color=MID, size="14px")
     )
 
 
 def _svg_footer(width: int, height: int, text: str) -> str:
-    return _text(42, height - 20, text, color=MID, size="11px")
+    return _text(48, height - 24, text, color=MID, size="10px", style="italic")
 
 
 def _rect(x: float, y: float, width: float, height: float, color: str) -> str:
     return (
         f'<rect x="{x:.2f}" y="{y:.2f}" width="{max(width, 0):.2f}" '
-        f'height="{height:.2f}" fill="{color}" rx="2"/>'
+        f'height="{height:.2f}" fill="{color}" rx="3"/>'
+    )
+
+
+def _circle(x: float, y: float, radius: float, color: str) -> str:
+    return (
+        f'<circle cx="{x:.2f}" cy="{y:.2f}" r="{radius:.2f}" '
+        f'fill="{color}" stroke="{BACKGROUND}" stroke-width="2"/>'
     )
 
 
@@ -1073,16 +1122,17 @@ def _text(
     color: str = DARK,
     size: str = "12px",
     weight: str = "400",
+    style: str = "normal",
 ) -> str:
     return (
         f'<text x="{x}" y="{y}" text-anchor="{anchor}" fill="{color}" '
-        f'font-family="Arial, Helvetica, sans-serif" font-size="{size}" '
-        f'font-weight="{weight}">{html.escape(str(value))}</text>'
+        f'font-family="Georgia, Times New Roman, serif" font-size="{size}" '
+        f'font-weight="{weight}" font-style="{style}">{html.escape(str(value))}</text>'
     )
 
 
 def _legend(x: float, y: float, color: str, label: str) -> str:
-    return _rect(x, y - 10, 12, 12, color) + _text(x + 18, y, label, size="11px")
+    return _circle(x + 6, y - 5, 6, color) + _text(x + 19, y, label, size="11px")
 
 
 def _write_svg(path: Path, width: int, height: int, body: list[str]) -> None:
