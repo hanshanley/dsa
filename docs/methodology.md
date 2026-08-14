@@ -65,9 +65,7 @@ The command creates two text comparisons:
 Candidate quotations duplicated because multiple DSA bodies endorsed the same candidate in the
 same election are counted once. TF-IDF uses document-normalized unigram frequencies and smoothed
 inverse document frequency. MPIF uses weighted log-odds z-scores with an informative Dirichlet
-prior over unigrams and adjacent bigrams. Topic shares use reviewed excerpt counts. Topic
-similarity uses cosine similarity over token-frequency vectors. Sticking-point graphs deduplicate
-by stable contrast ID.
+prior over unigrams and adjacent bigrams.
 
 Before scoring, common policy phrases are mapped to canonical features, including
 `medicare_for_all`, `green_new_deal`, `single_payer`, `public_option`, `rent_control`,
@@ -81,3 +79,24 @@ These measures describe recoverable language. They do not infer positions from m
 measure sincerity or policy quality, or prove that a lexical difference caused an election
 outcome. The official DSA/DNC corpus is intentionally limited to manually reviewed exact
 excerpts, so its MPIF results should be read as descriptive rather than exhaustive.
+
+### Local-model topic classification
+
+Topic emphasis follows the `state-politics` design:
+
+- a published Comparative Agendas Project major-topic taxonomy in `config/cap_topics.json`;
+- pinned `sentence-transformers/all-MiniLM-L6-v2` weights;
+- local MPS execution when available, otherwise local CPU;
+- normalized embeddings and nearest-topic cosine similarity;
+- a 0.20 minimum-similarity threshold, with below-threshold rows explicitly unclassified;
+- runner-up topic and margin retained for every row;
+- a transparent seed-term keyword baseline;
+- diagnostic agreement against the existing reviewed-code crosswalk.
+
+No hosted model API is used. The model classifies the exact quotation in
+`data/analysis/candidate_text_corpus.csv`; it does not generate replacement text or factual
+claims. `data/analysis/model_topic_classifications.csv` retains the exact quotation and source URL
+beside every prediction, score, runner-up and margin.
+
+The crosswalk agreement is a diagnostic rather than an independent gold-standard accuracy
+estimate. Low-similarity and low-margin rows remain directly filterable.

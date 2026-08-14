@@ -28,6 +28,7 @@ from .statement_batches import (
 )
 from .sticking_points import analyze_sticking_points
 from .text_analysis import analyze_text
+from .model_topics import classify_model_topics
 from .voter_guides import collect_voter_guides
 from .wayback_crawler import discover_wayback_urls, filter_existing_wayback_urls
 
@@ -155,6 +156,10 @@ def main() -> None:
     subparsers.add_parser(
         "analyze-text",
         help="Generate TF-IDF, MPIF, similarity, topic, and sticking-point graphs.",
+    )
+    subparsers.add_parser(
+        "classify-topics",
+        help="Classify exact candidate quotations with a pinned local embedding model.",
     )
     args = parser.parse_args()
 
@@ -312,10 +317,21 @@ def main() -> None:
         return
     if args.command == "analyze-text":
         stats = analyze_text()
+        model_stats = classify_model_topics()
         print(
             "Text analysis complete: "
             f"candidate_documents={stats['candidate_documents']}, "
             f"candidate_verified_excerpts={stats['candidate_verified_excerpts']}, "
-            f"figures={stats['figure_count']}."
+            f"model_classified={model_stats['classified_rows']}, "
+            f"figures={stats['figure_count'] + 1}."
+        )
+        return
+    if args.command == "classify-topics":
+        stats = classify_model_topics()
+        print(
+            "Model topic classification complete: "
+            f"rows={stats['total_rows']}, classified={stats['classified_rows']}, "
+            f"unclassified={stats['unclassified_rows']}, "
+            f"crosswalk_agreement={stats['crosswalk_agreement']:.1%}."
         )
         return

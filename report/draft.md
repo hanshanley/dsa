@@ -136,21 +136,17 @@ These are nationwide counts of recorded, source-supported contrasts in the compl
 The full TF-IDF, MPIF, topic-share, similarity, and cycle analysis is generated with
 `uv run dsa-analysis analyze-text`.
 
-![Distinctive candidate MPIF terms](../outputs/figures/text_analysis/candidate_mpif_terms.svg)
+![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
-![Official DSA and Democratic Party MPIF terms](../outputs/figures/text_analysis/official_dsa_democratic_mpif.svg)
+![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
-![Candidate topic shares](../outputs/figures/text_analysis/candidate_topic_shares.svg)
+![Local-model policy emphasis](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
 
-![Topic emphasis difference](../outputs/figures/text_analysis/topic_emphasis_difference.svg)
+![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
 
-![Candidate feature prevalence](../outputs/figures/text_analysis/candidate_feature_prevalence.svg)
+![Source type difference](../outputs/figures/text_analysis/source_type_difference.svg)
 
-![Candidate evidence coverage](../outputs/figures/text_analysis/candidate_evidence_coverage.svg)
-
-![Primary sticking points by topic](../outputs/figures/text_analysis/sticking_points_by_topic.svg)
-
-![Primary sticking points by cycle](../outputs/figures/text_analysis/sticking_points_by_cycle.svg)
+![Explicit conflicts by cycle](../outputs/figures/text_analysis/explicit_conflicts_by_cycle.svg)
 
 ## Limitations
 
@@ -197,4 +193,4 @@ The census is complete under the stated protocol, but source-unavailable records
 - candidate_statement_evidence.csv:7156: unusually short quote
 - candidate_statement_evidence.csv:7157: unusually short quote
 
-Generated 2026-08-13. See `docs/methodology.md` for evidence rules.
+Generated 2026-08-14. See `docs/methodology.md` for evidence rules.

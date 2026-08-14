@@ -8,10 +8,12 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from .io import read_csv, write_csv
-from .paths import MANUAL_DIR, OUTPUT_DIR, PROCESSED_DIR, REPORT_DIR
+from .paths import ANALYSIS_DATA_DIR, MANUAL_DIR, OUTPUT_DIR, PROCESSED_DIR, REPORT_DIR
 
 FIGURE_DIR = OUTPUT_DIR / "figures" / "text_analysis"
 TABLE_DIR = OUTPUT_DIR / "tables" / "text_analysis"
+CORPUS_PATH = ANALYSIS_DATA_DIR / "candidate_text_corpus.csv"
+STICKING_SNAPSHOT_PATH = ANALYSIS_DATA_DIR / "primary_sticking_points.csv"
 
 DSA_RED = "#C85A3D"
 DEMOCRATIC_BLUE = "#3D6F8C"
@@ -159,14 +161,12 @@ def analyze_text() -> dict[str, int | float]:
     evidence_path = PROCESSED_DIR / "candidate_statement_evidence.csv"
     sticking_path = PROCESSED_DIR / "primary_sticking_points.csv"
     excerpts_path = MANUAL_DIR / "excerpts.csv"
-    evidence = read_csv(evidence_path)
-    sticking_points = list(
-        {
-            row["sticking_point_id"]: row
-            for row in read_csv(sticking_path)
-        }.values()
+    comparisons_path = MANUAL_DIR / "platform_comparisons.csv"
+    evidence, sticking_points = _load_or_export_analysis_data(
+        evidence_path, sticking_path
     )
     excerpts = read_csv(excerpts_path)
+    platform_comparisons = read_csv(comparisons_path)
 
     candidate_docs, candidate_rows = _candidate_corpus(evidence)
     official_docs = _official_corpus(excerpts)
@@ -174,14 +174,23 @@ def analyze_text() -> dict[str, int | float]:
     candidate_tfidf = group_tfidf(candidate_docs)
     candidate_mpif = mpif_rows(candidate_docs, "endorsed", "opponent")
     official_mpif = mpif_rows(official_docs, "dsa", "democratic")
-    topic_rows = topic_comparison(candidate_rows)
     prevalence_rows = feature_prevalence(candidate_docs)
     coverage_rows = evidence_coverage(evidence)
-    cycle_rows = sticking_point_cycles(sticking_points, evidence)
-    sticking_rows = sticking_point_topics(sticking_points)
+    volume_rows = verified_excerpt_volume(candidate_rows)
+    source_type_rows = source_type_comparison(candidate_rows)
+    explicit_cycle_rows = explicit_conflicts_by_cycle(sticking_points, evidence)
 
     TABLE_DIR.mkdir(parents=True, exist_ok=True)
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
+    for old_figure in FIGURE_DIR.glob("*.svg"):
+        old_figure.unlink()
+    for obsolete_table in (
+        "candidate_topic_comparison.csv",
+        "topic_excerpt_provenance.csv",
+        "sticking_points_by_topic.csv",
+        "sticking_points_by_cycle.csv",
+    ):
+        (TABLE_DIR / obsolete_table).unlink(missing_ok=True)
     write_csv(
         TABLE_DIR / "candidate_group_tfidf.csv",
         candidate_tfidf[:500],
@@ -196,18 +205,6 @@ def analyze_text() -> dict[str, int | float]:
         TABLE_DIR / "official_dsa_democratic_mpif.csv",
         official_mpif,
         ["feature", "dsa_count", "democratic_count", "z_score", "favored_group"],
-    )
-    write_csv(
-        TABLE_DIR / "candidate_topic_comparison.csv",
-        topic_rows,
-        [
-            "topic",
-            "endorsed_excerpts",
-            "opponent_excerpts",
-            "endorsed_share",
-            "opponent_share",
-            "cosine_similarity",
-        ],
     )
     write_csv(
         TABLE_DIR / "candidate_feature_prevalence.csv",
@@ -235,52 +232,34 @@ def analyze_text() -> dict[str, int | float]:
         ["pattern", "canonical_feature"],
     )
     write_csv(
-        TABLE_DIR / "sticking_points_by_topic.csv",
-        sticking_rows,
-        ["topic", "explicit_conflict", "coded_divergence", "total"],
+        TABLE_DIR / "verified_excerpt_volume_by_cycle.csv",
+        volume_rows,
+        ["cycle", "endorsed_excerpts", "opponent_excerpts", "total"],
     )
     write_csv(
-        TABLE_DIR / "sticking_points_by_cycle.csv",
-        cycle_rows,
-        ["cycle", "explicit_conflict", "coded_divergence", "total"],
+        TABLE_DIR / "source_types_by_group.csv",
+        source_type_rows,
+        [
+            "source_type",
+            "endorsed_excerpts",
+            "opponent_excerpts",
+            "endorsed_share",
+            "opponent_share",
+            "difference",
+        ],
+    )
+    write_csv(
+        TABLE_DIR / "explicit_conflicts_by_cycle.csv",
+        explicit_cycle_rows,
+        ["cycle", "explicit_conflicts"],
     )
 
-    _candidate_tfidf_chart(candidate_tfidf)
-    _mpif_chart(
-        candidate_mpif,
-        FIGURE_DIR / "candidate_mpif_terms.svg",
-        "Most informative candidate language",
-        "DSA-endorsed candidates compared with their Democratic primary opponents",
-        "endorsed",
-        "opponent",
-    )
-    _mpif_chart(
-        official_mpif,
-        FIGURE_DIR / "official_dsa_democratic_mpif.svg",
-        "Most informative official language",
-        "Official DSA statements compared with Democratic Party platform excerpts",
-        "dsa",
-        "democratic",
-    )
-    _topic_share_chart(topic_rows)
-    _topic_difference_chart(topic_rows)
-    _similarity_chart(topic_rows)
-    _prevalence_chart(prevalence_rows)
+    _policy_language_chart(prevalence_rows)
+    _official_contrast_chart(platform_comparisons, excerpts)
+    _volume_cycle_chart(volume_rows)
+    _source_type_chart(source_type_rows)
     _coverage_chart(coverage_rows)
-    _stacked_chart(
-        sticking_rows[:14],
-        FIGURE_DIR / "sticking_points_by_topic.svg",
-        "Primary sticking points by issue",
-        "Source-supported contrasts in the completed nationwide census",
-        "topic",
-    )
-    _stacked_chart(
-        cycle_rows,
-        FIGURE_DIR / "sticking_points_by_cycle.svg",
-        "Primary sticking points by election cycle",
-        "Explicit conflicts and coded policy divergences",
-        "cycle",
-    )
+    _explicit_cycle_chart(explicit_cycle_rows)
 
     summary = {
         "candidate_documents": len(candidate_docs),
@@ -290,12 +269,28 @@ def analyze_text() -> dict[str, int | float]:
         "candidate_mpif_features": len(candidate_mpif),
         "official_mpif_features": len(official_mpif),
         "prevalence_features": len(prevalence_rows),
-        "topics": len(topic_rows),
         "sticking_points": len(sticking_points),
-        "figure_count": 10,
+        "figure_count": 6,
         "input_hashes": {
             str(path.relative_to(path.parents[2])): _sha256(path)
-            for path in (evidence_path, sticking_path, excerpts_path)
+            for path in (
+                CORPUS_PATH,
+                STICKING_SNAPSHOT_PATH,
+                excerpts_path,
+                comparisons_path,
+            )
+        },
+        "lineage": {
+            "candidate_corpus": {
+                "generated_from": "data/processed/candidate_statement_evidence.csv",
+                "generator": "dsa_analysis.statement_batches.merge_statement_reviews",
+                "analysis_snapshot": "data/analysis/candidate_text_corpus.csv",
+            },
+            "sticking_points": {
+                "generated_from": "data/processed/primary_sticking_points.csv",
+                "generator": "dsa_analysis.sticking_points.analyze_sticking_points",
+                "analysis_snapshot": "data/analysis/primary_sticking_points.csv",
+            },
         },
         "parameters": {
             "tfidf_ngram": "unigram",
@@ -315,12 +310,97 @@ def analyze_text() -> dict[str, int | float]:
         summary,
         candidate_mpif,
         official_mpif,
-        topic_rows,
         prevalence_rows,
         coverage_rows,
-        cycle_rows,
+        volume_rows,
+        source_type_rows,
+        explicit_cycle_rows,
     )
     return summary
+
+
+def _load_or_export_analysis_data(
+    evidence_path: Path, sticking_path: Path
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    ANALYSIS_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    if evidence_path.exists() and sticking_path.exists():
+        evidence = _deduplicate_analysis_evidence(read_csv(evidence_path))
+        corpus_fields = [
+            "statement_key",
+            "race_id",
+            "candidate_name",
+            "election_date",
+            "party",
+            "role",
+            "evidence_status",
+            "topic",
+            "subtopic",
+            "stance",
+            "quote",
+            "source_url",
+            "source_type",
+            "published_date",
+            "locator",
+            "direct_opponent_name",
+            "notes",
+        ]
+        evidence = [
+            {field: row.get(field, "") for field in corpus_fields}
+            for row in evidence
+        ]
+        sticking_points = list(
+            {
+                row["sticking_point_id"]: row
+                for row in read_csv(sticking_path)
+            }.values()
+        )
+        write_csv(
+            CORPUS_PATH,
+            evidence,
+            corpus_fields,
+        )
+        write_csv(
+            STICKING_SNAPSHOT_PATH,
+            sticking_points,
+            [
+                "sticking_point_id",
+                "race_id",
+                "topic",
+                "subtopic",
+                "candidate_a",
+                "candidate_b",
+                "contrast_type",
+                "relationship_code",
+                "candidate_a_quote",
+                "candidate_b_quote",
+                "candidate_a_source",
+                "candidate_b_source",
+            ],
+        )
+        return evidence, sticking_points
+    return read_csv(CORPUS_PATH), read_csv(STICKING_SNAPSHOT_PATH)
+
+
+def _deduplicate_analysis_evidence(
+    evidence: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    deduplicated = {}
+    for row in evidence:
+        group = "endorsed" if row["role"] in {"endorsed", "unopposed"} else "opponent"
+        candidate = row["candidate_name"].strip().casefold()
+        election_date = row["election_date"].strip()
+        if row["evidence_status"] == "verified":
+            key = (
+                candidate,
+                election_date,
+                group,
+                row["topic"],
+                row["quote"].strip(),
+            )
+        else:
+            key = (candidate, election_date, group, "source_unavailable")
+        deduplicated.setdefault(key, row)
+    return list(deduplicated.values())
 
 
 def tokenize(text: str) -> list[str]:
@@ -526,6 +606,71 @@ def evidence_coverage(evidence: list[dict[str, str]]) -> list[dict[str, str]]:
     return rows
 
 
+def verified_excerpt_volume(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    counts: dict[str, Counter[str]] = defaultdict(Counter)
+    for row in rows:
+        cycle = row["election_date"][:4] if row["election_date"] else "unknown"
+        counts[cycle][row["group"]] += 1
+    output = []
+    for cycle, values in counts.items():
+        endorsed = values["endorsed"]
+        opponent = values["opponent"]
+        output.append(
+            {
+                "cycle": cycle,
+                "endorsed_excerpts": str(endorsed),
+                "opponent_excerpts": str(opponent),
+                "total": str(endorsed + opponent),
+            }
+        )
+    return sorted(output, key=lambda row: row["cycle"])
+
+
+def source_type_comparison(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    counts: dict[str, Counter[str]] = defaultdict(Counter)
+    totals = Counter()
+    for row in rows:
+        source_type = row["source_type"] or "unspecified"
+        counts[source_type][row["group"]] += 1
+        totals[row["group"]] += 1
+    output = []
+    for source_type, values in counts.items():
+        endorsed = values["endorsed"]
+        opponent = values["opponent"]
+        endorsed_share = endorsed / max(totals["endorsed"], 1)
+        opponent_share = opponent / max(totals["opponent"], 1)
+        output.append(
+            {
+                "source_type": source_type,
+                "endorsed_excerpts": str(endorsed),
+                "opponent_excerpts": str(opponent),
+                "endorsed_share": f"{endorsed_share:.6f}",
+                "opponent_share": f"{opponent_share:.6f}",
+                "difference": f"{endorsed_share - opponent_share:.6f}",
+            }
+        )
+    return sorted(output, key=lambda row: abs(float(row["difference"])), reverse=True)
+
+
+def explicit_conflicts_by_cycle(
+    rows: list[dict[str, str]], evidence: list[dict[str, str]]
+) -> list[dict[str, str]]:
+    cycle_by_race = {}
+    for row in evidence:
+        if row["race_id"] and row["election_date"]:
+            cycle_by_race[row["race_id"]] = row["election_date"][:4]
+    counts = Counter(
+        cycle_by_race.get(row["race_id"], "unknown")
+        for row in rows
+        if row["contrast_type"] == "explicit_conflict"
+    )
+    return [
+        {"cycle": cycle, "explicit_conflicts": str(count)}
+        for cycle, count in sorted(counts.items())
+        if cycle != "unknown"
+    ]
+
+
 def cosine_similarity(text_a: str, text_b: str) -> float:
     counts_a = Counter(tokenize(text_a))
     counts_b = Counter(tokenize(text_b))
@@ -600,9 +745,16 @@ def _candidate_corpus(
         quotes_by_document[(candidate, election_date, group)].append(row["quote"].strip())
         excerpt_rows.append(
             {
+                "statement_key": row["statement_key"],
+                "candidate_name": candidate,
+                "election_date": election_date,
                 "group": group,
                 "topic": row["topic"],
+                "subtopic": row["subtopic"],
                 "text": row["quote"].strip(),
+                "quote": row["quote"].strip(),
+                "source_url": row["source_url"],
+                "source_type": row["source_type"],
             }
         )
     documents = [
@@ -622,10 +774,11 @@ def _write_text_report(
     summary: dict[str, int | float],
     candidate_mpif: list[dict[str, str]],
     official_mpif: list[dict[str, str]],
-    topic_rows: list[dict[str, str]],
     prevalence_rows: list[dict[str, str]],
     coverage_rows: list[dict[str, str]],
-    cycle_rows: list[dict[str, str]],
+    volume_rows: list[dict[str, str]],
+    source_type_rows: list[dict[str, str]],
+    explicit_cycle_rows: list[dict[str, str]],
 ) -> None:
     endorsed_terms = [
         row["feature"] for row in candidate_mpif if row["favored_group"] == "endorsed"
@@ -637,23 +790,21 @@ def _write_text_report(
     democratic_terms = [
         row["feature"] for row in official_mpif if row["favored_group"] == "democratic"
     ][:8]
-    lowest_similarity = sorted(
-        topic_rows, key=lambda row: float(row["cosine_similarity"])
-    )[:5]
-    topic_differences = sorted(
-        topic_rows,
-        key=lambda row: abs(
-            float(row["endorsed_share"]) - float(row["opponent_share"])
-        ),
-        reverse=True,
-    )[:7]
     prevalence_positive = [
         row for row in prevalence_rows if float(row["difference"]) > 0
     ][:8]
     prevalence_negative = [
         row for row in prevalence_rows if float(row["difference"]) < 0
     ][:8]
-    largest_cycles = sorted(cycle_rows, key=lambda row: int(row["total"]), reverse=True)[:5]
+    largest_volume_cycles = sorted(
+        volume_rows, key=lambda row: int(row["total"]), reverse=True
+    )[:5]
+    largest_explicit_cycles = sorted(
+        explicit_cycle_rows,
+        key=lambda row: int(row["explicit_conflicts"]),
+        reverse=True,
+    )[:5]
+    source_type_differences = source_type_rows[:8]
     text = f"""# DSA-versus-Democratic text analysis
 
 This analysis is generated by `uv run dsa-analysis analyze-text` from the completed,
@@ -669,6 +820,17 @@ strictly validated census.
 Identical candidate quotations repeated through multiple chapter or National endorsement queues
 are counted once per candidate and election.
 
+## Source data and lineage
+
+- `data/analysis/candidate_text_corpus.csv` is the committed row-level input. Every verified row
+  contains an exact candidate quotation and source URL.
+- `data/analysis/primary_sticking_points.csv` is the committed deduplicated contrast input.
+- The candidate corpus is exported by code from
+  `data/processed/candidate_statement_evidence.csv`, which is generated by
+  `dsa-analysis merge-statement-reviews`.
+- The public charts use exact words, source types, evidence statuses, election dates, and
+  explicitly named conflicts. They do not use analyst-created topic totals.
+
 ## Methods
 
 - **TF-IDF:** mean unigram TF-IDF by candidate group.
@@ -678,10 +840,10 @@ are counted once per candidate and election.
 - **Document prevalence:** difference in the share of candidate/election documents containing a
   normalized feature. This prevents a few candidates who repeat a phrase many times from
   dominating the result.
-- **Cosine similarity:** term-frequency similarity between endorsed-candidate and opponent
-  language within each coded topic.
-- **Sticking-point counts:** unique contrast IDs, separated into direct explicit conflicts and
-  analyst-coded policy divergences.
+- **Source mix:** direct counts of the retained `source_type` metadata attached to exact quotes.
+- **Evidence volume:** direct counts of deduplicated verified quotations by election year.
+- **Explicit conflicts:** unique rows marked `explicit_conflict`; analyst-coded divergences are
+  excluded from the public conflict chart.
 
 ## Main language differences
 
@@ -690,11 +852,9 @@ are counted once per candidate and election.
 - Official DSA features: {", ".join(_label(term) for term in dsa_terms)}.
 - Official Democratic platform features: {", ".join(_label(term) for term in democratic_terms)}.
 
-![Candidate MPIF terms](../outputs/figures/text_analysis/candidate_mpif_terms.svg)
+![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
-![Candidate TF-IDF terms](../outputs/figures/text_analysis/candidate_tfidf_terms.svg)
-
-![Official DSA and Democratic Party MPIF terms](../outputs/figures/text_analysis/official_dsa_democratic_mpif.svg)
+![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
 The candidate comparison especially distinguishes rights-based housing and labor language
 (`rent`, `human right`, `rent control`, `social housing`, `living wage`) from opponent language
@@ -708,48 +868,40 @@ training, and border administration.
 - More common across opponent documents:
   {", ".join(_label(row["feature"]) for row in prevalence_negative)}.
 
-![Candidate feature prevalence](../outputs/figures/text_analysis/candidate_feature_prevalence.svg)
-
 When MPIF and document prevalence point in the same direction, the result is less likely to be
 driven by one unusually repetitive campaign.
 
-## Issue emphasis
+## First-party source mix
 
-![Candidate topic shares](../outputs/figures/text_analysis/candidate_topic_shares.svg)
+The largest differences in the kinds of real sources recovered are:
 
-The largest group differences in excerpt share are:
+{chr(10).join(f'- **{_label(row["source_type"])}:** {float(row["difference"]):+.1%}' for row in source_type_differences)}
 
-{chr(10).join(f'- **{_label(row["topic"])}:** {(float(row["endorsed_share"]) - float(row["opponent_share"])):+.1%}' for row in topic_differences)}
+Positive values indicate a larger share of DSA-endorsed excerpts; negative values indicate a
+larger share of opponent excerpts.
 
-Positive values indicate more emphasis among DSA-endorsed candidates.
+![Source type difference](../outputs/figures/text_analysis/source_type_difference.svg)
 
-![Topic emphasis difference](../outputs/figures/text_analysis/topic_emphasis_difference.svg)
+## Evidence volume by election cycle
 
-## Topics with the least shared language
+{chr(10).join(f'- **{row["cycle"]}:** {row["endorsed_excerpts"]} endorsed-candidate and {row["opponent_excerpts"]} opponent quotations' for row in largest_volume_cycles)}
 
-{chr(10).join(f'- **{_label(row["topic"])}:** {float(row["cosine_similarity"]):.2f}' for row in lowest_similarity)}
+![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
 
-![Topic cosine similarity](../outputs/figures/text_analysis/topic_cosine_similarity.svg)
+These are direct counts of exact quotations, not estimates of issue importance.
 
-Low similarity identifies different vocabulary within an issue; it does not by itself prove
-opposing policy positions.
+## Explicitly stated conflicts
 
-## Cycles with the most recorded contrasts
+{chr(10).join(f'- **{row["cycle"]}:** {row["explicit_conflicts"]} explicit conflicts' for row in largest_explicit_cycles)}
 
-{chr(10).join(f'- **{row["cycle"]}:** {row["total"]}' for row in largest_cycles)}
+![Explicit conflicts by cycle](../outputs/figures/text_analysis/explicit_conflicts_by_cycle.svg)
 
-![Sticking points by topic](../outputs/figures/text_analysis/sticking_points_by_topic.svg)
-
-![Sticking points by cycle](../outputs/figures/text_analysis/sticking_points_by_cycle.svg)
-
-Counts depend on recoverable first-party material and the number of identified primaries in each
-cycle. They are not measures of voter salience.
+This chart excludes analyst-coded divergences and retains only direct, source-supported conflict
+records.
 
 ## Evidence coverage
 
 {chr(10).join(f'- **{_label(row["group"])}:** {row["verified_documents"]} verified candidate/election documents, {row["source_unavailable_documents"]} documented source gaps ({float(row["verified_share"]):.1%} verified).' for row in coverage_rows)}
-
-![Candidate evidence coverage](../outputs/figures/text_analysis/candidate_evidence_coverage.svg)
 
 ## Limitations
 
@@ -758,7 +910,8 @@ excerpts, so it is much smaller than the candidate corpus. `source_unavailable` 
 unknowns rather than evidence of no position. Lexical distinctiveness measures language, not
 ideology, sincerity, policy feasibility, or causal importance in election outcomes. Phrase
 normalization reduces superficial variants, but it can also combine uses that differ in context;
-the exact source quotations remain the authoritative evidence.
+the exact source quotations and URLs in `data/analysis/candidate_text_corpus.csv` remain the
+authoritative evidence.
 """
     (REPORT_DIR / "text_analysis.md").write_text(text, encoding="utf-8")
 
@@ -782,6 +935,318 @@ def _official_corpus(excerpts: list[dict[str, str]]) -> list[dict[str, str]]:
             }
         )
     return documents
+
+
+def _policy_language_chart(rows: list[dict[str, str]]) -> None:
+    policy_features = {
+        "affordable_housing",
+        "border",
+        "business",
+        "climate_change",
+        "collective_bargaining",
+        "corporate",
+        "eviction",
+        "green_new_deal",
+        "healthcare",
+        "human_right",
+        "living_wage",
+        "market",
+        "medicare_for_all",
+        "minimum_wage",
+        "public_housing",
+        "public_option",
+        "rent",
+        "rent_control",
+        "single_payer",
+        "small_business",
+        "social_housing",
+        "technology",
+        "tenant",
+        "training",
+        "union",
+        "universal_basic_income",
+        "worker",
+        "working_class",
+    }
+    filtered = [row for row in rows if row["feature"] in policy_features]
+    positive = [row for row in filtered if float(row["difference"]) > 0][:8]
+    negative = [row for row in filtered if float(row["difference"]) < 0][:8]
+    selected = [*reversed(positive), *negative]
+    _diverging_svg(
+        FIGURE_DIR / "policy_language_difference.svg",
+        "Difference in policy language",
+        "Share of candidate/election documents containing each normalized policy feature",
+        [_label(row["feature"]) for row in selected],
+        [float(row["difference"]) for row in selected],
+        "More DSA-endorsed documents",
+        "More opponent documents",
+        (
+            "Source: candidate_statement_evidence.csv; verified exact quotes; one record per "
+            "candidate/election/quote after deduplication."
+        ),
+    )
+
+
+def _official_contrast_chart(
+    comparisons: list[dict[str, str]], excerpts: list[dict[str, str]]
+) -> None:
+    excerpts_by_id = {row["excerpt_id"]: row for row in excerpts}
+    rows = [row for row in comparisons if row["reviewed"].casefold() == "true"]
+    width = 1320
+    row_height = 145
+    height = 165 + len(rows) * row_height
+    body = [
+        _svg_header(
+            width,
+            height,
+            "Official DSA and Democratic policy mechanisms",
+            "Direct comparison of manually reviewed official texts",
+        ),
+        _text(285, 108, "DSA", "middle", DSA_RED, "13px", "700"),
+        _text(660, 108, "Issue", "middle", MID, "12px", "700"),
+        _text(1035, 108, "Democratic Party", "middle", DEMOCRATIC_BLUE, "13px", "700"),
+    ]
+    for index, row in enumerate(rows):
+        y = 132 + index * row_height
+        dsa = excerpts_by_id[row["dsa_excerpt_id"]]
+        democratic = excerpts_by_id[row["democratic_excerpt_id"]]
+        body.append(_rect(48, y, 490, 112, _tint(DSA_RED, 0.88)))
+        body.append(_rect(782, y, 490, 112, _tint(DEMOCRATIC_BLUE, 0.88)))
+        body.append(_line(660, y + 4, 660, y + 108, LIGHT))
+        body.append(_wrapped_text(68, y + 28, dsa["quote"], 54, DSA_RED))
+        body.append(
+            _wrapped_text(802, y + 28, democratic["quote"], 54, DEMOCRATIC_BLUE)
+        )
+        body.append(
+            _text(
+                660,
+                y + 43,
+                _label(row["topic"]),
+                "middle",
+                DARK,
+                "14px",
+                "700",
+            )
+        )
+        body.append(
+            _text(
+                660,
+                y + 66,
+                row["cycle"],
+                "middle",
+                MID,
+                "11px",
+            )
+        )
+        body.append(
+            _text(
+                660,
+                y + 88,
+                _label(row["relationship_code"]),
+                "middle",
+                MID,
+                "10px",
+                "700",
+            )
+        )
+    body.append(
+        _svg_footer(
+            width,
+            height,
+            "Source: reviewed official DSA statements and Democratic Party platforms; quotations shortened only by line wrapping.",
+        )
+    )
+    _write_svg(FIGURE_DIR / "official_policy_contrasts.svg", width, height, body)
+
+
+def _cycle_line_chart(rows: list[dict[str, str]]) -> None:
+    rows = [row for row in rows if row["cycle"] != "unknown"]
+    width = 1200
+    height = 620
+    plot_left = 105
+    plot_right = 1080
+    plot_top = 125
+    plot_bottom = 520
+    maximum = max(
+        (
+            max(int(row["explicit_conflict"]), int(row["coded_divergence"]))
+            for row in rows
+        ),
+        default=1,
+    )
+    body = [
+        _svg_header(
+            width,
+            height,
+            "Primary sticking points by election cycle",
+            "Unique explicit conflicts and analyst-coded policy divergences",
+        )
+    ]
+    for tick in range(5):
+        value = maximum * tick / 4
+        y = plot_bottom - (plot_bottom - plot_top) * tick / 4
+        body.append(_line(plot_left, y, plot_right, y, LIGHT))
+        body.append(_text(plot_left - 14, y + 4, f"{value:.0f}", "end", MID, "11px"))
+    x_positions = []
+    for index, row in enumerate(rows):
+        x = plot_left + (plot_right - plot_left) * index / max(len(rows) - 1, 1)
+        x_positions.append(x)
+        body.append(_text(x, plot_bottom + 28, row["cycle"], "middle", MID, "11px"))
+    for key, color, label in (
+        ("explicit_conflict", DSA_RED, "Explicit conflict"),
+        ("coded_divergence", DEMOCRATIC_BLUE, "Coded divergence"),
+    ):
+        points = []
+        for x, row in zip(x_positions, rows, strict=True):
+            value = int(row[key])
+            y = plot_bottom - (plot_bottom - plot_top) * value / maximum
+            points.append((x, y, value))
+        body.append(
+            f'<polyline points="{" ".join(f"{x:.2f},{y:.2f}" for x, y, _ in points)}" '
+            f'fill="none" stroke="{color}" stroke-width="4" stroke-linejoin="round"/>'
+        )
+        for x, y, value in points:
+            body.append(_circle(x, y, 6, color))
+        x, y, _ = points[-1]
+        body.append(_text(x + 14, y + 4, label, color=color, size="12px", weight="700"))
+    body.append(
+        _svg_footer(
+            width,
+            height,
+            "Counts reflect recoverable first-party evidence and the number of identified primaries in each cycle.",
+        )
+    )
+    _write_svg(FIGURE_DIR / "sticking_points_by_cycle.svg", width, height, body)
+
+
+def _volume_cycle_chart(rows: list[dict[str, str]]) -> None:
+    width = 1200
+    height = 620
+    plot_left = 105
+    plot_right = 1080
+    plot_top = 125
+    plot_bottom = 520
+    maximum = max(
+        (
+            max(int(row["endorsed_excerpts"]), int(row["opponent_excerpts"]))
+            for row in rows
+        ),
+        default=1,
+    )
+    body = [
+        _svg_header(
+            width,
+            height,
+            "Verified first-party evidence by election cycle",
+            "Count of deduplicated exact candidate quotations",
+        )
+    ]
+    for tick in range(5):
+        value = maximum * tick / 4
+        y = plot_bottom - (plot_bottom - plot_top) * tick / 4
+        body.append(_line(plot_left, y, plot_right, y, LIGHT))
+        body.append(_text(plot_left - 14, y + 4, f"{value:.0f}", "end", MID, "11px"))
+    group_width = (plot_right - plot_left) / max(len(rows), 1)
+    bar_width = min(28, group_width * 0.28)
+    for index, row in enumerate(rows):
+        center = plot_left + group_width * (index + 0.5)
+        endorsed = int(row["endorsed_excerpts"])
+        opponent = int(row["opponent_excerpts"])
+        endorsed_height = (plot_bottom - plot_top) * endorsed / maximum
+        opponent_height = (plot_bottom - plot_top) * opponent / maximum
+        body.append(
+            _rect(
+                center - bar_width - 2,
+                plot_bottom - endorsed_height,
+                bar_width,
+                endorsed_height,
+                DSA_RED,
+            )
+        )
+        body.append(
+            _rect(
+                center + 2,
+                plot_bottom - opponent_height,
+                bar_width,
+                opponent_height,
+                DEMOCRATIC_BLUE,
+            )
+        )
+        body.append(_text(center, plot_bottom + 28, row["cycle"], "middle", MID, "11px"))
+    body.extend(
+        [
+            _legend(800, 72, DSA_RED, "DSA-endorsed"),
+            _legend(945, 72, DEMOCRATIC_BLUE, "Democratic opponents"),
+            _svg_footer(
+                width,
+                height,
+                "Source: data/analysis/candidate_text_corpus.csv; evidence_status=verified; duplicate candidate/election/quote rows removed.",
+            ),
+        ]
+    )
+    _write_svg(FIGURE_DIR / "verified_evidence_by_cycle.svg", width, height, body)
+
+
+def _source_type_chart(rows: list[dict[str, str]]) -> None:
+    selected = rows[:12]
+    _diverging_svg(
+        FIGURE_DIR / "source_type_difference.svg",
+        "Difference in first-party source mix",
+        "Share of verified exact excerpts by source type",
+        [_label(row["source_type"]) for row in selected],
+        [float(row["difference"]) for row in selected],
+        "More DSA-endorsed excerpts",
+        "More opponent excerpts",
+        (
+            "Source: data/analysis/candidate_text_corpus.csv; source_type is retained "
+            "from each reviewed exact quotation."
+        ),
+    )
+
+
+def _explicit_cycle_chart(rows: list[dict[str, str]]) -> None:
+    width = 1200
+    height = 600
+    plot_left = 105
+    plot_right = 1080
+    plot_top = 125
+    plot_bottom = 500
+    maximum = max((int(row["explicit_conflicts"]) for row in rows), default=1)
+    body = [
+        _svg_header(
+            width,
+            height,
+            "Explicitly stated primary conflicts by cycle",
+            "Only direct, source-supported candidate contrasts; coded divergences excluded",
+        )
+    ]
+    for tick in range(5):
+        value = maximum * tick / 4
+        y = plot_bottom - (plot_bottom - plot_top) * tick / 4
+        body.append(_line(plot_left, y, plot_right, y, LIGHT))
+        body.append(_text(plot_left - 14, y + 4, f"{value:.0f}", "end", MID, "11px"))
+    points = []
+    for index, row in enumerate(rows):
+        x = plot_left + (plot_right - plot_left) * index / max(len(rows) - 1, 1)
+        value = int(row["explicit_conflicts"])
+        y = plot_bottom - (plot_bottom - plot_top) * value / maximum
+        points.append((x, y, value))
+        body.append(_text(x, plot_bottom + 28, row["cycle"], "middle", MID, "11px"))
+    body.append(
+        f'<polyline points="{" ".join(f"{x:.2f},{y:.2f}" for x, y, _ in points)}" '
+        f'fill="none" stroke="{DSA_RED}" stroke-width="4" stroke-linejoin="round"/>'
+    )
+    for x, y, value in points:
+        body.append(_circle(x, y, 7, DSA_RED))
+        body.append(_text(x, y - 14, str(value), "middle", DARK, "11px", "700"))
+    body.append(
+        _svg_footer(
+            width,
+            height,
+            "Source: data/analysis/primary_sticking_points.csv; contrast_type=explicit_conflict; unique sticking_point_id rows.",
+        )
+    )
+    _write_svg(FIGURE_DIR / "explicit_conflicts_by_cycle.svg", width, height, body)
 
 
 def _candidate_tfidf_chart(rows: list[dict[str, str]]) -> None:
@@ -886,6 +1351,10 @@ def _similarity_chart(rows: list[dict[str, str]]) -> None:
         [float(row["cosine_similarity"]) for row in selected],
         DEMOCRATIC_BLUE,
         maximum=1.0,
+        footer=(
+            "Source: candidate_statement_evidence.csv topic codes and exact quotes; "
+            "cosine similarity uses normalized token-frequency vectors."
+        ),
     )
 
 
@@ -908,6 +1377,10 @@ def _topic_difference_chart(rows: list[dict[str, str]]) -> None:
         ],
         "More endorsed-candidate emphasis",
         "More opponent emphasis",
+        (
+            "Source: candidate_statement_evidence.csv topic codes; verified exact quotes; "
+            "shares use deduplicated excerpts within each group."
+        ),
     )
 
 
@@ -1022,6 +1495,7 @@ def _diverging_svg(
     values: list[float],
     positive_label: str,
     negative_label: str,
+    footer: str = "Positive scores favor the red group; negative scores favor the blue group.",
 ) -> None:
     width = 1240
     height = 215 + len(labels) * 36
@@ -1050,7 +1524,7 @@ def _diverging_svg(
         [
             _text((center + plot_right) / 2, 84, positive_label, "middle", DSA_RED, "12px", "700"),
             _text((plot_left + center) / 2, 84, negative_label, "middle", DEMOCRATIC_BLUE, "12px", "700"),
-            _svg_footer(width, height, "Positive scores favor the red group; negative scores favor the blue group."),
+            _svg_footer(width, height, footer),
         ]
     )
     _write_svg(path, width, height, body)
@@ -1064,6 +1538,10 @@ def _horizontal_svg(
     values: list[float],
     color: str,
     maximum: float | None = None,
+    footer: str = (
+        "Similarity ranges from 0 (no shared vocabulary) to 1 "
+        "(identical term proportions)."
+    ),
 ) -> None:
     width = 1150
     height = 205 + len(labels) * 40
@@ -1080,7 +1558,7 @@ def _horizontal_svg(
         body.append(_text(plot_left - 22, y + 17, label, "end", DARK, "13px"))
         body.append(_rect(plot_left, y, plot_width * value / maximum, 24, color))
         body.append(_text(plot_left + plot_width * value / maximum + 9, y + 17, f"{value:.2f}", size="11px", weight="700"))
-    body.append(_svg_footer(width, height, "Similarity ranges from 0 (no shared vocabulary) to 1 (identical term proportions)."))
+    body.append(_svg_footer(width, height, footer))
     _write_svg(path, width, height, body)
 
 
@@ -1110,6 +1588,13 @@ def _circle(x: float, y: float, radius: float, color: str) -> str:
     )
 
 
+def _tint(color: str, amount: float) -> str:
+    color = color.lstrip("#")
+    channels = [int(color[index : index + 2], 16) for index in (0, 2, 4)]
+    mixed = [round(channel + (255 - channel) * amount) for channel in channels]
+    return "#" + "".join(f"{channel:02X}" for channel in mixed)
+
+
 def _line(x1: float, y1: float, x2: float, y2: float, color: str) -> str:
     return f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{color}" stroke-width="1"/>'
 
@@ -1133,6 +1618,30 @@ def _text(
 
 def _legend(x: float, y: float, color: str, label: str) -> str:
     return _circle(x + 6, y - 5, 6, color) + _text(x + 19, y, label, size="11px")
+
+
+def _wrapped_text(
+    x: float, y: float, value: str, width: int, color: str, max_lines: int = 4
+) -> str:
+    words = value.split()
+    lines = []
+    current = []
+    for word in words:
+        proposed = " ".join([*current, word])
+        if len(proposed) > width and current:
+            lines.append(" ".join(current))
+            current = [word]
+        else:
+            current.append(word)
+    if current:
+        lines.append(" ".join(current))
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        lines[-1] = lines[-1].rstrip(".,;:") + "…"
+    return "".join(
+        _text(x, y + index * 20, line, color=color, size="12px")
+        for index, line in enumerate(lines)
+    )
 
 
 def _write_svg(path: Path, width: int, height: int, body: list[str]) -> None:

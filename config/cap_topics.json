@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "source": "Comparative Agendas Project major topic codes: https://www.comparativeagendas.net/pages/master-codebook",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "minimum_similarity": 0.2,
+  "topics": [
+    {"code": 1, "name": "Macroeconomics", "description": "Taxation, budgets, spending, deficits, inflation, economic growth, and management of the overall economy.", "seeds": ["tax", "budget", "revenue", "inflation", "economic growth"]},
+    {"code": 2, "name": "Civil rights and liberties", "description": "Civil rights, discrimination, voting rights, privacy, racial and gender equality, disability rights, and LGBTQ rights.", "seeds": ["civil rights", "discrimination", "voting rights", "racial justice", "lgbtq"]},
+    {"code": 3, "name": "Health", "description": "Health care access and cost, insurance, Medicare, Medicaid, public health, mental health, and reproductive health.", "seeds": ["healthcare", "medicare", "medicaid", "insurance", "public health"]},
+    {"code": 4, "name": "Agriculture", "description": "Farming, ranching, agricultural markets, food safety, rural development, and agricultural land and water use.", "seeds": ["agriculture", "farm", "ranch", "rural", "food safety"]},
+    {"code": 5, "name": "Labor and employment", "description": "Wages, unions, collective bargaining, working conditions, unemployment, workplace safety, and employment law.", "seeds": ["worker", "union", "collective bargaining", "minimum wage", "paid leave"]},
+    {"code": 6, "name": "Education", "description": "Public schools, teachers, school funding, curriculum, higher education, tuition, student debt, school choice, and charter schools.", "seeds": ["education", "school", "teacher", "student debt", "tuition"]},
+    {"code": 7, "name": "Environment", "description": "Pollution, clean air and water, conservation, wildlife, climate change, emissions, and environmental protection.", "seeds": ["climate change", "pollution", "clean water", "conservation", "emissions"]},
+    {"code": 8, "name": "Energy", "description": "Electricity, utilities, fossil fuels, renewable and nuclear energy, energy prices, pipelines, and the power grid.", "seeds": ["energy", "electricity", "renewable", "solar", "pipeline"]},
+    {"code": 9, "name": "Immigration", "description": "Immigration and border enforcement, refugees, asylum, immigrant status, deportation, and sanctuary policies.", "seeds": ["immigration", "border", "refugee", "asylum", "deportation"]},
+    {"code": 10, "name": "Transportation", "description": "Roads, bridges, public transit, rail, airports, ports, vehicles, traffic, and transportation funding.", "seeds": ["transportation", "road", "bridge", "transit", "rail"]},
+    {"code": 12, "name": "Law, crime and justice", "description": "Policing, courts, sentencing, prisons, criminal justice reform, guns, drug enforcement, and public safety.", "seeds": ["police", "court", "prison", "criminal justice", "gun"]},
+    {"code": 13, "name": "Social welfare", "description": "Poverty, food assistance, child care, family services, elderly and disability services, homelessness, and the safety net.", "seeds": ["poverty", "food assistance", "child care", "homelessness", "safety net"]},
+    {"code": 14, "name": "Housing and community development", "description": "Affordable housing, homeownership, rents, tenant protections, zoning, homelessness, and community development.", "seeds": ["housing", "rent", "tenant", "zoning", "homeownership"]},
+    {"code": 15, "name": "Business, commerce and consumers", "description": "Business regulation, small business, banking, finance, insurance markets, consumer protection, corporations, and competition.", "seeds": ["business", "banking", "finance", "consumer protection", "corporation"]},
+    {"code": 16, "name": "Defense and veterans", "description": "Armed forces, National Guard, military installations, veterans benefits, troops, and homeland security.", "seeds": ["military", "veteran", "national guard", "troops", "homeland security"]},
+    {"code": 17, "name": "Science, technology and communications", "description": "Broadband, telecommunications, internet policy, research, innovation, cybersecurity, data privacy, and artificial intelligence.", "seeds": ["technology", "broadband", "internet", "cybersecurity", "artificial intelligence"]},
+    {"code": 18, "name": "Foreign trade", "description": "Trade agreements, tariffs, exports, imports, and international commerce.", "seeds": ["trade", "tariff", "export", "import", "free trade"]},
+    {"code": 19, "name": "International affairs", "description": "Foreign policy, foreign aid, international organizations, treaties, war, diplomacy, and relations with other countries.", "seeds": ["foreign policy", "foreign aid", "diplomacy", "war", "israel"]},
+    {"code": 20, "name": "Government operations", "description": "Elections administration, redistricting, campaign finance, ethics, corruption, transparency, constitutions, and government structure.", "seeds": ["election", "redistricting", "campaign finance", "ethics", "transparency"]},
+    {"code": 21, "name": "Public lands and water", "description": "Public land management, parks, water rights, forests, mining, wilderness, tribal affairs, and natural-resource use.", "seeds": ["public lands", "water rights", "forest", "mining", "tribal"]},
+    {"code": 23, "name": "Culture, family and social issues", "description": "Family, marriage, religion, arts, culture, sports, parental rights, and contested moral or social questions.", "seeds": ["family", "marriage", "religion", "culture", "parental rights"]}
+  ]
+}

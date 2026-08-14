@@ -36,3 +36,44 @@ first-party text before the row may appear in the report.
 
 One row per chapter and election year searched. It records where researchers looked and why a
 chapter-year may remain unresolved.
+## Analysis snapshots
+
+### `data/analysis/candidate_text_corpus.csv`
+
+Committed row-level input for the reproducible text and topic graphs. It is exported from
+`data/processed/candidate_statement_evidence.csv` by
+`dsa_analysis.text_analysis._load_or_export_analysis_data`.
+
+Key fields:
+
+- `statement_key`, `race_id`, `candidate_name`, `election_date`, `party`, `role`
+- `evidence_status`: `verified` or `source_unavailable`
+- `topic`, `subtopic`, `stance`: reviewed codes constrained by `config/taxonomy.json`
+- `quote`: exact first-party wording
+- `source_url`, `source_type`, `published_date`, `locator`
+- `direct_opponent_name`, `notes`
+
+Verified duplicate quotations are deduplicated by candidate, election, role, topic, and exact
+quote. Source-unavailable rows are deduplicated by candidate, election, and role.
+
+### `data/analysis/model_topic_classifications.csv`
+
+Local sentence-transformer output for every verified exact quotation. It preserves the exact
+quote and source URL and adds:
+
+- pinned model name and local device;
+- predicted CAP topic code/name;
+- cosine similarity;
+- runner-up topic and similarity;
+- top-two margin;
+- keyword-baseline topic/score and agreement flag.
+
+### `data/analysis/model_topic_validation.json`
+
+Run-level counts and diagnostics: classified/unclassified rows, threshold, low-margin rows,
+keyword agreement, and reviewed-code crosswalk agreement.
+
+### `data/analysis/primary_sticking_points.csv`
+
+Committed, deduplicated snapshot of the source-supported candidate/opponent contrast table used
+for topic and election-cycle charts.
