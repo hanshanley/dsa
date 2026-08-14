@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Source-first analysis of DSA positions and Democratic primary contrasts"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "sentence-transformers>=3.0,<4",
+    "torch>=2.4,<3",
+]
 
 [project.scripts]
 dsa-analysis = "dsa_analysis.cli:main"

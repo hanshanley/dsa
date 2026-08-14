@@ -45,7 +45,9 @@ class TextAnalysisTests(unittest.TestCase):
         stats = analyze_text()
         self.assertGreater(stats["candidate_documents"], 0)
         self.assertGreater(stats["sticking_points"], 0)
-        self.assertTrue((FIGURE_DIR / "candidate_mpif_terms.svg").exists())
+        self.assertEqual(stats["figure_count"], 6)
+        self.assertTrue((FIGURE_DIR / "policy_language_difference.svg").exists())
+        self.assertTrue((FIGURE_DIR / "official_policy_contrasts.svg").exists())
         self.assertTrue((TABLE_DIR / "analysis_manifest.json").exists())
 
 

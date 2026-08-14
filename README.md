@@ -23,12 +23,37 @@ source-supported candidate/opponent contrasts**.
 | Movement-building and working-class political power | Governing competence, coalition breadth, and institutional implementation |
 | Collective/public ownership and decommodification | Regulated, competitive capitalism |
 
-![Most informative DSA-endorsed and Democratic-opponent language](outputs/figures/text_analysis/candidate_mpif_terms.svg)
+![Difference in DSA-endorsed and Democratic-opponent policy language](outputs/figures/text_analysis/policy_language_difference.svg)
 
-The MPIF graph above uses normalized phrases and weighted log-odds. Red terms occur
-disproportionately in DSA-endorsed candidate documents; blue terms occur disproportionately in
-Democratic opponent documents. See the [full text-analysis report](report/text_analysis.md) for
-TF-IDF, robustness checks, issue shares, similarity, evidence coverage, and limitations.
+The graph above compares the share of candidate/election documents containing each normalized
+policy feature. Red features appear in more DSA-endorsed candidate documents; blue features
+appear in more Democratic opponent documents. See the
+[full text-analysis report](report/text_analysis.md) for methods, issue emphasis, similarity,
+sticking points, evidence coverage, and limitations.
+
+### Data behind the graphs
+
+- [`data/analysis/candidate_text_corpus.csv`](data/analysis/candidate_text_corpus.csv) contains
+  the exact candidate quote, candidate, election date, endorsed/opponent role, source URL, source
+  type, locator, and evidence status used by the analysis.
+- [`data/analysis/model_topic_classifications.csv`](data/analysis/model_topic_classifications.csv)
+  retains every exact quote and source URL alongside the local model topic, cosine similarity,
+  runner-up topic, margin, and keyword-baseline result.
+- [`data/analysis/primary_sticking_points.csv`](data/analysis/primary_sticking_points.csv)
+  contains the deduplicated candidate/opponent contrasts used in the issue and cycle graphs.
+- [`config/cap_topics.json`](config/cap_topics.json) defines the published Comparative Agendas
+  Project topic scheme embedded by the pinned local model.
+- [`data/analysis/model_topic_validation.json`](data/analysis/model_topic_validation.json)
+  reports thresholding, low-margin rows, keyword agreement, and reviewed-code crosswalk
+  agreement.
+
+The model never invents replacement text. It classifies the exact quotation retained in the same
+row. For each model topic:
+
+```text
+topic share = locally classified exact quotations in topic / all classified quotations
+topic difference = DSA-endorsed share - Democratic-opponent share
+```
 
 ## What the project does
 
@@ -96,7 +121,8 @@ uv run dsa-analysis analyze
 uv run dsa-analysis analyze-text
 ```
 
-`analyze-text` uses only the Python standard library. It compares:
+`analyze-text` runs the pinned local `sentence-transformers/all-MiniLM-L6-v2` model; no hosted
+model API is used. It compares:
 
 - reviewed official DSA excerpts with reviewed Democratic Party platform excerpts; and
 - verified statements by DSA-endorsed candidates with verified statements by their Democratic
@@ -115,35 +141,25 @@ hashes and method parameters.
 The figures use one consistent publication palette throughout: DSA red for endorsed/DSA text,
 Democratic blue for opponent/DNC text, charcoal labels, and a warm neutral background.
 
-### Distinctive candidate language
+### Policy language
 
-![Distinctive candidate MPIF terms](outputs/figures/text_analysis/candidate_mpif_terms.svg)
-
-![Distinctive candidate TF-IDF terms](outputs/figures/text_analysis/candidate_tfidf_terms.svg)
+![Difference in policy language](outputs/figures/text_analysis/policy_language_difference.svg)
 
 ### Official DSA and Democratic Party language
 
-![Official DSA and Democratic Party MPIF terms](outputs/figures/text_analysis/official_dsa_democratic_mpif.svg)
+![Official policy mechanism contrasts](outputs/figures/text_analysis/official_policy_contrasts.svg)
 
-### Issue emphasis and similarity
+### Local-model policy emphasis
 
-![Candidate topic shares](outputs/figures/text_analysis/candidate_topic_shares.svg)
+![Local-model policy emphasis difference](outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
 
-![Topic emphasis difference](outputs/figures/text_analysis/topic_emphasis_difference.svg)
+### Direct evidence and explicit conflicts
 
-![Topic cosine similarity](outputs/figures/text_analysis/topic_cosine_similarity.svg)
+![Verified evidence by cycle](outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
 
-### Robustness and evidence coverage
+![Explicit conflicts by cycle](outputs/figures/text_analysis/explicit_conflicts_by_cycle.svg)
 
-![Candidate feature prevalence](outputs/figures/text_analysis/candidate_feature_prevalence.svg)
-
-![Candidate evidence coverage](outputs/figures/text_analysis/candidate_evidence_coverage.svg)
-
-### Primary sticking points
-
-![Sticking points by topic](outputs/figures/text_analysis/sticking_points_by_topic.svg)
-
-![Sticking points by cycle](outputs/figures/text_analysis/sticking_points_by_cycle.svg)
+![Source type difference](outputs/figures/text_analysis/source_type_difference.svg)
 
 Run the test suite with:
 
