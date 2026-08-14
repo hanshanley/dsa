@@ -41,7 +41,12 @@ position.
 - `data/processed/` contains collection results, research queues, coverage ledgers, verified
   endorsements, and the SQLite research database.
 - `outputs/tables/` contains generated analysis tables.
+- `outputs/figures/text_analysis/` contains reproducible SVG text-analysis graphs.
+- `outputs/tables/text_analysis/` contains TF-IDF, MPIF, similarity, topic, cycle, and manifest
+  tables used by those figures.
 - `report/draft.md` contains the generated research report and current dataset status.
+- `report/text_analysis.md` explains the graph methods and summarizes the principal lexical
+  findings.
 
 ## Repository guide
 
@@ -65,7 +70,46 @@ To rebuild the reviewed data and report:
 uv run dsa-analysis init-db
 uv run dsa-analysis validate
 uv run dsa-analysis analyze
+uv run dsa-analysis analyze-text
 ```
+
+`analyze-text` uses only the Python standard library. It compares:
+
+- reviewed official DSA excerpts with reviewed Democratic Party platform excerpts; and
+- verified statements by DSA-endorsed candidates with verified statements by their Democratic
+  primary opponents.
+
+It generates mean TF-IDF, weighted log-odds most-informative-feature (MPIF) scores, topic shares,
+within-topic cosine similarity, and sticking-point counts by topic and cycle. Identical candidate
+quotes repeated through multiple endorsement queues are deduplicated by candidate and election.
+The generated `analysis_manifest.json` records input hashes and method parameters.
+
+## Text-analysis graph gallery
+
+The figures use one consistent publication palette throughout: DSA red for endorsed/DSA text,
+Democratic blue for opponent/DNC text, charcoal labels, and a warm neutral background.
+
+### Distinctive candidate language
+
+![Distinctive candidate MPIF terms](outputs/figures/text_analysis/candidate_mpif_terms.svg)
+
+![Distinctive candidate TF-IDF terms](outputs/figures/text_analysis/candidate_tfidf_terms.svg)
+
+### Official DSA and Democratic Party language
+
+![Official DSA and Democratic Party MPIF terms](outputs/figures/text_analysis/official_dsa_democratic_mpif.svg)
+
+### Issue emphasis and similarity
+
+![Candidate topic shares](outputs/figures/text_analysis/candidate_topic_shares.svg)
+
+![Topic cosine similarity](outputs/figures/text_analysis/topic_cosine_similarity.svg)
+
+### Primary sticking points
+
+![Sticking points by topic](outputs/figures/text_analysis/sticking_points_by_topic.svg)
+
+![Sticking points by cycle](outputs/figures/text_analysis/sticking_points_by_cycle.svg)
 
 Run the test suite with:
 

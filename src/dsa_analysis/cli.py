@@ -27,6 +27,7 @@ from .statement_batches import (
     prepare_statement_batches,
 )
 from .sticking_points import analyze_sticking_points
+from .text_analysis import analyze_text
 from .voter_guides import collect_voter_guides
 from .wayback_crawler import discover_wayback_urls, filter_existing_wayback_urls
 
@@ -151,6 +152,10 @@ def main() -> None:
     )
     validate_parser.add_argument("--strict", action="store_true")
     subparsers.add_parser("analyze", help="Generate summary tables and the draft report.")
+    subparsers.add_parser(
+        "analyze-text",
+        help="Generate TF-IDF, MPIF, similarity, topic, and sticking-point graphs.",
+    )
     args = parser.parse_args()
 
     if args.command == "collect":
@@ -304,3 +309,13 @@ def main() -> None:
             "Analysis complete: "
             + ", ".join(f"{name}={value}" for name, value in stats.items())
         )
+        return
+    if args.command == "analyze-text":
+        stats = analyze_text()
+        print(
+            "Text analysis complete: "
+            f"candidate_documents={stats['candidate_documents']}, "
+            f"candidate_verified_excerpts={stats['candidate_verified_excerpts']}, "
+            f"figures=7."
+        )
+        return

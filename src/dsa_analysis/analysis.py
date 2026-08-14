@@ -331,6 +331,21 @@ not claims about every endorsed candidate.
 
 {chr(10).join(sticking_lines) or "- No derived sticking points are available."}
 
+## Reproducible text-analysis figures
+
+The full TF-IDF, MPIF, topic-share, similarity, and cycle analysis is generated with
+`uv run dsa-analysis analyze-text`.
+
+![Distinctive candidate MPIF terms](../outputs/figures/text_analysis/candidate_mpif_terms.svg)
+
+![Official DSA and Democratic Party MPIF terms](../outputs/figures/text_analysis/official_dsa_democratic_mpif.svg)
+
+![Candidate topic shares](../outputs/figures/text_analysis/candidate_topic_shares.svg)
+
+![Primary sticking points by topic](../outputs/figures/text_analysis/sticking_points_by_topic.svg)
+
+![Primary sticking points by cycle](../outputs/figures/text_analysis/sticking_points_by_cycle.svg)
+
 ## Limitations
 
 {limitations}
