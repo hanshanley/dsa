@@ -69,6 +69,14 @@ prior over unigrams and adjacent bigrams. Topic shares use reviewed excerpt coun
 similarity uses cosine similarity over token-frequency vectors. Sticking-point graphs deduplicate
 by stable contrast ID.
 
+Before scoring, common policy phrases are mapped to canonical features, including
+`medicare_for_all`, `green_new_deal`, `single_payer`, `public_option`, `rent_control`,
+`social_housing`, `living_wage`, `working_class`, and `small_business`. Common plural forms are
+lightly lemmatized, and campaign boilerplate terms are excluded. The generated
+`normalization_rules.csv` makes phrase mappings auditable. Document-prevalence results report the
+share of candidate/election documents containing each feature as a robustness check against
+repetition by a small number of campaigns.
+
 These measures describe recoverable language. They do not infer positions from missing sources,
 measure sincerity or policy quality, or prove that a lexical difference caused an election
 outcome. The official DSA/DNC corpus is intentionally limited to manually reviewed exact

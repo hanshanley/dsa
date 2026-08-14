@@ -142,6 +142,12 @@ The full TF-IDF, MPIF, topic-share, similarity, and cycle analysis is generated 
 
 ![Candidate topic shares](../outputs/figures/text_analysis/candidate_topic_shares.svg)
 
+![Topic emphasis difference](../outputs/figures/text_analysis/topic_emphasis_difference.svg)
+
+![Candidate feature prevalence](../outputs/figures/text_analysis/candidate_feature_prevalence.svg)
+
+![Candidate evidence coverage](../outputs/figures/text_analysis/candidate_evidence_coverage.svg)
+
 ![Primary sticking points by topic](../outputs/figures/text_analysis/sticking_points_by_topic.svg)
 
 ![Primary sticking points by cycle](../outputs/figures/text_analysis/sticking_points_by_cycle.svg)

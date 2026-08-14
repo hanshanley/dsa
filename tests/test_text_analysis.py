@@ -14,7 +14,13 @@ class TextAnalysisTests(unittest.TestCase):
     def test_tokenize_removes_stopwords_and_normalizes_possessives(self):
         self.assertEqual(
             tokenize("The workers’ movement supports public ownership."),
-            ["workers", "movement", "supports", "public", "ownership"],
+            ["worker", "movement", "ownership"],
+        )
+
+    def test_tokenize_canonicalizes_policy_phrases(self):
+        self.assertEqual(
+            tokenize("Medicare for All and rent control support working-class tenants."),
+            ["medicare_for_all", "rent_control", "working_class", "tenant"],
         )
 
     def test_cosine_similarity_bounds(self):
@@ -32,7 +38,7 @@ class TextAnalysisTests(unittest.TestCase):
             minimum_total=1,
         )
         by_feature = {row["feature"]: row for row in rows}
-        self.assertEqual(by_feature["workers"]["favored_group"], "endorsed")
+        self.assertEqual(by_feature["worker"]["favored_group"], "endorsed")
         self.assertEqual(by_feature["business"]["favored_group"], "opponent")
 
     def test_analysis_generates_figures_and_manifest(self):

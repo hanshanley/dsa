@@ -92,6 +92,65 @@ STOPWORDS = {
     "your",
 }
 
+DOMAIN_STOPWORDS = {
+    "area",
+    "bring",
+    "candidate",
+    "campaign",
+    "cause",
+    "city",
+    "community",
+    "county",
+    "ensure",
+    "focus",
+    "help",
+    "ill",
+    "increase",
+    "issue",
+    "lead",
+    "many",
+    "must",
+    "need",
+    "new",
+    "officer",
+    "people",
+    "plan",
+    "policy",
+    "president",
+    "priority",
+    "public",
+    "right",
+    "seek",
+    "state",
+    "support",
+    "system",
+    "want",
+    "work",
+    "year",
+}
+
+PHRASE_PATTERNS = [
+    (r"\bmedicare\s+for\s+all\b", "medicare_for_all"),
+    (r"\bgreen\s+new\s+deal\b", "green_new_deal"),
+    (r"\buniversal\s+basic\s+income\b", "universal_basic_income"),
+    (r"\bsingle[-\s]+payer\b", "single_payer"),
+    (r"\bpublic\s+option\b", "public_option"),
+    (r"\brent\s+control\b", "rent_control"),
+    (r"\bsocial\s+housing\b", "social_housing"),
+    (r"\baffordable\s+housing\b", "affordable_housing"),
+    (r"\bpublic\s+housing\b", "public_housing"),
+    (r"\bliving\s+wage\b", "living_wage"),
+    (r"\bminimum\s+wage\b", "minimum_wage"),
+    (r"\bworking[-\s]+class\b", "working_class"),
+    (r"\bsmall\s+business(?:es)?\b", "small_business"),
+    (r"\bcollective\s+bargaining\b", "collective_bargaining"),
+    (r"\bclimate\s+change\b", "climate_change"),
+    (r"\bcriminal\s+justice\b", "criminal_justice"),
+    (r"\bpublic\s+safety\b", "public_safety"),
+    (r"\bhuman\s+rights?\b", "human_right"),
+    (r"\bhealth\s+care\b", "healthcare"),
+]
+
 
 def analyze_text() -> dict[str, int | float]:
     evidence_path = PROCESSED_DIR / "candidate_statement_evidence.csv"
@@ -113,6 +172,8 @@ def analyze_text() -> dict[str, int | float]:
     candidate_mpif = mpif_rows(candidate_docs, "endorsed", "opponent")
     official_mpif = mpif_rows(official_docs, "dsa", "democratic")
     topic_rows = topic_comparison(candidate_rows)
+    prevalence_rows = feature_prevalence(candidate_docs)
+    coverage_rows = evidence_coverage(evidence)
     cycle_rows = sticking_point_cycles(sticking_points, evidence)
     sticking_rows = sticking_point_topics(sticking_points)
 
@@ -120,12 +181,12 @@ def analyze_text() -> dict[str, int | float]:
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
     write_csv(
         TABLE_DIR / "candidate_group_tfidf.csv",
-        candidate_tfidf,
+        candidate_tfidf[:500],
         ["term", "endorsed_score", "opponent_score", "difference"],
     )
     write_csv(
         TABLE_DIR / "candidate_group_mpif.csv",
-        candidate_mpif,
+        candidate_mpif[:500],
         ["feature", "endorsed_count", "opponent_count", "z_score", "favored_group"],
     )
     write_csv(
@@ -144,6 +205,31 @@ def analyze_text() -> dict[str, int | float]:
             "opponent_share",
             "cosine_similarity",
         ],
+    )
+    write_csv(
+        TABLE_DIR / "candidate_feature_prevalence.csv",
+        prevalence_rows[:500],
+        [
+            "feature",
+            "endorsed_documents",
+            "opponent_documents",
+            "endorsed_share",
+            "opponent_share",
+            "difference",
+        ],
+    )
+    write_csv(
+        TABLE_DIR / "candidate_evidence_coverage.csv",
+        coverage_rows,
+        ["group", "verified_documents", "source_unavailable_documents", "verified_share"],
+    )
+    write_csv(
+        TABLE_DIR / "normalization_rules.csv",
+        [
+            {"pattern": pattern, "canonical_feature": feature}
+            for pattern, feature in PHRASE_PATTERNS
+        ],
+        ["pattern", "canonical_feature"],
     )
     write_csv(
         TABLE_DIR / "sticking_points_by_topic.csv",
@@ -174,7 +260,10 @@ def analyze_text() -> dict[str, int | float]:
         "democratic",
     )
     _topic_share_chart(topic_rows)
+    _topic_difference_chart(topic_rows)
     _similarity_chart(topic_rows)
+    _prevalence_chart(prevalence_rows)
+    _coverage_chart(coverage_rows)
     _stacked_chart(
         sticking_rows[:14],
         FIGURE_DIR / "sticking_points_by_topic.svg",
@@ -197,8 +286,10 @@ def analyze_text() -> dict[str, int | float]:
         "candidate_tfidf_terms": len(candidate_tfidf),
         "candidate_mpif_features": len(candidate_mpif),
         "official_mpif_features": len(official_mpif),
+        "prevalence_features": len(prevalence_rows),
         "topics": len(topic_rows),
         "sticking_points": len(sticking_points),
+        "figure_count": 10,
         "input_hashes": {
             str(path.relative_to(path.parents[2])): _sha256(path)
             for path in (evidence_path, sticking_path, excerpts_path)
@@ -209,13 +300,23 @@ def analyze_text() -> dict[str, int | float]:
             "mpif_prior_mass": 1000.0,
             "candidate_min_feature_count": 5,
             "official_min_feature_count": 1,
+            "phrase_rules": len(PHRASE_PATTERNS),
+            "domain_stopwords": len(DOMAIN_STOPWORDS),
         },
     }
     (TABLE_DIR / "analysis_manifest.json").write_text(
         json.dumps(summary, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
-    _write_text_report(summary, candidate_mpif, official_mpif, topic_rows, cycle_rows)
+    _write_text_report(
+        summary,
+        candidate_mpif,
+        official_mpif,
+        topic_rows,
+        prevalence_rows,
+        coverage_rows,
+        cycle_rows,
+    )
     return summary
 
 
@@ -228,15 +329,30 @@ def tokenize(text: str) -> list[str]:
         .replace("–", "-")
         .replace("—", "-")
     )
-    tokens = re.findall(r"[a-z][a-z'-]{1,}", normalized)
+    for pattern, replacement in PHRASE_PATTERNS:
+        normalized = re.sub(pattern, replacement, normalized)
+    tokens = re.findall(r"[a-z][a-z_'-]{1,}", normalized)
     cleaned = []
     for token in tokens:
         token = token.strip("-'")
         if token.endswith("'s"):
             token = token[:-2]
-        if len(token) > 2 and token not in STOPWORDS:
+        token = _lemmatize(token)
+        if len(token) > 2 and token not in STOPWORDS and token not in DOMAIN_STOPWORDS:
             cleaned.append(token)
     return cleaned
+
+
+def _lemmatize(token: str) -> str:
+    if "_" in token:
+        return token
+    if token.endswith("ies") and len(token) > 4:
+        return token[:-3] + "y"
+    if token.endswith("sses"):
+        return token[:-2]
+    if token.endswith("s") and not token.endswith(("ss", "us", "is")) and len(token) > 4:
+        return token[:-1]
+    return token
 
 
 def group_tfidf(documents: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -347,6 +463,66 @@ def topic_comparison(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     )
 
 
+def feature_prevalence(documents: list[dict[str, str]]) -> list[dict[str, str]]:
+    group_documents = Counter(row["group"] for row in documents)
+    document_counts: dict[str, Counter[str]] = defaultdict(Counter)
+    for row in documents:
+        tokens = tokenize(row["text"])
+        features = set(tokens)
+        features.update(f"{a} {b}" for a, b in zip(tokens, tokens[1:], strict=False))
+        document_counts[row["group"]].update(features)
+    features = set(document_counts["endorsed"]) | set(document_counts["opponent"])
+    rows = []
+    for feature in features:
+        endorsed_documents = document_counts["endorsed"][feature]
+        opponent_documents = document_counts["opponent"][feature]
+        total_documents = endorsed_documents + opponent_documents
+        if total_documents < 10:
+            continue
+        endorsed_share = endorsed_documents / max(group_documents["endorsed"], 1)
+        opponent_share = opponent_documents / max(group_documents["opponent"], 1)
+        rows.append(
+            {
+                "feature": feature,
+                "endorsed_documents": str(endorsed_documents),
+                "opponent_documents": str(opponent_documents),
+                "endorsed_share": f"{endorsed_share:.6f}",
+                "opponent_share": f"{opponent_share:.6f}",
+                "difference": f"{endorsed_share - opponent_share:.6f}",
+            }
+        )
+    return sorted(rows, key=lambda row: abs(float(row["difference"])), reverse=True)
+
+
+def evidence_coverage(evidence: list[dict[str, str]]) -> list[dict[str, str]]:
+    statuses: dict[tuple[str, str, str], set[str]] = defaultdict(set)
+    for row in evidence:
+        group = "endorsed" if row["role"] in {"endorsed", "unopposed"} else "opponent"
+        key = (
+            row["candidate_name"].strip().casefold(),
+            row["election_date"].strip(),
+            group,
+        )
+        statuses[key].add(row["evidence_status"])
+    counts: dict[str, Counter[str]] = defaultdict(Counter)
+    for (*_, group), values in statuses.items():
+        status = "verified" if "verified" in values else "source_unavailable"
+        counts[group][status] += 1
+    rows = []
+    for group in ("endorsed", "opponent"):
+        verified = counts[group]["verified"]
+        unavailable = counts[group]["source_unavailable"]
+        rows.append(
+            {
+                "group": group,
+                "verified_documents": str(verified),
+                "source_unavailable_documents": str(unavailable),
+                "verified_share": f"{verified / max(verified + unavailable, 1):.6f}",
+            }
+        )
+    return rows
+
+
 def cosine_similarity(text_a: str, text_b: str) -> float:
     counts_a = Counter(tokenize(text_a))
     counts_b = Counter(tokenize(text_b))
@@ -444,6 +620,8 @@ def _write_text_report(
     candidate_mpif: list[dict[str, str]],
     official_mpif: list[dict[str, str]],
     topic_rows: list[dict[str, str]],
+    prevalence_rows: list[dict[str, str]],
+    coverage_rows: list[dict[str, str]],
     cycle_rows: list[dict[str, str]],
 ) -> None:
     endorsed_terms = [
@@ -459,6 +637,19 @@ def _write_text_report(
     lowest_similarity = sorted(
         topic_rows, key=lambda row: float(row["cosine_similarity"])
     )[:5]
+    topic_differences = sorted(
+        topic_rows,
+        key=lambda row: abs(
+            float(row["endorsed_share"]) - float(row["opponent_share"])
+        ),
+        reverse=True,
+    )[:7]
+    prevalence_positive = [
+        row for row in prevalence_rows if float(row["difference"]) > 0
+    ][:8]
+    prevalence_negative = [
+        row for row in prevalence_rows if float(row["difference"]) < 0
+    ][:8]
     largest_cycles = sorted(cycle_rows, key=lambda row: int(row["total"]), reverse=True)[:5]
     text = f"""# DSA-versus-Democratic text analysis
 
@@ -481,6 +672,9 @@ are counted once per candidate and election.
 - **MPIF:** weighted log-odds z-scores with an informative Dirichlet prior, using unigrams and
   adjacent bigrams. Positive values favor DSA-endorsed candidates or DSA; negative values favor
   Democratic opponents or the DNC.
+- **Document prevalence:** difference in the share of candidate/election documents containing a
+  normalized feature. This prevents a few candidates who repeat a phrase many times from
+  dominating the result.
 - **Cosine similarity:** term-frequency similarity between endorsed-candidate and opponent
   language within each coded topic.
 - **Sticking-point counts:** unique contrast IDs, separated into direct explicit conflicts and
@@ -488,10 +682,10 @@ are counted once per candidate and election.
 
 ## Main language differences
 
-- DSA-endorsed candidate features: {", ".join(endorsed_terms)}.
-- Democratic opponent features: {", ".join(opponent_terms)}.
-- Official DSA features: {", ".join(dsa_terms)}.
-- Official Democratic platform features: {", ".join(democratic_terms)}.
+- DSA-endorsed candidate features: {", ".join(_label(term) for term in endorsed_terms)}.
+- Democratic opponent features: {", ".join(_label(term) for term in opponent_terms)}.
+- Official DSA features: {", ".join(_label(term) for term in dsa_terms)}.
+- Official Democratic platform features: {", ".join(_label(term) for term in democratic_terms)}.
 
 ![Candidate MPIF terms](../outputs/figures/text_analysis/candidate_mpif_terms.svg)
 
@@ -501,11 +695,32 @@ are counted once per candidate and election.
 
 The candidate comparison especially distinguishes rights-based housing and labor language
 (`rent`, `human right`, `rent control`, `social housing`, `living wage`) from opponent language
-that more often emphasizes businesses, plans, offices, and administrative choices.
+that more often emphasizes business, opportunity, public-option mechanisms, technology,
+training, and border administration.
+
+## Document-prevalence robustness check
+
+- More common across DSA-endorsed candidate documents:
+  {", ".join(_label(row["feature"]) for row in prevalence_positive)}.
+- More common across opponent documents:
+  {", ".join(_label(row["feature"]) for row in prevalence_negative)}.
+
+![Candidate feature prevalence](../outputs/figures/text_analysis/candidate_feature_prevalence.svg)
+
+When MPIF and document prevalence point in the same direction, the result is less likely to be
+driven by one unusually repetitive campaign.
 
 ## Issue emphasis
 
 ![Candidate topic shares](../outputs/figures/text_analysis/candidate_topic_shares.svg)
+
+The largest group differences in excerpt share are:
+
+{chr(10).join(f'- **{_label(row["topic"])}:** {(float(row["endorsed_share"]) - float(row["opponent_share"])):+.1%}' for row in topic_differences)}
+
+Positive values indicate more emphasis among DSA-endorsed candidates.
+
+![Topic emphasis difference](../outputs/figures/text_analysis/topic_emphasis_difference.svg)
 
 ## Topics with the least shared language
 
@@ -527,12 +742,20 @@ opposing policy positions.
 Counts depend on recoverable first-party material and the number of identified primaries in each
 cycle. They are not measures of voter salience.
 
+## Evidence coverage
+
+{chr(10).join(f'- **{_label(row["group"])}:** {row["verified_documents"]} verified candidate/election documents, {row["source_unavailable_documents"]} documented source gaps ({float(row["verified_share"]):.1%} verified).' for row in coverage_rows)}
+
+![Candidate evidence coverage](../outputs/figures/text_analysis/candidate_evidence_coverage.svg)
+
 ## Limitations
 
 The official DSA-versus-DNC MPIF corpus is intentionally restricted to manually reviewed exact
 excerpts, so it is much smaller than the candidate corpus. `source_unavailable` findings remain
 unknowns rather than evidence of no position. Lexical distinctiveness measures language, not
-ideology, sincerity, policy feasibility, or causal importance in election outcomes.
+ideology, sincerity, policy feasibility, or causal importance in election outcomes. Phrase
+normalization reduces superficial variants, but it can also combine uses that differ in context;
+the exact source quotations remain the authoritative evidence.
 """
     (REPORT_DIR / "text_analysis.md").write_text(text, encoding="utf-8")
 
@@ -646,6 +869,90 @@ def _similarity_chart(rows: list[dict[str, str]]) -> None:
         DEMOCRATIC_BLUE,
         maximum=1.0,
     )
+
+
+def _topic_difference_chart(rows: list[dict[str, str]]) -> None:
+    selected = sorted(
+        rows,
+        key=lambda row: abs(
+            float(row["endorsed_share"]) - float(row["opponent_share"])
+        ),
+        reverse=True,
+    )[:13]
+    _diverging_svg(
+        FIGURE_DIR / "topic_emphasis_difference.svg",
+        "Difference in issue emphasis",
+        "Share of verified excerpts: DSA-endorsed candidates minus Democratic opponents",
+        [_label(row["topic"]) for row in selected],
+        [
+            float(row["endorsed_share"]) - float(row["opponent_share"])
+            for row in selected
+        ],
+        "More endorsed-candidate emphasis",
+        "More opponent emphasis",
+    )
+
+
+def _prevalence_chart(rows: list[dict[str, str]]) -> None:
+    positive = [row for row in rows if float(row["difference"]) > 0][:12]
+    negative = [row for row in rows if float(row["difference"]) < 0][:12]
+    selected = [*reversed(positive), *negative]
+    _diverging_svg(
+        FIGURE_DIR / "candidate_feature_prevalence.svg",
+        "Distinctive feature prevalence",
+        "Difference in the share of candidate/election documents containing each feature",
+        [_label(row["feature"]) for row in selected],
+        [float(row["difference"]) for row in selected],
+        "More DSA-endorsed documents",
+        "More opponent documents",
+    )
+
+
+def _coverage_chart(rows: list[dict[str, str]]) -> None:
+    width = 900
+    height = 300
+    plot_left = 210
+    plot_width = 590
+    maximum = max(
+        (
+            int(row["verified_documents"]) + int(row["source_unavailable_documents"])
+            for row in rows
+        ),
+        default=1,
+    )
+    body = [
+        _svg_header(
+            width,
+            height,
+            "First-party evidence coverage",
+            "Candidate/election documents with verified text versus documented source gaps",
+        )
+    ]
+    for index, row in enumerate(rows):
+        y = 115 + index * 65
+        verified = int(row["verified_documents"])
+        unavailable = int(row["source_unavailable_documents"])
+        verified_width = plot_width * verified / maximum
+        unavailable_width = plot_width * unavailable / maximum
+        body.append(_text(195, y + 16, _label(row["group"]), "end"))
+        body.append(_rect(plot_left, y, verified_width, 24, DSA_RED))
+        body.append(_rect(plot_left + verified_width, y, unavailable_width, 24, LIGHT))
+        body.append(_text(plot_left + verified_width - 7, y + 17, str(verified), "end", "#FFFFFF"))
+        body.append(
+            _text(
+                plot_left + verified_width + unavailable_width + 8,
+                y + 17,
+                f"{float(row['verified_share']):.0%} verified",
+            )
+        )
+    body.extend(
+        [
+            _legend(555, 72, DSA_RED, "Verified text"),
+            _legend(670, 72, LIGHT, "Source unavailable"),
+            _svg_footer(width, height, "Coverage status is explicit; unavailable text is not treated as no position."),
+        ]
+    )
+    _write_svg(FIGURE_DIR / "candidate_evidence_coverage.svg", width, height, body)
 
 
 def _stacked_chart(

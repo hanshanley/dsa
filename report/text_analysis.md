@@ -19,6 +19,9 @@ are counted once per candidate and election.
 - **MPIF:** weighted log-odds z-scores with an informative Dirichlet prior, using unigrams and
   adjacent bigrams. Positive values favor DSA-endorsed candidates or DSA; negative values favor
   Democratic opponents or the DNC.
+- **Document prevalence:** difference in the share of candidate/election documents containing a
+  normalized feature. This prevents a few candidates who repeat a phrase many times from
+  dominating the result.
 - **Cosine similarity:** term-frequency similarity between endorsed-candidate and opponent
   language within each coded topic.
 - **Sticking-point counts:** unique contrast IDs, separated into direct explicit conflicts and
@@ -26,10 +29,10 @@ are counted once per candidate and election.
 
 ## Main language differences
 
-- DSA-endorsed candidate features: rent, human, human right, control, right, rent control, social, social housing, wage, medicare all.
-- Democratic opponent features: small, businesses, business, option, officers, plan, president, many, small businesses, focus.
-- Official DSA features: democratic, society, party, defunding, refunding, communities, defunding police, police refunding.
-- Official Democratic platform features: public, americans, able, option, public option, affordable, capitalism, access.
+- DSA-endorsed candidate features: Human Right, Tenant, Rent Control, Single Payer, Social Housing, Eviction, Guarantee, Living Wage, Medicare For All, Rent.
+- Democratic opponent features: Business, Small Business, Opportunity, Children, Trump, Citizen, Bike, Training, Market, Border.
+- Official DSA features: Democratic, Society, Party, Defunding, Refunding, Defunding Police, Police Refunding, Replace.
+- Official Democratic platform features: American, Able, Public Option, Affordable, Capitalism, Access, Coverage, Opt.
 
 ![Candidate MPIF terms](../outputs/figures/text_analysis/candidate_mpif_terms.svg)
 
@@ -39,18 +42,45 @@ are counted once per candidate and election.
 
 The candidate comparison especially distinguishes rights-based housing and labor language
 (`rent`, `human right`, `rent control`, `social housing`, `living wage`) from opponent language
-that more often emphasizes businesses, plans, offices, and administrative choices.
+that more often emphasizes business, opportunity, public-option mechanisms, technology,
+training, and border administration.
+
+## Document-prevalence robustness check
+
+- More common across DSA-endorsed candidate documents:
+  Human Right, Worker, Rent Control, Healthcare, Tenant, Single Payer, Social Housing, Medicare For All.
+- More common across opponent documents:
+  Business, American, Small Business, Opportunity, Public Option, Children, Technology, Seattle.
+
+![Candidate feature prevalence](../outputs/figures/text_analysis/candidate_feature_prevalence.svg)
+
+When MPIF and document prevalence point in the same direction, the result is less likely to be
+driven by one unusually repetitive campaign.
 
 ## Issue emphasis
 
 ![Candidate topic shares](../outputs/figures/text_analysis/candidate_topic_shares.svg)
 
+The largest group differences in excerpt share are:
+
+- **Labor:** +3.7%
+- **Housing:** +3.6%
+- **Climate Energy:** -3.2%
+- **Immigration:** -2.3%
+- **Political Strategy:** +2.1%
+- **Education:** -1.8%
+- **Healthcare:** +1.7%
+
+Positive values indicate more emphasis among DSA-endorsed candidates.
+
+![Topic emphasis difference](../outputs/figures/text_analysis/topic_emphasis_difference.svg)
+
 ## Topics with the least shared language
 
-- **Foreign Policy:** 0.32
-- **Economic Ownership:** 0.32
+- **Economic Ownership:** 0.28
+- **Foreign Policy:** 0.31
+- **Democracy:** 0.53
 - **Civil Rights:** 0.54
-- **Democracy:** 0.55
 - **Immigration:** 0.62
 
 ![Topic cosine similarity](../outputs/figures/text_analysis/topic_cosine_similarity.svg)
@@ -73,9 +103,18 @@ opposing policy positions.
 Counts depend on recoverable first-party material and the number of identified primaries in each
 cycle. They are not measures of voter salience.
 
+## Evidence coverage
+
+- **Endorsed:** 283 verified candidate/election documents, 201 documented source gaps (58.5% verified).
+- **Opponent:** 712 verified candidate/election documents, 821 documented source gaps (46.4% verified).
+
+![Candidate evidence coverage](../outputs/figures/text_analysis/candidate_evidence_coverage.svg)
+
 ## Limitations
 
 The official DSA-versus-DNC MPIF corpus is intentionally restricted to manually reviewed exact
 excerpts, so it is much smaller than the candidate corpus. `source_unavailable` findings remain
 unknowns rather than evidence of no position. Lexical distinctiveness measures language, not
-ideology, sincerity, policy feasibility, or causal importance in election outcomes.
+ideology, sincerity, policy feasibility, or causal importance in election outcomes. Phrase
+normalization reduces superficial variants, but it can also combine uses that differ in context;
+the exact source quotations remain the authoritative evidence.
