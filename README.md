@@ -52,6 +52,8 @@ position.
 
 - `src/dsa_analysis/` — collection, crawling, adjudication, validation, and analysis code
 - `config/` — source registry and policy taxonomy
+- `files/research_archive/` — downloaded top-level JSON/HTML research captures retained for
+  reproducibility without cluttering the repository root
 - `docs/methodology.md` — research design and source hierarchy
 - `docs/codebook.md` — coding rules
 - `docs/data_dictionary.md` — dataset fields
