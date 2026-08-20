@@ -5,7 +5,9 @@ from datetime import date
 from .io import read_csv, read_json
 from .paths import CONFIG_DIR, MANUAL_DIR, PROCESSED_DIR
 from .schema import (
+    ANALYSIS_SCOPES,
     CONTRAST_TYPES,
+    ORGANIZATIONAL_CONTEXT_STATUSES,
     SCHEMAS,
     STANCE_CODES,
     VERIFICATION_STATUSES,
@@ -49,6 +51,8 @@ def validate(strict: bool = False) -> AuditResult:
         (row["race_id"], row["candidate_id"])
         for row in race_candidates
     }
+    candidate_document_rows = tables["candidate_documents"]
+    organizational_context_rows = tables["organizational_context_sources"]
     taxonomy = read_json(CONFIG_DIR / "taxonomy.json")
     topics = set(taxonomy["topics"])
     subtopics = {
@@ -63,6 +67,62 @@ def validate(strict: bool = False) -> AuditResult:
         tier = row["source_tier"]
         if tier not in {"1", "2", "3", "4"}:
             errors.append(f"documents.csv:{number}: source_tier must be 1-4")
+
+    for number, row in enumerate(candidate_document_rows, start=2):
+        if row["verification_status"] not in VERIFICATION_STATUSES:
+            errors.append(f"candidate_documents.csv:{number}: invalid verification_status")
+        tier = row["source_tier"]
+        if tier not in {"1", "2", "3", "4"}:
+            errors.append(f"candidate_documents.csv:{number}: source_tier must be 1-4")
+        if row["role"] not in {"endorsed", "opponent", "unopposed"}:
+            errors.append(f"candidate_documents.csv:{number}: invalid role")
+        scope = row.get("analysis_scope", "").strip() or "analysis"
+        if scope not in ANALYSIS_SCOPES:
+            errors.append(f"candidate_documents.csv:{number}: invalid analysis_scope")
+        if row["race_id"] not in race_ids:
+            errors.append(f"candidate_documents.csv:{number}: unknown race_id")
+        if (row["race_id"], row["candidate_id"]) not in candidate_races:
+            errors.append(
+                f"candidate_documents.csv:{number}: candidate missing from race roster"
+            )
+
+    for number, row in enumerate(organizational_context_rows, start=2):
+        status = row["verification_status"]
+        if status not in ORGANIZATIONAL_CONTEXT_STATUSES:
+            errors.append(
+                f"organizational_context_sources.csv:{number}: invalid verification_status"
+            )
+        if row["organization_level"] not in {"national", "state", "local"}:
+            errors.append(
+                f"organizational_context_sources.csv:{number}: invalid organization_level"
+            )
+        if row["context_category"] not in {
+            "dnc_national",
+            "state_democratic_party",
+            "dsa_national",
+            "dsa_state_local",
+        }:
+            errors.append(
+                f"organizational_context_sources.csv:{number}: invalid context_category"
+            )
+        if status == "verified" and not (
+            row.get("source_url", "").strip() or row.get("archive_url", "").strip()
+        ):
+            errors.append(
+                "organizational_context_sources.csv:"
+                f"{number}: verified row requires source_url or archive_url"
+            )
+        if row["context_category"] == "dsa_state_local":
+            if not row.get("endorsing_body", "").strip():
+                errors.append(
+                    "organizational_context_sources.csv:"
+                    f"{number}: dsa_state_local row requires endorsing_body"
+                )
+        elif row.get("endorsing_body", "").strip():
+            errors.append(
+                "organizational_context_sources.csv:"
+                f"{number}: endorsing_body only allowed for dsa_state_local rows"
+            )
 
     for number, row in enumerate(tables["endorsements"], start=2):
         if row["endorsement_source_document_id"] not in document_ids:

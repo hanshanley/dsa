@@ -4,13 +4,13 @@
 
 ## Current dataset status
 
-- Registered documents: 15
-- Verified documents: 12
-- Verified DSA endorsements: 4
-- Tracked Democratic primaries: 3
-- Candidates on tracked primary ballots: 23
-- Opponents requiring comparison: 20
-- Opponents with verified first-party evidence: 1
+- Registered documents: 20
+- Verified documents: 17
+- Verified DSA endorsements: 6
+- Tracked Democratic primaries: 5
+- Candidates on tracked primary ballots: 27
+- Opponents requiring comparison: 22
+- Opponents with verified first-party evidence: 3
 - Reviewed exact excerpts: 14
 - Reviewed party-platform comparisons: 4
 - Candidate/opponent contrasts: 1
@@ -22,7 +22,7 @@ The official DSA National archive currently yields **357 unique
 campaign records**. Removing rows categorized only as ballot initiatives leaves
 **328 candidate or office records** requiring verification of party,
 primary type, opponents, and campaign sources. The current chapter directory creates
-**2640 chapter-year search units** for 2016–2026.
+**2673 chapter-year search units** for 2016–2026.
 
 - Endorsed 2016: 1
 - Endorsed 2017: 6
@@ -38,25 +38,25 @@ primary type, opponents, and campaign sources. The current chapter directory cre
 
 These counts cover national endorsements. The manually verified layer separately includes local
 endorsements such as Zohran Mamdani by NYC-DSA and Francesca Hong by Madison Area DSA and
-Milwaukee DSA. Together, the national archive and verified local layer form the completed nationwide endorsement census under the methodology's source-availability rules.
+Milwaukee DSA. The verified local layer is still incomplete and must not be treated as a nationwide local-endorsement census.
 
 ## Nationwide local-chapter census status
 
-- Current chapters and organizing committees crawled: 240
-- Endorsement-like first-party pages discovered: 1927
-- Reviewable endorsement mentions extracted: 4619
-- High-confidence candidate/office leads extracted: 100
-- Independently verified local candidate endorsements: 938
-- Rejected candidate-level false positives: 24
-- Chapter-year coverage units: 2640
-- Unresolved chapter-year units: 0
-- National and local endorsed candidacies queued: 1254
-- Endorsed candidacies with resolved roster research: 1254
-- Candidate rows in verified primary rosters: 3518
-- Exact candidate evidence rows: 7350
-- Derived primary sticking-point rows: 1388
+- Current chapters and organizing committees crawled: 243
+- Endorsement-like first-party pages discovered: 875
+- Reviewable endorsement mentions extracted: 2521
+- High-confidence candidate/office leads extracted: 76
+- Independently verified local candidate endorsements: 0
+- Rejected candidate-level false positives: 0
+- Chapter-year coverage units: 2673
+- Unresolved chapter-year units: 1729
+- National and local endorsed candidacies queued: 0
+- Endorsed candidacies with resolved roster research: 0
+- Candidate rows in verified primary rosters: 0
+- Exact candidate evidence rows: 0
+- Derived primary sticking-point rows: 0
 
-Strict validation passes: every chapter-year is resolved and every endorsed candidacy has a resolved race, roster, and candidate/opponent evidence status.
+The analysis is not complete until `uv run dsa-analysis validate --strict` passes.
 
 ## Findings from reviewed first-party text
 
@@ -115,21 +115,9 @@ not claims about every endorsed candidate.
 
 ## Primary sticking-point counts
 
-These are nationwide counts of recorded, source-supported contrasts in the completed census. They measure expressed and recoverable campaign differences, not unspoken positions or voter priorities.
+These counts come only from currently verified candidate evidence and are not yet nationwide frequency estimates.
 
-- Housing: 275
-- Healthcare: 246
-- Climate Energy: 193
-- Public Safety: 154
-- Political Strategy: 116
-- Labor: 78
-- Tax Budget: 74
-- Education: 69
-- Immigration: 62
-- Economic Ownership: 53
-- Civil Rights: 27
-- Democracy: 26
-- Foreign Policy: 15
+- No derived sticking points are available.
 
 ## Reproducible text-analysis figures
 
@@ -150,47 +138,10 @@ The full TF-IDF, MPIF, topic-share, similarity, and cycle analysis is generated 
 
 ## Limitations
 
-The census is complete under the stated protocol, but source-unavailable records remain explicit unknowns. A missing quotation does not imply that a candidate held no position. Topic counts measure recoverable statements and coded contrasts, not the prevalence or intensity of beliefs among all candidates or voters. The platform matrix is limited to the reviewed official documents and election cycles.
+The national and local endorsement census, full platform coding, candidate/opponent evidence, and primary-level contrasts are not complete. Frequency claims are therefore premature.
 
 ## Audit warnings
 
-- candidate_statement_evidence.csv:1436: unusually short quote
-- candidate_statement_evidence.csv:1437: unusually short quote
-- candidate_statement_evidence.csv:1647: unusually short quote
-- candidate_statement_evidence.csv:1695: unusually short quote
-- candidate_statement_evidence.csv:1707: unusually short quote
-- candidate_statement_evidence.csv:2285: unusually short quote
-- candidate_statement_evidence.csv:2286: unusually short quote
-- candidate_statement_evidence.csv:2642: unusually short quote
-- candidate_statement_evidence.csv:2643: unusually short quote
-- candidate_statement_evidence.csv:2673: unusually short quote
-- candidate_statement_evidence.csv:3668: unusually short quote
-- candidate_statement_evidence.csv:3669: unusually short quote
-- candidate_statement_evidence.csv:3670: unusually short quote
-- candidate_statement_evidence.csv:3671: unusually short quote
-- candidate_statement_evidence.csv:3672: unusually short quote
-- candidate_statement_evidence.csv:3673: unusually short quote
-- candidate_statement_evidence.csv:4005: unusually short quote
-- candidate_statement_evidence.csv:4006: unusually short quote
-- candidate_statement_evidence.csv:4264: unusually short quote
-- candidate_statement_evidence.csv:4265: unusually short quote
-- candidate_statement_evidence.csv:4266: unusually short quote
-- candidate_statement_evidence.csv:4340: unusually short quote
-- candidate_statement_evidence.csv:4638: unusually short quote
-- candidate_statement_evidence.csv:4799: unusually short quote
-- candidate_statement_evidence.csv:4800: unusually short quote
-- candidate_statement_evidence.csv:4803: unusually short quote
-- candidate_statement_evidence.csv:5002: unusually short quote
-- candidate_statement_evidence.csv:5003: unusually short quote
-- candidate_statement_evidence.csv:5004: unusually short quote
-- candidate_statement_evidence.csv:6106: unusually short quote
-- candidate_statement_evidence.csv:6107: unusually short quote
-- candidate_statement_evidence.csv:6485: unusually short quote
-- candidate_statement_evidence.csv:6486: unusually short quote
-- candidate_statement_evidence.csv:7038: unusually short quote
-- candidate_statement_evidence.csv:7142: unusually short quote
-- candidate_statement_evidence.csv:7155: unusually short quote
-- candidate_statement_evidence.csv:7156: unusually short quote
-- candidate_statement_evidence.csv:7157: unusually short quote
+- 19 opponent records still need verified first-party evidence
 
-Generated 2026-08-14. See `docs/methodology.md` for evidence rules.
+Generated 2026-08-20. See `docs/methodology.md` for evidence rules.

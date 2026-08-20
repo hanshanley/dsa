@@ -1,10 +1,12 @@
 import csv
 import hashlib
 import json
+import re
+import unicodedata
 from pathlib import Path
 
-from .io import merge_notes, read_csv, write_csv
-from .paths import PROCESSED_DIR
+from .io import merge_notes, read_csv, read_json, write_csv
+from .paths import CONFIG_DIR, MANUAL_DIR, PROCESSED_DIR
 
 SESSION_BATCH_DIR = Path(
     "/Users/hanshanley/.copilot/session-state/"
@@ -96,8 +98,27 @@ def build_opponent_queue() -> int:
         row["queue_id"]: row
         for row in read_csv(queue_path)
     } if queue_path.exists() else {}
+    source_config = read_json(CONFIG_DIR / "sources.json")
+    final_year = int(source_config["research_cutoff"][:4])
+    allowed_years = {str(year) for year in range(2016, final_year + 1)}
     rows_by_key = {}
+    unresolved_local = []
     for candidate in candidates:
+        unresolved_reasons = []
+        if candidate["election_year"] not in allowed_years:
+            unresolved_reasons.append(
+                "missing_or_out_of_window_election_year"
+            )
+        if not candidate["office_text"].strip():
+            unresolved_reasons.append("missing_office")
+        if unresolved_reasons:
+            unresolved_local.append(
+                {
+                    **candidate,
+                    "resolution_reason": " | ".join(unresolved_reasons),
+                }
+            )
+            continue
         queue_id = hashlib.sha256(
             (
                 f'{candidate["chapter"]}\n{candidate["candidate_name"]}\n'
@@ -120,19 +141,40 @@ def build_opponent_queue() -> int:
             existing_by_id.get(queue_id),
         )
 
+    national_resolutions = {
+        row["record_id"]: row
+        for path in sorted(MANUAL_DIR.glob("national_census_resolutions_*.csv"))
+        for row in read_csv(path)
+    }
+    reconciliation_path = (
+        PROCESSED_DIR / "race_registry_national_endorsement_reconciliation.csv"
+    )
+    reconciliation = {
+        row["record_id"]: row
+        for row in read_csv(reconciliation_path)
+    } if reconciliation_path.exists() else {}
+    registry_path = PROCESSED_DIR / "race_registry.csv"
+    registry_by_id = {
+        row["race_id"]: row
+        for row in read_csv(registry_path)
+    } if registry_path.exists() else {}
     national_path = PROCESSED_DIR / "national_endorsement_archive.csv"
     if national_path.exists():
         with national_path.open(newline="", encoding="utf-8") as handle:
             for row in csv.DictReader(handle):
                 office_types = set(row["office_types"].split(" | "))
-                if office_types and office_types <= {"Ballot Initiative"}:
+                if "Ballot Initiative" in office_types:
                     continue
-                year = row["election_date"][:4]
+                resolution = national_resolutions.get(row["record_id"], {})
+                year = (
+                    resolution.get("primary_date", "")[:4]
+                    or row["election_date"][:4]
+                )
                 candidate = {
                     "candidate_name": row["campaign"],
-                    "office_text": row["office"],
+                    "office_text": resolution.get("office", "") or row["office"],
                     "election_year": year,
-                    "state": "",
+                    "state": resolution.get("state", ""),
                 }
                 key = _queue_key(candidate)
                 if key in rows_by_key:
@@ -147,14 +189,69 @@ def build_opponent_queue() -> int:
                     candidate_name=row["campaign"],
                     office_text=row["office"],
                     election_year=year,
-                    election_stage="unknown",
+                    election_stage=(
+                        "primary"
+                        if resolution.get("classification", "")
+                        == "democratic_primary"
+                        else "unknown"
+                    ),
                     endorsement_source_url=row["source_view_url"],
                     notes="Official DSA National endorsement archive",
                 )
-                rows_by_key[key] = _preserve_queue_status(
+                new_row = _preserve_queue_status(
                     new_row,
                     existing_by_id.get(new_row["queue_id"]),
                 )
+                classification = resolution.get("classification", "")
+                if classification == "democratic_primary":
+                    new_row["race_resolution_status"] = "verified"
+                    new_row["official_election_source"] = resolution.get(
+                        "official_election_source", ""
+                    ).split(" ; ")[0]
+                    new_row["opponent_roster_status"] = (
+                        "verified"
+                        if _resolved_opponent_names(
+                            resolution.get("opponents", "")
+                        )
+                        else "not_searched"
+                    )
+                elif classification == "source_unavailable":
+                    new_row["race_resolution_status"] = "source_unavailable"
+                    new_row["opponent_roster_status"] = "source_unavailable"
+                    new_row["candidate_statement_status"] = "source_unavailable"
+                    new_row["opponent_statement_status"] = "source_unavailable"
+                elif classification:
+                    new_row["race_resolution_status"] = "not_a_primary"
+                    new_row["opponent_roster_status"] = "not_applicable"
+                    new_row["candidate_statement_status"] = "not_applicable"
+                    new_row["opponent_statement_status"] = "not_applicable"
+                elif (
+                    reconciliation.get(row["record_id"], {}).get(
+                        "registry_status", ""
+                    )
+                    == "matched_in_scope"
+                ):
+                    matched_race_ids = reconciliation[row["record_id"]].get(
+                        "matched_race_ids", ""
+                    ).split(" | ")
+                    matched_registry = next(
+                        (
+                            registry_by_id[race_id]
+                            for race_id in matched_race_ids
+                            if race_id in registry_by_id
+                        ),
+                        {},
+                    )
+                    new_row["race_resolution_status"] = "verified"
+                    new_row["official_election_source"] = matched_registry.get(
+                        "official_election_source", ""
+                    )
+                    new_row["opponent_roster_status"] = (
+                        "verified"
+                        if matched_registry.get("certified_opponents", "")
+                        else "not_searched"
+                    )
+                rows_by_key[key] = new_row
     rows = sorted(
         rows_by_key.values(),
         key=lambda row: (
@@ -184,7 +281,52 @@ def build_opponent_queue() -> int:
             "notes",
         ],
     )
+    write_csv(
+        PROCESSED_DIR / "local_endorsement_resolution_queue.csv",
+        unresolved_local,
+        [
+            "endorsement_key",
+            "chapter",
+            "state",
+            "candidate_name",
+            "office_text",
+            "election_year",
+            "election_stage",
+            "source_url",
+            "confidence",
+            "review_status",
+            "mention_ids",
+            "notes",
+            "resolution_reason",
+        ],
+    )
     return len(rows)
+
+
+def _resolved_opponent_names(value: str) -> list[str]:
+    placeholders = {
+        "april general field",
+        "democratic primary field",
+        "district democratic field",
+        "none listed",
+    }
+    return [
+        name.strip()
+        for name in re.split(r"\s*[;|]\s*", value)
+        if name.strip() and name.strip().casefold() not in placeholders
+    ]
+
+
+def _identity(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value)
+    normalized = "".join(
+        character
+        for character in normalized
+        if not unicodedata.combining(character)
+    )
+    return " ".join(
+        re.sub(r"[^a-z0-9]+", " ", normalized.casefold()).split()
+    )
 
 
 def _preserve_queue_status(
@@ -527,12 +669,94 @@ def enrich_verified_endorsement_years() -> tuple[int, int]:
     return enriched, unresolved
 
 
+def enrich_verified_endorsements_from_registry() -> tuple[int, int, int]:
+    verified_path = PROCESSED_DIR / "local_endorsements_verified.csv"
+    registry_path = PROCESSED_DIR / "race_registry.csv"
+    if not verified_path.exists() or not registry_path.exists():
+        return 0, 0, 0
+    registry_by_candidate: dict[str, list[dict[str, str]]] = {}
+    for registry_row in read_csv(registry_path):
+        for candidate_name in registry_row.get("all_candidates", "").split(" | "):
+            key = _identity(candidate_name)
+            if key:
+                registry_by_candidate.setdefault(key, []).append(registry_row)
+
+    rows = read_csv(verified_path)
+    years_enriched = 0
+    offices_enriched = 0
+    unresolved = 0
+    final_year = int(
+        read_json(CONFIG_DIR / "sources.json")["research_cutoff"][:4]
+    )
+    for row in rows:
+        matches = [
+            match
+            for match in registry_by_candidate.get(
+                _identity(row["candidate_name"]), []
+            )
+            if not row["state"]
+            or not match.get("state_code", "")
+            or row["state"] == match["state_code"]
+        ]
+        unique_matches = {
+            (
+                match.get("election_year", ""),
+                match.get("office", ""),
+                match.get("state_code", ""),
+            ): match
+            for match in matches
+        }
+        if len(unique_matches) != 1:
+            if not row["election_year"] or not row["office_text"]:
+                unresolved += 1
+            continue
+        match = next(iter(unique_matches.values()))
+        match_year = match.get("election_year", "")
+        if (
+            not row["election_year"]
+            and match_year.isdigit()
+            and 2016 <= int(match_year) <= final_year
+        ):
+            row["election_year"] = match_year
+            years_enriched += 1
+        if not row["office_text"] and match.get("office", ""):
+            row["office_text"] = match["office"]
+            offices_enriched += 1
+        if not row["election_year"] or not row["office_text"]:
+            unresolved += 1
+    write_csv(
+        verified_path,
+        rows,
+        [
+            "endorsement_key",
+            "chapter",
+            "state",
+            "candidate_name",
+            "office_text",
+            "election_year",
+            "election_stage",
+            "source_url",
+            "confidence",
+            "review_status",
+            "mention_ids",
+            "notes",
+        ],
+    )
+    return years_enriched, offices_enriched, unresolved
+
+
 def _input_ids(batch_dir: Path) -> set[str]:
     input_ids = set()
     for path in sorted(batch_dir.glob("batch_*.jsonl")):
         with path.open(encoding="utf-8") as handle:
             for line in handle:
                 input_ids.add(json.loads(line)["mention_id"])
+    for path in sorted(batch_dir.glob("input_*.csv")):
+        with path.open(newline="", encoding="utf-8") as handle:
+            for row in csv.DictReader(handle):
+                mention_id = row.get("mention_id", "").strip()
+                if mention_id:
+                    input_ids.add(mention_id)
     if not input_ids:
         raise ValueError("No adjudication batch inputs were found")
     return input_ids

@@ -16,10 +16,18 @@ from .chapter_crawler import crawl_all_chapters
 from .coverage import build_coverage_ledger
 from .collector import collect_sources
 from .database import initialize_database
+from .document_corpus import run_candidate_document_regather_batch
 from .endorsement_mentions import extract_mentions
+from .full_text_audit import build_full_text_sufficiency_audit
+from .organizational_context import (
+    build_organizational_context_inventory,
+    run_organizational_context_fetch_pass,
+)
+from .organizational_context_corpus import run_organizational_context_extraction_batch
 from .opponent_batches import merge_opponent_reviews, prepare_opponent_batches
 from .priorities import build_priority_queues
 from .queue import build_research_queue
+from .race_registry import build_race_registry
 from .structured_leads import extract_structured_leads
 from .statement_batches import (
     merge_statement_reviews,
@@ -160,6 +168,32 @@ def main() -> None:
     subparsers.add_parser(
         "classify-topics",
         help="Classify exact candidate quotations with a pinned local embedding model.",
+    )
+    subparsers.add_parser(
+        "build-race-registry",
+        help="Build the canonical nationwide DSA-endorsed primary race registry.",
+    )
+    regather_parser = subparsers.add_parser(
+        "regather-candidate-documents",
+        help="Fetch and extract the highest-priority incomplete campaign documents.",
+    )
+    regather_parser.add_argument("--limit", type=int)
+    subparsers.add_parser(
+        "audit-full-text",
+        help="Audit full-document and paired-race sufficiency before narrative analysis.",
+    )
+    subparsers.add_parser(
+        "build-organizational-context",
+        help="Build national and state official-platform coverage for represented cycles.",
+    )
+    context_fetch_parser = subparsers.add_parser(
+        "fetch-organizational-context",
+        help="Fetch queued official party and DSA organizational documents.",
+    )
+    context_fetch_parser.add_argument("--limit", type=int)
+    subparsers.add_parser(
+        "extract-organizational-context",
+        help="Extract and segment fetched official organizational documents.",
     )
     args = parser.parse_args()
 
@@ -335,3 +369,66 @@ def main() -> None:
             f"crosswalk_agreement={stats['crosswalk_agreement']:.1%}."
         )
         return
+    if args.command == "build-race-registry":
+        result = build_race_registry()
+        print(
+            "Race registry complete: "
+            f"in_scope_races={result.in_scope_race_rows}, "
+            f"resolved_states={result.resolved_state_race_rows}, "
+            f"represented_state_cycles={result.represented_state_cycle_rows}, "
+            f"unresolved_fields={result.unresolved_race_rows}."
+        )
+        return
+    if args.command == "regather-candidate-documents":
+        result = run_candidate_document_regather_batch(limit=args.limit)
+        batch = result.batch_result
+        print(
+            "Candidate document regather complete: "
+            f"selected_urls={result.plan.selected_unique_urls}, "
+            f"processed={batch.processed_documents}, "
+            f"successful={batch.successful_documents}, "
+            f"fetch_errors={batch.fetch_errors}, "
+            f"extraction_errors={batch.extraction_errors}."
+        )
+        return
+    if args.command == "audit-full-text":
+        result = build_full_text_sufficiency_audit()
+        print(
+            "Full-text audit complete: "
+            f"corpus_rows={result.corpus_rows}, "
+            f"eligible_races={result.eligible_races}, "
+            f"retryable_gaps={result.retryable_gaps}, "
+            f"sufficient={str(result.sufficient).lower()}."
+        )
+        if not result.sufficient:
+            print("Failed gates: " + ", ".join(result.failed_gates))
+            raise SystemExit(1)
+        return
+    if args.command == "build-organizational-context":
+        result = build_organizational_context_inventory()
+        print(
+            "Organizational context inventory complete: "
+            f"state_cycles={result.represented_state_cycle_rows}, "
+            f"coverage_rows={result.coverage_rows}, "
+            f"platform_gaps={result.platform_gap_rows}, "
+            f"all_categories_resolved="
+            f"{str(result.all_represented_state_cycles_have_status).lower()}."
+        )
+        return
+    if args.command == "fetch-organizational-context":
+        result = run_organizational_context_fetch_pass(limit=args.limit)
+        print(
+            "Organizational context fetch complete: "
+            f"attempted={result.queued_urls}, fetched={result.fetched_urls}, "
+            f"failed={result.failed_urls}."
+        )
+        raise SystemExit(1 if result.failed_urls else 0)
+    if args.command == "extract-organizational-context":
+        result = run_organizational_context_extraction_batch()
+        print(
+            "Organizational context extraction complete: "
+            f"processed={result.processed_documents}, "
+            f"successful={result.successful_documents}, "
+            f"extraction_errors={result.extraction_errors}."
+        )
+        raise SystemExit(1 if result.extraction_errors else 0)

@@ -19,20 +19,43 @@ def fetch_archived_pages(limit: int = 500, workers: int = 4) -> tuple[int, int, 
     status_path = PROCESSED_DIR / "archive_page_status.csv"
     pages = read_csv(pages_path) if pages_path.exists() else []
     statuses = read_csv(status_path) if status_path.exists() else []
-    completed = {row["archive_id"] for row in statuses}
-    targets = [row for row in source if row["archive_id"] not in completed][:limit]
+    for row in statuses:
+        row["attempt_count"] = row.get("attempt_count", "") or "1"
+        if row["fetch_status"] == "source_unavailable" and _is_transient_error(row["error"]):
+            row["fetch_status"] = "fetch_error"
+    statuses_by_id = {row["archive_id"]: row for row in statuses}
+    completed = {
+        row["archive_id"]
+        for row in statuses
+        if row["fetch_status"] != "fetch_error"
+        or int(row["attempt_count"]) >= 3
+    }
+    targets = sorted(
+        (row for row in source if row["archive_id"] not in completed),
+        key=lambda row: (
+            int(statuses_by_id.get(row["archive_id"], {}).get("attempt_count", "0")),
+            statuses_by_id.get(row["archive_id"], {}).get("retrieved_at", ""),
+            row["archive_id"],
+        ),
+    )[:limit]
     new_pages = []
     new_statuses = []
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {executor.submit(_fetch_one, row): row for row in targets}
         for future in as_completed(futures):
             page, status = future.result()
+            status["attempt_count"] = str(
+                int(statuses_by_id.get(status["archive_id"], {}).get("attempt_count", "0"))
+                + 1
+            )
             new_statuses.append(status)
             if page:
                 new_pages.append(page)
+    pages_by_id = {row["archive_id"]: row for row in pages}
+    pages_by_id.update({row["archive_id"]: row for row in new_pages})
     write_csv(
         pages_path,
-        pages + new_pages,
+        sorted(pages_by_id.values(), key=lambda row: row["archive_id"]),
         [
             "page_id",
             "archive_id",
@@ -52,9 +75,10 @@ def fetch_archived_pages(limit: int = 500, workers: int = 4) -> tuple[int, int, 
             "text_excerpt",
         ],
     )
+    statuses_by_id.update({row["archive_id"]: row for row in new_statuses})
     write_csv(
         status_path,
-        statuses + new_statuses,
+        sorted(statuses_by_id.values(), key=lambda row: row["archive_id"]),
         [
             "archive_id",
             "chapter_record_id",
@@ -62,6 +86,7 @@ def fetch_archived_pages(limit: int = 500, workers: int = 4) -> tuple[int, int, 
             "state",
             "archive_url",
             "fetch_status",
+            "attempt_count",
             "retrieved_at",
             "error",
         ],
@@ -121,10 +146,30 @@ def _fetch_one(
     except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
         return None, _status(
             row,
-            "source_unavailable",
+            "fetch_error" if _is_transient_error(str(error)) else "source_unavailable",
             retrieved_at,
             f"{type(error).__name__}: {error}",
         )
+
+
+def _is_transient_error(error: str) -> bool:
+    lowered = error.casefold()
+    return any(
+        marker in lowered
+        for marker in (
+            "connection refused",
+            "connection reset",
+            "remote end closed",
+            "temporarily unavailable",
+            "timed out",
+            "timeout",
+            "http error 429",
+            "http error 500",
+            "http error 502",
+            "http error 503",
+            "http error 504",
+        )
+    )
 
 
 def _status(

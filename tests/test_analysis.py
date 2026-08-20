@@ -8,9 +8,9 @@ class AnalysisTests(unittest.TestCase):
     def test_analysis_generates_caveated_report(self) -> None:
         stats = analyze()
         report = (REPORT_DIR / "draft.md").read_text(encoding="utf-8")
-        self.assertEqual(stats["endorsements"], 4)
-        self.assertEqual(stats["tracked_races"], 3)
-        self.assertEqual(stats["opponent_candidates"], 20)
+        self.assertEqual(stats["endorsements"], 6)
+        self.assertEqual(stats["tracked_races"], 5)
+        self.assertEqual(stats["opponent_candidates"], 22)
         self.assertIn("## Limitations", report)
         self.assertIn("direct textual observations", report)
         self.assertIn("mo01-dem-primary-2026", report)

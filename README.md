@@ -11,9 +11,23 @@ opponents.
 
 ## At a glance: where the language differs
 
-The completed, strictly validated census contains **2,640 chapter-years**, **1,254 endorsed
-candidacies**, **3,518 official roster rows**, **7,350 exact evidence rows**, and **1,388
-source-supported candidate/opponent contrasts**.
+The previously published counts of **1,254 endorsed candidacies** and **3,518 roster rows**
+depended on ignored generated census files that are not present in the repository and cannot
+currently be reproduced. They must not be treated as a completeness claim. The rebuilt national
+DSA feed contains **308 candidate endorsements since 2016**, after ballot initiatives are
+excluded. Every one of the 178 endorsements that was previously absent or mis-scoped has now
+been adjudicated: 27 Democratic primaries, 37 nonpartisan primaries, 82 general-only races, and
+32 explicit noncandidate, unopposed, ballot-position, or source-unavailable cases. The canonical
+registry is now seeded from endorsements before quotation evidence and contains **509 races,
+375 in-scope Democratic primaries, and 1,496 candidates**. Every dated national Democratic-primary
+adjudication is represented; the Sanders presidential endorsement remains unresolved because it
+maps to many state contests rather than one national primary date.
+
+This is not yet a nationwide completeness claim. The local chapter crawl currently contains
+2,521 reviewable endorsement mentions from 825 live or archived pages, while 1,729 chapter-year
+cells still require review. The registry-first document audit also exposes 1,010 candidate search
+gaps, so narrative clustering remains gated until local endorsements, certified rosters, campaign
+texts, and official state platforms are complete.
 
 | DSA / DSA-endorsed emphasis | Democratic platform / opponent emphasis |
 | --- | --- |
@@ -114,11 +128,22 @@ commands.
 To rebuild the reviewed data and report:
 
 ```bash
+uv run dsa-analysis build-race-registry
+uv run dsa-analysis regather-candidate-documents
+uv run dsa-analysis audit-full-text
+uv run dsa-analysis build-organizational-context
+uv run dsa-analysis fetch-organizational-context
+uv run dsa-analysis extract-organizational-context
 uv run dsa-analysis init-db
 uv run dsa-analysis validate
 uv run dsa-analysis analyze
 uv run dsa-analysis analyze-text
 ```
+
+The narrative pipeline uses the full campaign-document corpus and a separate official
+organizational-context corpus. `audit-full-text` intentionally exits nonzero until nationwide
+candidate/opponent coverage meets the configured sufficiency gates; clustering should not be run
+against the legacy quotation snapshot or while those gates fail.
 
 `analyze-text` runs the pinned local `sentence-transformers/all-MiniLM-L6-v2` model; no hosted
 model API is used. It compares:

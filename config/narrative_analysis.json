@@ -1,0 +1,55 @@
+{
+  "config_version": "2",
+  "seed": 1729,
+  "embedding_cache": {
+    "schema_version": 1,
+    "hash_algorithm": "sha256",
+    "normalization": "l2"
+  },
+  "threshold_sampling": {
+    "thresholds": [0.55, 0.6, 0.65, 0.68, 0.7, 0.75, 0.8],
+    "band_width": 0.03,
+    "max_per_threshold": 24,
+    "balance_keys": ["race_id"]
+  },
+  "threshold_selection": {
+    "selected_cosine_threshold": null,
+    "selection_source": "annotation",
+    "selection_metric": "balanced_accuracy",
+    "tie_breakers": ["precision", "recall", "higher_threshold"],
+    "positive_label": "match",
+    "negative_label": "mismatch"
+  },
+  "knn": {
+    "k": 64,
+    "min_similarity": null,
+    "threshold_source": "annotation_selection",
+    "mutual": true
+  },
+  "leiden": {
+    "objective": "rb_configuration",
+    "resolution": 1.0,
+    "min_community_size": 4
+  },
+  "narrative_lift": {
+    "smoothing": 1e-06
+  },
+  "umap": {
+    "n_neighbors": 15,
+    "min_dist": 0.1,
+    "metric": "cosine",
+    "n_components": 2,
+    "dimension_sweep": [2, 5, 10, 20, 30]
+  },
+  "hot_cold": {
+    "min_document_frequency": 2,
+    "top_n": 20,
+    "quantiles": [0.1, 0.2, 0.3, 0.4],
+    "stability_quantiles": [0.1, 0.2, 0.3, 0.4]
+  },
+  "dp_means": {
+    "max_distance": null,
+    "distance_source": "selected_cosine_threshold",
+    "max_iterations": 25
+  }
+}
