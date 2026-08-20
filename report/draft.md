@@ -46,13 +46,13 @@ Milwaukee DSA. The verified local layer is still incomplete and must not be trea
 - Endorsement-like first-party pages discovered: 875
 - Reviewable endorsement mentions extracted: 2521
 - High-confidence candidate/office leads extracted: 76
-- Independently verified local candidate endorsements: 355
+- Independently verified local candidate endorsements: 349
 - Rejected candidate-level false positives: 6
 - Chapter-year coverage units: 2673
-- Unresolved chapter-year units: 1729
-- National and local endorsed candidacies queued: 572
-- Endorsed candidacies with resolved roster research: 308
-- Candidate rows in verified primary rosters: 0
+- Unresolved chapter-year units: 1612
+- National and local endorsed candidacies queued: 622
+- Endorsed candidacies with resolved roster research: 622
+- Candidate rows in verified primary rosters: 594
 - Exact candidate evidence rows: 0
 - Derived primary sticking-point rows: 0
 

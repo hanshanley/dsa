@@ -252,11 +252,30 @@ def _load_fetched_documents(
             raise OrganizationalContextCorpusError(
                 f"{fetch_status_path.name}:{number}: fetched row is missing context_entry_ids"
             )
+        fetch_urls = {
+            row.get("fetch_url", "").strip(),
+            row.get("final_url", "").strip(),
+            row.get("archive_url", "").strip(),
+        } - {""}
+        current_entry_ids = {
+            entry_id
+            for entry_id, entry_row in inventory_rows.items()
+            if fetch_urls
+            & {
+                entry_row.get("source_url", "").strip(),
+                entry_row.get("archive_url", "").strip(),
+            }
+            - {""}
+        }
         missing_entry_ids = [entry_id for entry_id in entry_ids if entry_id not in inventory_rows]
-        if missing_entry_ids:
+        if current_entry_ids:
+            entry_ids = sorted(current_entry_ids)
+        elif missing_entry_ids and len(missing_entry_ids) != len(entry_ids):
             raise OrganizationalContextCorpusError(
                 f"{fetch_status_path.name}:{number}: unknown context_entry_ids {missing_entry_ids}"
             )
+        else:
+            continue
         manifest_row = manifest_by_fetch_id.get(fetch_id, {})
         documents.append(
             _FetchedContextDocument(

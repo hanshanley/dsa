@@ -2022,6 +2022,15 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "source_type": "campaign_page",
                 "source_url": "https://example.org/extraction-error",
             },
+            {
+                "queue_id": "q5",
+                "race_id": "race-5",
+                "candidate_name": "Malformed URL",
+                "role": "opponent",
+                "election_date": "2026-06-16",
+                "source_type": "campaign_page",
+                "source_url": "/document/132 | https:/example.org/platform.pdf",
+            },
         ]
 
         def fetcher(document_id: str, source_url: str) -> RawDocumentCapture:
@@ -2042,10 +2051,12 @@ class DocumentCorpusBatchTests(unittest.TestCase):
 
         self.assertEqual(result.fetch_errors, 1)
         self.assertEqual(result.extraction_errors, 1)
+        self.assertEqual(result.metadata_errors, 1)
         metadata_rows = {row["candidate_name"]: row for row in self._read_csv(paths.metadata_path)}
         self.assertEqual(metadata_rows["Fetch Failure"]["fetch_status"], "fetch_error")
-        self.assertEqual(metadata_rows["Fetch Failure"]["coverage_status"], "source_unavailable")
+        self.assertEqual(metadata_rows["Fetch Failure"]["coverage_status"], "found_unverified")
         self.assertEqual(metadata_rows["Extraction Failure"]["extraction_status"], "extraction_error")
+        self.assertEqual(metadata_rows["Malformed URL"]["fetch_status"], "metadata_error")
         self.assertEqual(self._read_csv(paths.analysis_segment_path), [])
 
     def test_run_candidate_document_extraction_batch_prefers_transcript_text(self) -> None:
