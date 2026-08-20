@@ -27,8 +27,11 @@ maps to many state contests rather than one national primary date.
 This is not yet a nationwide completeness claim. The local chapter crawl currently contains
 2,521 reviewable endorsement mentions from 825 live or archived pages and has produced **349
 verified in-window local endorsements**, including **103 verified Democratic primaries**. The
-registry-first document audit still exposes 949 retryable candidate search gaps, so narrative
-clustering remains gated until candidate texts and official platforms are sufficiently complete.
+The registry-first document audit now has an explicit search decision for every candidate: 587
+have extracted text, 107 are `source_unavailable`, 44 are documented `searched_not_found`, and
+765 have attempted but still unverified sources. The corpus contains 3,275 extracted documents,
+56,102 analysis segments, and 152 races with substantive text on both sides. Narrative clustering
+remains gated on the 809 unresolved attempted/not-found cases and human threshold annotation.
 Official organizational coverage now spans all 134 represented state-cycles with no unsearched
 platform rows: 359 entries are verified, 82 are documented `searched_not_found`, 1 is
 `source_unavailable`, and 104 are explicitly `not_applicable`. The extracted organizational

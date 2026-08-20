@@ -57,6 +57,7 @@ class FullTextAuditPaths:
     candidate_document_analysis_segments_path: Path
     output_dir: Path
     race_registry_path: Path | None = None
+    candidate_search_resolutions_path: Path | None = None
 
     @classmethod
     def default(cls) -> "FullTextAuditPaths":
@@ -79,6 +80,8 @@ class FullTextAuditPaths:
             / "candidate_document_analysis_segments.csv",
             output_dir=PROCESSED_DIR,
             race_registry_path=PROCESSED_DIR / "race_registry.csv",
+            candidate_search_resolutions_path=MANUAL_DIR
+            / "candidate_document_search_resolutions.csv",
         )
 
 
@@ -649,6 +652,9 @@ def _load_registry_queue(
     metadata_rows = _load_document_metadata_rows(
         paths.candidate_document_metadata_path
     )
+    search_resolutions = _candidate_search_resolutions(
+        paths.candidate_search_resolutions_path
+    )
     allowed_years = {str(year) for year in expected_years}
     candidate_occurrences: Counter[tuple[str, str]] = Counter()
     for row in registry_rows:
@@ -747,7 +753,10 @@ def _load_registry_queue(
             elif matching_metadata:
                 status = "found_unverified"
             else:
-                status = "not_searched"
+                status = search_resolutions.get(
+                    (row.get("race_id", "").strip(), candidate_key[1], role),
+                    "not_searched",
+                )
             output.append(
                 {
                     "queue_source": "registry",
@@ -1075,6 +1084,39 @@ def _processed_candidate_status(path: Path) -> dict[tuple[str, str, str], str]:
         key: ("verified" if "verified" in values else "source_unavailable")
         for key, values in statuses.items()
     }
+
+
+def _candidate_search_resolutions(
+    path: Path | None,
+) -> dict[tuple[str, str, str], str]:
+    if path is None or not path.exists():
+        return {}
+    statuses: dict[tuple[str, str, str], set[str]] = defaultdict(set)
+    for number, row in enumerate(read_csv(path), start=2):
+        research_status = row.get("research_status", "").strip()
+        if research_status not in {
+            "verified_source",
+            "searched_not_found",
+            "source_unavailable",
+        }:
+            raise ValueError(f"{path.name}:{number}: invalid research_status")
+        key = (
+            row.get("race_id", "").strip(),
+            _identity(row.get("candidate_name", "")),
+            row.get("role", "").strip(),
+        )
+        if not all(key):
+            raise ValueError(f"{path.name}:{number}: incomplete candidate identity")
+        statuses[key].add(research_status)
+    output = {}
+    for key, values in statuses.items():
+        if "verified_source" in values:
+            output[key] = "found_unverified"
+        elif "searched_not_found" in values:
+            output[key] = "searched_not_found"
+        else:
+            output[key] = "source_unavailable"
+    return output
 
 
 def _load_document_metadata_rows(path: Path) -> list[dict[str, str]]:

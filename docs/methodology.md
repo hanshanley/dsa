@@ -59,6 +59,10 @@ PDF, audio, or video. Generated summaries are never evidence.
 
 The dataset distinguishes `not_searched`, `searched_not_found`, `source_unavailable`,
 `found_unverified`, and `verified`. No-position-found is not interpreted as opposition or support.
+Candidate-level source research decisions are retained in
+`data/manual/candidate_document_search_resolutions.csv`; verified sources are also added to
+`candidate_documents.csv`. This keeps completed unsuccessful searches distinct from fetch or
+extraction failures and prevents candidates without recovered text from disappearing silently.
 ## Reproducible lexical comparison
 
 Run `uv run dsa-analysis analyze-text` after the reviewed evidence and sticking-point datasets

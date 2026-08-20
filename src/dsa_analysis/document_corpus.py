@@ -3251,6 +3251,12 @@ def _resolve_raw_capture(
         seen_rows.add(identity)
         manifest_rows.append(candidate_row)
     for manifest_row in manifest_rows:
+        job_archive_url, _ = split_archive_url(job.source_url)
+        if job_archive_url and not _manifest_row_has_exact_url(
+            manifest_row,
+            job.source_url,
+        ):
+            continue
         raw_path = _path_from_row(manifest_row.get("raw_path", ""))
         if raw_path and raw_path.exists():
             content = raw_path.read_bytes()
@@ -3295,6 +3301,23 @@ def _resolve_raw_capture(
             "fetched",
             None,
         )
+
+
+def _manifest_row_has_exact_url(
+    manifest_row: dict[str, str],
+    source_url: str,
+) -> bool:
+    normalized_source = normalize_source_url(source_url)
+    for field in ("source_url", "archive_url", "final_url"):
+        value = manifest_row.get(field, "").strip()
+        if not value:
+            continue
+        try:
+            if normalize_source_url(value) == normalized_source:
+                return True
+        except DocumentCorpusError:
+            continue
+    return False
 
 
 def _job_manifest_lookup_keys(job: CandidateDocumentJob) -> tuple[str, ...]:
@@ -3539,6 +3562,8 @@ def _normalize_candidate_document_job(row: dict[str, str]) -> CandidateDocumentJ
         "effective_date", ""
     ).strip()
     if publication_date:
+        if re.fullmatch(r"\d{4}", publication_date):
+            publication_date = f"{publication_date}-01-01"
         _coerce_date(publication_date)
     document_id = row.get("document_id", "").strip() or candidate_document_id(
         candidate_name,
