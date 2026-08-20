@@ -26,6 +26,10 @@ class FullTextAuditTests(unittest.TestCase):
         paths = replace(
             self._paths(root),
             race_registry_path=root / "data" / "processed" / "race_registry.csv",
+            candidate_search_resolutions_path=root
+            / "data"
+            / "manual"
+            / "candidate_document_search_resolutions.csv",
         )
         self._write_csv(
             paths.race_registry_path,
@@ -87,13 +91,24 @@ class FullTextAuditTests(unittest.TestCase):
                 },
             ],
         )
+        self._write_csv(
+            paths.candidate_search_resolutions_path,
+            [
+                {
+                    "race_id": "canonical-race",
+                    "candidate_name": "Taylor Example",
+                    "role": "opponent",
+                    "research_status": "searched_not_found",
+                }
+            ],
+        )
 
         queue = _load_registry_queue(paths, [2016])
         by_candidate = {row["candidate_name"]: row for row in queue}
 
         self.assertEqual(by_candidate["Casey Example"]["current_status"], "verified")
         self.assertEqual(by_candidate["Robin Example"]["current_status"], "found_unverified")
-        self.assertEqual(by_candidate["Taylor Example"]["current_status"], "not_searched")
+        self.assertEqual(by_candidate["Taylor Example"]["current_status"], "searched_not_found")
 
     def test_legacy_quotes_seed_actionable_queues_but_do_not_count_as_full_documents(self) -> None:
         root = self._scenario_root("manual")

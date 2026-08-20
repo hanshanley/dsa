@@ -1497,6 +1497,65 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertEqual(metadata_rows["Alex Example"]["raw_path"], metadata_rows["Blair Example"]["raw_path"])
         self.assertEqual(len(self._read_jsonl(paths.raw_manifest_path)), 1)
 
+    def test_archive_source_does_not_reuse_live_interstitial_raw(self) -> None:
+        root = self._scenario_root("archive_replaces_live")
+        paths = self._paths(root)
+        live_url = "https://example.org/platform"
+        archive_url = (
+            "https://web.archive.org/web/20200101000000id_/"
+            "https://example.org/platform"
+        )
+        fetch_calls: list[str] = []
+
+        def fetcher(document_id: str, source_url: str) -> RawDocumentCapture:
+            fetch_calls.append(source_url)
+            body = (
+                b"<html><body><p>Archived substantive platform text.</p></body></html>"
+                if source_url == archive_url
+                else b"<html><head><meta http-equiv='refresh' content='0'></head></html>"
+            )
+            return self._capture(
+                document_id=document_id,
+                source_url=source_url,
+                content_type="text/html",
+                body=body,
+            )
+
+        run_candidate_document_extraction_batch(
+            [
+                {
+                    "queue_id": "q-live",
+                    "race_id": "race-1",
+                    "candidate_name": "Alex Example",
+                    "role": "endorsed",
+                    "election_date": "2020-06-16",
+                    "source_type": "campaign_page",
+                    "source_url": live_url,
+                }
+            ],
+            paths,
+            fetcher=fetcher,
+        )
+        result = run_candidate_document_extraction_batch(
+            [
+                {
+                    "queue_id": "q-archive",
+                    "race_id": "race-1",
+                    "candidate_name": "Alex Example",
+                    "role": "endorsed",
+                    "election_date": "2020-06-16",
+                    "source_type": "campaign_page",
+                    "source_url": archive_url,
+                }
+            ],
+            paths,
+            fetcher=fetcher,
+        )
+
+        self.assertEqual(fetch_calls, [live_url, archive_url])
+        self.assertEqual(result.fetched_documents, 1)
+        self.assertEqual(result.reused_raw_documents, 0)
+
     def test_reused_raw_preserves_archive_provenance(self) -> None:
         root = self._scenario_root("reuse_archive_provenance")
         paths = self._paths(root)
@@ -2031,6 +2090,16 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "source_type": "campaign_page",
                 "source_url": "/document/132 | https:/example.org/platform.pdf",
             },
+            {
+                "queue_id": "q6",
+                "race_id": "race-6",
+                "candidate_name": "Year Only Date",
+                "role": "endorsed",
+                "election_date": "2020-06-16",
+                "publication_date": "2020",
+                "source_type": "campaign_page",
+                "source_url": "https://example.org/year-only",
+            },
         ]
 
         def fetcher(document_id: str, source_url: str) -> RawDocumentCapture:
@@ -2040,7 +2109,11 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 document_id=document_id,
                 source_url=source_url,
                 content_type="text/plain",
-                body=b"   \n\n  ",
+                body=(
+                    b"A substantive campaign platform about housing and healthcare."
+                    if source_url.endswith("year-only")
+                    else b"   \n\n  "
+                ),
             )
 
         result = run_candidate_document_extraction_batch(
@@ -2057,7 +2130,10 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertEqual(metadata_rows["Fetch Failure"]["coverage_status"], "found_unverified")
         self.assertEqual(metadata_rows["Extraction Failure"]["extraction_status"], "extraction_error")
         self.assertEqual(metadata_rows["Malformed URL"]["fetch_status"], "metadata_error")
-        self.assertEqual(self._read_csv(paths.analysis_segment_path), [])
+        self.assertEqual(metadata_rows["Year Only Date"]["publication_date"], "2020-01-01")
+        analysis_rows = self._read_csv(paths.analysis_segment_path)
+        self.assertEqual(len(analysis_rows), 1)
+        self.assertEqual(analysis_rows[0]["candidate_name"], "Year Only Date")
 
     def test_run_candidate_document_extraction_batch_prefers_transcript_text(self) -> None:
         root = self._scenario_root("transcript")

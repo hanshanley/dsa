@@ -2,6 +2,7 @@ from collections import Counter
 from dataclasses import dataclass
 from datetime import date
 
+from .document_corpus import candidate_slug
 from .io import read_csv, read_json
 from .paths import CONFIG_DIR, MANUAL_DIR, PROCESSED_DIR
 from .schema import (
@@ -51,6 +52,23 @@ def validate(strict: bool = False) -> AuditResult:
         (row["race_id"], row["candidate_id"])
         for row in race_candidates
     }
+    registry_path = PROCESSED_DIR / "race_registry.csv"
+    if registry_path.exists():
+        for row in read_csv(registry_path):
+            race_id = row.get("race_id", "").strip()
+            if not race_id:
+                continue
+            race_ids.add(race_id)
+            for field in (
+                "endorsed_candidates",
+                "unopposed_candidates",
+                "opponent_candidates",
+            ):
+                for candidate_name in row.get(field, "").split(" | "):
+                    if candidate_name.strip():
+                        candidate_races.add(
+                            (race_id, candidate_slug(candidate_name))
+                        )
     candidate_document_rows = tables["candidate_documents"]
     organizational_context_rows = tables["organizational_context_sources"]
     taxonomy = read_json(CONFIG_DIR / "taxonomy.json")
