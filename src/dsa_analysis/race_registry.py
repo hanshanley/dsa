@@ -232,6 +232,7 @@ class RaceRegistryPaths:
     candidate_document_metadata_path: Path | None = None
     candidate_document_full_text_path: Path | None = None
     national_census_resolution_paths: tuple[Path, ...] = ()
+    processed_opponent_queue_path: Path | None = None
 
     @classmethod
     def default(cls) -> "RaceRegistryPaths":
@@ -251,6 +252,8 @@ class RaceRegistryPaths:
             national_census_resolution_paths=tuple(
                 sorted(MANUAL_DIR.glob("national_census_resolutions_*.csv"))
             ),
+            processed_opponent_queue_path=PROCESSED_DIR
+            / "opponent_research_queue.csv",
         )
 
 
@@ -289,6 +292,11 @@ class ProcessedRacePackage:
     endorsed_candidates: tuple[str, ...]
     opponent_candidates: tuple[str, ...]
     official_election_source: str
+    office: str
+    jurisdiction: str
+    state_code: str
+    state: str
+    endorsing_bodies: tuple[str, ...]
 
 
 @dataclass(frozen=True)
@@ -341,7 +349,14 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
     )
     for race_id, package in national_packages.items():
         resolution_packages.setdefault(race_id, package)
-    processed_packages = _processed_race_packages(paths.processed_race_rosters_path)
+    processed_packages = _processed_race_packages(
+        paths.processed_race_rosters_path,
+        paths.processed_opponent_queue_path,
+    )
+    processed_seeded_races = _seed_grouped_from_processed_packages(
+        grouped,
+        processed_packages,
+    )
     metadata_evidence_by_race = _candidate_document_evidence_by_race(
         paths.candidate_document_metadata_path,
         paths.candidate_document_full_text_path,
@@ -519,6 +534,22 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
                 metadata_source = f"resolution_{resolution_match.verification_status}"
                 source_reference = resolution_match.source_key
         elif processed_match is not None:
+            if not office and processed_match.office:
+                office = processed_match.office
+                office_status = "processed_verified"
+                office_source = processed_match.processed_race_id
+                office_confidence = VERIFIED_CONFIDENCE
+            if not jurisdiction and processed_match.jurisdiction:
+                jurisdiction = processed_match.jurisdiction
+                jurisdiction_status = "processed_verified"
+                jurisdiction_source = processed_match.processed_race_id
+                jurisdiction_confidence = VERIFIED_CONFIDENCE
+            if not state_code and processed_match.state_code:
+                state_code = processed_match.state_code
+                state = processed_match.state
+                state_status = "processed_verified"
+                state_source = processed_match.processed_race_id
+                state_confidence = VERIFIED_CONFIDENCE
             source_fields = _classified_source_fields(
                 url=processed_match.official_election_source,
                 verified_status="processed_verified",
@@ -541,6 +572,7 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
             )
             metadata_source = "processed_verified"
             source_reference = processed_match.processed_race_id
+            endorsing_bodies = list(processed_match.endorsing_bodies)
         if resolution_match is None and hint is not None:
             if not state_code:
                 state_code = hint["state_code"]
@@ -687,6 +719,7 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
         "in_scope_races": sum(row["scope_kind"] == IN_SCOPE_KIND for row in registry_rows),
         "raw_total_races": len(raw_registry_rows),
         "manual_endorsement_seeded_races": manual_seeded_races,
+        "processed_roster_seeded_races": processed_seeded_races,
         **national_seed_summary,
         "resolution_verified_rows": sum(
             package.verification_status == "verified"
@@ -914,22 +947,6 @@ def _national_endorsement_reconciliation_rows(
 ) -> list[dict[str, str]]:
     if not archive_path.exists():
         return []
-    registry_by_alias_year: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
-    for row in registry_rows:
-        names = _split_pipe_values(
-            " | ".join(
-                (
-                    row.get("endorsed_candidates", ""),
-                    row.get("unopposed_candidates", ""),
-                )
-            )
-        )
-        for name in names:
-            for alias in _candidate_alias_family(name):
-                registry_by_alias_year[
-                    (alias, row.get("election_year", ""))
-                ].append(row)
-
     resolutions_by_id = {
         row.get("record_id", ""): row
         for path in resolution_paths
@@ -951,11 +968,22 @@ def _national_endorsement_reconciliation_rows(
         office_types = _split_pipe_values(row.get("office_types", ""))
         if "Ballot Initiative" in office_types:
             continue
-        matches_by_race_id: dict[str, dict[str, str]] = {}
-        for alias in _candidate_alias_family(row.get("campaign", "")):
-            for match in registry_by_alias_year.get((alias, election_year), []):
-                matches_by_race_id[match["race_id"]] = match
-        matches = list(matches_by_race_id.values())
+        matches = [
+            registry_row
+            for registry_row in registry_rows
+            if registry_row.get("election_year", "") == election_year
+            and any(
+                _candidate_name_matches(name, row.get("campaign", ""))
+                for name in _split_pipe_values(
+                    " | ".join(
+                        (
+                            registry_row.get("endorsed_candidates", ""),
+                            registry_row.get("unopposed_candidates", ""),
+                        )
+                    )
+                )
+            )
+        ]
         scope_kinds = sorted({match["scope_kind"] for match in matches})
         if any(scope == IN_SCOPE_KIND for scope in scope_kinds):
             registry_status = "matched_in_scope"
@@ -1261,6 +1289,21 @@ def _candidate_tokens(name: str) -> list[str]:
     text = re.sub(r"\b(jr|jr\.|sr|sr\.|ii|iii|iv)\b", " ", text)
     text = re.sub(r"[^a-z0-9]+", " ", text)
     return [token for token in text.split() if token]
+
+
+def _candidate_name_matches(left: str, right: str) -> bool:
+    left_tokens = _candidate_tokens(left)
+    right_tokens = _candidate_tokens(right)
+    if not left_tokens or not right_tokens:
+        return False
+    if left_tokens == right_tokens:
+        return True
+    if len(left_tokens) < 2 or len(right_tokens) < 2:
+        return False
+    return (
+        left_tokens[0] == right_tokens[0]
+        and left_tokens[-1] == right_tokens[-1]
+    )
 
 
 def _merge_registry_component(rows: list[dict[str, str]]) -> dict[str, str]:
@@ -2084,6 +2127,13 @@ def _seed_grouped_from_national_census(
                         candidate_race_id
                         for candidate_race_id in matched_race_ids.get(record_id, [])
                         if candidate_race_id in grouped
+                        and any(
+                            _candidate_name_matches(
+                                member.get("candidate_name", ""),
+                                normalized["campaign"],
+                            )
+                            for member in grouped[candidate_race_id]
+                        )
                     ),
                     "",
                 )
@@ -2203,13 +2253,15 @@ def _find_candidate_year_race(
     candidate_name: str,
     election_year: str,
 ) -> str:
-    candidate_key = _identity(candidate_name)
     matches = sorted(
         race_id
         for race_id, rows in grouped.items()
         if any(
             row.get("election_date", "")[:4] == election_year
-            and _identity(row.get("candidate_name", "")) == candidate_key
+            and _candidate_name_matches(
+                row.get("candidate_name", ""),
+                candidate_name,
+            )
             for row in rows
         )
     )
@@ -2349,9 +2401,66 @@ def _resolution_packages(
     return packages
 
 
-def _processed_race_packages(path: Path) -> list[ProcessedRacePackage]:
+def _seed_grouped_from_processed_packages(
+    grouped: dict[str, list[dict[str, str]]],
+    packages: list[ProcessedRacePackage],
+) -> int:
+    seeded = 0
+    for package in packages:
+        if package.processed_race_id in grouped:
+            continue
+        matching_race = _find_existing_race_for_package(grouped, package)
+        if matching_race:
+            continue
+        rows = _synthetic_candidate_rows(
+            race_id=package.processed_race_id,
+            election_date=package.election_date,
+            endorsed_candidate=(
+                package.endorsed_candidates[0]
+                if package.endorsed_candidates
+                else ""
+            ),
+            opponents=package.opponent_candidates,
+            evidence_status="verified",
+            source_url=package.official_election_source,
+            notes="Seeded from verified local primary roster research.",
+        )
+        if rows:
+            grouped[package.processed_race_id].extend(rows)
+            seeded += 1
+    return seeded
+
+
+def _find_existing_race_for_package(
+    grouped: dict[str, list[dict[str, str]]],
+    package: ProcessedRacePackage,
+) -> str:
+    candidate_keys = {
+        _identity(name)
+        for name in package.endorsed_candidates
+    }
+    matches = sorted(
+        race_id
+        for race_id, rows in grouped.items()
+        if any(
+            row.get("election_date", "") == package.election_date
+            and _identity(row.get("candidate_name", "")) in candidate_keys
+            for row in rows
+        )
+    )
+    return matches[0] if len(matches) == 1 else ""
+
+
+def _processed_race_packages(
+    path: Path,
+    queue_path: Path | None = None,
+) -> list[ProcessedRacePackage]:
     if not path.exists():
         return []
+    queue_by_id = {
+        row.get("queue_id", ""): row
+        for row in read_csv(queue_path)
+    } if queue_path and queue_path.exists() else {}
     rows = read_csv(path)
     grouped: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in rows:
@@ -2364,6 +2473,15 @@ def _processed_race_packages(path: Path) -> list[ProcessedRacePackage]:
         if len(election_dates) != 1:
             continue
         official_sources = sorted({row.get("official_election_source", "").strip() for row in members if row.get("official_election_source", "").strip()})
+        queue_rows = [
+            queue_by_id[row.get("queue_id", "")]
+            for row in members
+            if row.get("queue_id", "") in queue_by_id
+        ]
+        sample_queue = queue_rows[0] if queue_rows else {}
+        state_code = sample_queue.get("state", "").strip()
+        if state_code not in STATE_NAME_BY_CODE:
+            state_code = ""
         packages.append(
             ProcessedRacePackage(
                 processed_race_id=race_id,
@@ -2371,6 +2489,20 @@ def _processed_race_packages(path: Path) -> list[ProcessedRacePackage]:
                 endorsed_candidates=tuple(sorted({row.get("candidate_name", "").strip() for row in members if row.get("role", "").strip() in {"endorsed", "unopposed"}})),
                 opponent_candidates=tuple(sorted({row.get("candidate_name", "").strip() for row in members if row.get("role", "").strip() == "opponent"})),
                 official_election_source=official_sources[0] if official_sources else "",
+                office=sample_queue.get("office_text", "").strip(),
+                jurisdiction=sample_queue.get("office_text", "").strip(),
+                state_code=state_code,
+                state=STATE_NAME_BY_CODE.get(state_code, ""),
+                endorsing_bodies=tuple(
+                    sorted(
+                        {
+                            body.strip()
+                            for queue_row in queue_rows
+                            for body in queue_row.get("chapter", "").split(" | ")
+                            if body.strip()
+                        }
+                    )
+                ),
             )
         )
     return packages
