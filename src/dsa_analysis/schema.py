@@ -22,6 +22,39 @@ SCHEMAS = {
             "verification_status",
         ),
     ),
+    "candidate_documents": TableSchema(
+        "candidate_documents",
+        "candidate_document_id",
+        (
+            "candidate_document_id",
+            "race_id",
+            "candidate_id",
+            "candidate_name",
+            "role",
+            "election_date",
+            "title",
+            "source_type",
+            "source_tier",
+            "source_url",
+            "verification_status",
+        ),
+    ),
+    "organizational_context_sources": TableSchema(
+        "organizational_context_sources",
+        "context_entry_id",
+        (
+            "context_entry_id",
+            "state",
+            "state_code",
+            "cycle_year",
+            "organization_level",
+            "context_category",
+            "organization",
+            "title",
+            "platform_type",
+            "verification_status",
+        ),
+    ),
     "endorsements": TableSchema(
         "endorsements",
         "endorsement_id",
@@ -113,5 +146,7 @@ VERIFICATION_STATUSES = {
     "found_unverified",
     "verified",
 }
+ORGANIZATIONAL_CONTEXT_STATUSES = VERIFICATION_STATUSES | {"not_applicable"}
+ANALYSIS_SCOPES = {"analysis", "context_only"}
 STANCE_CODES = {"support", "oppose", "mixed", "unclear"}
 CONTRAST_TYPES = {"explicit_conflict", "coded_divergence"}

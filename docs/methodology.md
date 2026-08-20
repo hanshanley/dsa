@@ -15,6 +15,13 @@ The endorsement census seeks every identifiable federal, state, and local Democr
 endorsement nationwide. Because local archives are decentralized and may be deleted, results
 must include the coverage ledger and must not claim unknowable absolute completeness.
 
+The canonical denominator is endorsement-first. Verified manual endorsements and adjudicated
+DSA National records seed races before any quotation or campaign-document evidence is attached.
+National records are classified as Democratic primary, nonpartisan primary, general-only,
+unopposed, ballot or party position, noncandidate, or source unavailable. Only dated Democratic
+primaries enter the candidate-versus-opponent analysis; exclusions remain in the reconciliation
+table. This prevents quotation availability from silently determining which races exist.
+
 ## Source hierarchy
 
 1. Adopted platforms, programs, resolutions, constitutions, and endorsement notices.
@@ -100,3 +107,48 @@ beside every prediction, score, runner-up and margin.
 
 The crosswalk agreement is a diagnostic rather than an independent gold-standard accuracy
 estimate. Low-similarity and low-margin rows remain directly filterable.
+
+## Full-document narrative corpus
+
+Narrative analysis does not use `candidate_text_corpus.csv` as its input. That file is a
+quotation-level evidence snapshot. The narrative corpus instead collects complete campaign
+policy pages, platforms, releases, speeches, interviews, questionnaires, voter guides, and
+publisher-provided transcripts within each primary's campaign window. Documents are stored with
+content-addressed raw provenance and deterministically segmented; transcriptless audio/video and
+unscoped multi-candidate documents are excluded from analysis.
+
+The comparison denominator is the canonical nationwide registry of tracked DSA-endorsed
+Democratic primaries and every identified certified Democratic opponent. Candidate documents
+remain separate from the organizational-context corpus, which contains DNC platforms, DSA
+national programs or resolutions, state Democratic Party platforms, and official local DSA
+electoral documents. State-cycle rows explicitly distinguish verified full platforms,
+carry-forward documents, drafts or convention packets, searched-not-found results, and
+non-platform electoral context.
+
+Run the collection stages with:
+
+```bash
+uv run dsa-analysis build-race-registry
+uv run dsa-analysis regather-candidate-documents
+uv run dsa-analysis build-organizational-context
+uv run dsa-analysis fetch-organizational-context
+uv run dsa-analysis extract-organizational-context
+uv run dsa-analysis audit-full-text
+```
+
+`audit-full-text` is a hard gate. Narrative clustering must not proceed while retryable candidate
+searches remain or while paired-race, year, source-class, or imbalance checks fail.
+
+## Narrative clustering and fingerprint
+
+Analysis units are normalized full-document segments embedded with the pinned local MiniLM model.
+The cosine threshold is selected from human judgments at 0.55, 0.60, 0.65, 0.68, 0.70, 0.75,
+and 0.80; no production threshold is selected before annotation. For the chosen threshold, the
+pipeline constructs a cosine K-nearest-neighbor graph with `K=64`, runs weighted Leiden
+RBConfiguration community detection at resolution 1.0, and retains communities with at least
+four members. Cosine DP-Means at the same human-selected threshold is a robustness analysis.
+
+Narrative lift and density comparisons use candidate/race-balanced weights because campaigns
+contribute unequal text volumes. UMAP dimensions 2, 5, 10, 20, and 30 are compared using
+trustworthiness before KDE dimensionality is fixed. Hot/cold-zone TF-IDF and NPMI characterize
+the resulting density contrast; the two-dimensional projection is visualization only.
