@@ -489,7 +489,7 @@ class OrganizationalContextTests(unittest.TestCase):
                     "official_election_source_status": "manual_verified",
                     "certified_opponents": "Sam Example",
                     "certified_opponents_status": "manual_verified",
-                    "endorsing_bodies": "",
+                    "endorsing_bodies": "Las Vegas",
                     "metadata_source": "manual_verified",
                     "source_reference": "nv-race",
                     "unresolved_fields": "",
@@ -796,6 +796,47 @@ class OrganizationalContextTests(unittest.TestCase):
         self.assertEqual(fetch_result.queued_urls, 1)
         status_rows = self._read_csv(fetch_result.status_path)
         self.assertEqual(status_rows[0]["status"], "fetched")
+
+    def test_fetch_pass_preserves_records_from_prior_targeted_runs(self) -> None:
+        root = self._scenario_root("fetch_resume")
+        paths = self._paths(root)
+        first_queue = [
+            {
+                "fetch_id": "fetch-a",
+                "fetch_url": "https://example.org/a",
+                "archive_url": "",
+                "context_entry_ids": "context-a",
+            }
+        ]
+        second_queue = [
+            {
+                "fetch_id": "fetch-b",
+                "fetch_url": "https://example.org/b",
+                "archive_url": "",
+                "context_entry_ids": "context-b",
+            }
+        ]
+
+        def fetcher(url: str) -> FetchCapture:
+            return FetchCapture(
+                fetch_url=url,
+                final_url=url,
+                retrieved_at="2026-08-20T00:00:00+00:00",
+                content_type="text/html",
+                content_bytes=url.encode(),
+                status_code=200,
+            )
+
+        run_organizational_context_fetch_pass(first_queue, paths, fetcher=fetcher)
+        fetch_result = run_organizational_context_fetch_pass(second_queue, paths, fetcher=fetcher)
+
+        status_rows = self._read_csv(fetch_result.status_path)
+        self.assertEqual([row["fetch_id"] for row in status_rows], ["fetch-a", "fetch-b"])
+        manifest_rows = [
+            json.loads(line)
+            for line in fetch_result.raw_manifest_path.read_text(encoding="utf-8").splitlines()
+        ]
+        self.assertEqual([row["fetch_id"] for row in manifest_rows], ["fetch-a", "fetch-b"])
 
     def _scenario_root(self, name: str) -> Path:
         root = SCRATCH_ROOT / name

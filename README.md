@@ -18,16 +18,21 @@ DSA feed contains **308 candidate endorsements since 2016**, after ballot initia
 excluded. Every one of the 178 endorsements that was previously absent or mis-scoped has now
 been adjudicated: 27 Democratic primaries, 37 nonpartisan primaries, 82 general-only races, and
 32 explicit noncandidate, unopposed, ballot-position, or source-unavailable cases. The canonical
-registry is now seeded from endorsements before quotation evidence and contains **509 races,
-375 in-scope Democratic primaries, and 1,496 candidates**. Every dated national Democratic-primary
+registry is now seeded from endorsements before quotation evidence and contains **511 races,
+377 in-scope Democratic primaries, and 1,503 candidates** across **134 represented state-cycles**.
+Every dated national Democratic-primary
 adjudication is represented; the Sanders presidential endorsement remains unresolved because it
 maps to many state contests rather than one national primary date.
 
 This is not yet a nationwide completeness claim. The local chapter crawl currently contains
-2,521 reviewable endorsement mentions from 825 live or archived pages, while 1,729 chapter-year
-cells still require review. The registry-first document audit also exposes 1,010 candidate search
-gaps, so narrative clustering remains gated until local endorsements, certified rosters, campaign
-texts, and official state platforms are complete.
+2,521 reviewable endorsement mentions from 825 live or archived pages and has produced **349
+verified in-window local endorsements**, including **103 verified Democratic primaries**. The
+registry-first document audit still exposes 949 retryable candidate search gaps, so narrative
+clustering remains gated until candidate texts and official platforms are sufficiently complete.
+Official organizational coverage now spans all 134 represented state-cycles with no unsearched
+platform rows: 359 entries are verified, 82 are documented `searched_not_found`, 1 is
+`source_unavailable`, and 104 are explicitly `not_applicable`. The extracted organizational
+corpus contains 80 documents and 4,737 clean full-platform analysis segments.
 
 | DSA / DSA-endorsed emphasis | Democratic platform / opponent emphasis |
 | --- | --- |

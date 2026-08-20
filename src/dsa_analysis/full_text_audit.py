@@ -650,6 +650,24 @@ def _load_registry_queue(
         paths.candidate_document_metadata_path
     )
     allowed_years = {str(year) for year in expected_years}
+    candidate_occurrences: Counter[tuple[str, str]] = Counter()
+    for row in registry_rows:
+        if (
+            row.get("scope_kind", "").strip()
+            != "tracked_dsa_endorsed_democratic_primary"
+        ):
+            continue
+        year = row.get("election_date", "").strip()[:4]
+        row_candidates: set[tuple[str, str]] = set()
+        for field in (
+            "endorsed_candidates",
+            "unopposed_candidates",
+            "opponent_candidates",
+        ):
+            row_candidates.update(
+                (_identity(name), year) for name in _pipe_values(row.get(field, ""))
+            )
+        candidate_occurrences.update(row_candidates)
     output: list[dict[str, str]] = []
     for number, row in enumerate(registry_rows, start=2):
         if (
@@ -697,6 +715,24 @@ def _load_registry_queue(
                 if metadata.get("race_id", "").strip() in source_race_ids
                 and _identity(metadata.get("candidate_name", "")) == candidate_key[1]
             ]
+            if (
+                candidate_occurrences[(candidate_key[1], year)] == 1
+                or "president" in _identity(row.get("office", ""))
+            ):
+                fallback_metadata = [
+                    metadata
+                    for metadata in metadata_rows
+                    if metadata.get("election_year", "") == year
+                    and _identity(metadata.get("candidate_name", "")) == candidate_key[1]
+                ]
+                matching_document_ids = {
+                    metadata.get("document_id", "") for metadata in matching_metadata
+                }
+                matching_metadata.extend(
+                    metadata
+                    for metadata in fallback_metadata
+                    if metadata.get("document_id", "") not in matching_document_ids
+                )
             if any(
                 metadata.get("extraction_status", "").strip() == "extracted"
                 and metadata.get("analysis_scope", "analysis").strip() == "analysis"
@@ -708,6 +744,8 @@ def _load_registry_queue(
                 for metadata in matching_metadata
             ):
                 status = "source_unavailable"
+            elif matching_metadata:
+                status = "found_unverified"
             else:
                 status = "not_searched"
             output.append(

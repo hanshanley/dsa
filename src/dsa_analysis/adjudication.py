@@ -745,6 +745,118 @@ def enrich_verified_endorsements_from_registry() -> tuple[int, int, int]:
     return years_enriched, offices_enriched, unresolved
 
 
+def merge_local_metadata_reviews(batch_dir: Path) -> tuple[int, int, int]:
+    expected: set[str] = set()
+    for path in sorted(batch_dir.glob("metadata_batch_*.jsonl")):
+        with path.open(encoding="utf-8") as handle:
+            for line in handle:
+                expected.add(json.loads(line)["endorsement_key"])
+    if not expected:
+        raise ValueError("No local metadata batch inputs were found")
+
+    required = {
+        "endorsement_key",
+        "decision",
+        "office_text",
+        "election_year",
+        "election_stage",
+        "official_source",
+        "notes",
+    }
+    reviews: dict[str, dict[str, str]] = {}
+    for path in sorted(batch_dir.glob("metadata_review_*.csv")):
+        with path.open(newline="", encoding="utf-8") as handle:
+            reader = csv.DictReader(handle)
+            missing = required - set(reader.fieldnames or [])
+            if missing:
+                raise ValueError(f"{path.name}: missing columns {sorted(missing)}")
+            for row in reader:
+                key = row["endorsement_key"].strip()
+                if key not in expected:
+                    raise ValueError(f"{path.name}: unknown endorsement_key {key}")
+                if key in reviews:
+                    raise ValueError(f"{path.name}: duplicate endorsement_key {key}")
+                if row["decision"] not in {
+                    "resolved",
+                    "out_of_window",
+                    "source_unavailable",
+                }:
+                    raise ValueError(f"{path.name}: invalid decision")
+                if row["decision"] == "resolved" and (
+                    not row["office_text"].strip()
+                    or not re.fullmatch(r"20\d{2}", row["election_year"].strip())
+                ):
+                    raise ValueError(
+                        f"{path.name}: resolved row lacks office or four-digit year"
+                    )
+                reviews[key] = row
+    uncovered = expected - set(reviews)
+    if uncovered:
+        raise ValueError(f"{len(uncovered)} local metadata rows remain unreviewed")
+
+    verified_path = PROCESSED_DIR / "local_endorsements_verified.csv"
+    verified = []
+    out_of_window = []
+    unavailable = 0
+    for candidate in read_csv(verified_path):
+        review = reviews.get(candidate["endorsement_key"])
+        if not review:
+            verified.append(candidate)
+            continue
+        decision = review["decision"]
+        candidate["notes"] = merge_notes(
+            candidate["notes"],
+            review["notes"].strip(),
+            (
+                f"Metadata source: {review['official_source'].strip()}"
+                if review["official_source"].strip()
+                else ""
+            ),
+        )
+        if decision == "out_of_window":
+            candidate["office_text"] = (
+                review["office_text"].strip() or candidate["office_text"]
+            )
+            candidate["election_year"] = review["election_year"].strip()
+            candidate["election_stage"] = (
+                review["election_stage"].strip() or candidate["election_stage"]
+            )
+            out_of_window.append(candidate)
+            continue
+        if decision == "source_unavailable":
+            unavailable += 1
+            verified.append(candidate)
+            continue
+        candidate["office_text"] = review["office_text"].strip()
+        candidate["election_year"] = review["election_year"].strip()
+        candidate["election_stage"] = (
+            review["election_stage"].strip() or "unknown"
+        )
+        verified.append(candidate)
+
+    fieldnames = [
+        "endorsement_key",
+        "chapter",
+        "state",
+        "candidate_name",
+        "office_text",
+        "election_year",
+        "election_stage",
+        "source_url",
+        "confidence",
+        "review_status",
+        "mention_ids",
+        "notes",
+    ]
+    write_csv(verified_path, verified, fieldnames)
+    write_csv(
+        PROCESSED_DIR / "local_endorsements_out_of_window.csv",
+        out_of_window,
+        fieldnames,
+    )
+    return len(reviews), len(out_of_window), unavailable
+
+
 def _input_ids(batch_dir: Path) -> set[str]:
     input_ids = set()
     for path in sorted(batch_dir.glob("batch_*.jsonl")):

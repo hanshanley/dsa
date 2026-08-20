@@ -302,14 +302,14 @@ class OrganizationalContextCorpusTests(unittest.TestCase):
             writer.writerow(
                 {
                     "fetch_id": "fetch-invalid",
-                    "fetch_url": "https://example.org/tx-platform",
+                    "fetch_url": "https://example.org/unknown-platform",
                     "archive_url": "",
-                    "context_entry_ids": "context-missing",
+                    "context_entry_ids": "context-known | context-missing",
                     "status": "fetched",
                     "http_status": "200",
                     "content_type": "text/html",
                     "retrieved_at": "2026-08-20T00:00:00+00:00",
-                    "final_url": "https://example.org/tx-platform",
+                    "final_url": "https://example.org/unknown-platform",
                     "raw_path": "raw/organizational_context/fetch-invalid.html",
                     "sha256": "",
                     "error": "",
@@ -319,6 +319,57 @@ class OrganizationalContextCorpusTests(unittest.TestCase):
 
         with self.assertRaisesRegex(OrganizationalContextCorpusError, "unknown context_entry_ids"):
             run_organizational_context_extraction_batch(paths)
+
+    def test_run_organizational_context_extraction_batch_remaps_superseded_context_id_by_url(self) -> None:
+        root = self._scenario_root("superseded_context")
+        paths = self._paths(root)
+        source_url = "https://example.org/current-platform"
+        self._write_csv(
+            paths.inventory_path,
+            [
+                self._inventory_row(
+                    "context-current",
+                    state="Wisconsin",
+                    state_code="WI",
+                    cycle_year="2026",
+                    context_category="dsa_state_local",
+                    organization_level="local",
+                    organization="Madison Area DSA",
+                    title="Current platform",
+                    platform_type="chapter_endorsement_process",
+                    source_url=source_url,
+                )
+            ],
+        )
+        self._write_csv(paths.fetch_status_path, [], [
+            "fetch_id",
+            "fetch_url",
+            "archive_url",
+            "context_entry_ids",
+            "status",
+            "http_status",
+            "content_type",
+            "retrieved_at",
+            "final_url",
+            "raw_path",
+            "sha256",
+            "error",
+        ])
+        self._write_jsonl(paths.raw_manifest_path, [])
+        self._write_fetched_document(
+            paths,
+            fetch_id="fetch-current-platform",
+            fetch_url=source_url,
+            context_entry_ids="context-superseded",
+            content_type="text/html",
+            suffix=".html",
+            body=b"<main><p>Workers deserve housing, healthcare, transit, education, and democratic power.</p></main>",
+        )
+
+        run_organizational_context_extraction_batch(paths)
+
+        metadata_rows = self._read_csv(paths.metadata_path)
+        self.assertEqual(metadata_rows[0]["context_entry_ids"], "context-current")
 
     def _scenario_root(self, name: str) -> Path:
         root = SCRATCH_ROOT / name

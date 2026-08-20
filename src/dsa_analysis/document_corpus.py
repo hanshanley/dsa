@@ -1,5 +1,6 @@
 import base64
 import hashlib
+import http.client
 import importlib
 import json
 import mimetypes
@@ -640,6 +641,10 @@ def normalize_source_url(value: str) -> str:
     value = value.strip()
     if not value:
         raise DocumentCorpusError("source_url is required")
+    if re.search(r"[\x00-\x20|]", value):
+        raise DocumentCorpusError(f"invalid source_url: {value}")
+    if re.match(r"^https?:/(?!/)", value, flags=re.IGNORECASE):
+        raise DocumentCorpusError(f"invalid source_url: {value}")
     if not re.match(r"^https?://", value, flags=re.IGNORECASE):
         value = f"https://{value}"
     parsed = urlparse(value)
@@ -717,7 +722,13 @@ def fetch_raw_document(
             final_url = normalize_source_url(response.geturl())
             content_type = response.headers.get_content_type()
             encoding = response.headers.get_content_charset() or "utf-8"
-    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+    except (
+        urllib.error.URLError,
+        http.client.InvalidURL,
+        TimeoutError,
+        OSError,
+        ValueError,
+    ) as error:
         raise RawFetchError(
             f"failed to fetch {normalized_url}: {type(error).__name__}: {error}"
         ) from error
@@ -1143,7 +1154,7 @@ def run_candidate_document_extraction_batch(
                 fetch_status=fetch_status,
                 extraction_status="not_attempted",
                 error=str(error),
-                coverage_status="source_unavailable" if fetch_status == "fetch_error" else "",
+                coverage_status="found_unverified" if fetch_status == "fetch_error" else "",
             )
             current_paragraph_rows[job.document_id] = []
             current_sentence_rows[job.document_id] = []
@@ -1936,23 +1947,24 @@ def build_candidate_document_discovery_queue(
             )
         official_election_source = candidate["official_election_source"]
         if official_election_source:
-            seed_url = canonical_source_url(official_election_source)
-            seen_key = (*key, "official_election_source", seed_url)
-            if seen_key not in seen:
-                seen.add(seen_key)
-                queue_rows.append(
-                    _discovery_seed_row(
-                        candidate,
-                        seed_url=seed_url,
-                        seed_kind="official_election_source",
-                        source_record_id="",
-                        source_type_class="filing",
-                        campaign_domain=campaign_domain,
-                        known_source_count=len(sources),
-                        legacy_locators="",
-                        note="Election metadata context from roster discovery",
+            for source_url in _split_source_urls(official_election_source):
+                seed_url = canonical_source_url(source_url)
+                seen_key = (*key, "official_election_source", seed_url)
+                if seen_key not in seen:
+                    seen.add(seen_key)
+                    queue_rows.append(
+                        _discovery_seed_row(
+                            candidate,
+                            seed_url=seed_url,
+                            seed_kind="official_election_source",
+                            source_record_id="",
+                            source_type_class="filing",
+                            campaign_domain=campaign_domain,
+                            known_source_count=len(sources),
+                            legacy_locators="",
+                            note="Election metadata context from roster discovery",
+                        )
                     )
-                )
     return sorted(
         queue_rows,
         key=lambda row: (
@@ -3509,7 +3521,10 @@ def _normalize_candidate_document_job(row: dict[str, str]) -> CandidateDocumentJ
     if not election_date:
         raise DocumentCorpusError("election_date is required")
     _coerce_date(election_date)
-    normalized_source_url = normalize_source_url(source_url)
+    source_urls = _split_source_urls(source_url)
+    normalized_source_url = (
+        source_urls[0] if source_urls else normalize_source_url(source_url)
+    )
     source_type = (
         row.get("source_type", "").strip()
         or row.get("source_type_class", "").strip()
@@ -3550,6 +3565,20 @@ def _normalize_candidate_document_job(row: dict[str, str]) -> CandidateDocumentJ
         transcript_text=row.get("transcript_text", "").strip(),
         transcript_title=row.get("transcript_title", "").strip(),
     )
+
+
+def _split_source_urls(value: str) -> tuple[str, ...]:
+    urls: list[str] = []
+    for part in re.split(r"\s+\|\s+", value.strip()):
+        if not part:
+            continue
+        try:
+            normalized = normalize_source_url(part)
+        except DocumentCorpusError:
+            continue
+        if normalized not in urls:
+            urls.append(normalized)
+    return tuple(urls)
 
 
 def _normalized_regather_queue_row(row: dict[str, str]) -> dict[str, str]:

@@ -2,11 +2,13 @@ import csv
 import json
 import shutil
 import unittest
+from dataclasses import replace
 from pathlib import Path
 
 from dsa_analysis.document_corpus import candidate_document_id
 from dsa_analysis.full_text_audit import (
     FullTextAuditPaths,
+    _load_registry_queue,
     build_full_text_sufficiency_audit,
 )
 
@@ -18,6 +20,80 @@ class FullTextAuditTests(unittest.TestCase):
         shutil.rmtree(SCRATCH_ROOT, ignore_errors=True)
         SCRATCH_ROOT.mkdir(parents=True, exist_ok=True)
         self.addCleanup(lambda: shutil.rmtree(SCRATCH_ROOT, ignore_errors=True))
+
+    def test_registry_queue_reuses_unique_candidate_documents_across_canonical_race_ids(self) -> None:
+        root = self._scenario_root("registry_alias")
+        paths = replace(
+            self._paths(root),
+            race_registry_path=root / "data" / "processed" / "race_registry.csv",
+        )
+        self._write_csv(
+            paths.race_registry_path,
+            [
+                {
+                    "race_id": "canonical-race",
+                    "source_race_ids": "canonical-race",
+                    "scope_kind": "tracked_dsa_endorsed_democratic_primary",
+                    "election_date": "2016-09-08",
+                    "endorsed_candidates": "Casey Example",
+                    "unopposed_candidates": "",
+                    "opponent_candidates": "Robin Example | Taylor Example",
+                    "office": "State Representative",
+                    "official_election_source": "https://example.org/results",
+                }
+            ],
+        )
+        self._write_csv(
+            paths.candidate_document_metadata_path,
+            [
+                {
+                    "document_id": "doc-casey-unavailable",
+                    "candidate_name": "Casey Example",
+                    "race_id": "canonical-race",
+                    "role": "endorsed",
+                    "election_date": "2016-09-08",
+                    "source_type": "campaign_page",
+                    "source_url": "https://example.org/missing-casey",
+                    "coverage_status": "source_unavailable",
+                    "fetch_status": "fetch_error",
+                    "extraction_status": "source_unavailable",
+                    "analysis_scope": "analysis",
+                },
+                {
+                    "document_id": "doc-casey",
+                    "candidate_name": "Casey Example",
+                    "race_id": "legacy-race",
+                    "role": "endorsed",
+                    "election_date": "2016-09-08",
+                    "source_type": "campaign_page",
+                    "source_url": "https://example.org/casey",
+                    "coverage_status": "found_unverified",
+                    "fetch_status": "reused_raw",
+                    "extraction_status": "extracted",
+                    "analysis_scope": "analysis",
+                },
+                {
+                    "document_id": "doc-robin",
+                    "candidate_name": "Robin Example",
+                    "race_id": "canonical-race",
+                    "role": "opponent",
+                    "election_date": "2016-09-08",
+                    "source_type": "campaign_page",
+                    "source_url": "https://example.org/robin",
+                    "coverage_status": "found_unverified",
+                    "fetch_status": "fetch_error",
+                    "extraction_status": "not_attempted",
+                    "analysis_scope": "analysis",
+                },
+            ],
+        )
+
+        queue = _load_registry_queue(paths, [2016])
+        by_candidate = {row["candidate_name"]: row for row in queue}
+
+        self.assertEqual(by_candidate["Casey Example"]["current_status"], "verified")
+        self.assertEqual(by_candidate["Robin Example"]["current_status"], "found_unverified")
+        self.assertEqual(by_candidate["Taylor Example"]["current_status"], "not_searched")
 
     def test_legacy_quotes_seed_actionable_queues_but_do_not_count_as_full_documents(self) -> None:
         root = self._scenario_root("manual")

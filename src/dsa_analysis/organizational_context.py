@@ -306,6 +306,101 @@ def build_organizational_context_inventory(
     )
 
 
+def merge_organizational_context_reviews(
+    batch_dir: Path,
+    paths: OrganizationalContextPaths | None = None,
+) -> tuple[int, int, int]:
+    paths = paths or OrganizationalContextPaths.default()
+    expected: set[str] = set()
+    for path in sorted(batch_dir.glob("platform_batch_*.jsonl")):
+        with path.open(encoding="utf-8") as handle:
+            for line in handle:
+                expected.add(json.loads(line)["context_entry_id"])
+    if not expected:
+        raise OrganizationalContextError("No platform research batches were found")
+
+    fields = [
+        "context_entry_id",
+        "state",
+        "state_code",
+        "cycle_year",
+        "organization_level",
+        "context_category",
+        "organization",
+        "endorsing_body",
+        "title",
+        "platform_type",
+        "adoption_date",
+        "effective_date",
+        "source_url",
+        "archive_url",
+        "verification_status",
+        "notes",
+    ]
+    reviews: dict[str, dict[str, str]] = {}
+    for path in sorted(batch_dir.glob("platform_review_*.csv")):
+        with path.open(newline="", encoding="utf-8") as handle:
+            reader = csv.DictReader(handle)
+            if reader.fieldnames != fields:
+                raise OrganizationalContextError(
+                    f"{path.name}: expected header {fields}, found {reader.fieldnames}"
+                )
+            for row in reader:
+                context_id = row["context_entry_id"].strip()
+                if context_id not in expected:
+                    raise OrganizationalContextError(
+                        f"{path.name}: unknown context_entry_id {context_id}"
+                    )
+                if context_id in reviews:
+                    raise OrganizationalContextError(
+                        f"{path.name}: duplicate context_entry_id {context_id}"
+                    )
+                status = row["verification_status"].strip()
+                if status not in RESOLVED_STATUSES | GAP_STATUSES:
+                    raise OrganizationalContextError(
+                        f"{path.name}: invalid verification_status {status}"
+                    )
+                if status == "verified" and not (
+                    row["source_url"].strip() or row["archive_url"].strip()
+                ):
+                    raise OrganizationalContextError(
+                        f"{path.name}: verified row requires a source URL"
+                    )
+                reviews[context_id] = {
+                    field: row.get(field, "").strip()
+                    for field in fields
+                }
+    uncovered = expected - set(reviews)
+    if uncovered:
+        raise OrganizationalContextError(
+            f"{len(uncovered)} platform research rows remain unreviewed"
+        )
+
+    existing = {
+        row["context_entry_id"]: {
+            field: (row.get(field) or "").strip()
+            for field in fields
+        }
+        for row in read_csv(paths.registry_seed_path)
+    }
+    existing.update(reviews)
+    rows = sorted(
+        existing.values(),
+        key=lambda row: (
+            row["cycle_year"],
+            row["state_code"],
+            row["context_category"],
+            row["context_entry_id"],
+        ),
+    )
+    write_csv(paths.registry_seed_path, rows, fields)
+    return (
+        len(reviews),
+        sum(row["verification_status"] == "verified" for row in reviews.values()),
+        sum(row["verification_status"] != "verified" for row in reviews.values()),
+    )
+
+
 def run_organizational_context_fetch_pass(
     queue_rows: list[dict[str, str]] | None = None,
     paths: OrganizationalContextPaths | None = None,
@@ -387,9 +482,16 @@ def run_organizational_context_fetch_pass(
         )
     status_path = paths.output_dir / "organizational_context_fetch_status.csv"
     manifest_path = paths.output_dir / "organizational_context_raw_manifest.jsonl"
+    existing_statuses = {
+        row["fetch_id"]: row
+        for row in read_csv(status_path)
+    } if status_path.exists() else {}
+    existing_statuses.update(
+        {row["fetch_id"]: row for row in status_rows}
+    )
     write_csv(
         status_path,
-        status_rows,
+        sorted(existing_statuses.values(), key=lambda row: row["fetch_id"]),
         [
             "fetch_id",
             "fetch_url",
@@ -405,8 +507,20 @@ def run_organizational_context_fetch_pass(
             "error",
         ],
     )
+    existing_manifest: dict[str, dict[str, str]] = {}
+    if manifest_path.exists():
+        with manifest_path.open(encoding="utf-8") as handle:
+            for line in handle:
+                row = json.loads(line)
+                existing_manifest[row["fetch_id"]] = row
+    existing_manifest.update(
+        {row["fetch_id"]: row for row in manifest_rows}
+    )
     with manifest_path.open("w", encoding="utf-8") as handle:
-        for row in manifest_rows:
+        for row in sorted(
+            existing_manifest.values(),
+            key=lambda row: row["fetch_id"],
+        ):
             handle.write(json.dumps(row, sort_keys=True) + "\n")
     return OrganizationalContextFetchResult(
         queued_urls=len(selected),
@@ -510,7 +624,12 @@ def _inventory_entries(
     seed_entries_by_cycle_category: dict[tuple[str, str, str], list[ContextEntry]] = defaultdict(list)
     for entry in seed_entries:
         seed_entries_by_key[
-            (entry.state_code, entry.cycle_year, entry.context_category, _identity(entry.endorsing_body))
+            (
+                entry.state_code,
+                entry.cycle_year,
+                entry.context_category,
+                _local_body_identity(entry.endorsing_body),
+            )
         ].append(entry)
         seed_entries_by_cycle_category[(entry.state_code, entry.cycle_year, entry.context_category)].append(entry)
     local_seed_entries_by_cycle = defaultdict(list)
@@ -542,10 +661,15 @@ def _inventory_entries(
                 covered_bodies = set()
                 for body in local_bodies:
                     matching_entries = seed_entries_by_key.get(
-                        (item.state_code, item.cycle_year, category, _identity(body)),
+                        (
+                            item.state_code,
+                            item.cycle_year,
+                            category,
+                            _local_body_identity(body),
+                        ),
                         [],
                     )
-                    covered_bodies.add(_identity(body))
+                    covered_bodies.add(_local_body_identity(body))
                     if matching_entries:
                         inventory.extend(
                             sorted(
@@ -565,7 +689,7 @@ def _inventory_entries(
                             )
                         )
                 for seed in sorted(local_seed_entries, key=lambda entry: (entry.endorsing_body, entry.context_entry_id)):
-                    if _identity(seed.endorsing_body) not in covered_bodies:
+                    if _local_body_identity(seed.endorsing_body) not in covered_bodies:
                         inventory.append(seed)
                 continue
             matching_entries = seed_entries_by_cycle_category.get(
@@ -999,3 +1123,11 @@ def _state_name(state_code: str) -> str:
 
 def _identity(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip().casefold()
+
+
+def _local_body_identity(value: str) -> str:
+    identity = _identity(value)
+    identity = re.sub(r"\bdemocratic socialists of america\b", " ", identity)
+    identity = re.sub(r"\bdsa\b", " ", identity)
+    identity = re.sub(r"\bchapter\b", " ", identity)
+    return re.sub(r"[^a-z0-9]+", " ", identity).strip()
