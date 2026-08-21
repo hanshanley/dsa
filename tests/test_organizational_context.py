@@ -6,6 +6,7 @@ from pathlib import Path
 
 from dsa_analysis.organizational_context import (
     FetchCapture,
+    OrganizationalContextFetchError,
     OrganizationalContextPaths,
     build_organizational_context_inventory,
     run_organizational_context_fetch_pass,
@@ -837,6 +838,44 @@ class OrganizationalContextTests(unittest.TestCase):
             for line in fetch_result.raw_manifest_path.read_text(encoding="utf-8").splitlines()
         ]
         self.assertEqual([row["fetch_id"] for row in manifest_rows], ["fetch-a", "fetch-b"])
+
+    def test_fetch_pass_uses_archive_after_live_failure(self) -> None:
+        root = self._scenario_root("fetch_archive_fallback")
+        paths = self._paths(root)
+        queue = [
+            {
+                "fetch_id": "fetch-a",
+                "fetch_url": "https://example.org/live",
+                "archive_url": "https://web.archive.org/example",
+                "context_entry_ids": "context-a",
+            }
+        ]
+        attempted_urls: list[str] = []
+
+        def fetcher(url: str) -> FetchCapture:
+            attempted_urls.append(url)
+            if url.endswith("/live"):
+                raise OrganizationalContextFetchError("live source unavailable")
+            return FetchCapture(
+                fetch_url=url,
+                final_url=url,
+                retrieved_at="2026-08-20T00:00:00+00:00",
+                content_type="text/html",
+                content_bytes=b"<html>archived platform</html>",
+                status_code=200,
+            )
+
+        result = run_organizational_context_fetch_pass(queue, paths, fetcher=fetcher)
+
+        self.assertEqual(
+            attempted_urls,
+            ["https://example.org/live", "https://web.archive.org/example"],
+        )
+        self.assertEqual(result.fetched_urls, 1)
+        self.assertEqual(result.failed_urls, 0)
+        status = self._read_csv(result.status_path)[0]
+        self.assertEqual(status["status"], "fetched")
+        self.assertEqual(status["final_url"], "https://web.archive.org/example")
 
     def _scenario_root(self, name: str) -> Path:
         root = SCRATCH_ROOT / name

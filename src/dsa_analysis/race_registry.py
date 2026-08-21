@@ -14,6 +14,10 @@ from .paths import ANALYSIS_DATA_DIR, MANUAL_DIR, PROCESSED_DIR
 
 IN_SCOPE_KIND = "tracked_dsa_endorsed_democratic_primary"
 OUT_OF_SCOPE_KIND = "other_corpus_race"
+DEMOCRATIC_PRIMARY_PARTIES = {
+    "Democratic",
+    "Democratic-Farmer-Labor",
+}
 QUEUE_ROLES = {"endorsed", "opponent", "unopposed"}
 HIGH_CONFIDENCE = "high"
 VERIFIED_CONFIDENCE = "verified"
@@ -84,6 +88,7 @@ STATE_NAME_BY_CODE = {
     "OK": "Oklahoma",
     "OR": "Oregon",
     "PA": "Pennsylvania",
+    "PR": "Puerto Rico",
     "RI": "Rhode Island",
     "SC": "South Carolina",
     "SD": "South Dakota",
@@ -381,13 +386,15 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
         scope_kind = (
             IN_SCOPE_KIND
             if any(
-                row.get("party", "").strip() == "Democratic"
+                row.get("party", "").strip() in DEMOCRATIC_PRIMARY_PARTIES
                 and row.get("role", "").strip() in {"endorsed", "unopposed"}
                 for row in rows
             )
             else OUT_OF_SCOPE_KIND
         )
-        primary_party = "Democratic" if scope_kind == IN_SCOPE_KIND else (parties[0] if len(parties) == 1 else "")
+        primary_party = parties[0] if len(parties) == 1 else (
+            "Democratic" if scope_kind == IN_SCOPE_KIND else ""
+        )
         endorsed_name = " | ".join(endorsed_candidates or unopposed_candidates)
 
         manual_match = _match_manual_package(rows, manual_packages, election_date, endorsed_candidates, unopposed_candidates)
@@ -643,6 +650,11 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
             certified_opponents_status = "corpus_candidate_set"
         if not endorsing_bodies and manual_match is not None:
             endorsing_bodies = list(manual_match.endorsing_bodies)
+        if (
+            primary_party == "Democratic-Farmer-Labor"
+            and office.casefold() in {"mayor", "city council"}
+        ):
+            scope_kind = OUT_OF_SCOPE_KIND
 
         unresolved_fields = [
             field
@@ -2023,18 +2035,19 @@ def _seed_grouped_from_manual_packages(
     for package in packages:
         if package.manual_race_id in grouped:
             continue
-        matching_existing_races = {
-            race_id
-            for race_id, rows in grouped.items()
-            if any(
-                row.get("election_date", "") == package.election_date
-                and _identity(row.get("candidate_name", ""))
-                in {_identity(name) for name in package.endorsed_candidates}
-                for row in rows
-            )
-        }
-        if len(matching_existing_races) == 1:
-            continue
+        if _identity(package.office) not in {"president", "us president"}:
+            matching_existing_races = {
+                race_id
+                for race_id, rows in grouped.items()
+                if any(
+                    row.get("election_date", "") == package.election_date
+                    and _identity(row.get("candidate_name", ""))
+                    in {_identity(name) for name in package.endorsed_candidates}
+                    for row in rows
+                )
+            }
+            if len(matching_existing_races) == 1:
+                continue
         rows = _synthetic_candidate_rows(
             race_id=package.manual_race_id,
             election_date=package.election_date,
@@ -2514,6 +2527,8 @@ def _validate_resolution_against_manual(
 ) -> None:
     if manual_match is None:
         return
+    if _identity(manual_match.office) in {"president", "us president"}:
+        return
     field_pairs = [
         ("election_date", resolution.election_date, manual_match.election_date),
         ("office", resolution.office, manual_match.office),
@@ -2553,12 +2568,26 @@ def _match_manual_package(
     endorsed_candidates: list[str],
     unopposed_candidates: list[str],
 ) -> ManualRacePackage | None:
+    race_ids = {row.get("race_id", "").strip() for row in rows}
+    exact_matches = [
+        package for package in packages if package.manual_race_id in race_ids
+    ]
+    if len(exact_matches) == 1:
+        return exact_matches[0]
+    if len(exact_matches) > 1:
+        raise RaceRegistryError(
+            f"multiple verified manual packages match race IDs {sorted(race_ids)}"
+        )
     candidate_keys = {_identity(name) for name in endorsed_candidates + unopposed_candidates}
     candidates = sorted(
-        package
-        for package in packages
-        if package.election_date == election_date
-        and candidate_keys & {_identity(name) for name in package.endorsed_candidates}
+        (
+            package
+            for package in packages
+            if package.election_date == election_date
+            and candidate_keys
+            & {_identity(name) for name in package.endorsed_candidates}
+        ),
+        key=lambda package: package.manual_race_id,
     )
     if not candidates:
         return None

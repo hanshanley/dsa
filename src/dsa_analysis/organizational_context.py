@@ -427,27 +427,38 @@ def run_organizational_context_fetch_pass(
     for row in selected:
         fetch_id = row["fetch_id"]
         fetch_url = row["fetch_url"]
+        archive_url = row.get("archive_url", "").strip()
         try:
             capture = fetcher(fetch_url)
-        except OrganizationalContextFetchError as error:
-            failed += 1
-            status_rows.append(
-                {
-                    "fetch_id": fetch_id,
-                    "fetch_url": fetch_url,
-                    "archive_url": row.get("archive_url", ""),
-                    "context_entry_ids": row.get("context_entry_ids", ""),
-                    "status": "fetch_error",
-                    "http_status": "",
-                    "content_type": "",
-                    "retrieved_at": datetime.now(UTC).isoformat(),
-                    "final_url": "",
-                    "raw_path": "",
-                    "sha256": "",
-                    "error": str(error),
-                }
-            )
-            continue
+        except OrganizationalContextFetchError as live_error:
+            if not archive_url or archive_url == fetch_url:
+                error = str(live_error)
+                capture = None
+            else:
+                try:
+                    capture = fetcher(archive_url)
+                except OrganizationalContextFetchError as archive_error:
+                    error = f"{live_error}; archive fallback failed: {archive_error}"
+                    capture = None
+            if capture is None:
+                failed += 1
+                status_rows.append(
+                    {
+                        "fetch_id": fetch_id,
+                        "fetch_url": fetch_url,
+                        "archive_url": archive_url,
+                        "context_entry_ids": row.get("context_entry_ids", ""),
+                        "status": "fetch_error",
+                        "http_status": "",
+                        "content_type": "",
+                        "retrieved_at": datetime.now(UTC).isoformat(),
+                        "final_url": "",
+                        "raw_path": "",
+                        "sha256": "",
+                        "error": error,
+                    }
+                )
+                continue
         fetched += 1
         output_path = _persist_fetch_capture(paths.raw_dir, fetch_id, capture)
         sha256 = hashlib.sha256(capture.content_bytes).hexdigest()
@@ -455,7 +466,7 @@ def run_organizational_context_fetch_pass(
             {
                 "fetch_id": fetch_id,
                 "fetch_url": fetch_url,
-                "archive_url": row.get("archive_url", ""),
+                "archive_url": archive_url,
                 "context_entry_ids": row.get("context_entry_ids", ""),
                 "status": "fetched",
                 "http_status": str(capture.status_code),
@@ -471,7 +482,7 @@ def run_organizational_context_fetch_pass(
             {
                 "fetch_id": fetch_id,
                 "fetch_url": fetch_url,
-                "archive_url": row.get("archive_url", ""),
+                "archive_url": archive_url,
                 "final_url": capture.final_url,
                 "retrieved_at": capture.retrieved_at,
                 "content_type": capture.content_type,

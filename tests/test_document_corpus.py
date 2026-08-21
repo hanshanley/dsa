@@ -2312,6 +2312,51 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         )
         self.assertEqual({row["text"] for row in full_text_rows}, {""})
 
+    def test_same_candidate_document_can_apply_to_multiple_races(self) -> None:
+        root = self._scenario_root("same_candidate_shared_across_races")
+        paths = self._paths(root)
+        shared_url = "https://example.org/candidate-platform.txt"
+        queue_rows = [
+            {
+                "queue_id": "q7a",
+                "race_id": "race-7a",
+                "candidate_name": "Alex Example",
+                "role": "endorsed",
+                "election_date": "2026-03-03",
+                "source_type": "campaign_platform",
+                "source_url": shared_url,
+            },
+            {
+                "queue_id": "q7b",
+                "race_id": "race-7b",
+                "candidate_name": "Alex Example",
+                "role": "endorsed",
+                "election_date": "2026-04-07",
+                "source_type": "campaign_platform",
+                "source_url": shared_url,
+            },
+        ]
+
+        run_candidate_document_extraction_batch(
+            queue_rows,
+            paths,
+            fetcher=lambda document_id, source_url: self._capture(
+                document_id=document_id,
+                source_url=source_url,
+                content_type="text/plain",
+                body=b"Alex supports universal health care and stronger labor rights.",
+            ),
+            analysis_config=AnalysisSegmentConfig(min_tokens=2, max_tokens=30),
+        )
+
+        metadata_rows = self._read_csv(paths.metadata_path)
+        self.assertEqual(
+            {row["coverage_status"] for row in metadata_rows},
+            {"found_unverified"},
+        )
+        self.assertEqual({row["extraction_status"] for row in metadata_rows}, {"extracted"})
+        self.assertEqual(len(self._read_csv(paths.analysis_segment_path)), 2)
+
     def test_shared_document_with_locator_scopes_candidate_specific_section(self) -> None:
         root = self._scenario_root("shared_scoped")
         paths = self._paths(root)

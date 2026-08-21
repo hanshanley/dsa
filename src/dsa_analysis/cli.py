@@ -19,6 +19,10 @@ from .database import initialize_database
 from .document_corpus import run_candidate_document_regather_batch
 from .endorsement_mentions import extract_mentions
 from .full_text_audit import build_full_text_sufficiency_audit
+from .fec_presidential import (
+    import_2016_presidential_primaries,
+    import_2020_presidential_primaries,
+)
 from .organizational_context import (
     build_organizational_context_inventory,
     run_organizational_context_fetch_pass,
@@ -173,6 +177,14 @@ def main() -> None:
     subparsers.add_parser(
         "build-race-registry",
         help="Build the canonical nationwide DSA-endorsed primary race registry.",
+    )
+    subparsers.add_parser(
+        "import-2016-presidential-primaries",
+        help="Import official FEC state rosters for DSA-endorsed Bernie Sanders.",
+    )
+    subparsers.add_parser(
+        "import-2020-presidential-primaries",
+        help="Import official FEC state rosters for DSA-endorsed Bernie Sanders.",
     )
     regather_parser = subparsers.add_parser(
         "regather-candidate-documents",
@@ -385,6 +397,20 @@ def main() -> None:
             f"resolved_states={result.resolved_state_race_rows}, "
             f"represented_state_cycles={result.represented_state_cycle_rows}, "
             f"unresolved_fields={result.unresolved_race_rows}."
+        )
+        return
+    if args.command == "import-2016-presidential-primaries":
+        endorsements, candidates = import_2016_presidential_primaries()
+        print(
+            "2016 presidential primaries imported: "
+            f"races={endorsements}, candidate_rows={candidates}."
+        )
+        return
+    if args.command == "import-2020-presidential-primaries":
+        endorsements, candidates = import_2020_presidential_primaries()
+        print(
+            "2020 presidential primaries imported: "
+            f"races={endorsements}, candidate_rows={candidates}."
         )
         return
     if args.command == "regather-candidate-documents":

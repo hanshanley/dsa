@@ -150,11 +150,11 @@ class SourceFirstCensusTests(unittest.TestCase):
             )
         )
 
-    def test_debbie_medina_and_bernie_sanders_are_not_manual_endorsements(self) -> None:
+    def test_presidential_expansion_is_manual_but_debbie_medina_is_not(self) -> None:
         endorsements = read_csv(MANUAL_DIR / "endorsements.csv")
         names = {row["candidate_name"] for row in endorsements}
         self.assertNotIn("Debbie Medina", names)
-        self.assertNotIn("Bernie Sanders", names)
+        self.assertIn("Bernie Sanders", names)
 
 
 if __name__ == "__main__":
