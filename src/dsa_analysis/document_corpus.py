@@ -2004,11 +2004,15 @@ def run_campaign_domain_discovery_pass(
         if discovery_paths.discovered_url_path.exists()
         else []
     )
-    discovered_index = {
-        _discovered_url_key(row): dict(row)
-        for row in discovered_rows
-        if row.get("discovery_seed_id") and row.get("source_url")
-    }
+    discovered_index = {}
+    for row in discovered_rows:
+        if not row.get("discovery_seed_id") or not row.get("source_url"):
+            continue
+        try:
+            key = _discovered_url_key(row)
+        except DocumentCorpusError:
+            continue
+        discovered_index[key] = dict(row)
     fetch = fetcher or _fetch_discovery_document
     cdx = cdx_fetcher or _query_wayback_cdx
     pending = [seed for seed in seeds if not _campaign_domain_seed_complete(seed, status_by_seed)]
