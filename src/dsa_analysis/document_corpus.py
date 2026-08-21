@@ -1558,12 +1558,34 @@ def classify_source_type(source_type: str, source_url: str = "") -> str:
 def _candidate_source_rows(
     evidence_rows: Sequence[dict[str, str]],
     candidate_document_rows: Sequence[dict[str, str]] | None = None,
+    roster_rows: Sequence[dict[str, str]] | None = None,
 ) -> list[dict[str, str]]:
     rows = [dict(row) for row in evidence_rows]
     for row in candidate_document_rows or ():
         normalized = _normalize_candidate_document_row(row)
         if normalized:
             rows.append(normalized)
+            if (
+                normalized["source_type"] == "official_campaign_platform"
+                and normalized["race_id"].startswith("us-president-dem-primary-")
+            ):
+                source_year = normalized["election_date"][:4]
+                source_candidate = candidate_slug(normalized["candidate_name"])
+                for roster_row in roster_rows or ():
+                    race_id = roster_row.get("race_id", "").strip()
+                    election_date = roster_row.get("election_date", "").strip()
+                    if (
+                        not race_id.startswith("us-president-dem-primary-")
+                        or election_date[:4] != source_year
+                        or candidate_slug(roster_row.get("candidate_name", "").strip())
+                        != source_candidate
+                    ):
+                        continue
+                    expanded = dict(normalized)
+                    expanded["race_id"] = race_id
+                    expanded["election_date"] = election_date
+                    expanded["role"] = roster_row.get("role", "").strip() or normalized["role"]
+                    rows.append(expanded)
     return rows
 
 
@@ -1664,7 +1686,7 @@ def build_candidate_source_inventory(
 ) -> list[dict[str, str]]:
     roster_by_race, roster_by_date = _index_roster_rows(roster_rows)
     grouped: dict[tuple[str, str, str], dict[str, object]] = {}
-    for row in _candidate_source_rows(evidence_rows, candidate_document_rows):
+    for row in _candidate_source_rows(evidence_rows, candidate_document_rows, roster_rows):
         source_url = row.get("source_url", "").strip()
         if not source_url:
             continue
@@ -1882,7 +1904,7 @@ def build_candidate_document_discovery_queue(
     roster_rows: list[dict[str, str]],
     candidate_document_rows: list[dict[str, str]] | None = None,
 ) -> list[dict[str, str]]:
-    source_rows = _candidate_source_rows(evidence_rows, candidate_document_rows)
+    source_rows = _candidate_source_rows(evidence_rows, candidate_document_rows, roster_rows)
     inventory_rows = build_candidate_source_inventory(
         evidence_rows,
         roster_rows,

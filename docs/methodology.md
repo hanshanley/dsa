@@ -92,7 +92,16 @@ Before scoring, common policy phrases are mapped to canonical features, includin
 lightly lemmatized, and campaign boilerplate terms are excluded. The generated
 `normalization_rules.csv` makes phrase mappings auditable. Document-prevalence results report the
 share of candidate/election documents containing each feature as a robustness check against
-repetition by a small number of campaigns.
+repetition by a small number of campaigns. The difference figure requires an absolute prevalence
+gap of at least 0.5 percentage points. Features common to both groups are reported separately in
+the shared-emphasis table and paired-bar figure using the smaller of the two group prevalences;
+shared mention is treated as agenda overlap, not automatically as policy agreement.
+
+A stricter within-primary agreement signal requires both an endorsed candidate and an opponent
+to use the same concrete normalized mechanism phrase, such as `rent_control`,
+`medicare_for_all`, or `public_option`. Mentions preceded by explicit oppositional or negating
+language are excluded. This remains a high-precision language signal rather than a complete
+stance classifier, so the generated table retains both exact excerpts for review.
 
 Coverage shares use the registry-wide candidate/race denominator from
 `data/processed/full_text_queue_summary.csv`. Candidate counts with `current_status=verified` are
@@ -157,7 +166,8 @@ searches remain or while paired-race, year, source-class, or imbalance checks fa
 
 ## Narrative clustering and fingerprint
 
-Analysis units are normalized full-document segments embedded with the pinned local MiniLM model.
+Analysis units are normalized full-document segments embedded with the pinned
+`Alibaba-NLP/gte-multilingual-base` revision.
 The cosine threshold is selected from human judgments at 0.55, 0.60, 0.65, 0.68, 0.70, 0.75,
 and 0.80; no production threshold is selected before annotation. For the chosen threshold, the
 pipeline constructs a cosine K-nearest-neighbor graph with `K=64`, runs weighted Leiden
@@ -168,3 +178,8 @@ Narrative lift and density comparisons use candidate/race-balanced weights becau
 contribute unequal text volumes. UMAP dimensions 2, 5, 10, 20, and 30 are compared using
 trustworthiness before KDE dimensionality is fixed. Hot/cold-zone TF-IDF and NPMI characterize
 the resulting density contrast; the two-dimensional projection is visualization only.
+For interpretability, DSA-overrepresented, opponent-overrepresented, and shared high-joint-density
+points are grouped spatially within the visualization. Each displayed region is labeled with
+locally distinctive terms, an extractive representative source passage, segment count, and
+candidate/cycle count. These labels summarize underlying text and do not change the
+higher-dimensional density calculation.

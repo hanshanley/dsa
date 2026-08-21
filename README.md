@@ -54,9 +54,21 @@ full-platform documents** and **5,747 source segments**.
 
 The graph above compares the share of candidate/election documents containing each normalized
 policy feature. Red features appear in more DSA-endorsed candidate documents; blue features
-appear in more Democratic opponent documents. See the
+appear in more Democratic opponent documents. Features with gaps below 0.5 percentage points are
+excluded from this difference chart and reported separately as shared emphasis.
+
+![Shared DSA-endorsed and Democratic-opponent policy emphasis](outputs/figures/text_analysis/policy_language_overlap.svg)
+
+The shared-emphasis graph shows agenda overlap without assuming that both groups propose the same
+policy mechanism or take the same stance. See the
 [full text-analysis report](report/text_analysis.md) for methods, issue emphasis, similarity,
 sticking points, evidence coverage, and limitations.
+
+![Shared affirmative policy mechanisms within primaries](outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
+
+The stricter mechanism graph counts primaries where both sides affirmatively use the same
+concrete normalized mechanism phrase; negated or oppositional mentions are excluded, and exact
+paired excerpts remain in the generated table for review.
 
 ### Data behind the graphs
 
@@ -119,6 +131,9 @@ position.
 - `report/draft.md` contains the generated research report and current dataset status.
 - `report/text_analysis.md` explains the graph methods and summarizes the principal lexical
   findings.
+- `report/provisional_kde_analysis.md` interprets labeled DSA-overrepresented,
+  opponent-overrepresented, and shared high-density embedding regions using their underlying
+  source text.
 
 ## Repository guide
 
@@ -184,6 +199,14 @@ Democratic blue for opponent/DNC text, charcoal labels, and a warm neutral backg
 ### Policy language
 
 ![Difference in policy language](outputs/figures/text_analysis/policy_language_difference.svg)
+
+### Shared policy emphasis
+
+![Shared policy emphasis](outputs/figures/text_analysis/policy_language_overlap.svg)
+
+### Shared affirmative mechanisms within primaries
+
+![Shared affirmative policy mechanisms](outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
 
 ### Official DSA and Democratic Party language
 

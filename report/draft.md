@@ -54,14 +54,14 @@ nationwide local denominator.
 ## 3. Candidate-document coverage
 
 - Registry candidate/race records in the document queue: 1927
-- Records with verified extraction status: 1024
-- Retryable candidate-document gaps: 899
-- Candidates with substantive extracted text: 934
-- Substantive source documents: 1575
+- Records with verified extraction status: 1032
+- Retryable candidate-document gaps: 891
+- Candidates with substantive extracted text: 942
+- Substantive source documents: 1585
 - Eligible analysis segments before analysis-specific deduplication:
-  39080
-- Clean document-backed races: 391
-- Two-sided paired races eligible for comparison: 264
+  39310
+- Clean document-backed races: 392
+- Two-sided paired races eligible for comparison: 268
 
 Candidate-document coverage is incomplete. Shared multi-candidate documents without usable
 locators remain provenance-only and are excluded from analysis eligibility.
@@ -86,19 +86,23 @@ subset.
 
 ## 5. Full-corpus lexical and topic outputs
 
-- Candidate source documents used by lexical analysis: 1582
-- Candidate source segments before shared-text deduplication: 39080
-- Candidate segments after deduplication: 37977
-- Candidate analysis documents after deduplication: 1332
+- Candidate source documents used by lexical analysis: 1592
+- Candidate source segments before shared-text deduplication: 39310
+- Candidate segments after deduplication: 38207
+- Candidate analysis documents after deduplication: 1341
 - Unique source-supported primary contrasts: 1251
-- Local-model classified segments: 25437
-- Local-model unclassified segments below threshold: 12540
+- Local-model classified segments: 25614
+- Local-model unclassified segments below threshold: 12593
 
 TF-IDF, MPIF, document prevalence, source mix, cycle volume, explicit-conflict, and local-model
 topic outputs are generated from the full eligible segment snapshots, not from the legacy manual
 excerpt table.
 
 ![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
+
+![Shared policy emphasis](../outputs/figures/text_analysis/policy_language_overlap.svg)
+
+![Shared affirmative policy mechanisms](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
 
 ![Official contrast](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
@@ -107,15 +111,18 @@ excerpt table.
 ## 6. Provisional KDE
 
 - Status: **provisional**
-- Retained segments: 38245
-- Candidates represented: 247 endorsed and
-  465 opponents
+- Retained segments: 38139
+- Candidates represented: 244 endorsed and
+  471 opponents
 - Selected UMAP dimensions: 10
 - Density-fit sample: 5000 endorsed and
   5000 opponent segments
 
 The KDE remains provisional because the full-text sufficiency audit fails. It describes the
-currently recoverable segmented corpus and is not a complete-census estimate.
+currently recoverable segmented corpus and is not a complete-census estimate. The labeled
+regions are derived from the underlying segments in each locally overrepresented or shared
+high-density area; each label reports distinctive terms, an extractive representative passage,
+and candidate/cycle support.
 
 ![Provisional GTE KDE](../figures/provisional_gte_kde.png)
 
@@ -166,7 +173,7 @@ frequency estimates and their row counts are not corpus totals.
 - The race registry has 72 unresolved in-scope races and
   7 national endorsements absent from the
   registry.
-- Candidate-document recovery has 899 retryable candidate gaps;
+- Candidate-document recovery has 891 retryable candidate gaps;
   the full-text sufficiency decision is **insufficient**.
 - Local census coverage has 1612 unresolved chapter-year units.
 - Organizational context has 152 platform-gap rows and

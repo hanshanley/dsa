@@ -1,30 +1,104 @@
 {
   "candidate_counts": {
-    "endorsed": 247,
-    "opponent": 465
+    "endorsed": 244,
+    "opponent": 471
   },
-  "corpus_hash": "026f693745907627ceb5ac50b6f9bf782bd92060532347f2879f1690295ca7e7",
+  "corpus_hash": "867c81afee827abcc16ab6282a1c2a24c594e8e473ca04105d54033c5768d50e",
+  "density_regions": [
+    {
+      "candidate_count": 187,
+      "centroid_x": 0.772532,
+      "centroid_y": 0.57498,
+      "mean_log1p_density_ratio": 0.000285635718,
+      "region_id": "D1",
+      "representative_candidate": "Marguerite Green",
+      "representative_excerpt": "I think that we have to remember that this is why people are hesitant to change\u2014they\u2019re worried about jobs, and we have to be priori...",
+      "segment_count": 2323,
+      "top_terms": "energy | fuel | socialist | fossil | climate",
+      "zone": "hot"
+    },
+    {
+      "candidate_count": 139,
+      "centroid_x": -3.153413,
+      "centroid_y": -3.625622,
+      "mean_log1p_density_ratio": 0.000298895427,
+      "region_id": "D2",
+      "representative_candidate": "Claire Valdez",
+      "representative_excerpt": "Claire supports returning to that model, allowing localities to set rent adjustments based on local housing data, and legislation th...",
+      "segment_count": 840,
+      "top_terms": "housing | prison | tenant | landlord | rent",
+      "zone": "hot"
+    },
+    {
+      "candidate_count": 386,
+      "centroid_x": -1.790437,
+      "centroid_y": -2.327957,
+      "mean_log1p_density_ratio": -0.000195747046,
+      "region_id": "O1",
+      "representative_candidate": "Seth Grimes",
+      "representative_excerpt": "Residents and businesses are looking for leaders who will tame development and rework planning processes, who will build the school...",
+      "segment_count": 4912,
+      "top_terms": "housing | resident | school | development | council",
+      "zone": "cold"
+    },
+    {
+      "candidate_count": 108,
+      "centroid_x": 1.538987,
+      "centroid_y": 4.342509,
+      "mean_log1p_density_ratio": -0.000163379653,
+      "region_id": "O2",
+      "representative_candidate": "Cory Booker",
+      "representative_excerpt": "(APPLAUSE) GABBARD: Donald Trump won this election because far too many people in this country felt like they'd been left behind by...",
+      "segment_count": 1461,
+      "top_terms": "trump | donald | bash | omar | country",
+      "zone": "cold"
+    },
+    {
+      "candidate_count": 393,
+      "centroid_x": 1.283053,
+      "centroid_y": -3.493065,
+      "mean_log1p_density_ratio": -4.199268e-06,
+      "region_id": "S1",
+      "representative_candidate": "Ky Fireside",
+      "representative_excerpt": "To the extent we can create an orderly way of handling health care so people know what is available to them and providers and insura...",
+      "segment_count": 2032,
+      "top_terms": "tax | healthcare | cost | insurance | abortion",
+      "zone": "shared"
+    },
+    {
+      "candidate_count": 536,
+      "centroid_x": -1.099103,
+      "centroid_y": -0.063273,
+      "mean_log1p_density_ratio": 1.886113e-06,
+      "region_id": "S2",
+      "representative_candidate": "Seth Anderson-Oberman",
+      "representative_excerpt": "In October, 2022, the City Controller's office, on the request of City Council, authored a withering analysis of Philadelphia Police...",
+      "segment_count": 2736,
+      "top_terms": "police | council | contact | seat | mayor",
+      "zone": "shared"
+    }
+  ],
   "dimension_selection_rule": "smallest tested dimension within 0.005 trustworthiness of the maximum",
   "dimension_sweep": [
     {
       "dimensions": 2,
-      "trustworthiness": 0.852256923076923
+      "trustworthiness": 0.8556899198717949
     },
     {
       "dimensions": 5,
-      "trustworthiness": 0.9421758573717949
+      "trustworthiness": 0.942396530448718
     },
     {
       "dimensions": 10,
-      "trustworthiness": 0.9543540144230769
+      "trustworthiness": 0.9553227964743589
     },
     {
       "dimensions": 20,
-      "trustworthiness": 0.9550606891025641
+      "trustworthiness": 0.955695905448718
     },
     {
       "dimensions": 30,
-      "trustworthiness": 0.9550043429487179
+      "trustworthiness": 0.9565502003205129
     }
   ],
   "filter": {
@@ -32,7 +106,11 @@
     "excluded_flags": [
       "boilerplate_flag"
     ],
-    "minimum_token_count": 8,
+    "excluded_source_types": [
+      "filing",
+      "official_election_source"
+    ],
+    "minimum_token_count": 20,
     "roles": [
       "endorsed",
       "opponent",
@@ -40,11 +118,11 @@
     ]
   },
   "group_counts": {
-    "endorsed": 12751,
-    "opponent": 25494
+    "endorsed": 12650,
+    "opponent": 25489
   },
   "input_path": "data/processed/candidate_document_analysis_segments.csv",
-  "input_sha256": "2ebddd3e5ba874345e226065f2e3431c37cebbf850899eaf45e02e01eb7f0e8f",
+  "input_sha256": "8ec35b7bacc6e9a9c4cdfb26fc3e38e0d649d41c0922e3aab1451ef7d519a637",
   "kde": {
     "bandwidth_rule": "Scott n^(-1/(d+4))",
     "bandwidths": {
@@ -63,687 +141,694 @@
   "model_revision": "9bbca17d9273fd0d03d5725c7a4b0f6b45142062",
   "outputs": {
     "figure": "figures/provisional_gte_kde.png",
+    "regions": "data/analysis/provisional_gte_kde/density_regions.csv",
+    "report": "report/provisional_kde_analysis.md",
     "scores": "data/analysis/provisional_gte_kde/segment_density_scores.csv",
     "sweep": "data/analysis/provisional_gte_kde/umap_dimension_sweep.csv",
     "terms": "data/analysis/provisional_gte_kde/hot_cold_terms.csv"
   },
-  "retained_segments": 38245,
+  "retained_segments": 38139,
   "seed": 1729,
   "selected_dimensions": 10,
   "status": "provisional",
   "top_cold_terms": [
     {
-      "composite_score": -1.105812441803,
+      "composite_score": -1.191825978482,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.003152590807,
-      "negative_npmi": 0.102659850996,
-      "npmi_difference": -1.102659850996,
+      "negative_mean_tfidf": 0.003656033781,
+      "negative_npmi": 0.188169944701,
+      "npmi_difference": -1.188169944701,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
       "term": "reserve",
-      "tfidf_difference": -0.003152590807
+      "tfidf_difference": -0.003656033781
     },
     {
-      "composite_score": -1.086692644017,
+      "composite_score": -1.176643338406,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.002130327241,
-      "negative_npmi": 0.084562316775,
-      "npmi_difference": -1.084562316775,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "lieutenant",
-      "tfidf_difference": -0.002130327241
-    },
-    {
-      "composite_score": -1.083576829662,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.00206998622,
-      "negative_npmi": 0.081506843442,
-      "npmi_difference": -1.081506843442,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "wtop",
-      "tfidf_difference": -0.00206998622
-    },
-    {
-      "composite_score": -1.083409944868,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.001411148553,
-      "negative_npmi": 0.081998796315,
-      "npmi_difference": -1.081998796315,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "composting",
-      "tfidf_difference": -0.001411148553
-    },
-    {
-      "composite_score": -1.079696773413,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.001631446039,
-      "negative_npmi": 0.078065327374,
-      "npmi_difference": -1.078065327374,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "guns",
-      "tfidf_difference": -0.001631446039
-    },
-    {
-      "composite_score": -1.078899003755,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.001118853904,
-      "negative_npmi": 0.07778014985,
-      "npmi_difference": -1.07778014985,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "corridors",
-      "tfidf_difference": -0.001118853904
-    },
-    {
-      "composite_score": -1.07565961258,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.001270182484,
-      "negative_npmi": 0.074389430096,
-      "npmi_difference": -1.074389430096,
+      "negative_mean_tfidf": 0.004411515292,
+      "negative_npmi": 0.172231823114,
+      "npmi_difference": -1.172231823114,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
       "term": "hoyer",
-      "tfidf_difference": -0.001270182484
+      "tfidf_difference": -0.004411515292
     },
     {
-      "composite_score": -1.074910732517,
+      "composite_score": -1.169527287841,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000856701205,
-      "negative_npmi": 0.074054031312,
-      "npmi_difference": -1.074054031312,
+      "negative_mean_tfidf": 0.002004372385,
+      "negative_npmi": 0.167522915456,
+      "npmi_difference": -1.167522915456,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "entrepreneurs",
-      "tfidf_difference": -0.000856701205
+      "term": "ag",
+      "tfidf_difference": -0.002004372385
     },
     {
-      "composite_score": -1.074884080302,
+      "composite_score": -1.153952340959,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.001517186937,
-      "negative_npmi": 0.073366893365,
-      "npmi_difference": -1.073366893365,
+      "negative_mean_tfidf": 0.001572464178,
+      "negative_npmi": 0.152379876781,
+      "npmi_difference": -1.152379876781,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "jay",
-      "tfidf_difference": -0.001517186937
+      "term": "composting",
+      "tfidf_difference": -0.001572464178
     },
     {
-      "composite_score": -1.074555202053,
+      "composite_score": -1.149237670543,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.001188308688,
-      "negative_npmi": 0.073366893365,
-      "npmi_difference": -1.073366893365,
+      "negative_mean_tfidf": 0.001995879617,
+      "negative_npmi": 0.147241790926,
+      "npmi_difference": -1.147241790926,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "cta",
-      "tfidf_difference": -0.001188308688
+      "term": "wtop",
+      "tfidf_difference": -0.001995879617
     },
     {
-      "composite_score": -1.073756607733,
+      "composite_score": -1.145472595971,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.00074195474,
-      "negative_npmi": 0.073014652994,
-      "npmi_difference": -1.073014652994,
+      "negative_mean_tfidf": 0.001791439966,
+      "negative_npmi": 0.143681156006,
+      "npmi_difference": -1.143681156006,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "steny",
+      "tfidf_difference": -0.001791439966
+    },
+    {
+      "composite_score": -1.144827542895,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001894357448,
+      "negative_npmi": 0.142933185446,
+      "npmi_difference": -1.142933185446,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "lemon",
+      "tfidf_difference": -0.001894357448
+    },
+    {
+      "composite_score": -1.138437474701,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.00199674722,
+      "negative_npmi": 0.136440727481,
+      "npmi_difference": -1.136440727481,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "tapper",
+      "tfidf_difference": -0.00199674722
+    },
+    {
+      "composite_score": -1.137739138353,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000820344148,
+      "negative_npmi": 0.136918794205,
+      "npmi_difference": -1.136918794205,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
       "term": "farmland",
-      "tfidf_difference": -0.00074195474
+      "tfidf_difference": -0.000820344148
     },
     {
-      "composite_score": -1.072961143292,
+      "composite_score": -1.137518246546,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.001041315357,
-      "negative_npmi": 0.071919827935,
-      "npmi_difference": -1.071919827935,
+      "negative_mean_tfidf": 0.000599452341,
+      "negative_npmi": 0.136918794205,
+      "npmi_difference": -1.136918794205,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "kenyan",
-      "tfidf_difference": -0.001041315357
+      "term": "ofce",
+      "tfidf_difference": -0.000599452341
     },
     {
-      "composite_score": -1.072871217362,
+      "composite_score": -1.133839388881,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.001330116376,
-      "negative_npmi": 0.071541100987,
-      "npmi_difference": -1.071541100987,
+      "negative_mean_tfidf": 0.000687664253,
+      "negative_npmi": 0.133151724629,
+      "npmi_difference": -1.133151724629,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "daniel",
-      "tfidf_difference": -0.001330116376
+      "term": "m83",
+      "tfidf_difference": -0.000687664253
     },
     {
-      "composite_score": -1.07255430672,
+      "composite_score": -1.133786085424,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000634478785,
-      "negative_npmi": 0.071919827935,
-      "npmi_difference": -1.071919827935,
+      "negative_mean_tfidf": 0.000634360796,
+      "negative_npmi": 0.133151724629,
+      "npmi_difference": -1.133151724629,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "measurable",
-      "tfidf_difference": -0.000634478785
+      "term": "beltway",
+      "tfidf_difference": -0.000634360796
     },
     {
-      "composite_score": -1.072267295306,
+      "composite_score": -1.133735591096,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000726194319,
-      "negative_npmi": 0.071541100987,
-      "npmi_difference": -1.071541100987,
+      "negative_mean_tfidf": 0.00164650254,
+      "negative_npmi": 0.132089088555,
+      "npmi_difference": -1.132089088555,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "pressing",
-      "tfidf_difference": -0.000726194319
+      "term": "bash",
+      "tfidf_difference": -0.00164650254
     },
     {
-      "composite_score": -1.072148342821,
+      "composite_score": -1.13342668565,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000607241834,
-      "negative_npmi": 0.071541100987,
-      "npmi_difference": -1.071541100987,
+      "negative_mean_tfidf": 0.000946367835,
+      "negative_npmi": 0.132480317815,
+      "npmi_difference": -1.132480317815,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "tel",
-      "tfidf_difference": -0.000607241834
+      "term": "48th",
+      "tfidf_difference": -0.000946367835
     },
     {
-      "composite_score": -1.071894132944,
+      "composite_score": -1.132827613661,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000353031958,
-      "negative_npmi": 0.071541100987,
-      "npmi_difference": -1.071541100987,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "wb",
-      "tfidf_difference": -0.000353031958
-    },
-    {
-      "composite_score": -1.071796211129,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.000641339844,
-      "negative_npmi": 0.071154871285,
-      "npmi_difference": -1.071154871285,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "bp",
-      "tfidf_difference": -0.000641339844
-    },
-    {
-      "composite_score": -1.071741879104,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.000587007818,
-      "negative_npmi": 0.071154871285,
-      "npmi_difference": -1.071154871285,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "agritourism",
-      "tfidf_difference": -0.000587007818
-    },
-    {
-      "composite_score": -1.071734965508,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.00097424042,
-      "negative_npmi": 0.070760725088,
-      "npmi_difference": -1.070760725088,
+      "negative_mean_tfidf": 0.001032960492,
+      "negative_npmi": 0.131794653168,
+      "npmi_difference": -1.131794653168,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
       "term": "sonoma",
-      "tfidf_difference": -0.00097424042
+      "tfidf_difference": -0.001032960492
     },
     {
-      "composite_score": -1.071719415648,
+      "composite_score": -1.132553727793,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000564544362,
-      "negative_npmi": 0.071154871285,
-      "npmi_difference": -1.071154871285,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "va",
-      "tfidf_difference": -0.000564544362
-    },
-    {
-      "composite_score": -1.071485888482,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.000725163393,
-      "negative_npmi": 0.070760725088,
-      "npmi_difference": -1.070760725088,
+      "negative_mean_tfidf": 0.000759074625,
+      "negative_npmi": 0.131794653168,
+      "npmi_difference": -1.131794653168,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
       "term": "redevelopment",
-      "tfidf_difference": -0.000725163393
+      "tfidf_difference": -0.000759074625
     },
     {
-      "composite_score": -1.071344105097,
+      "composite_score": -1.132052034205,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000583380008,
-      "negative_npmi": 0.070760725088,
-      "npmi_difference": -1.070760725088,
+      "negative_mean_tfidf": 0.000784347963,
+      "negative_npmi": 0.131267686243,
+      "npmi_difference": -1.131267686243,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "sr",
-      "tfidf_difference": -0.000583380008
+      "term": "tel",
+      "tfidf_difference": -0.000784347963
     },
     {
-      "composite_score": -1.071293326469,
+      "composite_score": -1.131878651019,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.00053260138,
-      "negative_npmi": 0.070760725088,
-      "npmi_difference": -1.070760725088,
+      "negative_mean_tfidf": 0.000784736504,
+      "negative_npmi": 0.131093914515,
+      "npmi_difference": -1.131093914515,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "fp",
-      "tfidf_difference": -0.00053260138
+      "term": "mcps",
+      "tfidf_difference": -0.000784736504
     },
     {
-      "composite_score": -1.071043642231,
+      "composite_score": -1.131518708582,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000685430818,
-      "negative_npmi": 0.070358211413,
-      "npmi_difference": -1.070358211413,
+      "negative_mean_tfidf": 0.001917292934,
+      "negative_npmi": 0.129601415648,
+      "npmi_difference": -1.129601415648,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "highway",
-      "tfidf_difference": -0.000685430818
+      "term": "applause",
+      "tfidf_difference": -0.001917292934
     },
     {
-      "composite_score": -1.07091071216,
+      "composite_score": -1.131409317458,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000552500747,
-      "negative_npmi": 0.070358211413,
-      "npmi_difference": -1.070358211413,
+      "negative_mean_tfidf": 0.000315402943,
+      "negative_npmi": 0.131093914515,
+      "npmi_difference": -1.131093914515,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "tc",
-      "tfidf_difference": -0.000552500747
+      "term": "wb",
+      "tfidf_difference": -0.000315402943
     },
     {
-      "composite_score": -1.070868045034,
+      "composite_score": -1.131178509455,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000509833621,
-      "negative_npmi": 0.070358211413,
-      "npmi_difference": -1.070358211413,
+      "negative_mean_tfidf": 0.000801299999,
+      "negative_npmi": 0.130377209456,
+      "npmi_difference": -1.130377209456,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
-      "term": "ii",
-      "tfidf_difference": -0.000509833621
+      "term": "270",
+      "tfidf_difference": -0.000801299999
     },
     {
-      "composite_score": -1.070786259647,
+      "composite_score": -1.1309978029,
       "favored_group": "cold",
-      "negative_mean_tfidf": 0.000839422343,
-      "negative_npmi": 0.069946837305,
-      "npmi_difference": -1.069946837305,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "congestion",
-      "tfidf_difference": -0.000839422343
-    },
-    {
-      "composite_score": -1.070577642465,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.001051580155,
-      "negative_npmi": 0.06952606231,
-      "npmi_difference": -1.06952606231,
-      "positive_mean_tfidf": 0.0,
-      "positive_npmi": -1.0,
-      "term": "sylvia",
-      "tfidf_difference": -0.001051580155
-    },
-    {
-      "composite_score": -1.070532469051,
-      "favored_group": "cold",
-      "negative_mean_tfidf": 0.000585631746,
-      "negative_npmi": 0.069946837305,
-      "npmi_difference": -1.069946837305,
+      "negative_mean_tfidf": 0.000620593444,
+      "negative_npmi": 0.130377209456,
+      "npmi_difference": -1.130377209456,
       "positive_mean_tfidf": 0.0,
       "positive_npmi": -1.0,
       "term": "equalization",
-      "tfidf_difference": -0.000585631746
+      "tfidf_difference": -0.000620593444
+    },
+    {
+      "composite_score": -1.130941475679,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000564266223,
+      "negative_npmi": 0.130377209456,
+      "npmi_difference": -1.130377209456,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "agritourism",
+      "tfidf_difference": -0.000564266223
+    },
+    {
+      "composite_score": -1.130844554167,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000467344711,
+      "negative_npmi": 0.130377209456,
+      "npmi_difference": -1.130377209456,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "drawing",
+      "tfidf_difference": -0.000467344711
+    },
+    {
+      "composite_score": -1.130757605632,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001114046326,
+      "negative_npmi": 0.129643559306,
+      "npmi_difference": -1.129643559306,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "sylvia",
+      "tfidf_difference": -0.001114046326
+    },
+    {
+      "composite_score": -1.130717268155,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.0003400587,
+      "negative_npmi": 0.130377209456,
+      "npmi_difference": -1.130377209456,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "zy",
+      "tfidf_difference": -0.0003400587
+    },
+    {
+      "composite_score": -1.130127825704,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000484266397,
+      "negative_npmi": 0.129643559306,
+      "npmi_difference": -1.129643559306,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "wineries",
+      "tfidf_difference": -0.000484266397
+    },
+    {
+      "composite_score": -1.130054911813,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001163024516,
+      "negative_npmi": 0.128891887296,
+      "npmi_difference": -1.128891887296,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "fppc",
+      "tfidf_difference": -0.001163024516
+    },
+    {
+      "composite_score": -1.129429781333,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000537894037,
+      "negative_npmi": 0.128891887296,
+      "npmi_difference": -1.128891887296,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "lt",
+      "tfidf_difference": -0.000537894037
+    },
+    {
+      "composite_score": -1.129372877405,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000480990109,
+      "negative_npmi": 0.128891887296,
+      "npmi_difference": -1.128891887296,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "outer",
+      "tfidf_difference": -0.000480990109
     }
   ],
   "top_hot_terms": [
     {
-      "composite_score": 1.285921757693,
+      "composite_score": 1.248998485414,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.277650357498,
-      "positive_mean_tfidf": 0.008271400195,
-      "positive_npmi": 0.277650357498,
-      "term": "dsa",
-      "tfidf_difference": 0.008271400195
+      "npmi_difference": 1.247091255486,
+      "positive_mean_tfidf": 0.001907229928,
+      "positive_npmi": 0.247091255486,
+      "term": "gaza",
+      "tfidf_difference": 0.001907229928
     },
     {
-      "composite_score": 1.222820808144,
+      "composite_score": 1.248619018195,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.21938800549,
-      "positive_mean_tfidf": 0.003432802654,
-      "positive_npmi": 0.21938800549,
-      "term": "socialists",
-      "tfidf_difference": 0.003432802654
+      "npmi_difference": 1.244450820268,
+      "positive_mean_tfidf": 0.004168197927,
+      "positive_npmi": 0.244450820268,
+      "term": "sex",
+      "tfidf_difference": 0.004168197927
     },
     {
-      "composite_score": 1.202372485811,
+      "composite_score": 1.247109472429,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.199637411348,
-      "positive_mean_tfidf": 0.002735074464,
-      "positive_npmi": 0.199637411348,
-      "term": "palestine",
-      "tfidf_difference": 0.002735074464
+      "npmi_difference": 1.244959766839,
+      "positive_mean_tfidf": 0.00214970559,
+      "positive_npmi": 0.244959766839,
+      "term": "uncommitted",
+      "tfidf_difference": 0.00214970559
     },
     {
-      "composite_score": 1.192929897162,
+      "composite_score": 1.245633429389,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.189436803278,
-      "positive_mean_tfidf": 0.003493093884,
-      "positive_npmi": 0.189436803278,
+      "npmi_difference": 1.241981478329,
+      "positive_mean_tfidf": 0.003651951059,
+      "positive_npmi": 0.241981478329,
       "term": "dropdown",
-      "tfidf_difference": 0.003493093884
+      "tfidf_difference": 0.003651951059
     },
     {
-      "composite_score": 1.189709933927,
+      "composite_score": 1.241556179041,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.188297219661,
-      "positive_mean_tfidf": 0.001412714265,
-      "positive_npmi": 0.188297219661,
-      "term": "salazar",
-      "tfidf_difference": 0.001412714265
+      "npmi_difference": 1.23766243052,
+      "positive_mean_tfidf": 0.003893748521,
+      "positive_npmi": 0.23766243052,
+      "term": "ballotpedia",
+      "tfidf_difference": 0.003893748521
     },
     {
-      "composite_score": 1.188583130177,
+      "composite_score": 1.241451759895,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.18713056576,
-      "positive_mean_tfidf": 0.001452564418,
-      "positive_npmi": 0.18713056576,
-      "term": "thomason",
-      "tfidf_difference": 0.001452564418
+      "npmi_difference": 1.238768447097,
+      "positive_mean_tfidf": 0.002683312798,
+      "positive_npmi": 0.238768447097,
+      "term": "palestine",
+      "tfidf_difference": 0.002683312798
     },
     {
-      "composite_score": 1.186191189166,
+      "composite_score": 1.2392436969,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.184708748548,
-      "positive_mean_tfidf": 0.001482440617,
-      "positive_npmi": 0.184708748548,
+      "npmi_difference": 1.23766243052,
+      "positive_mean_tfidf": 0.00158126638,
+      "positive_npmi": 0.23766243052,
       "term": "ceasefire",
-      "tfidf_difference": 0.001482440617
+      "tfidf_difference": 0.00158126638
     },
     {
-      "composite_score": 1.181796661925,
+      "composite_score": 1.237855468054,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.18082169542,
-      "positive_mean_tfidf": 0.000974966505,
-      "positive_npmi": 0.18082169542,
-      "term": "evictions",
-      "tfidf_difference": 0.000974966505
+      "npmi_difference": 1.236354343397,
+      "positive_mean_tfidf": 0.001501124657,
+      "positive_npmi": 0.236354343397,
+      "term": "salazar",
+      "tfidf_difference": 0.001501124657
     },
     {
-      "composite_score": 1.18002644904,
+      "composite_score": 1.232971504482,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.178028396987,
-      "positive_mean_tfidf": 0.001998052053,
-      "positive_npmi": 0.178028396987,
-      "term": "allegheny",
-      "tfidf_difference": 0.001998052053
+      "npmi_difference": 1.231485374765,
+      "positive_mean_tfidf": 0.001486129717,
+      "positive_npmi": 0.231485374765,
+      "term": "thomason",
+      "tfidf_difference": 0.001486129717
     },
     {
-      "composite_score": 1.179196010378,
+      "composite_score": 1.228906068439,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.178028396987,
-      "positive_mean_tfidf": 0.001167613391,
-      "positive_npmi": 0.178028396987,
-      "term": "fran",
-      "tfidf_difference": 0.001167613391
+      "npmi_difference": 1.227475972331,
+      "positive_mean_tfidf": 0.001430096108,
+      "positive_npmi": 0.227475972331,
+      "term": "jails",
+      "tfidf_difference": 0.001430096108
     },
     {
-      "composite_score": 1.17789082608,
+      "composite_score": 1.225768347529,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.176560546673,
-      "positive_mean_tfidf": 0.001330279407,
-      "positive_npmi": 0.176560546673,
+      "npmi_difference": 1.224179852559,
+      "positive_mean_tfidf": 0.00158849497,
+      "positive_npmi": 0.224179852559,
       "term": "confinement",
-      "tfidf_difference": 0.001330279407
+      "tfidf_difference": 0.00158849497
     },
     {
-      "composite_score": 1.175119483705,
+      "composite_score": 1.225177588287,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.173459313555,
-      "positive_mean_tfidf": 0.00166017015,
-      "positive_npmi": 0.173459313555,
-      "term": "gate",
-      "tfidf_difference": 0.00166017015
+      "npmi_difference": 1.224179852559,
+      "positive_mean_tfidf": 0.000997735728,
+      "positive_npmi": 0.224179852559,
+      "term": "evictions",
+      "tfidf_difference": 0.000997735728
     },
     {
-      "composite_score": 1.174671369619,
+      "composite_score": 1.223566363584,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.173459313555,
-      "positive_mean_tfidf": 0.001212056064,
-      "positive_npmi": 0.173459313555,
-      "term": "solitary",
-      "tfidf_difference": 0.001212056064
-    },
-    {
-      "composite_score": 1.173340273374,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.171814394835,
-      "positive_mean_tfidf": 0.001525878539,
-      "positive_npmi": 0.171814394835,
-      "term": "cdt",
-      "tfidf_difference": 0.001525878539
-    },
-    {
-      "composite_score": 1.173266375267,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.171814394835,
-      "positive_mean_tfidf": 0.001451980432,
-      "positive_npmi": 0.171814394835,
-      "term": "matos",
-      "tfidf_difference": 0.001451980432
-    },
-    {
-      "composite_score": 1.173236139402,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.171814394835,
-      "positive_mean_tfidf": 0.001421744567,
-      "positive_npmi": 0.171814394835,
+      "npmi_difference": 1.222054680416,
+      "positive_mean_tfidf": 0.001511683168,
+      "positive_npmi": 0.222054680416,
       "term": "asst",
-      "tfidf_difference": 0.001421744567
+      "tfidf_difference": 0.001511683168
     },
     {
-      "composite_score": 1.172635935876,
+      "composite_score": 1.221536309263,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.171814394835,
-      "positive_mean_tfidf": 0.000821541041,
-      "positive_npmi": 0.171814394835,
-      "term": "bushwick",
-      "tfidf_difference": 0.000821541041
+      "npmi_difference": 1.220071977069,
+      "positive_mean_tfidf": 0.001464332194,
+      "positive_npmi": 0.220071977069,
+      "term": "solitary",
+      "tfidf_difference": 0.001464332194
     },
     {
-      "composite_score": 1.172568287978,
+      "composite_score": 1.216992458373,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.171814394835,
-      "positive_mean_tfidf": 0.000753893143,
-      "positive_npmi": 0.171814394835,
-      "term": "israeli",
-      "tfidf_difference": 0.000753893143
-    },
-    {
-      "composite_score": 1.172415427424,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.171814394835,
-      "positive_mean_tfidf": 0.000601032589,
-      "positive_npmi": 0.171814394835,
-      "term": "magisterial",
-      "tfidf_difference": 0.000601032589
-    },
-    {
-      "composite_score": 1.172081098396,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.170097222007,
-      "positive_mean_tfidf": 0.001983876389,
-      "positive_npmi": 0.170097222007,
-      "term": "obituaries",
-      "tfidf_difference": 0.001983876389
-    },
-    {
-      "composite_score": 1.171943974995,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.170097222007,
-      "positive_mean_tfidf": 0.001846752988,
-      "positive_npmi": 0.170097222007,
-      "term": "maine",
-      "tfidf_difference": 0.001846752988
-    },
-    {
-      "composite_score": 1.171630577427,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.170097222007,
-      "positive_mean_tfidf": 0.00153335542,
-      "positive_npmi": 0.170097222007,
-      "term": "notices",
-      "tfidf_difference": 0.00153335542
-    },
-    {
-      "composite_score": 1.171550749832,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.170097222007,
-      "positive_mean_tfidf": 0.001453527825,
-      "positive_npmi": 0.170097222007,
-      "term": "connecticut",
-      "tfidf_difference": 0.001453527825
-    },
-    {
-      "composite_score": 1.171455660419,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.168299090539,
-      "positive_mean_tfidf": 0.00315656988,
-      "positive_npmi": 0.168299090539,
-      "term": "whyy",
-      "tfidf_difference": 0.00315656988
-    },
-    {
-      "composite_score": 1.170999539886,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.168299090539,
-      "positive_mean_tfidf": 0.002700449347,
-      "positive_npmi": 0.168299090539,
-      "term": "wesa",
-      "tfidf_difference": 0.002700449347
-    },
-    {
-      "composite_score": 1.170061643989,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.168299090539,
-      "positive_mean_tfidf": 0.001762553449,
-      "positive_npmi": 0.168299090539,
-      "term": "preview",
-      "tfidf_difference": 0.001762553449
-    },
-    {
-      "composite_score": 1.169057421219,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.168299090539,
-      "positive_mean_tfidf": 0.00075833068,
-      "positive_npmi": 0.168299090539,
-      "term": "vegas",
-      "tfidf_difference": 0.00075833068
-    },
-    {
-      "composite_score": 1.167842316206,
-      "favored_group": "hot",
-      "negative_mean_tfidf": 0.0,
-      "negative_npmi": -1.0,
-      "npmi_difference": 1.166409520051,
-      "positive_mean_tfidf": 0.001432796155,
-      "positive_npmi": 0.166409520051,
+      "npmi_difference": 1.21547107046,
+      "positive_mean_tfidf": 0.001521387913,
+      "positive_npmi": 0.21547107046,
       "term": "uconn",
-      "tfidf_difference": 0.001432796155
+      "tfidf_difference": 0.001521387913
     },
     {
-      "composite_score": 1.167709004909,
+      "composite_score": 1.216758577417,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.166409520051,
-      "positive_mean_tfidf": 0.001299484858,
-      "positive_npmi": 0.166409520051,
-      "term": "prizio",
-      "tfidf_difference": 0.001299484858
+      "npmi_difference": 1.21547107046,
+      "positive_mean_tfidf": 0.001287506957,
+      "positive_npmi": 0.21547107046,
+      "term": "notices",
+      "tfidf_difference": 0.001287506957
     },
     {
-      "composite_score": 1.167466816577,
+      "composite_score": 1.216730432179,
       "favored_group": "hot",
       "negative_mean_tfidf": 0.0,
       "negative_npmi": -1.0,
-      "npmi_difference": 1.166409520051,
-      "positive_mean_tfidf": 0.001057296526,
-      "positive_npmi": 0.166409520051,
-      "term": "tips",
-      "tfidf_difference": 0.001057296526
+      "npmi_difference": 1.21547107046,
+      "positive_mean_tfidf": 0.001259361718,
+      "positive_npmi": 0.21547107046,
+      "term": "matos",
+      "tfidf_difference": 0.001259361718
+    },
+    {
+      "composite_score": 1.216403042521,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.21547107046,
+      "positive_mean_tfidf": 0.000931972061,
+      "positive_npmi": 0.21547107046,
+      "term": "samson",
+      "tfidf_difference": 0.000931972061
+    },
+    {
+      "composite_score": 1.216148410025,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.21547107046,
+      "positive_mean_tfidf": 0.000677339565,
+      "positive_npmi": 0.21547107046,
+      "term": "decarceration",
+      "tfidf_difference": 0.000677339565
+    },
+    {
+      "composite_score": 1.211578635607,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.210451081849,
+      "positive_mean_tfidf": 0.001127553758,
+      "positive_npmi": 0.210451081849,
+      "term": "sox",
+      "tfidf_difference": 0.001127553758
+    },
+    {
+      "composite_score": 1.211404647434,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.210558063325,
+      "positive_mean_tfidf": 0.000846584109,
+      "positive_npmi": 0.210558063325,
+      "term": "prevailing",
+      "tfidf_difference": 0.000846584109
+    },
+    {
+      "composite_score": 1.211279325564,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.210558063325,
+      "positive_mean_tfidf": 0.000721262239,
+      "positive_npmi": 0.210558063325,
+      "term": "carceral",
+      "tfidf_difference": 0.000721262239
+    },
+    {
+      "composite_score": 1.211081970811,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.210451081849,
+      "positive_mean_tfidf": 0.000630888962,
+      "positive_npmi": 0.210451081849,
+      "term": "langford",
+      "tfidf_difference": 0.000630888962
+    },
+    {
+      "composite_score": 1.208828345229,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.207818749416,
+      "positive_mean_tfidf": 0.001009595813,
+      "positive_npmi": 0.207818749416,
+      "term": "farnese",
+      "tfidf_difference": 0.001009595813
+    },
+    {
+      "composite_score": 1.208617732554,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.207818749416,
+      "positive_mean_tfidf": 0.000798983138,
+      "positive_npmi": 0.207818749416,
+      "term": "vegas",
+      "tfidf_difference": 0.000798983138
+    },
+    {
+      "composite_score": 1.208357849908,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.207690424997,
+      "positive_mean_tfidf": 0.000667424911,
+      "positive_npmi": 0.207690424997,
+      "term": "redfored",
+      "tfidf_difference": 0.000667424911
+    },
+    {
+      "composite_score": 1.208280118494,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.207690424997,
+      "positive_mean_tfidf": 0.000589693497,
+      "positive_npmi": 0.207690424997,
+      "term": "palestinians",
+      "tfidf_difference": 0.000589693497
+    },
+    {
+      "composite_score": 1.20825662587,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.207690424997,
+      "positive_mean_tfidf": 0.000566200873,
+      "positive_npmi": 0.207690424997,
+      "term": "lvdsa",
+      "tfidf_difference": 0.000566200873
+    },
+    {
+      "composite_score": 1.20577347057,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.204721741955,
+      "positive_mean_tfidf": 0.001051728615,
+      "positive_npmi": 0.204721741955,
+      "term": "sample",
+      "tfidf_difference": 0.001051728615
+    },
+    {
+      "composite_score": 1.205759032269,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.204721741955,
+      "positive_mean_tfidf": 0.001037290315,
+      "positive_npmi": 0.204721741955,
+      "term": "gate",
+      "tfidf_difference": 0.001037290315
     }
   ],
   "warning": "The full-text sufficiency audit still fails. Results describe the currently recoverable segmented corpus and must not be treated as a complete census.",
   "zones": {
     "counts": {
-      "cold": 6374,
-      "hot": 3188
+      "cold": 6373,
+      "hot": 3163,
+      "shared": 4768
     },
-    "endorsed_hot_cutoff": 0.00017486148543573805,
+    "endorsed_hot_cutoff": 0.0001683119649990006,
     "endorsed_hot_quantile": 0.75,
-    "opponent_cold_cutoff": -7.053589712884264e-05,
-    "opponent_cold_quantile": 0.25
+    "opponent_cold_cutoff": -8.117992552657438e-05,
+    "opponent_cold_quantile": 0.25,
+    "shared_absolute_score_cutoff": 3.536521205896071e-05,
+    "shared_absolute_score_quantile": 0.25,
+    "shared_joint_density_cutoff": -8.803399840193215,
+    "shared_joint_density_quantile": 0.5
   }
 }

@@ -14,6 +14,8 @@ from dsa_analysis.text_analysis import (
     candidate_record_coverage,
     cosine_similarity,
     mpif_rows,
+    policy_overlap_rows,
+    shared_affirmative_mechanisms,
     tokenize,
 )
 
@@ -119,6 +121,107 @@ class TextAnalysisTests(unittest.TestCase):
                 places=6,
             )
 
+    def test_policy_overlap_excludes_tiny_shared_prevalence(self):
+        rows = policy_overlap_rows(
+            [
+                {
+                    "feature": "healthcare",
+                    "endorsed_share": "0.20",
+                    "opponent_share": "0.18",
+                    "difference": "0.02",
+                },
+                {
+                    "feature": "universal_basic_income",
+                    "endorsed_share": "0.001",
+                    "opponent_share": "0.001",
+                    "difference": "0.0",
+                },
+            ]
+        )
+
+        self.assertEqual([row["feature"] for row in rows], ["healthcare"])
+        self.assertEqual(rows[0]["shared_emphasis"], "0.180000")
+
+    def test_shared_mechanisms_require_both_groups_and_exclude_negation(self):
+        with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as directory:
+            path = Path(directory) / "segments.csv"
+            fields = [
+                "race_id",
+                "candidate_name",
+                "role",
+                "source_type",
+                "text",
+                "token_count",
+                "boilerplate_flag",
+            ]
+            with path.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(handle, fieldnames=fields)
+                writer.writeheader()
+                writer.writerows(
+                    [
+                        {
+                            "race_id": "race-1",
+                            "candidate_name": "Endorsed",
+                            "role": "endorsed",
+                            "source_type": "policy_page",
+                            "text": "We will enact rent control and build tenant power across the city.",
+                            "token_count": "20",
+                            "boilerplate_flag": "false",
+                        },
+                        {
+                            "race_id": "race-1",
+                            "candidate_name": "Opponent",
+                            "role": "opponent",
+                            "source_type": "candidate_questionnaire",
+                            "text": "I support rent control as one tool for keeping homes affordable.",
+                            "token_count": "20",
+                            "boilerplate_flag": "false",
+                        },
+                        {
+                            "race_id": "race-2",
+                            "candidate_name": "Endorsed",
+                            "role": "endorsed",
+                            "source_type": "policy_page",
+                            "text": "Our platform supports a public option for every resident.",
+                            "token_count": "20",
+                            "boilerplate_flag": "false",
+                        },
+                        {
+                            "race_id": "race-2",
+                            "candidate_name": "Opponent",
+                            "role": "opponent",
+                            "source_type": "policy_page",
+                            "text": "I oppose the public option and prefer another approach.",
+                            "token_count": "20",
+                            "boilerplate_flag": "false",
+                        },
+                        {
+                            "race_id": "race-3",
+                            "candidate_name": "Endorsed",
+                            "role": "endorsed",
+                            "source_type": "policy_page",
+                            "text": "We support a public option as an immediate coverage expansion.",
+                            "token_count": "20",
+                            "boilerplate_flag": "false",
+                        },
+                        {
+                            "race_id": "race-3",
+                            "candidate_name": "Opponent",
+                            "role": "opponent",
+                            "source_type": "policy_page",
+                            "text": "There should be no public option in the final legislation.",
+                            "token_count": "20",
+                            "boilerplate_flag": "false",
+                        },
+                    ]
+                )
+
+            rows = shared_affirmative_mechanisms(path)
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["feature"], "rent_control")
+        self.assertEqual(rows[0]["race_id"], "race-1")
+
     def test_candidate_corpus_deduplicates_shared_text_across_state_races(self):
         with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as directory:
             root = Path(directory)
@@ -192,8 +295,13 @@ class TextAnalysisTests(unittest.TestCase):
             self.assertGreater(stats["candidate_segments"], 0)
             self.assertGreater(stats["official_segments"], 0)
             self.assertGreater(stats["sticking_points"], 0)
-            self.assertEqual(stats["figure_count"], 6)
+            self.assertEqual(stats["figure_count"], 9)
+            self.assertEqual(stats["generated_figure_count"], 8)
             self.assertTrue((FIGURE_DIR / "policy_language_difference.svg").exists())
+            self.assertTrue((FIGURE_DIR / "policy_language_overlap.svg").exists())
+            self.assertTrue(
+                (FIGURE_DIR / "shared_affirmative_policy_mechanisms.svg").exists()
+            )
             self.assertTrue((FIGURE_DIR / "official_policy_contrasts.svg").exists())
             self.assertTrue(model_figure.exists())
             self.assertTrue((TABLE_DIR / "analysis_manifest.json").exists())

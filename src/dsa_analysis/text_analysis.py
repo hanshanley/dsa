@@ -26,6 +26,50 @@ OFFICIAL_CATEGORY_GROUPS = {
     "dnc_national": "democratic",
     "state_democratic_party": "democratic",
 }
+POLICY_FEATURES = {
+    "affordable_housing",
+    "border",
+    "business",
+    "climate_change",
+    "collective_bargaining",
+    "corporate",
+    "eviction",
+    "green_new_deal",
+    "healthcare",
+    "human_right",
+    "living_wage",
+    "market",
+    "medicare_for_all",
+    "minimum_wage",
+    "public_housing",
+    "public_option",
+    "rent",
+    "rent_control",
+    "single_payer",
+    "small_business",
+    "social_housing",
+    "technology",
+    "tenant",
+    "training",
+    "union",
+    "universal_basic_income",
+    "worker",
+    "working_class",
+}
+SHARED_MECHANISM_FEATURES = {
+    "affordable_housing",
+    "collective_bargaining",
+    "green_new_deal",
+    "living_wage",
+    "medicare_for_all",
+    "minimum_wage",
+    "public_housing",
+    "public_option",
+    "rent_control",
+    "single_payer",
+    "social_housing",
+    "universal_basic_income",
+}
 
 DSA_RED = "#C85A3D"
 DEMOCRATIC_BLUE = "#3D6F8C"
@@ -187,6 +231,9 @@ def analyze_text() -> dict[str, int | float]:
     candidate_mpif = mpif_rows(candidate_docs, "endorsed", "opponent")
     official_mpif = mpif_rows(official_docs, "dsa", "democratic")
     prevalence_rows = feature_prevalence(candidate_docs)
+    overlap_rows = policy_overlap_rows(prevalence_rows)
+    shared_mechanism_rows = shared_affirmative_mechanisms()
+    shared_mechanism_summary = _shared_mechanism_summary(shared_mechanism_rows)
     coverage_rows = candidate_record_coverage()
     volume_rows = verified_segment_volume(candidate_rows)
     source_type_rows = source_type_comparison(candidate_rows)
@@ -232,6 +279,34 @@ def analyze_text() -> dict[str, int | float]:
         ],
     )
     write_csv(
+        TABLE_DIR / "candidate_policy_overlap.csv",
+        overlap_rows,
+        [
+            "feature",
+            "endorsed_share",
+            "opponent_share",
+            "shared_emphasis",
+            "share_gap",
+        ],
+    )
+    write_csv(
+        TABLE_DIR / "shared_affirmative_policy_mechanisms.csv",
+        shared_mechanism_rows,
+        [
+            "race_id",
+            "feature",
+            "endorsed_candidates",
+            "opponent_candidates",
+            "endorsed_example",
+            "opponent_example",
+        ],
+    )
+    write_csv(
+        TABLE_DIR / "shared_affirmative_policy_mechanism_summary.csv",
+        shared_mechanism_summary,
+        ["feature", "race_count"],
+    )
+    write_csv(
         TABLE_DIR / "candidate_evidence_coverage.csv",
         coverage_rows,
         [
@@ -273,6 +348,8 @@ def analyze_text() -> dict[str, int | float]:
     )
 
     _policy_language_chart(prevalence_rows)
+    _policy_overlap_chart(overlap_rows)
+    _shared_mechanism_chart(shared_mechanism_summary)
     _official_contrast_chart(platform_comparisons, excerpts)
     _volume_cycle_chart(volume_rows)
     _source_type_chart(source_type_rows)
@@ -302,7 +379,9 @@ def analyze_text() -> dict[str, int | float]:
         "official_mpif_features": len(official_mpif),
         "prevalence_features": len(prevalence_rows),
         "sticking_points": len(sticking_points),
-        "figure_count": 6,
+        "figure_count": len(list(FIGURE_DIR.glob("*.svg"))),
+        "generated_figure_count": 8,
+        "shared_affirmative_mechanism_rows": len(shared_mechanism_rows),
         "input_hashes": {
             str(path.relative_to(path.parents[2])): _sha256(path)
             for path in (
@@ -380,6 +459,8 @@ def analyze_text() -> dict[str, int | float]:
         candidate_mpif,
         official_mpif,
         prevalence_rows,
+        overlap_rows,
+        shared_mechanism_summary,
         coverage_rows,
         volume_rows,
         source_type_rows,
@@ -630,6 +711,131 @@ def feature_prevalence(documents: list[dict[str, str]]) -> list[dict[str, str]]:
         rows,
         key=lambda row: (-abs(float(row["difference"])), row["feature"]),
     )
+
+
+def policy_overlap_rows(
+    prevalence_rows: list[dict[str, str]],
+    *,
+    minimum_shared_share: float = 0.01,
+) -> list[dict[str, str]]:
+    rows = []
+    for row in prevalence_rows:
+        if row["feature"] not in POLICY_FEATURES:
+            continue
+        endorsed_share = float(row["endorsed_share"])
+        opponent_share = float(row["opponent_share"])
+        shared_emphasis = min(endorsed_share, opponent_share)
+        if shared_emphasis < minimum_shared_share:
+            continue
+        rows.append(
+            {
+                "feature": row["feature"],
+                "endorsed_share": f"{endorsed_share:.6f}",
+                "opponent_share": f"{opponent_share:.6f}",
+                "shared_emphasis": f"{shared_emphasis:.6f}",
+                "share_gap": f"{abs(endorsed_share - opponent_share):.6f}",
+            }
+        )
+    return sorted(
+        rows,
+        key=lambda row: (
+            -float(row["shared_emphasis"]),
+            float(row["share_gap"]),
+            row["feature"],
+        ),
+    )
+
+
+def shared_affirmative_mechanisms(
+    path: Path | None = None,
+) -> list[dict[str, str]]:
+    path = path or CANDIDATE_SEGMENTS_PATH
+    indexed: dict[tuple[str, str, str], dict[str, object]] = {}
+    for row in read_csv(path):
+        if not _eligible_segment(row):
+            continue
+        if row.get("source_type", "").strip() in {"filing", "official_election_source"}:
+            continue
+        role = row.get("role", "").strip()
+        if role not in {"endorsed", "unopposed", "opponent"}:
+            continue
+        group = "endorsed" if role in {"endorsed", "unopposed"} else "opponent"
+        text = row.get("text", "").strip()
+        for pattern, feature in PHRASE_PATTERNS:
+            if feature not in SHARED_MECHANISM_FEATURES:
+                continue
+            match = re.search(pattern, text, flags=re.IGNORECASE)
+            if not match or _is_negated_mechanism(text, match.start()):
+                continue
+            key = (row.get("race_id", "").strip(), feature, group)
+            record = indexed.setdefault(
+                key,
+                {"candidates": set(), "example": ""},
+            )
+            record["candidates"].add(row.get("candidate_name", "").strip())
+            if not record["example"]:
+                record["example"] = _excerpt_around_match(text, match.start(), match.end())
+    output = []
+    race_features = {(race_id, feature) for race_id, feature, _ in indexed}
+    for race_id, feature in sorted(race_features):
+        endorsed = indexed.get((race_id, feature, "endorsed"))
+        opponent = indexed.get((race_id, feature, "opponent"))
+        if not endorsed or not opponent:
+            continue
+        output.append(
+            {
+                "race_id": race_id,
+                "feature": feature,
+                "endorsed_candidates": " | ".join(sorted(endorsed["candidates"])),
+                "opponent_candidates": " | ".join(sorted(opponent["candidates"])),
+                "endorsed_example": str(endorsed["example"]),
+                "opponent_example": str(opponent["example"]),
+            }
+        )
+    return output
+
+
+def _is_negated_mechanism(text: str, match_start: int) -> bool:
+    sentence_start = max(
+        text.rfind(".", 0, match_start),
+        text.rfind("!", 0, match_start),
+        text.rfind("?", 0, match_start),
+        text.rfind("\n", 0, match_start),
+    )
+    prefix = text[sentence_start + 1 : match_start].casefold()
+    return bool(
+        re.search(
+            r"\b(?:against|oppose|opposed\s+to|reject|repeal)\s+"
+            r"(?:(?:a|an|any|the|this)\s+)?$"
+            r"|\b(?:eliminate|end)\s+(?:the\s+)?$"
+            r"|\b(?:do not|does not|don't|doesn't|never|not)\s+"
+            r"(?:(?:back|favor|support)\s+)?(?:(?:a|an|any|the|this)\s+)?$"
+            r"|\b(?:no|without)\s+(?:(?:a|an|any|the|this)\s+)?$",
+            prefix,
+        )
+    )
+
+
+def _excerpt_around_match(text: str, start: int, end: int) -> str:
+    excerpt = " ".join(text[max(0, start - 80) : min(len(text), end + 110)].split())
+    if start > 80:
+        excerpt = "..." + excerpt
+    if end + 110 < len(text):
+        excerpt += "..."
+    return excerpt
+
+
+def _shared_mechanism_summary(
+    rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    counts = Counter(row["feature"] for row in rows)
+    return [
+        {"feature": feature, "race_count": str(count)}
+        for feature, count in sorted(
+            counts.items(),
+            key=lambda item: (-item[1], item[0]),
+        )
+    ]
 
 
 def candidate_record_coverage() -> list[dict[str, str]]:
@@ -1086,6 +1292,8 @@ def _write_text_report(
     candidate_mpif: list[dict[str, str]],
     official_mpif: list[dict[str, str]],
     prevalence_rows: list[dict[str, str]],
+    overlap_rows: list[dict[str, str]],
+    shared_mechanism_summary: list[dict[str, str]],
     coverage_rows: list[dict[str, str]],
     volume_rows: list[dict[str, str]],
     source_type_rows: list[dict[str, str]],
@@ -1107,6 +1315,8 @@ def _write_text_report(
     prevalence_negative = [
         row for row in prevalence_rows if float(row["difference"]) < 0
     ][:8]
+    strongest_overlap = overlap_rows[:8]
+    strongest_shared_mechanisms = shared_mechanism_summary[:8]
     largest_volume_cycles = sorted(
         volume_rows, key=lambda row: int(row["total"]), reverse=True
     )[:5]
@@ -1185,6 +1395,35 @@ The candidate comparison especially distinguishes rights-based housing and labor
 that more often emphasizes business, opportunity, public-option mechanisms, technology,
 training, and border administration.
 
+## Shared policy emphasis
+
+The difference chart intentionally excludes features whose prevalence gap is below 0.5
+percentage points. Shared emphasis is reported separately rather than displaying a rounded
+`0.00` difference as if it were substantively distinctive.
+
+- Highest shared-emphasis features:
+  {", ".join(_label(row["feature"]) for row in strongest_overlap)}.
+
+![Shared policy emphasis](../outputs/figures/text_analysis/policy_language_overlap.svg)
+
+Both groups discussing a feature does not establish identical policy positions. This chart
+identifies common agenda space; the exact texts and reviewed mechanism comparisons are required
+to determine agreement, disagreement, or different proposed means.
+
+## Shared affirmative mechanism language within primaries
+
+As a stricter agreement-oriented check, we identify races where an endorsed candidate and an
+opponent both use the same concrete normalized policy-mechanism phrase. Mentions preceded by
+oppositional or negating language are excluded. The most common shared mechanisms are:
+
+{chr(10).join(f'- **{_label(row["feature"])}:** {row["race_count"]} races' for row in strongest_shared_mechanisms)}
+
+![Shared affirmative policy mechanisms](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
+
+This is stronger evidence of common policy language than topic overlap, but it is still not a
+complete stance classifier. The generated table retains both sides' exact source excerpts for
+review.
+
 ## Document-prevalence robustness check
 
 - More common across DSA-endorsed candidate documents:
@@ -1243,44 +1482,23 @@ the exact segment text and provenance in the generated analysis snapshots remain
 
 
 def _policy_language_chart(rows: list[dict[str, str]]) -> None:
-    policy_features = {
-        "affordable_housing",
-        "border",
-        "business",
-        "climate_change",
-        "collective_bargaining",
-        "corporate",
-        "eviction",
-        "green_new_deal",
-        "healthcare",
-        "human_right",
-        "living_wage",
-        "market",
-        "medicare_for_all",
-        "minimum_wage",
-        "public_housing",
-        "public_option",
-        "rent",
-        "rent_control",
-        "single_payer",
-        "small_business",
-        "social_housing",
-        "technology",
-        "tenant",
-        "training",
-        "union",
-        "universal_basic_income",
-        "worker",
-        "working_class",
-    }
-    filtered = [row for row in rows if row["feature"] in policy_features]
+    minimum_gap = 0.005
+    filtered = [
+        row
+        for row in rows
+        if row["feature"] in POLICY_FEATURES
+        and abs(float(row["difference"])) >= minimum_gap
+    ]
     positive = [row for row in filtered if float(row["difference"]) > 0][:8]
     negative = [row for row in filtered if float(row["difference"]) < 0][:8]
     selected = [*reversed(positive), *negative]
     _diverging_svg(
         FIGURE_DIR / "policy_language_difference.svg",
         "Difference in policy language",
-        "Share of candidate/election documents containing each normalized policy feature",
+        (
+            "Share gap for normalized policy features; gaps below 0.5 percentage points "
+            "are shown in the overlap figure"
+        ),
         [_label(row["feature"]) for row in selected],
         [float(row["difference"]) for row in selected],
         "More DSA-endorsed documents",
@@ -1288,6 +1506,98 @@ def _policy_language_chart(rows: list[dict[str, str]]) -> None:
         (
             "Source: candidate_document_analysis_segments.csv; eligible exact-text segments; "
             "shared source documents deduplicated within group and election cycle."
+        ),
+    )
+
+
+def _policy_overlap_chart(rows: list[dict[str, str]]) -> None:
+    selected = rows[:10]
+    width = 1240
+    height = 205 + len(selected) * 42
+    plot_left = 330
+    plot_width = 780
+    maximum = max(
+        (
+            max(float(row["endorsed_share"]), float(row["opponent_share"]))
+            for row in selected
+        ),
+        default=1.0,
+    )
+    body = [
+        _svg_header(
+            width,
+            height,
+            "Shared policy emphasis",
+            (
+                "Features appearing in both groups; paired bars show document prevalence, "
+                "not identical policy positions"
+            ),
+        )
+    ]
+    for tick in range(5):
+        value = maximum * tick / 4
+        x = plot_left + plot_width * tick / 4
+        body.append(_line(x, 112, x, height - 60, LIGHT))
+        body.append(_text(x, 99, f"{value:.0%}", "middle", MID, "10px"))
+    for index, row in enumerate(selected):
+        y = 126 + index * 42
+        endorsed = float(row["endorsed_share"])
+        opponent = float(row["opponent_share"])
+        body.append(
+            _text(plot_left - 22, y + 19, _label(row["feature"]), "end", DARK, "13px")
+        )
+        body.append(
+            _rect(plot_left, y, plot_width * endorsed / maximum, 11, DSA_RED)
+        )
+        body.append(
+            _rect(plot_left, y + 15, plot_width * opponent / maximum, 11, DEMOCRATIC_BLUE)
+        )
+        body.append(
+            _text(
+                plot_left + plot_width * max(endorsed, opponent) / maximum + 8,
+                y + 20,
+                f"{endorsed:.0%} / {opponent:.0%}",
+                size="10px",
+            )
+        )
+    body.extend(
+        [
+            _legend(790, 75, DSA_RED, "DSA-endorsed documents"),
+            _legend(995, 75, DEMOCRATIC_BLUE, "Opponent documents"),
+            _svg_footer(
+                width,
+                height,
+                (
+                    "Shared mention indicates overlapping agenda attention. Consult exact text "
+                    "to distinguish agreement from different mechanisms or opposing stances."
+                ),
+            ),
+        ]
+    )
+    _write_svg(
+        FIGURE_DIR / "policy_language_overlap.svg",
+        width,
+        height,
+        body,
+    )
+
+
+def _shared_mechanism_chart(rows: list[dict[str, str]]) -> None:
+    selected = rows[:10]
+    _horizontal_svg(
+        FIGURE_DIR / "shared_affirmative_policy_mechanisms.svg",
+        "Shared affirmative policy mechanisms",
+        (
+            "Number of primaries where both sides affirmatively use the same normalized "
+            "mechanism phrase"
+        ),
+        [_label(row["feature"]) for row in selected],
+        [float(row["race_count"]) for row in selected],
+        GREEN,
+        value_format=".0f",
+        footer=(
+            "Negated or oppositional mentions are excluded. Exact paired excerpts are retained "
+            "in shared_affirmative_policy_mechanisms.csv."
         ),
     )
 
@@ -1848,6 +2158,7 @@ def _horizontal_svg(
     values: list[float],
     color: str,
     maximum: float | None = None,
+    value_format: str = ".2f",
     footer: str = (
         "Similarity ranges from 0 (no shared vocabulary) to 1 "
         "(identical term proportions)."
@@ -1862,12 +2173,29 @@ def _horizontal_svg(
     for tick in range(5):
         x = plot_left + plot_width * tick / 4
         body.append(_line(x, 106, x, height - 58, LIGHT))
-        body.append(_text(x, 94, f"{maximum * tick / 4:.2f}", "middle", MID, "10px"))
+        body.append(
+            _text(
+                x,
+                94,
+                format(maximum * tick / 4, value_format),
+                "middle",
+                MID,
+                "10px",
+            )
+        )
     for index, (label, value) in enumerate(zip(labels, values, strict=True)):
         y = 120 + index * 40
         body.append(_text(plot_left - 22, y + 17, label, "end", DARK, "13px"))
         body.append(_rect(plot_left, y, plot_width * value / maximum, 24, color))
-        body.append(_text(plot_left + plot_width * value / maximum + 9, y + 17, f"{value:.2f}", size="11px", weight="700"))
+        body.append(
+            _text(
+                plot_left + plot_width * value / maximum + 9,
+                y + 17,
+                format(value, value_format),
+                size="11px",
+                weight="700",
+            )
+        )
     body.append(_svg_footer(width, height, footer))
     _write_svg(path, width, height, body)
 
