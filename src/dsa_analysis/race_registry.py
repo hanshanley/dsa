@@ -14,10 +14,18 @@ from .paths import ANALYSIS_DATA_DIR, MANUAL_DIR, PROCESSED_DIR
 
 IN_SCOPE_KIND = "tracked_dsa_endorsed_democratic_primary"
 OUT_OF_SCOPE_KIND = "other_corpus_race"
+DURABLE_OUT_OF_SCOPE_CLASSIFICATIONS = {
+    "ballot_or_party_position",
+    "general_only",
+    "nonpartisan_primary",
+    "not_candidate",
+    "unopposed_no_primary",
+}
 DEMOCRATIC_PRIMARY_PARTIES = {
     "Democratic",
     "Democratic-Farmer-Labor",
 }
+NONPARTISAN_NOMINATING_STATES = {"CA", "LA", "WA"}
 QUEUE_ROLES = {"endorsed", "opponent", "unopposed"}
 HIGH_CONFIDENCE = "high"
 VERIFIED_CONFIDENCE = "verified"
@@ -187,17 +195,20 @@ ELECTION_AUTHORITY_HOST_ALLOWLIST = {
     "www.lehighcounty.org",
     "www.monroecounty.gov",
     "www.nvsos.gov",
+    "www.orangecountygov.com",
     "www.oregonvotes.gov",
     "www.rensco.com",
     "www.ri.gov",
     "www.sec.state.ma.us",
     "www.sos.mo.gov",
+    "www.sos.state.tx.us",
     "www.sos.ms.gov",
     "www.sos.state.co.us",
     "www.stlouis-mo.gov",
     "www.tucsonaz.gov",
     "www.vote.nyc",
     "www.votepinellas.com",
+    "enr.sos.mo.gov",
 }
 ELECTION_AUTHORITY_PATH_TOKENS = (
     "ballot",
@@ -238,11 +249,12 @@ class RaceRegistryPaths:
     candidate_document_full_text_path: Path | None = None
     national_census_resolution_paths: tuple[Path, ...] = ()
     processed_opponent_queue_path: Path | None = None
+    scope_resolution_path: Path | None = None
 
     @classmethod
     def default(cls) -> "RaceRegistryPaths":
         return cls(
-            candidate_corpus_path=ANALYSIS_DATA_DIR / "candidate_text_corpus.csv",
+            candidate_corpus_path=MANUAL_DIR / "race_registry_candidate_seed.csv",
             manual_endorsements_path=MANUAL_DIR / "endorsements.csv",
             manual_race_candidates_path=MANUAL_DIR / "race_candidates.csv",
             manual_resolution_paths=tuple(
@@ -259,6 +271,7 @@ class RaceRegistryPaths:
             ),
             processed_opponent_queue_path=PROCESSED_DIR
             / "opponent_research_queue.csv",
+            scope_resolution_path=MANUAL_DIR / "race_scope_resolutions.csv",
         )
 
 
@@ -348,12 +361,6 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
         paths.national_census_resolution_paths,
         paths.output_dir / "race_registry_national_endorsement_reconciliation.csv",
     )
-    resolution_packages = _resolution_packages(
-        paths.manual_resolution_paths,
-        grouped,
-    )
-    for race_id, package in national_packages.items():
-        resolution_packages.setdefault(race_id, package)
     processed_packages = _processed_race_packages(
         paths.processed_race_rosters_path,
         paths.processed_opponent_queue_path,
@@ -362,10 +369,17 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
         grouped,
         processed_packages,
     )
+    resolution_packages = _resolution_packages(
+        paths.manual_resolution_paths,
+        grouped,
+    )
+    for race_id, package in national_packages.items():
+        resolution_packages.setdefault(race_id, package)
     metadata_evidence_by_race = _candidate_document_evidence_by_race(
         paths.candidate_document_metadata_path,
         paths.candidate_document_full_text_path,
     )
+    scope_resolutions = _scope_resolutions(paths.scope_resolution_path, grouped)
 
     raw_registry_rows: list[dict[str, str]] = []
     reclassified_non_authority_resolution_rows = 0
@@ -655,6 +669,12 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
             and office.casefold() in {"mayor", "city council"}
         ):
             scope_kind = OUT_OF_SCOPE_KIND
+        if (
+            state_code in NONPARTISAN_NOMINATING_STATES
+            and office.casefold() not in {"president", "democratic presidential primary"}
+        ):
+            scope_kind = OUT_OF_SCOPE_KIND
+        scope_kind = scope_resolutions.get(race_id, scope_kind)
 
         unresolved_fields = [
             field
@@ -758,6 +778,10 @@ def build_race_registry(paths: RaceRegistryPaths | None = None) -> RaceRegistryR
         "national_candidate_endorsements": len(national_reconciliation_rows),
         "national_endorsements_absent_from_registry": sum(
             row["registry_status"] == "absent_from_registry"
+            for row in national_reconciliation_rows
+        ),
+        "national_endorsements_classified_out_of_scope": sum(
+            row["registry_status"] == "classified_out_of_scope"
             for row in national_reconciliation_rows
         ),
         "national_endorsements_matched_in_scope": sum(
@@ -997,7 +1021,15 @@ def _national_endorsement_reconciliation_rows(
             )
         ]
         scope_kinds = sorted({match["scope_kind"] for match in matches})
-        if any(scope == IN_SCOPE_KIND for scope in scope_kinds):
+        classification = resolution.get("classification", "")
+        if classification in DURABLE_OUT_OF_SCOPE_CLASSIFICATIONS:
+            registry_status = "classified_out_of_scope"
+            review_status = "resolved"
+            notes = (
+                f"National census classification {classification!r} excludes this "
+                "endorsement from the Democratic-primary denominator."
+            )
+        elif any(scope == IN_SCOPE_KIND for scope in scope_kinds):
             registry_status = "matched_in_scope"
             review_status = "resolved"
             notes = "Matched by normalized endorsed-candidate name and election year."
@@ -1022,7 +1054,7 @@ def _national_endorsement_reconciliation_rows(
                 "election_year": election_year,
                 "endorsing_chapters": row.get("endorsing_chapters", ""),
                 "primary_result": row.get("primary_result", ""),
-                "census_classification": resolution.get("classification", ""),
+                "census_classification": classification,
                 "census_primary_date": census_primary_date,
                 "census_verification_status": resolution.get(
                     "verification_status", ""
@@ -1312,8 +1344,18 @@ def _candidate_name_matches(left: str, right: str) -> bool:
         return True
     if len(left_tokens) < 2 or len(right_tokens) < 2:
         return False
+    left_given = (
+        "".join(left_tokens[:-1])
+        if all(len(token) == 1 for token in left_tokens[:-1])
+        else left_tokens[0]
+    )
+    right_given = (
+        "".join(right_tokens[:-1])
+        if all(len(token) == 1 for token in right_tokens[:-1])
+        else right_tokens[0]
+    )
     return (
-        left_tokens[0] == right_tokens[0]
+        left_given == right_given
         and left_tokens[-1] == right_tokens[-1]
     )
 
@@ -2412,6 +2454,57 @@ def _resolution_packages(
                     source_key=f"{path.name}:{number}",
                 )
     return packages
+
+
+def _scope_resolutions(
+    path: Path | None,
+    corpus_rows_by_race: dict[str, list[dict[str, str]]],
+) -> dict[str, str]:
+    if path is None or not path.exists():
+        return {}
+    expected_fields = ["race_id", "scope_kind", "classification", "source_url", "notes"]
+    with path.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle)
+        fieldnames = reader.fieldnames or []
+        if fieldnames != expected_fields:
+            raise RaceRegistryError(
+                f"{path.name}: expected header {expected_fields}, found {fieldnames}"
+            )
+        resolutions: dict[str, str] = {}
+        for number, row in enumerate(reader, start=2):
+            normalized = {
+                str(key): str(value or "").strip()
+                for key, value in row.items()
+            }
+            race_id = normalized["race_id"]
+            if not race_id or race_id not in corpus_rows_by_race:
+                raise RaceRegistryError(
+                    f"{path.name}:{number}: unknown or missing race_id {race_id!r}"
+                )
+            if race_id in resolutions:
+                raise RaceRegistryError(
+                    f"{path.name}:{number}: duplicate race_id {race_id}"
+                )
+            scope_kind = normalized["scope_kind"]
+            if scope_kind not in {IN_SCOPE_KIND, OUT_OF_SCOPE_KIND}:
+                raise RaceRegistryError(
+                    f"{path.name}:{number}: invalid scope_kind {scope_kind!r}"
+                )
+            classification = normalized["classification"]
+            if (
+                scope_kind == OUT_OF_SCOPE_KIND
+                and classification not in DURABLE_OUT_OF_SCOPE_CLASSIFICATIONS
+            ):
+                raise RaceRegistryError(
+                    f"{path.name}:{number}: invalid out-of-scope classification "
+                    f"{classification!r}"
+                )
+            if not normalized["source_url"] or not normalized["notes"]:
+                raise RaceRegistryError(
+                    f"{path.name}:{number}: source_url and notes are required"
+                )
+            resolutions[race_id] = scope_kind
+    return resolutions
 
 
 def _seed_grouped_from_processed_packages(

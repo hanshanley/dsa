@@ -13,7 +13,19 @@ from .paths import ANALYSIS_DATA_DIR, MANUAL_DIR, OUTPUT_DIR, PROCESSED_DIR, REP
 FIGURE_DIR = OUTPUT_DIR / "figures" / "text_analysis"
 TABLE_DIR = OUTPUT_DIR / "tables" / "text_analysis"
 CORPUS_PATH = ANALYSIS_DATA_DIR / "candidate_text_corpus.csv"
+OFFICIAL_CORPUS_PATH = ANALYSIS_DATA_DIR / "organizational_context_text_corpus.csv"
 STICKING_SNAPSHOT_PATH = ANALYSIS_DATA_DIR / "primary_sticking_points.csv"
+CANDIDATE_SEGMENTS_PATH = PROCESSED_DIR / "candidate_document_analysis_segments.csv"
+CANDIDATE_METADATA_PATH = PROCESSED_DIR / "candidate_document_metadata.csv"
+OFFICIAL_SEGMENTS_PATH = PROCESSED_DIR / "organizational_context_analysis_segments.csv"
+FULL_TEXT_QUEUE_SUMMARY_PATH = PROCESSED_DIR / "full_text_queue_summary.csv"
+SUBSTANTIVE_MIN_TOKENS = 20
+OFFICIAL_CATEGORY_GROUPS = {
+    "dsa_national": "dsa",
+    "dsa_state_local": "dsa",
+    "dnc_national": "democratic",
+    "state_democratic_party": "democratic",
+}
 
 DSA_RED = "#C85A3D"
 DEMOCRATIC_BLUE = "#3D6F8C"
@@ -168,17 +180,17 @@ def analyze_text() -> dict[str, int | float]:
     excerpts = read_csv(excerpts_path)
     platform_comparisons = read_csv(comparisons_path)
 
-    candidate_docs, candidate_rows = _candidate_corpus(evidence)
-    official_docs = _official_corpus(excerpts)
+    candidate_docs, candidate_rows = _candidate_segment_corpus()
+    official_docs, official_rows = _official_segment_corpus()
 
     candidate_tfidf = group_tfidf(candidate_docs)
     candidate_mpif = mpif_rows(candidate_docs, "endorsed", "opponent")
     official_mpif = mpif_rows(official_docs, "dsa", "democratic")
     prevalence_rows = feature_prevalence(candidate_docs)
-    coverage_rows = evidence_coverage(evidence)
-    volume_rows = verified_excerpt_volume(candidate_rows)
+    coverage_rows = candidate_record_coverage()
+    volume_rows = verified_segment_volume(candidate_rows)
     source_type_rows = source_type_comparison(candidate_rows)
-    explicit_cycle_rows = explicit_conflicts_by_cycle(sticking_points, evidence)
+    explicit_cycle_rows = explicit_conflicts_by_cycle(sticking_points, candidate_rows)
 
     TABLE_DIR.mkdir(parents=True, exist_ok=True)
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
@@ -204,7 +216,7 @@ def analyze_text() -> dict[str, int | float]:
     )
     write_csv(
         TABLE_DIR / "official_dsa_democratic_mpif.csv",
-        official_mpif,
+        official_mpif[:500],
         ["feature", "dsa_count", "democratic_count", "z_score", "favored_group"],
     )
     write_csv(
@@ -222,7 +234,12 @@ def analyze_text() -> dict[str, int | float]:
     write_csv(
         TABLE_DIR / "candidate_evidence_coverage.csv",
         coverage_rows,
-        ["group", "verified_documents", "source_unavailable_documents", "verified_share"],
+        [
+            "group",
+            "candidate_race_records_with_extracted_text",
+            "candidate_race_records_without_extracted_text",
+            "extracted_share",
+        ],
     )
     write_csv(
         TABLE_DIR / "normalization_rules.csv",
@@ -235,15 +252,15 @@ def analyze_text() -> dict[str, int | float]:
     write_csv(
         TABLE_DIR / "verified_excerpt_volume_by_cycle.csv",
         volume_rows,
-        ["cycle", "endorsed_excerpts", "opponent_excerpts", "total"],
+        ["cycle", "endorsed_segments", "opponent_segments", "total"],
     )
     write_csv(
         TABLE_DIR / "source_types_by_group.csv",
         source_type_rows,
         [
             "source_type",
-            "endorsed_excerpts",
-            "opponent_excerpts",
+            "endorsed_segments",
+            "opponent_segments",
             "endorsed_share",
             "opponent_share",
             "difference",
@@ -264,8 +281,22 @@ def analyze_text() -> dict[str, int | float]:
 
     summary = {
         "candidate_documents": len(candidate_docs),
-        "candidate_verified_excerpts": len(candidate_rows),
+        "candidate_source_documents": len(
+            {
+                document_id
+                for row in candidate_rows
+                for document_id in _split_values(row["document_ids"])
+            }
+        ),
+        "candidate_source_segments": sum(
+            int(row["provenance_row_count"]) for row in candidate_rows
+        ),
+        "candidate_segments": len(candidate_rows),
         "official_documents": len(official_docs),
+        "official_source_segments": sum(
+            int(row["provenance_row_count"]) for row in official_rows
+        ),
+        "official_segments": len(official_rows),
         "candidate_tfidf_terms": len(candidate_tfidf),
         "candidate_mpif_features": len(candidate_mpif),
         "official_mpif_features": len(official_mpif),
@@ -276,6 +307,8 @@ def analyze_text() -> dict[str, int | float]:
             str(path.relative_to(path.parents[2])): _sha256(path)
             for path in (
                 CORPUS_PATH,
+                OFFICIAL_CORPUS_PATH,
+                FULL_TEXT_QUEUE_SUMMARY_PATH,
                 STICKING_SNAPSHOT_PATH,
                 excerpts_path,
                 comparisons_path,
@@ -283,9 +316,42 @@ def analyze_text() -> dict[str, int | float]:
         },
         "lineage": {
             "candidate_corpus": {
-                "generated_from": "data/processed/candidate_statement_evidence.csv",
-                "generator": "dsa_analysis.statement_batches.merge_statement_reviews",
+                "generated_from": [
+                    "data/processed/candidate_document_analysis_segments.csv",
+                    "data/processed/candidate_document_metadata.csv",
+                ],
+                "generator": "dsa_analysis.document_corpus.run_candidate_document_regather_batch",
                 "analysis_snapshot": "data/analysis/candidate_text_corpus.csv",
+                "eligibility": (
+                    "nonempty segment; token_count >= 20; boilerplate_flag=false"
+                ),
+                "deduplication": (
+                    "one exact-text segment per endorsed/opponent group and election cycle; "
+                    "all candidate, race, document, locator, and source provenance retained"
+                ),
+            },
+            "official_corpus": {
+                "generated_from": (
+                    "data/processed/organizational_context_analysis_segments.csv"
+                ),
+                "generator": (
+                    "dsa_analysis.organizational_context_corpus."
+                    "run_organizational_context_extraction_batch"
+                ),
+                "analysis_snapshot": (
+                    "data/analysis/organizational_context_text_corpus.csv"
+                ),
+                "eligibility": (
+                    "full_platform_categories present; nonempty segment; "
+                    "token_count >= 20; boilerplate_flag=false"
+                ),
+                "category_grouping": OFFICIAL_CATEGORY_GROUPS,
+            },
+            "candidate_coverage": {
+                "generated_from": "data/processed/full_text_queue_summary.csv",
+                "denominator": "registry-wide candidate/race records",
+                "extracted_status": "verified",
+                "without_extracted_text": "all statuses other than verified",
             },
             "sticking_points": {
                 "generated_from": "data/processed/primary_sticking_points.csv",
@@ -299,6 +365,8 @@ def analyze_text() -> dict[str, int | float]:
             "mpif_prior_mass": 1000.0,
             "candidate_min_feature_count": 5,
             "official_min_feature_count": 1,
+            "published_feature_row_limit": 500,
+            "substantive_min_tokens": SUBSTANTIVE_MIN_TOKENS,
             "phrase_rules": len(PHRASE_PATTERNS),
             "domain_stopwords": len(DOMAIN_STOPWORDS),
         },
@@ -326,39 +394,11 @@ def _load_or_export_analysis_data(
     ANALYSIS_DATA_DIR.mkdir(parents=True, exist_ok=True)
     if evidence_path.exists() and sticking_path.exists():
         evidence = _deduplicate_analysis_evidence(read_csv(evidence_path))
-        corpus_fields = [
-            "statement_key",
-            "race_id",
-            "candidate_name",
-            "election_date",
-            "party",
-            "role",
-            "evidence_status",
-            "topic",
-            "subtopic",
-            "stance",
-            "quote",
-            "source_url",
-            "source_type",
-            "published_date",
-            "locator",
-            "direct_opponent_name",
-            "notes",
-        ]
-        evidence = [
-            {field: row.get(field, "") for field in corpus_fields}
-            for row in evidence
-        ]
         sticking_points = list(
             {
                 row["sticking_point_id"]: row
                 for row in read_csv(sticking_path)
             }.values()
-        )
-        write_csv(
-            CORPUS_PATH,
-            evidence,
-            corpus_fields,
         )
         write_csv(
             STICKING_SNAPSHOT_PATH,
@@ -379,7 +419,12 @@ def _load_or_export_analysis_data(
             ],
         )
         return evidence, sticking_points
-    return read_csv(CORPUS_PATH), read_csv(STICKING_SNAPSHOT_PATH)
+    sticking_points = (
+        read_csv(sticking_path)
+        if sticking_path.exists()
+        else read_csv(STICKING_SNAPSHOT_PATH)
+    )
+    return [], sticking_points
 
 
 def _deduplicate_analysis_evidence(
@@ -587,39 +632,46 @@ def feature_prevalence(documents: list[dict[str, str]]) -> list[dict[str, str]]:
     )
 
 
-def evidence_coverage(evidence: list[dict[str, str]]) -> list[dict[str, str]]:
-    statuses: dict[tuple[str, str, str], set[str]] = defaultdict(set)
-    for row in evidence:
-        group = "endorsed" if row["role"] in {"endorsed", "unopposed"} else "opponent"
-        key = (
-            row["candidate_name"].strip().casefold(),
-            row["election_date"].strip(),
-            group,
+def candidate_record_coverage() -> list[dict[str, str]]:
+    summary_rows = read_csv(FULL_TEXT_QUEUE_SUMMARY_PATH)
+    required_fields = {"queue_source", "group", "current_status", "candidate_count"}
+    if not summary_rows or not required_fields.issubset(summary_rows[0]):
+        raise ValueError(
+            "full-text queue summary must contain registry group, status, and candidate counts"
         )
-        statuses[key].add(row["evidence_status"])
     counts: dict[str, Counter[str]] = defaultdict(Counter)
-    for (*_, group), values in statuses.items():
-        status = "verified" if "verified" in values else "source_unavailable"
-        counts[group][status] += 1
+    for row in summary_rows:
+        if row.get("queue_source", "").strip() != "registry":
+            continue
+        group = row.get("group", "").strip()
+        if group not in {"endorsed", "opponent"}:
+            raise ValueError(f"unexpected full-text queue group: {group!r}")
+        candidate_count = int(row.get("candidate_count", "0") or 0)
+        status = (
+            "with_extracted_text"
+            if row.get("current_status", "").strip() == "verified"
+            else "without_extracted_text"
+        )
+        counts[group][status] += candidate_count
     rows = []
     for group in ("endorsed", "opponent"):
-        verified = counts[group]["verified"]
-        unavailable = counts[group]["source_unavailable"]
+        verified = counts[group]["with_extracted_text"]
+        unavailable = counts[group]["without_extracted_text"]
         rows.append(
             {
                 "group": group,
-                "verified_documents": str(verified),
-                "source_unavailable_documents": str(unavailable),
-                "verified_share": f"{verified / max(verified + unavailable, 1):.6f}",
+                "candidate_race_records_with_extracted_text": str(verified),
+                "candidate_race_records_without_extracted_text": str(unavailable),
+                "extracted_share": f"{verified / max(verified + unavailable, 1):.6f}",
             }
         )
     return rows
 
 
-def verified_excerpt_volume(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+def verified_segment_volume(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     counts: dict[str, Counter[str]] = defaultdict(Counter)
     for row in rows:
-        cycle = row["election_date"][:4] if row["election_date"] else "unknown"
+        cycle = row["cycle"] or "unknown"
         counts[cycle][row["group"]] += 1
     output = []
     for cycle, values in counts.items():
@@ -628,8 +680,8 @@ def verified_excerpt_volume(rows: list[dict[str, str]]) -> list[dict[str, str]]:
         output.append(
             {
                 "cycle": cycle,
-                "endorsed_excerpts": str(endorsed),
-                "opponent_excerpts": str(opponent),
+                "endorsed_segments": str(endorsed),
+                "opponent_segments": str(opponent),
                 "total": str(endorsed + opponent),
             }
         )
@@ -640,7 +692,7 @@ def source_type_comparison(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     counts: dict[str, Counter[str]] = defaultdict(Counter)
     totals = Counter()
     for row in rows:
-        source_type = row["source_type"] or "unspecified"
+        source_type = row.get("source_types", row.get("source_type", "")) or "unspecified"
         counts[source_type][row["group"]] += 1
         totals[row["group"]] += 1
     output = []
@@ -652,8 +704,8 @@ def source_type_comparison(rows: list[dict[str, str]]) -> list[dict[str, str]]:
         output.append(
             {
                 "source_type": source_type,
-                "endorsed_excerpts": str(endorsed),
-                "opponent_excerpts": str(opponent),
+                "endorsed_segments": str(endorsed),
+                "opponent_segments": str(opponent),
                 "endorsed_share": f"{endorsed_share:.6f}",
                 "opponent_share": f"{opponent_share:.6f}",
                 "difference": f"{endorsed_share - opponent_share:.6f}",
@@ -663,12 +715,12 @@ def source_type_comparison(rows: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def explicit_conflicts_by_cycle(
-    rows: list[dict[str, str]], evidence: list[dict[str, str]]
+    rows: list[dict[str, str]], candidate_segments: list[dict[str, str]]
 ) -> list[dict[str, str]]:
     cycle_by_race = {}
-    for row in evidence:
-        if row["race_id"] and row["election_date"]:
-            cycle_by_race[row["race_id"]] = row["election_date"][:4]
+    for row in candidate_segments:
+        for race_id in _split_values(row["race_ids"]):
+            cycle_by_race[race_id] = row["cycle"]
     counts = Counter(
         cycle_by_race.get(row["race_id"], "unknown")
         for row in rows
@@ -736,48 +788,297 @@ def sticking_point_cycles(
     return sorted(output, key=lambda row: row["cycle"])
 
 
-def _candidate_corpus(
-    evidence: list[dict[str, str]],
-) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
-    quotes_by_document: dict[tuple[str, str, str], list[str]] = defaultdict(list)
-    seen_quotes = set()
-    excerpt_rows = []
-    for row in evidence:
-        if row["evidence_status"] != "verified" or not row["quote"].strip():
+def _candidate_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    metadata = {
+        row["document_id"]: row for row in read_csv(CANDIDATE_METADATA_PATH)
+    }
+    eligible = []
+    for row in read_csv(CANDIDATE_SEGMENTS_PATH):
+        if not _eligible_segment(row):
             continue
-        group = "endorsed" if row["role"] in {"endorsed", "unopposed"} else "opponent"
-        candidate = row["candidate_name"].strip()
-        election_date = row["election_date"].strip()
-        quote_key = (candidate.casefold(), election_date, group, row["quote"].strip())
-        if quote_key in seen_quotes:
-            continue
-        seen_quotes.add(quote_key)
-        quotes_by_document[(candidate, election_date, group)].append(row["quote"].strip())
-        excerpt_rows.append(
+        document = metadata.get(row["document_id"])
+        if document is None:
+            raise ValueError(
+                f"candidate segment references unknown document {row['document_id']}"
+            )
+        role = row["role"].strip()
+        group = "endorsed" if role in {"endorsed", "unopposed"} else "opponent"
+        election_date = document.get("election_date", "").strip()
+        eligible.append(
             {
-                "statement_key": row["statement_key"],
-                "candidate_name": candidate,
-                "election_date": election_date,
+                **row,
                 "group": group,
-                "topic": row["topic"],
-                "subtopic": row["subtopic"],
-                "text": row["quote"].strip(),
-                "quote": row["quote"].strip(),
-                "source_url": row["source_url"],
-                "source_type": row["source_type"],
+                "cycle": election_date[:4] if election_date else "unknown",
+                "election_date": election_date,
+                "source_url": document.get("source_url", "").strip(),
+                "archive_url": document.get("archive_url", "").strip(),
+                "final_url": document.get("final_url", "").strip(),
+                "publication_date": document.get("publication_date", "").strip(),
+                "document_text_sha256": document.get("text_sha256", "").strip(),
             }
         )
-    documents = [
-        {
-            "document_id": hashlib.sha256(
-                f"{candidate}\n{election_date}\n{group}".encode()
-            ).hexdigest()[:24],
+
+    document_segments: dict[tuple[str, str, str], list[dict[str, str]]] = defaultdict(list)
+    for row in eligible:
+        document_key = (
+            row["group"],
+            row["cycle"],
+            row["document_text_sha256"] or row["document_id"],
+        )
+        document_segments[document_key].append(row)
+    documents = []
+    for (group, cycle, document_hash), rows in sorted(document_segments.items()):
+        documents.append(
+            {
+                "document_id": hashlib.sha256(
+                    f"{group}\n{cycle}\n{document_hash}".encode()
+                ).hexdigest()[:24],
+                "group": group,
+                "text": " ".join(
+                    row["text"]
+                    for row in sorted(rows, key=lambda item: int(item["segment_index"]))
+                ),
+            }
+        )
+
+    grouped: dict[tuple[str, str, str], list[dict[str, str]]] = defaultdict(list)
+    for row in eligible:
+        grouped[(row["group"], row["cycle"], row["sha256"])].append(row)
+    snapshot_rows = []
+    for (group, cycle, text_hash), rows in sorted(grouped.items()):
+        first = rows[0]
+        snapshot_rows.append(
+            {
+                "corpus_segment_id": hashlib.sha256(
+                    f"{group}\n{cycle}\n{text_hash}".encode()
+                ).hexdigest()[:24],
+                "source_analysis_segment_ids": _join_values(
+                    row["analysis_segment_id"] for row in rows
+                ),
+                "document_ids": _join_values(row["document_id"] for row in rows),
+                "candidate_slugs": _join_values(row["candidate_slug"] for row in rows),
+                "candidate_names": _join_values(row["candidate_name"] for row in rows),
+                "race_ids": _join_values(row["race_id"] for row in rows),
+                "roles": _join_values(row["role"] for row in rows),
+                "group": group,
+                "cycle": cycle,
+                "election_dates": _join_values(row["election_date"] for row in rows),
+                "source_types": _join_values(row["source_type"] for row in rows),
+                "source_urls": _join_values(row["source_url"] for row in rows),
+                "archive_urls": _join_values(row["archive_url"] for row in rows),
+                "final_urls": _join_values(row["final_url"] for row in rows),
+                "publication_dates": _join_values(
+                    row["publication_date"] for row in rows
+                ),
+                "locators": _join_values(row["locator"] for row in rows),
+                "text": first["text"],
+                "token_count": first["token_count"],
+                "text_sha256": text_hash,
+                "exact_duplicate_hash": first["exact_duplicate_hash"],
+                "provenance_row_count": str(len(rows)),
+            }
+        )
+    write_csv(
+        CORPUS_PATH,
+        snapshot_rows,
+        [
+            "corpus_segment_id",
+            "source_analysis_segment_ids",
+            "document_ids",
+            "candidate_slugs",
+            "candidate_names",
+            "race_ids",
+            "roles",
+            "group",
+            "cycle",
+            "election_dates",
+            "source_types",
+            "source_urls",
+            "archive_urls",
+            "final_urls",
+            "publication_dates",
+            "locators",
+            "text",
+            "token_count",
+            "text_sha256",
+            "exact_duplicate_hash",
+            "provenance_row_count",
+        ],
+    )
+    return documents, snapshot_rows
+
+
+def _official_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    metadata_path = PROCESSED_DIR / "organizational_context_document_metadata.csv"
+    metadata = {
+        row["context_document_id"]: row for row in read_csv(metadata_path)
+    }
+    grouped: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
+    document_segments: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
+    for row in read_csv(OFFICIAL_SEGMENTS_PATH):
+        if not _eligible_segment(row) or not row["full_platform_categories"].strip():
+            continue
+        group = _official_group(row["full_platform_categories"])
+        document = metadata.get(row["context_document_id"])
+        if document is None:
+            raise ValueError(
+                "organizational segment references unknown document "
+                f"{row['context_document_id']}"
+            )
+        enriched = {
+            **row,
             "group": group,
-            "text": " ".join(quotes),
+            "fetch_url": document.get("fetch_url", "").strip(),
+            "source_urls": document.get("source_urls", "").strip(),
+            "archive_urls": document.get("archive_urls", "").strip(),
+            "final_url": document.get("final_url", "").strip(),
         }
-        for (candidate, election_date, group), quotes in quotes_by_document.items()
-    ]
-    return documents, excerpt_rows
+        grouped[(group, row["sha256"])].append(enriched)
+        document_segments[(group, row["context_document_id"])].append(enriched)
+
+    snapshot_rows = []
+    for (group, text_hash), rows in sorted(grouped.items()):
+        first = rows[0]
+        snapshot_rows.append(
+            {
+                "corpus_segment_id": hashlib.sha256(
+                    f"{group}\n{text_hash}".encode()
+                ).hexdigest()[:24],
+                "source_analysis_segment_ids": _join_values(
+                    row["analysis_segment_id"] for row in rows
+                ),
+                "context_document_ids": _join_values(
+                    row["context_document_id"] for row in rows
+                ),
+                "fetch_ids": _join_values(row["fetch_id"] for row in rows),
+                "context_entry_ids": _join_values(
+                    value
+                    for row in rows
+                    for value in _split_values(row["context_entry_ids"])
+                ),
+                "group": group,
+                "context_categories": _join_values(
+                    value
+                    for row in rows
+                    for value in _split_values(row["context_categories"])
+                ),
+                "full_platform_categories": _join_values(
+                    value
+                    for row in rows
+                    for value in _split_values(row["full_platform_categories"])
+                ),
+                "states": _join_values(
+                    value for row in rows for value in _split_values(row["states"])
+                ),
+                "state_codes": _join_values(
+                    value for row in rows for value in _split_values(row["state_codes"])
+                ),
+                "cycle_years": _join_values(
+                    value for row in rows for value in _split_values(row["cycle_years"])
+                ),
+                "organizations": _join_values(
+                    value
+                    for row in rows
+                    for value in _split_values(row["organizations"])
+                ),
+                "titles": _join_values(
+                    value for row in rows for value in _split_values(row["titles"])
+                ),
+                "platform_types": _join_values(
+                    value
+                    for row in rows
+                    for value in _split_values(row["platform_types"])
+                ),
+                "fetch_urls": _join_values(row["fetch_url"] for row in rows),
+                "source_urls": _join_values(
+                    value
+                    for row in rows
+                    for value in _split_values(row["source_urls"])
+                ),
+                "archive_urls": _join_values(
+                    value
+                    for row in rows
+                    for value in _split_values(row["archive_urls"])
+                ),
+                "final_urls": _join_values(row["final_url"] for row in rows),
+                "locators": _join_values(row["locator"] for row in rows),
+                "text": first["text"],
+                "token_count": first["token_count"],
+                "text_sha256": text_hash,
+                "exact_duplicate_hash": first["exact_duplicate_hash"],
+                "provenance_row_count": str(len(rows)),
+            }
+        )
+    write_csv(
+        OFFICIAL_CORPUS_PATH,
+        snapshot_rows,
+        list(snapshot_rows[0]) if snapshot_rows else [
+            "corpus_segment_id",
+            "source_analysis_segment_ids",
+            "context_document_ids",
+            "fetch_ids",
+            "context_entry_ids",
+            "group",
+            "context_categories",
+            "full_platform_categories",
+            "states",
+            "state_codes",
+            "cycle_years",
+            "organizations",
+            "titles",
+            "platform_types",
+            "fetch_urls",
+            "source_urls",
+            "archive_urls",
+            "final_urls",
+            "locators",
+            "text",
+            "token_count",
+            "text_sha256",
+            "exact_duplicate_hash",
+            "provenance_row_count",
+        ],
+    )
+    documents = []
+    for (group, document_id), rows in sorted(document_segments.items()):
+        seen_hashes = set()
+        texts = []
+        for row in sorted(rows, key=lambda item: int(item["segment_index"])):
+            if row["sha256"] in seen_hashes:
+                continue
+            seen_hashes.add(row["sha256"])
+            texts.append(row["text"])
+        documents.append(
+            {"document_id": document_id, "group": group, "text": " ".join(texts)}
+        )
+    return documents, snapshot_rows
+
+
+def _eligible_segment(row: dict[str, str]) -> bool:
+    return (
+        bool(row.get("text", "").strip())
+        and row.get("boilerplate_flag", "false").strip().casefold() != "true"
+        and int(row.get("token_count", "0") or 0) >= SUBSTANTIVE_MIN_TOKENS
+    )
+
+
+def _official_group(categories_value: str) -> str:
+    categories = _split_values(categories_value)
+    unsupported = [category for category in categories if category not in OFFICIAL_CATEGORY_GROUPS]
+    if unsupported:
+        raise ValueError(f"unsupported full-platform categories: {unsupported}")
+    groups = {OFFICIAL_CATEGORY_GROUPS[category] for category in categories}
+    if len(groups) != 1:
+        raise ValueError(f"mixed full-platform category groups: {categories}")
+    return groups.pop()
+
+
+def _split_values(value: str) -> list[str]:
+    return [part.strip() for part in value.split(" | ") if part.strip()]
+
+
+def _join_values(values) -> str:
+    return " | ".join(sorted({value.strip() for value in values if value.strip()}))
 
 
 def _write_text_report(
@@ -815,29 +1116,42 @@ def _write_text_report(
         reverse=True,
     )[:5]
     source_type_differences = source_type_rows[:8]
+    coverage_total = sum(
+        int(row["candidate_race_records_with_extracted_text"])
+        + int(row["candidate_race_records_without_extracted_text"])
+        for row in coverage_rows
+    )
     text = f"""# DSA-versus-Democratic text analysis
 
-This analysis is generated by `uv run dsa-analysis analyze-text` from the completed,
-strictly validated census.
+This analysis is generated by `uv run dsa-analysis analyze-text` from the current canonical
+registry and recoverable full-text corpus.
 
 ## Corpus
 
-- Candidate/election documents: {summary["candidate_documents"]}
-- Deduplicated verified candidate excerpts: {summary["candidate_verified_excerpts"]}
-- Reviewed official DSA/DNC excerpts: {summary["official_documents"]}
+- Deduplicated candidate analysis documents: {summary["candidate_documents"]}
+- Underlying eligible candidate source documents: {summary["candidate_source_documents"]}
+- Eligible candidate source segments: {summary["candidate_source_segments"]}
+- Candidate segments after shared-text deduplication: {summary["candidate_segments"]}
+- Eligible full-platform organizational documents: {summary["official_documents"]}
+- Eligible official-platform source segments: {summary["official_source_segments"]}
+- Official-platform segments after exact-text deduplication: {summary["official_segments"]}
 - Unique source-supported primary contrasts: {summary["sticking_points"]}
 
-Identical candidate quotations repeated through multiple chapter or National endorsement queues
-are counted once per candidate and election.
+Exact candidate segment text is counted once per endorsed/opponent group and election cycle.
+This prevents a shared national platform from being multiplied across state races while retaining
+all contributing candidates, races, source documents, URLs, and locators in the snapshot.
 
 ## Source data and lineage
 
-- `data/analysis/candidate_text_corpus.csv` is the committed row-level input. Every verified row
-  contains an exact candidate quotation and source URL.
+- `data/analysis/candidate_text_corpus.csv` is the generated candidate-segment snapshot. Every
+  row retains exact extracted text plus its candidate, race, document, URL, and locator lineage.
+- `data/analysis/organizational_context_text_corpus.csv` is the generated official-platform
+  snapshot used for the DSA-versus-Democratic MPIF comparison.
 - `data/analysis/primary_sticking_points.csv` is the committed deduplicated contrast input.
-- The candidate corpus is exported by code from
-  `data/processed/candidate_statement_evidence.csv`, which is generated by
-  `dsa-analysis merge-statement-reviews`.
+- Candidate text comes from `data/processed/candidate_document_analysis_segments.csv` and joins
+  `candidate_document_metadata.csv` for source and election provenance.
+- Official text comes from the generated organizational-context analysis-segment path and is
+  restricted to rows with a full-platform category.
 - The public charts use exact words, source types, evidence statuses, election dates, and
   explicitly named conflicts. They do not use analyst-created topic totals.
 
@@ -850,8 +1164,8 @@ are counted once per candidate and election.
 - **Document prevalence:** difference in the share of candidate/election documents containing a
   normalized feature. This prevents a few candidates who repeat a phrase many times from
   dominating the result.
-- **Source mix:** direct counts of the retained `source_type` metadata attached to exact quotes.
-- **Evidence volume:** direct counts of deduplicated verified quotations by election year.
+- **Source mix:** direct counts of source-type metadata attached to eligible segments.
+- **Evidence volume:** direct counts of deduplicated eligible segments by election cycle.
 - **Explicit conflicts:** unique rows marked `explicit_conflict`; analyst-coded divergences are
   excluded from the public conflict chart.
 
@@ -894,11 +1208,11 @@ larger share of opponent excerpts.
 
 ## Evidence volume by election cycle
 
-{chr(10).join(f'- **{row["cycle"]}:** {row["endorsed_excerpts"]} endorsed-candidate and {row["opponent_excerpts"]} opponent quotations' for row in largest_volume_cycles)}
+{chr(10).join(f'- **{row["cycle"]}:** {row["endorsed_segments"]} endorsed-candidate and {row["opponent_segments"]} opponent segments' for row in largest_volume_cycles)}
 
 ![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
 
-These are direct counts of exact quotations, not estimates of issue importance.
+These are direct counts of eligible exact-text segments, not estimates of issue importance.
 
 ## Explicitly stated conflicts
 
@@ -911,40 +1225,21 @@ records.
 
 ## Evidence coverage
 
-{chr(10).join(f'- **{_label(row["group"])}:** {row["verified_documents"]} verified candidate/election documents, {row["source_unavailable_documents"]} documented source gaps ({float(row["verified_share"]):.1%} verified).' for row in coverage_rows)}
+The denominator is the registry-wide {coverage_total} candidate/race records summarized in
+`data/processed/full_text_queue_summary.csv`; only `verified` is counted as extracted.
+
+{chr(10).join(f'- **{_label(row["group"])}:** {row["candidate_race_records_with_extracted_text"]} candidate/race records with extracted text, {row["candidate_race_records_without_extracted_text"]} without extracted text ({float(row["extracted_share"]):.1%} extracted).' for row in coverage_rows)}
 
 ## Limitations
 
-The official DSA-versus-DNC MPIF corpus is intentionally restricted to manually reviewed exact
-excerpts, so it is much smaller than the candidate corpus. `source_unavailable` findings remain
-unknowns rather than evidence of no position. Lexical distinctiveness measures language, not
-ideology, sincerity, policy feasibility, or causal importance in election outcomes. Phrase
-normalization reduces superficial variants, but it can also combine uses that differ in context;
-the exact source quotations and URLs in `data/analysis/candidate_text_corpus.csv` remain the
-authoritative evidence.
+The official DSA-versus-Democratic MPIF corpus includes only extracted documents classified as
+full platforms; other organizational statements and process documents are excluded.
+`source_unavailable` findings remain unknowns rather than evidence of no position. Lexical
+distinctiveness measures language, not ideology, sincerity, policy feasibility, or causal
+importance in election outcomes. Phrase normalization can combine uses that differ in context;
+the exact segment text and provenance in the generated analysis snapshots remain authoritative.
 """
     (REPORT_DIR / "text_analysis.md").write_text(text, encoding="utf-8")
-
-
-def _official_corpus(excerpts: list[dict[str, str]]) -> list[dict[str, str]]:
-    documents = []
-    for row in excerpts:
-        if row["reviewed"].casefold() != "true":
-            continue
-        if row["speaker"] == "DSA":
-            group = "dsa"
-        elif row["speaker"] == "Democratic National Committee":
-            group = "democratic"
-        else:
-            continue
-        documents.append(
-            {
-                "document_id": row["excerpt_id"],
-                "group": group,
-                "text": row["quote"],
-            }
-        )
-    return documents
 
 
 def _policy_language_chart(rows: list[dict[str, str]]) -> None:
@@ -991,8 +1286,8 @@ def _policy_language_chart(rows: list[dict[str, str]]) -> None:
         "More DSA-endorsed documents",
         "More opponent documents",
         (
-            "Source: candidate_statement_evidence.csv; verified exact quotes; one record per "
-            "candidate/election/quote after deduplication."
+            "Source: candidate_document_analysis_segments.csv; eligible exact-text segments; "
+            "shared source documents deduplicated within group and election cycle."
         ),
     )
 
@@ -1138,7 +1433,7 @@ def _volume_cycle_chart(rows: list[dict[str, str]]) -> None:
     plot_bottom = 520
     maximum = max(
         (
-            max(int(row["endorsed_excerpts"]), int(row["opponent_excerpts"]))
+            max(int(row["endorsed_segments"]), int(row["opponent_segments"]))
             for row in rows
         ),
         default=1,
@@ -1147,8 +1442,8 @@ def _volume_cycle_chart(rows: list[dict[str, str]]) -> None:
         _svg_header(
             width,
             height,
-            "Verified first-party evidence by election cycle",
-            "Count of deduplicated exact candidate quotations",
+            "Eligible first-party text by election cycle",
+            "Count of deduplicated substantive candidate segments",
         )
     ]
     for tick in range(5):
@@ -1160,8 +1455,8 @@ def _volume_cycle_chart(rows: list[dict[str, str]]) -> None:
     bar_width = min(28, group_width * 0.28)
     for index, row in enumerate(rows):
         center = plot_left + group_width * (index + 0.5)
-        endorsed = int(row["endorsed_excerpts"])
-        opponent = int(row["opponent_excerpts"])
+        endorsed = int(row["endorsed_segments"])
+        opponent = int(row["opponent_segments"])
         endorsed_height = (plot_bottom - plot_top) * endorsed / maximum
         opponent_height = (plot_bottom - plot_top) * opponent / maximum
         body.append(
@@ -1190,7 +1485,7 @@ def _volume_cycle_chart(rows: list[dict[str, str]]) -> None:
             _svg_footer(
                 width,
                 height,
-                "Source: data/analysis/candidate_text_corpus.csv; evidence_status=verified; duplicate candidate/election/quote rows removed.",
+                "Source: data/analysis/candidate_text_corpus.csv; substantive non-boilerplate segments; shared exact text deduplicated within group and cycle.",
             ),
         ]
     )
@@ -1202,14 +1497,14 @@ def _source_type_chart(rows: list[dict[str, str]]) -> None:
     _diverging_svg(
         FIGURE_DIR / "source_type_difference.svg",
         "Difference in first-party source mix",
-        "Share of verified exact excerpts by source type",
+        "Share of eligible exact-text segments by source type",
         [_label(row["source_type"]) for row in selected],
         [float(row["difference"]) for row in selected],
-        "More DSA-endorsed excerpts",
-        "More opponent excerpts",
+        "More DSA-endorsed segments",
+        "More opponent segments",
         (
-            "Source: data/analysis/candidate_text_corpus.csv; source_type is retained "
-            "from each reviewed exact quotation."
+            "Source: data/analysis/candidate_text_corpus.csv; source types and exact "
+            "source provenance are retained for every segment."
         ),
     )
 
@@ -1416,7 +1711,8 @@ def _coverage_chart(rows: list[dict[str, str]]) -> None:
     plot_width = 720
     maximum = max(
         (
-            int(row["verified_documents"]) + int(row["source_unavailable_documents"])
+            int(row["candidate_race_records_with_extracted_text"])
+            + int(row["candidate_race_records_without_extracted_text"])
             for row in rows
         ),
         default=1,
@@ -1425,8 +1721,8 @@ def _coverage_chart(rows: list[dict[str, str]]) -> None:
         _svg_header(
             width,
             height,
-            "First-party evidence coverage",
-            "Candidate/election documents with verified text versus documented source gaps",
+            "Candidate/race text coverage",
+            "Registry-wide candidate/race records with versus without extracted text",
         )
     ]
     for tick in range(5):
@@ -1436,8 +1732,8 @@ def _coverage_chart(rows: list[dict[str, str]]) -> None:
         body.append(_text(x, 100, f"{value:.0f}", "middle", MID, "11px"))
     for index, row in enumerate(rows):
         y = 132 + index * 82
-        verified = int(row["verified_documents"])
-        unavailable = int(row["source_unavailable_documents"])
+        verified = int(row["candidate_race_records_with_extracted_text"])
+        unavailable = int(row["candidate_race_records_without_extracted_text"])
         verified_width = plot_width * verified / maximum
         unavailable_width = plot_width * unavailable / maximum
         body.append(_text(plot_left - 24, y + 20, _label(row["group"]), "end", DARK, "14px", "700"))
@@ -1449,15 +1745,19 @@ def _coverage_chart(rows: list[dict[str, str]]) -> None:
             _text(
                 plot_left + verified_width + unavailable_width + 8,
                 y + 20,
-                f"{float(row['verified_share']):.0%} verified",
+                f"{float(row['extracted_share']):.0%} extracted",
                 size="12px",
             )
         )
     body.extend(
         [
-            _legend(710, 72, DSA_RED, "Verified text"),
-            _legend(845, 72, "#C9CED3", "Source unavailable"),
-            _svg_footer(width, height, "Coverage status is explicit; unavailable text is not treated as no position."),
+            _legend(710, 72, DSA_RED, "Extracted text"),
+            _legend(845, 72, "#C9CED3", "No extracted text"),
+            _svg_footer(
+                width,
+                height,
+                "Source: full_text_queue_summary.csv; verified is extracted; all other statuses are not extracted.",
+            ),
         ]
     )
     _write_svg(FIGURE_DIR / "candidate_evidence_coverage.svg", width, height, body)

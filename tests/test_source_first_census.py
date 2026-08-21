@@ -144,8 +144,8 @@ class SourceFirstCensusTests(unittest.TestCase):
 
         self.assertTrue(
             any(
-                row["candidate_name"] == "Mike Connolly"
-                and row["election_date"] == "2016-09-08"
+                "Mike Connolly" in row["candidate_names"].split(" | ")
+                and "2016-09-08" in row["election_dates"].split(" | ")
                 for row in corpus
             )
         )

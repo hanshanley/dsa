@@ -172,7 +172,7 @@ def main() -> None:
     )
     subparsers.add_parser(
         "classify-topics",
-        help="Classify exact candidate quotations with a pinned local embedding model.",
+        help="Classify eligible exact-text candidate segments with a pinned local embedding model.",
     )
     subparsers.add_parser(
         "build-race-registry",
@@ -375,7 +375,8 @@ def main() -> None:
         print(
             "Text analysis complete: "
             f"candidate_documents={stats['candidate_documents']}, "
-            f"candidate_verified_excerpts={stats['candidate_verified_excerpts']}, "
+            f"candidate_segments={stats['candidate_segments']}, "
+            f"official_segments={stats['official_segments']}, "
             f"model_classified={model_stats['classified_rows']}, "
             f"figures={stats['figure_count'] + 1}."
         )
@@ -385,8 +386,7 @@ def main() -> None:
         print(
             "Model topic classification complete: "
             f"rows={stats['total_rows']}, classified={stats['classified_rows']}, "
-            f"unclassified={stats['unclassified_rows']}, "
-            f"crosswalk_agreement={stats['crosswalk_agreement']:.1%}."
+            f"unclassified={stats['unclassified_rows']}."
         )
         return
     if args.command == "build-race-registry":

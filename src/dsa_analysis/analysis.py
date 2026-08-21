@@ -1,38 +1,33 @@
 from collections import Counter
 from datetime import date
+from pathlib import Path
 
 from .audit import validate
 from .io import read_csv, read_json, write_csv
-from .paths import CONFIG_DIR, MANUAL_DIR, OUTPUT_DIR, PROCESSED_DIR, REPORT_DIR
+from .paths import (
+    ANALYSIS_DATA_DIR,
+    CONFIG_DIR,
+    MANUAL_DIR,
+    OUTPUT_DIR,
+    PROCESSED_DIR,
+    REPORT_DIR,
+)
 
 
-def analyze() -> dict[str, int]:
+def analyze() -> dict[str, object]:
     audit = validate()
-    if not audit.ok:
-        raise ValueError("Validation failed:\n" + "\n".join(audit.errors))
+    audit_messages = tuple(f"Validation error: {error}" for error in audit.errors)
+    audit_messages += audit.warnings
 
     documents = read_csv(MANUAL_DIR / "documents.csv")
-    endorsements = read_csv(MANUAL_DIR / "endorsements.csv")
-    race_candidates = read_csv(MANUAL_DIR / "race_candidates.csv")
     excerpts = read_csv(MANUAL_DIR / "excerpts.csv")
     contrasts = read_csv(MANUAL_DIR / "contrasts.csv")
     platform_comparisons = read_csv(MANUAL_DIR / "platform_comparisons.csv")
-    coverage = read_csv(MANUAL_DIR / "coverage.csv")
     reviewed = [row for row in excerpts if row["reviewed"].lower() == "true"]
     national_archive = _optional_csv("national_endorsement_archive.csv")
-    candidate_queue = _optional_csv("primary_research_queue.csv")
-    coverage_template = _optional_csv("coverage_template.csv")
-    chapter_crawl = _optional_csv("chapter_crawl_status.csv")
-    local_pages = _optional_csv("local_endorsement_pages.csv")
-    local_mentions = _optional_csv("local_endorsement_mentions.csv")
-    local_leads = _optional_csv("local_endorsement_leads.csv")
-    census_coverage = _optional_csv("coverage_ledger.csv")
     local_verified = _optional_csv("local_endorsements_verified.csv")
-    local_rejected = _optional_csv("local_endorsements_rejected.csv")
-    opponent_queue = _optional_csv("opponent_research_queue.csv")
-    race_rosters = _optional_csv("race_rosters_discovered.csv")
-    statement_evidence = _optional_csv("candidate_statement_evidence.csv")
     sticking_points = _optional_csv("primary_sticking_points.csv")
+    canonical = _load_canonical_metrics()
 
     topic_counts = Counter(row["topic"] for row in reviewed)
     topic_rows = [
@@ -89,69 +84,19 @@ def analyze() -> dict[str, int]:
         ],
         ["topic", "contrast_type", "relationship_code", "count"],
     )
+    write_csv(
+        OUTPUT_DIR / "tables" / "canonical_analysis_overview.csv",
+        [
+            {"section": section, "metric": metric, "value": value}
+            for section, metrics in canonical["overview"].items()
+            for metric, value in metrics.items()
+        ],
+        ["section", "metric", "value"],
+    )
 
     stats = {
-        "documents": len(documents),
-        "verified_documents": sum(
-            row["verification_status"] == "verified" for row in documents
-        ),
-        "endorsements": len(endorsements),
-        "tracked_races": len({row["race_id"] for row in race_candidates}),
-        "race_candidates": len(race_candidates),
-        "opponent_candidates": sum(
-            row["role"] == "opponent" for row in race_candidates
-        ),
-        "opponents_with_verified_evidence": sum(
-            row["role"] == "opponent" and row["evidence_status"] == "verified"
-            for row in race_candidates
-        ),
-        "reviewed_excerpts": len(reviewed),
-        "platform_comparisons": sum(
-            row["reviewed"].lower() == "true" for row in platform_comparisons
-        ),
-        "contrasts": len(contrasts),
-        "coverage_rows": len(coverage),
+        **canonical["stats"],
         "national_archive_records": len(national_archive),
-        "candidate_queue_rows": len(candidate_queue),
-        "coverage_search_units": len(coverage_template),
-        "chapters_crawled": len(chapter_crawl),
-        "local_endorsement_pages": len(local_pages),
-        "local_endorsement_mentions": len(local_mentions),
-        "local_endorsement_leads": len(local_leads),
-        "census_coverage_rows": len(census_coverage),
-        "census_unresolved_rows": sum(
-            row["status"] in {"not_searched", "found_unverified"}
-            for row in census_coverage
-        ),
-        "local_verified_endorsements": len(local_verified),
-        "local_rejected_leads": len(local_rejected),
-        "all_endorsed_candidacies": len(opponent_queue),
-        "race_roster_rows": len(race_rosters),
-        "race_reviews_resolved": sum(
-            row["race_resolution_status"]
-            in {"verified", "not_a_primary", "source_unavailable"}
-            for row in opponent_queue
-        ),
-        "candidacy_unresolved_rows": sum(
-            any(
-                row[field]
-                not in {
-                    "verified",
-                    "not_a_primary",
-                    "not_applicable",
-                    "source_unavailable",
-                }
-                for field in (
-                    "race_resolution_status",
-                    "opponent_roster_status",
-                    "candidate_statement_status",
-                    "opponent_statement_status",
-                )
-            )
-            for row in opponent_queue
-        ),
-        "candidate_evidence_rows": len(statement_evidence),
-        "sticking_point_rows": len(sticking_points),
     }
     _write_report(
         stats,
@@ -159,65 +104,26 @@ def analyze() -> dict[str, int]:
         reviewed,
         platform_comparisons,
         contrasts,
-        sticking_points,
         year_rows,
-        audit.warnings,
+        audit_messages,
     )
     return stats
 
 
 def _write_report(
-    stats: dict[str, int],
+    stats: dict[str, object],
     documents: list[dict[str, str]],
     excerpts: list[dict[str, str]],
     platform_comparisons: list[dict[str, str]],
     contrasts: list[dict[str, str]],
-    sticking_points: list[dict[str, str]],
     year_rows: list[dict[str, object]],
     warnings: tuple[str, ...],
 ) -> None:
-    census_complete = (
-        stats["census_unresolved_rows"] == 0
-        and stats["candidacy_unresolved_rows"] == 0
-    )
-    local_census_note = (
-        "Together, the national archive and verified local layer form the completed "
-        "nationwide endorsement census under the methodology's source-availability rules."
-        if census_complete
-        else "The verified local layer is still incomplete and must not be treated as a "
-        "nationwide local-endorsement census."
-    )
-    completion_note = (
-        "Strict validation passes: every chapter-year is resolved and every endorsed "
-        "candidacy has a resolved race, roster, and candidate/opponent evidence status."
-        if census_complete
-        else "The analysis is not complete until `uv run dsa-analysis validate --strict` "
-        "passes."
-    )
-    sticking_note = (
-        "These are nationwide counts of recorded, source-supported contrasts in the "
-        "completed census. They measure expressed and recoverable campaign differences, "
-        "not unspoken positions or voter priorities."
-        if census_complete
-        else "These counts come only from currently verified candidate evidence and are "
-        "not yet nationwide frequency estimates."
-    )
-    limitations = (
-        "The census is complete under the stated protocol, but source-unavailable records "
-        "remain explicit unknowns. A missing quotation does not imply that a candidate held "
-        "no position. Topic counts measure recoverable statements and coded contrasts, not "
-        "the prevalence or intensity of beliefs among all candidates or voters. The platform "
-        "matrix is limited to the reviewed official documents and election cycles."
-        if census_complete
-        else "The national and local endorsement census, full platform coding, candidate/"
-        "opponent evidence, and primary-level contrasts are not complete. Frequency claims "
-        "are therefore premature."
-    )
     config = read_json(CONFIG_DIR / "sources.json")
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     quote_lines = []
     documents_by_id = {row["document_id"]: row for row in documents}
-    for row in excerpts:
+    for row in excerpts[:3]:
         document = documents_by_id[row["document_id"]]
         quote_lines.append(
             f'- **{row["topic"]}/{row["subtopic"]}:** "{row["quote"]}" '
@@ -252,105 +158,145 @@ def _write_report(
         f'- {row["endorsement_cycle"]}: {row["campaign_count"]}'
         for row in year_rows
     ]
-    sticking_topic_counts = Counter(row["topic"] for row in sticking_points)
-    sticking_lines = [
-        f"- {topic.replace('_', ' ').title()}: {count}"
-        for topic, count in sticking_topic_counts.most_common()
-    ]
     text = f"""# DSA and Democratic primary positions
 
 **Research window:** {config["study_start"]} through {config["research_cutoff"]}
 
-## Current dataset status
+## Scope and canonical outputs
 
-- Registered documents: {stats["documents"]}
-- Verified documents: {stats["verified_documents"]}
-- Verified DSA endorsements: {stats["endorsements"]}
-- Tracked Democratic primaries: {stats["tracked_races"]}
-- Candidates on tracked primary ballots: {stats["race_candidates"]}
-- Opponents requiring comparison: {stats["opponent_candidates"]}
-- Opponents with verified first-party evidence: {stats["opponents_with_verified_evidence"]}
-- Reviewed exact excerpts: {stats["reviewed_excerpts"]}
-- Reviewed party-platform comparisons: {stats["platform_comparisons"]}
-- Candidate/opponent contrasts: {stats["contrasts"]}
-- Chapter-year coverage records: {stats["coverage_rows"]}
+This report is generated from the current race registry, full-text audit, organizational-context
+inventory/extraction summaries, endorsement-census outputs, and full-corpus analysis manifests.
+The small reviewed quotations below are qualitative examples only; their counts are not corpus
+totals and are not used as the denominator for the quantitative sections.
 
-## Official national endorsement census
+## 1. Denominator completeness
 
-The official DSA National archive currently yields **{stats["national_archive_records"]} unique
-campaign records**. Removing rows categorized only as ballot initiatives leaves
-**{stats["candidate_queue_rows"]} candidate or office records** requiring verification of party,
-primary type, opponents, and campaign sources. The current chapter directory creates
-**{stats["coverage_search_units"]} chapter-year search units** for 2016–2026.
+- Canonical races: {stats["canonical_races"]}
+- In-scope DSA-endorsed Democratic primaries: {stats["in_scope_races"]}
+- In-scope races with unresolved denominator metadata: {stats["in_scope_unresolved_races"]}
+- In-scope candidate/race records represented in the registry: {stats["in_scope_candidate_records"]}
+- Valid official-election-source rows: {stats["valid_official_election_source_rows"]}
+- National candidate endorsements: {stats["national_candidate_endorsements"]}
+- National endorsements matched to in-scope races: {stats["national_endorsements_matched_in_scope"]}
+- National endorsements absent from the registry:
+  {stats["national_endorsements_absent_from_registry"]}
 
-{chr(10).join(year_lines) or "- Run the official Airtable collection commands to populate this section."}
+These are denominator and reconciliation counts, not claims that every candidate has usable text.
+The race denominator remains incomplete while unresolved in-scope races or unmatched national
+endorsements remain.
 
-These counts cover national endorsements. The manually verified layer separately includes local
-endorsements such as Zohran Mamdani by NYC-DSA and Francesca Hong by Madison Area DSA and
-Milwaukee DSA. {local_census_note}
+## 2. National and local endorsement census
 
-## Nationwide local-chapter census status
+The official national archive contains **{stats["national_archive_records"]} campaign records**.
+Its cycle distribution is:
 
-- Current chapters and organizing committees crawled: {stats["chapters_crawled"]}
-- Endorsement-like first-party pages discovered: {stats["local_endorsement_pages"]}
-- Reviewable endorsement mentions extracted: {stats["local_endorsement_mentions"]}
-- High-confidence candidate/office leads extracted: {stats["local_endorsement_leads"]}
-- Independently verified local candidate endorsements: {stats["local_verified_endorsements"]}
-- Rejected candidate-level false positives: {stats["local_rejected_leads"]}
-- Chapter-year coverage units: {stats["census_coverage_rows"]}
-- Unresolved chapter-year units: {stats["census_unresolved_rows"]}
-- National and local endorsed candidacies queued: {stats["all_endorsed_candidacies"]}
-- Endorsed candidacies with resolved roster research: {stats["race_reviews_resolved"]}
-- Candidate rows in verified primary rosters: {stats["race_roster_rows"]}
-- Exact candidate evidence rows: {stats["candidate_evidence_rows"]}
-- Derived primary sticking-point rows: {stats["sticking_point_rows"]}
+{chr(10).join(year_lines) or "- No official national archive cycle rows are available."}
 
-{completion_note}
+- Verified local candidate endorsements: {stats["local_verified_endorsements"]}
+- Local chapter-year search units: {stats["local_coverage_rows"]}
+- Local chapter-year units still `not_searched` or `found_unverified`:
+  {stats["local_unresolved_rows"]}
 
-## Findings from reviewed first-party text
+The local verified file is a census output, but unresolved chapter-year search units remain
+explicit coverage gaps. Verified endorsement counts must not be substituted for a complete
+nationwide local denominator.
 
-The reviewed DSA material explicitly describes democratic socialism in terms of replacing
-capitalism, expanding democratic control into workplaces and the economy, and collective or
-public ownership of key economic systems. It also describes electoral work as movement-building
-rather than simple alignment with the Democratic Party. These are direct textual observations,
-not claims about every endorsed candidate.
+## 3. Candidate-document coverage
 
-{chr(10).join(quote_lines) or "- No reviewed excerpts are available."}
+- Registry candidate/race records in the document queue: {stats["candidate_queue_records"]}
+- Records with verified extraction status: {stats["verified_candidate_records"]}
+- Retryable candidate-document gaps: {stats["retryable_candidate_gaps"]}
+- Candidates with substantive extracted text: {stats["substantive_candidate_count"]}
+- Substantive source documents: {stats["substantive_document_count"]}
+- Eligible analysis segments before analysis-specific deduplication:
+  {stats["substantive_segment_rows"]}
+- Clean document-backed races: {stats["document_backed_races"]}
+- Two-sided paired races eligible for comparison: {stats["paired_race_eligible"]}
 
-## Reviewed DSA-Democratic platform contrasts
+Candidate-document coverage is incomplete. Shared multi-candidate documents without usable
+locators remain provenance-only and are excluded from analysis eligibility.
 
-{chr(10).join(comparison_lines) or "- No reviewed comparisons are available."}
+## 4. Official-platform coverage
 
-## Reviewed primary sticking-point example
+- Represented state-cycle rows: {stats["organizational_state_cycles"]}
+- Inventory rows across DNC, DSA, state-party, and local-DSA categories:
+  {stats["organizational_inventory_rows"]}
+- Verified organizational-context inventory rows: {stats["organizational_verified_rows"]}
+- Platform-gap rows: {stats["organizational_platform_gap_rows"]}
+- Fetched organizational documents: {stats["organizational_fetched_documents"]}
+- Successfully extracted organizational documents: {stats["organizational_successful_documents"]}
+- Extraction errors: {stats["organizational_extraction_errors"]}
+- Eligible full-platform documents in lexical analysis: {stats["official_analysis_documents"]}
+- Eligible full-platform source segments: {stats["official_source_segments"]}
 
-{chr(10).join(contrast_lines) or "- No reviewed candidate contrasts are available."}
+Every represented state-cycle has an explicit status for each context category, but explicit
+`searched_not_found`, `source_unavailable`, and `not_applicable` statuses are not extracted
+platform text. Official-platform lexical results therefore describe the recoverable full-platform
+subset.
 
-## Primary sticking-point counts
+## 5. Full-corpus lexical and topic outputs
 
-{sticking_note}
+- Candidate source documents used by lexical analysis: {stats["candidate_source_documents"]}
+- Candidate source segments before shared-text deduplication: {stats["candidate_source_segments"]}
+- Candidate segments after deduplication: {stats["candidate_analysis_segments"]}
+- Candidate analysis documents after deduplication: {stats["candidate_analysis_documents"]}
+- Unique source-supported primary contrasts: {stats["analysis_sticking_points"]}
+- Local-model classified segments: {stats["model_classified_rows"]}
+- Local-model unclassified segments below threshold: {stats["model_unclassified_rows"]}
 
-{chr(10).join(sticking_lines) or "- No derived sticking points are available."}
-
-## Reproducible text-analysis figures
-
-The full TF-IDF, MPIF, topic-share, similarity, and cycle analysis is generated with
-`uv run dsa-analysis analyze-text`.
+TF-IDF, MPIF, document prevalence, source mix, cycle volume, explicit-conflict, and local-model
+topic outputs are generated from the full eligible segment snapshots, not from the legacy manual
+excerpt table.
 
 ![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
-![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
+![Official contrast](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
-![Local-model policy emphasis](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
+![Modeled topics](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
 
-![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
+## 6. Provisional KDE
 
-![Source type difference](../outputs/figures/text_analysis/source_type_difference.svg)
+- Status: **{stats["kde_status"]}**
+- Retained segments: {stats["kde_retained_segments"]}
+- Candidates represented: {stats["kde_endorsed_candidates"]} endorsed and
+  {stats["kde_opponent_candidates"]} opponents
+- Selected UMAP dimensions: {stats["kde_selected_dimensions"]}
+- Density-fit sample: {stats["kde_endorsed_fit_count"]} endorsed and
+  {stats["kde_opponent_fit_count"]} opponent segments
 
-![Explicit conflicts by cycle](../outputs/figures/text_analysis/explicit_conflicts_by_cycle.svg)
+The KDE remains provisional because the full-text sufficiency audit fails. It describes the
+currently recoverable segmented corpus and is not a complete-census estimate.
 
-## Limitations
+![Provisional GTE KDE](../figures/provisional_gte_kde.png)
 
-{limitations}
+## 7. Small reviewed qualitative examples
+
+These quotations and hand-coded contrasts are intentionally a small, nonrepresentative
+qualitative layer. They illustrate what exact source-level evidence looks like; they are not
+frequency estimates and their row counts are not corpus totals.
+
+{chr(10).join(quote_lines) or "- No reviewed excerpts are available."}
+
+### Reviewed DSA-Democratic platform examples
+
+{chr(10).join(comparison_lines) or "- No reviewed comparisons are available."}
+
+### Reviewed primary sticking-point example
+
+{chr(10).join(contrast_lines) or "- No reviewed candidate contrasts are available."}
+
+## Remaining gaps
+
+- The race registry has {stats["in_scope_unresolved_races"]} unresolved in-scope races and
+  {stats["national_endorsements_absent_from_registry"]} national endorsements absent from the
+  registry.
+- Candidate-document recovery has {stats["retryable_candidate_gaps"]} retryable candidate gaps;
+  the full-text sufficiency decision is **{stats["full_text_sufficiency"]}**.
+- Local census coverage has {stats["local_unresolved_rows"]} unresolved chapter-year units.
+- Organizational context has {stats["organizational_platform_gap_rows"]} platform-gap rows and
+  {stats["organizational_extraction_errors"]} extraction error.
+- Source-class and group/year imbalance diagnostics still prevent population-level frequency
+  claims.
 
 ## Audit warnings
 
@@ -368,3 +314,151 @@ def _optional_csv(name: str) -> list[dict[str, str]]:
         if path.exists() or path.with_suffix(path.suffix + ".gz").exists()
         else []
     )
+
+
+def _load_canonical_metrics(
+    processed_dir: Path = PROCESSED_DIR,
+    analysis_data_dir: Path = ANALYSIS_DATA_DIR,
+    output_dir: Path = OUTPUT_DIR,
+) -> dict[str, dict[str, object]]:
+    race = read_json(processed_dir / "race_registry_summary.json")
+    full_text = read_json(processed_dir / "full_text_audit_summary.json")
+    organization = read_json(processed_dir / "organizational_context_summary.json")
+    extraction = read_json(
+        processed_dir / "organizational_context_extraction_summary.json"
+    )
+    lexical = read_json(output_dir / "tables" / "text_analysis" / "analysis_manifest.json")
+    model = read_json(analysis_data_dir / "model_topic_validation.json")
+    kde = read_json(analysis_data_dir / "provisional_gte_kde" / "summary.json")
+
+    registry_rows = read_csv(processed_dir / "race_registry.csv")
+    local_rows = read_csv(processed_dir / "local_endorsements_verified.csv")
+    local_coverage = read_csv(processed_dir / "coverage_ledger.csv")
+    in_scope_candidate_records = sum(
+        int(row["candidate_count"])
+        for row in registry_rows
+        if row["scope_kind"] == "tracked_dsa_endorsed_democratic_primary"
+    )
+    local_unresolved_rows = sum(
+        row["status"] in {"not_searched", "found_unverified"}
+        for row in local_coverage
+    )
+    stats = {
+        "canonical_races": race["canonical_races"],
+        "in_scope_races": race["in_scope_races"],
+        "in_scope_unresolved_races": race["in_scope_unresolved_races"],
+        "in_scope_candidate_records": in_scope_candidate_records,
+        "valid_official_election_source_rows": race[
+            "valid_official_election_source_rows"
+        ],
+        "national_candidate_endorsements": race["national_candidate_endorsements"],
+        "national_endorsements_matched_in_scope": race[
+            "national_endorsements_matched_in_scope"
+        ],
+        "national_endorsements_absent_from_registry": race[
+            "national_endorsements_absent_from_registry"
+        ],
+        "local_verified_endorsements": len(local_rows),
+        "local_coverage_rows": len(local_coverage),
+        "local_unresolved_rows": local_unresolved_rows,
+        "candidate_queue_records": full_text["queue"]["candidate_rows"],
+        "verified_candidate_records": full_text["queue"]["status_counts"]["verified"],
+        "retryable_candidate_gaps": full_text["retryable_gaps"]["candidate_gap_count"],
+        "substantive_candidate_count": full_text["document_corpus"][
+            "substantive_candidate_count"
+        ],
+        "substantive_document_count": full_text["document_corpus"][
+            "substantive_document_count"
+        ],
+        "substantive_segment_rows": full_text["document_corpus"][
+            "substantive_segment_rows"
+        ],
+        "document_backed_races": full_text["paired_races"][
+            "clean_document_backed_races"
+        ],
+        "paired_race_eligible": full_text["paired_races"]["eligible_count"],
+        "full_text_sufficiency": full_text["sufficiency"]["decision"],
+        "organizational_state_cycles": organization["represented_state_cycles"],
+        "organizational_inventory_rows": organization["inventory"]["row_count"],
+        "organizational_verified_rows": organization["inventory"][
+            "by_verification_status"
+        ]["verified"],
+        "organizational_platform_gap_rows": organization["coverage"][
+            "platform_gap_rows"
+        ],
+        "organizational_fetched_documents": extraction["fetched_documents"],
+        "organizational_successful_documents": extraction["successful_documents"],
+        "organizational_extraction_errors": extraction["extraction_errors"],
+        "official_analysis_documents": lexical["official_documents"],
+        "official_source_segments": lexical["official_source_segments"],
+        "candidate_source_documents": lexical["candidate_source_documents"],
+        "candidate_source_segments": lexical["candidate_source_segments"],
+        "candidate_analysis_segments": lexical["candidate_segments"],
+        "candidate_analysis_documents": lexical["candidate_documents"],
+        "analysis_sticking_points": lexical["sticking_points"],
+        "model_classified_rows": model["classified_rows"],
+        "model_unclassified_rows": model["unclassified_rows"],
+        "kde_status": kde["status"],
+        "kde_retained_segments": kde["retained_segments"],
+        "kde_endorsed_candidates": kde["candidate_counts"]["endorsed"],
+        "kde_opponent_candidates": kde["candidate_counts"]["opponent"],
+        "kde_selected_dimensions": kde["selected_dimensions"],
+        "kde_endorsed_fit_count": kde["kde"]["fit_counts"]["endorsed"],
+        "kde_opponent_fit_count": kde["kde"]["fit_counts"]["opponent"],
+    }
+    overview = {
+        "denominator_completeness": {
+            key: stats[key]
+            for key in (
+                "canonical_races",
+                "in_scope_races",
+                "in_scope_unresolved_races",
+                "in_scope_candidate_records",
+                "valid_official_election_source_rows",
+                "national_endorsements_absent_from_registry",
+            )
+        },
+        "candidate_document_coverage": {
+            key: stats[key]
+            for key in (
+                "candidate_queue_records",
+                "verified_candidate_records",
+                "retryable_candidate_gaps",
+                "substantive_candidate_count",
+                "substantive_document_count",
+                "paired_race_eligible",
+            )
+        },
+        "official_platform_coverage": {
+            key: stats[key]
+            for key in (
+                "organizational_state_cycles",
+                "organizational_inventory_rows",
+                "organizational_platform_gap_rows",
+                "organizational_successful_documents",
+                "official_analysis_documents",
+                "official_source_segments",
+            )
+        },
+        "full_corpus_analysis": {
+            key: stats[key]
+            for key in (
+                "candidate_source_documents",
+                "candidate_source_segments",
+                "candidate_analysis_segments",
+                "model_classified_rows",
+                "analysis_sticking_points",
+            )
+        },
+        "provisional_kde": {
+            key: stats[key]
+            for key in (
+                "kde_status",
+                "kde_retained_segments",
+                "kde_endorsed_candidates",
+                "kde_opponent_candidates",
+                "kde_selected_dimensions",
+            )
+        },
+    }
+    return {"stats": stats, "overview": overview}

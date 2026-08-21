@@ -13,6 +13,7 @@ from .narrative_analysis import hot_cold_characterization, umap_trustworthiness
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = ROOT / "data" / "processed" / "candidate_document_analysis_segments.csv"
+DEFAULT_METADATA = ROOT / "data" / "processed" / "candidate_document_metadata.csv"
 DEFAULT_OUTPUT = ROOT / "data" / "analysis" / "provisional_gte_kde"
 DEFAULT_FIGURE = ROOT / "figures" / "provisional_gte_kde.png"
 MODEL_NAME = "Alibaba-NLP/gte-multilingual-base"
@@ -212,7 +213,11 @@ def run_provisional_kde(
         "filter": {
             "roles": ["endorsed", "opponent", "unopposed"],
             "minimum_token_count": 8,
-            "excluded_flags": ["boilerplate_flag", "exact_duplicate_flag"],
+            "excluded_flags": ["boilerplate_flag"],
+            "deduplication": (
+                "one exact-text segment per candidate, group, and election cycle; "
+                "repeated state-race provenance retained"
+            ),
         },
         "retained_segments": len(rows),
         "group_counts": dict(group_counts),
@@ -220,7 +225,7 @@ def run_provisional_kde(
             Counter(
                 row["group"]
                 for row in {
-                    (item["group"], item["race_id"], item["candidate_slug"]): item
+                    (item["group"], item["candidate_unit_id"]): item
                     for item in rows
                 }.values()
             )
@@ -264,16 +269,25 @@ def run_provisional_kde(
     )
 
 
-def load_eligible_segments(path: Path) -> list[dict[str, str]]:
-    rows = []
+def load_eligible_segments(
+    path: Path,
+    metadata_path: Path = DEFAULT_METADATA,
+) -> list[dict[str, str]]:
+    metadata = {}
+    if metadata_path.exists():
+        with metadata_path.open(encoding="utf-8", newline="") as handle:
+            metadata = {
+                row["document_id"]: row
+                for row in csv.DictReader(handle)
+                if row.get("document_id")
+            }
+    grouped: dict[tuple[str, str, str, str], list[dict[str, str]]] = defaultdict(list)
     with path.open(encoding="utf-8", newline="") as handle:
         for row in csv.DictReader(handle):
             role = row.get("role", "")
             if role not in {"endorsed", "opponent", "unopposed"}:
                 continue
-            if _is_true(row.get("boilerplate_flag")) or _is_true(
-                row.get("exact_duplicate_flag")
-            ):
+            if _is_true(row.get("boilerplate_flag")):
                 continue
             if int(row.get("token_count") or 0) < 8:
                 continue
@@ -282,8 +296,63 @@ def load_eligible_segments(path: Path) -> list[dict[str, str]]:
                 continue
             retained = dict(row)
             retained["group"] = "endorsed" if role in {"endorsed", "unopposed"} else "opponent"
-            rows.append(retained)
-    return rows
+            document = metadata.get(row.get("document_id", ""), {})
+            election_date = (
+                document.get("election_date", "").strip()
+                or row.get("election_date", "").strip()
+            )
+            cycle = election_date[:4] if election_date else "unknown"
+            retained["cycle"] = cycle
+            retained["candidate_unit_id"] = f"{cycle}:{row.get('candidate_slug', '').strip()}"
+            text_hash = (
+                row.get("exact_duplicate_hash", "").strip()
+                or row.get("sha256", "").strip()
+                or hashlib.sha256(text.encode("utf-8")).hexdigest()
+            )
+            grouped[
+                (
+                    retained["group"],
+                    cycle,
+                    row.get("candidate_slug", "").strip(),
+                    text_hash,
+                )
+            ].append(retained)
+
+    rows = []
+    for duplicates in grouped.values():
+        retained = dict(duplicates[0])
+        retained["race_ids"] = " | ".join(
+            sorted({row.get("race_id", "").strip() for row in duplicates if row.get("race_id")})
+        )
+        retained["document_ids"] = " | ".join(
+            sorted(
+                {
+                    row.get("document_id", "").strip()
+                    for row in duplicates
+                    if row.get("document_id")
+                }
+            )
+        )
+        retained["analysis_segment_ids"] = " | ".join(
+            sorted(
+                {
+                    row.get("analysis_segment_id", "").strip()
+                    for row in duplicates
+                    if row.get("analysis_segment_id")
+                }
+            )
+        )
+        retained["provenance_row_count"] = str(len(duplicates))
+        rows.append(retained)
+    return sorted(
+        rows,
+        key=lambda row: (
+            row["group"],
+            row["candidate_unit_id"],
+            row.get("sha256", ""),
+            row.get("analysis_segment_id", ""),
+        ),
+    )
 
 
 def select_dimension_elbow(
@@ -307,10 +376,13 @@ def balanced_kde_sample_indices(
     limit: int,
     seed: int,
 ) -> list[int]:
-    by_candidate: dict[tuple[str, str], list[int]] = defaultdict(list)
+    by_candidate: dict[str, list[int]] = defaultdict(list)
     for index, row in enumerate(rows):
         if row["group"] == group:
-            by_candidate[(row["race_id"], row["candidate_slug"])].append(index)
+            candidate_unit_id = row.get("candidate_unit_id") or (
+                f"{row.get('race_id', '')}:{row.get('candidate_slug', '')}"
+            )
+            by_candidate[candidate_unit_id].append(index)
     if not by_candidate:
         raise ValueError(f"No rows available for KDE group {group!r}")
     rng = random.Random(seed)

@@ -62,7 +62,7 @@ class FullTextAuditPaths:
     @classmethod
     def default(cls) -> "FullTextAuditPaths":
         return cls(
-            candidate_corpus_path=ANALYSIS_DATA_DIR / "candidate_text_corpus.csv",
+            candidate_corpus_path=MANUAL_DIR / "race_registry_candidate_seed.csv",
             config_path=CONFIG_DIR / "sources.json",
             manual_documents_path=MANUAL_DIR / "documents.csv",
             manual_candidate_documents_path=MANUAL_DIR / "candidate_documents.csv",
@@ -564,13 +564,11 @@ def _load_corpus_rows(path: Path, expected_years: list[int]) -> list[dict[str, s
         "election_date",
         "role",
         "evidence_status",
-        "quote",
-        "source_url",
-        "source_type",
     }
     missing = required - set(rows[0]) if rows else set()
     if missing:
         raise ValueError(f"{path.name}: missing columns {sorted(missing)}")
+    has_evidence_text = bool(rows) and {"quote", "source_url"}.issubset(rows[0])
     allowed_years = {str(year) for year in expected_years}
     output = []
     for number, row in enumerate(rows, start=2):
@@ -584,7 +582,7 @@ def _load_corpus_rows(path: Path, expected_years: list[int]) -> list[dict[str, s
         year = _year_from_value(election_date, path.name, f"row {number} election_date")
         if str(year) not in allowed_years:
             raise ValueError(f"{path.name}:{number}: election year outside study window")
-        if status == "verified" and (
+        if has_evidence_text and status == "verified" and (
             not row.get("quote", "").strip() or not row.get("source_url", "").strip()
         ):
             raise ValueError(

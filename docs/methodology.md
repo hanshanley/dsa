@@ -71,16 +71,18 @@ Candidate-level source research decisions are retained in
 extraction failures and prevents candidates without recovered text from disappearing silently.
 ## Reproducible lexical comparison
 
-Run `uv run dsa-analysis analyze-text` after the reviewed evidence and sticking-point datasets
-have been rebuilt.
+Run `uv run dsa-analysis analyze-text` after candidate and organizational full-document segment
+corpora have been rebuilt.
 
 The command creates two text comparisons:
 
-1. official DSA statements versus Democratic National Committee platform excerpts; and
-2. DSA-endorsed candidate statements versus statements by Democratic primary opponents.
+1. official full-platform DSA segments versus Democratic Party platform segments; and
+2. full-document DSA-endorsed candidate segments versus Democratic-primary opponent segments.
 
-Candidate quotations duplicated because multiple DSA bodies endorsed the same candidate in the
-same election are counted once. TF-IDF uses document-normalized unigram frequencies and smoothed
+Eligible segments contain at least 20 tokens and exclude flagged boilerplate. Exact candidate
+text is counted once per group and cycle, preventing shared national platforms from being
+multiplied across state races while retaining every candidate, race, document, source, and
+locator in the snapshot. TF-IDF uses document-normalized unigram frequencies and smoothed
 inverse document frequency. MPIF uses weighted log-odds z-scores with an informative Dirichlet
 prior over unigrams and adjacent bigrams.
 
@@ -92,10 +94,16 @@ lightly lemmatized, and campaign boilerplate terms are excluded. The generated
 share of candidate/election documents containing each feature as a robustness check against
 repetition by a small number of campaigns.
 
+Coverage shares use the registry-wide candidate/race denominator from
+`data/processed/full_text_queue_summary.csv`. Candidate counts with `current_status=verified` are
+treated as having extracted text; every other queue status remains in the denominator as without
+extracted text.
+
 These measures describe recoverable language. They do not infer positions from missing sources,
 measure sincerity or policy quality, or prove that a lexical difference caused an election
-outcome. The official DSA/DNC corpus is intentionally limited to manually reviewed exact
-excerpts, so its MPIF results should be read as descriptive rather than exhaustive.
+outcome. Official MPIF input is restricted to generated organizational-context rows identified
+as full platforms. DSA National and state/local DSA categories are grouped against DNC National
+and state Democratic Party categories.
 
 ### Local-model topic classification
 
@@ -108,24 +116,22 @@ Topic emphasis follows the `state-politics` design:
 - a 0.20 minimum-similarity threshold, with below-threshold rows explicitly unclassified;
 - runner-up topic and margin retained for every row;
 - a transparent seed-term keyword baseline;
-- diagnostic agreement against the existing reviewed-code crosswalk.
+- a retained schema marker that the legacy quotation-level reviewed-code crosswalk is not
+  applicable to full-document segments.
 
-No hosted model API is used. The model classifies the exact quotation in
+No hosted model API is used. The model classifies the exact segment text in
 `data/analysis/candidate_text_corpus.csv`; it does not generate replacement text or factual
-claims. `data/analysis/model_topic_classifications.csv` retains the exact quotation and source URL
-beside every prediction, score, runner-up and margin.
+claims. `data/analysis/model_topic_classifications.csv` retains exact text and aggregated
+candidate, race, document, URL, and locator provenance beside every prediction and score.
 
-The crosswalk agreement is a diagnostic rather than an independent gold-standard accuracy
-estimate. Low-similarity and low-margin rows remain directly filterable.
+Low-similarity and low-margin rows remain directly filterable.
 
 ## Full-document narrative corpus
 
-Narrative analysis does not use `candidate_text_corpus.csv` as its input. That file is a
-quotation-level evidence snapshot. The narrative corpus instead collects complete campaign
-policy pages, platforms, releases, speeches, interviews, questionnaires, voter guides, and
-publisher-provided transcripts within each primary's campaign window. Documents are stored with
-content-addressed raw provenance and deterministically segmented; transcriptless audio/video and
-unscoped multi-candidate documents are excluded from analysis.
+Narrative analysis and the lexical/topic pipeline now derive from the same complete campaign
+document collection, although they may apply different downstream eligibility and modeling
+rules. Documents are stored with content-addressed raw provenance and deterministically
+segmented; transcriptless audio/video and unscoped multi-candidate documents are excluded.
 
 The comparison denominator is the canonical nationwide registry of tracked DSA-endorsed
 Democratic primaries and every identified certified Democratic opponent. Candidate documents

@@ -1,20 +1,47 @@
 {
-  "candidate_documents": 997,
-  "candidate_mpif_features": 2249,
-  "candidate_tfidf_terms": 5865,
-  "candidate_verified_excerpts": 3438,
+  "candidate_documents": 1332,
+  "candidate_mpif_features": 34527,
+  "candidate_segments": 37977,
+  "candidate_source_documents": 1582,
+  "candidate_source_segments": 39080,
+  "candidate_tfidf_terms": 40217,
   "figure_count": 6,
   "input_hashes": {
-    "data/analysis/candidate_text_corpus.csv": "1910679f65fbe0e0d5f1f79f6897b4802bd1f94809685ce1a970f4f5f73ad8f5",
+    "data/analysis/candidate_text_corpus.csv": "83ff347efa5ddc3c9fa3f9a1dfbe33cfefac13a5e2b50b54c4c14044d43cb807",
+    "data/analysis/organizational_context_text_corpus.csv": "b48b0ffbb2aca23950bdbee7dbe9ee868beb105ed9c5a13324d183bf8aff5acd",
     "data/analysis/primary_sticking_points.csv": "d1ff808f2217f7fc0b61059515de36914297709f2e68abae9fc97dc1d6866709",
     "data/manual/excerpts.csv": "03edd6b2528f354b46940856cc4c116684a8f918b7258a5eea97cd6d7db63869",
-    "data/manual/platform_comparisons.csv": "d219f624614a5bd962b5f8fec5a401714dc65eccfbf6730618e7d7aafdcc0e67"
+    "data/manual/platform_comparisons.csv": "d219f624614a5bd962b5f8fec5a401714dc65eccfbf6730618e7d7aafdcc0e67",
+    "data/processed/full_text_queue_summary.csv": "ae51d200b41e1762ebe96727c9bc7ce6071149116c9b0df310bfd8131bc679f4"
   },
   "lineage": {
     "candidate_corpus": {
       "analysis_snapshot": "data/analysis/candidate_text_corpus.csv",
-      "generated_from": "data/processed/candidate_statement_evidence.csv",
-      "generator": "dsa_analysis.statement_batches.merge_statement_reviews"
+      "deduplication": "one exact-text segment per endorsed/opponent group and election cycle; all candidate, race, document, locator, and source provenance retained",
+      "eligibility": "nonempty segment; token_count >= 20; boilerplate_flag=false",
+      "generated_from": [
+        "data/processed/candidate_document_analysis_segments.csv",
+        "data/processed/candidate_document_metadata.csv"
+      ],
+      "generator": "dsa_analysis.document_corpus.run_candidate_document_regather_batch"
+    },
+    "candidate_coverage": {
+      "denominator": "registry-wide candidate/race records",
+      "extracted_status": "verified",
+      "generated_from": "data/processed/full_text_queue_summary.csv",
+      "without_extracted_text": "all statuses other than verified"
+    },
+    "official_corpus": {
+      "analysis_snapshot": "data/analysis/organizational_context_text_corpus.csv",
+      "category_grouping": {
+        "dnc_national": "democratic",
+        "dsa_national": "dsa",
+        "dsa_state_local": "dsa",
+        "state_democratic_party": "democratic"
+      },
+      "eligibility": "full_platform_categories present; nonempty segment; token_count >= 20; boilerplate_flag=false",
+      "generated_from": "data/processed/organizational_context_analysis_segments.csv",
+      "generator": "dsa_analysis.organizational_context_corpus.run_organizational_context_extraction_batch"
     },
     "sticking_points": {
       "analysis_snapshot": "data/analysis/primary_sticking_points.csv",
@@ -22,8 +49,10 @@
       "generator": "dsa_analysis.sticking_points.analyze_sticking_points"
     }
   },
-  "official_documents": 12,
-  "official_mpif_features": 176,
+  "official_documents": 47,
+  "official_mpif_features": 133826,
+  "official_segments": 5733,
+  "official_source_segments": 5747,
   "parameters": {
     "candidate_min_feature_count": 5,
     "domain_stopwords": 34,
@@ -31,8 +60,10 @@
     "mpif_prior_mass": 1000.0,
     "official_min_feature_count": 1,
     "phrase_rules": 19,
+    "published_feature_row_limit": 500,
+    "substantive_min_tokens": 20,
     "tfidf_ngram": "unigram"
   },
-  "prevalence_features": 1009,
+  "prevalence_features": 10448,
   "sticking_points": 1251
 }
