@@ -306,6 +306,7 @@ name = "dsa-analysis"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "certifi" },
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "scikit-learn" },
@@ -317,6 +318,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "certifi", specifier = ">=2025" },
     { name = "matplotlib", specifier = ">=3.9,<4" },
     { name = "numpy", specifier = ">=2.0,<3" },
     { name = "scikit-learn", specifier = ">=1.5,<2" },
