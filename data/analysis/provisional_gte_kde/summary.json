@@ -1,0 +1,749 @@
+{
+  "candidate_counts": {
+    "endorsed": 212,
+    "opponent": 447
+  },
+  "corpus_hash": "63bb328abbfe740226e11dbbd66b67eb63382cd9c3b3fc200fc45365e80da607",
+  "dimension_selection_rule": "smallest tested dimension within 0.005 trustworthiness of the maximum",
+  "dimension_sweep": [
+    {
+      "dimensions": 2,
+      "trustworthiness": 0.8479011217948718
+    },
+    {
+      "dimensions": 5,
+      "trustworthiness": 0.9454462900641025
+    },
+    {
+      "dimensions": 10,
+      "trustworthiness": 0.9582559134615385
+    },
+    {
+      "dimensions": 20,
+      "trustworthiness": 0.9582964983974359
+    },
+    {
+      "dimensions": 30,
+      "trustworthiness": 0.9584928044871794
+    }
+  ],
+  "filter": {
+    "excluded_flags": [
+      "boilerplate_flag",
+      "exact_duplicate_flag"
+    ],
+    "minimum_token_count": 8,
+    "roles": [
+      "endorsed",
+      "opponent",
+      "unopposed"
+    ]
+  },
+  "group_counts": {
+    "endorsed": 11322,
+    "opponent": 23776
+  },
+  "input_path": "data/processed/candidate_document_analysis_segments.csv",
+  "input_sha256": "0f899269a3a7bfac88d0286697dd0e6b07494338f7a669afc50ec27d887435bc",
+  "kde": {
+    "bandwidth_rule": "Scott n^(-1/(d+4))",
+    "bandwidths": {
+      "endorsed": 0.544236740393845,
+      "opponent": 0.544236740393845
+    },
+    "coordinate_standardization": "joint z-score",
+    "fit_counts": {
+      "endorsed": 5000,
+      "opponent": 5000
+    },
+    "fit_sampling": "deterministic round-robin candidate-balanced sample",
+    "kernel": "gaussian"
+  },
+  "model_name": "Alibaba-NLP/gte-multilingual-base",
+  "model_revision": "9bbca17d9273fd0d03d5725c7a4b0f6b45142062",
+  "outputs": {
+    "figure": "figures/provisional_gte_kde.png",
+    "scores": "data/analysis/provisional_gte_kde/segment_density_scores.csv",
+    "sweep": "data/analysis/provisional_gte_kde/umap_dimension_sweep.csv",
+    "terms": "data/analysis/provisional_gte_kde/hot_cold_terms.csv"
+  },
+  "retained_segments": 35098,
+  "seed": 1729,
+  "selected_dimensions": 10,
+  "status": "provisional",
+  "top_cold_terms": [
+    {
+      "composite_score": -1.103798635183,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.003293191425,
+      "negative_npmi": 0.100505443758,
+      "npmi_difference": -1.100505443758,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "reserve",
+      "tfidf_difference": -0.003293191425
+    },
+    {
+      "composite_score": -1.099357077865,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.004100877254,
+      "negative_npmi": 0.095256200612,
+      "npmi_difference": -1.095256200612,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "bike",
+      "tfidf_difference": -0.004100877254
+    },
+    {
+      "composite_score": -1.085509491797,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001935283494,
+      "negative_npmi": 0.083574208303,
+      "npmi_difference": -1.083574208303,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "lanes",
+      "tfidf_difference": -0.001935283494
+    },
+    {
+      "composite_score": -1.085417007067,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.00227789028,
+      "negative_npmi": 0.083139116787,
+      "npmi_difference": -1.083139116787,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "lieutenant",
+      "tfidf_difference": -0.00227789028
+    },
+    {
+      "composite_score": -1.081311833762,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.002152728119,
+      "negative_npmi": 0.079159105643,
+      "npmi_difference": -1.079159105643,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "wtop",
+      "tfidf_difference": -0.002152728119
+    },
+    {
+      "composite_score": -1.079826120404,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001431862589,
+      "negative_npmi": 0.078394257815,
+      "npmi_difference": -1.078394257815,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "composting",
+      "tfidf_difference": -0.001431862589
+    },
+    {
+      "composite_score": -1.079707143784,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001572809708,
+      "negative_npmi": 0.078134334076,
+      "npmi_difference": -1.078134334076,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "pedestrian",
+      "tfidf_difference": -0.001572809708
+    },
+    {
+      "composite_score": -1.077597803791,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001930196958,
+      "negative_npmi": 0.075667606833,
+      "npmi_difference": -1.075667606833,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "hoyer",
+      "tfidf_difference": -0.001930196958
+    },
+    {
+      "composite_score": -1.076798945587,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001131338754,
+      "negative_npmi": 0.075667606833,
+      "npmi_difference": -1.075667606833,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "corridors",
+      "tfidf_difference": -0.001131338754
+    },
+    {
+      "composite_score": -1.076739162411,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001071555578,
+      "negative_npmi": 0.075667606833,
+      "npmi_difference": -1.075667606833,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "travel",
+      "tfidf_difference": -0.001071555578
+    },
+    {
+      "composite_score": -1.076551576019,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000883969186,
+      "negative_npmi": 0.075667606833,
+      "npmi_difference": -1.075667606833,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "tel",
+      "tfidf_difference": -0.000883969186
+    },
+    {
+      "composite_score": -1.076381291126,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001003645996,
+      "negative_npmi": 0.07537764513,
+      "npmi_difference": -1.07537764513,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "californians",
+      "tfidf_difference": -0.001003645996
+    },
+    {
+      "composite_score": -1.075511067299,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.00072420432,
+      "negative_npmi": 0.074786862979,
+      "npmi_difference": -1.074786862979,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "ofce",
+      "tfidf_difference": -0.00072420432
+    },
+    {
+      "composite_score": -1.075402422793,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001530908561,
+      "negative_npmi": 0.073871514232,
+      "npmi_difference": -1.073871514232,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "guns",
+      "tfidf_difference": -0.001530908561
+    },
+    {
+      "composite_score": -1.073816061,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000898611745,
+      "negative_npmi": 0.072917449255,
+      "npmi_difference": -1.072917449255,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "biking",
+      "tfidf_difference": -0.000898611745
+    },
+    {
+      "composite_score": -1.073779162635,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001189164467,
+      "negative_npmi": 0.072589998168,
+      "npmi_difference": -1.072589998168,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "opinions",
+      "tfidf_difference": -0.001189164467
+    },
+    {
+      "composite_score": -1.072911858688,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001335410672,
+      "negative_npmi": 0.071576448015,
+      "npmi_difference": -1.071576448015,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "steny",
+      "tfidf_difference": -0.001335410672
+    },
+    {
+      "composite_score": -1.072870378215,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000950651288,
+      "negative_npmi": 0.071919726927,
+      "npmi_difference": -1.071919726927,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "routes",
+      "tfidf_difference": -0.000950651288
+    },
+    {
+      "composite_score": -1.072774405929,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001197957914,
+      "negative_npmi": 0.071576448015,
+      "npmi_difference": -1.071576448015,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "kenyan",
+      "tfidf_difference": -0.001197957914
+    },
+    {
+      "composite_score": -1.072483133837,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001255727275,
+      "negative_npmi": 0.071227406562,
+      "npmi_difference": -1.071227406562,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "karla",
+      "tfidf_difference": -0.001255727275
+    },
+    {
+      "composite_score": -1.072310066163,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000733618148,
+      "negative_npmi": 0.071576448015,
+      "npmi_difference": -1.071576448015,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "potomac",
+      "tfidf_difference": -0.000733618148
+    },
+    {
+      "composite_score": -1.072116205304,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001243876446,
+      "negative_npmi": 0.070872328858,
+      "npmi_difference": -1.070872328858,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "cta",
+      "tfidf_difference": -0.001243876446
+    },
+    {
+      "composite_score": -1.072055601577,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000828195015,
+      "negative_npmi": 0.071227406562,
+      "npmi_difference": -1.071227406562,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "practical",
+      "tfidf_difference": -0.000828195015
+    },
+    {
+      "composite_score": -1.071785809137,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000558402574,
+      "negative_npmi": 0.071227406562,
+      "npmi_difference": -1.071227406562,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "drawing",
+      "tfidf_difference": -0.000558402574
+    },
+    {
+      "composite_score": -1.071621542532,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.001478680619,
+      "negative_npmi": 0.070142861912,
+      "npmi_difference": -1.070142861912,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "bailey",
+      "tfidf_difference": -0.001478680619
+    },
+    {
+      "composite_score": -1.071490913981,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000979993917,
+      "negative_npmi": 0.070510920064,
+      "npmi_difference": -1.070510920064,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "pedestrians",
+      "tfidf_difference": -0.000979993917
+    },
+    {
+      "composite_score": -1.071411243079,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000900323015,
+      "negative_npmi": 0.070510920064,
+      "npmi_difference": -1.070510920064,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "pressing",
+      "tfidf_difference": -0.000900323015
+    },
+    {
+      "composite_score": -1.071033518486,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000522598422,
+      "negative_npmi": 0.070510920064,
+      "npmi_difference": -1.070510920064,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "randomized",
+      "tfidf_difference": -0.000522598422
+    },
+    {
+      "composite_score": -1.07048841577,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000720605681,
+      "negative_npmi": 0.069767810089,
+      "npmi_difference": -1.069767810089,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "entrepreneurs",
+      "tfidf_difference": -0.000720605681
+    },
+    {
+      "composite_score": -1.07045390727,
+      "favored_group": "cold",
+      "negative_mean_tfidf": 0.000686097181,
+      "negative_npmi": 0.069767810089,
+      "npmi_difference": -1.069767810089,
+      "positive_mean_tfidf": 0.0,
+      "positive_npmi": -1.0,
+      "term": "bp",
+      "tfidf_difference": -0.000686097181
+    }
+  ],
+  "top_hot_terms": [
+    {
+      "composite_score": 1.297496876209,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.288968728951,
+      "positive_mean_tfidf": 0.008528147258,
+      "positive_npmi": 0.288968728951,
+      "term": "dsa",
+      "tfidf_difference": 0.008528147258
+    },
+    {
+      "composite_score": 1.229021723626,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.2253890007,
+      "positive_mean_tfidf": 0.003632722925,
+      "positive_npmi": 0.2253890007,
+      "term": "socialists",
+      "tfidf_difference": 0.003632722925
+    },
+    {
+      "composite_score": 1.216275841962,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.213630942566,
+      "positive_mean_tfidf": 0.002644899397,
+      "positive_npmi": 0.213630942566,
+      "term": "incarcerated",
+      "tfidf_difference": 0.002644899397
+    },
+    {
+      "composite_score": 1.212716595891,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.210819566406,
+      "positive_mean_tfidf": 0.001897029485,
+      "positive_npmi": 0.210819566406,
+      "term": "alexandria",
+      "tfidf_difference": 0.001897029485
+    },
+    {
+      "composite_score": 1.21225921472,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.208872930561,
+      "positive_mean_tfidf": 0.003386284158,
+      "positive_npmi": 0.208872930561,
+      "term": "allegheny",
+      "tfidf_difference": 0.003386284158
+    },
+    {
+      "composite_score": 1.203530777786,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.201512583866,
+      "positive_mean_tfidf": 0.00201819392,
+      "positive_npmi": 0.201512583866,
+      "term": "erika",
+      "tfidf_difference": 0.00201819392
+    },
+    {
+      "composite_score": 1.202612111323,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.200379369077,
+      "positive_mean_tfidf": 0.002232742246,
+      "positive_npmi": 0.200379369077,
+      "term": "palestine",
+      "tfidf_difference": 0.002232742246
+    },
+    {
+      "composite_score": 1.202260677116,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.200379369077,
+      "positive_mean_tfidf": 0.00188130804,
+      "positive_npmi": 0.200379369077,
+      "term": "fran",
+      "tfidf_difference": 0.00188130804
+    },
+    {
+      "composite_score": 1.198501680878,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.196830817055,
+      "positive_mean_tfidf": 0.001670863823,
+      "positive_npmi": 0.196830817055,
+      "term": "thomason",
+      "tfidf_difference": 0.001670863823
+    },
+    {
+      "composite_score": 1.198401583342,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.196830817055,
+      "positive_mean_tfidf": 0.001570766288,
+      "positive_npmi": 0.196830817055,
+      "term": "salazar",
+      "tfidf_difference": 0.001570766288
+    },
+    {
+      "composite_score": 1.193314480705,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.191689573661,
+      "positive_mean_tfidf": 0.001624907043,
+      "positive_npmi": 0.191689573661,
+      "term": "ceasefire",
+      "tfidf_difference": 0.001624907043
+    },
+    {
+      "composite_score": 1.190598931198,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.188904428689,
+      "positive_mean_tfidf": 0.00169450251,
+      "positive_npmi": 0.188904428689,
+      "term": "detention",
+      "tfidf_difference": 0.00169450251
+    },
+    {
+      "composite_score": 1.185847405863,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.184390485964,
+      "positive_mean_tfidf": 0.001456919899,
+      "positive_npmi": 0.184390485964,
+      "term": "confinement",
+      "tfidf_difference": 0.001456919899
+    },
+    {
+      "composite_score": 1.185723932139,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.184390485964,
+      "positive_mean_tfidf": 0.001333446175,
+      "positive_npmi": 0.184390485964,
+      "term": "criminalization",
+      "tfidf_difference": 0.001333446175
+    },
+    {
+      "composite_score": 1.183718182038,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.182779722737,
+      "positive_mean_tfidf": 0.000938459301,
+      "positive_npmi": 0.182779722737,
+      "term": "israeli",
+      "tfidf_difference": 0.000938459301
+    },
+    {
+      "composite_score": 1.182432463485,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.181107188545,
+      "positive_mean_tfidf": 0.00132527494,
+      "positive_npmi": 0.181107188545,
+      "term": "solitary",
+      "tfidf_difference": 0.00132527494
+    },
+    {
+      "composite_score": 1.182024045383,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.181107188545,
+      "positive_mean_tfidf": 0.000916856838,
+      "positive_npmi": 0.181107188545,
+      "term": "evictions",
+      "tfidf_difference": 0.000916856838
+    },
+    {
+      "composite_score": 1.181075838482,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.179366356586,
+      "positive_mean_tfidf": 0.001709481896,
+      "positive_npmi": 0.179366356586,
+      "term": "prizio",
+      "tfidf_difference": 0.001709481896
+    },
+    {
+      "composite_score": 1.180982286565,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.179366356586,
+      "positive_mean_tfidf": 0.001615929979,
+      "positive_npmi": 0.179366356586,
+      "term": "matos",
+      "tfidf_difference": 0.001615929979
+    },
+    {
+      "composite_score": 1.180950903769,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.179366356586,
+      "positive_mean_tfidf": 0.001584547183,
+      "positive_npmi": 0.179366356586,
+      "term": "defendini",
+      "tfidf_difference": 0.001584547183
+    },
+    {
+      "composite_score": 1.180816912981,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.179366356586,
+      "positive_mean_tfidf": 0.001450556395,
+      "positive_npmi": 0.179366356586,
+      "term": "mathews",
+      "tfidf_difference": 0.001450556395
+    },
+    {
+      "composite_score": 1.180340476576,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.179366356586,
+      "positive_mean_tfidf": 0.00097411999,
+      "positive_npmi": 0.179366356586,
+      "term": "prostitution",
+      "tfidf_difference": 0.00097411999
+    },
+    {
+      "composite_score": 1.180231655617,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.179366356586,
+      "positive_mean_tfidf": 0.000865299031,
+      "positive_npmi": 0.179366356586,
+      "term": "roe",
+      "tfidf_difference": 0.000865299031
+    },
+    {
+      "composite_score": 1.180127860655,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.179366356586,
+      "positive_mean_tfidf": 0.000761504069,
+      "positive_npmi": 0.179366356586,
+      "term": "ocasio",
+      "tfidf_difference": 0.000761504069
+    },
+    {
+      "composite_score": 1.180052606535,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.179366356586,
+      "positive_mean_tfidf": 0.000686249949,
+      "positive_npmi": 0.179366356586,
+      "term": "magisterial",
+      "tfidf_difference": 0.000686249949
+    },
+    {
+      "composite_score": 1.178452541633,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.177549541677,
+      "positive_mean_tfidf": 0.000902999956,
+      "positive_npmi": 0.177549541677,
+      "term": "contra",
+      "tfidf_difference": 0.000902999956
+    },
+    {
+      "composite_score": 1.178423099836,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.177549541677,
+      "positive_mean_tfidf": 0.000873558159,
+      "positive_npmi": 0.177549541677,
+      "term": "palestinians",
+      "tfidf_difference": 0.000873558159
+    },
+    {
+      "composite_score": 1.178383415455,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.177549541677,
+      "positive_mean_tfidf": 0.000833873777,
+      "positive_npmi": 0.177549541677,
+      "term": "rikers",
+      "tfidf_difference": 0.000833873777
+    },
+    {
+      "composite_score": 1.177549709143,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.175647600284,
+      "positive_mean_tfidf": 0.001902108859,
+      "positive_npmi": 0.175647600284,
+      "term": "dropdown",
+      "tfidf_difference": 0.001902108859
+    },
+    {
+      "composite_score": 1.176671175378,
+      "favored_group": "hot",
+      "negative_mean_tfidf": 0.0,
+      "negative_npmi": -1.0,
+      "npmi_difference": 1.175647600284,
+      "positive_mean_tfidf": 0.001023575094,
+      "positive_npmi": 0.175647600284,
+      "term": "philly",
+      "tfidf_difference": 0.001023575094
+    }
+  ],
+  "warning": "The full-text sufficiency audit still fails. Results describe the currently recoverable segmented corpus and must not be treated as a complete census.",
+  "zones": {
+    "counts": {
+      "cold": 5944,
+      "hot": 2831
+    },
+    "endorsed_hot_cutoff": 0.00014675814049093798,
+    "endorsed_hot_quantile": 0.75,
+    "opponent_cold_cutoff": -7.621973936277726e-05,
+    "opponent_cold_quantile": 0.25
+  }
+}
