@@ -22,6 +22,12 @@ unopposed, ballot or party position, noncandidate, or source unavailable. Only d
 primaries enter the candidate-versus-opponent analysis; exclusions remain in the reconciliation
 table. This prevents quotation availability from silently determining which races exist.
 
+National presidential endorsements are expanded into state and territory contests rather than
+stored as one synthetic nationwide primary. `import-2016-presidential-primaries` and
+`import-2020-presidential-primaries` ingest the official FEC election workbooks, retain every
+certified Democratic ballot option in contests containing the endorsed candidate, and attach
+the national DSA endorsement date to each resulting race.
+
 ## Source hierarchy
 
 1. Adopted platforms, programs, resolutions, constitutions, and endorsement notices.

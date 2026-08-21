@@ -15,6 +15,76 @@ class RaceRegistryTests(unittest.TestCase):
         SCRATCH_ROOT.mkdir(parents=True, exist_ok=True)
         self.addCleanup(lambda: shutil.rmtree(SCRATCH_ROOT, ignore_errors=True))
 
+    def test_dfl_primary_is_in_scope(self) -> None:
+        root = self._scenario_root("dfl")
+        self._write_csv(
+            root / "data" / "analysis" / "candidate_text_corpus.csv",
+            [
+                {
+                    "statement_key": "dfl-1",
+                    "race_id": "race-dfl",
+                    "candidate_name": "Endorsed Candidate",
+                    "election_date": "2022-08-09",
+                    "party": "Democratic-Farmer-Labor",
+                    "role": "endorsed",
+                    "evidence_status": "verified",
+                    "notes": "",
+                },
+                {
+                    "statement_key": "dfl-2",
+                    "race_id": "race-dfl",
+                    "candidate_name": "Primary Opponent",
+                    "election_date": "2022-08-09",
+                    "party": "Democratic-Farmer-Labor",
+                    "role": "opponent",
+                    "evidence_status": "verified",
+                    "notes": "",
+                },
+                {
+                    "statement_key": "dfl-mayor",
+                    "race_id": "race-dfl-mayor",
+                    "candidate_name": "Mayoral Candidate",
+                    "election_date": "2025-11-04",
+                    "party": "Democratic-Farmer-Labor",
+                    "role": "endorsed",
+                    "evidence_status": "verified",
+                    "notes": "2025-MN-MINNEAPOLIS-MAYOR",
+                },
+            ],
+        )
+        self._write_csv(
+            root / "data" / "manual" / "race_registry_resolutions_dfl.csv",
+            [
+                {
+                    "race_id": "race-dfl-mayor",
+                    "election_date": "2025-11-04",
+                    "office": "Mayor",
+                    "jurisdiction": "Minneapolis",
+                    "state": "Minnesota",
+                    "state_code": "MN",
+                    "official_election_source": "https://example.org/results",
+                    "verification_status": "verified",
+                    "notes": "Minnesota municipal contest.",
+                }
+            ],
+        )
+
+        result = build_race_registry(self._paths(root))
+        registry_rows = {
+            row["race_id"]: row for row in self._read_csv(result.registry_path)
+        }
+        registry_row = registry_rows["race-dfl"]
+
+        self.assertEqual(
+            registry_row["scope_kind"],
+            "tracked_dsa_endorsed_democratic_primary",
+        )
+        self.assertEqual(registry_row["primary_party"], "Democratic-Farmer-Labor")
+        self.assertEqual(
+            registry_rows["race-dfl-mayor"]["scope_kind"],
+            "other_corpus_race",
+        )
+
     def test_builds_registry_with_manual_hint_and_unresolved_rows(self) -> None:
         root = self._scenario_root("registry")
         self._write_csv(

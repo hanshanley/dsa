@@ -3356,8 +3356,8 @@ def _job_manifest_lookup_keys(job: CandidateDocumentJob) -> tuple[str, ...]:
 
 def _shared_source_candidates(
     queue_rows: Sequence[dict[str, str]],
-) -> dict[str, set[tuple[str, str, str]]]:
-    grouped: dict[str, set[tuple[str, str, str]]] = defaultdict(set)
+) -> dict[str, set[tuple[str, str]]]:
+    grouped: dict[str, set[tuple[str, str]]] = defaultdict(set)
     for row in queue_rows:
         source_url = (
             row.get("source_url", "").strip()
@@ -3371,7 +3371,7 @@ def _shared_source_candidates(
             continue
         try:
             grouped[canonical_source_url(source_url)].add(
-                (race_id, _identity_name(candidate_name), role)
+                (_identity_name(candidate_name), role)
             )
         except DocumentCorpusError:
             continue

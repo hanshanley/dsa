@@ -18,24 +18,29 @@ DSA feed contains **308 candidate endorsements since 2016**, after ballot initia
 excluded. Every one of the 178 endorsements that was previously absent or mis-scoped has now
 been adjudicated: 27 Democratic primaries, 37 nonpartisan primaries, 82 general-only races, and
 32 explicit noncandidate, unopposed, ballot-position, or source-unavailable cases. The canonical
-registry is now seeded from endorsements before quotation evidence and contains **511 races,
-377 in-scope Democratic primaries, and 1,503 candidates** across **134 represented state-cycles**.
-Every dated national Democratic-primary
-adjudication is represented; the Sanders presidential endorsement remains unresolved because it
-maps to many state contests rather than one national primary date.
+registry is now seeded from endorsements before quotation evidence and contains **579 races,
+454 in-scope Democratic primaries, and 2,112 candidate/race records** across **187 represented
+state-cycles**. The Sanders presidential endorsements are decomposed using the official FEC
+results workbooks into **36 state/territory primaries in 2016** and **43 in 2020**, preserving
+each certified ballot rather than treating the nomination as one national race.
 
 This is not yet a nationwide completeness claim. The local chapter crawl currently contains
 2,521 reviewable endorsement mentions from 825 live or archived pages and has produced **349
 verified in-window local endorsements**, including **103 verified Democratic primaries**. The
-The registry-first document audit now has an explicit search decision for every candidate: 587
-have extracted text, 107 are `source_unavailable`, 44 are documented `searched_not_found`, and
-765 have attempted but still unverified sources. The corpus contains 3,275 extracted documents,
-56,102 analysis segments, and 152 races with substantive text on both sides. Narrative clustering
-remains gated on the 809 unresolved attempted/not-found cases and human threshold annotation.
-Official organizational coverage now spans all 134 represented state-cycles with no unsearched
-platform rows: 359 entries are verified, 82 are documented `searched_not_found`, 1 is
-`source_unavailable`, and 104 are explicitly `not_applicable`. The extracted organizational
-corpus contains 80 documents and 4,737 clean full-platform analysis segments.
+registry-first document audit currently classifies 1,055 candidate/race records as verified,
+943 as attempted but still unverified, 44 as documented `searched_not_found`, 10 as
+`source_unavailable`, and 60 records as `not_searched`. The corpus contains 3,942 extracted
+documents, 73,584 analysis segments, and 250 races with
+substantive text on both sides. A provisional GTE multilingual UMAP/KDE analysis has been run on
+36,241 clean segments, but final narrative inference remains gated on unresolved candidate
+sources and human threshold annotation.
+
+The expanded registry also increases official organizational coverage obligations. Every row has
+now been researched: the current inventory has 435 verified entries, 154 documented
+`searched_not_found`, 12 `source_unavailable`, 157 explicitly `not_applicable`, and zero
+`not_searched` platform rows. The extracted organizational corpus currently contains 83
+documents and 4,829 clean full-platform analysis segments, including 33 state Democratic Party
+platform documents.
 
 | DSA / DSA-endorsed emphasis | Democratic platform / opponent emphasis |
 | --- | --- |

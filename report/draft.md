@@ -4,13 +4,13 @@
 
 ## Current dataset status
 
-- Registered documents: 20
-- Verified documents: 17
-- Verified DSA endorsements: 6
-- Tracked Democratic primaries: 5
-- Candidates on tracked primary ballots: 27
-- Opponents requiring comparison: 22
-- Opponents with verified first-party evidence: 3
+- Registered documents: 22
+- Verified documents: 19
+- Verified DSA endorsements: 85
+- Tracked Democratic primaries: 84
+- Candidates on tracked primary ballots: 713
+- Opponents requiring comparison: 629
+- Opponents with verified first-party evidence: 610
 - Reviewed exact excerpts: 14
 - Reviewed party-platform comparisons: 4
 - Candidate/opponent contrasts: 1
