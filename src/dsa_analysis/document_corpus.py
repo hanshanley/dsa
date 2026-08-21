@@ -6,6 +6,7 @@ import json
 import mimetypes
 import platform
 import re
+import ssl
 import subprocess
 import unicodedata
 import urllib.error
@@ -717,7 +718,11 @@ def fetch_raw_document(
         },
     )
     try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:
+        with urllib.request.urlopen(
+            request,
+            timeout=timeout,
+            context=_verified_ssl_context(),
+        ) as response:
             content = response.read()
             final_url = normalize_source_url(response.geturl())
             content_type = response.headers.get_content_type()
@@ -2925,7 +2930,11 @@ def _fetch_discovery_document(url: str) -> dict[str, str]:
         },
     )
     try:
-        with urllib.request.urlopen(request, timeout=20) as response:
+        with urllib.request.urlopen(
+            request,
+            timeout=20,
+            context=_verified_ssl_context(),
+        ) as response:
             body = response.read(2_000_000)
             content_type = response.headers.get_content_type()
             charset = response.headers.get_content_charset() or "utf-8"
@@ -2971,7 +2980,11 @@ def _query_wayback_cdx(
         f"https://web.archive.org/cdx/search/cdx?{query}",
         headers={"User-Agent": USER_AGENT, "Accept": "application/json,text/plain;q=0.8,*/*;q=0.2"},
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
+    with urllib.request.urlopen(
+        request,
+        timeout=30,
+        context=_verified_ssl_context(),
+    ) as response:
         payload = json.loads(response.read().decode("utf-8", "replace"))
     if not isinstance(payload, list) or not payload:
         return []
@@ -2992,6 +3005,12 @@ def _query_wayback_cdx(
             continue
         results.append({str(key): str(value) for key, value in row.items()})
     return results
+
+
+def _verified_ssl_context() -> ssl.SSLContext:
+    import certifi
+
+    return ssl.create_default_context(cafile=certifi.where())
 
 
 def _discovered_url_key(row: dict[str, str]) -> tuple[str, str, str]:
