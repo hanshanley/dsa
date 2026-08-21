@@ -26,6 +26,7 @@ from .organizational_context import (
 from .organizational_context_corpus import run_organizational_context_extraction_batch
 from .opponent_batches import merge_opponent_reviews, prepare_opponent_batches
 from .priorities import build_priority_queues
+from .provisional_kde import run_provisional_kde
 from .queue import build_research_queue
 from .race_registry import build_race_registry
 from .structured_leads import extract_structured_leads
@@ -195,6 +196,13 @@ def main() -> None:
         "extract-organizational-context",
         help="Extract and segment fetched official organizational documents.",
     )
+    kde_parser = subparsers.add_parser(
+        "provisional-kde",
+        help="Run provisional GTE multilingual UMAP/KDE analysis on candidate segments.",
+    )
+    kde_parser.add_argument("--batch-size", type=int, default=48)
+    kde_parser.add_argument("--max-length", type=int, default=256)
+    kde_parser.add_argument("--force-embeddings", action="store_true")
     args = parser.parse_args()
 
     if args.command == "collect":
@@ -432,3 +440,18 @@ def main() -> None:
             f"extraction_errors={result.extraction_errors}."
         )
         raise SystemExit(1 if result.extraction_errors else 0)
+    if args.command == "provisional-kde":
+        result = run_provisional_kde(
+            batch_size=args.batch_size,
+            max_length=args.max_length,
+            force_embeddings=args.force_embeddings,
+        )
+        print(
+            "Provisional KDE complete: "
+            f"segments={result.retained_segments}, "
+            f"endorsed={result.endorsed_segments}, "
+            f"opponent={result.opponent_segments}, "
+            f"dimensions={result.selected_dimensions}, "
+            f"output={result.output_directory}."
+        )
+        return
