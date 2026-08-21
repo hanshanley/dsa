@@ -402,6 +402,52 @@ class DocumentCorpusTests(unittest.TestCase):
         self.assertEqual(by_domain["janeesefordc.com"]["legacy_locators"], "Homes for All")
         self.assertEqual(by_domain["civilbeat.org"]["legacy_locators"], "Question 5")
 
+    def test_presidential_platform_expands_to_same_candidate_cycle_ballots(self) -> None:
+        roster_rows = [
+            {
+                "queue_id": "q-nh",
+                "race_id": "us-president-dem-primary-2016-nh",
+                "candidate_name": "Bernie Sanders",
+                "role": "endorsed",
+                "election_date": "2016-02-09",
+                "official_election_source": "https://example.org/nh",
+            },
+            {
+                "queue_id": "q-pr",
+                "race_id": "us-president-dem-primary-2016-pr",
+                "candidate_name": "Bernie Sanders",
+                "role": "endorsed",
+                "election_date": "2016-06-05",
+                "official_election_source": "https://example.org/pr",
+            },
+        ]
+        candidate_documents = [
+            {
+                "candidate_document_id": "bernie-platform",
+                "race_id": "us-president-dem-primary-2016-nh",
+                "candidate_name": "Bernie Sanders",
+                "role": "endorsed",
+                "election_date": "2016-02-09",
+                "source_url": "https://web.archive.org/bernie/issues",
+                "source_type": "official_campaign_platform",
+                "verification_status": "verified",
+            }
+        ]
+
+        inventory = build_candidate_source_inventory(
+            [],
+            roster_rows,
+            candidate_documents,
+        )
+
+        self.assertEqual(
+            {row["race_id"] for row in inventory},
+            {
+                "us-president-dem-primary-2016-nh",
+                "us-president-dem-primary-2016-pr",
+            },
+        )
+
     def test_discovery_queue_seeds_campaign_domain_known_docs_and_roster_context(self) -> None:
         evidence_rows = [
             {

@@ -250,6 +250,10 @@ excerpt table.
 
 ![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
+![Shared policy emphasis](../outputs/figures/text_analysis/policy_language_overlap.svg)
+
+![Shared affirmative policy mechanisms](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
+
 ![Official contrast](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
 ![Modeled topics](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
@@ -265,7 +269,10 @@ excerpt table.
   {stats["kde_opponent_fit_count"]} opponent segments
 
 The KDE remains provisional because the full-text sufficiency audit fails. It describes the
-currently recoverable segmented corpus and is not a complete-census estimate.
+currently recoverable segmented corpus and is not a complete-census estimate. The labeled
+regions are derived from the underlying segments in each locally overrepresented or shared
+high-density area; each label reports distinctive terms, an extractive representative passage,
+and candidate/cycle support.
 
 ![Provisional GTE KDE](../figures/provisional_gte_kde.png)
 
