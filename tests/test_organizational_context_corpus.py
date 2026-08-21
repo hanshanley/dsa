@@ -371,6 +371,58 @@ class OrganizationalContextCorpusTests(unittest.TestCase):
         metadata_rows = self._read_csv(paths.metadata_path)
         self.assertEqual(metadata_rows[0]["context_entry_ids"], "context-current")
 
+    def test_run_organizational_context_extraction_batch_skips_partially_stale_capture(self) -> None:
+        root = self._scenario_root("partially_superseded_context")
+        paths = self._paths(root)
+        source_url = "https://example.org/current-platform"
+        inventory_rows = [
+            self._inventory_row(
+                f"context-current-{index}",
+                state="Wisconsin",
+                state_code="WI",
+                cycle_year=str(2022 + index),
+                context_category="state_democratic_party",
+                organization_level="state",
+                organization="Wisconsin Democratic Party",
+                title="Current platform",
+                platform_type="state_party_platform",
+                source_url=source_url,
+            )
+            for index in range(2)
+        ]
+        self._write_csv(paths.inventory_path, inventory_rows)
+        self._write_csv(paths.fetch_status_path, [], [
+            "fetch_id",
+            "fetch_url",
+            "archive_url",
+            "context_entry_ids",
+            "status",
+            "http_status",
+            "content_type",
+            "retrieved_at",
+            "final_url",
+            "raw_path",
+            "sha256",
+            "error",
+        ])
+        self._write_jsonl(paths.raw_manifest_path, [])
+        self._write_fetched_document(
+            paths,
+            fetch_id="fetch-current-platform",
+            fetch_url="https://example.org/retired-platform-route",
+            context_entry_ids=(
+                "context-current-0 | context-current-1 | context-superseded"
+            ),
+            content_type="text/html",
+            suffix=".html",
+            body=b"<main><p>Workers deserve housing, healthcare, transit, education, and democratic power.</p></main>",
+        )
+
+        run_organizational_context_extraction_batch(paths)
+
+        metadata_rows = self._read_csv(paths.metadata_path)
+        self.assertEqual(metadata_rows, [])
+
     def _scenario_root(self, name: str) -> Path:
         root = SCRATCH_ROOT / name
         root.mkdir(parents=True, exist_ok=True)

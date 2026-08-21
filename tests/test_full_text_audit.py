@@ -8,6 +8,7 @@ from pathlib import Path
 from dsa_analysis.document_corpus import candidate_document_id
 from dsa_analysis.full_text_audit import (
     FullTextAuditPaths,
+    _load_corpus_rows,
     _load_registry_queue,
     build_full_text_sufficiency_audit,
 )
@@ -109,6 +110,33 @@ class FullTextAuditTests(unittest.TestCase):
         self.assertEqual(by_candidate["Casey Example"]["current_status"], "verified")
         self.assertEqual(by_candidate["Robin Example"]["current_status"], "found_unverified")
         self.assertEqual(by_candidate["Taylor Example"]["current_status"], "searched_not_found")
+
+    def test_registry_seed_without_legacy_quote_columns_is_supported(self) -> None:
+        root = self._scenario_root("registry_seed")
+        self._write_json(
+            root / "config" / "sources.json",
+            {
+                "study_start": "2016-01-01",
+                "research_cutoff": "2016-12-31",
+            },
+        )
+        paths = self._paths(root)
+        self._write_csv(
+            paths.candidate_corpus_path,
+            [
+                {
+                    "race_id": "race-1",
+                    "candidate_name": "Casey Example",
+                    "election_date": "2016-05-10",
+                    "role": "endorsed",
+                    "evidence_status": "verified",
+                }
+            ],
+        )
+
+        rows = _load_corpus_rows(paths.candidate_corpus_path, [2016])
+
+        self.assertEqual(len(rows), 1)
 
     def test_legacy_quotes_seed_actionable_queues_but_do_not_count_as_full_documents(self) -> None:
         root = self._scenario_root("manual")

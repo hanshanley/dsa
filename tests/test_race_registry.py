@@ -15,6 +15,15 @@ class RaceRegistryTests(unittest.TestCase):
         SCRATCH_ROOT.mkdir(parents=True, exist_ok=True)
         self.addCleanup(lambda: shutil.rmtree(SCRATCH_ROOT, ignore_errors=True))
 
+    def test_default_registry_seed_is_independent_of_analysis_outputs(self) -> None:
+        paths = RaceRegistryPaths.default()
+
+        self.assertEqual(
+            paths.candidate_corpus_path.name,
+            "race_registry_candidate_seed.csv",
+        )
+        self.assertEqual(paths.candidate_corpus_path.parent.name, "manual")
+
     def test_dfl_primary_is_in_scope(self) -> None:
         root = self._scenario_root("dfl")
         self._write_csv(
@@ -316,6 +325,91 @@ class RaceRegistryTests(unittest.TestCase):
         self.assertEqual(seeded["metadata_source"], "resolution_verified")
         summary = json.loads(result.summary_path.read_text(encoding="utf-8"))
         self.assertEqual(summary["national_democratic_primary_seeded_races"], 1)
+
+    def test_durable_out_of_scope_classification_overrides_candidate_party(self) -> None:
+        root = self._scenario_root("durable_out_of_scope")
+        self._write_csv(
+            root / "data" / "analysis" / "candidate_text_corpus.csv",
+            [
+                {
+                    "race_id": "race-top-two",
+                    "candidate_name": "Example Candidate",
+                    "election_date": "2024-03-05",
+                    "party": "Democratic",
+                    "role": "endorsed",
+                    "evidence_status": "verified",
+                    "notes": "California top-two primary.",
+                }
+            ],
+        )
+        self._write_csv(
+            root / "data" / "manual" / "race_registry_resolutions_test.csv",
+            [
+                {
+                    "race_id": "race-top-two",
+                    "election_date": "2024-03-05",
+                    "office": "State Assembly",
+                    "jurisdiction": "District 1",
+                    "state": "California",
+                    "state_code": "CA",
+                    "official_election_source": "https://electionresults.sos.ca.gov/",
+                    "verification_status": "verified",
+                    "notes": "Official California top-two primary results.",
+                }
+            ],
+        )
+        self._write_csv(
+            root / "data" / "manual" / "national_census_resolutions_2024.csv",
+            [
+                {
+                    "record_id": "rec-top-two",
+                    "campaign": "Example Candidate",
+                    "endorsement_election_date": "2024-11-05",
+                    "office": "State Assembly",
+                    "classification": "nonpartisan_primary",
+                    "primary_date": "2024-03-05",
+                    "primary_party": "Nonpartisan",
+                    "state": "California",
+                    "state_code": "CA",
+                    "jurisdiction": "District 1",
+                    "official_election_source": "https://electionresults.sos.ca.gov/",
+                    "opponents": "Other Candidate",
+                    "verification_status": "official",
+                    "notes": "California uses a top-two primary rather than a Democratic primary.",
+                }
+            ],
+        )
+        self._write_csv(
+            root / "data" / "processed" / "national_endorsement_archive.csv",
+            [
+                {
+                    "record_id": "rec-top-two",
+                    "campaign": "Example Candidate",
+                    "office": "State Assembly",
+                    "office_types": "State",
+                    "election_date": "2024-11-05",
+                    "endorsing_chapters": "Example",
+                    "primary_result": "Loss",
+                }
+            ],
+        )
+
+        result = build_race_registry(self._paths(root))
+        registry_row = self._read_csv(result.registry_path)[0]
+        reconciliation_row = self._read_csv(
+            root
+            / "data"
+            / "processed"
+            / "race_registry_national_endorsement_reconciliation.csv"
+        )[0]
+        summary = json.loads(result.summary_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(registry_row["scope_kind"], "other_corpus_race")
+        self.assertEqual(
+            reconciliation_row["registry_status"], "classified_out_of_scope"
+        )
+        self.assertEqual(summary["national_endorsements_absent_from_registry"], 0)
+        self.assertEqual(summary["national_endorsements_classified_out_of_scope"], 1)
 
     def test_metadata_inference_resolves_unambiguous_race_and_skips_ambiguous_conflicts(self) -> None:
         root = self._scenario_root("metadata_inference")
@@ -1363,6 +1457,10 @@ class RaceRegistryTests(unittest.TestCase):
                     )
                 )
             ),
+            scope_resolution_path=root
+            / "data"
+            / "manual"
+            / "race_scope_resolutions.csv",
         )
 
     def _write_csv(self, path: Path, rows: list[dict[str, str]]) -> None:

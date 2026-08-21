@@ -430,6 +430,7 @@ def run_organizational_context_fetch_pass(
         archive_url = row.get("archive_url", "").strip()
         try:
             capture = fetcher(fetch_url)
+            _raise_for_access_block(capture)
         except OrganizationalContextFetchError as live_error:
             if not archive_url or archive_url == fetch_url:
                 error = str(live_error)
@@ -437,6 +438,7 @@ def run_organizational_context_fetch_pass(
             else:
                 try:
                     capture = fetcher(archive_url)
+                    _raise_for_access_block(capture)
                 except OrganizationalContextFetchError as archive_error:
                     error = f"{live_error}; archive fallback failed: {archive_error}"
                     capture = None
@@ -1105,6 +1107,22 @@ def _fetch_url(url: str, *, timeout: int) -> FetchCapture:
             )
     except (urllib.error.URLError, TimeoutError, OSError) as error:
         raise OrganizationalContextFetchError(f"failed to fetch {url}: {type(error).__name__}: {error}") from error
+
+
+def _raise_for_access_block(capture: FetchCapture) -> None:
+    if capture.content_type not in {"text/html", "application/xhtml+xml"}:
+        return
+    sample = capture.content_bytes[:16_384].lower()
+    markers = (
+        b"/.well-known/sgcaptcha/",
+        b"cf-chl-",
+        b"cloudflare ray id",
+        b"<title>just a moment",
+    )
+    if any(marker in sample for marker in markers):
+        raise OrganizationalContextFetchError(
+            f"failed to fetch {capture.fetch_url}: access challenge page returned"
+        )
 
 
 def _persist_fetch_capture(raw_dir: Path, fetch_id: str, capture: FetchCapture) -> Path:

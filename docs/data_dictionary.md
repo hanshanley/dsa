@@ -40,26 +40,33 @@ chapter-year may remain unresolved.
 
 ### `data/analysis/candidate_text_corpus.csv`
 
-Committed row-level input for the reproducible text and topic graphs. It is exported from
-`data/processed/candidate_statement_evidence.csv` by
-`dsa_analysis.text_analysis._load_or_export_analysis_data`.
+Generated row-level input for the reproducible text and topic graphs. It is exported from
+`data/processed/candidate_document_analysis_segments.csv` and joined to
+`candidate_document_metadata.csv` for source provenance.
 
 Key fields:
 
-- `statement_key`, `race_id`, `candidate_name`, `election_date`, `party`, `role`
-- `evidence_status`: `verified` or `source_unavailable`
-- `topic`, `subtopic`, `stance`: reviewed codes constrained by `config/taxonomy.json`
-- `quote`: exact first-party wording
-- `source_url`, `source_type`, `published_date`, `locator`
-- `direct_opponent_name`, `notes`
+- `corpus_segment_id` and contributing `source_analysis_segment_ids`
+- aggregated `document_ids`, `candidate_names`, `race_ids`, `roles`, and election dates
+- `group` and `cycle`
+- source types, source/archive/final URLs, publication dates, and locators
+- exact `text`, token count, text hash, duplicate hash, and provenance-row count
 
-Verified duplicate quotations are deduplicated by candidate, election, role, topic, and exact
-quote. Source-unavailable rows are deduplicated by candidate, election, and role.
+Only nonempty segments with at least 20 tokens and `boilerplate_flag=false` are eligible. Exact
+text is deduplicated within endorsed/opponent group and election cycle, so a shared national
+platform is not multiplied across state races; all contributing provenance is retained.
+
+### `data/analysis/organizational_context_text_corpus.csv`
+
+Generated exact-text segment snapshot for official DSA-versus-Democratic analysis. Eligibility
+requires a full-platform category, at least 20 tokens, and no boilerplate flag. DSA National and
+state/local DSA categories form the DSA group; DNC National and state Democratic Party categories
+form the Democratic group.
 
 ### `data/analysis/model_topic_classifications.csv`
 
-Local sentence-transformer output for every verified exact quotation. It preserves the exact
-quote and source URL and adds:
+Local sentence-transformer output for every eligible candidate segment. It preserves exact text
+and aggregated candidate/race/document/source provenance and adds:
 
 - pinned model name and local device;
 - predicted CAP topic code/name;
@@ -71,7 +78,8 @@ quote and source URL and adds:
 ### `data/analysis/model_topic_validation.json`
 
 Run-level counts and diagnostics: classified/unclassified rows, threshold, low-margin rows,
-keyword agreement, and reviewed-code crosswalk agreement.
+keyword agreement, input hash, source-document count, and corpus lineage. The legacy
+quotation-level reviewed-code crosswalk is marked inapplicable to full-document segments.
 
 ### `data/analysis/primary_sticking_points.csv`
 

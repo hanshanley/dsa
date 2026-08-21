@@ -877,6 +877,50 @@ class OrganizationalContextTests(unittest.TestCase):
         self.assertEqual(status["status"], "fetched")
         self.assertEqual(status["final_url"], "https://web.archive.org/example")
 
+    def test_fetch_pass_uses_archive_after_live_access_challenge(self) -> None:
+        root = self._scenario_root("fetch_access_challenge")
+        paths = self._paths(root)
+        queue = [
+            {
+                "fetch_id": "fetch-a",
+                "fetch_url": "https://example.org/live.pdf",
+                "archive_url": "https://web.archive.org/example.pdf",
+                "context_entry_ids": "context-a",
+            }
+        ]
+        attempted_urls: list[str] = []
+
+        def fetcher(url: str) -> FetchCapture:
+            attempted_urls.append(url)
+            if url == "https://example.org/live.pdf":
+                return FetchCapture(
+                    fetch_url=url,
+                    final_url=url,
+                    retrieved_at="2026-08-20T00:00:00+00:00",
+                    content_type="text/html",
+                    content_bytes=b'<meta http-equiv="refresh" content="0;/.well-known/sgcaptcha/">',
+                    status_code=202,
+                )
+            return FetchCapture(
+                fetch_url=url,
+                final_url=url,
+                retrieved_at="2026-08-20T00:00:00+00:00",
+                content_type="application/pdf",
+                content_bytes=b"%PDF-1.7 archived platform",
+                status_code=200,
+            )
+
+        result = run_organizational_context_fetch_pass(queue, paths, fetcher=fetcher)
+
+        self.assertEqual(
+            attempted_urls,
+            ["https://example.org/live.pdf", "https://web.archive.org/example.pdf"],
+        )
+        self.assertEqual(result.fetched_urls, 1)
+        self.assertEqual(result.failed_urls, 0)
+        status = self._read_csv(result.status_path)[0]
+        self.assertEqual(status["content_type"], "application/pdf")
+
     def _scenario_root(self, name: str) -> Path:
         root = SCRATCH_ROOT / name
         root.mkdir(parents=True, exist_ok=True)

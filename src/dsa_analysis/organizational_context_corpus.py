@@ -270,6 +270,8 @@ def _load_fetched_documents(
         missing_entry_ids = [entry_id for entry_id in entry_ids if entry_id not in inventory_rows]
         if current_entry_ids:
             entry_ids = sorted(current_entry_ids)
+        elif missing_entry_ids and len(missing_entry_ids) < len(entry_ids) - len(missing_entry_ids):
+            continue
         elif missing_entry_ids and len(missing_entry_ids) != len(entry_ids):
             raise OrganizationalContextCorpusError(
                 f"{fetch_status_path.name}:{number}: unknown context_entry_ids {missing_entry_ids}"

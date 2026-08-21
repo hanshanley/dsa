@@ -1,3 +1,4 @@
+import hashlib
 import json
 import re
 from collections import Counter, defaultdict
@@ -34,7 +35,7 @@ def classify_model_topics() -> dict[str, int | float | str]:
     corpus = [
         row
         for row in read_csv(corpus_path)
-        if row["evidence_status"] == "verified" and row["quote"].strip()
+        if row["text"].strip()
     ]
     config = read_json(CONFIG_DIR / "cap_topics.json")
     topics = [
@@ -55,7 +56,7 @@ def classify_model_topics() -> dict[str, int | float | str]:
         convert_to_numpy=True,
         show_progress_bar=False,
     )
-    texts = [row["quote"] for row in corpus]
+    texts = [row["text"] for row in corpus]
     vectors = model.encode(
         texts,
         batch_size=64,
@@ -74,21 +75,23 @@ def classify_model_topics() -> dict[str, int | float | str]:
         runner_up_similarity = float(scores[second_index])
         topic = topics[best_index] if similarity >= minimum_similarity else None
         keyword_code, keyword_score = _keyword_predict(
-            source["quote"], topics, keyword_patterns
+            source["text"], topics, keyword_patterns
         )
         rows.append(
             {
-                "statement_key": source["statement_key"],
-                "race_id": source["race_id"],
-                "candidate_name": source["candidate_name"],
-                "election_date": source["election_date"],
-                "group": (
-                    "endorsed"
-                    if source["role"] in {"endorsed", "unopposed"}
-                    else "opponent"
-                ),
-                "quote": source["quote"],
-                "source_url": source["source_url"],
+                "corpus_segment_id": source["corpus_segment_id"],
+                "source_analysis_segment_ids": source["source_analysis_segment_ids"],
+                "document_ids": source["document_ids"],
+                "candidate_names": source["candidate_names"],
+                "race_ids": source["race_ids"],
+                "group": source["group"],
+                "cycle": source["cycle"],
+                "source_types": source["source_types"],
+                "source_urls": source["source_urls"],
+                "locators": source["locators"],
+                "text": source["text"],
+                "text_sha256": source["text_sha256"],
+                "provenance_row_count": source["provenance_row_count"],
                 "model_name": model_name,
                 "device": device,
                 "topic_code": str(topic.code) if topic else "",
@@ -103,20 +106,26 @@ def classify_model_topics() -> dict[str, int | float | str]:
                 "keyword_agrees": str(
                     bool(topic and keyword_code == topic.code)
                 ).lower(),
-                "reviewed_topic": source["topic"],
+                "reviewed_topic": "",
             }
         )
     write_csv(
         MODEL_OUTPUT,
         rows,
         [
-            "statement_key",
-            "race_id",
-            "candidate_name",
-            "election_date",
+            "corpus_segment_id",
+            "source_analysis_segment_ids",
+            "document_ids",
+            "candidate_names",
+            "race_ids",
             "group",
-            "quote",
-            "source_url",
+            "cycle",
+            "source_types",
+            "source_urls",
+            "locators",
+            "text",
+            "text_sha256",
+            "provenance_row_count",
             "model_name",
             "device",
             "topic_code",
@@ -140,8 +149,8 @@ def classify_model_topics() -> dict[str, int | float | str]:
         [
             "topic_code",
             "topic_name",
-            "endorsed_quotes",
-            "opponent_quotes",
+            "endorsed_segments",
+            "opponent_segments",
             "endorsed_share",
             "opponent_share",
             "difference",
@@ -161,11 +170,12 @@ def classify_model_topics() -> dict[str, int | float | str]:
         ),
         [row["topic_name"] for row in selected],
         [float(row["difference"]) for row in selected],
-        "More DSA-endorsed quotation share",
-        "More opponent quotation share",
+        "More DSA-endorsed segment share",
+        "More opponent segment share",
         (
             "Source: data/analysis/model_topic_classifications.csv; local model only; "
-            f"minimum cosine similarity {minimum_similarity:.2f}; exact quotes and URLs retained."
+            f"minimum cosine similarity {minimum_similarity:.2f}; exact segments and "
+            "provenance retained."
         ),
     )
     summary = {
@@ -176,6 +186,28 @@ def classify_model_topics() -> dict[str, int | float | str]:
         "classified_rows": sum(bool(row["topic_code"]) for row in rows),
         "unclassified_rows": sum(not row["topic_code"] for row in rows),
         "total_rows": len(rows),
+        "corpus_segments": len(corpus),
+        "source_documents": len(
+            {
+                document_id
+                for row in corpus
+                for document_id in row["document_ids"].split(" | ")
+                if document_id
+            }
+        ),
+        "input_sha256": hashlib.sha256(corpus_path.read_bytes()).hexdigest(),
+        "lineage": {
+            "input": "data/analysis/candidate_text_corpus.csv",
+            "generated_from": [
+                "data/processed/candidate_document_analysis_segments.csv",
+                "data/processed/candidate_document_metadata.csv",
+            ],
+            "unit": "eligible substantive exact-text segment",
+            "deduplication": (
+                "one exact-text segment per endorsed/opponent group and election cycle"
+            ),
+        },
+        "reviewed_crosswalk_applicable": False,
     }
     MODEL_SUMMARY.write_text(
         json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8"
@@ -271,8 +303,8 @@ def _topic_emphasis(rows: list[dict[str, str]]) -> list[dict[str, str]]:
             {
                 "topic_code": code,
                 "topic_name": name,
-                "endorsed_quotes": str(endorsed),
-                "opponent_quotes": str(opponent),
+                "endorsed_segments": str(endorsed),
+                "opponent_segments": str(opponent),
                 "endorsed_share": f"{endorsed_share:.6f}",
                 "opponent_share": f"{opponent_share:.6f}",
                 "difference": f"{endorsed_share - opponent_share:.6f}",
@@ -287,18 +319,30 @@ def _write_model_report(summary: dict, emphasis: list[dict[str, str]]) -> None:
     largest = sorted(
         emphasis, key=lambda row: abs(float(row["difference"])), reverse=True
     )[:10]
+    largest_lines = "\n".join(
+        f'- **{row["topic_name"]}:** {float(row["difference"]):+.1%} '
+        f'({row["endorsed_segments"]} endorsed-candidate segments; '
+        f'{row["opponent_segments"]} opponent segments; '
+        f'mean similarity {float(row["mean_similarity"]):.2f}; '
+        f'mean margin {float(row["mean_margin"]):.2f})'
+        for row in largest
+    )
     text = f"""# Local-model topic analysis
 
-This analysis is generated by `uv run dsa-analysis analyze-text` using the pinned local model
+This analysis is generated by `uv run dsa-analysis classify-topics` using the pinned local model
 `{summary["model_name"]}` on `{summary["device"]}`.
 
 ## Real source input
 
 - Every classified row comes from `data/analysis/candidate_text_corpus.csv`.
-- Every row retains the exact candidate quotation and source URL.
-- The model sees the quotation text; it does not generate replacement text or factual claims.
+- Every row retains exact candidate segment text plus candidate, race, document, URL, and locator
+  provenance.
+- The model sees the extracted segment text; it does not generate replacement text or factual
+  claims.
 - Full outputs, similarity scores, runner-up topics and margins are committed at
   `data/analysis/model_topic_classifications.csv`.
+- Corpus segments: {summary["corpus_segments"]:,} from {summary["source_documents"]:,} source
+  documents after shared-text provenance-aware deduplication.
 
 ## Model and taxonomy
 
@@ -307,23 +351,21 @@ This analysis is generated by `uv run dsa-analysis analyze-text` using the pinne
 - Unclassified below the {summary["minimum_similarity"]:.2f} threshold:
   {summary["unclassified_rows"]:,}
 - Rows with runner-up margin below 0.03: {summary["low_margin_rows"]:,}
-- Agreement with the existing reviewed-code crosswalk:
-  {summary["crosswalk_agreement"]:.1%} across {summary["crosswalk_rows"]:,} comparable rows.
 - Agreement with the transparent keyword baseline:
   {summary["model_keyword_agreement"]:.1%} across {summary["keyword_rows"]:,} rows with a keyword
   prediction.
 
-The crosswalk comparison is a diagnostic, not an independent gold-standard accuracy estimate.
+The legacy quotation-level reviewed-code crosswalk is not applicable to full-document segments.
 Every classification remains inspectable at row level.
 
 ## Largest modeled emphasis differences
 
-{chr(10).join(f'- **{row["topic_name"]}:** {float(row["difference"]):+.1%} ({row["endorsed_quotes"]} endorsed-candidate quotations; {row["opponent_quotes"]} opponent quotations; mean similarity {float(row["mean_similarity"]):.2f}; mean margin {float(row["mean_margin"]):.2f})' for row in largest)}
+{largest_lines}
 
 ![Model-classified policy emphasis](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
 
-Positive differences indicate a larger share of classified DSA-endorsed quotations. Negative
-differences indicate a larger share of classified opponent quotations.
+Positive differences indicate a larger share of classified DSA-endorsed segments. Negative
+differences indicate a larger share of classified opponent segments.
 
 ## Limitations
 
