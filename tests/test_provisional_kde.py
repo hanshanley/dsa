@@ -4,6 +4,7 @@ import tempfile
 from pathlib import Path
 
 from dsa_analysis.provisional_kde import (
+    _cluster_terms_look_substantive,
     _looks_like_navigation_or_form,
     balanced_kde_sample_indices,
     density_region_summaries,
@@ -13,10 +14,50 @@ from dsa_analysis.provisional_kde import (
 
 
 class ProvisionalKDETests(unittest.TestCase):
+    def test_cluster_term_gate_rejects_coherent_nonpolitical_artifacts(self) -> None:
+        self.assertFalse(
+            _cluster_terms_look_substantive(
+                ["podcast", "story", "chicago", "read", "aug"]
+            )
+        )
+        self.assertFalse(
+            _cluster_terms_look_substantive(
+                ["withdrawal", "payout", "casino", "interac", "wallet"]
+            )
+        )
+        self.assertTrue(
+            _cluster_terms_look_substantive(
+                ["housing", "tenant", "landlord", "rent", "eviction"]
+            )
+        )
+
     def test_url_encoded_questionnaire_boilerplate_is_detected(self) -> None:
         self.assertTrue(
             _looks_like_navigation_or_form(
                 "Org+Thank+you+for+your+interest+in+completing+this+questionnare."
+            )
+        )
+
+    def test_navigation_and_disclosure_fragments_are_detected(self) -> None:
+        self.assertTrue(
+            _looks_like_navigation_or_form(
+                "High School football (Opens in new window) Friday Night Drive podcast"
+            )
+        )
+        self.assertTrue(
+            _looks_like_navigation_or_form(
+                "Schedule Summary (required) Schedules attached Total number of pages"
+            )
+        )
+        self.assertTrue(
+            _looks_like_navigation_or_form(
+                "Subscribe Issues Archive Articles Podcast This is a search field"
+            )
+        )
+        self.assertTrue(_looks_like_navigation_or_form("��� ��M1�z h�M�/�$ ��"))
+        self.assertTrue(
+            _looks_like_navigation_or_form(
+                "Instant Casino Fastest Withdrawal Methods Payout Interac e-Transfer"
             )
         )
 
@@ -267,3 +308,36 @@ class ProvisionalKDETests(unittest.TestCase):
         self.assertTrue(all(row["top_terms"] for row in regions))
         self.assertTrue(all(row["representative_excerpt"] for row in regions))
         self.assertTrue(all(row.get("density_region_id") for row in rows))
+
+    def test_density_regions_cluster_in_semantic_space(self) -> None:
+        import numpy as np
+
+        rows = []
+        semantic_coordinates = []
+        for cluster, terms in enumerate(("climate energy", "tenant rent")):
+            for index in range(180):
+                rows.append(
+                    {
+                        "zone": "hot",
+                        "umap_x": index / 100,
+                        "umap_y": index / 100,
+                        "log1p_density_ratio": 1.0,
+                        "candidate_unit_id": f"{cluster}-{index}",
+                        "candidate_name": f"Candidate {cluster}-{index}",
+                        "text": f"{terms} policy language for working families",
+                        "token_count": "20",
+                    }
+                )
+                semantic_coordinates.append(
+                    [float(cluster * 10), index / 10_000]
+                )
+
+        regions = density_region_summaries(
+            rows,
+            max_regions_per_zone=2,
+            semantic_coordinates=np.array(semantic_coordinates),
+        )
+
+        self.assertEqual(len(regions), 2)
+        self.assertTrue(all(row["semantic_coherence"] > 0.9 for row in regions))
+        self.assertEqual({row["region_id"] for row in regions}, {"D1", "D2"})

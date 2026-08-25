@@ -10,7 +10,7 @@ changing its meaning. Record a page number, section heading, paragraph index, or
 - `policy_support`: supports a concrete policy or institution.
 - `policy_opposition`: rejects a concrete policy or institution.
 - `value_statement`: states a goal or principle without a policy instrument.
-- `candidate_contrast`: directly distinguishes the speaker from an opponent.
+- `candidate_contrast`: directly distinguishes the speaker from another Democrat in the primary.
 - `party_contrast`: directly distinguishes the speaker from a political organization.
 - `strategy`: describes electoral, legislative, labor, or movement strategy.
 
@@ -29,7 +29,7 @@ Use `support`, `oppose`, `mixed`, or `unclear`. Do not infer stance from topic p
 
 ## Primary sticking point
 
-A topic qualifies as an explicit sticking point only when an official candidate, opponent, or
+A topic qualifies as an explicit sticking point only when an official candidate, another Democrat, or
 debate source directly frames a disagreement. Analyst-coded divergence is reported separately.
 
 ## Reviewer checklist

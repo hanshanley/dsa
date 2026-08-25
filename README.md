@@ -14,7 +14,7 @@
 
 ## What this project asks
 
-How do DSA-endorsed candidates describe politics differently from the Democrats they face in
+How do DSA-endorsed candidates describe politics differently from other Democrats in the same
 primaries—and where do they speak in similar terms?
 
 This repository builds an auditable national dataset of DSA endorsements, reconstructs the
@@ -29,22 +29,22 @@ recorded as missing; it is never interpreted as a candidate holding no position.
 ## Semantic map
 
 <p align="center">
-  <img src="figures/provisional_gte_kde.png" width="1200" alt="Semantic map comparing DSA-endorsed candidate and Democratic primary opponent campaign language">
+  <img src="figures/provisional_gte_kde.png" width="1200" alt="Semantic map comparing DSA-endorsed candidates and other Democrats">
 </p>
 
-The map embeds **38,139 deduplicated campaign-text passages** with
+The map embeds **36,657 deduplicated campaign-text passages** with
 [`Alibaba-NLP/gte-multilingual-base`](https://huggingface.co/Alibaba-NLP/gte-multilingual-base).
 Nearby points contain semantically similar language. Red regions are denser among DSA-endorsed
-candidate texts, blue regions among opponents, and gold regions are common to both groups.
+candidate texts, blue regions among other Democrats, and gold regions are common to both groups.
 
 The strongest recurring distinctions are:
 
-- **DSA-overrepresented:** climate and fossil-fuel language; tenants, landlords, rent, housing,
-  and prisons.
-- **Opponent-overrepresented:** development, schools, residents, and council governance;
-  national Democratic debate language centered on Trump and presidential candidates.
-- **Shared high-density language:** health-care costs, taxes, insurance, abortion, policing,
-  public safety, and local councils.
+- **DSA-overrepresented:** tenants, landlords, rent, eviction, and housing as a right; movement,
+  socialist, progressive-left, and coalition language.
+- **Other-Democrat-overrepresented:** agriculture, farms, food systems, and land preservation;
+  housing and transit framed through development and administrative delivery.
+- **Shared high-density language:** schools, students, taxes, and public funding; policing,
+  violence, crime, mental health, and community resources.
 
 The cards use source-attributed passages selected for both topical relevance and proximity to
 each region's semantic center. The two-dimensional projection is for visualization; density is
@@ -53,12 +53,12 @@ estimated in the selected 10-dimensional representation.
 ## What the campaigns emphasize
 
 <p align="center">
-  <img src="outputs/figures/text_analysis/policy_language_difference.svg" width="1100" alt="Comparison of policy-language prevalence in DSA-endorsed and opponent campaign documents">
+  <img src="outputs/figures/text_analysis/policy_language_difference.svg" width="1100" alt="Comparison of policy-language prevalence in DSA-endorsed and other Democratic campaign documents">
 </p>
 
 The clearest language pattern is not simply “left versus moderate.” DSA-endorsed campaigns more
 often foreground **rights, class, workers, unions, tenants, rent, and universal public
-programs**. Opponents more often foreground **business, small business, technology, markets,
+programs**. Other Democrats more often foreground **business, small business, technology, markets,
 training, and administrative delivery**.
 
 These are document-level mention rates. A term appearing more often indicates greater emphasis,
@@ -67,7 +67,7 @@ not necessarily endorsement.
 ## Where the agendas overlap
 
 <p align="center">
-  <img src="outputs/figures/text_analysis/policy_language_overlap.svg" width="1050" alt="Issues discussed by both DSA-endorsed candidates and Democratic primary opponents">
+  <img src="outputs/figures/text_analysis/policy_language_overlap.svg" width="1050" alt="Issues discussed by both DSA-endorsed candidates and other Democrats">
 </p>
 
 Both groups devote substantial attention to health care, workers, business, affordable housing,
@@ -92,7 +92,7 @@ Candidate rhetoric is analyzed separately from organizational platforms. The off
 contains DSA national and state/local programs alongside DNC and state Democratic Party
 platforms.
 
-| DSA / DSA-endorsed emphasis | Democratic platform / opponent emphasis |
+| DSA / DSA-endorsed emphasis | Democratic platform / other-Democrat emphasis |
 | --- | --- |
 | Housing as a right; tenants; rent control; social and public housing | Housing supply, development, and administrative delivery |
 | Single payer and Medicare for All | Public-option and incremental coverage mechanisms |
@@ -120,7 +120,7 @@ platforms.
 
 The corpus spans 2016–2026. It is broad enough for descriptive analysis of the recovered
 materials, but it is **not a claim of complete nationwide text coverage**. The audit retains
-891 retryable candidate-source gaps, and 19 opponent records still lack verified first-party
+891 retryable candidate-source gaps, and 19 other-Democrat records still lack verified first-party
 evidence. See [`docs/completeness.md`](docs/completeness.md) for the completion criteria and
 [`data/processed/full_text_audit_summary.json`](data/processed/full_text_audit_summary.json) for
 the machine-readable audit.

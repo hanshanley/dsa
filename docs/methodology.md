@@ -3,7 +3,7 @@
 ## Research question
 
 What do DSA and the Democratic Party officially say, and what issues distinguish
-DSA-endorsed candidates from their opponents in Democratic primaries?
+DSA-endorsed candidates from other Democrats in the same primaries?
 
 ## Scope
 
@@ -19,7 +19,7 @@ The canonical denominator is endorsement-first. Verified manual endorsements and
 DSA National records seed races before any quotation or campaign-document evidence is attached.
 National records are classified as Democratic primary, nonpartisan primary, general-only,
 unopposed, ballot or party position, noncandidate, or source unavailable. Only dated Democratic
-primaries enter the candidate-versus-opponent analysis; exclusions remain in the reconciliation
+primaries enter the candidate-group comparison; exclusions remain in the reconciliation
 table. This prevents quotation availability from silently determining which races exist.
 
 National presidential endorsements are expanded into state and territory contests rather than
@@ -47,7 +47,7 @@ candidate.
 
 Primary sticking points have two separate measures:
 
-- **Explicit conflict:** a candidate or opponent directly contrasts positions, attacks a policy,
+- **Explicit conflict:** a candidate or another Democrat directly contrasts positions, attacks a policy,
   or rebuts the other in an official source.
 - **Coded divergence:** reviewed primary-source passages support materially different policy
   instruments or scopes even without a direct attack.
@@ -77,7 +77,7 @@ corpora have been rebuilt.
 The command creates two text comparisons:
 
 1. official full-platform DSA segments versus Democratic Party platform segments; and
-2. full-document DSA-endorsed candidate segments versus Democratic-primary opponent segments.
+2. full-document DSA-endorsed candidate passages versus passages from other Democrats.
 
 Eligible segments contain at least 20 tokens and exclude flagged boilerplate. Exact candidate
 text is counted once per group and cycle, preventing shared national platforms from being
@@ -97,7 +97,7 @@ gap of at least 0.5 percentage points. Features common to both groups are report
 the shared-emphasis table and paired-bar figure using the smaller of the two group prevalences;
 shared mention is treated as agenda overlap, not automatically as policy agreement.
 
-A stricter within-primary agreement signal requires both an endorsed candidate and an opponent
+A stricter within-primary agreement signal requires both an endorsed candidate and another Democrat
 to use the same concrete normalized mechanism phrase, such as `rent_control`,
 `medicare_for_all`, or `public_option`. Mentions preceded by explicit oppositional or negating
 language are excluded. This remains a high-precision language signal rather than a complete
@@ -143,7 +143,7 @@ rules. Documents are stored with content-addressed raw provenance and determinis
 segmented; transcriptless audio/video and unscoped multi-candidate documents are excluded.
 
 The comparison denominator is the canonical nationwide registry of tracked DSA-endorsed
-Democratic primaries and every identified certified Democratic opponent. Candidate documents
+Democratic primaries and every identified certified Democratic candidate. Candidate documents
 remain separate from the organizational-context corpus, which contains DNC platforms, DSA
 national programs or resolutions, state Democratic Party platforms, and official local DSA
 electoral documents. State-cycle rows explicitly distinguish verified full platforms,
@@ -178,7 +178,7 @@ Narrative lift and density comparisons use candidate/race-balanced weights becau
 contribute unequal text volumes. UMAP dimensions 2, 5, 10, 20, and 30 are compared using
 trustworthiness before KDE dimensionality is fixed. Hot/cold-zone TF-IDF and NPMI characterize
 the resulting density contrast; the two-dimensional projection is visualization only.
-For interpretability, DSA-overrepresented, opponent-overrepresented, and shared high-joint-density
+For interpretability, DSA-overrepresented, other-Democrat-overrepresented, and shared high-joint-density
 points are grouped spatially within the visualization. Each displayed region is labeled with
 locally distinctive terms, an extractive representative source passage, segment count, and
 unique candidate count. These labels summarize underlying text and do not change the

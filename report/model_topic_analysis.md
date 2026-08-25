@@ -31,21 +31,21 @@ Every classification remains inspectable at row level.
 
 ## Largest modeled emphasis differences
 
-- **Labor and employment:** +2.3% (341 endorsed-candidate segments; 273 opponent segments; mean similarity 0.30; mean margin 0.08)
-- **Health:** -1.8% (441 endorsed-candidate segments; 1144 opponent segments; mean similarity 0.33; mean margin 0.10)
-- **Civil rights and liberties:** +1.2% (359 endorsed-candidate segments; 488 opponent segments; mean similarity 0.30; mean margin 0.05)
-- **Defense and veterans:** -1.1% (86 endorsed-candidate segments; 356 opponent segments; mean similarity 0.28; mean margin 0.07)
-- **Business, commerce and consumers:** -0.9% (59 endorsed-candidate segments; 259 opponent segments; mean similarity 0.28; mean margin 0.05)
-- **Energy:** +0.9% (273 endorsed-candidate segments; 381 opponent segments; mean similarity 0.33; mean margin 0.07)
-- **Macroeconomics:** -0.7% (66 endorsed-candidate segments; 248 opponent segments; mean similarity 0.27; mean margin 0.06)
-- **Social welfare:** +0.7% (568 endorsed-candidate segments; 974 opponent segments; mean similarity 0.31; mean margin 0.05)
-- **Transportation:** -0.7% (386 endorsed-candidate segments; 861 opponent segments; mean similarity 0.33; mean margin 0.09)
-- **Law, crime and justice:** -0.7% (1097 endorsed-candidate segments; 2221 opponent segments; mean similarity 0.32; mean margin 0.09)
+- **Labor and employment:** +2.3% (341 endorsed-candidate segments; 273 other-Democrat segments; mean similarity 0.30; mean margin 0.08)
+- **Health:** -1.8% (441 endorsed-candidate segments; 1144 other-Democrat segments; mean similarity 0.33; mean margin 0.10)
+- **Civil rights and liberties:** +1.2% (359 endorsed-candidate segments; 488 other-Democrat segments; mean similarity 0.30; mean margin 0.05)
+- **Defense and veterans:** -1.1% (86 endorsed-candidate segments; 356 other-Democrat segments; mean similarity 0.28; mean margin 0.07)
+- **Business, commerce and consumers:** -0.9% (59 endorsed-candidate segments; 259 other-Democrat segments; mean similarity 0.28; mean margin 0.05)
+- **Energy:** +0.9% (273 endorsed-candidate segments; 381 other-Democrat segments; mean similarity 0.33; mean margin 0.07)
+- **Macroeconomics:** -0.7% (66 endorsed-candidate segments; 248 other-Democrat segments; mean similarity 0.27; mean margin 0.06)
+- **Social welfare:** +0.7% (568 endorsed-candidate segments; 974 other-Democrat segments; mean similarity 0.31; mean margin 0.05)
+- **Transportation:** -0.7% (386 endorsed-candidate segments; 861 other-Democrat segments; mean similarity 0.33; mean margin 0.09)
+- **Law, crime and justice:** -0.7% (1097 endorsed-candidate segments; 2221 other-Democrat segments; mean similarity 0.32; mean margin 0.09)
 
 ![Model-classified policy emphasis](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
 
 Positive differences indicate a larger share of classified DSA-endorsed segments. Negative
-differences indicate a larger share of classified opponent segments.
+differences indicate a larger share of classified other-Democrat segments.
 
 ## Limitations
 

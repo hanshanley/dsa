@@ -1,9 +1,9 @@
 # Provisional GTE KDE region analysis
 
-The KDE contains **38139** passages after deduplicating repeated text
+The KDE contains **36657** passages after deduplicating repeated text
 within each candidate and election year:
-**12650** from DSA-endorsed candidates and
-**25489** from opponents. Density estimation is performed in
+**12234** from DSA-endorsed candidates and
+**24423** from other Democrats. Density estimation is performed in
 **10 dimensions**; the two-dimensional map is used only for
 visualization.
 
@@ -13,21 +13,24 @@ visualization.
 
 - **D regions** are spatial groupings among DSA-endorsed segments above the endorsed-group
   upper-quartile density-ratio cutoff.
-- **O regions** are spatial groupings among opponent segments below the opponent-group
-  lower-quartile cutoff.
+- **M regions** are semantically coherent groupings among other-Democrat passages below that
+  group's lower-quartile density-ratio cutoff.
 - **S regions** are high-joint-density areas with small absolute density differences. They
   represent semantic overlap, not proof of identical positions.
-- Terms are locally distinctive document-prevalence terms from the underlying region text.
+- Each zone is first divided into six candidate subregions in the selected 10-dimensional
+  semantic representation. Only the two subregions with the strongest combination of semantic
+  coherence, textual support, and density-ratio strength are published.
+- Terms are locally distinctive document-prevalence terms from the underlying subregion text.
   Examples are extractive source passages, not generated paraphrases.
 
 | Region | Interpretation | Passages | Candidates | Distinctive terms | Representative source text |
 | --- | --- | ---: | ---: | --- | --- |
-| D1 | DSA-overrepresented | 2323 | 167 | energy, fuel, socialist, fossil, climate | Jabari Brisport: For both our planet and our communities, we must rapidly replace fossil fuels with clean renewable energy sources. |
-| D2 | DSA-overrepresented | 840 | 124 | housing, prison, tenant, landlord, rent | Claire Valdez: Landlords have used algorithmic driven software like RealPage to collude with each other and raise rents across entire housing markets – costing tenants $3.8 billion nationwide in inflated... |
-| O1 | Opponent-overrepresented | 4912 | 380 | housing, resident, school, development, council | Seth Grimes: Residents and businesses are looking for leaders who will tame development and rework planning processes, who will build the school capacity we lack and create the transportation solutions... |
-| O2 | Opponent-overrepresented | 1461 | 108 | trump, donald, omar, harris, castro | Multi-candidate debate: HARRIS: First of all, Donald Trump came in making a whole lot of promises to working people that he did not keep. |
-| S1 | Shared high-density | 2032 | 381 | tax, healthcare, cost, insurance, abortion | Ashley Hartmeier-Prigg: Affordability & Cost of Living: Expand affordable housing, lower health care and child care costs, and deliver tax relief for working families. |
-| S2 | Shared high-density | 2736 | 513 | police, council, marijuana, public safety, diego | Byron Sigcho-Lopez: I will fight for additional reforms and oversight to restore public trust and prioritize public safety, including establishing the Civilian Police Accountability Council (CPAC). |
+| D1 | DSA-overrepresented | 314 | 76 | housing, tenant, landlord, rent, eviction | Claire Valdez: Second: Housing as a human right: For far too long, real estate has had a stranglehold on New Y ork City, and the result has been the violent eviction and displacement of our Black and... |
+| D2 | DSA-overrepresented | 700 | 121 | socialist, think, really, i'm, progressive | Paul Prescod: Other kinds of movement, DSA, that broad coalition, I think that's a strength that I'm bringing to this, is having a foot firmly in the world of the left, progressive left broadly speaking... |
+| M1 | Other-Democrat-overrepresented | 569 | 75 | food, reserve, farm, agricultural, agriculture | Chris Wilhelm: The agricultural reserve is one of the things that makes Montgomery County unique, so the county government should be supporting career pathways to promote agriculture and food service. |
+| M2 | Other-Democrat-overrepresented | 2106 | 275 | housing, transit, affordable housing, transportation, development | Fatmata Barrie: ...Ride On routes and frequency as well as fight for public transportation fiscal notes to be added for new developments so we as county legislators are ensuring new housing and transit... |
+| S1 | Shared high-density | 729 | 210 | school, student, education, tax, funding | Erika Uyterhoeven: ...and labor unions in the inside-outside campaign that won the Student Opportunity Act and its $1.5 billion in new funding for public schools, targeted at special education, English... |
+| S2 | Shared high-density | 486 | 198 | police, violence, mental, crime, enforcement | JuanPablo Prieto: We do not want to overpolice our communities, instead we want to bring resources to combat the root of crime including food assistance, access to good paying jobs, and mental health... |
 
 ## Limits
 

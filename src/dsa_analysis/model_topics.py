@@ -171,7 +171,7 @@ def classify_model_topics() -> dict[str, int | float | str]:
         [row["topic_name"] for row in selected],
         [float(row["difference"]) for row in selected],
         "More DSA-endorsed segment share",
-        "More opponent segment share",
+        "More other-Democrat segment share",
         (
             "Source: data/analysis/model_topic_classifications.csv; local model only; "
             f"minimum cosine similarity {minimum_similarity:.2f}; exact segments and "
@@ -322,7 +322,7 @@ def _write_model_report(summary: dict, emphasis: list[dict[str, str]]) -> None:
     largest_lines = "\n".join(
         f'- **{row["topic_name"]}:** {float(row["difference"]):+.1%} '
         f'({row["endorsed_segments"]} endorsed-candidate segments; '
-        f'{row["opponent_segments"]} opponent segments; '
+        f'{row["opponent_segments"]} other-Democrat segments; '
         f'mean similarity {float(row["mean_similarity"]):.2f}; '
         f'mean margin {float(row["mean_margin"]):.2f})'
         for row in largest
@@ -365,7 +365,7 @@ Every classification remains inspectable at row level.
 ![Model-classified policy emphasis](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
 
 Positive differences indicate a larger share of classified DSA-endorsed segments. Negative
-differences indicate a larger share of classified opponent segments.
+differences indicate a larger share of classified other-Democrat segments.
 
 ## Limitations
 

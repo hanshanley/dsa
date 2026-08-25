@@ -14,7 +14,7 @@ registry and recoverable full-text corpus.
 - Official-platform segments after exact-text deduplication: 5733
 - Unique source-supported primary contrasts: 1251
 
-Exact candidate segment text is counted once per endorsed/opponent group and election cycle.
+Exact candidate passage text is counted once per DSA-endorsed/other-Democrat group and election cycle.
 This prevents a shared national platform from being multiplied across state races while retaining
 all contributing candidates, races, source documents, URLs, and locators in the snapshot.
 
@@ -37,7 +37,7 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 - **TF-IDF:** mean unigram TF-IDF by candidate group.
 - **MPIF:** weighted log-odds z-scores with an informative Dirichlet prior, using unigrams and
   adjacent bigrams. Positive values favor DSA-endorsed candidates or DSA; negative values favor
-  Democratic opponents or the DNC.
+  other Democrats or the DNC.
 - **Document prevalence:** difference in the share of candidate/election documents containing a
   normalized feature. This prevents a few candidates who repeat a phrase many times from
   dominating the result.
@@ -66,7 +66,7 @@ all contributing candidates, races, source documents, URLs, and locators in the 
   4%), and rent
   (20% versus
   13%).
-- **Business and development:** opponent documents more often mention business
+- **Business and development:** other-Democrat documents more often mention business
   (39% versus
   27%), small business
   (20% versus
@@ -86,7 +86,7 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 ![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
 The candidate comparison especially distinguishes rights-based housing and labor language
-(`rent`, `human right`, `rent control`, `social housing`, `living wage`) from opponent language
+(`rent`, `human right`, `rent control`, `social housing`, `living wage`) from other-Democrat language
 that more often emphasizes business, opportunity, public-option mechanisms, technology,
 training, and border administration.
 
@@ -107,8 +107,8 @@ to determine agreement, disagreement, or different proposed means.
 
 ## Shared affirmative mechanism language within primaries
 
-As a stricter agreement-oriented check, we identify races where an endorsed candidate and an
-opponent both use the same concrete normalized policy-mechanism phrase. Mentions preceded by
+As a stricter agreement-oriented check, we identify races where an endorsed candidate and
+another Democrat both use the same concrete normalized policy-mechanism phrase. Mentions preceded by
 oppositional or negating language are excluded. The most common shared mechanisms are:
 
 - **Affordable Housing:** 50 races
@@ -130,7 +130,7 @@ review.
 
 - More common across DSA-endorsed candidate documents:
   Fight, Volunteer, Human Right, Justice, Corporate, Platform, Working Class, Worker.
-- More common across opponent documents:
+- More common across other-Democrat documents:
   Business, Challenge, Small Business, His, Veteran, Technology, Success, Today.
 
 When MPIF and document prevalence point in the same direction, the result is less likely to be
@@ -150,17 +150,17 @@ The largest differences in the kinds of real sources recovered are:
 - **Official Campaign Page:** -1.4%
 
 Positive values indicate a larger share of DSA-endorsed excerpts; negative values indicate a
-larger share of opponent excerpts.
+larger share of other-Democrat excerpts.
 
 ![Source type difference](../outputs/figures/text_analysis/source_type_difference.svg)
 
 ## Evidence volume by election cycle
 
-- **2020:** 2001 endorsed-candidate and 7449 opponent segments
-- **2026:** 2369 endorsed-candidate and 6922 opponent segments
-- **2018:** 1306 endorsed-candidate and 2505 opponent segments
-- **2022:** 2014 endorsed-candidate and 1624 opponent segments
-- **2024:** 1928 endorsed-candidate and 1647 opponent segments
+- **2020:** 2001 DSA-endorsed and 7449 other-Democrat passages
+- **2026:** 2369 DSA-endorsed and 6922 other-Democrat passages
+- **2018:** 1306 DSA-endorsed and 2505 other-Democrat passages
+- **2022:** 2014 DSA-endorsed and 1624 other-Democrat passages
+- **2024:** 1928 DSA-endorsed and 1647 other-Democrat passages
 
 ![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
 
@@ -185,7 +185,7 @@ The denominator is the registry-wide 1927 candidate/race records summarized in
 `data/processed/full_text_queue_summary.csv`; only `verified` is counted as extracted.
 
 - **Endorsed:** 281 candidate/race records with extracted text, 150 without extracted text (65.2% extracted).
-- **Opponent:** 751 candidate/race records with extracted text, 745 without extracted text (50.2% extracted).
+- **Other Democrats:** 751 candidate/race records with extracted text, 745 without extracted text (50.2% extracted).
 
 ## Limitations
 
