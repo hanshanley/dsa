@@ -13,7 +13,7 @@ candidacy. `endorsement_source_document_id` must reference `documents.csv`.
 ## `race_candidates.csv`
 
 One row for every candidate on a tracked Democratic-primary ballot. The endorsed candidate and
-all opponents are retained, including withdrawn candidates who remained on the certified ballot.
+all other Democrats are retained, including withdrawn candidates who remained on the certified ballot.
 `evidence_status` tracks whether first-party policy material has been reviewed for that person.
 
 ## `excerpts.csv`
@@ -23,7 +23,7 @@ must be `true` before the excerpt can support final analysis.
 
 ## `contrasts.csv`
 
-One row per candidate/opponent/topic comparison. `contrast_type` is `explicit_conflict` or
+One row per endorsed-candidate/other-Democrat/topic comparison. `contrast_type` is `explicit_conflict` or
 `coded_divergence`; both sides require excerpt IDs unless the relationship is
 `insufficient_evidence`.
 
@@ -53,7 +53,7 @@ Key fields:
 - exact `text`, token count, text hash, duplicate hash, and provenance-row count
 
 Only nonempty segments with at least 20 tokens and `boilerplate_flag=false` are eligible. Exact
-text is deduplicated within endorsed/opponent group and election cycle, so a shared national
+text is deduplicated within endorsed/other-Democrat group and election cycle, so a shared national
 platform is not multiplied across state races; all contributing provenance is retained.
 
 ### `data/analysis/organizational_context_text_corpus.csv`
@@ -83,5 +83,5 @@ quotation-level reviewed-code crosswalk is marked inapplicable to full-document 
 
 ### `data/analysis/primary_sticking_points.csv`
 
-Committed, deduplicated snapshot of the source-supported candidate/opponent contrast table used
+Committed, deduplicated snapshot of the source-supported endorsed/other-Democrat contrast table used
 for topic and election-cycle charts.

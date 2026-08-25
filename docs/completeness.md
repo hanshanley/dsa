@@ -11,8 +11,8 @@ January 1, 2016:
 3. Every endorsed candidacy is classified by election type. Partisan Democratic primaries,
    nonpartisan primaries, blanket primaries, and top-two primaries remain distinct.
 4. Every candidate appearing on the same certified primary ballot is recorded, not only the
-   winner, runner-up, incumbent, or best-funded opponent.
-5. The endorsed candidate and every opponent have reviewed first-party policy evidence or an
+   winner, runner-up, incumbent, or best-funded other Democrat.
+5. The endorsed candidate and every other Democrat in the primary have reviewed first-party policy evidence or an
    explicit `source_unavailable` result after documented searching.
 6. Every reported sticking point links both sides' exact words and distinguishes an explicit
    campaign conflict from an analyst-coded policy difference.

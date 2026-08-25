@@ -1338,7 +1338,7 @@ registry and recoverable full-text corpus.
 - Official-platform segments after exact-text deduplication: {summary["official_segments"]}
 - Unique source-supported primary contrasts: {summary["sticking_points"]}
 
-Exact candidate segment text is counted once per endorsed/opponent group and election cycle.
+Exact candidate passage text is counted once per DSA-endorsed/other-Democrat group and election cycle.
 This prevents a shared national platform from being multiplied across state races while retaining
 all contributing candidates, races, source documents, URLs, and locators in the snapshot.
 
@@ -1361,7 +1361,7 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 - **TF-IDF:** mean unigram TF-IDF by candidate group.
 - **MPIF:** weighted log-odds z-scores with an informative Dirichlet prior, using unigrams and
   adjacent bigrams. Positive values favor DSA-endorsed candidates or DSA; negative values favor
-  Democratic opponents or the DNC.
+  other Democrats or the DNC.
 - **Document prevalence:** difference in the share of candidate/election documents containing a
   normalized feature. This prevents a few candidates who repeat a phrase many times from
   dominating the result.
@@ -1390,7 +1390,7 @@ all contributing candidates, races, source documents, URLs, and locators in the 
   {float(prevalence_by_feature["green_new_deal"]["opponent_share"]):.0%}), and rent
   ({float(prevalence_by_feature["rent"]["endorsed_share"]):.0%} versus
   {float(prevalence_by_feature["rent"]["opponent_share"]):.0%}).
-- **Business and development:** opponent documents more often mention business
+- **Business and development:** other-Democrat documents more often mention business
   ({float(prevalence_by_feature["business"]["opponent_share"]):.0%} versus
   {float(prevalence_by_feature["business"]["endorsed_share"]):.0%}), small business
   ({float(prevalence_by_feature["small_business"]["opponent_share"]):.0%} versus
@@ -1410,7 +1410,7 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 ![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
 The candidate comparison especially distinguishes rights-based housing and labor language
-(`rent`, `human right`, `rent control`, `social housing`, `living wage`) from opponent language
+(`rent`, `human right`, `rent control`, `social housing`, `living wage`) from other-Democrat language
 that more often emphasizes business, opportunity, public-option mechanisms, technology,
 training, and border administration.
 
@@ -1431,8 +1431,8 @@ to determine agreement, disagreement, or different proposed means.
 
 ## Shared affirmative mechanism language within primaries
 
-As a stricter agreement-oriented check, we identify races where an endorsed candidate and an
-opponent both use the same concrete normalized policy-mechanism phrase. Mentions preceded by
+As a stricter agreement-oriented check, we identify races where an endorsed candidate and
+another Democrat both use the same concrete normalized policy-mechanism phrase. Mentions preceded by
 oppositional or negating language are excluded. The most common shared mechanisms are:
 
 {chr(10).join(f'- **{_label(row["feature"])}:** {row["race_count"]} races' for row in strongest_shared_mechanisms)}
@@ -1447,7 +1447,7 @@ review.
 
 - More common across DSA-endorsed candidate documents:
   {", ".join(_label(row["feature"]) for row in prevalence_positive)}.
-- More common across opponent documents:
+- More common across other-Democrat documents:
   {", ".join(_label(row["feature"]) for row in prevalence_negative)}.
 
 When MPIF and document prevalence point in the same direction, the result is less likely to be
@@ -1460,13 +1460,13 @@ The largest differences in the kinds of real sources recovered are:
 {chr(10).join(f'- **{_label(row["source_type"])}:** {float(row["difference"]):+.1%}' for row in source_type_differences)}
 
 Positive values indicate a larger share of DSA-endorsed excerpts; negative values indicate a
-larger share of opponent excerpts.
+larger share of other-Democrat excerpts.
 
 ![Source type difference](../outputs/figures/text_analysis/source_type_difference.svg)
 
 ## Evidence volume by election cycle
 
-{chr(10).join(f'- **{row["cycle"]}:** {row["endorsed_segments"]} endorsed-candidate and {row["opponent_segments"]} opponent segments' for row in largest_volume_cycles)}
+{chr(10).join(f'- **{row["cycle"]}:** {row["endorsed_segments"]} DSA-endorsed and {row["opponent_segments"]} other-Democrat passages' for row in largest_volume_cycles)}
 
 ![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
 
@@ -1486,7 +1486,7 @@ records.
 The denominator is the registry-wide {coverage_total} candidate/race records summarized in
 `data/processed/full_text_queue_summary.csv`; only `verified` is counted as extracted.
 
-{chr(10).join(f'- **{_label(row["group"])}:** {row["candidate_race_records_with_extracted_text"]} candidate/race records with extracted text, {row["candidate_race_records_without_extracted_text"]} without extracted text ({float(row["extracted_share"]):.1%} extracted).' for row in coverage_rows)}
+{chr(10).join(f'- **{"Other Democrats" if row["group"] == "opponent" else _label(row["group"])}:** {row["candidate_race_records_with_extracted_text"]} candidate/race records with extracted text, {row["candidate_race_records_without_extracted_text"]} without extracted text ({float(row["extracted_share"]):.1%} extracted).' for row in coverage_rows)}
 
 ## Limitations
 
@@ -1515,7 +1515,7 @@ def _policy_language_chart(rows: list[dict[str, str]]) -> None:
         ),
         (
             "Business and economic development",
-            "Opponents more often frame policy through business, technology, markets, and training.",
+            "Other Democrats more often frame policy through business, technology, markets, and training.",
             ["business", "small_business", "technology", "market", "training"],
         ),
     ]
@@ -1561,13 +1561,13 @@ def _policy_language_chart(rows: list[dict[str, str]]) -> None:
         _text(
             68,
             168,
-            "opponents foreground business and economic-development language.",
+            "other Democrats foreground business and economic-development language.",
             color=DARK,
             size="14px",
             weight="700",
         ),
         _legend(876, 135, DSA_RED, "DSA-endorsed"),
-        _legend(1042, 135, DEMOCRATIC_BLUE, "Opponents"),
+        _legend(1042, 135, DEMOCRATIC_BLUE, "Other Democrats"),
     ]
     card_y = card_top
     for section_index, (title, takeaway, section_rows) in enumerate(selected_sections):
@@ -1698,7 +1698,7 @@ def _policy_overlap_chart(rows: list[dict[str, str]]) -> None:
             weight="700",
         ),
         _legend(870, 138, DSA_RED, "DSA-endorsed"),
-        _legend(1038, 138, DEMOCRATIC_BLUE, "Opponents"),
+        _legend(1038, 138, DEMOCRATIC_BLUE, "Other Democrats"),
     ]
     for tick in range(6):
         value = maximum * tick / 5
@@ -1949,7 +1949,7 @@ def _volume_cycle_chart(rows: list[dict[str, str]]) -> None:
     body.extend(
         [
             _legend(800, 72, DSA_RED, "DSA-endorsed"),
-            _legend(945, 72, DEMOCRATIC_BLUE, "Democratic opponents"),
+            _legend(945, 72, DEMOCRATIC_BLUE, "Other Democrats"),
             _svg_footer(
                 width,
                 height,
@@ -1969,7 +1969,7 @@ def _source_type_chart(rows: list[dict[str, str]]) -> None:
         [_label(row["source_type"]) for row in selected],
         [float(row["difference"]) for row in selected],
         "More DSA-endorsed segments",
-        "More opponent segments",
+        "More other-Democrat passages",
         (
             "Source: data/analysis/candidate_text_corpus.csv; source types and exact "
             "source provenance are retained for every segment."
@@ -2038,11 +2038,11 @@ def _candidate_tfidf_chart(rows: list[dict[str, str]]) -> None:
     _diverging_svg(
         FIGURE_DIR / "candidate_tfidf_terms.svg",
         "Distinctive TF-IDF terms",
-        "Mean document TF-IDF: DSA-endorsed candidates versus Democratic opponents",
+        "Mean document TF-IDF: DSA-endorsed candidates versus other Democrats",
         labels,
         values,
         "DSA-endorsed",
-        "Democratic opponents",
+        "Other Democrats",
     )
 
 
@@ -2107,7 +2107,7 @@ def _topic_share_chart(rows: list[dict[str, str]]) -> None:
     body.extend(
         [
             _legend(770, 70, DSA_RED, "DSA-endorsed"),
-            _legend(930, 70, DEMOCRATIC_BLUE, "Democratic opponents"),
+            _legend(930, 70, DEMOCRATIC_BLUE, "Other Democrats"),
             _svg_footer(width, height, "Source: verified first-party candidate statements; duplicate queue copies removed."),
         ]
     )
@@ -2119,7 +2119,7 @@ def _similarity_chart(rows: list[dict[str, str]]) -> None:
     _horizontal_svg(
         FIGURE_DIR / "topic_cosine_similarity.svg",
         "Language similarity within issues",
-        "Cosine similarity between endorsed-candidate and opponent wording",
+        "Cosine similarity between DSA-endorsed and other-Democrat wording",
         [_label(row["topic"]) for row in selected],
         [float(row["cosine_similarity"]) for row in selected],
         DEMOCRATIC_BLUE,
@@ -2142,14 +2142,14 @@ def _topic_difference_chart(rows: list[dict[str, str]]) -> None:
     _diverging_svg(
         FIGURE_DIR / "topic_emphasis_difference.svg",
         "Difference in issue emphasis",
-        "Share of verified excerpts: DSA-endorsed candidates minus Democratic opponents",
+        "Share of verified excerpts: DSA-endorsed candidates minus other Democrats",
         [_label(row["topic"]) for row in selected],
         [
             float(row["endorsed_share"]) - float(row["opponent_share"])
             for row in selected
         ],
         "More endorsed-candidate emphasis",
-        "More opponent emphasis",
+        "More other-Democrat emphasis",
         (
             "Source: candidate_statement_evidence.csv topic codes; verified exact quotes; "
             "shares use deduplicated excerpts within each group."
@@ -2168,7 +2168,7 @@ def _prevalence_chart(rows: list[dict[str, str]]) -> None:
         [_label(row["feature"]) for row in selected],
         [float(row["difference"]) for row in selected],
         "More DSA-endorsed documents",
-        "More opponent documents",
+        "More other-Democrat documents",
     )
 
 
@@ -2204,7 +2204,10 @@ def _coverage_chart(rows: list[dict[str, str]]) -> None:
         unavailable = int(row["candidate_race_records_without_extracted_text"])
         verified_width = plot_width * verified / maximum
         unavailable_width = plot_width * unavailable / maximum
-        body.append(_text(plot_left - 24, y + 20, _label(row["group"]), "end", DARK, "14px", "700"))
+        group_label = (
+            "Other Democrats" if row["group"] == "opponent" else _label(row["group"])
+        )
+        body.append(_text(plot_left - 24, y + 20, group_label, "end", DARK, "14px", "700"))
         body.append(_rect(plot_left, y, verified_width, 30, DSA_RED))
         body.append(_rect(plot_left + verified_width, y, unavailable_width, 30, "#C9CED3"))
         if verified_width > 45:

@@ -111,12 +111,12 @@ excerpt table.
 ## 6. Provisional KDE
 
 - Status: **provisional**
-- Retained segments: 38139
-- Candidates represented: 244 endorsed and
-  471 opponents
+- Retained segments: 36657
+- Candidates represented: 242 endorsed and
+  464 other Democrats
 - Selected UMAP dimensions: 10
 - Density-fit sample: 5000 endorsed and
-  5000 opponent segments
+  5000 other-Democrat segments
 
 The KDE remains provisional because the full-text sufficiency audit fails. It describes the
 currently recoverable segmented corpus and is not a complete-census estimate. The labeled
@@ -183,6 +183,6 @@ frequency estimates and their row counts are not corpus totals.
 
 ## Audit warnings
 
-- 19 opponent records still need verified first-party evidence
+- 19 other-Democrat records still need verified first-party evidence
 
 Generated 2026-08-24. See `docs/methodology.md` for evidence rules.

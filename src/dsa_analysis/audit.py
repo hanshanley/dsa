@@ -225,7 +225,7 @@ def validate(strict: bool = False) -> AuditResult:
         )
         if incomplete_opponents:
             warnings.append(
-                f"{incomplete_opponents} opponent records still need verified first-party evidence"
+                f"{incomplete_opponents} other-Democrat records still need verified first-party evidence"
             )
     else:
         _validate_statement_evidence(errors, warnings, taxonomy)

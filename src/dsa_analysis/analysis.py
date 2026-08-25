@@ -263,10 +263,10 @@ excerpt table.
 - Status: **{stats["kde_status"]}**
 - Retained segments: {stats["kde_retained_segments"]}
 - Candidates represented: {stats["kde_endorsed_candidates"]} endorsed and
-  {stats["kde_opponent_candidates"]} opponents
+  {stats["kde_opponent_candidates"]} other Democrats
 - Selected UMAP dimensions: {stats["kde_selected_dimensions"]}
 - Density-fit sample: {stats["kde_endorsed_fit_count"]} endorsed and
-  {stats["kde_opponent_fit_count"]} opponent segments
+  {stats["kde_opponent_fit_count"]} other-Democrat segments
 
 The KDE remains provisional because the full-text sufficiency audit fails. It describes the
 currently recoverable segmented corpus and is not a complete-census estimate. The labeled

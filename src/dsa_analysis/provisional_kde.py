@@ -280,6 +280,12 @@ def run_provisional_kde(
             "counts": dict(zone_counts),
         },
         "density_regions": region_rows,
+        "region_clustering": {
+            "space": f"{selected_dimensions}-dimensional standardized semantic representation",
+            "candidate_subregions_per_zone": 6,
+            "published_subregions_per_zone": 2,
+            "selection": "semantic coherence, support, and density-ratio strength",
+        },
         "top_hot_terms": characterization["hot_terms"],
         "top_cold_terms": characterization["cold_terms"],
         "outputs": {
@@ -331,6 +337,8 @@ def load_eligible_segments(
                 continue
             text = (row.get("text") or "").strip()
             if not text:
+                continue
+            if _looks_like_navigation_or_form(text):
                 continue
             retained = dict(row)
             retained["group"] = "endorsed" if role in {"endorsed", "unopposed"} else "opponent"
@@ -498,7 +506,7 @@ def _plot_density_fingerprint(
     )
     zone_styles = {
         "hot": ("#C84A32", "#FBEDE8", "More common in DSA-endorsed text"),
-        "cold": ("#2F6F98", "#EAF2F7", "More common in opponents' text"),
+        "cold": ("#2F6F98", "#EAF2F7", "More common in other Democrats' text"),
         "shared": ("#8A7525", "#F5F1DE", "Common to both groups"),
     }
     for zone, (color, _, label) in zone_styles.items():
@@ -653,7 +661,7 @@ def _plot_density_fingerprint(
             va="bottom",
         )
     figure.suptitle(
-        "Where DSA-endorsed candidates and primary opponents differ — and overlap",
+        "Where DSA-endorsed candidates and other Democrats differ — and overlap",
         fontsize=21,
         y=0.985,
         fontweight="bold",
@@ -684,25 +692,33 @@ def density_region_summaries(
     from sklearn.cluster import KMeans
     from sklearn.preprocessing import StandardScaler
 
-    prefixes = {"hot": "D", "cold": "O", "shared": "S"}
+    prefixes = {"hot": "D", "cold": "M", "shared": "S"}
     output = []
     row_indices = {id(row): index for index, row in enumerate(rows)}
     for zone in ("hot", "cold", "shared"):
         zone_rows = [row for row in rows if row.get("zone") == zone]
         if not zone_rows:
             continue
-        cluster_count = min(
-            max_regions_per_zone,
-            max(1, len(zone_rows) // 350),
-        )
-        coordinates = np.array(
+        visualization_coordinates = np.array(
             [[float(row["umap_x"]), float(row["umap_y"])] for row in zone_rows]
         )
-        standardized_coordinates = StandardScaler().fit_transform(coordinates)
+        if semantic_coordinates is None:
+            clustering_coordinates = StandardScaler().fit_transform(
+                visualization_coordinates
+            )
+        else:
+            clustering_coordinates = np.array(
+                [semantic_coordinates[row_indices[id(row)]] for row in zone_rows]
+            )
+        cluster_count = min(
+            max_regions_per_zone * 3,
+            max(1, len(zone_rows) // 150),
+            len(zone_rows),
+        )
         if (
             cluster_count == 1
             or len(zone_rows) < 4
-            or np.allclose(np.ptp(standardized_coordinates, axis=0), 0.0)
+            or np.allclose(np.ptp(clustering_coordinates, axis=0), 0.0)
         ):
             labels = np.zeros(len(zone_rows), dtype=int)
             cluster_count = 1
@@ -711,24 +727,59 @@ def density_region_summaries(
                 n_clusters=cluster_count,
                 random_state=SEED,
                 n_init=20,
-            ).fit_predict(standardized_coordinates)
+            ).fit_predict(clustering_coordinates)
         clusters = []
+        zone_score_scale = max(
+            (
+                abs(float(row["log1p_density_ratio"]))
+                for row in zone_rows
+            ),
+            default=1.0,
+        )
         for label in range(cluster_count):
-            members = [
-                row for row, assigned in zip(zone_rows, labels, strict=True) if assigned == label
+            member_indices = [
+                index
+                for index, assigned in enumerate(labels)
+                if assigned == label
             ]
+            members = [zone_rows[index] for index in member_indices]
+            candidate_count = len(
+                {
+                    str(
+                        row.get("candidate_slug")
+                        or row.get("candidate_name")
+                        or row.get("candidate_unit_id", "")
+                    )
+                    for row in members
+                }
+            )
+            if candidate_count < 20 and cluster_count > 1:
+                continue
+            member_coordinates = clustering_coordinates[member_indices]
+            centroid = np.mean(member_coordinates, axis=0)
+            mean_distance = float(
+                np.mean(np.linalg.norm(member_coordinates - centroid, axis=1))
+            )
+            coherence = 1.0 / (1.0 + mean_distance)
             mean_score = sum(float(row["log1p_density_ratio"]) for row in members) / len(members)
+            strength = abs(mean_score) / max(zone_score_scale, 1e-12)
+            terms = _distinctive_region_terms(members, zone_rows)
+            if not _cluster_terms_look_substantive(terms):
+                continue
             clusters.append(
                 {
                     "members": members,
                     "mean_score": mean_score,
-                    "rank_score": abs(mean_score) * (len(members) ** 0.5),
+                    "coherence": coherence,
+                    "candidate_count": candidate_count,
+                    "terms": terms,
+                    "rank_score": coherence * math.log1p(len(members)) * (1.0 + strength),
                 }
             )
         clusters.sort(key=lambda cluster: float(cluster["rank_score"]), reverse=True)
-        for rank, cluster in enumerate(clusters, start=1):
+        for rank, cluster in enumerate(clusters[:max_regions_per_zone], start=1):
             members = cluster["members"]
-            terms = _distinctive_region_terms(members, zone_rows)
+            terms = cluster["terms"]
             if semantic_coordinates is None:
                 evidence_coordinates = np.array(
                     [[float(row["umap_x"]), float(row["umap_y"])] for row in members]
@@ -750,19 +801,14 @@ def density_region_summaries(
                     "region_id": region_id,
                     "zone": zone,
                     "segment_count": len(members),
-                    "candidate_count": len(
-                        {
-                            str(
-                                row.get("candidate_slug")
-                                or row.get("candidate_name")
-                                or row.get("candidate_unit_id", "")
-                            )
-                            for row in members
-                        }
-                    ),
+                    "candidate_count": int(cluster["candidate_count"]),
                     "mean_log1p_density_ratio": round(
                         float(cluster["mean_score"]),
                         12,
+                    ),
+                    "semantic_coherence": round(
+                        float(cluster["coherence"]),
+                        6,
                     ),
                     "centroid_x": round(
                         sum(float(row["umap_x"]) for row in members) / len(members),
@@ -783,6 +829,30 @@ def density_region_summaries(
                 }
             )
     return output
+
+
+def _cluster_terms_look_substantive(terms: Sequence[str]) -> bool:
+    noise_terms = {
+        "attached",
+        "aug",
+        "casino",
+        "facebook",
+        "fppc",
+        "interac",
+        "newsletter",
+        "opinion",
+        "payout",
+        "podcast",
+        "read",
+        "schedule",
+        "story",
+        "subscribe",
+        "twitter",
+        "wallet",
+        "withdrawal",
+    }
+    normalized_terms = {term.casefold().replace("-", "_") for term in terms}
+    return len(normalized_terms & noise_terms) < 3
 
 
 def _distinctive_region_terms(
@@ -1015,6 +1085,15 @@ def _looks_like_navigation_or_form(text: str) -> bool:
     from urllib.parse import unquote_plus
 
     normalized = " ".join(unquote_plus(text).casefold().split())
+    if "\ufffd" in normalized:
+        return True
+    visible_characters = [character for character in normalized if not character.isspace()]
+    if visible_characters:
+        ascii_share = sum(character.isascii() for character in visible_characters) / len(
+            visible_characters
+        )
+        if ascii_share < 0.8:
+            return True
     return any(
         marker in normalized
         for marker in (
@@ -1024,20 +1103,32 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             "california form 700",
             "check back for more information",
             "conversation …",
+            "by elections committee",
             "email facebook linkedin",
             "<abbr title=",
             "<h4>",
             "<h5>",
             "name of source (not an acronym)",
             "news story election",
+            "newsletter subscribe",
+            "opens in new window",
             "politics + government",
             "politics & government",
             "schedule d income",
+            "schedule summary (required)",
+            "schedules attached",
             "servpro of",
             "sign up for the free",
             "skip to main content",
             "stay in the know",
+            "subscribe issues archive",
             "thank you for your interest in completing this question",
+            "this is a search field",
+            "total number of pages including this cover page",
+            "instant casino",
+            "withdrawal methods payout",
+            "interac e-transfer",
+            "roundup of the week's stories",
             "new yorkers get",
             "why are you running for county council",
         )
@@ -1058,7 +1149,7 @@ def _representative_candidate(
 def _write_kde_report(path: Path, summary: dict[str, Any]) -> None:
     zone_labels = {
         "hot": "DSA-overrepresented",
-        "cold": "Opponent-overrepresented",
+        "cold": "Other-Democrat-overrepresented",
         "shared": "Shared high-density",
     }
     region_lines = []
@@ -1084,7 +1175,7 @@ def _write_kde_report(path: Path, summary: dict[str, Any]) -> None:
 The KDE contains **{summary["retained_segments"]}** passages after deduplicating repeated text
 within each candidate and election year:
 **{summary["group_counts"]["endorsed"]}** from DSA-endorsed candidates and
-**{summary["group_counts"]["opponent"]}** from opponents. Density estimation is performed in
+**{summary["group_counts"]["opponent"]}** from other Democrats. Density estimation is performed in
 **{summary["selected_dimensions"]} dimensions**; the two-dimensional map is used only for
 visualization.
 
@@ -1094,11 +1185,14 @@ visualization.
 
 - **D regions** are spatial groupings among DSA-endorsed segments above the endorsed-group
   upper-quartile density-ratio cutoff.
-- **O regions** are spatial groupings among opponent segments below the opponent-group
-  lower-quartile cutoff.
+- **M regions** are semantically coherent groupings among other-Democrat passages below that
+  group's lower-quartile density-ratio cutoff.
 - **S regions** are high-joint-density areas with small absolute density differences. They
   represent semantic overlap, not proof of identical positions.
-- Terms are locally distinctive document-prevalence terms from the underlying region text.
+- Each zone is first divided into six candidate subregions in the selected 10-dimensional
+  semantic representation. Only the two subregions with the strongest combination of semantic
+  coherence, textual support, and density-ratio strength are published.
+- Terms are locally distinctive document-prevalence terms from the underlying subregion text.
   Examples are extractive source passages, not generated paraphrases.
 
 | Region | Interpretation | Passages | Candidates | Distinctive terms | Representative source text |
