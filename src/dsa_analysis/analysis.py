@@ -272,7 +272,7 @@ The KDE remains provisional because the full-text sufficiency audit fails. It de
 currently recoverable segmented corpus and is not a complete-census estimate. The labeled
 regions are derived from the underlying segments in each locally overrepresented or shared
 high-density area; each label reports distinctive terms, an extractive representative passage,
-and candidate/cycle support.
+and candidate support.
 
 ![Provisional GTE KDE](../figures/provisional_gte_kde.png)
 

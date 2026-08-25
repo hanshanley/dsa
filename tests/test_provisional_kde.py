@@ -43,6 +43,56 @@ class ProvisionalKDETests(unittest.TestCase):
 
         self.assertTrue(region["representative_excerpt"].startswith("The candidate supports"))
 
+    def test_density_region_excerpt_prefers_relevant_text_over_central_navigation(self) -> None:
+        rows = []
+        for index in range(12):
+            rows.append(
+                {
+                    "zone": "hot",
+                    "umap_x": 0.0 if index == 0 else 1.0 + index / 100,
+                    "umap_y": 0.0 if index == 0 else 1.0 + index / 100,
+                    "log1p_density_ratio": 1.0,
+                    "candidate_unit_id": f"candidate-{index}",
+                    "candidate_name": f"Candidate {index}",
+                    "source_type": "campaign_page",
+                    "text": (
+                        "Skip to main content Issues Get Involved Donate"
+                        if index == 0
+                        else (
+                            "Our climate plan replaces fossil fuel infrastructure with "
+                            "community-owned renewable energy."
+                        )
+                    ),
+                    "token_count": "20",
+                }
+            )
+
+        [region] = density_region_summaries(rows, max_regions_per_zone=1)
+
+        self.assertIn("climate plan", region["representative_excerpt"])
+
+    def test_density_region_excerpt_does_not_attribute_debate_speaker_to_candidate(self) -> None:
+        rows = [
+            {
+                "zone": "cold",
+                "umap_x": index / 100,
+                "umap_y": index / 100,
+                "log1p_density_ratio": -1.0,
+                "candidate_unit_id": f"candidate-{index}",
+                "candidate_name": "Candidate",
+                "source_type": "debate_transcript",
+                "text": (
+                    "HARRIS: Donald Trump made promises to working people that he did not keep."
+                ),
+                "token_count": "20",
+            }
+            for index in range(12)
+        ]
+
+        [region] = density_region_summaries(rows, max_regions_per_zone=1)
+
+        self.assertEqual(region["representative_candidate"], "Multi-candidate debate")
+
     def test_select_dimension_elbow_uses_smallest_near_maximum(self) -> None:
         rows = [
             {"dimensions": 2, "trustworthiness": 0.86},

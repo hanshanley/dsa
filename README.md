@@ -33,7 +33,7 @@ verified** and **zero remain `not_searched`**. It retains **899 explicit retryab
 hard source-unavailable records. The recoverable corpus contains **1,575 substantive documents**,
 **39,080 eligible source segments**, and **264 of 391 document-backed races** have substantive
 text on both sides. A provisional GTE multilingual UMAP/KDE analysis has been run on **38,245
-candidate/cycle-deduplicated segments**, but final narrative inference remains gated on unresolved
+passages deduplicated within each candidate and election year**, but final narrative inference remains gated on unresolved
 candidate sources and human threshold annotation.
 
 The expanded registry also increases official organizational coverage obligations. Every row has

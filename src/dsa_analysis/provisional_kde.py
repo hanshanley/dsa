@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import html
 import json
 import math
 import random
@@ -203,7 +204,10 @@ def run_provisional_kde(
         top_n=30,
         quantiles=(0.1, 0.2, 0.3, 0.4),
     )
-    region_rows = density_region_summaries(scored_rows)
+    region_rows = density_region_summaries(
+        scored_rows,
+        semantic_coordinates=standardized,
+    )
     _write_csv(output_directory / "segment_density_scores.csv", scored_rows)
     _write_csv(output_directory / "umap_dimension_sweep.csv", sweep_rows)
     _write_csv(output_directory / "hot_cold_terms.csv", characterization["rows"])
@@ -478,30 +482,26 @@ def _plot_density_fingerprint(
 
     x = np.array([float(row["umap_x"]) for row in rows])
     y = np.array([float(row["umap_y"]) for row in rows])
-    score = np.array([float(row["log1p_density_ratio"]) for row in rows])
-    bound = max(abs(float(np.quantile(score, 0.01))), abs(float(np.quantile(score, 0.99))))
-    figure = plt.figure(figsize=(18, 10))
-    grid = figure.add_gridspec(1, 2, width_ratios=(1.75, 1.45), wspace=0.08)
+    figure = plt.figure(figsize=(20, 11), facecolor="#FAFAF8")
+    grid = figure.add_gridspec(1, 2, width_ratios=(1.08, 1.0), wspace=0.09)
     axis = figure.add_subplot(grid[0, 0])
-    summary_axis = figure.add_subplot(grid[0, 1])
-    scatter = axis.scatter(
+    card_grid = grid[0, 1].subgridspec(3, 2, hspace=0.16, wspace=0.10)
+    axis.set_facecolor("#F4F4F1")
+    axis.scatter(
         x,
         y,
-        c=score,
-        cmap="coolwarm",
-        vmin=-bound,
-        vmax=bound,
-        s=2.5,
-        alpha=0.32,
+        color="#C9CBC8",
+        s=3.0,
+        alpha=0.20,
         linewidths=0,
         rasterized=True,
     )
     zone_styles = {
-        "hot": ("#C94F36", "DSA-overrepresented"),
-        "cold": ("#356D91", "Opponent-overrepresented"),
-        "shared": ("#8A7A39", "Shared high-density"),
+        "hot": ("#C84A32", "#FBEDE8", "More common in DSA-endorsed text"),
+        "cold": ("#2F6F98", "#EAF2F7", "More common in opponents' text"),
+        "shared": ("#8A7525", "#F5F1DE", "Common to both groups"),
     }
-    for zone, (color, label) in zone_styles.items():
+    for zone, (color, _, label) in zone_styles.items():
         zone_rows = [row for row in rows if row.get("zone") == zone]
         if not zone_rows:
             continue
@@ -509,8 +509,8 @@ def _plot_density_fingerprint(
             [float(row["umap_x"]) for row in zone_rows],
             [float(row["umap_y"]) for row in zone_rows],
             color=color,
-            s=4,
-            alpha=0.38,
+            s=4.5,
+            alpha=0.48,
             linewidths=0,
             rasterized=True,
             label=label,
@@ -523,7 +523,7 @@ def _plot_density_fingerprint(
             str(region["region_id"]),
             ha="center",
             va="center",
-            fontsize=9,
+            fontsize=10,
             fontweight="bold",
             color="white",
             bbox={
@@ -534,90 +534,142 @@ def _plot_density_fingerprint(
                 "alpha": 0.95,
             },
         )
-    axis.set_title("Where DSA-endorsed and opponent texts concentrate", fontsize=16)
-    axis.set_xlabel("UMAP 1 (visualization only)")
-    axis.set_ylabel("UMAP 2 (visualization only)")
-    colorbar = figure.colorbar(scatter, ax=axis)
-    colorbar.set_label("log(1 + DSA density) - log(1 + opponent density)")
-    axis.legend(loc="upper right", frameon=False, fontsize=8)
+    x_low, x_high = np.quantile(x, [0.003, 0.997])
+    y_low, y_high = np.quantile(y, [0.003, 0.997])
+    x_pad = (x_high - x_low) * 0.04
+    y_pad = (y_high - y_low) * 0.04
+    axis.set_xlim(x_low - x_pad, x_high + x_pad)
+    axis.set_ylim(y_low - y_pad, y_high + y_pad)
+    axis.set_title("Semantic map of campaign language", fontsize=17, loc="left", pad=14)
+    axis.set_xlabel("UMAP dimension 1")
+    axis.set_ylabel("UMAP dimension 2")
+    axis.legend(
+        loc="upper left",
+        frameon=True,
+        facecolor="white",
+        edgecolor="#DDDDDD",
+        fontsize=9,
+        markerscale=2,
+    )
+    axis.grid(color="white", linewidth=0.8, alpha=0.8)
     axis.text(
         0.01,
         0.01,
         (
-            f"DSA cutoff: {endorsed_cutoff:.3g} | Opponent cutoff: "
-            f"{opponent_cutoff:.3g}\nLabels summarize underlying segments; gray areas are not "
-            "classified as distinctive regions."
+            "Nearby points contain semantically similar passages. "
+            "Gray points are not assigned to a highlighted region.\n"
+            "The two-dimensional map is for visualization only; extreme outliers are clipped."
         ),
         transform=axis.transAxes,
-        fontsize=8,
-    )
-    summary_axis.axis("off")
-    summary_axis.set_title(
-        "Text character of labeled regions",
-        loc="left",
-        fontsize=15,
-        pad=12,
+        fontsize=8.5,
+        color="#555555",
     )
     for index, region in enumerate(region_rows):
         column = index % 2
         row_index = index // 2
-        x_position = column * 0.51
-        y_position = 0.94 - row_index * 0.31
+        card = figure.add_subplot(card_grid[row_index, column])
+        card.set_xticks([])
+        card.set_yticks([])
         zone = str(region["zone"])
-        color, zone_label = zone_styles[zone]
-        summary_axis.text(
-            x_position,
-            y_position,
+        color, background, zone_label = zone_styles[zone]
+        card.set_facecolor(background)
+        for spine in card.spines.values():
+            spine.set_color(color)
+            spine.set_linewidth(1.2)
+        card.text(
+            0.05,
+            0.92,
             f'{region["region_id"]}  {zone_label}',
-            transform=summary_axis.transAxes,
+            transform=card.transAxes,
             color=color,
-            fontsize=10,
+            fontsize=11,
             fontweight="bold",
             va="top",
         )
-        y_position -= 0.035
-        summary_axis.text(
-            x_position,
-            y_position,
-            textwrap.fill(
-                f'Terms: {str(region["top_terms"]).replace("_", " ")}',
-                width=34,
-            ),
-            transform=summary_axis.transAxes,
-            color="#252525",
-            fontsize=8.5,
+        card.text(
+            0.05,
+            0.77,
+            "DISTINCTIVE LANGUAGE",
+            transform=card.transAxes,
+            color="#666666",
+            fontsize=7.5,
+            fontweight="bold",
             va="top",
         )
-        y_position -= 0.07
-        summary_axis.text(
-            x_position,
-            y_position,
-            textwrap.fill(f'Example: {region["representative_excerpt"]}', width=40),
-            transform=summary_axis.transAxes,
-            color="#555555",
+        card.text(
+            0.05,
+            0.70,
+            textwrap.fill(
+                str(region["top_terms"]).replace("_", " ").replace(" | ", " · "),
+                width=42,
+            ),
+            transform=card.transAxes,
+            color="#252525",
+            fontsize=9.5,
+            va="top",
+        )
+        candidate = str(region.get("representative_candidate", "")).strip()
+        source_label = str(region.get("representative_source_type", "")).replace("_", " ")
+        card.text(
+            0.05,
+            0.53,
+            "REPRESENTATIVE PASSAGE",
+            transform=card.transAxes,
+            color="#666666",
             fontsize=7.5,
+            fontweight="bold",
+            va="top",
+        )
+        card.text(
+            0.05,
+            0.475,
+            " · ".join(part for part in (candidate, source_label) if part),
+            transform=card.transAxes,
+            color="#555555",
+            fontsize=7.8,
+            fontweight="bold",
+            va="top",
+        )
+        card.text(
+            0.05,
+            0.40,
+            textwrap.fill(f'“{region["representative_excerpt"]}”', width=49),
+            transform=card.transAxes,
+            color="#3F3F3F",
+            fontsize=8.7,
             va="top",
             style="italic",
         )
-        y_position -= 0.12
-        summary_axis.text(
-            x_position,
-            y_position,
+        card.text(
+            0.05,
+            0.08,
             (
-                f'{region["segment_count"]} segments · '
-                f'{region["candidate_count"]} candidate/cycle units'
+                f'{int(region["segment_count"]):,} passages from '
+                f'{int(region["candidate_count"]):,} candidates'
             ),
-            transform=summary_axis.transAxes,
-            color="#777777",
-            fontsize=7.5,
-            va="top",
+            transform=card.transAxes,
+            color="#5F5F5F",
+            fontsize=8.5,
+            va="bottom",
         )
     figure.suptitle(
-        "Provisional GTE multilingual KDE fingerprint",
-        fontsize=19,
-        y=0.99,
+        "Where DSA-endorsed candidates and primary opponents differ — and overlap",
+        fontsize=21,
+        y=0.985,
+        fontweight="bold",
     )
-    figure.subplots_adjust(top=0.93, bottom=0.08, left=0.06, right=0.98)
+    figure.text(
+        0.5,
+        0.947,
+        (
+            "Highlighted regions summarize recurring language in the recoverable campaign-text "
+            "corpus; cards show locally distinctive terms and a central source passage."
+        ),
+        ha="center",
+        fontsize=11,
+        color="#555555",
+    )
+    figure.subplots_adjust(top=0.90, bottom=0.07, left=0.05, right=0.985)
     figure.savefig(figure_path, dpi=220)
     plt.close(figure)
 
@@ -626,6 +678,7 @@ def density_region_summaries(
     rows: Sequence[dict[str, Any]],
     *,
     max_regions_per_zone: int = 2,
+    semantic_coordinates: Any | None = None,
 ) -> list[dict[str, Any]]:
     import numpy as np
     from sklearn.cluster import KMeans
@@ -633,6 +686,7 @@ def density_region_summaries(
 
     prefixes = {"hot": "D", "cold": "O", "shared": "S"}
     output = []
+    row_indices = {id(row): index for index, row in enumerate(rows)}
     for zone in ("hot", "cold", "shared"):
         zone_rows = [row for row in rows if row.get("zone") == zone]
         if not zone_rows:
@@ -675,7 +729,19 @@ def density_region_summaries(
         for rank, cluster in enumerate(clusters, start=1):
             members = cluster["members"]
             terms = _distinctive_region_terms(members, zone_rows)
-            excerpt = _representative_region_excerpt(members, terms)
+            if semantic_coordinates is None:
+                evidence_coordinates = np.array(
+                    [[float(row["umap_x"]), float(row["umap_y"])] for row in members]
+                )
+            else:
+                evidence_coordinates = np.array(
+                    [semantic_coordinates[row_indices[id(row)]] for row in members]
+                )
+            excerpt, representative = _representative_region_evidence(
+                members,
+                terms,
+                evidence_coordinates,
+            )
             region_id = f"{prefixes[zone]}{rank}"
             for row in members:
                 row["density_region_id"] = region_id
@@ -685,7 +751,14 @@ def density_region_summaries(
                     "zone": zone,
                     "segment_count": len(members),
                     "candidate_count": len(
-                        {str(row.get("candidate_unit_id", "")) for row in members}
+                        {
+                            str(
+                                row.get("candidate_slug")
+                                or row.get("candidate_name")
+                                or row.get("candidate_unit_id", "")
+                            )
+                            for row in members
+                        }
                     ),
                     "mean_log1p_density_ratio": round(
                         float(cluster["mean_score"]),
@@ -701,7 +774,12 @@ def density_region_summaries(
                     ),
                     "top_terms": " | ".join(terms),
                     "representative_excerpt": excerpt,
-                    "representative_candidate": _representative_candidate(members, excerpt),
+                    "representative_candidate": str(
+                        representative.get("candidate_name", "")
+                    ),
+                    "representative_source_type": str(
+                        representative.get("source_type", "")
+                    ),
                 }
             )
     return output
@@ -720,8 +798,13 @@ def _distinctive_region_terms(
         "all",
         "applause",
         "august",
+        "assembly",
+        "board",
         "campaign",
         "candidate",
+        "courtesy",
+        "contact",
+        "country",
         "city",
         "county",
         "date",
@@ -732,13 +815,18 @@ def _distinctive_region_terms(
         "editor",
         "election",
         "email",
+        "experience",
+        "facebook",
         "form",
         "her",
         "information",
         "issue",
+        "linkedin",
         "local",
         "lemon",
+        "mayor",
         "make",
+        "member",
         "name",
         "need",
         "new",
@@ -751,6 +839,7 @@ def _distinctive_region_terms(
         "running",
         "said",
         "schedule",
+        "seat",
         "she",
         "sport",
         "state",
@@ -761,13 +850,20 @@ def _distinctive_region_terms(
         "vote",
         "vice",
         "website",
+        "window",
         "work",
         "would",
         "year",
         "newsletter",
+        "nextdoor",
         "office",
         "org",
         "questionnaire",
+        "photo",
+        "reddit",
+        "san",
+        "bash",
+        "bluesky",
         "com",
     }
     for row in region_rows:
@@ -797,21 +893,32 @@ def _distinctive_region_terms(
     return [term for _, _, term in scored[:top_n]]
 
 
-def _representative_region_excerpt(
+def _representative_region_evidence(
     rows: Sequence[dict[str, Any]],
     terms: Sequence[str],
-) -> str:
+    coordinates: Any,
+) -> tuple[str, dict[str, Any]]:
+    import numpy as np
+
     from .text_analysis import tokenize
 
     term_set = set(terms)
+    centroid = np.mean(coordinates, axis=0)
+    distances = np.linalg.norm(coordinates - centroid, axis=1)
+    distance_scale = max(float(np.quantile(distances, 0.9)), 1e-9)
     candidates = []
-    for row in rows:
-        text = str(row.get("text", ""))
-        if _looks_like_navigation_or_form(text):
+    for row_index, row in enumerate(rows):
+        raw_text = str(row.get("text", ""))
+        raw_normalized = raw_text.casefold()
+        if any(
+            marker in raw_normalized
+            for marker in ("<abbr title=", "<h4>", "<h5>")
+        ):
             continue
+        text = _clean_excerpt_text(raw_text)
         spans = [
             span.strip()
-            for span in re.split(r"(?<=[.!?])\s+|\n+", text)
+            for span in re.split(r"(?<=[.!?;])\s+|\n+", text)
             if 10 <= len(span.split()) <= 60
             and not _looks_like_navigation_or_form(span)
         ]
@@ -819,19 +926,89 @@ def _representative_region_excerpt(
             normalized = " ".join(span.split())
             if not normalized:
                 continue
+            term_share = len(term_set & set(tokenize(normalized))) / max(len(term_set), 1)
+            source_quality = _representative_source_quality(
+                str(row.get("source_type", ""))
+            )
+            centrality = 1.0 - min(float(distances[row_index]) / distance_scale, 1.0)
+            speaker_penalty = float(
+                bool(re.match(r"^(?:MODERATOR|TAPPER|LEMON|BASH|QUESTION):", normalized))
+            )
             candidates.append(
                 (
-                    len(term_set & set(tokenize(normalized))),
-                    min(len(normalized.split()), 40),
-                    -int(bool(re.match(r"^[A-Z][A-Z .'-]{1,20}:", normalized))),
+                    term_share,
+                    (
+                        0.55 * centrality
+                        + 0.10 * source_quality
+                        - speaker_penalty
+                    ),
+                    centrality,
                     row,
                     normalized,
                 )
             )
     if not candidates:
-        return "[No high-confidence representative excerpt; inspect the region CSV.]"
-    _, _, _, _, excerpt = max(candidates, key=lambda candidate: candidate[:3])
-    return excerpt if len(excerpt) <= 135 else excerpt[:132].rstrip() + "..."
+        return (
+            "[No high-confidence representative passage; inspect the region CSV.]",
+            {},
+        )
+    _, _, _, representative, excerpt = max(
+        candidates,
+        key=lambda candidate: candidate[:3],
+    )
+    excerpt = _trim_representative_excerpt(excerpt, term_set)
+    if "debate" in str(representative.get("source_type", "")).casefold():
+        representative = dict(representative)
+        representative["candidate_name"] = "Multi-candidate debate"
+    return excerpt, representative
+
+
+def _trim_representative_excerpt(
+    excerpt: str,
+    terms: set[str],
+    *,
+    max_length: int = 190,
+) -> str:
+    if len(excerpt) <= max_length:
+        return excerpt
+    lowered = excerpt.casefold()
+    positions = [lowered.find(term.casefold()) for term in terms]
+    positions = [position for position in positions if position >= 0]
+    center = min(positions) if positions else 0
+    start = max(0, center - max_length // 3)
+    end = min(len(excerpt), start + max_length)
+    if end - start < max_length:
+        start = max(0, end - max_length)
+    if start:
+        next_space = excerpt.find(" ", start)
+        start = next_space + 1 if next_space >= 0 else start
+    if end < len(excerpt):
+        previous_space = excerpt.rfind(" ", start, end)
+        end = previous_space if previous_space > start else end
+    snippet = excerpt[start:end].strip()
+    if start:
+        snippet = "..." + snippet.lstrip(" ,;:-")
+    if end < len(excerpt):
+        snippet = snippet.rstrip(" ,;:-") + "..."
+    return snippet
+
+
+def _clean_excerpt_text(text: str) -> str:
+    cleaned = html.unescape(text)
+    cleaned = re.sub(r"<[^>]+>", " ", cleaned)
+    return " ".join(cleaned.split())
+
+
+def _representative_source_quality(source_type: str) -> int:
+    normalized = source_type.casefold()
+    if any(
+        marker in normalized
+        for marker in ("platform", "policy", "questionnaire", "campaign_page")
+    ):
+        return 2
+    if any(marker in normalized for marker in ("statement", "interview", "op_ed")):
+        return 1
+    return 0
 
 
 def _looks_like_navigation_or_form(text: str) -> bool:
@@ -846,6 +1023,11 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             "candidate roundups",
             "california form 700",
             "check back for more information",
+            "conversation …",
+            "email facebook linkedin",
+            "<abbr title=",
+            "<h4>",
+            "<h5>",
             "name of source (not an acronym)",
             "news story election",
             "politics + government",
@@ -853,9 +1035,11 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             "schedule d income",
             "servpro of",
             "sign up for the free",
+            "skip to main content",
             "stay in the know",
             "thank you for your interest in completing this question",
             "new yorkers get",
+            "why are you running for county council",
         )
     )
 
@@ -897,7 +1081,8 @@ def _write_kde_report(path: Path, summary: dict[str, Any]) -> None:
     path.write_text(
         f"""# Provisional GTE KDE region analysis
 
-The KDE contains **{summary["retained_segments"]}** candidate/cycle-deduplicated segments:
+The KDE contains **{summary["retained_segments"]}** passages after deduplicating repeated text
+within each candidate and election year:
 **{summary["group_counts"]["endorsed"]}** from DSA-endorsed candidates and
 **{summary["group_counts"]["opponent"]}** from opponents. Density estimation is performed in
 **{summary["selected_dimensions"]} dimensions**; the two-dimensional map is used only for
@@ -916,7 +1101,7 @@ visualization.
 - Terms are locally distinctive document-prevalence terms from the underlying region text.
   Examples are extractive source passages, not generated paraphrases.
 
-| Region | Interpretation | Segments | Candidate/cycles | Distinctive terms | Representative source text |
+| Region | Interpretation | Passages | Candidates | Distinctive terms | Representative source text |
 | --- | --- | ---: | ---: | --- | --- |
 {chr(10).join(region_lines)}
 
