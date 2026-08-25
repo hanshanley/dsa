@@ -181,5 +181,5 @@ the resulting density contrast; the two-dimensional projection is visualization 
 For interpretability, DSA-overrepresented, opponent-overrepresented, and shared high-joint-density
 points are grouped spatially within the visualization. Each displayed region is labeled with
 locally distinctive terms, an extractive representative source passage, segment count, and
-candidate/cycle count. These labels summarize underlying text and do not change the
+unique candidate count. These labels summarize underlying text and do not change the
 higher-dimensional density calculation.
