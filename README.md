@@ -1,244 +1,210 @@
-# Democratic Socialists of America (DSA) positions and Democratic Party Positions Contrast
+<div align="center">
+  <h1>DSA and Democratic Primary Discourse</h1>
+  <p><strong>A source-first national comparison of campaigns, platforms, and policy language since 2016.</strong></p>
+  <p>
+    <a href="#what-the-campaigns-emphasize">Findings</a> ·
+    <a href="#semantic-map">Semantic map</a> ·
+    <a href="#data-and-coverage">Data</a> ·
+    <a href="#methods">Methods</a> ·
+    <a href="#reproduce-the-analysis">Reproduce</a>
+  </p>
+</div>
 
-This project is a source-first study of what the Democratic Socialists of America, the
-Democratic Party, and candidates in Democratic primaries have said since 2016.
+---
 
-It builds an auditable national dataset of DSA endorsements, identifies the other candidates in
-those primaries, collects exact passages from first-party sources, and analyzes where their
-positions align or diverge. The resulting data supports a report on the policy and strategic
-differences between DSA, Democratic Party platforms, DSA-endorsed candidates, and their primary
-opponents.
+## What this project asks
 
-## At a glance: where the language differs
+How do DSA-endorsed candidates describe politics differently from the Democrats they face in
+primaries—and where do they speak in similar terms?
 
-The previously published counts of **1,254 endorsed candidacies** and **3,518 roster rows**
-depended on ignored generated census files that are not present in the repository and cannot
-currently be reproduced. They must not be treated as a completeness claim. The rebuilt national
-DSA feed contains **308 candidate endorsements since 2016**, after ballot initiatives are
-excluded. Every one of the 178 endorsements that was previously absent or mis-scoped has now
-been adjudicated: 27 Democratic primaries, 37 nonpartisan primaries, 82 general-only races, and
-32 explicit noncandidate, unopposed, ballot-position, or source-unavailable cases. The canonical
-registry is now seeded from endorsements before text evidence and contains **578 canonical
-races, 421 strict in-scope Democratic or Minnesota DFL primaries, and 1,912 canonical
-candidate/race records** across **180 represented state-cycles**. The Sanders presidential
-endorsements are decomposed using the official FEC
-results workbooks into **36 state/territory primaries in 2016** and **43 in 2020**, preserving
-each certified ballot rather than treating the nomination as one national race.
+This repository builds an auditable national dataset of DSA endorsements, reconstructs the
+corresponding Democratic-primary fields, collects exact campaign and organizational text, and
+compares the resulting language. Sources include campaign platforms, policy pages,
+questionnaires, debates, interviews, speeches, press releases, archived websites, and official
+DSA and Democratic Party platforms.
 
-This is not yet a nationwide completeness claim. The local chapter crawl currently contains
-2,521 reviewable endorsement mentions from 825 live or archived pages and has produced **349
-verified in-window local endorsements**, including **103 verified Democratic primaries**. The
-registry-first document queue contains **1,927 candidate/race records**, of which **1,024 are
-verified** and **zero remain `not_searched`**. It retains **899 explicit retryable gaps** and four
-hard source-unavailable records. The recoverable corpus contains **1,575 substantive documents**,
-**39,080 eligible source segments**, and **264 of 391 document-backed races** have substantive
-text on both sides. A provisional GTE multilingual UMAP/KDE analysis has been run on **38,245
-passages deduplicated within each candidate and election year**, but final narrative inference remains gated on unresolved
-candidate sources and human threshold annotation.
+The analysis measures **emphasis and language**, not ideology by assumption. Missing evidence is
+recorded as missing; it is never interpreted as a candidate holding no position.
 
-The expanded registry also increases official organizational coverage obligations. Every row has
-an explicit status: the current inventory has **730 rows, 426 verified entries, 152 platform
-gaps, and zero `not_searched` rows**. The organizational pipeline fetched and successfully
-extracted **93 of 93 documents with zero extraction errors**. Lexical analysis uses **47 eligible
-full-platform documents** and **5,747 source segments**.
+## Semantic map
+
+<p align="center">
+  <img src="figures/provisional_gte_kde.png" width="1200" alt="Semantic map comparing DSA-endorsed candidate and Democratic primary opponent campaign language">
+</p>
+
+The map embeds **38,139 deduplicated campaign-text passages** with
+[`Alibaba-NLP/gte-multilingual-base`](https://huggingface.co/Alibaba-NLP/gte-multilingual-base).
+Nearby points contain semantically similar language. Red regions are denser among DSA-endorsed
+candidate texts, blue regions among opponents, and gold regions are common to both groups.
+
+The strongest recurring distinctions are:
+
+- **DSA-overrepresented:** climate and fossil-fuel language; tenants, landlords, rent, housing,
+  and prisons.
+- **Opponent-overrepresented:** development, schools, residents, and council governance;
+  national Democratic debate language centered on Trump and presidential candidates.
+- **Shared high-density language:** health-care costs, taxes, insurance, abortion, policing,
+  public safety, and local councils.
+
+The cards use source-attributed passages selected for both topical relevance and proximity to
+each region's semantic center. The two-dimensional projection is for visualization; density is
+estimated in the selected 10-dimensional representation.
+
+## What the campaigns emphasize
+
+<p align="center">
+  <img src="outputs/figures/text_analysis/policy_language_difference.svg" width="1100" alt="Comparison of policy-language prevalence in DSA-endorsed and opponent campaign documents">
+</p>
+
+The clearest language pattern is not simply “left versus moderate.” DSA-endorsed campaigns more
+often foreground **rights, class, workers, unions, tenants, rent, and universal public
+programs**. Opponents more often foreground **business, small business, technology, markets,
+training, and administrative delivery**.
+
+These are document-level mention rates. A term appearing more often indicates greater emphasis,
+not necessarily endorsement.
+
+## Where the agendas overlap
+
+<p align="center">
+  <img src="outputs/figures/text_analysis/policy_language_overlap.svg" width="1050" alt="Issues discussed by both DSA-endorsed candidates and Democratic primary opponents">
+</p>
+
+Both groups devote substantial attention to health care, workers, business, affordable housing,
+unions, training, climate change, and rent. Shared attention does not establish agreement:
+candidates may diagnose the same problem while proposing different mechanisms.
+
+The stricter comparison below counts primaries where both sides affirmatively use the same
+concrete policy phrase.
+
+<p align="center">
+  <img src="outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg" width="980" alt="Shared affirmative policy mechanisms within Democratic primaries">
+</p>
+
+Affordable housing is the most common shared mechanism language, followed by minimum wage,
+Green New Deal, public housing, Medicare for All, single payer, and rent control. Negated or
+explicitly oppositional mentions are excluded; exact paired passages remain available for
+review.
+
+## Official platforms
+
+Candidate rhetoric is analyzed separately from organizational platforms. The official corpus
+contains DSA national and state/local programs alongside DNC and state Democratic Party
+platforms.
 
 | DSA / DSA-endorsed emphasis | Democratic platform / opponent emphasis |
 | --- | --- |
-| Housing as a right; tenants; rent control; social and public housing | Business, opportunity, market mechanisms, and administrative delivery |
-| Single-payer and Medicare for All | Public-option and incremental coverage mechanisms |
+| Housing as a right; tenants; rent control; social and public housing | Housing supply, development, and administrative delivery |
+| Single payer and Medicare for All | Public-option and incremental coverage mechanisms |
 | Living wages, unions, workers, and collective power | Training, pathways, small business, and labor-market opportunity |
 | Movement-building and working-class political power | Governing competence, coalition breadth, and institutional implementation |
-| Collective/public ownership and decommodification | Regulated, competitive capitalism |
+| Collective or public ownership and decommodification | Regulated, competitive capitalism |
 
-![Difference in DSA-endorsed and Democratic-opponent policy language](outputs/figures/text_analysis/policy_language_difference.svg)
+<p align="center">
+  <img src="outputs/figures/text_analysis/official_policy_contrasts.svg" width="1050" alt="Reviewed contrasts between official DSA and Democratic Party policy language">
+</p>
 
-The graph above compares the share of candidate/election documents containing each normalized
-policy feature. Red features appear in more DSA-endorsed candidate documents; blue features
-appear in more Democratic opponent documents. Features with gaps below 0.5 percentage points are
-excluded from this difference chart and reported separately as shared emphasis.
+## Data and coverage
 
-![Shared DSA-endorsed and Democratic-opponent policy emphasis](outputs/figures/text_analysis/policy_language_overlap.svg)
+| Corpus component | Current coverage |
+| --- | ---: |
+| Strict in-scope Democratic or Minnesota DFL primaries | **421** |
+| Races with substantive campaign text on both sides | **268** |
+| Candidates with substantive text | **942** |
+| Substantive candidate documents | **1,585** |
+| Eligible source passages | **39,310** |
+| Deduplicated candidate analysis documents | **1,341** |
+| Deduplicated candidate analysis passages | **38,207** |
+| Organizational documents successfully extracted | **93 / 93** |
+| Full organizational platforms in lexical analysis | **47** |
 
-The shared-emphasis graph shows agenda overlap without assuming that both groups propose the same
-policy mechanism or take the same stance. See the
-[full text-analysis report](report/text_analysis.md) for methods, issue emphasis, similarity,
-sticking points, evidence coverage, and limitations.
-
-![Shared affirmative policy mechanisms within primaries](outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
-
-The stricter mechanism graph counts primaries where both sides affirmatively use the same
-concrete normalized mechanism phrase; negated or oppositional mentions are excluded, and exact
-paired excerpts remain in the generated table for review.
-
-### Data behind the graphs
-
-- [`data/analysis/candidate_text_corpus.csv`](data/analysis/candidate_text_corpus.csv) contains
-  deduplicated exact candidate segments with contributing candidates, races, documents, URLs,
-  source types, dates, locators, and provenance-row counts.
-- `data/analysis/model_topic_classifications.csv` is generated by `classify-topics` and retains
-  every exact segment and its provenance alongside the local model topic, cosine similarity,
-  runner-up topic, margin, and keyword-baseline result.
-- [`data/analysis/primary_sticking_points.csv`](data/analysis/primary_sticking_points.csv)
-  contains the deduplicated candidate/opponent contrasts used in the issue and cycle graphs.
-- [`config/cap_topics.json`](config/cap_topics.json) defines the published Comparative Agendas
-  Project topic scheme embedded by the pinned local model.
-- `data/analysis/model_topic_validation.json` is generated with thresholding, low-margin rows,
-  keyword agreement, and reviewed-code crosswalk agreement.
-
-The model never invents replacement text. It classifies the exact segment retained in the same
-row. For each model topic:
-
-```text
-topic share = locally classified exact segments in topic / all classified segments
-topic difference = DSA-endorsed share - Democratic-opponent share
-```
-
-## What the project does
-
-- Collects current and historical endorsements from DSA National and local chapters.
-- Tracks which chapter-year records have been searched so gaps are explicit rather than silently
-  treated as no endorsements.
-- Reconstructs Democratic primary ballot rosters for endorsed candidates.
-- Collects exact candidate and opponent statements from official pages, documents, interviews,
-  debates, and archived sources.
-- Compares DSA and Democratic Party texts within the election cycle in which they were published.
-- Separates direct, explicit conflicts from analyst-coded policy divergences.
-- Validates provenance, source status, review state, and coding before generating tables and a
-  draft report.
+The corpus spans 2016–2026. It is broad enough for descriptive analysis of the recovered
+materials, but it is **not a claim of complete nationwide text coverage**. The audit retains
+891 retryable candidate-source gaps, and 19 opponent records still lack verified first-party
+evidence. See [`docs/completeness.md`](docs/completeness.md) for the completion criteria and
+[`data/processed/full_text_audit_summary.json`](data/processed/full_text_audit_summary.json) for
+the machine-readable audit.
 
 ## Evidence standard
 
-Substantive findings must be supported by exact quotations from official organizational or
-campaign sources. Journalism, search results, and third-party trackers can help locate evidence,
-but they do not substantiate a claim on their own.
+Substantive findings must trace to exact text from official organizations, campaigns, debates,
+interviews, or attributable candidate responses. Journalism and search results may locate
+sources but do not substitute for primary evidence.
 
-Automated tools may retrieve pages, discover leads, and suggest structured data. A human reviewer
-must verify every excerpt used in the report against the original page, PDF, audio, or video.
-Missing evidence is recorded with statuses such as `not_searched`, `searched_not_found`,
-`source_unavailable`, and `found_unverified`; absence of a statement is not interpreted as a
-position.
+Every analyzed passage retains its candidate, race, document, URL, source type, date, and
+locator. `source_unavailable`, `searched_not_found`, and unresolved records remain explicit
+unknowns.
 
-## Outputs
+## Methods
 
-- `data/manual/` contains reviewed source metadata, excerpts, endorsements, race rosters, and
-  coded contrasts.
-- `data/processed/` contains collection results, research queues, coverage ledgers, verified
-  endorsements, and the SQLite research database.
-- `outputs/tables/` contains generated analysis tables.
-- `outputs/figures/text_analysis/` contains reproducible SVG text-analysis graphs.
-- `outputs/tables/text_analysis/` contains TF-IDF, MPIF, similarity, topic, cycle, and manifest
-  tables used by those figures.
-- `report/draft.md` contains the generated research report and current dataset status.
-- `report/text_analysis.md` explains the graph methods and summarizes the principal lexical
-  findings.
-- `report/provisional_kde_analysis.md` interprets labeled DSA-overrepresented,
-  opponent-overrepresented, and shared high-density embedding regions using their underlying
-  source text.
+### Document-level language
 
-## Repository guide
+Policy phrases are normalized before counting. Each feature is measured as the share of
+candidate-election documents containing that phrase, preventing a campaign that repeats one
+term many times from dominating the comparison.
 
-- `src/dsa_analysis/` — collection, crawling, adjudication, validation, and analysis code
-- `config/` — source registry and policy taxonomy
-- `files/research_archive/` — downloaded top-level JSON/HTML research captures retained for
-  reproducibility without cluttering the repository root
-- `docs/methodology.md` — research design and source hierarchy
-- `docs/codebook.md` — coding rules
-- `docs/data_dictionary.md` — dataset fields
-- `docs/completeness.md` — coverage and completion criteria
-- `tests/` — validation and analysis tests
+### Semantic density
 
-## Running the project
+Eligible passages are embedded with the pinned multilingual GTE model and L2-normalized.
+Dimensionality is selected by a trustworthiness sweep; KDE is estimated in 10 dimensions with
+candidate-balanced fitting and Scott's bandwidth rule. UMAP is used only for the two-dimensional
+display.
 
-The project requires Python 3.12 and uses `uv` for its development environment. The main entry
-point is `dsa-analysis`; run `uv run dsa-analysis --help` to see the collection and research
-commands.
+### Agreement and disagreement
 
-To rebuild the reviewed data and report:
+- **Overlap** identifies issues discussed by both groups.
+- **Shared affirmative mechanisms** require both sides in the same primary to use the same
+  concrete mechanism phrase without local negation.
+- **Explicit conflicts** are direct, source-supported candidate contrasts; analyst-coded
+  divergences are kept separate.
+
+Full details are in [`docs/methodology.md`](docs/methodology.md), with field definitions in
+[`docs/data_dictionary.md`](docs/data_dictionary.md).
+
+## Key outputs
+
+- [`data/analysis/candidate_text_corpus.csv`](data/analysis/candidate_text_corpus.csv) — exact
+  deduplicated candidate passages with full provenance
+- [`data/analysis/provisional_gte_kde/density_regions.csv`](data/analysis/provisional_gte_kde/density_regions.csv)
+  — labeled semantic regions, terms, counts, and representative evidence
+- [`outputs/tables/text_analysis/candidate_feature_prevalence.csv`](outputs/tables/text_analysis/candidate_feature_prevalence.csv)
+  — document-level phrase prevalence by candidate group
+- [`outputs/tables/text_analysis/shared_affirmative_policy_mechanisms.csv`](outputs/tables/text_analysis/shared_affirmative_policy_mechanisms.csv)
+  — exact paired evidence for shared mechanisms
+- [`report/text_analysis.md`](report/text_analysis.md) — lexical, overlap, and agreement analysis
+- [`report/provisional_kde_analysis.md`](report/provisional_kde_analysis.md) — region-by-region
+  semantic interpretation
+- [`report/draft.md`](report/draft.md) — generated canonical research report
+
+## Reproduce the analysis
+
+The project requires Python 3.12 and [`uv`](https://docs.astral.sh/uv/).
 
 ```bash
-uv run dsa-analysis build-race-registry
-uv run dsa-analysis regather-candidate-documents
-uv run dsa-analysis audit-full-text
-uv run dsa-analysis build-organizational-context
-uv run dsa-analysis fetch-organizational-context
-uv run dsa-analysis extract-organizational-context
-uv run dsa-analysis provisional-kde
-uv run dsa-analysis init-db
+git clone https://github.com/hanshanley/dsa.git
+cd dsa
+uv sync
 uv run dsa-analysis validate
+uv run dsa-analysis provisional-kde
 uv run dsa-analysis analyze-text
 uv run dsa-analysis classify-topics
 uv run dsa-analysis analyze-text
 uv run dsa-analysis analyze
 ```
 
-The narrative pipeline uses the full campaign-document corpus and a separate official
-organizational-context corpus. `audit-full-text` intentionally exits nonzero until nationwide
-candidate/opponent coverage meets the configured sufficiency gates; clustering should not be run
-against the legacy quotation snapshot or while those gates fail.
-
-`analyze-text` runs the pinned local `sentence-transformers/all-MiniLM-L6-v2` model; no hosted
-model API is used. It compares:
-
-- reviewed official DSA excerpts with reviewed Democratic Party platform excerpts; and
-- verified statements by DSA-endorsed candidates with verified statements by their Democratic
-  primary opponents.
-
-It generates mean TF-IDF, weighted log-odds most-informative-feature (MPIF) scores, topic shares,
-document-level feature prevalence, within-topic cosine similarity, evidence coverage, and
-sticking-point counts by topic and cycle. Policy phrases such as `Medicare for All`,
-`rent control`, and `public option` are normalized before scoring. Common plural variants are
-lightly lemmatized. Identical candidate quotes repeated through multiple endorsement queues are
-deduplicated by candidate and election. The generated `analysis_manifest.json` records input
-hashes and method parameters.
-
-## Text-analysis graph gallery
-
-The figures use one consistent publication palette throughout: DSA red for endorsed/DSA text,
-Democratic blue for opponent/DNC text, charcoal labels, and a warm neutral background.
-
-### Policy language
-
-![Difference in policy language](outputs/figures/text_analysis/policy_language_difference.svg)
-
-### Shared policy emphasis
-
-![Shared policy emphasis](outputs/figures/text_analysis/policy_language_overlap.svg)
-
-### Shared affirmative mechanisms within primaries
-
-![Shared affirmative policy mechanisms](outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
-
-### Official DSA and Democratic Party language
-
-![Official policy mechanism contrasts](outputs/figures/text_analysis/official_policy_contrasts.svg)
-
-### Local-model policy emphasis
-
-![Local-model policy emphasis difference](outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
-
-This chart was generated from **37,977 exact candidate segments** with the pinned local
-`all-MiniLM-L6-v2` model and CAP topic descriptions:
-
-- 25,437 classified at cosine similarity ≥ 0.20
-- 12,540 explicitly unclassified below threshold
-- 14,438 low-margin rows (< 0.03 between the top two topics)
-- no reviewed-code crosswalk was applicable to the full-segment corpus
-- 45.6% agreement with the transparent keyword baseline where it produced a prediction
-
-Every plotted classification is auditable in
-[`data/analysis/model_topic_classifications.csv`](data/analysis/model_topic_classifications.csv),
-which retains the exact segment provenance, similarity, runner-up topic, and margin.
-
-### Direct evidence and explicit conflicts
-
-![Verified evidence by cycle](outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
-
-![Explicit conflicts by cycle](outputs/figures/text_analysis/explicit_conflicts_by_cycle.svg)
-
-![Source type difference](outputs/figures/text_analysis/source_type_difference.svg)
-
-Run the test suite with:
+Run the full test suite with:
 
 ```bash
 uv run python -m unittest discover -s tests
 ```
+
+## Repository guide
+
+- `src/dsa_analysis/` — collection, extraction, audit, and analysis code
+- `data/manual/` — reviewed source registrations and adjudications
+- `data/processed/` — generated corpora, coverage queues, and audit outputs
+- `data/analysis/` — analysis-ready snapshots and model outputs
+- `outputs/` — reproducible tables and SVG figures
+- `figures/` — semantic-density visualization
+- `docs/` — methodology, codebook, completeness criteria, and data dictionary
+- `tests/` — regression and validation tests

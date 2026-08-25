@@ -1299,16 +1299,7 @@ def _write_text_report(
     source_type_rows: list[dict[str, str]],
     explicit_cycle_rows: list[dict[str, str]],
 ) -> None:
-    endorsed_terms = [
-        row["feature"] for row in candidate_mpif if row["favored_group"] == "endorsed"
-    ][:10]
-    opponent_terms = [
-        row["feature"] for row in candidate_mpif if row["favored_group"] == "opponent"
-    ][:10]
-    dsa_terms = [row["feature"] for row in official_mpif if row["favored_group"] == "dsa"][:8]
-    democratic_terms = [
-        row["feature"] for row in official_mpif if row["favored_group"] == "democratic"
-    ][:8]
+    prevalence_by_feature = {row["feature"]: row for row in prevalence_rows}
     prevalence_positive = [
         row for row in prevalence_rows if float(row["difference"]) > 0
     ][:8]
@@ -1381,10 +1372,38 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 
 ## Main language differences
 
-- DSA-endorsed candidate features: {", ".join(_label(term) for term in endorsed_terms)}.
-- Democratic opponent features: {", ".join(_label(term) for term in opponent_terms)}.
-- Official DSA features: {", ".join(_label(term) for term in dsa_terms)}.
-- Official Democratic platform features: {", ".join(_label(term) for term in democratic_terms)}.
+- **Rights and labor:** DSA-endorsed documents mention human rights
+  ({float(prevalence_by_feature["human_right"]["endorsed_share"]):.0%} versus
+  {float(prevalence_by_feature["human_right"]["opponent_share"]):.0%}), working class
+  ({float(prevalence_by_feature["working_class"]["endorsed_share"]):.0%} versus
+  {float(prevalence_by_feature["working_class"]["opponent_share"]):.0%}), workers
+  ({float(prevalence_by_feature["worker"]["endorsed_share"]):.0%} versus
+  {float(prevalence_by_feature["worker"]["opponent_share"]):.0%}), and unions
+  ({float(prevalence_by_feature["union"]["endorsed_share"]):.0%} versus
+  {float(prevalence_by_feature["union"]["opponent_share"]):.0%}) more often.
+- **Housing, health, and climate:** DSA-endorsed documents more often mention health care
+  ({float(prevalence_by_feature["healthcare"]["endorsed_share"]):.0%} versus
+  {float(prevalence_by_feature["healthcare"]["opponent_share"]):.0%}), tenants
+  ({float(prevalence_by_feature["tenant"]["endorsed_share"]):.0%} versus
+  {float(prevalence_by_feature["tenant"]["opponent_share"]):.0%}), the Green New Deal
+  ({float(prevalence_by_feature["green_new_deal"]["endorsed_share"]):.0%} versus
+  {float(prevalence_by_feature["green_new_deal"]["opponent_share"]):.0%}), and rent
+  ({float(prevalence_by_feature["rent"]["endorsed_share"]):.0%} versus
+  {float(prevalence_by_feature["rent"]["opponent_share"]):.0%}).
+- **Business and development:** opponent documents more often mention business
+  ({float(prevalence_by_feature["business"]["opponent_share"]):.0%} versus
+  {float(prevalence_by_feature["business"]["endorsed_share"]):.0%}), small business
+  ({float(prevalence_by_feature["small_business"]["opponent_share"]):.0%} versus
+  {float(prevalence_by_feature["small_business"]["endorsed_share"]):.0%}), technology
+  ({float(prevalence_by_feature["technology"]["opponent_share"]):.0%} versus
+  {float(prevalence_by_feature["technology"]["endorsed_share"]):.0%}), markets
+  ({float(prevalence_by_feature["market"]["opponent_share"]):.0%} versus
+  {float(prevalence_by_feature["market"]["endorsed_share"]):.0%}), and training
+  ({float(prevalence_by_feature["training"]["opponent_share"]):.0%} versus
+  {float(prevalence_by_feature["training"]["endorsed_share"]):.0%}).
+- Official-platform MPIF remains available in the generated tables. The strongest broad
+  organizational distinction is working-class, worker, union, and movement language in DSA
+  texts versus family, nation, access, and institutional-party language in Democratic texts.
 
 ![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
@@ -1482,88 +1501,227 @@ the exact segment text and provenance in the generated analysis snapshots remain
 
 
 def _policy_language_chart(rows: list[dict[str, str]]) -> None:
-    minimum_gap = 0.005
-    filtered = [
-        row
-        for row in rows
-        if row["feature"] in POLICY_FEATURES
-        and abs(float(row["difference"])) >= minimum_gap
+    by_feature = {row["feature"]: row for row in rows}
+    sections = [
+        (
+            "Rights and labor",
+            "DSA-endorsed campaigns use class, worker, union, and rights language more often.",
+            ["human_right", "working_class", "worker", "union"],
+        ),
+        (
+            "Housing, health, and climate",
+            "The largest issue-specific DSA gaps concern health care, tenants, climate, and rent.",
+            ["healthcare", "tenant", "green_new_deal", "rent"],
+        ),
+        (
+            "Business and economic development",
+            "Opponents more often frame policy through business, technology, markets, and training.",
+            ["business", "small_business", "technology", "market", "training"],
+        ),
     ]
-    positive = [row for row in filtered if float(row["difference"]) > 0][:8]
-    negative = [row for row in filtered if float(row["difference"]) < 0][:8]
-    selected = [*reversed(positive), *negative]
-    _diverging_svg(
-        FIGURE_DIR / "policy_language_difference.svg",
-        "Difference in policy language",
-        (
-            "Share gap for normalized policy features; gaps below 0.5 percentage points "
-            "are shown in the overlap figure"
-        ),
-        [_label(row["feature"]) for row in selected],
-        [float(row["difference"]) for row in selected],
-        "More DSA-endorsed documents",
-        "More opponent documents",
-        (
-            "Source: candidate_document_analysis_segments.csv; eligible exact-text segments; "
-            "shared source documents deduplicated within group and election cycle."
-        ),
-    )
-
-
-def _policy_overlap_chart(rows: list[dict[str, str]]) -> None:
-    selected = rows[:10]
+    selected_sections = [
+        (title, takeaway, [by_feature[feature] for feature in features if feature in by_feature])
+        for title, takeaway, features in sections
+    ]
+    selected_sections = [
+        (title, takeaway, section_rows)
+        for title, takeaway, section_rows in selected_sections
+        if section_rows
+    ]
     width = 1240
-    height = 205 + len(selected) * 42
-    plot_left = 330
-    plot_width = 780
-    maximum = max(
-        (
-            max(float(row["endorsed_share"]), float(row["opponent_share"]))
-            for row in selected
-        ),
-        default=1.0,
-    )
+    card_top = 218
+    row_height = 44
+    card_gap = 22
+    card_heights = [112 + len(section_rows) * row_height for _, _, section_rows in selected_sections]
+    height = card_top + sum(card_heights) + card_gap * max(len(card_heights) - 1, 0) + 72
+    plot_left = 400
+    plot_right = 1110
+    plot_width = plot_right - plot_left
+    maximum = 0.5
     body = [
         _svg_header(
             width,
             height,
-            "Shared policy emphasis",
+            "What distinguishes candidate campaign language?",
             (
-                "Features appearing in both groups; paired bars show document prevalence, "
-                "not identical policy positions"
+                "Share of candidate-year campaign documents mentioning each phrase; "
+                "lines compare actual prevalence, not just the gap"
+            ),
+        ),
+        _rect(48, 96, 1144, 92, CARD),
+        _text(68, 120, "BOTTOM LINE", color=MID, size="10px", weight="700"),
+        _text(
+            68,
+            145,
+            "DSA-endorsed campaigns foreground rights, labor, tenants, and broad public programs;",
+            color=DARK,
+            size="14px",
+            weight="700",
+        ),
+        _text(
+            68,
+            168,
+            "opponents foreground business and economic-development language.",
+            color=DARK,
+            size="14px",
+            weight="700",
+        ),
+        _legend(876, 135, DSA_RED, "DSA-endorsed"),
+        _legend(1042, 135, DEMOCRATIC_BLUE, "Opponents"),
+    ]
+    card_y = card_top
+    for section_index, (title, takeaway, section_rows) in enumerate(selected_sections):
+        card_height = card_heights[section_index]
+        body.append(_rect(48, card_y, 1144, card_height, "#FCFBF8"))
+        body.append(_text(68, card_y + 30, title, color=DARK, size="18px", weight="700"))
+        body.append(_text(68, card_y + 54, takeaway, color=MID, size="12px"))
+        axis_y = card_y + 80
+        for tick in range(6):
+            value = maximum * tick / 5
+            x = plot_left + plot_width * tick / 5
+            body.append(_line(x, axis_y, x, card_y + card_height - 18, LIGHT))
+            body.append(_text(x, axis_y - 8, f"{value:.0%}", "middle", MID, "10px"))
+        for row_index, row in enumerate(section_rows):
+            y = axis_y + 27 + row_index * row_height
+            endorsed = float(row["endorsed_share"])
+            opponent = float(row["opponent_share"])
+            difference = endorsed - opponent
+            x_endorsed = plot_left + plot_width * endorsed / maximum
+            x_opponent = plot_left + plot_width * opponent / maximum
+            favored_color = DSA_RED if difference > 0 else DEMOCRATIC_BLUE
+            body.append(
+                _text(72, y + 5, _label(row["feature"]), color=DARK, size="13px", weight="700")
+            )
+            body.append(
+                _text(
+                    270,
+                    y + 5,
+                    f"{abs(difference) * 100:.1f} pts more",
+                    "start",
+                    favored_color,
+                    "11px",
+                    "700",
+                )
+            )
+            body.append(_line(x_endorsed, y, x_opponent, y, "#B8B6B0"))
+            body.append(_circle(x_endorsed, y, 7, DSA_RED))
+            body.append(_circle(x_opponent, y, 7, DEMOCRATIC_BLUE))
+            body.append(
+                _text(
+                    x_endorsed,
+                    y - 12,
+                    f"{endorsed:.0%}",
+                    "middle",
+                    DSA_RED,
+                    "10px",
+                    "700",
+                )
+            )
+            body.append(
+                _text(
+                    x_opponent,
+                    y + 20,
+                    f"{opponent:.0%}",
+                    "middle",
+                    DEMOCRATIC_BLUE,
+                    "10px",
+                    "700",
+                )
+            )
+        card_y += card_height + card_gap
+    body.append(
+        _svg_footer(
+            width,
+            height,
+            (
+                "Interpretation: mention rates measure emphasis, not support or opposition. "
+                "Exact text is retained in candidate_text_corpus.csv; repeated shared text is "
+                "deduplicated within candidate group and election year."
             ),
         )
+    )
+    _write_svg(
+        FIGURE_DIR / "policy_language_difference.svg",
+        width,
+        height,
+        body,
+    )
+
+
+def _policy_overlap_chart(rows: list[dict[str, str]]) -> None:
+    by_feature = {row["feature"]: row for row in rows}
+    selected = [
+        by_feature[feature]
+        for feature in (
+            "healthcare",
+            "worker",
+            "business",
+            "affordable_housing",
+            "union",
+            "training",
+            "climate_change",
+            "rent",
+        )
+        if feature in by_feature
     ]
-    for tick in range(5):
-        value = maximum * tick / 4
+    width = 1240
+    height = 250 + len(selected) * 52
+    plot_left = 370
+    plot_width = 730
+    maximum = 0.5
+    body = [
+        _svg_header(
+            width,
+            height,
+            "Where the two groups discuss the same issues",
+            (
+                "Actual mention rates reveal common agenda space even when the proposed "
+                "solutions may differ"
+            ),
+        ),
+        _rect(48, 96, 1144, 92, CARD),
+        _text(68, 120, "BOTTOM LINE", color=MID, size="10px", weight="700"),
+        _text(
+            68,
+            146,
+            "Health care, workers, business, housing, and climate appear in both camps;",
+            color=DARK,
+            size="14px",
+            weight="700",
+        ),
+        _text(
+            68,
+            169,
+            "overlap in attention is not proof of agreement.",
+            color=DARK,
+            size="14px",
+            weight="700",
+        ),
+        _legend(870, 138, DSA_RED, "DSA-endorsed"),
+        _legend(1038, 138, DEMOCRATIC_BLUE, "Opponents"),
+    ]
+    for tick in range(6):
+        value = maximum * tick / 5
         x = plot_left + plot_width * tick / 4
-        body.append(_line(x, 112, x, height - 60, LIGHT))
-        body.append(_text(x, 99, f"{value:.0%}", "middle", MID, "10px"))
+        x = plot_left + plot_width * tick / 5
+        body.append(_line(x, 202, x, height - 60, LIGHT))
+        body.append(_text(x, 190, f"{value:.0%}", "middle", MID, "10px"))
     for index, row in enumerate(selected):
-        y = 126 + index * 42
+        y = 220 + index * 52
         endorsed = float(row["endorsed_share"])
         opponent = float(row["opponent_share"])
+        x_endorsed = plot_left + plot_width * endorsed / maximum
+        x_opponent = plot_left + plot_width * opponent / maximum
         body.append(
-            _text(plot_left - 22, y + 19, _label(row["feature"]), "end", DARK, "13px")
+            _text(72, y + 5, _label(row["feature"]), "start", DARK, "13px", "700")
         )
-        body.append(
-            _rect(plot_left, y, plot_width * endorsed / maximum, 11, DSA_RED)
-        )
-        body.append(
-            _rect(plot_left, y + 15, plot_width * opponent / maximum, 11, DEMOCRATIC_BLUE)
-        )
-        body.append(
-            _text(
-                plot_left + plot_width * max(endorsed, opponent) / maximum + 8,
-                y + 20,
-                f"{endorsed:.0%} / {opponent:.0%}",
-                size="10px",
-            )
-        )
+        body.append(_line(x_endorsed, y, x_opponent, y, "#B8B6B0"))
+        body.append(_circle(x_endorsed, y, 7, DSA_RED))
+        body.append(_circle(x_opponent, y, 7, DEMOCRATIC_BLUE))
+        body.append(_text(x_endorsed, y - 12, f"{endorsed:.0%}", "middle", DSA_RED, "10px", "700"))
+        body.append(_text(x_opponent, y + 20, f"{opponent:.0%}", "middle", DEMOCRATIC_BLUE, "10px", "700"))
     body.extend(
         [
-            _legend(790, 75, DSA_RED, "DSA-endorsed documents"),
-            _legend(995, 75, DEMOCRATIC_BLUE, "Opponent documents"),
             _svg_footer(
                 width,
                 height,
@@ -2249,7 +2407,7 @@ def _text(
 ) -> str:
     return (
         f'<text x="{x}" y="{y}" text-anchor="{anchor}" fill="{color}" '
-        f'font-family="Georgia, Times New Roman, serif" font-size="{size}" '
+        f'font-family="Inter, Arial, Helvetica, sans-serif" font-size="{size}" '
         f'font-weight="{weight}" font-style="{style}">{html.escape(str(value))}</text>'
     )
 
