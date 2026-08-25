@@ -48,10 +48,38 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 
 ## Main language differences
 
-- DSA-endorsed candidate features: Worker, Union, Working Class, Fight, Que, Claire, Movement, Open, Labor, Socialist.
-- Democratic opponent features: Oregon, American, California, Business, Senator, Veteran, Growth, Know, Reserve, Biden.
-- Official DSA features: Working Class, Movement, Worker, Union, Power, End, Bay, East.
-- Official Democratic platform features: Democrat, Believe, American, Family, Nation, Committee, Access, Health.
+- **Rights and labor:** DSA-endorsed documents mention human rights
+  (23% versus
+  7%), working class
+  (20% versus
+  7%), workers
+  (39% versus
+  26%), and unions
+  (30% versus
+  19%) more often.
+- **Housing, health, and climate:** DSA-endorsed documents more often mention health care
+  (44% versus
+  34%), tenants
+  (17% versus
+  9%), the Green New Deal
+  (12% versus
+  4%), and rent
+  (20% versus
+  13%).
+- **Business and development:** opponent documents more often mention business
+  (39% versus
+  27%), small business
+  (20% versus
+  10%), technology
+  (16% versus
+  7%), markets
+  (16% versus
+  11%), and training
+  (19% versus
+  15%).
+- Official-platform MPIF remains available in the generated tables. The strongest broad
+  organizational distinction is working-class, worker, union, and movement language in DSA
+  texts versus family, nation, access, and institutional-party language in Democratic texts.
 
 ![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
