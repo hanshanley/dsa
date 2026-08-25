@@ -282,8 +282,9 @@ def run_provisional_kde(
         "density_regions": region_rows,
         "region_clustering": {
             "space": f"{selected_dimensions}-dimensional standardized semantic representation",
-            "candidate_subregions_per_zone": 6,
-            "published_subregions_per_zone": 2,
+            "candidate_subregions_per_zone": 12,
+            "retained_subregions_per_zone": 6,
+            "displayed_subregions_per_zone": 2,
             "selection": "semantic coherence, support, and density-ratio strength",
         },
         "top_hot_terms": characterization["hot_terms"],
@@ -523,7 +524,10 @@ def _plot_density_fingerprint(
             rasterized=True,
             label=label,
         )
-    for region in region_rows:
+    displayed_regions = [
+        region for region in region_rows if bool(region.get("displayed_on_map", True))
+    ]
+    for region in displayed_regions:
         color = zone_styles[str(region["zone"])][0]
         axis.text(
             float(region["centroid_x"]),
@@ -572,7 +576,7 @@ def _plot_density_fingerprint(
         fontsize=8.5,
         color="#555555",
     )
-    for index, region in enumerate(region_rows):
+    for index, region in enumerate(displayed_regions):
         column = index % 2
         row_index = index // 2
         card = figure.add_subplot(card_grid[row_index, column])
@@ -685,7 +689,9 @@ def _plot_density_fingerprint(
 def density_region_summaries(
     rows: Sequence[dict[str, Any]],
     *,
-    max_regions_per_zone: int = 2,
+    max_regions_per_zone: int = 6,
+    displayed_regions_per_zone: int = 2,
+    candidate_subregions_per_zone: int = 12,
     semantic_coordinates: Any | None = None,
 ) -> list[dict[str, Any]]:
     import numpy as np
@@ -711,7 +717,7 @@ def density_region_summaries(
                 [semantic_coordinates[row_indices[id(row)]] for row in zone_rows]
             )
         cluster_count = min(
-            max_regions_per_zone * 3,
+            candidate_subregions_per_zone,
             max(1, len(zone_rows) // 150),
             len(zone_rows),
         )
@@ -800,6 +806,7 @@ def density_region_summaries(
                 {
                     "region_id": region_id,
                     "zone": zone,
+                    "displayed_on_map": rank <= displayed_regions_per_zone,
                     "segment_count": len(members),
                     "candidate_count": int(cluster["candidate_count"]),
                     "mean_log1p_density_ratio": round(
@@ -836,17 +843,28 @@ def _cluster_terms_look_substantive(terms: Sequence[str]) -> bool:
         "attached",
         "aug",
         "casino",
+        "donate",
         "facebook",
         "fppc",
         "interac",
+        "instagram",
+        "join",
+        "july",
+        "menu",
+        "min",
         "newsletter",
         "opinion",
         "payout",
         "podcast",
         "read",
+        "search",
         "schedule",
+        "season",
+        "sign",
         "story",
         "subscribe",
+        "football",
+        "open",
         "twitter",
         "wallet",
         "withdrawal",
@@ -864,8 +882,107 @@ def _distinctive_region_terms(
     from .text_analysis import tokenize
 
     excluded = {
+        "about",
+        "actually",
+        "after",
         "also",
         "all",
+        "because",
+        "before",
+        "being",
+        "could",
+        "did",
+        "does",
+        "doing",
+        "don't",
+        "during",
+        "each",
+        "even",
+        "every",
+        "from",
+        "going",
+        "had",
+        "has",
+        "have",
+        "he",
+        "he's",
+        "here",
+        "hers",
+        "herself",
+        "him",
+        "himself",
+        "how",
+        "i'd",
+        "i'll",
+        "i'm",
+        "i've",
+        "into",
+        "it",
+        "it's",
+        "itself",
+        "just",
+        "kind",
+        "know",
+        "like",
+        "lot",
+        "me",
+        "mine",
+        "more",
+        "most",
+        "my",
+        "myself",
+        "our",
+        "ours",
+        "ourselves",
+        "really",
+        "should",
+        "some",
+        "than",
+        "that",
+        "that's",
+        "their",
+        "theirs",
+        "them",
+        "themselves",
+        "there",
+        "there's",
+        "these",
+        "they",
+        "they're",
+        "they've",
+        "thing",
+        "think",
+        "this",
+        "those",
+        "through",
+        "under",
+        "very",
+        "want",
+        "was",
+        "we",
+        "we're",
+        "we've",
+        "were",
+        "what",
+        "what's",
+        "when",
+        "where",
+        "which",
+        "who",
+        "who's",
+        "whom",
+        "why",
+        "will",
+        "with",
+        "you",
+        "you'd",
+        "you'll",
+        "you're",
+        "you've",
+        "your",
+        "yours",
+        "yourself",
+        "yourselves",
         "applause",
         "august",
         "assembly",
@@ -886,9 +1003,12 @@ def _distinctive_region_terms(
         "election",
         "email",
         "experience",
+        "endorsement",
+        "endorsed",
         "facebook",
         "form",
         "her",
+        "his",
         "information",
         "issue",
         "linkedin",
@@ -906,6 +1026,10 @@ def _distinctive_region_terms(
         "politic",
         "primary",
         "race",
+        "ran",
+        "receive",
+        "received",
+        "run",
         "running",
         "said",
         "schedule",
@@ -917,6 +1041,7 @@ def _distinctive_region_terms(
         "senator",
         "tapper",
         "thank",
+        "taxe",
         "vote",
         "vice",
         "website",
@@ -924,11 +1049,14 @@ def _distinctive_region_terms(
         "work",
         "would",
         "year",
+        "yeah",
         "newsletter",
         "nextdoor",
         "office",
         "org",
         "questionnaire",
+        "press",
+        "release",
         "photo",
         "reddit",
         "san",
@@ -1094,6 +1222,8 @@ def _looks_like_navigation_or_form(text: str) -> bool:
         )
         if ascii_share < 0.8:
             return True
+    if normalized.startswith("do you commit to ") and normalized.endswith("?"):
+        return True
     return any(
         marker in normalized
         for marker in (
@@ -1126,6 +1256,8 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             "this is a search field",
             "total number of pages including this cover page",
             "instant casino",
+            "house office building washington",
+            "phone fax",
             "withdrawal methods payout",
             "interac e-transfer",
             "roundup of the week's stories",
@@ -1157,10 +1289,11 @@ def _write_kde_report(path: Path, summary: dict[str, Any]) -> None:
         excerpt = str(region["representative_excerpt"]).replace("|", "\\|")
         terms = str(region["top_terms"]).replace("_", " ").replace(" | ", ", ")
         region_lines.append(
-            "| {region_id} | {zone} | {segments} | {candidates} | {terms} | "
+            "| {region_id} | {zone} | {map_status} | {segments} | {candidates} | {terms} | "
             "{candidate}: {excerpt} |".format(
                 region_id=region["region_id"],
                 zone=zone_labels[str(region["zone"])],
+                map_status="Yes" if region["displayed_on_map"] else "No",
                 segments=region["segment_count"],
                 candidates=region["candidate_count"],
                 terms=terms,
@@ -1189,14 +1322,14 @@ visualization.
   group's lower-quartile density-ratio cutoff.
 - **S regions** are high-joint-density areas with small absolute density differences. They
   represent semantic overlap, not proof of identical positions.
-- Each zone is first divided into six candidate subregions in the selected 10-dimensional
-  semantic representation. Only the two subregions with the strongest combination of semantic
-  coherence, textual support, and density-ratio strength are published.
+- Each zone is divided into 12 candidate subregions in the selected 10-dimensional semantic
+  representation. The table retains up to six substantive, sufficiently supported regions;
+  the map displays the top two per category to remain legible.
 - Terms are locally distinctive document-prevalence terms from the underlying subregion text.
   Examples are extractive source passages, not generated paraphrases.
 
-| Region | Interpretation | Passages | Candidates | Distinctive terms | Representative source text |
-| --- | --- | ---: | ---: | --- | --- |
+| Region | Interpretation | On map | Passages | Candidates | Distinctive terms | Representative source text |
+| --- | --- | --- | ---: | ---: | --- | --- |
 {chr(10).join(region_lines)}
 
 ## Limits

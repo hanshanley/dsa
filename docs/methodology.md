@@ -179,7 +179,9 @@ contribute unequal text volumes. UMAP dimensions 2, 5, 10, 20, and 30 are compar
 trustworthiness before KDE dimensionality is fixed. Hot/cold-zone TF-IDF and NPMI characterize
 the resulting density contrast; the two-dimensional projection is visualization only.
 For interpretability, DSA-overrepresented, other-Democrat-overrepresented, and shared high-joint-density
-points are grouped spatially within the visualization. Each displayed region is labeled with
-locally distinctive terms, an extractive representative source passage, segment count, and
-unique candidate count. These labels summarize underlying text and do not change the
+points are divided into 12 candidate subregions in the selected semantic representation. The
+complete region table retains up to six substantive regions per category, while the
+visualization displays the top two.
+Each region is labeled with locally distinctive terms, an extractive representative source
+passage, segment count, and unique candidate count. These labels summarize underlying text and do not change the
 higher-dimensional density calculation.

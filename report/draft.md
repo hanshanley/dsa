@@ -111,7 +111,7 @@ excerpt table.
 ## 6. Provisional KDE
 
 - Status: **provisional**
-- Retained segments: 36657
+- Retained segments: 36650
 - Candidates represented: 242 endorsed and
   464 other Democrats
 - Selected UMAP dimensions: 10

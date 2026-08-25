@@ -5,6 +5,7 @@ from pathlib import Path
 
 from dsa_analysis.provisional_kde import (
     _cluster_terms_look_substantive,
+    _distinctive_region_terms,
     _looks_like_navigation_or_form,
     balanced_kde_sample_indices,
     density_region_summaries,
@@ -14,6 +15,32 @@ from dsa_analysis.provisional_kde import (
 
 
 class ProvisionalKDETests(unittest.TestCase):
+    def test_region_terms_exclude_pronouns_contractions_and_filler(self) -> None:
+        region_rows = [
+            {
+                "candidate_name": "Candidate",
+                "text": (
+                    "I'm really thinking about housing housing tenants rent eviction "
+                    "and I think it's what we want."
+                ),
+            }
+            for _ in range(10)
+        ]
+        background_rows = [
+            {
+                "candidate_name": "Other",
+                "text": "Schools students education funding teachers.",
+            }
+            for _ in range(10)
+        ]
+
+        terms = _distinctive_region_terms(region_rows, [*region_rows, *background_rows])
+
+        self.assertNotIn("i'm", terms)
+        self.assertNotIn("really", terms)
+        self.assertNotIn("think", terms)
+        self.assertIn("housing", terms)
+
     def test_cluster_term_gate_rejects_coherent_nonpolitical_artifacts(self) -> None:
         self.assertFalse(
             _cluster_terms_look_substantive(
@@ -58,6 +85,16 @@ class ProvisionalKDETests(unittest.TestCase):
         self.assertTrue(
             _looks_like_navigation_or_form(
                 "Instant Casino Fastest Withdrawal Methods Payout Interac e-Transfer"
+            )
+        )
+        self.assertTrue(
+            _looks_like_navigation_or_form(
+                "Do you commit to visiting constituents who are incarcerated in state prisons?"
+            )
+        )
+        self.assertTrue(
+            _looks_like_navigation_or_form(
+                "1705 Longworth House Office Building Washington, DC 20515 Phone Fax"
             )
         )
 
@@ -314,7 +351,9 @@ class ProvisionalKDETests(unittest.TestCase):
 
         rows = []
         semantic_coordinates = []
-        for cluster, terms in enumerate(("climate energy", "tenant rent")):
+        for cluster, terms in enumerate(
+            ("climate energy", "tenant rent", "healthcare insurance")
+        ):
             for index in range(180):
                 rows.append(
                     {
@@ -334,10 +373,14 @@ class ProvisionalKDETests(unittest.TestCase):
 
         regions = density_region_summaries(
             rows,
-            max_regions_per_zone=2,
+            max_regions_per_zone=3,
             semantic_coordinates=np.array(semantic_coordinates),
         )
 
-        self.assertEqual(len(regions), 2)
+        self.assertEqual(len(regions), 3)
         self.assertTrue(all(row["semantic_coherence"] > 0.9 for row in regions))
-        self.assertEqual({row["region_id"] for row in regions}, {"D1", "D2"})
+        self.assertEqual({row["region_id"] for row in regions}, {"D1", "D2", "D3"})
+        self.assertEqual(
+            sum(bool(row["displayed_on_map"]) for row in regions),
+            2,
+        )

@@ -32,23 +32,25 @@ recorded as missing; it is never interpreted as a candidate holding no position.
   <img src="figures/provisional_gte_kde.png" width="1200" alt="Semantic map comparing DSA-endorsed candidates and other Democrats">
 </p>
 
-The map embeds **36,657 deduplicated campaign-text passages** with
+The map embeds **36,650 deduplicated campaign-text passages** with
 [`Alibaba-NLP/gte-multilingual-base`](https://huggingface.co/Alibaba-NLP/gte-multilingual-base).
 Nearby points contain semantically similar language. Red regions are denser among DSA-endorsed
 candidate texts, blue regions among other Democrats, and gold regions are common to both groups.
 
 The strongest recurring distinctions are:
 
-- **DSA-overrepresented:** tenants, landlords, rent, eviction, and housing as a right; movement,
-  socialist, progressive-left, and coalition language.
-- **Other-Democrat-overrepresented:** agriculture, farms, food systems, and land preservation;
-  housing and transit framed through development and administrative delivery.
-- **Shared high-density language:** schools, students, taxes, and public funding; policing,
-  violence, crime, mental health, and community resources.
+- **DSA-overrepresented:** tenants, landlords, rent, eviction, and housing as a right; climate,
+  renewable energy, fossil fuels, labor, unions, socialism, and universal health care.
+- **Other-Democrat-overrepresented:** agriculture and land preservation; transit and bicycle
+  infrastructure; housing development; business administration; and education governance.
+- **Shared high-density language:** taxes and revenue; abortion and reproductive rights;
+  health-insurance costs; zoning and development; schools and funding; and candidate biographies.
 
 The cards use source-attributed passages selected for both topical relevance and proximity to
 each region's semantic center. The two-dimensional projection is for visualization; density is
 estimated in the selected 10-dimensional representation.
+The [complete semantic-region table](data/analysis/provisional_gte_kde/density_regions.csv)
+lists up to six regions per category and marks the two shown on the map.
 
 ## What the campaigns emphasize
 
@@ -166,7 +168,8 @@ Full details are in [`docs/methodology.md`](docs/methodology.md), with field def
 - [`data/analysis/candidate_text_corpus.csv`](data/analysis/candidate_text_corpus.csv) — exact
   deduplicated candidate passages with full provenance
 - [`data/analysis/provisional_gte_kde/density_regions.csv`](data/analysis/provisional_gte_kde/density_regions.csv)
-  — labeled semantic regions, terms, counts, and representative evidence
+  — all substantive semantic regions (up to six per category), terms, counts, representative
+  evidence, and an indicator for the two per category displayed on the map
 - [`outputs/tables/text_analysis/candidate_feature_prevalence.csv`](outputs/tables/text_analysis/candidate_feature_prevalence.csv)
   — document-level phrase prevalence by candidate group
 - [`outputs/tables/text_analysis/shared_affirmative_policy_mechanisms.csv`](outputs/tables/text_analysis/shared_affirmative_policy_mechanisms.csv)
