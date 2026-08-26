@@ -117,7 +117,11 @@ class ProvisionalKDETests(unittest.TestCase):
             for index in range(12)
         ]
 
-        [region] = density_region_summaries(rows, max_regions_per_zone=1)
+        [region] = density_region_summaries(
+            rows,
+            max_regions_per_zone=1,
+            min_candidate_count=1,
+        )
 
         self.assertTrue(region["representative_excerpt"].startswith("The candidate supports"))
 
@@ -145,7 +149,11 @@ class ProvisionalKDETests(unittest.TestCase):
                 }
             )
 
-        [region] = density_region_summaries(rows, max_regions_per_zone=1)
+        [region] = density_region_summaries(
+            rows,
+            max_regions_per_zone=1,
+            min_candidate_count=1,
+        )
 
         self.assertIn("climate plan", region["representative_excerpt"])
 
@@ -167,7 +175,11 @@ class ProvisionalKDETests(unittest.TestCase):
             for index in range(12)
         ]
 
-        [region] = density_region_summaries(rows, max_regions_per_zone=1)
+        [region] = density_region_summaries(
+            rows,
+            max_regions_per_zone=1,
+            min_candidate_count=1,
+        )
 
         self.assertEqual(region["representative_candidate"], "Multi-candidate debate")
 
@@ -339,14 +351,21 @@ class ProvisionalKDETests(unittest.TestCase):
                     }
                 )
 
-        regions = density_region_summaries(rows)
+        regions = density_region_summaries(rows, min_candidate_count=1)
 
         self.assertEqual({row["zone"] for row in regions}, {"hot", "cold", "shared"})
         self.assertTrue(all(row["top_terms"] for row in regions))
         self.assertTrue(all(row["representative_excerpt"] for row in regions))
-        self.assertTrue(all(row.get("density_region_id") for row in rows))
+        self.assertTrue(all("density_cluster_label" in row for row in rows))
+        self.assertTrue(
+            all(
+                row.get("density_region_id")
+                for row in rows
+                if row["density_cluster_label"] >= 0
+            )
+        )
 
-    def test_density_regions_cluster_in_semantic_space(self) -> None:
+    def test_density_regions_use_hdbscan_in_semantic_space(self) -> None:
         import numpy as np
 
         rows = []
@@ -380,7 +399,55 @@ class ProvisionalKDETests(unittest.TestCase):
         self.assertEqual(len(regions), 3)
         self.assertTrue(all(row["semantic_coherence"] > 0.9 for row in regions))
         self.assertEqual({row["region_id"] for row in regions}, {"D1", "D2", "D3"})
+        self.assertTrue(
+            all(0.0 <= row["mean_membership_probability"] <= 1.0 for row in regions)
+        )
         self.assertEqual(
             sum(bool(row["displayed_on_map"]) for row in regions),
             2,
         )
+
+    def test_hdbscan_leaves_isolated_semantic_point_as_noise(self) -> None:
+        import numpy as np
+
+        rows = []
+        semantic_coordinates = []
+        for cluster, terms in enumerate(("climate energy", "tenant rent")):
+            for index in range(80):
+                rows.append(
+                    {
+                        "zone": "hot",
+                        "umap_x": float(cluster),
+                        "umap_y": index / 100,
+                        "log1p_density_ratio": 1.0,
+                        "candidate_unit_id": f"{cluster}-{index}",
+                        "candidate_name": f"Candidate {cluster}-{index}",
+                        "text": f"{terms} policy language for working families",
+                        "token_count": "20",
+                    }
+                )
+                semantic_coordinates.append([float(cluster * 10), index / 10_000])
+        noise_row = {
+            "zone": "hot",
+            "umap_x": 100.0,
+            "umap_y": 100.0,
+            "log1p_density_ratio": 1.0,
+            "candidate_unit_id": "noise",
+            "candidate_name": "Noise Candidate",
+            "text": "Unrelated isolated semantic content with no nearby passages",
+            "token_count": "20",
+        }
+        rows.append(noise_row)
+        semantic_coordinates.append([100.0, 100.0])
+
+        regions = density_region_summaries(
+            rows,
+            max_regions_per_zone=2,
+            min_cluster_size=20,
+            min_samples=5,
+            semantic_coordinates=np.array(semantic_coordinates),
+        )
+
+        self.assertEqual(len(regions), 2)
+        self.assertEqual(noise_row["density_cluster_label"], -1)
+        self.assertNotIn("density_region_id", noise_row)

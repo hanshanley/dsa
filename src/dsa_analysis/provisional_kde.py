@@ -281,11 +281,26 @@ def run_provisional_kde(
         },
         "density_regions": region_rows,
         "region_clustering": {
+            "algorithm": "HDBSCAN",
             "space": f"{selected_dimensions}-dimensional standardized semantic representation",
-            "candidate_subregions_per_zone": 12,
+            "metric": "euclidean",
+            "min_cluster_size": 60,
+            "min_samples": 10,
+            "cluster_selection_method": "eom",
+            "allow_single_cluster": True,
             "retained_subregions_per_zone": 6,
             "displayed_subregions_per_zone": 2,
-            "selection": "semantic coherence, support, and density-ratio strength",
+            "noise_points_by_zone": {
+                zone: sum(
+                    row.get("zone") == zone
+                    and int(row.get("density_cluster_label", -1)) == -1
+                    for row in scored_rows
+                )
+                for zone in ("hot", "cold", "shared")
+            },
+            "selection": (
+                "mean HDBSCAN membership probability, support, and density-ratio strength"
+            ),
         },
         "top_hot_terms": characterization["hot_terms"],
         "top_cold_terms": characterization["cold_terms"],
@@ -691,11 +706,13 @@ def density_region_summaries(
     *,
     max_regions_per_zone: int = 6,
     displayed_regions_per_zone: int = 2,
-    candidate_subregions_per_zone: int = 12,
+    min_cluster_size: int = 60,
+    min_samples: int = 10,
+    min_candidate_count: int = 20,
     semantic_coordinates: Any | None = None,
 ) -> list[dict[str, Any]]:
     import numpy as np
-    from sklearn.cluster import KMeans
+    from sklearn.cluster import HDBSCAN
     from sklearn.preprocessing import StandardScaler
 
     prefixes = {"hot": "D", "cold": "M", "shared": "S"}
@@ -716,24 +733,38 @@ def density_region_summaries(
             clustering_coordinates = np.array(
                 [semantic_coordinates[row_indices[id(row)]] for row in zone_rows]
             )
-        cluster_count = min(
-            candidate_subregions_per_zone,
-            max(1, len(zone_rows) // 150),
-            len(zone_rows),
+        effective_min_cluster_size = min(
+            min_cluster_size,
+            max(2, len(zone_rows) // 2),
         )
-        if (
-            cluster_count == 1
-            or len(zone_rows) < 4
-            or np.allclose(np.ptp(clustering_coordinates, axis=0), 0.0)
+        effective_min_samples = min(
+            min_samples,
+            max(1, effective_min_cluster_size - 1),
+        )
+        if len(zone_rows) < 4 or np.allclose(
+            np.ptp(clustering_coordinates, axis=0),
+            0.0,
         ):
             labels = np.zeros(len(zone_rows), dtype=int)
-            cluster_count = 1
+            probabilities = np.ones(len(zone_rows), dtype=float)
         else:
-            labels = KMeans(
-                n_clusters=cluster_count,
-                random_state=SEED,
-                n_init=20,
-            ).fit_predict(clustering_coordinates)
+            clusterer = HDBSCAN(
+                min_cluster_size=effective_min_cluster_size,
+                min_samples=effective_min_samples,
+                metric="euclidean",
+                cluster_selection_method="eom",
+                allow_single_cluster=True,
+                n_jobs=1,
+                copy=False,
+            )
+            labels = clusterer.fit_predict(clustering_coordinates)
+            probabilities = clusterer.probabilities_
+        for index, row in enumerate(zone_rows):
+            row["density_cluster_label"] = int(labels[index])
+            row["density_cluster_probability"] = round(
+                float(probabilities[index]),
+                6,
+            )
         clusters = []
         zone_score_scale = max(
             (
@@ -742,7 +773,7 @@ def density_region_summaries(
             ),
             default=1.0,
         )
-        for label in range(cluster_count):
+        for label in sorted(set(int(value) for value in labels if int(value) >= 0)):
             member_indices = [
                 index
                 for index, assigned in enumerate(labels)
@@ -759,7 +790,7 @@ def density_region_summaries(
                     for row in members
                 }
             )
-            if candidate_count < 20 and cluster_count > 1:
+            if candidate_count < min_candidate_count:
                 continue
             member_coordinates = clustering_coordinates[member_indices]
             centroid = np.mean(member_coordinates, axis=0)
@@ -769,6 +800,7 @@ def density_region_summaries(
             coherence = 1.0 / (1.0 + mean_distance)
             mean_score = sum(float(row["log1p_density_ratio"]) for row in members) / len(members)
             strength = abs(mean_score) / max(zone_score_scale, 1e-12)
+            membership_probability = float(np.mean(probabilities[member_indices]))
             terms = _distinctive_region_terms(members, zone_rows)
             if not _cluster_terms_look_substantive(terms):
                 continue
@@ -779,7 +811,12 @@ def density_region_summaries(
                     "coherence": coherence,
                     "candidate_count": candidate_count,
                     "terms": terms,
-                    "rank_score": coherence * math.log1p(len(members)) * (1.0 + strength),
+                    "membership_probability": membership_probability,
+                    "rank_score": (
+                        membership_probability
+                        * math.log1p(len(members))
+                        * (1.0 + strength)
+                    ),
                 }
             )
         clusters.sort(key=lambda cluster: float(cluster["rank_score"]), reverse=True)
@@ -815,6 +852,10 @@ def density_region_summaries(
                     ),
                     "semantic_coherence": round(
                         float(cluster["coherence"]),
+                        6,
+                    ),
+                    "mean_membership_probability": round(
+                        float(cluster["membership_probability"]),
                         6,
                     ),
                     "centroid_x": round(
@@ -1038,16 +1079,20 @@ def _distinctive_region_terms(
         "sport",
         "state",
         "support",
+        "something",
         "senator",
         "tapper",
         "thank",
         "taxe",
+        "top",
         "vote",
         "vice",
         "website",
         "window",
         "work",
         "would",
+        "get",
+        "say",
         "year",
         "yeah",
         "newsletter",
@@ -1289,13 +1334,15 @@ def _write_kde_report(path: Path, summary: dict[str, Any]) -> None:
         excerpt = str(region["representative_excerpt"]).replace("|", "\\|")
         terms = str(region["top_terms"]).replace("_", " ").replace(" | ", ", ")
         region_lines.append(
-            "| {region_id} | {zone} | {map_status} | {segments} | {candidates} | {terms} | "
+            "| {region_id} | {zone} | {map_status} | {segments} | {candidates} | "
+            "{confidence} | {terms} | "
             "{candidate}: {excerpt} |".format(
                 region_id=region["region_id"],
                 zone=zone_labels[str(region["zone"])],
                 map_status="Yes" if region["displayed_on_map"] else "No",
                 segments=region["segment_count"],
                 candidates=region["candidate_count"],
+                confidence=f'{float(region["mean_membership_probability"]):.2f}',
                 terms=terms,
                 candidate=region["representative_candidate"] or "Representative segment",
                 excerpt=excerpt,
@@ -1322,14 +1369,15 @@ visualization.
   group's lower-quartile density-ratio cutoff.
 - **S regions** are high-joint-density areas with small absolute density differences. They
   represent semantic overlap, not proof of identical positions.
-- Each zone is divided into 12 candidate subregions in the selected 10-dimensional semantic
-  representation. The table retains up to six substantive, sufficiently supported regions;
+- HDBSCAN identifies variable-shape clusters in the selected 10-dimensional UMAP representation
+  (`min_cluster_size=60`, `min_samples=10`, Euclidean metric, EOM selection). Noise points remain
+  unassigned. The table retains up to six substantive, sufficiently supported regions per zone;
   the map displays the top two per category to remain legible.
 - Terms are locally distinctive document-prevalence terms from the underlying subregion text.
   Examples are extractive source passages, not generated paraphrases.
 
-| Region | Interpretation | On map | Passages | Candidates | Distinctive terms | Representative source text |
-| --- | --- | --- | ---: | ---: | --- | --- |
+| Region | Interpretation | On map | Passages | Candidates | HDBSCAN confidence | Distinctive terms | Representative source text |
+| --- | --- | --- | ---: | ---: | ---: | --- | --- |
 {chr(10).join(region_lines)}
 
 ## Limits
