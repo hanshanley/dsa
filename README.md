@@ -39,18 +39,19 @@ candidate texts, blue regions among other Democrats, and gold regions are common
 
 The strongest recurring distinctions are:
 
-- **DSA-overrepresented:** tenants, landlords, rent, eviction, and housing as a right; climate,
-  renewable energy, fossil fuels, labor, unions, socialism, and universal health care.
-- **Other-Democrat-overrepresented:** agriculture and land preservation; transit and bicycle
-  infrastructure; housing development; business administration; and education governance.
-- **Shared high-density language:** taxes and revenue; abortion and reproductive rights;
-  health-insurance costs; zoning and development; schools and funding; and candidate biographies.
+- **DSA-overrepresented:** socialist and movement-building language; climate and renewable
+  energy; tenants and eviction; labor and wages; Palestine/Israel; and universal health care.
+- **Other-Democrat-overrepresented:** California education; agriculture and land preservation;
+  transit and bicycle infrastructure; housing development; and waste and recycling.
+- **Shared high-density language:** education and candidate experience; immigration and the
+  border; zoning and development; legal experience; taxes and revenue; and political leadership.
 
 The cards use source-attributed passages selected for both topical relevance and proximity to
 each region's semantic center. The two-dimensional projection is for visualization; density is
 estimated in the selected 10-dimensional representation.
 The [complete semantic-region table](data/analysis/provisional_gte_kde/density_regions.csv)
-lists up to six regions per category and marks the two shown on the map.
+lists up to six HDBSCAN regions per category and marks the two shown on the map. HDBSCAN runs
+on the selected 10-dimensional UMAP representation; unclustered points remain explicit noise.
 
 ## What the campaigns emphasize
 
