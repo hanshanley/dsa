@@ -29,6 +29,12 @@ class TextAnalysisTests(unittest.TestCase):
             ["worker", "movement", "ownership"],
         )
 
+    def test_tokenize_removes_pronouns_and_contractions(self):
+        self.assertEqual(
+            tokenize("I'm sure his platform says she's helping ourselves."),
+            ["sure", "says", "helping"],
+        )
+
     def test_tokenize_canonicalizes_policy_phrases(self):
         self.assertEqual(
             tokenize("Medicare for All and rent control support working-class tenants."),

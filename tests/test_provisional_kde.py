@@ -75,6 +75,16 @@ class ProvisionalKDETests(unittest.TestCase):
                 ["withdrawal", "payout", "casino", "interac", "wallet"]
             )
         )
+        self.assertFalse(
+            _cluster_terms_look_substantive(
+                ["actblue", "donation", "phone", "saved", "express"]
+            )
+        )
+        self.assertFalse(
+            _cluster_terms_look_substantive(
+                ["council", "june", "interview", "ballot", "party"]
+            )
+        )
         self.assertTrue(
             _cluster_terms_look_substantive(
                 ["housing", "tenant", "landlord", "rent", "eviction"]

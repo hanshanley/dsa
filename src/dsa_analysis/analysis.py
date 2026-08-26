@@ -298,9 +298,10 @@ and candidate support.
   {stats["official_kde_sensitivity_min_regions"]}–
   {stats["official_kde_sensitivity_max_regions"]} retained regions
 
-Equal-size, document-balanced fitting prevents the larger Democratic passage inventory from
-mechanically determining the semantic manifold or density estimates. It does not compensate for
-missing platforms, the national/subnational mismatch, or the smaller DSA document inventory.
+Equal-size, document-stratified UMAP fitting and equal-platform-weighted KDE prevent the larger
+Democratic passage inventory from mechanically determining the semantic manifold or density
+estimates. They do not compensate for missing platforms, the national/subnational mismatch, or
+the smaller DSA document inventory.
 HDBSCAN regions report distinctive terms and exact representative passages, but their
 parameter sensitivity makes them exploratory evidence summaries rather than a stable topic
 taxonomy.

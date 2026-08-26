@@ -73,7 +73,9 @@ share. Each platform contributes at most once per feature.
 
 ### `data/analysis/official_platform_gte_kde/`
 
-Document-balanced semantic-density outputs for official platforms:
+Document-stratified, equal-platform-weighted semantic-density outputs for official platforms.
+This pipeline applies an additional quality and minimum-platform-coverage gate beyond the
+44-document lexical corpus:
 
 - `segment_density_scores.csv`: exact passages, provenance, selected-space density values,
   two-dimensional visualization coordinates, zone, HDBSCAN label, and membership probability;
