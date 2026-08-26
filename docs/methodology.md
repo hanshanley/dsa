@@ -112,16 +112,21 @@ These measures describe recoverable language. They do not infer positions from m
 measure sincerity or policy quality, or prove that a lexical difference caused an election
 outcome. Official MPIF input is restricted to generated organizational-context rows identified
 as full platforms. DSA National and state/local DSA categories are grouped against DNC National
-and state Democratic Party categories.
+and state Democratic Party categories. If an official PDF combines a platform with a constitution
+or bylaws, only the platform section is eligible; internal party-governance text is excluded at
+the first explicit constitution/bylaws boundary.
 
 Official-platform robustness uses two additional balance controls. First, feature prevalence is
 computed at the document level: each platform contributes at most one observation to each
 canonical policy feature, regardless of length or repetition. Second, the official-platform
 semantic fingerprint fits both UMAP and Gaussian KDE on equal-size deterministic samples selected
-round-robin across documents within each group. The dimensionality sweep tests 2, 5, 10, 20, and
-30 dimensions using trustworthiness; the current corpus selects five dimensions. Coordinate
-standardization is also fit on the balanced sample, and KDE uses Scott's bandwidth rule. HDBSCAN
-(`min_cluster_size=10`, `min_samples=3`, excess-of-mass selection) identifies interpretable
+round-robin across documents within each group. KDE then uses inverse within-document passage
+frequency weights so every represented platform has equal aggregate density weight within its
+group. The dimensionality sweep tests 2, 5, 10, 20, and 30 dimensions using trustworthiness; the
+current corpus selects five dimensions. Coordinate standardization is also fit on the balanced
+sample, and KDE uses Scott's bandwidth rule. HDBSCAN
+(`min_cluster_size=10`, `min_samples=3`, leaf selection,
+`allow_single_cluster=false`) identifies interpretable
 DSA-overrepresented, Democratic-overrepresented, and shared high-density regions, retaining
 unassigned points as noise. The 2D UMAP is visualization only.
 

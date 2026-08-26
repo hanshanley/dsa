@@ -3,10 +3,25 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dsa_analysis.official_platform_kde import load_official_platform_segments
+from dsa_analysis.official_platform_kde import (
+    _document_balance_weights,
+    load_official_platform_segments,
+)
 
 
 class OfficialPlatformKDETests(unittest.TestCase):
+    def test_document_balance_weights_equalize_platform_contributions(self):
+        rows = [
+            {"support_unit_ids": "document-a"},
+            {"support_unit_ids": "document-a"},
+            {"support_unit_ids": "document-b"},
+        ]
+
+        self.assertEqual(
+            _document_balance_weights(rows, [0, 1, 2]),
+            [0.5, 0.5, 1.0],
+        )
+
     def test_loader_maps_groups_and_platform_documents(self):
         with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as directory:
             path = Path(directory) / "platforms.csv"

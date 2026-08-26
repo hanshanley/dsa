@@ -5,6 +5,7 @@ from pathlib import Path
 
 from dsa_analysis.provisional_kde import (
     _cluster_terms_look_substantive,
+    _density_fingerprint_layout,
     _distinctive_region_terms,
     _looks_like_navigation_or_form,
     _looks_like_table_of_contents,
@@ -16,6 +17,16 @@ from dsa_analysis.provisional_kde import (
 
 
 class ProvisionalKDETests(unittest.TestCase):
+    def test_density_fingerprint_layout_stacks_three_region_cards(self) -> None:
+        self.assertEqual(
+            _density_fingerprint_layout(3),
+            (3, 1, (1.35, 0.90)),
+        )
+        self.assertEqual(
+            _density_fingerprint_layout(6),
+            (3, 2, (1.08, 1.0)),
+        )
+
     def test_region_terms_exclude_pronouns_contractions_and_filler(self) -> None:
         region_rows = [
             {
@@ -227,6 +238,29 @@ class ProvisionalKDETests(unittest.TestCase):
             {rows[index]["candidate_slug"] for index in selected},
             {"a", "b"},
         )
+
+    def test_balanced_kde_sample_uses_all_provenance_units(self) -> None:
+        rows = [
+            {"group": "endorsed", "support_unit_ids": "document-a | document-b"},
+            {"group": "endorsed", "support_unit_ids": "document-a"},
+            {"group": "endorsed", "support_unit_ids": "document-b"},
+            {"group": "endorsed", "support_unit_ids": "document-c"},
+        ]
+
+        selected = balanced_kde_sample_indices(
+            rows,
+            group="endorsed",
+            limit=3,
+            seed=1729,
+        )
+        represented = {
+            document_id.strip()
+            for index in selected
+            for document_id in rows[index]["support_unit_ids"].split(" | ")
+        }
+
+        self.assertEqual(len(selected), 3)
+        self.assertEqual(represented, {"document-a", "document-b", "document-c"})
 
     def test_load_segments_retains_one_duplicate_per_candidate_cycle(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

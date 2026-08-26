@@ -452,8 +452,10 @@ def analyze_text() -> dict[str, int | float]:
                     "data/analysis/organizational_context_text_corpus.csv"
                 ),
                 "eligibility": (
-                    "full_platform_categories present; nonempty segment; "
-                    "token_count >= 20; boilerplate_flag=false"
+                    "full_platform_categories present; at least one contributing context entry "
+                    "currently verification_status=verified; nonempty segment; "
+                    "token_count >= 20; boilerplate_flag=false; combined platform/governance "
+                    "documents restricted to the platform section"
                 ),
                 "category_grouping": OFFICIAL_CATEGORY_GROUPS,
             },
@@ -1192,9 +1194,11 @@ def _official_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str
         for row in read_csv(OFFICIAL_INVENTORY_PATH)
         if row.get("verification_status", "").strip() == "verified"
     }
+    source_rows = read_csv(OFFICIAL_SEGMENTS_PATH)
+    platform_end_indices = _combined_document_platform_end_indices(source_rows, metadata)
     grouped: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
     document_segments: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
-    for row in read_csv(OFFICIAL_SEGMENTS_PATH):
+    for row in source_rows:
         if not _eligible_segment(row) or not row["full_platform_categories"].strip():
             continue
         group = _official_group(row["full_platform_categories"])
@@ -1206,6 +1210,12 @@ def _official_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str
             )
         context_entry_ids = _split_values(row.get("context_entry_ids", ""))
         if not verified_context_ids.intersection(context_entry_ids):
+            continue
+        platform_end_index = platform_end_indices.get(row["context_document_id"])
+        if (
+            platform_end_index is not None
+            and int(row.get("segment_index", "0")) >= platform_end_index
+        ):
             continue
         enriched = {
             **row,
@@ -1339,6 +1349,50 @@ def _official_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str
             }
         )
     return documents, snapshot_rows
+
+
+def _combined_document_platform_end_indices(
+    rows: list[dict[str, str]],
+    metadata: dict[str, dict[str, str]],
+) -> dict[str, int]:
+    by_document: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in rows:
+        by_document[row["context_document_id"]].append(row)
+
+    cutoffs = {}
+    for document_id, document_rows in by_document.items():
+        document = metadata.get(document_id, {})
+        title = (document.get("titles") or document.get("title", "")).casefold()
+        if "platform" not in title or not (
+            "constitution" in title or "bylaw" in title or "by-law" in title
+        ):
+            continue
+        ordered = sorted(document_rows, key=lambda row: int(row.get("segment_index", "0")))
+        platform_position = next(
+            (
+                position
+                for position, row in enumerate(ordered)
+                if "platform of " in row.get("text", "").casefold()
+            ),
+            None,
+        )
+        boundary_position = next(
+            (
+                position
+                for position, row in enumerate(ordered)
+                if "constitution of " in row.get("text", "").casefold()
+                or "bylaws of " in row.get("text", "").casefold()
+                or "by-laws of " in row.get("text", "").casefold()
+            ),
+            None,
+        )
+        if (
+            platform_position is not None
+            and boundary_position is not None
+            and platform_position < boundary_position
+        ):
+            cutoffs[document_id] = int(ordered[boundary_position]["segment_index"])
+    return cutoffs
 
 
 def _eligible_segment(row: dict[str, str]) -> bool:

@@ -16,10 +16,10 @@ registry and recoverable full-text corpus.
   DSA state/local 3, DNC national
   3, and state Democratic Party
   35
-- Eligible official-platform source segments: 5662
-- Official-platform segments after exact-text deduplication: 5648
+- Eligible official-platform source segments: 5450
+- Official-platform segments after exact-text deduplication: 5437
 - DSA official segments after deduplication: 328;
-  Democratic official segments: 5320
+  Democratic official segments: 5109
 - Unique source-supported primary contrasts: 1251
 
 Exact candidate passage text is counted once per DSA-endorsed/other-Democrat group and election cycle.
@@ -104,7 +104,7 @@ platform one observation per policy feature.
 The largest DSA-side document-prevalence differences are
 Social Housing (100% versus 3%), Working Class (100% versus 16%), Tenant (100% versus 18%), Green New Deal (83% versus 5%), Medicare For All (67% versus 16%), Border (83% versus 37%).
 The largest Democratic-side differences are
-Small Business (79% versus 0%), Business (82% versus 17%), Human Right (76% versus 17%), Climate Change (82% versus 33%), Training (82% versus 33%), Affordable Housing (58% versus 17%).
+Small Business (79% versus 0%), Business (79% versus 17%), Human Right (76% versus 17%), Climate Change (82% versus 33%), Training (82% versus 33%), Affordable Housing (58% versus 17%).
 These are differences in whether a document mentions a normalized feature, not evidence that
 every organization takes the same position or proposes the same mechanism.
 

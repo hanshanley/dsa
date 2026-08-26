@@ -94,10 +94,11 @@ review.
 Candidate rhetoric is analyzed separately from organizational platforms. The official corpus
 contains DSA national and state/local programs alongside DNC and state Democratic Party
 platforms. The current analysis contains **6 DSA documents (328 passages)** and **38 Democratic
-documents (5,320 passages)** after excluding sources whose current verification status is not
+documents (5,109 passages)** after excluding sources whose current verification status is not
 usable. The imbalance is handled two ways: document prevalence gives each platform one
 observation per feature, while the semantic fingerprint fits UMAP and KDE to equal-size,
-round-robin document-balanced samples from each group.
+round-robin document-stratified samples from each group and gives every represented platform equal
+aggregate weight in KDE.
 
 By category, the analyzed set contains 3 DSA national documents, 3 DSA state/local documents,
 3 DNC national platforms, and 35 state Democratic Party platforms. The coverage ledger retains
@@ -108,10 +109,11 @@ silence.
   <img src="figures/official_platform_gte_kde.png" width="1100" alt="Document-balanced semantic density map of official DSA and Democratic platforms">
 </p>
 
-The selected five-dimensional representation separates a recurring DSA region about collective
-power and transformational social change from a Democratic-platform region centered on students,
-affordability, infrastructure, and environmental administration. A shared high-density region
-contains health, service, family, and worker language. The document-prevalence result separately
+The selected five-dimensional representation separates DSA regions centered on collective
+working-class power, donor influence, and electoral organizing from Democratic-platform regions
+centered on inclusive governance, healthcare access, education, and climate policy. Shared
+high-density regions cover foreign policy, healthcare, anti-discrimination, and criminal-justice
+language. The document-prevalence result separately
 shows the strongest DSA-side differences for social housing, working-class, tenant, Green New
 Deal, and Medicare for All language. These are relative emphasis patterns in the recoverable
 corpus, not evidence that every organization or candidate holds the same position.
@@ -180,9 +182,10 @@ display.
 
 Official platforms use a separate five-dimensional sweep result. Both the UMAP manifold and KDE
 are fit on **328 passages per group**, sampled deterministically in round-robin order across
-documents. This prevents the larger Democratic passage inventory from mechanically determining
-the geometry or density estimates, but it cannot replace missing DSA state/local platforms or
-erase the 6-versus-38 document-coverage limitation.
+documents; inverse within-document passage-frequency weights give each represented platform equal
+aggregate KDE weight. This prevents the larger Democratic passage inventory from mechanically
+determining the geometry or density estimates, but it cannot replace missing DSA state/local
+platforms or erase the 6-versus-38 document-coverage limitation.
 
 ### Agreement and disagreement
 

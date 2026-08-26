@@ -8,6 +8,7 @@ from dsa_analysis.text_analysis import (
     FIGURE_DIR,
     TABLE_DIR,
     _candidate_segment_corpus,
+    _official_segment_corpus,
     _eligible_segment,
     _official_group,
     analyze_text,
@@ -67,6 +68,96 @@ class TextAnalysisTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             _official_group("dsa_national | dnc_national")
 
+    def test_official_corpus_uses_current_verification_and_platform_section(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            metadata_path = root / "organizational_context_document_metadata.csv"
+            inventory_path = root / "inventory.csv"
+            segments_path = root / "segments.csv"
+            output_path = root / "corpus.csv"
+            self._write_csv(
+                metadata_path,
+                [
+                    {
+                        "context_document_id": "combined",
+                        "title": "Platform, Constitution and Bylaws",
+                    },
+                    {"context_document_id": "invalidated", "title": "Old Platform"},
+                ],
+            )
+            self._write_csv(
+                inventory_path,
+                [
+                    {"context_entry_id": "verified", "verification_status": "verified"},
+                    {
+                        "context_entry_id": "invalid",
+                        "verification_status": "source_unavailable",
+                    },
+                ],
+            )
+            base = {
+                "full_platform_categories": "state_democratic_party",
+                "boilerplate_flag": "false",
+                "token_count": "20",
+                "context_categories": "state_democratic_party",
+                "states": "Missouri",
+                "state_codes": "MO",
+                "cycle_years": "2026",
+                "organizations": "Missouri Democratic Party",
+                "titles": "Platform, Constitution and Bylaws",
+                "platform_types": "state_party_platform",
+                "locator": "paragraph 1",
+                "exact_duplicate_hash": "duplicate",
+                "fetch_id": "fetch",
+            }
+            self._write_csv(
+                segments_path,
+                [
+                    {
+                        **base,
+                        "context_document_id": "combined",
+                        "context_entry_ids": "verified",
+                        "analysis_segment_id": "platform",
+                        "segment_index": "0",
+                        "sha256": "platform-hash",
+                        "text": "Platform of Missouri with twenty substantive policy words "
+                        "about schools workers health housing climate rights and fair wages.",
+                    },
+                    {
+                        **base,
+                        "context_document_id": "combined",
+                        "context_entry_ids": "verified",
+                        "analysis_segment_id": "constitution",
+                        "segment_index": "1",
+                        "sha256": "constitution-hash",
+                        "text": "Constitution of Missouri with twenty procedural words about "
+                        "committee officers meetings bylaws elections and internal governance.",
+                    },
+                    {
+                        **base,
+                        "context_document_id": "invalidated",
+                        "context_entry_ids": "invalid",
+                        "analysis_segment_id": "invalid",
+                        "segment_index": "0",
+                        "sha256": "invalid-hash",
+                        "text": "An extracted stale platform passage that must not remain "
+                        "after its source verification status changes.",
+                    },
+                ],
+            )
+
+            with (
+                patch("dsa_analysis.text_analysis.PROCESSED_DIR", root),
+                patch("dsa_analysis.text_analysis.OFFICIAL_INVENTORY_PATH", inventory_path),
+                patch("dsa_analysis.text_analysis.OFFICIAL_SEGMENTS_PATH", segments_path),
+                patch("dsa_analysis.text_analysis.OFFICIAL_CORPUS_PATH", output_path),
+            ):
+                documents, rows = _official_segment_corpus()
+
+            self.assertEqual([row["text_sha256"] for row in rows], ["platform-hash"])
+            self.assertEqual(len(documents), 1)
+            self.assertNotIn("Constitution", documents[0]["text"])
+
     def test_official_prevalence_balances_unequal_document_counts(self):
         rows = official_feature_prevalence(
             [
@@ -85,6 +176,13 @@ class TextAnalysisTests(unittest.TestCase):
         self.assertEqual(by_feature["worker"]["democratic_share"], "0.250000")
         self.assertEqual(by_feature["small_business"]["dsa_share"], "0.000000")
         self.assertEqual(by_feature["small_business"]["democratic_share"], "0.750000")
+
+    @staticmethod
+    def _write_csv(path: Path, rows: list[dict[str, str]]) -> None:
+        with path.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+            writer.writeheader()
+            writer.writerows(rows)
 
     def test_candidate_coverage_uses_registry_queue_denominator(self):
         with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as directory:

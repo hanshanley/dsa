@@ -441,10 +441,18 @@ def balanced_kde_sample_indices(
     by_candidate: dict[str, list[int]] = defaultdict(list)
     for index, row in enumerate(rows):
         if row["group"] == group:
-            candidate_unit_id = row.get("candidate_unit_id") or (
-                f"{row.get('race_id', '')}:{row.get('candidate_slug', '')}"
-            )
-            by_candidate[candidate_unit_id].append(index)
+            unit_ids = [
+                value.strip()
+                for value in row.get("support_unit_ids", "").split(" | ")
+                if value.strip()
+            ]
+            if not unit_ids:
+                unit_ids = [
+                    row.get("candidate_unit_id")
+                    or f"{row.get('race_id', '')}:{row.get('candidate_slug', '')}"
+                ]
+            for unit_id in unit_ids:
+                by_candidate[unit_id].append(index)
     if not by_candidate:
         raise ValueError(f"No rows available for KDE group {group!r}")
     rng = random.Random(seed)
@@ -453,14 +461,19 @@ def balanced_kde_sample_indices(
     candidates = sorted(by_candidate)
     rng.shuffle(candidates)
     selected = []
+    selected_set: set[int] = set()
     offset = 0
     while len(selected) < limit:
         added = False
         for candidate in candidates:
             indices = by_candidate[candidate]
             if offset < len(indices):
-                selected.append(indices[offset])
+                index = indices[offset]
                 added = True
+                if index in selected_set:
+                    continue
+                selected.append(index)
+                selected_set.add(index)
                 if len(selected) == limit:
                     break
         if not added:
@@ -515,17 +528,28 @@ def _plot_density_fingerprint(
 
     x = np.array([float(row["umap_x"]) for row in rows])
     y = np.array([float(row["umap_y"]) for row in rows])
-    figure = plt.figure(figsize=(20, 11), facecolor="#FAFAF8")
-    grid = figure.add_gridspec(1, 2, width_ratios=(1.08, 1.0), wspace=0.09)
+    displayed_regions = [
+        region for region in region_rows if bool(region.get("displayed_on_map", True))
+    ]
+    card_rows, card_columns, width_ratios = _density_fingerprint_layout(
+        len(displayed_regions)
+    )
+    figure = plt.figure(figsize=(18, 10.5), facecolor="#FAFAF8")
+    grid = figure.add_gridspec(1, 2, width_ratios=width_ratios, wspace=0.08)
     axis = figure.add_subplot(grid[0, 0])
-    card_grid = grid[0, 1].subgridspec(3, 2, hspace=0.16, wspace=0.10)
+    card_grid = grid[0, 1].subgridspec(
+        card_rows,
+        card_columns,
+        hspace=0.13,
+        wspace=0.10,
+    )
     axis.set_facecolor("#F4F4F1")
     axis.scatter(
         x,
         y,
         color="#C9CBC8",
-        s=3.0,
-        alpha=0.20,
+        s=2.5,
+        alpha=0.15,
         linewidths=0,
         rasterized=True,
     )
@@ -542,15 +566,12 @@ def _plot_density_fingerprint(
             [float(row["umap_x"]) for row in zone_rows],
             [float(row["umap_y"]) for row in zone_rows],
             color=color,
-            s=4.5,
-            alpha=0.48,
+            s=5.5,
+            alpha=0.55,
             linewidths=0,
             rasterized=True,
             label=label,
         )
-    displayed_regions = [
-        region for region in region_rows if bool(region.get("displayed_on_map", True))
-    ]
     for region in displayed_regions:
         color = zone_styles[str(region["zone"])][0]
         axis.text(
@@ -601,8 +622,8 @@ def _plot_density_fingerprint(
         color="#555555",
     )
     for index, region in enumerate(displayed_regions):
-        column = index % 2
-        row_index = index // 2
+        column = index % card_columns
+        row_index = index // card_columns
         card = figure.add_subplot(card_grid[row_index, column])
         card.set_xticks([])
         card.set_yticks([])
@@ -613,18 +634,36 @@ def _plot_density_fingerprint(
             spine.set_color(color)
             spine.set_linewidth(1.2)
         card.text(
-            0.05,
-            0.92,
-            f'{region["region_id"]}  {zone_label}',
+            0.055,
+            0.91,
+            str(region["region_id"]),
             transform=card.transAxes,
-            color=color,
-            fontsize=11,
+            color="white",
+            fontsize=9.5,
             fontweight="bold",
-            va="top",
+            va="center",
+            ha="left",
+            bbox={
+                "boxstyle": "round,pad=0.24",
+                "facecolor": color,
+                "edgecolor": color,
+                "linewidth": 0,
+            },
         )
         card.text(
-            0.05,
-            0.77,
+            0.14 if card_columns == 1 else 0.17,
+            0.91,
+            textwrap.fill(zone_label, width=56 if card_columns == 1 else 31),
+            transform=card.transAxes,
+            color=color,
+            fontsize=10.5 if card_columns == 1 else 9.5,
+            fontweight="bold",
+            va="center",
+            linespacing=0.95,
+        )
+        card.text(
+            0.055,
+            0.74,
             "DISTINCTIVE LANGUAGE",
             transform=card.transAxes,
             color="#666666",
@@ -633,11 +672,11 @@ def _plot_density_fingerprint(
             va="top",
         )
         card.text(
-            0.05,
-            0.70,
+            0.055,
+            0.67,
             textwrap.fill(
                 str(region["top_terms"]).replace("_", " ").replace(" | ", " · "),
-                width=42,
+                width=68 if card_columns == 1 else 42,
             ),
             transform=card.transAxes,
             color="#252525",
@@ -647,8 +686,8 @@ def _plot_density_fingerprint(
         candidate = str(region.get("representative_candidate", "")).strip()
         source_label = str(region.get("representative_source_type", "")).replace("_", " ")
         card.text(
-            0.05,
-            0.53,
+            0.055,
+            0.51,
             "REPRESENTATIVE PASSAGE",
             transform=card.transAxes,
             color="#666666",
@@ -657,19 +696,26 @@ def _plot_density_fingerprint(
             va="top",
         )
         card.text(
-            0.05,
-            0.475,
-            " · ".join(part for part in (candidate, source_label) if part),
+            0.055,
+            0.455,
+            textwrap.fill(
+                " · ".join(part for part in (candidate, source_label) if part),
+                width=76 if card_columns == 1 else 55,
+            ),
             transform=card.transAxes,
             color="#555555",
-            fontsize=7.8,
+            fontsize=7.3,
             fontweight="bold",
             va="top",
+            linespacing=0.95,
         )
         card.text(
-            0.05,
-            0.40,
-            textwrap.fill(f'“{region["representative_excerpt"]}”', width=49),
+            0.055,
+            0.355,
+            textwrap.fill(
+                f'“{region["representative_excerpt"]}”',
+                width=72 if card_columns == 1 else 49,
+            ),
             transform=card.transAxes,
             color="#3F3F3F",
             fontsize=8.7,
@@ -677,7 +723,7 @@ def _plot_density_fingerprint(
             style="italic",
         )
         card.text(
-            0.05,
+            0.055,
             0.08,
             (
                 f'{int(region["segment_count"]):,} passages from '
@@ -707,6 +753,16 @@ def _plot_density_fingerprint(
     plt.close(figure)
 
 
+def _density_fingerprint_layout(
+    displayed_region_count: int,
+) -> tuple[int, int, tuple[float, float]]:
+    if displayed_region_count <= 0:
+        return 1, 1, (1.45, 0.85)
+    if displayed_region_count <= 3:
+        return displayed_region_count, 1, (1.35, 0.90)
+    return (displayed_region_count + 1) // 2, 2, (1.08, 1.0)
+
+
 def density_region_summaries(
     rows: Sequence[dict[str, Any]],
     *,
@@ -715,6 +771,8 @@ def density_region_summaries(
     min_cluster_size: int = 60,
     min_samples: int = 10,
     min_candidate_count: int = 20,
+    allow_single_cluster: bool = True,
+    cluster_selection_method: str = "eom",
     semantic_coordinates: Any | None = None,
 ) -> list[dict[str, Any]]:
     import numpy as np
@@ -758,8 +816,8 @@ def density_region_summaries(
                 min_cluster_size=effective_min_cluster_size,
                 min_samples=effective_min_samples,
                 metric="euclidean",
-                cluster_selection_method="eom",
-                allow_single_cluster=True,
+                cluster_selection_method=cluster_selection_method,
+                allow_single_cluster=allow_single_cluster,
                 n_jobs=1,
                 copy=False,
             )
@@ -894,6 +952,8 @@ def _cluster_terms_look_substantive(terms: Sequence[str]) -> bool:
         "aug",
         "casino",
         "donate",
+        "elected",
+        "event",
         "facebook",
         "fppc",
         "interac",
@@ -913,11 +973,14 @@ def _cluster_terms_look_substantive(terms: Sequence[str]) -> bool:
         "sign",
         "story",
         "subscribe",
+        "team",
         "football",
         "open",
         "twitter",
         "wallet",
         "withdrawal",
+        "volunteer",
+        "caucuse",
     }
     normalized_terms = {term.casefold().replace("-", "_") for term in terms}
     return len(normalized_terms & noise_terms) < 3
@@ -933,6 +996,7 @@ def _distinctive_region_terms(
 
     excluded = {
         "about",
+        "across",
         "actually",
         "after",
         "also",
@@ -1008,6 +1072,7 @@ def _distinctive_region_terms(
         "through",
         "together",
         "under",
+        "value",
         "very",
         "want",
         "was",
@@ -1036,6 +1101,8 @@ def _distinctive_region_terms(
         "yourself",
         "yourselves",
         "applause",
+        "adopted",
+        "approved",
         "august",
         "assembly",
         "board",
@@ -1043,6 +1110,8 @@ def _distinctive_region_terms(
         "candidate",
         "courtesy",
         "contact",
+        "course",
+        "convention",
         "country",
         "city",
         "county",
@@ -1055,6 +1124,7 @@ def _distinctive_region_terms(
         "election",
         "email",
         "experience",
+        "forward",
         "endorsement",
         "endorsed",
         "facebook",
@@ -1069,20 +1139,27 @@ def _distinctive_region_terms(
         "mayor",
         "make",
         "majority",
+        "major",
         "member",
+        "meet",
         "name",
         "need",
+        "neither",
         "new",
         "news",
         "one",
+        "order",
         "other",
         "page",
         "people",
         "platform",
         "politic",
+        "positive",
         "primary",
+        "program",
         "race",
         "ran",
+        "read",
         "receive",
         "received",
         "run",
@@ -1093,6 +1170,7 @@ def _distinctive_region_terms(
         "she",
         "sport",
         "state",
+        "share",
         "support",
         "something",
         "senator",
@@ -1100,6 +1178,7 @@ def _distinctive_region_terms(
         "thank",
         "taxe",
         "top",
+        "true",
         "vote",
         "vice",
         "website",
@@ -1296,6 +1375,14 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             return True
     if normalized.startswith("do you commit to ") and normalized.endswith("?"):
         return True
+    if re.search(r"(?:\b\d+\s+){5,}", normalized):
+        return True
+    navigation_tokens = re.findall(r"[a-z]+", normalized)
+    if sum(
+        navigation_tokens[index] == navigation_tokens[index + 1]
+        for index in range(len(navigation_tokens) - 1)
+    ) >= 2:
+        return True
     return any(
         marker in normalized
         for marker in (
@@ -1318,6 +1405,7 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             "politics + government",
             "politics & government",
             "political party:",
+            "read more issue",
             "schedule d income",
             "schedule summary (required)",
             "schedules attached",
