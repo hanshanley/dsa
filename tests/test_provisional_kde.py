@@ -9,6 +9,7 @@ from dsa_analysis.provisional_kde import (
     _distinctive_region_terms,
     _looks_like_navigation_or_form,
     _looks_like_table_of_contents,
+    _wrap_card_text,
     balanced_kde_sample_indices,
     density_region_summaries,
     load_eligible_segments,
@@ -17,6 +18,16 @@ from dsa_analysis.provisional_kde import (
 
 
 class ProvisionalKDETests(unittest.TestCase):
+    def test_card_text_wrapper_enforces_line_budget(self) -> None:
+        wrapped = _wrap_card_text(
+            "one two three four five six seven eight nine ten",
+            width=10,
+            max_lines=2,
+        )
+
+        self.assertEqual(len(wrapped.splitlines()), 2)
+        self.assertTrue(wrapped.endswith("…"))
+
     def test_density_fingerprint_layout_stacks_three_region_cards(self) -> None:
         self.assertEqual(
             _density_fingerprint_layout(3),

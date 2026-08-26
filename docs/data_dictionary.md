@@ -77,12 +77,19 @@ Document-balanced semantic-density outputs for official platforms:
 
 - `segment_density_scores.csv`: exact passages, provenance, selected-space density values,
   two-dimensional visualization coordinates, zone, HDBSCAN label, and membership probability;
+- `analysis_flow.csv`: complete passage accounting from loaded and excluded rows through
+  highlighted, noise, retained-region, and displayed-region subsets;
+- `platform_coverage.csv`: every contributing platform, national/subnational level, passage
+  coverage, eligibility status, and exclusion reason;
 - `density_regions.csv`: retained DSA-overrepresented, Democratic-overrepresented, and shared
   HDBSCAN regions with terms and representative exact passages;
+- `clustering_sensitivity.csv`: region counts and assigned-passage counts across the prespecified
+  HDBSCAN method, minimum-cluster-size, and minimum-samples grid;
 - `umap_dimension_sweep.csv`: trustworthiness for 2, 5, 10, 20, and 30 dimensions;
 - `hot_cold_terms.csv`: deterministic hot/cold-zone lexical characterization;
 - `summary.json`: model identity, corpus hash, balance rules, bandwidths, thresholds, dimensions,
-  group/document counts, and clustering configuration.
+  group/document counts, eligibility gates, passage-flow counts, clustering configuration, and
+  sensitivity ranges.
 
 `embeddings.npy` is a local cache and is not versioned.
 

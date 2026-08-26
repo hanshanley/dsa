@@ -519,6 +519,7 @@ def _plot_density_fingerprint(
     hot_label: str = "More common in DSA-endorsed text",
     cold_label: str = "More common in other Democrats' text",
     unit_label: str = "candidates",
+    accounting_note: str = "",
 ) -> None:
     import matplotlib
 
@@ -528,6 +529,11 @@ def _plot_density_fingerprint(
 
     x = np.array([float(row["umap_x"]) for row in rows])
     y = np.array([float(row["umap_y"]) for row in rows])
+    map_rows = [
+        row for row in rows if bool(row.get("included_in_balanced_map_sample"))
+    ]
+    if not map_rows:
+        map_rows = list(rows)
     displayed_regions = [
         region for region in region_rows if bool(region.get("displayed_on_map", True))
     ]
@@ -545,8 +551,8 @@ def _plot_density_fingerprint(
     )
     axis.set_facecolor("#F4F4F1")
     axis.scatter(
-        x,
-        y,
+        [float(row["umap_x"]) for row in map_rows],
+        [float(row["umap_y"]) for row in map_rows],
         color="#C9CBC8",
         s=2.5,
         alpha=0.15,
@@ -559,7 +565,7 @@ def _plot_density_fingerprint(
         "shared": ("#8A7525", "#F5F1DE", "Common to both groups"),
     }
     for zone, (color, _, label) in zone_styles.items():
-        zone_rows = [row for row in rows if row.get("zone") == zone]
+        zone_rows = [row for row in map_rows if row.get("zone") == zone]
         if not zone_rows:
             continue
         axis.scatter(
@@ -574,9 +580,36 @@ def _plot_density_fingerprint(
         )
     for region in displayed_regions:
         color = zone_styles[str(region["zone"])][0]
+        region_members = [
+            row
+            for row in rows
+            if row.get("density_region_id") == region["region_id"]
+        ]
+        if region_members:
+            anchor = min(
+                region_members,
+                key=lambda row: (
+                    (float(row["umap_x"]) - float(region["centroid_x"])) ** 2
+                    + (float(row["umap_y"]) - float(region["centroid_y"])) ** 2
+                ),
+            )
+            label_x = float(anchor["umap_x"])
+            label_y = float(anchor["umap_y"])
+            axis.scatter(
+                [label_x],
+                [label_y],
+                color=color,
+                s=16,
+                alpha=0.95,
+                linewidths=0,
+                zorder=4,
+            )
+        else:
+            label_x = float(region["centroid_x"])
+            label_y = float(region["centroid_y"])
         axis.text(
-            float(region["centroid_x"]),
-            float(region["centroid_y"]),
+            label_x,
+            label_y,
             str(region["region_id"]),
             ha="center",
             va="center",
@@ -615,7 +648,8 @@ def _plot_density_fingerprint(
         (
             "Nearby points contain semantically similar passages. "
             "Gray points are not assigned to a highlighted region.\n"
-            "The two-dimensional map is for visualization only; extreme outliers are clipped."
+            "Labels mark actual region members nearest full-region centroids; "
+            "extreme outliers are clipped."
         ),
         transform=axis.transAxes,
         fontsize=8.5,
@@ -653,7 +687,11 @@ def _plot_density_fingerprint(
         card.text(
             0.14 if card_columns == 1 else 0.17,
             0.91,
-            textwrap.fill(zone_label, width=56 if card_columns == 1 else 31),
+            _wrap_card_text(
+                zone_label,
+                width=56 if card_columns == 1 else 31,
+                max_lines=2,
+            ),
             transform=card.transAxes,
             color=color,
             fontsize=10.5 if card_columns == 1 else 9.5,
@@ -674,9 +712,10 @@ def _plot_density_fingerprint(
         card.text(
             0.055,
             0.67,
-            textwrap.fill(
+            _wrap_card_text(
                 str(region["top_terms"]).replace("_", " ").replace(" | ", " · "),
                 width=68 if card_columns == 1 else 42,
+                max_lines=2,
             ),
             transform=card.transAxes,
             color="#252525",
@@ -698,9 +737,10 @@ def _plot_density_fingerprint(
         card.text(
             0.055,
             0.455,
-            textwrap.fill(
+            _wrap_card_text(
                 " · ".join(part for part in (candidate, source_label) if part),
                 width=76 if card_columns == 1 else 55,
+                max_lines=2,
             ),
             transform=card.transAxes,
             color="#555555",
@@ -712,9 +752,10 @@ def _plot_density_fingerprint(
         card.text(
             0.055,
             0.355,
-            textwrap.fill(
+            _wrap_card_text(
                 f'“{region["representative_excerpt"]}”',
                 width=72 if card_columns == 1 else 49,
+                max_lines=5 if card_columns == 1 else 4,
             ),
             transform=card.transAxes,
             color="#3F3F3F",
@@ -742,13 +783,27 @@ def _plot_density_fingerprint(
     )
     figure.text(
         0.5,
-        0.947,
+        0.953,
         subtitle,
         ha="center",
         fontsize=11,
         color="#555555",
     )
-    figure.subplots_adjust(top=0.90, bottom=0.07, left=0.05, right=0.985)
+    if accounting_note:
+        figure.text(
+            0.5,
+            0.927,
+            accounting_note,
+            ha="center",
+            fontsize=9.5,
+            color="#555555",
+        )
+    figure.subplots_adjust(
+        top=0.89 if accounting_note else 0.90,
+        bottom=0.07,
+        left=0.05,
+        right=0.985,
+    )
     figure.savefig(figure_path, dpi=220)
     plt.close(figure)
 
@@ -761,6 +816,20 @@ def _density_fingerprint_layout(
     if displayed_region_count <= 3:
         return displayed_region_count, 1, (1.35, 0.90)
     return (displayed_region_count + 1) // 2, 2, (1.08, 1.0)
+
+
+def _wrap_card_text(text: str, *, width: int, max_lines: int) -> str:
+    lines = textwrap.wrap(
+        text,
+        width=width,
+        break_long_words=False,
+        break_on_hyphens=False,
+    )
+    if len(lines) <= max_lines:
+        return "\n".join(lines)
+    retained = lines[:max_lines]
+    retained[-1] = retained[-1].rstrip(" .,;:…") + "…"
+    return "\n".join(retained)
 
 
 def density_region_summaries(
