@@ -79,7 +79,7 @@ locators remain provenance-only and are excluded from analysis eligibility.
 - Eligible full-platform documents in lexical analysis: 44
 - Analyzed DSA platforms: 6
 - Analyzed Democratic platforms: 38
-- Eligible full-platform source segments: 5662
+- Eligible full-platform source segments: 5450
 
 Every represented state-cycle has an explicit status for each context category, but explicit
 `searched_not_found`, `source_unavailable`, and `not_applicable` statuses are not extracted

@@ -156,7 +156,10 @@ def run_official_platform_kde(
             kernel="gaussian",
             algorithm="ball_tree",
             leaf_size=40,
-        ).fit(standardized[fit_indices[group]])
+        ).fit(
+            standardized[fit_indices[group]],
+            sample_weight=_document_balance_weights(rows, fit_indices[group]),
+        )
         log_densities[group] = kde.score_samples(standardized)
 
     groups = np.array([row["group"] for row in rows])
@@ -219,6 +222,8 @@ def run_official_platform_kde(
         min_cluster_size=10,
         min_samples=3,
         min_candidate_count=2,
+        allow_single_cluster=False,
+        cluster_selection_method="leaf",
     )
     _write_csv(output_directory / "segment_density_scores.csv", scored_rows)
     _write_csv(output_directory / "umap_dimension_sweep.csv", sweep_rows)
@@ -233,8 +238,8 @@ def run_official_platform_kde(
         title="Where official DSA and Democratic platforms differ — and overlap",
         map_title="Semantic map of official platform language",
         subtitle=(
-            "UMAP and KDE are fit on equal, document-balanced samples from each group; "
-            "cards summarize HDBSCAN regions in the selected-dimensional space."
+            "UMAP uses equal, document-stratified group samples; KDE gives each platform equal "
+            "weight; cards summarize selected-dimensional HDBSCAN regions."
         ),
         hot_label="More common in official DSA platforms",
         cold_label="More common in official Democratic platforms",
@@ -242,11 +247,45 @@ def run_official_platform_kde(
     )
 
     document_counts = Counter(
-        row["group"]
-        for row in {
-            (row["group"], row["candidate_unit_id"]): row for row in rows
-        }.values()
+        group
+        for group, _ in {
+            (row["group"], document_id.strip())
+            for row in rows
+            for document_id in row["support_unit_ids"].split(" | ")
+            if document_id.strip()
+        }
     )
+    fit_document_counts = {
+        output_group: len(
+            {
+                document_id.strip()
+                for index in fit_indices[input_group]
+                for document_id in rows[index]["support_unit_ids"].split(" | ")
+                if document_id.strip()
+            }
+        )
+        for output_group, input_group in (
+            ("dsa", "endorsed"),
+            ("democratic", "opponent"),
+        )
+    }
+    fit_document_passage_ranges = {}
+    for output_group, input_group in (
+        ("dsa", "endorsed"),
+        ("democratic", "opponent"),
+    ):
+        counts = Counter(
+            document_id.strip()
+            for index in fit_indices[input_group]
+            for document_id in rows[index]["support_unit_ids"].split(" | ")
+            if document_id.strip()
+        )
+        values = sorted(counts.values())
+        fit_document_passage_ranges[output_group] = {
+            "minimum": min(values),
+            "median": float(np.median(values)),
+            "maximum": max(values),
+        }
     zone_counts = Counter(row["zone"] for row in scored_rows if row["zone"])
     summary = {
         "status": "recoverable_platform_corpus",
@@ -274,7 +313,7 @@ def run_official_platform_kde(
             "smallest tested dimension within 0.005 trustworthiness of the maximum"
         ),
         "umap_fit": {
-            "sampling": "equal-size deterministic document-balanced sample by group",
+            "sampling": "equal-size deterministic document-stratified sample by group",
             "per_group_count": per_group_limit,
             "n_neighbors": 15,
             "metric": "cosine",
@@ -283,11 +322,17 @@ def run_official_platform_kde(
             "coordinate_standardization": "z-score fit on the balanced UMAP sample",
             "kernel": "gaussian",
             "bandwidth_rule": "Scott n^(-1/(d+4))",
-            "fit_sampling": "equal-size deterministic document-balanced sample by group",
+            "fit_sampling": "equal-size deterministic document-stratified sample by group",
             "fit_counts": {
                 "dsa": len(fit_indices["endorsed"]),
                 "democratic": len(fit_indices["opponent"]),
             },
+            "fit_document_counts": fit_document_counts,
+            "fit_document_passage_ranges": fit_document_passage_ranges,
+            "sample_weighting": (
+                "inverse passage frequency within each contributing document; each platform "
+                "has equal aggregate weight within its group"
+            ),
             "bandwidths": {
                 "dsa": bandwidths["endorsed"],
                 "democratic": bandwidths["opponent"],
@@ -310,7 +355,8 @@ def run_official_platform_kde(
             "metric": "euclidean",
             "min_cluster_size": 10,
             "min_samples": 3,
-            "cluster_selection_method": "eom",
+            "cluster_selection_method": "leaf",
+            "allow_single_cluster": False,
             "retained_subregions_per_zone": 6,
             "displayed_subregions_per_zone": 2,
         },
@@ -375,6 +421,28 @@ def _platform_corpus_hash(rows: list[dict[str, str]]) -> str:
     return digest.hexdigest()
 
 
+def _document_balance_weights(
+    rows: list[dict[str, str]],
+    indices: list[int],
+) -> list[float]:
+    document_counts = Counter(
+        document_id.strip()
+        for index in indices
+        for document_id in rows[index]["support_unit_ids"].split(" | ")
+        if document_id.strip()
+    )
+    if not document_counts:
+        raise ValueError("Official-platform KDE rows do not contain support-unit provenance")
+    return [
+        sum(
+            1.0 / document_counts[document_id.strip()]
+            for document_id in rows[index]["support_unit_ids"].split(" | ")
+            if document_id.strip()
+        )
+        for index in indices
+    ]
+
+
 def _write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
@@ -415,7 +483,11 @@ from candidate rhetoric.
   {group_counts["democratic"]:,} passages.
 - UMAP fit: {summary["umap_fit"]["per_group_count"]:,} passages per group, selected
   deterministically in round-robin order across documents.
-- KDE fit: the same equal-sized, document-balanced samples.
+- KDE fit: the same equal-sized samples, representing
+  {summary["kde"]["fit_document_counts"]["dsa"]} DSA and
+  {summary["kde"]["fit_document_counts"]["democratic"]} Democratic documents.
+- KDE weights: inverse within-document passage frequency, giving each represented platform equal
+  aggregate density weight within its group.
 - Density space: {summary["selected_dimensions"]} dimensions; the 2D map is visualization only.
 
 Equal sampling prevents the larger Democratic passage inventory from mechanically determining
@@ -425,8 +497,9 @@ the manifold or density estimates. It does not compensate for unavailable platfo
 
 ## Semantic regions
 
-Regions are HDBSCAN communities in the selected-dimensional semantic space. The public map shows
-the two strongest regions per zone; this table retains up to six.
+Regions are HDBSCAN communities in the selected-dimensional semantic space with single-cluster
+fallback disabled to avoid treating an entire density zone as one broad semantic region. The
+public map shows the two strongest regions per zone; this table retains up to six.
 
 | ID | Density zone | Passages | Platforms | HDBSCAN confidence | Distinctive terms | Representative exact passage |
 |---|---|---:|---:|---:|---|---|

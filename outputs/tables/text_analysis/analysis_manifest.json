@@ -9,7 +9,7 @@
   "generated_figure_count": 9,
   "input_hashes": {
     "data/analysis/candidate_text_corpus.csv": "067968f8e6d9c19b076e3b3a4a811e329efd52ece799a1537833b41f2d3d586e",
-    "data/analysis/organizational_context_text_corpus.csv": "7050544031bab01d0b05e13956083b3a6c3eff390c55c4c19c4dce1ed9966f87",
+    "data/analysis/organizational_context_text_corpus.csv": "eed9e00eb247de825e0c373bcffe3f3ba464300d438007f55224f179ce66a68e",
     "data/analysis/primary_sticking_points.csv": "d1ff808f2217f7fc0b61059515de36914297709f2e68abae9fc97dc1d6866709",
     "data/manual/excerpts.csv": "03edd6b2528f354b46940856cc4c116684a8f918b7258a5eea97cd6d7db63869",
     "data/manual/platform_comparisons.csv": "d219f624614a5bd962b5f8fec5a401714dc65eccfbf6730618e7d7aafdcc0e67",
@@ -40,7 +40,7 @@
         "dsa_state_local": "dsa",
         "state_democratic_party": "democratic"
       },
-      "eligibility": "full_platform_categories present; nonempty segment; token_count >= 20; boilerplate_flag=false",
+      "eligibility": "full_platform_categories present; at least one contributing context entry currently verification_status=verified; nonempty segment; token_count >= 20; boilerplate_flag=false; combined platform/governance documents restricted to the platform section",
       "generated_from": "data/processed/organizational_context_analysis_segments.csv",
       "generator": "dsa_analysis.organizational_context_corpus.run_organizational_context_extraction_batch"
     },
@@ -61,13 +61,13 @@
     "democratic": 38,
     "dsa": 6
   },
-  "official_mpif_features": 132127,
-  "official_segments": 5648,
+  "official_mpif_features": 128936,
+  "official_segments": 5437,
   "official_segments_by_group": {
-    "democratic": 5320,
+    "democratic": 5109,
     "dsa": 328
   },
-  "official_source_segments": 5662,
+  "official_source_segments": 5450,
   "organizational_platform_gap_rows": 154,
   "parameters": {
     "candidate_min_feature_count": 5,
