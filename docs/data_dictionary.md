@@ -61,7 +61,30 @@ platform is not multiplied across state races; all contributing provenance is re
 Generated exact-text segment snapshot for official DSA-versus-Democratic analysis. Eligibility
 requires a full-platform category, at least 20 tokens, and no boilerplate flag. DSA National and
 state/local DSA categories form the DSA group; DNC National and state Democratic Party categories
-form the Democratic group.
+form the Democratic group. At analysis time, at least one contributing context entry must still
+have `verification_status=verified` in the current organizational inventory; stale extraction
+artifacts from unavailable or invalidated sources are excluded.
+
+### `outputs/tables/text_analysis/official_platform_document_prevalence.csv`
+
+One row per canonical policy feature. Counts and shares record how many analyzed DSA and
+Democratic platform documents mention the feature; `difference` is DSA share minus Democratic
+share. Each platform contributes at most once per feature.
+
+### `data/analysis/official_platform_gte_kde/`
+
+Document-balanced semantic-density outputs for official platforms:
+
+- `segment_density_scores.csv`: exact passages, provenance, selected-space density values,
+  two-dimensional visualization coordinates, zone, HDBSCAN label, and membership probability;
+- `density_regions.csv`: retained DSA-overrepresented, Democratic-overrepresented, and shared
+  HDBSCAN regions with terms and representative exact passages;
+- `umap_dimension_sweep.csv`: trustworthiness for 2, 5, 10, 20, and 30 dimensions;
+- `hot_cold_terms.csv`: deterministic hot/cold-zone lexical characterization;
+- `summary.json`: model identity, corpus hash, balance rules, bandwidths, thresholds, dimensions,
+  group/document counts, and clustering configuration.
+
+`embeddings.npy` is a local cache and is not versioned.
 
 ### `data/analysis/model_topic_classifications.csv`
 

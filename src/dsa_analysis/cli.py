@@ -29,6 +29,7 @@ from .organizational_context import (
 )
 from .organizational_context_corpus import run_organizational_context_extraction_batch
 from .opponent_batches import merge_opponent_reviews, prepare_opponent_batches
+from .official_platform_kde import run_official_platform_kde
 from .priorities import build_priority_queues
 from .provisional_kde import run_provisional_kde
 from .queue import build_research_queue
@@ -215,6 +216,13 @@ def main() -> None:
     kde_parser.add_argument("--batch-size", type=int, default=48)
     kde_parser.add_argument("--max-length", type=int, default=256)
     kde_parser.add_argument("--force-embeddings", action="store_true")
+    official_kde_parser = subparsers.add_parser(
+        "official-platform-kde",
+        help="Run document-balanced GTE UMAP/KDE analysis on official platform text.",
+    )
+    official_kde_parser.add_argument("--batch-size", type=int, default=48)
+    official_kde_parser.add_argument("--max-length", type=int, default=256)
+    official_kde_parser.add_argument("--force-embeddings", action="store_true")
     args = parser.parse_args()
 
     if args.command == "collect":
@@ -477,6 +485,21 @@ def main() -> None:
             f"segments={result.retained_segments}, "
             f"endorsed={result.endorsed_segments}, "
             f"opponent={result.opponent_segments}, "
+            f"dimensions={result.selected_dimensions}, "
+            f"output={result.output_directory}."
+        )
+        return
+    if args.command == "official-platform-kde":
+        result = run_official_platform_kde(
+            batch_size=args.batch_size,
+            max_length=args.max_length,
+            force_embeddings=args.force_embeddings,
+        )
+        print(
+            "Official-platform KDE complete: "
+            f"segments={result.retained_segments}, "
+            f"dsa={result.dsa_segments}, "
+            f"democratic={result.democratic_segments}, "
             f"dimensions={result.selected_dimensions}, "
             f"output={result.output_directory}."
         )

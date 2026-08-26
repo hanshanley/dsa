@@ -93,7 +93,32 @@ review.
 
 Candidate rhetoric is analyzed separately from organizational platforms. The official corpus
 contains DSA national and state/local programs alongside DNC and state Democratic Party
-platforms.
+platforms. The current analysis contains **6 DSA documents (328 passages)** and **38 Democratic
+documents (5,320 passages)** after excluding sources whose current verification status is not
+usable. The imbalance is handled two ways: document prevalence gives each platform one
+observation per feature, while the semantic fingerprint fits UMAP and KDE to equal-size,
+round-robin document-balanced samples from each group.
+
+By category, the analyzed set contains 3 DSA national documents, 3 DSA state/local documents,
+3 DNC national platforms, and 35 state Democratic Party platforms. The coverage ledger retains
+154 explicit platform gaps; these remain missing data rather than evidence of organizational
+silence.
+
+<p align="center">
+  <img src="figures/official_platform_gte_kde.png" width="1100" alt="Document-balanced semantic density map of official DSA and Democratic platforms">
+</p>
+
+The selected five-dimensional representation separates a recurring DSA region about collective
+power and transformational social change from a Democratic-platform region centered on students,
+affordability, infrastructure, and environmental administration. A shared high-density region
+contains health, service, family, and worker language. The document-prevalence result separately
+shows the strongest DSA-side differences for social housing, working-class, tenant, Green New
+Deal, and Medicare for All language. These are relative emphasis patterns in the recoverable
+corpus, not evidence that every organization or candidate holds the same position.
+
+<p align="center">
+  <img src="outputs/figures/text_analysis/official_platform_document_prevalence.svg" width="1050" alt="Document-level policy language prevalence in official DSA and Democratic platforms">
+</p>
 
 | DSA / DSA-endorsed emphasis | Democratic platform / other-Democrat emphasis |
 | --- | --- |
@@ -119,7 +144,7 @@ platforms.
 | Deduplicated candidate analysis documents | **1,341** |
 | Deduplicated candidate analysis passages | **38,207** |
 | Organizational documents successfully extracted | **93 / 93** |
-| Full organizational platforms in lexical analysis | **47** |
+| Full organizational platforms in lexical analysis | **44** (**6 DSA; 38 Democratic**) |
 
 The corpus spans 2016–2026. It is broad enough for descriptive analysis of the recovered
 materials, but it is **not a claim of complete nationwide text coverage**. The audit retains
@@ -153,6 +178,12 @@ Dimensionality is selected by a trustworthiness sweep; KDE is estimated in 10 di
 candidate-balanced fitting and Scott's bandwidth rule. UMAP is used only for the two-dimensional
 display.
 
+Official platforms use a separate five-dimensional sweep result. Both the UMAP manifold and KDE
+are fit on **328 passages per group**, sampled deterministically in round-robin order across
+documents. This prevents the larger Democratic passage inventory from mechanically determining
+the geometry or density estimates, but it cannot replace missing DSA state/local platforms or
+erase the 6-versus-38 document-coverage limitation.
+
 ### Agreement and disagreement
 
 - **Overlap** identifies issues discussed by both groups.
@@ -173,6 +204,12 @@ Full details are in [`docs/methodology.md`](docs/methodology.md), with field def
   evidence, and an indicator for the two per category displayed on the map
 - [`outputs/tables/text_analysis/candidate_feature_prevalence.csv`](outputs/tables/text_analysis/candidate_feature_prevalence.csv)
   — document-level phrase prevalence by candidate group
+- [`outputs/tables/text_analysis/official_platform_document_prevalence.csv`](outputs/tables/text_analysis/official_platform_document_prevalence.csv)
+  — document-balanced policy-feature prevalence across official DSA and Democratic platforms
+- [`data/analysis/official_platform_gte_kde/density_regions.csv`](data/analysis/official_platform_gte_kde/density_regions.csv)
+  — HDBSCAN regions underlying the balanced official-platform KDE map
+- [`report/official_platform_kde_analysis.md`](report/official_platform_kde_analysis.md)
+  — official-platform KDE dimensions, balancing, region table, and limitations
 - [`outputs/tables/text_analysis/shared_affirmative_policy_mechanisms.csv`](outputs/tables/text_analysis/shared_affirmative_policy_mechanisms.csv)
   — exact paired evidence for shared mechanisms
 - [`report/text_analysis.md`](report/text_analysis.md) — lexical, overlap, and agreement analysis

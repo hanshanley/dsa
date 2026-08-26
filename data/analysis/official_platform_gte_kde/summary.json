@@ -1,0 +1,137 @@
+{
+  "corpus_hash": "f486b87c1cb9afb1a3e8cc8877ac7d2e9438ec7ad3c8f8b6b2c23fc4a803e5e8",
+  "density_regions": [
+    {
+      "candidate_count": 6,
+      "centroid_x": 0.73043,
+      "centroid_y": 10.981334,
+      "displayed_on_map": true,
+      "mean_log1p_density_ratio": 0.014054442692,
+      "mean_membership_probability": 1.0,
+      "region_id": "D1",
+      "representative_candidate": "Democratic Socialists of America",
+      "representative_excerpt": "Transformational change in society does not come from moral righteousness or a checklist of policy positions, but from growing and wielding power.",
+      "representative_source_type": "dsa_national_platform_draft",
+      "segment_count": 52,
+      "semantic_coherence": 0.537954,
+      "top_terms": "society | goal | recruiting | come | collective",
+      "zone": "hot"
+    },
+    {
+      "candidate_count": 34,
+      "centroid_x": -4.800245,
+      "centroid_y": 9.561996,
+      "displayed_on_map": true,
+      "mean_log1p_density_ratio": -0.010022602788,
+      "mean_membership_probability": 1.0,
+      "region_id": "M1",
+      "representative_candidate": "Democratic National Committee",
+      "representative_excerpt": "...support the use of restorative justice practices that help students and staff resolve conflicts peacefully and respectfully while helping to improve the teaching and learning...",
+      "representative_source_type": "national_party_platform",
+      "segment_count": 1286,
+      "semantic_coherence": 0.447275,
+      "top_terms": "student | affordable | infrastructure | environment | improve",
+      "zone": "cold"
+    },
+    {
+      "candidate_count": 41,
+      "centroid_x": -2.999471,
+      "centroid_y": 8.137971,
+      "displayed_on_map": true,
+      "mean_log1p_density_ratio": -0.00060868825,
+      "mean_membership_probability": 1.0,
+      "region_id": "S1",
+      "representative_candidate": "Massachusetts Democratic Party",
+      "representative_excerpt": "\u25cf Access to improved healthcare services, including mental health services, for veterans and their families.",
+      "representative_source_type": "state_party_platform",
+      "segment_count": 704,
+      "semantic_coherence": 0.356173,
+      "top_terms": "health | service | family | healthcare | worker",
+      "zone": "shared"
+    }
+  ],
+  "dimension_selection_rule": "smallest tested dimension within 0.005 trustworthiness of the maximum",
+  "dimension_sweep": [
+    {
+      "dimensions": 2,
+      "trustworthiness": 0.910888098464318
+    },
+    {
+      "dimensions": 5,
+      "trustworthiness": 0.9584862428485396
+    },
+    {
+      "dimensions": 10,
+      "trustworthiness": 0.9575250301114122
+    },
+    {
+      "dimensions": 20,
+      "trustworthiness": 0.957862842517314
+    },
+    {
+      "dimensions": 30,
+      "trustworthiness": 0.9599706413730804
+    }
+  ],
+  "document_counts": {
+    "democratic": 38,
+    "dsa": 6
+  },
+  "group_counts": {
+    "democratic": 5320,
+    "dsa": 328
+  },
+  "input_path": "data/analysis/organizational_context_text_corpus.csv",
+  "kde": {
+    "bandwidth_rule": "Scott n^(-1/(d+4))",
+    "bandwidths": {
+      "democratic": 0.5253617643667702,
+      "dsa": 0.5253617643667702
+    },
+    "coordinate_standardization": "z-score fit on the balanced UMAP sample",
+    "fit_counts": {
+      "democratic": 328,
+      "dsa": 328
+    },
+    "fit_sampling": "equal-size deterministic document-balanced sample by group",
+    "kernel": "gaussian"
+  },
+  "model_name": "Alibaba-NLP/gte-multilingual-base",
+  "model_revision": "9bbca17d9273fd0d03d5725c7a4b0f6b45142062",
+  "region_clustering": {
+    "algorithm": "HDBSCAN",
+    "cluster_selection_method": "eom",
+    "displayed_subregions_per_zone": 2,
+    "metric": "euclidean",
+    "min_cluster_size": 10,
+    "min_samples": 3,
+    "retained_subregions_per_zone": 6,
+    "space": "5-dimensional standardized semantic representation"
+  },
+  "retained_segments": 5648,
+  "seed": 1729,
+  "selected_dimensions": 5,
+  "status": "recoverable_platform_corpus",
+  "umap_fit": {
+    "metric": "cosine",
+    "n_neighbors": 15,
+    "per_group_count": 328,
+    "sampling": "equal-size deterministic document-balanced sample by group"
+  },
+  "warning": "Equal-sample KDE controls passage-volume imbalance but cannot correct for missing platforms or the smaller number of recoverable DSA documents.",
+  "zones": {
+    "counts": {
+      "cold": 1330,
+      "hot": 82,
+      "shared": 706
+    },
+    "democratic_cold_cutoff": -0.008322171752559414,
+    "democratic_cold_quantile": 0.25,
+    "dsa_hot_cutoff": 0.011031663409199302,
+    "dsa_hot_quantile": 0.75,
+    "shared_absolute_score_cutoff": 0.003270920295615621,
+    "shared_absolute_score_quantile": 0.25,
+    "shared_joint_density_cutoff": -6.27221516255688,
+    "shared_joint_density_quantile": 0.5
+  }
+}

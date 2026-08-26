@@ -227,6 +227,8 @@ locators remain provenance-only and are excluded from analysis eligibility.
 - Successfully extracted organizational documents: {stats["organizational_successful_documents"]}
 - Extraction errors: {stats["organizational_extraction_errors"]}
 - Eligible full-platform documents in lexical analysis: {stats["official_analysis_documents"]}
+- Analyzed DSA platforms: {stats["official_dsa_documents"]}
+- Analyzed Democratic platforms: {stats["official_democratic_documents"]}
 - Eligible full-platform source segments: {stats["official_source_segments"]}
 
 Every represented state-cycle has an explicit status for each context category, but explicit
@@ -256,6 +258,8 @@ excerpt table.
 
 ![Official contrast](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
+![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
+
 ![Modeled topics](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
 
 ## 6. Provisional KDE
@@ -276,7 +280,23 @@ and candidate support.
 
 ![Provisional GTE KDE](../figures/provisional_gte_kde.png)
 
-## 7. Small reviewed qualitative examples
+## 7. Official-platform KDE
+
+- DSA documents: {stats["official_dsa_documents"]}
+- Democratic documents: {stats["official_democratic_documents"]}
+- Selected UMAP dimensions: {stats["official_kde_selected_dimensions"]}
+- UMAP/KDE fit sample: {stats["official_kde_fit_count"]} passages per group, sampled
+  round-robin across documents
+
+Equal-size, document-balanced fitting prevents the larger Democratic passage inventory from
+mechanically determining the semantic manifold or density estimates. It does not compensate for
+missing platforms or make the smaller DSA document inventory substantively equivalent. HDBSCAN
+regions report distinctive terms and exact representative passages for DSA-overrepresented,
+Democratic-overrepresented, and shared high-density areas.
+
+![Official-platform GTE KDE](../figures/official_platform_gte_kde.png)
+
+## 8. Small reviewed qualitative examples
 
 These quotations and hand-coded contrasts are intentionally a small, nonrepresentative
 qualitative layer. They illustrate what exact source-level evidence looks like; they are not
@@ -337,6 +357,9 @@ def _load_canonical_metrics(
     lexical = read_json(output_dir / "tables" / "text_analysis" / "analysis_manifest.json")
     model = read_json(analysis_data_dir / "model_topic_validation.json")
     kde = read_json(analysis_data_dir / "provisional_gte_kde" / "summary.json")
+    official_kde = read_json(
+        analysis_data_dir / "official_platform_gte_kde" / "summary.json"
+    )
 
     registry_rows = read_csv(processed_dir / "race_registry.csv")
     local_rows = read_csv(processed_dir / "local_endorsements_verified.csv")
@@ -398,6 +421,13 @@ def _load_canonical_metrics(
         "organizational_extraction_errors": extraction["extraction_errors"],
         "official_analysis_documents": lexical["official_documents"],
         "official_source_segments": lexical["official_source_segments"],
+        "official_dsa_documents": lexical["official_documents_by_group"]["dsa"],
+        "official_democratic_documents": lexical["official_documents_by_group"][
+            "democratic"
+        ],
+        "official_analysis_segments": lexical["official_segments"],
+        "official_kde_selected_dimensions": official_kde["selected_dimensions"],
+        "official_kde_fit_count": official_kde["kde"]["fit_counts"]["dsa"],
         "candidate_source_documents": lexical["candidate_source_documents"],
         "candidate_source_segments": lexical["candidate_source_segments"],
         "candidate_analysis_segments": lexical["candidate_segments"],
@@ -445,6 +475,9 @@ def _load_canonical_metrics(
                 "organizational_successful_documents",
                 "official_analysis_documents",
                 "official_source_segments",
+                "official_dsa_documents",
+                "official_democratic_documents",
+                "official_kde_selected_dimensions",
             )
         },
         "full_corpus_analysis": {

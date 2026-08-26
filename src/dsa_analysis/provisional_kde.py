@@ -497,6 +497,15 @@ def _plot_density_fingerprint(
     figure_path: Path,
     endorsed_cutoff: float,
     opponent_cutoff: float,
+    title: str = "Where DSA-endorsed candidates and other Democrats differ — and overlap",
+    map_title: str = "Semantic map of campaign language",
+    subtitle: str = (
+        "Highlighted regions summarize recurring language in the recoverable campaign-text "
+        "corpus; cards show locally distinctive terms and a central source passage."
+    ),
+    hot_label: str = "More common in DSA-endorsed text",
+    cold_label: str = "More common in other Democrats' text",
+    unit_label: str = "candidates",
 ) -> None:
     import matplotlib
 
@@ -521,8 +530,8 @@ def _plot_density_fingerprint(
         rasterized=True,
     )
     zone_styles = {
-        "hot": ("#C84A32", "#FBEDE8", "More common in DSA-endorsed text"),
-        "cold": ("#2F6F98", "#EAF2F7", "More common in other Democrats' text"),
+        "hot": ("#C84A32", "#FBEDE8", hot_label),
+        "cold": ("#2F6F98", "#EAF2F7", cold_label),
         "shared": ("#8A7525", "#F5F1DE", "Common to both groups"),
     }
     for zone, (color, _, label) in zone_styles.items():
@@ -567,7 +576,7 @@ def _plot_density_fingerprint(
     y_pad = (y_high - y_low) * 0.04
     axis.set_xlim(x_low - x_pad, x_high + x_pad)
     axis.set_ylim(y_low - y_pad, y_high + y_pad)
-    axis.set_title("Semantic map of campaign language", fontsize=17, loc="left", pad=14)
+    axis.set_title(map_title, fontsize=17, loc="left", pad=14)
     axis.set_xlabel("UMAP dimension 1")
     axis.set_ylabel("UMAP dimension 2")
     axis.legend(
@@ -672,7 +681,7 @@ def _plot_density_fingerprint(
             0.08,
             (
                 f'{int(region["segment_count"]):,} passages from '
-                f'{int(region["candidate_count"]):,} candidates'
+                f'{int(region["candidate_count"]):,} {unit_label}'
             ),
             transform=card.transAxes,
             color="#5F5F5F",
@@ -680,7 +689,7 @@ def _plot_density_fingerprint(
             va="bottom",
         )
     figure.suptitle(
-        "Where DSA-endorsed candidates and other Democrats differ — and overlap",
+        title,
         fontsize=21,
         y=0.985,
         fontweight="bold",
@@ -688,10 +697,7 @@ def _plot_density_fingerprint(
     figure.text(
         0.5,
         0.947,
-        (
-            "Highlighted regions summarize recurring language in the recoverable campaign-text "
-            "corpus; cards show locally distinctive terms and a central source passage."
-        ),
+        subtitle,
         ha="center",
         fontsize=11,
         color="#555555",
@@ -782,12 +788,15 @@ def density_region_summaries(
             members = [zone_rows[index] for index in member_indices]
             candidate_count = len(
                 {
-                    str(
-                        row.get("candidate_slug")
+                    unit.strip()
+                    for row in members
+                    for unit in str(
+                        row.get("support_unit_ids")
+                        or row.get("candidate_slug")
                         or row.get("candidate_name")
                         or row.get("candidate_unit_id", "")
-                    )
-                    for row in members
+                    ).split(" | ")
+                    if unit.strip()
                 }
             )
             if candidate_count < min_candidate_count:
@@ -953,6 +962,7 @@ def _distinctive_region_terms(
         "him",
         "himself",
         "how",
+        "hope",
         "i'd",
         "i'll",
         "i'm",
@@ -996,6 +1006,7 @@ def _distinctive_region_terms(
         "this",
         "those",
         "through",
+        "together",
         "under",
         "very",
         "want",
@@ -1057,13 +1068,17 @@ def _distinctive_region_terms(
         "lemon",
         "mayor",
         "make",
+        "majority",
         "member",
         "name",
         "need",
         "new",
         "news",
         "one",
+        "other",
+        "page",
         "people",
+        "platform",
         "politic",
         "primary",
         "race",
@@ -1089,6 +1104,7 @@ def _distinctive_region_terms(
         "vice",
         "website",
         "window",
+        "win",
         "work",
         "would",
         "get",
@@ -1101,13 +1117,17 @@ def _distinctive_region_terms(
         "org",
         "questionnaire",
         "press",
+        "provide",
         "release",
         "photo",
+        "pdf",
         "reddit",
         "san",
         "bash",
         "bluesky",
         "com",
+        "believe",
+        "including",
     }
     for row in region_rows:
         excluded.update(tokenize(str(row.get("candidate_name", ""))))
@@ -1164,8 +1184,15 @@ def _representative_region_evidence(
             for span in re.split(r"(?<=[.!?;])\s+|\n+", text)
             if 10 <= len(span.split()) <= 60
             and not _looks_like_navigation_or_form(span)
+            and not _looks_like_table_of_contents(span)
         ]
-        for span in spans or [text]:
+        if (
+            not spans
+            and not _looks_like_navigation_or_form(text)
+            and not _looks_like_table_of_contents(text)
+        ):
+            spans = [text]
+        for span in spans:
             normalized = " ".join(span.split())
             if not normalized:
                 continue
@@ -1274,6 +1301,7 @@ def _looks_like_navigation_or_form(text: str) -> bool:
         for marker in (
             "(back to top)",
             "candidate questionnaire",
+            "candidate q&a",
             "candidate roundups",
             "california form 700",
             "check back for more information",
@@ -1289,6 +1317,7 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             "opens in new window",
             "politics + government",
             "politics & government",
+            "political party:",
             "schedule d income",
             "schedule summary (required)",
             "schedules attached",
@@ -1297,6 +1326,7 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             "skip to main content",
             "stay in the know",
             "subscribe issues archive",
+            "table of contents",
             "thank you for your interest in completing this question",
             "this is a search field",
             "total number of pages including this cover page",
@@ -1309,6 +1339,16 @@ def _looks_like_navigation_or_form(text: str) -> bool:
             "new yorkers get",
             "why are you running for county council",
         )
+    )
+
+
+def _looks_like_table_of_contents(text: str) -> bool:
+    words = re.findall(r"[A-Za-z][A-Za-z'-]*", text)
+    title_case_share = sum(word[0].isupper() for word in words) / max(len(words), 1)
+    return (
+        len(words) >= 10
+        and title_case_share >= 0.5
+        and not re.search(r"[.!?]", text)
     )
 
 
