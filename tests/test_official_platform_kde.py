@@ -5,11 +5,73 @@ from pathlib import Path
 
 from dsa_analysis.official_platform_kde import (
     _document_balance_weights,
+    _prepare_platform_analysis_rows,
     load_official_platform_segments,
 )
 
 
 class OfficialPlatformKDETests(unittest.TestCase):
+    def test_platform_analysis_gate_excludes_sparse_and_navigation_only_sources(self):
+        rows = [
+            {
+                "analysis_segment_id": f"good-{index}",
+                "group": "endorsed",
+                "official_group": "dsa",
+                "support_unit_ids": "document-good",
+                "candidate_unit_id": "document-good",
+                "candidate_name": "Good platform",
+                "source_type": "dsa_national_program",
+                "text": f"Substantive worker housing policy passage number {index}.",
+                "organizations": "Good platform",
+                "titles": "Program",
+                "cycle_years": "2024",
+            }
+            for index in range(3)
+        ]
+        rows.extend(
+            [
+                {
+                    "analysis_segment_id": "sparse",
+                    "group": "opponent",
+                    "official_group": "democratic",
+                    "support_unit_ids": "document-sparse",
+                    "candidate_unit_id": "document-sparse",
+                    "candidate_name": "Sparse platform",
+                    "source_type": "state_party_platform",
+                    "text": "One isolated policy passage.",
+                    "organizations": "Sparse platform",
+                    "titles": "Platform",
+                    "cycle_years": "2024",
+                },
+                {
+                    "analysis_segment_id": "navigation",
+                    "group": "endorsed",
+                    "official_group": "dsa",
+                    "support_unit_ids": "document-good",
+                    "candidate_unit_id": "document-good",
+                    "candidate_name": "Good platform",
+                    "source_type": "dsa_national_program",
+                    "text": "EVENTS EVENTS Resources Resources Take Action Take Action DONATE DONATE",
+                    "organizations": "Good platform",
+                    "titles": "Program",
+                    "cycle_years": "2024",
+                },
+            ]
+        )
+
+        eligible, coverage, audit = _prepare_platform_analysis_rows(
+            rows,
+            minimum_passages=2,
+        )
+
+        self.assertEqual(len(eligible), 3)
+        self.assertEqual(audit["text_quality_excluded_passages"], 1)
+        self.assertEqual(audit["excluded_platforms"], 1)
+        self.assertEqual(
+            {row["document_id"]: row["eligible"] for row in coverage},
+            {"document-good": True, "document-sparse": False},
+        )
+
     def test_document_balance_weights_equalize_platform_contributions(self):
         rows = [
             {"support_unit_ids": "document-a"},

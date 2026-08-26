@@ -132,17 +132,28 @@ and candidate support.
 
 ## 7. Official-platform KDE
 
-- DSA documents: 6
-- Democratic documents: 38
+- KDE-eligible DSA documents: 6
+- KDE-eligible Democratic documents: 35
+- Eligible level mix: 3 national and
+  3 subnational DSA platforms versus
+  3 national and
+  32 subnational Democratic platforms
 - Selected UMAP dimensions: 5
-- UMAP/KDE fit sample: 328 passages per group, sampled
+- UMAP/KDE fit sample: 327 passages per group, sampled
   round-robin across documents
+- Region accounting: 711 passages in
+  15 retained regions; the public map shows
+  6 regions
+- Sensitivity: 24 HDBSCAN specifications produce
+  6–
+  17 retained regions
 
 Equal-size, document-balanced fitting prevents the larger Democratic passage inventory from
 mechanically determining the semantic manifold or density estimates. It does not compensate for
-missing platforms or make the smaller DSA document inventory substantively equivalent. HDBSCAN
-regions report distinctive terms and exact representative passages for DSA-overrepresented,
-Democratic-overrepresented, and shared high-density areas.
+missing platforms, the national/subnational mismatch, or the smaller DSA document inventory.
+HDBSCAN regions report distinctive terms and exact representative passages, but their
+parameter sensitivity makes them exploratory evidence summaries rather than a stable topic
+taxonomy.
 
 ![Official-platform GTE KDE](../figures/official_platform_gte_kde.png)
 

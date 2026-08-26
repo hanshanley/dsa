@@ -93,30 +93,37 @@ review.
 
 Candidate rhetoric is analyzed separately from organizational platforms. The official corpus
 contains DSA national and state/local programs alongside DNC and state Democratic Party
-platforms. The current analysis contains **6 DSA documents (328 passages)** and **38 Democratic
-documents (5,109 passages)** after excluding sources whose current verification status is not
-usable. The imbalance is handled two ways: document prevalence gives each platform one
-observation per feature, while the semantic fingerprint fits UMAP and KDE to equal-size,
-round-robin document-stratified samples from each group and gives every represented platform equal
-aggregate weight in KDE.
+platforms. The source inventory contains **6 DSA documents** and **38 Democratic documents**.
+The semantic analysis additionally requires at least 10 quality-screened passages per platform,
+leaving **6 DSA documents (327 passages)** and **35 Democratic documents (4,983 passages)**.
+Document prevalence gives each platform one observation per feature. The semantic fingerprint
+fits UMAP and KDE to equal-size, round-robin document-stratified samples and gives every eligible
+platform equal aggregate KDE weight.
 
-By category, the analyzed set contains 3 DSA national documents, 3 DSA state/local documents,
-3 DNC national platforms, and 35 state Democratic Party platforms. The coverage ledger retains
-154 explicit platform gaps; these remain missing data rather than evidence of organizational
-silence.
+The KDE-eligible set contains 3 DSA national documents, 3 DSA state/local documents, 3 DNC
+national platforms, and 32 state Democratic Party platforms. That level mismatch is material:
+the result is a comparison of the recoverable corpus, not a balanced census of national and local
+organizations. The coverage ledger retains 154 explicit platform gaps; these remain missing data
+rather than evidence of organizational silence.
 
 <p align="center">
   <img src="figures/official_platform_gte_kde.png" width="1100" alt="Document-balanced semantic density map of official DSA and Democratic platforms">
 </p>
 
-The selected five-dimensional representation separates DSA regions centered on collective
-working-class power, donor influence, and electoral organizing from Democratic-platform regions
-centered on inclusive governance, healthcare access, education, and climate policy. Shared
-high-density regions cover foreign policy, healthcare, anti-discrimination, and criminal-justice
-language. The document-prevalence result separately
+The map draws an equal-size sample of 327 passages per group, avoiding the false visual impression
+that the much larger collected Democratic corpus is itself a substantive result. The full run
+retains 15 exploratory regions; the six strongest are displayed. Across 24 prespecified HDBSCAN
+configurations, the retained-region count ranges from 6 to 29, so these regions are evidence
+summaries rather than a stable topic taxonomy. The document-prevalence result separately
 shows the strongest DSA-side differences for social housing, working-class, tenant, Green New
 Deal, and Medicare for All language. These are relative emphasis patterns in the recoverable
 corpus, not evidence that every organization or candidate holds the same position.
+
+The complete accounting is in
+[`analysis_flow.csv`](data/analysis/official_platform_gte_kde/analysis_flow.csv),
+[`platform_coverage.csv`](data/analysis/official_platform_gte_kde/platform_coverage.csv),
+[`density_regions.csv`](data/analysis/official_platform_gte_kde/density_regions.csv), and
+[`clustering_sensitivity.csv`](data/analysis/official_platform_gte_kde/clustering_sensitivity.csv).
 
 <p align="center">
   <img src="outputs/figures/text_analysis/official_platform_document_prevalence.svg" width="1050" alt="Document-level policy language prevalence in official DSA and Democratic platforms">

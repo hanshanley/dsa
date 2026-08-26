@@ -118,17 +118,26 @@ the first explicit constitution/bylaws boundary.
 
 Official-platform robustness uses two additional balance controls. First, feature prevalence is
 computed at the document level: each platform contributes at most one observation to each
-canonical policy feature, regardless of length or repetition. Second, the official-platform
-semantic fingerprint fits both UMAP and Gaussian KDE on equal-size deterministic samples selected
-round-robin across documents within each group. KDE then uses inverse within-document passage
-frequency weights so every represented platform has equal aggregate density weight within its
-group. The dimensionality sweep tests 2, 5, 10, 20, and 30 dimensions using trustworthiness; the
-current corpus selects five dimensions. Coordinate standardization is also fit on the balanced
-sample, and KDE uses Scott's bandwidth rule. HDBSCAN
+canonical policy feature, regardless of length or repetition. The semantic analysis separately
+requires at least 10 quality-screened passages per platform; sparse fragments do not receive the
+same aggregate weight as complete platforms. Second, the official-platform semantic fingerprint
+fits both UMAP and Gaussian KDE on equal-size deterministic samples selected round-robin across
+documents within each group. KDE then uses inverse within-document passage-frequency weights so
+every eligible platform has equal aggregate density weight within its group. The public map draws
+only this equal-size sample, while density scoring and clustering use all eligible passages. The
+dimensionality sweep tests 2, 5, 10, 20, and 30 dimensions using trustworthiness; the current
+corpus selects five dimensions. Coordinate standardization is also fit on the balanced sample,
+and KDE uses Scott's bandwidth rule. HDBSCAN
 (`min_cluster_size=10`, `min_samples=3`, leaf selection,
-`allow_single_cluster=false`) identifies interpretable
+`allow_single_cluster=false`) identifies exploratory
 DSA-overrepresented, Democratic-overrepresented, and shared high-density regions, retaining
-unassigned points as noise. The 2D UMAP is visualization only.
+unassigned points as noise. A prespecified 24-run sensitivity grid varies leaf versus
+excess-of-mass selection, minimum cluster size (8, 10, 15, 20), and minimum samples (2, 3, 5).
+The six-per-zone retention cap and substantive-support gates remain fixed across that grid so
+the production and sensitivity counts are comparable. The region inventory is not treated as a
+stable topic taxonomy when counts or assignment coverage vary across the grid. The 2D UMAP is
+visualization only; each label is anchored to an actual region passage nearest the full-region
+centroid.
 
 Equal group samples prevent the much larger Democratic passage inventory from mechanically
 dominating the fitted manifold or densities. They do not compensate for missing organizational

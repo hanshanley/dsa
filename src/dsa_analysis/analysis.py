@@ -282,17 +282,28 @@ and candidate support.
 
 ## 7. Official-platform KDE
 
-- DSA documents: {stats["official_dsa_documents"]}
-- Democratic documents: {stats["official_democratic_documents"]}
+- KDE-eligible DSA documents: {stats["official_kde_dsa_documents"]}
+- KDE-eligible Democratic documents: {stats["official_kde_democratic_documents"]}
+- Eligible level mix: {stats["official_kde_dsa_national"]} national and
+  {stats["official_kde_dsa_subnational"]} subnational DSA platforms versus
+  {stats["official_kde_democratic_national"]} national and
+  {stats["official_kde_democratic_subnational"]} subnational Democratic platforms
 - Selected UMAP dimensions: {stats["official_kde_selected_dimensions"]}
 - UMAP/KDE fit sample: {stats["official_kde_fit_count"]} passages per group, sampled
   round-robin across documents
+- Region accounting: {stats["official_kde_retained_region_passages"]} passages in
+  {stats["official_kde_retained_regions"]} retained regions; the public map shows
+  {stats["official_kde_displayed_regions"]} regions
+- Sensitivity: {stats["official_kde_sensitivity_specs"]} HDBSCAN specifications produce
+  {stats["official_kde_sensitivity_min_regions"]}–
+  {stats["official_kde_sensitivity_max_regions"]} retained regions
 
 Equal-size, document-balanced fitting prevents the larger Democratic passage inventory from
 mechanically determining the semantic manifold or density estimates. It does not compensate for
-missing platforms or make the smaller DSA document inventory substantively equivalent. HDBSCAN
-regions report distinctive terms and exact representative passages for DSA-overrepresented,
-Democratic-overrepresented, and shared high-density areas.
+missing platforms, the national/subnational mismatch, or the smaller DSA document inventory.
+HDBSCAN regions report distinctive terms and exact representative passages, but their
+parameter sensitivity makes them exploratory evidence summaries rather than a stable topic
+taxonomy.
 
 ![Official-platform GTE KDE](../figures/official_platform_gte_kde.png)
 
@@ -359,6 +370,13 @@ def _load_canonical_metrics(
     kde = read_json(analysis_data_dir / "provisional_gte_kde" / "summary.json")
     official_kde = read_json(
         analysis_data_dir / "official_platform_gte_kde" / "summary.json"
+    )
+    official_kde_eligibility = official_kde.get("eligibility", {})
+    official_kde_levels = official_kde_eligibility.get("eligible_level_counts", {})
+    official_kde_clustering = official_kde.get("region_clustering", {})
+    official_kde_documents = official_kde.get(
+        "document_counts",
+        lexical["official_documents_by_group"],
     )
 
     registry_rows = read_csv(processed_dir / "race_registry.csv")
@@ -428,6 +446,48 @@ def _load_canonical_metrics(
         "official_analysis_segments": lexical["official_segments"],
         "official_kde_selected_dimensions": official_kde["selected_dimensions"],
         "official_kde_fit_count": official_kde["kde"]["fit_counts"]["dsa"],
+        "official_kde_dsa_documents": official_kde_documents["dsa"],
+        "official_kde_democratic_documents": official_kde_documents["democratic"],
+        "official_kde_dsa_national": official_kde_levels.get("dsa", {}).get(
+            "national",
+            "not recorded",
+        ),
+        "official_kde_dsa_subnational": official_kde_levels.get("dsa", {}).get(
+            "subnational",
+            "not recorded",
+        ),
+        "official_kde_democratic_national": official_kde_levels.get(
+            "democratic",
+            {},
+        ).get("national", "not recorded"),
+        "official_kde_democratic_subnational": official_kde_levels.get(
+            "democratic",
+            {},
+        ).get("subnational", "not recorded"),
+        "official_kde_retained_regions": official_kde_clustering.get(
+            "retained_region_count",
+            "not recorded",
+        ),
+        "official_kde_retained_region_passages": official_kde_clustering.get(
+            "retained_region_passages",
+            "not recorded",
+        ),
+        "official_kde_displayed_regions": official_kde_clustering.get(
+            "displayed_region_count",
+            "not recorded",
+        ),
+        "official_kde_sensitivity_specs": official_kde_clustering.get(
+            "sensitivity_specifications",
+            "not recorded",
+        ),
+        "official_kde_sensitivity_min_regions": official_kde_clustering.get(
+            "sensitivity_region_count_range",
+            ["not recorded", "not recorded"],
+        )[0],
+        "official_kde_sensitivity_max_regions": official_kde_clustering.get(
+            "sensitivity_region_count_range",
+            ["not recorded", "not recorded"],
+        )[1],
         "candidate_source_documents": lexical["candidate_source_documents"],
         "candidate_source_segments": lexical["candidate_source_segments"],
         "candidate_analysis_segments": lexical["candidate_segments"],
