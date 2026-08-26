@@ -185,4 +185,4 @@ frequency estimates and their row counts are not corpus totals.
 
 - 19 other-Democrat records still need verified first-party evidence
 
-Generated 2026-08-24. See `docs/methodology.md` for evidence rules.
+Generated 2026-08-26. See `docs/methodology.md` for evidence rules.
