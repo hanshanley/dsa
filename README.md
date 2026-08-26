@@ -93,7 +93,7 @@ review.
 
 Candidate rhetoric is analyzed separately from organizational platforms. The official corpus
 contains DSA national and state/local programs alongside DNC and state Democratic Party
-platforms. The source inventory contains **6 DSA documents** and **38 Democratic documents**.
+platforms. The lexical corpus contains **6 DSA documents** and **38 Democratic documents**.
 The semantic analysis additionally requires at least 10 quality-screened passages per platform,
 leaving **6 DSA documents (327 passages)** and **35 Democratic documents (4,983 passages)**.
 Document prevalence gives each platform one observation per feature. The semantic fingerprint
@@ -107,13 +107,13 @@ organizations. The coverage ledger retains 154 explicit platform gaps; these rem
 rather than evidence of organizational silence.
 
 <p align="center">
-  <img src="figures/official_platform_gte_kde.png" width="1100" alt="Document-balanced semantic density map of official DSA and Democratic platforms">
+  <img src="figures/official_platform_gte_kde.png" width="1100" alt="Document-stratified, equal-platform-weighted semantic density map of official DSA and Democratic platforms">
 </p>
 
 The map draws an equal-size sample of 327 passages per group, avoiding the false visual impression
 that the much larger collected Democratic corpus is itself a substantive result. The full run
 retains 15 exploratory regions; the six strongest are displayed. Across 24 prespecified HDBSCAN
-configurations, the retained-region count ranges from 6 to 29, so these regions are evidence
+configurations, the retained-region count ranges from 6 to 17, so these regions are evidence
 summaries rather than a stable topic taxonomy. The document-prevalence result separately
 shows the strongest DSA-side differences for social housing, working-class, tenant, Green New
 Deal, and Medicare for All language. These are relative emphasis patterns in the recoverable
@@ -188,11 +188,12 @@ candidate-balanced fitting and Scott's bandwidth rule. UMAP is used only for the
 display.
 
 Official platforms use a separate five-dimensional sweep result. Both the UMAP manifold and KDE
-are fit on **328 passages per group**, sampled deterministically in round-robin order across
-documents; inverse within-document passage-frequency weights give each represented platform equal
-aggregate KDE weight. This prevents the larger Democratic passage inventory from mechanically
-determining the geometry or density estimates, but it cannot replace missing DSA state/local
-platforms or erase the 6-versus-38 document-coverage limitation.
+use **327 passages per group** after the separate semantic quality and platform-coverage gates.
+UMAP fitting uses a deterministic round-robin document-stratified sample; inverse
+within-document passage-frequency weights give each of the **6 DSA and 35 Democratic**
+KDE-eligible platforms equal aggregate density weight. This prevents the larger Democratic
+passage inventory from mechanically determining the geometry or density estimates, but it cannot
+replace missing DSA state/local platforms or erase the 6-versus-35 semantic-coverage limitation.
 
 ### Agreement and disagreement
 

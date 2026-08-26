@@ -111,17 +111,44 @@ STOPWORDS = {
     "had",
     "has",
     "have",
+    "he",
+    "he'd",
+    "he'll",
+    "he's",
+    "her",
+    "hers",
+    "herself",
     "here",
+    "him",
+    "himself",
+    "his",
     "how",
+    "i'd",
+    "i'll",
+    "i'm",
+    "i've",
     "into",
+    "it",
+    "it'd",
+    "it'll",
+    "it's",
+    "itself",
     "its",
     "just",
     "more",
     "most",
+    "my",
+    "myself",
     "not",
     "our",
+    "ours",
+    "ourselves",
     "out",
     "over",
+    "she",
+    "she'd",
+    "she'll",
+    "she's",
     "should",
     "some",
     "such",
@@ -129,7 +156,9 @@ STOPWORDS = {
     "that",
     "the",
     "their",
+    "theirs",
     "them",
+    "themselves",
     "then",
     "there",
     "these",
@@ -141,6 +170,11 @@ STOPWORDS = {
     "under",
     "very",
     "was",
+    "we",
+    "we'd",
+    "we'll",
+    "we're",
+    "we've",
     "were",
     "what",
     "when",
@@ -152,7 +186,14 @@ STOPWORDS = {
     "with",
     "would",
     "you",
+    "you'd",
+    "you'll",
+    "you're",
+    "you've",
     "your",
+    "yours",
+    "yourself",
+    "yourselves",
 }
 
 DOMAIN_STOPWORDS = {
@@ -165,6 +206,7 @@ DOMAIN_STOPWORDS = {
     "community",
     "county",
     "ensure",
+    "endorsement",
     "focus",
     "help",
     "ill",
@@ -178,6 +220,7 @@ DOMAIN_STOPWORDS = {
     "officer",
     "people",
     "plan",
+    "platform",
     "policy",
     "president",
     "priority",
@@ -188,6 +231,7 @@ DOMAIN_STOPWORDS = {
     "support",
     "system",
     "want",
+    "volunteer",
     "work",
     "year",
 }
@@ -581,6 +625,8 @@ def tokenize(text: str) -> list[str]:
         token = token.strip("-'")
         if token.endswith("'s"):
             token = token[:-2]
+        if token in STOPWORDS or token in DOMAIN_STOPWORDS:
+            continue
         token = _lemmatize(token)
         if len(token) > 2 and token not in STOPWORDS and token not in DOMAIN_STOPWORDS:
             cleaned.append(token)
@@ -1563,7 +1609,8 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 
 ## Official DSA and Democratic platforms
 
-This is a separate organizational corpus, not a proxy for candidate positions. It contains
+This is the separate 44-document organizational lexical corpus, not a proxy for candidate
+positions. It contains
 {official_document_counts.get("dsa", 0)} recoverable DSA platform documents and
 {official_document_counts.get("democratic", 0)} recoverable Democratic platform documents.
 The unequal document inventory makes raw segment totals descriptive rather than directly
@@ -1589,7 +1636,9 @@ explicit platform-gap rows limit generalization beyond the documents actually co
 ![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
 
 The separate [official-platform semantic-density report](official_platform_kde_analysis.md)
-uses equal-size, document-balanced UMAP and KDE fitting and reports the underlying HDBSCAN regions.
+applies a separate platform-coverage and text-quality gate, then uses equal-size,
+document-stratified UMAP fitting and equal-platform-weighted KDE. It reports the exact eligible
+corpus, passage flow, parameter sensitivity, and underlying HDBSCAN regions.
 
 The candidate comparison especially distinguishes rights-based housing and labor language
 (`rent`, `human right`, `rent control`, `social housing`, `living wage`) from other-Democrat language

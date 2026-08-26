@@ -218,7 +218,10 @@ def main() -> None:
     kde_parser.add_argument("--force-embeddings", action="store_true")
     official_kde_parser = subparsers.add_parser(
         "official-platform-kde",
-        help="Run document-balanced GTE UMAP/KDE analysis on official platform text.",
+        help=(
+            "Run document-stratified, equal-platform-weighted GTE UMAP/KDE analysis "
+            "on official platform text."
+        ),
     )
     official_kde_parser.add_argument("--batch-size", type=int, default=48)
     official_kde_parser.add_argument("--max-length", type=int, default=256)

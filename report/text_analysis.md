@@ -94,7 +94,8 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 
 ## Official DSA and Democratic platforms
 
-This is a separate organizational corpus, not a proxy for candidate positions. It contains
+This is the separate 44-document organizational lexical corpus, not a proxy for candidate
+positions. It contains
 6 recoverable DSA platform documents and
 38 recoverable Democratic platform documents.
 The unequal document inventory makes raw segment totals descriptive rather than directly
@@ -120,7 +121,9 @@ explicit platform-gap rows limit generalization beyond the documents actually co
 ![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
 
 The separate [official-platform semantic-density report](official_platform_kde_analysis.md)
-uses equal-size, document-balanced UMAP and KDE fitting and reports the underlying HDBSCAN regions.
+applies a separate platform-coverage and text-quality gate, then uses equal-size,
+document-stratified UMAP fitting and equal-platform-weighted KDE. It reports the exact eligible
+corpus, passage flow, parameter sensitivity, and underlying HDBSCAN regions.
 
 The candidate comparison especially distinguishes rights-based housing and labor language
 (`rent`, `human right`, `rent control`, `social housing`, `living wage`) from other-Democrat language
@@ -166,9 +169,9 @@ review.
 ## Document-prevalence robustness check
 
 - More common across DSA-endorsed candidate documents:
-  Fight, Volunteer, Human Right, Justice, Corporate, Platform, Working Class, Worker.
+  Fight, Human Right, Justice, Corporate, Working Class, Worker, Profit, Organizing.
 - More common across other-Democrat documents:
-  Business, Challenge, Small Business, His, Veteran, Technology, Success, Today.
+  Business, Challenge, Small Business, Veteran, Technology, Success, Today, Opportunity.
 
 When MPIF and document prevalence point in the same direction, the result is less likely to be
 driven by one unusually repetitive campaign.
