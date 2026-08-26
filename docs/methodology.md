@@ -114,6 +114,23 @@ outcome. Official MPIF input is restricted to generated organizational-context r
 as full platforms. DSA National and state/local DSA categories are grouped against DNC National
 and state Democratic Party categories.
 
+Official-platform robustness uses two additional balance controls. First, feature prevalence is
+computed at the document level: each platform contributes at most one observation to each
+canonical policy feature, regardless of length or repetition. Second, the official-platform
+semantic fingerprint fits both UMAP and Gaussian KDE on equal-size deterministic samples selected
+round-robin across documents within each group. The dimensionality sweep tests 2, 5, 10, 20, and
+30 dimensions using trustworthiness; the current corpus selects five dimensions. Coordinate
+standardization is also fit on the balanced sample, and KDE uses Scott's bandwidth rule. HDBSCAN
+(`min_cluster_size=10`, `min_samples=3`, excess-of-mass selection) identifies interpretable
+DSA-overrepresented, Democratic-overrepresented, and shared high-density regions, retaining
+unassigned points as noise. The 2D UMAP is visualization only.
+
+Equal group samples prevent the much larger Democratic passage inventory from mechanically
+dominating the fitted manifold or densities. They do not compensate for missing organizational
+documents or remove the interpretive limitation created by substantially fewer recoverable DSA
+platforms. Platform records whose current inventory status is not `verified` are excluded even if
+an older extraction artifact remains on disk.
+
 ### Local-model topic classification
 
 Topic emphasis follows the `state-politics` design:

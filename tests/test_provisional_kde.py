@@ -7,6 +7,7 @@ from dsa_analysis.provisional_kde import (
     _cluster_terms_look_substantive,
     _distinctive_region_terms,
     _looks_like_navigation_or_form,
+    _looks_like_table_of_contents,
     balanced_kde_sample_indices,
     density_region_summaries,
     load_eligible_segments,
@@ -81,6 +82,11 @@ class ProvisionalKDETests(unittest.TestCase):
                 "Subscribe Issues Archive Articles Podcast This is a search field"
             )
         )
+        self.assertTrue(
+            _looks_like_navigation_or_form(
+                "[PDF page 6] Table of Contents Agriculture Arts Business Civil Rights"
+            )
+        )
         self.assertTrue(_looks_like_navigation_or_form("��� ��M1�z h�M�/�$ ��"))
         self.assertTrue(
             _looks_like_navigation_or_form(
@@ -95,6 +101,12 @@ class ProvisionalKDETests(unittest.TestCase):
         self.assertTrue(
             _looks_like_navigation_or_form(
                 "1705 Longworth House Office Building Washington, DC 20515 Phone Fax"
+            )
+        )
+        self.assertTrue(
+            _looks_like_table_of_contents(
+                "Preamble America at 250 Declaration Constitution State Today Economy "
+                "Education Housing Health Care Environment Energy"
             )
         )
 

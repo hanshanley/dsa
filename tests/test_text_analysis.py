@@ -14,6 +14,7 @@ from dsa_analysis.text_analysis import (
     candidate_record_coverage,
     cosine_similarity,
     mpif_rows,
+    official_feature_prevalence,
     policy_overlap_rows,
     shared_affirmative_mechanisms,
     tokenize,
@@ -65,6 +66,25 @@ class TextAnalysisTests(unittest.TestCase):
         )
         with self.assertRaises(ValueError):
             _official_group("dsa_national | dnc_national")
+
+    def test_official_prevalence_balances_unequal_document_counts(self):
+        rows = official_feature_prevalence(
+            [
+                {"document_id": "dsa-1", "group": "dsa", "text": "workers and unions"},
+                {"document_id": "dsa-2", "group": "dsa", "text": "workers"},
+                {"document_id": "dem-1", "group": "democratic", "text": "workers"},
+                {"document_id": "dem-2", "group": "democratic", "text": "small business"},
+                {"document_id": "dem-3", "group": "democratic", "text": "small business"},
+                {"document_id": "dem-4", "group": "democratic", "text": "small business"},
+            ]
+        )
+        by_feature = {row["feature"]: row for row in rows}
+        self.assertEqual(by_feature["worker"]["dsa_documents"], "2")
+        self.assertEqual(by_feature["worker"]["democratic_documents"], "1")
+        self.assertEqual(by_feature["worker"]["dsa_share"], "1.000000")
+        self.assertEqual(by_feature["worker"]["democratic_share"], "0.250000")
+        self.assertEqual(by_feature["small_business"]["dsa_share"], "0.000000")
+        self.assertEqual(by_feature["small_business"]["democratic_share"], "0.750000")
 
     def test_candidate_coverage_uses_registry_queue_denominator(self):
         with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as directory:
@@ -295,16 +315,22 @@ class TextAnalysisTests(unittest.TestCase):
             self.assertGreater(stats["candidate_segments"], 0)
             self.assertGreater(stats["official_segments"], 0)
             self.assertGreater(stats["sticking_points"], 0)
-            self.assertEqual(stats["figure_count"], 9)
-            self.assertEqual(stats["generated_figure_count"], 8)
+            self.assertEqual(stats["figure_count"], 10)
+            self.assertEqual(stats["generated_figure_count"], 9)
             self.assertTrue((FIGURE_DIR / "policy_language_difference.svg").exists())
             self.assertTrue((FIGURE_DIR / "policy_language_overlap.svg").exists())
             self.assertTrue(
                 (FIGURE_DIR / "shared_affirmative_policy_mechanisms.svg").exists()
             )
             self.assertTrue((FIGURE_DIR / "official_policy_contrasts.svg").exists())
+            self.assertTrue(
+                (FIGURE_DIR / "official_platform_document_prevalence.svg").exists()
+            )
             self.assertTrue(model_figure.exists())
             self.assertTrue((TABLE_DIR / "analysis_manifest.json").exists())
+            self.assertTrue(
+                (TABLE_DIR / "official_platform_document_prevalence.csv").exists()
+            )
         finally:
             if created_placeholder:
                 model_figure.unlink(missing_ok=True)

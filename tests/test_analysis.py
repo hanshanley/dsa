@@ -44,6 +44,7 @@ class AnalysisTests(unittest.TestCase):
             output = root / "outputs"
             (output / "tables" / "text_analysis").mkdir(parents=True)
             (analysis / "provisional_gte_kde").mkdir(parents=True)
+            (analysis / "official_platform_gte_kde").mkdir(parents=True)
             processed.mkdir()
 
             fixtures = {
@@ -88,7 +89,9 @@ class AnalysisTests(unittest.TestCase):
                 },
                 output / "tables" / "text_analysis" / "analysis_manifest.json": {
                     "official_documents": 4,
+                    "official_documents_by_group": {"dsa": 1, "democratic": 3},
                     "official_source_segments": 40,
+                    "official_segments": 38,
                     "candidate_source_documents": 15,
                     "candidate_source_segments": 100,
                     "candidate_segments": 90,
@@ -105,6 +108,10 @@ class AnalysisTests(unittest.TestCase):
                     "candidate_counts": {"endorsed": 4, "opponent": 7},
                     "selected_dimensions": 3,
                     "kde": {"fit_counts": {"endorsed": 40, "opponent": 40}},
+                },
+                analysis / "official_platform_gte_kde" / "summary.json": {
+                    "selected_dimensions": 5,
+                    "kde": {"fit_counts": {"dsa": 10, "democratic": 10}},
                 },
             }
             for path, payload in fixtures.items():

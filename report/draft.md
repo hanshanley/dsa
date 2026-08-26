@@ -71,13 +71,15 @@ locators remain provenance-only and are excluded from analysis eligibility.
 - Represented state-cycle rows: 180
 - Inventory rows across DNC, DSA, state-party, and local-DSA categories:
   730
-- Verified organizational-context inventory rows: 426
-- Platform-gap rows: 152
+- Verified organizational-context inventory rows: 424
+- Platform-gap rows: 154
 - Fetched organizational documents: 93
 - Successfully extracted organizational documents: 93
 - Extraction errors: 0
-- Eligible full-platform documents in lexical analysis: 47
-- Eligible full-platform source segments: 5747
+- Eligible full-platform documents in lexical analysis: 44
+- Analyzed DSA platforms: 6
+- Analyzed Democratic platforms: 38
+- Eligible full-platform source segments: 5662
 
 Every represented state-cycle has an explicit status for each context category, but explicit
 `searched_not_found`, `source_unavailable`, and `not_applicable` statuses are not extracted
@@ -106,12 +108,14 @@ excerpt table.
 
 ![Official contrast](../outputs/figures/text_analysis/official_policy_contrasts.svg)
 
+![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
+
 ![Modeled topics](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
 
 ## 6. Provisional KDE
 
 - Status: **provisional**
-- Retained segments: 36650
+- Retained segments: 36613
 - Candidates represented: 242 endorsed and
   464 other Democrats
 - Selected UMAP dimensions: 10
@@ -126,7 +130,23 @@ and candidate support.
 
 ![Provisional GTE KDE](../figures/provisional_gte_kde.png)
 
-## 7. Small reviewed qualitative examples
+## 7. Official-platform KDE
+
+- DSA documents: 6
+- Democratic documents: 38
+- Selected UMAP dimensions: 5
+- UMAP/KDE fit sample: 328 passages per group, sampled
+  round-robin across documents
+
+Equal-size, document-balanced fitting prevents the larger Democratic passage inventory from
+mechanically determining the semantic manifold or density estimates. It does not compensate for
+missing platforms or make the smaller DSA document inventory substantively equivalent. HDBSCAN
+regions report distinctive terms and exact representative passages for DSA-overrepresented,
+Democratic-overrepresented, and shared high-density areas.
+
+![Official-platform GTE KDE](../figures/official_platform_gte_kde.png)
+
+## 8. Small reviewed qualitative examples
 
 These quotations and hand-coded contrasts are intentionally a small, nonrepresentative
 qualitative layer. They illustrate what exact source-level evidence looks like; they are not
@@ -176,7 +196,7 @@ frequency estimates and their row counts are not corpus totals.
 - Candidate-document recovery has 891 retryable candidate gaps;
   the full-text sufficiency decision is **insufficient**.
 - Local census coverage has 1612 unresolved chapter-year units.
-- Organizational context has 152 platform-gap rows and
+- Organizational context has 154 platform-gap rows and
   0 extraction error.
 - Source-class and group/year imbalance diagnostics still prevent population-level frequency
   claims.

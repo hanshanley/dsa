@@ -9,9 +9,17 @@ registry and recoverable full-text corpus.
 - Underlying eligible candidate source documents: 1592
 - Eligible candidate source segments: 39310
 - Candidate segments after shared-text deduplication: 38207
-- Eligible full-platform organizational documents: 47
-- Eligible official-platform source segments: 5747
-- Official-platform segments after exact-text deduplication: 5733
+- Eligible full-platform organizational documents: 44
+- DSA official documents: 6; Democratic official
+  documents: 38
+- Documents by category: DSA national 3,
+  DSA state/local 3, DNC national
+  3, and state Democratic Party
+  35
+- Eligible official-platform source segments: 5662
+- Official-platform segments after exact-text deduplication: 5648
+- DSA official segments after deduplication: 328;
+  Democratic official segments: 5320
 - Unique source-supported primary contrasts: 1251
 
 Exact candidate passage text is counted once per DSA-endorsed/other-Democrat group and election cycle.
@@ -41,6 +49,9 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 - **Document prevalence:** difference in the share of candidate/election documents containing a
   normalized feature. This prevents a few candidates who repeat a phrase many times from
   dominating the result.
+- **Official-platform document prevalence:** the same calculation at the organizational-document
+  level. Each platform contributes once per feature, so a long state-party platform cannot gain
+  weight by repeating a phrase.
 - **Source mix:** direct counts of source-type metadata attached to eligible segments.
 - **Evidence volume:** direct counts of deduplicated eligible segments by election cycle.
 - **Explicit conflicts:** unique rows marked `explicit_conflict`; analyst-coded divergences are
@@ -81,9 +92,35 @@ all contributing candidates, races, source documents, URLs, and locators in the 
   organizational distinction is working-class, worker, union, and movement language in DSA
   texts versus family, nation, access, and institutional-party language in Democratic texts.
 
+## Official DSA and Democratic platforms
+
+This is a separate organizational corpus, not a proxy for candidate positions. It contains
+6 recoverable DSA platform documents and
+38 recoverable Democratic platform documents.
+The unequal document inventory makes raw segment totals descriptive rather than directly
+comparable. MPIF adjusts for token totals; the document-prevalence table additionally gives each
+platform one observation per policy feature.
+
+The largest DSA-side document-prevalence differences are
+Social Housing (100% versus 3%), Working Class (100% versus 16%), Tenant (100% versus 18%), Green New Deal (83% versus 5%), Medicare For All (67% versus 16%), Border (83% versus 37%).
+The largest Democratic-side differences are
+Small Business (79% versus 0%), Business (82% versus 17%), Human Right (76% versus 17%), Climate Change (82% versus 33%), Training (82% versus 33%), Affordable Housing (58% versus 17%).
+These are differences in whether a document mentions a normalized feature, not evidence that
+every organization takes the same position or proposes the same mechanism.
+
+The four hand-reviewed platform contrasts are qualitative examples selected to make exact
+language visible; they are not a representative sample of all platform differences. Sparse
+recoverable DSA state/local platforms and 154
+explicit platform-gap rows limit generalization beyond the documents actually collected.
+
 ![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
 ![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
+
+![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
+
+The separate [official-platform semantic-density report](official_platform_kde_analysis.md)
+uses equal-size, document-balanced UMAP and KDE fitting and reports the underlying HDBSCAN regions.
 
 The candidate comparison especially distinguishes rights-based housing and labor language
 (`rent`, `human right`, `rent control`, `social housing`, `living wage`) from other-Democrat language

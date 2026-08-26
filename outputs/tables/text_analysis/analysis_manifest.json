@@ -5,11 +5,11 @@
   "candidate_source_documents": 1592,
   "candidate_source_segments": 39310,
   "candidate_tfidf_terms": 40361,
-  "figure_count": 9,
-  "generated_figure_count": 8,
+  "figure_count": 10,
+  "generated_figure_count": 9,
   "input_hashes": {
     "data/analysis/candidate_text_corpus.csv": "067968f8e6d9c19b076e3b3a4a811e329efd52ece799a1537833b41f2d3d586e",
-    "data/analysis/organizational_context_text_corpus.csv": "b48b0ffbb2aca23950bdbee7dbe9ee868beb105ed9c5a13324d183bf8aff5acd",
+    "data/analysis/organizational_context_text_corpus.csv": "7050544031bab01d0b05e13956083b3a6c3eff390c55c4c19c4dce1ed9966f87",
     "data/analysis/primary_sticking_points.csv": "d1ff808f2217f7fc0b61059515de36914297709f2e68abae9fc97dc1d6866709",
     "data/manual/excerpts.csv": "03edd6b2528f354b46940856cc4c116684a8f918b7258a5eea97cd6d7db63869",
     "data/manual/platform_comparisons.csv": "d219f624614a5bd962b5f8fec5a401714dc65eccfbf6730618e7d7aafdcc0e67",
@@ -50,10 +50,25 @@
       "generator": "dsa_analysis.sticking_points.analyze_sticking_points"
     }
   },
-  "official_documents": 47,
-  "official_mpif_features": 133826,
-  "official_segments": 5733,
-  "official_source_segments": 5747,
+  "official_documents": 44,
+  "official_documents_by_category": {
+    "dnc_national": 3,
+    "dsa_national": 3,
+    "dsa_state_local": 3,
+    "state_democratic_party": 35
+  },
+  "official_documents_by_group": {
+    "democratic": 38,
+    "dsa": 6
+  },
+  "official_mpif_features": 132127,
+  "official_segments": 5648,
+  "official_segments_by_group": {
+    "democratic": 5320,
+    "dsa": 328
+  },
+  "official_source_segments": 5662,
+  "organizational_platform_gap_rows": 154,
   "parameters": {
     "candidate_min_feature_count": 5,
     "domain_stopwords": 34,

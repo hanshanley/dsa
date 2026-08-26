@@ -18,6 +18,8 @@ STICKING_SNAPSHOT_PATH = ANALYSIS_DATA_DIR / "primary_sticking_points.csv"
 CANDIDATE_SEGMENTS_PATH = PROCESSED_DIR / "candidate_document_analysis_segments.csv"
 CANDIDATE_METADATA_PATH = PROCESSED_DIR / "candidate_document_metadata.csv"
 OFFICIAL_SEGMENTS_PATH = PROCESSED_DIR / "organizational_context_analysis_segments.csv"
+OFFICIAL_INVENTORY_PATH = PROCESSED_DIR / "organizational_context_inventory.csv"
+ORGANIZATIONAL_SUMMARY_PATH = PROCESSED_DIR / "organizational_context_summary.json"
 FULL_TEXT_QUEUE_SUMMARY_PATH = PROCESSED_DIR / "full_text_queue_summary.csv"
 SUBSTANTIVE_MIN_TOKENS = 20
 OFFICIAL_CATEGORY_GROUPS = {
@@ -230,6 +232,13 @@ def analyze_text() -> dict[str, int | float]:
     candidate_tfidf = group_tfidf(candidate_docs)
     candidate_mpif = mpif_rows(candidate_docs, "endorsed", "opponent")
     official_mpif = mpif_rows(official_docs, "dsa", "democratic")
+    official_prevalence_rows = official_feature_prevalence(official_docs)
+    official_document_counts = Counter(row["group"] for row in official_docs)
+    official_category_counts = Counter(row["category"] for row in official_docs)
+    official_segment_counts = Counter(row["group"] for row in official_rows)
+    organizational_summary = json.loads(
+        ORGANIZATIONAL_SUMMARY_PATH.read_text(encoding="utf-8")
+    )
     prevalence_rows = feature_prevalence(candidate_docs)
     overlap_rows = policy_overlap_rows(prevalence_rows)
     shared_mechanism_rows = shared_affirmative_mechanisms()
@@ -265,6 +274,18 @@ def analyze_text() -> dict[str, int | float]:
         TABLE_DIR / "official_dsa_democratic_mpif.csv",
         official_mpif[:500],
         ["feature", "dsa_count", "democratic_count", "z_score", "favored_group"],
+    )
+    write_csv(
+        TABLE_DIR / "official_platform_document_prevalence.csv",
+        official_prevalence_rows,
+        [
+            "feature",
+            "dsa_documents",
+            "democratic_documents",
+            "dsa_share",
+            "democratic_share",
+            "difference",
+        ],
     )
     write_csv(
         TABLE_DIR / "candidate_feature_prevalence.csv",
@@ -351,6 +372,10 @@ def analyze_text() -> dict[str, int | float]:
     _policy_overlap_chart(overlap_rows)
     _shared_mechanism_chart(shared_mechanism_summary)
     _official_contrast_chart(platform_comparisons, excerpts)
+    _official_platform_prevalence_chart(
+        official_prevalence_rows,
+        official_document_counts,
+    )
     _volume_cycle_chart(volume_rows)
     _source_type_chart(source_type_rows)
     _coverage_chart(coverage_rows)
@@ -370,17 +395,23 @@ def analyze_text() -> dict[str, int | float]:
         ),
         "candidate_segments": len(candidate_rows),
         "official_documents": len(official_docs),
+        "official_documents_by_group": dict(sorted(official_document_counts.items())),
+        "official_documents_by_category": dict(sorted(official_category_counts.items())),
+        "organizational_platform_gap_rows": organizational_summary["coverage"][
+            "platform_gap_rows"
+        ],
         "official_source_segments": sum(
             int(row["provenance_row_count"]) for row in official_rows
         ),
         "official_segments": len(official_rows),
+        "official_segments_by_group": dict(sorted(official_segment_counts.items())),
         "candidate_tfidf_terms": len(candidate_tfidf),
         "candidate_mpif_features": len(candidate_mpif),
         "official_mpif_features": len(official_mpif),
         "prevalence_features": len(prevalence_rows),
         "sticking_points": len(sticking_points),
         "figure_count": len(list(FIGURE_DIR.glob("*.svg"))),
-        "generated_figure_count": 8,
+        "generated_figure_count": 9,
         "shared_affirmative_mechanism_rows": len(shared_mechanism_rows),
         "input_hashes": {
             str(path.relative_to(path.parents[2])): _sha256(path)
@@ -458,6 +489,7 @@ def analyze_text() -> dict[str, int | float]:
         summary,
         candidate_mpif,
         official_mpif,
+        official_prevalence_rows,
         prevalence_rows,
         overlap_rows,
         shared_mechanism_summary,
@@ -705,6 +737,42 @@ def feature_prevalence(documents: list[dict[str, str]]) -> list[dict[str, str]]:
                 "endorsed_share": f"{endorsed_share:.6f}",
                 "opponent_share": f"{opponent_share:.6f}",
                 "difference": f"{endorsed_share - opponent_share:.6f}",
+            }
+        )
+    return sorted(
+        rows,
+        key=lambda row: (-abs(float(row["difference"])), row["feature"]),
+    )
+
+
+def official_feature_prevalence(
+    documents: list[dict[str, str]],
+    *,
+    minimum_total_documents: int = 2,
+) -> list[dict[str, str]]:
+    group_documents = Counter(row["group"] for row in documents)
+    document_counts: dict[str, Counter[str]] = defaultdict(Counter)
+    for row in documents:
+        tokens = tokenize(row["text"])
+        features = set(tokens)
+        features.update(f"{a} {b}" for a, b in zip(tokens, tokens[1:], strict=False))
+        document_counts[row["group"]].update(features & POLICY_FEATURES)
+    rows = []
+    for feature in sorted(POLICY_FEATURES):
+        dsa_documents = document_counts["dsa"][feature]
+        democratic_documents = document_counts["democratic"][feature]
+        if dsa_documents + democratic_documents < minimum_total_documents:
+            continue
+        dsa_share = dsa_documents / max(group_documents["dsa"], 1)
+        democratic_share = democratic_documents / max(group_documents["democratic"], 1)
+        rows.append(
+            {
+                "feature": feature,
+                "dsa_documents": str(dsa_documents),
+                "democratic_documents": str(democratic_documents),
+                "dsa_share": f"{dsa_share:.6f}",
+                "democratic_share": f"{democratic_share:.6f}",
+                "difference": f"{dsa_share - democratic_share:.6f}",
             }
         )
     return sorted(
@@ -1119,6 +1187,11 @@ def _official_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str
     metadata = {
         row["context_document_id"]: row for row in read_csv(metadata_path)
     }
+    verified_context_ids = {
+        row["context_entry_id"]
+        for row in read_csv(OFFICIAL_INVENTORY_PATH)
+        if row.get("verification_status", "").strip() == "verified"
+    }
     grouped: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
     document_segments: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
     for row in read_csv(OFFICIAL_SEGMENTS_PATH):
@@ -1131,6 +1204,9 @@ def _official_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str
                 "organizational segment references unknown document "
                 f"{row['context_document_id']}"
             )
+        context_entry_ids = _split_values(row.get("context_entry_ids", ""))
+        if not verified_context_ids.intersection(context_entry_ids):
+            continue
         enriched = {
             **row,
             "group": group,
@@ -1255,7 +1331,12 @@ def _official_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str
             seen_hashes.add(row["sha256"])
             texts.append(row["text"])
         documents.append(
-            {"document_id": document_id, "group": group, "text": " ".join(texts)}
+            {
+                "document_id": document_id,
+                "group": group,
+                "category": _split_values(rows[0]["full_platform_categories"])[0],
+                "text": " ".join(texts),
+            }
         )
     return documents, snapshot_rows
 
@@ -1291,6 +1372,7 @@ def _write_text_report(
     summary: dict[str, int | float],
     candidate_mpif: list[dict[str, str]],
     official_mpif: list[dict[str, str]],
+    official_prevalence_rows: list[dict[str, str]],
     prevalence_rows: list[dict[str, str]],
     overlap_rows: list[dict[str, str]],
     shared_mechanism_summary: list[dict[str, str]],
@@ -1308,6 +1390,15 @@ def _write_text_report(
     ][:8]
     strongest_overlap = overlap_rows[:8]
     strongest_shared_mechanisms = shared_mechanism_summary[:8]
+    official_positive = [
+        row for row in official_prevalence_rows if float(row["difference"]) > 0
+    ][:6]
+    official_negative = [
+        row for row in official_prevalence_rows if float(row["difference"]) < 0
+    ][:6]
+    official_document_counts = summary["official_documents_by_group"]
+    official_category_counts = summary["official_documents_by_category"]
+    official_segment_counts = summary["official_segments_by_group"]
     largest_volume_cycles = sorted(
         volume_rows, key=lambda row: int(row["total"]), reverse=True
     )[:5]
@@ -1334,8 +1425,16 @@ registry and recoverable full-text corpus.
 - Eligible candidate source segments: {summary["candidate_source_segments"]}
 - Candidate segments after shared-text deduplication: {summary["candidate_segments"]}
 - Eligible full-platform organizational documents: {summary["official_documents"]}
+- DSA official documents: {official_document_counts.get("dsa", 0)}; Democratic official
+  documents: {official_document_counts.get("democratic", 0)}
+- Documents by category: DSA national {official_category_counts.get("dsa_national", 0)},
+  DSA state/local {official_category_counts.get("dsa_state_local", 0)}, DNC national
+  {official_category_counts.get("dnc_national", 0)}, and state Democratic Party
+  {official_category_counts.get("state_democratic_party", 0)}
 - Eligible official-platform source segments: {summary["official_source_segments"]}
 - Official-platform segments after exact-text deduplication: {summary["official_segments"]}
+- DSA official segments after deduplication: {official_segment_counts.get("dsa", 0)};
+  Democratic official segments: {official_segment_counts.get("democratic", 0)}
 - Unique source-supported primary contrasts: {summary["sticking_points"]}
 
 Exact candidate passage text is counted once per DSA-endorsed/other-Democrat group and election cycle.
@@ -1365,6 +1464,9 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 - **Document prevalence:** difference in the share of candidate/election documents containing a
   normalized feature. This prevents a few candidates who repeat a phrase many times from
   dominating the result.
+- **Official-platform document prevalence:** the same calculation at the organizational-document
+  level. Each platform contributes once per feature, so a long state-party platform cannot gain
+  weight by repeating a phrase.
 - **Source mix:** direct counts of source-type metadata attached to eligible segments.
 - **Evidence volume:** direct counts of deduplicated eligible segments by election cycle.
 - **Explicit conflicts:** unique rows marked `explicit_conflict`; analyst-coded divergences are
@@ -1405,9 +1507,35 @@ all contributing candidates, races, source documents, URLs, and locators in the 
   organizational distinction is working-class, worker, union, and movement language in DSA
   texts versus family, nation, access, and institutional-party language in Democratic texts.
 
+## Official DSA and Democratic platforms
+
+This is a separate organizational corpus, not a proxy for candidate positions. It contains
+{official_document_counts.get("dsa", 0)} recoverable DSA platform documents and
+{official_document_counts.get("democratic", 0)} recoverable Democratic platform documents.
+The unequal document inventory makes raw segment totals descriptive rather than directly
+comparable. MPIF adjusts for token totals; the document-prevalence table additionally gives each
+platform one observation per policy feature.
+
+The largest DSA-side document-prevalence differences are
+{", ".join(f'{_label(row["feature"])} ({float(row["dsa_share"]):.0%} versus {float(row["democratic_share"]):.0%})' for row in official_positive)}.
+The largest Democratic-side differences are
+{", ".join(f'{_label(row["feature"])} ({float(row["democratic_share"]):.0%} versus {float(row["dsa_share"]):.0%})' for row in official_negative)}.
+These are differences in whether a document mentions a normalized feature, not evidence that
+every organization takes the same position or proposes the same mechanism.
+
+The four hand-reviewed platform contrasts are qualitative examples selected to make exact
+language visible; they are not a representative sample of all platform differences. Sparse
+recoverable DSA state/local platforms and {summary["organizational_platform_gap_rows"]}
+explicit platform-gap rows limit generalization beyond the documents actually collected.
+
 ![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
 
 ![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
+
+![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
+
+The separate [official-platform semantic-density report](official_platform_kde_analysis.md)
+uses equal-size, document-balanced UMAP and KDE fitting and reports the underlying HDBSCAN regions.
 
 The candidate comparison especially distinguishes rights-based housing and labor language
 (`rent`, `human right`, `rent control`, `social housing`, `living wage`) from other-Democrat language
@@ -1734,6 +1862,101 @@ def _policy_overlap_chart(rows: list[dict[str, str]]) -> None:
     )
     _write_svg(
         FIGURE_DIR / "policy_language_overlap.svg",
+        width,
+        height,
+        body,
+    )
+
+
+def _official_platform_prevalence_chart(
+    rows: list[dict[str, str]],
+    document_counts: Counter[str],
+) -> None:
+    selected = sorted(
+        rows,
+        key=lambda row: abs(float(row["difference"])),
+        reverse=True,
+    )[:12]
+    width = 1240
+    height = 272 + len(selected) * 48
+    plot_left = 390
+    plot_width = 690
+    body = [
+        _svg_header(
+            width,
+            height,
+            "Policy language across official platforms",
+            "Document-level mention rates; every recoverable platform contributes once per feature",
+        ),
+        _rect(48, 96, 1144, 104, CARD),
+        _text(68, 121, "WHAT THIS CONTROLS", color=MID, size="10px", weight="700"),
+        _text(
+            68,
+            148,
+            (
+                "Rates compare documents, not passage volume, so longer Democratic platforms "
+                "do not receive extra weight."
+            ),
+            color=DARK,
+            size="14px",
+            weight="700",
+        ),
+        _text(
+            68,
+            174,
+            (
+                f"Recoverable corpus: {document_counts.get('dsa', 0)} DSA and "
+                f"{document_counts.get('democratic', 0)} Democratic platform documents."
+            ),
+            color=MID,
+            size="12px",
+        ),
+        _legend(845, 176, DSA_RED, "Official DSA"),
+        _legend(1017, 176, DEMOCRATIC_BLUE, "Official Democratic"),
+    ]
+    for tick in range(6):
+        value = tick / 5
+        x = plot_left + plot_width * value
+        body.append(_line(x, 220, x, height - 62, LIGHT))
+        body.append(_text(x, 215, f"{value:.0%}", "middle", MID, "10px"))
+    for index, row in enumerate(selected):
+        y = 245 + index * 48
+        dsa_share = float(row["dsa_share"])
+        democratic_share = float(row["democratic_share"])
+        x_dsa = plot_left + plot_width * dsa_share
+        x_democratic = plot_left + plot_width * democratic_share
+        body.append(
+            _text(72, y + 5, _label(row["feature"]), "start", DARK, "13px", "700")
+        )
+        body.append(_line(x_dsa, y, x_democratic, y, "#B8B6B0"))
+        body.append(_circle(x_dsa, y, 7, DSA_RED))
+        body.append(_circle(x_democratic, y, 7, DEMOCRATIC_BLUE))
+        body.append(
+            _text(x_dsa, y - 12, f"{dsa_share:.0%}", "middle", DSA_RED, "10px", "700")
+        )
+        body.append(
+            _text(
+                x_democratic,
+                y + 20,
+                f"{democratic_share:.0%}",
+                "middle",
+                DEMOCRATIC_BLUE,
+                "10px",
+                "700",
+            )
+        )
+    body.append(
+        _svg_footer(
+            width,
+            height,
+            (
+                "Mention rates show agenda emphasis, not policy direction. The unequal number "
+                "of recoverable platforms remains a coverage limitation."
+            ),
+        )
+    )
+    _write_svg(
+        FIGURE_DIR / "official_platform_document_prevalence.svg",
         width,
         height,
         body,
