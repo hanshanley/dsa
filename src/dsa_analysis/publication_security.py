@@ -70,7 +70,7 @@ ASSIGNMENT = re.compile(
 )
 TOKEN_ASSIGNMENT = re.compile(
     rb"""(?ix)(?<![a-z0-9_])
-    (?:["']|\\["'])?(?:token|auth|bitoken|gmrenderkey|clienttoken|entitlementsapikey)
+    (?:["']|\\["'])?(?:token|auth|bitoken|gmrenderkey|clienttoken|entitlementsapikey|licensekey)
     (?:["']|\\["'])?\s*[:=]\s*(?:["']|\\["'])
     (?P<value>[a-z0-9_./+=:-]{12,})
     """
