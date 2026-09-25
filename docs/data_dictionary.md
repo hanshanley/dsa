@@ -2,6 +2,12 @@
 
 ## Current execution and coverage audits
 
+For sanitized public snapshots, `source_sha256`/`raw_sha256` describe the published representation.
+`publication_redactions.json` provides `original_sha256`, `public_sha256`, original/public byte
+counts and redaction categories. It contains no credential values. An original filename may remain
+stable while its public content is redacted; use the recorded public hash, not a digest inferred
+from the filename.
+
 `data/analysis/execution_audit.json` separates model execution from source completeness.
 Stage `completed_at` values are recorded run times; `audited_at` is only observation time.
 `current` means the recorded input/output fingerprints and screening version match, not that

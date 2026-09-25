@@ -17,6 +17,7 @@ from .historical_policy import REVIEW_METHOD, linked_publication_bound, validate
 from .io import read_csv, read_json, write_csv
 from .paths import ANALYSIS_DATA_DIR, CONFIG_DIR, MANUAL_DIR, PROCESSED_DIR, ROOT
 from .policy_comparison import archive_capture_date, normalize, source_evidence_date
+from .publication_security import source_version_digest
 
 
 def split_answers(paragraphs, document: dict, questions: list[dict]) -> list[dict]:
@@ -330,7 +331,7 @@ def build_questionnaire_answers() -> dict:
             # Preserve answer-corpus IDs when the source's genre is refined.
             document_id = (
                 candidate_document_id(name, race["race_id"], source["url"], "candidate_questionnaire")
-                + "-answers-" + source["sha256"][:12] + "-" + scope_hash
+                + "-answers-" + source_version_digest(source)[:12] + "-" + scope_hash
             )
             capture = RawDocumentCapture(
                 document_id, source["url"], source["final_url"], source["retrieved_at"],

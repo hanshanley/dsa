@@ -1005,4 +1005,4 @@ frequency estimates and their row counts are not corpus totals.
 - excerpts.csv:22: unusually short quote
 - 26 legacy manual other-Democrat rows are not marked verified; see current policy-evidence coverage for subsequently recovered sources
 
-Generated 2026-09-24. See `docs/methodology.md` for evidence rules.
+Generated 2026-09-25. See `docs/methodology.md` for evidence rules.

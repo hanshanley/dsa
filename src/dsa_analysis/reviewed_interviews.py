@@ -13,6 +13,7 @@ from .document_corpus import (
 from .historical_policy import validate_historical_review
 from .io import read_csv, read_json, write_csv
 from .paths import ANALYSIS_DATA_DIR, CONFIG_DIR, MANUAL_DIR, PROCESSED_DIR, ROOT
+from .publication_security import source_version_digest
 
 
 def export_reviewed_interview_answers(name: str = "policy_new_york_2017") -> dict:
@@ -72,7 +73,7 @@ def _export_reviewed_text(name: str, *, source_type: str) -> dict:
         reused_document_id = definition.get("existing_analysis_document_id")
         document_id = reused_document_id or (
             candidate_document_id(name_on_ballot, race_id, source["url"], source_type)
-            + "-answers-" + source["sha256"][:12] + "-" + scope_hash
+            + "-answers-" + source_version_digest(source)[:12] + "-" + scope_hash
         )
         if reused_document_id:
             prior = existing[reused_document_id]

@@ -20,6 +20,7 @@ from .document_corpus import (
 )
 from .io import read_csv, read_json
 from .paths import ANALYSIS_DATA_DIR, MANUAL_DIR, PROCESSED_DIR, ROOT
+from .publication_security import source_version_digest
 
 IDENTITY_BASIS = "canonical_registry_and_cached_source_association"
 REVIEW_METHOD = "assistant_source_review_not_independent_human_gold"
@@ -390,7 +391,7 @@ def register_review_captures(input_path, output_path) -> dict:
             raise ValueError("Only reviewed source captures can be registered")
         source_type = registration["source_type"]
         url = source["url"]
-        document_id = candidate_document_id(excerpt["speaker"], race["race_id"], url, source_type) + "-" + source["sha256"][:12]
+        document_id = candidate_document_id(excerpt["speaker"], race["race_id"], url, source_type) + "-" + source_version_digest(source)[:12]
         excerpt["metadata_document_id"] = document_id
         job = {
             "document_id": document_id, "candidate_name": excerpt["speaker"],

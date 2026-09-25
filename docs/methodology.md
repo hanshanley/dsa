@@ -1,5 +1,19 @@
 # Methodology
 
+## Sanitized publication representations
+
+Public source snapshots have incidental API keys, authentication tokens, session identifiers
+and signed URL credentials redacted. Their published hashes and byte counts refer to those
+sanitized representations. `data/analysis/publication_redactions.json` retains the corresponding
+original hashes and transformation categories without credential values. Original captures are
+quarantined locally outside Git, not distributed as an alternative public copy.
+
+This transformation is separate from source collection and does not change a source's publication,
+revision or capture date. Source-version identifiers remain stable; candidate quotations, dates,
+comparison interpretations and complete answers are compared with their pre-redaction semantic
+fingerprints. Every affected usable source is replayed through the normal scoped extraction and
+validation pipeline before analysis is regenerated.
+
 ## Research question
 
 What do DSA and the Democratic Party officially say, and what issues distinguish

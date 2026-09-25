@@ -1,6 +1,6 @@
 # Analysis execution and source coverage
 
-Audit observed at **2026-09-25T03:25:21.216495+00:00**. Research cutoff: **2026-09-22**.
+Audit observed at **2026-09-25T07:28:48.917899+00:00**. Research cutoff: **2026-09-22**.
 The machine-readable receipt is `data/analysis/execution_audit.json`, including input hashes.
 An audit timestamp is not a claimed model execution time.
 
@@ -8,9 +8,9 @@ An audit timestamp is not a claimed model execution time.
 
 | Stage | Input/output status | Recorded completion time (UTC) |
 | --- | --- | --- |
-| lexical | current | 2026-09-25T03:24:10.211114+00:00 |
-| local_classifier | current | 2026-09-25T03:20:28.536930+00:00 |
-| candidate_kde | current | 2026-09-25T03:21:17.880416+00:00 |
+| lexical | current | 2026-09-25T07:20:52.074138+00:00 |
+| local_classifier | current | 2026-09-25T07:20:58.126359+00:00 |
+| candidate_kde | current | 2026-09-25T07:21:48.781577+00:00 |
 
 The lexical corpus contains **2,866 passages** in
 **209 deduplicated analysis documents**.

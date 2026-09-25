@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+scanner="$(git config --get publication.gitleaksPath || command -v gitleaks || true)"
+if [ -z "$scanner" ] || [ ! -x "$scanner" ]; then
+  echo "Publication blocked: install Gitleaks or configure publication.gitleaksPath." >&2
+  exit 1
+fi
+"$scanner" git --staged --pre-commit --redact=100 --ignore-gitleaks-allow \
+  --max-decode-depth=3 --max-archive-depth=2 --no-banner
+if command -v uv >/dev/null 2>&1; then
+  uv run python -m dsa_analysis.publication_security
+else
+  python3 src/dsa_analysis/publication_security.py
+fi

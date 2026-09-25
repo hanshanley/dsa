@@ -388,6 +388,31 @@ the machine-readable audit.
 
 ## Evidence standard
 
+### Publication safety
+
+Captured websites can contain client API keys, signed URLs, session identifiers and other
+incidental credentials unrelated to candidate positions. Public snapshots are sanitized before
+publication. `data/analysis/publication_redactions.json` records original and public hashes,
+byte counts and redaction categories without storing credential values. Original captures are
+kept outside versioned content; a public snapshot's hash describes its sanitized bytes, not an
+unchanged original response. Source-version identifiers, quoted policy text and source dates
+are preserved and revalidated.
+
+Enable the repository's fail-closed pre-commit check in every publishing clone:
+
+```bash
+git config core.hooksPath .githooks
+# Install Gitleaks 8.30.1, or point this local setting at its verified executable.
+git config publication.gitleaksPath /absolute/path/to/gitleaks
+uv run python -m dsa_analysis.publication_security --all-staged
+```
+
+The hook runs Gitleaks and supplemental checks for signed URLs, encoded values and compressed
+artifacts. CI scans reachable history as well. Do not bypass these checks or allowlist raw
+capture directories. A clean scan is not a guarantee against every unknown format, encrypted
+payload or credential visible only in an image. Removing a value does not revoke it; historical
+copies and provider-side credentials may require separate action.
+
 Substantive findings must trace to exact text from official organizations, campaigns, debates,
 interviews, or attributable candidate responses. Journalism and search results may locate
 sources but do not substitute for primary evidence.
