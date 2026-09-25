@@ -1,0 +1,21 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "cases": [
+    {
+      "race_id": "me-house-39-dem-primary-2016",
+      "outcome": "additional_candidate_source_needed",
+      "reviewed_source_sha256": ["678b3b64253208f8f06956a1b91776bb646233dd83beba00ac35ef7a9f10ab13"],
+      "notes": "The shared2016 Press Herald article contains genuine candidate quotations, but many specific policy proposals are reporter paraphrases. No strong same-policy pair was established from the literal candidate words. The available Edwards homepage replay is after the primary; it has not been enrolled as pre-primary text."
+    },
+    {
+      "race_id": "race-0737ecc067d5cc0799e8",
+      "outcome": "additional_policy_detail_needed",
+      "reviewed_source_sha256": [
+        "777fe955f9cd88a87bf17020e95742f4e06674edc9649fbb19cf9441b68744f1",
+        "d1588065b5a90ecfe603125cc23e2ba4893b1d122d39820c7c24fdd4821c27cd",
+        "5f13ea163d50617cebd6e135150cd3465ec2d72add3457a4914d32ad4b95ed99"
+      ],
+      "notes": "Khorasani's homepage lists Medicare for All but its linked detailed page was not recovered. Malik explicitly supports keeping the ACA working while discussing the feasibility of universal coverage; that is not an explicit single-payer rejection. Litton's retained homepage mainly supplies campaign framing and biography. Do not manufacture a financing disagreement or count a menu label as a detailed policy commitment."
+    }
+  ]
+}

@@ -4,7 +4,7 @@ from datetime import date
 
 from .document_corpus import candidate_slug
 from .io import read_csv, read_json
-from .paths import CONFIG_DIR, MANUAL_DIR, PROCESSED_DIR
+from .paths import ANALYSIS_DATA_DIR, CONFIG_DIR, MANUAL_DIR, PROCESSED_DIR
 from .schema import (
     ANALYSIS_SCOPES,
     CONTRAST_TYPES,
@@ -225,7 +225,8 @@ def validate(strict: bool = False) -> AuditResult:
         )
         if incomplete_opponents:
             warnings.append(
-                f"{incomplete_opponents} other-Democrat records still need verified first-party evidence"
+                f"{incomplete_opponents} legacy manual other-Democrat rows are not marked verified; "
+                "see current policy-evidence coverage for subsequently recovered sources"
             )
     else:
         _validate_statement_evidence(errors, warnings, taxonomy)
@@ -233,6 +234,19 @@ def validate(strict: bool = False) -> AuditResult:
         warnings.append("candidate/opponent contrasts have not yet been populated")
 
     if strict:
+        congress_summary = ANALYSIS_DATA_DIR / "congressional" / "summary.json"
+        if not congress_summary.exists():
+            errors.append("strict census: nationwide congressional inventory is missing")
+        elif not read_json(congress_summary).get("complete"):
+            errors.append("strict census: nationwide congressional coverage remains incomplete")
+        from .census import census_gaps
+
+        gaps, _ = census_gaps()
+        if gaps:
+            errors.append(
+                f"strict census: {len(gaps)} source/coverage gaps; "
+                "run `dsa-analysis audit-census` for the complete row-level ledger"
+            )
         coverage_path = PROCESSED_DIR / "coverage_ledger.csv"
         if not coverage_path.exists():
             errors.append("strict census: coverage_ledger.csv has not been generated")

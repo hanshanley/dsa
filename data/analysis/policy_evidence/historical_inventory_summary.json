@@ -1,0 +1,28 @@
+{
+  "in_scope_races": 420,
+  "candidate_race_records": 1913,
+  "cases_with_reviewed_statements": 178,
+  "cases_with_both_groups_reviewed": 135,
+  "candidates_with_reviewed_statements": 470,
+  "individual_candidate_race_records": 1876,
+  "individual_candidate_records_with_reviewed_statements": 470,
+  "endorsed_ballot_campaign_records": 7,
+  "non_person_ballot_option_records": 30,
+  "policy_evidence_records_without_reviewed_statements": 1413,
+  "acquisition_work_units_with_missing_direct_review": 833,
+  "cases_with_paired_cached_sources": 53,
+  "source_associations": 4051,
+  "unique_retained_raw_sources": 1632,
+  "strict_congressional_registry_records": 56,
+  "strict_congressional_records_with_reviewed_statements": 45,
+  "complete": false,
+  "limitations": [
+    "Cached source availability is not semantic review or complete platform coverage.",
+    "Candidate/race records are not necessarily distinct people or distinct national campaigns.",
+    "Shared presidential sources do not constitute independent state-specific policy observations.",
+    "Missing reviewed statements do not establish that candidates lacked a policy.",
+    "The legacy candidate_race_records count includes non-person ballot options and endorsed ballot campaigns; entity-specific denominators are separate.",
+    "Generic Uncommitted/No Preference/Scattered results are not individual platform gaps. Endorsed ballot campaigns still require campaign evidence.",
+    "Research work units group same-cycle presidential names using only the explicit reviewed alias map; they do not merge election records or create reviewed evidence."
+  ]
+}

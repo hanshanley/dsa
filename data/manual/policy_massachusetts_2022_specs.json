@@ -1,0 +1,22 @@
+{
+  "raw_folder": "data/raw/policy_massachusetts_2022",
+  "source_defaults": {
+    "status": "timing_unverified",
+    "source_type": "candidate_interview",
+    "notes": "The article's August17,2022 publication and September16 revision are preserved and verified from retained JSON-LD. The current body was readable through ordinary anonymous browser access without bypassing any gate. The known post-primary revision keeps the statements timing-qualified."
+  },
+  "sources": [
+    {"key": "stanton", "capture": "stanton-peake-capture.json", "race_id": "race-4a19411701e40165da88", "speaker": "Jack Stanton"},
+    {"key": "peake", "capture": "stanton-peake-capture.json", "race_id": "race-4a19411701e40165da88", "speaker": "Sarah K. Peake", "source_speaker": "Sarah Peake", "identity_notes": "The article identifies incumbent Sarah Peake in the2022 Fourth Barnstable primary against Jack Stanton, matching the canonical candidate with a middle initial."}
+  ],
+  "statements": [
+    {"id": "ma22-stanton-governing", "source": "stanton", "topic": "campaign_approach", "subtopic": "legislative_change_strategy", "stance": "use_supermajority_to_deliver_promised_change", "kind": "campaign_frame", "quote": "We have all the power to enact the things that we should be able to enact", "locator": "paragraph 60", "claim": "Argues that Democratic legislative power should deliver popular proposals rather than letting them die each session."},
+    {"id": "ma22-peake-governing", "source": "peake", "topic": "campaign_approach", "subtopic": "legislative_change_strategy", "stance": "inside_relationships_and_detailed_legislative_work", "kind": "campaign_frame", "quote": "come into the building and sharpen your pencil and go to work", "locator": "paragraph 65", "claim": "Argues for detailed legislative work and relationships to advance proposals, using the healthcare bill as an example."},
+    {"id": "ma22-peake-health", "source": "peake", "topic": "healthcare", "subtopic": "current_single_payer_bill_readiness", "stance": "not_ready_as_presented", "quote": "is not ready for prime time yet", "locator": "paragraph 65", "claim": "Says the then-current single-payer bill needs more work and Medicare waivers. This is not recast as opposition to all universal healthcare, and the legal feasibility claim is not independently verified."},
+    {"id": "ma22-peake-housing", "source": "peake", "topic": "housing", "subtopic": "housing_infrastructure_and_density", "stance": "support_wastewater_enabled_density", "quote": "30, 40 units at a time", "locator": "paragraph 79", "claim": "Advocates thinking at larger housing scale and says wastewater improvements can enable denser development."},
+    {"id": "ma22-peake-state-housing", "source": "peake", "topic": "housing", "subtopic": "state_controlled_housing_siting", "stance": "expresses_concern_about_state_decisions", "quote": "some bureaucrat in Boston making a decision about what housing Truro needs", "locator": "paragraph 75", "claim": "Expresses concern about state-directed local housing decisions. The article's separate paraphrase of Stanton's public-building proposal is not converted into an invented literal quotation."}
+  ],
+  "comparisons": [
+    {"id": "ma22-stanton-peake-governing", "left": "ma22-stanton-governing", "right": "ma22-peake-governing", "relationship": "different_emphasis", "kind": "campaign_framing", "analysis": "Stanton emphasizes using a Democratic supermajority to deliver promised changes; Peake emphasizes working through institutions and legislative details. This is a campaign-strategy comparison, not a complete same-policy platform contrast."}
+  ]
+}

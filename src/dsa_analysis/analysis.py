@@ -1,8 +1,10 @@
+import hashlib
 from collections import Counter
 from datetime import date
 from pathlib import Path
 
 from .audit import validate
+from .document_corpus import CANDIDATE_SCREENING_VERSION
 from .io import read_csv, read_json, write_csv
 from .paths import (
     ANALYSIS_DATA_DIR,
@@ -10,11 +12,39 @@ from .paths import (
     MANUAL_DIR,
     OUTPUT_DIR,
     PROCESSED_DIR,
+    RAW_DIR,
     REPORT_DIR,
 )
 
 
 def analyze() -> dict[str, object]:
+    if (ANALYSIS_DATA_DIR / "policy_evidence" / "source_manifest.csv").exists():
+        from .policy_comparison import export_policy_comparisons
+        from .policy_inventory import build_policy_inventory
+        from .policy_findings import build_policy_findings
+        from .national_platform_applicability import export_national_platform_applicability
+        from .policy_browser import build_policy_browser
+        from .mayoral_survey import build_mayoral_survey
+        from .questionnaire_answers import build_questionnaire_answers
+        from .reviewed_interviews import export_reviewed_interview_answers, export_reviewed_platform_text
+
+        export_policy_comparisons()
+        for bundle in read_json(CONFIG_DIR / "policy_comparison_reviews.json").get(
+            "complete_interview_bundles", [],
+        ):
+            export_reviewed_interview_answers(bundle)
+        for bundle in read_json(CONFIG_DIR / "policy_comparison_reviews.json").get(
+            "complete_platform_bundles", [],
+        ):
+            export_reviewed_platform_text(bundle)
+        build_policy_inventory()
+        build_policy_findings()
+        export_national_platform_applicability()
+        build_policy_browser()
+        if (RAW_DIR / "policy_mayor_survey_2025" / "publisher_version" / "parsed_manifest.json").exists():
+            build_mayoral_survey()
+        if (MANUAL_DIR / "policy_complete_questionnaires.json").exists():
+            build_questionnaire_answers()
     audit = validate()
     audit_messages = tuple(f"Validation error: {error}" for error in audit.errors)
     audit_messages += audit.warnings
@@ -107,6 +137,10 @@ def analyze() -> dict[str, object]:
         year_rows,
         audit_messages,
     )
+    if (ANALYSIS_DATA_DIR / "policy_evidence" / "source_manifest.csv").exists():
+        from .execution_audit import write_execution_audit
+
+        write_execution_audit()
     return stats
 
 
@@ -131,9 +165,52 @@ def _write_report(
             f'{row["locator"]}'
         )
     warning_lines = [f"- {warning}" for warning in warnings]
+    policy_path = ANALYSIS_DATA_DIR / "policy_evidence" / "reviewed_candidate_comparisons.csv"
+    policy_rows = read_csv(policy_path) if policy_path.exists() else []
+    policy_lines = [
+        f'- **{row["candidate_name"]} / {row["opponent_name"]} '
+        f'({row["topic"]}; {row["relationship"]}):** {row["analysis"]}'
+        for row in policy_rows
+    ]
+    timing_path = ANALYSIS_DATA_DIR / "policy_evidence" / "timing_unverified_candidate_comparisons.csv"
+    timing_rows = read_csv(timing_path) if timing_path.exists() else []
+    timing_lines = [
+        f'- **{row["candidate_name"]} / {row["opponent_name"]}:** {row["analysis"]}'
+        for row in timing_rows
+    ]
+    statement_path = ANALYSIS_DATA_DIR / "policy_evidence" / "reviewed_candidate_statements.csv"
+    statement_rows = read_csv(statement_path) if statement_path.exists() else []
+    paired_excerpt_ids = {
+        row[field] for row in policy_rows + timing_rows
+        for field in ("candidate_excerpt_id", "opponent_excerpt_id")
+    }
+    standalone_lines = [
+        f'- **{row.get("canonical_speaker") or row["speaker"]}** '
+        f'({row["topic"]}; {row["election_date"]}): "{row["quote"]}" '
+        f'— [{row["quote_match_locators"]}]({row["source_url"]})'
+        for row in statement_rows if row["excerpt_id"] not in paired_excerpt_ids
+    ]
+    findings_path = ANALYSIS_DATA_DIR / "policy_evidence" / "cross_race_policy_findings.csv"
+    findings = read_csv(findings_path) if findings_path.exists() else []
+    findings_lines = [
+        "| Topic | Cases | Distinct source pairs | Shared proposition | Mechanism/scope/strategy | Emphasis | Explicit disagreement |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+    ] if findings else []
+    for row in findings:
+        strategy = sum(int(row[key]) for key in ("different_mechanism", "different_scope", "different_strategy"))
+        findings_lines.append(
+            f'| {row["topic_group"]} | {row["election_cases"]} | {row["distinct_source_quote_pairs"]} '
+            f'| {row["shared_position"]} | {strategy} | {row["different_emphasis"]} | {row["explicit_disagreement"]} |'
+        )
     excerpts_by_id = {row["excerpt_id"]: row for row in excerpts}
     comparison_lines = []
+    from .policy_comparison import platform_pair_date_issues
+
     for row in platform_comparisons:
+        if row["reviewed"].lower() != "true":
+            continue
+        if platform_pair_date_issues(row, excerpts_by_id, documents_by_id):
+            continue
         dsa = excerpts_by_id[row["dsa_excerpt_id"]]
         democratic = excerpts_by_id[row["democratic_excerpt_id"]]
         comparison_lines.append(
@@ -143,7 +220,11 @@ def _write_report(
             f'- **Coded relationship:** `{row["relationship_code"]}` — {row["notes"]}'
         )
     contrast_lines = []
+    pending_contrast_lines = []
     for row in contrasts:
+        if row["reviewed"].lower() != "true":
+            pending_contrast_lines.append(f'- **{row["race_id"]}: withheld** — {row["notes"]}')
+            continue
         candidate = excerpts_by_id[row["candidate_excerpt_id"]]
         opponent = excerpts_by_id[row["opponent_excerpt_id"]]
         document = documents_by_id[candidate["document_id"]]
@@ -161,6 +242,49 @@ def _write_report(
     text = f"""# DSA and Democratic primary positions
 
 **Research window:** {config["study_start"]} through {config["research_cutoff"]}
+**Source discovery begins:** {config.get("source_start", config["study_start"])}
+
+Actual execution, input freshness, selected-evidence counts, and remaining coverage gaps
+are reported separately in [the execution audit](analysis_execution.md).
+
+## Cross-race policy and campaign evidence
+
+{chr(10).join(findings_lines) or "No reviewed cross-race findings have been published."}
+
+This table counts selected source-reviewed evidence, including explicitly timing-qualified
+records. It is not a population estimate or a ranking of whole-campaign salience. Reused
+national source pairs are deduplicated; distinct pairs are not necessarily statistically
+independent. Mechanisms can coexist, and different emphasis is not opposition.
+The full registry accounting and candidate quotations are in
+`data/analysis/policy_evidence/race_policy_comparison_matrix.csv` and
+`data/analysis/policy_evidence/documented_campaign_positions.csv`.
+
+## Source-backed candidate comparisons
+
+{chr(10).join(policy_lines) or "- No source-reviewed candidate comparisons have been published."}
+
+These comparisons are assistant source reviews, not independent human gold labels.
+Exact short quotations, reviewed locators, publication/archive dates and source hashes
+are retained in `data/analysis/policy_evidence/reviewed_candidate_comparisons.csv`.
+The sources are candidate platforms and interviews, kept distinct from adopted organizational platforms.
+
+### Additional candidate answers with unverified pre-primary timing
+
+{chr(10).join(timing_lines) or "- No timing-unverified comparisons have been published."}
+
+These authentic campaign statements and guide answers are retained separately, not backdated.
+They are attributable to the candidates, but the exact publication time and text version
+available before the primary have not been verified. They do not enter the timing-verified
+comparison table or the screened classifier input. Different stated priorities or policy tools
+can coexist; absence from one answer is not opposition.
+
+### Standalone attributed positions
+
+{chr(10).join(standalone_lines) or "- No additional standalone positions."}
+
+These statements remain valuable even when there is no same-policy comparator. A future
+election date is a scheduled event, not a completed result. The comparison exports preserve
+candidate-authored factual claims without independently certifying those claims.
 
 ## Scope and canonical outputs
 
@@ -169,12 +293,19 @@ inventory/extraction summaries, endorsement-census outputs, and full-corpus anal
 The small reviewed quotations below are qualitative examples only; their counts are not corpus
 totals and are not used as the denominator for the quantitative sections.
 
+The separate all-party House/Senate inventory is at `data/analysis/congressional/`.
+It is not the denominator for these DSA discourse findings. That inventory retains explicit
+missing primary results, special-election reconciliation, and nationwide policy-text gaps.
+See `data/analysis/census_summary.json` and `data/analysis/congressional/summary.json` before
+interpreting either corpus as complete. A refreshed cutoff does not mean every source has
+been recollected or every primary has been certified.
+
 ## 1. Denominator completeness
 
 - Canonical races: {stats["canonical_races"]}
 - In-scope DSA-endorsed Democratic primaries: {stats["in_scope_races"]}
 - In-scope races with unresolved denominator metadata: {stats["in_scope_unresolved_races"]}
-- In-scope candidate/race records represented in the registry: {stats["in_scope_candidate_records"]}
+- In-scope participant/ballot-option records represented in the registry: {stats["in_scope_candidate_records"]} (not a count of individual people; see the execution audit's entity-specific denominators)
 - Valid official-election-source rows: {stats["valid_official_election_source_rows"]}
 - National candidate endorsements: {stats["national_candidate_endorsements"]}
 - National endorsements matched to in-scope races: {stats["national_endorsements_matched_in_scope"]}
@@ -242,7 +373,9 @@ subset.
 - Candidate source segments before shared-text deduplication: {stats["candidate_source_segments"]}
 - Candidate segments after deduplication: {stats["candidate_analysis_segments"]}
 - Candidate analysis documents after deduplication: {stats["candidate_analysis_documents"]}
-- Unique source-supported primary contrasts: {stats["analysis_sticking_points"]}
+- Automated primary contrasts eligible for current analysis: {stats["analysis_sticking_points"]}
+- Automated contrast input status: **{stats["sticking_points_input_status"]}**
+- Local-model input status: **{stats["model_input_status"]}**
 - Local-model classified segments: {stats["model_classified_rows"]}
 - Local-model unclassified segments below threshold: {stats["model_unclassified_rows"]}
 
@@ -324,6 +457,10 @@ frequency estimates and their row counts are not corpus totals.
 
 {chr(10).join(contrast_lines) or "- No reviewed candidate contrasts are available."}
 
+### Prior contrasts withheld for re-review
+
+{chr(10).join(pending_contrast_lines) or "- None."}
+
 ## Remaining gaps
 
 - The race registry has {stats["in_scope_unresolved_races"]} unresolved in-scope races and
@@ -343,6 +480,17 @@ frequency estimates and their row counts are not corpus totals.
 
 Generated {date.today().isoformat()}. See `docs/methodology.md` for evidence rules.
 """
+    if stats["model_input_status"] == "stale_input":
+        text = text.replace(
+            "![Modeled topics](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)",
+            "**Withheld:** the model-topic figure was produced from a superseded candidate corpus.",
+        )
+    if stats["kde_status"] == "stale_input":
+        text = text.replace(
+            "![Provisional GTE KDE](../figures/provisional_gte_kde.png)",
+            "**Withheld:** the candidate KDE was produced from a superseded candidate corpus. "
+            "The retained counts above describe that older run, not the current screened input.",
+        )
     (REPORT_DIR / "draft.md").write_text(text, encoding="utf-8")
 
 
@@ -369,6 +517,39 @@ def _load_canonical_metrics(
     lexical = read_json(output_dir / "tables" / "text_analysis" / "analysis_manifest.json")
     model = read_json(analysis_data_dir / "model_topic_validation.json")
     kde = read_json(analysis_data_dir / "provisional_gte_kde" / "summary.json")
+    corpus_path = analysis_data_dir / "candidate_text_corpus.csv"
+    corpus_hash = hashlib.sha256(corpus_path.read_bytes()).hexdigest() if corpus_path.exists() else ""
+    preparation_stale = bool(corpus_hash and lexical.get("screening_version") != CANDIDATE_SCREENING_VERSION)
+    if corpus_hash:
+        for name in (
+            "candidate_document_analysis_segments.csv",
+            "candidate_document_metadata.csv",
+            "race_registry.csv",
+        ):
+            path = processed_dir / name
+            recorded = lexical.get("input_hashes", {}).get(f"data/processed/{name}")
+            if not path.exists() or recorded != hashlib.sha256(path.read_bytes()).hexdigest():
+                preparation_stale = True
+    model_stale = preparation_stale or bool(corpus_hash and model.get("input_sha256") != corpus_hash)
+    if corpus_hash:
+        for key, path in (
+            ("config_sha256", CONFIG_DIR / "cap_topics.json"),
+            ("output_sha256", analysis_data_dir / "model_topic_classifications.csv"),
+        ):
+            if not path.exists() or model.get(key) != hashlib.sha256(path.read_bytes()).hexdigest():
+                model_stale = True
+    kde_stale = preparation_stale or bool(corpus_hash and (
+        kde.get("candidate_corpus_sha256") != corpus_hash
+        or kde.get("screening_version") != CANDIDATE_SCREENING_VERSION
+    ))
+    if corpus_hash:
+        for key, path in (
+            ("input_sha256", processed_dir / "candidate_document_analysis_segments.csv"),
+            ("metadata_sha256", processed_dir / "candidate_document_metadata.csv"),
+            ("registry_sha256", processed_dir / "race_registry.csv"),
+        ):
+            if not path.exists() or kde.get(key) != hashlib.sha256(path.read_bytes()).hexdigest():
+                kde_stale = True
     official_kde = read_json(
         analysis_data_dir / "official_platform_gte_kde" / "summary.json"
     )
@@ -494,9 +675,11 @@ def _load_canonical_metrics(
         "candidate_analysis_segments": lexical["candidate_segments"],
         "candidate_analysis_documents": lexical["candidate_documents"],
         "analysis_sticking_points": lexical["sticking_points"],
-        "model_classified_rows": model["classified_rows"],
-        "model_unclassified_rows": model["unclassified_rows"],
-        "kde_status": kde["status"],
+        "sticking_points_input_status": lexical.get("sticking_points_input_status", "not_checked"),
+        "model_input_status": "stale_input" if model_stale else "current" if corpus_hash else "not_checked",
+        "model_classified_rows": None if model_stale else model["classified_rows"],
+        "model_unclassified_rows": None if model_stale else model["unclassified_rows"],
+        "kde_status": "stale_input" if kde_stale else kde["status"],
         "kde_retained_segments": kde["retained_segments"],
         "kde_endorsed_candidates": kde["candidate_counts"]["endorsed"],
         "kde_opponent_candidates": kde["candidate_counts"]["opponent"],

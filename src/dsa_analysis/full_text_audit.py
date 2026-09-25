@@ -13,6 +13,8 @@ from .document_corpus import (
     build_candidate_source_inventory,
     canonical_source_url,
     candidate_document_id,
+    candidate_document_analysis_issues,
+    tracked_primary_race_ids,
     candidate_slug,
     classify_source_type,
     normalize_source_url,
@@ -569,6 +571,7 @@ def _load_corpus_rows(path: Path, expected_years: list[int]) -> list[dict[str, s
     if missing:
         raise ValueError(f"{path.name}: missing columns {sorted(missing)}")
     has_evidence_text = bool(rows) and {"quote", "source_url"}.issubset(rows[0])
+    allowed_statuses = CORPUS_STATUSES if has_evidence_text else QUEUE_STATUSES
     allowed_years = {str(year) for year in expected_years}
     output = []
     for number, row in enumerate(rows, start=2):
@@ -576,7 +579,7 @@ def _load_corpus_rows(path: Path, expected_years: list[int]) -> list[dict[str, s
         if role not in QUEUE_ROLES:
             raise ValueError(f"{path.name}:{number}: invalid role")
         status = row.get("evidence_status", "").strip()
-        if status not in CORPUS_STATUSES:
+        if status not in allowed_statuses:
             raise ValueError(f"{path.name}:{number}: invalid evidence_status")
         election_date = row.get("election_date", "").strip()
         year = _year_from_value(election_date, path.name, f"row {number} election_date")
@@ -1121,6 +1124,10 @@ def _load_document_metadata_rows(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         return []
     rows = read_csv(path)
+    registry_path = path.with_name("race_registry.csv")
+    in_scope = tracked_primary_race_ids(
+        read_csv(registry_path), read_csv(MANUAL_DIR / "endorsements.csv"),
+    ) if registry_path.exists() else None
     required = {
         "document_id",
         "candidate_name",
@@ -1159,6 +1166,15 @@ def _load_document_metadata_rows(path: Path) -> list[dict[str, str]]:
                 "election_date": election_date,
                 "election_year": year,
                 "publication_date": row.get("publication_date", "").strip(),
+                "campaign_window_status": row.get("campaign_window_status", "").strip(),
+                "archive_url": row.get("archive_url", "").strip(),
+                "final_url": row.get("final_url", "").strip(),
+                "retrieved_at": row.get("retrieved_at", "").strip(),
+                "title": row.get("title", "").strip(),
+                "comparison_scope_status": (
+                    "out_of_scope" if in_scope is not None and row.get("race_id") not in in_scope
+                    else "in_scope" if in_scope is not None else "not_checked"
+                ),
                 "source_type": source_type,
                 "source_type_class": classify_source_type(source_type, source_url),
                 "source_url": source_url,
@@ -1337,11 +1353,7 @@ def _is_substantive_segment(row: dict[str, str]) -> bool:
 
 
 def _metadata_supports_analysis(row: dict[str, str]) -> bool:
-    if row.get("analysis_scope", "").strip() == "context_only":
-        return False
-    return row.get("coverage_status", "").strip() != "shared_document_unscoped" and (
-        row.get("extraction_status", "").strip() != "shared_document_unscoped"
-    )
+    return not candidate_document_analysis_issues(row)
 
 
 def _metadata_supports_clean_pairing(row: dict[str, str]) -> bool:
@@ -1451,15 +1463,15 @@ def _paired_race_rows_from_clean_documents(
             }
         )
         blockers = []
-        if not endorsed:
-            blockers.append("endorsed_clean_document_missing")
-        if not opponents:
-            blockers.append("opponent_clean_document_missing")
+        if not substantive_endorsed:
+            blockers.append("endorsed_substantive_document_missing")
+        if not substantive_opponents:
+            blockers.append("opponent_substantive_document_missing")
         output.append(
             {
                 "race_id": race_id,
                 "election_year": election_year,
-                "paired_race_eligible": "true" if endorsed and opponents else "false",
+                "paired_race_eligible": "true" if substantive_endorsed and substantive_opponents else "false",
                 "endorsed_clean_candidates": str(len(endorsed)),
                 "opponent_clean_candidates": str(len(opponents)),
                 "clean_document_count": str(len(clean_document_ids)),
@@ -1864,11 +1876,11 @@ def _build_candidate_document_queue_rows(
         ):
             if not existing[field] and row[field]:
                 existing[field] = row[field]
-        if (
-            existing.get("analysis_scope", "").strip() == "analysis"
-            and row.get("analysis_scope", "").strip() == "context_only"
+        scope_priority = {"analysis": 0, "candidate_excerpt": 1, "context_only": 2}
+        if scope_priority.get(row.get("analysis_scope", ""), 0) > scope_priority.get(
+            existing.get("analysis_scope", ""), 0,
         ):
-            existing["analysis_scope"] = "context_only"
+            existing["analysis_scope"] = row["analysis_scope"]
 
     def collection_fields(row: dict[str, str]) -> tuple[str, str, str, str, str]:
         document_id = row.get("document_id", "").strip()

@@ -1,0 +1,24 @@
+{
+  "race_id": "race-4bb8173fd4fdca0b2d3f",
+  "sources": [
+    {"key":"bush","capture":"bush-2024-interview.json","speaker":"Cori Bush"},
+    {"key":"bell","capture":"bell-2024-interview.json","speaker":"Wesley Bell"},
+    {"key":"chappelle","capture":"chappelle-2024-interview.json","speaker":"Maria Chappelle-Nadal"}
+  ],
+  "statements": [
+    {"id":"mo24-bush-safety","source":"bush","topic":"public_safety","subtopic":"social_investment_instead_of_militarization","stance":"support","quote":"Put that money into our social safety net","locator":"paragraph 298","claim":"Proposes redirecting militarized-equipment spending to social services, not cutting police pensions or denying pay raises."},
+    {"id":"mo24-bush-peace","source":"bush","topic":"foreign_policy","subtopic":"israeli_palestinian_safety_and_freedom","stance":"support","quote":"safety for Israelis and Palestinians","locator":"paragraph 267","claim":"Calls for safety, liberation, and freedom for both Israelis and Palestinians; this quote alone does not specify every aid condition."},
+    {"id":"mo24-bush-legislative-frame","source":"bush","topic":"campaign_approach","subtopic":"legislative_effectiveness","stance":"emphasize_record","kind":"campaign_frame","quote":"we did have wins","locator":"paragraph 282","claim":"Presents legislative wins despite internal and cross-party tensions as evidence of effectiveness."},
+    {"id":"mo24-bell-diversion","source":"bell","topic":"public_safety","subtopic":"court_diversion","stance":"support","quote":"we won't prosecute you","locator":"paragraph 282","claim":"Describes nonprosecution conditional on good-faith participation in diversion programs, and discusses expanding federal support."},
+    {"id":"mo24-bell-coalition","source":"bell","topic":"campaign_approach","subtopic":"legislative_effectiveness","stance":"emphasize_coalitions","kind":"campaign_frame","quote":"coalition building","locator":"paragraph 277","claim":"Emphasizes working within his caucus and across the aisle to pass radiation-compensation legislation."},
+    {"id":"mo24-bell-allies","source":"bell","topic":"foreign_policy","subtopic":"alliance_commitment","stance":"support","quote":"we do have to stand by our allies","locator":"paragraph 273","claim":"Couples a call for peaceful resolution with support for allies; this does not prove support for every weapons transfer."},
+    {"id":"mo24-chappelle-two-state","source":"chappelle","topic":"foreign_policy","subtopic":"two_state_solution","stance":"support","quote":"a two-state solution","locator":"paragraph 273","claim":"Explicitly favors a two-state solution; no position on every specific aid condition is imputed."},
+    {"id":"mo24-chappelle-housing","source":"chappelle","topic":"housing","subtopic":"housing_development","stance":"support","quote":"I want development","locator":"paragraph 281","claim":"Calls for development in the context of vacant and rundown housing; detailed financing mechanisms are not established by this quotation."},
+    {"id":"mo24-chappelle-legislative-frame","source":"chappelle","topic":"campaign_approach","subtopic":"legislative_effectiveness","stance":"emphasize_policy_expertise","kind":"campaign_frame","quote":"be able to count numbers","locator":"paragraph 283","claim":"Presents legislative vote-counting and issue expertise as the route to passing radiation-exposure compensation."}
+  ],
+  "comparisons": [
+    {"id":"mo24-bush-bell-public-safety","left":"mo24-bush-safety","right":"mo24-bell-diversion","relationship":"different_strategy","analysis":"Bush specifies moving militarized-equipment spending into social services; Bell describes court diversion backed by federal support. These are different, potentially complementary approaches—not evidence that either rejects the other's mechanism."},
+    {"id":"mo24-bush-bell-legislative-frame","left":"mo24-bush-legislative-frame","right":"mo24-bell-coalition","relationship":"different_emphasis","kind":"campaign_framing","analysis":"Bush points to wins despite legislative tensions; Bell emphasizes coalition-building across party lines. Both claim an effective route to results."},
+    {"id":"mo24-bush-chappelle-legislative-frame","left":"mo24-bush-legislative-frame","right":"mo24-chappelle-legislative-frame","relationship":"different_emphasis","kind":"campaign_framing","analysis":"Bush emphasizes achieved wins; Chappelle-Nadal emphasizes vote-counting and policy expertise. These are campaign arguments, not independent effectiveness measurements."}
+  ]
+}

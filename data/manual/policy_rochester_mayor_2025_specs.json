@@ -1,0 +1,47 @@
+{
+  "race_id": "race-1018572bbe0d5cb327c4",
+  "source_bundle": "policy_historical_c_followup_sources.json",
+  "source_document_id": "cfol-rochester",
+  "statements": [
+    {
+      "id": "roc25-lupien-gardens",
+      "speaker": "Mary Lupien",
+      "role": "endorsed_candidate",
+      "quote": "community gardens",
+      "locator": "paragraph 46",
+      "claim": "Proposes integrating food-system goals into city budgeting and zoning, protecting garden land, and investing in neighborhood food infrastructure."
+    },
+    {
+      "id": "roc25-evans-gardens",
+      "speaker": "Malik D Evans",
+      "role": "opponent_candidate",
+      "quote": "provide resources",
+      "locator": "paragraph 38",
+      "claim": "Describes the city's existing provision of resources and materials for residents seeking to establish gardens."
+    },
+    {
+      "id": "roc25-sinha-gardens",
+      "speaker": "Shashi Ranjan Sinha",
+      "role": "opponent_candidate",
+      "quote": "community gardens",
+      "locator": "paragraph 58",
+      "claim": "Supports garden land access, easier zoning, utilities and equipment, training, and small grants."
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "roc25-lupien-evans-garden-support",
+      "left": "roc25-lupien-gardens",
+      "right": "roc25-evans-gardens",
+      "relationship": "shared_position",
+      "analysis": "Both support city assistance for community gardens. Lupien proposes broader budgeting, zoning and land protections; Evans points to existing material support. Brevity is not evidence of opposition to additional measures."
+    },
+    {
+      "id": "roc25-lupien-sinha-garden-support",
+      "left": "roc25-lupien-gardens",
+      "right": "roc25-sinha-gardens",
+      "relationship": "shared_position",
+      "analysis": "Both propose city land, zoning and resource support for community gardens. The answers differ in implementation detail without establishing conflicting policy goals."
+    }
+  ]
+}

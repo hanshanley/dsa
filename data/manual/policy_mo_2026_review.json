@@ -1,0 +1,592 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "scope": "2026 Missouri congressional races involving Cori Bush and Hartzell Gray",
+  "created_at": "2026-09-23",
+  "qualifying_roster": {
+    "path": "data/raw/policy_mo_2026/verified_candidate_roster.csv",
+    "sha256": "5d9ef8ef8b37225a130cd7dce1b347d1e9d818d6f5c04fb59423e679fb5c814d",
+    "source_document_ids": [
+      "mo01-identity-sos-20260606",
+      "mo04-identity-sos-20260606"
+    ]
+  },
+  "race_verification": [
+    {
+      "race_id": "race-6233a2b380836f3b2218",
+      "election_date": "2026-08-04",
+      "district": "MO-01",
+      "primary_party": "Democratic",
+      "identity_status": "verified_official_certified_candidate_list",
+      "official_candidates": [
+        "Alissa Murphy",
+        "Carl E. Harris Sr",
+        "Cori Bush",
+        "Wesley Bell",
+        "Carl Earnest Henderson"
+      ],
+      "registry_corrections": [
+        "Carl Harris Sr. normalized to official Carl E. Harris Sr",
+        "Carl Henderson normalized to official Carl Earnest Henderson"
+      ],
+      "source_document_id": "mo01-identity-sos-20260606"
+    },
+    {
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "election_date": "2026-08-04",
+      "district": "MO-04",
+      "primary_party": "Democratic",
+      "identity_status": "verified_official_certified_candidate_list",
+      "official_candidates": [
+        "Jordan Herrera",
+        "Wayne Russell",
+        "Hartzell Gray 3rd",
+        "G Rick",
+        "Jeanette Cass",
+        "Ashleigh Rogers",
+        "Randy Miller"
+      ],
+      "registry_corrections": [
+        "Hartzell Gray normalized to official Hartzell Gray 3rd",
+        "G. Rick normalized to official G Rick"
+      ],
+      "source_document_id": "mo04-identity-sos-20260606"
+    }
+  ],
+  "sources": [
+    {
+      "document_id": "mo04-ashleigh-live-current",
+      "url": "https://ashleighrogers4congress.com/",
+      "final_url": "https://ashleighrogers4congress.com/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23T04:55:19.193432+00:00",
+      "retrieved_at_precision": "timestamp",
+      "raw_path": "data/raw/policy_mo_2026/ashleigh-rogers-current.html",
+      "sha256": "85a3bc07c4d3178079fbe66c7696c785cf35f74df6042595329fcbaa7ec52ee1",
+      "bytes": 161991,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "notes": "Full candidate-authored campaign homepage. On the Issues includes first-person policy statements, but original publication date and the pre-primary version are unverified; the indexed August3 archive still returns HTTP500."
+    },
+    {
+      "document_id": "mo01-carl-harris-stlamerican-20260320",
+      "url": "https://www.stlamerican.com/news/local-news/carl-harris-enters-race-for-missouris-1st-congressional-district/",
+      "final_url": "https://www.stlamerican.com/news/local-news/carl-harris-enters-race-for-missouris-1st-congressional-district/",
+      "publication_date": "2026-03-20",
+      "retrieved_at": "2026-09-23T04:57:03.254185+00:00",
+      "retrieved_at_precision": "timestamp",
+      "raw_path": "data/raw/policy_mo_2026/carl-harris-stlamerican-20260320.html",
+      "sha256": "fdde18f7d00a9a31d7367e2e049ac5c84e61b8146c8318d4093ad68fe8155ba4",
+      "bytes": 206277,
+      "content_type": "text/html",
+      "status": "captured_not_excerpted",
+      "notes": "Complete dated article contains only reporter narration about campaign themes, no direct candidate quotation or submitted policy answers. Retained as discovery context, not attributed policy text."
+    },
+    {
+      "document_id": "mo01-identity-sos-20260606",
+      "url": "https://s1.sos.mo.gov/candidatesonweb/DisplayCandidatesPlacement.aspx?ElectionCode=750006905&OfficeCode=25%20CN%201",
+      "final_url": "https://web.archive.org/web/20260606074525id_/https://s1.sos.mo.gov/CandidatesOnWeb/DisplayCandidatesPlacement.aspx?OfficeCode=25%20CN%201&ElectionCode=750006905",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/mo-sos-2026-cd1-certified-candidates-20260606074525.html",
+      "sha256": "24765cd5388b960132e58b3f190a7d3d5fa60eb346f67b64908f18fb398f287e",
+      "bytes": 23645,
+      "status": "identity_only",
+      "notes": "Certified candidate list; used only to verify district, party, election and candidate identities. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2026-06-06"
+    },
+    {
+      "document_id": "mo04-identity-sos-20260606",
+      "url": "https://s1.sos.mo.gov/candidatesonweb/DisplayCandidatesPlacement.aspx?ElectionCode=750006905&OfficeCode=25%20CN%204",
+      "final_url": "https://web.archive.org/web/20260606074419id_/https://s1.sos.mo.gov/CandidatesOnWeb/DisplayCandidatesPlacement.aspx?OfficeCode=25%20CN%204&ElectionCode=750006905",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/mo-sos-2026-cd4-certified-candidates-20260606074419.html",
+      "sha256": "4128dcb318c978a1a5e9d1396de4ed0f3ef61db23fae993e79484206db1e4745",
+      "bytes": 24097,
+      "status": "identity_only",
+      "notes": "Certified candidate list; used only to verify district, party, election and candidate identities. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2026-06-06"
+    },
+    {
+      "document_id": "mo01-stlpr-bush-bell-20260724",
+      "url": "https://www.stlpr.org/show/st-louis-on-the-air/2026-07-24/missouri-wesley-bell-cori-bush-radio-appearance",
+      "final_url": "https://www.stlpr.org/show/st-louis-on-the-air/2026-07-24/missouri-wesley-bell-cori-bush-radio-appearance",
+      "publication_date": "2026-07-24",
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/mo01-stlpr-bush-bell-2026-07-24.html",
+      "sha256": "a5cafdfc151432cee7830403e17859098f7e7c4182c59efe7bacca535a58ada7",
+      "bytes": 227173,
+      "status": "used",
+      "notes": "Dated joint radio appearance/article. Excerpts use only direct Bush or Bell quotations; reporter descriptions are excluded from stance coding. Retrieved_at precision is date-only.",
+      "archive_capture_date": null
+    },
+    {
+      "document_id": "mo04-hartzell-platform-20260803",
+      "url": "https://www.hartzellforcongress.com/",
+      "final_url": "https://web.archive.org/web/20260803201925id_/https://www.hartzellforcongress.com/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/hartzell-issues-20260803201925.html",
+      "sha256": "6c1e351c090b6a5bba5e11a260067bf9d04a830906831efc4f42cf8f78ee204d",
+      "bytes": 470703,
+      "status": "used",
+      "notes": "Campaign platform is undated; pre-primary archive capture establishes this version by 2026-08-03. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2026-08-03"
+    },
+    {
+      "document_id": "mo04-herrera-platform-20260803",
+      "url": "https://jordanjherrera.com/issues",
+      "final_url": "https://web.archive.org/web/20260803205949id_/https://jordanjherrera.com/issues/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/herrera-issues-20260803205949.html",
+      "sha256": "699cc08117ef168ef9947b16228c61f8dbdd4e66233f51d9145e03c8add797ba",
+      "bytes": 301280,
+      "status": "used",
+      "notes": "Campaign platform is undated; pre-primary archive capture establishes this version by 2026-08-03. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2026-08-03"
+    },
+    {
+      "document_id": "mo04-jeanette-cass-platform-20250907",
+      "url": "https://www.cassforcongress.com/",
+      "final_url": "https://web.archive.org/web/20250907182249id_/https://www.cassforcongress.com/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/jeanette-cass-20250907182249.html",
+      "sha256": "5c431b4f4927d139169dc64dde84a1197ae4b353b786c46dcc0afcdae01eecd3",
+      "bytes": 949942,
+      "status": "used",
+      "notes": "Campaign page is undated; archive capture establishes this text before the primary. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2025-09-07"
+    },
+    {
+      "document_id": "mo04-randy-miller-platform-20260803",
+      "url": "https://www.randymillercongress.com/",
+      "final_url": "https://web.archive.org/web/20260803201241id_/https://www.randymillercongress.com/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/randy-miller-20260803201241.html",
+      "sha256": "91e7af8815a6d74f01ef3cc0a6975293ca1a5a2367f7414d8eb80822553185de",
+      "bytes": 853166,
+      "status": "used",
+      "notes": "Campaign page archived the day before the primary; publication date is the archive capture bound, not a claimed original posting date. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2026-08-03"
+    },
+    {
+      "document_id": "mo04-wayne-russell-platform-20260803",
+      "url": "https://votewaynerussell.com/",
+      "final_url": "https://web.archive.org/web/20260803200904id_/https://votewaynerussell.com/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/wayne-russell-20260803200904.html",
+      "sha256": "218f2896a2c8e743d3531d11338d25ac552f79538ac3eab7a52fbf09a19fc546",
+      "bytes": 167515,
+      "status": "used",
+      "notes": "Campaign page archived the day before the primary; publication date is the archive capture bound, not a claimed original posting date. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2026-08-03"
+    },
+    {
+      "document_id": "mo01-cori-priorities-20260803",
+      "url": "https://www.coribush.org/priorities",
+      "final_url": "https://web.archive.org/web/20260803190838id_/https://www.coribush.org/priorities",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/cori-priorities-20260803190838.html",
+      "sha256": "bfc1c6374d557fc848f2128d5352698f28432740f14da7e40d5febad7877ba1d",
+      "bytes": 620107,
+      "status": "captured_not_excerpted",
+      "notes": "Pre-primary campaign page captured, but the rendered archive exposed headings without sufficient mechanism detail for a new excerpt. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2026-08-03"
+    },
+    {
+      "document_id": "mo01-bell-issues-20260803",
+      "url": "https://www.bell4mo.com/issues/",
+      "final_url": "https://web.archive.org/web/20260803190804id_/https://www.bell4mo.com/issues/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_mo_2026/bell-issues-20260803190804.html",
+      "sha256": "09197f269cfcd5fc6388a66e61e8a1b31c35ce60d36138a80faae86b85916c16",
+      "bytes": 32042,
+      "status": "captured_not_excerpted",
+      "notes": "Pre-primary campaign platform captured; direct radio quotations were preferred for the retained Bell excerpt. Retrieved_at precision is date-only.",
+      "archive_capture_date": "2026-08-03"
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-mo04-rogers-healthcare-right",
+      "document_id": "mo04-ashleigh-live-current",
+      "speaker": "Ashleigh Rogers", "role": "opponent_candidate",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73", "election_date": "2026-08-04",
+      "topic": "healthcare", "subtopic": "healthcare_as_right", "stance": "support",
+      "short_exact_quote": "Access to reliable & affordable healthcare is a human right.",
+      "locator": "paragraph 41, Healthcare card under On the Issues",
+      "notes": "Campaign-authored first-person policy card; navigation and cookie text are excluded. Current capture does not prove pre-primary timing."
+    },
+    {
+      "excerpt_id": "ex-mo04-rogers-housing-programs",
+      "document_id": "mo04-ashleigh-live-current",
+      "speaker": "Ashleigh Rogers", "role": "opponent_candidate",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73", "election_date": "2026-08-04",
+      "topic": "housing", "subtopic": "affordable_housing_supply", "stance": "support_programs",
+      "short_exact_quote": "Increasing loan and grant programs, tax credits",
+      "locator": "paragraph 49, Housing and Childcare card",
+      "notes": "The complete card combines housing and childcare policies; the short phrase is not evidence that these tools are exclusive to housing or that Rogers rejects public housing."
+    },
+    {
+      "excerpt_id": "ex-mo01-bush-israel-aid-1",
+      "document_id": "mo01-stlpr-bush-bell-20260724",
+      "speaker": "Cori Bush",
+      "role": "endorsed_candidate",
+      "race_id": "race-6233a2b380836f3b2218",
+      "election_date": "2026-08-04",
+      "topic": "foreign_policy",
+      "subtopic": "gaza_characterization",
+      "stance": "characterizes_as_genocide",
+      "short_exact_quote": "As stated by Human Rights Watch and Amnesty International, a genocide is happening in Gaza",
+      "locator": "Article section on Israel military aid; Bush second direct quotation, first sentence",
+      "notes": "Direct Bush quotation characterizing events in Gaza. It is not coded as a vote position or opposition to a specific weapons transfer."
+    },
+    {
+      "excerpt_id": "ex-mo01-bell-alliance-1",
+      "document_id": "mo01-stlpr-bush-bell-20260724",
+      "speaker": "Wesley Bell",
+      "role": "opponent_candidate",
+      "race_id": "race-6233a2b380836f3b2218",
+      "election_date": "2026-08-04",
+      "topic": "foreign_policy",
+      "subtopic": "alliance_commitment",
+      "stance": "support_alliance_commitment",
+      "short_exact_quote": "we're still going to stand with our allies",
+      "locator": "Article section on Israel military aid; Bell first quoted sentence after Netanyahu clause",
+      "notes": "Direct Bell quotation. It is not coded as support for every weapons transfer or as direct opposition to Bush’s specific weapons statement."
+    },
+    {
+      "excerpt_id": "ex-mo04-hartzell-housing-1",
+      "document_id": "mo04-hartzell-platform-20260803",
+      "speaker": "Hartzell Gray",
+      "role": "endorsed_candidate",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "election_date": "2026-08-04",
+      "topic": "housing",
+      "subtopic": "affordable_housing_supply",
+      "stance": "support",
+      "short_exact_quote": "repeal the Faircloth Amendment, and invest in public housing that’s safe, modern, and energy-efficient",
+      "locator": "Housing is a Human Right section, second paragraph",
+      "notes": "Campaign-authored platform captured before the primary."
+    },
+    {
+      "excerpt_id": "ex-mo04-herrera-housing-1",
+      "document_id": "mo04-herrera-platform-20260803",
+      "speaker": "Jordan Herrera",
+      "role": "opponent_candidate",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "election_date": "2026-08-04",
+      "topic": "housing",
+      "subtopic": "affordable_housing_supply",
+      "stance": "support",
+      "short_exact_quote": "I support declaring a National Housing Emergency",
+      "locator": "Housing Affordability & Economic Revitalization > My Housing Plan > Increase Supply at Scale",
+      "notes": "Campaign-authored platform captured before the primary."
+    },
+    {
+      "excerpt_id": "ex-mo04-cass-transit-1",
+      "document_id": "mo04-jeanette-cass-platform-20250907",
+      "speaker": "Jeanette Cass",
+      "role": "opponent_candidate",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "election_date": "2026-08-04",
+      "topic": "transportation",
+      "subtopic": "public_transportation",
+      "stance": "support_federal_funding",
+      "short_exact_quote": "fight for federal dollars for public transportation, rural commuter rail routes, and equitable access",
+      "locator": "Fund transportation section, second sentence",
+      "notes": "Campaign-authored statement from a pre-primary archive capture."
+    },
+    {
+      "excerpt_id": "ex-mo04-miller-housing-1",
+      "document_id": "mo04-randy-miller-platform-20260803",
+      "speaker": "Randy Miller",
+      "role": "opponent_candidate",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "election_date": "2026-08-04",
+      "topic": "housing",
+      "subtopic": "affordable_housing_supply",
+      "stance": "support_tax_incentives",
+      "short_exact_quote": "Tax incentives for builders who build truly affordable housing",
+      "locator": "Homepage policy list, affordable housing item",
+      "notes": "Campaign-authored statement captured before the primary."
+    },
+    {
+      "excerpt_id": "ex-mo04-russell-immigration-1",
+      "document_id": "mo04-wayne-russell-platform-20260803",
+      "speaker": "Wayne Russell",
+      "role": "opponent_candidate",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "election_date": "2026-08-04",
+      "topic": "immigration",
+      "subtopic": "citizenship_pathway",
+      "stance": "support",
+      "short_exact_quote": "Fast-track citizenship for vetted immigrants",
+      "locator": "Homepage priority list, immigration item",
+      "notes": "Campaign-authored statement captured before the primary."
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "cmp-mo04-gray-rogers-housing",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "excerpt_ids": ["ex-mo04-hartzell-housing-1", "ex-mo04-rogers-housing-programs"],
+      "relationship": "different_emphasis",
+      "interpretation": "Gray specifies public-housing investment and Faircloth repeal. Rogers' current housing-and-childcare card emphasizes loan/grant programs and tax credits. These priorities can coexist; no opposition to public housing is inferred, and Rogers' pre-primary text version is unverified."
+    },
+    {
+      "comparison_id": "cmp-mo04-housing-strategy",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "excerpt_ids": [
+        "ex-mo04-hartzell-housing-1",
+        "ex-mo04-herrera-housing-1"
+      ],
+      "relationship": "different_strategy",
+      "interpretation": "Both support expanding affordable housing supply. Gray specifies Faircloth Amendment repeal and public-housing investment; Herrera proposes a National Housing Emergency to accelerate construction. The comparison does not imply disagreement on other housing policies."
+    },
+    {
+      "comparison_id": "cmp-mo04-hartzell-miller-housing",
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "excerpt_ids": [
+        "ex-mo04-hartzell-housing-1",
+        "ex-mo04-miller-housing-1"
+      ],
+      "relationship": "different_mechanism",
+      "interpretation": "Both advocate truly affordable housing. Gray names public-housing investment and repeal of the Faircloth Amendment; Miller names tax incentives for builders. These are different mechanisms that could coexist, not proof that either rejects the other's proposal."
+    }
+  ],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-6233a2b380836f3b2218",
+      "candidate": "Alissa Murphy",
+      "attempted_url": "https://www.fec.gov/data/candidate/H6MO01311/",
+      "outcome": "identity_only_no_policy_answers",
+      "notes": "Official FEC page confirms candidacy and committee identity but contains no candidate-authored policy platform or questionnaire answers. A candidate LinkedIn post was located but did not provide a usable policy position."
+    },
+    {
+      "race_id": "race-6233a2b380836f3b2218",
+      "candidate": "Carl E. Harris Sr",
+      "attempted_url": "https://secure.actblue.com/directory/MO",
+      "outcome": "identity_only_no_policy_answers",
+      "notes": "ActBlue directory confirms a campaign fundraising entry but provides no candidate-authored policy platform or questionnaire answers."
+    },
+    {
+      "race_id": "race-6233a2b380836f3b2218",
+      "candidate": "Carl Earnest Henderson",
+      "attempted_url": "https://s1.sos.mo.gov/CandidatesOnWeb/DisplayCandidatesPlacement.aspx?OfficeCode=25%20CN%201&ElectionCode=750006905",
+      "outcome": "official_identity_only",
+      "notes": "Official certified candidate list verifies ballot identity; no distinct candidate-authored policy source was recovered in the bounded pass."
+    },
+    {
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "candidate": "Ashleigh Rogers",
+      "attempted_url": "https://ashleighrogers4congress.com/",
+      "outcome": "archive_capture_failed",
+      "notes": "A pre-primary Wayback capture was indexed at 2026-08-03, but replay retrieval returned an archive server error; no full candidate-authored body was retained."
+    },
+    {
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "candidate": "G Rick",
+      "attempted_url": "https://www.axios.com/local/kansas-city/2026/07/31/missouri-4th-district-primary-candidates-2026",
+      "outcome": "candidate_did_not_respond_source_body_unavailable",
+      "notes": "Axios search indexing states G Rick did not respond to its candidate questions, but direct retrieval returned a challenge page, so the article body was not retained or used as policy evidence."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "candidate": "Ashleigh Rogers",
+      "url": "https://web.archive.org/web/20260803200859id_/https://ashleighrogers4congress.com/",
+      "outcome": "archive_replay_http500",
+      "notes": "Exact independently indexed August3 capture failed again after gzip extraction support was added. Normal replay also failed; current campaign text is retained separately with timing qualification."
+    },
+    {
+      "race_id": "race-6233a2b380836f3b2218",
+      "candidate": "Carl E. Harris Sr",
+      "url": "https://www.stlamerican.com/news/local-news/carl-harris-enters-race-for-missouris-1st-congressional-district/",
+      "outcome": "reporter_summary_only_no_candidate_quote",
+      "raw_path": "data/raw/policy_mo_2026/carl-harris-stlamerican-20260320.html",
+      "notes": "Full March20 article reviewed; economic-opportunity summary was not promoted to exact candidate speech."
+    },
+    {
+      "candidate": "Cori Bush",
+      "url": "https://www.coribush.org/priorities",
+      "outcome": "captured_pre_primary_archive_no_mechanism_excerpt",
+      "raw_path": "data/raw/policy_mo_2026/cori-priorities-20260803190838.html"
+    },
+    {
+      "candidate": "Wesley Bell",
+      "url": "https://www.bell4mo.com/issues/",
+      "outcome": "captured_pre_primary_archive",
+      "raw_path": "data/raw/policy_mo_2026/bell-issues-20260803190804.html"
+    },
+    {
+      "candidate": "Cori Bush / Wesley Bell",
+      "race_id": "race-6233a2b380836f3b2218",
+      "url": "https://www.stlpr.org/show/st-louis-on-the-air/2026-07-24/missouri-wesley-bell-cori-bush-radio-appearance",
+      "outcome": "recovered_dated_joint_appearance",
+      "raw_path": "data/raw/policy_mo_2026/mo01-stlpr-bush-bell-2026-07-24.html"
+    },
+    {
+      "candidate": "Hartzell Gray",
+      "url": "https://www.hartzellforcongress.com/",
+      "outcome": "recovered_pre_primary_archive",
+      "raw_path": "data/raw/policy_mo_2026/hartzell-issues-20260803201925.html"
+    },
+    {
+      "candidate": "Jordan Herrera",
+      "url": "https://jordanjherrera.com/issues",
+      "outcome": "recovered_pre_primary_archive",
+      "raw_path": "data/raw/policy_mo_2026/herrera-issues-20260803205949.html"
+    },
+    {
+      "candidate": "Jeanette Cass",
+      "url": "https://www.cassforcongress.com/",
+      "outcome": "recovered_pre_primary_archive",
+      "raw_path": "data/raw/policy_mo_2026/jeanette-cass-20250907182249.html"
+    },
+    {
+      "candidate": "Randy Miller",
+      "url": "https://www.randymillercongress.com/",
+      "outcome": "recovered_pre_primary_archive",
+      "raw_path": "data/raw/policy_mo_2026/randy-miller-20260803201241.html"
+    },
+    {
+      "candidate": "Wayne Russell",
+      "url": "https://votewaynerussell.com/",
+      "outcome": "recovered_pre_primary_archive",
+      "raw_path": "data/raw/policy_mo_2026/wayne-russell-20260803200904.html"
+    },
+    {
+      "candidate": "Ashleigh Rogers",
+      "url": "https://ashleighrogers4congress.com/",
+      "outcome": "archive_server_error",
+      "raw_path": null
+    },
+    {
+      "candidate": "Alissa Murphy",
+      "url": "https://www.fec.gov/data/candidate/H6MO01311/",
+      "outcome": "identity_only_no_policy_answers",
+      "raw_path": null
+    },
+    {
+      "candidate": "Carl E. Harris Sr",
+      "url": "https://secure.actblue.com/directory/MO",
+      "outcome": "identity_only_no_policy_answers",
+      "raw_path": null
+    },
+    {
+      "candidate": "Carl Earnest Henderson",
+      "url": "https://s1.sos.mo.gov/CandidatesOnWeb/DisplayCandidatesPlacement.aspx?OfficeCode=25%20CN%201&ElectionCode=750006905",
+      "outcome": "official_identity_only",
+      "raw_path": null
+    },
+    {
+      "candidate": "Ashleigh Rogers",
+      "url": "https://ashleighrogers4congress.com/",
+      "outcome": "archive_capture_failed",
+      "raw_path": null
+    },
+    {
+      "candidate": "G Rick",
+      "url": "https://www.axios.com/local/kansas-city/2026/07/31/missouri-4th-district-primary-candidates-2026",
+      "outcome": "candidate_did_not_respond_source_body_unavailable",
+      "raw_path": null
+    }
+  ],
+  "identity_aliases": [
+    {
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "canonical_registry_name": "Hartzell Gray",
+      "speaker": "Hartzell Gray",
+      "ballot_name": "Hartzell Gray 3rd",
+      "review_status": "accepted_contextual_official_alias",
+      "ballot_source_id": "mo04-identity-sos-20260606",
+      "ballot_candidate_source_id": "U.S. REPRESENTATIVE - DISTRICT 4 > Democratic table > candidate row 3 (Hartzell Gray 3rd)",
+      "identity_document_ids": [
+        "mo04-identity-sos-20260606",
+        "mo04-hartzell-platform-20260803"
+      ],
+      "notes": "Explicit same-race mapping of the campaign/registry display name to the certified name with suffix. Contextual official and campaign evidence, not a fuzzy global merge or a claim that an official candidate number was assigned.",
+      "official_name": "Hartzell Gray 3rd",
+      "identity_document_id": "mo04-identity-sos-20260606",
+      "official_candidate_id": null,
+      "source_locator": "U.S. REPRESENTATIVE - DISTRICT 4 > Democratic table > candidate row 3 (Hartzell Gray 3rd)",
+      "evidence_type": "direct_official_certified_candidate_list",
+      "evidence_notes": "Official certified candidate table directly names Hartzell Gray 3rd; filing date 2/24/2026. Ballot-placement random number 603 is not treated as a candidate ID."
+    },
+    {
+      "race_id": "race-3b9a8d1c4fa2cbcadb73",
+      "canonical_registry_name": "G. Rick",
+      "speaker": "G. Rick",
+      "ballot_name": "G Rick",
+      "review_status": "accepted_contextual_official_alias",
+      "ballot_source_id": "mo04-identity-sos-20260606",
+      "ballot_candidate_source_id": "U.S. REPRESENTATIVE - DISTRICT 4 > Democratic table > candidate row 4 (G Rick)",
+      "identity_document_ids": [
+        "mo04-identity-sos-20260606"
+      ],
+      "notes": "Reviewed punctuation variation in the same certified district/party field. The row locator is a local source key, not the ballot-placement random number or a government-issued person ID.",
+      "official_name": "G Rick",
+      "identity_document_id": "mo04-identity-sos-20260606",
+      "official_candidate_id": null,
+      "source_locator": "U.S. REPRESENTATIVE - DISTRICT 4 > Democratic table > candidate row 4 (G Rick)",
+      "evidence_type": "direct_official_certified_candidate_list",
+      "evidence_notes": "Official certified candidate table directly names G Rick; filing date 2/24/2026. Ballot-placement random number 706 is not treated as a candidate ID."
+    },
+    {
+      "race_id": "race-6233a2b380836f3b2218",
+      "canonical_registry_name": "Carl Harris Sr.",
+      "speaker": "Carl Harris Sr.",
+      "ballot_name": "Carl E. Harris Sr",
+      "review_status": "accepted_contextual_official_alias",
+      "ballot_source_id": "mo01-identity-sos-20260606",
+      "ballot_candidate_source_id": "U.S. REPRESENTATIVE - DISTRICT 1 > Democratic table > candidate row 2 (Carl E. Harris Sr)",
+      "identity_document_ids": [
+        "mo01-identity-sos-20260606"
+      ],
+      "notes": "Explicit contextual same-race mapping retaining the certified middle initial and suffix. No policy source has yet been attributed to this person.",
+      "official_name": "Carl E. Harris Sr",
+      "identity_document_id": "mo01-identity-sos-20260606",
+      "official_candidate_id": null,
+      "source_locator": "U.S. REPRESENTATIVE - DISTRICT 1 > Democratic table > candidate row 2 (Carl E. Harris Sr)",
+      "evidence_type": "direct_official_certified_candidate_list",
+      "evidence_notes": "Official certified candidate table directly names Carl E. Harris Sr; filing date 2/24/2026. Ballot-placement random number 710 is not treated as a candidate ID."
+    },
+    {
+      "race_id": "race-6233a2b380836f3b2218",
+      "canonical_registry_name": "Carl Henderson",
+      "speaker": "Carl Henderson",
+      "ballot_name": "Carl Earnest Henderson",
+      "review_status": "accepted_contextual_official_alias",
+      "ballot_source_id": "mo01-identity-sos-20260606",
+      "ballot_candidate_source_id": "U.S. REPRESENTATIVE - DISTRICT 1 > Democratic table > candidate row 5 (Carl Earnest Henderson)",
+      "identity_document_ids": [
+        "mo01-identity-sos-20260606"
+      ],
+      "notes": "Explicit contextual same-race mapping retaining the certified middle name. No policy source has yet been attributed to this person.",
+      "official_name": "Carl Earnest Henderson",
+      "identity_document_id": "mo01-identity-sos-20260606",
+      "official_candidate_id": null,
+      "source_locator": "U.S. REPRESENTATIVE - DISTRICT 1 > Democratic table > candidate row 5 (Carl Earnest Henderson)",
+      "evidence_type": "direct_official_certified_candidate_list",
+      "evidence_notes": "Official certified candidate table directly names Carl Earnest Henderson; filing date 3/24/2026. Ballot-placement random number not assigned is not treated as a candidate ID."
+    }
+  ]
+}

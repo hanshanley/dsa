@@ -1,0 +1,161 @@
+{
+  "race": {
+    "race_id": "race-9ec6691d67b9c9ad482a",
+    "scope_kind": "tracked_dsa_endorsed_democratic_primary",
+    "election_date": "2024-05-14",
+    "election_year": "2024",
+    "primary_party": "Democratic",
+    "endorsed_candidate": "Andrea L. Crooms",
+    "endorsed_candidates": "Andrea L. Crooms",
+    "unopposed_candidates": "",
+    "opponent_candidates": "McKayla Wilkes | Quincy Bareebe | Steny Hoyer",
+    "all_candidates": "Andrea L. Crooms | McKayla Wilkes | Quincy Bareebe | Steny Hoyer",
+    "candidate_count": "4",
+    "role_set": "endorsed | opponent",
+    "party_set": "Democratic",
+    "evidence_statuses": "verified",
+    "office": "US House",
+    "office_status": "resolution_verified",
+    "office_source": "race_registry_resolutions_2023_2024.csv:56",
+    "office_confidence": "verified",
+    "jurisdiction": "District 5",
+    "jurisdiction_status": "resolution_verified",
+    "jurisdiction_source": "race_registry_resolutions_2023_2024.csv:56",
+    "jurisdiction_confidence": "verified",
+    "state": "Maryland",
+    "state_code": "MD",
+    "state_status": "resolution_verified",
+    "state_source": "race_registry_resolutions_2023_2024.csv:56",
+    "state_confidence": "verified",
+    "official_election_source": "https://elections.maryland.gov/elections/archive/2024/Primary_Results/gen_detail_results_2024_3_5_Democratic_District%205.html",
+    "official_election_source_status": "resolution_verified",
+    "official_election_source_source": "race_registry_resolutions_2023_2024.csv:56",
+    "official_election_source_confidence": "verified",
+    "supporting_source": "",
+    "supporting_source_status": "unresolved",
+    "supporting_source_type": "",
+    "supporting_source_source": "",
+    "supporting_source_confidence": "",
+    "certified_opponents": "McKayla Wilkes | Quincy Bareebe | Steny Hoyer",
+    "certified_opponents_status": "corpus_candidate_set",
+    "endorsing_bodies": "",
+    "metadata_source": "resolution_verified",
+    "source_reference": "race_registry_resolutions_2023_2024.csv:56",
+    "canonical_candidate_aliases": "a crooms | a l | and crooms | and l | andrea crooms | andrea l | andrea l crooms | m wilkes | mck wilkes | mckayla wilkes | q bareebe | qui bareebe | quincy bareebe | s hoyer | ste hoyer | steny hoyer",
+    "source_race_ids": "race-9ec6691d67b9c9ad482a",
+    "merged_race_id_count": "1",
+    "unresolved_fields": ""
+  },
+  "sources": [
+    {
+      "document_id": "da4449360a2fdfff2c7998c5",
+      "metadata_document_id": "da4449360a2fdfff2c7998c5",
+      "url": "https://www.hoyerforcongress.com/news-clips/hoyer-op-ed-county-residents-already-reaping-benefits-health-care-reform",
+      "final_url": "https://www.hoyerforcongress.com/news-clips/hoyer-op-ed-county-residents-already-reaping-benefits-health-care-reform",
+      "publication_date": "2023-01-30",
+      "retrieved_at": "2026-08-20T02:53:43.445261+00:00",
+      "raw_path": "data/raw/policy_historical_d/sources/da4449360a2fdfff2c7998c5.html",
+      "sha256": "f3042f01db50a78e80908bfbffff41c091ff8baff6c026d225ffb02bb41e8eec",
+      "bytes": 20602,
+      "content_type": "text/html",
+      "status": "used",
+      "notes": "Cached candidate source semantically reviewed; packet metadata preserved exactly."
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hd-23-steny-hoyer",
+      "metadata_document_id": "da4449360a2fdfff2c7998c5",
+      "document_id": "da4449360a2fdfff2c7998c5",
+      "speaker": "Steny Hoyer",
+      "role": "opponent_candidate",
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "election_date": "2024-05-14",
+      "topic": "healthcare",
+      "subtopic": "aca_health_reform",
+      "stance": "support",
+      "short_exact_quote": "I also supported health care reform because of the stories of ordinary Maryland families.",
+      "locator": "paragraph 31",
+      "representation_kind": "campaign_frame",
+      "notes": "Candidate-attributed retained text; prompts, navigation, reporter narration, and neighboring candidates are excluded.",
+      "attribution_notes": "Quote occurs in the retained candidate-associated candidate campaign framing at paragraph 31; navigation, prompts, reporter narration, endorsement text, and other candidates are excluded."
+    }
+  ],
+  "comparisons": [],
+  "candidate_dispositions": [
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "Andrea L. Crooms",
+      "role": "endorsed",
+      "election_date": "2024-05-14",
+      "outcome": "listed_candidate_route_retained_for_recovery_review"
+    },
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "McKayla Wilkes",
+      "role": "opponent",
+      "election_date": "2024-05-14",
+      "outcome": "listed_candidate_route_retained_for_recovery_review"
+    },
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "Quincy Bareebe",
+      "role": "opponent",
+      "election_date": "2024-05-14",
+      "outcome": "listed_candidate_route_retained_for_recovery_review"
+    },
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "Steny Hoyer",
+      "role": "opponent",
+      "election_date": "2024-05-14",
+      "outcome": "evidence_recovered"
+    }
+  ],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "Andrea L. Crooms",
+      "attempted_url": "https://vopaction.org/wp-content/uploads/2024/05/House_Crooms_Andrea.pdf",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "notes": "No attributable source was promoted after the bounded candidate route."
+    },
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "McKayla Wilkes",
+      "attempted_url": "https://marylandmatters.org/2023/06/15/wilkes-kicks-off-third-campaign-to-represent-southern-maryland-in-congress",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "notes": "No attributable source was promoted after the bounded candidate route."
+    },
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "Quincy Bareebe",
+      "attempted_url": "https://quincybareebe.squarespace.com/issues",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "notes": "No attributable source was promoted after the bounded candidate route."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "Andrea L. Crooms",
+      "url": "https://vopaction.org/wp-content/uploads/2024/05/House_Crooms_Andrea.pdf",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "raw_path": null
+    },
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "McKayla Wilkes",
+      "url": "https://marylandmatters.org/2023/06/15/wilkes-kicks-off-third-campaign-to-represent-southern-maryland-in-congress",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "raw_path": null
+    },
+    {
+      "race_id": "race-9ec6691d67b9c9ad482a",
+      "candidate": "Quincy Bareebe",
+      "url": "https://quincybareebe.squarespace.com/issues",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "raw_path": null
+    }
+  ]
+}

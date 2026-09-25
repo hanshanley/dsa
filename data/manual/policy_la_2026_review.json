@@ -1,0 +1,99 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "scope": "Lauren Jewett's documented campaign positions for the upcoming Louisiana House District 1 open election",
+  "comparison_scope": "upcoming_nonpartisan_ballot_democratic_candidates",
+  "scope_notes": "The retained official roster lists Lauren Jewett as the sole named Democrat, Randall Arrington and Steve Scalise as Republicans, and E. Liddy Glass as No Party. No other Democrat is invented as a comparator. November 3 remains future relative to the research cutoff; no vote or outcome is inferred.",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "qualifying_roster": {
+    "path": "data/analysis/congressional/gulf/future_qualifying_roster.csv",
+    "sha256": "b6b5ea5299d419069bc3a82fe94b6c11c3d77caaf6e04fd0dc92a33a1f01b0bd",
+    "source_document_id": "la-2026-official-qualified-house-roster"
+  },
+  "sources": [
+    {
+      "document_id": "la-2026-official-qualified-house-roster",
+      "url": "https://voterportal.sos.la.gov/CandidateInquiry?electionDate=20261103",
+      "final_url": "https://voterportal.sos.la.gov/CandidateInquiry?electionDate=20261103",
+      "publication_date": null,
+      "retrieved_at": "2026-09-22",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/gulf_primaries/la/2026/la-2026-11-03-house-candidate-inquiry.html",
+      "sha256": "d5d0429c94225cdb174adad33c00c6725767ab3dabfdb29bff845727d52ebf1b",
+      "bytes": 101729,
+      "content_type": "text/html",
+      "status": "identity_only",
+      "notes": "Official qualifying roster, not results. Office70195 lists the four House01 candidates and their declared parties; candidate3 is Lauren Jewett, Democrat. Snapshot does not establish any future outcome."
+    },
+    {
+      "document_id": "la01-jewett-healthcare-archive-20260818",
+      "url": "https://www.laurenjewett.com/issues/quality-healthcare",
+      "final_url": "https://web.archive.org/web/20260818232028id_/https://www.laurenjewett.com/issues/quality-healthcare",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23T02:49:46.989156+00:00",
+      "retrieved_at_precision": "timestamp",
+      "raw_path": "data/raw/policy_la_2026/la01-jewett-healthcare-20260818.html.gz",
+      "sha256": "f0d9183efc1b6265eac1112570a684a5a657140ec31fbb914e7a45e20c9afcdf",
+      "bytes": 42303,
+      "content_type": "text/html",
+      "content_encoding": "gzip",
+      "status": "used",
+      "notes": "Full archived campaign issue page. Wire bytes are gzip-compressed and retained unchanged; extraction decodes gzip without replacing source identity. August18 capture establishes the wording before the future November election and the research cutoff."
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-la01-jewett-single-payer",
+      "document_id": "la01-jewett-healthcare-archive-20260818",
+      "speaker": "Lauren Jewett",
+      "role": "endorsed_candidate",
+      "race_id": "race-1d2c5471b666d1dfee92",
+      "election_date": "2026-11-03",
+      "topic": "healthcare",
+      "subtopic": "single_payer",
+      "stance": "support",
+      "short_exact_quote": "Cosponsor Medicare for All",
+      "locator": "paragraph 18, first item under Lauren's Priorities in Congress",
+      "notes": "Campaign-authored pledge. Retained as a standalone position because there is no other named Democrat in the official qualified field."
+    },
+    {
+      "excerpt_id": "ex-la01-jewett-aca-expansion",
+      "document_id": "la01-jewett-healthcare-archive-20260818",
+      "speaker": "Lauren Jewett",
+      "role": "endorsed_candidate",
+      "race_id": "race-1d2c5471b666d1dfee92",
+      "election_date": "2026-11-03",
+      "topic": "healthcare",
+      "subtopic": "aca_coverage",
+      "stance": "support_expansion",
+      "short_exact_quote": "expand the Affordable Care Act",
+      "locator": "paragraph 19, second item under Lauren's Priorities in Congress",
+      "notes": "The same platform supports both Medicare for All and ACA expansion. Those mechanisms must not be assumed mutually exclusive solely from which phrase a candidate emphasizes."
+    },
+    {
+      "excerpt_id": "ex-la01-jewett-community-care",
+      "document_id": "la01-jewett-healthcare-archive-20260818",
+      "speaker": "Lauren Jewett",
+      "role": "endorsed_candidate",
+      "race_id": "race-1d2c5471b666d1dfee92",
+      "election_date": "2026-11-03",
+      "topic": "healthcare",
+      "subtopic": "home_community_based_services",
+      "stance": "support_mandatory_benefit",
+      "short_exact_quote": "make Home and Community-Based Services a mandatory Medicaid benefit",
+      "locator": "paragraph 33, HCBS priority item",
+      "notes": "Exact campaign policy proposal, not an independent legal conclusion about current Medicaid rules."
+    }
+  ],
+  "comparisons": [],
+  "unsuccessful_sources": [],
+  "source_attempts": [
+    {
+      "race_id": "race-1d2c5471b666d1dfee92",
+      "candidate": "Lauren Jewett",
+      "attempted_url": "https://archive.org/wayback/available?url=https%3A%2F%2Fwww.laurenjewett.com%2Fissues%2Fmodern-economy&timestamp=20260922",
+      "outcome": "no_snapshot_returned",
+      "notes": "Availability query returned no capture for that exact issue route. Healthcare evidence was recovered independently; this is not an exhaustive search or an absence-of-position claim."
+    }
+  ]
+}

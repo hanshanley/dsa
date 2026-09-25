@@ -1,0 +1,47 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "alerts": [
+    {
+      "race_id": "national-recDXw3CpyWrmjZpF-dem-primary",
+      "status": "possible_duplicate_contest_requires_alias_review",
+      "related_race_id": "race-2d77a10e3b62e9f5ec19",
+      "evidence": [{"raw_path": "data/raw/policy_race_identity/duplicate_registry_contexts_20260924.csv", "sha256": "4a321e753431ae25776687f633aa8cacc40da350be6e66a0189bd3630af91250", "locator": "The two Michigan13 rows; internal registry snapshot, not official identity confirmation."}],
+      "notes": "This national-import record names Donavan McKinney for Congress against Shri Thanedar for Michigan13 on August4,2026. The related reviewed record names Donavan McKinney for USHouse District13 on the same date. Treat these as suspected duplicate registry contexts, not independent campaigns; an explicit source-preserving alias resolution is still required before merging.",
+      "scope_change": "none_pending_explicit_alias_resolution"
+    },
+    {
+      "race_id": "race-74334f63d0a95ab26466",
+      "status": "possible_duplicate_contest_requires_alias_review",
+      "related_race_id": "race-3db62fccce64bbd64336",
+      "evidence": [{"raw_path": "data/raw/policy_race_identity/duplicate_registry_contexts_20260924.csv", "sha256": "4a321e753431ae25776687f633aa8cacc40da350be6e66a0189bd3630af91250", "locator": "The two Georgia58 rows; internal registry snapshot, not official identity confirmation."}],
+      "notes": "Both records place Mathewos Samson in the Georgia58 Democratic primary on May19,2026 with Henderson, Ladipo and Lamont. Office/jurisdiction wording and Ladipo's middle-initial variant currently prevent automatic reconciliation. Preserve both source histories pending explicit contest and candidate alias review; do not treat them as independent campaigns.",
+      "scope_change": "none_pending_explicit_alias_resolution"
+    },
+    {
+      "race_id": "race-af740de05cb7f05c11ad",
+      "status": "possible_duplicate_contest_requires_alias_review",
+      "related_race_id": "race-22a899eddaf5c65171b5",
+      "evidence": [{"raw_path": "data/raw/policy_race_identity/duplicate_registry_contexts_20260924.csv", "sha256": "4a321e753431ae25776687f633aa8cacc40da350be6e66a0189bd3630af91250", "locator": "The two NevadaAssembly10 rows; internal registry snapshot, not official identity confirmation."}],
+      "notes": "The NevadaAssembly10 records use Valerie versus Val Thomason and Venise Karris versus Venise L. Karris for the same June9,2026 primary. They are suspected duplicate contexts requiring explicit source-backed name resolution, not evidence of two independent races.",
+      "scope_change": "none_pending_explicit_alias_resolution"
+    },
+    {
+      "race_id": "race-d696522faa4508ad99d7",
+      "status": "possible_duplicate_contest_requires_alias_review",
+      "related_race_id": "national-recz9WOUNjTC3V34x-dem-primary",
+      "evidence": [{"raw_path": "data/raw/policy_race_identity/duplicate_registry_contexts_20260924.csv", "sha256": "4a321e753431ae25776687f633aa8cacc40da350be6e66a0189bd3630af91250", "locator": "The two PlainfieldWard1 rows; internal registry snapshot, not official identity confirmation."}],
+      "notes": "The two PlainfieldWard1 records share the June2,2026 primary and the Graham/Griffin opponent field, but use Meghana Meg Anandarangam versus Meg Anandarangam. Explicit candidate-name and source-preserving contest resolution remains necessary. Reviewed words in one record are not manufactured as new evidence in the other.",
+      "scope_change": "none_pending_explicit_alias_resolution"
+    },
+    {
+      "race_id": "race-4afc66bae06154e36ec3",
+      "status": "election_cycle_confirmation_required",
+      "notes": "The registry places Adam Broad against Brad Schneider in2022, but the retained official FEC returns identify Broad's115 Democratic write-in votes in2020. The2022 IL10 Democratic return lists Schneider and no Broad entry. This does not prove that Broad never announced a2022 campaign, and no2020 endorsement is inferred. Do not attach2020 policy statements to the2022 record or call its candidate field certified until the cycle-specific candidacy and endorsement are resolved.",
+      "evidence": [
+        {"raw_path": "data/raw/fec/federalelections2020.xlsx", "sha256": "5073b6d2c76c86c941508dfb1a11cc497e8529b0068c5132aceb0f385c19352e", "locator": "13. US House Results by State, rows1058-1059"},
+        {"raw_path": "data/raw/fec/federalelections2022.xlsx", "sha256": "cdb258ea23803e50d752bcea19faa39b3c201eb960094bcb556c3a38c2350897", "locator": "8. US House Results by State, IL10 candidate section including row1304"}
+      ],
+      "scope_change": "none_pending_endorsement_and_candidacy_resolution"
+    }
+  ]
+}

@@ -1,0 +1,931 @@
+
+
+<html>
+<head>
+<title>Election Results</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="ArchiveResults.css">
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+function SwitchElection(selectObject,DataMode) 
+	{
+	// Validate parameter value
+	var TempStr
+    var listndx
+    
+	if (selectObject == null)
+		return false;
+	if (selectObject.selectedIndex+"" == "undefined" || selectObject.selectedIndex == null || selectObject.selectedIndex < 0)
+		return false;
+
+	listndx = eval(selectObject.selectedIndex);
+	if (selectObject[listndx].value != "Select")
+		{
+		TempStr = "Index.asp?ElectionDate=" + selectObject[listndx].value
+		if(DataMode != null)
+			TempStr += "&DATAMODE=" + DataMode;
+
+		parent.location = TempStr;
+		return true;
+		}
+	return false;
+	}
+	
+function SwitchRace(selectObject, ElecDate, Party,DataMode) 
+	{
+	// Validate parameter value
+	var TempStr
+    var listndx
+    
+	if (selectObject == null)
+		return false;
+	if (selectObject.selectedIndex+"" == "undefined" || selectObject.selectedIndex == null || selectObject.selectedIndex < 0)
+		return false;
+
+	listndx = eval(selectObject.selectedIndex);
+	if (selectObject[listndx].value != "Select")
+		{
+		TempStr = "SummaryRpt.asp?ElectionDate=" + ElecDate + "&Race=" + selectObject[listndx].value;
+		if (Party != "")
+			TempStr += "&Party=" + Party;
+		if(DataMode != null)
+			TempStr += "&DATAMODE=" + DataMode;
+			
+		parent.WinResults.location = TempStr;
+		return true;
+		}
+	return false;
+	}
+
+function SwitchCounty(selectObject,ElecDate, Party,DataMode)
+         {
+	// Validate parameter value
+	var TempStr
+    var listndx
+    
+	if (selectObject == null)
+		return false;
+	if (selectObject.selectedIndex+"" == "undefined" || selectObject.selectedIndex == null || selectObject.selectedIndex < 0)
+		return false;
+
+	listndx = eval(selectObject.selectedIndex);
+	if (selectObject[listndx].value != "Select"){
+		TempStr = "SummaryRpt.asp?ElectionDate=" + ElecDate
+		TempStr += "&COUNTY=" + selectObject[listndx].value;
+		TempStr += "&PARTY=" + Party;
+		if(DataMode != null)
+			TempStr += "&DATAMODE=" + DataMode;
+			
+		parent.WinResults.location = TempStr;
+		return true;
+		}
+	return false;
+	}	
+	//-->
+</SCRIPT>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td width="1" valign="top"></td>
+    <td width="10" height="1" valign="top"></td>
+    <td width="200" height="1" valign="top"></td>
+    <td width="10" height="1" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="1" valign="top"></td>
+    <td width="200" COLSPAN="3" class="headerCenterAlignLight" bgcolor="#336699">Election Results </td>
+  </tr>
+  <tr>
+    <td width="1" valign="top"></td>
+    <td colspan="3" valign="top" bgcolor="#336699"><img src="images/transparent.gif" height="4"></TD>
+  <tr>
+    <td width="1" valign="top"></td>
+    <td colspan="3" valign="top" bgcolor="#E6E6E6"> 
+  <FORM ACTION="" METHOD="post" NAME="ElecForm" ID="ElecForm">
+  <INPUT TYPE="hidden" NAME="DATAMODE" ID="DATAMODE" VALUE="">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr bgcolor="#cccccc"><td colspan="3"><img src="images/transparent.gif" width="1" height="4"></td></tr>
+    <tr bgcolor="#cccccc"><td colspan="3" class="headerLeftAlign">Select Election:</td>
+    </tr><tr bgcolor="#cccccc"><td colspan="3"><img src="images/transparent.gif" width="1" height="4"></td></tr>
+<!-- Elections List Box -->
+    <tr bgcolor="#cccccc"> 
+      <td colspan="3" class="ComboList">
+          <SELECT NAME="SelectElection" onChange="SwitchElection(this,'')">
+            <option value="Select">Select</option>
+
+            	<option value="8/18/2026" 
+
+		            	selected
+		         
+            	>2026 Primary Election</option>
+
+            	<option value="11/5/2024" 
+		         
+            	>2024 General Election</option>
+
+            	<option value="8/20/2024" 
+		         
+            	>2024 Primary Election</option>
+
+            	<option value="3/19/2024" 
+		         
+            	>2024 Presidential Preference Primary</option>
+
+            	<option value="11/8/2022" 
+		         
+            	>2022 General Election</option>
+
+            	<option value="8/23/2022" 
+		         
+            	>2022 Primary Election</option>
+
+            	<option value="11/3/2020" 
+		         
+            	>2020 General Election</option>
+
+            	<option value="8/18/2020" 
+		         
+            	>2020 Primary Election</option>
+
+            	<option value="3/17/2020" 
+		         
+            	>2020 Presidential Preference Primary</option>
+
+            	<option value="11/6/2018" 
+		         
+            	>2018 General Election</option>
+
+            	<option value="8/28/2018" 
+		         
+            	>2018 Primary Election</option>
+
+            	<option value="11/8/2016" 
+		         
+            	>2016 General Election</option>
+
+            	<option value="8/30/2016" 
+		         
+            	>2016 Primary Election</option>
+
+            	<option value="3/15/2016" 
+		         
+            	>2016 Presidential Preference</option>
+
+            	<option value="11/4/2014" 
+		         
+            	>2014 General Election</option>
+
+            	<option value="8/26/2014" 
+		         
+            	>2014 Primary Election</option>
+
+            	<option value="11/6/2012" 
+		         
+            	>2012 General Election</option>
+
+            	<option value="8/14/2012" 
+		         
+            	>2012 Primary Election</option>
+
+            	<option value="1/31/2012" 
+		         
+            	>2012 Presidential Preference</option>
+
+            	<option value="11/2/2010" 
+		         
+            	>2010 General</option>
+
+            	<option value="8/24/2010" 
+		         
+            	>2010 Primary</option>
+
+            	<option value="11/4/2008" 
+		         
+            	>2008 General</option>
+
+            	<option value="8/26/2008" 
+		         
+            	>2008 Primary</option>
+
+            	<option value="1/29/2008" 
+		         
+            	>2008 Presidential Preference</option>
+
+            	<option value="11/7/2006" 
+		         
+            	>2006 General</option>
+
+            	<option value="9/5/2006" 
+		         
+            	>2006 Primary</option>
+
+            	<option value="11/2/2004" 
+		         
+            	>2004 General</option>
+
+            	<option value="8/31/2004" 
+		         
+            	>2004 Primary</option>
+
+            	<option value="3/9/2004" 
+		         
+            	>2004 Pres. Preference</option>
+
+            	<option value="11/5/2002" 
+		         
+            	>2002 General</option>
+
+            	<option value="9/10/2002" 
+		         
+            	>2002 Primary</option>
+
+            	<option value="11/7/2000" 
+		         
+            	>2000 General</option>
+
+            	<option value="10/3/2000" 
+		         
+            	>2000 Runoff</option>
+
+            	<option value="9/5/2000" 
+		         
+            	>2000 Primary</option>
+
+            	<option value="3/14/2000" 
+		         
+            	>2000 Pres. Preference</option>
+
+            	<option value="11/3/1998" 
+		         
+            	>1998 General</option>
+
+            	<option value="10/1/1998" 
+		         
+            	>1998 Runoff</option>
+
+            	<option value="9/1/1998" 
+		         
+            	>1998 Primary</option>
+
+            	<option value="11/5/1996" 
+		         
+            	>1996 General</option>
+
+            	<option value="10/1/1996" 
+		         
+            	>1996 Runoff</option>
+
+            	<option value="9/3/1996" 
+		         
+            	>1996 Primary</option>
+
+            	<option value="3/12/1996" 
+		         
+            	>1996 Pres. Preference</option>
+
+            	<option value="11/8/1994" 
+		         
+            	>1994 General</option>
+
+            	<option value="10/4/1994" 
+		         
+            	>1994 Runoff</option>
+
+            	<option value="9/8/1994" 
+		         
+            	>1994 Primary</option>
+
+            	<option value="11/3/1992" 
+		         
+            	>1992 General</option>
+
+            	<option value="10/1/1992" 
+		         
+            	>1992 Runoff</option>
+
+            	<option value="9/1/1992" 
+		         
+            	>1992 Primary</option>
+
+            	<option value="3/10/1992" 
+		         
+            	>1992 Pres. Preference</option>
+
+            	<option value="11/6/1990" 
+		         
+            	>1990 General</option>
+
+            	<option value="10/2/1990" 
+		         
+            	>1990 Runoff</option>
+
+            	<option value="9/4/1990" 
+		         
+            	>1990 Primary</option>
+
+            	<option value="11/8/1988" 
+		         
+            	>1988 General</option>
+
+            	<option value="10/4/1988" 
+		         
+            	>1988 Runoff</option>
+
+            	<option value="9/6/1988" 
+		         
+            	>1988 Primary</option>
+
+            	<option value="3/8/1988" 
+		         
+            	>1988 Pres. Preference</option>
+
+            	<option value="11/4/1986" 
+		         
+            	>1986 General</option>
+
+            	<option value="9/30/1986" 
+		         
+            	>1986 Runoff</option>
+
+            	<option value="9/2/1986" 
+		         
+            	>1986 Primary</option>
+
+            	<option value="11/6/1984" 
+		         
+            	>1984 General</option>
+
+            	<option value="10/2/1984" 
+		         
+            	>1984 Runoff</option>
+
+            	<option value="9/4/1984" 
+		         
+            	>1984 Primary</option>
+
+            	<option value="3/13/1984" 
+		         
+            	>1984 Pres. Preference</option>
+
+            	<option value="11/2/1982" 
+		         
+            	>1982 General</option>
+
+            	<option value="10/5/1982" 
+		         
+            	>1982 Runoff</option>
+
+            	<option value="9/7/1982" 
+		         
+            	>1982 Primary</option>
+
+            	<option value="11/4/1980" 
+		         
+            	>1980 General</option>
+
+            	<option value="10/7/1980" 
+		         
+            	>1980 Runoff</option>
+
+            	<option value="9/9/1980" 
+		         
+            	>1980 Primary</option>
+
+            	<option value="3/11/1980" 
+		         
+            	>1980 Pres. Preference</option>
+
+            	<option value="11/7/1978" 
+		         
+            	>1978 General</option>
+
+            	<option value="10/5/1978" 
+		         
+            	>1978 Runoff</option>
+
+            	<option value="9/12/1978" 
+		         
+            	>1978 Primary</option>
+ 
+          </select>
+      </td>
+    </tr>
+    <tr bgcolor="#cccccc"><td colspan="3"><img src="images/transparent.gif" width="1" height="10"></td></tr>
+    <tr bgcolor="#336699"><td colspan="3" ><img src="images/transparent.gif" width="1" height="2"></td></tr>
+
+		
+	    <tr><td colspan="3"><img src="images/transparent.gif" width="1" height="5"></td></tr>
+	    <tr><td colspan="3" class="headerCenterAlign">August 18, 2026 Primary Election</td></tr>
+	    <tr><td colspan="3"><img src="images/transparent.gif" width="1" height="5"></td></tr>
+
+			    <tr><td colspan="3" bgcolor="#336699"><img src="images/transparent.gif" width="1" height="2"></td></tr>
+			    <tr> 
+
+			      			<td colspan="3" class="headerCenterAlignLight" bgcolor="#336699">Republican Primary</td>
+
+				</TR>
+
+		    <tr><td colspan="3" bgcolor="#336699"><img src="images/transparent.gif" width="1" height="2"></td></tr>
+		    <tr><td colspan="3"><img src="images/transparent.gif" width="1" height="4"></td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign">Select Office:</td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="ComboList">
+
+		          <SELECT onChange="SwitchRace(this,'8/18/2026','REP','')">
+
+            	<option value="Select">Select</option>
+
+	       		   	<option value="FED">Federal Offices</option>
+
+	       		   	<option value="CAB">Governor and Cabinet</option>
+
+	       		   	<option value="LEG">Senate and House</option>
+
+				</SELECT></td>
+    		</tr>
+		<!--- County Selection -->
+		    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign">Select County: </td></tr> 
+			<tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="ComboList">
+
+		        <SELECT onChange="SwitchCounty(this,'8/18/2026','REP','')">
+
+        		<option value="Select">Select</option>
+
+	        	<option value="ALA">Alachua</option>
+
+	        	<option value="BAK">Baker</option>
+
+	        	<option value="BAY">Bay</option>
+
+	        	<option value="BRA">Bradford</option>
+
+	        	<option value="BRE">Brevard</option>
+
+	        	<option value="BRO">Broward</option>
+
+	        	<option value="CAL">Calhoun</option>
+
+	        	<option value="CHA">Charlotte</option>
+
+	        	<option value="CIT">Citrus</option>
+
+	        	<option value="CLA">Clay</option>
+
+	        	<option value="CLL">Collier</option>
+
+	        	<option value="CLM">Columbia</option>
+
+	        	<option value="DES">Desoto</option>
+
+	        	<option value="DIX">Dixie</option>
+
+	        	<option value="DUV">Duval</option>
+
+	        	<option value="ESC">Escambia</option>
+
+	        	<option value="FLA">Flagler</option>
+
+	        	<option value="FRA">Franklin</option>
+
+	        	<option value="GAD">Gadsden</option>
+
+	        	<option value="GIL">Gilchrist</option>
+
+	        	<option value="GLA">Glades</option>
+
+	        	<option value="GUL">Gulf</option>
+
+	        	<option value="HAM">Hamilton</option>
+
+	        	<option value="HAR">Hardee</option>
+
+	        	<option value="HEN">Hendry</option>
+
+	        	<option value="HER">Hernando</option>
+
+	        	<option value="HIG">Highlands</option>
+
+	        	<option value="HIL">Hillsborough</option>
+
+	        	<option value="HOL">Holmes</option>
+
+	        	<option value="IND">Indian River</option>
+
+	        	<option value="JAC">Jackson</option>
+
+	        	<option value="JEF">Jefferson</option>
+
+	        	<option value="LAF">Lafayette</option>
+
+	        	<option value="LAK">Lake</option>
+
+	        	<option value="LEE">Lee</option>
+
+	        	<option value="LEO">Leon</option>
+
+	        	<option value="LEV">Levy</option>
+
+	        	<option value="LIB">Liberty</option>
+
+	        	<option value="MAD">Madison</option>
+
+	        	<option value="MAN">Manatee</option>
+
+	        	<option value="MRN">Marion</option>
+
+	        	<option value="MRT">Martin</option>
+
+	        	<option value="DAD">Miami-Dade</option>
+
+	        	<option value="MON">Monroe</option>
+
+	        	<option value="NAS">Nassau</option>
+
+	        	<option value="OKA">Okaloosa</option>
+
+	        	<option value="OKE">Okeechobee</option>
+
+	        	<option value="ORA">Orange</option>
+
+	        	<option value="OSC">Osceola</option>
+
+	        	<option value="PAL">Palm Beach</option>
+
+	        	<option value="PAS">Pasco</option>
+
+	        	<option value="PIN">Pinellas</option>
+
+	        	<option value="POL">Polk</option>
+
+	        	<option value="PUT">Putnam</option>
+
+	        	<option value="SAN">Santa Rosa</option>
+
+	        	<option value="SAR">Sarasota</option>
+
+	        	<option value="SEM">Seminole</option>
+
+	        	<option value="STJ">St. Johns</option>
+
+	        	<option value="STL">St. Lucie</option>
+
+	        	<option value="SUM">Sumter</option>
+
+	        	<option value="SUW">Suwannee</option>
+
+	        	<option value="TAY">Taylor</option>
+
+	        	<option value="UNI">Union</option>
+
+	        	<option value="VOL">Volusia</option>
+
+	        	<option value="WAK">Wakulla</option>
+
+	        	<option value="WAL">Walton</option>
+
+	        	<option value="WAS">Washington</option>
+
+			</SELECT>
+
+			</TD></TR>
+		<tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="10"></td></tr>
+
+			    <tr><td colspan="3" bgcolor="#336699"><img src="images/transparent.gif" width="1" height="2"></td></tr>
+			    <tr> 
+
+			      			<td colspan="3" class="headerCenterAlignLight" bgcolor="#336699">Democratic Primary</td>
+
+				</TR>
+
+		    <tr><td colspan="3" bgcolor="#336699"><img src="images/transparent.gif" width="1" height="2"></td></tr>
+		    <tr><td colspan="3"><img src="images/transparent.gif" width="1" height="4"></td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign">Select Office:</td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="ComboList">
+
+		          <SELECT onChange="SwitchRace(this,'8/18/2026','DEM','')">
+
+            	<option value="Select">Select</option>
+
+	       		   	<option value="FED">Federal Offices</option>
+
+	       		   	<option value="CAB">Governor and Cabinet</option>
+
+	       		   	<option value="LEG">Senate and House</option>
+
+				</SELECT></td>
+    		</tr>
+		<!--- County Selection -->
+		    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign">Select County: </td></tr> 
+			<tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="ComboList">
+
+		        <SELECT onChange="SwitchCounty(this,'8/18/2026','DEM','')">
+
+        		<option value="Select">Select</option>
+
+	        	<option value="ALA">Alachua</option>
+
+	        	<option value="BAK">Baker</option>
+
+	        	<option value="BAY">Bay</option>
+
+	        	<option value="BRA">Bradford</option>
+
+	        	<option value="BRE">Brevard</option>
+
+	        	<option value="BRO">Broward</option>
+
+	        	<option value="CAL">Calhoun</option>
+
+	        	<option value="CHA">Charlotte</option>
+
+	        	<option value="CIT">Citrus</option>
+
+	        	<option value="CLA">Clay</option>
+
+	        	<option value="CLL">Collier</option>
+
+	        	<option value="CLM">Columbia</option>
+
+	        	<option value="DES">Desoto</option>
+
+	        	<option value="DIX">Dixie</option>
+
+	        	<option value="DUV">Duval</option>
+
+	        	<option value="ESC">Escambia</option>
+
+	        	<option value="FLA">Flagler</option>
+
+	        	<option value="FRA">Franklin</option>
+
+	        	<option value="GAD">Gadsden</option>
+
+	        	<option value="GIL">Gilchrist</option>
+
+	        	<option value="GLA">Glades</option>
+
+	        	<option value="GUL">Gulf</option>
+
+	        	<option value="HAM">Hamilton</option>
+
+	        	<option value="HAR">Hardee</option>
+
+	        	<option value="HEN">Hendry</option>
+
+	        	<option value="HER">Hernando</option>
+
+	        	<option value="HIG">Highlands</option>
+
+	        	<option value="HIL">Hillsborough</option>
+
+	        	<option value="HOL">Holmes</option>
+
+	        	<option value="IND">Indian River</option>
+
+	        	<option value="JAC">Jackson</option>
+
+	        	<option value="JEF">Jefferson</option>
+
+	        	<option value="LAF">Lafayette</option>
+
+	        	<option value="LAK">Lake</option>
+
+	        	<option value="LEE">Lee</option>
+
+	        	<option value="LEO">Leon</option>
+
+	        	<option value="LEV">Levy</option>
+
+	        	<option value="LIB">Liberty</option>
+
+	        	<option value="MAD">Madison</option>
+
+	        	<option value="MAN">Manatee</option>
+
+	        	<option value="MRN">Marion</option>
+
+	        	<option value="MRT">Martin</option>
+
+	        	<option value="DAD">Miami-Dade</option>
+
+	        	<option value="MON">Monroe</option>
+
+	        	<option value="NAS">Nassau</option>
+
+	        	<option value="OKA">Okaloosa</option>
+
+	        	<option value="OKE">Okeechobee</option>
+
+	        	<option value="ORA">Orange</option>
+
+	        	<option value="OSC">Osceola</option>
+
+	        	<option value="PAL">Palm Beach</option>
+
+	        	<option value="PAS">Pasco</option>
+
+	        	<option value="PIN">Pinellas</option>
+
+	        	<option value="POL">Polk</option>
+
+	        	<option value="PUT">Putnam</option>
+
+	        	<option value="SAN">Santa Rosa</option>
+
+	        	<option value="SAR">Sarasota</option>
+
+	        	<option value="SEM">Seminole</option>
+
+	        	<option value="STJ">St. Johns</option>
+
+	        	<option value="STL">St. Lucie</option>
+
+	        	<option value="SUM">Sumter</option>
+
+	        	<option value="SUW">Suwannee</option>
+
+	        	<option value="TAY">Taylor</option>
+
+	        	<option value="UNI">Union</option>
+
+	        	<option value="VOL">Volusia</option>
+
+	        	<option value="WAK">Wakulla</option>
+
+	        	<option value="WAL">Walton</option>
+
+	        	<option value="WAS">Washington</option>
+
+			</SELECT>
+
+			</TD></TR>
+		<tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="10"></td></tr>
+
+			    <tr><td colspan="3" bgcolor="#336699"><img src="images/transparent.gif" width="1" height="2"></td></tr>
+			    <tr> 
+
+			      			<td colspan="3" class="headerCenterAlignLight" bgcolor="#336699">NonPartisan Primary</td>
+
+				</TR>
+
+		    <tr><td colspan="3" bgcolor="#336699"><img src="images/transparent.gif" width="1" height="2"></td></tr>
+		    <tr><td colspan="3"><img src="images/transparent.gif" width="1" height="4"></td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign">Select Office:</td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="ComboList">
+
+		          <SELECT onChange="SwitchRace(this,'8/18/2026','NOP','')">
+
+            	<option value="Select">Select</option>
+
+	       		   	<option value="JUD">Judicial Offices</option>
+
+				</SELECT></td>
+    		</tr>
+		<!--- County Selection -->
+		    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="headerLeftAlign">Select County: </td></tr> 
+			<tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="3"></td></tr>
+		    <tr><td colspan="3" class="ComboList">
+
+		        <SELECT onChange="SwitchCounty(this,'8/18/2026','NOP','')">
+
+        		<option value="Select">Select</option>
+
+	        	<option value="BRE">Brevard</option>
+
+	        	<option value="BRO">Broward</option>
+
+	        	<option value="CHA">Charlotte</option>
+
+	        	<option value="CIT">Citrus</option>
+
+	        	<option value="CLL">Collier</option>
+
+	        	<option value="FLA">Flagler</option>
+
+	        	<option value="FRA">Franklin</option>
+
+	        	<option value="GAD">Gadsden</option>
+
+	        	<option value="GLA">Glades</option>
+
+	        	<option value="HAR">Hardee</option>
+
+	        	<option value="HEN">Hendry</option>
+
+	        	<option value="HER">Hernando</option>
+
+	        	<option value="HIG">Highlands</option>
+
+	        	<option value="HIL">Hillsborough</option>
+
+	        	<option value="JEF">Jefferson</option>
+
+	        	<option value="LAK">Lake</option>
+
+	        	<option value="LEE">Lee</option>
+
+	        	<option value="LEO">Leon</option>
+
+	        	<option value="LIB">Liberty</option>
+
+	        	<option value="MRN">Marion</option>
+
+	        	<option value="DAD">Miami-Dade</option>
+
+	        	<option value="ORA">Orange</option>
+
+	        	<option value="OSC">Osceola</option>
+
+	        	<option value="PAS">Pasco</option>
+
+	        	<option value="PIN">Pinellas</option>
+
+	        	<option value="POL">Polk</option>
+
+	        	<option value="PUT">Putnam</option>
+
+	        	<option value="SEM">Seminole</option>
+
+	        	<option value="STJ">St. Johns</option>
+
+	        	<option value="SUM">Sumter</option>
+
+	        	<option value="VOL">Volusia</option>
+
+	        	<option value="WAK">Wakulla</option>
+
+			</SELECT>
+
+			</TD></TR>
+		<tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="10"></td></tr>
+
+		    <tr>
+			<TD WIDTH="7" ><IMG SRC="images/rt_arrow.gif" WIDTH="7" HEIGHT="5" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+			<TD WIDTH="5" ><IMG SRC="images/transparent.gif" WIDTH="3" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+			<td class="Normal"><A HREF="TurnoutRpt.asp?ElectionDate=8/18/2026&DATAMODE=" TARGET="WinResults">
+					Voter Turnout
+			</A></td></tr>
+		
+		    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="6"></td></tr>
+		
+		    <tr>
+			<TD WIDTH="7" ><IMG SRC="images/rt_arrow.gif" WIDTH="7" HEIGHT="5" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+			<TD WIDTH="5" ><IMG SRC="images/transparent.gif" WIDTH="3" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+			<td class="Normal"><A HREF="downloadresults.asp?ElectionDate=8/18/2026&DATAMODE=" TARGET="_blank">Download Results </A></td></tr>
+
+
+
+    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="6"></td></tr>
+
+	<tr><TD WIDTH="7" ><IMG SRC="images/rt_arrow.gif" WIDTH="7" HEIGHT="5" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+	<TD WIDTH="5" ><IMG SRC="images/transparent.gif" WIDTH="3" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+    <td colspan="2" class="Normal"><a href="Specials.asp" TARGET="_blank">Special Election Results</a></td></tr>
+
+	
+    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="6"></td></tr>
+	
+	<tr><TD WIDTH="7" ><IMG SRC="images/rt_arrow.gif" WIDTH="7" HEIGHT="5" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+	<TD WIDTH="5" ><IMG SRC="images/transparent.gif" WIDTH="3" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+	<td class="Normal"><A HREF="http://dos.elections.myflorida.com/supervisors/" TARGET="_blank">Supervisors of Elections</A></td></tr>
+    
+	<tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="6"></td></tr>
+
+	<tr><TD WIDTH="7" ><IMG SRC="images/rt_arrow.gif" WIDTH="7" HEIGHT="5" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+	<TD WIDTH="5" ><IMG SRC="images/transparent.gif" WIDTH="3" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+    <td colspan="2" class="Normal"><A HREF="https://dos.myflorida.com/elections/for-voters/election-dates/" TARGET="_blank">Elections Information</A></td></tr>
+
+ <!--   <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="6"></td></tr>
+
+	<tr><TD WIDTH="7" ><IMG SRC="images/rt_arrow.gif" WIDTH="7" HEIGHT="5" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+	<TD WIDTH="5" ><IMG SRC="images/transparent.gif" WIDTH="3" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+    <td class="Normal"><A HREF="http://www.MyFlElections.com" TARGET="_blank">MyFlElections.com</A></td></tr>
+    <tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="6"></td></tr>
+ -->
+
+	<tr><td colspan="3" class="headerLeftAlign"><img src="images/transparent.gif" width="1" height="6"></td></tr>
+	<tr><TD WIDTH="7" ><IMG SRC="images/rt_arrow.gif" WIDTH="7" HEIGHT="5" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+	<TD WIDTH="5" ><IMG SRC="images/transparent.gif" WIDTH="3" BORDER="0" ALIGN="ABSMIDDLE" ALT=""></td>	
+    <td class="Normal"><A HREF="https://dos.myflorida.com/elections/" TARGET="_blank">Division of Elections</A></td></tr>
+  </table>
+  </FORM></td>
+ <!--   </tr>
+	<TR>
+	<td width="1" valign="top"></td>
+    <TD COLSPAN="3" VALIGN="top" BGCOLOR="#CCCCCC" CLASS="headerLeftAlign">&nbsp;</TD>
+    </tr>
+ -->
+</table>
+</body>
+</html>

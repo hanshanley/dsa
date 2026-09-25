@@ -1,0 +1,26 @@
+{
+  "raw_folder": "data/raw/policy_texas_da_2020",
+  "source_defaults": {
+    "status": "timing_unverified", "source_type": "candidate_interview",
+    "publication_date": "2019-08-22", "source_updated_date": "2025-09-30",
+    "publisher_date_metadata": {"format": "json_ld", "node_id": "https://www.austinchronicle.com/news/how-much-reform-is-enough-in-the-travis-county-district-attorney-race-11675308/"},
+    "notes": "Original interviews published during the2020 primary campaign, with a later2025 publisher modification explicitly retained. Only direct candidate quotations are attributed. Missing original PDF attachments are not reconstructed from the journalist's policy summary; the present article version remains timing-qualified."
+  },
+  "sources": [
+    {"key": "garza", "capture": "reform-capture.json", "race_id": "race-7ab35229d5841ad0bb44", "speaker": "José Garza"},
+    {"key": "moore", "capture": "reform-capture.json", "race_id": "race-7ab35229d5841ad0bb44", "speaker": "Margaret Moore"},
+    {"key": "martinson", "capture": "reform-capture.json", "race_id": "race-7ab35229d5841ad0bb44", "speaker": "Erin Martinson"}
+  ],
+  "statements": [
+    {"id": "tx20-garza-reform-frame", "source": "garza", "topic": "campaign_approach", "subtopic": "criminal_justice_reform_record", "stance": "system_is_broken", "kind": "campaign_frame", "quote": "our criminal justice system is broken", "locator": "paragraph 254", "claim": "Campaigns on the need to repair a broken criminal-justice system, not on a claim that all prosecution should cease."},
+    {"id": "tx20-moore-reform-frame", "source": "moore", "topic": "campaign_approach", "subtopic": "criminal_justice_reform_record", "stance": "defend_existing_reform_record", "kind": "campaign_frame", "quote": "utilizing reform tactics others are just beginning to use", "locator": "paragraph 239", "claim": "Defends Travis County's existing reform record as advanced relative to other jurisdictions. This is her self-assessment, not an independent comparison of performance."},
+    {"id": "tx20-garza-priorities", "source": "garza", "topic": "campaign_approach", "subtopic": "stated_campaign_priorities", "stance": "racial_economic_and_immigrant_justice", "kind": "campaign_frame", "quote": "people of color, working people and poor people, and immigrant families", "locator": "paragraph 240", "claim": "Centers the criminal system's effects on racialized, working-class, low-income and immigrant communities."},
+    {"id": "tx20-martinson-priorities", "source": "martinson", "topic": "campaign_approach", "subtopic": "stated_campaign_priorities", "stance": "survivor_justice_and_reform", "kind": "campaign_frame", "quote": "domestic violence and sexual assault", "locator": "paragraph 244", "claim": "Calls for changing the handling of domestic violence and sexual assault while explicitly also supporting broader criminal-justice reform."},
+    {"id": "tx20-garza-resource-frame", "source": "garza", "topic": "campaign_approach", "subtopic": "prosecution_and_resource_allocation", "stance": "prioritize_resources_not_end_all_prosecution", "kind": "campaign_frame", "quote": "how we are using our resources, what our priorities are", "locator": "paragraph 260", "claim": "Says reform and serious-case prosecution are compatible and acknowledges that some people need incarceration; no blanket anti-prosecution stance is inferred."},
+    {"id": "tx20-martinson-community", "source": "martinson", "topic": "democratic_reform", "subtopic": "community_advisory_board", "stance": "support", "quote": "community advisory board", "locator": "paragraph 245", "claim": "Proposes a community advisory board for regular input on district-attorney policy and prosecutions."}
+  ],
+  "comparisons": [
+    {"id": "tx20-garza-moore-reform-frame", "left": "tx20-garza-reform-frame", "right": "tx20-moore-reform-frame", "relationship": "different_emphasis", "kind": "campaign_framing", "analysis": "Garza emphasizes the system's need for structural change; Moore emphasizes reform already implemented under her leadership. The evidence supports competing reform narratives, not the unqualified label that Moore opposes reform."},
+    {"id": "tx20-garza-martinson-priorities", "left": "tx20-garza-priorities", "right": "tx20-martinson-priorities", "relationship": "different_emphasis", "kind": "campaign_framing", "analysis": "Garza foregrounds unequal impacts across racial, economic and immigrant communities; Martinson foregrounds survivor justice and sexual-assault/domestic-violence handling. Both also discuss criminal-justice reform, so neither is assigned exclusive ownership of a concern."}
+  ]
+}

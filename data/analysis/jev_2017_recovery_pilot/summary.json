@@ -1,0 +1,33 @@
+{
+  "accuracy_difference": null,
+  "agreement_with_local": null,
+  "baseline_sha256": "a5380fe0416b9d17dc3fc6335177755675ecb8976c3ff4c4108d480036eb89ae",
+  "canonical_classifier_changed": false,
+  "corpus_sha256": "641cb2db7d806e27ea2c3abbfa52bbead3e9e40128427d687c5f367c81f33df7",
+  "gold_sha256": null,
+  "improvement_established": false,
+  "input_tokens_this_run": 0,
+  "jev_accuracy": null,
+  "jev_brier_score": null,
+  "jev_coverage": null,
+  "jev_log_loss": null,
+  "jev_macro_f1": null,
+  "limitations": [
+    "Agreement with another classifier is not accuracy.",
+    "Provider confidence is not measured accuracy on this corpus.",
+    "No improvement claim without an independent, adequately sized reviewed test set.",
+    "Pilot metrics are descriptive; overlapping or repeated text is not independent."
+  ],
+  "live_requests": 0,
+  "local_accuracy": null,
+  "local_coverage": null,
+  "local_macro_f1": null,
+  "model": "jev-1.13.0",
+  "prediction_rows": 0,
+  "question_sha256": "fb26c0fba65bd713a675ab7808b876f423049746a4756d3b81a6a369b3481a32",
+  "reviewed_rows": 0,
+  "sample_rows": 220,
+  "sample_sha256": "c6e79aa5442f4b71f059281056f046f0abca79bb6d8a629f62cf77a86a7e5204",
+  "sampling": "Deterministic round-robin across group/cycle strata; not population weighted",
+  "status": "prepared"
+}

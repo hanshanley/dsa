@@ -1,0 +1,29 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "decision": "Retain original election observations but distinguish individual candidates, endorsed ballot campaigns, and non-person ballot options in policy coverage.",
+  "reviewed_labels": ["No Preference", "Scattered", "Uncommitted", "\"Uncommitted\"", "Uninstructed Delegation", "Miscellaneous", "Uncommitted Delegate", "Uncommitted Delegates", "Undeclared", "Uninstructed Delegate", "Noncommitted Delegate", "Uncommitted NJ", "Uninstructed Campaign"],
+  "scope": "Exact labels in United States presidential contests only. This is not a general name-matching rule. Local offices containing the word President are not national presidential races.",
+  "evidence": [
+    {
+      "raw_path": "data/raw/fec/federalelections2016.xlsx",
+      "sha256": "b4a1d1383602bc388cfbdf1fbea2476476d32e0b44b44236d3a3910fa9782eb6",
+      "sheet": "2016 Pres Primary Results",
+      "rows": [5,142,170,283,321,341,375,423,460,632,763,805,943],
+      "fields": "Official Democratic ballot-option display name and vote count. Not every original source row is in the current strict study registry."
+    },
+    {
+      "raw_path": "data/raw/fec/federalelections2020.xlsx",
+      "sha256": "5073b6d2c76c86c941508dfb1a11cc497e8529b0068c5132aceb0f385c19352e",
+      "sheet": "10. 2020 Pres Primary Results",
+      "rows": [8,42,185,208,341,349,410,438,483,554,596,720,763,853,890,935,1057,1102],
+      "fields": "Official Democratic ballot-option display name and vote count."
+    }
+  ],
+  "endorsed_2024_campaign_records": [
+    "race-1ebf8dc775ced8d30b89", "race-3b8f105d02f390f68f75", "race-839b10104820793a268a",
+    "race-9065e448b7091dd55686", "race-97cfab5130640c94bcc2", "race-e2b6f8d54db828efc7e2",
+    "race-f289969f5b8add9b1d6d"
+  ],
+  "interpretation": "The30 generic opponent ballot-option records are not30 people with missing personal platforms. The7 endorsed2024 ballot campaigns still require attributable campaign evidence; no policy is inferred merely from the ballot label. No votes, source rows, primary records or reviewed quotations are deleted by this accounting change.",
+  "national_worklist": "Same-cycle presidential records may share a research work unit using the existing explicit alias map. Such grouping does not merge election records, establish source applicability before a particular primary, or create independent observations."
+}

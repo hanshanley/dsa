@@ -1,0 +1,13 @@
+attempt_id,attempted_on,state_code,cycle,source_url,method,outcome,raw_evidence,notes
+ny-01,2026-09-22,NY,2024,https://elections.ny.gov/2024-election-results,urllib_and_curl,blocked_http_403,,Authority landing page rejected direct scripted retrieval.
+ny-02,2026-09-22,NY,2024,https://results.elections.ny.gov/search?df=2024&dt=2024&p=1,headless_firefox,success,ny-2024-election-database-search.csv,Official replacement database loaded and exposed its search CSV URL.
+ny-03,2026-09-22,NY,2024,https://ny.elstats.civera.com/api/download_search.csv,authority_linked_vendor_download,success_partial,ny-2024-election-database-search.csv,"Contains four State Board congressional primary contests, not county-only races."
+ny-04,2026-09-22,NY,2024,https://ny.staging.elstats2.civera.com/eng/files/serve/472,authority_linked_vendor_download,success_partial,ny-2024-primary-certified-results.pdf,Certified statement confirms the same four congressional contests.
+ny-05,2026-09-22,NY,2024,https://elections.ny.gov/certification-june-25-2024-primary-election,headless_firefox,success_partial,ny-2024-primary-certification.pdf,"Pre-election roster covers state-filed offices, not county-filed districts."
+ny-06,2026-09-22,NY,2026,https://elections.ny.gov/system/files/documents/2026/05/accessible-june-23-2026-primary-certification-amended-4.30.26-.pdf,curl_and_headless_firefox,blocked_http_403_or_authority_404,ny-2026-primary-certification-blocked-403.html,Pre-election certification was not treated as post-primary results.
+ny-07,2026-09-22,NY,2026,https://elections.ny.gov/certification-june-23-2026-primary-election,headless_firefox,success_partial_roster,ny-2026-primary-certification.pdf,Current authority alias resolved the amended May 13 PDF; state-filed districts only.
+ny-08,2026-09-22,NY,2026,https://nyenr.elections.ny.gov/HomeNoJS.aspx,web_index_and_direct_probe,rejected_unofficial_incomplete,,June 26 snapshot labels itself unofficial and has incomplete district reporting.
+mi-01,2026-09-22,MI,2024,https://mielections.us/election/results/2024PRI_CENR.html,curl,timeout,,Legacy authority host did not respond within 45 seconds.
+mi-02,2026-09-22,MI,2026,https://mielections.us/election/results/2026PRI_CENR.html,curl,timeout,,Legacy authority host did not respond within 45 seconds.
+mi-03,2026-09-22,MI,2024-2026,https://mvic.sos.state.mi.us/votehistory/,curl_and_web_fetch,blocked_http_403,,Cloudflare rejected non-browser requests to result pages and exports.
+mi-04,2026-09-22,MI,2024-2026,https://mvic.sos.state.mi.us/votehistory/,headless_firefox_webdriver_bidi,success,mi-2024-primary-results.tsv | mi-2026-primary-results.tsv,Authority pages exposed election IDs 698 and 706; same-origin export fetch succeeded.

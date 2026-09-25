@@ -10,6 +10,7 @@ from dsa_analysis.provisional_kde import (
     _looks_like_navigation_or_form,
     _looks_like_table_of_contents,
     _wrap_card_text,
+    _write_kde_report,
     balanced_kde_sample_indices,
     density_region_summaries,
     load_eligible_segments,
@@ -18,6 +19,20 @@ from dsa_analysis.provisional_kde import (
 
 
 class ProvisionalKDETests(unittest.TestCase):
+    def test_report_uses_selected_dimension_in_cluster_description(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "report.md"
+            _write_kde_report(path, {
+                "retained_segments": 30,
+                "group_counts": {"endorsed": 10, "opponent": 20},
+                "selected_dimensions": 5,
+                "density_regions": [],
+            })
+            text = path.read_text(encoding="utf-8")
+            self.assertIn("selected 5-dimensional UMAP representation", text)
+            self.assertNotIn("10-dimensional", text)
+            self.assertIn("give candidates equal density weight", text)
+
     def test_card_text_wrapper_enforces_line_budget(self) -> None:
         wrapped = _wrap_card_text(
             "one two three four five six seven eight nine ten",
@@ -328,21 +343,52 @@ class ProvisionalKDETests(unittest.TestCase):
             with metadata_path.open("w", encoding="utf-8", newline="") as handle:
                 writer = csv.DictWriter(
                     handle,
-                    fieldnames=["document_id", "election_date"],
+                    fieldnames=["document_id", "election_date", "race_id"],
                 )
                 writer.writeheader()
                 writer.writerows(
                     [
-                        {"document_id": "document-nh", "election_date": "2020-02-11"},
-                        {"document_id": "document-ia", "election_date": "2020-02-03"},
+                        {"document_id": "document-nh", "election_date": "2020-02-11", "race_id": "race-nh"},
+                        {"document_id": "document-ia", "election_date": "2020-02-03", "race_id": "race-ia"},
                     ]
                 )
+            self._write_registry(root / "race_registry.csv", ["race-nh", "race-ia"])
 
             rows = load_eligible_segments(segments_path, metadata_path)
 
             self.assertEqual(len(rows), 1)
             self.assertEqual(rows[0]["race_ids"], "race-ia | race-nh")
             self.assertEqual(rows[0]["provenance_row_count"], "2")
+
+    def test_presidential_alias_dedup_retains_original_ballot_names(self):
+        from dsa_analysis.io import write_csv
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            rows = [{
+                "analysis_segment_id": str(i), "document_id": str(i), "race_id": "r",
+                "candidate_name": name, "candidate_slug": slug, "role": "opponent",
+                "text": "We support more affordable housing, stronger public schools, accessible healthcare and fair wages for working families across the country.",
+                "token_count": "22", "sha256": "same", "boilerplate_flag": "false",
+            } for i, (name, slug) in enumerate((
+                ("Elizabeth Warren", "elizabeth-warren"),
+                ("Elizabeth Ann Warren", "elizabeth-ann-warren"),
+            ))]
+            write_csv(root / "segments.csv", rows, list(rows[0]))
+            metadata = [{
+                "document_id": str(i), "race_id": "r", "election_date": "2020-02-11",
+            } for i in range(2)]
+            write_csv(root / "metadata.csv", metadata, list(metadata[0]))
+            registry = [{
+                "race_id": "r", "scope_kind": "tracked_dsa_endorsed_democratic_primary",
+                "office": "President",
+            }]
+            write_csv(root / "race_registry.csv", registry, list(registry[0]))
+            [retained] = load_eligible_segments(root / "segments.csv", root / "metadata.csv")
+            self.assertEqual(retained["candidate_unit_id"], "2020:elizabeth-warren")
+            self.assertEqual(retained["source_candidate_names"], "Elizabeth Ann Warren | Elizabeth Warren")
+            registry[0]["office"] = "City Council"
+            write_csv(root / "race_registry.csv", registry, list(registry[0]))
+            self.assertEqual(len(load_eligible_segments(root / "segments.csv", root / "metadata.csv")), 2)
 
     def test_load_segments_keeps_same_text_for_different_candidates(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -388,13 +434,68 @@ class ProvisionalKDETests(unittest.TestCase):
                         }
                     )
 
-            rows = load_eligible_segments(
-                segments_path,
-                root / "missing-metadata.csv",
-            )
+            metadata_path = root / "metadata.csv"
+            with metadata_path.open("w", encoding="utf-8", newline="") as handle:
+                writer = csv.DictWriter(handle, fieldnames=["document_id", "election_date", "race_id"])
+                writer.writeheader()
+                writer.writerows([
+                    {"document_id": f"document-{name}", "election_date": "2020-03-03", "race_id": "race-1"}
+                    for name in ("a", "b")
+                ])
+            self._write_registry(root / "race_registry.csv", ["race-1"])
+            rows = load_eligible_segments(segments_path, metadata_path)
 
             self.assertEqual(len(rows), 2)
             self.assertEqual({row["candidate_slug"] for row in rows}, {"a", "b"})
+
+    @staticmethod
+    def _write_registry(path, race_ids):
+        from dsa_analysis.io import write_csv
+        rows = [{
+            "race_id": race_id, "scope_kind": "tracked_dsa_endorsed_democratic_primary",
+            "election_date": "2020-03-03", "endorsed_candidates": "Candidate",
+        } for race_id in race_ids]
+        write_csv(path, rows, list(rows[0]))
+
+    def test_kde_uses_source_eligibility_and_primary_scope(self):
+        from dsa_analysis.io import write_csv
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            changes = {
+                "good": {},
+                "quote": {"analysis_scope": "reviewed_quote"},
+                "context": {"analysis_scope": "context_only"},
+                "undated": {"publication_date": "", "campaign_window_status": "undated"},
+                "unscoped": {"extraction_status": "shared_document_unscoped"},
+                "outside": {"race_id": "not-a-primary"},
+                "interview": {"source_type": "candidate_interview"},
+            }
+            metadata = [{
+                "document_id": key, "election_date": "2020-03-03",
+                "publication_date": "2020-02-01", "retrieved_at": "2026-09-24",
+                "race_id": "race", "campaign_window_status": "in_window",
+                "analysis_scope": "analysis", "extraction_status": "extracted",
+                "source_type": "campaign_platform", "source_url": "https://candidate.example/issues",
+                "final_url": "https://candidate.example/issues", **override,
+            } for key, override in changes.items()]
+            segments = [{
+                "document_id": row["document_id"], "analysis_segment_id": row["document_id"],
+                "race_id": row["race_id"], "candidate_slug": row["document_id"],
+                "candidate_name": row["document_id"], "role": "endorsed", "token_count": "24",
+                "boilerplate_flag": "false",
+                "text": "We support public housing construction, better funded schools, affordable healthcare, expanded labor rights, and reliable public transportation for every community in our state.",
+            } for row in metadata]
+            write_csv(root / "metadata.csv", metadata, list(metadata[0]))
+            write_csv(root / "segments.csv", segments, list(segments[0]))
+            self._write_registry(root / "race_registry.csv", ["race"])
+            rows = load_eligible_segments(root / "segments.csv", root / "metadata.csv")
+            self.assertEqual([row["document_id"] for row in rows], ["good"])
+            with self.assertRaisesRegex(ValueError, "requires source metadata"):
+                load_eligible_segments(root / "segments.csv", root / "missing.csv")
+            metadata[0]["race_id"] = "different"
+            write_csv(root / "metadata.csv", metadata, list(metadata[0]))
+            with self.assertRaisesRegex(ValueError, "disagree on race"):
+                load_eligible_segments(root / "segments.csv", root / "metadata.csv")
 
     def test_density_regions_summarize_hot_cold_and_shared_text(self) -> None:
         rows = []

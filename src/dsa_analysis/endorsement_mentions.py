@@ -5,7 +5,7 @@ from .io import read_csv, write_csv
 from .paths import PROCESSED_DIR
 
 ENDORSEMENT_PATTERN = re.compile(r"\b(?:endorse(?:d|ment|ments|s|ing)?|re-endorse\w*)\b", re.I)
-YEAR_PATTERN = re.compile(r"\b(201[6-9]|202[0-6])\b")
+YEAR_PATTERN = re.compile(r"\b(20\d{2})\b")
 SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+|(?=\b(?:20\d{2}|Current|Past) Endorsements\b)")
 LOW_VALUE_PATTERNS = (
     "endorsement process",

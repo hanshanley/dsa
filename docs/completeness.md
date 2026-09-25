@@ -1,7 +1,11 @@
 # Completeness standard
 
-The project is complete only when all of the following conditions hold for the period beginning
-January 1, 2016:
+The election study begins January 1, 2016. Source discovery begins January 1, 2015, so prior-year
+endorsements and campaign material for 2016 primaries are retained. The congressional
+special-election inventory also keeps 2015 contests. Source publication dates and election
+dates must not be conflated.
+
+The project is complete only when all of the following conditions hold:
 
 1. Every current or historically identified DSA chapter has a resolved record for every election
    year: `verified`, `searched_not_found`, or `source_unavailable` with an explanation.
@@ -17,6 +21,35 @@ January 1, 2016:
 6. Every reported sticking point links both sides' exact words and distinguishes an explicit
    campaign conflict from an analyst-coded policy difference.
 7. `uv run dsa-analysis validate --strict` passes.
+8. The nationwide congressional inventory covers every regular House seat and the independently
+   verified Senate class in every 2016–2026 cycle, with nonvoting delegations separately retained.
+   This inventory includes all parties, not only DSA-endorsed contests.
+9. Every special election, primary, runoff, repeat election, convention, and unopposed nomination
+   is reconciled against election-authority sources. Named candidates, aggregate write-ins,
+   fusion ballot lines, and repeated observations are not conflated.
+10. Every claimed primary roster includes the losing candidates. FEC filings, a general-ballot
+    nominee list, a seat checklist, or a scheduled election date cannot establish primary-roster
+    completeness.
+
+## What counts as a completed search
+
+Finding one verified endorsement does not complete a chapter-year census. Likewise, crawling
+URLs without reviewing their contents, a transient fetch failure, and a truncated archive search
+cannot be promoted to a completed search. Current-year reviews predating the research cutoff
+remain open.
+
+Explicit chapter-year resolutions may be recorded in
+`data/manual/chapter_year_resolutions.csv` with `coverage_id`, `status`, `searched_on`,
+`evidence_urls`, and `notes`. Status must be `verified`, `searched_not_found`, or
+`source_unavailable`, with substantive search notes and source locators. The absence of this file
+does not create default resolutions. Historically identified chapters are retained even if
+absent from the current directory.
+
+`audit-census` writes a row-level ledger of known gaps and a year-by-year accounting;
+`collect-congressional` writes a separate all-party congressional inventory. Neither command's
+successful execution means the underlying census is complete. Consult the `complete` field,
+not merely the exit status. The congressional importer deliberately remains uncertified until
+the election-specific roster, date, special-election, and text-coverage obligations are resolved.
 
 ## Source limitations
 

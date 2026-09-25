@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head><script src="/Built-with-the-For-hopence-Hurleysurfecting-the-" async></script>
+    <title>Pennsylvania Elections - Summary Results</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link type='text/css' rel='stylesheet' href='/Content/bootstrap.css?v=1.2' />
+    
+    <link type='text/css' rel='stylesheet' href='/Content/bootstrap-glyphicons.css?v=1.2' />
+    <link type='text/css' rel='stylesheet' href='/Content/core.css?v=1.2' />
+    <link type='text/css' rel='stylesheet' href='/Content/font-awesome.css?v=1.2' />
+    <link type='text/css' rel='stylesheet' href='/Content/angular-busy.css?v=1.2' />
+    <link type='text/css' rel='stylesheet' href='/Content/animate.css?v=1.2' />
+    <link type='text/css' rel='stylesheet' href='/Content/custom.css?v=1.2' />
+
+    <script type='text/javascript' src='/Scripts/jquery.min.js?v=1.2'></script>
+    
+    <script type='text/javascript' src='/Scripts/bootstrap.min.js?v=1.2'></script>
+
+    
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .containerT {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Take the full viewport height */
+            margin-right: 1px;
+            overflow: visible; /* ensure sticky works */
+        }
+
+
+
+        .body {
+            flex-grow: 1; /* Grow to fill available space */
+            font-family: system-ui !important;
+            font-size: 16px !important
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .body {
+                font-size: 14px !important
+            }
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1050; /* Higher than header/nav */
+            width: 100%;
+        }
+
+        #simplePopupDesc:focus {
+            outline: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+            var GACode = 'UA-56757930-1';
+    </script>
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', GACode]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body style="padding-top: 0px">
+
+    
+
+
+    <script type='text/javascript' src='/Scripts/common.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/moment.min.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/modernizr-2.6.2.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/bootstrap-notify.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/Angular/angular.min.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/Angular/angular-sanitize.min.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/geolocation.min.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/angular-animate.min.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/angular-busy.min.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/local-storage.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/AppScripts/AngularModule.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/AppScripts/Service.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/AppScripts/Controller.js?v=1.2'></script>
+
+    <script type='text/javascript' src='/Scripts/purify.min.js?v=1.2'></script>
+
+    <script type='text/javascript' src='/Scripts/AppScripts/HeaderController.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/AppScripts/GeneralController.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/AppScripts/SpecialController.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/AppScripts/ReportController.js?v=1.2'></script>
+    <script type='text/javascript' src='/Scripts/AppScripts/ElectionFeedController.js?v=1.2'></script>
+
+    <script type='text/javascript' src='/Scripts/filesaver.min.js?v=1.2'></script>
+
+    <div style="width:100%" ng-controller="LayoutController">
+        <div class="containerT">
+            <!-- Hidden Notification Banner -->
+            <input type="hidden" value='{{NotificationBanner}}' />
+
+            <!-- Instruction Text -->
+            <div style="text-align: center; background-color: #112e47; color: yellow"
+                 ng-bind-html="InstructionText">
+            </div>
+            
+
+            <div class="modal fade"
+                 id="simplePopup"
+                 tabindex="-1"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="simplePopupTitle"
+                 aria-describedby="simplePopupDesc">
+
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    ng-click="ClosePopup()"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="simplePopupTitle">Pennsylvania Elections</h4>
+                        </div>
+
+                        <div class="modal-body"
+                             id="simplePopupDesc"
+                             tabindex="-1">
+                            <div style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; color: firebrick"
+                                 ng-bind-html="PopupMessage">
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button"
+                                    ng-click="ClosePopup()"
+                                    class="btn btn-primary"
+                                    data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Header Section with ARIA Landmarks -->
+            <header class="header" role="banner" aria-label="Main Site Header">
+                <style type="text/css">
+    .contrast {
+        background-color: #07519C;
+    }
+
+    @media screen and (max-width: 767px) {
+        .hamburger {
+            color: white;
+            text-transform: none;
+            font-size: 1em !important;
+            padding-top: 4%
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .hamburger {
+            display: none;
+        }
+    }
+
+    .mobileMenu {
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        /*transform: translate(-50%, -50%);*/
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        height: 80%;
+        width: 50%;
+        overflow: auto;
+    }
+
+    .mobileHref {
+        color: black;
+    }
+    /* Popup content */
+    .mobileMenu-conent {
+        /* Add styles as needed */
+    }
+
+    /* Overlay */
+    .mobileMenu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    ul.menu {
+        list-style: none; /* Remove default bullet points */
+        padding: 0;
+    }
+
+        ul.menu > li {
+            position: relative;
+            padding: 10px 15px;
+            background-color: white;
+            border-bottom: 1px solid white;
+            cursor: pointer;
+        }
+
+        ul.menu ul {
+            display: none; /* Hide nested ul by default */
+            list-style: none;
+            padding-left: 20px; /* Add some indentation */
+        }
+
+            ul.menu ul ul {
+                padding-left: 30px; /* Adjust indentation for deeper nested lists */
+            }
+
+        ul.menu li ul li {
+            padding: 8px 0;
+            border-bottom: none; /* Remove border between nested items */
+        }
+
+        ul.menu > li.subMenu::after {
+            content: '▼'; /* Default right arrow */
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        ul.menu > li.open::after {
+            content: '▲'; /* Down arrow when submenu is open */
+        }
+
+        ul.menu > li:hover {
+            background-color: #e0e0e0;
+        }
+
+
+    .dropdown-menu .submenu {
+        display: none;
+    }
+
+    .dropdown-menu .open .submenu {
+        display: block;
+    }
+
+    /* Adjustments for Tab view */
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .subsubmenu {
+            left: auto !important;
+            right: 100% !important;
+        }
+    }
+
+    .panel-heading-level1 {
+        border-top-right-radius: 0px !important;
+        border-top-left-radius: 0px !important;
+    }
+</style>
+
+<div ng-controller="HeaderController">
+    <div class="navbar navbar-default contrast" role="navigation">
+        <div class="container-fluid" style="background-color: #112e47; padding-top: 1.5rem; display: flex;">
+            
+            <section style="display: flex; gap: 8px; line-height: 1.3; margin-top: 10px " aria-label="logo">
+                <div class="hamburger" id="expandMobileMene"><i class="fa fa-bars"></i></div>
+                <picture>
+                    
+                    <img alt="PABanner" src="/Images/logo-64w.png" />
+                </picture>
+
+                <div style="color: white; text-transform: none; font-size: 1em !important; font-family: var(--bs-body-font-family) !important; ">
+                    <div class="itcLubalin" style="font-size:1.5rem">Commonwealth of Pennsylvania</div>
+                    <div>Election Results</div>
+                </div>
+            </section>
+
+            <div class="navbar-collapse collapse" style="width:72%;text-transform:none !important">
+                <ul class="nav navbar-nav" aria-label="Home" style="padding-left:15%" role="menubar">
+                    <li role="none">
+                        <a href="#" tabindex="0" role="menuitem" aria-label="Home" ng-click="HomeClick()">Home</a>
+                    </li>
+
+                    <li class="dropdown" aria-label="Reports" role="none">
+                        <a href="#" tabindex="0" aria-label="Reports" role="menuitem" class="dropdown-toggle"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false">Reports <b class="caret"></b></a>
+                        <ul class="dropdown-menu" style="right: 0; left: auto;">
+                            <li aria-label="Reporting Center" role="none"><a tabindex="-1" href="#" role="menuitem" aria-label="Reporting Center" ng-click="LoadReportCenter()">Reporting Center</a></li>
+                            <li aria-label="Election Feed" role="none"><a tabindex="-1" href="#" role="menuitem" aria-label="Election Feed" ng-click="LoadElectionFeed()">Election Feed</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" aria-label="Elections" role="none">
+                        <a href="#" tabindex="0" aria-label="Elections" role="menuitem" class="dropdown-toggle"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false">Elections <b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-level" style="right: 0; left: auto;">
+                            <li class="dropdown-submenu" role="none" ng-repeat="yearset in electionJson track by $index">
+                                <a href="#" tabindex="-1" role="menuitem" aria-label="{{yearset.year}}" class="toggleStop" alt="yearset.year">{{yearset.year}}</a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li class="dropdown-submenu" role="none" ng-repeat="electionTypes in yearset.electiontype">
+                                        <a href="#" tabindex="-1" role="menuitem" aria-label="{{electionTypes.type}}" class="toggleStop" alt="electionTypes.type">{{electionTypes.type}}</a>
+                                        <ul class="dropdown-menu subsubmenu" style="right: auto;">
+                                            <li ng-repeat="election in electionTypes.Elections" role="none"><a tabindex="-1" role="menuitem" aria-label="{{election.ElectionName}}" href="#" ng-click="ElectionMenuClick(election.Electionid,election.ElectionType,election.ISActive)">{{election.ElectionName}}</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" aria-label="Counties" role="none">
+                        <a href="#" tabindex="0" aria-label="Counties" role="menuitem" class="dropdown-toggle" data-toggle="dropdown">Counties <b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-level" style="right: 0; left: auto;">
+                            <li class="dropdown-submenu" role="none">
+                                <a href="#" tabindex="-1" role="menuitem" class="toggleStop" aria-label="A-B" alt="A-B">A-B</a>
+                                <ul class="dropdown-menu">
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="ADAMS" alt="ADAMS">ADAMS</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="ALLEGHENY" alt="ALLEGHENY">ALLEGHENY</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="ARMSTRONG" alt="ARMSTRONG">ARMSTRONG</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="BEAVER" alt="BEAVER">BEAVER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="BEDFORD" alt="BEDFORD">BEDFORD</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="BERKS" alt="BERKS">BERKS</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="BLAIR" alt="BLAIR">BLAIR</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="BRADFORD" alt="BRADFORD">BRADFORD</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="BUCKS" alt="BUCKS">BUCKS</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="BUTLER" alt="BUTLER">BUTLER</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu" role="none">
+                                <a href="#" role="menuitem" tabindex="-1" class="toggleStop" aria-label="C" alt="C">C</a>
+                                <ul class="dropdown-menu">
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CAMBRIA" alt="CAMBRIA">CAMBRIA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CAMERON" alt="CAMERON">CAMERON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CARBON" alt="CARBON">CARBON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CENTRE" alt="CENTRE">CENTRE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CHESTER" alt="CHESTER">CHESTER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CLARION" alt="CLARION">CLARION</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CLEARFIELD" alt="CLEARFIELD">CLEARFIELD</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CLINTON" alt="CLINTON">CLINTON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="COLUMBIA" alt="COLUMBIA">COLUMBIA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CRAWFORD" alt="CRAWFORD">CRAWFORD</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="CUMBERLAND" alt="CUMBERLAND">CUMBERLAND</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu" role="none">
+                                <a href="#" role="menuitem" tabindex="-1" class="toggleStop" aria-label="D-I" alt="D-I">D-I</a>
+                                <ul class="dropdown-menu">
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="DAUPHIN" alt="DAUPHIN">DAUPHIN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="DELAWARE" alt="DELAWARE">DELAWARE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="ELK" alt="ELK">ELK</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="ERIE" alt="ERIE">ERIE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="FAYETTE" alt="FAYETTE">FAYETTE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="FOREST" alt="FOREST">FOREST</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="FRANKLIN" alt="FRANKLIN">FRANKLIN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="FULTON" alt="FULTON">FULTON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="GREENE" alt="GREENE">GREENE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="HUNTINGDON" alt="HUNTINGDON">HUNTINGDON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="INDIANA" alt="INDIANA">INDIANA</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu" role="none">
+                                <a href="#" role="menuitem" tabindex="-1" class="toggleStop" aria-label="J-L" alt="ADAMS">J-L</a>
+                                <ul class="dropdown-menu">
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="JEFFERSON" alt="JEFFERSON">JEFFERSON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="JUNIATA" alt="JUNIATA">JUNIATA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="LACKAWANNA" alt="LACKAWANNA">LACKAWANNA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="LANCASTER" alt="LANCASTER">LANCASTER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="LAWRENCE" alt="LAWRENCE">LAWRENCE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="LEBANON" alt="LEBANON">LEBANON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="LEHIGH" alt="LEHIGH">LEHIGH</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="LUZERNE" alt="LUZERNE">LUZERNE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="LYCOMING" alt="LYCOMING">LYCOMING</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu" role="none">
+                                <a href="#" role="menuitem" tabindex="-1" class="toggleStop" aria-label="M-N" alt="ADAMS">M-N</a>
+                                <ul class="dropdown-menu">
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="McKEAN" alt="McKEAN">McKEAN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="MERCER" alt="MERCER">MERCER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="MIFFLIN" alt="MIFFLIN">MIFFLIN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="MONROE" alt="MONROE">MONROE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="MONTGOMERY" alt="MONTGOMERY">MONTGOMERY</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="MONTOUR" alt="MONTOUR">MONTOUR</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="NORTHAMPTON" alt="NORTHAMPTON">NORTHAMPTON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="NORTHUMBERLAND" alt="NORTHUMBERLAND">NORTHUMBERLAND</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu" role="none">
+                                <a href="#" role="menuitem" tabindex="-1" class="toggleStop" aria-label="P-S" alt="ADAMS">P-S</a>
+                                <ul class="dropdown-menu">
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="PERRY" alt="PERRY">PERRY</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="PHILADELPHIA" alt="PHILADELPHIA">PHILADELPHIA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="PIKE" alt="PIKE">PIKE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="POTTER" alt="POTTER">POTTER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="SCHUYLKILL" alt="SCHUYLKILL">SCHUYLKILL</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="SNYDER" alt="SNYDER">SNYDER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="SOMERSET" alt="SOMERSET">SOMERSET</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="SULLIVAN" alt="SULLIVAN">SULLIVAN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="SUSQUEHANNA" alt="SUSQUEHANNA">SUSQUEHANNA</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu" role="none">
+                                <a href="#" role="menuitem" tabindex="-1" class="toggleStop" aria-label="T-Z" alt="ADAMS">T-Z</a>
+                                <ul class="dropdown-menu">
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="TIOGA" alt="TIOGA">TIOGA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="UNION" alt="UNION">UNION</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="VENANGO" alt="VENANGO">VENANGO</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="WARREN" alt="WARREN">WARREN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="WASHINGTON" alt="WASHINGTON">WASHINGTON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="WAYNE" alt="WAYNE">WAYNE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="WESTMORELAND" alt="WESTMORELAND">WESTMORELAND</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="WYOMING" alt="WYOMING">WYOMING</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata" aria-label="YORK" alt="YORK">YORK</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" aria-label="Offices" role="none">
+                        <a href="#" tabindex="0" role="menuitem" aria-label="Offices" class="dropdown-toggle"
+                           data-toggle="dropdown">Offices <b class="caret"></b></a>
+                        <ul class="dropdown-menu" style="right: 0; left: auto;">
+                            <li ng-repeat="offices in officeNames.Table" role="none"><a tabindex="-1" href="#" role="menuitem" aria-label="{{offices.OfficeName}}" ng-click="MenuClick(offices.OfficeID, offices.OfficeName)">{{offices.OfficeName}}</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" aria-label="Other Links" role="none">
+                        <a href="#" tabindex="0" aria-label="Other Links" role="menuitem" class="dropdown-toggle"
+                           data-toggle="dropdown">Other Links<b class="caret"></b></a>
+                        <ul class="dropdown-menu" style="right: 0; left: auto;">
+                            <li aria-label="Department of State" role="none"><a tabindex="-1" role="menuitem" aria-label="Department of State" href="https://www.dos.pa.gov/" target="_blank" rel="noopener noreferrer">Department of State</a></li>
+                            <li aria-label="Elections" role="none"><a tabindex="-1" role="menuitem" href="https://www.pavoterservices.pa.gov/Pages/SurePortalHome.aspx" target="_blank" rel="noopener noreferrer">Elections</a></li>
+                            <li aria-label="Campaign Finance Reporting" role="none"><a tabindex="-1" role="menuitem" href="https://www.campaignfinanceonline.pa.gov/" target="_blank" rel="noopener noreferrer">Campaign Finance Reporting</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel-heading-level1"
+	 style="background-color: black; padding-top: 10px; padding-bottom: 10px; color: white;">
+    <div class="panel-title" style="font-size:15px;" ng-cloak>
+        <div class="row" ng-show="(isReportCenter!=1  && isElectionFeed!=1)">
+            
+            <header style="background-color: #000; color: #fff; text-align: center;">
+                <h3 style="font-size: 15px; margin-bottom: 0.5rem;">{{electionDate | date:'EEEE, MMMM d, y'}}</h3>
+                <h1 style="font-size:15px;font-weight:bold">{{electionName}} ({{electionStatus}} Returns)</h1>
+                <h2 style="font-size:15px" ng-if="electionName && electionName.toLowerCase().indexOf('special') === -1">
+                    <span bind-unsafe-html="displayName"></span>
+                </h2>
+            </header>
+            
+            <div style="width: 80%; margin-left: 20px;">
+                
+                <div class="row" ng-show="false">
+                    <span style="color:#87A1C4">{{preincts.DistrictMessage}}</span>
+                </div>
+                <div class="row" style="margin-top: 10px; margin-right: 10px;" ng-show="false">
+                    <div ng-class="{'col-sm-12':showChart==true, 'col-sm-8':showChart==true}">
+                        <div class="progress" aria-label="votes">
+                            <div class="progress-bar progress-warning"
+                                 role="progressbar" aria-label="votes" aria-valuenow="{{preincts.Percentage}}" aria-valuemin="0" aria-valuemax="100"
+                                 ng-attr-style="width: {{preincts.Percentage}}%;background-color: #9DA0A0;">
+                                <small><span class="spantext" style="color:#6F7171">{{preincts.Percentage}}%</span></small>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="row" ng-show="isReportCenter==1 || isElectionFeed==1">
+            <div style="text-align:center; margin-top:15px;">
+                <h4><span bind-unsafe-html="displayName"></span></h4>
+            </div>
+        </div>
+     </div>
+</div>
+    <div id="expandMenu" class="mobileMenu">
+
+        <div class="mobileMenu-conent">
+            <div style="display: flex; flex-direction: row; justify-content: space-between; background-color: #112e47; color: white; ">
+                <div style="text-transform: none; font-size: 1em !important;">
+                    <div>
+                        <picture>
+                            <img alt="PABanner" src="/Images/logo-64w.png" />
+                        </picture>
+                        <div class="itcLubalin" style="font-size: 2rem;margin-left: 5px">Commonwealth of Pennsylvania</div>
+                        <div style="margin-top: 10px; margin-left: 5px">Election Results</div>
+                    </div>
+
+                </div>
+                <div id="closeMobileMenu" style="cursor:pointer">X</div>
+            </div>
+            <div>
+                <ul class="menu" role="menubar">
+                    <li aria-label="Home" ng-click="HomeClick()" role="none">
+                        <a role="menuitem" tabindex="0"  aria-label="Home" href="#" class="mobileHref">Home</a>
+                    </li>
+                    <li class="subMenu" aria-label="Reports" role="none">
+                        Reports
+                        <ul>
+                            <li role="none" aria-label="Reporting Center"><a tabindex="-1" role="menuitem" href="#" aria-label="Reporting Center" class="mobileHref" ng-click="LoadReportCenter()">Reporting Center</a></li>
+                            <li role="none" aria-label="Election Feed"><a tabindex="-1" role="menuitem" href="#" aria-label="Election Feed" class="mobileHref" ng-click="LoadElectionFeed()">Election Feed</a></li>
+                        </ul>
+                    </li>
+                    <li class="subMenu" role="none" aria-label="Elections">
+                        Elections
+                        <ul>
+                            <li role="none" ng-repeat="yearset in electionJson track by $index">
+                                <a  role="menuitem" href="#" tabindex="-1" aria-label="{{yearset.year}}" class="toggleStop mobileHref" alt="yearset.year">{{yearset.year}}</a>
+                                <ul >
+                                    <li role="none" ng-repeat="electionTypes in yearset.electiontype">
+                                        <a  role="menuitem" href="#" tabindex="-1" aria-label="{{electionTypes.type}}" class="toggleStop mobileHref" alt="electionTypes.type">{{electionTypes.type}}</a>
+                                        <ul style="right: auto;" >
+                                            <li role="none" ng-repeat="election in electionTypes.Elections">
+                                                <a tabindex="-1" role="menuitem" href="#" class="mobileHref" aria-label="{{election.ElectionName}}" ng-click="ElectionMenuClick(election.Electionid,election.ElectionType,election.ISActive)">{{election.ElectionName}}</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="subMenu" aria-label="Counties" role="none">
+                        Counties
+                        <ul >
+                            <li aria-label="A-B" role="none">
+                                A-B
+                                <ul >
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="ADAMS"  alt="ADAMS">ADAMS</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="ALLEGHENY" alt="ALLEGHENY">ALLEGHENY</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="ARMSTRONG" alt="ARMSTRONG">ARMSTRONG</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="BEAVER" alt="BEAVER">BEAVER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="BEDFORD" alt="BEDFORD">BEDFORD</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="BERKS"  alt="BERKS">BERKS</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="BLAIR"  alt="BLAIR">BLAIR</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="BRADFORD" alt="BRADFORD">BRADFORD</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="BUCKS"  alt="BUCKS">BUCKS</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="BUTLER" alt="BUTLER">BUTLER</a></li>
+                                </ul>
+                            </li>
+                            <li aria-label="C" role="none">
+                                C
+                                <ul >
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CAMBRIA" alt="CAMBRIA">CAMBRIA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CAMERON" alt="CAMERON">CAMERON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CARBON" alt="CARBON">CARBON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CENTRE" alt="CENTRE">CENTRE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CHESTER" alt="CHESTER">CHESTER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CLARION" alt="CLARION">CLARION</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CLEARFIELD" alt="CLEARFIELD">CLEARFIELD</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CLINTON" alt="CLINTON">CLINTON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="COLUMBIA" alt="COLUMBIA">COLUMBIA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CRAWFORD" alt="CRAWFORD">CRAWFORD</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="CUMBERLAND" alt="CUMBERLAND">CUMBERLAND</a></li>
+                                </ul>
+                            </li>
+                            <li aria-label="D-I" role="none">
+                                D-I
+                                <ul>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="DAUPHIN" alt="DAUPHIN">DAUPHIN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="DELAWARE" alt="DELAWARE">DELAWARE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="ELK" alt="ELK">ELK</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="ERIE" alt="ERIE">ERIE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="FAYETTE" alt="FAYETTE">FAYETTE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="FOREST" alt="FOREST">FOREST</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="FRANKLIN" alt="FRANKLIN">FRANKLIN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="FULTON" alt="FULTON">FULTON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="GREENE" alt="GREENE">GREENE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="HUNTINGDON" alt="HUNTINGDON">HUNTINGDON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="INDIANA" alt="INDIANA">INDIANA</a></li>
+                                </ul>
+                            </li>
+                            <li aria-label="J-L" role="none">
+                                J-L
+                                <ul>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="JEFFERSON" alt="JEFFERSON">JEFFERSON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="JUNIATA" alt="JUNIATA">JUNIATA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="LACKAWANNA" alt="LACKAWANNA">LACKAWANNA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="LANCASTER" alt="LANCASTER">LANCASTER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="LAWRENCE" alt="LAWRENCE">LAWRENCE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="LEBANON" alt="LEBANON">LEBANON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="LEHIGH" alt="LEHIGH">LEHIGH</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="LUZERNE" alt="LUZERNE">LUZERNE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="LYCOMING" alt="LYCOMING">LYCOMING</a></li>
+                                </ul>
+                            </li>
+                            <li aria-label="M-N" role="none">
+                                M-N
+                                <ul>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="McKEAN" alt="McKEAN">McKEAN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="MERCER" alt="MERCER">MERCER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="MIFFLIN" alt="MIFFLIN">MIFFLIN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="MONROE" alt="MONROE">MONROE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="MONTGOMERY" alt="MONTGOMERY">MONTGOMERY</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="MONTOUR" alt="MONTOUR">MONTOUR</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="NORTHAMPTON" alt="NORTHAMPTON">NORTHAMPTON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="NORTHUMBERLAND" alt="NORTHUMBERLAND">NORTHUMBERLAND</a></li>
+                                </ul>
+                            </li>
+                            <li aria-label="P-S" role="none">
+                                P-S
+                                <ul>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="PERRY" alt="PERRY">PERRY</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="PHILADELPHIA" alt="PHILADELPHIA">PHILADELPHIA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="PIKE" alt="PIKE">PIKE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="POTTER" alt="POTTER">POTTER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="SCHUYLKILL" alt="SCHUYLKILL">SCHUYLKILL</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="SNYDER" alt="SNYDER">SNYDER</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="SOMERSET" alt="SOMERSET">SOMERSET</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="SULLIVAN" alt="SULLIVAN">SULLIVAN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata  mobileHref" aria-label="SUSQUEHANNA" alt="SUSQUEHANNA">SUSQUEHANNA</a></li>
+                                </ul>
+                            </li>
+                            <li aria-label="T-Z" role="none">
+                                T-Z
+                                <ul>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="TIOGA" alt="TIOGA">TIOGA</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="UNION" alt="UNION">UNION</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="VENANGO" alt="VENANGO">VENANGO</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="WARREN" alt="WARREN">WARREN</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="WASHINGTON" alt="WASHINGTON">WASHINGTON</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="WAYNE" alt="WAYNE">WAYNE</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="WESTMORELAND" alt="WESTMORELAND">WESTMORELAND</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="WYOMING" alt="WYOMING">WYOMING</a></li>
+                                    <li role="none"><a tabindex="-1" role="menuitem" href="#" class="countydata mobileHref" aria-label="YORK" alt="YORK">YORK</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="subMenu" aria-label="Offices" role="none">
+                        Offices
+                        <ul>
+                            <li ng-repeat="offices in officeNames.Table" role="none">
+                                <a href="#" tabindex="-1" role="menuitem" aria-label="{{offices.OfficeName}}" class="mobileHref" ng-click="MenuClick(offices.OfficeID, offices.OfficeName)">{{offices.OfficeName}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="subMenu" aria-label="Other Links" role="none">
+                        Other Links
+                        <ul>
+                            <li role="none" aria-label="Department of State"><a tabindex="-1" role="menuitem" aria-label="Department of State" class="mobileHref" href="https://www.dos.pa.gov/" target="_blank" rel="noopener noreferrer">Department of State</a></li>
+                            <li role="none" aria-label="Elections"><a tabindex="-1" role="menuitem" aria-label="Elections" class="mobileHref" href="https://www.pavoterservices.pa.gov/Pages/SurePortalHome.aspx" target="_blank" rel="noopener noreferrer">Elections</a></li>
+                            <li role="none" aria-label="Campaign Finance Reporting"><a tabindex="-1" role="menuitem" aria-label="Campaign Finance Reporting" class="mobileHref" href="https://www.campaignfinanceonline.pa.gov/" target="_blank" rel="noopener noreferrer">Campaign Finance Reporting</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript' src='/Scripts/common.js?v=1.2'></script>
+
+<script type="text/javascript">
+    $(function () {
+        $(".countydata").click(function () {
+
+            
+            var electionID = localStorage.getItem('ElectionId') || readQueryStringValue('ELECTIONID');
+            var electionType = localStorage.getItem('ElectionType') || readQueryStringValue('ElectionType');
+
+            var isActive = localStorage.getItem('IsActive') || readQueryStringValue('IsActive')|| window.sessionStorage.getItem('IsActive');
+            var officeId = localStorage.getItem('officeId') || readQueryStringValue('officeId');
+            var districtName = localStorage.getItem('districtName') || readQueryStringValue('districtname')|| window.sessionStorage.getItem('districtName');
+
+            var districtId = localStorage.getItem('districtId') || sessionStorage.getItem('DistrictId') || readQueryStringValue('districtId') || 1;
+
+            window.localStorage['currentURL'] = window.location.href;
+            const countyName = this.text.toUpperCase() === 'MCKEAN' ? 'McKEAN' : this.text.toUpperCase();
+            const x = encodeURI(getRedirectURL(window.location.href, applicationPath, countyName, electionID, electionType, isActive, districtId, officeId, 'countymenu', districtName));
+            console.log('redirecting to ' + x);
+            window.location.href = x;
+
+        });
+
+        function getAllQueryStringKeys(paraName) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const keys ='';
+
+            for (const key of urlParams.keys()) {
+                if (key.toLocaleLowerCase() == paraName.toLocaleLowerCase())
+                    return key;
+            }
+
+            return paraName;
+        }
+
+        function readQueryStringValue(paraName) {
+            
+            var keys = getAllQueryStringKeys(paraName);
+            var urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get(keys);
+            return myParam;
+        }
+
+    });
+
+    $(document).ready(function () {
+
+        function resetCountySMenuToggle() {
+            $('.dropdown a.toggleStop').each(function (index, value) {
+                if ($(this).next('ul').css('display') === 'block') {
+                    $(this).next('ul').toggle();
+                }
+            });
+
+          
+        }
+        function resetAllMenuToggle() {
+            $('.dropdown').each(function (item, index) {
+                $(this).find('.dropdown-menu').each(function (item1, index) {
+
+                    if ($(this).css('display') === 'block') {
+                       // $(this).toggle();
+                        $(this).removeAttr('style');
+                    }
+                })
+            })
+        }
+
+       
+
+        function resetMenuToggle(currObj) {
+            $(currObj).each(function (item, index) {
+                $(this).find('ul').each(function (item1, index) {
+                    if ($(this).css('display') === 'block') {
+                        //$(this).toggle();
+                        $(this).removeAttr('style');
+                    }
+                })
+            })
+        }
+
+
+        
+
+        $('.menu').on('click', '> li', function (event) {
+            var submenu = $(this).children('ul');
+            if (submenu.length) {
+                submenu.slideToggle();
+                $(this).toggleClass('open');
+            }
+            event.stopPropagation(); // Stop the event from bubbling up to the document
+        });
+
+        // Event delegation for inner list items
+        $('.menu').on('click', 'li ul li', function (event) {
+            event.stopPropagation(); // Prevents the click event from bubbling up
+            var subsubmenu = $(this).children('ul');
+            if (subsubmenu.length) {
+                subsubmenu.slideToggle();
+                $(this).toggleClass('open');
+            }
+        });
+
+        function isValidHttpUrl(string) {
+            try {
+                const newUrl = new URL(string);
+                return newUrl.protocol === 'http:' || newUrl.protocol === 'https:';
+            }
+            catch (err) {
+                return false;
+            }
+        }
+
+        function attributeEncode(str) {
+            return str.replace(/["&'<>]/g, function (char) {
+                switch (char) {
+                    case '"': return '&quot;';
+                    case '&': return '&amp;';
+                    case "'": return '&#39;';
+                    case '<': return '&lt;';
+                    case '>': return '&gt;';
+                }
+            });
+        }
+
+        $('.dropdown-toggle').on('keydown', function (e) {
+            var $this = $(this);
+            var $parent = $this.closest('li');
+            var $submenu = $parent.find('.dropdown-menu').first();
+
+            switch (e.key) {
+                case "Tab":
+                    if ($('li.dropdown').hasClass('open')) {
+                        var obj = $('li.dropdown.open a.dropdown-toggle');
+                        if (obj.length > 0) {
+                            obj.dropdown('toggle');
+                            obj.parent().removeClass('open');
+
+                        }
+                    } else {
+                        resetAllMenuToggle();
+                    }
+                    break;
+                case 'Escape':
+                    
+                    resetAllMenuToggle();
+
+                    if ($('li.dropdown').hasClass('open')) {
+                        var obj = $('li.dropdown.open a.dropdown-toggle');
+                        if (obj.length > 0) {
+                            obj.dropdown('toggle');
+                            obj.parent().removeClass('open');
+
+                        }
+                    }
+                    e.stopPropagation();
+
+                    break;
+                case 'ArrowDown':
+                    e.preventDefault();
+
+                    if (!$parent.hasClass('open')) {
+                        if ($this.hasClass('dropdown-toggle')) {
+                            $this.dropdown('toggle');
+                            $submenu.find('li:first-child > a').focus();
+                        }
+                    } else {
+                        $submenu.find('li:first-child > a').focus();
+                    }
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+
+                    if (($submenu || '').length > 0) {
+                        $submenu.toggle();
+                        $submenu.find('li:first-child > a').focus();
+                    }
+
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    if ($parent.hasClass('open')) {
+                        $parent.removeClass('open');
+                        resetMenuToggle($parent);
+                        $parent.closest('.dropdown-menu').prev('a').focus();
+                    }
+                    break;
+                case 'Enter':
+                    e.preventDefault();
+                    if ($this.attr('target') === '_blank') {
+                        const url = encodeURI($this.attr('href'));
+                        const urlencoded = attributeEncode(url);
+                        if (isValidHttpUrl(urlencoded)) {
+                            $this.click();
+                        }
+                    } else {
+                        
+                        var nextSubMenu = $this.next('ul.dropdown-menu');
+                        if ((nextSubMenu || '').length <= 0) {
+                            event = 'enter';
+                            $this.click();
+                        } else {
+                            if (($submenu || '').length > 0) {
+                                // resetCountySMenuToggle();
+                                $submenu.toggle();
+                                $submenu.find('li:first-child > a').focus();
+                            }
+                        }
+                    }
+
+                    break;
+            }
+        });
+
+
+       
+
+        var event = '';
+        $(document).on('click', function (a) {
+            if (event !== 'enter') {
+                var $this = $(this);
+                resetAllMenuToggle();
+               
+            } else {
+                event = '';
+            }
+        });
+      
+
+        $(document).on('keydown', '.dropdown-menu a', function (e) {
+            var $this = $(this);
+            var $parentLi = $this.parent('li');
+            var $submenu = $parentLi.find('.dropdown-menu').first();
+
+            switch (e.key) {
+                case "Tab":
+                    // e.preventDefault();
+                    if ($('li.dropdown').hasClass('open')) {
+                        var obj = $('li.dropdown.open a.dropdown-toggle');
+                        if (obj.length > 0) {
+                            obj.dropdown('toggle');
+                            obj.parent().removeClass('open');
+                        }
+                    }
+                    //} else {
+                    //    resetAllMenuToggle();
+                    //}
+                    resetAllMenuToggle();
+
+                    break;
+                case 'Escape':
+                    
+                    if ($('li.dropdown').hasClass('open')) {
+                        var obj = $('li.dropdown.open a.dropdown-toggle');
+                        if (obj.length > 0) {
+                            obj.parent().removeClass('open');
+
+                        }
+                        e.preventDefault();
+                    } 
+
+                    resetAllMenuToggle();
+                    break;
+                case 'ArrowDown':
+                    e.preventDefault();
+                    if ($parentLi.next('li').length) {
+                        $parentLi.next('li').find('a').first().focus();
+                    } else {
+                        $parentLi.siblings('li').first().find('a').first().focus();
+                    }
+                    break;
+                case 'ArrowUp':
+                    e.preventDefault();
+                    if ($parentLi.prev('li').length) {
+                        $parentLi.prev('li').find('a').first().focus();
+                    } else {
+                        $parentLi.siblings('li').last().find('a').first().focus();
+                    }
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+
+                    if (($submenu || '').length > 0) {
+                        // resetCountySMenuToggle();
+                        $submenu.toggle();
+                        $submenu.find('li:first-child > a').focus();
+                    }
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    if ($parentLi.closest('.dropdown-menu').parent('li').hasClass('dropdown-submenu')) {
+                        resetMenuToggle($parentLi.closest('.dropdown-menu').parent('li'));
+                        $parentLi.closest('.dropdown-menu').prev('a').focus();
+                    }
+                    break;
+
+                case 'Enter':
+                    e.preventDefault();
+                    if ($this.attr('target') === '_blank') {
+                        const url = encodeURI($this.attr('href'));
+                        const urlencoded = attributeEncode(url);
+                        if (isValidHttpUrl(urlencoded)) {
+                            $this.click();
+                        }
+                    } else {
+                        //event = 'enter'
+                        //$this.click();
+                        var nextSubMenu = $this.next('ul.dropdown-menu');
+                        if ((nextSubMenu || '').length <= 0) { $this.click(); } else {
+                            if (($submenu || '').length > 0) {
+                                // resetCountySMenuToggle();
+                                $submenu.toggle();
+                                $submenu.find('li:first-child > a').focus();
+                            }
+                        }
+                    }
+
+                    break;
+                default:
+                    resetAllMenuToggle();
+                    if ($('.open').length > 0) {
+                        e.preventDefault();
+                        resetCountySMenuToggle();
+                        var obj = $('li.dropdown.open a.dropdown-toggle');
+                        if (obj.length > 0) {
+                            obj.dropdown('toggle');
+                        }
+                    }
+                    break;
+            }
+        });
+
+    });
+
+    $("#expandMobileMene").click(function () {
+        $('#expandMenu').show();
+        //$(".overlay").show();
+    });
+    $("#closeMobileMenu").click(function () {
+        $('#expandMenu').hide();
+        //$(".overlay").hide();
+    });
+</script>
+            </header>
+
+            <!-- Main Body Section with ARIA Landmark and Region Management -->
+            <main class="body" role="main" aria-labelledby="main-content">
+                
+
+<style>
+    h5.boxtitle {
+        display: flex;
+        font-size: 16px !important;
+        justify-content: space-between;
+    }
+
+        h5.boxtitle span:nth-child(1) {
+            /*order: 1; /* Span 1 on the left */
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 40%;
+        }
+
+        h5.boxtitle span:nth-child(2) {
+            /*order: 2; /* Span 2 in the middle */
+            flex: 0 0 auto;
+            width: 25%;
+        }
+
+        h5.boxtitle span:nth-child(3) {
+            /*order: 3; /* Span 3 on the right */
+            flex: 0 0 auto;
+            width: 25%;
+            text-align: right;
+        }
+
+    .container {
+        display: flex;
+        width: 100%;
+        height: 100px; /* Adjust as needed */
+        margin-bottom: 2px;
+        /*background-color: #f1f1f1;*/
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important
+    }
+
+    .div1, .div2, .div3 {
+        flex: 1;
+        font-weight: bold;
+        background-color: #f1f1f1;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .div1, .div2 {
+        margin-right: 10px;
+    }
+
+        .div2.hidden, .div3.hidden {
+            display: none;
+        }
+
+    .container.single .div1 {
+        flex: 1 1 100%;
+        margin-right: 0px;
+    }
+
+    .ballotQuestions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .instruction {
+        margin: 2px 0 2px 0;
+        background-color: #f1f1f1;
+        height: 100px;
+        width: 100%;
+        text-align: center;
+    }
+
+        .instruction a {
+            color: #226BAA;
+        }
+
+    .panel {
+        box-shadow: none !important;
+    }
+
+    /* Adjustments for mobile view */
+    @media screen and (max-width: 767px) {
+
+
+        h5.boxtitle {
+            font-size: 14px !important;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+            h5.boxtitle span:nth-child(2),
+            h5.boxtitle span:nth-child(3) {
+                width: 100%;
+                text-align: right;
+            }
+
+            h5.boxtitle span:nth-child(1) {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 5px; /* Add some space between spans */
+            }
+
+
+        .candidateDetails {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+            .candidateDetails > div:nth-child(1) { /*Candidate Name*/
+                width: 50% !important;
+            }
+
+            .candidateDetails > div:nth-child(2) { /*Candidate Progress and percentage*/
+                width: 50% !important;
+                flex-direction: row !important;
+                margin-bottom: 5px !important;
+            }
+
+        .progress {
+            margin-bottom: 0px !important;
+            margin-right: 5px !important;
+            width: 25%;
+        }
+
+            .progress > div:nth-child(1) {
+                margin-bottom: 10px !important;
+            }
+
+        .summaryData {
+            width: 100% !important;
+        }
+
+        .candidateProgressPercentage {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap
+        }
+
+            .candidateProgressPercentage > div:nth-child(1) {
+                order: 2;
+            }
+
+            .candidateProgressPercentage > div:nth-child(2) {
+                order: 1;
+            }
+
+        .ballotQuestions > div:nth-child(2) {
+            order: 3;
+        }
+
+        .ballotQuestions > div:nth-child(3) {
+            order: 2;
+            padding-right: 5px;
+        }
+
+        .candidateContainer > div:nth-child(2) {
+            margin-right: 0px;
+        }
+        .instruction-data-sticky {
+            display: none !important;
+        }
+    }
+
+    /* Adjustments for Tab view */
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+        .mainContainer {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        .candidateDetails {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .progress {
+            width: 50%;
+            margin-right: 10px;
+        }
+
+        .countyMap {
+            padding: 0px;
+        }
+
+        .summaryData {
+            width: 100% !important;
+        }
+
+        .candidateContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .parties {
+            width: 100%;
+            margin-right: 5px
+        }
+
+        .candidateProgressPercentage {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap
+        }
+        .instruction-data-sticky {
+            display: none !important;
+        }
+    }
+
+    /*Desktop*/
+    @media (min-width: 1025px) {
+
+        .candidateContainer > div:nth-child(2) {
+            margin-right: 0px;
+        }
+
+        .mainContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .candidateDetails {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .progress {
+            width: 50%;
+            margin-right: 10px;
+        }
+
+        .countyMap {
+            width: 30%;
+            padding: 40px;
+        }
+
+        .summaryData {
+            width: 70%
+        }
+
+        .candidateProgressPercentage {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap
+        }
+
+        .candidateContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .parties {
+            width: 50%;
+            margin-right: 5px
+        }
+    }
+
+    .instruction-data-sticky {
+        position: sticky;
+        top: 80px; /* below the site sticky instruction + header */
+        z-index: 20;
+        background-color: firebrick;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+
+    /* REQUIRED: allow sticky to work */
+    .summaryData,
+    .countyMap,
+    .mainContainer {
+        overflow: visible !important;
+    }
+
+</style>
+<div ng-controller="SummaryElectionController">
+    <div backdrop="true" cg-busy="[promiseGet]">
+        <div class="panel panel-default" style="border-color:white;">
+            
+            <div class="mainContainer">
+                <div class="countyMap">
+                    <style>
+    .popup-window {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        border: 2px solid #000;
+        background-color: #fff;
+        z-index: 1000;
+        overflow: auto;
+    }
+
+        .popup-window iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+    .highlight {
+        background-color: grey;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: white;
+        color: black;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .dropdownCnt {
+        position: relative;
+        display: inline-block;
+        margin-top: 15px;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #searchInput {
+        box-sizing: border-box;
+        padding: 8px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .dropdownCnt-content {
+        display: none;
+        position: absolute;
+        min-width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        box-shadow: 0px 8px 16px 0px rgba (0,0,0,0.2);
+        border: 1px solid #ccc;
+        z-index: 1100;
+        background-color: white;
+        width: 100%;
+    }
+
+        .dropdownCnt-content a {
+            padding: 8px 16px;
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+
+            .dropdownCnt-content a:hover {
+                background-color: #ddd;
+            }
+    .instruction-data-sticky {
+        z-index: 500;
+    }
+
+    /* Adjustments for mobile view */
+    @media screen and (max-width: 767px) {
+        .mapContainer {
+            display: none;
+        }
+
+        .expandButtonDiv {
+            display: none;
+        }
+
+        .filterBy {
+            padding-bottom: 5px;
+            padding-left: 5px;
+        }
+
+        .dropdownCnt {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            z-index:auto;
+        }
+
+        .selectedCounty {
+            padding: 10px;
+            background-color: #112e47;
+            color: #fff;
+        }
+        .instruction-data-sticky {
+            display: none !important;
+        }
+    }
+
+    /*Tab view*/
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .mapContainer {
+            display: none;
+        }
+
+        .expandButtonDiv {
+            display: none;
+        }
+
+        .filterBy {
+            padding-bottom: 5px;
+            padding-left: 5px;
+        }
+
+        .dropdownCnt {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            z-index: auto;
+        }
+
+        .selectedCounty {
+            padding: 10px;
+            background-color: #112e47;
+            color: #fff;
+        }
+        .instruction-data-sticky {
+            display: none !important;
+        }
+    }
+
+    /*Desktop view*/
+    @media (min-width: 1025px) {
+
+        .selectedCounty {
+            padding: 10px;
+            background-color: #112e47;
+            color: #fff;
+            margin-left: 0px;
+            margin-bottom: 5px;
+        }
+
+        .instruction-data-sticky {
+            position: sticky;
+            top: 80px; /* adjust based on header height */
+            z-index: 999;
+            background-color: firebrick;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .countyMap,
+        .mainContainer {
+            overflow: visible !important;
+        }
+    }
+</style>
+<div ng-controller="CountyMapViewController">
+
+    <div align="left" backdrop="true">
+
+        <div style="color: White;" ng-if="countyName.length > 0">
+            <span id="countyName">
+                <span style="padding-right: 15px;">{{formatCountyName(countyName)}}{{' County '}}</span>
+                <span style="cursor:pointer;font-size:medium;" ng-click="resetCounty('countymap');">X</span>
+
+            </span>
+        </div>
+
+        <div class="filterBy">
+            <h4 style="font-weight: bold; font-size: 14px !important; " id="filterByLabel">Filter by county</h4>
+        </div>
+
+        <div style="float: right;" class="expandButtonDiv">
+            <button id="expand" title="Expand" value="Expand"><i class="fa fa-expand"></i></button>
+        </div>
+        
+
+        <div class="overlay"></div>
+        <div class="popup-window" style="z-index: 1200;">
+            <button class="close-popup">X</button>
+            <div style="text-align: center; padding-top: 15px; font-weight: bold;">Filter by County</div>
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+        <div align="center" style="background-color: #f2f2f2; padding: 20px; border-radius: 10px;" class="mapContainer">
+
+            <img class="map" id="my_image" src="/Images/pennsylvania-county-map.gif" alt="PACounty" usemap="#world" width="80%" />
+
+        </div>
+        <div class="dropdownCnt">
+            <input type="text" id="searchInput" aria-label="Seacrch counties" placeholder="Search counties" autocomplete="off" value="{{selectedCountyName}}">
+            <div id="dropdownCnt-content" class="dropdownCnt-content">
+                <a href="#" data-value="ADAMS">ADAMS</a>
+                <a href="#" data-value="ALLEGHENY">ALLEGHENY</a>
+                <a href="#" data-value="ARMSTRONG">ARMSTRONG</a>
+                <a href="#" data-value="BEAVER">BEAVER</a>
+                <a href="#" data-value="BEDFORD">BEDFORD</a>
+                <a href="#" data-value="BERKS">BERKS</a>
+                <a href="#" data-value="BLAIR">BLAIR</a>
+                <a href="#" data-value="BRADFORD">BRADFORD</a>
+                <a href="#" data-value="BUCKS">BUCKS</a>
+                <a href="#" data-value="BUTLER">BUTLER</a>
+                <a href="#" data-value="CAMBRIA">CAMBRIA</a>
+                <a href="#" data-value="CAMERON">CAMERON</a>
+                <a href="#" data-value="CARBON">CARBON</a>
+                <a href="#" data-value="CENTRE">CENTRE</a>
+                <a href="#" data-value="CHESTER">CHESTER</a>
+                <a href="#" data-value="CLARION">CLARION</a>
+                <a href="#" data-value="CLEARFIELD">CLEARFIELD</a>
+                <a href="#" data-value="CLINTON">CLINTON</a>
+                <a href="#" data-value="COLUMBIA">COLUMBIA</a>
+                <a href="#" data-value="CRAWFORD">CRAWFORD</a>
+                <a href="#" data-value="CUMBERLAND">CUMBERLAND</a>
+                <a href="#" data-value="DAUPHIN">DAUPHIN</a>
+                <a href="#" data-value="DELAWARE">DELAWARE</a>
+                <a href="#" data-value="ELK">ELK</a>
+                <a href="#" data-value="ERIE">ERIE</a>
+                <a href="#" data-value="FAYETTE">FAYETTE</a>
+                <a href="#" data-value="FOREST">FOREST</a>
+                <a href="#" data-value="FRANKLIN">FRANKLIN</a>
+                <a href="#" data-value="FULTON">FULTON</a>
+                <a href="#" data-value="GREENE">GREENE</a>
+                <a href="#" data-value="HUNTINGDON">HUNTINGDON</a>
+                <a href="#" data-value="INDIANA">INDIANA</a>
+                <a href="#" data-value="JEFFERSON">JEFFERSON</a>
+                <a href="#" data-value="JUNIATA">JUNIATA</a>
+                <a href="#" data-value="LACKAWANNA">LACKAWANNA</a>
+                <a href="#" data-value="LANCASTER">LANCASTER</a>
+                <a href="#" data-value="LAWRENCE">LAWRENCE</a>
+                <a href="#" data-value="LEBANON">LEBANON</a>
+                <a href="#" data-value="LEHIGH">LEHIGH</a>
+                <a href="#" data-value="LUZERNE">LUZERNE</a>
+                <a href="#" data-value="LYCOMING">LYCOMING</a>
+                <a href="#" data-value="McKEAN">McKEAN</a>
+                <a href="#" data-value="MERCER">MERCER</a>
+                <a href="#" data-value="MIFFLIN">MIFFLIN</a>
+                <a href="#" data-value="MONROE">MONROE</a>
+                <a href="#" data-value="MONTGOMERY">MONTGOMERY</a>
+                <a href="#" data-value="MONTOUR">MONTOUR</a>
+                <a href="#" data-value="NORTHAMPTON">NORTHAMPTON</a>
+                <a href="#" data-value="NORTHUMBERLAND">NORTHUMBERLAND</a>
+                <a href="#" data-value="PERRY">PERRY</a>
+                <a href="#" data-value="PHILADELPHIA">PHILADELPHIA</a>
+                <a href="#" data-value="PIKE">PIKE</a>
+                <a href="#" data-value="POTTER">POTTER</a>
+                <a href="#" data-value="SCHUYLKILL">SCHUYLKILL</a>
+                <a href="#" data-value="SNYDER">SNYDER</a>
+                <a href="#" data-value="SOMERSET">SOMERSET</a>
+                <a href="#" data-value="SULLIVAN">SULLIVAN</a>
+                <a href="#" data-value="SUSQUEHANNA">SUSQUEHANNA</a>
+                <a href="#" data-value="TIOGA">TIOGA</a>
+                <a href="#" data-value="UNION">UNION</a>
+                <a href="#" data-value="VENANGO">VENANGO</a>
+                <a href="#" data-value="WARREN">WARREN</a>
+                <a href="#" data-value="WASHINGTON">WASHINGTON</a>
+                <a href="#" data-value="WAYNE">WAYNE</a>
+                <a href="#" data-value="WESTMORELAND">WESTMORELAND</a>
+                <a href="#" data-value="WYOMING">WYOMING</a>
+                <a href="#" data-value="YORK">YORK</a>
+
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <map name="world">
+        <area shape="poly" class="maparea" href="#" data-county-id="2290" title="Adams" alt="Adams"
+              coords="392,426,392,394,395,387,425,378,434,372,440,377,447,381,454,394,452,398,454,404,450,410,450,426,392,426" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2291" title="Allegheny" alt="Allegheny"
+              coords="29,303,52,284,56,274,110,271,111,276,103,284,103,291,108,293,111,309,105,318,100,343,90,347,79,343,83,340,51,327,30,303" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2292" title="Armstrong" alt="Armstrong"
+              coords="113,272,113,194,113,199,116,209,120,211,122,218,134,221,140,221,152,218,161,216,168,211,172,211,172,255,142,292,140,295,127,287,130,282,116,272,113,275" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2293" title="Beaver" alt="Beaver"
+              coords="9,303,8,239,52,242,55,279,31,303,8,302" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2294" title="Bedford" alt="Bedford"
+              coords="223,427,228,415,228,378,228,371,244,339,245,329,269,341,270,334,287,344,292,336,295,344,307,354,300,368,302,373,300,373,300,381,280,425,223,427" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2295" title="Berks" alt="Berks"
+              coords="592,359,558,331,555,324,523,302,533,300,542,300,569,290,574,287,577,277,590,272,635,309,617,344,592,359" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2296" title="Blair" alt="Blair"
+              coords="248,329,254,322,256,300,269,287,269,277,270,275,272,277,280,263,309,260,298,268,297,275,302,280,301,290,302,295,307,295,308,290,307,300,309,302,307,307,295,329,290,341,270,334,270,341,263,334,249,329,248,327" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2297" title="Bradford" alt="Bradford"
+              coords="461,51,465,120,549,127,552,110,563,110,558,54,459,51" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2298" title="Bucks" alt="Bucks"
+              coords="641,314,677,282,678,285,681,288,686,288,690,290,693,300,695,312,695,314,703,315,708,318,709,324,711,329,715,331,720,336,724,343,730,345,734,351,735,356,732,361,725,361,722,365,715,368,711,370,705,373,704,373,708,366,706,362,643,313" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2299" title="Butler" alt="Butler"
+              coords="55,271,54,239,52,220,75,190,113,188,111,272,55,271" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2300" title="Cambria" alt="Cambria"
+              coords="193,334,223,261,281,263,274,275,270,275,270,281,268,286,260,295,258,300,255,317,249,324,244,331,243,341,213,341,211,336,207,335,193,335" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2301" title="Cameron" alt="Cameron"
+              coords="271,115,272,150,292,150,293,164,295,164,295,179,312,181,325,157,327,140,319,137,298,115,272,115" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2302" title="Carbon" alt="Carbon"
+              coords="576,232,600,220,609,217,609,213,604,209,606,202,617,195,624,201,639,220,631,227,641,249,629,250,617,254,606,260,576,232" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2303" title="Centre" alt="Centre"
+              coords="279,263,277,258,282,249,290,243,297,238,298,232,302,231,306,225,312,227,314,223,315,215,317,206,313,197,325,191,329,186,329,181,336,178,339,188,350,188,352,195,360,200,377,206,386,222,416,216,430,213,420,229,403,242,362,264,352,263,347,260,333,268,309,260,280,260" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2304" title="Chester" alt="Chester"
+              coords="561,426,577,402,577,389,585,375,584,363,618,343,639,359,644,362,644,367,649,367,655,372,650,379,644,384,635,390,627,404,614,413,603,426,561,426" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2305" title="Clarion" alt="Clarion"
+              coords="111,188,115,188,118,180,119,175,122,170,122,165,130,163,137,161,137,153,147,153,148,146,172,146,172,207,163,215,150,217,137,220,125,217,121,210,118,207,114,200,113,190" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2306" title="Clearfield" alt="Clearfield"
+              coords="223,261,223,195,228,184,244,183,244,175,312,181,318,191,311,199,314,207,314,216,314,221,309,223,303,223,296,237,291,240,282,250,277,259,277,263,223,261" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2307" title="Clinton" alt="Clinton"
+              coords="313,181,327,157,327,137,373,140,381,154,389,159,410,184,432,209,387,223,378,206,363,199,356,199,351,186,340,186,339,174,327,181,328,189,322,191,314,181" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2308" title="Columbia" alt="Columbia"
+              coords="497,193,502,193,525,168,538,168,536,183,543,197,545,197,550,227,542,237,538,249,528,254,525,244,513,247,513,237,511,234,513,225,506,217,505,210,501,207,497,193" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2309" title="Crawford" alt="Crawford"
+              coords="8,76,122,76,122,113,98,115,71,137,9,135,9,78" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2310" title="Cumberland" alt="Cumberland"
+              coords="393,387,383,372,381,363,375,352,400,335,398,340,408,338,414,338,453,333,459,330,459,335,467,344,459,347,462,354,452,355,429,375,394,386" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2311" title="Dauphin" alt="Dauphin"
+              coords="462,329,459,322,454,324,450,322,450,318,452,312,457,307,457,302,453,298,453,290,454,284,463,281,489,275,509,290,491,304,505,349,484,360,484,352,467,344,462,335,461,327" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2312" title="Delaware" alt="Delaware"
+              coords="628,408,628,404,638,390,645,387,646,386,646,381,651,379,651,373,656,372,671,390,668,400,673,403,666,405,660,404,650,413,640,409,627,406" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2313" title="Elk" alt="Elk"
+              coords="205,114,263,113,265,118,271,118,272,150,292,151,292,163,295,162,295,179,245,174,243,181,237,181,234,178,232,177,233,172,201,157,191,157,188,157,188,148,191,147,191,145,205,145,205,113" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2314" title="Erie" alt="Erie"
+              coords="7,75,8,55,55,31,61,22,67,27,103,8,103,49,122,52,122,75,8,76" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2315" title="Fayette" alt="Fayette"
+              coords="86,426,83,420,86,416,82,409,82,402,82,394,79,390,73,390,75,382,76,381,79,382,87,379,89,377,87,371,94,367,90,361,105,362,116,367,124,368,137,360,154,371,154,376,159,376,146,404,151,410,151,415,146,426,86,425" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2316" title="Forest" alt="Forest"
+              coords="135,113,205,113,201,141,191,142,190,146,186,146,186,161,173,161,172,147,148,146,148,153,138,152,138,146,132,143,135,137,135,116" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2317" title="Franklin" alt="Franklin"
+              coords="313,426,329,402,334,382,363,338,370,345,373,345,373,352,381,365,393,387,389,392,392,426,313,426" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2318" title="Fulton" alt="Fulton"
+              coords="277,426,298,379,298,375,303,372,298,370,303,365,308,355,315,362,333,367,341,372,331,382,331,389,323,409,313,426,277,426" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2319" title="Greene" alt="Greene"
+              coords="7,426,7,388,13,389,19,387,22,387,36,379,41,382,51,382,57,383,63,383,66,379,67,384,72,387,73,392,78,392,81,402,79,406,84,411,79,416,86,426,8,426" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2320" title="Huntingdon" alt="Huntingdon"
+              coords="341,372,335,365,328,365,327,362,318,360,296,345,293,333,308,303,306,298,308,288,303,293,302,291,303,281,297,271,308,261,330,269,346,261,355,264,360,264,362,265,362,271,359,279,345,288,347,301,335,315,338,315,341,320,350,320,356,318,361,338,343,370" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2321" title="Indiana" alt="Indiana"
+              coords="142,293,170,254,172,232,222,234,223,264,202,313,195,311,193,318,189,318,185,320,183,319,183,315,178,313,175,314,170,311,165,313,163,311,163,306,153,303,151,308,143,301,142,296" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2322" title="Jefferson" alt="Jefferson"
+              coords="170,232,170,227,170,225,173,163,180,161,184,163,188,161,195,161,202,156,232,173,232,178,234,180,234,185,227,185,223,195,223,232,173,232" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2323" title="Juniata" alt="Juniata"
+              coords="362,338,356,319,373,303,372,296,389,288,389,284,413,269,431,271,437,269,438,271,445,270,450,276,456,276,446,281,427,285,430,290,382,315,382,319,363,335" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2324" title="Lackawanna" alt="Lackawanna"
+              coords="643,110,645,175,635,180,633,179,629,184,628,188,625,189,622,189,620,186,618,174,617,174,615,165,615,161,601,152,598,153,597,147,604,132,602,131,611,111,641,110" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2325" title="Lancaster" alt="Lancaster"
+              coords="555,331,591,360,582,362,582,376,576,389,577,392,576,394,576,402,568,419,559,426,545,426,531,406,531,405,528,402,527,395,520,390,513,387,512,379,509,375,500,373,497,371,493,371,486,361,489,356,493,356,502,351,523,343,537,341,556,331" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2326" title="Lawrence" alt="Lawrence"
+              coords="7,196,40,196,41,197,54,199,60,207,51,218,52,240,7,242,8,196" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2327" title="Lebanon" alt="Lebanon"
+              coords="504,350,490,304,507,291,556,330,537,340,523,343,505,350" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2328" title="Lehigh" alt="Lehigh"
+              coords="590,270,601,268,604,263,613,259,617,254,625,254,625,259,631,264,634,263,640,274,647,274,652,280,651,287,657,293,641,313,591,272" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2329" title="Luzerne" alt="Luzerne"
+              coords="540,154,575,154,596,147,597,153,609,161,614,159,613,165,615,174,618,175,620,188,625,191,622,196,617,195,607,200,603,201,604,212,608,216,572,233,549,226,547,195,542,195,534,181,536,167,542,154" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2330" title="Lycoming" alt="Lycoming"
+              coords="375,127,451,126,465,120,474,120,480,148,502,169,518,170,502,193,479,186,474,190,465,190,461,195,454,194,453,201,429,207,409,180,402,177,390,163,390,159,383,158,381,151,375,137,376,126" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2331" title="McKEAN" alt="McKEAN"
+              coords="209,52,298,51,297,114,271,114,271,118,264,118,264,111,204,113,205,82,209,79,210,57,207,57,209,51" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2332" title="Mercer" alt="Mercer"
+              coords="7,137,72,136,73,188,60,205,56,199,41,197,41,194,34,194,34,196,8,197,8,136" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2333" title="Mifflin" alt="Mifflin"
+              coords="405,243,405,265,410,269,387,280,388,287,375,297,372,303,355,319,349,320,347,322,340,322,341,318,336,315,349,301,345,291,355,280,365,271,363,263,405,244" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2334" title="Monroe" alt="Monroe"
+              coords="643,249,630,225,638,220,623,199,634,181,641,179,683,177,682,194,689,194,697,204,704,202,697,213,683,220,686,223,673,229,670,236,643,248" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2335" title="Montgomery" alt="Montgomery"
+              coords="633,308,699,359,689,370,690,372,687,373,679,367,673,367,667,372,675,379,666,383,655,371,651,372,649,367,644,367,643,359,639,360,639,355,628,344,615,341,635,311" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2336" title="Montour" alt="Montour"
+              coords="483,189,495,191,497,206,504,209,504,217,510,225,510,234,505,236,505,226,499,226,495,223,477,226,479,211,484,201,484,190" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2337" title="Northampton" alt="Northampton"
+              coords="625,253,652,245,671,237,675,231,686,225,694,239,694,242,690,243,689,248,689,249,684,254,679,254,677,258,676,269,677,281,660,293,652,285,655,279,647,272,643,274,635,260,630,261,625,254" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2338" title="Northumberland" alt="Northumberland"
+              coords="458,280,468,265,468,253,475,239,465,223,469,206,463,196,465,191,483,190,484,201,477,226,489,225,501,227,505,226,504,233,507,238,512,238,512,245,523,245,527,254,488,274,475,276,458,281" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2339" title="Perry" alt="Perry"
+              coords="457,280,454,287,451,288,453,298,456,302,454,304,448,309,446,317,448,322,456,323,459,328,454,331,436,331,414,336,410,338,409,334,399,339,399,338,404,331,386,343,381,344,373,350,372,343,370,344,370,339,367,340,366,331,383,320,382,318,429,290,429,287,446,282,457,280" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2340" title="Philadelphia" alt="Philadelphia"
+              coords="675,403,673,400,670,400,672,390,670,386,676,381,670,373,673,366,677,371,681,368,687,373,692,371,690,371,700,361,706,363,705,366,704,371,705,373,697,381,692,383,686,386,684,395,684,398,683,400,679,400,676,403" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2341" title="Pike" alt="Pike"
+              coords="657,177,662,163,659,157,668,156,671,150,676,145,692,118,699,126,697,130,703,134,704,137,711,137,714,142,715,145,727,147,734,146,735,150,740,157,731,159,718,175,718,181,711,190,697,202,692,195,682,191,686,175,657,175" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2342" title="Potter" alt="Potter"
+              coords="298,52,372,51,375,138,320,138,297,115,298,51" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2343" title="Schuylkill" alt="Schuylkill"
+              coords="489,272,537,250,540,236,550,228,572,234,576,233,606,263,576,277,574,287,569,287,558,292,545,295,522,302,489,272" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2344" title="Snyder" alt="Snyder"
+              coords="405,248,445,238,448,240,456,236,474,238,467,253,468,264,459,274,450,277,448,272,446,272,445,268,438,270,436,268,431,270,406,268,405,250" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2345" title="Somerset" alt="Somerset"
+              coords="148,425,148,416,153,415,151,409,147,406,165,367,170,365,175,362,179,356,193,335,211,336,212,343,242,343,232,367,227,372,228,411,223,426,150,425" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2346" title="Sullivan" alt="Sullivan"
+              coords="473,120,493,120,499,122,509,125,547,127,536,164,525,165,520,170,505,169,481,150,474,120" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2347" title="Susquehanna" alt="Susquehanna"
+              coords="558,51,561,110,643,111,640,51,556,51" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2348" title="Tioga" alt="Tioga"
+              coords="372,51,375,125,419,125,453,125,465,118,458,51,373,54" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2349" title="Union" alt="Union"
+              coords="405,250,405,243,431,213,432,206,438,205,441,204,454,204,454,194,462,194,467,204,465,221,465,226,473,236,454,236,446,239,441,238,405,249" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2350" title="Venango" alt="Venango"
+              coords="72,189,72,135,97,115,135,115,134,140,132,140,132,145,137,145,138,159,130,162,130,164,121,164,121,170,120,170,119,174,116,174,115,184,110,186,75,189" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2351" title="Warren" alt="Warren"
+              coords="121,51,121,113,204,113,205,81,210,77,207,51,122,51" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2352" title="Washington" alt="Washington"
+              coords="8,304,29,304,50,328,82,341,76,344,87,351,90,351,90,356,84,356,92,366,90,371,87,368,87,373,86,376,79,381,75,378,73,383,67,383,66,378,62,381,56,383,50,381,43,378,36,378,19,386,13,390,8,387,8,303" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2353" title="Wayne" alt="Wayne"
+              coords="641,51,645,174,640,179,657,177,661,164,657,154,666,154,670,147,675,145,692,115,695,113,694,90,687,87,692,81,678,72,671,76,665,61,657,54,657,51,641,51" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2354" title="Westmoreland" alt="Westmoreland"
+              coords="111,272,115,269,127,282,126,290,136,295,142,295,141,302,148,307,153,307,162,309,164,312,170,312,183,318,183,322,189,319,195,314,201,317,178,356,178,363,172,362,168,366,162,372,158,373,153,366,138,359,124,366,119,367,111,363,106,361,88,361,86,356,90,356,92,351,100,344,102,322,110,313,110,295,106,292,102,292,102,285,106,284,111,277,111,272" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2355" title="Wyoming" alt="Wyoming"
+              coords="550,109,609,111,606,118,601,132,603,134,596,147,579,153,540,153" />
+        <area shape="poly" class="maparea" href="#" data-county-id="2356" title="York" alt="York"
+              coords="450,426,451,408,456,405,453,398,454,394,447,378,443,377,435,370,446,357,462,354,463,347,468,345,480,352,481,360,493,372,509,373,513,382,513,387,527,397,527,402,545,426,451,426" />
+    </map>
+
+</div>
+<script type='text/javascript' src='/Scripts/jquery.maphilight.js?v=1.2'></script>
+<script type='text/javascript' src='/Scripts/imageMapResizer.js?v=1.2'></script>
+<script type='text/javascript' src='/Scripts/common.js?v=1.2'></script>
+<script type="text/javascript">
+
+    $(function () {
+        var currentIndex = -1;
+        var $dropdownLinks = $("#dropdownCnt-content a");
+        $("map area").attr("tabindex", "-1");
+        var csearchVal = localStorage.getItem('countySearch');
+        if (csearchVal !== '') {
+            filterDropdown(csearchVal);
+        }
+
+        var counties;
+        var countiesJson = fetch('../Scripts/Counties.json')
+            .then(res => res.json())
+            .then(data => {
+                counties = data;
+            })
+            .catch(error => {
+            });
+
+        $('#countyName').addClass('badge badge-pill badge-primary selectedCounty')
+
+        $('#filterByLabel').on('click', function () { });
+
+        $('#expand').on('click', function () {
+
+            var electionType = localStorage.getItem('ElectionType');
+            var electionID = localStorage.getItem('ElectionId');
+            var isActive = localStorage.getItem('IsActive');
+            var officeId = localStorage.getItem('officeId');
+            var districtId = localStorage.getItem('districtId') || 1;
+
+            const baseURL = window.location.origin;
+            window.localStorage['currentURL'] = window.location.href;
+            console.log('baseURL =' + baseURL);
+            var url = baseURL + '/Home/ShowExpandedMap?districtId=' + districtId + '&officeId=' + officeId + '&electionType=' + electionType + '&electionID=' + electionID
+                + "&isActive=" + isActive + '&applicationPath=' + baseURL; // URL you want to open
+
+            //console.log(url);
+
+            document.querySelector(".popup-window iframe").setAttribute('src', url);
+            $('.overlay, .popup-window').fadeIn();
+
+            // Attach keydown event listener for Escape key to close the popup
+            $(document).on('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    $('.overlay, .popup-window').fadeOut();
+                    $(document).off('keydown');
+                }
+            });
+        });
+
+        $('.close-popup').on('click', function () {
+            $('.overlay, .popup-window').fadeOut();
+        });
+
+        window.addEventListener('message', function (event) {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+
+            if (event.data.type === 'redirect') {
+                const url = encodeURI(event.data.url);
+                window.location.href = url;
+            }
+        });
+
+        function filterDropdown(value) {
+
+            $("#dropdownCnt-content a").filter(function (index) {
+                $(this).toggle(
+                    $(this).text().toLowerCase().indexOf(value) > -1 &&
+                    (value !== '' || index < 68)
+                );
+            });
+            $("#dropdownCnt-content").show();
+        }
+
+        $("#searchInput").on("keyup", function (e) {
+            var value = $(this).val().toLowerCase();
+            filterDropdown(value);
+
+            if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+                e.preventDefault();
+                ensureItemVisible(navigateDropdown(e.key));
+
+            } else if (e.key === "Enter" && currentIndex > -1) {
+                e.preventDefault();
+                $("#dropdownCnt-content a:visible").eq(currentIndex).click();
+
+                var val = $("#dropdownCnt-content a:visible").eq(currentIndex).text();
+                var idx = counties.indexOf(val);
+
+                if (idx >= 0) {
+                    localStorage.setItem('countySearch', counties[idx]);
+                }
+            }
+        });
+
+        function navigateDropdown(key) {
+            var visibleLinks = $dropdownLinks.filter(':visible');
+            //console.log('visibleLinks')
+            //console.log(visibleLinks.length)
+            if (key === "ArrowDown") {
+                currentIndex = (currentIndex + 1) % visibleLinks.length;
+                //console.log(currentIndex)
+            } else if (key === "ArrowUp") {
+                currentIndex = (currentIndex - 1 + visibleLinks.length) % visibleLinks.length;
+            }
+            visibleLinks.removeClass('highlight');
+            return visibleLinks.eq(currentIndex).addClass('highlight');
+        }
+
+        $("#searchInput").on("click", function () {
+            filterDropdown('');
+        });
+
+        // Close dropdown on Escape key press
+        $("#searchInput").on("keydown", function (e) {
+            console.log(e.key)
+            if (e.key === "Escape") {
+                $(this).val('');
+                $(this).blur();
+                $("#dropdownCnt-content").hide();
+                localStorage.setItem('countySearch', null);
+            }
+        });
+
+        $("#dropdownCnt-content a").on("keydown", function (e) {
+
+            if (e.key === "Escape") {
+                $("#searchInput").val('');
+                $(this).val('');
+                $(this).blur();
+                currentIndex = -1;
+                $("#dropdownCnt-content").hide();
+            }
+        });
+
+        $("#dropdownCnt-content a").on("click", function (e) {
+            e.preventDefault();
+            var selectedValue = $(this).data("value");
+            var sval = $("#searchInput").val();
+
+            var idx = counties.indexOf(sval);
+
+            if (idx >= 0) {
+                localStorage.setItem('countySearch', counties[idx]);
+            }
+
+            changeCount(selectedValue);
+            $("#dropdownCnt-content").hide();
+            $("#searchInput").val($(this).text());
+            currentIndex = -1;
+
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest(".dropdownCnt").length) {
+                $("#dropdownCnt-content").hide();
+            }
+        });
+
+        $('map').imageMapResize();
+
+        $(".maparea").click(function () {
+            changeCount(this.alt);
+
+        });
+
+        $("#county").change(function () {
+            changeCount($(this).val());
+        });
+
+        function getAllQueryStringKeys(paraName) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const keys = '';
+
+            for (const key of urlParams.keys()) {
+                if (key.toLocaleLowerCase() == paraName.toLocaleLowerCase())
+                    return key;
+            }
+
+            return paraName;
+        }
+
+        function readQueryStringValue(paraName) {
+
+            var keys = getAllQueryStringKeys(paraName);
+            var urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get(keys);
+            return myParam;
+        }
+
+        function readVariableValue(object, key) {
+            for (let a in object) {
+                //console.log(sessionStorage[a]);
+                if (a.toLocaleLowerCase() == key.toLocaleLowerCase())
+                    return object[a];
+            }
+        }
+
+        function changeCount(countyName) {
+            console.clear();
+            console.log("changeCount")
+            var electionType = localStorage.getItem('ElectionType') || readQueryStringValue('ElectionType');
+            var electionID = localStorage.getItem('ElectionId') || readQueryStringValue('ElectionID');
+            var isActive = localStorage.getItem('IsActive') || readQueryStringValue('IsActive');
+            var officeId = localStorage.getItem('officeId');
+            if ((officeId || 'undefined') == 'undefined' || (officeId || '') == '')
+                officeId = readVariableValue(sessionStorage, 'OfficeId') || readQueryStringValue('OfficeId');
+            // var officeId = localStorage.getItem('officeId') || sessionStorage.getItem('OfficeId') || readQueryStringValue('OfficeId');
+            var districtId = localStorage.getItem('districtId') || sessionStorage.getItem('DistrictId') || readQueryStringValue('DistrictId') || 1;
+            var districtName = localStorage.getItem('districtName') || readQueryStringValue('districtName') || sessionStorage.getItem('districtName');
+
+            console.log(electionID)
+            console.log(isActive)
+            console.log(officeId)
+            console.log(districtId)
+
+            countyName_ = countyName.toUpperCase();
+            window.localStorage['currentURL'] = window.location.href;
+
+            const url = encodeURI(getRedirectURL(window.location.href, applicationPath, countyName_, electionID, electionType, isActive, districtId, officeId, 'countymap', districtName));
+            console.log(url)
+            window.location.href = url;
+
+            //if (electionType == 'P') {
+            //    window.location.href = applicationPath + "Home/CountyResults?countyName=" + countyName + '&ElectionID=' + electionID + '&ElectionType=' + electionType + '&IsActive=' + isActive;
+            //} else if (electionType == 'G') {
+            //    window.location.href = applicationPath + "General/CountyResults?countyName=" + countyName + '&ElectionID=' + electionID + '&ElectionType=' + electionType + '&IsActive=' + isActive;
+            //}
+            //else if (electionType == 'S') {
+            //    window.location.href = applicationPath + "Special/CountyResults?countyName=" + countyName + '&ElectionID=' + electionID + '&ElectionType=' + electionType + '&IsActive=' + isActive;
+            //}
+        }
+
+        function ensureItemVisible(item) {
+            var dropdownContent = $('.dropdownCnt-content');
+            var scrollTop = dropdownContent.scrollTop();
+            var dropdownOffsetTop = dropdownContent.offset().top; // Top position of the dropdown container
+            var dropdownHeight = dropdownContent.height();
+            var itemOffsetTop = item.offset().top - dropdownOffsetTop; // Corrected item top position
+            var itemHeight = item.outerHeight();
+
+            if (itemOffsetTop < 0) {
+                // Scroll up to make the item visible at the top
+                dropdownContent.scrollTop(scrollTop + itemOffsetTop);
+            } else if (itemOffsetTop + itemHeight > dropdownHeight) {
+                // Scroll down to make the item visible at the bottom
+                dropdownContent.scrollTop(scrollTop + (itemOffsetTop - dropdownHeight + itemHeight));
+            }
+        }
+    });
+
+    $(window).on('load', function () {
+        $('#filterByLabel').trigger('click');
+    });
+</script>
+                    <br />
+                    <div style="padding-top: 50px; background-color: #f2f2f2; padding: 20px; border-radius: 10px; color: firebrick"
+                         class="instruction-data-sticky"
+                         tabindex="0"
+                         ng-if="showFloatingBanner"
+                         aria-describedby="floatingBannerContent">
+                        <div id="floatingBannerContent" ng-bind-html="floatingBannerText"></div>
+                    </div>
+
+                </div>
+                <div class="summaryData">
+                    <div class="panel-body" style="padding:0px;" ng-show="showInstruction">
+                        <div class="col-sm-12 instruction">
+                            <label id="lblInstruction" style="font-weight:bold"></label>
+
+                        </div>
+                    </div>
+                    <div class="container single">
+                        <div class="div1">
+                            {{ElectionStatus === 'U'|| ElectionStatus === 'Unofficial' ? 'Unofficial Results' : 'Official Results'}}
+                        </div>
+                        <div class="div2 hidden">
+                            {{RegisteredVotes | number}}
+                            <h6 className={classes.boxText}>Registered voters</h6>
+
+                        </div>
+                        <div class="div3 hidden">
+                            {{BallotsCounted | number}}
+                            <h6 className={classes.boxText}>Ballots cast</h6>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="padding-top:0px;">
+                        <div style="width:100%" id="primary">
+                            <div class="row" id="items">
+                                <div ng-repeat="levels in filterRecords(electionData)">
+                                    <div>
+                                        <div ng-if="levels.$key!='Ballot Questions'" ng-cloak role="table" aria-label="Candidates">
+                                            <div class="panel panel-default" style="border:none;margin-bottom:0px">
+                                                <div class="panel panel-heading-level1" ng-cloak style="margin-bottom:0px">
+                                                    <div class="panel-title">
+                                                        <h5 class="boxtitle">
+                                                            <span style="font-weight:bold" ng-bind="levels.$key"></span>
+                                                            <span>
+                                                                <a href="#" style="color:black" title="Breakdown for {{levels.$key}}"
+                                                                   ng-click="CountyBreakdown(levels[0].OfficeId,levels[0].DistrictId)">
+                                                                    By County <span class="icon-table" aria-hidden="true"></span>
+                                                                </a>
+                                                            </span>
+                                                            <span>
+                                                                <a href="#" style="color:black" title="Breakdown for {{levels.$key}}"
+                                                                   ng-show="levels[0].Statewide[0].Democratic[0].ShowVotesBreakdown === '1' ||
+                                                                            levels[0].Statewide[0].Republican[0].ShowVotesBreakdown === '1'"
+                                                                   ng-click="CountyBreakdownVM(levels[0].OfficeId,levels[0].DistrictId,levels.$key )">
+                                                                    By Vote Method <span class="icon-align-right" aria-hidden="true"></span>
+                                                                </a>
+                                                            </span>
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div ng-repeat="offices in Details">
+                                                    <div ng-if="levels[0].OfficeId == offices.OfficeID && offices.BallotQuestions == 0 && offices.ElectionID == ElectionID">
+                                                        <div class="{{offices.Style}}" style="padding-left:10px;" ng-bind="offices.Message"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body" style="padding-left:0px; padding-right:0px;">
+                                                    <div ng-repeat="parties in toArray(levels[0].Statewide)" class="candidateContainer">
+                                                        <div ng-repeat="items in parties" class="parties">
+                                                            <div class="panel panel-default" style="margin-bottom:0px" role="row">
+                                                                <div class="panel-heading-party" ng-cloak>
+                                                                    <div class="panel-title">
+                                                                        <h5><span role="rowheader" style="font-weight:bold" ng-bind="items[0].PartyFullName"></span></h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel-body-party" ng-cloak role="rowgroup">
+                                                                    <div ng-repeat="item in items" class="candidateDetails">
+                                                                        <div style="width:50%"><span role="cell" ng-bind="item.CandidateName"></span></div>
+                                                                        <div class="candidateProgressPercentage">
+                                                                            <div class="progress" aria-label="votes">
+                                                                                <div role="progressbar" aria-label="votes" ng-class="{'progress-bar':1, 'progress-bar-info':item.PartyName=='DEM', 'progress-bar-danger':item.PartyName=='REP'}"
+                                                                                     aria-valuenow="{{item.Percentage}}" aria-valuemin="0" aria-valuemax="100"
+                                                                                     ng-attr-style="width: {{item.Percentage}}%;">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div style="width:100%">
+                                                                                <span class="progress-spantext" role="cell" style="z-index: 1000 !important;">{{item.Percentage}}% (Votes: {{item.Votes | number:0}})</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!--/panel-body-->
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div ng-if="levels.$key=='Ballot Questions'" ng-cloak role="table" aria-label="Ballot Questions">
+                                            <div class="panel panel-default">
+                                                <div class="panel panel-heading-level1" ng-cloak>
+                                                    <div class="panel-title">
+                                                        <h5 class="boxtitle">
+                                                            <span style="font-weight:bold" ng-bind="levels.$key"></span>
+                                                            <span style="text-align: right;">
+                                                                <a href="#" style="color:black" title="Breakdown for {{levels.$key}}"
+                                                                   ng-click="BallotQuestionVM()">
+                                                                    By Vote Method <span class="icon-align-right" aria-hidden="true"></span>
+                                                                </a>
+                                                            </span>
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div ng-repeat="offices in Details">
+                                                    <div ng-if="offices.BallotQuestions == 1 && offices.ElectionID == ElectionID">
+                                                        <div class="{{offices.Style}}" style="padding-left:10px;" ng-bind="offices.Message"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="panel-body">
+                                                        <div ng-repeat="items in levels[0]" role="rowgroup">
+                                                            <div ng-repeat="item in items" role="row">
+                                                                <div class="col-xs-12" style="padding-bottom: 15px;">
+                                                                    <div class="panel-body-party" style="padding-left:0px" ng-cloak>
+                                                                        <div class="ballotQuestions">
+                                                                            <div style="width: 50%;">
+                                                                                <small><span class="spantext" role="cell" ng-bind="item.Title"></span></small>
+                                                                            </div>
+                                                                            <div style="width: 30%;">
+                                                                                <div style="margin-bottom: 4px; height: 35px; margin-right: 10px;">
+                                                                                    <div class="progress-bar progress-bar-success" role="progressbar"
+                                                                                         ng-attr-style="width: {{item.YesVotesPercent}}%;border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                                                                        <small><span class="spantext" role="cell">{{item.YesVotesPercent}}%</span></small>
+                                                                                    </div>
+                                                                                    <div class="progress-bar progress-bar-danger" role="progressbar"
+                                                                                         ng-attr-style="width: {{item.NoVotesPercent}}%;border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+                                                                                        <small><span class="spantext" role="cell">{{item.NoVotesPercent}}%</span></small>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div style="width: 20%;">
+                                                                                <div><span style="font-weight:bold">Votes: Yes: </span>{{item.YesVotes | number:0}}</div>
+                                                                                <div><span style="font-weight:bold">Votes:  No: </span>{{item.NoVotes | number:0}}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="breakDownSection" ng-show="item.ShowVotesBreakdown == '1'">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4" role="cell">Election Day Yes : {{item.ElectionDayYesVotes}}</div>
+                                                                                <!-- <div class="col-sm-4">Absentee Yes : {{item.AbsenteeYesVotes}}</div> -->
+                                                                                <div class="col-sm-4" role="cell"> Mail Yes : {{item.MailInYesVotes}}</div>
+                                                                                <div class="col-sm-4" role="cell">Provisional Yes : {{item.ProvisionalYesVotes}}</div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4" role="cell">Election Day No : {{item.ElectionDayNoVotes}}</div>
+
+                                                                                <!-- <div class="col-sm-4">Absentee No : {{item.AbsenteeNoVotes}}</div> -->
+                                                                                <div class="col-sm-4" role="cell"> Mail No : {{item.MailInNoVotes}}</div>
+                                                                                <div class="col-sm-4" role="cell">Provisional No : {{item.ProvisionalNoVotes}}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--/panel-body-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pull-right" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+                                                    <a href="#" style="color:#1d4466;">Back to Top</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+            </main>
+
+
+
+        </div>
+        <!-- Footer Section with ARIA Landmark -->
+        <footer class="footerT" role="contentinfo" aria-label="Footer Information">
+            
+<style type="text/css">
+    .contrast {
+        background-color: black;
+    }
+    .navbar-nav > li > a:focus {
+        color: #FFFFFF;
+        opacity: .9;
+        background-color: red;
+    }
+
+    .disclaimer {
+        padding-left: 10px;
+        font-size: 1.5rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    /* Adjustments for mobile view */
+    @media screen and (max-width: 767px) {
+
+        .disclaimer {
+            padding-left: 10px;
+            font-size: 1.5rem;
+            padding-top: 20px;
+            padding-bottom: 5px;
+        }
+
+    }
+</style>
+
+<div>
+    <div style="background-color:black;color:white; overflow:auto">
+        <div style="padding-left: 10px; display: flex; flex-direction: row; flex-wrap: wrap; height: 40px; justify-content: space-between; padding-top: 5px;padding-bottom:10px">
+
+            <div>
+                <a style="color: white; margin-right: 5px;" href="http://www.pa.gov/privacy-policy/" target="_blank" rel="noopener noreferrer"><strong>PRIVACY POLICY</strong></a>
+                <a style="color: white; margin-right: 5px;" href="http://www.pa.gov/security-policy/" target="_blank" rel="noopener noreferrer"><strong>SECURITY POLICY</strong></a>
+                <a style="color: white; margin-right: 5px;" href="http://www.pa.gov/" target="_blank" rel="noopener noreferrer"><strong>AGENCIES</strong></a>
+            </div>
+            <div style="padding-right:5px;">
+                COPYRIGHT &copy; 2026 COMMONWEALTH OF PENNSYLVANIA. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+        <div class="disclaimer" ng-if=showUnofficalDiscalimer>
+            Disclaimer: Results displayed are <strong><i>unofficial</i></strong> and for informational purposes only. Counties provide these <strong><i>unofficial</i></strong> results as they tally votes cast 
+            via in-person, mail, and provisional ballots. Official results will be clearly marked as such on the site after counties complete the certification 
+            process.
+        </div>
+    </div>
+    
+</div>
+
+        </footer>
+
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    
+
+    
+    <script type="text/javascript">
+        var applicationPath = 'https://www.electionreturns.pa.gov/';
+        var isMobileBrowser = 'False';
+        var environment = 'Production';
+        var isNotificationMessage = '';//'';
+        var site_key = 'REDACTED________________________________';
+        var enableRecaptcha = '1';
+        var maxRecaptchaLimit = '50';
+        var mainInstructionText = '';
+
+        //if (isNotificationMessage.length > 0) {
+        //    var notify = $.notify({
+        //        icon: 'glyphicon glyphicon-warning-sign',
+        //        title: '',
+        //        message: isNotificationMessage,
+        //    }, {
+        //        type: 'notify',
+        //        allow_dismiss: false,
+        //        newest_on_top: true,
+        //        placement: { from: 'top', align: 'left' },
+        //        offset: { x: 10, y: 400 },
+        //        spacing: 10,
+        //        z_index: 1031,
+        //        delay: 0,
+        //        mouse_over: null
+        //    });
+            //}
+
+        window.addEventListener('beforeunload', function () {
+            localStorage.clear();
+
+            // Force a full page reload in case of Browser's Back button click.
+            if (this.performance.navigation.TYPE_BACK_FORWARD == 2) {
+                this.setTimeout(function () {
+                    window.location.reload();
+                }, 2000);
+            }
+        });
+
+    </script>
+    <!-- Simple Popup Modal -->
+
+
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=2068775673" async></script></body>
+</html>

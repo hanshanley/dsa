@@ -1,0 +1,119 @@
+{
+  "race": {
+    "race_id": "race-3b2b88f146005f2e7e13",
+    "scope_kind": "tracked_dsa_endorsed_democratic_primary",
+    "election_date": "2026-08-04",
+    "election_year": "2026",
+    "primary_party": "Democratic",
+    "endorsed_candidate": "Dave Zeglen",
+    "endorsed_candidates": "Dave Zeglen",
+    "unopposed_candidates": "",
+    "opponent_candidates": "Aidan Sova",
+    "all_candidates": "Aidan Sova | Dave Zeglen",
+    "candidate_count": "2",
+    "role_set": "endorsed | opponent",
+    "party_set": "Democratic",
+    "evidence_statuses": "source_unavailable | verified",
+    "office": "City Council",
+    "office_status": "resolution_source_unavailable",
+    "office_source": "race_registry_resolutions_2025_2026.csv:20",
+    "office_confidence": "high",
+    "jurisdiction": "Ward 4 (Ann Arbor)",
+    "jurisdiction_status": "resolution_source_unavailable",
+    "jurisdiction_source": "race_registry_resolutions_2025_2026.csv:20",
+    "jurisdiction_confidence": "high",
+    "state": "Michigan",
+    "state_code": "MI",
+    "state_status": "resolution_source_unavailable",
+    "state_source": "race_registry_resolutions_2025_2026.csv:20",
+    "state_confidence": "high",
+    "official_election_source": "",
+    "official_election_source_status": "source_unavailable",
+    "official_election_source_source": "race_registry_resolutions_2025_2026.csv:20",
+    "official_election_source_confidence": "",
+    "supporting_source": "",
+    "supporting_source_status": "unresolved",
+    "supporting_source_type": "",
+    "supporting_source_source": "",
+    "supporting_source_confidence": "",
+    "certified_opponents": "Aidan Sova",
+    "certified_opponents_status": "corpus_candidate_set",
+    "endorsing_bodies": "",
+    "metadata_source": "resolution_source_unavailable",
+    "source_reference": "race_registry_resolutions_2025_2026.csv:20",
+    "canonical_candidate_aliases": "a sova | aid sova | aidan sova | d zeglen | dav zeglen | dave zeglen",
+    "source_race_ids": "race-3b2b88f146005f2e7e13",
+    "merged_race_id_count": "1",
+    "unresolved_fields": ""
+  },
+  "sources": [
+    {
+      "document_id": "94c6667a3ed554b78effc005",
+      "metadata_document_id": "94c6667a3ed554b78effc005",
+      "url": "https://www.voteaidansova.com/",
+      "final_url": "https://www.voteaidansova.com/",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:48:57.906122+00:00",
+      "raw_path": "data/raw/policy_historical_d/sources/94c6667a3ed554b78effc005.html",
+      "sha256": "8aee1da661c811746ae5693dac93afd24ea42f91102b01dab9956376efb5f369",
+      "bytes": 217320,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "notes": "Cached candidate source semantically reviewed; packet metadata preserved exactly."
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hd-28-aidan-sova",
+      "metadata_document_id": "94c6667a3ed554b78effc005",
+      "document_id": "94c6667a3ed554b78effc005",
+      "speaker": "Aidan Sova",
+      "role": "opponent_candidate",
+      "race_id": "race-3b2b88f146005f2e7e13",
+      "election_date": "2026-08-04",
+      "topic": "housing",
+      "subtopic": "mixed_income_supply",
+      "stance": "support",
+      "short_exact_quote": "Increasing our housing supply with accessible, mixed-income developments",
+      "locator": "paragraph 36",
+      "representation_kind": "policy_position",
+      "notes": "Candidate-attributed retained text; prompts, navigation, reporter narration, and neighboring candidates are excluded.",
+      "attribution_notes": "Quote occurs in the retained candidate-associated campaign-authored platform or statement at paragraph 36; navigation, prompts, reporter narration, endorsement text, and other candidates are excluded."
+    }
+  ],
+  "comparisons": [],
+  "candidate_dispositions": [
+    {
+      "race_id": "race-3b2b88f146005f2e7e13",
+      "candidate": "Aidan Sova",
+      "role": "opponent",
+      "election_date": "2026-08-04",
+      "outcome": "evidence_recovered"
+    },
+    {
+      "race_id": "race-3b2b88f146005f2e7e13",
+      "candidate": "Dave Zeglen",
+      "role": "endorsed",
+      "election_date": "2026-08-04",
+      "outcome": "listed_candidate_route_retained_for_recovery_review"
+    }
+  ],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-3b2b88f146005f2e7e13",
+      "candidate": "Dave Zeglen",
+      "attempted_url": "https://www.michigandaily.com/news/ann-arbor/dave-zeglen-aidan-sova-ann-arbor-ward-4",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "notes": "No attributable source was promoted after the bounded candidate route."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-3b2b88f146005f2e7e13",
+      "candidate": "Dave Zeglen",
+      "url": "https://www.michigandaily.com/news/ann-arbor/dave-zeglen-aidan-sova-ann-arbor-ward-4",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "raw_path": null
+    }
+  ]
+}

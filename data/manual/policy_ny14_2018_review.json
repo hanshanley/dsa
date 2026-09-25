@@ -1,0 +1,257 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "sources": [
+    {
+      "document_id": "ny14-2018-aoc",
+      "metadata_document_id": "954645c16f26e163ee665784",
+      "url": "https://www.nyccfb.info/nyc-votes/vgwelcome/congressional-primary-2018/meet-the-candidates/congressional-district-14-democratic/alexandria-ocasio-cortez",
+      "final_url": "https://www.nyccfb.info/nyc-votes/vgwelcome/congressional-primary-2018/meet-the-candidates/congressional-district-14-democratic/alexandria-ocasio-cortez",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:44:46.058675+00:00",
+      "raw_path": "data/raw/policy_ny14_2018/aoc-8b1767b2a2e9e6b801dcb1115bea6ddbf424fae8d91bee980ae08a52d1362c49.html",
+      "sha256": "8b1767b2a2e9e6b801dcb1115bea6ddbf424fae8d91bee980ae08a52d1362c49",
+      "bytes": 60896,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "historical_cycle_evidence": {
+        "election_year": "2018",
+        "exact_quote": "Congressional Primary 2018",
+        "source_locator": "paragraph 94"
+      },
+      "notes": "Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted. Historical guide context established; exact pre-primary publication/version remains unknown."
+    },
+    {
+      "document_id": "ny14-2018-crowley",
+      "metadata_document_id": "bf8c73ad4bb3359a596239bb",
+      "url": "https://www.nyccfb.info/nyc-votes/vgwelcome/congressional-primary-2018/meet-the-candidates/congressional-district-14-democratic/joseph-crowley?languageType=English",
+      "final_url": "https://www.nyccfb.info/nyc-votes/vgwelcome/congressional-primary-2018/meet-the-candidates/congressional-district-14-democratic/joseph-crowley?languageType=English",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:56:25.608398+00:00",
+      "raw_path": "data/raw/policy_ny14_2018/crowley-88dd3de07d6518988dbd5b4a70ba92cc7ba36d2be68f158c98b88d38a5d49863.html",
+      "sha256": "88dd3de07d6518988dbd5b4a70ba92cc7ba36d2be68f158c98b88d38a5d49863",
+      "bytes": 60061,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "historical_cycle_evidence": {
+        "election_year": "2018",
+        "exact_quote": "Congressional Primary 2018",
+        "source_locator": "paragraph 94"
+      },
+      "notes": "Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted. Historical guide context established; exact pre-primary publication/version remains unknown."
+    },
+    {
+      "document_id": "ny14-fec2018-identity",
+      "url": "https://www.fec.gov/resources/cms-content/documents/federalelections2018.xlsx",
+      "final_url": "https://www.fec.gov/resources/cms-content/documents/federalelections2018.xlsx",
+      "publication_date": null,
+      "retrieved_at": "2026-09-22",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/fec/federalelections2018.xlsx",
+      "sha256": "f2c42311862b4927df2ca5908c5f9c8f8da6221a8db88fd00434a22ec1e0e303",
+      "bytes": 602712,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "status": "identity_only",
+      "notes": "2018 US House Results by State, rows2719-2720: NY14,D, Ocasio-Cortez and Crowley. Write-in/fusion observations in other rows are not alternate candidacies."
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ny14-18-aoc-health-priority",
+      "document_id": "ny14-2018-aoc",
+      "metadata_document_id": "954645c16f26e163ee665784",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "election_date": "2018-06-26",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "topic": "healthcare",
+      "subtopic": "declared_first_issue",
+      "stance": "prioritize",
+      "short_exact_quote": "Improved and Expanded Medicare-for-All",
+      "locator": "paragraph 106",
+      "claim_summary": "Lists expanded Medicare for All first in the guide's explicit Top Three Issues section.",
+      "notes": "Lists expanded Medicare for All first in the guide's explicit Top Three Issues section. Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted.",
+      "representation_kind": "campaign_frame",
+      "identity_evidence_document_ids": [
+        "ny14-fec2018-identity"
+      ]
+    },
+    {
+      "excerpt_id": "ny14-18-aoc-ice",
+      "document_id": "ny14-2018-aoc",
+      "metadata_document_id": "954645c16f26e163ee665784",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "election_date": "2018-06-26",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "topic": "immigration",
+      "subtopic": "ice_abolition",
+      "stance": "support",
+      "short_exact_quote": "Abolish ICE",
+      "locator": "paragraph 108",
+      "claim_summary": "Lists abolishing ICE alongside criminal-justice reform among her top issues.",
+      "notes": "Lists abolishing ICE alongside criminal-justice reform among her top issues. Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted.",
+      "representation_kind": "policy_position",
+      "identity_evidence_document_ids": [
+        "ny14-fec2018-identity"
+      ]
+    },
+    {
+      "excerpt_id": "ny14-18-aoc-housing",
+      "document_id": "ny14-2018-aoc",
+      "metadata_document_id": "954645c16f26e163ee665784",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "election_date": "2018-06-26",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "topic": "housing",
+      "subtopic": "housing_as_right",
+      "stance": "support",
+      "short_exact_quote": "Housing as a Right",
+      "locator": "paragraph 127",
+      "claim_summary": "Includes housing as a right in her economic- and social-dignity agenda.",
+      "notes": "Includes housing as a right in her economic- and social-dignity agenda. Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted.",
+      "representation_kind": "policy_position",
+      "identity_evidence_document_ids": [
+        "ny14-fec2018-identity"
+      ]
+    },
+    {
+      "excerpt_id": "ny14-18-aoc-funding",
+      "document_id": "ny14-2018-aoc",
+      "metadata_document_id": "954645c16f26e163ee665784",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "election_date": "2018-06-26",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "topic": "campaign_approach",
+      "subtopic": "corporate_pac_and_lobbyist_funding",
+      "stance": "reject",
+      "short_exact_quote": "rejects money from corporate PACs and lobbyists",
+      "locator": "paragraph 129",
+      "claim_summary": "States that rejecting corporate PAC and lobbyist contributions allows prioritizing working-class families. No independent finance audit is inferred.",
+      "notes": "States that rejecting corporate PAC and lobbyist contributions allows prioritizing working-class families. No independent finance audit is inferred. Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted.",
+      "representation_kind": "campaign_frame",
+      "identity_evidence_document_ids": [
+        "ny14-fec2018-identity"
+      ]
+    },
+    {
+      "excerpt_id": "ny14-18-aoc-urgency",
+      "document_id": "ny14-2018-aoc",
+      "metadata_document_id": "954645c16f26e163ee665784",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "election_date": "2018-06-26",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "topic": "campaign_approach",
+      "subtopic": "political_change",
+      "stance": "emphasize_urgency",
+      "short_exact_quote": "political courage",
+      "locator": "paragraph 128",
+      "claim_summary": "Criticizes Democrats for accepting high rents, expensive healthcare and underfunded education, and argues faster change requires political courage.",
+      "notes": "Criticizes Democrats for accepting high rents, expensive healthcare and underfunded education, and argues faster change requires political courage. Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted.",
+      "representation_kind": "campaign_frame",
+      "identity_evidence_document_ids": [
+        "ny14-fec2018-identity"
+      ]
+    },
+    {
+      "excerpt_id": "ny14-18-crowley-health-priority",
+      "document_id": "ny14-2018-crowley",
+      "metadata_document_id": "bf8c73ad4bb3359a596239bb",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "election_date": "2018-06-26",
+      "speaker": "Joseph Crowley",
+      "role": "opponent_candidate",
+      "topic": "healthcare",
+      "subtopic": "declared_first_issue",
+      "stance": "prioritize",
+      "short_exact_quote": "Health care",
+      "locator": "paragraph 106",
+      "claim_summary": "Lists healthcare first in the same Top Three Issues format; does not specify an insurance model in that item.",
+      "notes": "Lists healthcare first in the same Top Three Issues format; does not specify an insurance model in that item. Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted.",
+      "representation_kind": "campaign_frame",
+      "identity_evidence_document_ids": [
+        "ny14-fec2018-identity"
+      ]
+    },
+    {
+      "excerpt_id": "ny14-18-crowley-immigration",
+      "document_id": "ny14-2018-crowley",
+      "metadata_document_id": "bf8c73ad4bb3359a596239bb",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "election_date": "2018-06-26",
+      "speaker": "Joseph Crowley",
+      "role": "opponent_candidate",
+      "topic": "immigration",
+      "subtopic": "comprehensive_immigration_reform",
+      "stance": "support",
+      "short_exact_quote": "pass comprehensive immigration reform",
+      "locator": "paragraph 126",
+      "claim_summary": "Promises comprehensive immigration reform and a welcoming community; this statement does not establish a position on abolishing ICE.",
+      "notes": "Promises comprehensive immigration reform and a welcoming community; this statement does not establish a position on abolishing ICE. Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted.",
+      "representation_kind": "policy_position",
+      "identity_evidence_document_ids": [
+        "ny14-fec2018-identity"
+      ]
+    },
+    {
+      "excerpt_id": "ny14-18-crowley-congress-frame",
+      "document_id": "ny14-2018-crowley",
+      "metadata_document_id": "bf8c73ad4bb3359a596239bb",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "election_date": "2018-06-26",
+      "speaker": "Joseph Crowley",
+      "role": "opponent_candidate",
+      "topic": "campaign_approach",
+      "subtopic": "political_change",
+      "stance": "emphasize_congressional_action",
+      "short_exact_quote": "Congress fights for hard-working Americans",
+      "locator": "paragraph 126",
+      "claim_summary": "Frames Congress acting for working people as the way to expand healthcare, improve criminal justice and secure financial equality.",
+      "notes": "Frames Congress acting for working people as the way to expand healthcare, improve criminal justice and secure financial equality. Both official guide pages have an inconsistent template field saying District16. Their breadcrumbs, candidate occupations/statements and retained official FEC2018 House rows2719-2720 identify the District14 Democratic contest. The actual written candidate statements are used; the erroneous template field is not silently accepted.",
+      "representation_kind": "campaign_frame",
+      "identity_evidence_document_ids": [
+        "ny14-fec2018-identity"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "ny14-18-declared-health-priority",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "excerpt_ids": [
+        "ny14-18-aoc-health-priority",
+        "ny14-18-crowley-health-priority"
+      ],
+      "relationship": "shared_position",
+      "comparison_kind": "campaign_framing",
+      "interpretation": "Both explicitly list healthcare as their first issue. Ocasio-Cortez names expanded Medicare for All; Crowley's short priority item does not specify an insurance mechanism."
+    },
+    {
+      "comparison_id": "ny14-18-immigration-emphasis",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "excerpt_ids": [
+        "ny14-18-aoc-ice",
+        "ny14-18-crowley-immigration"
+      ],
+      "relationship": "different_emphasis",
+      "comparison_kind": "policy_comparison",
+      "interpretation": "Ocasio-Cortez explicitly calls for ICE abolition, while Crowley promises comprehensive immigration reform. The latter's unspecified agency policy is not coded as opposition to abolition."
+    },
+    {
+      "comparison_id": "ny14-18-campaign-change-frame",
+      "race_id": "race-e8ab7964ed1c0352d699",
+      "excerpt_ids": [
+        "ny14-18-aoc-urgency",
+        "ny14-18-crowley-congress-frame"
+      ],
+      "relationship": "different_emphasis",
+      "comparison_kind": "campaign_framing",
+      "interpretation": "Ocasio-Cortez criticizes Democrats settling for inadequate outcomes and emphasizes political courage; Crowley promises congressional action for working families. This compares their stated framing without inferring unspoken policy disagreement."
+    }
+  ],
+  "unsuccessful_sources": [],
+  "source_attempts": []
+}

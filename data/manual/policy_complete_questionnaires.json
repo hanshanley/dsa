@@ -1,0 +1,419 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "bundles": [
+    {
+      "id": "md39-2026",
+      "title": "Maryland House of Delegates District 39, 2026 Democratic primary",
+      "race_id": "race-d8835fb9366a2e5d54c7",
+      "review_path": "data/manual/policy_maryland_2026_followup_review.json",
+      "coverage_note": "Five candidates' full published answers to five common questions, republished from Vote411 by Maryland Matters. The publisher explicitly distinguishes these unedited candidate answers from its edited campaign biographies. Exact pre-primary release/version is unverified, so all answers are downloadable but not enrolled in the dated model corpus. Amar Mukunda is absent from this guide; absence is not a verified nonresponse, withdrawal or no-platform finding.",
+      "questions": [
+        {"id": "data-centers", "topic": "data_centers", "prompt": "Data centers can bring some important economic benefits, but also have a negative impact on the power grid, water supply and land use. Do you support the establishment of additional centers in Maryland? Why or why not?", "numbered": false},
+        {"id": "utilities", "topic": "utility_affordability", "prompt": "What do you see as the factors contributing to escalating utility costs in Maryland? How will you address them?", "numbered": false},
+        {"id": "transit", "topic": "public_transportation", "prompt": "Should the availability of public transportation be improved across the state? Why or why not?", "numbered": false},
+        {"id": "budget", "topic": "budget_priorities", "prompt": "Maryland is required to balance the budget every year. What will be your three top budget priorities, and what programs will you fight for?", "numbered": false},
+        {"id": "immigration", "topic": "immigrant_communities", "prompt": "Immigrants are an important part of our community and make significant contributions, including to Maryland's economy. What will you do to support immigrant communities in Maryland?", "numbered": false}
+      ],
+      "documents": [
+        {
+          "source_id": "md26-d39", "candidate_name": "Gabriel Acevero",
+          "question_paragraphs": [54,67,80,93,106],
+          "answer_ranges": [[56,56],[69,69],[82,82],[95,95],[108,108]],
+          "candidate_heading": {"paragraph": 55, "text": "Gabriel Acevero (D)"},
+          "answer_headings": [{"paragraph": 55, "text": "Gabriel Acevero (D)"}, {"paragraph": 68, "text": "Gabriel Acevero (D)"}, {"paragraph": 81, "text": "Gabriel Acevero (D)"}, {"paragraph": 94, "text": "Gabriel Acevero (D)"}, {"paragraph": 107, "text": "Gabriel Acevero (D)"}],
+          "end_paragraph": 118, "end_marker": "X"
+        },
+        {
+          "source_id": "md26-d39", "candidate_name": "George Lluberes",
+          "question_paragraphs": [54,67,80,93,106],
+          "answer_ranges": [[58,58],[71,71],[84,84],[97,97],[110,110]],
+          "candidate_heading": {"paragraph": 57, "text": "George Lluberes (D)"},
+          "answer_headings": [{"paragraph": 57, "text": "George Lluberes (D)"}, {"paragraph": 70, "text": "George Lluberes (D)"}, {"paragraph": 83, "text": "George Lluberes (D)"}, {"paragraph": 96, "text": "George Lluberes (D)"}, {"paragraph": 109, "text": "George Lluberes (D)"}],
+          "end_paragraph": 118, "end_marker": "X"
+        },
+        {
+          "source_id": "md26-d39", "candidate_name": "Lesley J. Lopez",
+          "question_paragraphs": [54,67,80,93,106],
+          "answer_ranges": [[60,60],[73,73],[86,86],[99,99],[112,112]],
+          "candidate_heading": {"paragraph": 59, "text": "Lesley Lopez (D)"},
+          "answer_headings": [{"paragraph": 59, "text": "Lesley Lopez (D)"}, {"paragraph": 72, "text": "Lesley Lopez (D)"}, {"paragraph": 85, "text": "Lesley Lopez (D)"}, {"paragraph": 98, "text": "Lesley Lopez (D)"}, {"paragraph": 111, "text": "Lesley Lopez (D)"}],
+          "end_paragraph": 118, "end_marker": "X"
+        },
+        {
+          "source_id": "md26-d39", "candidate_name": "Greg Wims",
+          "question_paragraphs": [54,67,80,93,106],
+          "answer_ranges": [[62,62],[75,75],[88,88],[101,101],[114,114]],
+          "candidate_heading": {"paragraph": 61, "text": "Greg Wims (D)"},
+          "answer_headings": [{"paragraph": 61, "text": "Greg Wims (D)"}, {"paragraph": 74, "text": "Greg Wims (D)"}, {"paragraph": 87, "text": "Greg Wims (D)"}, {"paragraph": 100, "text": "Greg Wims (D)"}, {"paragraph": 113, "text": "Greg Wims (D)"}],
+          "end_paragraph": 118, "end_marker": "X"
+        },
+        {
+          "source_id": "md26-d39", "candidate_name": "Robert T. Wu",
+          "question_paragraphs": [54,67,80,93,106],
+          "answer_ranges": [[64,64],[77,77],[90,90],[103,103],[116,116]],
+          "candidate_heading": {"paragraph": 63, "text": "Robert Wu (D)"},
+          "answer_headings": [{"paragraph": 63, "text": "Robert Wu (D)"}, {"paragraph": 76, "text": "Robert Wu (D)"}, {"paragraph": 89, "text": "Robert Wu (D)"}, {"paragraph": 102, "text": "Robert Wu (D)"}, {"paragraph": 115, "text": "Robert Wu (D)"}],
+          "end_paragraph": 118, "end_marker": "X"
+        }
+      ]
+    },
+    {
+      "id": "wi-governor-2026-housing",
+      "response_format": "published_topic_round",
+      "title": "Wisconsin governor, 2026 Democratic primary: housing",
+      "race_id": "race-48b209f7fa641f4b280d",
+      "review_path": "data/manual/policy_wisconsin_governor_2026_review.json",
+      "coverage_note": "All six tracked Democrats' complete published housing-response blocks from PBS Wisconsin's April22 episode. Named speaker headings delimit answers; reporter narration, the Republican response and Missy Hughes, who is outside this tracked ballot field, are excluded. The transcript preserves edited published responses, not an unedited interview. Source dates do not imply that Barnes or Rodriguez remained active at the August primary.",
+      "questions": [
+        {"id": "housing", "topic": "housing", "prompt": "A 2024 study by the Wisconsin Policy Forum showed over a five-year stretch, home prices went up 53% while incomes rose by less than 20%. State government can’t lower the price of materials or labor, but it can create an environment making it easier to build new homes. So we asked the candidates for governor how they plan to address the affordable housing crisis in Wisconsin.", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "wi26-gov-housing", "candidate_name": "Francesca Hong", "question_paragraphs": [62], "answer_ranges": [[70,70]], "candidate_heading": {"paragraph": 69, "text": "Francesca Hong:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-housing", "candidate_name": "Mandela Barnes", "question_paragraphs": [62], "answer_ranges": [[64,64]], "candidate_heading": {"paragraph": 63, "text": "Mandela Barnes:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-housing", "candidate_name": "Sara Rodriguez", "question_paragraphs": [62], "answer_ranges": [[66,66]], "candidate_heading": {"paragraph": 65, "text": "Sara Rodriguez:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-housing", "candidate_name": "Joel Brennan", "question_paragraphs": [62], "answer_ranges": [[72,72]], "candidate_heading": {"paragraph": 71, "text": "Joel Brennan:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-housing", "candidate_name": "David Crowley", "question_paragraphs": [62], "answer_ranges": [[76,76]], "candidate_heading": {"paragraph": 75, "text": "David Crowley:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-housing", "candidate_name": "Kelda Roys", "question_paragraphs": [62], "answer_ranges": [[78,78]], "candidate_heading": {"paragraph": 77, "text": "Kelda Roys:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"}
+      ]
+    },
+    {
+      "id": "wi-governor-2026-data",
+      "response_format": "published_topic_round",
+      "title": "Wisconsin governor, 2026 Democratic primary: data centers",
+      "race_id": "race-48b209f7fa641f4b280d",
+      "review_path": "data/manual/policy_wisconsin_governor_2026_review.json",
+      "coverage_note": "All six tracked Democrats' named response blocks from the February18 PBS episode. Reporter claims in the common introductory prompt are retained as the prompt, not adopted as independently verified facts or included in candidate model text. Hong's response here is not silently expanded into a full moratorium pledge. Candidates may have made additional or later proposals elsewhere.",
+      "questions": [
+        {"id": "data-centers", "topic": "data_centers", "prompt": "Wisconsin’s utility companies are asking the Public Service Commission to approve the largest rate hikes in history. And that’s before we see any impact from the data centers being proposed around the state. So we asked the candidates what role the state should play in approving or facilitating these data centers.", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "wi26-gov-data", "candidate_name": "Francesca Hong", "question_paragraphs": [62], "answer_ranges": [[66,66]], "candidate_heading": {"paragraph": 65, "text": "Francesca Hong:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-data", "candidate_name": "Mandela Barnes", "question_paragraphs": [62], "answer_ranges": [[72,72]], "candidate_heading": {"paragraph": 71, "text": "Mandela Barnes:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-data", "candidate_name": "Sara Rodriguez", "question_paragraphs": [62], "answer_ranges": [[76,76]], "candidate_heading": {"paragraph": 75, "text": "Sara Rodriguez:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-data", "candidate_name": "Joel Brennan", "question_paragraphs": [62], "answer_ranges": [[74,74]], "candidate_heading": {"paragraph": 73, "text": "Joel Brennan:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-data", "candidate_name": "David Crowley", "question_paragraphs": [62], "answer_ranges": [[78,78]], "candidate_heading": {"paragraph": 77, "text": "David Crowley:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-data", "candidate_name": "Kelda Roys", "question_paragraphs": [62], "answer_ranges": [[70,70]], "candidate_heading": {"paragraph": 69, "text": "Kelda Roys:"}, "end_paragraph": 79, "end_marker": "Zac Schultz:"}
+      ]
+    },
+    {
+      "id": "wi-governor-2026-schools",
+      "response_format": "published_topic_round",
+      "title": "Wisconsin governor, 2026 Democratic primary: school funding and vouchers",
+      "race_id": "race-48b209f7fa641f4b280d",
+      "review_path": "data/manual/policy_wisconsin_governor_2026_review.json",
+      "coverage_note": "The January30 PBS transcript has two separate named-speaker rounds. Every tracked Democrat's complete published block is preserved for each round. Headings and exact answer ranges prevent another candidate or reporter entering the response. A call for scrutiny is not automatically an abolition pledge, and a candidate's description of current voucher law is not independently certified legal guidance.",
+      "questions": [
+        {"id": "funding", "topic": "school_funding", "prompt": "Calling Wisconsin’s school funding formula broken is one of the oldest refrains in state politics, but the sheer number and size of operating referenda around the state show school districts and voters agree the state is not providing enough money.", "numbered": false},
+        {"id": "vouchers", "topic": "school_vouchers", "prompt": "Wisconsin’s school voucher program was created in the 1990s in Milwaukee and expanded statewide in 2011. As the cost of the program has grown, the question we put to the candidates is whether it should expand, contract or stay the same.", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "wi26-gov-schools", "candidate_name": "Francesca Hong", "question_paragraphs": [61,79], "answer_ranges": [[69,69],[89,89]], "candidate_heading": {"paragraph": 68, "text": "Francesca Hong:"}, "answer_headings": [{"paragraph": 68, "text": "Francesca Hong:"}, {"paragraph": 88, "text": "Francesca Hong:"}], "end_paragraph": 96, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-schools", "candidate_name": "Mandela Barnes", "question_paragraphs": [61,79], "answer_ranges": [[75,75],[83,83]], "candidate_heading": {"paragraph": 74, "text": "Mandela Barnes:"}, "answer_headings": [{"paragraph": 74, "text": "Mandela Barnes:"}, {"paragraph": 82, "text": "Mandela Barnes:"}], "end_paragraph": 96, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-schools", "candidate_name": "Sara Rodriguez", "question_paragraphs": [61,79], "answer_ranges": [[71,71],[87,87]], "candidate_heading": {"paragraph": 70, "text": "Sara Rodriguez:"}, "answer_headings": [{"paragraph": 70, "text": "Sara Rodriguez:"}, {"paragraph": 86, "text": "Sara Rodriguez:"}], "end_paragraph": 96, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-schools", "candidate_name": "Joel Brennan", "question_paragraphs": [61,79], "answer_ranges": [[65,65],[93,93]], "candidate_heading": {"paragraph": 64, "text": "Joel Brennan:"}, "answer_headings": [{"paragraph": 64, "text": "Joel Brennan:"}, {"paragraph": 92, "text": "Joel Brennan:"}], "end_paragraph": 96, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-schools", "candidate_name": "David Crowley", "question_paragraphs": [61,79], "answer_ranges": [[67,67],[91,91]], "candidate_heading": {"paragraph": 66, "text": "David Crowley:"}, "answer_headings": [{"paragraph": 66, "text": "David Crowley:"}, {"paragraph": 90, "text": "David Crowley:"}], "end_paragraph": 96, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-schools", "candidate_name": "Kelda Roys", "question_paragraphs": [61,79], "answer_ranges": [[63,63],[95,95]], "candidate_heading": {"paragraph": 62, "text": "Kelda Roys:"}, "answer_headings": [{"paragraph": 62, "text": "Kelda Roys:"}, {"paragraph": 94, "text": "Kelda Roys:"}], "end_paragraph": 96, "end_marker": "Zac Schultz:"}
+      ]
+    },
+    {
+      "id": "wi-governor-2026-priorities",
+      "response_format": "published_topic_round",
+      "title": "Wisconsin governor, 2026 Democratic primary: first governing priorities",
+      "race_id": "race-48b209f7fa641f4b280d",
+      "review_path": "data/manual/policy_wisconsin_governor_2026_review.json",
+      "coverage_note": "All six tracked candidates' answers to PBS's first-bill prompt, published January16. The interview dates precede later withdrawals. These explicitly stated priorities support campaign-framing comparisons, not measured message frequency or proof that unmentioned policies were opposed. The publisher's Francesa Hong name typo is explicitly reviewed and retained in the source heading.",
+      "questions": [
+        {"id": "priorities", "topic": "first_governing_priorities", "prompt": "For the first time in 16 years, you can legitimately say control of the Wisconsin Legislature is up for grabs in the next election, which means the incoming governor could actually pass their agenda. So we asked each candidate what the first bill would be that they want to sign into law. The most common answer had to do with dealing with the rising costs of everything.", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "wi26-gov-priorities", "candidate_name": "Francesca Hong", "question_paragraphs": [61], "answer_ranges": [[79,79]], "candidate_heading": {"paragraph": 78, "text": "Francesa Hong:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-priorities", "candidate_name": "Mandela Barnes", "question_paragraphs": [61], "answer_ranges": [[73,73]], "candidate_heading": {"paragraph": 72, "text": "Mandela Barnes:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-priorities", "candidate_name": "Sara Rodriguez", "question_paragraphs": [61], "answer_ranges": [[63,63]], "candidate_heading": {"paragraph": 62, "text": "Sara Rodriguez:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-priorities", "candidate_name": "Joel Brennan", "question_paragraphs": [61], "answer_ranges": [[67,67]], "candidate_heading": {"paragraph": 66, "text": "Joel Brennan:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-priorities", "candidate_name": "David Crowley", "question_paragraphs": [61], "answer_ranges": [[65,65]], "candidate_heading": {"paragraph": 64, "text": "David Crowley:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-priorities", "candidate_name": "Kelda Roys", "question_paragraphs": [61], "answer_ranges": [[77,77]], "candidate_heading": {"paragraph": 76, "text": "Kelda Roys:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"}
+      ]
+    },
+    {
+      "id": "wi-governor-2026-bipartisan",
+      "response_format": "published_topic_round",
+      "title": "Wisconsin governor, 2026 Democratic primary: cross-party governing",
+      "race_id": "race-48b209f7fa641f4b280d",
+      "review_path": "data/manual/policy_wisconsin_governor_2026_review.json",
+      "coverage_note": "Six complete named responses from the January21 PBS episode. Claimed legislative accomplishments remain attributed self-descriptions. The publisher's Joe Brennan heading is explicitly associated with the canonical Joel Brennan record through the same original interview series. These answers do not justify assuming the DSA-endorsed candidate rejects all bipartisan work.",
+      "questions": [
+        {"id": "bipartisan", "topic": "cross_party_governing", "prompt": "With a Democratic governor and a Republican Legislature, the last eight years in Wisconsin politics have been defined by gridlock and a lack of trust in the Capitol. And whether a Democrat or Republican wins the race for governor this fall, there’s a good chance the other party will control at least one chamber of the Legislature, meaning the next governor will need to know how to work across the aisle to pass a budget. We asked nine of the leading candidates for governor about their track record of bipartisanship.", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "wi26-gov-bipartisan", "candidate_name": "Francesca Hong", "question_paragraphs": [61], "answer_ranges": [[63,63]], "candidate_heading": {"paragraph": 62, "text": "Francesca Hong:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-bipartisan", "candidate_name": "Mandela Barnes", "question_paragraphs": [61], "answer_ranges": [[69,69]], "candidate_heading": {"paragraph": 68, "text": "Mandela Barnes:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-bipartisan", "candidate_name": "Sara Rodriguez", "question_paragraphs": [61], "answer_ranges": [[79,79]], "candidate_heading": {"paragraph": 78, "text": "Sara Rodriguez:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-bipartisan", "candidate_name": "Joel Brennan", "question_paragraphs": [61], "answer_ranges": [[75,75]], "candidate_heading": {"paragraph": 74, "text": "Joe Brennan:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-bipartisan", "candidate_name": "David Crowley", "question_paragraphs": [61], "answer_ranges": [[77,77]], "candidate_heading": {"paragraph": 76, "text": "David Crowley:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"},
+        {"source_id": "wi26-gov-bipartisan", "candidate_name": "Kelda Roys", "question_paragraphs": [61], "answer_ranges": [[65,65]], "candidate_heading": {"paragraph": 64, "text": "Kelda Roys:"}, "end_paragraph": 80, "end_marker": "Zac Schultz:"}
+      ]
+    },
+    {
+      "id": "hi01-2018",
+      "title": "Hawaii Congressional District 1, 2018 Democratic primary",
+      "race_id": "race-a5c9cc4ff2b525bcb410",
+      "review_path": "data/manual/policy_hawaii_2018_review.json",
+      "coverage_note": "Complete answers to Civil Beat's twelve questions for six candidates, not all campaign material or the complete primary field. Ed Case's separately reviewed interviews are not substitutes for questionnaire answers.",
+      "questions": [
+        {"id": "q1", "topic": "campaign_priorities", "prompt": "What would be your first priority if elected? How would that change if your party is in the majority? The minority?"},
+        {"id": "q2", "topic": "house_leadership", "prompt": "Who would you support for Speaker of the House?"},
+        {"id": "q3", "topic": "war_and_diplomacy", "prompt": "Under what circumstances should America go to war?"},
+        {"id": "q4", "topic": "technology_regulation", "prompt": "Should Facebook be regulated by the federal government? How?"},
+        {"id": "q5", "topic": "climate_energy", "prompt": "What should the United States do to control carbon emissions and slow climate change?"},
+        {"id": "q6", "topic": "social_insurance", "prompt": "Is it time to reform Social Security, Medicare and Medicaid? How?", "variants": ["Is it time to reform Social Security, Medicare, and Medicaid? How?"]},
+        {"id": "q7", "topic": "taxes_and_spending", "prompt": "Congress has struggled in recent years to reach agreement on budget deficits, the national debt and spending in general. What would be your approach to fiscal matters?"},
+        {"id": "q8", "topic": "legislative_strategy", "prompt": "Whatever happens in the midterm elections, Congress will remain deeply divided. What specifically would you do to help bridge the partisan divide in Washington?"},
+        {"id": "q9", "topic": "immigration", "prompt": "What should be done to reform U.S. immigration policies, if anything?"},
+        {"id": "q10", "topic": "military_presence", "prompt": "What is your view of the role of the U.S. military in the islands, and would you like to see that role increased or decreased?"},
+        {"id": "q11", "topic": "gun_policy", "prompt": "What specific reforms, if any, would you seek in gun control policies?"},
+        {"id": "q12", "topic": "candidate_selected_issue", "prompt": "What other important issue would you like to discuss here?", "variants": ["What other important issues would you like to discuss here?"]}
+      ],
+      "documents": [
+        {"source_id": "hi01-2018-ing", "candidate_name": "Kaniela Saito Ing", "question_paragraphs": [105,109,112,116,121,126,131,136,140,144,149,153], "end_paragraph": 157, "end_marker": "GET IN-DEPTH REPORTING ON HAWAII’S BIGGEST ISSUES"},
+        {"source_id": "hi01-2018-fukumoto", "candidate_name": "Beth Keiko Fukumoto", "question_paragraphs": [105,109,112,115,119,123,126,131,135,139,142,146], "end_paragraph": 150, "end_marker": "GET IN-DEPTH REPORTING ON HAWAII’S BIGGEST ISSUES"},
+        {"source_id": "hi01-2018-chin", "candidate_name": "Doug S. Chin", "question_paragraphs": [105,111,113,117,120,123,125,128,130,133,136,139], "end_paragraph": 142, "end_marker": "GET IN-DEPTH REPORTING ON HAWAII’S BIGGEST ISSUES"},
+        {"source_id": "hi01-2018-kim", "candidate_name": "Donna Mercado Kim", "question_paragraphs": [105,109,111,114,116,119,125,129,133,138,141,143], "end_paragraph": 148, "end_marker": "GET IN-DEPTH REPORTING ON HAWAII’S BIGGEST ISSUES", "answer_caveats": {"q1": "The publisher text says 'Denying immigration to those fleeing violence' despite the surrounding safety and welcoming-immigration language. The wording is preserved, not silently corrected or classified as an unambiguous exclusion proposal.", "q8": "The answer opens with a quotation attributed to George Washington. It is part of Kim's response, not a new literal policy commitment authored by Kim."}},
+        {"source_id": "hi01-2018-martin", "candidate_name": "Ernest Yorihiko Martin", "question_paragraphs": [105,110,112,115,117,119,122,124,126,128,131,133], "end_paragraph": 136, "end_marker": "GET IN-DEPTH REPORTING ON HAWAII’S BIGGEST ISSUES"},
+        {"source_id": "hi01-2018-puletasi", "candidate_name": "Sam Puletasi", "question_paragraphs": [105,108,110,112,114,116,118,120,122,124,126,128], "end_paragraph": 130, "end_marker": "GET IN-DEPTH REPORTING ON HAWAII’S BIGGEST ISSUES"}
+      ]
+    },
+    {
+      "id": "il07-2020",
+      "title": "Illinois Congressional District 7, 2020 Democratic primary",
+      "race_id": "race-a4f6ebb856fb4c3cc6a2",
+      "review_path": "data/manual/policy_illinois_7_review.json",
+      "coverage_note": "All four primary candidates answered WTTW's three questions. Exact publication and pre-primary version remain unverified, so these full answers are available for qualified comparison but are not enrolled as timing-supported classification inputs. Separately submitted opening campaign statements support the reviewed claims but are not additional questionnaire answers.",
+      "questions": [
+        {"id": "q1", "topic": "campaign_motivation", "prompt": "Why are you running?", "numbered": false},
+        {"id": "q2", "topic": "office_priorities_and_strategy", "prompt": "What is your vision for this office?", "numbered": false},
+        {"id": "q3", "topic": "pressing_issue_and_proposals", "prompt": "What do you think is the most pressing issue facing your constituents and how do you plan on addressing it?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "il07-2020-anthony-clark", "candidate_name": "Anthony Clark", "question_paragraphs": [82,88,93], "end_paragraph": 97, "end_marker": "Thanks to our sponsors:", "answer_caveats": {"q3": "Includes a quotation attributed to Martin Luther King Jr.; embedded quotations are not new factual verification or independently authored candidate wording."}},
+        {"source_id": "il07-2020-danny-k-davis", "candidate_name": "Danny K. Davis", "question_paragraphs": [96,98,100], "end_paragraph": 102, "end_marker": "Thanks to our sponsors:"},
+        {"source_id": "il07-2020-kina-collins", "candidate_name": "Kina Collins", "question_paragraphs": [88,90,92], "end_paragraph": 97, "end_marker": "Thanks to our sponsors:"},
+        {"source_id": "il07-2020-kristine-schanbacher", "candidate_name": "Kristine Schanbacher", "question_paragraphs": [97,100,103], "end_paragraph": 112, "end_marker": "Thanks to our sponsors:"}
+      ]
+    },
+    {
+      "id": "il08-2022",
+      "title": "Illinois Congressional District 8, 2022 Democratic primary",
+      "race_id": "race-9c5f47278f523126e61b",
+      "review_path": "data/manual/policy_illinois_2022_review.json",
+      "coverage_note": "Both Democratic candidates answered all four WTTW questions. The retained 2022 primary guide has no verified original publication/version date, so answers remain timing-qualified and are not enrolled as dated model inputs. Candidate allegations and quoted third-party schedules are preserved as speech, not independently verified findings.",
+      "questions": [
+        {"id": "q1", "topic": "campaign_motivation", "prompt": "Why are you running?", "numbered": false},
+        {"id": "q2", "topic": "governance_reform", "prompt": "What does this office do well, and what needs fixing?", "numbered": false},
+        {"id": "q3", "topic": "pressing_issue_and_proposals", "prompt": "What is the most pressing issue facing your constituents and how do you plan on addressing it?", "numbered": false},
+        {"id": "q4", "topic": "constituent_engagement", "prompt": "What specific steps would you take to ensure your office is accessible and responsive to your constituents?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "il08-2022-junaid-ahmed", "candidate_name": "Junaid Ahmed", "question_paragraphs": [82,91,97,101], "end_paragraph": 110, "end_marker": "Thanks to our sponsors:", "answer_caveats": {"q4": "The answer includes an attributed third-party schedule to criticize how Congress spends its time; it is not the candidate's proposed schedule."}},
+        {"source_id": "il08-2022-raja-krishnamoorthi", "candidate_name": "Raja Krishnamoorthi", "question_paragraphs": [79,82,85,88], "end_paragraph": 91, "end_marker": "Thanks to our sponsors:"}
+      ]
+    },
+    {
+      "id": "tx-travis-da-2024",
+      "title": "Travis County District Attorney, 2024 Democratic primary",
+      "race_id": "race-dd06d2c4839b786be1bd",
+      "review_path": "data/manual/policy_questionnaire_round_3_review.json",
+      "coverage_note": "Both candidates supplied responses to all three Community Impact questions before the primary. The publisher requested answers under fifty words; complete responses to this format are not complete campaign platforms. Performance claims and personal self-descriptions are attributed, not independently audited.",
+      "questions": [
+        {"id": "q1", "topic": "prosecution_priorities", "prompt": "What will be your top priorities if you are elected?", "numbered": false},
+        {"id": "q2", "topic": "governing_qualifications", "prompt": "What uniquely qualifies you for this position?", "numbered": false},
+        {"id": "q3", "topic": "candidate_selected_message", "prompt": "What is something you want Travis County residents to know about you?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "tx24-common", "candidate_name": "José Garza", "question_paragraphs": [45,47,49], "end_paragraph": 51, "end_marker": "Jeremy Sylestine"},
+        {"source_id": "tx24-common", "candidate_name": "Jeremy Sylestine", "question_paragraphs": [54,56,58], "end_paragraph": 60, "end_marker": "More Election news from Central Austin"}
+      ]
+    },
+    {
+      "id": "pa-city7-2023",
+      "title": "Pittsburgh City Council District 7, 2023 Democratic primary",
+      "race_id": "national-recihG0fIKbvStGIg-dem-primary",
+      "review_path": "data/manual/policy_recovered_batch_1_review.json",
+      "coverage_note": "Both candidates answered WESA's five questions. Candidate answers are separated from reporter biographies and source captions. Numerical claims about housing output, buyers and budgets remain attributed statements rather than independently verified statistics.",
+      "questions": [
+        {"id": "q1", "topic": "campaign_priorities", "prompt": "What should Pittsburgh City Council’s top priority be right now? How would you try to address it, if elected?", "numbered": false},
+        {"id": "q2", "topic": "district_needs_and_representation", "prompt": "What does your district most need from City Council? Why are you the right person to address it?", "numbered": false},
+        {"id": "q3", "topic": "youth_violence_prevention", "prompt": "Violent crime, particularly among youth, has been a high priority for the mayor’s office and city council. What do you think council’s role should be in addressing the problem?", "variants": ["Violent crime, particularly among youth, has been an issue of high priority for the mayor’s office and city council. What do you think council’s role should be in addressing the problem?"], "numbered": false},
+        {"id": "q4", "topic": "housing", "prompt": "Pittsburgh faces a variety of housing challenges — from a lack of affordable housing stock to a growing homeless population. What is the most effective thing council can do to address this?", "variants": ["Pittsburgh faces a variety of housing challenges — from a lack of affordable housing stock to a growing homeless population — what is the most effective thing council can do to address this?"], "numbered": false},
+        {"id": "q5", "topic": "police_workforce_policy", "prompt": "The state of the city’s Bureau of Police has been a topic of discussion for city leaders. While City Council has held public hearings to learn more about staffing concerns, what else can or should council do to improve working conditions for police?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "pa23-city7", "candidate_name": "Deb Gross", "question_paragraphs": [220,223,225,228,233], "end_paragraph": 235, "end_marker": "Tags"},
+        {"source_id": "pa23-city7", "candidate_name": "Jordan Botta", "question_paragraphs": [196,198,201,203,206], "end_paragraph": 209, "end_marker": "Deb Gross"}
+      ]
+    },
+    {
+      "id": "pa-county11-2023",
+      "title": "Allegheny County Council District 11, 2023 Democratic primary",
+      "race_id": "national-rec0ntzcTu773zMP5-dem-primary",
+      "review_path": "data/manual/policy_recovered_batch_1_review.json",
+      "coverage_note": "Both candidates answered all five WESA questions. Complete responses retain shared opposition to privatizing Shuman, support for more council resources, and differing policy emphases without treating an unmentioned proposal as opposed.",
+      "questions": [
+        {"id": "q1", "topic": "campaign_priorities", "prompt": "What is the most important issue for residents of your district? What will you do to tackle that issue?", "numbered": false},
+        {"id": "q2", "topic": "property_assessment_reform", "prompt": "Allegheny County’s property tax assessment system has been subject to much criticism in recent months. How do you think property tax assessments should be handled going forward, and what steps will you take to accomplish that?", "numbered": false},
+        {"id": "q3", "topic": "climate_energy", "prompt": "County Council has passed a number of environmental ordinances during the past year, including a ban on fracking in county parks and creating a new Department of Sustainability. But there is still debate on issues such as the county's approach to large industrial polluters. What changes, if any, would you like to see in the county's energy and environmental policies, and why?", "numbered": false},
+        {"id": "q4", "topic": "detention_and_public_ownership", "prompt": "Conditions at the Allegheny County Jail have become a subject of intense debate, and there is increased discussion of finding a replacement for the now-closed Shuman Juvenile Detention Center. What concerns, if any, do you have about the future for these facilities, and what would you do on council to address those concerns?", "numbered": false},
+        {"id": "q5", "topic": "county_council_role", "prompt": "County Council has played a more activist role in recent years, sometimes thwarting the county executive's agenda and pursuing its own policy goals. Critics say council is a part-time body whose role was originally intended to simply oversee the county's budget process. What role do you think council should play in shaping policy, and do you think council needs more staff and resources than it has now?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "pa23-county11", "candidate_name": "Dennis McDermott", "question_paragraphs": [223,225,227,232,234], "end_paragraph": 236, "end_marker": "Tags"},
+        {"source_id": "pa23-county11", "candidate_name": "Paul Klein", "question_paragraphs": [201,203,205,207,209], "end_paragraph": 211, "end_marker": "Dennis McDermott"}
+      ]
+    },
+    {
+      "id": "wi76-2026",
+      "title": "Wisconsin Assembly District 76, 2026 Democratic primary",
+      "race_id": "race-e87b28f84c6a49987afa",
+      "review_path": "data/manual/policy_recovered_batch_1_review.json",
+      "coverage_note": "All five candidates answered City Cast Madison's seven questions before the primary. The original named-answer format is preserved. The restaurant question is nonpolicy context and does not enter policy-model inputs. Near-duplicate public-bank answers attributed to Bennett and Sullivan are preserved but withheld from model inputs and independent policy comparison pending attribution review.",
+      "questions": [
+        {"id": "q1", "topic": "district_priorities", "prompt": "What is the single most pressing issue facing the 76th and how will you address it?", "numbered": false},
+        {"id": "q2", "topic": "statewide_priorities", "prompt": "What's the most important issue facing the state at large?", "numbered": false},
+        {"id": "q3", "topic": "governing_qualifications", "prompt": "What sets you apart from your competitors?", "numbered": false},
+        {"id": "q4", "topic": "hyperscale_data_centers", "prompt": "Would you support a moratorium on hyperscale data centers in Wisconsin? Why or why not?", "numbered": false},
+        {"id": "q5", "topic": "housing", "prompt": "What's something the state government currently isn't doing, but could do, to help ease Madison's housing crisis?", "numbered": false},
+        {"id": "q6", "topic": "legislative_strategy", "prompt": "What's your philosophy when it comes to working across the political aisle with Republican colleagues?", "numbered": false},
+        {"id": "q7", "topic": "personal_preference_not_policy", "prompt": "What’s your favorite meal in Madison?", "numbered": false, "include_in_policy_corpus": false}
+      ],
+      "documents": [
+        {"source_id": "wi26-madison", "candidate_name": "Juliana Bennett", "question_paragraphs": [10,16,22,28,34,40,46], "answer_paragraphs": [14,20,26,32,38,44,50], "speaker_prefixes": ["Juliana Bennett:", "Juliana Bennett :"], "end_paragraph": 52, "end_marker": "Share article", "analysis_excluded_questions": {"q5": "near_duplicate_publisher_answer_requires_attribution_review"}, "answer_caveats": {"q5": "The publisher attributes nearly the same public-bank answer to Bennett and Sullivan, with a small wording error in this version. Preserve the printed text, but do not treat it as independently corroborated agreement until the attribution is checked."}},
+        {"source_id": "wi26-madison", "candidate_name": "Isaia Ben-Ami", "question_paragraphs": [10,16,22,28,34,40,46], "answer_paragraphs": [11,17,23,29,35,41,47], "speaker_prefixes": ["Isaia Ben-Ami:", "Isaia Ben-Ami :"], "end_paragraph": 52, "end_marker": "Share article"},
+        {"source_id": "wi26-madison", "candidate_name": "Tony Castañeda", "question_paragraphs": [10,16,22,28,34,40,46], "answer_paragraphs": [12,18,24,30,36,42,48], "speaker_prefixes": ["Tony Castañeda:", "Tony Castañeda :"], "end_paragraph": 52, "end_marker": "Share article"},
+        {"source_id": "wi26-madison", "candidate_name": "Dina Nina Martinez-Rutherford", "question_paragraphs": [10,16,22,28,34,40,46], "answer_paragraphs": [13,19,25,31,37,43,49], "speaker_prefixes": ["Dina Nina Martinez-Rutherford:", "Dina Nina Martinez-Rutherford :"], "end_paragraph": 52, "end_marker": "Share article"},
+        {"source_id": "wi26-madison", "candidate_name": "Zoe Sullivan", "question_paragraphs": [10,16,22,28,34,40,46], "answer_paragraphs": [15,21,27,33,39,45,51], "speaker_prefixes": ["Zoe Sullivan:", "Zoe Sullivan :"], "end_paragraph": 52, "end_marker": "Share article", "analysis_excluded_questions": {"q5": "near_duplicate_publisher_answer_requires_attribution_review"}, "answer_caveats": {"q5": "The publisher attributes nearly the same public-bank answer to Sullivan and Bennett. Preserve both as printed, but withhold them from model inputs and independent policy comparison pending attribution review."}}
+      ]
+    },
+    {
+      "id": "ma26-2016",
+      "title": "Massachusetts House, 26th Middlesex District, 2016 Democratic primary",
+      "race_id": "race-0f0734c608b02353f3cf",
+      "review_path": "data/manual/policy_recovered_batch_2_review.json",
+      "coverage_note": "Both candidates supplied all five answers to The Somerville Times before the September 8 primary. Biographical introductions, publisher text, and comments are excluded from the answer-only corpus. The marijuana question is a real policy disagreement; both oppose the current charter-cap ballot question despite disputing past records.",
+      "questions": [
+        {"id": "q1", "topic": "charter_school_cap", "prompt": "What is your position on the ballot questions to “lift the cap” on charter schools and why?"},
+        {"id": "q2", "topic": "cannabis_legalization", "prompt": "What is your position on the ballot question to “regulate marijuana” like alcohol?"},
+        {"id": "q3", "topic": "green_line_extension", "prompt": "Due to the high initial cost estimates for the proposed Green Line Extension, the project has been stalled and is being scaled back. What would you do to make sure the Green Line Extension becomes a reality and how soon? What would you do to help speed the completion?"},
+        {"id": "q4", "topic": "opioid_policy", "prompt": "Opioid abuse is a problem that cannot be ignored. What steps can the state legislature take to address this epidemic here in the District as well as the City of Somerville.", "variants": ["Opioid abuse is a problem that cannot be ignored. What steps can address this epidemic here in the District as well as the City of Somerville."]},
+        {"id": "q5", "topic": "watershed_protection", "prompt": "What initiatives have you or would you support to enhance the environmental quality of the Mystic River watersheds."}
+      ],
+      "documents": [
+        {"source_id": "ma16-somerville", "candidate_name": "Mike Connolly", "question_paragraphs": [30,32,34,36,38], "end_paragraph": 40, "end_marker": "________________________________________________________________"},
+        {"source_id": "ma16-somerville", "candidate_name": "Timothy J. Toomey, Jr.", "question_paragraphs": [48,50,52,54,56], "end_paragraph": 58, "end_marker": "If you found this article of interest, please consider sharing it."}
+      ]
+    },
+    {
+      "id": "pa-controller-2023",
+      "title": "Allegheny County Controller, 2023 Democratic primary",
+      "race_id": "race-e998c1da8d59c9a7b9df",
+      "review_path": "data/manual/policy_recovered_batch_3_review.json",
+      "coverage_note": "Both candidates answered WESA's five questions before the primary. Accusations, self-described records and financial assessments remain attributed statements, not independent audit findings. The candidate answers are separated from reporter biographies and captions.",
+      "questions": [
+        {"id": "q1", "topic": "oversight_priorities", "prompt": "The controller's office has oversight over county operations and agencies. What areas of government require the most urgent scrutiny, and why?", "numbered": false},
+        {"id": "q2", "topic": "transparency", "prompt": "How would you assess the availability and transparency of information about the county's finances and operations, and what, if anything, do you think should the next controller do to improve it?", "numbered": false},
+        {"id": "q3", "topic": "watchdog_independence", "prompt": "A controller acts as a fiscal watchdog, and an ability to maintain independence from the legislative and executive branch of the government is arguably essential. What can you point to in your background to demonstrate that independence?", "numbered": false},
+        {"id": "q4", "topic": "oversight_board_powers", "prompt": "The controller sits on the Jail Oversight Board, as well as a juvenile detention advisory board, and a retirement and investment board. How well are these boards functioning in your view, and what role do you think you would play on them as controller?", "numbered": false},
+        {"id": "q5", "topic": "fiscal_priorities", "prompt": "How would you assess the county's overall financial strength, and what fiscal concerns would you be paying attention to as controller?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "pa23-controller", "candidate_name": "Darwin Leuba", "question_paragraphs": [201,203,205,207,209], "end_paragraph": 211, "end_marker": "Corey O’Connor"},
+        {"source_id": "pa23-controller", "candidate_name": "Corey O’Connor", "question_paragraphs": [223,226,229,233,236], "end_paragraph": 240, "end_marker": "Tags"}
+      ]
+    },
+    {
+      "id": "mn65-2022-priorities",
+      "title": "Minnesota Senate District 65, 2022 DFL primary: campaign priorities",
+      "race_id": "race-deff03074ea69358d8e9",
+      "review_path": "data/manual/policy_minnesota_2022_review.json",
+      "coverage_note": "Both responding Senate candidates' complete answers to the shared priority question are retained. Zuki Ellis is explicitly listed as not responding to this publisher; her separately recovered Senate platform appears in the source-reviewed comparison browser. The House candidates on the same page are not included in this Senate comparison.",
+      "questions": [
+        {"id": "q1", "topic": "campaign_priorities", "prompt": "What are your two to three top priorities as a state representative/senator and how will you address those issues? What made you decide to focus on those issues in particular?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "mn22-senate65-priorities", "candidate_name": "Sheigh Freeberg", "question_paragraphs": [62], "answer_ranges": [[78,81]], "candidate_heading": {"paragraph": 76, "text": "Sheigh Freeberg"}, "end_paragraph": 82, "end_marker": "Sandy Pappas"},
+        {"source_id": "mn22-senate65-priorities", "candidate_name": "Sandy Pappas", "question_paragraphs": [62], "answer_ranges": [[84,86]], "candidate_heading": {"paragraph": 82, "text": "Sandy Pappas"}, "end_paragraph": 87, "end_marker": "Vote on August 9"}
+      ]
+    },
+    {
+      "id": "va-braddock-2019",
+      "title": "Fairfax County Braddock District, 2019 Democratic primary",
+      "race_id": "race-686ed0f1771e83016f0c",
+      "review_path": "data/manual/policy_frontier_batch_2_review.json",
+      "coverage_note": "Both candidates' complete responses to GGWash's six housing and transportation questions are retained. Explicit speaker prefixes and paragraph ranges separate the interleaved answers. Stated fiscal amounts, population statistics and claimed effects are candidate assertions, not independent audit findings.",
+      "questions": [
+        {"id": "q1", "topic": "housing_affordability", "prompt": "Who do you think has the hardest time finding housing that’s affordable to them in Fairfax County, and what steps do you plan to take to address that need?", "numbered": false},
+        {"id": "q2", "topic": "housing_diversity", "prompt": "Would you champion increasing housing diversity in parts of the county which have fewer lower-income residents than the entire county and Washington region as a whole? Why or why not?", "numbered": false},
+        {"id": "q3", "topic": "development_and_transit", "prompt": "How do you reconcile the need to provide housing affordability in the parts of your district with good transit with some other people’s stated desire to slow development?", "numbered": false},
+        {"id": "q4", "topic": "transit_oriented_communities", "prompt": "Fairfax County has been pushing for walkable, transit-accessible communities to meet demand and reduce greenhouse gas emissions from transportation. Would you continue this trend, and where in your district would you emphasize this? If not, why not?", "numbered": false},
+        {"id": "q5", "topic": "transportation_priorities", "prompt": "What are the top three transportation priorities you have for your district? Tell us why and the revenue source (including any new revenue sources you’d champion).", "numbered": false},
+        {"id": "q6", "topic": "transportation_safety", "prompt": "Fairfax County is one of the few area jurisdictions that has not adopted Vision Zero. Given the high number of people who die or are seriously injured while moving around in Fairfax, what would you advocate to ensure safety for everyone even though Fairfax DOT has to work with VDOT to make changes in Fairfax’s transportation network?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "frontier2-va19-braddock", "candidate_name": "Irma Marianela Corado", "question_paragraphs": [47,54,57,61,66,74], "answer_ranges": [[50,53],[56,56],[59,60],[65,65],[70,73],[77,77]], "speaker_prefixes": ["Irma Corado:"], "end_paragraph": 78, "end_marker": "What do you think? Give us your feedback using this form and see all of the races at our 2019 primary election page ."},
+        {"source_id": "frontier2-va19-braddock", "candidate_name": "James Robert Walkinshaw", "question_paragraphs": [47,54,57,61,66,74], "answer_ranges": [[48,49],[55,55],[58,58],[62,64],[67,69],[75,76]], "speaker_prefixes": ["James Walkinshaw:"], "end_paragraph": 78, "end_marker": "What do you think? Give us your feedback using this form and see all of the races at our 2019 primary election page ."}
+      ]
+    },
+    {
+      "id": "co-larimer3-2020",
+      "title": "Larimer County Commissioner District 3, 2020 Democratic primary",
+      "race_id": "race-43e72676de9c6085ee97",
+      "review_path": "data/manual/policy_frontier_batch_2_review.json",
+      "coverage_note": "Both candidates' four submitted Surveyor responses are retained in full. The introductory personal-biography question is nonpolicy context and is excluded from policy-model inputs. The other responses preserve stated priorities and proposals without treating short answers as complete campaign platforms.",
+      "questions": [
+        {"id": "q1", "topic": "personal_background_not_policy", "prompt": "Can you please provide a brief history of your background, i.e. career/occupation, family, history in Colorado/Larimer County, etc., just some basic get-to-know-you information for our readers.", "include_in_policy_corpus": false},
+        {"id": "q2", "topic": "reason_for_running", "prompt": "What prompted you to run for Larimer County Commissioner District 3?"},
+        {"id": "q3", "topic": "governing_philosophy", "prompt": "Can you please provide a brief outline of your political/ideological philosophy?"},
+        {"id": "q4", "topic": "campaign_priorities", "prompt": "What are the major issue(s) on which you want to focus your campaign and potential service as Larimer County Commissioner District 3?"}
+      ],
+      "documents": [
+        {"source_id": "frontier2-co20-shadduck", "candidate_name": "Jody Shadduck-McNally", "question_paragraphs": [53,58,61,64], "end_paragraph": 70, "end_marker": "related Local News"},
+        {"source_id": "frontier2-co20-baker", "candidate_name": "Myles G. Baker", "question_paragraphs": [53,56,58,60], "end_paragraph": 65, "end_marker": "related Local News"}
+      ]
+    },
+    {
+      "id": "ky-louisville10-2020",
+      "title": "Louisville Metro Council District 10, 2020 Democratic primary",
+      "race_id": "race-545d24c0467c329fe6e1",
+      "review_path": "data/manual/policy_kentucky_2020_review.json",
+      "coverage_note": "Both candidates' complete three-question responses are retained with explicit surname attribution. The original June2020 article was modified in March2024; these current answers remain timing-qualified and are not enrolled in the dated model corpus. Medical, fiscal and legal claims remain attributed candidate statements.",
+      "questions": [
+        {"id": "q1", "topic": "pandemic_response", "prompt": "What are your ideas for helping residents in your district weather the continued challenges posed by coronavirus, both in terms of health and finances?", "numbered": false},
+        {"id": "q2", "topic": "police_reform", "prompt": "What, if any, reforms to the budget and policies of the Louisville Metro Police Department would you advocate for as a Metro Council member?", "numbered": false},
+        {"id": "q3", "topic": "district_priorities", "prompt": "In your opinion, what is the number one issue facing your district and how do you plan to address it?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "ky20-council10-questionnaire", "candidate_name": "Ryan Fenwick", "question_paragraphs": [260,265,272], "answer_ranges": [[264,264],[266,266],[276,276]], "speaker_prefixes": ["Fenwick:"], "end_paragraph": 277, "end_marker": "News"},
+        {"source_id": "ky20-council10-questionnaire", "candidate_name": "Pat Mulvihill", "question_paragraphs": [260,265,272], "answer_ranges": [[261,263],[267,271],[273,275]], "speaker_prefixes": ["Mulvihill:"], "end_paragraph": 277, "end_marker": "News"}
+      ]
+    },
+    {
+      "id": "ms-senate-2018",
+      "title": "Mississippi US Senate, 2018 Democratic primary",
+      "race_id": "race-145ef0f5b3eee7d39938",
+      "review_path": "data/manual/policy_mississippi_2018_review.json",
+      "coverage_note": "Five candidates' complete five-question submissions are retained. Omeria Scott's questionnaire was not recovered; this is not a no-position label. These original2018 articles have known2025 revision metadata and remain timing-qualified. Exact publisher newsletter inserts are excluded from the answers and separately documented. Candidate claims and allegations are not independently verified.",
+      "questions": [
+        {"id": "q1", "topic": "governing_and_electoral_strategy", "prompt": "Why does your district (for senators, your state) need you right now?", "variants": ["Why does your district (for Senate candidates, your state) need you right now?"], "numbered": false},
+        {"id": "q2", "topic": "advocacy_and_record", "prompt": "Provide one or two examples of when you have been an advocate for your district (or state) in your personal or professional life. What was the result?", "numbered": false},
+        {"id": "q3", "topic": "legislative_priorities", "prompt": "In the past year or so, what was the most important vote taken for your district (or state)? How would you have voted and why? What is the most pressing issue for your district (or state)?", "numbered": false},
+        {"id": "q4", "topic": "leading_policy_proposal", "prompt": "If you could propose one piece of legislation that would greatly improve the quality of life for people your district (or state) what would it be?", "numbered": false},
+        {"id": "q5", "topic": "future_political_work", "prompt": "If you are unsuccessful in winning your race, how specifically will you continue working on behalf of your district (or state)?", "numbered": false}
+      ],
+      "documents": [
+        {"source_id": "ms18-bohren", "candidate_name": "Jensen Bohren", "question_paragraphs": [190,194,196,198,200], "end_paragraph": 202, "end_marker": "Read more 2018 election stories at jfp.ms/2018elections . The JFP is still taking candidate questionnaires. Don’t see your candidate? Tell them to email their questionnaire to arielle@jacksonfreepress.com .", "noncandidate_paragraphs": [{"paragraph": 191, "exact_text": "Sign up for our FREE email newsletter today!", "reason": "Publisher newsletter promotion, not candidate speech."}, {"paragraph": 192, "exact_text": "Unlock exclusive, in-depth stories that go beyond headlines.", "reason": "Publisher newsletter promotion, not candidate speech."}]},
+        {"source_id": "ms18-baria", "candidate_name": "David Baria", "question_paragraphs": [190,194,196,198,200], "end_paragraph": 202, "end_marker": "Read more 2018 election stories at jfp.ms/2018elections . The JFP is still taking candidate questionnaires. Don’t see your candidate? Tell them to email their questionnaire to arielle@jacksonfreepress.com .", "noncandidate_paragraphs": [{"paragraph": 191, "exact_text": "Sign up for our FREE email newsletter today!", "reason": "Publisher newsletter promotion, not candidate speech."}, {"paragraph": 192, "exact_text": "Unlock exclusive, in-depth stories that go beyond headlines.", "reason": "Publisher newsletter promotion, not candidate speech."}]},
+        {"source_id": "ms18-garland", "candidate_name": "Jerone Garland", "question_paragraphs": [190,194,196,198,202], "end_paragraph": 204, "end_marker": "Read more 2018 election stories at jfp.ms/2018elections . The JFP is still taking candidate questionnaires. Don’t see your candidate? Tell them to email their questionnaire to arielle@jacksonfreepress.com .", "noncandidate_paragraphs": [{"paragraph": 192, "exact_text": "Sign up for our FREE email newsletter today!", "reason": "Publisher newsletter promotion, not candidate speech."}, {"paragraph": 193, "exact_text": "Unlock exclusive, in-depth stories that go beyond headlines.", "reason": "Publisher newsletter promotion, not candidate speech."}]},
+        {"source_id": "ms18-sherman", "candidate_name": "Howard Sherman", "question_paragraphs": [190,193,201,204,206], "end_paragraph": 208, "end_marker": "Read more 2018 election stories at jfp.ms/2018elections . The JFP is still taking candidate questionnaires. Don’t see your candidate? Tell them to email their questionnaire to arielle@jacksonfreepress.com .", "noncandidate_paragraphs": [{"paragraph": 195, "exact_text": "Sign up for our FREE email newsletter today!", "reason": "Publisher newsletter promotion, not candidate speech."}, {"paragraph": 196, "exact_text": "Unlock exclusive, in-depth stories that go beyond headlines.", "reason": "Publisher newsletter promotion, not candidate speech."}]},
+        {"source_id": "ms18-maurice", "candidate_name": "Victor G. Maurice, Jr.", "question_paragraphs": [190,194,198,203,207], "end_paragraph": 209, "end_marker": "Read more 2018 election stories at jfp.ms/2018elections . The JFP is still taking candidate questionnaires. Don’t see your candidate? Tell them to email their questionnaire to arielle@jacksonfreepress.com .", "noncandidate_paragraphs": [{"paragraph": 195, "exact_text": "Sign up for our FREE email newsletter today!", "reason": "Publisher newsletter promotion, not candidate speech."}, {"paragraph": 196, "exact_text": "Unlock exclusive, in-depth stories that go beyond headlines.", "reason": "Publisher newsletter promotion, not candidate speech."}]}
+      ]
+    }
+  ]
+}

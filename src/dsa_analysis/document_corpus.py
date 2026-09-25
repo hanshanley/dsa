@@ -1,4 +1,5 @@
 import base64
+import gzip
 import hashlib
 import http.client
 import importlib
@@ -12,9 +13,11 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+import zlib
 from collections import Counter, defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import UTC, date, datetime
+from functools import lru_cache
 from html.parser import HTMLParser
 from io import BytesIO
 from pathlib import Path
@@ -25,6 +28,8 @@ from .io import read_csv, write_csv
 from .paths import PROCESSED_DIR, RAW_DIR, ROOT
 
 USER_AGENT = "dsa-analysis/0.1 (+candidate document corpus)"
+CANDIDATE_SCREENING_VERSION = "source_scope_primary_registry_html_controls_v4"
+MAX_DECOMPRESSED_DOCUMENT_BYTES = 64 * 1024 * 1024
 COVERAGE_STATUSES = {
     "not_searched",
     "searched_not_found",
@@ -205,6 +210,10 @@ REGATHER_PRIORITY_SOURCE_TYPE_CLASSES = (
     "interview",
     "debate",
 )
+MIXED_SPEAKER_SOURCE_CLASSES = {
+    "interview", "questionnaire", "debate", "forum", "voter_guide", "profile_or_op_ed",
+    "speech", "statement", "press_release",
+}
 BOILERPLATE_PHRASES = {
     "all rights reserved",
     "cookie policy",
@@ -212,6 +221,8 @@ BOILERPLATE_PHRASES = {
     "privacy policy",
     "terms of service",
     "unsubscribe",
+    "send us your confidential news tip",
+    "add your confidential information here",
 }
 ANALYSIS_STOPWORDS = {
     "a",
@@ -334,7 +345,8 @@ class RawDocumentCapture:
 
     @property
     def suffix(self) -> str:
-        return _suffix(self.final_url or self.source_url, self.content_type)
+        suffix = _suffix(self.final_url or self.source_url, self.content_type)
+        return suffix + ".gz" if self.content_bytes.startswith(b"\x1f\x8b") and not suffix.endswith(".gz") else suffix
 
 
 @dataclass(frozen=True)
@@ -763,6 +775,18 @@ def persist_raw_document(
 
 
 def extract_document_text(capture: RawDocumentCapture) -> ExtractedDocument:
+    if capture.content_bytes.startswith(b"\x1f\x8b"):
+        try:
+            with gzip.GzipFile(fileobj=BytesIO(capture.content_bytes)) as compressed:
+                decoded = compressed.read(MAX_DECOMPRESSED_DOCUMENT_BYTES + 1)
+        except (OSError, EOFError, zlib.error) as error:
+            raise ExtractionError(f"{capture.document_id}: invalid gzip document") from error
+        if len(decoded) > MAX_DECOMPRESSED_DOCUMENT_BYTES:
+            raise ExtractionError(f"{capture.document_id}: decompressed document exceeds size limit")
+        capture = replace(
+            capture, content_bytes=decoded, byte_count=len(decoded),
+            sha256=hashlib.sha256(decoded).hexdigest(),
+        )
     extractor = _extractor_name(capture)
     if extractor == "media_no_transcript":
         return ExtractedDocument(
@@ -1069,10 +1093,34 @@ def run_candidate_document_extraction_batch(
     if queue_rows is None:
         queue_rows = _load_candidate_document_queue(paths.queue_path)
     analysis_config = analysis_config or AnalysisSegmentConfig()
-    shared_source_candidates = _shared_source_candidates(queue_rows)
-
+    correction_path = ROOT / "data" / "manual" / "candidate_source_date_corrections.json"
+    date_corrections = (
+        json.loads(correction_path.read_text())["corrections"] if correction_path.exists() else []
+    )
+    association_path = ROOT / "data" / "manual" / "candidate_source_association_corrections.json"
+    association_corrections = (
+        json.loads(association_path.read_text())["corrections"] if association_path.exists() else []
+    )
+    exclusion_path = ROOT / "data" / "manual" / "candidate_source_exclusions.json"
+    source_exclusions = (
+        json.loads(exclusion_path.read_text())["exclusions"] if exclusion_path.exists() else []
+    )
     manifest_index = _load_raw_manifest_index(paths.raw_manifest_path)
     metadata_by_document = _load_existing_csv_by_key(paths.metadata_path, "document_id")
+    from .national_platform_applicability import is_presidential_office
+
+    registry_path = paths.metadata_path.with_name("race_registry.csv")
+    presidential_race_ids = {
+        race_id
+        for race in (read_csv(registry_path) if registry_path.exists() else [])
+        if is_presidential_office(race.get("office", ""))
+        and race.get("scope_kind") == "tracked_dsa_endorsed_democratic_primary"
+        for race_id in (race["race_id"], *race.get("source_race_ids", "").split(" | "))
+        if race_id
+    }
+    shared_source_candidates = _shared_source_candidates([
+        *metadata_by_document.values(), *queue_rows,
+    ], presidential_race_ids=presidential_race_ids)
     full_text_by_document = _load_existing_jsonl_by_key(paths.full_text_path, "document_id")
     paragraph_rows = read_csv(paths.paragraph_path) if paths.paragraph_path.exists() else []
     sentence_rows = read_csv(paths.sentence_path) if paths.sentence_path.exists() else []
@@ -1133,6 +1181,9 @@ def run_candidate_document_extraction_batch(
         replaced_document_ids.add(job.document_id)
         try:
             capture, fetch_status, raw_path = _resolve_raw_capture(job, manifest_index, fetcher)
+            job = _apply_source_association_corrections(job, capture, association_corrections)
+            job = _apply_source_date_corrections(job, capture, date_corrections)
+            job = _apply_source_exclusions(job, capture, source_exclusions)
         except (DocumentCorpusError, RawFetchError) as error:
             processed_documents += 1
             if isinstance(error, RawFetchError):
@@ -1214,13 +1265,22 @@ def run_candidate_document_extraction_batch(
 
         shared_scope_status = ""
         if (
-            len(shared_source_candidates.get(canonical_source_url(job.source_url), set())) > 1
+            (
+                len(shared_source_candidates.get(canonical_source_url(job.source_url), set())) > 1
+                or job.analysis_scope in {"candidate_excerpt", "reviewed_quote"}
+                or (
+                    job.legacy_locators.strip()
+                    and classify_source_type(job.source_type, job.source_url) in MIXED_SPEAKER_SOURCE_CLASSES
+                )
+            )
             and not job.transcript_text
         ):
             extracted, shared_scope_status = _scope_shared_document_for_candidate(
                 job,
                 extracted,
             )
+            if shared_scope_status == "extracted" and job.analysis_scope in {"analysis", "candidate_excerpt"}:
+                job = replace(job, analysis_scope="candidate_excerpt")
 
         extraction_status = (
             "media_no_transcript"
@@ -1334,6 +1394,76 @@ def run_candidate_document_extraction_batch(
     )
 
 
+def _apply_source_exclusions(
+    job: CandidateDocumentJob, capture: RawDocumentCapture, exclusions: Sequence[dict[str, str]],
+) -> CandidateDocumentJob:
+    for exclusion in exclusions:
+        if (
+            job.race_id != exclusion["race_id"] or job.candidate_name != exclusion["candidate_name"]
+            or capture.sha256 != exclusion["source_sha256"]
+        ):
+            continue
+        if not exclusion.get("reason", "").strip():
+            raise DocumentCorpusError("A source-identity exclusion requires an explicit reason")
+        note = "Excluded candidate-source version: " + exclusion["reason"]
+        return replace(
+            job, analysis_scope="context_only",
+            notes=job.notes if note in job.notes else job.notes + " | " + note,
+        )
+    return job
+
+
+def _apply_source_association_corrections(
+    job: CandidateDocumentJob, capture: RawDocumentCapture, corrections: Sequence[dict[str, str]],
+) -> CandidateDocumentJob:
+    for correction in corrections:
+        if (
+            job.race_id != correction["previous_race_id"]
+            or job.candidate_name != correction["candidate_name"]
+            or canonical_source_url(job.source_url) != canonical_source_url(correction["source_url"])
+        ):
+            continue
+        if capture.sha256 != correction["source_sha256"] or job.election_date != correction["election_date"]:
+            raise DocumentCorpusError("Candidate/race correction requires its reviewed source version and election date")
+        if (
+            not correction.get("corrected_race_id") or not correction.get("reason", "").strip()
+            or correction.get("role") not in {"endorsed", "opponent", "unopposed"}
+        ):
+            raise DocumentCorpusError("Candidate/race correction lacks a valid identity or review reason")
+        return replace(
+            job, race_id=correction["corrected_race_id"], role=correction["role"],
+            notes=job.notes + " | Corrected source/race association: " + correction["reason"],
+        )
+    return job
+
+
+def _apply_source_date_corrections(
+    job: CandidateDocumentJob, capture: RawDocumentCapture, corrections: Sequence[dict[str, str]],
+) -> CandidateDocumentJob:
+    for correction in corrections:
+        if canonical_source_url(job.source_url) != canonical_source_url(correction["source_url"]):
+            continue
+        replacement = correction.get("replacement_publication_date", "")
+        rejected = job.publication_date == correction["rejected_publication_date"]
+        restore_verified = not job.publication_date and bool(replacement) and capture.sha256 == correction["source_sha256"]
+        if not (rejected or restore_verified):
+            continue
+        if capture.sha256 != correction["source_sha256"]:
+            raise DocumentCorpusError(
+                "A rejected publication date was reused for a different source version; review the date evidence"
+            )
+        if not correction.get("reason", "").strip():
+            raise DocumentCorpusError("Source date correction requires an explicit reason")
+        note = (
+            f"Rejected unsupported publication date {job.publication_date}: "
+            if rejected else f"Restored hash-bound verified publication date {replacement}: "
+        ) + correction["reason"]
+        if replacement:
+            _coerce_date(replacement)
+        return replace(job, publication_date=replacement, notes=job.notes + " | " + note)
+    return job
+
+
 def build_analysis_segments(
     *,
     candidate_name: str,
@@ -1359,6 +1489,129 @@ def build_analysis_segments(
         config=analysis_config,
     )
     return _annotate_analysis_segments(segments, analysis_config)
+
+
+def analysis_paragraph_exclusions(paragraphs: Sequence[TextSegment]) -> dict[int, str]:
+    """Exclude identifiable page controls without changing retained source locators."""
+    ordered = sorted(paragraphs, key=lambda paragraph: paragraph.index)
+    excluded = {}
+    for offset, paragraph in enumerate(ordered[:60]):
+        if (
+            re.match(r"^The Wayback Machine\s*-\s*https?://web\.archive\.org/web/\d+", paragraph.text)
+            and any(previous.text.strip().casefold() == "timestamps" for previous in ordered[:offset])
+        ):
+            excluded.update({p.index: "archive_capture_toolbar" for p in ordered[:offset + 1]})
+            break
+    controls = {
+        "home", "menu", "navigation menu", "open menu close menu", "skip to content",
+        "skip to main content", "donate", "donate now", "volunteer", "contact", "contact us",
+        "facebook", "twitter", "instagram", "facebook twitter", "facebook-f twitter instagram",
+        "learn more", "view more", "sign up", "get updates", "contribute", "contribute now",
+        "sign up for our free email newsletter today!",
+        "unlock exclusive, in-depth stories that go beyond headlines.",
+        "facebook twitter instagram", "my tweets", "tim’s twitter feed",
+        "like tim on facebook for more community news",
+        "home | menu | sign up | donate",
+        "resources and information about covid-19: click here",
+        "earl blumenauer for congress | radically effective - https://www.earlblumenauer.com",
+        "heading", "sign up to receive mobile alerts", "explore", "get in touch",
+        "my story issues events videos connect press blog store donate",
+    }
+    for paragraph in ordered:
+        normalized = " ".join(paragraph.text.split()).casefold()
+        if normalized in controls or re.fullmatch(
+            r"(?:sign in with (?:facebook|email).+|or sign in with email|"
+            r"created with nationbuilder.*|wordpress theme.*|"
+            r"view .+['’]s profile on (?:facebook|twitter|instagram)|"
+            r"follow us on (?:facebook|twitter|instagram)|"
+            r"back to [a-z0-9.-]+\.(?:com|org|net)|"
+            r"youtube icon-twitter-x icon-substack instagram facebook tiktok(?: \[translate\])?)",
+            normalized,
+        ):
+            excluded.setdefault(paragraph.index, "page_control_not_candidate_policy")
+    return excluded
+
+
+@lru_cache(maxsize=512)
+def _retained_html_controls(
+    raw_path: str, digest: str, mtime_ns: int, size: int,
+) -> dict[int, tuple[str, str]]:
+    path = (ROOT / raw_path).resolve()
+    body = path.read_bytes()
+    if hashlib.sha256(body).hexdigest() != digest:
+        raise DocumentCorpusError("HTML page-control screening source hash mismatch")
+    if body.startswith(b"\x1f\x8b"):
+        with gzip.GzipFile(fileobj=BytesIO(body)) as compressed:
+            body = compressed.read(MAX_DECOMPRESSED_DOCUMENT_BYTES + 1)
+        if len(body) > MAX_DECOMPRESSED_DOCUMENT_BYTES:
+            raise ExtractionError("HTML page-control source exceeds decompression limit")
+    parser = _AnalysisHTMLParser()
+    parser.feed(_decode_text(body, "utf-8"))
+    parser.close()
+    original = parser.paragraphs()
+    result = {}
+    number = 0
+    for text, reason in zip(original, parser.paragraph_reasons, strict=True):
+        for normalized in segment_paragraphs(text):
+            number += 1
+            if reason:
+                result[number] = (normalized, reason)
+    return result
+
+
+def source_analysis_paragraph_exclusions(
+    metadata: dict[str, str], paragraphs: Sequence[TextSegment],
+) -> dict[int, str]:
+    reasons = analysis_paragraph_exclusions(paragraphs)
+    if (
+        metadata.get("analysis_scope", "") in {"", "analysis"}
+        and metadata.get("content_type") in {"text/html", "application/xhtml+xml"}
+        and metadata.get("raw_path") and metadata.get("raw_sha256")
+    ):
+        path = (ROOT / metadata["raw_path"]).resolve()
+        stat = path.stat()
+        controls = _retained_html_controls(
+            metadata["raw_path"], metadata["raw_sha256"], stat.st_mtime_ns, stat.st_size,
+        )
+        for paragraph in paragraphs:
+            control = controls.get(paragraph.index)
+            if control:
+                if paragraph.text != control[0]:
+                    raise DocumentCorpusError(
+                        "HTML page-control mapping differs from retained paragraph; review extraction lineage"
+                    )
+                reasons[paragraph.index] = control[1]
+    return reasons
+
+
+def rebuild_candidate_analysis_segments(paths: CandidateDocumentBatchPaths | None = None) -> int:
+    paths = paths or CandidateDocumentBatchPaths.default()
+    metadata = read_csv(paths.metadata_path)
+    paragraphs = read_csv(paths.paragraph_path)
+    sentences = read_csv(paths.sentence_path)
+    segments = _build_analysis_segment_corpus(metadata, paragraphs, sentences, AnalysisSegmentConfig())
+    write_csv(paths.analysis_segment_path, [row.as_row() for row in segments], _analysis_segment_fieldnames())
+    by_document = defaultdict(list)
+    for row in paragraphs:
+        by_document[row["document_id"]].append(_segment_from_row(row))
+    exclusions = []
+    metadata_by_id = {r["document_id"]: r for r in metadata}
+    for document_id, items in sorted(by_document.items()):
+        row = metadata_by_id[document_id]
+        reasons = (
+            source_analysis_paragraph_exclusions(row, items)
+            if _metadata_supports_analysis(row) else analysis_paragraph_exclusions(items)
+        )
+        exclusions.extend({
+            "document_id": document_id, "locator": paragraph.locator, "text": paragraph.text,
+            "source_sha256": row.get("raw_sha256", ""),
+            "exclusion_reason": reasons[paragraph.index],
+        } for paragraph in items if paragraph.index in reasons)
+    write_csv(
+        paths.analysis_segment_path.with_name("candidate_analysis_paragraph_exclusions.csv"),
+        exclusions, ["document_id", "locator", "text", "source_sha256", "exclusion_reason"],
+    )
+    return len(segments)
 
 
 def build_analysis_segment_review_sample(
@@ -1494,6 +1747,8 @@ def split_archive_url(value: str) -> tuple[str, str]:
         live_url = live_url.replace("http:/", "http://", 1)
     if live_url.startswith("https:/") and not live_url.startswith("https://"):
         live_url = live_url.replace("https:/", "https://", 1)
+    if parsed.query:
+        live_url += "?" + parsed.query
     return normalized, normalize_source_url(live_url)
 
 
@@ -1832,7 +2087,10 @@ def build_candidate_source_inventory(
                 "effective_date": effective_dates[0] if effective_dates else "",
                 "source_tier": source_tiers[0] if source_tiers else "",
                 "analysis_scope": (
-                    "context_only" if "context_only" in analysis_scopes else "analysis"
+                    "context_only" if "context_only" in analysis_scopes else
+                    "candidate_excerpt" if "candidate_excerpt" in analysis_scopes else
+                    "analysis" if "analysis" in analysis_scopes else
+                    "reviewed_quote" if "reviewed_quote" in analysis_scopes else "analysis"
                 ),
                 "evidence_status": evidence_status,
                 "statement_count": str(len(statement_keys)),
@@ -2652,7 +2910,7 @@ def _append_campaign_discovery_queue_rows(
             "candidate_name": discovery.get("candidate_name", ""),
             "role": discovery.get("role", ""),
             "election_date": discovery.get("election_date", ""),
-            "publication_date": _truncate_date(discovery.get("discovery_provenance_date", "")),
+            "publication_date": "",
             "source_type": source_type_class,
             "source_type_class": source_type_class,
             "source_url": discovery.get("source_url", ""),
@@ -2867,7 +3125,7 @@ def _parse_feed_entries(value: str) -> list[dict[str, str]]:
         if not link_match:
             continue
         date_match = re.search(
-            r"<(?:pubDate|updated|published)>\s*(.*?)\s*</(?:pubDate|updated|published)>",
+            r"<(?:pubDate|published)>\s*(.*?)\s*</(?:pubDate|published)>",
             block,
             flags=re.IGNORECASE | re.DOTALL,
         )
@@ -3282,6 +3540,8 @@ def _resolve_raw_capture(
     manifest_index: _RawManifestIndex,
     fetcher: Callable[[str, str], RawDocumentCapture],
 ) -> tuple[RawDocumentCapture, str, Path | None]:
+    source_archive, _ = split_archive_url(job.source_url)
+    requested_archive = source_archive or job.archive_url
     seen_rows: set[int] = set()
     manifest_rows: list[dict[str, str]] = []
     for candidate_row in (
@@ -3296,10 +3556,14 @@ def _resolve_raw_capture(
         seen_rows.add(identity)
         manifest_rows.append(candidate_row)
     for manifest_row in manifest_rows:
-        job_archive_url, _ = split_archive_url(job.source_url)
-        if job_archive_url and not _manifest_row_has_exact_url(
+        if requested_archive and not _manifest_row_has_exact_url(
             manifest_row,
-            job.source_url,
+            requested_archive,
+        ):
+            continue
+        if (
+            requested_archive and job.analysis_scope != "context_only"
+            and urlparse(manifest_row.get("final_url", "")).hostname != "web.archive.org"
         ):
             continue
         raw_path = _path_from_row(manifest_row.get("raw_path", ""))
@@ -3325,27 +3589,8 @@ def _resolve_raw_capture(
                     "reused_raw",
                     raw_path,
                 )
-    try:
-        return fetcher(job.document_id, job.source_url), "fetched", None
-    except RawFetchError:
-        if not job.archive_url:
-            raise
-        archive_capture = fetcher(job.document_id, job.archive_url)
-        return (
-            RawDocumentCapture(
-                document_id=archive_capture.document_id,
-                source_url=job.source_url,
-                final_url=archive_capture.final_url,
-                retrieved_at=archive_capture.retrieved_at,
-                content_type=archive_capture.content_type,
-                encoding=archive_capture.encoding,
-                content_bytes=archive_capture.content_bytes,
-                byte_count=archive_capture.byte_count,
-                sha256=archive_capture.sha256,
-            ),
-            "fetched",
-            None,
-        )
+    capture = fetcher(job.document_id, requested_archive or job.source_url)
+    return replace(capture, source_url=job.source_url), "fetched", None
 
 
 def _manifest_row_has_exact_url(
@@ -3378,8 +3623,12 @@ def _job_manifest_lookup_keys(job: CandidateDocumentJob) -> tuple[str, ...]:
 
 def _shared_source_candidates(
     queue_rows: Sequence[dict[str, str]],
-) -> dict[str, set[tuple[str, str]]]:
-    grouped: dict[str, set[tuple[str, str]]] = defaultdict(set)
+    *,
+    presidential_race_ids: set[str] | None = None,
+) -> dict[str, set[str]]:
+    from .national_platform_applicability import name_key
+
+    grouped: dict[str, set[str]] = defaultdict(set)
     for row in queue_rows:
         source_url = (
             row.get("source_url", "").strip()
@@ -3392,9 +3641,12 @@ def _shared_source_candidates(
         if not source_url or not candidate_name or not race_id or not role:
             continue
         try:
-            grouped[canonical_source_url(source_url)].add(
-                (_identity_name(candidate_name), role)
+            identity = (
+                name_key(candidate_name).replace("-", " ")
+                if presidential_race_ids and race_id in presidential_race_ids
+                else _identity_name(candidate_name)
             )
+            grouped[canonical_source_url(source_url)].add(identity)
         except DocumentCorpusError:
             continue
     return grouped
@@ -3407,6 +3659,27 @@ def _scope_shared_document_for_candidate(
     locators = [value.strip() for value in job.legacy_locators.split(" | ") if value.strip()]
     if not locators:
         return _shared_document_unscoped(extracted), "shared_document_unscoped"
+    if job.analysis_scope == "reviewed_quote":
+        scoped = []
+        for locator in locators:
+            match = re.fullmatch(r"paragraph (\d+) quote: (.+)", locator, re.S)
+            if not match:
+                return _shared_document_unscoped(extracted), "shared_document_unscoped"
+            number, quote = int(match[1]), " ".join(match[2].split())
+            paragraph = next((p for p in extracted.paragraphs if p.index == number), None)
+            if paragraph is None or quote not in " ".join(paragraph.text.split()):
+                return _shared_document_unscoped(extracted), "shared_document_unscoped"
+            scoped.append(TextSegment(
+                segment_id=stable_hash(extracted.document_id, locator),
+                document_id=extracted.document_id, segment_kind="paragraph",
+                index=number, locator=f"paragraph {number} reviewed quotation",
+                text=quote, sha256=_sha256_text(quote),
+            ))
+        text = "\n\n".join(p.text for p in scoped)
+        return replace(
+            extracted, paragraphs=tuple(scoped), sentences=(), text=text,
+            text_sha256=_sha256_text(text), coverage_status="found_unverified",
+        ), "extracted"
     paragraph_indices: set[int] = set()
     for locator in locators:
         resolved = _resolve_locator_paragraphs(locator, extracted.paragraphs)
@@ -3515,6 +3788,15 @@ def _resolve_locator_paragraphs(
         if len(start_indexes) == 1:
             return tuple(range(start_indexes[0], len(paragraphs) + 1))
         return ()
+    paragraph_range = re.fullmatch(
+        r"paragraphs?\s+(\d+)\s*[-–]\s*(\d+)", normalized_locator, re.IGNORECASE,
+    )
+    if paragraph_range:
+        start, end = map(int, paragraph_range.groups())
+        if end < start:
+            return ()
+        available = {paragraph.index for paragraph in paragraphs}
+        return tuple(index for index in range(start, end + 1) if index in available)
     paragraph_match = re.search(r"\bparagraph\s+(\d+)\b", normalized_locator, re.IGNORECASE)
     if paragraph_match:
         return (int(paragraph_match.group(1)),)
@@ -3603,13 +3885,28 @@ def _normalize_candidate_document_job(row: dict[str, str]) -> CandidateDocumentJ
         archive_url = normalize_source_url(archive_url)
     publication_date = row.get("publication_date", "").strip() or row.get(
         "published_date", ""
-    ).strip() or row.get(
-        "effective_date", ""
     ).strip()
+    notes = row.get("notes", "").strip()
+    if (
+        publication_date and row.get("discovery_method")
+        and publication_date == _truncate_date(row.get("discovery_provenance_date", ""))
+    ):
+        notes = " | ".join(filter(None, [
+            notes, "Discovery provenance date is not document publication: " + publication_date,
+        ]))
+        publication_date = ""
+    if not publication_date and row.get("effective_date", "").strip():
+        notes = " | ".join(filter(None, [
+            notes, "Effective date retained as context, not inferred as publication: " + row["effective_date"].strip(),
+        ]))
     if publication_date:
         if re.fullmatch(r"\d{4}", publication_date):
-            publication_date = f"{publication_date}-01-01"
-        _coerce_date(publication_date)
+            notes = " | ".join(filter(None, [
+                notes, f"Source publication year {publication_date}; exact publication date unknown.",
+            ]))
+            publication_date = ""
+        else:
+            _coerce_date(publication_date)
     document_id = row.get("document_id", "").strip() or candidate_document_id(
         candidate_name,
         race_id,
@@ -3627,7 +3924,7 @@ def _normalize_candidate_document_job(row: dict[str, str]) -> CandidateDocumentJ
         source_type=source_type,
         source_url=normalized_source_url,
         archive_url=archive_url,
-        notes=row.get("notes", "").strip(),
+        notes=notes,
         seed_kind=row.get("seed_kind", "").strip(),
         source_record_id=row.get("source_record_id", "").strip(),
         legacy_locators=row.get("legacy_locators", "").strip(),
@@ -4151,17 +4448,132 @@ def _build_analysis_segment_corpus(
                 candidate_slug_value=metadata_row.get("candidate_slug", ""),
                 source_type=metadata_row.get("source_type", ""),
                 config=config,
+                excluded_paragraphs=source_analysis_paragraph_exclusions(metadata_row, paragraphs),
             )
         )
     return _annotate_analysis_segments(all_segments, config)
 
 
+def archived_campaign_version_date(row: dict[str, str], election_date: str) -> str:
+    """Allow an explicitly identified campaign platform's later retained edition, not an old interview."""
+    if (
+        row.get("source_type") != "official_campaign_platform"
+        or not row.get("publication_date") or not election_date
+    ):
+        return ""
+    window = campaign_window_for_election(election_date)
+    if date.fromisoformat(row["publication_date"]) >= window.start:
+        return ""
+    final = row.get("final_url", "")
+    if urlparse(final).hostname != "web.archive.org":
+        return ""
+    match = re.search(r"/web/(\d{8})\d{6}", final)
+    if not match:
+        return ""
+    captured = datetime.strptime(match[1], "%Y%m%d").date()
+    if row.get("source_updated_date") and date.fromisoformat(row["source_updated_date"]) > captured:
+        return ""
+    return captured.isoformat() if window.contains(captured) else ""
+
+
+def candidate_document_analysis_issues(row: dict[str, str]) -> list[str]:
+    """Screen source suitability without claiming semantic or human verification."""
+    issues = []
+    if row.get("analysis_scope", "").strip() == "context_only":
+        issues.append("context_only")
+    if row.get("analysis_scope", "").strip() == "reviewed_quote":
+        issues.append("reviewed_quote_not_full_text_input")
+    if row.get("comparison_scope_status") == "out_of_scope":
+        issues.append("outside_tracked_democratic_primary")
+    extraction_status = row.get("extraction_status", "").strip()
+    if extraction_status and extraction_status != "extracted":
+        issues.append("not_extracted_or_unscoped")
+    if row.get("coverage_status", "").strip() == "shared_document_unscoped":
+        issues.append("shared_document_unscoped")
+    window_status = row.get("campaign_window_status", "").strip()
+    if window_status == "out_of_window" and not archived_campaign_version_date(row, row.get("election_date", "")):
+        issues.append("outside_primary_campaign_window")
+    if window_status == "undated" and row.get("election_date"):
+        archive = row.get("final_url", "") or row.get("archive_url", "") or row.get("source_url", "")
+        capture_match = re.search(r"/web/(\d{8})\d*", archive)
+        captured = (
+            datetime.strptime(capture_match[1], "%Y%m%d").date()
+            if capture_match else
+            date.fromisoformat(row["retrieved_at"][:10]) if row.get("retrieved_at") else None
+        )
+        if captured is None or not campaign_window_for_election(row["election_date"]).contains(captured):
+            issues.append("undated_source_without_in_window_capture")
+    source_url = row.get("source_url", "").strip()
+    if source_url:
+        try:
+            canonical = canonical_source_url(source_url)
+        except DocumentCorpusError:
+            issues.append("invalid_source_url")
+            return issues
+        parsed = urlparse(canonical)
+        source_class = classify_source_type(row.get("source_type", ""), canonical)
+        final_url = row.get("final_url", "").strip()
+        if (
+            (row.get("archive_url") or urlparse(source_url).hostname == "web.archive.org")
+            and final_url and urlparse(final_url).hostname != "web.archive.org"
+        ):
+            issues.append("requested_archive_capture_not_retained")
+        if (
+            source_class in {"campaign_page", "policy_page"} and final_url
+            and source_domain(source_url) != source_domain(final_url)
+            and row.get("analysis_scope") not in {"candidate_excerpt", "reviewed_quote", "context_only"}
+        ):
+            issues.append("campaign_redirect_requires_identity_and_cycle_review")
+        if (
+            source_class in MIXED_SPEAKER_SOURCE_CLASSES
+            and row.get("analysis_scope", "") not in {"candidate_excerpt", "reviewed_quote", "context_only"}
+        ):
+            issues.append("mixed_speaker_source_requires_candidate_scope")
+        if source_class == "filing" and row.get("analysis_scope") != "candidate_excerpt":
+            issues.append("filing_context_is_not_candidate_policy")
+        if (
+            re.fullmatch(r"/(?:news|press|media|category/[^/]+)/?", parsed.path)
+            and row.get("analysis_scope") != "candidate_excerpt"
+        ):
+            issues.append("rolling_index_requires_article_or_excerpt_scope")
+        if parsed.path in {"", "/"} and source_class in {"campaign_page", "policy_page"}:
+            slug = row.get("candidate_slug", "") or candidate_slug(row.get("candidate_name", ""))
+            name_tokens = [token for token in slug.split("-") if len(token) >= 4]
+            title = row.get("title", "").casefold()
+            if not _is_candidate_specific_campaign_domain(parsed.hostname or "", slug) and not any(
+                re.search(rf"\b{re.escape(token)}\b", title) for token in name_tokens
+            ):
+                issues.append("unattributed_campaign_homepage")
+    return issues
+
+
 def _metadata_supports_analysis(metadata_row: dict[str, str]) -> bool:
-    if metadata_row.get("analysis_scope", "").strip() == "context_only":
-        return False
-    return metadata_row.get("coverage_status", "").strip() != "shared_document_unscoped" and (
-        metadata_row.get("extraction_status", "").strip() != "shared_document_unscoped"
+    return not candidate_document_analysis_issues(metadata_row)
+
+
+def tracked_primary_race_ids(
+    registry: Sequence[dict[str, str]],
+    endorsements: Sequence[dict[str, str]] = (),
+) -> set[str]:
+    in_scope = [row for row in registry if row.get("scope_kind") == "tracked_dsa_endorsed_democratic_primary"]
+    result = {
+        value
+        for row in in_scope
+        for value in (row["race_id"], *row.get("source_race_ids", "").split(" | "))
+        if value
+    }
+    identities = {
+        (row.get("election_date"), candidate_slug(name))
+        for row in in_scope
+        for name in (row.get("endorsed_candidates") or row.get("endorsed_candidate", "")).split(" | ")
+        if name
+    }
+    result.update(
+        row["race_id"] for row in endorsements
+        if row.get("verification_status") == "verified"
+        and (row.get("election_date"), candidate_slug(row.get("candidate_name", ""))) in identities
     )
+    return result
 
 
 def _segment_from_row(row: dict[str, str]) -> TextSegment:
@@ -4187,13 +4599,20 @@ def _analysis_segments_for_document(
     candidate_slug_value: str,
     source_type: str,
     config: AnalysisSegmentConfig,
+    excluded_paragraphs: dict[int, str] | None = None,
 ) -> list[AnalysisSegment]:
+    excluded = (
+        excluded_paragraphs if excluded_paragraphs is not None
+        else analysis_paragraph_exclusions(paragraphs)
+    )
     sentence_meta = [_sentence_meta(segment) for segment in sentences]
     sentences_by_paragraph: dict[int, list[dict[str, object]]] = defaultdict(list)
     for meta in sentence_meta:
         sentences_by_paragraph[int(meta["paragraph_index"])].append(meta)
     units: list[_AnalysisSourceUnit] = []
     for paragraph in sorted(paragraphs, key=lambda value: value.index):
+        if paragraph.index in excluded:
+            continue
         paragraph_sentences = sentences_by_paragraph.get(paragraph.index, [])
         token_count = _token_count(paragraph.text)
         if token_count > config.max_tokens and len(paragraph_sentences) > 1:
@@ -4428,10 +4847,6 @@ def _boilerplate_reasons(
     for phrase in sorted(BOILERPLATE_PHRASES):
         if phrase in normalized:
             reasons.append(f"phrase:{phrase}")
-    if exact_hash and len(exact_documents.get(exact_hash, set())) > 1 and token_count <= config.max_tokens:
-        reasons.append("repeated_cross_document_exact")
-    elif near_hash and len(near_documents.get(near_hash, set())) > 1 and token_count <= config.max_tokens:
-        reasons.append("repeated_cross_document_near")
     return reasons
 
 
@@ -4521,15 +4936,13 @@ def _path_from_row(value: str) -> Path | None:
 
 
 def _archive_provenance_url(archive_url: str, final_url: str) -> str:
-    if archive_url.strip():
-        return normalize_source_url(archive_url)
     try:
         normalized_final_url = normalize_source_url(final_url)
     except DocumentCorpusError:
-        return ""
+        normalized_final_url = ""
     if urlparse(normalized_final_url).netloc == "web.archive.org":
         return normalized_final_url
-    return ""
+    return normalize_source_url(archive_url) if archive_url.strip() else ""
 
 
 def _candidate_records(
@@ -4710,7 +5123,11 @@ def _extractor_name(capture: RawDocumentCapture) -> str:
     suffix = capture.suffix
     if capture.content_type.startswith(("audio/", "video/")) or suffix in MEDIA_SUFFIXES:
         return "media_no_transcript"
-    if capture.content_type in PDF_TYPES or suffix == ".pdf":
+    if (
+        capture.content_type in PDF_TYPES or suffix == ".pdf"
+        or capture.content_type in {"application/octet-stream", "binary/octet-stream"}
+        and capture.content_bytes.startswith(b"%PDF-")
+    ):
         return "pdf"
     if capture.content_type in SRT_TYPES or suffix == ".srt":
         return "srt"
@@ -5030,6 +5447,76 @@ class _StructuredHTMLParser(HTMLParser):
         if paragraph:
             self._paragraphs.append(paragraph)
         self._current.clear()
+
+
+class _AnalysisHTMLParser(_StructuredHTMLParser):
+    """Annotate the original extraction, without removing or renumbering source paragraphs."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self._elements: list[tuple[str, str]] = []
+        self._fragment_reasons: list[str] = []
+        self.paragraph_reasons: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        super().handle_starttag(tag, attrs)
+        if tag in {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}:
+            return
+        values = dict(attrs)
+        role = values.get("role", "")
+        tokens = {
+            token.casefold()
+            for value in (values.get("class"), values.get("id")) if value
+            for token in value.split()
+        }
+        reason = ""
+        if tag in {"nav", "footer", "form", "button", "select", "textarea"}:
+            reason = "html_" + tag + "_page_control"
+        elif role in {"navigation", "banner", "contentinfo", "dialog", "search"}:
+            reason = "html_" + role + "_page_control"
+        elif tag not in {"html", "body", "main", "article"} and (
+            tokens & {
+                "nav", "navbar", "navigation", "menu", "main-menu", "main-navigation",
+                "primary-menu", "primary-navigation", "secondary-menu", "mobile-menu",
+                "mobile-nav", "mobile-navigation", "desktop-menu", "header-nav", "footer-nav",
+                "header-navigation", "footer-navigation", "site-navigation", "site-header",
+                "site-footer", "header-nav-inner", "header-nav-folder-content",
+                "social-links", "share-links", "cookie-banner", "cookie-consent",
+                "fusion-main-menu", "fusion-secondary-menu", "fusion-mobile-nav-holder",
+                "widget_nav_menu", "widget_recent_entries", "widget_search", "widget_social",
+                "social-sharing", "social-icons", "footer-content", "footer-widgets",
+            }
+            or any(re.fullmatch(
+                r"(?:menu-item(?:-[a-z0-9-]+)?|nav-(?:list|links|items|container))", token,
+            ) for token in tokens)
+        ):
+            reason = "html_navigation_or_site_control"
+        self._elements.append((tag, reason))
+
+    def handle_endtag(self, tag: str) -> None:
+        super().handle_endtag(tag)
+        for index in range(len(self._elements) - 1, -1, -1):
+            if self._elements[index][0] == tag:
+                del self._elements[index:]
+                break
+
+    def handle_data(self, data: str) -> None:
+        count = len(self._current)
+        super().handle_data(data)
+        if len(self._current) > count:
+            self._fragment_reasons.append(next(
+                (reason for _, reason in reversed(self._elements) if reason), "",
+            ))
+
+    def _flush_paragraph(self) -> None:
+        count = len(self._paragraphs)
+        reasons = list(self._fragment_reasons)
+        super()._flush_paragraph()
+        if len(self._paragraphs) > count:
+            self.paragraph_reasons.append(
+                " | ".join(sorted(set(reasons))) if reasons and all(reasons) else "",
+            )
+        self._fragment_reasons.clear()
 
 
 class _DiscoveryLinkParser(HTMLParser):

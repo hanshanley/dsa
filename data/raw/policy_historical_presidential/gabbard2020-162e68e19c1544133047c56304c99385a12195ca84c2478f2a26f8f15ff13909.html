@@ -1,0 +1,2086 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js">
+<!--
+  Aloha, internet friend, from all of us @ TULSI2020.com.
+-->
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"877e78ad18",applicationID:"229453582"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Issues | TULSI 2020" />
+<meta property="og:site_name" content="TULSI2020.com" />
+<link rel="canonical" href="https://www.tulsi2020.com/issues" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Issues" />
+<meta name="twitter:description" content="Tulsi Gabbard for President - Official Website" />
+<meta name="twitter:site" content="@TulsiGabbard" />
+<meta property="og:type" content="website" />
+<meta name="twitter:site:id" content="26637348" />
+<meta property="og:url" content="https://www.tulsi2020.com/issues" />
+<meta property="og:title" content="Issues" />
+<meta name="twitter:url" content="https://www.tulsi2020.com/issues" />
+<meta property="og:description" content="Tulsi Gabbard for President - Official Website" />
+<meta name="twitter:image:alt" content="Tulsi Gabbard for President - Official Website" />
+<meta name="twitter:image" content="https://www.tulsi2020.com/sites/default/files/styles/social_share_twitter/public/images/cards/card-issues.jpg?itok=4BlTmoEP" />
+<meta property="og:image" content="https://www.tulsi2020.com/sites/default/files/styles/social_share_fb/public/images/cards/card-issues.jpg?itok=oaRnooHl" />
+<meta property="og:image:url" content="https://www.tulsi2020.com/sites/default/files/styles/social_share_fb/public/images/cards/card-issues.jpg?itok=oaRnooHl" />
+<meta property="og:image:secure_url" content="https://www.tulsi2020.com/sites/default/files/styles/social_share_fb/public/images/cards/card-issues.jpg?itok=oaRnooHl" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="manifest" href="/themes/custom/tulsi/favicon/site.manifest" />
+<link rel="mask-icon" href="/themes/custom/tulsi/favicon/safari-pinned-tab.svg" color="#0c2340" />
+<meta name="msapplication-TileColor" content="#0c2340" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="shortcut icon" href="/themes/custom/tulsi/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.tulsi2020.com/issues" />
+<link rel="revision" href="https://www.tulsi2020.com/issues" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?q1ashy" defer="true"></script>
+
+    <title>Issues | TULSI 2020</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_n45GoRRK_rF7Obb-E0xJ4_2QgObNQO_ItrS1i4DyEuc.css?q1ashy" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_qXtL6nDCtVQ5S3w72aG79oxBZ-xgJCBynIrzmmmCOcU.css?q1ashy" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/default/files/js/js_B7pS3ddmNLFYOJi3j28odiodelMu-EhaOeKlHZ8E6y0.js"></script>
+
+  </head>
+  <body class="page-node-325 page-node path-node page-node-type-page">
+        <a href="#content-top" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBBPL6B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+<header class="main-header u-show-for-large u-no-focus js-main-header is-sticky is-compressed" tabindex="-1">
+    <div class="main-header__inner">
+                        <a href="/" title="TULSI 2020" rel="home" class="logo">
+            <svg id="TGLogo" data-name="TGLogo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 136.8 55.29">
+                <title>Tulsi Gabbard</title><path class="brand-header-tulsi" d="M11.83,12.67H4.32a.83.83,0,0,1-.83-.83V4.94a.83.83,0,0,1,.83-.83H30.48a.83.83,0,0,1,.83.83v6.9a.83.83,0,0,1-.83.83H22.92a.84.84,0,0,0-.83.83V37.15a1,1,0,0,1-1,1h-2.2a6.22,6.22,0,0,1-6.22-6.22h0V13.5A.83.83,0,0,0,11.83,12.67Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-tulsi" d="M36.45,23.23V4.94a.83.83,0,0,1,.83-.83h7.88a.83.83,0,0,1,.83.83h0V23c0,4.92,1.72,7.25,5.51,7.25s5.56-2.24,5.56-7V4.94a.83.83,0,0,1,.83-.83h7.87a.83.83,0,0,1,.83.83h0V23c0,11-5.5,15.81-15.19,15.81S36.45,33.88,36.45,23.23Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-tulsi" d="M73,4.11h7.78a.83.83,0,0,1,.83.83h0V28a.83.83,0,0,0,.83.83H95.91a.83.83,0,0,1,.83.83h0v7.66a.83.83,0,0,1-.83.83H73a.83.83,0,0,1-.83-.83h0V4.94A.83.83,0,0,1,73,4.11Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-tulsi" d="M122,12.76a.83.83,0,0,1-1.08.46h0c-1.13-.49-3.08-1.15-3.87-1.39a11.54,11.54,0,0,0-2.79-.46,5.06,5.06,0,0,0-2.76.58,1.89,1.89,0,0,0-.78,1.81,2.19,2.19,0,0,0,.64,1.41,4.85,4.85,0,0,0,1.47.87,12.23,12.23,0,0,0,2,.56c.73.14,1.46.3,2.18.48a13.29,13.29,0,0,1,6.47,3.23,9.17,9.17,0,0,1,2.46,5.95,11.91,11.91,0,0,1-.46,4.68,9.73,9.73,0,0,1-2.21,3.74,11.43,11.43,0,0,1-3.84,2.61A16.74,16.74,0,0,1,114,38.55c-5.39.45-9.84-1.66-13.43-3.61a.84.84,0,0,1-.37-1l2.47-6.08a.67.67,0,0,1,.88-.35l.11.06a33.77,33.77,0,0,0,5.51,2.5,11.93,11.93,0,0,0,4.15.6,4.66,4.66,0,0,0,3-.87,2.26,2.26,0,0,0,.62-1.95,3,3,0,0,0-.37-1.27,2.88,2.88,0,0,0-1-.94,7.34,7.34,0,0,0-1.68-.72c-.68-.21-1.5-.43-2.46-.67-1.14-.26-2.26-.56-3.36-.89a10.36,10.36,0,0,1-3-1.45,7.85,7.85,0,0,1-2.24-2.49,9.43,9.43,0,0,1-1.11-4,11.9,11.9,0,0,1,.44-4.52,9.84,9.84,0,0,1,2-3.61,10.31,10.31,0,0,1,3.41-2.51,13.59,13.59,0,0,1,4.69-1.19,21,21,0,0,1,5.19.25A19.4,19.4,0,0,1,123.83,6a.83.83,0,0,1,.3,1Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-tulsi" d="M131.69,4.11h7.8a.8.8,0,0,1,.8.8v27a6.22,6.22,0,0,1-6.22,6.22h-2.14a1.08,1.08,0,0,1-1.08-1.08V4.94a.83.83,0,0,1,.83-.83h0Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M35.4,58.78a6.36,6.36,0,0,1-2.47-.46A5.54,5.54,0,0,1,31,57.06a5.65,5.65,0,0,1-1.22-1.89,6.47,6.47,0,0,1-.43-2.36v0a6,6,0,0,1,.45-2.31,5.73,5.73,0,0,1,1.24-1.91,6,6,0,0,1,4.32-1.79,8.3,8.3,0,0,1,1.38.11,6.22,6.22,0,0,1,1.15.31,5.24,5.24,0,0,1,1,.49,6,6,0,0,1,.68.48.29.29,0,0,1,0,.42l-.9,1.08a.3.3,0,0,1-.42.05,4.84,4.84,0,0,0-.46-.33,3.42,3.42,0,0,0-.73-.39,4,4,0,0,0-.83-.25,5.27,5.27,0,0,0-1-.09,3.38,3.38,0,0,0-1.48.33,3.75,3.75,0,0,0-1.19.89,4.11,4.11,0,0,0-.8,1.3,4.43,4.43,0,0,0-.29,1.58v0a4.74,4.74,0,0,0,.28,1.66,3.94,3.94,0,0,0,.8,1.31,3.88,3.88,0,0,0,1.24.86,4,4,0,0,0,1.62.32A4.82,4.82,0,0,0,37,56.7a4.46,4.46,0,0,0,1.25-.64V53.87H35.6a.3.3,0,0,1-.3-.3V52.4a.3.3,0,0,1,.3-.3H40a.29.29,0,0,1,.29.3V57a7.08,7.08,0,0,1-1,.7,7.49,7.49,0,0,1-1.13.58,7.92,7.92,0,0,1-1.3.39A7.61,7.61,0,0,1,35.4,58.78Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M48.45,46.89H50a.29.29,0,0,1,.27.18l4.85,11.09a.3.3,0,0,1-.28.42h-1.5A.28.28,0,0,1,53,58.4l-1.1-2.62H46.43L45.31,58.4a.28.28,0,0,1-.27.18H43.6a.3.3,0,0,1-.27-.42l4.84-11.09A.31.31,0,0,1,48.45,46.89ZM51.17,54l-2-4.64-2,4.64Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M58.48,47.27a.31.31,0,0,1,.3-.3h4.9a4.11,4.11,0,0,1,3,1,2.61,2.61,0,0,1,.78,1.92v0a2.93,2.93,0,0,1-.14.93,3.23,3.23,0,0,1-.36.72,3,3,0,0,1-.53.54,4.57,4.57,0,0,1-.62.39,6.68,6.68,0,0,1,.93.43,3,3,0,0,1,.73.57,2.36,2.36,0,0,1,.47.78,3,3,0,0,1,.16,1v0a3,3,0,0,1-.3,1.37,2.88,2.88,0,0,1-.87,1,4.35,4.35,0,0,1-1.36.6,6.83,6.83,0,0,1-1.75.21H58.78a.3.3,0,0,1-.3-.3Zm4.8,4.59a2.88,2.88,0,0,0,1.59-.38,1.32,1.32,0,0,0,.59-1.19v0a1.27,1.27,0,0,0-.52-1.09,2.47,2.47,0,0,0-1.51-.39H60.51v3.08Zm.6,4.91a3,3,0,0,0,1.64-.39,1.37,1.37,0,0,0,.59-1.2v0A1.29,1.29,0,0,0,65.52,54a3.1,3.1,0,0,0-1.79-.41H60.51v3.18Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M71.7,47.26A.29.29,0,0,1,72,47H76.9a4.1,4.1,0,0,1,3,1,2.61,2.61,0,0,1,.78,1.92v0a2.67,2.67,0,0,1-.14.93,2.56,2.56,0,0,1-.36.72,2.71,2.71,0,0,1-.53.54,4.48,4.48,0,0,1-.61.39A6.68,6.68,0,0,1,80,53a2.92,2.92,0,0,1,.72.57,2.2,2.2,0,0,1,.47.78,3,3,0,0,1,.17,1v0A2.86,2.86,0,0,1,81,56.77a2.69,2.69,0,0,1-.87,1,4.19,4.19,0,0,1-1.35.6,6.91,6.91,0,0,1-1.76.21H72a.29.29,0,0,1-.28-.28Zm4.8,4.6a2.82,2.82,0,0,0,1.58-.38,1.33,1.33,0,0,0,.6-1.19v0a1.27,1.27,0,0,0-.52-1.09,2.49,2.49,0,0,0-1.51-.39H73.72v3.08Zm.59,4.91a3,3,0,0,0,1.64-.39,1.35,1.35,0,0,0,.6-1.2v0A1.32,1.32,0,0,0,78.74,54,3.1,3.1,0,0,0,77,53.59H73.72v3.18Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M89.21,46.89h1.52a.29.29,0,0,1,.26.17l4.86,11.12a.29.29,0,0,1-.26.4H94.06a.3.3,0,0,1-.27-.17l-1.1-2.63H87.2l-1.12,2.63a.29.29,0,0,1-.26.17H84.35a.29.29,0,0,1-.26-.4L89,47.06A.3.3,0,0,1,89.21,46.89ZM91.94,54l-2-4.64L88,54Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M99.26,47.26a.28.28,0,0,1,.28-.29h4.89a5.76,5.76,0,0,1,1.94.31,4,4,0,0,1,1.41.85,3.29,3.29,0,0,1,.71,1.12,3.66,3.66,0,0,1,.25,1.39v0a3.75,3.75,0,0,1-.21,1.29,3.34,3.34,0,0,1-.57,1,3.29,3.29,0,0,1-.87.74,4.16,4.16,0,0,1-1.12.48l2.81,3.94a.28.28,0,0,1-.23.45h-1.7a.27.27,0,0,1-.23-.12l-2.78-3.93h-2.56V58.3a.29.29,0,0,1-.29.28H99.54a.28.28,0,0,1-.28-.28Zm5,5.47A2.71,2.71,0,0,0,106,52.2a1.73,1.73,0,0,0,.65-1.42v0a1.7,1.7,0,0,0-.63-1.44,2.85,2.85,0,0,0-1.78-.5h-3v3.92Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M112.49,47.26a.29.29,0,0,1,.29-.29h4a6.93,6.93,0,0,1,2.49.44,6,6,0,0,1,2,1.22,5.57,5.57,0,0,1,1.27,1.83,6,6,0,0,1,.44,2.28v0a6,6,0,0,1-.44,2.29,5.61,5.61,0,0,1-1.27,1.84,6,6,0,0,1-2,1.22,6.72,6.72,0,0,1-2.49.45h-4a.29.29,0,0,1-.29-.29Zm4.31,9.48a4.63,4.63,0,0,0,1.66-.29,3.81,3.81,0,0,0,1.27-.82,3.85,3.85,0,0,0,.81-1.25,4.22,4.22,0,0,0,.29-1.57v0a4.27,4.27,0,0,0-.29-1.58,3.9,3.9,0,0,0-.81-1.26,3.83,3.83,0,0,0-1.27-.83,4.42,4.42,0,0,0-1.66-.3h-2.29v7.93Z" transform="translate(-3.49 -3.49)"/></svg>
+        </a>
+        
+
+
+        <div class="main-menus">
+
+                
+              <ul class="nav-list menu js-primary-menu">
+                    <li class="menu-item">
+        <a href="/about" class="about js-megamenu-trigger" data-megamenu="mm-one" data-drupal-link-system-path="node/1">About</a>
+              </li>
+                <li class="menu-item menu-item--active-trail">
+        <a href="/issues" class="issues js-megamenu-trigger is-active" data-megamenu="mm-two" data-drupal-link-system-path="node/325">Issues</a>
+              </li>
+                <li class="menu-item">
+        <a href="/volunteer" class="volunteer js-megamenu-trigger" data-megamenu="mm-three" data-drupal-link-system-path="node/4">Join Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://secure.ngpvan.com/p/uEk71xTbu0iDkh_D4IJSuw2?ms=web-events-nav" class="more js-megamenu-trigger" data-megamenu="mm-four">Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="/updates" title="Campaign updates" data-drupal-link-system-path="updates">Updates</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://shop.tulsi2020.com" class="shop">Shop</a>
+              </li>
+        </ul>
+  
+
+
+
+
+
+            
+
+
+        </div>
+
+
+                <a href="https://secure.actblue.com/donate/tulsi2020?refcode=web-nav" class="contribute button large secondary u-mb-0x" target="_blank">Donate</a>
+
+
+
+
+        
+    </div>
+    <div class="main-header__dropdown js-megamenu-container">
+        <nav class="c-megamenu js-megamenu" data-megamenu="mm-one">
+            <div class="c-megamenu__container">
+                <div class="c-megamenu__body">
+                    <h4>Aloha</h4>
+                    <p>Love for others, for her community, and her country has inspired Tulsi to live a life defined by service.</p>
+                    <ul class="vertical menu strong">
+                        <li>
+                            <a href="/about">Read Tulsi's Bio
+                                <i class="fas fa-caret-right fa-sm"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/vision">Tulsi's Vision for America
+                                <i class="fas fa-caret-right fa-sm"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/about/my-spiritual-path">My Spiritual Path
+                                <i class="fas fa-caret-right fa-sm"></i>
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                    
+
+                </div>
+                <footer class="c-megamenu__footer">
+                    <ul class="c-share-menu c-share-menu--dark">
+                        <li class="facebook">
+                            <a href="https://facebook.com/tulsigabbard" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                                <span class="show-for-sr">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="instagram">
+                            <a href="https://instagram.com/tulsigabbard" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-instagram"></i>
+                                </span>
+                                <span class="show-for-sr">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="twitter">
+                            <a href="https://twitter.com/tulsigabbard" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                                <span class="show-for-sr">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="medium">
+                            <a href="https://medium.com/@TulsiGabbard" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-medium"></i>
+                                </span>
+                                <span class="show-for-sr">Medium</span>
+                            </a>
+                        </li>
+                        <li class="twitter">
+                            <a href="https://www.youtube.com/tulsigabbard" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-youtube"></i>
+                                </span>
+                                <span class="show-for-sr">YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="vertical menu centered">
+                        <li>
+                            <a class="has-text-centered" href="/splash/tulsitv?ms=web-main-drop">Get notified when Tulsi is in your area</a>
+                        </li>
+                    </ul>
+                </footer>
+            </footer>
+        </nav>
+
+
+        <nav class="c-megamenu c-megamenu--issues js-megamenu c-megamenu--no-footer" data-megamenu="mm-two">
+            <div class="c-megamenu__container">
+                <div class="c-megamenu__body">
+                    <h4>Issues</h4>
+
+
+                      <div>
+    <nav role="navigation" aria-labelledby="block-issues-menu" id="block-issues">
+            
+  <h2 class="visually-hidden" id="block-issues-menu">Issues</h2>
+  
+
+        
+              <ul class="nav-list vertical menu">
+                    <li class="menu-item">
+        <a href="/issues/end-regime-change-wars" data-drupal-link-system-path="node/307">Stop engaging in regime change wars</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/end-new-cold-war-and-nuclear-arms-race" data-drupal-link-system-path="node/308">End the new Cold War</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/invest-needs-american-people" data-drupal-link-system-path="node/309">Invest in the needs of the American people</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/build-green-economy-21st-century" data-drupal-link-system-path="node/311">Build a green economy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/guarantee-quality-healthcare-all" data-drupal-link-system-path="node/310">Guarantee quality healthcare for all</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/protect-environment" data-drupal-link-system-path="node/312">Protect the environment</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/care-our-veterans" data-drupal-link-system-path="node/313">Care for our veterans</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/protect-our-civil-liberties" data-drupal-link-system-path="node/314">Protect our civil liberties</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/protect-second-amendment-while-ensuring-gun-safety" data-drupal-link-system-path="node/315">Second Amendment and gun safety</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/protect-our-democracy" data-drupal-link-system-path="node/316">Protect our democracy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/end-failed-war-drugs" data-drupal-link-system-path="node/317">End the failed war on drugs</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/reform-our-broken-immigration-system" data-drupal-link-system-path="node/318">Reform our broken immigration system</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/protect-womans-right-choose" data-drupal-link-system-path="node/319">Protect a woman’s right to choose</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/end-corruption-washington" data-drupal-link-system-path="node/320">End the corruption in Washington</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/fix-our-broken-criminal-justice-system" data-drupal-link-system-path="node/322">Fix our broken criminal justice system</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/protect-social-security" data-drupal-link-system-path="node/323">Protect Social Security</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/equality-all" data-drupal-link-system-path="node/326">Equality for all</a>
+              </li>
+                <li class="menu-item">
+        <a href="/issues/reports-chemical-attacks-syria" data-drupal-link-system-path="node/329">Reports on chemical attacks in Syria</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+
+                    <ul class="vertical menu strong">
+                        <li>
+                            <a class="button pond" href="/issues">View All Issues
+                                <i class="fas fa-caret-right fa-sm"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <nav class="c-megamenu js-megamenu" data-megamenu="mm-three">
+            <div class="c-megamenu__container">
+                <div class="c-megamenu__body">
+                    <h4>Get Involved</h4>
+                    <ul class="vertical menu strong">
+                        <li>
+                            <a href="/join-us">Sign up &amp; join us</a>
+                        </li>
+                        <li>
+                            <a href="/volunteer">Volunteer</a>
+                        </li>
+                        <li>
+                            <a href="https://shop.tulsi2020.com">Merchandise</a>
+                        </li>
+                        <li>
+                            <a href="https://jobs.lever.co/tulsi2020" target="_blank">Jobs</a>
+                        </li>
+                    </ul>
+
+                    
+
+                </div>
+                <footer class="c-megamenu__footer">
+                    <h5>Our campaign does not accept PAC money. This is a movement powered by you, the people.</h5>
+                    <a class="button secondary fluid" href="https://secure.actblue.com/donate/tulsi2020?refcode=web-main-drop-button" target="_blank">Donate</a>
+                    <a class="button inline transparent fluid transparent--lod" href="https://tulsi.to/donate-today" target="_blank">Alternate form</a>
+                    <ul class="vertical menu centered">
+                        <li>
+                            <a href="https://tulsi.to/mail" target="_blank">or download a form &amp; donate by mail.</a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </nav>
+
+        <nav class="c-megamenu js-megamenu" data-megamenu="mm-four">
+            <div class="c-megamenu__container">
+                <div class="c-megamenu__body">
+                    <h4>Events</h4>
+                    <ul class="vertical menu strong">
+                        <li>
+                            <a href="https://secure.ngpvan.com/p/uEk71xTbu0iDkh_D4IJSuw2">View All Events</a>
+                        </li>
+                        <li>
+                            <a href="https://secure.ngpvan.com/p/mpB17nVX0kSTuM1pBYwkBQ2">Official Events</a>
+                        </li>
+                        <li>
+                            <a href="https://secure.ngpvan.com/p/jA6r9eftj0KWJMIbUssWYA2">Supporter-hosted Events</a>
+                        </li>
+                        <li>
+                            <a href="https://secure.ngpvan.com/C-Ri-IqpgEuDGm2uX8cjkA2">Host an Event</a>
+                        </li>
+                    </ul>
+
+                    
+
+                </div>
+                <footer class="c-megamenu__footer">
+                    <h5 class="u-mb-0x">Press &amp; Scheduling</h5>
+                    <div class="columns">
+                        <div class="column">
+                            <ul class="vertical menu">
+                                <li>
+                                    <a href="/press">Press Releases</a>
+                                </li>
+                                <li>
+                                    <a href="/join-our-press-list">Join Our Press List</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <ul class="vertical menu">
+                                <li>
+                                    <a href="/s/event">Events &amp; Speaking</a>
+                                </li>
+                                <li>
+                                    <a href="/s/meeting">Meeting Request</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a class="button pond fluid" href="/scheduling" >Submit request</a>
+                    <a class="button inline transparent fluid transparent--lod" href="/press/request">Press inquiry</a>
+
+                </footer>
+
+            </div>
+        </nav>
+    </div>
+
+</header>
+<header class="mini-header u-hide-for-large js-mini-header">
+    <ul class="menu">
+        <li class="more u-hide-for-large">
+            <a class="js-mobile-nav-trigger mobile-nav-button" href="#" tab-index="-1">
+                <span class="c-burger js-burger"></span>
+            </a>
+        </li>
+        <li class="logo menu-text u-uppercase u-text-center">
+              <div>
+                <a href="/" title="TULSI 2020" rel="home" class="logo">
+            <svg id="TGLogo" data-name="TGLogo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 136.8 55.29">
+                <title>Tulsi Gabbard</title><path class="brand-header-tulsi" d="M11.83,12.67H4.32a.83.83,0,0,1-.83-.83V4.94a.83.83,0,0,1,.83-.83H30.48a.83.83,0,0,1,.83.83v6.9a.83.83,0,0,1-.83.83H22.92a.84.84,0,0,0-.83.83V37.15a1,1,0,0,1-1,1h-2.2a6.22,6.22,0,0,1-6.22-6.22h0V13.5A.83.83,0,0,0,11.83,12.67Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-tulsi" d="M36.45,23.23V4.94a.83.83,0,0,1,.83-.83h7.88a.83.83,0,0,1,.83.83h0V23c0,4.92,1.72,7.25,5.51,7.25s5.56-2.24,5.56-7V4.94a.83.83,0,0,1,.83-.83h7.87a.83.83,0,0,1,.83.83h0V23c0,11-5.5,15.81-15.19,15.81S36.45,33.88,36.45,23.23Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-tulsi" d="M73,4.11h7.78a.83.83,0,0,1,.83.83h0V28a.83.83,0,0,0,.83.83H95.91a.83.83,0,0,1,.83.83h0v7.66a.83.83,0,0,1-.83.83H73a.83.83,0,0,1-.83-.83h0V4.94A.83.83,0,0,1,73,4.11Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-tulsi" d="M122,12.76a.83.83,0,0,1-1.08.46h0c-1.13-.49-3.08-1.15-3.87-1.39a11.54,11.54,0,0,0-2.79-.46,5.06,5.06,0,0,0-2.76.58,1.89,1.89,0,0,0-.78,1.81,2.19,2.19,0,0,0,.64,1.41,4.85,4.85,0,0,0,1.47.87,12.23,12.23,0,0,0,2,.56c.73.14,1.46.3,2.18.48a13.29,13.29,0,0,1,6.47,3.23,9.17,9.17,0,0,1,2.46,5.95,11.91,11.91,0,0,1-.46,4.68,9.73,9.73,0,0,1-2.21,3.74,11.43,11.43,0,0,1-3.84,2.61A16.74,16.74,0,0,1,114,38.55c-5.39.45-9.84-1.66-13.43-3.61a.84.84,0,0,1-.37-1l2.47-6.08a.67.67,0,0,1,.88-.35l.11.06a33.77,33.77,0,0,0,5.51,2.5,11.93,11.93,0,0,0,4.15.6,4.66,4.66,0,0,0,3-.87,2.26,2.26,0,0,0,.62-1.95,3,3,0,0,0-.37-1.27,2.88,2.88,0,0,0-1-.94,7.34,7.34,0,0,0-1.68-.72c-.68-.21-1.5-.43-2.46-.67-1.14-.26-2.26-.56-3.36-.89a10.36,10.36,0,0,1-3-1.45,7.85,7.85,0,0,1-2.24-2.49,9.43,9.43,0,0,1-1.11-4,11.9,11.9,0,0,1,.44-4.52,9.84,9.84,0,0,1,2-3.61,10.31,10.31,0,0,1,3.41-2.51,13.59,13.59,0,0,1,4.69-1.19,21,21,0,0,1,5.19.25A19.4,19.4,0,0,1,123.83,6a.83.83,0,0,1,.3,1Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-tulsi" d="M131.69,4.11h7.8a.8.8,0,0,1,.8.8v27a6.22,6.22,0,0,1-6.22,6.22h-2.14a1.08,1.08,0,0,1-1.08-1.08V4.94a.83.83,0,0,1,.83-.83h0Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M35.4,58.78a6.36,6.36,0,0,1-2.47-.46A5.54,5.54,0,0,1,31,57.06a5.65,5.65,0,0,1-1.22-1.89,6.47,6.47,0,0,1-.43-2.36v0a6,6,0,0,1,.45-2.31,5.73,5.73,0,0,1,1.24-1.91,6,6,0,0,1,4.32-1.79,8.3,8.3,0,0,1,1.38.11,6.22,6.22,0,0,1,1.15.31,5.24,5.24,0,0,1,1,.49,6,6,0,0,1,.68.48.29.29,0,0,1,0,.42l-.9,1.08a.3.3,0,0,1-.42.05,4.84,4.84,0,0,0-.46-.33,3.42,3.42,0,0,0-.73-.39,4,4,0,0,0-.83-.25,5.27,5.27,0,0,0-1-.09,3.38,3.38,0,0,0-1.48.33,3.75,3.75,0,0,0-1.19.89,4.11,4.11,0,0,0-.8,1.3,4.43,4.43,0,0,0-.29,1.58v0a4.74,4.74,0,0,0,.28,1.66,3.94,3.94,0,0,0,.8,1.31,3.88,3.88,0,0,0,1.24.86,4,4,0,0,0,1.62.32A4.82,4.82,0,0,0,37,56.7a4.46,4.46,0,0,0,1.25-.64V53.87H35.6a.3.3,0,0,1-.3-.3V52.4a.3.3,0,0,1,.3-.3H40a.29.29,0,0,1,.29.3V57a7.08,7.08,0,0,1-1,.7,7.49,7.49,0,0,1-1.13.58,7.92,7.92,0,0,1-1.3.39A7.61,7.61,0,0,1,35.4,58.78Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M48.45,46.89H50a.29.29,0,0,1,.27.18l4.85,11.09a.3.3,0,0,1-.28.42h-1.5A.28.28,0,0,1,53,58.4l-1.1-2.62H46.43L45.31,58.4a.28.28,0,0,1-.27.18H43.6a.3.3,0,0,1-.27-.42l4.84-11.09A.31.31,0,0,1,48.45,46.89ZM51.17,54l-2-4.64-2,4.64Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M58.48,47.27a.31.31,0,0,1,.3-.3h4.9a4.11,4.11,0,0,1,3,1,2.61,2.61,0,0,1,.78,1.92v0a2.93,2.93,0,0,1-.14.93,3.23,3.23,0,0,1-.36.72,3,3,0,0,1-.53.54,4.57,4.57,0,0,1-.62.39,6.68,6.68,0,0,1,.93.43,3,3,0,0,1,.73.57,2.36,2.36,0,0,1,.47.78,3,3,0,0,1,.16,1v0a3,3,0,0,1-.3,1.37,2.88,2.88,0,0,1-.87,1,4.35,4.35,0,0,1-1.36.6,6.83,6.83,0,0,1-1.75.21H58.78a.3.3,0,0,1-.3-.3Zm4.8,4.59a2.88,2.88,0,0,0,1.59-.38,1.32,1.32,0,0,0,.59-1.19v0a1.27,1.27,0,0,0-.52-1.09,2.47,2.47,0,0,0-1.51-.39H60.51v3.08Zm.6,4.91a3,3,0,0,0,1.64-.39,1.37,1.37,0,0,0,.59-1.2v0A1.29,1.29,0,0,0,65.52,54a3.1,3.1,0,0,0-1.79-.41H60.51v3.18Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M71.7,47.26A.29.29,0,0,1,72,47H76.9a4.1,4.1,0,0,1,3,1,2.61,2.61,0,0,1,.78,1.92v0a2.67,2.67,0,0,1-.14.93,2.56,2.56,0,0,1-.36.72,2.71,2.71,0,0,1-.53.54,4.48,4.48,0,0,1-.61.39A6.68,6.68,0,0,1,80,53a2.92,2.92,0,0,1,.72.57,2.2,2.2,0,0,1,.47.78,3,3,0,0,1,.17,1v0A2.86,2.86,0,0,1,81,56.77a2.69,2.69,0,0,1-.87,1,4.19,4.19,0,0,1-1.35.6,6.91,6.91,0,0,1-1.76.21H72a.29.29,0,0,1-.28-.28Zm4.8,4.6a2.82,2.82,0,0,0,1.58-.38,1.33,1.33,0,0,0,.6-1.19v0a1.27,1.27,0,0,0-.52-1.09,2.49,2.49,0,0,0-1.51-.39H73.72v3.08Zm.59,4.91a3,3,0,0,0,1.64-.39,1.35,1.35,0,0,0,.6-1.2v0A1.32,1.32,0,0,0,78.74,54,3.1,3.1,0,0,0,77,53.59H73.72v3.18Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M89.21,46.89h1.52a.29.29,0,0,1,.26.17l4.86,11.12a.29.29,0,0,1-.26.4H94.06a.3.3,0,0,1-.27-.17l-1.1-2.63H87.2l-1.12,2.63a.29.29,0,0,1-.26.17H84.35a.29.29,0,0,1-.26-.4L89,47.06A.3.3,0,0,1,89.21,46.89ZM91.94,54l-2-4.64L88,54Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M99.26,47.26a.28.28,0,0,1,.28-.29h4.89a5.76,5.76,0,0,1,1.94.31,4,4,0,0,1,1.41.85,3.29,3.29,0,0,1,.71,1.12,3.66,3.66,0,0,1,.25,1.39v0a3.75,3.75,0,0,1-.21,1.29,3.34,3.34,0,0,1-.57,1,3.29,3.29,0,0,1-.87.74,4.16,4.16,0,0,1-1.12.48l2.81,3.94a.28.28,0,0,1-.23.45h-1.7a.27.27,0,0,1-.23-.12l-2.78-3.93h-2.56V58.3a.29.29,0,0,1-.29.28H99.54a.28.28,0,0,1-.28-.28Zm5,5.47A2.71,2.71,0,0,0,106,52.2a1.73,1.73,0,0,0,.65-1.42v0a1.7,1.7,0,0,0-.63-1.44,2.85,2.85,0,0,0-1.78-.5h-3v3.92Z" transform="translate(-3.49 -3.49)"/><path class="brand-header-gabbard" d="M112.49,47.26a.29.29,0,0,1,.29-.29h4a6.93,6.93,0,0,1,2.49.44,6,6,0,0,1,2,1.22,5.57,5.57,0,0,1,1.27,1.83,6,6,0,0,1,.44,2.28v0a6,6,0,0,1-.44,2.29,5.61,5.61,0,0,1-1.27,1.84,6,6,0,0,1-2,1.22,6.72,6.72,0,0,1-2.49.45h-4a.29.29,0,0,1-.29-.29Zm4.31,9.48a4.63,4.63,0,0,0,1.66-.29,3.81,3.81,0,0,0,1.27-.82,3.85,3.85,0,0,0,.81-1.25,4.22,4.22,0,0,0,.29-1.57v0a4.27,4.27,0,0,0-.29-1.58,3.9,3.9,0,0,0-.81-1.26,3.83,3.83,0,0,0-1.27-.83,4.42,4.42,0,0,0-1.66-.3h-2.29v7.93Z" transform="translate(-3.49 -3.49)"/></svg>
+        </a>
+        
+  </div>
+
+        </li>
+        <li class="contribute">
+            <a class="button secondary fluid" href="https://secure.actblue.com/donate/tulsi2020?refcode=web-m-nav" target="_blank">Donate</a>
+        </li>
+    </ul>
+</header>
+
+<div class="js-content" id="content-top" tabindex="-1"></div>
+
+
+  <div>
+    
+<div class="modal message-modal" id="messageModal">
+	<div class="modal-background"></div>
+	<div class="modal-content message-modal-content">
+		<div data-drupal-messages-fallback class="hidden"></div>
+	</div>
+</div>
+
+  </div>
+
+
+<main class="content-main " role="main">
+    
+      <div>
+    <div id="block-tulsi-content" class="o-block o-block--system o-block--block-tulsi-content">
+	
+		
+			<article role="article" about="/issues">
+
+  
+    
+
+  
+  <div class="view-mode-full">
+      
+
+  <div class="o-blade o-blade--salute o-blade--salute-single paragraph paragraph--type--blade-salute paragraph--view-mode--default">
+        <div class="container">
+
+      <div class="o-blade__body">
+        <div class="o-headline o-headline--salute">
+          <h1 class="o-headline__main">  Issues
+</h1>
+          <p class="o-headline__sub lead">  Please join me in ushering in a new century of peace and prosperity, where we all have clean air to breathe, water to drink, and food to eat; where all are treated equally and have respect for each other regardless of our race, nationality, how we worship or who we love; a century that will fulfill the promise of America, of freedom, justice, equality and opportunity for all.
+</p>
+        </div>
+
+      </div>
+    </div>
+
+      </div>
+
+
+  </div>
+
+</article>
+
+	</div>
+<div class="views-element-container o-block o-block--views o-block--block-views-block-issues-block-1" id="block-views-block-issues-block-1">
+	
+		
+			<div class="o-container"><div class="js-view-dom-id-c053bbe0b0712b6c59127501c0fdbc4530991f446bde14b199e7bcccdf34a56b view-container">
+    
+    
+    
+
+    
+    
+    
+
+    
+
+<div class="container">
+	<section class="issues-grid">
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/flags.jpg?itok=YvZ3dKpz 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/flags.jpg?itok=YvZ3dKpz 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/flags.jpg?itok=YvZ3dKpz 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/flags.jpg?itok=-pnzFs6d 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/flags.jpg?itok=-pnzFs6d 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/flags.jpg?itok=UT9QCYFG 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/flags.jpg?itok=UT9QCYFG 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/flags.jpg?itok=-pnzFs6d" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Photo of American flags" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>End regime change wars</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>Regime change wars — toppling foreign governments we don’t like — have drained our country of trillions of dollars, undermined our national security, and cost the lives of thousands of our men and women in uniform. My first responsibility as your Commander in Chief will be to put an end to this disastrous foreign policy that has been perpetuated by warmongers in both political parties.</p></div>
+      
+			<a class="button pond fluid" href="/issues/end-regime-change-wars">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/weapons-stockpile.jpg?itok=qurQ34n1 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/weapons-stockpile.jpg?itok=qurQ34n1 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/weapons-stockpile.jpg?itok=qurQ34n1 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/weapons-stockpile.jpg?itok=kiUXZpNp 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/weapons-stockpile.jpg?itok=kiUXZpNp 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/weapons-stockpile.jpg?itok=M9KnCDK6 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/weapons-stockpile.jpg?itok=M9KnCDK6 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/weapons-stockpile.jpg?itok=kiUXZpNp" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Weapons stockpile" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>End the new Cold War and nuclear arms race</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>Shortsighted, self-serving leaders in the grip of the military industrial complex have brought us into a new Cold War and nuclear arms race with Russia and China, threatening the future of the planet and the entire human race. On day one of my presidency, I will call a summit between the United States, China, and Russia to work to end this new Cold War, stop the arms race, reduce tensions, and increase cooperation going forward.</p></div>
+      
+			<a class="button pond fluid" href="/issues/end-new-cold-war-and-nuclear-arms-race">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/1Q6A4522.jpg?itok=YBR3fl7f 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/1Q6A4522.jpg?itok=YBR3fl7f 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/1Q6A4522.jpg?itok=YBR3fl7f 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/1Q6A4522.jpg?itok=CFopZzss 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/1Q6A4522.jpg?itok=CFopZzss 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/1Q6A4522.jpg?itok=bBKCecBy 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/1Q6A4522.jpg?itok=bBKCecBy 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/1Q6A4522.jpg?itok=CFopZzss" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Tulsi Gabbard at a farmers&#039; market" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Invest in the needs of the American people</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>I will be your voice in Washington. I will put an end to the failed policy of being the world’s police and nation builder, redirecting the trillions of dollars wasted on regime change wars and weapons to meet your needs here at home. We will work side-by-side, treating others with respect, and ensure a cleaner, safer, and healthier future for all Americans.</p></div>
+      
+			<a class="button pond fluid" href="/issues/invest-needs-american-people">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/healthcare.jpg?itok=SW5RBW_u 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/healthcare.jpg?itok=SW5RBW_u 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/healthcare.jpg?itok=SW5RBW_u 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/healthcare.jpg?itok=NW9fcqTG 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/healthcare.jpg?itok=NW9fcqTG 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/healthcare.jpg?itok=CfAEBm1b 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/healthcare.jpg?itok=CfAEBm1b 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/healthcare.jpg?itok=NW9fcqTG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of Tulsi with supporters" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Guarantee quality healthcare for all</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>Everyone deserves quality healthcare in our country. As president, I will work to ensure all Americans have that quality healthcare through a single-payer system that is incentivized to increase health and prevent and heal disease, whilst allowing individuals to access private insurance if they choose.</p></div>
+      
+			<a class="button pond fluid" href="/issues/guarantee-quality-healthcare-all">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/green-economy.jpg?itok=J14LojZ9 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/green-economy.jpg?itok=J14LojZ9 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/green-economy.jpg?itok=J14LojZ9 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/green-economy.jpg?itok=eBrEHada 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/green-economy.jpg?itok=eBrEHada 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/green-economy.jpg?itok=bsDd2P9n 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/green-economy.jpg?itok=bsDd2P9n 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/green-economy.jpg?itok=eBrEHada" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of a wind farm" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Build a green economy for the 21st century</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>We can and must begin to build a 100% renewable energy economy. By redirecting the billions spent every year subsidizing the fossil fuel industry to instead invest in the industries of the future — expanding wind, solar, and geothermal — we will guarantee a cleaner, safer energy future and create high-quality jobs.</p></div>
+      
+			<a class="button pond fluid" href="/issues/build-green-economy-21st-century">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/standing-rock_0.jpg?itok=0E-x3jcZ 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/standing-rock_0.jpg?itok=0E-x3jcZ 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/standing-rock_0.jpg?itok=0E-x3jcZ 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/standing-rock_0.jpg?itok=dwax6FI7 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/standing-rock_0.jpg?itok=dwax6FI7 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/standing-rock_0.jpg?itok=wcluzRsG 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/standing-rock_0.jpg?itok=wcluzRsG 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/standing-rock_0.jpg?itok=dwax6FI7" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of Tulsi Gabbard at Standing Rock" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Protect the environment</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>“Environmentalism” is not a policy choice. It is part of our everyday lives. Central to our rights as Americans, to life, liberty, and the pursuit of happiness, is having clean air to breathe, clean water to drink, and safe food to eat. These essential elements are core to the existence of every human being, and it is my personal commitment to fight to protect and improve them. </p></div>
+      
+			<a class="button pond fluid" href="/issues/protect-environment">Learn more</a>
+		</div>
+	</div>
+
+</div>
+			</section>
+</div>
+
+    
+    
+
+    
+    
+
+    
+    
+</div>
+</div>
+
+	</div>
+  
+      <div>
+              <div>
+
+			<section class="o-blade o-blade--wistia o-blade--video-text paragraph paragraph--type--blade-video-text paragraph--view-mode--default">
+			<div class="container">
+				<div class="o-blade__media">
+					<div class="responsive-embed widescreen">
+						  <div class="video-embed-field-provider-youtube video-embed-field-responsive-video o-container"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/h-W40aYCb0Y?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+</div>
+
+
+					</div>
+
+				</div>
+
+				<div class="o-blade__body">
+
+					  <h5>Watch</h5>
+
+<h3>Tulsi's Motive: To Save the People and Planet from Annihilation</h3>
+
+<p>I love this country and would do anything to protect the American people.</p>
+
+
+				</div>
+
+			</div>
+
+		</section>
+	</div>
+          </div>
+  
+<div class="views-element-container o-block o-block--views o-block--block-views-block-issues-block-2" id="block-views-block-issues-block-2">
+	
+		
+			<div class="o-container"><div class="js-view-dom-id-69e87d13505d1d5b18bf4cb4ad51a6a9ab56f4e9b7f8bc0affbca8d7d55b1a3c view-container">
+    
+    
+    
+
+    
+    
+    
+
+    
+
+<div class="container">
+	<section class="issues-grid">
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/Tulsi_Gabbard_high9.jpg?itok=Y3A3NFur 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/Tulsi_Gabbard_high9.jpg?itok=Y3A3NFur 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/Tulsi_Gabbard_high9.jpg?itok=Y3A3NFur 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/Tulsi_Gabbard_high9.jpg?itok=mPDDr3Uw 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/Tulsi_Gabbard_high9.jpg?itok=mPDDr3Uw 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/Tulsi_Gabbard_high9.jpg?itok=yTad3la2 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/Tulsi_Gabbard_high9.jpg?itok=yTad3la2 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/Tulsi_Gabbard_high9.jpg?itok=mPDDr3Uw" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of Tulsi Gabbard with a fellow veteran" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Care for our veterans</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>It is our nation’s responsibility to ensure that our veterans receive the care, services, and benefits they’ve earned and deserve. Taking care of our brothers and sisters in uniform who have selflessly served our country must be a priority for Congress and our country. To honor our veterans, military service members, and their families for their service to our great country, it is my personal commitment to never send our troops into harms’ way unless it is absolutely necessary.</p></div>
+      
+			<a class="button pond fluid" href="/issues/care-our-veterans">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/united-states-constitution.jpg?itok=n75fwe7l 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/united-states-constitution.jpg?itok=n75fwe7l 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/united-states-constitution.jpg?itok=n75fwe7l 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/united-states-constitution.jpg?itok=3mQXhxZV 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/united-states-constitution.jpg?itok=3mQXhxZV 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/united-states-constitution.jpg?itok=FeJpw6s- 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/united-states-constitution.jpg?itok=FeJpw6s- 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/united-states-constitution.jpg?itok=3mQXhxZV" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of the US Constitution" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Protect our civil liberties</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>Our right to privacy, guaranteed by the 4th Amendment of the Constitution, is constantly under attack by overreaching intelligence agencies and big tech monopolies that falsely invoke national security to take away our civil liberties, privacy, and freedoms.</p></div>
+      
+			<a class="button pond fluid" href="/issues/protect-our-civil-liberties">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/1Q6A5040.jpg?itok=4mxOzymD 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/1Q6A5040.jpg?itok=4mxOzymD 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/1Q6A5040.jpg?itok=4mxOzymD 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/1Q6A5040.jpg?itok=K08FepiP 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/1Q6A5040.jpg?itok=K08FepiP 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/1Q6A5040.jpg?itok=IsMHcayY 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/1Q6A5040.jpg?itok=IsMHcayY 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/1Q6A5040.jpg?itok=K08FepiP" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of Tulsi in front of the American flag" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Protect the Second Amendment while ensuring gun safety</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>I will uphold our constitutional right to bear arms while also upholding our responsibility to keep our children and communities safe from people who seek to do us harm.</p></div>
+      
+			<a class="button pond fluid" href="/issues/protect-second-amendment-while-ensuring-gun-safety">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/democracy.jpg?itok=cqhcG-NC 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/democracy.jpg?itok=cqhcG-NC 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/democracy.jpg?itok=cqhcG-NC 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/democracy.jpg?itok=3w0peHoJ 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/democracy.jpg?itok=3w0peHoJ 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/democracy.jpg?itok=zUxsR61J 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/democracy.jpg?itok=zUxsR61J 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/democracy.jpg?itok=3w0peHoJ" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of the American flag" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Protect our democracy</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>As your president, I will make it a priority to guarantee a government of, by, and for the people by strengthening campaign finance laws, protecting voting rights for every American, and ensuring our elections are protected against all forms of interference. My Securing America’s Elections Act ensures either a paper ballot or voter-verified paper backup, so no foreign countries or individuals can skewer results. If we lose faith in our elections, democracy crumbles.</p></div>
+      
+			<a class="button pond fluid" href="/issues/protect-our-democracy">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/tulsi-norml.jpg?itok=eeld4ldg 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/tulsi-norml.jpg?itok=eeld4ldg 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/tulsi-norml.jpg?itok=eeld4ldg 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/tulsi-norml.jpg?itok=usjVk9po 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/tulsi-norml.jpg?itok=usjVk9po 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/tulsi-norml.jpg?itok=ulSUH2tf 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/tulsi-norml.jpg?itok=ulSUH2tf 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/tulsi-norml.jpg?itok=usjVk9po" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Tulsi Gabbard speaks at a NORML event" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>End the failed war on drugs</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>The failed war on drugs is an attack on our values of freedom and fairness as Americans. In recent years, many states have taken initiative by legalizing marijuana, reforming drug laws and sentencing guidelines, and winding down the <em>“War on Drugs.”</em> Now it’s time for the federal government to do its part.</p></div>
+      
+			<a class="button pond fluid" href="/issues/end-failed-war-drugs">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/immigration.jpg?itok=daT4JQtH 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/immigration.jpg?itok=daT4JQtH 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/immigration.jpg?itok=daT4JQtH 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/immigration.jpg?itok=EV8CxdPb 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/immigration.jpg?itok=EV8CxdPb 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/immigration.jpg?itok=MBN0OIh8 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/immigration.jpg?itok=MBN0OIh8 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/immigration.jpg?itok=EV8CxdPb" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of the statue of liberty" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Reform our broken immigration system</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>On immigration, I will not accept the false choice between compassion and security that is currently being offered to us. It will be my policy to balance border security, have an asylum process that reflects our values as a nation of immigrants, and include a path to legal status for DREAMers.</p></div>
+      
+			<a class="button pond fluid" href="/issues/reform-our-broken-immigration-system">Learn more</a>
+		</div>
+	</div>
+
+</div>
+			</section>
+</div>
+
+    
+    
+
+    
+    
+
+    
+    
+</div>
+</div>
+
+	</div>
+  
+      <div>
+              <div>
+
+			<section class="o-blade o-blade--wistia o-blade--video-text paragraph paragraph--type--blade-video-text paragraph--view-mode--default">
+			<div class="container">
+				<div class="o-blade__media">
+					<div class="responsive-embed widescreen">
+						  <div class="video-embed-field-provider-youtube video-embed-field-responsive-video o-container"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/pzBwjtNj9X4?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+</div>
+
+
+					</div>
+
+				</div>
+
+				<div class="o-blade__body">
+
+					  <h5>Watch</h5>
+
+<h3>To respect you — that is my personal commitment</h3>
+
+<p>It is my personal commitment to you that I will always treat you, and all my fellow Americans, with respect. Everyone deserves respect no matter their race, religion, or political views or affiliation.</p>
+
+
+				</div>
+
+			</div>
+
+		</section>
+	</div>
+          </div>
+  
+<div class="views-element-container o-block o-block--views o-block--block-views-block-issues-block-3" id="block-views-block-issues-block-3">
+	
+		
+			<div class="o-container"><div class="js-view-dom-id-ff3c7d3b7d86cfd1db3959f73f03b2a16d162a7cc4345a3867494e3096dbaac0 view-container">
+    
+    
+    
+
+    
+    
+    
+
+    
+
+<div class="container">
+	<section class="issues-grid">
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/womens.jpg?itok=sd50Jieg 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/womens.jpg?itok=sd50Jieg 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/womens.jpg?itok=sd50Jieg 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/womens.jpg?itok=VQRffyAS 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/womens.jpg?itok=VQRffyAS 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/womens.jpg?itok=dIz5-Syp 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/womens.jpg?itok=dIz5-Syp 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/womens.jpg?itok=VQRffyAS" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of a group of young women" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Protect a woman’s right to choose</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>I agree with Hillary Clinton when she said abortion should be safe, legal, and rare. We must commit to defending a woman’s right to choose. The government has no place in making that most personal of decisions. I support codifying Roe v. Wade while making sure that during the third trimester, abortion is not an option unless the life or severe health consequences of a woman are at risk.</p></div>
+      
+			<a class="button pond fluid" href="/issues/protect-womans-right-choose">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/washingtondc.jpg?itok=L7HJVi5b 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/washingtondc.jpg?itok=L7HJVi5b 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/washingtondc.jpg?itok=L7HJVi5b 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/washingtondc.jpg?itok=UTLBuBh7 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/washingtondc.jpg?itok=UTLBuBh7 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/washingtondc.jpg?itok=pmoR-as2 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/washingtondc.jpg?itok=pmoR-as2 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/washingtondc.jpg?itok=UTLBuBh7" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Photo of the Capitol building" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>End the corruption in Washington</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>The corrupting power and influence of big money special interests drives the agenda in Washington DC and is a direct threat to our democracy. As president, I will work fiercely to get corporate money and lobbyists out of politics and put you back in control of your government. We’ve got to close the legal loopholes that give special interests so much influence and take away your voice.</p></div>
+      
+			<a class="button pond fluid" href="/issues/end-corruption-washington">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/criminal-justice.jpg?itok=YrCB_sja 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/criminal-justice.jpg?itok=YrCB_sja 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/criminal-justice.jpg?itok=YrCB_sja 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/criminal-justice.jpg?itok=XzYc_o0f 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/criminal-justice.jpg?itok=XzYc_o0f 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/criminal-justice.jpg?itok=vHEIQWlp 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/criminal-justice.jpg?itok=vHEIQWlp 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/criminal-justice.jpg?itok=XzYc_o0f" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of a prison" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Fix our broken criminal justice system</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>We have a criminal justice system that treats you better if you’re rich and guilty than if you’re poor and innocent. Big crooks make billions — little “crooks” go to jail. This skewed system cannot stand. Fairness and the rule of law are not mutually exclusive. Now is the time to make our criminal justice system <em>just</em>.</p></div>
+      
+			<a class="button pond fluid" href="/issues/fix-our-broken-criminal-justice-system">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/tulsi-with-supporter.jpg?itok=b6wbQPEr 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/tulsi-with-supporter.jpg?itok=b6wbQPEr 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/tulsi-with-supporter.jpg?itok=b6wbQPEr 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/tulsi-with-supporter.jpg?itok=WMXDWp2X 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/tulsi-with-supporter.jpg?itok=WMXDWp2X 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/tulsi-with-supporter.jpg?itok=wuSKciXg 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/tulsi-with-supporter.jpg?itok=wuSKciXg 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/tulsi-with-supporter.jpg?itok=WMXDWp2X" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of Tulsi Gabbard with a supporter" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Protect Social Security</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>For generations, Social Security has provided economic security and lifted millions of Americans out of poverty. I will ensure the program remains solvent without reducing benefits for those who rely on it.</p></div>
+      
+			<a class="button pond fluid" href="/issues/protect-social-security">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--even">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/equality.jpg?itok=-uWRVO8G 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/equality.jpg?itok=-uWRVO8G 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/equality.jpg?itok=-uWRVO8G 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/equality.jpg?itok=rGKVQzSi 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/equality.jpg?itok=rGKVQzSi 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/equality.jpg?itok=jDBx9WJW 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/equality.jpg?itok=jDBx9WJW 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/equality.jpg?itok=rGKVQzSi" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of Tulsi Gabbard in front of the American Flag" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Equality for all</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>We must work side-by-side to stand up to bigotry, hatred, and violence against others because of their race, religion, or sexual orientation. We must continue to fight for genuine equality and restore human dignity for all Americans.</p></div>
+      
+			<a class="button pond fluid" href="/issues/equality-all">Learn more</a>
+		</div>
+	</div>
+
+</div>
+											<div class="issues-grid__item  issue-grid--odd">
+	<div class="issue-drop">
+		
+		<div class="issue-drop__inner">
+			<div class="issue-drop__media">
+				
+            <div class="blazy" data-blazy="">
+
+
+
+                    <div class="media media--blazy media--loading media--responsive media--image">
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="all and (min-width: 1600px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/syria.jpg?itok=raIRn6cJ 1x"/>
+              <source media="all and (min-width: 1200px) and (max-width: 1599px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/syria.jpg?itok=raIRn6cJ 1x"/>
+              <source media="all and (min-width: 1024px) and (max-width: 1199px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_large_scale_crop/public/images/issues/2019-11/syria.jpg?itok=raIRn6cJ 1x"/>
+              <source media="all and (min-width: 640px) and (max-width: 1023px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/syria.jpg?itok=tkf_bqsn 1x, /sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/syria.jpg?itok=tkf_bqsn 2x"/>
+              <source media="(min-width: 0px)" type="image/jpeg" data-srcset="/sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/syria.jpg?itok=mnhI_OoH 1x, /sites/default/files/styles/r_small_scale_crop/public/images/issues/2019-11/syria.jpg?itok=mnhI_OoH 2x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" data-src="/sites/default/files/styles/r_medium_scale_crop/public/images/issues/2019-11/syria.jpg?itok=tkf_bqsn" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A photo of Tulsi Gabbard in Syria" typeof="foaf:Image" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+</div>
+      
+
+			</div>
+			<div class="issue-drop__body">
+				<h3>
+					<a class="issue-drop__trigger" rel="bookmark"><span>Reports on chemical attacks in Syria</span>
+</a>
+				</h3>
+				
+
+			</div>
+		</div>
+		<div class="issue-drop__description">
+			
+            <div><p>There is evidence that both the Syrian government of Bashar al-Assad as well as the armed opposition groups aligned against him have used chemical weapons (CW) during the Syrian war. </p></div>
+      
+			<a class="button pond fluid" href="/issues/reports-chemical-attacks-syria">Learn more</a>
+		</div>
+	</div>
+
+</div>
+			</section>
+</div>
+
+    
+    
+
+    
+    
+
+    
+    
+</div>
+</div>
+
+	</div>
+  
+      <div>
+              <div>
+
+			<section class="o-blade o-blade--wistia o-blade--video-text paragraph paragraph--type--blade-video-text paragraph--view-mode--default">
+			<div class="container">
+				<div class="o-blade__media">
+					<div class="responsive-embed widescreen">
+						  <div class="video-embed-field-provider-youtube video-embed-field-responsive-video o-container"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/TqwumsGYDlo?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+</div>
+
+
+					</div>
+
+				</div>
+
+				<div class="o-blade__body">
+
+					  <h5>Watch</h5>
+
+<h3>I'll speak to every American</h3>
+
+<p>I go on Tucker Carlson, I go on Bret Baier, I go on Sean Hannity, I go on MSNBC, I go on CNN—I am here to speak to every single American in this country about the unifying leadership that I want to bring as president, not just speak to those who agree with me.</p>
+
+
+				</div>
+
+			</div>
+
+		</section>
+	</div>
+          </div>
+  
+<div class="views-element-container o-block o-block--views o-block--block-views-block-issues-block-4" id="block-views-block-issues-block-4">
+	
+		
+			<div class="o-container"><div class="js-view-dom-id-eeb82fd3cbf81b01634a8fc1a96303b6fbfc127b200b205abe424eedf8b08d83 view-container">
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+</div>
+</div>
+
+	</div>
+
+  </div>
+
+      <div class="related">
+      
+      <div>
+              <div>
+
+    <div class="o-blade paragraph o-blade--ngp-wrapper paragraph--type--blade-ngp-wrapper paragraph--view-mode--default">
+                    <div class="o-blade__media"></div>
+            <div class="o-blade__body">
+
+                
+
+                <div class="ngp-action">
+                    <div class="ngp-form" data-form-url="https://actions.ngpvan.com/v1/Forms/NWYpkaF_Y0yLKyrTKNIJPA2" data-fastaction-endpoint="https://fastaction.ngpvan.com" data-inline-errors="true" data-labels="inline" data-fastaction-nologin="true" data-databag-endpoint="https://profile.ngpvan.com" data-databag="everybody" data-ngp-generic="true" data-ngp-generic-style="large-form"></div>
+                </div>
+
+            </div>
+            </div>
+</div>
+          </div>
+  
+
+  </div>
+
+</main>
+<footer class="main-footer">
+    <div class="o-blade o-blade--footer">
+        <div class="container">
+            <div class="o-blade__body">
+                <div class="columns">
+                    <div class="column is-7-desktop is-order-2-tablet">
+
+                        <aside class="secondary">
+
+                              <div class="footer-brand">
+                <a href="/" title="TULSI 2020" rel="home" class="logo">
+            <svg id="TGLogo" data-name="TGLogo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 136.8 55.29">
+                <title>Tulsi Gabbard</title><path class="brand-footer-tulsi" d="M11.83,12.67H4.32a.83.83,0,0,1-.83-.83V4.94a.83.83,0,0,1,.83-.83H30.48a.83.83,0,0,1,.83.83v6.9a.83.83,0,0,1-.83.83H22.92a.84.84,0,0,0-.83.83V37.15a1,1,0,0,1-1,1h-2.2a6.22,6.22,0,0,1-6.22-6.22h0V13.5A.83.83,0,0,0,11.83,12.67Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-tulsi" d="M36.45,23.23V4.94a.83.83,0,0,1,.83-.83h7.88a.83.83,0,0,1,.83.83h0V23c0,4.92,1.72,7.25,5.51,7.25s5.56-2.24,5.56-7V4.94a.83.83,0,0,1,.83-.83h7.87a.83.83,0,0,1,.83.83h0V23c0,11-5.5,15.81-15.19,15.81S36.45,33.88,36.45,23.23Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-tulsi" d="M73,4.11h7.78a.83.83,0,0,1,.83.83h0V28a.83.83,0,0,0,.83.83H95.91a.83.83,0,0,1,.83.83h0v7.66a.83.83,0,0,1-.83.83H73a.83.83,0,0,1-.83-.83h0V4.94A.83.83,0,0,1,73,4.11Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-tulsi" d="M122,12.76a.83.83,0,0,1-1.08.46h0c-1.13-.49-3.08-1.15-3.87-1.39a11.54,11.54,0,0,0-2.79-.46,5.06,5.06,0,0,0-2.76.58,1.89,1.89,0,0,0-.78,1.81,2.19,2.19,0,0,0,.64,1.41,4.85,4.85,0,0,0,1.47.87,12.23,12.23,0,0,0,2,.56c.73.14,1.46.3,2.18.48a13.29,13.29,0,0,1,6.47,3.23,9.17,9.17,0,0,1,2.46,5.95,11.91,11.91,0,0,1-.46,4.68,9.73,9.73,0,0,1-2.21,3.74,11.43,11.43,0,0,1-3.84,2.61A16.74,16.74,0,0,1,114,38.55c-5.39.45-9.84-1.66-13.43-3.61a.84.84,0,0,1-.37-1l2.47-6.08a.67.67,0,0,1,.88-.35l.11.06a33.77,33.77,0,0,0,5.51,2.5,11.93,11.93,0,0,0,4.15.6,4.66,4.66,0,0,0,3-.87,2.26,2.26,0,0,0,.62-1.95,3,3,0,0,0-.37-1.27,2.88,2.88,0,0,0-1-.94,7.34,7.34,0,0,0-1.68-.72c-.68-.21-1.5-.43-2.46-.67-1.14-.26-2.26-.56-3.36-.89a10.36,10.36,0,0,1-3-1.45,7.85,7.85,0,0,1-2.24-2.49,9.43,9.43,0,0,1-1.11-4,11.9,11.9,0,0,1,.44-4.52,9.84,9.84,0,0,1,2-3.61,10.31,10.31,0,0,1,3.41-2.51,13.59,13.59,0,0,1,4.69-1.19,21,21,0,0,1,5.19.25A19.4,19.4,0,0,1,123.83,6a.83.83,0,0,1,.3,1Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-tulsi" d="M131.69,4.11h7.8a.8.8,0,0,1,.8.8v27a6.22,6.22,0,0,1-6.22,6.22h-2.14a1.08,1.08,0,0,1-1.08-1.08V4.94a.83.83,0,0,1,.83-.83h0Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-gabbard" d="M35.4,58.78a6.36,6.36,0,0,1-2.47-.46A5.54,5.54,0,0,1,31,57.06a5.65,5.65,0,0,1-1.22-1.89,6.47,6.47,0,0,1-.43-2.36v0a6,6,0,0,1,.45-2.31,5.73,5.73,0,0,1,1.24-1.91,6,6,0,0,1,4.32-1.79,8.3,8.3,0,0,1,1.38.11,6.22,6.22,0,0,1,1.15.31,5.24,5.24,0,0,1,1,.49,6,6,0,0,1,.68.48.29.29,0,0,1,0,.42l-.9,1.08a.3.3,0,0,1-.42.05,4.84,4.84,0,0,0-.46-.33,3.42,3.42,0,0,0-.73-.39,4,4,0,0,0-.83-.25,5.27,5.27,0,0,0-1-.09,3.38,3.38,0,0,0-1.48.33,3.75,3.75,0,0,0-1.19.89,4.11,4.11,0,0,0-.8,1.3,4.43,4.43,0,0,0-.29,1.58v0a4.74,4.74,0,0,0,.28,1.66,3.94,3.94,0,0,0,.8,1.31,3.88,3.88,0,0,0,1.24.86,4,4,0,0,0,1.62.32A4.82,4.82,0,0,0,37,56.7a4.46,4.46,0,0,0,1.25-.64V53.87H35.6a.3.3,0,0,1-.3-.3V52.4a.3.3,0,0,1,.3-.3H40a.29.29,0,0,1,.29.3V57a7.08,7.08,0,0,1-1,.7,7.49,7.49,0,0,1-1.13.58,7.92,7.92,0,0,1-1.3.39A7.61,7.61,0,0,1,35.4,58.78Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-gabbard" d="M48.45,46.89H50a.29.29,0,0,1,.27.18l4.85,11.09a.3.3,0,0,1-.28.42h-1.5A.28.28,0,0,1,53,58.4l-1.1-2.62H46.43L45.31,58.4a.28.28,0,0,1-.27.18H43.6a.3.3,0,0,1-.27-.42l4.84-11.09A.31.31,0,0,1,48.45,46.89ZM51.17,54l-2-4.64-2,4.64Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-gabbard" d="M58.48,47.27a.31.31,0,0,1,.3-.3h4.9a4.11,4.11,0,0,1,3,1,2.61,2.61,0,0,1,.78,1.92v0a2.93,2.93,0,0,1-.14.93,3.23,3.23,0,0,1-.36.72,3,3,0,0,1-.53.54,4.57,4.57,0,0,1-.62.39,6.68,6.68,0,0,1,.93.43,3,3,0,0,1,.73.57,2.36,2.36,0,0,1,.47.78,3,3,0,0,1,.16,1v0a3,3,0,0,1-.3,1.37,2.88,2.88,0,0,1-.87,1,4.35,4.35,0,0,1-1.36.6,6.83,6.83,0,0,1-1.75.21H58.78a.3.3,0,0,1-.3-.3Zm4.8,4.59a2.88,2.88,0,0,0,1.59-.38,1.32,1.32,0,0,0,.59-1.19v0a1.27,1.27,0,0,0-.52-1.09,2.47,2.47,0,0,0-1.51-.39H60.51v3.08Zm.6,4.91a3,3,0,0,0,1.64-.39,1.37,1.37,0,0,0,.59-1.2v0A1.29,1.29,0,0,0,65.52,54a3.1,3.1,0,0,0-1.79-.41H60.51v3.18Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-gabbard" d="M71.7,47.26A.29.29,0,0,1,72,47H76.9a4.1,4.1,0,0,1,3,1,2.61,2.61,0,0,1,.78,1.92v0a2.67,2.67,0,0,1-.14.93,2.56,2.56,0,0,1-.36.72,2.71,2.71,0,0,1-.53.54,4.48,4.48,0,0,1-.61.39A6.68,6.68,0,0,1,80,53a2.92,2.92,0,0,1,.72.57,2.2,2.2,0,0,1,.47.78,3,3,0,0,1,.17,1v0A2.86,2.86,0,0,1,81,56.77a2.69,2.69,0,0,1-.87,1,4.19,4.19,0,0,1-1.35.6,6.91,6.91,0,0,1-1.76.21H72a.29.29,0,0,1-.28-.28Zm4.8,4.6a2.82,2.82,0,0,0,1.58-.38,1.33,1.33,0,0,0,.6-1.19v0a1.27,1.27,0,0,0-.52-1.09,2.49,2.49,0,0,0-1.51-.39H73.72v3.08Zm.59,4.91a3,3,0,0,0,1.64-.39,1.35,1.35,0,0,0,.6-1.2v0A1.32,1.32,0,0,0,78.74,54,3.1,3.1,0,0,0,77,53.59H73.72v3.18Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-gabbard" d="M89.21,46.89h1.52a.29.29,0,0,1,.26.17l4.86,11.12a.29.29,0,0,1-.26.4H94.06a.3.3,0,0,1-.27-.17l-1.1-2.63H87.2l-1.12,2.63a.29.29,0,0,1-.26.17H84.35a.29.29,0,0,1-.26-.4L89,47.06A.3.3,0,0,1,89.21,46.89ZM91.94,54l-2-4.64L88,54Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-gabbard" d="M99.26,47.26a.28.28,0,0,1,.28-.29h4.89a5.76,5.76,0,0,1,1.94.31,4,4,0,0,1,1.41.85,3.29,3.29,0,0,1,.71,1.12,3.66,3.66,0,0,1,.25,1.39v0a3.75,3.75,0,0,1-.21,1.29,3.34,3.34,0,0,1-.57,1,3.29,3.29,0,0,1-.87.74,4.16,4.16,0,0,1-1.12.48l2.81,3.94a.28.28,0,0,1-.23.45h-1.7a.27.27,0,0,1-.23-.12l-2.78-3.93h-2.56V58.3a.29.29,0,0,1-.29.28H99.54a.28.28,0,0,1-.28-.28Zm5,5.47A2.71,2.71,0,0,0,106,52.2a1.73,1.73,0,0,0,.65-1.42v0a1.7,1.7,0,0,0-.63-1.44,2.85,2.85,0,0,0-1.78-.5h-3v3.92Z" transform="translate(-3.49 -3.49)"/><path class="brand-footer-gabbard" d="M112.49,47.26a.29.29,0,0,1,.29-.29h4a6.93,6.93,0,0,1,2.49.44,6,6,0,0,1,2,1.22,5.57,5.57,0,0,1,1.27,1.83,6,6,0,0,1,.44,2.28v0a6,6,0,0,1-.44,2.29,5.61,5.61,0,0,1-1.27,1.84,6,6,0,0,1-2,1.22,6.72,6.72,0,0,1-2.49.45h-4a.29.29,0,0,1-.29-.29Zm4.31,9.48a4.63,4.63,0,0,0,1.66-.29,3.81,3.81,0,0,0,1.27-.82,3.85,3.85,0,0,0,.81-1.25,4.22,4.22,0,0,0,.29-1.57v0a4.27,4.27,0,0,0-.29-1.58,3.9,3.9,0,0,0-.81-1.26,3.83,3.83,0,0,0-1.27-.83,4.42,4.42,0,0,0-1.66-.3h-2.29v7.93Z" transform="translate(-3.49 -3.49)"/></svg>
+        </a>
+
+                    <ul class="c-share-menu">
+      <li class="facebook">
+        <a href="https://facebook.com/tulsigabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-facebook-f"></i>
+          </span>
+          <span class="show-for-sr">Facebook</span>
+        </a>
+      </li>
+      <li class="instagram">
+        <a href="https://instagram.com/tulsigabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-instagram"></i>
+          </span>
+          <span class="show-for-sr">Instagram</span>
+        </a>
+      </li>
+      <li class="twitter">
+        <a href="https://twitter.com/tulsigabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+          <span class="show-for-sr">Twitter</span>
+        </a>
+      </li>
+      <li class="medium">
+        <a href="https://medium.com/@TulsiGabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-medium"></i>
+          </span>
+          <span class="show-for-sr">Medium</span>
+        </a>
+      </li>
+      <li class="twitter">
+        <a href="https://www.youtube.com/tulsigabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-youtube"></i>
+          </span>
+          <span class="show-for-sr">YouTube</span>
+        </a>
+      </li>
+    </ul>
+
+
+
+  </div>
+
+
+                        </aside>
+
+                    </div>
+                    <div class="column is-5-desktop is-order-1-tablet">
+
+                        <div class="primary">
+                            <div class="columns is-mobile">
+
+                                <div class="column">
+                                      <div>
+    <div id="block-footeraction">
+  
+    
+      
+              <ul class="site-menu vertical menu">
+                    <li class="menu-item">
+        <a href="https://secure.actblue.com/donate/tulsi2020?refcode=web-footer-nav" class="contribute" target="_blank">Contribute</a>
+              </li>
+                <li class="menu-item">
+        <a href="/volunteer" data-drupal-link-system-path="node/4">Volunteer</a>
+              </li>
+                <li class="menu-item">
+        <a href="/join-us" data-drupal-link-system-path="node/25">Sign Up</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+<nav role="navigation" aria-labelledby="block-footerscheduling-menu" id="block-footerscheduling">
+      
+  <h2 id="block-footerscheduling-menu">Scheduling</h2>
+  
+
+        
+              <ul class="nav-list vertical menu">
+                    <li class="menu-item">
+        <a href="/s/event" data-drupal-link-system-path="node/34">Event or Speaking Request</a>
+              </li>
+                <li class="menu-item">
+        <a href="/s/meeting" data-drupal-link-system-path="node/36">Request a Meeting</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                                </div>
+
+                                <div class="column">
+                                      <div>
+    <div id="block-footer">
+  
+    
+      
+              <ul class="site-menu vertical menu">
+                    <li class="menu-item">
+        <a href="/about" data-drupal-link-system-path="node/1">About</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contact" data-drupal-link-system-path="node/3">Contact</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://shop.tulsi2020.com">Shop</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+<nav role="navigation" aria-labelledby="block-pressfooter-menu" id="block-pressfooter">
+      
+  <h2 id="block-pressfooter-menu">Press Information</h2>
+  
+
+        
+              <ul class="nav-list vertical menu">
+                    <li class="menu-item">
+        <a href="/press/request" data-drupal-link-system-path="node/37">Submit a Press Request</a>
+              </li>
+                <li class="menu-item">
+        <a href="/press" data-drupal-link-system-path="press">Press Releases</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-colophon c-colophon--dark c-colophon--bordered">
+                    <div class="c-colophon__body">
+
+                          <div class="footer__colophon">
+    <div id="block-mobiledisclaimer" class="mobile-disclaimer">
+  
+    
+        <h4>Text <span>TULSI</span> to <span>48728</span> to receive mobile alerts</h4>
+
+<p>Mobile alerts from TULSI 2020. Periodic messages. Msg &amp; data rates may apply. Text STOP to 48728 to stop receiving messages. Text HELP to 48728 for more information. <a href="https://sync.revmsg.net/public/terms-and-conditions/c023311b-0343-40c6-83c2-34a6eed42542/48728">Terms &amp; Conditions</a>.</p>
+
+  </div>
+<div id="block-militarydisclaimer" class="military-disclaimer">
+  
+    
+        <p>Tulsi Gabbard is a member of the Hawaii Army National Guard. Use of her military rank, job titles, and photographs in uniform does not imply endorsement by the Hawaii Army National Guard, the Department of the Army or the Department of Defense. All factual military information and photographs are provided in conjunction with other non-military biographical data.</p>
+
+
+  </div>
+
+  </div>
+
+                          <div class="footer__legal">
+    <div id="block-footerlegal">
+  
+    
+      
+              <ul class="legal-menu align-center menu">
+                    <li class="menu-item">
+        <a href="/privacy-policy" data-drupal-link-system-path="node/5">Privacy Policy</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+
+  </div>
+
+
+                        <p class="paid-for">
+                            Paid for by Tulsi Now                        </p>
+
+                        <p class="copyright u-mb-0x">
+                            &copy;
+                            2019
+                            TULSI 2020
+                            <span>|</span> 
+                            <a class="lang-switcher" href="https://es.tulsi2020.com">en Español</a>
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="c-footer-tools">
+                    <div class="c-footer-tools__body">
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Mobile navigation menu -->
+<nav class="c-mobile-nav is-invisible js-mobile-nav">
+    <div class="c-mobile-nav__screen js-mobile-nav-screen show" data-screen="top">
+        <div class="c-mobile-nav__body c-mobile-nav__body--cols">
+            <div class="top">
+                                <ul class="nav-list large vertical menu">
+                    <li class="menu-item">
+                        <a class="js-mobile-nav-screen-trigger" data-drupal-link-system-path="/about" data-screen="about" href="/about">
+                            About
+                            <span class='icon'>
+                                <i class="fas fa-caret-right fa-sm"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a data-drupal-link-system-path="/record" href="/record">Issues</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a class="js-mobile-nav-screen-trigger" data-drupal-link-system-path="node/4" data-screen="volunteer" href="/volunteer">
+                            Get Involved
+                            <span class='icon'>
+                                <i class="fas fa-caret-right fa-sm"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-item has-screen">
+                        <a class="js-mobile-nav-screen-trigger" data-screen="events" href="https://tulsi.to/events">
+                            Events
+                            <span class='icon'>
+                                <i class="fas fa-caret-right fa-sm"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item has-screen">
+                        <a class="js-mobile-nav-screen-trigger" data-screen="press" href="/press">
+                            Press
+                            <span class='icon'>
+                                <i class="fas fa-caret-right fa-sm"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://shop.tulsi2020.com">Shop</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom">
+                <div class="cta">
+                    
+                </div>
+
+                <div class="c-mobile-nav__footer">
+                                <ul class="c-share-menu">
+      <li class="facebook">
+        <a href="https://facebook.com/tulsigabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-facebook-f"></i>
+          </span>
+          <span class="show-for-sr">Facebook</span>
+        </a>
+      </li>
+      <li class="instagram">
+        <a href="https://instagram.com/tulsigabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-instagram"></i>
+          </span>
+          <span class="show-for-sr">Instagram</span>
+        </a>
+      </li>
+      <li class="twitter">
+        <a href="https://twitter.com/tulsigabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+          <span class="show-for-sr">Twitter</span>
+        </a>
+      </li>
+      <li class="medium">
+        <a href="https://medium.com/@TulsiGabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-medium"></i>
+          </span>
+          <span class="show-for-sr">Medium</span>
+        </a>
+      </li>
+      <li class="twitter">
+        <a href="https://www.youtube.com/tulsigabbard" target="_blank">
+          <span class="icon">
+            <i class="fab fa-youtube"></i>
+          </span>
+          <span class="show-for-sr">YouTube</span>
+        </a>
+      </li>
+    </ul>
+
+
+
+
+                    <a class="lang-switcher" href="https://es.tulsi2020.com">en Español</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c-mobile-nav__screen js-mobile-nav-screen" data-screen="about">
+        <div class="c-mobile-nav__body">
+
+            <ul class="nav-list large vertical menu">
+                <li class="menu-item">
+                    <a class="js-mobile-nav-screen-trigger" data-screen="top" href="#">
+                        <span class='icon'>
+                            <i class="fas fa-caret-left fa-sm"></i>
+                        </span>
+                        Back</a>
+                </li>
+            </ul>
+
+            <ul class="nav-list sub vertical menu">
+                <li class="menu-item">
+                    <a href="/about">Read Tulsi's Bio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/vision">Tulsi's Vision for America</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/about/my-spiritual-path">My Spiritual Path</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="c-mobile-nav__screen js-mobile-nav-screen" data-screen="events">
+        <div class="c-mobile-nav__body">
+
+            <ul class="nav-list large vertical menu">
+                <li class="menu-item">
+                    <a class="js-mobile-nav-screen-trigger" data-screen="top" href="#">
+                        <span class='icon'>
+                            <i class="fas fa-caret-left fa-sm"></i>
+                        </span>
+                        Back</a>
+                </li>
+            </ul>
+
+            <ul class="nav-list sub vertical menu">
+                <li>
+                    <a href="https://secure.ngpvan.com/p/uEk71xTbu0iDkh_D4IJSuw2">View All Events</a>
+                </li>
+                <li>
+                    <a href="https://secure.ngpvan.com/p/mpB17nVX0kSTuM1pBYwkBQ2">Official Events</a>
+                </li>
+                <li>
+                    <a href="https://secure.ngpvan.com/p/jA6r9eftj0KWJMIbUssWYA2">Supporter-hosted Events</a>
+                </li>
+                <li>
+                    <a href="https://secure.ngpvan.com/C-Ri-IqpgEuDGm2uX8cjkA2">Host an Event</a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+
+    <div class="c-mobile-nav__screen js-mobile-nav-screen" data-screen="press">
+        <div class="c-mobile-nav__body">
+
+            <ul class="nav-list large vertical menu">
+                <li class="menu-item">
+                    <a class="js-mobile-nav-screen-trigger" data-screen="top" href="#">
+                        <span class='icon'>
+                            <i class="fas fa-caret-left fa-sm"></i>
+                        </span>
+                        Back</a>
+                </li>
+            </ul>
+
+            <ul class="nav-list sub vertical menu">
+                <li class="menu-item">
+                    <a href="/press">Press Releases</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/a/press-list">Join Our Press List</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/press/request">Press Request</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/s/event">Event Request</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/s/meeting">Meeting Request</a>
+                </li>
+                
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="c-mobile-nav__screen js-mobile-nav-screen" data-screen="volunteer">
+        <div class="c-mobile-nav__body">
+
+            <ul class="nav-list large vertical menu">
+                <li class="menu-item">
+                    <a class="js-mobile-nav-screen-trigger" data-screen="top" href="#">
+                        <span class='icon'>
+                            <i class="fas fa-caret-left fa-sm"></i>
+                        </span>
+                        Back</a>
+                </li>
+            </ul>
+
+            <ul class="nav-list sub vertical menu">
+                <li class="menu-item">
+                    <a href="https://secure.actblue.com/donate/tulsi2020?refcode=web-m-nav2">Contribute</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/join-us">Sign Up</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/volunteer">Volunteer</a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://shop.tulsi2020.com" target="_blank">Merchandise</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="https://tulsi.to/donate-today" target="_blank">Alternate Donation Form</a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://tulsi.to/mail" target="_blank">Mail Donation Form</a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://jobs.lever.co/tulsi2020" target="_blank">Jobs</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/325","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25},"user":{"uid":0,"permissionsHash":"f9165ecc0d06fd5f3d3802ee842bba544be9f63f48de08054ab3ef7372888d45"}}</script>
+<script src="/sites/default/files/js/js_qF7pXYzKJvdnbo7RAru_mX46ztVSSXobr9oz2scDUhA.js"></script>
+<script src="https://d3rse9xjbp8270.cloudfront.net/at.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_B52TU_weZFF6bOOaEdgC9QN5fuI-ynrFhc314hwCiYw.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"877e78ad18","applicationID":"229453582","transactionName":"ZlYBY0RZVkRQB0JdCl8cIlRCUVdZHhRXUwBuUAJUXl0=","queueTime":0,"applicationTime":26,"atts":"ShECFQxDRUo=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

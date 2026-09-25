@@ -1,0 +1,54 @@
+{
+  "as_of": "2026-09-22",
+  "auxiliary_source_sha256": {
+    "2024congressgecands.xlsx": "b142427552dd9f5b7ce1a72393d9ad5ac3d58773c9c53202759e04c8835103b3",
+    "federalspecialelectionslist.pdf": "87f571174b74c7370f042e4e015fd7c54ee9cf60ee3d532d1bf022678873d5ee",
+    "senate_class_i.html": "f75128953c963cad63c348fd9ac53707f90a6f5abcfb0701b9b5f1f1be4f465e",
+    "senate_class_ii.html": "caafbfd86935a3d24e84818272b0fae94d9e9dcfc2ffe244b41385479df0db94",
+    "senate_class_iii.html": "29c9cc53035a8b2c6421b4cf5258569fa504f52cd7465e0e90c5ac60cfdf84b0"
+  },
+  "complete": false,
+  "dsa_congressional_review_required": 5,
+  "dsa_congressional_rows_reconciled": 23,
+  "election_cycles": [
+    2016,
+    2018,
+    2020,
+    2022,
+    2024,
+    2026
+  ],
+  "future_primary_seat_cycles": 6,
+  "gap_records": 912,
+  "general_ballot_2024_rows": 1259,
+  "limitations": [
+    "Source rows are not unique candidates or unique elections; fusion ballot lines and overlapping special-election appendices are retained with provenance.",
+    "Blank votes are missing, not zero. Unopposed and asterisk flags are preserved, not invented votes or proof that a primary was held.",
+    "Named write-ins and aggregate/scattered write-ins remain distinct.",
+    "All stages and raw source columns are retained, including ranked-choice rounds.",
+    "Primary dates, certified rosters, and special-election identities still require state-by-state reconciliation; source rows do not prove exhaustive coverage.",
+    "Candidate filings and general-election nominees cannot replace primary losers.",
+    "Nationwide campaign-policy text is not yet collected; existing DSA text remains a separate, narrower corpus.",
+    "Missing regular-seat return counts describe numeric-source presence, not a census of unresolved primary nominations. Party accounting separately identifies official no-primary decisions and future-scheduled elections."
+  ],
+  "longitudinal_primary_observations": 16487,
+  "missing_regular_seat_results": 164,
+  "party_accounting_rows": 5519,
+  "regular_seat_inventory_rows": 2843,
+  "scope": "All parties, U.S. House and Senate; independent of DSA endorsements",
+  "source_identity_review_groups": 107,
+  "source_result_rows": 13581,
+  "source_rows_by_cycle": {
+    "2016": 2866,
+    "2018": 3512,
+    "2020": 3501,
+    "2022": 3702
+  },
+  "source_start": "2015-01-01",
+  "special_election_calendar_rows": 73,
+  "special_election_calendar_updated_on": "2026-03-12",
+  "state_primary_candidate_rows": 5207,
+  "state_primary_contests": 1468,
+  "tracked_party_resolved_seat_cycles": 717,
+  "unresolved_primary_seat_cycles": 2120
+}

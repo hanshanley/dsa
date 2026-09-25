@@ -1,0 +1,458 @@
+{
+  "corpus": {
+    "corpus_kind": "legacy_statement_rows",
+    "has_2016_verified_text": false,
+    "missing_verified_text_years": [
+      "2016"
+    ],
+    "missing_years": [],
+    "rows": 2311,
+    "source_class_counts": {
+      "other": 2311
+    },
+    "source_unavailable_rows": 1242,
+    "treat_as_full_documents": false,
+    "verified_rows": 1061,
+    "years_present": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "years_with_verified_text": [
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ]
+  },
+  "discovery": {
+    "discovery_queue_rows": 2722,
+    "document_queue_rows": 2699,
+    "queued_candidates_without_any_document_seed": 172,
+    "source_inventory_rows": 531,
+    "top_unseeded_candidates": [
+      {
+        "candidate_name": "Alexa Avil\u00e9s",
+        "election_year": "2025",
+        "race_id": "race-0159b30b2abfcca8ea6b",
+        "role": "endorsed"
+      },
+      {
+        "candidate_name": "Rashida Tlaib",
+        "election_year": "2026",
+        "race_id": "race-0238993b2ccb424dc347",
+        "role": "endorsed"
+      },
+      {
+        "candidate_name": "Shanelle Jackson",
+        "election_year": "2026",
+        "race_id": "race-0238993b2ccb424dc347",
+        "role": "opponent"
+      },
+      {
+        "candidate_name": "Mary Lupien",
+        "election_year": "2025",
+        "race_id": "race-1018572bbe0d5cb327c4",
+        "role": "endorsed"
+      },
+      {
+        "candidate_name": "Malik D Evans",
+        "election_year": "2025",
+        "race_id": "race-1018572bbe0d5cb327c4",
+        "role": "opponent"
+      },
+      {
+        "candidate_name": "Shashi Ranjan Sinha",
+        "election_year": "2025",
+        "race_id": "race-1018572bbe0d5cb327c4",
+        "role": "opponent"
+      },
+      {
+        "candidate_name": "Val Thomason",
+        "election_year": "2026",
+        "race_id": "race-22a899eddaf5c65171b5",
+        "role": "endorsed"
+      },
+      {
+        "candidate_name": "Venise L. Karris",
+        "election_year": "2026",
+        "race_id": "race-22a899eddaf5c65171b5",
+        "role": "opponent"
+      },
+      {
+        "candidate_name": "Robert Hunter",
+        "election_year": "2026",
+        "race_id": "race-23a81db2e61ea7e89f32",
+        "role": "endorsed"
+      },
+      {
+        "candidate_name": "Hanadi Nadeem",
+        "election_year": "2026",
+        "race_id": "race-272467423dd3b8accee4",
+        "role": "opponent"
+      }
+    ]
+  },
+  "document_corpus": {
+    "analysis_segment_rows": 13954,
+    "eligible_analysis_segment_rows": 13484,
+    "eligible_text_document_count": 532,
+    "full_text_rows": 5296,
+    "groups_with_substantive_text": [
+      "endorsed",
+      "opponent"
+    ],
+    "metadata_rows": 5889,
+    "missing_years": [
+      "2025"
+    ],
+    "raw_extracted_document_count": 5296,
+    "shared_document_unscoped_count": 2625,
+    "source_classes_with_substantive_text": [
+      "campaign_page",
+      "interview",
+      "other",
+      "policy_page",
+      "questionnaire"
+    ],
+    "status": "present",
+    "status_note": "Collected candidate-document full text is available and counted separately from legacy quotation rows. 2625 shared multi-candidate documents lack usable locators and are retained as provenance only, excluded from analysis eligibility.",
+    "substantive_candidate_count": 417,
+    "substantive_document_count": 520,
+    "substantive_segment_rows": 13334,
+    "years_with_substantive_text": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2026"
+    ]
+  },
+  "imbalance_diagnostics": {
+    "flagged_rows": [
+      {
+        "bucket": "2020",
+        "dimension": "election_year",
+        "flag_reason": "candidate_ratio_gt_3"
+      },
+      {
+        "bucket": "2025",
+        "dimension": "election_year",
+        "flag_reason": "no_substantive_document_support"
+      },
+      {
+        "bucket": "debate",
+        "dimension": "source_type_class",
+        "flag_reason": "no_substantive_document_support"
+      },
+      {
+        "bucket": "forum",
+        "dimension": "source_type_class",
+        "flag_reason": "no_substantive_document_support"
+      },
+      {
+        "bucket": "interview",
+        "dimension": "source_type_class",
+        "flag_reason": "candidate_ratio_gt_3"
+      },
+      {
+        "bucket": "policy_page",
+        "dimension": "source_type_class",
+        "flag_reason": "candidate_ratio_gt_3"
+      },
+      {
+        "bucket": "press_release",
+        "dimension": "source_type_class",
+        "flag_reason": "no_substantive_document_support"
+      },
+      {
+        "bucket": "profile_or_op_ed",
+        "dimension": "source_type_class",
+        "flag_reason": "no_substantive_document_support"
+      },
+      {
+        "bucket": "speech",
+        "dimension": "source_type_class",
+        "flag_reason": "no_substantive_document_support"
+      },
+      {
+        "bucket": "statement",
+        "dimension": "source_type_class",
+        "flag_reason": "no_substantive_document_support"
+      },
+      {
+        "bucket": "video",
+        "dimension": "source_type_class",
+        "flag_reason": "no_substantive_document_support"
+      },
+      {
+        "bucket": "voter_guide",
+        "dimension": "source_type_class",
+        "flag_reason": "no_substantive_document_support"
+      }
+    ],
+    "rows": 25
+  },
+  "paired_races": {
+    "basis": "clean_candidate_document_metadata_and_analysis_segments",
+    "clean_document_backed_races": 128,
+    "eligible_count": 88,
+    "has_2016_eligible_race": true,
+    "missing_years": [
+      "2021",
+      "2025"
+    ],
+    "race_count": 128,
+    "years_with_eligible_races": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2022",
+      "2023",
+      "2024",
+      "2026"
+    ]
+  },
+  "queue": {
+    "candidate_rows": 1928,
+    "group_counts": {
+      "endorsed": 430,
+      "opponent": 1498
+    },
+    "has_2016_coverage": true,
+    "missing_years": [],
+    "race_count": 420,
+    "source_mode": "registry",
+    "status_counts": {
+      "found_unverified": 866,
+      "not_searched": 7,
+      "searched_not_found": 25,
+      "source_unavailable": 3,
+      "verified": 1027
+    },
+    "years_present": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ]
+  },
+  "retryable_gaps": {
+    "by_status": {
+      "found_unverified": 866,
+      "not_searched": 7,
+      "searched_not_found": 25
+    },
+    "candidate_gap_count": 898,
+    "count": 898,
+    "coverage_gap_years": [],
+    "top_priority": [
+      {
+        "candidate_name": "Dan Michniewicz",
+        "election_year": "2020",
+        "gap_type": "candidate_gap",
+        "race_id": "race-de378ad3073d92f58c34"
+      },
+      {
+        "candidate_name": "\"Rocky\" Roque De La Fuente",
+        "election_year": "2016",
+        "gap_type": "candidate_gap",
+        "race_id": "us-president-dem-primary-2016-pr"
+      },
+      {
+        "candidate_name": "Bill French",
+        "election_year": "2016",
+        "gap_type": "candidate_gap",
+        "race_id": "us-president-dem-primary-2016-nh"
+      },
+      {
+        "candidate_name": "Brock C. Hutton",
+        "election_year": "2016",
+        "gap_type": "candidate_gap",
+        "race_id": "us-president-dem-primary-2016-nh"
+      },
+      {
+        "candidate_name": "Calvis L. Hawes",
+        "election_year": "2016",
+        "gap_type": "candidate_gap",
+        "race_id": "us-president-dem-primary-2016-tx"
+      }
+    ]
+  },
+  "study_window": {
+    "expected_years": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "final_year": 2026,
+    "start_year": 2016
+  },
+  "sufficiency": {
+    "decision": "insufficient",
+    "failed_gates": [
+      "no_retryable_candidate_searches",
+      "paired_race_two_sided_substantive_text",
+      "group_year_source_class_support",
+      "imbalance_diagnostics"
+    ],
+    "hard_gates": {
+      "census_2016_present": {
+        "missing_years": [],
+        "pass": true,
+        "years_present": [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026"
+        ]
+      },
+      "group_year_source_class_support": {
+        "groups_with_substantive_text": [
+          "endorsed",
+          "opponent"
+        ],
+        "missing_group_year_support": [
+          "endorsed:2025",
+          "opponent:2025"
+        ],
+        "missing_source_classes": [
+          "debate",
+          "forum",
+          "press_release",
+          "profile_or_op_ed",
+          "speech",
+          "statement",
+          "video",
+          "voter_guide"
+        ],
+        "pass": false,
+        "source_classes_with_substantive_text": [
+          "campaign_page",
+          "interview",
+          "other",
+          "policy_page",
+          "questionnaire"
+        ],
+        "years_with_substantive_text": [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2026"
+        ]
+      },
+      "imbalance_diagnostics": {
+        "flagged_rows": [
+          "election_year:2020:candidate_ratio_gt_3",
+          "election_year:2025:no_substantive_document_support",
+          "source_type_class:debate:no_substantive_document_support",
+          "source_type_class:forum:no_substantive_document_support",
+          "source_type_class:interview:candidate_ratio_gt_3",
+          "source_type_class:policy_page:candidate_ratio_gt_3",
+          "source_type_class:press_release:no_substantive_document_support",
+          "source_type_class:profile_or_op_ed:no_substantive_document_support",
+          "source_type_class:speech:no_substantive_document_support",
+          "source_type_class:statement:no_substantive_document_support",
+          "source_type_class:video:no_substantive_document_support",
+          "source_type_class:voter_guide:no_substantive_document_support"
+        ],
+        "pass": false
+      },
+      "no_retryable_candidate_searches": {
+        "pass": false,
+        "retryable_candidate_rows": 898
+      },
+      "paired_race_two_sided_substantive_text": {
+        "eligible_races": 88,
+        "eligible_years": [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2022",
+          "2023",
+          "2024",
+          "2026"
+        ],
+        "missing_years": [
+          "2021",
+          "2025"
+        ],
+        "pass": false
+      }
+    },
+    "passes": false
+  },
+  "support": {
+    "group_year_rows": 22,
+    "missing_group_year_support": [
+      "endorsed:2025",
+      "opponent:2025"
+    ],
+    "missing_source_classes": [
+      "debate",
+      "debate",
+      "forum",
+      "press_release",
+      "press_release",
+      "profile_or_op_ed",
+      "profile_or_op_ed",
+      "speech",
+      "statement",
+      "statement",
+      "video",
+      "voter_guide"
+    ],
+    "source_class_rows": 26
+  }
+}

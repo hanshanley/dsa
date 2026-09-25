@@ -15,6 +15,7 @@ from .paths import ANALYSIS_DATA_DIR, MANUAL_DIR, PROCESSED_DIR
 IN_SCOPE_KIND = "tracked_dsa_endorsed_democratic_primary"
 OUT_OF_SCOPE_KIND = "other_corpus_race"
 DURABLE_OUT_OF_SCOPE_CLASSIFICATIONS = {
+    "endorsement_revoked_before_primary",
     "ballot_or_party_position",
     "general_only",
     "nonpartisan_primary",

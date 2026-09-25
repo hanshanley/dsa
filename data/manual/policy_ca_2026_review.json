@@ -1,0 +1,571 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "scope": "2026 California 26 and California 24 shared nonpartisan top-two ballot policy comparisons",
+  "comparison_scope": "nonpartisan_ballot_endorsed_vs_democrats",
+  "scope_notes": "The official results table has blank primary_party for these shared voter-nominated ballots. The focal DSA-endorsed candidate may have any verified ballot party preference; only comparison candidates are restricted to named non-write-in candidates whose explicit candidate party column is Democratic. Helena Pasquarella's official ballot preference is Peace and Freedom and she is not labeled as a Democrat.",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "sources": [
+    {
+      "document_id": "ca-identity-certified-candidates-20260326",
+      "title": "Official Certified List of Candidates, Statewide Direct Primary Election - June 2, 2026",
+      "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-primary/cert-list-candidates.pdf",
+      "final_url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-primary/cert-list-candidates.pdf",
+      "publication_date": "2026-03-26",
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "application/pdf",
+      "raw_path": "data/raw/policy_ca_2026/ca-certified-candidates-2026-03-26.pdf",
+      "sha256": "f409e8fbef68b56ef7ea4cac8ed1903a5d02fa8a8229666a73861e4b8ea2c03c",
+      "bytes": 1153683,
+      "status": "identity_only",
+      "evidence_status": "identity_only",
+      "notes": "Official identity and party-preference evidence, not a policy source. PDF page 20 lists CA-24; PDF page 21 lists CA-26. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca26-chris-live-paused",
+      "title": "Chris Espinosa for Congress | CA-26 Democrat",
+      "url": "https://www.espinosaforcongress.com/issues",
+      "final_url": "https://www.espinosaforcongress.com/issues",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca26-chris-issues.html",
+      "sha256": "60b86185f480981aa51947b9ed2ecf7e56a722dd609d304934a21216d92cc989",
+      "bytes": 98795,
+      "status": "excluded",
+      "evidence_status": "blocked_or_nonpolicy",
+      "notes": "The final body is a site-paused/404 page and contains no policy text. It is not counted as policy evidence. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca26-chris-issues-20260603205553",
+      "title": "Issues — EspinosaForCongress.com",
+      "url": "https://www.espinosaforcongress.com/issues",
+      "final_url": "https://web.archive.org/web/20260603205553id_/https://www.espinosaforcongress.com/issues",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca26-chris-issues-wayback.html",
+      "sha256": "d131e0671fd0bd2b60bdc5d1c46ae0dcb0719ce0de224f3a535158374a56e707",
+      "bytes": 324672,
+      "status": "timing_unverified",
+      "evidence_status": "timing_unverified",
+      "notes": "Full campaign issues page. A request for the closest capture before June 2 redirected to a June 3 capture, so the policy wording is real but cannot prove its pre-primary state. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca26-jacqui-climate-current",
+      "title": "Champion for Our Environment — Jacqui Irwin for Congress",
+      "url": "https://jacquiirwin.com/champion-for-our-environment",
+      "final_url": "https://jacquiirwin.com/champion-for-our-environment",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca26-jacqui-climate.html",
+      "sha256": "91ee83259d86a903c6a27283ff77a7d27c9d85b1f897c5d09c28d2cce11014e2",
+      "bytes": 295721,
+      "status": "timing_unverified",
+      "evidence_status": "timing_unverified",
+      "notes": "Candidate-controlled environmental record page with substantive body text. The page is undated and was captured after the primary, so timing is unresolved. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca26-liam-signal-403",
+      "title": "Error 403 Forbidden",
+      "url": "https://signalscv.com/2026/05/the-signals-california-primary-preview-2/",
+      "final_url": "https://signalscv.com/2026/05/the-signals-california-primary-preview-2/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca26-liam-signal-2026-05.html",
+      "sha256": "b05b7d02e79f00fe4b3d8229ef38854125057d7978ee859c99bba1a63c81216f",
+      "bytes": 1041,
+      "status": "excluded",
+      "evidence_status": "blocked_or_nonpolicy",
+      "notes": "The final body is a 403 page and is not counted as policy evidence. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca26-liam-vcstar-aol-20260510",
+      "title": "Meet the 9 candidates in 26th Congressional District race - AOL",
+      "url": "https://www.aol.com/articles/meet-9-candidates-26th-congressional-123026000.html",
+      "final_url": "https://www.aol.com/articles/meet-9-candidates-26th-congressional-123026000.html",
+      "publication_date": "2026-05-10",
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca26-liam-vcstar-aol-2026-05-10.html",
+      "sha256": "d151119ab3de305dfd2484fd44ab3aef5470ab615328bc3d02651302a81f5f6d",
+      "bytes": 711554,
+      "status": "used",
+      "evidence_status": "verified_pre_primary",
+      "notes": "Full dated Ventura County Star candidate questionnaire syndicated by AOL. JSON-LD identifies Tony Biasotti, Ventura County Star, publication 2026-05-10, and the original VC Star URL. The excerpt uses only Hernandez's answer. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca26-sasan-platform-current",
+      "title": "Sasan Samadzadeh for Congress – CA-26",
+      "url": "https://sasansamadzadeh.org/",
+      "final_url": "https://sasansamadzadeh.org/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca26-sasan-platform.html",
+      "sha256": "07d471e5894a5f1529420edb0845b57cfad43d9350a86d828b8a2c72160dd560",
+      "bytes": 862639,
+      "status": "timing_unverified",
+      "evidence_status": "timing_unverified",
+      "notes": "Full candidate platform with substantive policy text. The page is undated and no pre-primary capture was established in the bounded pass. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca26-ssfl-candidate-survey-current",
+      "title": "Candidate Survey — PARENTS AGAINST SANTA SUSANA FIELD LAB",
+      "url": "https://parentsagainstssfl.com/vote",
+      "final_url": "https://parentsagainstssfl.com/vote",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca26-ssfl-candidate-survey.html",
+      "sha256": "5b3b08ebad6e45392fe6ab74471e74351ded03423374bc673cd21cfd4029133c",
+      "bytes": 454139,
+      "status": "timing_unverified",
+      "evidence_status": "timing_unverified",
+      "notes": "Candidate-answer survey containing separate labeled sections for Chris Espinosa and Sonia Kacker. Publication date and exact pre-primary version were not established. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca26-sonia-campaign-alias-current",
+      "title": "Dr. Sonia for Congress | CA-26 in 2026",
+      "url": "https://drsoniaforcongress.com/",
+      "final_url": "https://drsoniaforcongress.com/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca26-sonia-campaign.html",
+      "sha256": "9923a04b33a8d4a699375d9d2028365a42b875850cf87747c3634a8371405410",
+      "bytes": 3657,
+      "status": "identity_only",
+      "evidence_status": "identity_only",
+      "notes": "The server body is a minimal shell, not a complete policy page. Its JSON-LD names the candidate as Dr. Sonia Devgan-Kacker while the official certified list and survey use Sonia Kacker, retaining the registry-to-ballot alias evidence. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca24-helena-issues-current",
+      "title": "Issues — Pasquarella for Congress",
+      "url": "https://www.pasquarellaforcongress.com/issues",
+      "final_url": "https://www.pasquarellaforcongress.com/issues",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca24-helena-issues.html",
+      "sha256": "1b8ebf45ac9c5135a512de5b30e9bfe26c4dbdddf1ef00a9e3d588fe14fac807",
+      "bytes": 337179,
+      "status": "timing_unverified",
+      "evidence_status": "timing_unverified",
+      "notes": "Full focal-candidate issues page. It is undated and the bounded pass did not establish a pre-primary capture. Official party preference is Peace and Freedom, not Democratic. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca24-salud-healthcare-current",
+      "title": "Issue | Issues | Salud Carbajal for Congress",
+      "url": "https://www.saludcarbajal.com/issues/making-health-care-more-affordable",
+      "final_url": "https://www.saludcarbajal.com/issues/making-health-care-more-affordable",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca24-salud-healthcare.html",
+      "sha256": "e52047b1c804c0e46a2a0ba62cafbb3d800f16c4c5a1b6e4dec5bb13e86a874a",
+      "bytes": 24044,
+      "status": "timing_unverified",
+      "evidence_status": "timing_unverified",
+      "notes": "Full candidate-controlled healthcare issue page. It is undated and captured after the primary, so timing is unresolved. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca24-sarah-platform-20260504",
+      "title": "Sarah Bacon for Congress Unveils Platform to Fix a Political System Built for the Powerful, Not the People",
+      "url": "https://www.sarahbacon.com/sarah-bacon-platform-launch-050426.pdf",
+      "final_url": "https://www.sarahbacon.com/sarah-bacon-platform-launch-050426.pdf",
+      "publication_date": "2026-05-04",
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "application/pdf",
+      "raw_path": "data/raw/policy_ca_2026/ca24-sarah-platform-2026-05-04.pdf",
+      "sha256": "a50ce7532eb16ebc8ce4e377f631af5d2148a0b5ba58ffa2d47faf8f9fa81a90",
+      "bytes": 181724,
+      "status": "used",
+      "evidence_status": "verified_pre_primary",
+      "notes": "Original two-page campaign press-release PDF dated May 4, 2026. MIME and PDF body were verified; the excerpt is campaign-authored platform summary text. Exact acquisition time was not retained."
+    },
+    {
+      "document_id": "ca24-sarah-issues-current",
+      "title": "Issues — Sarah Bacon for Congress",
+      "url": "https://www.sarahbacon.com/issues",
+      "final_url": "https://www.sarahbacon.com/issues",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "content_type": "text/html",
+      "raw_path": "data/raw/policy_ca_2026/ca24-sarah-issues.html",
+      "sha256": "7438c76e1db9737db0e4f092f7db34092df5c9681fffa127b2c04cc120121913",
+      "bytes": 779542,
+      "status": "excluded",
+      "evidence_status": "timing_unverified_redundant",
+      "notes": "Complete current issues page retained, but the dated original platform PDF supplies the selected pre-primary evidence. Exact acquisition time was not retained."
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-ca26-chris-single-payer",
+      "document_id": "ca26-chris-issues-20260603205553",
+      "speaker": "Chris Espinosa",
+      "role": "endorsed_candidate",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "election_date": "2026-06-02",
+      "topic": "healthcare",
+      "subtopic": "single_payer",
+      "stance": "support",
+      "short_exact_quote": "I support universal coverage through a Medicare for All–style system",
+      "locator": "Healthcare for All section, opening platform sentence",
+      "notes": "First-person campaign platform statement. Archive timing is post-primary and therefore timing-unverified.",
+      "evidence_status": "timing_unverified",
+      "ballot_party": "Democratic"
+    },
+    {
+      "excerpt_id": "ex-ca26-liam-single-payer",
+      "document_id": "ca26-liam-vcstar-aol-20260510",
+      "speaker": "Liam Andres O'Neill Hernandez",
+      "role": "opponent_candidate",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "election_date": "2026-06-02",
+      "topic": "healthcare",
+      "subtopic": "single_payer",
+      "stance": "support",
+      "short_exact_quote": "fighting for Medicare for All",
+      "locator": "Liam Andres O'Neill Hernandez section, answer to top-priority question, second paragraph",
+      "notes": "Candidate's own questionnaire answer; article prose and prompts are excluded.",
+      "evidence_status": "verified_pre_primary",
+      "ballot_party": "Democratic"
+    },
+    {
+      "excerpt_id": "ex-ca26-sasan-single-payer",
+      "document_id": "ca26-sasan-platform-current",
+      "speaker": "Sasan Samadzadeh",
+      "role": "opponent_candidate",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "election_date": "2026-06-02",
+      "topic": "healthcare",
+      "subtopic": "single_payer",
+      "stance": "support",
+      "short_exact_quote": "Fight for Medicare for All — a single-payer system",
+      "locator": "Healthcare platform, fifth bullet",
+      "notes": "Candidate-controlled platform text; publication and pre-primary timing are unresolved.",
+      "evidence_status": "timing_unverified",
+      "ballot_party": "Democratic"
+    },
+    {
+      "excerpt_id": "ex-ca26-chris-renewable-energy",
+      "document_id": "ca26-chris-issues-20260603205553",
+      "speaker": "Chris Espinosa",
+      "role": "endorsed_candidate",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "election_date": "2026-06-02",
+      "topic": "climate",
+      "subtopic": "renewable_energy_transition",
+      "stance": "support",
+      "short_exact_quote": "Accelerate a just transition to a clean energy, pollution-free economy",
+      "locator": "Climate & Environmental Justice section, second policy bullet",
+      "notes": "Campaign platform statement; archive timing is post-primary and therefore timing-unverified.",
+      "evidence_status": "timing_unverified",
+      "ballot_party": "Democratic"
+    },
+    {
+      "excerpt_id": "ex-ca26-jacqui-renewable-energy",
+      "document_id": "ca26-jacqui-climate-current",
+      "speaker": "Jacqui Irwin",
+      "role": "opponent_candidate",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "election_date": "2026-06-02",
+      "topic": "climate",
+      "subtopic": "renewable_energy_transition",
+      "stance": "support",
+      "short_exact_quote": "Supports the acceleration of renewable energy goals and planning",
+      "locator": "Champion for Our Environment, third record bullet",
+      "notes": "Campaign-authored candidate record statement; publication and pre-primary timing are unresolved.",
+      "evidence_status": "timing_unverified",
+      "ballot_party": "Democratic"
+    },
+    {
+      "excerpt_id": "ex-ca26-chris-ssfl-cleanup",
+      "document_id": "ca26-ssfl-candidate-survey-current",
+      "speaker": "Chris Espinosa",
+      "role": "endorsed_candidate",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "election_date": "2026-06-02",
+      "topic": "environment",
+      "subtopic": "ssfl_complete_background_cleanup",
+      "stance": "support",
+      "short_exact_quote": "A complete “Background” cleanup to remove all man-made contamination or equivalent",
+      "locator": "Chris Espinosa, District CA-26 section; answer to cleanup-position question",
+      "notes": "Candidate-submitted survey answer. In the labeled Chris Espinosa, District CA-26 section, this text follows the question asking which statement best describes his cleanup position and is prefixed as the selected answer, not merely displayed option text. The source date and pre-primary text version are unresolved.",
+      "evidence_status": "timing_unverified",
+      "ballot_party": "Democratic"
+    },
+    {
+      "excerpt_id": "ex-ca26-sonia-ssfl-cleanup",
+      "document_id": "ca26-ssfl-candidate-survey-current",
+      "speaker": "Sonia Kacker",
+      "role": "opponent_candidate",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "election_date": "2026-06-02",
+      "topic": "environment",
+      "subtopic": "ssfl_complete_background_cleanup",
+      "stance": "support",
+      "short_exact_quote": "A complete “Background” cleanup to remove all man-made contamination or equivalent",
+      "locator": "Sonia Kacker, MD, District CA-26 section; answer to cleanup-position question",
+      "notes": "Candidate-submitted survey answer under the official ballot name. In the labeled Sonia Kacker, MD, District CA-26 section, this text follows the question asking which statement best describes her cleanup position and is prefixed as the selected answer, not merely displayed option text. The source date and pre-primary version are unresolved.",
+      "evidence_status": "timing_unverified",
+      "ballot_party": "Democratic"
+    },
+    {
+      "excerpt_id": "ex-ca24-helena-single-payer",
+      "document_id": "ca24-helena-issues-current",
+      "speaker": "Helena Pasquarella",
+      "role": "endorsed_candidate",
+      "race_id": "race-b72c70764e7173f3e7b1",
+      "election_date": "2026-06-02",
+      "topic": "healthcare",
+      "subtopic": "medicare_coverage_for_all",
+      "stance": "support",
+      "short_exact_quote": "fight for Medicare for All",
+      "locator": "Universal Single-Payer Healthcare for All, final paragraph",
+      "notes": "First-person campaign platform statement. Focal candidate's official preference is Peace and Freedom; page timing is unresolved.",
+      "evidence_status": "timing_unverified",
+      "ballot_party": "Peace and Freedom"
+    },
+    {
+      "excerpt_id": "ex-ca24-sarah-single-payer",
+      "document_id": "ca24-sarah-platform-20260504",
+      "speaker": "Sarah Bacon",
+      "role": "opponent_candidate",
+      "race_id": "race-b72c70764e7173f3e7b1",
+      "election_date": "2026-06-02",
+      "topic": "healthcare",
+      "subtopic": "medicare_coverage_for_all",
+      "stance": "support",
+      "short_exact_quote": "expanding Medicare to cover all Americans",
+      "locator": "PDF page 1, platform-summary paragraph following Bacon's first direct quotation",
+      "notes": "Campaign-authored summary in the original dated platform-launch PDF.",
+      "evidence_status": "verified_pre_primary",
+      "ballot_party": "Democratic"
+    },
+    {
+      "excerpt_id": "ex-ca24-salud-healthcare-expansion",
+      "document_id": "ca24-salud-healthcare-current",
+      "speaker": "Salud Carbajal",
+      "role": "opponent_candidate",
+      "race_id": "race-b72c70764e7173f3e7b1",
+      "election_date": "2026-06-02",
+      "topic": "healthcare",
+      "subtopic": "aca_premium_tax_credits",
+      "stance": "support",
+      "short_exact_quote": "I successfully got ACA tax cuts expanded for millions of families to get lower premiums",
+      "locator": "Making Health Care More Affordable, fourth paragraph",
+      "notes": "First-person campaign record statement naming ACA premium-tax-credit expansion as a mechanism for lowering premiums. The page does not state Carbajal's position on Medicare for All or single-payer financing; page timing is unresolved.",
+      "evidence_status": "timing_unverified",
+      "ballot_party": "Democratic"
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "cmp-ca26-chris-liam-single-payer",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "comparison_scope": "nonpartisan_ballot_endorsed_vs_democrats",
+      "excerpt_ids": [
+        "ex-ca26-chris-single-payer",
+        "ex-ca26-liam-single-payer"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Espinosa and Hernandez each explicitly support Medicare for All or a Medicare-for-All-style universal system. The comparison is timing-unverified because Espinosa's retained archive is dated June 3, one day after the shared-ballot primary.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "comparison_id": "cmp-ca26-chris-sasan-single-payer",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "comparison_scope": "nonpartisan_ballot_endorsed_vs_democrats",
+      "excerpt_ids": [
+        "ex-ca26-chris-single-payer",
+        "ex-ca26-sasan-single-payer"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Espinosa and Samadzadeh each explicitly support a Medicare-for-All single-payer system. Publication and pre-primary timing remain unresolved for the retained platform wording.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "comparison_id": "cmp-ca26-chris-jacqui-renewable-energy",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "comparison_scope": "nonpartisan_ballot_endorsed_vs_democrats",
+      "excerpt_ids": [
+        "ex-ca26-chris-renewable-energy",
+        "ex-ca26-jacqui-renewable-energy"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Espinosa and Irwin each support accelerating a transition toward renewable or clean energy. The short excerpts do not establish identical timelines, technologies, or labor standards, and both retained wordings are timing-unverified.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "comparison_id": "cmp-ca26-chris-sonia-ssfl-cleanup",
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "comparison_scope": "nonpartisan_ballot_endorsed_vs_democrats",
+      "excerpt_ids": [
+        "ex-ca26-chris-ssfl-cleanup",
+        "ex-ca26-sonia-ssfl-cleanup"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Espinosa and Kacker selected the same survey proposition: complete background cleanup removing all man-made contamination or equivalent. The survey's publication date and pre-primary text version remain unresolved.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "comparison_id": "cmp-ca24-helena-sarah-single-payer",
+      "race_id": "race-b72c70764e7173f3e7b1",
+      "comparison_scope": "nonpartisan_ballot_endorsed_vs_democrats",
+      "excerpt_ids": [
+        "ex-ca24-helena-single-payer",
+        "ex-ca24-sarah-single-payer"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Pasquarella and Bacon each support extending Medicare coverage to everyone. This is the narrower shared proposition established by the excerpts; Bacon's wording does not by itself establish single-payer financing or identical system design. Bacon's platform launch is dated before the primary; Pasquarella's retained campaign page is undated, so the pair remains timing-unverified.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "comparison_id": "cmp-ca24-helena-salud-healthcare-strategy",
+      "race_id": "race-b72c70764e7173f3e7b1",
+      "comparison_scope": "nonpartisan_ballot_endorsed_vs_democrats",
+      "excerpt_ids": [
+        "ex-ca24-helena-single-payer",
+        "ex-ca24-salud-healthcare-expansion"
+      ],
+      "relationship": "different_emphasis",
+      "interpretation": "Pasquarella emphasizes Medicare coverage for everyone, while Carbajal's retained page emphasizes ACA premium-tax-credit expansion to lower premiums. Carbajal's source does not state whether he supports or opposes Medicare for All or single-payer financing, so this is only a difference in the emphasis of the retained passages, not a proven insurance-strategy disagreement. Both retained campaign pages are timing-unverified.",
+      "evidence_status": "timing_unverified"
+    }
+  ],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "candidate": "Chris Espinosa",
+      "attempted_url": "https://www.espinosaforcongress.com/issues",
+      "outcome": "excluded_site_paused_404_body",
+      "notes": "The current final body contained no policy text."
+    },
+    {
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "candidate": "Liam Andres O'Neill Hernandez",
+      "attempted_url": "https://signalscv.com/2026/05/the-signals-california-primary-preview-2/",
+      "outcome": "excluded_http_403_body",
+      "notes": "The final body was a 403 page. A complete dated Ventura County Star questionnaire syndication was recovered instead."
+    }
+  ],
+  "source_attempts": [
+    {
+      "candidate": "Chris Espinosa",
+      "url": "https://www.espinosaforcongress.com/issues",
+      "outcome": "current_site_paused_then_archive_recovered_timing_unverified",
+      "raw_path": "data/raw/policy_ca_2026/ca26-chris-issues-wayback.html",
+      "notes": "Requested a capture no later than June 1; Wayback redirected to its closest available June 3 capture."
+    },
+    {
+      "candidate": "Jacqui Irwin",
+      "url": "https://jacquiirwin.com/champion-for-our-environment",
+      "outcome": "recovered_current_policy_timing_unverified",
+      "raw_path": "data/raw/policy_ca_2026/ca26-jacqui-climate.html",
+      "notes": "Substantive body and title verified; no publication date or pre-primary capture established."
+    },
+    {
+      "candidate": "Liam Andres O'Neill Hernandez",
+      "url": "https://www.aol.com/articles/meet-9-candidates-26th-congressional-123026000.html",
+      "outcome": "recovered_dated_pre_primary_questionnaire",
+      "raw_path": "data/raw/policy_ca_2026/ca26-liam-vcstar-aol-2026-05-10.html",
+      "notes": "Full body, title, author/provider, original VC Star URL, and JSON-LD publication date verified."
+    },
+    {
+      "candidate": "Sasan Samadzadeh",
+      "url": "https://sasansamadzadeh.org/",
+      "outcome": "recovered_current_platform_timing_unverified",
+      "raw_path": "data/raw/policy_ca_2026/ca26-sasan-platform.html",
+      "notes": "Complete platform recovered; no publication date or pre-primary archive established."
+    },
+    {
+      "candidate": "Sonia Kacker",
+      "url": "https://parentsagainstssfl.com/vote",
+      "outcome": "recovered_candidate_survey_timing_unverified",
+      "raw_path": "data/raw/policy_ca_2026/ca26-ssfl-candidate-survey.html",
+      "notes": "Labeled Sonia Kacker and Chris Espinosa answer sections recovered; publication timing unresolved."
+    },
+    {
+      "candidate": "Helena Pasquarella",
+      "url": "https://www.pasquarellaforcongress.com/issues",
+      "outcome": "recovered_current_platform_timing_unverified",
+      "raw_path": "data/raw/policy_ca_2026/ca24-helena-issues.html",
+      "notes": "Complete issues page recovered; official party preference remains Peace and Freedom."
+    },
+    {
+      "candidate": "Salud Carbajal",
+      "url": "https://www.saludcarbajal.com/issues/making-health-care-more-affordable",
+      "outcome": "recovered_current_policy_timing_unverified",
+      "raw_path": "data/raw/policy_ca_2026/ca24-salud-healthcare.html",
+      "notes": "Complete healthcare issue body recovered; no publication date or pre-primary capture established."
+    },
+    {
+      "candidate": "Sarah Bacon",
+      "url": "https://www.sarahbacon.com/sarah-bacon-platform-launch-050426.pdf",
+      "outcome": "recovered_original_dated_pre_primary_pdf",
+      "raw_path": "data/raw/policy_ca_2026/ca24-sarah-platform-2026-05-04.pdf",
+      "notes": "Original two-page application/pdf body dated May 4, 2026."
+    },
+    {
+      "candidate": "Sonia Kacker",
+      "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-primary/cert-list-candidates.pdf",
+      "outcome": "official_ballot_alias_verified",
+      "raw_path": "data/raw/policy_ca_2026/ca-certified-candidates-2026-03-26.pdf",
+      "notes": "Official list uses Sonia Kacker; campaign JSON-LD uses Dr. Sonia Devgan-Kacker."
+    },
+    {
+      "candidate": "Liam Andres O'Neill Hernandez",
+      "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-primary/cert-list-candidates.pdf",
+      "outcome": "official_punctuation_alias_verified",
+      "raw_path": "data/raw/policy_ca_2026/ca-certified-candidates-2026-03-26.pdf",
+      "notes": "Official list and questionnaire use the straight apostrophe; registry lead uses a typographic apostrophe."
+    }
+  ],
+  "identity_aliases": [
+    {
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "speaker": "Sonia Devgan-Kacker",
+      "ballot_name": "Sonia Kacker",
+      "review_status": "accepted_direct_official_alias",
+      "ballot_source_id": "ca-2026-primary",
+      "ballot_candidate_source_id": "3558",
+      "identity_document_ids": [
+        "ca-identity-certified-candidates-20260326",
+        "ca26-sonia-campaign-alias-current",
+        "ca26-ssfl-candidate-survey-current"
+      ],
+      "notes": "Direct candidate-controlled alias evidence: the campaign document identifies Dr. Sonia Kacker in its metadata and Dr. Sonia Devgan-Kacker in JSON-LD for the same CA-26 campaign; the official certified list and result row use Sonia Kacker. Reviewed policy excerpts keep the source/ballot speaker string Sonia Kacker and are not silently renamed."
+    },
+    {
+      "race_id": "race-76c7cbb9d6b99bc5d802",
+      "speaker": "Liam Andres O’Neill Hernandez",
+      "ballot_name": "Liam Andres O'Neill Hernandez",
+      "review_status": "accepted_direct_official_alias",
+      "ballot_source_id": "ca-2026-primary",
+      "ballot_candidate_source_id": "3719",
+      "identity_document_ids": [
+        "ca-identity-certified-candidates-20260326",
+        "ca26-liam-vcstar-aol-20260510"
+      ],
+      "notes": "Punctuation-only alias: the registry lead uses a typographic apostrophe, while the official certified list, official result row, and dated candidate questionnaire use the straight-apostrophe ballot name. Reviewed excerpts keep the questionnaire/ballot speaker string and are not silently renamed."
+    }
+  ]
+}

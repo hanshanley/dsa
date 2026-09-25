@@ -147,6 +147,6 @@ VERIFICATION_STATUSES = {
     "verified",
 }
 ORGANIZATIONAL_CONTEXT_STATUSES = VERIFICATION_STATUSES | {"not_applicable"}
-ANALYSIS_SCOPES = {"analysis", "context_only"}
+ANALYSIS_SCOPES = {"analysis", "context_only", "candidate_excerpt", "reviewed_quote"}
 STANCE_CODES = {"support", "oppose", "mixed", "unclear"}
 CONTRAST_TYPES = {"explicit_conflict", "coded_divergence"}

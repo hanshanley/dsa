@@ -1,0 +1,16 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "canonical_name": "Elizabeth Warren",
+  "accepted_source_names": ["Elizabeth A. Warren", "Elizabeth Ann Warren"],
+  "election_year": "2020",
+  "office": "President",
+  "official_candidate_id": "P00009621",
+  "evidence": {
+    "raw_path": "data/raw/fec/federalelections2020.xlsx",
+    "sha256": "5073b6d2c76c86c941508dfb1a11cc497e8529b0068c5132aceb0f385c19352e",
+    "sheet": "10. 2020 Pres Primary Results",
+    "rows": [7,391,889],
+    "fields": "All three first-name/display-name forms carry the same FEC candidate ID."
+  },
+  "effect": "Use these explicit aliases in national-platform applicability and in determining whether a presidential campaign source actually has multiple speakers. Preserve the original ballot names and election records. Do not infer aliases by fuzzy similarity, and do not apply the extraction alias rule without a presidential registry context."
+}

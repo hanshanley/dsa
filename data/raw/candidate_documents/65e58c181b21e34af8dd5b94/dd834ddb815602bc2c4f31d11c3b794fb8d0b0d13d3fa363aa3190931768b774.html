@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=350px, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="sboe.css" />
+    <link rel="stylesheet" href="meanmenu.min.css" media="all" />
+    <title>NC SBE Contest Results</title>
+</head>
+<body id="body">
+    <div id="menu">
+        <header>
+            <nav>
+                <table style="width:100%;">
+                    <tr>
+                        <td>
+                            <a href="https://www.ncsbe.gov/" id="logo"></a>
+                            <ul id="main_menu" style="visibility: hidden;"></ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2 style="text-align: center; margin: 0px; padding-right: 0em;">
+                                <span ID="lblHeader" style="visibility: hidden;">Header</span>
+                            </h2>
+                        </td>
+                    </tr>
+                </table>
+            </nav>
+        </header>
+    </div>
+    <div id="left_area">
+        <div class="links">
+            <span id="divTextSize">
+                <span style="font-weight: bold;">Text Size: </span>
+                <a href='#' onclick="resizeFont(-1);return false;" style="font-size: 100%;">A</a>
+                <a href='#' onclick="resizeFont(1);return false;" style="font-size: 150%;">A</a>
+            </span>
+            <span> | </span>
+            <a style="font-weight:bold; cursor:pointer;" onclick="showModal('modalOptions');">Options</a>
+            <span> | </span>
+            <a id="downloadslink" href="downloads.html" style="font-weight: bold;" target="_blank">Downloads</a>
+        </div>
+
+        <div id="filters">
+            <br />
+            <div id="divFilters">
+                <div ID="lblFilters" style="font-weight: bold; text-align: center; width: 100%;">Criteria</div>
+                <hr />
+                <table style="width: 100%;" border="0">
+                    <tr>
+                        <td style="width: 50px;">
+                            <span style="font-weight: bold;">Election:</span>
+                        </td>
+                        <td style="text-wrap: none;">
+                            <span style="color: red; float: right; visibility: hidden;" id="cboElectionError">*</span>
+                            <span style="display: block; overflow: hidden; padding-right: 5px;"><select id="cboElection" style="width: 100%;" onchange="disableDropdown('cboElection'); removeBlankComboItem('cboElection');"></select></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50px;">
+                            <span style="font-weight: bold;">County:</span>
+                        </td>
+                        <td>
+                            <span style="color: red; float: right; visibility: hidden;" id="cboCountyError">*</span>
+                            <span style="display: block; overflow: hidden; padding-right: 5px;"><select id="cboCounty" style="width: 100%;" onchange="disableDropdown('cboCounty');"></select></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50px;">
+                            <span style="font-weight: bold;">Office:</span>
+                        </td>
+                        <td>
+                            <span style="color: red; float: right; visibility: hidden;" id="cboOfficeError">*</span>
+                            <span style="display: block; overflow: hidden; padding-right: 5px;"><select id="cboOffice" style="width: 100%;" onchange="disableDropdown('cboOffice'); removeBlankComboItem('cboOffice');"></select></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50px;">
+                            <span style="font-weight: bold;">Contest:</span>
+                        </td>
+                        <td>
+                            <span style="color: red; float: right; visibility: hidden;" id="cboContestError">*</span>
+                            <span style="display: block; overflow: hidden; padding-right: 5px;"><select id="cboContest" style="width: 100%;" onchange="disableDropdown('cboContest');"></select></span>
+                        </td>
+                    </tr>
+                </table>
+                <div style="text-align: center;">
+                    <button id="btnDisplayResults" style="width: 125px;" onclick="displayResults()">Display Results</button>
+                    <button id="btnRefresh" style="width: 125px;" onclick="refreshPage()">Refresh</button>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+
+        <div id="divStats" style="visibility: hidden;">
+            <div ID="lblStats" style="font-weight: bold; text-align: center; width: 100%;"></div>
+            <hr />
+            <div id="divsubmit">
+                <b>Last County Submit: </b>
+                <br />
+                <span ID="lblLastSubmitted"></span>
+                <br />
+                <br />
+            </div>
+            <div id="divupload">
+                <b>Last County Upload: </b>
+                <br />
+                <span ID="lblLastUpdated"></span>
+                <br />
+                <br />
+            </div>
+            <div id="divprecincts">
+                <b>Precincts Reported: </b>
+                <br />
+                <span ID="lblPrecinctsReportingPct"></span>
+                <div class="progresscon" id="progress1" style="width: auto;">
+                    <div class="progressbar" id="bar1"></div>
+                    <div class="progresspct" id="percent1"></div>
+                    <div style="display: none;">
+                        <span ID="txtPrecinctsReportingPct"></span>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div id="divballots">
+                <b>Ballots Cast: </b>
+                <br />
+                <span ID="lblBallotsCastPct"></span>
+                <div class="progresscon" id="progress2" style="width: auto;">
+                    <div class="progressbar" id="bar2"></div>
+                    <div class="progresspct" id="percent2"></div>
+                    <div style="display: none;">
+                        <span ID="txtBallotsCastPct"></span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <hr id="hrlinks" />
+            <div id="divmaplink">
+                <br />
+                <a id="maplink" href="result_map.html" style="font-weight: bold;" target="_blank">Display Large Map</a>
+                <br />
+            </div>
+            <br />
+            <a id="statuslink" href="result_status.html" style="font-weight: bold;" target="_blank">Display County Status</a>
+            <br />
+        </div>
+    </div>
+
+    <div id="right_area" style="margin-top: 5px;">
+        <div id="slider_controls" style="visibility: hidden;">
+            <span id="slider-prev"></span>
+            <span id="slider-start-stop"></span>
+            <span id="slider-next"></span>
+        </div>
+        <div class="longlist" id="electionResults" style="visibility: hidden;">
+            <div id="bxResults" class="bxslider">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modalOptions">
+        <div class="modalBackground" onclick="hideModal('modalOptions');"></div>
+        <div class="modalContainer">
+            <div class="modal" style="margin: 0px;">
+                <div class="modalTop">
+                    <span class="close" onclick="hideModal('modalOptions'); return false;">X</span>
+                </div>
+                <div class="modalBody">
+                    <div style="text-align: center; font-weight: bold; font-size: larger;">Options</div>
+                    <br />
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="font-weight: bold;">
+                                Enable Scrolling:<br />
+                            </td>
+                            <td style="width: 125px;">
+                                <input id="chkAutoScroll" type="checkbox" onchange="toggleSlideOptions();" /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">
+                                Scroll Delay:<br />
+                            </td>
+                            <td>
+                                <span style="color: red; float: right; visibility: hidden;" id="cboSpeedError">*</span>
+                                <select id="cboSpeed" style="width: 80%;">
+                                    <option value="1000">1 Second</option>
+                                    <option value="2000">2 Seconds</option>
+                                    <option value="3000">3 Seconds</option>
+                                    <option value="4000">4 Seconds</option>
+                                    <option value="5000">5 Seconds</option>
+                                    <option value="6000">6 Seconds</option>
+                                    <option value="7000">7 Seconds</option>
+                                    <option value="8000">8 Seconds</option>
+                                    <option value="9000">9 Seconds</option>
+                                    <option value="10000">10 Seconds</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">
+                                Visible Contests:<br />
+                            </td>
+                            <td>
+                                <span style="color: red; float: right; visibility: hidden;" id="cboSlidesError">*</span>
+                                <select id="cboSlides" style="width: 80%;">
+                                    <option value="1">1 Contest</option>
+                                    <option value="2">2 Contests</option>
+                                    <option value="3">3 Contests</option>
+                                    <option value="4">4 Contests</option>
+                                    <option value="5">5 Contests</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <div style="text-align:center;">
+                        <button id="btnSetOptions" style="width: 80px;" onclick="checkOptions();">Apply</button>
+                        <button id="btnCancelOptions" style="width: 80px;" onclick="hideModal('modalOptions'); return false;">Cancel</button>
+                    </div>
+                </div>
+                <div class="modalBottom">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var fontsize = ['70%', '90%', '110%', '120%'],
+        fontindex = 1;
+
+    function getCookie(cname) {
+        var name = cname + '=';
+        var ca = document.cookie.split(';');
+
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+
+        return '';
+    }
+
+    var fontcookie = getCookie('fontsize');
+
+    if (fontcookie != '') {
+        fontindex = fontsize.indexOf(fontcookie);
+    }
+
+    document.write('<link rel="stylesheet" href="fontsize' + String(fontindex) + '.css" type="text/css" />');
+</script>
+
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="jquery.meanmenu.min.js"></script>
+<script src="jquery.bxslider.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159880906-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159880906-1');
+</script>
+
+<script type="text/javascript">
+    var $bxslider = jQuery.noConflict(),
+        $menu = jQuery.noConflict(),
+        width = 0,
+        height = 0,
+        fontsize = ['70%', '90%', '110%', '120%'],
+        barheight = ['20px', '22px', '24px', '26px'],
+        pctoffset = ['-17px', '-20px', '-23px', '-25px'],
+        fontindex = 1;
+
+    var datapath = '',
+        electiondt = '',
+        countyid = '0',
+        officeid = '',
+        contestid = '',
+        contestlink = '1',
+        archived = '0',
+        scrollenabled = '',
+        scrolldelay = '',
+        scrollcontests = '',
+        arrElection,
+        arrCounty,
+        arrOffice,
+        arrContest,
+        arrResults;
+
+    var timeDayHourMinute = String(new Date().getDate()) + '-' + String(new Date().getHours()) + '-' + String(new Date().getMinutes()),
+        timeHour = String(new Date().getHours()),
+        timeDate = String(new Date().getDate());
+
+    $menu(document).ready(function () {
+        $menu('header nav').meanmenu();
+    });
+
+    $bxslider(document).ready(function () {
+        slider = $bxslider('#bxResults').bxSlider({
+            mode: 'vertical',
+            minSlides: document.getElementById('cboSlides').value,
+            moveSlides: 1,
+            slideMargin: 10,
+            pager: false,
+            controls: true,
+            nextSelector: '#slider-next',
+            prevSelector: '#slider-prev',
+            nextText: 'Next >',
+            prevText: '< Prev',
+            auto: false,
+            autoControls: true,
+            autoControlsCombine: true,
+            autoControlsSelector: '#slider-start-stop',
+            startText: 'Start',
+            stopText: 'Stop',
+            pause: document.getElementById('cboSpeed').value,
+            onSlideAfter: function (slide, oldIndex, newIndex) {
+                ReloadOnFirstSlide(slide, oldIndex, newIndex);
+            }
+        });
+    });
+
+    window.onload = function () {
+        var fileElection = new XMLHttpRequest();
+
+        electiondt = getParameterByName('election_dt');
+        countyid = (getParameterByName('county_id') == '' ? '0' : getParameterByName('county_id'));
+        officeid = getParameterByName('office');
+        contestid = getParameterByName('contest');
+        scrollenabled = (getParameterByName('scroll_enabled') == '' ? '0' : getParameterByName('scroll_enabled'));
+        scrolldelay = (getParameterByName('scroll_delay') == '' ? '0' : getParameterByName('scroll_delay'));
+        scrollcontests = (getParameterByName('scroll_contests') == '' ? '0' : getParameterByName('scroll_contests'));
+
+        if (scrollenabled == 0) {
+            document.getElementById('cboSpeed').selectedIndex = -1;
+            document.getElementById('cboSlides').selectedIndex = -1;
+        }
+
+        fileElection.open('get', 'enr/' + 'elections.txt?v=' + timeDayHourMinute, false);
+        fileElection.send(null);
+
+        if (fileElection.responseText.length > 2 && fileElection.status != '404') { arrElection = JSON.parse(fileElection.responseText); }
+
+        loadElection(arrElection);
+
+        setPageDisplay();
+
+        fileElection = null;
+    }
+
+    window.onresize = function () {
+        setDivHeight();
+    }
+
+    function ReloadOnFirstSlide(slide, oldIndex, newIndex) {
+        if (newIndex == 0 && oldIndex == slider.getSlideCount() - 1) {
+            window.location.assign(window.location.href);
+        }
+    }
+
+    function GoToSlide() {
+        var cbo = document.getElementById('cboContest');
+        if (document.getElementById('chkAutoScroll').checked && parseInt(cbo.options[cbo.selectedIndex].value) > -1) {
+            slider.stopAuto();
+            slider.goToSlide(parseInt(cbo.selectedIndex));
+        }
+    }
+
+    function SetAutoPause() {
+        slider.stopAuto();
+        slider.startAuto(false, document.getElementById('cboSpeed').value);
+    }
+
+    function PrevSlide() {
+        slider.stopAuto();
+        slider.goToPrevSlide();
+    }
+
+    function NextSlide() {
+        slider.stopAuto();
+        slider.goToNextSlide();
+    }
+
+    function StopSlider() {
+        slider.stopAuto();
+    }
+
+    function getOffsetSum(elem) {
+        var top = 0, left = 0
+        while (elem) {
+            top = top + parseInt(elem.offsetTop)
+            left = left + parseInt(elem.offsetLeft)
+            elem = elem.offsetParent
+        }
+
+        return { top: top, left: left }
+    }
+
+    function getOffsetRect(elem) {
+        var box = elem.getBoundingClientRect()
+
+        var body = document.body
+        var docElem = document.documentElement
+
+        var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+        var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+
+        var clientTop = docElem.clientTop || body.clientTop || 0
+        var clientLeft = docElem.clientLeft || body.clientLeft || 0
+
+        var top = box.top + scrollTop - clientTop
+        var left = box.left + scrollLeft - clientLeft
+
+        return { top: Math.round(top), left: Math.round(left) }
+    }
+
+    function getOffset(elem) {
+        if (elem.getBoundingClientRect) {
+            return getOffsetRect(elem)
+        } else {
+            return getOffsetSum(elem)
+        }
+    }
+
+    function setDivHeight() {
+        if (document.getElementById('electionResults') != null) {
+            width = document.documentElement ? document.documentElement.clientWidth : 0;
+            height = document.documentElement ? document.documentElement.clientHeight : 0;
+
+            height = height - (getOffset(document.getElementById('electionResults')).top + 10);
+
+            if (height < 280) {
+                height = 280;
+            }
+
+            if (width >= 801) {
+                document.getElementById('electionResults').style.height = String(height) + 'px';
+            }
+            else if (width <= 831) {
+                document.getElementById('electionResults').style.height = '';
+            }
+        }
+    }
+
+    function updatePercent() {
+        if (document.getElementById('txtPrecinctsReportingPct') != null) {
+            var percent = document.getElementById('txtPrecinctsReportingPct').innerHTML;
+            document.getElementById('progress1').style.height = barheight[fontindex];
+            document.getElementById('bar1').style.width = percent;
+            document.getElementById('bar1').style.height = barheight[fontindex];
+            document.getElementById('percent1').innerHTML = percent;
+            document.getElementById('percent1').style.top = pctoffset[fontindex];
+        }
+
+        if (document.getElementById('txtBallotsCastPct') != null) {
+            var percent = document.getElementById('txtBallotsCastPct').innerHTML;
+            document.getElementById('progress2').style.height = barheight[fontindex];
+            document.getElementById('bar2').style.width = percent;
+            document.getElementById('bar2').style.height = barheight[fontindex];
+            document.getElementById('percent2').innerHTML = percent;
+            document.getElementById('percent2').style.top = pctoffset[fontindex];
+        }
+
+        if (document.getElementById('bxResults') != null) {
+            var current = slider.getCurrentSlide();
+
+            slider.reloadSlider({
+                mode: 'vertical',
+                minSlides: document.getElementById('cboSlides').value,
+                moveSlides: 1,
+                slideMargin: 10,
+                pager: false,
+                controls: true,
+                nextSelector: '#slider-next',
+                prevSelector: '#slider-prev',
+                nextText: 'Next >',
+                prevText: '< Prev',
+                auto: true,
+                autoControls: true,
+                autoControlsCombine: true,
+                autoControlsSelector: '#slider-start-stop',
+                startText: 'Start',
+                stopText: 'Stop',
+                pause: document.getElementById('cboSpeed').value,
+                onSlideAfter: function (slide, oldIndex, newIndex) {
+                    ReloadOnFirstSlide(slide, oldIndex, newIndex);
+                },
+                startSlide: current
+            });
+        }
+    }
+
+    function toggleSlider() {
+        if (document.getElementById('bxResults') != null) {
+            if (getParameterByName('scroll_enabled') == 1) {
+                document.getElementById('chkAutoScroll').checked = true
+            }
+            else {
+                document.getElementById('chkAutoScroll').checked = false
+            }
+
+            if (getParameterByName('scroll_delay') != null) {
+                document.getElementById('cboSpeed').value = getParameterByName('scroll_delay');
+            }
+
+            if (getParameterByName('scroll_contests') != null) {
+                document.getElementById('cboSlides').value = getParameterByName('scroll_contests');
+            }
+
+            if (document.getElementById('chkAutoScroll').checked == true) {
+                document.getElementById('bxResults').addEventListener('mouseover', StopSlider);
+                document.getElementById('bxResults').addEventListener('mouseout', SetAutoPause);
+                slider.reloadSlider();
+            }
+            else {
+                setDivHeight();
+                slider.destroySlider();
+                document.getElementById('bxResults').removeEventListener('mouseover', StopSlider);
+                document.getElementById('bxResults').removeEventListener('mouseout', SetAutoPause);
+            }
+        }
+    }
+
+    function showModal(divID) {
+        var width = document.documentElement ? document.documentElement.clientWidth : 0;
+        var height = document.documentElement ? document.documentElement.clientHeight : 0;
+        var mTop, mLeft;
+
+        document.getElementById(divID).style.visibility = 'visible';
+
+        window.onscroll = function () {
+            document.getElementById(divID).style.top = document.body.scrollTop;
+        };
+        document.getElementById(divID).style.top = document.body.scrollTop;
+
+        if (width > 0 && height > 0) {
+            mTop = parseInt((height - document.querySelectorAll('.modalContainer')[0].clientHeight) / 2);
+            mLeft = parseInt((width - document.querySelectorAll('.modalContainer')[0].clientWidth) / 2);
+            //Don't allow the the popup to start higher than the top of the visible screen
+            if (mTop <= 0) {
+                mTop = 0
+            }
+
+            document.querySelectorAll('.modalContainer')[0].style.top = String(mTop) + 'px';
+            document.querySelectorAll('.modalContainer')[0].style.left = String(mLeft) + 'px';
+        }
+
+        toggleSlideOptions()
+    }
+
+    function hideModal(divID) {
+        var width = document.documentElement ? document.documentElement.clientWidth : 0;
+
+        document.getElementById(divID).style.visibility = 'hidden';
+    }
+
+    function toggleSlideOptions() {
+        if (document.getElementById('chkAutoScroll').checked) {
+            document.getElementById('cboSpeed').disabled = '';
+            document.getElementById('cboSlides').disabled = '';
+
+            if (document.getElementById('cboSpeed').value == '') {
+                document.getElementById('cboSpeed').value = '5000';
+            }
+
+            if (document.getElementById('cboSlides').value == '') {
+                document.getElementById('cboSlides').value = '3';
+            }
+        }
+        else {
+            document.getElementById('cboSpeed').disabled = 'disabled';
+            document.getElementById('cboSlides').disabled = 'disabled';
+        }
+    }
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
+            results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    function resizeFont(inc) {
+        fontindex += inc;
+
+        if (fontindex < 0) { fontindex = 0; }
+        if (fontindex > fontsize.length - 1) { fontindex = fontsize.length - 1; }
+
+        document.body.style.fontSize = fontsize[fontindex];
+        document.cookie = 'fontsize=' + fontsize[fontindex];
+
+        updatePercent();
+        setDivHeight();
+        toggleSlider();
+    }
+
+    function getCookie(cname) {
+        var name = cname + '=';
+        var ca = document.cookie.split(';');
+
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+
+        return '';
+    }
+
+    function disableDropdown(dropdown) {
+        switch (dropdown) {
+            case 'cboElection':
+                electiondt = document.getElementById(dropdown).value;
+                document.getElementById('cboElectionError').style.visibility = 'hidden';
+                document.getElementById('cboCountyError').style.visibility = 'hidden';
+                document.getElementById('cboOfficeError').style.visibility = 'hidden';
+                document.getElementById('cboContestError').style.visibility = 'hidden';
+                countyid = '0';
+                officeid = '';
+                contestid = '';
+                loadDataFiles();
+                loadElectionData(electiondt, false);
+                break;
+            case 'cboCounty':
+                countyid = document.getElementById(dropdown).value;
+                if (countyid == 0) {
+                    if (new Date(electiondt).getFullYear() % 2 == 0) {
+                        officeid = 'FED';
+                    }
+                    else {
+                        officeid = 'CCL';
+                    }
+                }
+                else {
+                    officeid = 'ALL';
+                }
+                contestid = '0';
+                loadOffice(countyid, arrOffice);
+                loadContest(officeid, arrContest);
+                break;
+            case 'cboOffice':
+                officeid = document.getElementById(dropdown).value;
+                contestid = '0';
+                loadContest(officeid, arrContest);
+                break;
+            case 'cboContest':
+                contestid = document.getElementById(dropdown).value;
+                break;
+        }
+
+        if (document.getElementById('divStats') != null) {
+            document.getElementById('divStats').style.visibility = 'hidden';
+        }
+
+        if (document.getElementById('slider_controls') != null) {
+            document.getElementById('slider_controls').style.visibility = 'hidden';
+        }
+
+        if (document.getElementById('divError') != null) {
+            document.getElementById('divError').style.visibility = 'hidden';
+        }
+
+        if (document.getElementById('electionResults') != null) {
+            document.getElementById('electionResults').style.visibility = 'hidden';
+        }
+    }
+
+    function loadElection(election) {
+        var lastElection = '',
+            cboElection = document.getElementById('cboElection');
+
+        if (election.length > 0) {
+            opt = document.createElement('option');
+            opt.text = '';
+            opt.value = '';
+            cboElection.appendChild(opt);
+        }
+
+        if (election != undefined) {
+            for (var i = 0; i < election.length; i++) {
+                if (lastElection != election[i].edt) {
+                    opt = document.createElement('option');
+                    opt.text = election[i].edt;
+                    opt.value = election[i].edt;
+                    cboElection.appendChild(opt);
+                    lastElection = election[i].edt;
+                }
+            }
+
+            if (electiondt == '') {
+                document.getElementById('cboElection').selectedIndex = 0
+            }
+            else {
+                cboElection.value = electiondt;
+                if (cboElection.value != '') {
+                    contestlink = arrElection.filter(function (el) { return el.edt == electiondt; })[0].con;
+                    archived = arrElection.filter(function (el) { return el.edt == electiondt; })[0].arc;
+                }
+                removeBlankComboItem('cboElection');
+            }
+        }
+    }
+
+    function setPageDisplay() {
+        if (isURLCriteriaValid()) {
+            loadElectionData(electiondt, true);
+
+            if (document.getElementById('main_menu') != null) {
+                document.getElementById('main_menu').style.visibility = '';
+            }
+
+            if (document.getElementById('lblHeader') != null) {
+                document.getElementById('lblHeader').style.visibility = '';
+            }
+
+            if (document.getElementById('divStats') != null) {
+                document.getElementById('divStats').style.visibility = '';
+            }
+
+            if (document.getElementById('slider_controls') != null) {
+                document.getElementById('slider_controls').style.visibility = '';
+            }
+
+            if (document.getElementById('divError') != null) {
+                document.getElementById('divError').style.visibility = '';
+            }
+
+            if (document.getElementById('electionResults') != null) {
+                document.getElementById('electionResults').style.visibility = '';
+            }
+        }
+        else {
+            cboElection.value = '';
+
+            document.getElementById('btnSetOptions').disabled = 'disabled';
+
+            if (document.getElementById('main_menu') != null) {
+                document.getElementById('main_menu').style.visibility = 'hidden';
+            }
+
+            if (document.getElementById('lblHeader') != null) {
+                document.getElementById('lblHeader').style.display = 'none';
+            }
+
+            if (document.getElementById('divStats') != null) {
+                document.getElementById('divStats').style.visibility = 'hidden';
+            }
+
+            if (document.getElementById('slider_controls') != null) {
+                document.getElementById('slider_controls').style.visibility = 'hidden';
+            }
+
+            if (document.getElementById('divError') != null) {
+                document.getElementById('divError').style.visibility = 'hidden';
+            }
+
+            if (document.getElementById('electionResults') != null) {
+                document.getElementById('electionResults').style.visibility = 'hidden';
+            }
+
+            dv = document.createElement('div');
+            dv.id = 'lblMessage';
+            dv.style.textAlign = 'center';
+            dv.style.fontSize = '24pt';
+            dv.innerHTML = 'Please use the dropdown filters on the left to select and display election results.';
+            document.getElementById('right_area').insertBefore(dv, document.getElementById('right_area').childNodes[0]);
+        }
+    }
+
+    function isURLCriteriaValid() {
+        var criteriavalid = false,
+            paramcountyid = getParameterByName('county_id'),
+            paramoffice = getParameterByName('office'),
+            paramcontest = getParameterByName('contest');
+
+        if (cboElection.value != '') {
+            loadDataFiles();
+
+            criteriavalid = true;
+
+            if (paramcountyid != '' && arrCounty.filter(function (el) { return el.cid == paramcountyid }).length == 0) {
+                criteriavalid = false;
+            }
+
+            if (paramoffice != '' || paramcontest != '') {
+                if (arrOffice.filter(function (el) { return el.lbl == paramoffice && ((paramcountyid == 0 && el.sta == 1) || (paramcountyid > 0 && el.cty == 1)) }).length == 0) {
+                    criteriavalid = false;
+                }
+
+                if (arrContest.filter(function (el) { return el.cni == paramcontest && (el.cid == paramcountyid || paramcontest == 0) }).length == 0) {
+                    criteriavalid = false;
+                }
+            }
+        }
+
+        return criteriavalid;
+    }
+
+    function loadDataFiles() {
+        var fileContest = new XMLHttpRequest(),
+            fileCounty = new XMLHttpRequest(),
+            fileOffice = new XMLHttpRequest();
+
+        datapath = 'enr/' + getDateFolder(new Date(electiondt)) + '/data/';
+
+        fileCounty.open('get', datapath + 'county.txt?v=' + timeDayHourMinute, false);
+        fileCounty.send(null);
+
+        fileOffice.open('get', datapath + 'office.txt', false);
+        fileOffice.send(null);
+
+        fileContest.open('get', datapath + 'contest.txt?v=' + timeDayHourMinute, false);
+        fileContest.send(null);
+
+        if (fileCounty.responseText.length > 2 && fileCounty.status != '404') { arrCounty = JSON.parse(fileCounty.responseText); }
+        if (fileOffice.responseText.length > 2 && fileOffice.status != '404') { arrOffice = JSON.parse(fileOffice.responseText); }
+        if (fileContest.responseText.length > 2 && fileContest.status != '404') { arrContest = JSON.parse(fileContest.responseText); }
+    }
+
+    function loadElectionData(electiondt, isonload) {
+        var fileResults = new XMLHttpRequest();
+
+        if (scrolldelay == '0') {
+            document.getElementById('cboSpeed').selectedIndex = -1;
+        }
+        else {
+            document.getElementById('cboSpeed').value = scrolldelay;
+        }
+
+        if (scrollcontests == '0') {
+            document.getElementById('cboSlides').selectedIndex = -1;
+        }
+        else {
+            document.getElementById('cboSlides').value = scrollcontests;
+        }
+
+        loadCounty(arrCounty);
+
+        if (isonload == true) {
+            if (cboElection.value != '' && getParameterByName('election_dt') != '' && cboCounty.value != '' && getParameterByName('office') == '' && getParameterByName('contest') == '') {
+                if (countyid == 0) {
+                    if (new Date(electiondt).getFullYear() % 2 == 0) {
+                        officeid = 'FED';
+                    }
+                    else {
+                        officeid = 'CCL';
+                    }
+                }
+                else {
+                    officeid = 'ALL';
+                }
+
+                contestid = 0;
+            }
+        }
+        else {
+            if (cboElection.value != '' && getParameterByName('election_dt') != '' && cboCounty.value != '' && getParameterByName('county_id') != '' && getParameterByName('office') == '' && getParameterByName('contest') == '') {
+                if (countyid == 0) {
+                    if (new Date(electiondt).getFullYear() % 2 == 0) {
+                        officeid = 'FED';
+                    }
+                    else {
+                        officeid = 'CCL';
+                    }
+                }
+                else {
+                    officeid = 'ALL';
+                }
+
+                contestid = 0;
+            }
+        }
+
+        loadOffice(countyid, arrOffice);
+        loadContest(officeid, arrContest);
+
+        if (document.getElementById('cboContest').value != '') {
+            fileResults.open('get', datapath + 'results_' + countyid + '.txt?v=' + timeDayHourMinute, false);
+            fileResults.send(null);
+
+            if (fileResults.responseText.length > 2 && fileResults.status != '404') { arrResults = JSON.parse(fileResults.responseText); }
+
+            loadResults(arrResults);
+        }
+
+        fileCounty = null;
+        fileContest = null;
+        fileResults = null;
+        fileOffice = null;
+        datapath = null;
+
+        //load initial font size value
+
+        var fontcookie = getCookie('fontsize');
+
+        if (fontcookie != '') {
+            document.body.style.fontSize = fontcookie;
+            fontindex = fontsize.indexOf(fontcookie);
+        }
+
+        updatePercent();
+        setDivHeight();
+
+        toggleSlider();
+    }
+
+    function loadCounty(county) {
+        var lastCounty = '',
+            cboCounty = document.getElementById('cboCounty');
+
+        cboCounty.innerHTML = '';
+
+        document.getElementById('maplink').href = 'result_map.html' + '?election_dt=' + electiondt + '&county_id=' + countyid;
+        document.getElementById('statuslink').href = 'result_status.html' + '?election_dt=' + electiondt;
+        document.getElementById('statuslink').style.display = (countyid == 0 && archived == 0 ? '' : 'none');
+        document.getElementById('downloadslink').href = 'downloads.html' + '?election_dt=' + electiondt;
+
+        for (var i = 0; i < county.length; i++) {
+            if (lastCounty != county[i].cnm) {
+                opt = document.createElement('option');
+                opt.text = county[i].cnm;
+                opt.value = county[i].cid;
+                cboCounty.appendChild(opt);
+                lastCounty = county[i].cnm;
+            }
+
+            if (county[i].cid == countyid) {
+                document.getElementById('lblHeader').innerHTML = county[i].tle;
+
+                if (countyid == 0) {
+                    document.getElementById('lblStats').innerHTML = 'Statewide Info';
+                }
+                else {
+                    document.getElementById('lblStats').innerHTML = county[i].cnm + ' County Info';
+                }
+                document.getElementById('lblLastSubmitted').innerHTML = county[i].sub;
+                document.getElementById('lblLastUpdated').innerHTML = county[i].imp;
+                document.getElementById('lblPrecinctsReportingPct').innerHTML = county[i].ppt + ' (' + formatNumber(county[i].prt) + ' out of ' + formatNumber(county[i].ptl) + ')';
+                document.getElementById('txtPrecinctsReportingPct').innerHTML = county[i].ppt;
+                document.getElementById('lblBallotsCastPct').innerHTML = county[i].bpt + ' (' + formatNumber(county[i].bct) + ' out of ' + formatNumber(county[i].rtl) + ')';
+                document.getElementById('txtBallotsCastPct').innerHTML = county[i].bpt;
+
+                if (archived == 1) {
+                    document.getElementById('divsubmit').style.display = (county[i].sub == '' ? 'none' : '');
+                    document.getElementById('divupload').style.display = (county[i].imp == '' ? 'none' : '');
+                    document.getElementById('divprecincts').style.display = (county[i].ptl == 0 ? 'none' : '');
+                    document.getElementById('divballots').style.display = (county[i].bct == 0 || county[i].rtl == 0 ? 'none' : '');
+
+                    if (document.getElementById('divsubmit').style.display == 'none' &&
+                        document.getElementById('divupload').style.display == 'none' &&
+                        document.getElementById('divprecincts').style.display == 'none' &&
+                        document.getElementById('divballots').style.display == 'none') {
+
+                        document.getElementById('divStats').style.display = 'none'
+                    }
+                }
+            }
+        }
+
+        if (county.filter(function (el) { return el.cid == countyid; }).length > 0 && county.filter(function (el) { return el.cid == countyid; })[0].vwp == '') {
+            document.getElementById('divmaplink').style.display = 'none';
+        }
+
+        if (document.getElementById('statuslink').style.display == 'none' && document.getElementById('divmaplink').style.display == 'none') {
+            document.getElementById('hrlinks').style.display = 'none';
+        }
+
+        cboCounty.value = countyid;
+    }
+
+    function loadOffice(county, office) {
+        var lastOffice = '',
+            cboOffice = document.getElementById('cboOffice'),
+            menu = document.getElementById('main_menu');
+
+        cboOffice.innerHTML = '';
+        menu.innerHTML = '';
+
+        if (office.length > 0) {
+            opt = document.createElement('option');
+            opt.text = '';
+            opt.value = '';
+            cboOffice.appendChild(opt);
+        }
+
+        for (var i = 0; i < office.length; i++) {
+            if (lastOffice != office[i].cty && ((county > 0 && office[i].cty == '1') || (county == 0 && office[i].sta == '1'))) {
+                opt = document.createElement('option');
+                opt.text = office[i].des;
+                opt.value = office[i].lbl;
+                cboOffice.appendChild(opt);
+
+                menuitem = document.createElement('li');
+                link = document.createElement('a');
+                link.href = window.location.pathname + '?election_dt=' + electiondt + '&county_id=' + countyid + '&office=' + office[i].lbl + '&contest=0';
+                link.innerHTML = office[i].cnd;
+                menuitem.appendChild(link);
+                if (menu.childNodes.length > 0) {
+                    menuitem.className = 'border-left';
+                }
+                menu.appendChild(menuitem);
+
+                lastOffice = office[i].des;
+            }
+        }
+
+        if (officeid == '') {
+            document.getElementById('cboOffice').selectedIndex = 0
+        }
+        else {
+            cboOffice.value = officeid;
+            removeBlankComboItem('cboOffice');
+        }
+    }
+
+    function loadContest(officeid, contest) {
+        var lastContest = '',
+            cboContest = document.getElementById('cboContest');
+
+        cboContest.innerHTML = '';
+
+        for (var i = 0; i < contest.length; i++) {
+            if (officeid != '') {
+                if (lastContest != contest[i].cnm && ((contest[i].cid == countyid && (contest[i].ogl == officeid || (contest[i].ref == '1' && officeid == 'REF'))) || contest[i].cnm == 'ALL' || (contest[i].cid == countyid && officeid == 'ALL'))) {
+                    opt = document.createElement('option');
+                    opt.text = contest[i].cnm;
+                    opt.value = contest[i].cni;
+                    cboContest.appendChild(opt);
+                    lastContest = contest[i].cnm;
+                }
+            }
+        }
+
+        cboContest.value = contestid;
+    }
+
+    function loadResults(results) {
+        var body = document.getElementById('bxResults');
+        var tablename = '';
+        var append = false;
+
+        if (results != undefined) {
+            for (var i = 0; i < results.length; i++) {
+                if ((results[i].ogl == officeid || officeid == 'ALL' || (results[i].ref == '1' && officeid == 'REF')) && (results[i].gid == contestid || contestid == '0')) {
+                    if (tablename != 'table_' + results[i].lid) {
+                        tablename = 'table_' + results[i].lid;
+                        var tbl = document.createElement('table');
+                        tbl.id = tablename;
+                        tbl.width = '100%';
+                        tbl.className = 'grid_table';
+
+                        append = true;
+
+                        tbl.createCaption();
+
+                        if (contestlink == '1') {
+                            tbl.caption.innerHTML =
+                                '<div class="grid_caption">' +
+                                '<table border=0 style="padding: 0px; width: 100%;">' +
+                                '<tr style="padding: 0px;">' +
+                                '<td style="padding: 0px;">' +
+                                '<b class="grid_caption_link"><a href="contest_details.html' + '?election_dt=' + electiondt + '&county_id=' + countyid + '&contest_id=' + results[i].lid + '">' + results[i].cnm + '</a></b>' +
+                                '<b class="grid_caption_no_link">' + results[i].cnm + '</b>' +
+                                '<br />' +
+                                '<b style="padding-left:30px;">Precincts Reported: ' + results[i].prt + ' of ' + results[i].ptl + '</b>' +
+                                '</td>' +
+                                '<td style="padding: 0px; text-align: right; width: 10%;">' +
+                                '<a href="contest_details.html' + '?election_dt=' + electiondt + '&county_id=' + countyid + '&contest_id=' + results[i].lid + '" style="text-decoration: none"><div class="grid_caption_div">View Contest Details</div></a>' +
+                                '</td>' +
+                                '</tr>' +
+                                '</table>' +
+                                '</div>';
+
+                            //tbl.caption.innerHTML =
+                            //	'<div class="grid_caption">' +
+                            //	'<table border=0 style="padding: 0px; width: 100%;">' +
+                            //	'<tr style="padding: 0px;">' +
+                            //	'<td style="padding: 0px;">' +
+                            //	'<b class="grid_caption_link"><a href="contest_details.html' + '?election_dt=' + electiondt + '&county_id=' + countyid + '&contest_id=' + results[i].lid + '">' + results[i].cnm + '</a></b>' +
+                            //	'<b class="grid_caption_no_link">' + results[i].cnm + '</b>' +
+                            //	'</td>' +
+                            //	'<td style="padding: 0px; text-align: right; width: 10%;">' +
+                            //	'<a href="contest_details.html' + '?election_dt=' + electiondt + '&county_id=' + countyid + '&contest_id=' + results[i].lid + '" style="text-decoration: none"><div class="grid_caption_div">View Contest Details</div></a>' +
+                            //	'</td>' +
+                            //	'</tr>' +
+                            //	'</table>' +
+                            //	'</div>';
+                        }
+                        else {
+                            tbl.caption.innerHTML =
+                                '<div class="grid_caption">' +
+                                '<b>' + results[i].cnm + '</b>' +
+                                '<br />' +
+                                '<b style="padding-left:30px;">Precincts Reported: ' + results[i].prt + ' of ' + results[i].ptl + '</b>' +
+                                '</div>';
+
+                            //tbl.caption.innerHTML =
+                            //	'<div class="grid_caption">' +
+                            //	'<b>' + results[i].cnm + '</b>' +
+                            //	'</div>';
+                        }
+
+                        var tr = document.createElement('tr');
+                        tbl.appendChild(tr);
+
+                        var th = document.createElement('th');
+                        th.style.textAlign = 'left';
+                        th.innerHTML = 'NAME ON BALLOT';
+                        tr.appendChild(th);
+
+                        var th = document.createElement('th');
+                        th.style.textAlign = 'left';
+                        th.innerHTML = 'PARTY';
+                        tr.appendChild(th);
+
+                        var th = document.createElement('th');
+                        th.style.textAlign = 'right';
+                        th.innerHTML = 'BALLOT COUNT';
+                        tr.appendChild(th);
+
+                        var th = document.createElement('th');
+                        th.style.textAlign = 'right';
+                        th.innerHTML = 'PERCENT';
+                        tr.appendChild(th);
+                    }
+
+                    var tr = document.createElement('tr');
+                    tr.className = 'gvResults_Row';
+                    tbl.appendChild(tr);
+
+                    var td = document.createElement('td');
+                    td.style.width = '60%';
+                    td.innerHTML = results[i].bnm;
+                    tr.appendChild(td);
+
+                    var td = document.createElement('td');
+                    td.innerHTML = results[i].pty;
+                    tr.appendChild(td);
+
+                    var td = document.createElement('td');
+                    td.style.textAlign = 'right';
+                    td.innerHTML = formatNumber(results[i].vct);
+                    tr.appendChild(td);
+
+                    var td = document.createElement('td');
+                    td.style.textAlign = 'right';
+                    td.innerHTML = (Number(results[i].pct) * 100).toFixed(2) + '%';
+                    tr.appendChild(td);
+
+                    if (append == true) {
+                        dv = document.createElement('div');
+                        dv.className = 'bxSlides';
+                        dv.appendChild(tbl);
+                        body.appendChild(dv);
+                        append = false;
+                    }
+                }
+            }
+        }
+
+        if (body.childNodes.length < 2) {
+            dv = document.createElement('div');
+            dv.style.textAlign = 'center';
+            dv.style.fontWeight = 'bold';
+            dv.style.fontSize = 'larger';
+            dv.innerHTML = arrOffice.filter(function (el) { return (el.lbl == officeid); })[0].cnn;
+            body.parentNode.appendChild(dv);
+        }
+    }
+
+    function getDateFolder(d) {
+        return String(d.getFullYear()) + ('0' + String(d.getMonth() + 1)).slice(-2) + ('0' + String(d.getDate())).slice(-2)
+    }
+
+    function formatNumber(n) {
+        return n.replace(/./g, function (c, i, a) {
+            return i > 0 && c !== '.' && (a.length - i) % 3 === 0 ? ',' + c : c;
+        });
+    }
+
+    function checkOptions() {
+        cboSpeed = document.getElementById('cboSpeed');
+        cboSlides = document.getElementById('cboSlides');
+
+        if (cboSpeed.value != '' && cboSlides != '') {
+            displayResults();
+        }
+        else {
+            if (cboSpeed.value == '') { document.getElementById('cboSpeedError').style.visibility = ''; }
+            if (cboSlides.value == '') { document.getElementById('cboSlidesError').style.visibility = ''; }
+        }
+    }
+
+    function removeBlankComboItem(combo) {
+        if (document.getElementById(combo).value != '' && document.getElementById(combo).item(0).value == '')
+            document.getElementById(combo).remove(0);
+    }
+
+    function displayResults() {
+        var link = '';
+
+        cboElection = document.getElementById('cboElection');
+        cboCounty = document.getElementById('cboCounty');
+        cboOffice = document.getElementById('cboOffice');
+        cboContest = document.getElementById('cboContest');
+
+        if (cboElection.value != '' && cboCounty.value != '' && cboOffice.value != '' && cboContest.value != '') {
+            link = window.location.pathname + '?election_dt=' + electiondt + '&county_id=' + countyid + '&office=' + officeid + '&contest=' + contestid;
+
+            if (document.getElementById('chkAutoScroll').checked) {
+                scrolldelay = document.getElementById('cboSpeed').value;
+                scrollcontests = document.getElementById('cboSlides').value;
+
+                link = link + '&scroll_enabled=1' + '&scroll_delay=' + scrolldelay + '&scroll_contests=' + scrollcontests
+            }
+
+            window.location.assign(link);
+        }
+        else {
+            if (cboElection.value == '') { document.getElementById('cboElectionError').style.visibility = ''; }
+            if (cboCounty.value == '') { document.getElementById('cboCountyError').style.visibility = ''; }
+            if (cboOffice.value == '') { document.getElementById('cboOfficeError').style.visibility = ''; }
+            if (cboContest.value == '') { document.getElementById('cboContestError').style.visibility = ''; }
+        }
+    }
+
+    function refreshPage() {
+        window.location.reload(true);
+    }
+</script>

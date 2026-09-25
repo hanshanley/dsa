@@ -1,0 +1,4 @@
+attempt_id,attempted_on,state_code,cycle,source_url,method,outcome,raw_evidence,notes
+ak-2026-legacy-path,2026-09-22,AK,2026,https://www.elections.alaska.gov/results/26PRIM/,direct_http,superseded_by_official_enr26_path,,Used the official detail page's linked enr26 CSV instead.
+az-origin-canvass-downloads,2026-09-22,AZ,2024|2026,https://azsos.gov/;https://apps.azsos.gov/,direct_http,403_then_archived_official_capture,az/2024 and az/2026 official PDF snapshots,Did not loop on blocked origins; used exact archived official URLs.
+nv-state-results,2026-09-22,NV,2024|2026,https://silverstateelection.nv.gov/,direct_http_archive_indexes_and_legacy_app,imperva_challenge_no_result_payload,nv/2024 and nv/2026 official roster PDFs,"Results.NV.gov redirects to the shielded host. Official county final-summary format was verified, but partial county totals remain excluded."

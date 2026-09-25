@@ -1,0 +1,119 @@
+{
+  "race": {
+    "race_id": "race-dd06d2c4839b786be1bd",
+    "scope_kind": "tracked_dsa_endorsed_democratic_primary",
+    "election_date": "2024-03-05",
+    "election_year": "2024",
+    "primary_party": "Democratic",
+    "endorsed_candidate": "José Garza",
+    "endorsed_candidates": "José Garza",
+    "unopposed_candidates": "",
+    "opponent_candidates": "Jeremy Sylestine",
+    "all_candidates": "Jeremy Sylestine | José Garza",
+    "candidate_count": "2",
+    "role_set": "endorsed | opponent",
+    "party_set": "Democratic",
+    "evidence_statuses": "source_unavailable | verified",
+    "office": "District Attorney",
+    "office_status": "resolution_verified",
+    "office_source": "race_registry_resolutions_2023_2024.csv:66",
+    "office_confidence": "verified",
+    "jurisdiction": "Travis County",
+    "jurisdiction_status": "resolution_verified",
+    "jurisdiction_source": "race_registry_resolutions_2023_2024.csv:66",
+    "jurisdiction_confidence": "verified",
+    "state": "Texas",
+    "state_code": "TX",
+    "state_status": "resolution_verified",
+    "state_source": "race_registry_resolutions_2023_2024.csv:66",
+    "state_confidence": "verified",
+    "official_election_source": "",
+    "official_election_source_status": "unresolved",
+    "official_election_source_source": "",
+    "official_election_source_confidence": "",
+    "supporting_source": "https://www.joseforda.com/",
+    "supporting_source_status": "resolution_supporting",
+    "supporting_source_type": "candidate_controlled",
+    "supporting_source_source": "race_registry_resolutions_2023_2024.csv:66",
+    "supporting_source_confidence": "high",
+    "certified_opponents": "Jeremy Sylestine",
+    "certified_opponents_status": "corpus_candidate_set",
+    "endorsing_bodies": "",
+    "metadata_source": "resolution_verified",
+    "source_reference": "race_registry_resolutions_2023_2024.csv:66",
+    "canonical_candidate_aliases": "j garza | j sylestine | jer sylestine | jeremy sylestine | jos garza | jose garza",
+    "source_race_ids": "race-dd06d2c4839b786be1bd",
+    "merged_race_id_count": "1",
+    "unresolved_fields": "official_election_source"
+  },
+  "sources": [
+    {
+      "document_id": "c0cc422d1f47f2ae0585afd6",
+      "metadata_document_id": "c0cc422d1f47f2ae0585afd6",
+      "url": "https://www.fox7austin.com/news/travis-county-district-attorney-race-jose-garza-jeremy-sylestine",
+      "final_url": "https://www.fox7austin.com/news/travis-county-district-attorney-race-jose-garza-jeremy-sylestine",
+      "publication_date": "2024-02-20",
+      "retrieved_at": "2026-08-20T19:31:45.699715+00:00",
+      "raw_path": "data/raw/policy_historical_d/sources/c0cc422d1f47f2ae0585afd6.html",
+      "sha256": "b498f3a776fbc6b4ff60c1a750a842bc37661e9200353d173c65658314f7063c",
+      "bytes": 232920,
+      "content_type": "text/html",
+      "status": "used",
+      "notes": "Cached candidate source semantically reviewed; packet metadata preserved exactly."
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hd-24-jeremy-sylestine",
+      "metadata_document_id": "c0cc422d1f47f2ae0585afd6",
+      "document_id": "c0cc422d1f47f2ae0585afd6",
+      "speaker": "Jeremy Sylestine",
+      "role": "opponent_candidate",
+      "race_id": "race-dd06d2c4839b786be1bd",
+      "election_date": "2024-03-05",
+      "topic": "campaign_approach",
+      "subtopic": "prosecutorial_experience",
+      "stance": "self_description",
+      "short_exact_quote": "Someone who comes in who doesn't know criminal law and who has never worked in a courtroom before can't expertly put together a criminal case",
+      "locator": "paragraph 112",
+      "representation_kind": "campaign_frame",
+      "notes": "Candidate-attributed retained text; prompts, navigation, reporter narration, and neighboring candidates are excluded.",
+      "attribution_notes": "Quote occurs in the retained candidate-associated candidate campaign framing at paragraph 112; navigation, prompts, reporter narration, endorsement text, and other candidates are excluded."
+    }
+  ],
+  "comparisons": [],
+  "candidate_dispositions": [
+    {
+      "race_id": "race-dd06d2c4839b786be1bd",
+      "candidate": "Jeremy Sylestine",
+      "role": "opponent",
+      "election_date": "2024-03-05",
+      "outcome": "evidence_recovered"
+    },
+    {
+      "race_id": "race-dd06d2c4839b786be1bd",
+      "candidate": "José Garza",
+      "role": "endorsed",
+      "election_date": "2024-03-05",
+      "outcome": "listed_candidate_route_retained_for_recovery_review"
+    }
+  ],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-dd06d2c4839b786be1bd",
+      "candidate": "José Garza",
+      "attempted_url": "https://web.archive.org/web/20200225041734id_/https://www.joseforda.com/",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "notes": "No attributable source was promoted after the bounded candidate route."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-dd06d2c4839b786be1bd",
+      "candidate": "José Garza",
+      "url": "https://web.archive.org/web/20200225041734id_/https://www.joseforda.com/",
+      "outcome": "listed_candidate_route_retained_for_recovery_review",
+      "raw_path": null
+    }
+  ]
+}

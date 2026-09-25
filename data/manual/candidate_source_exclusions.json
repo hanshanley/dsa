@@ -1,0 +1,21 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "exclusions": [
+    {
+      "race_id": "race-9c5f47278f523126e61b",
+      "candidate_name": "Junaid Ahmed",
+      "source_sha256": "a3babf7fc802be0bbe50d907a09f87b2c4c2ce8f021759a9f21c5f8774777769",
+      "source_url": "https://www.junaidforcongress.com/issues",
+      "final_url": "https://tkrcd2025.org/",
+      "reason": "This exact capture is an unrelated gambling storefront reached by a campaign-domain redirect, not Junaid Ahmed's platform. It was already excluded from curated policy claims and must also be excluded from all candidate-model input."
+    },
+    {
+      "race_id": "race-440dcbc50602efe64cb3",
+      "candidate_name": "Claire Valdez",
+      "source_sha256": "9286dde255fa25f7ffe8fc376feca2a9ee5d31c00740647b731df8dd7bd0fb8f",
+      "source_url": "https://claireforqueens.com/",
+      "final_url": "https://clairevaldezforcongress.com/",
+      "reason": "The attempted historical replay returned a live congressional-campaign page, not a retained2024 Assembly-campaign version. A requested2024 archive timestamp cannot establish the timing or office identity of these bytes. This exclusion applies to the2024 race and this exact source hash, not every future campaign page for this candidate."
+    }
+  ]
+}

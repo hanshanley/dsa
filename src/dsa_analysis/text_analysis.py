@@ -5,9 +5,11 @@ import json
 import math
 import re
 from collections import Counter, defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 from .io import read_csv, write_csv
+from .document_corpus import CANDIDATE_SCREENING_VERSION
 from .paths import ANALYSIS_DATA_DIR, MANUAL_DIR, OUTPUT_DIR, PROCESSED_DIR, REPORT_DIR
 
 FIGURE_DIR = OUTPUT_DIR / "figures" / "text_analysis"
@@ -267,8 +269,28 @@ def analyze_text() -> dict[str, int | float]:
     evidence, sticking_points = _load_or_export_analysis_data(
         evidence_path, sticking_path
     )
+    stored_sticking_points = len(sticking_points)
+    contrast_sources_present = evidence_path.exists() and sticking_path.exists()
+    if not contrast_sources_present:
+        sticking_points = []
     excerpts = read_csv(excerpts_path)
     platform_comparisons = read_csv(comparisons_path)
+    from .policy_comparison import platform_pair_date_issues
+
+    excerpt_index = {row["excerpt_id"]: row for row in excerpts}
+    document_index = {row["document_id"]: row for row in read_csv(MANUAL_DIR / "documents.csv")}
+    platform_screen = [{
+        "comparison_id": row["comparison_id"], "cycle": row["cycle"],
+        "exclusion_reasons": " | ".join(platform_pair_date_issues(row, excerpt_index, document_index)),
+    } for row in platform_comparisons]
+    write_csv(
+        ANALYSIS_DATA_DIR / "platform_comparison_eligibility.csv", platform_screen,
+        ["comparison_id", "cycle", "exclusion_reasons"],
+    )
+    excluded_platform_ids = {row["comparison_id"] for row in platform_screen if row["exclusion_reasons"]}
+    platform_comparisons = [
+        row for row in platform_comparisons if row["comparison_id"] not in excluded_platform_ids
+    ]
 
     candidate_docs, candidate_rows = _candidate_segment_corpus()
     official_docs, official_rows = _official_segment_corpus()
@@ -426,6 +448,8 @@ def analyze_text() -> dict[str, int | float]:
     _explicit_cycle_chart(explicit_cycle_rows)
 
     summary = {
+        "completed_at": datetime.now(timezone.utc).isoformat(),
+        "screening_version": CANDIDATE_SCREENING_VERSION,
         "candidate_documents": len(candidate_docs),
         "candidate_source_documents": len(
             {
@@ -454,6 +478,11 @@ def analyze_text() -> dict[str, int | float]:
         "official_mpif_features": len(official_mpif),
         "prevalence_features": len(prevalence_rows),
         "sticking_points": len(sticking_points),
+        "stored_sticking_points": stored_sticking_points,
+        "sticking_points_input_status": (
+            "source_evidence_present" if contrast_sources_present
+            else "legacy_snapshot_not_revalidated"
+        ),
         "figure_count": len(list(FIGURE_DIR.glob("*.svg"))),
         "generated_figure_count": 9,
         "shared_affirmative_mechanism_rows": len(shared_mechanism_rows),
@@ -466,6 +495,10 @@ def analyze_text() -> dict[str, int | float]:
                 STICKING_SNAPSHOT_PATH,
                 excerpts_path,
                 comparisons_path,
+                CANDIDATE_SEGMENTS_PATH,
+                CANDIDATE_METADATA_PATH,
+                CANDIDATE_METADATA_PATH.with_name("race_registry.csv"),
+                MANUAL_DIR / "endorsements.csv",
             )
         },
         "lineage": {
@@ -477,7 +510,9 @@ def analyze_text() -> dict[str, int | float]:
                 "generator": "dsa_analysis.document_corpus.run_candidate_document_regather_batch",
                 "analysis_snapshot": "data/analysis/candidate_text_corpus.csv",
                 "eligibility": (
-                    "nonempty segment; token_count >= 20; boilerplate_flag=false"
+                    "tracked Democratic-primary race; source suitability and campaign-window "
+                    "checks passed; nonempty segment; token_count >= 20; boilerplate_flag=false; "
+                    "screening is not semantic verification"
                 ),
                 "deduplication": (
                     "one exact-text segment per endorsed/opponent group and election cycle; "
@@ -1111,9 +1146,35 @@ def sticking_point_cycles(
 
 
 def _candidate_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    from .document_corpus import candidate_document_analysis_issues, tracked_primary_race_ids
+
+    in_scope = tracked_primary_race_ids(
+        read_csv(CANDIDATE_METADATA_PATH.with_name("race_registry.csv")),
+        read_csv(MANUAL_DIR / "endorsements.csv"),
+    )
     metadata = {
-        row["document_id"]: row for row in read_csv(CANDIDATE_METADATA_PATH)
+        row["document_id"]: {
+            **row, "comparison_scope_status": "in_scope" if row.get("race_id") in in_scope else "out_of_scope",
+        } for row in read_csv(CANDIDATE_METADATA_PATH)
     }
+    eligibility = {
+        document_id: candidate_document_analysis_issues(row)
+        for document_id, row in metadata.items()
+    }
+    write_csv(
+        CORPUS_PATH.with_name("candidate_document_eligibility.csv"),
+        [{
+            **{key: row.get(key, "") for key in (
+                "document_id", "candidate_name", "race_id", "role", "election_date",
+                "source_url", "archive_url", "publication_date", "retrieved_at",
+            )},
+            "analysis_status": "excluded" if eligibility[document_id] else "screened_not_semantically_verified",
+            "exclusion_reasons": " | ".join(eligibility[document_id]),
+        } for document_id, row in metadata.items()],
+        ["document_id", "candidate_name", "race_id", "role", "election_date",
+         "source_url", "archive_url", "publication_date", "retrieved_at",
+         "analysis_status", "exclusion_reasons"],
+    )
     eligible = []
     for row in read_csv(CANDIDATE_SEGMENTS_PATH):
         if not _eligible_segment(row):
@@ -1123,6 +1184,8 @@ def _candidate_segment_corpus() -> tuple[list[dict[str, str]], list[dict[str, st
             raise ValueError(
                 f"candidate segment references unknown document {row['document_id']}"
             )
+        if eligibility[row["document_id"]]:
+            continue
         role = row["role"].strip()
         group = "endorsed" if role in {"endorsed", "unopposed"} else "opponent"
         election_date = document.get("election_date", "").strip()
@@ -1535,7 +1598,13 @@ registry and recoverable full-text corpus.
 - Official-platform segments after exact-text deduplication: {summary["official_segments"]}
 - DSA official segments after deduplication: {official_segment_counts.get("dsa", 0)};
   Democratic official segments: {official_segment_counts.get("democratic", 0)}
-- Unique source-supported primary contrasts: {summary["sticking_points"]}
+- Automated primary contrasts eligible for current analysis: {summary["sticking_points"]}
+- Retained older contrast rows: {summary["stored_sticking_points"]}
+- Contrast evidence status: **{summary["sticking_points_input_status"]}**
+
+Retained older contrast rows without their source-evidence input are not counted in current
+conflict charts. Separately source-reviewed candidate comparisons are published in
+`data/analysis/policy_evidence/reviewed_candidate_comparisons.csv`.
 
 Exact candidate passage text is counted once per DSA-endorsed/other-Democrat group and election cycle.
 This prevents a shared national platform from being multiplied across state races while retaining
@@ -1660,15 +1729,16 @@ Both groups discussing a feature does not establish identical policy positions. 
 identifies common agenda space; the exact texts and reviewed mechanism comparisons are required
 to determine agreement, disagreement, or different proposed means.
 
-## Shared affirmative mechanism language within primaries
+## Shared named-policy language within primaries
 
-As a stricter agreement-oriented check, we identify races where an endorsed candidate and
-another Democrat both use the same concrete normalized policy-mechanism phrase. Mentions preceded by
-oppositional or negating language are excluded. The most common shared mechanisms are:
+This automated review aid finds races where both groups use the same normalized policy phrase
+after a local-negation screen. It does not establish shared implementation or policy agreement.
+For example, Medicare-for-All wording can accompany different insurance designs.
+The most common shared phrases are:
 
 {chr(10).join(f'- **{_label(row["feature"])}:** {row["race_count"]} races' for row in strongest_shared_mechanisms)}
 
-![Shared affirmative policy mechanisms](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
+![Shared named-policy language](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
 
 This is stronger evidence of common policy language than topic overlap, but it is still not a
 complete stance classifier. The generated table retains both sides' exact source excerpts for
@@ -2070,18 +2140,17 @@ def _shared_mechanism_chart(rows: list[dict[str, str]]) -> None:
     selected = rows[:10]
     _horizontal_svg(
         FIGURE_DIR / "shared_affirmative_policy_mechanisms.svg",
-        "Shared affirmative policy mechanisms",
+        "Shared named-policy language",
         (
-            "Number of primaries where both sides affirmatively use the same normalized "
-            "mechanism phrase"
+            "Same-race sources with matching policy phrases after a local-negation screen"
         ),
         [_label(row["feature"]) for row in selected],
         [float(row["race_count"]) for row in selected],
         GREEN,
         value_format=".0f",
         footer=(
-            "Negated or oppositional mentions are excluded. Exact paired excerpts are retained "
-            "in shared_affirmative_policy_mechanisms.csv."
+            "Automated review aid, not verified agreement: matching phrases can conceal different "
+            "designs. Exact paired excerpts are retained in the companion CSV."
         ),
     )
 
@@ -2434,7 +2503,7 @@ def _topic_share_chart(rows: list[dict[str, str]]) -> None:
         [
             _legend(770, 70, DSA_RED, "DSA-endorsed"),
             _legend(930, 70, DEMOCRATIC_BLUE, "Other Democrats"),
-            _svg_footer(width, height, "Source: verified first-party candidate statements; duplicate queue copies removed."),
+            _svg_footer(width, height, "Source: retained candidate-attributed text; duplicate queue copies removed. Coverage limits apply."),
         ]
     )
     _write_svg(FIGURE_DIR / "candidate_topic_shares.svg", width, height, body)

@@ -1,0 +1,35 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "race_id": "race-c05a1295eea5d13e296b",
+  "scope": "Arizona8 congressional Democratic special primary on February27,2018; not Westbrook's later state-house campaign.",
+  "accepted_source_chain": [
+    {"capture": "data/raw/policy_arizona_2018_followup/az18-westbrook-home-capture.json", "use": "Discovery only: original congressional homepage explicitly links westbrookforcongress.com; no policy is inferred from the redirect notice."},
+    {"capture": "data/raw/policy_arizona_2018_followup/az18-westbrook-newsite-capture.json", "use": "Discovery and campaign identity: links original issue pages and dated candidate-authored articles. Navigation labels are not detailed policy evidence."},
+    {"capture": "data/raw/policy_arizona_2018_followup/az18-westbrook-old-platform-capture.json", "use": "Accepted original June2017 congressional platform."},
+    {"capture": "data/raw/policy_arizona_2018_followup/az18-westbrook-old-issues-capture.json", "use": "Accepted original June2017 congressional issues; repeated paragraphs retained but not counted as distinct commitments."},
+    {"capture": "data/raw/policy_arizona_2018_followup/az18-westbrook-single-payer-capture.json", "use": "Accepted actual December16,2017 candidate-authored single-payer article, preserving Medicaid/Medicare naming inconsistency."},
+    {"capture": "data/raw/policy_arizona_2018_followup/az18-westbrook-economic-frame-capture.json", "use": "Accepted actual January21,2018 capture of a candidate-authored economic/education argument."}
+  ],
+  "rejected_source_versions": [
+    {
+      "capture": "data/raw/policy_arizona_2018_followup/az18-westbrook-platform-capture.json",
+      "source_sha256": "6cd4cb1f01887ab22b927677e2c114a41e1ab34e2687b364fdcd2a089aec59cc",
+      "actual_replay": "2018-09-13T11:16:27",
+      "final_campaign_domain": "westbrookforarizona.com",
+      "reason": "The requested February congressional-platform URL redirected to a September replay of a later state-house campaign. This is not a retained pre-primary congressional version; neither the requested timestamp nor old page-creation metadata fixes its identity and timing."
+    }
+  ],
+  "failed_routes": [
+    {"url": "https://web.archive.org/web/20180215000000id_/https://westbrookforcongress.com/portfolio-items/health/", "outcome": "HTTP404 after redirect"},
+    {"url": "https://web.archive.org/web/20180215000000id_/https://westbrookforcongress.com/portfolio-items/living-wage/", "outcome": "HTTP404 after redirect"},
+    {"url": "https://web.archive.org/web/20180215000000id_/https://westbrookforcongress.com/portfolio-items/education/", "outcome": "HTTP404 after redirect"},
+    {"url": "https://azpbs.org/horizon/2018/02/congressional-district-8-democratic-debate/", "outcome": "Guessed program route returned404; no transcript or debate claim created."},
+    {"url": "https://www.briannawestbrook.com/issues/", "outcome": "Current landing-page redirect, not historical campaign policy."}
+  ],
+  "withheld_substitutes": [
+    "Contemporaneous GO and Phoenix New Times interviews contain real candidate quotations, but their specific policy summaries are reporter paraphrases. They were not substituted for the recovered candidate-authored platform.",
+    "Tipirneni education availability lookup returned an October2018 version after this primary; it was not used as a pre-primary education source.",
+    "Recent unrelated personal news is outside the historical policy research and is neither collected as platform evidence nor used to infer political positions."
+  ],
+  "remaining_limit": "Six accepted campaign sources improve this two-candidate comparison but do not establish that every linked issue page or every campaign statement has been recovered."
+}

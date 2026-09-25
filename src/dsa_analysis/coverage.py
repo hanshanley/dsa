@@ -1,17 +1,59 @@
+import hashlib
+import re
 from collections import defaultdict
+from datetime import date
 from pathlib import Path
 
 from .io import read_csv, read_json, write_csv
-from .paths import CONFIG_DIR, PROCESSED_DIR
+from .paths import CONFIG_DIR, MANUAL_DIR, PROCESSED_DIR
 
 SOCIAL_FIELDS = ("Facebook", "Instagram", "Twitter", "Bluesky", "Linktree", "Blog")
+
+
+def _chapter_key(name: str) -> str:
+    return re.sub(r"\s+dsa$", "", " ".join(name.lower().split()))
+
+
+def _chapter_identity(name: str, state: str) -> tuple[str, str]:
+    return _chapter_key(name), state.strip().upper()
+
+
+def coverage_chapters() -> list[dict[str, str]]:
+    """Keep historical chapter identities even when absent from today's directory."""
+    chapters = read_csv(PROCESSED_DIR / "chapter_directory.csv")
+    known = {
+        _chapter_identity(row.get("Name", ""), row.get("State", "")) for row in chapters
+    }
+    for filename in (
+        "local_endorsements_verified.csv",
+        "local_endorsement_candidates.csv",
+        "chapter_history_gaps.csv",
+    ):
+        path = PROCESSED_DIR / filename
+        if not path.exists():
+            continue
+        for row in read_csv(path):
+            name = row.get("chapter", "").strip()
+            key = _chapter_identity(name, row.get("state", ""))
+            if not key[0] or key in known:
+                continue
+            known.add(key)
+            chapters.append({
+                "record_id": "historical-" + hashlib.sha256(
+                    "\n".join(key).encode()
+                ).hexdigest()[:16],
+                "Name": name,
+                "State": row.get("state", ""),
+                "Website": "",
+            })
+    return chapters
 
 
 def build_coverage_ledger() -> tuple[int, int]:
     template = read_csv(PROCESSED_DIR / "coverage_template.csv")
     chapters = {
         row["record_id"]: row
-        for row in read_csv(PROCESSED_DIR / "chapter_directory.csv")
+        for row in coverage_chapters()
     }
     crawl_status = _by_id("chapter_crawl_status.csv", "chapter_record_id")
     wayback_status = _by_id("wayback_crawl_status.csv", "chapter_record_id")
@@ -25,19 +67,29 @@ def build_coverage_ledger() -> tuple[int, int]:
     _add_wayback_evidence(evidence_years, evidence_urls)
     _add_verified_endorsements(chapters, verified_years, evidence_urls)
     _add_history_gaps(chapters, history_gaps, evidence_urls)
+    resolutions = _coverage_resolutions()
 
     rows = []
     unresolved = 0
-    current_year = read_json(CONFIG_DIR / "sources.json")["research_cutoff"][:4]
+    cutoff = read_json(CONFIG_DIR / "sources.json")["research_cutoff"]
+    current_year = cutoff[:4]
     for template_row in template:
         chapter_id, year = template_row["coverage_id"].rsplit("-", 1)
         chapter = chapters[chapter_id]
         current = crawl_status.get(chapter_id, {})
         historical = wayback_status.get(chapter_id, {})
         urls = sorted(evidence_urls[(chapter_id, year)])
-        if year in verified_years[chapter_id]:
-            status = "verified"
-            method = "verified_first_party_endorsement"
+        resolution = resolutions.get(template_row["coverage_id"])
+        if resolution:
+            status = resolution["status"]
+            method = "reviewed_chapter_year_search"
+            urls = sorted(set(urls + resolution["evidence_urls"].split(" | ")))
+            if year == current_year and resolution["searched_on"] < cutoff:
+                status = "found_unverified"
+                method = "current_year_review_predates_cutoff"
+        elif year in verified_years[chapter_id]:
+            status = "found_unverified"
+            method = "verified_endorsement_not_exhaustive_census"
         elif year in history_gaps[chapter_id]:
             status = "source_unavailable"
             method = "documented_chapter_history_gap"
@@ -55,14 +107,14 @@ def build_coverage_ledger() -> tuple[int, int]:
             }
             and not (year == current_year and chapter_id in undated_evidence)
         ):
-            status = "searched_not_found"
-            method = "current_site_and_wayback_url_index"
+            status = "not_searched"
+            method = "url_index_searched_content_review_pending"
         elif (
             current.get("crawl_status") == "source_unavailable"
             and historical.get("crawl_status") in {"", "source_unavailable"}
         ):
-            status = "source_unavailable"
-            method = "no_public_website_or_archive"
+            status = "not_searched"
+            method = "website_or_archive_retry_needed"
         else:
             status = "not_searched"
             method = "additional_archive_review_needed"
@@ -74,7 +126,8 @@ def build_coverage_ledger() -> tuple[int, int]:
                 "status": status,
                 "search_method": method,
                 "evidence_urls": " | ".join(urls),
-                "notes": _notes(current, historical),
+                "searched_on": resolution["searched_on"] if resolution else "",
+                "notes": resolution["notes"] if resolution else _notes(current, historical),
             }
         )
     write_csv(
@@ -94,6 +147,24 @@ def build_coverage_ledger() -> tuple[int, int]:
         ],
     )
     return len(rows), unresolved
+
+
+def _coverage_resolutions() -> dict[str, dict[str, str]]:
+    path = MANUAL_DIR / "chapter_year_resolutions.csv"
+    if not path.exists():
+        return {}
+    resolutions = {}
+    for row in read_csv(path):
+        key = row.get("coverage_id", "")
+        if not key or key in resolutions:
+            raise ValueError(f"{path.name}: missing or duplicate coverage_id {key!r}")
+        if row.get("status") not in {"verified", "searched_not_found", "source_unavailable"}:
+            raise ValueError(f"{key}: invalid chapter-year resolution status")
+        if not row.get("notes", "").strip() or not row.get("evidence_urls", "").strip():
+            raise ValueError(f"{key}: resolution requires search notes and evidence URLs")
+        date.fromisoformat(row["searched_on"])
+        resolutions[key] = row
+    return resolutions
 
 
 def _add_page_evidence(
@@ -151,12 +222,12 @@ def _add_verified_endorsements(
     if not path.exists():
         return
     chapter_ids = {
-        row.get("Name", "").strip().lower(): chapter_id
+        _chapter_identity(row.get("Name", ""), row.get("State", "")): chapter_id
         for chapter_id, row in chapters.items()
     }
     for row in read_csv(path):
         year = row["election_year"].strip()
-        chapter_id = chapter_ids.get(row["chapter"].strip().lower(), "")
+        chapter_id = chapter_ids.get(_chapter_identity(row["chapter"], row.get("state", "")), "")
         if not chapter_id or len(year) != 4 or not year.isdigit():
             continue
         verified_years[chapter_id].add(year)
@@ -174,12 +245,12 @@ def _add_history_gaps(
     if not path.exists():
         return
     chapter_ids = {
-        row.get("Name", "").strip().lower(): chapter_id
+        _chapter_identity(row.get("Name", ""), row.get("State", "")): chapter_id
         for chapter_id, row in chapters.items()
     }
     for row in read_csv(path):
         year = row["election_year"].strip()
-        chapter_id = chapter_ids.get(row["chapter"].strip().lower(), "")
+        chapter_id = chapter_ids.get(_chapter_identity(row["chapter"], row.get("state", "")), "")
         if not chapter_id or len(year) != 4 or not year.isdigit():
             continue
         history_gaps[chapter_id].add(year)

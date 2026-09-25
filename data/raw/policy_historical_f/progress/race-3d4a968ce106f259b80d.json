@@ -1,0 +1,84 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-3d4a968ce106f259b80d",
+  "sources": [
+    {
+      "document_id": "30052b5963608b9ca8b8a14e",
+      "metadata_document_id": "30052b5963608b9ca8b8a14e",
+      "url": "https://www.pghlesbian.com/2021/04/qa-with-anita-prizio-allegheny-county-councilor-district-3",
+      "final_url": "https://www.pghlesbian.com/2021/04/qa-with-anita-prizio-allegheny-county-councilor-district-3/",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:41:45.308237+00:00",
+      "raw_path": "data/raw/policy_historical_f/sources/30052b5963608b9ca8b8a14e.html",
+      "sha256": "7b64ba529a62b289fccc492b50d48e8368e6dd1369bf77f3924fec718a884cfe",
+      "bytes": 154156,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "notes": "Semantically reviewed against candidate-scoped retained paragraphs; exact metadata, raw bytes, and temporal qualification preserved.",
+      "historical_cycle_evidence": {
+        "election_year": "2021",
+        "exact_quote": "2021 – In Memoriam",
+        "source_locator": "paragraph 28"
+      }
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hf-race-3d4a968ce106f259b80d-anita-prizio-fracking",
+      "metadata_document_id": "30052b5963608b9ca8b8a14e",
+      "document_id": "30052b5963608b9ca8b8a14e",
+      "speaker": "Anita Prizio",
+      "role": "endorsed_candidate",
+      "race_id": "race-3d4a968ce106f259b80d",
+      "election_date": "2021-05-18",
+      "topic": "climate",
+      "subtopic": "ban_fracking_in_county_parks",
+      "stance": "support",
+      "short_exact_quote": "We can definitely ban fracking in the parks.",
+      "locator": "paragraph 348",
+      "representation_kind": "policy_position",
+      "claim_summary": "Prizio supports using county authority to ban fracking in county parks and seeks broader watershed protection.",
+      "notes": "Candidate answer distinguishes an available county action from broader watershed authority.",
+      "attribution_notes": "paragraph 348 is within the retained candidate-associated answer block for Anita Prizio; prompt and publisher narration are not treated as candidate speech."
+    },
+    {
+      "excerpt_id": "ex-hf-race-3d4a968ce106f259b80d-anita-prizio-police-review",
+      "metadata_document_id": "30052b5963608b9ca8b8a14e",
+      "document_id": "30052b5963608b9ca8b8a14e",
+      "speaker": "Anita Prizio",
+      "role": "endorsed_candidate",
+      "race_id": "race-3d4a968ce106f259b80d",
+      "election_date": "2021-05-18",
+      "topic": "public_safety",
+      "subtopic": "independent_civilian_police_review",
+      "stance": "support",
+      "short_exact_quote": "We need to build ideas like this into our current discussion regarding the Independent Civilian Police Review Board.",
+      "locator": "paragraph 352",
+      "representation_kind": "policy_position",
+      "claim_summary": "Prizio supports a centralized civilian police-background-check position and incorporating that screening mechanism into an Independent Civilian Police Review Board.",
+      "notes": "Candidate response follows a concrete proposed county background-check mechanism.",
+      "attribution_notes": "paragraph 352 is within the retained candidate-associated answer block for Anita Prizio; prompt and publisher narration are not treated as candidate speech."
+    }
+  ],
+  "comparisons": [],
+  "unsuccessful_sources": [],
+  "source_attempts": [],
+  "case_disposition": {
+    "race_id": "race-3d4a968ce106f259b80d",
+    "election_date": "2021-05-18",
+    "status": "reviewed_with_evidence",
+    "candidates": [
+      {
+        "candidate_name": "Anita Prizio",
+        "role": "endorsed",
+        "status": "evidence_recovered"
+      }
+    ],
+    "source_count": 1,
+    "excerpt_count": 2,
+    "comparison_count": 0
+  }
+}

@@ -1,0 +1,527 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "scope": "2026 New York DSA-linked congressional candidates and Democratic primary comparators",
+  "created_at": "2026-09-22T17:28:28-07:00",
+  "sources": [
+    {
+      "document_id": "ny7-claire-issues-20260613",
+      "url": "https://clairevaldezforcongress.com/issues",
+      "final_url": "https://web.archive.org/web/20260613064424id_/https://clairevaldezforcongress.com/issues",
+      "publication_date": null,
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/claire-issues-20260613064424.html",
+      "sha256": "c0efaf4fcf38d55cae4842b1df4e46851bbe850b0296e49790385279a0357a8d",
+      "bytes": 81245,
+      "status": "used",
+      "notes": "Campaign issues page; page is undated, but this Wayback capture proves the text existed by 2026-06-13."
+    },
+    {
+      "document_id": "ny7-reynoso-politicsny-20260522",
+      "url": "https://politicsny.com/2026/05/22/campaign-insiders-a-qa-with-ny-7-candidate-antonio-reynoso/",
+      "final_url": "https://politicsny.com/2026/05/22/campaign-insiders-a-qa-with-ny-7-candidate-antonio-reynoso/",
+      "publication_date": "2026-05-22",
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/antonio-reynoso-politicsny-2026-05-22.html",
+      "sha256": "ec8efd260710ef38aa16524140ff93c94c76b7923ac17f7c4ba7e5f83bc497bc",
+      "bytes": 92825,
+      "status": "used",
+      "notes": "Dated candidate Q&A. Excerpts use only Reynoso answers, excluding prompts and reporter text."
+    },
+    {
+      "document_id": "ny13-darializa-streetsblog-20260616",
+      "url": "https://nyc.streetsblog.org/2026/06/16/lucky-13-darializa-avila-chevalier-answers-questions-that-rep-adriano-espaillat-wont",
+      "final_url": "https://nyc.streetsblog.org/2026/06/16/lucky-13-darializa-avila-chevalier-answers-questions-that-rep-adriano-espaillat-wont",
+      "publication_date": "2026-06-16",
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/darializa-streetsblog-2026-06-16.html",
+      "sha256": "061425eeb8e813541637d3325d84dd00b0d35c64a1a8ab2c53055d5e0c97215d",
+      "bytes": 126284,
+      "status": "used",
+      "notes": "Dated questionnaire. Excerpts use only text following the Darializa Avila Chevalier speaker label."
+    },
+    {
+      "document_id": "ny13-espaillat-issues-20260616",
+      "url": "https://www.adrianoespaillat.com/issues",
+      "final_url": "https://web.archive.org/web/20260616175954id_/https://www.adrianoespaillat.com/issues",
+      "publication_date": null,
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/espaillat-issues-20260616175954.html",
+      "sha256": "2d9a8911239eb2fba721ef450e0239b6e68fb48998cf9f9bb9a06c0d043c1bf5",
+      "bytes": 310183,
+      "status": "used",
+      "notes": "Campaign issues page is undated; pre-primary Wayback capture establishes existence by 2026-06-16."
+    },
+    {
+      "document_id": "ny14-aoc-issues-20260615",
+      "url": "https://www.ocasiocortez.com/issues",
+      "final_url": "https://web.archive.org/web/20260615095034id_/https://www.ocasiocortez.com/issues",
+      "publication_date": null,
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/aoc-issues-20260615095034.html",
+      "sha256": "e9187e6989b6af0f7bcd40f0bbc609b79b2248eee8ede3a1d628324c03454a9d",
+      "bytes": 128706,
+      "status": "used",
+      "notes": "Campaign platform is undated; pre-primary Wayback capture establishes existence by 2026-06-15."
+    },
+    {
+      "document_id": "ny14-dolan-bronxtimes-20260414",
+      "url": "https://www.bxtimes.com/marty-dolan-campaigns-for-second-time-to-challenge-aoc/",
+      "final_url": "https://www.bxtimes.com/marty-dolan-campaigns-for-second-time-to-challenge-aoc/",
+      "publication_date": "2026-04-14",
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/marty-dolan-bronx-times-2026-04-14.html",
+      "sha256": "a9bebd82a80dde16779c746e1707aed68b598d3f88233e27bb22e07b54288376",
+      "bytes": 123592,
+      "status": "used",
+      "notes": "Dated interview/article. Excerpts use statements directly attributed to Dolan."
+    },
+    {
+      "document_id": "ny14-felipe-campaign-undated-current",
+      "url": "https://www.garcia2026.net/",
+      "final_url": "https://www.garcia2026.net/",
+      "publication_date": null,
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/felipe-garcia-campaign.html",
+      "sha256": "0f63d23864a5062a10972370fba09afb356461e6007920bbacbd21a233e17816",
+      "bytes": 938863,
+      "status": "excluded",
+      "notes": "Undated page retrieved after the primary; cannot establish Felipe Garcia positions by 2026-06-23."
+    },
+    {
+      "document_id": "ny14-felipe-nycvotes-current-shell",
+      "url": "https://www.nycvotes.org/whats-on-the-ballot/june-2026-primary-election-voter-guide/representative-in-congress-june-2026-primary-election-voter-guide-nyc-votes/candidate-profile-june-2026-primary-election-voter-guide-nyc-votes/?bannerTitle=Felipe+Garcia&candidateId=V1752&electionCycle=2026&geoAreaAbbr=14&partyId=D",
+      "final_url": "https://www.nycvotes.org/whats-on-the-ballot/june-2026-primary-election-voter-guide/representative-in-congress-june-2026-primary-election-voter-guide-nyc-votes/candidate-profile-june-2026-primary-election-voter-guide-nyc-votes/?bannerTitle=Felipe+Garcia&candidateId=V1752&electionCycle=2026&geoAreaAbbr=14&partyId=D",
+      "publication_date": null,
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/felipe-garcia-nyc-votes-2026-primary.html",
+      "sha256": "c81d55fdd6bc64141b7f4feff9287e3f428dcfc7c464305fe26e4e6bccca4612",
+      "bytes": 57538,
+      "status": "excluded",
+      "notes": "Captured server shell did not contain the candidate questionnaire text; not used."
+    },
+    {
+      "document_id": "ny7-julie-won-undated-current",
+      "url": "https://www.juliewon.com/immigration",
+      "final_url": "https://www.juliewon.com/immigration",
+      "publication_date": null,
+      "retrieved_at": "2026-09-22T17:28:28-07:00",
+      "raw_path": "data/raw/policy_ny_2026/julie-won-immigration-undated-current.html",
+      "sha256": "bf4d0c2fe5252a3e32908499c90a4da5f961c7a7d989c5ef37b406d145929f1b",
+      "bytes": 154,
+      "status": "excluded",
+      "notes": "Undated current response was not a usable full pre-primary policy source."
+    },
+    {
+      "document_id": "ny7-julie-won-nycvotes-2026",
+      "url": "https://bengali.nycvotes.org/whats-on-the-ballot/june-2026-primary-election-voter-guide/representative-in-congress-june-2026-primary-election-voter-guide-nyc-votes/candidate-profile-june-2026-primary-election-voter-guide-nyc-votes/?bannerTitle=Julie+Won&candidateId=V1722&electionCycle=2026&geoAreaAbbr=07&partyId=D",
+      "final_url": "https://www.nycvotes.org/eFCandidateList/renderCandidateProfile?candidateId=V1722&electionCycle=2026&officeType=10&partyId=D&geoAreaAbbr=07&officelevel=3&languageType=en-US&umbracoPageId=5512",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "raw_path": "data/raw/policy_ny_2026/julie-won-nycvotes-profile-fragment.html",
+      "sha256": "4d9decd022591529b146eb1e07459f5fe2c2f7c18cbd7b448a4d33c965220ac3",
+      "bytes": 24992,
+      "status": "timing_unverified",
+      "notes": "Guide ties answers to June2026 election; publication time and pre-primary text version unverified. Retrieved_at precision is date-only.",
+      "retrieved_at_precision": "date_only"
+    },
+    {
+      "document_id": "ny7-vichal-kumar-nycvotes-2026",
+      "url": "https://arabic.nycvotes.org/whats-on-the-ballot/june-2026-primary-election-voter-guide/representative-in-congress-june-2026-primary-election-voter-guide-nyc-votes/candidate-profile-june-2026-primary-election-voter-guide-nyc-votes/?bannerTitle=Vichal+Kumar&candidateId=V1646&electionCycle=2026&geoAreaAbbr=07&partyId=D",
+      "final_url": "https://www.nycvotes.org/eFCandidateList/renderCandidateProfile?candidateId=V1646&electionCycle=2026&officeType=10&partyId=D&geoAreaAbbr=07&officelevel=3&languageType=en-US&umbracoPageId=5512",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "raw_path": "data/raw/policy_ny_2026/vichal-kumar-nycvotes-profile-fragment.html",
+      "sha256": "c7738f11e04275e6ba8101b98f433a3ac6db27ef458e471201555faf88c8143f",
+      "bytes": 24505,
+      "status": "timing_unverified",
+      "notes": "Guide ties answers to June2026 election; publication time and pre-primary text version unverified. Retrieved_at precision is date-only.",
+      "retrieved_at_precision": "date_only"
+    },
+    {
+      "document_id": "ny13-oscar-romero-nycvotes-2026",
+      "url": "https://www.nycvotes.org/whats-on-the-ballot/june-2026-primary-election-voter-guide/representative-in-congress-june-2026-primary-election-voter-guide-nyc-votes/candidate-profile-june-2026-primary-election-voter-guide-nyc-votes/?bannerTitle=Oscar+J+Romero+Jr&candidateId=V1749&electionCycle=2026&geoAreaAbbr=13&partyId=D",
+      "final_url": "https://www.nycvotes.org/eFCandidateList/renderCandidateProfile?candidateId=V1749&electionCycle=2026&officeType=10&partyId=D&geoAreaAbbr=13&officelevel=3&languageType=en-US&umbracoPageId=5512",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "raw_path": "data/raw/policy_ny_2026/oscar-romero-nycvotes-profile-fragment.html",
+      "sha256": "3eceaeae99070913b21e7d8be69612cc75bd0df0baf6c4985d224ffb6309372b",
+      "bytes": 24943,
+      "status": "timing_unverified",
+      "notes": "Guide ties answers to June2026 election; publication time and pre-primary text version unverified. Retrieved_at precision is date-only.",
+      "retrieved_at_precision": "date_only"
+    },
+    {
+      "document_id": "ny14-felipe-garcia-nycvotes-2026",
+      "url": "https://www.nycvotes.org/whats-on-the-ballot/june-2026-primary-election-voter-guide/representative-in-congress-june-2026-primary-election-voter-guide-nyc-votes/candidate-profile-june-2026-primary-election-voter-guide-nyc-votes/?bannerTitle=Felipe+Garcia&candidateId=V1752&electionCycle=2026&geoAreaAbbr=14&partyId=D",
+      "final_url": "https://www.nycvotes.org/eFCandidateList/renderCandidateProfile?candidateId=V1752&electionCycle=2026&officeType=10&partyId=D&geoAreaAbbr=14&officelevel=3&languageType=en-US&umbracoPageId=5512",
+      "publication_date": null,
+      "retrieved_at": "2026-09-23",
+      "raw_path": "data/raw/policy_ny_2026/felipe-garcia-nycvotes-profile-fragment.html",
+      "sha256": "45cef46a09a64bc36047eb04051cf49a96799199d93a0f91ab16ca82b84c17f4",
+      "bytes": 26080,
+      "status": "timing_unverified",
+      "notes": "Guide ties answers to June2026 election; publication time and pre-primary text version unverified. Retrieved_at precision is date-only.",
+      "retrieved_at_precision": "date_only"
+    },
+    {
+      "document_id": "ny13-theo-chino-patch-20260604",
+      "url": "https://patch.com/new-york/harlem/election-q-meet-ny-13-candidate-theo-chino-tavarez",
+      "final_url": "https://patch.com/new-york/harlem/election-q-meet-ny-13-candidate-theo-chino-tavarez",
+      "publication_date": "2026-06-04",
+      "retrieved_at": "2026-09-23",
+      "retrieved_at_precision": "date_only",
+      "raw_path": "data/raw/policy_ny_2026/theo-chino-patch-2026-primary-qa.html",
+      "sha256": "6fd017969441f00b8f497d0218f5fa9b4457eeab8daf5cabddce51841882bd97",
+      "bytes": 356566,
+      "status": "used",
+      "notes": "Dated pre-primary candidate Q&A. Excerpts use only CHINO-TAVAREZ answer text and exclude Patch prompts, reporter framing, subscription modules, and sidebars. Retrieved_at precision is date-only."
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-ny7-claire-labor-1",
+      "document_id": "ny7-claire-issues-20260613",
+      "speaker": "Claire Valdez",
+      "role": "endorsed_candidate",
+      "race_id": "race-d2aabb75a31f1e810737",
+      "election_date": "2026-06-23",
+      "topic": "labor",
+      "subtopic": "union_power",
+      "stance": "support",
+      "short_exact_quote": "Strengthen and pass the PRO Act, establish active federal support for union organizing, and end “at will” employment",
+      "locator": "Unions for All > In Congress, Claire will fight to, first bullet",
+      "notes": "Campaign-authored platform language attributed to Claire; navigation and surrounding promotional copy excluded."
+    },
+    {
+      "excerpt_id": "ex-ny7-reynoso-labor-1",
+      "document_id": "ny7-reynoso-politicsny-20260522",
+      "speaker": "Antonio Reynoso",
+      "role": "opponent_candidate",
+      "race_id": "race-d2aabb75a31f1e810737",
+      "election_date": "2026-06-23",
+      "topic": "labor",
+      "subtopic": "union_power",
+      "stance": "support",
+      "short_exact_quote": "a worker-first economy that empowers unions, promotes living wages, and allows Americans to lead balanced, dignified lives",
+      "locator": "Question: top issue facing voters; Reynoso answer, final sentence",
+      "notes": "Only Reynoso answer text; interviewer question excluded."
+    },
+    {
+      "excerpt_id": "ex-ny13-darializa-immigration-1",
+      "document_id": "ny13-darializa-streetsblog-20260616",
+      "speaker": "Darializa Avila Chevalier",
+      "role": "endorsed_candidate",
+      "race_id": "race-64bde8b146c8826d40ce",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "abolish_ice",
+      "stance": "support",
+      "short_exact_quote": "abolish ICE once and for all",
+      "locator": "First questionnaire answer, second paragraph",
+      "notes": "Speaker label immediately precedes answer; reporter framing excluded."
+    },
+    {
+      "excerpt_id": "ex-ny13-darializa-immigration-2",
+      "document_id": "ny13-darializa-streetsblog-20260616",
+      "speaker": "Darializa Avila Chevalier",
+      "role": "endorsed_candidate",
+      "race_id": "race-64bde8b146c8826d40ce",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "citizenship_pathway",
+      "stance": "support",
+      "short_exact_quote": "provide a pathway to citizenship for all immigrants",
+      "locator": "First questionnaire answer, final policy list",
+      "notes": "Speaker-attributed questionnaire answer."
+    },
+    {
+      "excerpt_id": "ex-ny13-espaillat-immigration-1",
+      "document_id": "ny13-espaillat-issues-20260616",
+      "speaker": "Adriano Espaillat",
+      "role": "opponent_candidate",
+      "race_id": "race-64bde8b146c8826d40ce",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "abolish_ice",
+      "stance": "support",
+      "short_exact_quote": "fought to dismantle ICE, keep families together, defend due process",
+      "locator": "Immigration issue section, second sentence",
+      "notes": "Campaign-authored third-person platform statement; attributed to Espaillat campaign, not an interviewer."
+    },
+    {
+      "excerpt_id": "ex-ny14-aoc-immigration-1",
+      "document_id": "ny14-aoc-issues-20260615",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "race_id": "race-4d9e32ed7f0d618a96ce",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "legalization_and_ice",
+      "stance": "legalize_undocumented_and_abolish_ice",
+      "short_exact_quote": "make undocumented individuals full members of the country they call their home and abolish ICE",
+      "locator": "Honor in Immigration issue summary",
+      "notes": "Campaign platform text captured before the primary."
+    },
+    {
+      "excerpt_id": "ex-ny14-dolan-immigration-1",
+      "document_id": "ny14-dolan-bronxtimes-20260414",
+      "speaker": "Marty Dolan",
+      "role": "opponent_candidate",
+      "race_id": "race-4d9e32ed7f0d618a96ce",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "federal_priority",
+      "stance": "prioritize_us_citizens_over_immigrants",
+      "short_exact_quote": "It’s clear that our resources and energy have been diverted on helping grown people or adults or kids from other countries",
+      "locator": "Policies, not protests section; second direct quotation in paragraph beginning Towards immigrants",
+      "notes": "Direct quotation attributed to Dolan; it establishes resource-priority emphasis, not explicit rejection of legalization or ICE abolition."
+    },
+    {
+      "excerpt_id": "ex-ny7-claire-immigration-1",
+      "document_id": "ny7-claire-issues-20260613",
+      "speaker": "Claire Valdez",
+      "role": "endorsed_candidate",
+      "race_id": "race-d2aabb75a31f1e810737",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "abolish_ice",
+      "stance": "support",
+      "short_exact_quote": "dismantle and abolish ICE",
+      "locator": "Abolish ICE and Protect Immigrants, first platform paragraph",
+      "notes": "Campaign-authored platform captured before the primary."
+    },
+    {
+      "excerpt_id": "ex-ny7-julie-immigration-1",
+      "document_id": "ny7-julie-won-nycvotes-2026",
+      "speaker": "Julie Won",
+      "role": "opponent_candidate",
+      "race_id": "race-d2aabb75a31f1e810737",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "abolish_ice",
+      "stance": "support",
+      "short_exact_quote": "In Congress I will abolish ICE, end family separation, and protect families like ours",
+      "locator": "Candidate profile > Issues > Immigration",
+      "notes": "Candidate-submitted NYC Votes answer; guide labels and question headings excluded.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "excerpt_id": "ex-ny7-vichal-immigration-1",
+      "document_id": "ny7-vichal-kumar-nycvotes-2026",
+      "speaker": "Vichal Kumar",
+      "role": "opponent_candidate",
+      "race_id": "race-d2aabb75a31f1e810737",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "abolish_ice",
+      "stance": "support",
+      "short_exact_quote": "ICE terrorizes our communities and must be dismantled",
+      "locator": "Candidate profile > Issues > Immigration, first sentence",
+      "notes": "Candidate-submitted NYC Votes answer; guide labels and question headings excluded.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "excerpt_id": "ex-ny13-oscar-immigration-1",
+      "document_id": "ny13-oscar-romero-nycvotes-2026",
+      "speaker": "Oscar J. Romero Jr.",
+      "role": "opponent_candidate",
+      "race_id": "race-64bde8b146c8826d40ce",
+      "election_date": "2026-06-23",
+      "topic": "immigration",
+      "subtopic": "abolish_ice",
+      "stance": "support",
+      "short_exact_quote": "I’m running for Congress to abolish ICE, protect civil rights, and end US forever wars",
+      "locator": "Candidate profile introductory statement",
+      "notes": "Candidate-submitted NYC Votes statement; guide labels excluded.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "excerpt_id": "ex-ny14-aoc-housing-1",
+      "document_id": "ny14-aoc-issues-20260615",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "race_id": "race-4d9e32ed7f0d618a96ce",
+      "election_date": "2026-06-23",
+      "topic": "housing",
+      "subtopic": "affordable_housing_supply",
+      "stance": "support",
+      "short_exact_quote": "permanent repeal of the Faircloth Amendment",
+      "locator": "Housing As a Human Right > Build New Affordable Housing, first paragraph",
+      "notes": "Campaign platform captured before the primary."
+    },
+    {
+      "excerpt_id": "ex-ny14-felipe-housing-1",
+      "document_id": "ny14-felipe-garcia-nycvotes-2026",
+      "speaker": "Felipe Garcia",
+      "role": "opponent_candidate",
+      "race_id": "race-4d9e32ed7f0d618a96ce",
+      "election_date": "2026-06-23",
+      "topic": "housing",
+      "subtopic": "affordable_housing_supply",
+      "stance": "support",
+      "short_exact_quote": "increasing investment in mixed-income housing, streamlining zoning, and protecting tenants",
+      "locator": "Candidate profile > Issues > Affordable Housing, first sentence",
+      "notes": "Candidate-submitted NYC Votes answer; guide labels and question headings excluded.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "excerpt_id": "ex-ny13-theo-federal-role-1",
+      "document_id": "ny13-theo-chino-patch-20260604",
+      "speaker": "Theo Bruce Chino-Tavarez",
+      "role": "opponent_candidate",
+      "race_id": "race-64bde8b146c8826d40ce",
+      "election_date": "2026-06-23",
+      "topic": "governance",
+      "subtopic": "federal_local_coordination",
+      "stance": "support",
+      "short_exact_quote": "the job of the Mayor to work with their members of Congress so we can bring his agenda and our collective priorities to Washington",
+      "locator": "PATCH question on affordability; CHINO-TAVAREZ first answer, second sentence",
+      "notes": "Direct candidate answer. The excerpt establishes his stated federal-local coordination approach, not a complete affordability platform."
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "cmp-ny7-labor",
+      "race_id": "race-d2aabb75a31f1e810737",
+      "excerpt_ids": [
+        "ex-ny7-claire-labor-1",
+        "ex-ny7-reynoso-labor-1"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Both excerpts support stronger unions and worker power. Valdez specifies the PRO Act, federal organizing support, and ending at-will employment; Reynoso emphasizes union empowerment and living wages. This comparison does not imply either excerpt is an exhaustive labor platform."
+    },
+    {
+      "comparison_id": "cmp-ny13-immigration",
+      "race_id": "race-64bde8b146c8826d40ce",
+      "excerpt_ids": [
+        "ex-ny13-darializa-immigration-1",
+        "ex-ny13-espaillat-immigration-1"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Avila Chevalier and Espaillat each support abolishing or dismantling ICE. Avila Chevalier’s citizenship-pathway excerpt remains separate and is not used to imply a difference or omission."
+    },
+    {
+      "comparison_id": "cmp-ny13-immigration-romero",
+      "race_id": "race-64bde8b146c8826d40ce",
+      "excerpt_ids": [
+        "ex-ny13-darializa-immigration-1",
+        "ex-ny13-oscar-immigration-1"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Avila Chevalier and Romero each explicitly support abolishing ICE. This pair is timing-unverified because the NYC Votes publication time and pre-primary text version are unverified.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "comparison_id": "cmp-ny14-immigration",
+      "race_id": "race-4d9e32ed7f0d618a96ce",
+      "excerpt_ids": [
+        "ex-ny14-aoc-immigration-1",
+        "ex-ny14-dolan-immigration-1"
+      ],
+      "relationship": "different_emphasis",
+      "interpretation": "Ocasio-Cortez emphasizes legal membership for undocumented residents and abolishing ICE. Dolan emphasizes prioritizing federal resources for Americans and says resources have been diverted to people from other countries. The retained excerpt does not establish that Dolan explicitly rejects legalization or ICE abolition, so no direct support-versus-opposition relationship is inferred."
+    },
+    {
+      "comparison_id": "cmp-ny7-abolish-ice",
+      "race_id": "race-d2aabb75a31f1e810737",
+      "excerpt_ids": [
+        "ex-ny7-claire-immigration-1",
+        "ex-ny7-julie-immigration-1"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Valdez and Won each explicitly support abolishing ICE. This pair is timing-unverified because the NYC Votes publication time and pre-primary text version are unverified.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "comparison_id": "cmp-ny7-abolish-ice-kumar",
+      "race_id": "race-d2aabb75a31f1e810737",
+      "excerpt_ids": [
+        "ex-ny7-claire-immigration-1",
+        "ex-ny7-vichal-immigration-1"
+      ],
+      "relationship": "shared_position",
+      "interpretation": "Valdez and Kumar each support abolishing or dismantling ICE. This pair is timing-unverified because the NYC Votes publication time and pre-primary text version are unverified.",
+      "evidence_status": "timing_unverified"
+    },
+    {
+      "comparison_id": "cmp-ny14-housing-strategy",
+      "race_id": "race-4d9e32ed7f0d618a96ce",
+      "excerpt_ids": [
+        "ex-ny14-aoc-housing-1",
+        "ex-ny14-felipe-housing-1"
+      ],
+      "relationship": "different_strategy",
+      "interpretation": "Both excerpts support expanding affordable housing supply through different strategies. Ocasio-Cortez specifies Faircloth Amendment repeal; Garcia emphasizes mixed-income investment, zoning streamlining, and tenant protections. This pair is timing-unverified because the NYC Votes publication time and pre-primary text version are unverified.",
+      "evidence_status": "timing_unverified"
+    }
+  ],
+  "unsuccessful_sources": [],
+  "source_attempts": [
+    {
+      "candidate": "Julie Won",
+      "url": "https://www.juliewon.com/immigration",
+      "outcome": "excluded_undated_current_page",
+      "raw_path": "data/raw/policy_ny_2026/julie-won-immigration-undated-current.html"
+    },
+    {
+      "candidate": "Julie Won",
+      "url": "https://www.nycvotes.org/eFCandidateList/renderCandidateProfile?candidateId=V1722&electionCycle=2026&officeType=10&partyId=D&geoAreaAbbr=07&officelevel=3&languageType=en-US&umbracoPageId=5512",
+      "outcome": "recovered_timing_unverified",
+      "raw_path": "data/raw/policy_ny_2026/julie-won-nycvotes-profile-fragment.html"
+    },
+    {
+      "candidate": "Vichal Kumar",
+      "url": null,
+      "outcome": "initial_unresolved_discovery_gap",
+      "raw_path": null
+    },
+    {
+      "candidate": "Vichal Kumar",
+      "url": "https://www.nycvotes.org/eFCandidateList/renderCandidateProfile?candidateId=V1646&electionCycle=2026&officeType=10&partyId=D&geoAreaAbbr=07&officelevel=3&languageType=en-US&umbracoPageId=5512",
+      "outcome": "recovered_timing_unverified",
+      "raw_path": "data/raw/policy_ny_2026/vichal-kumar-nycvotes-profile-fragment.html"
+    },
+    {
+      "candidate": "Oscar J. Romero Jr.",
+      "url": null,
+      "outcome": "initial_unresolved_discovery_gap",
+      "raw_path": null
+    },
+    {
+      "candidate": "Oscar J. Romero Jr.",
+      "url": "https://www.nycvotes.org/eFCandidateList/renderCandidateProfile?candidateId=V1749&electionCycle=2026&officeType=10&partyId=D&geoAreaAbbr=13&officelevel=3&languageType=en-US&umbracoPageId=5512",
+      "outcome": "recovered_timing_unverified",
+      "raw_path": "data/raw/policy_ny_2026/oscar-romero-nycvotes-profile-fragment.html"
+    },
+    {
+      "candidate": "Felipe Garcia",
+      "url": "https://www.garcia2026.net/",
+      "outcome": "excluded_undated_post_primary_retrieval",
+      "raw_path": "data/raw/policy_ny_2026/felipe-garcia-campaign.html"
+    },
+    {
+      "candidate": "Felipe Garcia",
+      "url": "https://www.nycvotes.org/whats-on-the-ballot/june-2026-primary-election-voter-guide/representative-in-congress-june-2026-primary-election-voter-guide-nyc-votes/candidate-profile-june-2026-primary-election-voter-guide-nyc-votes/?bannerTitle=Felipe+Garcia&candidateId=V1752&electionCycle=2026&geoAreaAbbr=14&partyId=D",
+      "outcome": "profile_shell_missing_answers",
+      "raw_path": "data/raw/policy_ny_2026/felipe-garcia-nyc-votes-2026-primary.html"
+    },
+    {
+      "candidate": "Felipe Garcia",
+      "url": "https://www.nycvotes.org/eFCandidateList/renderCandidateProfile?candidateId=V1752&electionCycle=2026&officeType=10&partyId=D&geoAreaAbbr=14&officelevel=3&languageType=en-US&umbracoPageId=5512",
+      "outcome": "recovered_timing_unverified",
+      "raw_path": "data/raw/policy_ny_2026/felipe-garcia-nycvotes-profile-fragment.html"
+    },
+    {
+      "candidate": "Theo Bruce Chino-Tavarez",
+      "url": "https://onyourballot.vote411.org/m/candidate-detail.do?id=72529590",
+      "outcome": "route_gateway_or_program_error",
+      "raw_path": null
+    },
+    {
+      "candidate": "Theo Bruce Chino-Tavarez",
+      "url": "https://patch.com/new-york/harlem/election-q-meet-ny-13-candidate-theo-chino-tavarez",
+      "outcome": "recovered_dated_pre_primary_q_and_a",
+      "raw_path": "data/raw/policy_ny_2026/theo-chino-patch-2026-primary-qa.html"
+    }
+  ]
+}

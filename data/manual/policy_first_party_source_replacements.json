@@ -1,0 +1,42 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "replacements": [
+    {
+      "review_file": "policy_historical_b_review.json",
+      "original_document_id": "72492a13293800285e5adb17",
+      "capture_path": "data/raw/policy_first_party_replacements/kirkham-archive-capture.json",
+      "status": "timing_unverified",
+      "source_speaker": "Jill Kirkham",
+      "identity_notes": "The candidate profile links directly to this Jill Kirkham for Governor platform; the canonical primary record includes the middle initial C. The page's title, campaign branding and linked origin establish the reviewed same-candidate association.",
+      "excerpt_locators": {
+        "ex-hb11-kirkham-marijuana": "paragraph 49"
+      },
+      "notes": "The candidate's own archived platform contains the exact quoted sentence. The actual May20,2026 replay is after the May19 primary, so it remains timing-qualified. Do not label the requested May18 lookup date as the capture date."
+    },
+    {
+      "review_file": "policy_historical_d_review.json",
+      "original_document_id": "5c6c65b4c4710b6f406a3a9f",
+      "capture_path": "data/raw/policy_first_party_replacements/hearn-archive-capture.json",
+      "status": "used",
+      "excerpt_locators": {
+        "ex-hd-34-aprile-hearn": "paragraph 18"
+      },
+      "notes": "The candidate's own campaign platform is retained at the actual May18,2026 pre-primary archive timestamp, and its exact statement matches the earlier aggregator excerpt. This upgrades provenance without creating a duplicate claim."
+    },
+    {
+      "review_file": "policy_historical_b_review.json",
+      "original_document_id": "130be9bfd7a44c6c2c1a4a04",
+      "capture_path": "data/raw/policy_frontier_comparisons/ma26-story-capture.json",
+      "status": "used",
+      "source_type": "candidate_interview",
+      "source_speaker": "Angelo Puppolo",
+      "identity_notes": "The publisher identifies Angelo Puppolo as the incumbent12th Hampden representative and reproduces his emailed response to the2026 primary challenge. This is the reviewed shortened public name of the canonical Angelo J. Puppolo,Jr.",
+      "attribution_note": "Exact candidate quotation is retained from his emailed statement reproduced by the original publisher.",
+      "superseded_source_note": "Original source association superseded by an explicitly scoped quotation with verified June18,2025 publication and revision metadata. The original capture is retained as provenance, not an extra policy source.",
+      "excerpt_locators": {
+        "ex-hb10-puppolo-campaign-frame": "paragraph 98"
+      },
+      "notes": "The retained same-page JSON-LD verifies publication and revision on June18,2025, before the2026 primary. This replaces the earlier unnecessary timing qualification without creating a duplicate claim. Reporter prose remains outside the quote-only model scope."
+    }
+  ]
+}

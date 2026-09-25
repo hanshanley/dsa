@@ -68,8 +68,8 @@ def analyze_sticking_points() -> tuple[int, int]:
         for candidate_a, candidate_b in combinations(sorted(candidates), 2):
             roles = roles_by_race.get(_race_id, {})
             if not (
-                roles.get(candidate_a) in {"endorsed", "unopposed"}
-                or roles.get(candidate_b) in {"endorsed", "unopposed"}
+                (roles.get(candidate_a) in {"endorsed", "unopposed"} and roles.get(candidate_b) == "opponent")
+                or (roles.get(candidate_b) in {"endorsed", "unopposed"} and roles.get(candidate_a) == "opponent")
             ):
                 continue
             relation, left, right = _relationship(
@@ -131,7 +131,11 @@ def _relationship(
 ) -> tuple[str, dict[str, str], dict[str, str]]:
     for left in left_rows:
         for right in right_rows:
-            if {left["stance"], right["stance"]} == {"support", "oppose"}:
+            if (
+                left["subtopic"]
+                and left["subtopic"] == right["subtopic"]
+                and {left["stance"], right["stance"]} == {"support", "oppose"}
+            ):
                 return "explicit_disagreement", left, right
     for left in left_rows:
         for right in right_rows:
@@ -139,6 +143,7 @@ def _relationship(
                 left["subtopic"]
                 and right["subtopic"]
                 and left["subtopic"] != right["subtopic"]
+                and left["stance"] == right["stance"] == "support"
             ):
                 return "different_mechanism", left, right
     return "", {}, {}

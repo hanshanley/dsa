@@ -3,6 +3,7 @@ import json
 import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from datetime import datetime, timezone
 
 from .io import read_csv, read_json, write_csv
 from .paths import ANALYSIS_DATA_DIR, CONFIG_DIR, OUTPUT_DIR, REPORT_DIR
@@ -28,16 +29,19 @@ class Topic:
         return f"{self.name}. {self.description} Examples: {', '.join(self.seeds)}."
 
 
-def classify_model_topics() -> dict[str, int | float | str]:
+def classify_model_topics() -> dict[str, object]:
     corpus_path = ANALYSIS_DATA_DIR / "candidate_text_corpus.csv"
     if not corpus_path.exists():
         raise FileNotFoundError("Run `dsa-analysis analyze-text` first")
+    input_hash = hashlib.sha256(corpus_path.read_bytes()).hexdigest()
+    config_path = CONFIG_DIR / "cap_topics.json"
+    config_hash = hashlib.sha256(config_path.read_bytes()).hexdigest()
     corpus = [
         row
         for row in read_csv(corpus_path)
         if row["text"].strip()
     ]
-    config = read_json(CONFIG_DIR / "cap_topics.json")
+    config = read_json(config_path)
     topics = [
         Topic(
             code=int(row["code"]),
@@ -49,7 +53,8 @@ def classify_model_topics() -> dict[str, int | float | str]:
     ]
     minimum_similarity = float(config["minimum_similarity"])
     model_name = config["model"]
-    model, device = _load_model(model_name)
+    model_revision = config["model_revision"]
+    model, device = _load_model(model_name, revision=model_revision)
     topic_vectors = model.encode(
         [topic.embedding_text for topic in topics],
         normalize_embeddings=True,
@@ -93,6 +98,7 @@ def classify_model_topics() -> dict[str, int | float | str]:
                 "text_sha256": source["text_sha256"],
                 "provenance_row_count": source["provenance_row_count"],
                 "model_name": model_name,
+                "model_revision": model_revision,
                 "device": device,
                 "topic_code": str(topic.code) if topic else "",
                 "topic_name": topic.name if topic else "Unclassified",
@@ -109,6 +115,11 @@ def classify_model_topics() -> dict[str, int | float | str]:
                 "reviewed_topic": "",
             }
         )
+    if (
+        hashlib.sha256(corpus_path.read_bytes()).hexdigest() != input_hash
+        or hashlib.sha256(config_path.read_bytes()).hexdigest() != config_hash
+    ):
+        raise ValueError("Topic classification inputs changed during inference; rerun classification")
     write_csv(
         MODEL_OUTPUT,
         rows,
@@ -127,6 +138,7 @@ def classify_model_topics() -> dict[str, int | float | str]:
             "text_sha256",
             "provenance_row_count",
             "model_name",
+            "model_revision",
             "device",
             "topic_code",
             "topic_name",
@@ -181,6 +193,7 @@ def classify_model_topics() -> dict[str, int | float | str]:
     summary = {
         **validation,
         "model_name": model_name,
+        "model_revision": model_revision,
         "device": device,
         "minimum_similarity": minimum_similarity,
         "classified_rows": sum(bool(row["topic_code"]) for row in rows),
@@ -195,7 +208,11 @@ def classify_model_topics() -> dict[str, int | float | str]:
                 if document_id
             }
         ),
-        "input_sha256": hashlib.sha256(corpus_path.read_bytes()).hexdigest(),
+        "input_sha256": input_hash,
+        "config_sha256": config_hash,
+        "output_sha256": hashlib.sha256(MODEL_OUTPUT.read_bytes()).hexdigest(),
+        "completed_at": datetime.now(timezone.utc).isoformat(),
+        "resolved_model_revision": model._first_module().auto_model.config._commit_hash,
         "lineage": {
             "input": "data/analysis/candidate_text_corpus.csv",
             "generated_from": [
@@ -216,16 +233,16 @@ def classify_model_topics() -> dict[str, int | float | str]:
     return summary
 
 
-def _load_model(model_name: str):
+def _load_model(model_name: str, *, revision: str):
     try:
         import torch
         from sentence_transformers import SentenceTransformer
     except ImportError as error:
         raise RuntimeError(
-            "Install local model dependencies with `uv sync --extra models`"
+            "Install local model dependencies with `uv sync`"
         ) from error
     device = "mps" if torch.backends.mps.is_available() else "cpu"
-    return SentenceTransformer(model_name, device=device), device
+    return SentenceTransformer(model_name, revision=revision, device=device), device
 
 
 def _keyword_patterns(topics: list[Topic]):
@@ -250,7 +267,7 @@ def _keyword_predict(text: str, topics: list[Topic], patterns):
     return best_code, best_score
 
 
-def _validation_summary(rows: list[dict[str, str]]) -> dict[str, int | float]:
+def _validation_summary(rows: list[dict[str, str]]) -> dict[str, int | float | None]:
     crosswalk = {
         key: int(value)
         for key, value in read_json(CONFIG_DIR / "topic_crosswalk.json")[
@@ -272,10 +289,11 @@ def _validation_summary(rows: list[dict[str, str]]) -> dict[str, int | float]:
     )
     return {
         "crosswalk_rows": len(comparable),
-        "crosswalk_agreement": correct / max(len(comparable), 1),
+        "crosswalk_agreement": correct / len(comparable) if comparable else None,
         "keyword_rows": len(keyword_comparable),
-        "model_keyword_agreement": keyword_agreement
-        / max(len(keyword_comparable), 1),
+        "model_keyword_agreement": (
+            keyword_agreement / len(keyword_comparable) if keyword_comparable else None
+        ),
         "low_margin_rows": sum(float(row["margin"]) < 0.03 for row in rows),
     }
 
@@ -316,6 +334,10 @@ def _topic_emphasis(rows: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def _write_model_report(summary: dict, emphasis: list[dict[str, str]]) -> None:
+    keyword_agreement = (
+        f'{summary["model_keyword_agreement"]:.1%}'
+        if summary["model_keyword_agreement"] is not None else "not available"
+    )
     largest = sorted(
         emphasis, key=lambda row: abs(float(row["difference"])), reverse=True
     )[:10]
@@ -329,7 +351,7 @@ def _write_model_report(summary: dict, emphasis: list[dict[str, str]]) -> None:
     )
     text = f"""# Local-model topic analysis
 
-This analysis is generated by `uv run dsa-analysis classify-topics` using the pinned local model
+This analysis is generated by `uv run dsa-analysis classify-topics` using the configured local model
 `{summary["model_name"]}` on `{summary["device"]}`.
 
 ## Real source input
@@ -352,11 +374,13 @@ This analysis is generated by `uv run dsa-analysis classify-topics` using the pi
   {summary["unclassified_rows"]:,}
 - Rows with runner-up margin below 0.03: {summary["low_margin_rows"]:,}
 - Agreement with the transparent keyword baseline:
-  {summary["model_keyword_agreement"]:.1%} across {summary["keyword_rows"]:,} rows with a keyword
+  {keyword_agreement} across {summary["keyword_rows"]:,} rows with a keyword
   prediction.
 
 The legacy quotation-level reviewed-code crosswalk is not applicable to full-document segments.
-Every classification remains inspectable at row level.
+No segment-level reviewed test set has established this classifier's accuracy.
+Missing reviewed agreement is null, not zero accuracy. Keyword agreement is a diagnostic, not
+independent validation. Every classification remains inspectable at row level.
 
 ## Largest modeled emphasis differences
 

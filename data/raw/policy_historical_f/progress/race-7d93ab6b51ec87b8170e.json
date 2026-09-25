@@ -1,0 +1,121 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-7d93ab6b51ec87b8170e",
+  "sources": [
+    {
+      "document_id": "joldc-61f30ef8c3c4b76777938437-lead45",
+      "metadata_document_id": null,
+      "url": "https://jimowles.org/news/candidate-answers-to-joldc-samy-olivares-for-ny-assembly-district-54-2022",
+      "final_url": "https://jimowles.org/news/candidate-answers-to-joldc-samy-olivares-for-ny-assembly-district-54-2022",
+      "publication_date": "2022-01-27",
+      "source_updated_date": "2022-02-25",
+      "retrieved_at": "2026-09-23T08:11:17.145856+00:00",
+      "raw_path": "data/raw/questionnaire_library/joldc/post-61f30ef8c3c4b76777938437-159f3aaed77823aafa2a616492bd66ac2ccc48d687e122aabaf85bede8ee1057.html",
+      "sha256": "69f2d5a0ff3d4f152425b8121d3aa4272a7f06a4cc0b9b05138b899725c75827",
+      "bytes": 48938,
+      "content_type": "text/html",
+      "status": "used",
+      "artifact_kind": "publisher_api_post_body",
+      "acquisition_url": "https://jimowles.org/news?category=questionnaire&format=json&offset=1645296241195",
+      "publisher_record_path": "data/raw/questionnaire_library/joldc/post-61f30ef8c3c4b76777938437-159f3aaed77823aafa2a616492bd66ac2ccc48d687e122aabaf85bede8ee1057.json",
+      "publisher_parent_path": "data/raw/questionnaire_library/joldc/index-5cfd6675657f6f2738c46fb42807ce4d3c072bccabcd7b85bcb7a3c27ea9dad7.json.gz",
+      "publisher_parent_item_index": 13,
+      "publisher_timezone": "America/New_York",
+      "notes": "Semantically reviewed against candidate-scoped retained paragraphs; exact metadata, raw bytes, and temporal qualification preserved.",
+      "candidate_document_registration": {
+        "canonical_race_id": "race-7d93ab6b51ec87b8170e",
+        "race_id": "race-7d93ab6b51ec87b8170e",
+        "candidate_name": "Samy Nemir Olivares",
+        "role": "endorsed",
+        "election_date": "2022-06-28",
+        "source_type": "candidate_questionnaire",
+        "publication_date": "2022-01-27",
+        "source_url": "https://jimowles.org/news/candidate-answers-to-joldc-samy-olivares-for-ny-assembly-district-54-2022",
+        "archive_url": "",
+        "candidate_only_locator": "Questionnaire body header: Candidate Name Samy Nemir Olivares; Office NY Assembly District 54"
+      },
+      "publisher_record_sha256": "159f3aaed77823aafa2a616492bd66ac2ccc48d687e122aabaf85bede8ee1057",
+      "publisher_parent_sha256": "5cfd6675657f6f2738c46fb42807ce4d3c072bccabcd7b85bcb7a3c27ea9dad7"
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hf-ex-joldc-61f30ef8c3c4b76777938437-healthcare",
+      "metadata_document_id": null,
+      "document_id": "joldc-61f30ef8c3c4b76777938437-lead45",
+      "speaker": "Samy Nemir Olivares",
+      "role": "endorsed_candidate",
+      "race_id": "race-7d93ab6b51ec87b8170e",
+      "election_date": "2022-06-28",
+      "topic": "healthcare",
+      "subtopic": "single_payer_and_new_york_health_act",
+      "stance": "support",
+      "short_exact_quote": "I am a strong, strong supporter of both the New York Health Act",
+      "locator": "question 35 answer",
+      "representation_kind": "policy_position",
+      "notes": "Full answer explicitly supports the New York Health Act and nationwide Medicare for All as universal single-payer systems.",
+      "attribution_notes": "Quote is from the candidate answer following question 35 answer in the body-verified NY Assembly District 54 questionnaire.",
+      "claim_summary": "Olivares supports both the New York Health Act and nationwide Medicare for All as universal single-payer health coverage."
+    },
+    {
+      "excerpt_id": "ex-hf-ex-joldc-61f30ef8c3c4b76777938437-housing",
+      "metadata_document_id": null,
+      "document_id": "joldc-61f30ef8c3c4b76777938437-lead45",
+      "speaker": "Samy Nemir Olivares",
+      "role": "endorsed_candidate",
+      "race_id": "race-7d93ab6b51ec87b8170e",
+      "election_date": "2022-06-28",
+      "topic": "housing",
+      "subtopic": "home_stability_support_rent_supplement",
+      "stance": "support",
+      "short_exact_quote": "Housing is a human right",
+      "locator": "question 40 answer",
+      "representation_kind": "policy_position",
+      "notes": "Candidate answer to: 40. Will you push for the passage of Home Stability Support (HSS) to bridge the difference between the public assistance shelter allowance and fair market rents for NY's 95,000 homeless? Will you co-sponsor S.856 / A.6032, which amend the Social Services Law to create a statewide rent supplement for families and individuals who are eligible for public assistance benefits and who face eviction, homelessness, or loss of housing due to domestic violence or hazardous living conditions? Full answer retained in source body; the short anchor is interpreted only in that context.",
+      "attribution_notes": "Quote is from the candidate answer following question 40 answer in the body-verified NY Assembly District 54 questionnaire.",
+      "claim_summary": "Olivares supports Home Stability Support and the proposed statewide rent supplement for eligible people facing eviction, homelessness, domestic violence, or hazardous housing."
+    }
+  ],
+  "comparisons": [],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-7d93ab6b51ec87b8170e",
+      "candidate": "Erik Martin Dilan",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-7d93ab6b51ec87b8170e",
+      "candidate": "Erik Martin Dilan",
+      "url": "https://dilan4assembly.com/news.html",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/215b9bc585bfcbc724fddc1a/23472d59c26b4d526f9101145e56957e57ff5058d48ea6b925bb8f39e6d23451.html"
+    }
+  ],
+  "case_disposition": {
+    "race_id": "race-7d93ab6b51ec87b8170e",
+    "election_date": "2022-06-28",
+    "status": "reviewed_with_evidence",
+    "candidates": [
+      {
+        "candidate_name": "Erik Martin Dilan",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Samy Nemir Olivares",
+        "role": "endorsed",
+        "status": "evidence_recovered"
+      }
+    ],
+    "source_count": 1,
+    "excerpt_count": 2,
+    "comparison_count": 0
+  }
+}

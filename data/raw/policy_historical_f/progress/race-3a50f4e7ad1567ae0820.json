@@ -1,0 +1,105 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-3a50f4e7ad1567ae0820",
+  "sources": [
+    {
+      "document_id": "199bc9d10e6a9252107badca",
+      "metadata_document_id": "199bc9d10e6a9252107badca",
+      "url": "https://jimowles.org/news/candidate-answers-to-joldc-emily-gallagher-for-ny-assembly-district-50-2022",
+      "final_url": "https://jimowles.org/news/candidate-answers-to-joldc-emily-gallagher-for-ny-assembly-district-50-2022",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:41:58.201381+00:00",
+      "raw_path": "data/raw/policy_historical_f/sources/199bc9d10e6a9252107badca.html",
+      "sha256": "4169bbe790057280e20e445e0dec110d0a245336c6de4085f43ca99dd6600c56",
+      "bytes": 119836,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "notes": "Semantically reviewed against candidate-scoped retained paragraphs; exact metadata, raw bytes, and temporal qualification preserved.",
+      "historical_cycle_evidence": {
+        "election_year": "2022",
+        "exact_quote": "Liberal Democratic Club January 25, 2022 nys assembly 2022",
+        "source_locator": "paragraph 89"
+      }
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hf-race-3a50f4e7ad1567ae0820-emily-e-gallagher-nyha",
+      "metadata_document_id": "199bc9d10e6a9252107badca",
+      "document_id": "199bc9d10e6a9252107badca",
+      "speaker": "Emily E. Gallagher",
+      "role": "endorsed_candidate",
+      "race_id": "race-3a50f4e7ad1567ae0820",
+      "election_date": "2022-06-28",
+      "topic": "healthcare",
+      "subtopic": "new_york_health_act",
+      "stance": "support",
+      "short_exact_quote": "Yes I cosponsor and am considered a champion.",
+      "locator": "paragraph 59",
+      "representation_kind": "policy_position",
+      "claim_summary": "Gallagher says she co-sponsors and champions the New York Health Act as a single-payer universal health-care measure.",
+      "notes": "Direct answer to the questionnaire question about single-payer and the New York Health Act.",
+      "attribution_notes": "paragraph 59 is within the retained candidate-associated answer block for Emily E. Gallagher; prompt and publisher narration are not treated as candidate speech."
+    },
+    {
+      "excerpt_id": "ex-hf-race-3a50f4e7ad1567ae0820-emily-e-gallagher-421a",
+      "metadata_document_id": "199bc9d10e6a9252107badca",
+      "document_id": "199bc9d10e6a9252107badca",
+      "speaker": "Emily E. Gallagher",
+      "role": "endorsed_candidate",
+      "race_id": "race-3a50f4e7ad1567ae0820",
+      "election_date": "2022-06-28",
+      "topic": "housing",
+      "subtopic": "eliminate_421a_tax_exemption",
+      "stance": "support",
+      "short_exact_quote": "It should be eliminated and NYC should only incentivize permanently affordable housing",
+      "locator": "paragraph 66",
+      "representation_kind": "policy_position",
+      "claim_summary": "Gallagher supports eliminating 421-a, auditing existing affordable units, and limiting future incentives to permanently affordable housing at local AMI.",
+      "notes": "Candidate answer identifies both elimination and the affordability condition.",
+      "attribution_notes": "paragraph 66 is within the retained candidate-associated answer block for Emily E. Gallagher; prompt and publisher narration are not treated as candidate speech."
+    }
+  ],
+  "comparisons": [],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-3a50f4e7ad1567ae0820",
+      "candidate": "Paddy O'Sullivan",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-3a50f4e7ad1567ae0820",
+      "candidate": "Paddy O'Sullivan",
+      "url": "https://results.elections.ny.gov/document/131",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/a1747296ef7ee36329d1a0ff/61011f1c28d0beb2e2a8e40cf0823df1a1a1fd225a749bbf8f35280896df511d.html"
+    }
+  ],
+  "case_disposition": {
+    "race_id": "race-3a50f4e7ad1567ae0820",
+    "election_date": "2022-06-28",
+    "status": "reviewed_with_evidence",
+    "candidates": [
+      {
+        "candidate_name": "Emily E. Gallagher",
+        "role": "endorsed",
+        "status": "evidence_recovered"
+      },
+      {
+        "candidate_name": "Paddy O'Sullivan",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      }
+    ],
+    "source_count": 1,
+    "excerpt_count": 2,
+    "comparison_count": 0
+  }
+}

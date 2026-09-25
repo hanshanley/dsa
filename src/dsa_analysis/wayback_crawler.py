@@ -9,8 +9,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, datetime
 
 from .chapter_crawler import normalize_url
-from .io import read_csv, write_csv
-from .paths import PROCESSED_DIR
+from .io import read_csv, read_json, write_csv
+from .paths import CONFIG_DIR, PROCESSED_DIR
 
 USER_AGENT = "dsa-analysis/0.1 (+public historical endorsement research)"
 STRONG_HISTORICAL_TERMS = (
@@ -49,21 +49,34 @@ EXCLUDED_SUFFIXES = (
 )
 
 
-def discover_wayback_urls(workers: int = 8) -> tuple[int, int]:
+def discover_wayback_urls(
+    workers: int = 8, *, limit: int | None = None, timeout: int = 60,
+) -> tuple[int, int]:
+    if workers < 1 or timeout < 1 or (limit is not None and limit < 1):
+        raise ValueError("workers, timeout, and limit must be positive")
     chapters = read_csv(PROCESSED_DIR / "chapter_directory.csv")
     rows = []
     status_rows = []
     targets = [chapter for chapter in chapters if chapter.get("Website", "").strip()]
+    status_path = PROCESSED_DIR / "wayback_crawl_status.csv"
+    prior_statuses = {
+        row["chapter_record_id"]: row for row in read_csv(status_path)
+    } if status_path.exists() else {}
+    targets.sort(key=lambda chapter: prior_statuses.get(
+        chapter["record_id"], {}
+    ).get("crawled_at", ""))
+    if limit is not None:
+        targets = targets[:limit]
     if workers == 1:
         for chapter in targets:
-            chapter_rows, status = _discover_chapter(chapter)
+            chapter_rows, status = _discover_chapter(chapter, timeout=timeout)
             rows.extend(chapter_rows)
             status_rows.append(status)
             time.sleep(1.25)
     else:
         with ThreadPoolExecutor(max_workers=workers) as executor:
             futures = {
-                executor.submit(_discover_chapter, chapter): chapter
+                executor.submit(_discover_chapter, chapter, timeout=timeout): chapter
                 for chapter in targets
             }
             for future in as_completed(futures):
@@ -80,6 +93,17 @@ def discover_wayback_urls(workers: int = 8) -> tuple[int, int]:
                 rows.extend(chapter_rows)
                 status_rows.append(status)
 
+    archive_path = PROCESSED_DIR / "wayback_endorsement_urls.csv"
+    if archive_path.exists():
+        existing = {row["archive_id"]: row for row in read_csv(archive_path)}
+        for row in rows:
+            prior = existing.get(row["archive_id"])
+            if prior:
+                row["review_status"] = prior["review_status"]
+            existing[row["archive_id"]] = row
+        rows = list(existing.values())
+    prior_statuses.update({row["chapter_record_id"]: row for row in status_rows})
+    status_rows = list(prior_statuses.values())
     rows.sort(key=lambda row: (row["state"], row["chapter"], row["timestamp"], row["url"]))
     status_rows.sort(key=lambda row: (row["state"], row["chapter"]))
     write_csv(
@@ -112,23 +136,25 @@ def discover_wayback_urls(workers: int = 8) -> tuple[int, int]:
             "error",
         ],
     )
-    return len(status_rows), len(rows)
+    return len(targets), len(rows)
 
 
 def _discover_chapter(
     chapter: dict[str, str],
+    *,
+    timeout: int = 60,
 ) -> tuple[list[dict[str, str]], dict[str, str | int]]:
     website = normalize_url(chapter["Website"])
     host = urllib.parse.urlparse(website).hostname or ""
+    config = read_json(CONFIG_DIR / "sources.json")
     query = urllib.parse.urlencode(
         {
             "url": f"{host}/*",
             "output": "json",
             "fl": "timestamp,original,statuscode,digest",
             "filter": "statuscode:200",
-            "from": "2016",
-            "to": "2026",
-            "collapse": "urlkey",
+            "from": config.get("source_start", config["study_start"]).replace("-", ""),
+            "to": config["research_cutoff"].replace("-", ""),
             "limit": "10000",
         }
     )
@@ -140,7 +166,7 @@ def _discover_chapter(
         if delay:
             time.sleep(delay)
         try:
-            with urllib.request.urlopen(request, timeout=60) as response:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
                 payload = json.load(response)
             break
         except (
@@ -181,11 +207,13 @@ def _discover_chapter(
                 "review_status": "not_searched",
             }
         )
+    truncated = bool(payload and len(payload) - 1 >= 10000)
     return output, _status(
         chapter,
-        "found_unverified" if output else "searched_not_found",
+        "partial" if truncated else ("found_unverified" if output else "searched_not_found"),
         website=website,
         matching_urls=len(output),
+        error="CDX result limit reached; further pagination required" if truncated else "",
     )
 
 
@@ -202,7 +230,7 @@ def filter_existing_wayback_urls() -> tuple[int, int]:
         row["archive_url"] = (
             f'https://web.archive.org/web/{row["timestamp"]}id_/{row["url"]}'
         )
-        key = (row["chapter_record_id"], row["url"], row["year"])
+        key = (row["chapter_record_id"], row["url"], row["timestamp"])
         prior = deduplicated.get(key)
         if prior is None or row["timestamp"] > prior["timestamp"]:
             deduplicated[key] = row
@@ -212,7 +240,7 @@ def filter_existing_wayback_urls() -> tuple[int, int]:
         counts[row["chapter_record_id"]] = counts.get(row["chapter_record_id"], 0) + 1
     statuses = read_csv(status_path)
     for row in statuses:
-        if row["crawl_status"] == "source_unavailable":
+        if row["crawl_status"] in {"source_unavailable", "partial", "error"}:
             continue
         count = counts.get(row["chapter_record_id"], 0)
         row["matching_urls"] = str(count)
@@ -309,7 +337,7 @@ def canonical_original_url(url: str) -> str:
 
 def infer_election_year(url: str, capture_year: str) -> str:
     path = urllib.parse.urlparse(url).path
-    matches = re.findall(r"/(201[6-9]|202[0-6])(?:/|[-_])", path)
+    matches = re.findall(r"/(20\d{2})(?:/|[-_])", path)
     return matches[0] if matches else capture_year
 
 

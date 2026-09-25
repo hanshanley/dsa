@@ -10,14 +10,20 @@ import re
 import textwrap
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
 from .narrative_analysis import hot_cold_characterization, umap_trustworthiness
+from .document_corpus import CANDIDATE_SCREENING_VERSION, candidate_document_analysis_issues, tracked_primary_race_ids
+from .io import read_csv
+from .national_platform_applicability import is_presidential_office, name_key
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = ROOT / "data" / "processed" / "candidate_document_analysis_segments.csv"
 DEFAULT_METADATA = ROOT / "data" / "processed" / "candidate_document_metadata.csv"
+DEFAULT_REGISTRY = ROOT / "data" / "processed" / "race_registry.csv"
+DEFAULT_CORPUS = ROOT / "data" / "analysis" / "candidate_text_corpus.csv"
 DEFAULT_OUTPUT = ROOT / "data" / "analysis" / "provisional_gte_kde"
 DEFAULT_FIGURE = ROOT / "figures" / "provisional_gte_kde.png"
 DEFAULT_REPORT = ROOT / "report" / "provisional_kde_analysis.md"
@@ -45,15 +51,26 @@ def run_provisional_kde(
     sweep_sample_size: int = 5_000,
     kde_fit_per_group: int = 5_000,
     force_embeddings: bool = False,
+    metadata_path: Path = DEFAULT_METADATA,
+    registry_path: Path = DEFAULT_REGISTRY,
+    corpus_path: Path = DEFAULT_CORPUS,
 ) -> ProvisionalKDEResult:
     import numpy as np
     import umap
     from sklearn.neighbors import KernelDensity
     from sklearn.preprocessing import StandardScaler
 
-    rows = load_eligible_segments(input_path)
+    input_hashes = {
+        "input_sha256": _file_hash(input_path),
+        "metadata_sha256": _file_hash(metadata_path),
+        "registry_sha256": _file_hash(registry_path),
+        "candidate_corpus_sha256": _file_hash(corpus_path),
+    }
+    rows = load_eligible_segments(input_path, metadata_path, registry_path)
     if not rows:
         raise ValueError("No eligible endorsed/opponent segments were found")
+    if {row["group"] for row in rows} != {"endorsed", "opponent"}:
+        raise ValueError("Candidate density comparison requires eligible text from both groups")
     output_directory.mkdir(parents=True, exist_ok=True)
     figure_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -66,15 +83,22 @@ def run_provisional_kde(
         if (
             manifest.get("corpus_hash") == corpus_hash
             and manifest.get("model_revision") == MODEL_REVISION
+            and manifest.get("model_name") == MODEL_NAME
+            and manifest.get("max_length") == max_length
+            and manifest.get("normalization") == "l2"
             and manifest.get("segment_count") == len(rows)
         ):
             embeddings = np.load(embeddings_path)
-    if embeddings is None:
+    generated_embeddings = embeddings is None
+    if generated_embeddings:
         embeddings = _encode_segments(
             [row["text"] for row in rows],
             batch_size=batch_size,
             max_length=max_length,
         )
+    if embeddings.ndim != 2 or embeddings.shape[0] != len(rows) or not np.isfinite(embeddings).all():
+        raise ValueError("Candidate embeddings have invalid dimensions or nonfinite values")
+    if generated_embeddings:
         np.save(embeddings_path, embeddings)
         _write_json(
             embedding_manifest_path,
@@ -208,6 +232,14 @@ def run_provisional_kde(
         scored_rows,
         semantic_coordinates=standardized,
     )
+    current_hashes = {
+        "input_sha256": _file_hash(input_path),
+        "metadata_sha256": _file_hash(metadata_path),
+        "registry_sha256": _file_hash(registry_path),
+        "candidate_corpus_sha256": _file_hash(corpus_path),
+    }
+    if current_hashes != input_hashes:
+        raise ValueError("Candidate analysis inputs changed during the KDE run; results not published")
     _write_csv(output_directory / "segment_density_scores.csv", scored_rows)
     _write_csv(output_directory / "umap_dimension_sweep.csv", sweep_rows)
     _write_csv(output_directory / "hot_cold_terms.csv", characterization["rows"])
@@ -218,18 +250,22 @@ def run_provisional_kde(
         figure_path=figure_path,
         endorsed_cutoff=endorsed_cutoff,
         opponent_cutoff=opponent_cutoff,
+        title="Exploratory map of source-screened campaign text",
+        subtitle="Language patterns in the recovered subset—not a national estimate or a classification of policy agreement.",
     )
 
     group_counts = Counter(row["group"] for row in rows)
     zone_counts = Counter(row["zone"] for row in scored_rows if row["zone"])
     summary = {
         "status": "provisional",
+        "completed_at": datetime.now(timezone.utc).isoformat(),
         "warning": (
             "The full-text sufficiency audit still fails. Results describe the currently "
             "recoverable segmented corpus and must not be treated as a complete census."
         ),
         "input_path": str(input_path.relative_to(ROOT)),
-        "input_sha256": _file_hash(input_path),
+        **input_hashes,
+        "screening_version": CANDIDATE_SCREENING_VERSION,
         "corpus_hash": corpus_hash,
         "model_name": MODEL_NAME,
         "model_revision": MODEL_REVISION,
@@ -238,7 +274,11 @@ def run_provisional_kde(
             "roles": ["endorsed", "opponent", "unopposed"],
             "minimum_token_count": 20,
             "excluded_flags": ["boilerplate_flag"],
+            "metadata_screen": "candidate_document_analysis_issues",
+            "race_scope": "tracked_primary_race_ids_including_canonical_aliases",
             "excluded_source_types": ["filing", "official_election_source"],
+            "archive_toolbar_and_page_controls": "excluded before segmentation; retained source locators unchanged",
+            "substantive_duplicates": "retained across candidates; not classified as boilerplate by repetition alone",
             "deduplication": (
                 "one exact-text segment per candidate, group, and election cycle; "
                 "repeated state-race provenance retained"
@@ -327,18 +367,33 @@ def run_provisional_kde(
 def load_eligible_segments(
     path: Path,
     metadata_path: Path = DEFAULT_METADATA,
+    registry_path: Path | None = None,
 ) -> list[dict[str, str]]:
-    metadata = {}
-    if metadata_path.exists():
-        with metadata_path.open(encoding="utf-8", newline="") as handle:
-            metadata = {
-                row["document_id"]: row
-                for row in csv.DictReader(handle)
-                if row.get("document_id")
-            }
+    registry_path = registry_path or metadata_path.with_name("race_registry.csv")
+    if not metadata_path.exists() or not registry_path.exists():
+        raise ValueError("Candidate KDE requires source metadata and the primary-race registry")
+    registry = read_csv(registry_path)
+    in_scope = tracked_primary_race_ids(registry)
+    presidential_race_ids = {
+        race_id for race in registry if is_presidential_office(race.get("office", ""))
+        for race_id in (race["race_id"], *race.get("source_race_ids", "").split(" | "))
+        if race_id
+    }
+    metadata = {
+        row["document_id"]: {
+            **row, "comparison_scope_status": "in_scope" if row.get("race_id") in in_scope else "out_of_scope",
+        } for row in read_csv(metadata_path)
+    }
     grouped: dict[tuple[str, str, str, str], list[dict[str, str]]] = defaultdict(list)
     with path.open(encoding="utf-8", newline="") as handle:
         for row in csv.DictReader(handle):
+            document = metadata.get(row.get("document_id", ""))
+            if document is None:
+                raise ValueError("Candidate KDE segment references missing source metadata")
+            if row.get("race_id") != document.get("race_id"):
+                raise ValueError("Candidate KDE segment and metadata disagree on race identity")
+            if candidate_document_analysis_issues(document):
+                continue
             role = row.get("role", "")
             if role not in {"endorsed", "opponent", "unopposed"}:
                 continue
@@ -358,14 +413,17 @@ def load_eligible_segments(
                 continue
             retained = dict(row)
             retained["group"] = "endorsed" if role in {"endorsed", "unopposed"} else "opponent"
-            document = metadata.get(row.get("document_id", ""), {})
             election_date = (
                 document.get("election_date", "").strip()
                 or row.get("election_date", "").strip()
             )
             cycle = election_date[:4] if election_date else "unknown"
             retained["cycle"] = cycle
-            retained["candidate_unit_id"] = f"{cycle}:{row.get('candidate_slug', '').strip()}"
+            candidate_key = (
+                name_key(row["candidate_name"]) if row["race_id"] in presidential_race_ids
+                else row.get("candidate_slug", "").strip()
+            )
+            retained["candidate_unit_id"] = f"{cycle}:{candidate_key}"
             text_hash = (
                 row.get("exact_duplicate_hash", "").strip()
                 or row.get("sha256", "").strip()
@@ -375,7 +433,7 @@ def load_eligible_segments(
                 (
                     retained["group"],
                     cycle,
-                    row.get("candidate_slug", "").strip(),
+                    candidate_key,
                     text_hash,
                 )
             ].append(retained)
@@ -405,6 +463,9 @@ def load_eligible_segments(
             )
         )
         retained["provenance_row_count"] = str(len(duplicates))
+        retained["source_candidate_names"] = " | ".join(sorted({
+            row["candidate_name"] for row in duplicates
+        }))
         rows.append(retained)
     return sorted(
         rows,
@@ -540,7 +601,9 @@ def _plot_density_fingerprint(
     card_rows, card_columns, width_ratios = _density_fingerprint_layout(
         len(displayed_regions)
     )
-    figure = plt.figure(figsize=(18, 10.5), facecolor="#FAFAF8")
+    figure = plt.figure(
+        figsize=(18, 7.5 if len(displayed_regions) <= 1 else 10.5), facecolor="#FAFAF8",
+    )
     grid = figure.add_gridspec(1, 2, width_ratios=width_ratios, wspace=0.08)
     axis = figure.add_subplot(grid[0, 0])
     card_grid = grid[0, 1].subgridspec(
@@ -630,7 +693,8 @@ def _plot_density_fingerprint(
     y_pad = (y_high - y_low) * 0.04
     axis.set_xlim(x_low - x_pad, x_high + x_pad)
     axis.set_ylim(y_low - y_pad, y_high + y_pad)
-    axis.set_title(map_title, fontsize=17, loc="left", pad=14)
+    if len(displayed_regions) > 1:
+        axis.set_title(map_title, fontsize=17, loc="left", pad=14)
     axis.set_xlabel("UMAP dimension 1")
     axis.set_ylabel("UMAP dimension 2")
     axis.legend(
@@ -777,22 +841,22 @@ def _plot_density_fingerprint(
         )
     figure.suptitle(
         title,
-        fontsize=21,
+        fontsize=18,
         y=0.985,
         fontweight="bold",
     )
     figure.text(
         0.5,
-        0.953,
+        0.94,
         subtitle,
         ha="center",
-        fontsize=11,
+        fontsize=10,
         color="#555555",
     )
     if accounting_note:
         figure.text(
             0.5,
-            0.927,
+            0.918,
             accounting_note,
             ha="center",
             fontsize=9.5,
@@ -1580,7 +1644,7 @@ visualization.
   group's lower-quartile density-ratio cutoff.
 - **S regions** are high-joint-density areas with small absolute density differences. They
   represent semantic overlap, not proof of identical positions.
-- HDBSCAN identifies variable-shape clusters in the selected 10-dimensional UMAP representation
+- HDBSCAN identifies variable-shape clusters in the selected {summary["selected_dimensions"]}-dimensional UMAP representation
   (`min_cluster_size=60`, `min_samples=10`, Euclidean metric, EOM selection). Noise points remain
   unassigned. The table retains up to six substantive, sufficiently supported regions per zone;
   the map displays the top two per category to remain legible.
@@ -1596,6 +1660,10 @@ visualization.
 This is a descriptive analysis of the recoverable corpus. Region labels summarize the text
 actually present in each density area; they do not imply a complete nationwide census, causal
 importance, or agreement merely because both groups occupy a shared region.
+Names, places, source formats, offices, and election years can influence these language regions.
+Round-robin sampling limits concentration only when the fitting cap is reached; it does not
+give candidates equal density weight. A category with no retained region is not evidence that
+those candidates lack distinctive policies.
 """,
         encoding="utf-8",
     )

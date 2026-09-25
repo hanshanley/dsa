@@ -23,6 +23,11 @@ from dsa_analysis.document_corpus import (
     build_candidate_document_regather_plan,
     canonical_source_url,
     campaign_window_for_election,
+    candidate_document_analysis_issues,
+    _shared_source_candidates,
+    _AnalysisHTMLParser,
+    _StructuredHTMLParser,
+    source_analysis_paragraph_exclusions,
     candidate_document_id,
     classify_source_type,
     extract_document_text,
@@ -81,6 +86,105 @@ class _Response:
 
 
 class DocumentCorpusTests(unittest.TestCase):
+    def test_html_controls_keep_original_paragraphs_and_substantive_policy_text(self):
+        body = (
+            '<body class="avada-menu-highlight-style-bar mobile-nav-style-dropdown">'
+            '<div class="layout-with-menu">'
+            "<nav><a>Meet us</a><a>Issues</a></nav>"
+            "<article><header><h1>Voting rights</h1></header>"
+            "<p>We support automatic voter registration and early voting.</p>"
+            "<p><a href='/policy'>Provide free public higher education.</a></p></article>"
+            "<form><p>Email address</p><button>Sign up</button></form>"
+            "<footer><p>Contact campaign headquarters</p></footer>"
+            "</div></body>"
+        )
+        original = _StructuredHTMLParser()
+        screened = _AnalysisHTMLParser()
+        for parser in (original, screened):
+            parser.feed(body)
+            parser.close()
+        self.assertEqual(original.paragraphs(), screened.paragraphs())
+        reasons = dict(zip(screened.paragraphs(), screened.paragraph_reasons, strict=True))
+        self.assertTrue(reasons["Meet us Issues"])
+        self.assertFalse(reasons["Voting rights"])
+        self.assertFalse(reasons["We support automatic voter registration and early voting."])
+        self.assertFalse(reasons["Provide free public higher education."])
+        self.assertTrue(reasons["Email address"])
+        self.assertTrue(reasons["Contact campaign headquarters"])
+
+    def test_speech_statement_and_release_need_speaker_scope(self):
+        for source_type in ("campaign_speech", "candidate_statement", "press_release"):
+            row = {
+                "source_type": source_type, "source_url": "https://publisher.example/news/item",
+                "analysis_scope": "analysis",
+            }
+            with self.subTest(source_type=source_type):
+                self.assertIn(
+                    "mixed_speaker_source_requires_candidate_scope",
+                    candidate_document_analysis_issues(row),
+                )
+                self.assertNotIn(
+                    "mixed_speaker_source_requires_candidate_scope",
+                    candidate_document_analysis_issues({**row, "analysis_scope": "candidate_excerpt"}),
+                )
+
+    def test_structural_controls_require_exact_retained_text_mapping(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "page.html"
+            body = b"<nav><p>Meet Candidate Events Store</p></nav><p>Fund public schools.</p>"
+            path.write_bytes(body)
+            metadata = {
+                "analysis_scope": "analysis", "content_type": "text/html",
+                "raw_path": str(path), "raw_sha256": hashlib.sha256(body).hexdigest(),
+            }
+            paragraphs, _ = segment_document("source", "Meet Candidate Events Store\n\nFund public schools.")
+            reasons = source_analysis_paragraph_exclusions(metadata, paragraphs)
+            self.assertIn(1, reasons)
+            self.assertNotIn(2, reasons)
+            changed, _ = segment_document("source", "A different first paragraph\n\nFund public schools.")
+            with self.assertRaisesRegex(ValueError, "mapping differs"):
+                source_analysis_paragraph_exclusions(metadata, changed)
+            path.write_bytes(body + b"\nchanged source")
+            with self.assertRaisesRegex(ValueError, "hash mismatch"):
+                source_analysis_paragraph_exclusions(metadata, paragraphs)
+
+    def test_verified_presidential_aliases_do_not_make_one_campaign_page_multispeaker(self):
+        rows = [{
+            "candidate_name": name, "race_id": "pres", "role": "opponent",
+            "source_url": "https://example.org/plans",
+        } for name in ("Elizabeth Warren", "Elizabeth Ann Warren")]
+        self.assertEqual(
+            len(_shared_source_candidates(rows, presidential_race_ids={"pres"})["https://example.org/plans"]),
+            1,
+        )
+        self.assertEqual(len(_shared_source_candidates(rows)["https://example.org/plans"]), 2)
+        rows.append({**rows[0], "candidate_name": "Elizabeth Warner"})
+        self.assertEqual(
+            len(_shared_source_candidates(rows, presidential_race_ids={"pres"})["https://example.org/plans"]),
+            2,
+        )
+
+    def test_older_campaign_page_can_have_a_verified_in_window_replay(self):
+        row = {
+            "source_url": "https://example.org/issues", "analysis_scope": "candidate_excerpt",
+            "source_type": "official_campaign_platform", "publication_date": "2018-01-22",
+            "election_date": "2020-02-11", "campaign_window_status": "out_of_window",
+            "final_url": "https://web.archive.org/web/20200204082527id_/https://example.org/issues",
+        }
+        self.assertNotIn("outside_primary_campaign_window", candidate_document_analysis_issues(row))
+        for changes in (
+            {"source_type": "candidate_interview"},
+            {"final_url": "https://example.org/issues"},
+            {"final_url": "https://web.archive.org/web/20200304082527id_/https://example.org/issues"},
+            {"publication_date": "2020-03-01"},
+        ):
+            with self.subTest(changes=changes):
+                self.assertIn(
+                    "outside_primary_campaign_window",
+                    candidate_document_analysis_issues({**row, **changes}),
+                )
+
     def test_fetch_raw_document_preserves_provenance(self) -> None:
         with patch(
             "dsa_analysis.document_corpus.urllib.request.urlopen",
@@ -1341,6 +1445,42 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertIn("phrase:paid for by", segments[3].boilerplate_reasons)
         self.assertEqual(segments[3].text, "Paid for by Example for City Council.")
 
+    def test_analysis_discards_archive_toolbar_but_preserves_original_locators(self) -> None:
+        paragraphs, sentences = self._segments(
+            "archive",
+            "23 captures\n\nAbout this capture\n\nCOLLECTED BY\n\nTIMESTAMPS\n\n"
+            "The Wayback Machine - https://web.archive.org/web/20200101/https://example.org/issues\n\n"
+            "Menu\n\nHousing\n\nWe will build public housing and protect tenants from unfair eviction.",
+        )
+        result = build_analysis_segments(
+            candidate_name="Candidate", race_id="race", role="endorsed", document_id="archive",
+            paragraphs=paragraphs, sentences=sentences, source_type="campaign_platform",
+            config=AnalysisSegmentConfig(min_tokens=3, max_tokens=50),
+        )
+        text = " ".join(row.text for row in result)
+        self.assertNotIn("Wayback", text)
+        self.assertNotIn("TIMESTAMPS", text)
+        self.assertIn("build public housing", text)
+        self.assertEqual(result[0].paragraph_start, 7)
+        self.assertEqual(paragraphs[4].locator, "paragraph 5")
+
+    def test_repeated_substantive_positions_are_duplicates_not_boilerplate(self) -> None:
+        from dsa_analysis.document_corpus import _annotate_analysis_segments
+        config = AnalysisSegmentConfig(min_tokens=3, max_tokens=50)
+        all_segments = []
+        for document in ("one", "two"):
+            paragraphs, sentences = self._segments(
+                document, "We will fund public schools and protect every tenant from unfair eviction.",
+            )
+            all_segments.extend(build_analysis_segments(
+                candidate_name=document, race_id="race", role="endorsed", document_id=document,
+                paragraphs=paragraphs, sentences=sentences, source_type="campaign_platform",
+                config=config,
+            ))
+        annotated = _annotate_analysis_segments(all_segments, config)
+        self.assertTrue(all(row.exact_duplicate_flag for row in annotated))
+        self.assertTrue(all(not row.boilerplate_flag for row in annotated))
+
     def test_segment_review_sample_is_deterministic(self) -> None:
         paragraphs, sentences = self._segments(
             "review-a",
@@ -1657,7 +1797,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertEqual(metadata_row["final_url"], archive_url)
         self.assertEqual(manifest_row["archive_url"], archive_url)
 
-    def test_run_candidate_document_extraction_batch_falls_back_to_archive_url(self) -> None:
+    def test_run_candidate_document_extraction_batch_prefers_requested_archive(self) -> None:
         root = self._scenario_root("archive_fallback")
         paths = self._paths(root)
         queue_rows = [
@@ -1680,7 +1820,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         def fetcher(document_id: str, source_url: str) -> RawDocumentCapture:
             calls.append(source_url)
             if source_url == "https://archive-example.org/platform":
-                raise RawFetchError("gone")
+                raise AssertionError("A named historical replay must not be replaced with a live page")
             return self._capture(
                 document_id=document_id,
                 source_url=source_url,
@@ -1694,7 +1834,6 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertEqual(
             calls,
             [
-                "https://archive-example.org/platform",
                 "https://web.archive.org/web/20180801000000/https://archive-example.org/platform",
             ],
         )
@@ -1704,6 +1843,49 @@ class DocumentCorpusBatchTests(unittest.TestCase):
             metadata_row["final_url"],
             "https://web.archive.org/web/20180801000000/https://archive-example.org/platform",
         )
+
+    def test_failed_archive_request_does_not_fall_back_to_live_content(self) -> None:
+        root = self._scenario_root("archive_failure_no_live_substitution")
+        paths = self._paths(root)
+        archive = "https://web.archive.org/web/20180801000000/https://example.org/platform"
+        calls = []
+        def fetcher(document_id, source_url):
+            calls.append(source_url)
+            raise RawFetchError("Requested archive is unavailable")
+        result = run_candidate_document_extraction_batch([{
+            "candidate_name": "Example", "role": "endorsed", "race_id": "race",
+            "election_date": "2018-08-07", "source_type": "campaign_page",
+            "source_url": "https://example.org/platform", "archive_url": archive,
+        }], paths, fetcher=fetcher)
+        self.assertEqual(calls, [archive])
+        self.assertEqual(result.fetch_errors, 1)
+        self.assertEqual(self._read_csv(paths.analysis_segment_path), [])
+
+    def test_cached_live_bytes_cannot_satisfy_a_requested_archive(self) -> None:
+        root = self._scenario_root("archive_rejects_cached_live")
+        paths = self._paths(root)
+        job = {
+            "candidate_name": "Example", "role": "endorsed", "race_id": "race",
+            "election_date": "2018-08-07", "source_type": "campaign_page",
+            "source_url": "https://example.org/platform",
+        }
+        run_candidate_document_extraction_batch([job], paths, fetcher=lambda document_id, source_url: self._capture(
+            document_id=document_id, source_url=source_url, content_type="text/plain",
+            body=b"Current live content from a different election.",
+        ))
+        archive = "https://web.archive.org/web/20180801000000/https://example.org/platform"
+        manifest = self._read_jsonl(paths.raw_manifest_path)
+        manifest[0]["archive_url"] = archive
+        paths.raw_manifest_path.write_text("".join(json.dumps(row) + "\n" for row in manifest), encoding="utf-8")
+        calls = []
+        def fetcher(document_id, source_url):
+            calls.append(source_url)
+            return self._capture(document_id=document_id, source_url=source_url, content_type="text/plain",
+                                 body=b"Original archived campaign words.")
+        run_candidate_document_extraction_batch([{**job, "archive_url": archive}], paths, fetcher=fetcher)
+        self.assertEqual(calls, [archive])
+        self.assertEqual(self._read_csv(paths.metadata_path)[0]["final_url"], archive)
+        self.assertEqual(self._read_jsonl(paths.full_text_path)[0]["text"], "Original archived campaign words.")
 
     def test_build_candidate_document_regather_plan_keeps_metadata_only_rows_pending(self) -> None:
         root = self._scenario_root("regather_plan")
@@ -2176,10 +2358,10 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertEqual(metadata_rows["Fetch Failure"]["coverage_status"], "found_unverified")
         self.assertEqual(metadata_rows["Extraction Failure"]["extraction_status"], "extraction_error")
         self.assertEqual(metadata_rows["Malformed URL"]["fetch_status"], "metadata_error")
-        self.assertEqual(metadata_rows["Year Only Date"]["publication_date"], "2020-01-01")
+        self.assertEqual(metadata_rows["Year Only Date"]["publication_date"], "")
+        self.assertIn("Source publication year 2020", metadata_rows["Year Only Date"]["notes"])
         analysis_rows = self._read_csv(paths.analysis_segment_path)
-        self.assertEqual(len(analysis_rows), 1)
-        self.assertEqual(analysis_rows[0]["candidate_name"], "Year Only Date")
+        self.assertEqual(analysis_rows, [])
 
     def test_run_candidate_document_extraction_batch_prefers_transcript_text(self) -> None:
         root = self._scenario_root("transcript")
@@ -2191,6 +2373,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "candidate_name": "Transcript Example",
                 "role": "endorsed",
                 "election_date": "2026-06-16",
+                "publication_date": "2026-05-01",
                 "source_type": "video",
                 "source_url": "https://example.org/watch",
                 "transcript_title": "Town Hall",
@@ -2226,6 +2409,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "candidate_name": "Plain Example",
                 "role": "endorsed",
                 "election_date": "2026-06-16",
+                "publication_date": "2026-05-01",
                 "source_type": "campaign_page",
                 "source_url": "https://example.org/plain.txt",
             },
@@ -2235,6 +2419,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "candidate_name": "Transcript Example",
                 "role": "opponent",
                 "election_date": "2026-06-16",
+                "publication_date": "2026-05-01",
                 "source_type": "candidate_video",
                 "source_url": "https://example.org/watch",
                 "transcript_text": "Public transit\x00 now.\n\nJobs\x0b and housing\tfor all.",
@@ -2369,6 +2554,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "candidate_name": "Alex Example",
                 "role": "endorsed",
                 "election_date": "2026-03-03",
+                "publication_date": "2026-02-01",
                 "source_type": "campaign_platform",
                 "source_url": shared_url,
             },
@@ -2376,8 +2562,9 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "queue_id": "q7b",
                 "race_id": "race-7b",
                 "candidate_name": "Alex Example",
-                "role": "endorsed",
+                "role": "unopposed",
                 "election_date": "2026-04-07",
+                "publication_date": "2026-02-01",
                 "source_type": "campaign_platform",
                 "source_url": shared_url,
             },
@@ -2403,6 +2590,51 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertEqual({row["extraction_status"] for row in metadata_rows}, {"extracted"})
         self.assertEqual(len(self._read_csv(paths.analysis_segment_path)), 2)
 
+    def test_single_candidate_interview_with_locator_is_explicitly_scoped(self) -> None:
+        root = self._scenario_root("single_interview_scoped")
+        paths = self._paths(root)
+        run_candidate_document_extraction_batch(
+            [{
+                "race_id": "race-interview", "candidate_name": "Alex Example", "role": "endorsed",
+                "election_date": "2026-06-16", "publication_date": "2026-05-01",
+                "source_type": "candidate_interview", "source_url": "https://example.org/interview",
+                "legacy_locators": "paragraph 2",
+            }],
+            paths,
+            fetcher=lambda document_id, source_url: self._capture(
+                document_id=document_id, source_url=source_url, content_type="text/plain",
+                body=b"Interviewer: What do you support?\n\nAlex: Public housing and more funding for public schools.\n\nPublisher subscription promotion.",
+            ),
+            analysis_config=AnalysisSegmentConfig(min_tokens=2, max_tokens=40),
+        )
+        text = self._read_jsonl(paths.full_text_path)[0]["text"]
+        self.assertEqual(text, "Alex: Public housing and more funding for public schools.")
+        self.assertEqual(self._read_csv(paths.metadata_path)[0]["analysis_scope"], "candidate_excerpt")
+        self.assertEqual(len(self._read_csv(paths.analysis_segment_path)), 1)
+
+    def test_successful_shared_scoping_does_not_promote_context_only_sources(self) -> None:
+        root = self._scenario_root("shared_context_only")
+        paths = self._paths(root)
+        run_candidate_document_extraction_batch(
+            [{
+                "race_id": "race-context", "candidate_name": name, "role": role,
+                "election_date": "2026-06-16", "publication_date": "2026-05-01",
+                "source_type": "candidate_questionnaire", "source_url": "https://example.org/shared-context",
+                "legacy_locators": f"paragraph {number}", "analysis_scope": "context_only",
+            } for number, (name, role) in enumerate([
+                ("Alex Example", "endorsed"), ("Blair Example", "opponent"),
+            ], 1)],
+            paths,
+            fetcher=lambda document_id, source_url: self._capture(
+                document_id=document_id, source_url=source_url, content_type="text/plain",
+                body=b"Alex background and identity context.\n\nBlair background and identity context.",
+            ),
+            analysis_config=AnalysisSegmentConfig(min_tokens=2, max_tokens=40),
+        )
+        self.assertEqual({r["extraction_status"] for r in self._read_csv(paths.metadata_path)}, {"extracted"})
+        self.assertEqual({r["analysis_scope"] for r in self._read_csv(paths.metadata_path)}, {"context_only"})
+        self.assertEqual(self._read_csv(paths.analysis_segment_path), [])
+
     def test_shared_document_with_locator_scopes_candidate_specific_section(self) -> None:
         root = self._scenario_root("shared_scoped")
         paths = self._paths(root)
@@ -2414,6 +2646,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "candidate_name": "Alex Example",
                 "role": "endorsed",
                 "election_date": "2026-06-16",
+                "publication_date": "2026-05-01",
                 "source_type": "questionnaire",
                 "source_url": shared_url,
                 "legacy_locators": "Question 1",
@@ -2424,6 +2657,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "candidate_name": "Blair Example",
                 "role": "opponent",
                 "election_date": "2026-06-16",
+                "publication_date": "2026-05-01",
                 "source_type": "questionnaire",
                 "source_url": shared_url,
                 "legacy_locators": "Question 2",
@@ -2454,6 +2688,10 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertNotIn("Question 1", full_text_rows["Blair Example"]["text"])
         analysis_rows = self._read_csv(paths.analysis_segment_path)
         self.assertEqual(len(analysis_rows), 2)
+        self.assertEqual(
+            {row["analysis_scope"] for row in self._read_csv(paths.metadata_path)},
+            {"candidate_excerpt"},
+        )
         self.assertEqual(
             {row["candidate_name"] for row in analysis_rows},
             {"Alex Example", "Blair Example"},
@@ -2611,6 +2849,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "candidate_name": "Alex Example",
                 "role": "endorsed",
                 "election_date": "2026-06-16",
+                "publication_date": "2026-05-01",
                 "source_type": "questionnaire",
                 "source_url": shared_url,
                 "legacy_locators": "PDF page 1",
@@ -2621,6 +2860,7 @@ class DocumentCorpusBatchTests(unittest.TestCase):
                 "candidate_name": "Blair Example",
                 "role": "opponent",
                 "election_date": "2026-06-16",
+                "publication_date": "2026-05-01",
                 "source_type": "questionnaire",
                 "source_url": shared_url,
                 "legacy_locators": "PDF page 2",
@@ -2670,6 +2910,50 @@ class DocumentCorpusBatchTests(unittest.TestCase):
         self.assertNotIn("[PDF page 1]", full_text_rows["Blair Example"]["text"])
         analysis_rows = self._read_csv(paths.analysis_segment_path)
         self.assertEqual(len(analysis_rows), 2)
+
+    def test_single_candidate_interview_honors_explicit_excerpt_scope(self) -> None:
+        paths = self._paths(self._scenario_root("single_candidate_excerpt"))
+        run_candidate_document_extraction_batch(
+            [{
+                "race_id": "race", "candidate_name": "Alex Example", "role": "endorsed",
+                "election_date": "2026-06-16", "publication_date": "2026-05-01",
+                "source_type": "candidate_interview", "source_url": "https://example.org/interview",
+                "analysis_scope": "candidate_excerpt", "legacy_locators": "paragraph 2",
+            }],
+            paths,
+            fetcher=lambda document_id, source_url: self._capture(
+                document_id=document_id, source_url=source_url, content_type="text/plain",
+                body=b"Interviewer: What is your policy?\n\nAlex: I support public housing.\n\nSubscribe for news tips.",
+            ),
+            analysis_config=AnalysisSegmentConfig(min_tokens=1, max_tokens=40),
+        )
+        rows = self._read_csv(paths.analysis_segment_path)
+        self.assertEqual([row["text"] for row in rows], ["Alex: I support public housing."])
+        self.assertEqual(rows[0]["locator"], "paragraph 2")
+
+    def test_partial_batch_does_not_forget_known_other_speakers_in_the_same_source(self) -> None:
+        paths = self._paths(self._scenario_root("known_shared_source"))
+        source = "https://example.org/shared-questionnaire"
+        prior = {
+            "document_id": "prior", "candidate_name": "Blair Example",
+            "race_id": "race", "role": "opponent", "source_url": source,
+        }
+        self._write_csv(paths.metadata_path, [prior])
+        run_candidate_document_extraction_batch(
+            [{
+                "race_id": "race", "candidate_name": "Alex Example", "role": "endorsed",
+                "election_date": "2026-06-16", "publication_date": "2026-05-01",
+                "source_type": "questionnaire", "source_url": source,
+            }],
+            paths,
+            fetcher=lambda document_id, source_url: self._capture(
+                document_id=document_id, source_url=source_url, content_type="text/plain",
+                body=b"Alex supports public housing.\n\nBlair supports protecting tenants.",
+            ),
+        )
+        row = next(r for r in self._read_csv(paths.metadata_path) if r["candidate_name"] == "Alex Example")
+        self.assertEqual(row["extraction_status"], "shared_document_unscoped")
+        self.assertEqual(self._read_csv(paths.analysis_segment_path), [])
 
     def _scenario_root(self, name: str) -> Path:
         root = SCRATCH_ROOT / name

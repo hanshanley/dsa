@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Ulster County Election Results">
+  <meta name="author" content="Ulster County Information Services">
+  <title>Ulster County Primary Election Results June 2021</title>
+  <link rel="icon" type="image/png" href="assets/img/ulster.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/img/ulster-16.png" sizes="16x16" />
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap core JavaScript -->
+  <script src="assets/js/jquery/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/Chart.min.js"></script>
+  <!-- <script src="/assets/js/chartjs-plugin-deferred.min.js"></script> -->
+  <script src="assets/js/chartjs-plugin-datalabels.min.js"></script>
+  <script>
+      Chart.defaults.global.legend.display = false;
+      Chart.defaults.global.defaultFontFamily = 'Libre Franklin';
+      Chart.defaults.global.layout.padding.top = 30;
+      Chart.defaults.global.layout.padding.left = 10;
+      Chart.defaults.global.aspectRatio = 1.7;
+      Chart.defaults.global.responsive =  true; 
+      Chart.scaleService.updateScaleDefaults('linear', { ticks: { min: 0 } });
+   
+      function showMulti(myList) {
+          $('section').hide();
+          loopy = myList.split(',');
+          $.each(loopy, function( index, value ) {
+          $('.area-' + value).show();
+        });
+      }
+
+
+      function showArea(area_id) {
+          $('section').show();
+          $('section').not('.area-' + area_id).hide();
+      }
+
+      /*back to top button */
+      $( document ).ready(function() {
+        var btn = $('#button');
+        btn.on('click', function(e) {
+          e.preventDefault();
+         $('html, body').animate({scrollTop:0}, '300');d
+        });
+
+      });
+  </script>  
+
+</head>
+
+<body>
+  <!-- navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+    <div class="container">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="row">
+              <div class="col-9 col-md-8">
+                 <img class="county-logo float-left mr-2" alt="ulster county" src="assets/img/seal-logo.png">
+                 <div class="navbar-brand d-inline">Ulster County Primary Results<br><span class="small">June 22, 2021</span></div>
+              </div>
+              <div class="col-3 col-md-4">
+        <ul class="navbar-nav">
+           <li class="p text-white timestamp">Official Results as of:<br>06/30/21 <br>Includes Early Voting</li>
+        </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+  </nav>
+   <!-- races menu -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+     <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+           <ul class="navbar-nav">
+               <li class="nav-item">
+               <a class="nav-link" id="menu-district" href="/wp-content/uploads/2021/07/2021-06-22-PrimaryResults.pdf" role="button">Results by District</a>
+            </li>
+              <li class="nav-item dropdown">
+<span class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All</span>
+<div class="dropdown-menu dropdown-menu-right">
+   <span class="dropdown-item" onClick="showMulti('5,7,9,11,12,13,2,3,10')" >All</span>
+   <span class="dropdown-item" onClick="showArea(5);" >Alderman Ward 3 (DEM) (Ward 3}</span>
+   <span class="dropdown-item" onClick="showArea(7);" >Alderman Ward 7 (DEM) (Ward 7}</span>
+   <span class="dropdown-item" onClick="showArea(9);" >Councilman (DEM) (Vote for 2) (Gardiner}</span>
+   <span class="dropdown-item" onClick="showArea(11);" >Councilman (DEM) (Vote for 2) (Rochester}</span>
+   <span class="dropdown-item" onClick="showArea(12);" >Councilman (DEM) (Vote for 2) (Saugerties}</span>
+   <span class="dropdown-item" onClick="showArea(13);" >Councilman (DEM) (Vote for 2) (Woodstock}</span>
+   <span class="dropdown-item" onClick="showArea(2);" >County Legislator 2nd District (WOR) (2nd Legislative District}</span>
+   <span class="dropdown-item" onClick="showArea(3);" >County Legislator 6th District (DEM) (6th Legislative District}</span>
+   <span class="dropdown-item" onClick="showArea(10);" >Supervisor (DEM) (Marbletown}</span>
+</div></li>
+          </ul>
+       </div>
+      </nav>
+ <!-- Page Content -->
+<div class="container">
+   <p></p>
+
+   <div class="mb-4"></div>
+    
+    <section class="area-2 race-1001 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">County Legislator 2nd District (DEM)</h5>
+    <p class="mt-2 text-center area-namne">2nd Legislative District</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">2 of 2 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1001"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">John Schoonmaker</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">189</div><div class="col-2 text-right">33.45%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Joe Maloney</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">254</div><div class="col-2 text-right">44.96%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Chris Allen</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">120</div><div class="col-2 text-right">21.24%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Write-in</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-2 text-right">2</div><div class="col-2 text-right">0.35%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">565</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">1</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">11</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">577</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Schoonmaker','Maloney','Allen','Write-in'];
+var dataz  = [189,254,120,2];
+var colorz = ['#36a3eb','#36a3eb','#36a3eb','#aaaaaa','#C30000','#C30000']; 
+var ctx1001 = document.getElementById("chart_1001");
+var chart1001 = new Chart(ctx1001, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-2 race-1002 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">County Legislator 2nd District (WOR)</h5>
+    <p class="mt-2 text-center area-namne">2nd Legislative District</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">2 of 2 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1002"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">John Schoonmaker</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#F08080; color:#ffffff">WOR</span></div><div class="col-2 text-right">6</div><div class="col-2 text-right">35.29%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Chris Allen [Write-in]</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#000000; color:#ffffff"></span></div><div class="col-2 text-right">11</div><div class="col-2 text-right">64.71%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Jared A. Vanvlierden</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#F08080; color:#ffffff">WOR</span></div><div class="col-2 text-right">0</div><div class="col-2 text-right">0.00%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Brandon O. Deweever</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#F08080; color:#ffffff">WOR</span></div><div class="col-2 text-right">0</div><div class="col-2 text-right">0.00%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">17</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">1</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">0</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">18</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Schoonmaker','Allen','Vanvlierden','Deweever'];
+var dataz  = [6,11,0,0];
+var colorz = ['#F08080','#000000','#F08080','#F08080','#C30000','#7AB764']; 
+var ctx1002 = document.getElementById("chart_1002");
+var chart1002 = new Chart(ctx1002, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-3 race-1003 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">County Legislator 6th District (DEM)</h5>
+    <p class="mt-2 text-center area-namne">6th Legislative District</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">3 of 3 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1003"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Philip M. Erner</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">248</div><div class="col-2 text-right">51.35%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">David Donaldson</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">234</div><div class="col-2 text-right">48.45%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Write-in</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-2 text-right">1</div><div class="col-2 text-right">0.21%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">483</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">1</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">19</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">503</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Erner','Donaldson','Write-in'];
+var dataz  = [248,234,1];
+var colorz = ['#36a3eb','#36a3eb','#aaaaaa','#C30000','#7AB764']; 
+var ctx1003 = document.getElementById("chart_1003");
+var chart1003 = new Chart(ctx1003, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-5 race-1004 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">Alderman Ward 3 (DEM)</h5>
+    <p class="mt-2 text-center area-namne">Ward 3</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">1 of 1 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1004"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Reynolds Scott-Childress</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">193</div><div class="col-2 text-right">77.51%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Brad Will</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">56</div><div class="col-2 text-right">22.49%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">249</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">0</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">8</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">257</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Reynolds','Will'];
+var dataz  = [193,56];
+var colorz = ['#36a3eb','#36a3eb','#C30000','#7AB764']; 
+var ctx1004 = document.getElementById("chart_1004");
+var chart1004 = new Chart(ctx1004, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-7 race-1005 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">Alderman Ward 7 (DEM)</h5>
+    <p class="mt-2 text-center area-namne">Ward 7</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">1 of 1 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1005"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Michael Olivieri</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">31</div><div class="col-2 text-right">17.82%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Laura Nordstrom</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">142</div><div class="col-2 text-right">81.61%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Write-in</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-2 text-right">1</div><div class="col-2 text-right">0.57%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">174</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">0</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">0</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">174</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Olivieri','Nordstrom','Write-in'];
+var dataz  = [31,142,1];
+var colorz = ['#36a3eb','#36a3eb','#aaaaaa','#7AB764','#C30000']; 
+var ctx1005 = document.getElementById("chart_1005");
+var chart1005 = new Chart(ctx1005, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-9 race-1006 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">Councilman (DEM) (Vote for 2)</h5>
+    <p class="mt-2 text-center area-namne">Gardiner</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">1 of 1 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1006"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Warren Wiegand</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">172</div><div class="col-2 text-right">31.05%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Carol Richman</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">239</div><div class="col-2 text-right">43.14%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Todd Baker</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">141</div><div class="col-2 text-right">25.45%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Write-in</div><div class="col-2 text-center candidate-party"></div><div class="col-2 text-right">2</div><div class="col-2 text-right">0.36%</div></div>
+<div class="row candidate-details"><div class="col-7 party-detail text-left"><span class="badge ml-4" style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-3 text-right">1</div><div class="col-2 text-right">0.18%</div></div>
+<div class="row candidate-details"><div class="col-7 party-detail text-left"><span class="badge ml-4" style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-3 text-right">1</div><div class="col-2 text-right">0.18%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">554</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">0</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">54</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">608</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Wiegand','Richman','Baker','Write-in'];
+var dataz  = [172,239,141,2];
+var colorz = ['#36a3eb','#36a3eb','#36a3eb','#aaaaaa','#C30000','#7AB764']; 
+var ctx1006 = document.getElementById("chart_1006");
+var chart1006 = new Chart(ctx1006, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-10 race-1007 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">Supervisor (DEM)</h5>
+    <p class="mt-2 text-center area-namne">Marbletown</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">5 of 5 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1007"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Richard Parete</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">307</div><div class="col-2 text-right">38.57%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Jacob Sherman</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">489</div><div class="col-2 text-right">61.43%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">796</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">0</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">0</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">796</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Parete','Sherman'];
+var dataz  = [307,489];
+var colorz = ['#36a3eb','#36a3eb','#C30000','#7AB764']; 
+var ctx1007 = document.getElementById("chart_1007");
+var chart1007 = new Chart(ctx1007, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-11 race-1008 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">Supervisor (DEM)</h5>
+    <p class="mt-2 text-center area-namne">Rochester</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">3 of 3 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1008"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Bea Haugen-Depuy</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">101</div><div class="col-2 text-right">14.77%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Mike Baden</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">581</div><div class="col-2 text-right">84.94%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Write-in</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-2 text-right">2</div><div class="col-2 text-right">0.29%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">684</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">1</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">9</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">694</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Bea','Baden','Write-in'];
+var dataz  = [101,581,2];
+var colorz = ['#36a3eb','#36a3eb','#aaaaaa','#C30000','#7AB764']; 
+var ctx1008 = document.getElementById("chart_1008");
+var chart1008 = new Chart(ctx1008, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-11 race-1009 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">Councilman (DEM) (Vote for 2)</h5>
+    <p class="mt-2 text-center area-namne">Rochester</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">3 of 3 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1009"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Charlotte Knapp</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">566</div><div class="col-2 text-right">44.85%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Michael Coleman</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">528</div><div class="col-2 text-right">41.84%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Robert H. Kilpert</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">167</div><div class="col-2 text-right">13.23%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Write-in</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-2 text-right">1</div><div class="col-2 text-right">0.08%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">1262</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">8</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">118</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">1388</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Knapp','Coleman','Kilpert','Write-in'];
+var dataz  = [566,528,167,1];
+var colorz = ['#36a3eb','#36a3eb','#36a3eb','#C30000','#7AB764','#aaaaaa']; 
+var ctx1009 = document.getElementById("chart_1009");
+var chart1009 = new Chart(ctx1009, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-12 race-1010 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">Councilman (DEM) (Vote for 2)</h5>
+    <p class="mt-2 text-center area-namne">Saugerties</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">7 of 7 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1010"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Kevin Freeman</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">491</div><div class="col-2 text-right">25.81%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Lauren Ruberg</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">257</div><div class="col-2 text-right">13.51%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Kayleigh Zaloga</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">529</div><div class="col-2 text-right">27.81%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Nina Schmidbaur</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">293</div><div class="col-2 text-right">15.40%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Timothy Scott Jr.</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">206</div><div class="col-2 text-right">10.83%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Diedre Miller</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">123</div><div class="col-2 text-right">6.47%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Write-in</div><div class="col-2 text-center candidate-party"></div><div class="col-2 text-right">3</div><div class="col-2 text-right">0.16%</div></div>
+<div class="row candidate-details"><div class="col-7 party-detail text-left"><span class="badge ml-4" style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-3 text-right">2</div><div class="col-2 text-right">0.11%</div></div>
+<div class="row candidate-details"><div class="col-7 party-detail text-left"><span class="badge ml-4" style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-3 text-right">1</div><div class="col-2 text-right">0.05%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">1902</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">0</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">152</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">2054</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Freeman','Ruberg','Zaloga','Schmidbaur','Scott','Miller','Write-in'];
+var dataz  = [491,257,529,293,206,123,3];
+var colorz = ['#36a3eb','#36a3eb','#36a3eb','#36a3eb','#36a3eb','#36a3eb','#aaaaaa','#C30000','#7AB764']; 
+var ctx1010 = document.getElementById("chart_1010");
+var chart1010 = new Chart(ctx1010, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+
+    <section class="area-13 race-1011 ">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h5 class="mt-2 text-center race-title">Councilman (DEM) (Vote for 2)</h5>
+    <p class="mt-2 text-center area-namne">Woodstock</p>
+    <div class="progress-box"><div class="row progress-row"><div class="col-4"> </div> <div class="col-6 text-right">4 of 4 reported</div><div class="col-2 text-right">100%</div></div></div>
+<canvas class="mb-4" id="chart_1011"></canvas><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Bennet Ratcliff </div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">518</div><div class="col-2 text-right">42.01%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Maria-Elena Conte</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">545</div><div class="col-2 text-right">44.20%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Howard Harris</div><div class="col-2 text-center candidate-party"><span class="badge " style="background-color:#36a3eb; color:#ffffff">DEM</span></div><div class="col-2 text-right">165</div><div class="col-2 text-right">13.38%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Write-in</div><div class="col-2 text-center candidate-party"></div><div class="col-2 text-right">5</div><div class="col-2 text-right">0.41%</div></div>
+<div class="row candidate-details"><div class="col-7 party-detail text-left"><span class="badge ml-4" style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-3 text-right">2</div><div class="col-2 text-right">0.16%</div></div>
+<div class="row candidate-details"><div class="col-7 party-detail text-left"><span class="badge ml-4" style="background-color:#aaaaaa; color:#ffffff">WI</span></div><div class="col-3 text-right">3</div><div class="col-2 text-right">0.24%</div></div>
+</div><div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Candidate Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">1233</div><div class="col-2 text-right"></div></div></div>
+<div class="candidate-box"><div class="row candidate-row"><div class="col-6 candidate-name">Blank</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">78</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Void</div><div class="col-2 text-center candidate-party">&nbsp;</div><div class="col-2 text-right">3</div><div class="col-2 text-right"></div></div>
+<div class="row candidate-row"><div class="col-6 candidate-name">Total All Votes</div><div class="col-2 text-center candidate-party"> </div><div class="col-2 text-right">1314</div><div class="col-2 text-right"></div></div></div>
+</div></div>
+
+<script>
+var labelz = ['Ratcliff','Conte','Harris','Write-in'];
+var dataz  = [518,545,165,5];
+var colorz = ['#36a3eb','#36a3eb','#36a3eb','#aaaaaa','#7AB764','#C30000']; 
+var ctx1011 = document.getElementById("chart_1011");
+var chart1011 = new Chart(ctx1011, {
+	  type: "bar",
+    data: {
+    	labels: labelz,
+        datasets: [{
+            data: dataz,
+            backgroundColor: colorz
+        },
+        ]
+    },
+    options: { scales: { xAxes: [ { gridLines: { display: false } } ] },
+
+     plugins: {
+        deferred: { yOffset: "50%", delay: 250 }, 
+        datalabels: {
+            formatter: (value, ctx) => {
+               let datasets = ctx.chart.data.datasets;
+
+         if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+           let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+           if (sum === 0 ) return "";
+           let percentage = ((value / sum) * 100).toFixed(2) + '%';
+           return percentage;
+         } else {
+           return percentage;
+         }
+            },
+            backgroundColor: "#fefefe",
+            color: "#222",
+            anchor: "end",
+            align: "end",
+            offset: 1
+        }
+    }
+}
+});
+</script></section><hr>
+ 
+    <a id="button"><img src="assets/img/chevron-up-solid.svg" title="scroll to top" alt="scroll to top" class="white-filter" height="40" width="40"></a>
+</div><!-- container  -->
+
+<footer class="page-footer font-small bg-primary text-white">
+  <div class="footer-copyright text-center py-3">&copy;  2021 <a class="text-white" href="https://elections.ulstercountyny.gov/">Ulster County Board of Elections</a></div>
+</footer>
+
+</body>
+</html>
+

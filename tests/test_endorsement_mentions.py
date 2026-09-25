@@ -9,7 +9,9 @@ class EndorsementMentionTests(unittest.TestCase):
         self.assertIsNotNone(ENDORSEMENT_PATTERN.search("Current endorsements"))
 
     def test_year_detection(self) -> None:
-        self.assertEqual(YEAR_PATTERN.findall("2015 2016 2024 2027"), ["2016", "2024"])
+        self.assertEqual(
+            YEAR_PATTERN.findall("2015 2016 2024 2027"), ["2015", "2016", "2024", "2027"]
+        )
 
 
 if __name__ == "__main__":

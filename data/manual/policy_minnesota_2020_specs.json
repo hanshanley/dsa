@@ -1,0 +1,23 @@
+{
+  "raw_folder": "data/raw/policy_minnesota_2020",
+  "source_defaults": {
+    "status": "used",
+    "notes": "Candidate-authored campaign platform or an explicitly attributed incumbent statement during the primary campaign window. Official legislative statements are identified as such, not mislabeled as campaign spending or proof of every platform priority."
+  },
+  "sources": [
+    {"key": "fateh-housing", "capture": "fateh-housing-capture.json", "race_id": "race-d96bd5f1de26b3d3b7d6", "speaker": "Omar Fateh", "source_type": "campaign_platform", "notes": "Actual May12,2020 archive of the housing platform with a2020 Senate campaign footer. The original publication day is unknown; the real capture establishes pre-primary availability."},
+    {"key": "hayden-housing", "capture": "hayden-housing-capture.json", "race_id": "race-d96bd5f1de26b3d3b7d6", "speaker": "Jeff Hayden", "source_type": "official_legislator_statement", "publication_date": "2020-04-17", "source_updated_date": "2020-04-22"},
+    {"key": "hayden-police", "capture": "hayden-police-capture.json", "race_id": "race-d96bd5f1de26b3d3b7d6", "speaker": "Jeff Hayden", "source_type": "official_legislator_statement", "publication_date": "2020-07-21", "source_updated_date": "2020-07-21"}
+  ],
+  "statements": [
+    {"id": "mn20-fateh-housing-relief", "source": "fateh-housing", "topic": "housing", "subtopic": "housing_payment_relief", "stance": "state_assistance_fund", "quote": "establish a state fund to keep people in their homes", "locator": "paragraph 54", "claim": "Proposes a state assistance fund for residents facing circumstances such as job loss or illness."},
+    {"id": "mn20-hayden-housing-relief", "source": "hayden-housing", "topic": "housing", "subtopic": "housing_payment_relief", "stance": "rent_and_mortgage_payment_moratorium", "quote": "a moratorium on rent and mortgage payments", "locator": "paragraph 35", "claim": "Calls for suspending rent and mortgage payments during the public-health emergency, arguing that stopping evictions alone leaves growing debts."},
+    {"id": "mn20-fateh-public-housing", "source": "fateh-housing", "topic": "housing", "subtopic": "state_public_housing_production", "stance": "support", "quote": "building as a state enterprise", "locator": "paragraph 42", "claim": "Supports state-led expansion of income-based public housing, alongside bonding and state funding for mixed-income and affordable homes."},
+    {"id": "mn20-fateh-fourplexes", "source": "fateh-housing", "topic": "housing", "subtopic": "statewide_fourplex_zoning", "stance": "support", "quote": "legalize fourplexes statewide", "locator": "paragraph 46", "claim": "Supports statewide legalization of fourplexes and ending exclusionary zoning."},
+    {"id": "mn20-fateh-rent-control", "source": "fateh-housing", "topic": "housing", "subtopic": "local_rent_control_authority", "stance": "support", "quote": "repeal the statewide preemption on local rent control", "locator": "paragraph 55", "claim": "Would restore local rent-control authority and explore statewide limits on annual rent increases."},
+    {"id": "mn20-hayden-police-frame", "source": "hayden-police", "topic": "campaign_approach", "subtopic": "police_reform_progress", "stance": "partial_progress_insufficient", "kind": "campaign_frame", "quote": "a step in the right direction, but it’s certainly not enough", "locator": "paragraph 35", "claim": "Describes the police-accountability compromise as partial progress falling short of needed fundamental change. This does not support labeling him categorically opposed to reform."}
+  ],
+  "comparisons": [
+    {"id": "mn20-fateh-hayden-housing-relief", "left": "mn20-fateh-housing-relief", "right": "mn20-hayden-housing-relief", "relationship": "different_mechanism", "analysis": "Fateh proposes a state assistance fund for housing emergencies; Hayden calls for a pandemic rent-and-mortgage payment moratorium. Both seek to keep residents housed. The tools can complement one another, and this pair does not establish identical broader platforms or opposition to the other's measure."}
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "sources": [
+    {
+      "document_id": "ny20-election-report",
+      "url": "https://ny1.com/nyc/all-boroughs/news/2020/06/03/ocasio-cortez-faces-first-reelection-test-after-two-years-of-being-national-face-of-progressives",
+      "final_url": "https://ny1.com/nyc/all-boroughs/news/2020/06/03/ocasio-cortez-faces-first-reelection-test-after-two-years-of-being-national-face-of-progressives",
+      "publication_date": "2020-06-03",
+      "retrieved_at": "2026-09-24T03:41:20.056913+00:00",
+      "raw_path": "data/raw/policy_ny14_followup/ny20-election-report/8e1e1d9acf5dc0da58dc6704dd61b306b421edd0b2cdc05aa43b8f5fbdde5614.html",
+      "sha256": "8e1e1d9acf5dc0da58dc6704dd61b306b421edd0b2cdc05aa43b8f5fbdde5614",
+      "bytes": 90415,
+      "content_type": "text/html",
+      "encoding": "utf-8",
+      "status": "used",
+      "notes": "The retained page visibly says PUBLISHED5:39 PM ET Jun.03,2020. Includes direct quotations from a town hall and BronxNet debate. References to PPP and coronavirus relief are not treated as one precisely identified statutory vote, nor as opposition to all relief.",
+      "metadata_document_ids": [
+        "5df7c044ddcb02ed48f93fbe-8e1e1d9acf5d",
+        "0b434b8da864b00a79c566b2-8e1e1d9acf5d"
+      ],
+      "metadata_document_id": null
+    },
+    {
+      "document_id": "ny20-debate",
+      "url": "https://ny1.com/nyc/all-boroughs/news/2020/06/05/alexandria-ocasio-cortez-michelle-caruso-cabrera-badrun-khan-14th-congressional-district-virtual-ny1-debate-",
+      "final_url": "https://ny1.com/nyc/all-boroughs/news/2020/06/05/alexandria-ocasio-cortez-michelle-caruso-cabrera-badrun-khan-14th-congressional-district-virtual-ny1-debate-",
+      "publication_date": "2020-06-05",
+      "retrieved_at": "2026-09-24T03:41:20.057223+00:00",
+      "raw_path": "data/raw/policy_ny14_followup/ny20-debate/fceb0a43394ab9a959538a0dc4618f9a2bb0b78a092805d1792add9afa6063fd.html",
+      "sha256": "fceb0a43394ab9a959538a0dc4618f9a2bb0b78a092805d1792add9afa6063fd",
+      "bytes": 106044,
+      "content_type": "text/html",
+      "encoding": "utf-8",
+      "status": "used",
+      "notes": "Direct candidate statements or quotations, not reporter or supporter paraphrases. Candidate factual claims and criticisms are attributed rather than independently verified.",
+      "source_updated_date": "2020-06-05",
+      "metadata_document_ids": [
+        "424ddefe00e0c529adb65b9f-fceb0a43394a",
+        "3f9c96d6e68826a47eebc8d7-fceb0a43394a"
+      ],
+      "metadata_document_id": null
+    },
+    {
+      "document_id": "ny24-aoc-rally",
+      "url": "https://www.bxtimes.com/aoc-rally-south-bronx/",
+      "final_url": "https://www.bxtimes.com/aoc-rally-south-bronx/",
+      "publication_date": "2024-05-20",
+      "retrieved_at": "2026-09-24T03:41:20.057306+00:00",
+      "raw_path": "data/raw/policy_ny14_followup/ny24-aoc-rally/f51c9ba0ab508553540ce2276472016d4e5a33599b276d169d56e3687796ca79.html",
+      "sha256": "f51c9ba0ab508553540ce2276472016d4e5a33599b276d169d56e3687796ca79",
+      "bytes": 126619,
+      "content_type": "text/html",
+      "encoding": "utf-8",
+      "status": "used",
+      "notes": "Direct speech and post-rally interview quotations from the May19 event. The article's June15 primary-date reference conflicts with the canonical June25 election date; that reporter date error is not propagated. Supporters' stories and policy statements are not attributed to the candidate.",
+      "source_updated_date": "2024-05-20",
+      "metadata_document_ids": [
+        "f470d48d5eba75f7494c57b5-f51c9ba0ab50"
+      ],
+      "metadata_document_id": "f470d48d5eba75f7494c57b5-f51c9ba0ab50"
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ny20-aoc-relief-design",
+      "document_id": "ny20-election-report",
+      "metadata_document_id": "5df7c044ddcb02ed48f93fbe-8e1e1d9acf5d",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "race_id": "race-a15fa79529a2d8246fd8",
+      "election_date": "2020-06-23",
+      "topic": "economic_policy",
+      "subtopic": "coronavirus_relief_strategy",
+      "stance": "criticize_corporate_favoring_design",
+      "representation_kind": "policy_position",
+      "short_exact_quote": "it is structured to benefit Wall Street, the wealthy and the rich",
+      "locator": "paragraph 161",
+      "claim_summary": "Criticizes the structure of PPP relief as favoring large financial interests over small businesses. This is not a statement opposing every pandemic relief package.",
+      "notes": "Criticizes the structure of PPP relief as favoring large financial interests over small businesses. This is not a statement opposing every pandemic relief package. The retained page visibly says PUBLISHED5:39 PM ET Jun.03,2020. Includes direct quotations from a town hall and BronxNet debate. References to PPP and coronavirus relief are not treated as one precisely identified statutory vote, nor as opposition to all relief.",
+      "candidate_document_registration": {
+        "race_id": "race-a15fa79529a2d8246fd8",
+        "candidate_name": "Alexandria Ocasio-Cortez",
+        "role": "endorsed",
+        "election_date": "2020-06-23",
+        "source_type": "candidate_debate_report",
+        "publication_date": "2020-06-03",
+        "source_url": "https://ny1.com/nyc/all-boroughs/news/2020/06/03/ocasio-cortez-faces-first-reelection-test-after-two-years-of-being-national-face-of-progressives",
+        "locator": "paragraph 161"
+      }
+    },
+    {
+      "excerpt_id": "ny20-caruso-relief",
+      "document_id": "ny20-debate",
+      "metadata_document_id": "424ddefe00e0c529adb65b9f-fceb0a43394a",
+      "speaker": "Michelle Caruso-Cabrera",
+      "role": "opponent_candidate",
+      "race_id": "race-a15fa79529a2d8246fd8",
+      "election_date": "2020-06-23",
+      "topic": "economic_policy",
+      "subtopic": "coronavirus_relief_strategy",
+      "stance": "pass_package_and_pursue_additional_relief",
+      "representation_kind": "policy_position",
+      "short_exact_quote": "I would have voted for that bill",
+      "locator": "paragraph 167",
+      "claim_summary": "Says she would have supported the relief bill under discussion and would work with Speaker Pelosi on another stimulus package.",
+      "notes": "Says she would have supported the relief bill under discussion and would work with Speaker Pelosi on another stimulus package. Direct candidate statements or quotations, not reporter or supporter paraphrases. Candidate factual claims and criticisms are attributed rather than independently verified.",
+      "candidate_document_registration": {
+        "race_id": "race-a15fa79529a2d8246fd8",
+        "candidate_name": "Michelle Caruso-Cabrera",
+        "role": "opponent",
+        "election_date": "2020-06-23",
+        "source_type": "candidate_debate_report",
+        "publication_date": "2020-06-05",
+        "source_url": "https://ny1.com/nyc/all-boroughs/news/2020/06/05/alexandria-ocasio-cortez-michelle-caruso-cabrera-badrun-khan-14th-congressional-district-virtual-ny1-debate-",
+        "locator": "paragraph 167"
+      }
+    },
+    {
+      "excerpt_id": "ny20-aoc-police-budget",
+      "document_id": "ny20-debate",
+      "metadata_document_id": "3f9c96d6e68826a47eebc8d7-fceb0a43394a",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "race_id": "race-a15fa79529a2d8246fd8",
+      "election_date": "2020-06-23",
+      "topic": "public_safety",
+      "subtopic": "police_budget_reallocation",
+      "stance": "support",
+      "representation_kind": "policy_position",
+      "short_exact_quote": "The reduction of our NYPD budget",
+      "locator": "paragraph 163",
+      "claim_summary": "Supports reducing the NYPD budget and links that spending to forgone investments in education and public housing. No opponent's policing stance is inferred from reporter summaries.",
+      "notes": "Supports reducing the NYPD budget and links that spending to forgone investments in education and public housing. No opponent's policing stance is inferred from reporter summaries. Direct candidate statements or quotations, not reporter or supporter paraphrases. Candidate factual claims and criticisms are attributed rather than independently verified.",
+      "candidate_document_registration": {
+        "race_id": "race-a15fa79529a2d8246fd8",
+        "candidate_name": "Alexandria Ocasio-Cortez",
+        "role": "endorsed",
+        "election_date": "2020-06-23",
+        "source_type": "candidate_debate_report",
+        "publication_date": "2020-06-05",
+        "source_url": "https://ny1.com/nyc/all-boroughs/news/2020/06/05/alexandria-ocasio-cortez-michelle-caruso-cabrera-badrun-khan-14th-congressional-district-virtual-ny1-debate-",
+        "locator": "paragraph 163"
+      }
+    },
+    {
+      "excerpt_id": "ny20-khan-ubi",
+      "document_id": "ny20-election-report",
+      "metadata_document_id": "0b434b8da864b00a79c566b2-8e1e1d9acf5d",
+      "speaker": "Badrun N. Khan",
+      "role": "opponent_candidate",
+      "race_id": "race-a15fa79529a2d8246fd8",
+      "election_date": "2020-06-23",
+      "topic": "social_welfare",
+      "subtopic": "universal_basic_income",
+      "stance": "support",
+      "representation_kind": "policy_position",
+      "short_exact_quote": "universal basic income, UBI",
+      "locator": "paragraph 172",
+      "claim_summary": "Calls for universal basic income in the pandemic context. This quotation is not compared to an invented AOC rejection of the proposal.",
+      "notes": "Calls for universal basic income in the pandemic context. This quotation is not compared to an invented AOC rejection of the proposal. The retained page visibly says PUBLISHED5:39 PM ET Jun.03,2020. Includes direct quotations from a town hall and BronxNet debate. References to PPP and coronavirus relief are not treated as one precisely identified statutory vote, nor as opposition to all relief.",
+      "candidate_document_registration": {
+        "race_id": "race-a15fa79529a2d8246fd8",
+        "candidate_name": "Badrun N. Khan",
+        "role": "opponent",
+        "election_date": "2020-06-23",
+        "source_type": "candidate_statement_report",
+        "publication_date": "2020-06-03",
+        "source_url": "https://ny1.com/nyc/all-boroughs/news/2020/06/03/ocasio-cortez-faces-first-reelection-test-after-two-years-of-being-national-face-of-progressives",
+        "locator": "paragraph 172"
+      },
+      "source_speaker": "Badrun Khan",
+      "identity_review": {
+        "status": "accepted_reviewed_source_alias",
+        "evidence_document_ids": [
+          "ny20-election-report"
+        ],
+        "notes": "The source explicitly identifies Badrun Khan as a Democratic candidate on the2020 NY14 ballot, matching the canonical middle-initial form."
+      }
+    },
+    {
+      "excerpt_id": "ny24-aoc-local-global",
+      "document_id": "ny24-aoc-rally",
+      "metadata_document_id": "f470d48d5eba75f7494c57b5-f51c9ba0ab50",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "race_id": "race-ce230166d53b758968b6",
+      "election_date": "2024-06-25",
+      "topic": "campaign_approach",
+      "subtopic": "local_vs_international_focus",
+      "stance": "connect_global_spending_to_local_needs",
+      "representation_kind": "campaign_frame",
+      "short_exact_quote": "distill themselves into local issues",
+      "locator": "paragraph 176",
+      "claim_summary": "Argues that national and international policy, including spending on overseas conflict, directly affects local residents and resources.",
+      "notes": "Argues that national and international policy, including spending on overseas conflict, directly affects local residents and resources. Direct speech and post-rally interview quotations from the May19 event. The article's June15 primary-date reference conflicts with the canonical June25 election date; that reporter date error is not propagated. Supporters' stories and policy statements are not attributed to the candidate.",
+      "candidate_document_registration": {
+        "race_id": "race-ce230166d53b758968b6",
+        "candidate_name": "Alexandria Ocasio-Cortez",
+        "role": "endorsed",
+        "election_date": "2024-06-25",
+        "source_type": "candidate_speech_and_interview",
+        "publication_date": "2024-05-20",
+        "source_url": "https://www.bxtimes.com/aoc-rally-south-bronx/",
+        "locator": "paragraph 176"
+      }
+    },
+    {
+      "excerpt_id": "ny24-aoc-local-commitment",
+      "document_id": "ny24-aoc-rally",
+      "metadata_document_id": "f470d48d5eba75f7494c57b5-f51c9ba0ab50",
+      "speaker": "Alexandria Ocasio-Cortez",
+      "role": "endorsed_candidate",
+      "race_id": "race-ce230166d53b758968b6",
+      "election_date": "2024-06-25",
+      "topic": "campaign_approach",
+      "subtopic": "constituent_representation",
+      "stance": "affirm_community_commitment",
+      "representation_kind": "campaign_frame",
+      "short_exact_quote": "I will never walk away from this community.",
+      "locator": "paragraph 161",
+      "claim_summary": "Responds to criticism about her focus by affirming commitment to the community; this is a campaign statement, not a measured constituent-service outcome.",
+      "notes": "Responds to criticism about her focus by affirming commitment to the community; this is a campaign statement, not a measured constituent-service outcome. Direct speech and post-rally interview quotations from the May19 event. The article's June15 primary-date reference conflicts with the canonical June25 election date; that reporter date error is not propagated. Supporters' stories and policy statements are not attributed to the candidate.",
+      "candidate_document_registration": {
+        "race_id": "race-ce230166d53b758968b6",
+        "candidate_name": "Alexandria Ocasio-Cortez",
+        "role": "endorsed",
+        "election_date": "2024-06-25",
+        "source_type": "candidate_speech_and_interview",
+        "publication_date": "2024-05-20",
+        "source_url": "https://www.bxtimes.com/aoc-rally-south-bronx/",
+        "locator": "paragraph 161"
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "ny20-aoc-caruso-relief",
+      "race_id": "race-a15fa79529a2d8246fd8",
+      "excerpt_ids": [
+        "ny20-aoc-relief-design",
+        "ny20-caruso-relief"
+      ],
+      "relationship": "different_strategy",
+      "comparison_kind": "policy_comparison",
+      "interpretation": "Ocasio-Cortez emphasizes opposition to corporate-favoring relief design; Caruso-Cabrera emphasizes passing the package and pursuing further aid. The reports use overlapping PPP/CARES/relief-bill references, so this records stated legislative strategies rather than inventing a precisely identified common vote or a blanket pro-/anti-relief distinction."
+    },
+    {
+      "comparison_id": "ny24-aoc-dolan-local-global",
+      "race_id": "race-ce230166d53b758968b6",
+      "excerpt_ids": [
+        "ny24-aoc-local-global",
+        "fed24-dolan-local-priority"
+      ],
+      "relationship": "different_emphasis",
+      "comparison_kind": "campaign_framing",
+      "interpretation": "Dolan says the Gaza war is not central to district concerns; Ocasio-Cortez explicitly argues that international policy translates into local resource decisions. These are different campaign frames, not independent findings about what all constituents prioritize."
+    }
+  ],
+  "unsuccessful_sources": [],
+  "source_attempts": []
+}

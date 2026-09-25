@@ -1,0 +1,22 @@
+{
+  "raw_folder": "data/raw/policy_michigan_2020",
+  "source_defaults": {
+    "status": "used",
+    "notes": "Candidate-authored text read in context. An authentic policy statement establishes what the candidate said, not independent verification of all statistics, accomplishments or projected effects."
+  },
+  "sources": [
+    {"key": "tlaib", "capture": "tlaib-health-capture.json", "race_id": "race-c5d0d4ddd63f35adacc7", "speaker": "Rashida Tlaib", "source_type": "candidate_signed_op_ed", "notes": "The publisher explicitly credits this column to Congresswoman Rashida Tlaib. The visible March19,2020 date corresponds to March20 at02:04 UTC in publisher metadata; neither date is near the primary boundary. Reporter commentary and linked articles are not used as Tlaib's own words."},
+    {"key": "jones", "capture": "jones-priorities-capture.json", "race_id": "race-c5d0d4ddd63f35adacc7", "speaker": "Brenda Jones", "source_type": "campaign_platform", "notes": "Actual June22,2020 pre-primary archive of Jones's own campaign priorities. A closer August8 replay was after the August4 primary and was not substituted for this earlier version. Original publication day remains unknown."}
+  ],
+  "statements": [
+    {"id": "mi20-tlaib-mfa", "source": "tlaib", "topic": "healthcare", "subtopic": "medicare_for_all", "stance": "support", "quote": "The reason we need a Medicare for All system is simple", "locator": "paragraph 25", "claim": "Explicitly advocates Medicare for All as a response to access gaps and the pandemic, grounded in healthcare as a right."},
+    {"id": "mi20-jones-mfa", "source": "jones", "topic": "healthcare", "subtopic": "medicare_for_all", "stance": "support", "quote": "Advocate for Medicare for all", "locator": "paragraph 39", "claim": "Explicitly supports Medicare for All and expanded mental-health and physical-health access."},
+    {"id": "mi20-jones-housing", "source": "jones", "topic": "housing", "subtopic": "federal_housing_standard", "stance": "support", "quote": "a federal minimum standard for decent and affordable housing", "locator": "paragraph 38", "claim": "Proposes a federal minimum housing standard; this short plank does not supply a complete financing or construction plan."},
+    {"id": "mi20-jones-profiling", "source": "jones", "topic": "civil_rights", "subtopic": "profiling", "stance": "oppose", "quote": "eliminate profiling practices based on race, gender, religion and sexual orientation", "locator": "paragraph 32", "claim": "Opposes discriminatory profiling; no Tlaib disagreement is inferred from the separate healthcare column's scope."},
+    {"id": "mi20-jones-jobs", "source": "jones", "topic": "labor_economy", "subtopic": "workforce_and_economic_development", "stance": "support", "quote": "Advocate for jobs, workforce development and economic development", "locator": "paragraph 35", "claim": "Names workforce and economic development as campaign priorities, alongside support for entrepreneurs and small businesses."},
+    {"id": "mi20-tlaib-health-frame", "source": "tlaib", "topic": "campaign_approach", "subtopic": "healthcare_framing", "stance": "people_before_profit", "kind": "campaign_frame", "quote": "puts people before profits, and lives before corporate bottom lines", "locator": "paragraph 27", "claim": "Frames healthcare reform around human need rather than profitability. The statement is not treated as an independent assessment of every actor in the health system."}
+  ],
+  "comparisons": [
+    {"id": "mi20-tlaib-jones-mfa", "left": "mi20-tlaib-mfa", "right": "mi20-jones-mfa", "relationship": "shared_position", "analysis": "Both explicitly support Medicare for All in their own pre-primary words. Different political alliances, donors or campaign styles do not establish a healthcare-policy disagreement; detailed implementation differences remain unproven."}
+  ]
+}

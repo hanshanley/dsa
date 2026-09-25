@@ -1,10 +1,12 @@
+import hashlib
 import json
 import re
 import urllib.parse
 import urllib.request
+from datetime import UTC, datetime
 from typing import Any
 
-from .io import write_csv
+from .io import read_csv, write_csv
 from .paths import PROCESSED_DIR, RAW_DIR
 
 PAST_ENDORSEMENTS = (
@@ -24,25 +26,42 @@ USER_AGENT = "Mozilla/5.0 (compatible; dsa-analysis/0.1)"
 
 def collect_national_endorsements() -> int:
     records: dict[str, dict[str, str]] = {}
+    payloads = {}
+    retrieved_at = datetime.now(UTC).isoformat()
     for label, url in (
         ("past", PAST_ENDORSEMENTS),
         ("current", CURRENT_ENDORSEMENTS),
     ):
         payload = fetch_shared_view(url)
-        RAW_DIR.mkdir(parents=True, exist_ok=True)
-        (RAW_DIR / f"national-endorsements-{label}.json").write_text(
-            json.dumps(payload, sort_keys=True),
-            encoding="utf-8",
-        )
+        payloads[label] = payload
         for row in normalize_table(payload):
-            records[row["record_id"]] = _endorsement_row(row, url)
+            records[row["record_id"]] = {
+                **_endorsement_row(row, url),
+                "source_presence": "latest_official_views",
+                "retrieved_at": retrieved_at,
+            }
+
+    archive_path = PROCESSED_DIR / "national_endorsement_archive.csv"
+    if archive_path.exists():
+        for row in read_csv(archive_path):
+            if row["record_id"] not in records:
+                records[row["record_id"]] = {
+                    **row,
+                    "source_presence": "historical_capture_only",
+                    "retrieved_at": row.get("retrieved_at", ""),
+                }
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    for label, payload in payloads.items():
+        (RAW_DIR / f"national-endorsements-{label}.json").write_text(
+            json.dumps(payload, sort_keys=True), encoding="utf-8",
+        )
 
     rows = sorted(
         records.values(),
         key=lambda row: (row["election_date"], row["campaign"], row["record_id"]),
     )
     write_csv(
-        PROCESSED_DIR / "national_endorsement_archive.csv",
+        archive_path,
         rows,
         [
             "record_id",
@@ -56,7 +75,21 @@ def collect_national_endorsements() -> int:
             "general_result",
             "created_time",
             "source_view_url",
+            "source_presence",
+            "retrieved_at",
         ],
+    )
+    (PROCESSED_DIR / "national_endorsement_refresh.json").write_text(
+        json.dumps({
+            "retrieved_at": retrieved_at,
+            "rows": len(rows),
+            "historical_only_rows": sum(
+                row["source_presence"] == "historical_capture_only" for row in rows
+            ),
+            "source_urls": [PAST_ENDORSEMENTS, CURRENT_ENDORSEMENTS],
+            "sha256": hashlib.sha256(archive_path.read_bytes()).hexdigest(),
+            "result_authority": "DSA-reported; not certified election results",
+        }, indent=2, sort_keys=True) + "\n", encoding="utf-8",
     )
     return len(rows)
 
@@ -69,6 +102,16 @@ def collect_chapters() -> int:
         encoding="utf-8",
     )
     normalized = normalize_table(payload)
+    directory_path = PROCESSED_DIR / "chapter_directory.csv"
+    current_ids = {row["record_id"] for row in normalized}
+    for row in normalized:
+        row["directory_presence"] = "current"
+    if directory_path.exists():
+        normalized.extend(
+            {**row, "directory_presence": "historical"}
+            for row in read_csv(directory_path)
+            if row["record_id"] not in current_ids
+        )
     columns = sorted(
         {
             key

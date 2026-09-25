@@ -1,0 +1,1318 @@
+			<!DOCTYPE html>
+			<html lang="en-US">
+			<head>
+				<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"REDACTED________________",applicationID:"1055475745",browserID:"1134532734"};;/*! For license information please see nr-loader-rum-1.320.1.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),s=0===Object.keys(r).length?e:r;for(let a in s)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):e[a]instanceof Map||e[a]instanceof Set||e[a]instanceof Date||e[a]instanceof RegExp?r[a]=e[a]:"object"==typeof e[a]&&null!==t[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){r[a]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>a});var n=r(384),i=r(8122);const s={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function a(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,s)])},7699(e,t,r){"use strict";var n=r(860);const i={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,1e6,"KC",0,i,"qh",0,"SESSION_ERROR"])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.320.1"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,s="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===a?.document?.visibilityState),c=""+a?.location,u=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,s,"gm",0,a,"m",0,c,"mw",0,o,"sb",0,d,"zk",0,()=>{const e=a?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<a.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>o,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),s=r(860),a=r(2646);function o(e,t){if(!e)return;const r={staged:!1,priority:s.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const s=e.ee,o=i.i.handlers;if(s&&!s.aborted&&s.backlog&&o){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=o[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof a.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete o[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],s=e[2];n.apply(i,s)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),s=r(2646),a=r(5607);const o="nr@context:".concat(a.W),c=function e(t,r){var n={},a={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,s){!1!==s&&(s=!0);if(c.aborted&&!i)return;t&&s&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var u=v()[a[e]];u&&u.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{a[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[a[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof s.y?e:e?(0,i.I)(e,o,()=>new s.y(o)):new s.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,o,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,s){s?(s.buffer([e],i),s.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>s});var n=r(9908);s.on=a;var i=s.handlers={};function s(e,t,r,s){a(s||n.d,i,e,t,r)}function a(e,t,r,i,s){s||(s="feature"),e||(e=n.d);var a=t[s]=t[s]||{};(a[r]=a[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function s(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>s,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>a,bz:()=>s});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function a(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,s=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var o=0;o<e;o++)a.push(i(r,s++).toString(16));return a.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>s});var n=r(944);const i=new Map;function s(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),s=t.includes("nrWrapper");return r||s||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>a,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function s(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(s())return e();const r=(0,i.J)(e),a=setInterval(()=>{s()&&(clearInterval(a),r())},500);(0,n.sp)("load",r,t)}function o(e){if(s())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(s())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),s=r(944),a=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,a.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,s.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,o])},2843(e,t,r){"use strict";r.d(t,{G:()=>s,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function s(e,t,r){(0,n.sp)("pagehide",e,t,r)}},9300(e,t,r){"use strict";r(860).K7.ajax;r.d(t,["mo",0,{NONE:"none",FAILURES:"failures",ALL:"all"}])},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>s});var n=r(9566),i=r(1741);class s extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>s});var n=r(944),i=r(4261);class s{#e(e,...t){if(this[e]!==s.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),s=r(1863),a=r(944),o=r(3969),c=r(8362),u=r(860);function d(e,t,r,s){const d=s||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(o.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,a.R)(23,e)}})}function l(e,t,r,n,a){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(a||null===r)&&(0,i.p)("api-"+n,[(0,s.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",s="browser/blobs",a="browser/logs",o={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[o.pageViewEvent]:1,[o.pageViewTiming]:2,[o.metrics]:3,[o.jserrors]:4,[o.softNav]:5,[o.ajax]:6,[o.sessionTrace]:7,[o.sessionReplay]:8,[o.logging]:9,[o.genericEvents]:10},u={[o.pageViewEvent]:"rum",[o.pageViewTiming]:n,[o.ajax]:n,[o.softNav]:n,[o.metrics]:i,[o.jserrors]:i,[o.sessionTrace]:s,[o.sessionReplay]:s,[o.logging]:a,[o.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,o,"P3",0,c,"XX",0,i,"Yy",0,a,"df",0,s])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const s=t[n]={exports:{}};return e[n](s,s.exports,r),s.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],s=t[n++];r.o(e,i)?0===s&&n++:0===s?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:s})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.320.1.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.320.1.PROD:";r.l=(n,i,s,a)=>{if(e[n])return void e[n].push(i);let o,c;if(void 0!==s){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+s){o=r;break}}}if(!o){c=!0;var d={296:"sha512-tVt1vBEIdH0cbF0+FX2YAtMEq3dHpAui3eZmJce4ncISLbsfSol5l/6zmO5AGwZq7lhKosE9/EY+uwxfn03iYw=="};o=document.createElement("script"),o.charset="utf-8",r.nc&&o.setAttribute("nonce",r.nc),o.setAttribute("data-webpack",t+s),o.src=n,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),d[a]&&(o.integrity=d[a])}e[n]=[i];const l=(t,r)=>{o.onerror=o.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],o.parentNode?.removeChild(o),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=l.bind(null,o.onerror),o.onload=l.bind(null,o.onload),c&&document.head.appendChild(o)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const s=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=s);const a=r.p+r.u(t),o=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;o.message="Loading chunk "+t+" failed: ("+e+": "+r+")",o.name="ChunkLoadError",o.type=e,o.request=r,i[1](o)}};r.l(a,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,s,a]=n;var o,c,u=0;if(i.some(t=>0!==e[t])){for(o in s)r.o(s,o)&&(r.m[o]=s[o]);if(a)a(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.320.1.PROD"]=self["webpackChunk:NRBA-1.320.1.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),s=r(1741);var a=r(2555),o=r(981);t.K7.genericEvents,o.R.PA,o.R.UA,o.R.BP;const c={RESOURCES:"experimental.resources",REGISTER:"register"};var u=r(9300);const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var l=r(2614),f=r(944),g=r(8122);const p="[data-nr-mask]",m=e=>(0,g.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1,iframe_bridge:!1,iframe_domains:[]},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:u.mo.NONE},api:{register:{get enabled(){return e.feature_flags.includes(c.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1,get allow_iframe_bridge(){return e.feature_flags.includes(c.IFRAME_BRIDGE)||e.experimental.iframe_bridge},set allow_iframe_bridge(t){e.experimental.iframe_bridge=t},get iframe_domains(){return e.experimental.iframe_domains},set iframe_domains(t){Array.isArray(t)?e.experimental.iframe_domains=t:(0,f.R)(1,t)}}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:l.wk,inactiveMs:l.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(p):""===t||null===t?e.mask_selector=p:(0,f.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,f.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,f.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var h=r(6154),v=r(9324);let b=0;const y={buildEnv:"PROD",distMethod:"CDN",version:v.xv,originTime:h.WN},_={consented:!1},w={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||_.consented},set consented(e){_.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++b},listeningForIframeMessages:!1};var R=r(7836),A=r(3241);const x={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};var E=r(9908);const S="newrelic-iframe-";function k(e,t={},n,o){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var p;e.init=m(c||{}),e.loader_config=(p=d||{},(0,g.a)(p,x)),u.jsAttributes??={},h.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,a.D)(u);const v=e.init;e.runtime??=(e=>{const t=(0,g.a)(e,w),r=Object.keys(y).reduce((e,t)=>(e[t]={value:y[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),v.proxy.assets&&(e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e})(v.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(s.W.prototype).forEach(r=>{const n=s.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=R.ee.get(e.agentIdentifier),e.exposed=f,(0,A.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.init.api.register.allow_iframe_bridge&&h.gm.addEventListener("message",t=>{"string"==typeof t.data?.type&&t.data.type.startsWith(S)&&(0,E.p)("iframe-message",[t],void 0,"IFRAME",e.ee)}),e.runtime.configured=!0)}var T=r(1863),j=r(4261),P=r(1738);var N=r(1687),O=r(4234),M=r(5289),I=r(7767);function D(e){return!!(0,i.dV)().o.MO&&(0,I.V)(e)&&!0===e?.session_trace.enabled}var V=r(6389),W=r(7699);const B=new WeakSet;class K extends O.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,V.J)(()=>{(0,N.Ak)(e,this.featureName),t()}))}):(0,N.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,a.f)(e.info))return(0,f.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);let i;try{if((0,I.V)(e.init)){const{setupAgentSession:t}=await r.e(296).then(r.bind(r,8391));i=t(e)}}catch(e){(0,f.R)(20,e),this.ee.emit("internal-error",[e]),(0,E.p)(W.qh,[e],void 0,this.featureName,this.ee)}if(e.init.api.register.allow_iframe_bridge)try{const{setupIframeMFEMessageListener:t}=await Promise.resolve().then(function(){const e=new Error("Cannot find module '../../loaders/configure/iframe-message-handler'");throw e.code="MODULE_NOT_FOUND",e});t(e)}catch(e){(0,f.R)(23,e)}try{if(!this.#r(this.featureName,i,e.init))return(0,N.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,f.R)(34,e),this.abortHandler?.(),(0,N.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};h.RI?(0,M.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return D(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!B.has(e)&&(B.add(e),!(0,a.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}k(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var C=r(6630);class U extends K{static featureName=C.T;constructor(e){var t;super(e,C.T),this.setupInspectionEvents(),t=e,(0,P.Y)(j.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,E.p)("api-"+j.Fw,[(0,T.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>r.e(296).then(r.bind(r,1324)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,A.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,M.sB)(t=>{e(t,"DOMContentLoaded")}),(0,M.GG)(t=>{e(t,"load")}),(0,M.Qr)(t=>{e(t,"navigate")}),this.ee.on(l.tS.UPDATE,(e,t)=>{(0,A.W)({type:"lifecycle",name:"session",data:t})})}}class L extends e.d{constructor(e){var t;(super(),h.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(U),k(this,e,e.loaderType||"agent"),t=this,(0,P.Y)(j.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,P.U)(t,e,r,j.cD,n);(0,f.R)(40,typeof r)}else(0,f.R)(39,typeof e)},t),function(e){(0,P.Y)(j.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,f.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,E.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,P.U)(e,"enduser.id",t,j.Dl,!0)},e)}(this),function(e){(0,P.Y)(j.nb,function(t){if("string"==typeof t||null===t)return(0,P.U)(e,"application.version",t,j.nb,!1);(0,f.R)(42,typeof t)},e)}(this),function(e){(0,P.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,P.Y)(j.Pv,function(t=!0){if("boolean"==typeof t){if((0,E.p)("api-"+j.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,f.R)(65,typeof t)},e)}(this),this.run()):(0,f.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures];r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,f.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,f.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var F=r(2843),G=r(782);class H extends K{static featureName=G.T;constructor(e){super(e,G.T),h.RI&&((0,F.u)(()=>(0,E.p)("docHidden",[(0,T.t)()],void 0,G.T,this.ee),!0),(0,F.G)(()=>(0,E.p)("winPagehide",[(0,T.t)()],void 0,G.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9981))))}}var z=r(3969);class Y extends K{static featureName=z.TZ;constructor(e){super(e,z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new L({features:[U,H,Y],loaderType:"lite"})})()})();</script><meta name="application-name" id="app-name" content="themorningcall"><meta name="viewport" content="width=device-width, initial-scale=1">			<meta name="msvalidate.01" content="4B535F7EB2971D1FCBA5D1D3E3E292C3" />
+					<meta name="robots" content="noarchive" />
+					<meta name="tdm-reservation" content="1" />
+		<meta property="mrf:authors" content="Andrew Wagaman" /><meta property="mrf:canonical" content="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/" /><title>The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay. &#8211; The Morning Call</title>
+<link rel='preload' as='image' fetchpriority='high' href='https://www.mcall.com/wp-content/uploads/2022/11/Morning_Call_black_vector-1.svg' type='image/svg+xml' />
+<meta name='robots' content='max-image-preview:large' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var scriptHelpers = {"staticPath":"https:\/\/www.mcall.com\/wp-content\/themes\/assets\/static\/"};
+/* ]]> */
+</script>
+		<style>@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap);body{--primary:#bc3b10;--secondary:#eeff41;--tertiary:#ff5722;--primary-light:#e03400;--primary-dark:#b93611;--font-primary:"Noto Sans",Helvetica,sans-serif;--font-secondary:"Noto Serif",Helvetica,serif}:root{--primary:#006fb7;--secondary:#d70000;--tertiary:#ffc518;--primary-lighter:#47b6ff;--primary-light:#0093f5;--primary-dark:#00568f;--primary-darker:#003d66;--site-branding-primary:#00102e;--site-branding-secondary:#233452;--site-branding-tertiary:#3d5268;--site-branding-gray-100:#38322a;--site-branding-gray-200:#5d5b5a;--site-branding-gray-300:#9d9a98;--site-branding-gray-400:#aaa7a4;--site-branding-gray-500:#d7d6d2;--site-branding-gray-600:#f1efeb;--primary-obit:#8d092d;--primary-obit-light:#c00c3d;--secondary-obit:#946c82;--tertiary-obit:#227db4;--quaternary-obit:#b3bc9c}:root{--site-branding-font-family-headers:"Noto Serif",serif;--site-branding-font-family-copy:"Noto Sans",sans-serif;--site-branding-font-style:normal;--site-branding-font-size-copy:0.875rem;--site-branding-font-size-headline:1.812rem;--site-branding-font-size-subheadline:1.125rem}.icon-arrow-down,.icon-arrow-right,.icon-close,.icon-hamburger,.icon-home3,.icon-plus,.icon-search,.icon-share-alt,.pushnav .menu-item-has-children:not(.nav-alt-links)>a:before{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;font-family:icomoon;font-style:normal;font-variant:normal;font-weight:400;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;line-height:1;speak:none;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-arrow-down:before,.icon-arrow-right:before,.icon-close:before,.icon-hamburger:before,.icon-home3:before,.icon-plus:before,.icon-search:before,.icon-share-alt:before,.pushnav .menu-item-has-children:not(.nav-alt-links)>a:before{color:inherit;font-size:inherit}:root{--icon-access-time:"";--icon-amazon:"";--icon-android:"";--icon-appleinc:"";--icon-arrow-down:"";--icon-arrow-left:"";--icon-arrow-right:"";--icon-arrow-up:"";--icon-attachment:"";--icon-backward2:"";--icon-bell-cross:"";--icon-bell2:"";--icon-bell3:"";--icon-bin:"";--icon-bookmark2:"";--icon-bookmark3:"";--icon-bookmarks:"";--icon-bubble2:"";--icon-bubbles3:"";--icon-calendar-empty:"";--icon-camera:"";--icon-cart-add2:"";--icon-cart-add:"";--icon-cart-remove:"";--icon-cart4:"";--icon-cart5:"";--icon-checkmark3:"";--icon-circle-small:"";--icon-city:"";--icon-close:"";--icon-cog:"";--icon-coin-dollar:"";--icon-comment:"";--icon-content_copy:"";--icon-credit-card2:"";--icon-dollar:"";--icon-download4:"";--icon-email:"";--icon-enlarge2:"";--icon-enlarge:"";--icon-equalizer2:"";--icon-eye-blocked:"";--icon-eye:"";--icon-facebook:"";--icon-feed:"";--icon-film4:"";--icon-first:"";--icon-floppy-disk:"";--icon-flower2:"";--icon-flower:"";--icon-gift2-share-01:"";--icon-gift2:"";--icon-google-plus:"";--icon-google:"";--icon-graduation:"";--icon-grid2:"";--icon-hamburger:"";--icon-headset:"";--icon-heart3:"";--icon-heart4:"";--icon-home3:"";--icon-info2:"";--icon-info:"";--icon-instagram:"";--icon-ios_share:"";--icon-key:"";--icon-last:"";--icon-library2:"";--icon-library:"";--icon-link:"";--icon-linkedin:"";--icon-location:"";--icon-magazine:"";--icon-map4:"";--icon-meter-medium:"";--icon-minus:"";--icon-mng-podcast1:"";--icon-mng-podcast:"";--icon-mobile:"";--icon-more2:"";--icon-music5:"";--icon-mute:"";--icon-new-tab:"";--icon-newspaper:"";--icon-next2:"";--icon-next:"";--icon-notification2:"";--icon-notification:"";--icon-office:"";--icon-paperplane:"";--icon-pause2:"";--icon-paypal:"";--icon-pen6:"";--icon-phone2:"";--icon-phone:"";--icon-piggy-bank:"";--icon-pinterest-p:"";--icon-play-arrow:"";--icon-plus:"";--icon-previous2:"";--icon-print:"";--icon-question3:"";--icon-question4:"";--icon-reddit:"";--icon-search:"";--icon-share-alt:"";--icon-share-more:"";--icon-share2:"";--icon-shrink2:"";--icon-shrink7:"";--icon-slideshow:"";--icon-sms:"";--icon-soundcloud:"";--icon-spam:"";--icon-sphere:"";--icon-spotify:"";--icon-stackoverflow:"";--icon-star-empty2:"";--icon-star-empty:"";--icon-star-full:"";--icon-stitcher:"";--icon-stop2:"";--icon-store:"";--icon-stumbleupon:"";--icon-thumbs-down2:"";--icon-thumbs-up2:"";--icon-tree2:"";--icon-tree:"";--icon-tumblr:"";--icon-twitter:"";--icon-unlink:"";--icon-unlocked:"";--icon-upload4:"";--icon-user-minus:"";--icon-user-plus:"";--icon-user4:"";--icon-user:"";--icon-users:"";--icon-vimeo:"";--icon-volume-decrease:"";--icon-volume-high:"";--icon-volume-increase:"";--icon-volume-low:"";--icon-volume-medium:"";--icon-volume-mute:"";--icon-warning2:"";--icon-warning:"";--icon-windows8:"";--icon-x:"";--icon-yelp:"";--icon-youtube:"";--icon-zoom-in2:"";--icon-zoom-out2:"";--icon-book:"";--icon-book3:"e993";--icon-quill3:"";--icon-quill4:"";--icon-google-color:"";--icon-padlock:"";--icon-bluesky:"";--icon-arrow-outline-up:"";--icon-arrow-outline-right:"";--icon-arrow-outline-left:"";--icon-arrow-outline-down:"";--icon-users4:"";--icon-heart-broken2:"";--icon-arrow-up11:"";--icon-arrow-right11:"";--icon-arrow-down11:"";--icon-arrow-left11:"";--icon-threads:"";--icon-swap:"";--icon-checkmark-circle:"";--icon-radio-unchecked:""}.icon-arrow-down:before{content:var(--icon-arrow-down)}.icon-arrow-right:before{content:var(--icon-arrow-right)}.icon-close:before{content:var(--icon-close)}.icon-hamburger:before{content:var(--icon-hamburger)}.icon-home3:before{content:var(--icon-home3)}.icon-plus:before{content:var(--icon-plus)}.icon-search:before{content:var(--icon-search)}.icon-share-alt:before{content:var(--icon-share-alt)}a,article,aside,body,div,figure,form,h1,h2,h3,header,html,i,iframe,img,label,li,nav,p,span,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,figure,header,nav{display:block}body{line-height:1}ul{list-style:none}button{border:none;background-color:rgba(0,0,0,0);font-size:inherit;appearance:none;-webkit-appearance:none;-moz-appearance:none}#content,.trending-bar .trending-bar-wrapper{max-width:81.25em;margin:0 auto;padding:0 .625rem}html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%}html *,html :after,html :before{-webkit-box-sizing:inherit;box-sizing:inherit}html a{text-decoration:none}body{font-family:Helvetica,sans-serif;font-size:100%;margin:0;text-shadow:1px 1px 1px rgba(0,0,0,.004);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}h1{font:normal 600 2.25em/1.1666666667 Noto Sans,Helvetica,sans-serif}h2{font:normal 600 1.875em/1.0666666667 Noto Sans,Helvetica,sans-serif}h3{font:normal 600 1.5em/1.1666666667 Noto Sans,Helvetica,sans-serif}a{color:inherit}img{display:block;height:auto;max-width:100%}body,html{-webkit-overflow-scrolling:touch}#page{position:relative;overflow-x:initial;overflow-y:visible}#content{margin-bottom:1em;margin-top:1em}@media (max-width:64.9375em){#content{margin-top:1em}}#content:after,.article-share:after,.full-view:after,.full-view>header:after,.site-header:after,.trending-bar .trending-bar-wrapper:after,form:after{clear:both;content:"";display:table}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.newsletter-simple a{font:normal 400 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;background-color:var(--primary);border:1px solid rgba(0,0,0,.15);color:#fff;padding:.75em 1.0625em}.body-copy>*{margin-bottom:1em}input[type=text]{border:1px solid #9d9a98;border-radius:0;color:#1a1a1a;height:30px;padding:.5em .625em}.search-form [class^=icon-]{color:var(--primary);font-size:1em;position:absolute;right:.3125em;top:.4375em}body{background-color:#fafafa}.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container{font:normal 400 1.3125em/1.1428571429 "Noto Serif",Helvetica,serif;border-bottom:2px solid var(--primary);color:#5d5b5a;letter-spacing:.035em;margin-bottom:1em;padding-bottom:.3125em;text-transform:uppercase}.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container ul{border-top:2px solid var(--primary)}.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container a{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.newsletter-simple a{font:normal 600 .9375em/1 Noto Sans,Helvetica,sans-serif;background-color:rgba(0,0,0,0);border:2px solid var(--primary);border-radius:4px;color:var(--primary);padding:.8125em 1.0625em;text-shadow:none;text-transform:uppercase}.full-view .article-share .sd-social-icon div.sd-content ul li.share-facebook,.full-view .article-share .sd-social-icon div.sd-content ul li.share-print,.full-view .article-share .sd-social-icon div.sd-content ul li.share-reddit,.full-view .article-share .sd-social-icon div.sd-content ul li.share-twitter,.site-header .article-share .sd-social-icon div.sd-content ul li.share-facebook,.site-header .article-share .sd-social-icon div.sd-content ul li.share-print,.site-header .article-share .sd-social-icon div.sd-content ul li.share-reddit,.site-header .article-share .sd-social-icon div.sd-content ul li.share-twitter{background-color:rgba(0,0,0,0);border:2px solid var(--primary)}.full-view .article-share .sd-social-icon div.sd-content ul li.share-facebook span:before,.full-view .article-share .sd-social-icon div.sd-content ul li.share-print span:before,.full-view .article-share .sd-social-icon div.sd-content ul li.share-reddit span:before,.full-view .article-share .sd-social-icon div.sd-content ul li.share-twitter span:before,.site-header .article-share .sd-social-icon div.sd-content ul li.share-facebook span:before,.site-header .article-share .sd-social-icon div.sd-content ul li.share-print span:before,.site-header .article-share .sd-social-icon div.sd-content ul li.share-reddit span:before,.site-header .article-share .sd-social-icon div.sd-content ul li.share-twitter span:before{color:var(--primary)}.full-view .article-share .sd-social-icon div.sd-content ul li.share-facebook,.site-header .article-share .sd-social-icon div.sd-content ul li.share-facebook{border:2px solid #3b5998}.full-view .article-share .sd-social-icon div.sd-content ul li.share-facebook span:before,.site-header .article-share .sd-social-icon div.sd-content ul li.share-facebook span:before{color:#3b5998}.full-view .article-share .sd-social-icon div.sd-content ul li.share-twitter,.site-header .article-share .sd-social-icon div.sd-content ul li.share-twitter{border:2px solid #00aced}.full-view .article-share .sd-social-icon div.sd-content ul li.share-twitter span:before,.site-header .article-share .sd-social-icon div.sd-content ul li.share-twitter span:before{color:#00aced}.full-view .article-share .sd-social-icon div.sd-content ul li.share-reddit,.site-header .article-share .sd-social-icon div.sd-content ul li.share-reddit{border:2px solid #ff4500}.full-view .article-share .sd-social-icon div.sd-content ul li.share-reddit span:before,.site-header .article-share .sd-social-icon div.sd-content ul li.share-reddit span:before{color:#ff4500}a img{border:none}.breadcrumbs{float:left;clear:both;text-transform:uppercase}.breadcrumbs .icon-arrow-right{display:inline-block;font-size:.875em;line-height:1;color:#ddd8d5;padding:5px}.header-title-area .breadcrumbs div.breadcrumbs-bar{font:normal 700 1em/1.375 Noto Sans,Helvetica,sans-serif;display:inline-block;letter-spacing:normal;color:inherit}figure{font-size:1rem}.image-wrapper{height:0;padding-bottom:56.25%;overflow:hidden;position:relative;width:100%}.image-wrapper img{left:0;position:absolute;top:0;width:100%}.header-features .image-wrapper{height:auto;padding-bottom:0;overflow:visible}.header-features .image-wrapper img{position:relative}.article-slideshow .slide-caption,.article-slideshow .slide-credit{display:none}.article-slideshow .icon-close{background-color:#141414;border:1px solid #fff;border-radius:50%;color:#fff;font-size:1.25em;height:1.6em;width:1.6em;bottom:.25em;left:.25em;display:none;left:auto;line-height:1;right:.5em;padding:0;position:absolute;top:.5em;z-index:1}.article-slideshow .image-wrapper img{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.footer-menus a{color:#000}.site-footer .menu-item-has-children .expander{position:absolute;display:none;top:0;right:0;width:2.9375em;height:2.9375em;text-align:center;z-index:5}.site-footer .menu-item-has-children .expander a{position:relative;display:inline-block;line-height:3;vertical-align:middle}@media (max-width:39.9375em){.site-footer .menu-item-has-children .expander{display:block}}.dfm-site-info .colophon ul{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;margin-top:1.25em}@media (max-width:49.9375em){.dfm-site-info .colophon ul{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}}.dfm-site-info .colophon .footer-flex-menu-wrap ul{display:contents;margin:0 auto 0 0;padding:0;width:auto}.site-header{background-color:#fff;position:relative}.site-header .input-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:100%;width:95%;margin:0 auto}.site-header #search-bar{background:#fafafa;position:absolute;right:0;-webkit-box-shadow:0 3px 3px rgba(0,0,0,.25);box-shadow:0 3px 3px rgba(0,0,0,.25);border-top:2px solid rgba(0,0,0,.5);display:none;height:4rem;margin:4rem auto;z-index:100;width:100%}.site-header #search-bar input[type=text]{width:92%;padding:1.3em .3em;outline:none;font-size:.9375em}@media (max-width:49.9375em){.site-header #search-bar input[type=text]{font-size:1rem}}.site-header .search-button-container{width:5%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.site-header .search-button-container .search-button{width:75px;font-size:.9375rem;font-weight:600;color:#fff;background:var(--primary);border-radius:5px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:0 auto}.site-header .icon-search,.site-header .search-button-container .search-button{height:2rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.site-header .icon-search{color:#141414;font-size:1.2rem;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;position:relative;top:0}@media (min-width:65em){.site-header{height:auto}}.site-header .article-share,.site-header .hidden_article_headline{display:none}.nav-wrapper-primary{border-bottom:1px solid #9d9a98}.nav-wrapper-primary .nav-primary-bottom,.nav-wrapper-primary .nav-primary-middle,.nav-wrapper-primary .nav-primary-top{max-width:95%;margin:0 auto}@media (max-width:79.9375em){.nav-wrapper-primary .nav-wrapper-secondary{max-width:79.9375em}}.nav-wrapper-primary .accuweather-wrap{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;width:33%;-ms-flex-item-align:center;align-self:center;padding:.9375rem}.nav-wrapper-primary .accuweather-wrap,.nav-wrapper-primary .accuweather-wrap .weather-date{display:-webkit-box;display:-ms-flexbox;display:flex}.nav-wrapper-primary .accuweather-wrap .weather-date .dfm_accuweather_current_conditions{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-item-align:center;align-self:center}.nav-wrapper-primary .accuweather-wrap .weather-date .dfm_accuweather_current_conditions a{display:-webkit-box;display:-ms-flexbox;display:flex}.nav-wrapper-primary .accuweather-wrap .weather-date span{font-size:1em;font-weight:700;position:relative;color:#1a1a1a}.nav-wrapper-primary .accuweather-wrap .weather-date i{font-size:1.65rem}.nav-wrapper-primary .accuweather-wrap .weather-date .date{margin-left:.8em;font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;color:#1a1a1a}.nav-wrapper-primary .accuweather-wrap .weather-date .date .e-edition{font-size:.8em;font-weight:500;margin-top:5.5%;color:#1a1a1a}.nav-wrapper-primary .nav-primary-top{display:-webkit-box;display:-ms-flexbox;display:flex;height:4em;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.nav-wrapper-primary .nav-primary-top .pushnav-flex-wrapper{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;width:33%}@media (max-width:49.9375em){.nav-wrapper-primary .nav-primary-top .pushnav-flex-wrapper{width:23%}}.nav-wrapper-primary .nav-primary-top .accuweather-wrap{padding:0 15px 5px;width:100%;display:none}@media (max-width:64.9375em){.nav-wrapper-primary .nav-primary-top .accuweather-wrap{display:block}}.nav-wrapper-primary .nav-primary-top #dfm-digisubs-menu{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}.nav-wrapper-primary .nav-primary-top .digisubs-pushmenu{display:none}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;width:30%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .icon-arrow-down{font-size:.7em;padding-left:5px}@media (max-width:49.9375em){.nav-wrapper-primary .nav-primary-top .digisubs-wrapper{width:20%}}@media (max-width:64.9375em){.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-pushmenu{display:block}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-pushmenu #mng-icon-image{display:-webkit-box;display:-ms-flexbox;display:flex}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-pushmenu .wrapper-nav-subs{height:calc(100vh - 64px);width:300px}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-pushmenu .wrapper-nav-subs .border-container{min-height:65vh}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-pushmenu .wrapper-nav-subs .border-container #push-account-content{margin:.75rem auto;width:230px;display:none}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-pushmenu .wrapper-nav-subs .border-container #push-account-content .show-digisubs-push{display:grid;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-pushmenu .wrapper-nav-subs .border-container .menu-item{height:3.5em}}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-wrapper-large{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-wrapper-large #dfm-digisubs-menu{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:15px}.nav-wrapper-primary .nav-primary-top .digisubs-wrapper .digisubs-wrapper-large #dfm-digisubs-menu .subscribe-special.custom-button>a{background-color:var(--primary-dark);color:#fff;text-align:center;font:normal 600 .9375em/1.7333333333 Noto Sans,Helvetica,sans-serif;border-radius:4px;display:-webkit-box;display:-ms-flexbox;display:flex;width:120px;height:45px;padding:10px 7px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:24px}.nav-wrapper-primary .nav-primary-top .search-icon-wrapper{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4;width:4%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:.9375rem}.nav-wrapper-primary .nav-primary-middle{display:-webkit-box;display:-ms-flexbox;display:flex;min-height:5em;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}@media (max-width:64.9375em){.nav-wrapper-primary .nav-primary-middle{display:none}}.nav-wrapper-primary .nav-primary-middle .sponsorship-ad-wrapper{width:33%;-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;-ms-flex-item-align:center;align-self:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;display:-webkit-box;display:-ms-flexbox;display:flex}.nav-wrapper-primary .nav-primary-bottom{display:-webkit-box;display:-ms-flexbox;display:flex;height:3em;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;width:100%;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}@media (max-width:64.9375em){.nav-wrapper-primary .nav-primary-bottom{display:none}}.nav-primary .menu{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;height:100%}@media (max-width:64.9375em){.nav-primary .menu{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}}.nav-primary .menu>li{margin-right:1.5625em;font-size:1rem}@media (max-width:64.9375em){.nav-primary .menu>li{border-right:1px solid #fff}.nav-primary .menu>li:last-child{border:none}}.nav-primary .menu>li>a{font:normal 700 1em/1 Noto Sans,Helvetica,sans-serif;display:block}@media (max-width:64.9375em){.nav-primary .menu>li>a{border:none;display:inline-block;font-weight:700;padding-right:.625em}}.nav-primary li{display:inline-block}.nav-primary a{color:#1a1a1a;text-decoration:none}.pushnav::-webkit-scrollbar{display:none}.pushnav{overflow:hidden;height:4em}@media (max-width:64.9375em){.pushnav{width:50px}}.pushnav.digisubs-toggle{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:4rem;padding:.9375rem 0 .9375rem .9375rem;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.pushnav .log-out-button{visibility:hidden}.pushnav .menu-toggle{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:4rem;padding:.9375rem;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.pushnav .menu-toggle .icon-hamburger{padding-right:.25rem}.pushnav .menu-toggle .menu-label{font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;padding-left:.25rem;color:#1a1a1a}@media (max-width:64.9375em){.pushnav .menu-toggle .menu-label{display:none}}.pushnav .menu{font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;background-color:#fafafa}.pushnav .wrapper-nav{height:calc(100% - 64px);height:-moz-calc(100% - 64px);width:300px}.pushnav .border-container{border-bottom:1px solid #141414;padding:.75rem 0 3rem}.pushnav .top-pushnav-container .subscribe-button{font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;color:#fff;background:var(--primary);border-radius:4px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:.875rem .625rem;margin:.75rem auto}.pushnav .top-pushnav-container .home-link,.pushnav .top-pushnav-container .subscribe-button{width:230px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.pushnav .top-pushnav-container .home-link{padding:.75rem .625rem;height:2.25rem;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.pushnav .top-pushnav-container .home-link span{font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;padding-left:.75rem}.pushnav li>a{display:block;width:100%;padding:.9375em;color:#1a1a1a;height:3.25rem}.pushnav .menu-item-has-children:not(.nav-alt-links){overflow:hidden;position:relative}.pushnav .menu-item-has-children:not(.nav-alt-links)>a{display:inline-block;position:relative;width:100%;z-index:5}.pushnav .menu-item-has-children:not(.nav-alt-links)>a:before{-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#141414;content:"";display:-webkit-box;display:-ms-flexbox;display:flex;font-size:.5625em;height:100%;width:100%;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding-right:.9375em;position:absolute;top:0;right:0}.pushnav .menu-item-has-children:not(.nav-alt-links)>ul{position:relative;background-color:#fff;-webkit-transform:scaleY(1);-ms-transform:scaleY(1);transform:scaleY(1);z-index:4;margin-top:-6px}.pushnav .newsletter-item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:1em 0;font:normal 600 .9375em/1.7333333333 Noto Sans,Helvetica,sans-serif}.pushnav .newsletter-item .prompt{text-align:center}.pushnav .newsletter-item .sign-up-button{letter-spacing:normal;text-transform:capitalize;height:2rem;width:230px;font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;color:#fff;background:var(--primary);border-radius:4px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:1.2rem 1rem}.trending-bar{float:left;position:relative;font-family:Noto Sans,Helvetica,sans-serif;width:100%}@media (max-width:64.9375em){.trending-bar{position:absolute;display:none;top:7.3125em;left:0;margin:0;z-index:7}}.trending-bar nav{width:100%;padding-left:5.625em;display:inline-block;float:left}@media (max-width:64.9375em){.trending-bar nav{padding-left:0}}.trending-bar ul{list-style:none;float:left;width:100%;overflow:hidden}@media (min-width:65em){.trending-bar ul{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}}@media (max-width:64.9375em){.trending-bar ul{width:100%;height:auto;overflow:visible}}@media (max-width:64.9375em){.trending-bar li{display:block;float:none;line-height:1.25;margin:0}.trending-bar li:last-child a{border:none}}.trending-bar a{text-decoration:none}@media (max-width:64.9375em){.trending-bar a{border-bottom:1px solid #aaa7a4;color:#1a1a1a;display:block;font-size:.9375em;padding:1em}}.trending-bar .trending-bar-wrapper>p{position:absolute;top:.1875em;font-weight:800;line-height:1.875em}@media (max-width:64.9375em){.trending-bar .trending-bar-wrapper{padding:0}}@media (max-width:64.9375em){.trending-bar .label{display:none}}.logo{display:inline-block;font-size:1rem;position:relative}.logo a{overflow:hidden;text-indent:-9999px}.logo.custom-logo img{margin:0 auto;max-height:3em;width:100%;-o-object-fit:contain;object-fit:contain}.logo.custom-logo a{background-image:none}.newsletter-simple{position:relative}.dfp-ad{height:auto;width:100%;overflow:auto}.dfp-ad.dfp-interstitial{height:1px;width:1px}.dfp-ad.dfp-top_leaderboard{margin-left:0!important;padding:0!important;clear:both;top:inherit!important}@media screen and (min-width:300px){.dfp-ad.dfp-top_leaderboard{min-height:50px}}@media screen and (min-width:750px){.dfp-ad.dfp-top_leaderboard{min-height:90px}}@media screen and (min-width:1000px){.dfp-ad.dfp-top_leaderboard{background-color:#fafafa;min-height:250px;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-bottom:1em}}@media (max-width:750px){.header-banners{-webkit-box-sizing:content-box;box-sizing:content-box;left:-10px;padding:0 10px;position:relative}}.article-slideshow .mng-gallery-list li{float:left;margin-right:1.25rem;visibility:hidden;display:none}.article-slideshow .mng-gallery-list li img{display:block;width:100%;height:auto;max-width:100%;max-height:100%;image-rendering:-webkit-optimize-contrast}.article-slideshow .mng-gallery-list li{margin-right:0}.mng-gallery-caption-expand{display:none}.search-form{display:inline-block;position:relative;width:100%}@media (max-width:64.9375em){.search-form{padding:.625em}}.search-form.header-search{clear:both;margin:0 auto}.search-form.header-search input[type=text]{font:normal 400 1.125em/1.2222222222 Noto Sans,Helvetica,sans-serif;height:3.0555555556em;width:100%}.search-form.header-search{height:3.75em}.search-form.header-search input[type=text]{height:100%}.search-form.header-search{display:none;height:2.5em;margin-top:.625em;position:absolute;right:.625em;width:10.9375em;z-index:1}@media (min-width:65em){.search-form.header-search{display:block}}.sharedaddy li{display:inline-block;margin-right:1.25em}.article-share{position:relative}.article-share .sd-content{float:left;position:relative}.article-share .sd-sharing .share-end,.article-share .sd-sharing>h3{display:none}.full-view .article-share ul,.site-header .article-share ul{display:-webkit-box;display:-ms-flexbox;display:flex;margin:0!important}.full-view .article-share .sd-content>ul li a,.full-view .article-share .sd-content>ul li span,.site-header .article-share .sd-content>ul li a,.site-header .article-share .sd-content>ul li span{width:100%;height:100%}.full-view .article-share .sd-social-icon .sd-content ul li a.sd-button,.site-header .article-share .sd-social-icon .sd-content ul li a.sd-button{height:100%;margin:0;padding:0;position:static;top:0;width:100%}.full-view .article-share .sd-social-icon .sd-content ul li[class*=share-],.site-header .article-share .sd-social-icon .sd-content ul li[class*=share-]{margin:0 .3125em 0 0!important;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.full-view .article-share .sd-social-icon .sd-content ul li[class*=share-] a.sd-button,.site-header .article-share .sd-social-icon .sd-content ul li[class*=share-] a.sd-button{background-color:rgba(0,0,0,0)}.full-view .article-share .sd-social-icon .sd-content ul li[class*=share-] a.sd-button:before,.site-header .article-share .sd-social-icon .sd-content ul li[class*=share-] a.sd-button:before{display:none}@media (max-width:64.9375em){.full-view .article-share .sd-social-icon .sd-content ul li.share-print,.full-view .article-share .sd-social-icon .sd-content ul li.share-reddit,.site-header .article-share .sd-social-icon .sd-content ul li.share-print,.site-header .article-share .sd-social-icon .sd-content ul li.share-reddit{display:none}}.full-view .article-share .sd-social-icon .sd-content ul li.share-facebook,.full-view .article-share .sd-social-icon .sd-content ul li.share-print,.full-view .article-share .sd-social-icon .sd-content ul li.share-reddit,.full-view .article-share .sd-social-icon .sd-content ul li.share-twitter,.site-header .article-share .sd-social-icon .sd-content ul li.share-facebook,.site-header .article-share .sd-social-icon .sd-content ul li.share-print,.site-header .article-share .sd-social-icon .sd-content ul li.share-reddit,.site-header .article-share .sd-social-icon .sd-content ul li.share-twitter{border-radius:50%;font-size:1.25em;height:2em;width:2em;background-color:var(--primary);border-bottom:2px solid var(--primary-dark);color:#fff;position:static;text-shadow:0 0 1px var(--primary-dark);padding-left:0}.full-view .article-share .sd-social-icon .sd-content ul li.share-facebook span,.full-view .article-share .sd-social-icon .sd-content ul li.share-print span,.full-view .article-share .sd-social-icon .sd-content ul li.share-reddit span,.full-view .article-share .sd-social-icon .sd-content ul li.share-twitter span,.site-header .article-share .sd-social-icon .sd-content ul li.share-facebook span,.site-header .article-share .sd-social-icon .sd-content ul li.share-print span,.site-header .article-share .sd-social-icon .sd-content ul li.share-reddit span,.site-header .article-share .sd-social-icon .sd-content ul li.share-twitter span{-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:icomoon;font-style:normal;font-variant:normal;font-weight:400;font-size:0;line-height:2;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;speak:none;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-left:10px}.full-view .article-share .sd-social-icon .sd-content ul li.share-facebook span:before,.full-view .article-share .sd-social-icon .sd-content ul li.share-print span:before,.full-view .article-share .sd-social-icon .sd-content ul li.share-reddit span:before,.full-view .article-share .sd-social-icon .sd-content ul li.share-twitter span:before,.site-header .article-share .sd-social-icon .sd-content ul li.share-facebook span:before,.site-header .article-share .sd-social-icon .sd-content ul li.share-print span:before,.site-header .article-share .sd-social-icon .sd-content ul li.share-reddit span:before,.site-header .article-share .sd-social-icon .sd-content ul li.share-twitter span:before{color:#fff;font-size:18px}.full-view .article-share .sd-social-icon .sd-content ul li.share-facebook,.site-header .article-share .sd-social-icon .sd-content ul li.share-facebook{background-color:red}.full-view .article-share .sd-social-icon .sd-content ul li.share-facebook span:before,.site-header .article-share .sd-social-icon .sd-content ul li.share-facebook span:before{content:var(--icon-facebook)}.full-view .article-share .sd-social-icon .sd-content ul li.share-twitter,.site-header .article-share .sd-social-icon .sd-content ul li.share-twitter{background-color:#00aced}.full-view .article-share .sd-social-icon .sd-content ul li.share-twitter span:before,.site-header .article-share .sd-social-icon .sd-content ul li.share-twitter span:before{content:var(--icon-twitter)}.full-view .article-share .sd-social-icon .sd-content ul li.share-reddit,.site-header .article-share .sd-social-icon .sd-content ul li.share-reddit{background-color:#ff4500}.full-view .article-share .sd-social-icon .sd-content ul li.share-reddit span:before,.site-header .article-share .sd-social-icon .sd-content ul li.share-reddit span:before{content:var(--icon-reddit)}.full-view .article-share .sd-social-icon .sd-content ul li.share-print span:before,.site-header .article-share .sd-social-icon .sd-content ul li.share-print span:before{content:var(--icon-print)}.full-view .article-share .sd-content>ul li,.site-header .article-share .sd-content>ul li,.site-header .article-share .share-alt{line-height:2;margin-right:.125em}.site-header .article-share .share-alt{display:none}@media (max-width:39.9375em){.site-header .article-share .share-alt{margin-right:0;width:2.5em}}@media (max-width:64.9375em){.full-view .article-share li:last-of-type,.site-header .article-share li:last-of-type{display:none}}.full-view .article-share .sharedaddy h3.sd-title,.site-header .article-share .sharedaddy h3.sd-title{display:none}@media (min-width:65em){.site-header .article-share{margin:0}}@media (max-width:64.9375em){.site-header .article-share{float:right;position:relative;top:.3125em}}@media (max-width:39.9375em){.site-header .article-share{background-color:#fff;height:2.5em;width:2.5em;z-index:1}.site-header .article-share .sharedaddy{background-color:#fff;left:0;padding:0 .3125em;position:absolute;-webkit-transform:translateX(2.5em);-ms-transform:translateX(2.5em);transform:translateX(2.5em);margin-top:0;width:auto}}.full-view>*{margin-bottom:2em}.full-view>header>*{margin-bottom:1em}.full-view>header>:last-child{margin-bottom:0}@media (min-width:80em){.full-view>header{width:100%}}@media (min-width:65em)and (max-width:79.9375em){.full-view>header{width:100%}}@media (min-width:50em)and (max-width:64.9375em){.full-view>header{width:100%}}@media (min-width:40em)and (max-width:49.9375em){.full-view>header{width:100%}}@media (min-width:20em)and (max-width:39.9375em){.full-view>header{width:100%}}.full-view>header h1{margin-bottom:.4444444444em}.full-view>header .header-title-area h1{width:100%;margin-bottom:.2666666667em;clear:both}.full-view .header-title-area>*{margin-bottom:1em}.full-view .header-title-area>:last-child{margin-bottom:0}@media (min-width:80em){.full-view .header-features{width:calc(75% - 5px);width:calc(75% - .32rem)}}@media (min-width:65em)and (max-width:79.9375em){.full-view .header-features{width:calc(69.23077% - 7px);width:calc(69.23077% - .39rem)}}@media (min-width:50em)and (max-width:64.9375em){.full-view .header-features{width:100%}}@media (min-width:40em)and (max-width:49.9375em){.full-view .header-features{width:100%}}@media (min-width:20em)and (max-width:39.9375em){.full-view .header-features{width:100%}}.full-view .article-sidebar{float:right;position:relative}@media (min-width:80em){.full-view .article-sidebar{width:calc(25% - 15px);width:calc(25% - .94rem)}}@media (min-width:65em)and (max-width:79.9375em){.full-view .article-sidebar{width:calc(30.76923% - 14px);width:calc(30.76923% - .87rem)}}@media (min-width:50em)and (max-width:64.9375em){.full-view .article-sidebar{width:100%}}@media (min-width:40em)and (max-width:49.9375em){.full-view .article-sidebar{width:100%}}@media (min-width:20em)and (max-width:39.9375em){.full-view .article-sidebar{width:100%}}@media (max-width:64.9375em){.logo.custom-logo a img{-webkit-filter:unset!important;filter:unset!important}}h1.entry-title{display:inline-block}.article-header{border-bottom:3px solid rgba(0,0,0,0);display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;float:none;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin:2em 0 -2.25em;padding:0;position:relative}.header-title-area{position:relative;z-index:1}.header-title-area>*{margin-bottom:.5em}.header-title-area>:last-child{margin-bottom:0}.header-title-area h1{font-size:1.9375em;line-height:1.1;font-weight:700;letter-spacing:-.03em}@media (min-width:40em){.header-title-area h1{font-size:2rem;line-height:1.15}}@media (min-width:65em){.header-title-area h1{font-size:2.25rem}}.header-title-area .breadcrumbs div{font-size:1.4375em;line-height:1.3;font-weight:500;color:#1f1e1e;letter-spacing:-.023em}@media (max-width:39.9375em){.header-title-area .breadcrumbs div{font:normal 500 1.25em/1.25 Noto Sans,Helvetica,sans-serif;letter-spacing:-.01em}}.headline-area{display:inline-block;margin:0;width:100%}@media (max-width:39.9375em){.headline-area{display:block}}.breadcrumbs{padding-top:1em}.article-slideshow .caption>*{margin-bottom:.5em}#content .obit-article-search-result .obit-card-essential-info-container{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;grid-area:essential-info}#content .obit-article-search-result .article-info{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;grid-area:additional-info}:root{--stn-player-titleBarBackground:#181c21;--stn-player-titleBarColor:#fff;--stn-player-panelBackground:#f1f1f1;--stn-player-playerBackground:#f9f9f9;--stn-player-progressBarTrackColor:#c72828;--stn-player-progressBarThumbColor:#fff;--stn-player-bigPlayButtonBackground:#c72828;--stn-player-bigPlayButtonColor:#c72828;--stn-player-controlbarActiveButtonsColour:#c72828;--stn-player-barkerBackground:#181c21;--stn-player-barkerSelectedPlaylistItemBackgroundColor:#2a323b;--stn-player-barkerSelectedPlaylistItemLeftBorderColor:#181c21;--stn-player-hoveredPlaylistItemTitleColor:#181c21;--stn-player-adProgressBarTrackColor:#c72828;--stn-player-adVolumeBarTrackColor:#c72828;--stn-player-miniTitleBarButtonsBackground:#c72828}.colophon ul{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;margin:0 auto;padding:1.25em .625em;width:100%}.site-footer .footer-menus>.menu-item .expander,.site-footer .menu-item-has-children .expander{position:static;width:50%}.site-footer .footer-menus>.menu-item .expander a,.site-footer .menu-item-has-children .expander a{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;height:100%;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding-right:5%}.site-footer .footer-menus>.menu-item .expander a:before,.site-footer .menu-item-has-children .expander a:before{display:none}.site-footer .footer-menus>.menu-item .expander a:after,.site-footer .menu-item-has-children .expander a:after{content:"";border-color:#aaa7a4 rgba(0,0,0,0) rgba(0,0,0,0);border-style:solid;border-width:7px 5px;margin:.3em 0 0 .25em}.header-placeholder{display:none}@media (max-width:64.9375em){.header-placeholder{height:4rem}}@media (min-width:65em){.header-placeholder{height:14rem}}.site-header{background-color:rgba(0,0,0,0)}.hidden-logo{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2;width:33%;-ms-flex-item-align:center;align-self:center}@media (max-width:49.9375em){.hidden-logo{width:53%}}.logo{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}@media (max-width:64.9375em){.logo{width:100%}}@media (max-width:64.9375em){.logo a{display:grid;place-items:center}}.section-header{font:normal 700 2.5em/.5 Noto Sans,Helvetica,sans-serif;color:var(--primary);text-align:center;overflow-wrap:break-word;line-height:1em;-ms-hyphens:auto;hyphens:auto}@media (max-width:64.9375em){.nav-primary{overflow:visible}}.nav-primary .menu{padding:0}@media (max-width:64.9375em){.nav-primary .menu{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}}.nav-primary .menu>li{margin:0}@media (max-width:64.9375em){.nav-primary .menu>li{border:0}}.nav-primary .menu>li>a{font:normal 600 .9375em/1.7333333333 Noto Sans,Helvetica,sans-serif;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex}@media (max-width:64.9375em){.nav-primary .menu>li>a{padding-left:.625em}}@media (max-width:79.9375em){.nav-primary .menu>li>a{font-size:.9375em}}@media (min-width:65em)and (max-width:79.9375em){.nav-primary .menu>li>a{padding:0 1.28vw}}@media (min-width:80em){.nav-primary .menu>li>a{padding:0 .8823529412em}}.nav-primary .menu>li:last-child>a{border-right:0}@media (min-width:65em)and (max-width:79.9375em){.nav-primary .menu>li:first-child>a{padding-left:.7142857143em}}@media (min-width:80em){.nav-primary .menu>li:first-child>a{padding-left:.5555555556em}}.pushnav li>a{font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;background:#fafafa}.pushnav .menu-item{height:2.5em;background:#fafafa}.pushnav .menu-item>a{height:2.8888888889em}.pushnav .menu-item>ul a{font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;margin-left:1rem}.trending-bar{width:100vw}@media (min-width:65em)and (max-width:79.9375em){.trending-bar{width:calc(100vw - 1.25em);left:.625em}}.trending-bar nav{float:none;padding:.5em 0}@media (min-width:65em){.trending-bar ul{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;height:1.125em;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;overflow:hidden}}.trending-bar li{line-height:1.15;padding-right:1.5625em;position:relative}.trending-bar a{color:#1f1e1e;font-family:"Noto Serif",Helvetica,serif}.trending-bar .trending-bar-wrapper p,.trending-bar a{font-size:.9375em}.trending-bar .trending-bar-wrapper{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;padding:0 .3125em}@media (min-width:80em){.trending-bar .trending-bar-wrapper{max-width:80em}}.trending-bar .trending-bar-wrapper>p{color:var(--primary-dark);display:block;font-size:.875em;padding-right:1.5625em;position:static;text-transform:uppercase;min-width:130px;white-space:nowrap}.newsletter-simple a{display:inline-block}.newsletter-simple .newsletter-item{border-bottom:1px solid #fff;padding-bottom:1em}@media (max-width:64.9375em){.newsletter-simple .newsletter-item{padding:1em 0}}.prompt{font:normal 700 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;color:#141414;margin-bottom:.75rem;position:relative;width:100%}.search-form.header-search{margin-top:0}.search-form.header-search input[type=text]{border:none;background-color:#fafafa;font-size:.9375em;padding:.75em}.sharedaddy{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}@media (max-width:39.9375em){.sharedaddy{float:none;margin-top:.625em}}.sharedaddy ul{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex}.sharedaddy li{margin:0 .3125em 0 0}.sharedaddy li:last-child{margin:0}.article-share{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.full-view .article-share{padding-top:.3125em}.full-view .article-share .sd-content>ul li{border-radius:50%;font-size:1.3125em;height:2.0476190476em;width:2.0476190476em}@media (min-width:20em)and (max-width:79.9375em){.full-view .article-share .sd-social-icon .sd-content>ul li a.sd-button,.site-header .article-share .sd-social-icon .sd-content>ul li a.sd-button{margin-right:0}}.full-view .article-share .sd-social-icon .sd-content>ul li.share-end,.site-header .article-share .sd-social-icon .sd-content>ul li.share-end{display:none}@media (max-width:64.9375em){.full-view .article-share li:last-of-type,.site-header .article-share li:last-of-type{display:block}}#sharing-top{display:none}.full-view .article-content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}@media (max-width:64.9375em){.full-view .article-content{-ms-flex-wrap:wrap;flex-wrap:wrap}}@media (min-width:80em){.full-view .article-content-wrapper{width:calc(75% - 5px);width:calc(75% - .32rem)}}@media (min-width:65em)and (max-width:79.9375em){.full-view .article-content-wrapper{width:calc(69.23077% - 7px);width:calc(69.23077% - .39rem)}}@media (min-width:50em)and (max-width:64.9375em){.full-view .article-content-wrapper{width:100%}}@media (min-width:40em)and (max-width:49.9375em){.full-view .article-content-wrapper{width:100%}}@media (min-width:20em)and (max-width:39.9375em){.full-view .article-content-wrapper{width:100%}}.full-view .header-features{padding:3em 0 1em;width:100%}@media (min-width:65em){.full-view .article-sidebar{margin-top:3em}}.full-view .article-sidebar .sidebar-content>*{margin-bottom:2.5em}.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container{counter-reset:section;background-color:rgba(0,0,0,0);color:var(--primary);padding:0;border-bottom:none;display:block}@media (max-width:64.9375em){.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container{float:left}}@media (min-width:50em)and (min-width:50em)and (max-width:64.9375em){.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container{width:calc(60% - 8px);width:calc(60% - .5rem)}}.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container ul{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:.625em 0;text-transform:none;font-size:medium}@media (min-width:40em){.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container ul{display:block}}@media (max-width:64.9375em){.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container ul{font:normal 600 .9375em/1.0666666667 Noto Sans,Helvetica,sans-serif;width:100%;letter-spacing:0}}@media (min-width:65em){.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container ul{font:normal 600 1.0625em/1.0588235294 Noto Sans,Helvetica,sans-serif;letter-spacing:-.015em}}.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container li{font-size:medium}.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container li a{counter-increment:section;display:-ms-flexbox;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;padding-top:1em;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:100%;width:100%;color:#000;border-bottom:none;font-size:medium}.full-view .article-sidebar .dfm-sidebar-most-popular-flex-container li a:before{font:normal 600 1.3125em/1 Noto Sans,Helvetica,sans-serif;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:var(--primary);border-radius:50%;color:#fff;content:counter(section);display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex:0 0 auto;-webkit-box-flex:0;flex:0 0 2rem;font-family:Noto Sans,Helvetica,sans-serif;height:2rem;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;line-height:2rem;margin-right:.625rem;max-width:100%;width:2rem}@media (min-width:50em)and (max-width:64.9375em){.full-view .article-sidebar .dfp-ad{width:calc(40% - 12px);width:calc(40% - .75rem)}}@media (min-width:40em)and (max-width:49.9375em){.full-view .article-sidebar .dfp-ad{width:100%}}@media (min-width:40em)and (max-width:64.9375em){.full-view .article-sidebar .dfp-ad{float:right}}</style>
+	<link rel="preload" fetchpriority="high" as="image" href="https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg">
+<script id="mng_admiral_script" type="text/javascript">
+!(function(h,_name,a,H,v){v=function(){(v.q=v.q||[]).push(arguments)},h[_name=a(a(_name))]=h[_name]||v,h[_name].v=h[_name].v||3,h[_name].s=3+0})(window,'%2561%64%256Di%2572%256%31%6C',decodeURI);!(function(h,a,H,v,l,O,k,o,V){O=function(r,s){return r<2&&s};try{a[H]=a[H]||function(h){h?k[h]=!0:O()},k=a[H]}catch(L){return void O()}!(function G(a,H,B,Q){function f(){try{if(k[B&&B.src||H]||k[o])return}catch(L){return void O()}B&&(B.remove(),B=null),clearTimeout(V),!a&&H&&(H+=(-1===H.indexOf("?")?"?":"&")+"r=1"),(H=O(++a,H))&&G(a,H)}B=h.createElement(v),Q=h.getElementsByTagName(v)[0],B.async=1,B.src=H,a>0&&(B.fetchPriority="high"),V=setTimeout(f,6e3+2e3*a),B[l]("error",f),B[l]("load",f),Q.parentNode.insertBefore(B,Q)})(0,o="https://thebestpaints.com/static/ja7f6tycboxc.v1.js")})(document,window,"QS02OEVGQTIzNzJFODI0QTAxMTQ4Njc3MUItMg","script","addEventListener",{});;
+!(function(h,a,H,v,l,O,k,o,V,L,G,_name,B,Q,f,K,j,P,g,y,s,t){_name=(G=function(h){return a(a(h))})('%61%64m%256%39%2572%25%361%25%36C'),B=h.localStorage,Q=h.sessionStorage,f=G('_a%2564%256%44%257%32%256C%25%36%33%256B%2576p'),j=h.location;try{0===document.referrer.indexOf(j.origin)?(K=new URLSearchParams(j.search)).get(G('%255F%61%63%2572%69'))?((P=K.get(G('%25%35F%25%36%31c%25%374')))===G('%65%78t%2565n%2564')?g=[["ad\u006d\u0069r\u0061\u006c-exte\u006e\u0064\u0065d","true"||_name]]:P===G('shap%65')&&(g=[["a\u0064\u006dira\u006c-\u0073hap\u0065d","true"||_name]]),g&&(Q[f]=JSON.stringify(g))):g=JSON.parse(Q[f]||"[]"):delete Q[f]}catch(E){g=[]}function Y(a,H){try{a=JSON.parse(B["_aQS02OEVGQTIzNzJFODI0QTAxMTQ4Njc3MUItMg"]||"{}").lgk||[]}catch(E){a=[]}g&&(a=a.concat(g)),a&&a.length&&(H=h[y].pubads())&&a.forEach((function(h){h&&h[0]&&H.setTargeting(h[0],h[1]||"")}))}y=G('%256%37%25%36%46%6F%67le%74%25%361%25%36%37');try{t=(s=h[y]=h[y]||{}).cmd=s.cmd||[],typeof s.pubads===H?Y():typeof t.unshift===H?t.unshift(Y):t.push(Y)}catch(E){}})(window,decodeURI,"function");
+</script>
+<link rel='dns-prefetch' href='//metrics.rapidedge.io' />
+<link rel='dns-prefetch' href='//htlbid.com' />
+<link rel='dns-prefetch' href='//cmp.osano.com' />
+<link rel='dns-prefetch' href='//ak.sail-horizon.com' />
+<link rel='dns-prefetch' href='//cdn.parsely.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//s211.mcall.com' />
+<link rel='dns-prefetch' href='//embed.sendtonews.com' />
+<link rel='dns-prefetch' href='//cdn.sophi.io' />
+<link rel='dns-prefetch' href='//applepay.cdn-apple.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel="alternate" type="application/rss+xml" title="The Morning Call &raquo; Feed" href="https://www.mcall.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Morning Call &raquo; Comments Feed" href="https://www.mcall.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Morning Call &raquo; The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay. Comments Feed" href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.mcall.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mcall.com%2F2021%2F04%2F22%2Fthe-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.mcall.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mcall.com%2F2021%2F04%2F22%2Fthe-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay%2F&#038;format=xml" />
+<meta name='description' content='Allentown voters next month will largely determine who represents them at City Hall through 2025. They face many choices, but The Morning Call is here to help. Last week, reporter Andrew Wagaman interviewed all five Allentown mayoral candidates on why they believe they deserve to lead Pennsylvania&#8217;s third-largest city. This week, The Morning Call hosted [&hellip;]' /><!-- WP SEO -->
+<link rel='stylesheet' id='__htl_style-css' href='https://htlbid.com/v3/mcall.com/htlbid.css' media='screen' />
+<style id='__htl_style-inline-css'>
+@media screen and (max-width:1000px) { #mobile-adhesion { display: block !important; } }
+/*# sourceURL=__htl_style-inline-css */
+</style>
+<link rel='stylesheet' id='all-css-ca8d' href='https://www.mcall.com/_static/??/wp-content/themes/wp-mason/dist/css/styleOsanoCustom.min.css,/wp-content/client-mu-plugins/src/Sitemap/includes/style.css?m=1785197931' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='digisubs_plugin_css-css' href='https://www.mcall.com/wp-content/plugins/mng-digisubs/static/mng-digisubs.styles.css?ver=1787154163' media='all' />
+<link rel='stylesheet' id='all-css-c6e0' href='https://www.mcall.com/_static/??-eJx9zDEKwzAMheELVVXSxVlK6VESR9gCWzKRTMntawqFTh0eP7zhw1eDqOIkjrHwCNQOrfTEYvhtlQRGCrlvuJqRG0Yb03YenLKDqHOk6zgv+Fe0I+Jzt1+l6saFYN0zGauA+Vk+1KPe57DM022ZQngDSZE+SQ==' type='text/css' media='all' />
+<link rel='stylesheet' id='mason-fonts-css' href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%2C800%7CNoto+Serif%3A400%2C400i%2C700%2C700i%2C800&#038;display=swap&#038;ver=6.9.7' media='all' />
+<link rel='stylesheet' id='all-css-5c33' href='https://www.mcall.com/wp-content/themes/assets/static/css/modernearthy.css?m=1787154163g' type='text/css' media='all' />
+<link rel='stylesheet' id='dfm-accuweather-bootstrap-icons-css' href='//cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css?ver=5.2.0' media='screen' />
+<link rel='stylesheet' id='all-css-4688' href='https://www.mcall.com/_static/??-eJyNjEEKAjEMAD9kG4vo9iI+RWpal2jSFpKy+HvXi7DgwdvMYQaW7rBVK9Wg85ipKuS7uJSdtLwyqQGqgtqLixeqfrUd/MiUrLiNCCbmfxYyvuGjWE/4dOHkA1ypItwGcQZtSIkdt7npRj6zi5zDFKdwjIe4fwOnvEzT' type='text/css' media='all' />
+<script id="dfm-blueconic-test-js-extra">
+var blueConicSettings = {"lazyload":""};
+//# sourceURL=dfm-blueconic-test-js-extra
+</script>
+<script type="text/javascript" src="https://www.mcall.com/wp-content/themes/wp-mason/dist/js/blueconicTest.min.js?m=1785197931g" ></script><script src="https://metrics.rapidedge.io/gamera.js?ltv=1&#038;audience=1&#038;tpcs=1&#038;partner=medianewsgroup" id="gamera-js" async data-wp-strategy="async"></script>
+<script src="https://cmp.osano.com/16A1AnRt2Fn8i1unj/f15ebf08-7008-40fe-9af3-db96dc3e8266/osano.js" id="osano-js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?ver=3.5.1" id="jquery-js"></script>
+<script id="sso-tools-js-extra">
+var MNG_SSO_CONNEXT_EVENT_TIMING_ANALYTICS = ["enabled"];
+//# sourceURL=sso-tools-js-extra
+</script>
+<script type="text/javascript" src="https://www.mcall.com/wp-content/client-mu-plugins/src/SSO/assets/js/sso-tools.min.js?m=1764602875g" ></script><script id="mg2_loader_loader-js-extra">
+var MG2 = {"settings":{"environment":"prod","version":"dfm","useDocumentReady":true,"xCode":"","randomURLChoosing":false,"plugins":[{"name":"FP","required":true,"initOptions":{"version":"dfm","environment":"prod"}},{"name":"DL","required":true,"initOptions":{"version":"dfm","environment":"prod","tagManager":"GTM","containerId":"GTM-NFD2QGD","collectors":["connext"]}},{"name":"NXT","required":true,"initOptions":{"environment":"prod","siteCode":"TRIBUNE","configCode":"Sophi8MCALL","clientCode":"dfm","debug":false,"silentmode":true,"attr":"8MCALL","settingsKey":"8MCALL","userAuthenticationTime":365,"authSettings":{"domain":"login.npuserlogin.com","client_id":"REDACTED________________________","redirect_uri":"https://www.mcall.com/login"}}}],"FP_CNAME":"fp.mcall.com","DL_CNAME":"g2i.mcall.com","NXT_CNAME":"engage.mcall.com","CONFIG_URL":"https://loader-config.mcall.com/prod/dfm/loader-config.json","appInsightsKey":"REDACTED____________________________"}};
+//# sourceURL=mg2_loader_loader-js-extra
+</script>
+<script src="https://www.mcall.com/wp-content/plugins/loader-wp/static/loader.min.js?ver=1.6.4" id="mg2_loader_loader-js"></script>
+<script id="mg2_loader_loader-js-after">
+(function( MG2, MG2Loader ) {
+	if ( 'undefined' !== typeof MG2 && 'undefined' !== typeof MG2Loader) {
+	    console.log("mg2loader: waiting for dom...");
+	    document.addEventListener("DOMContentLoaded", function() {
+	    	console.log("mg2loader: dom ready, instantiating.");
+	    	MG2Loader.init( MG2.settings );
+	    });
+
+	}
+})( MG2, MG2Loader );
+//# sourceURL=mg2_loader_loader-js-after
+</script>
+<script id="digisubs_settings-js-extra">
+var authentication_config = {"debug":"","entitlementsEnabled":"1","oneTapEnabled":"1","useTribMainGoogle":"","googleClientId":"965743605721-47pms82rfheevdkrbj8qv4c0lo9rj0fp.apps.googleusercontent.com","gotPositionEnabled":"","gotModalPosition":"","dropdownEnabled":"1","forceLogoutOnExpiredIdToken":"","auth0Domain":"login.npuserlogin.com","auth0ClientId":"REDACTED________________________","auth0RegwallUserEmail":"","sessionManagement":"1","sessionServer":"https://session.mcall.com","newsletterId":"277","newslettersEnabled":"","myAccountLink":"https://myaccount.mcall.com/","entitlementsEndpoint":"https://user.mng-digisubs-prod.com/","entitlementsAPIKey":"REDACTED________________________________","linaCheckOnArticles":"1","serverEntitlements":"1","bcLowaSegements":"","blueconicEnabled":"1","enableReaderDashboardLink":"1","enableDashboardCancel":"","enableReaderDashboardv2":"","enableDashboardBenefitHub":"","prosperstackClientid":"","enableUpdatePayment":"1","enableUpgradeSubscription":"1","enableDatadog":"","sophiOnDevice":"1","sophiSDKEnabled":"","regwallPrefId":"","cookieSize":"","whiteList":"","paywallId":"paywall-sspw-mg2pw01-fg24","articleSavingEnabled":"","articleSharingEnabled":"1","isEmbedLoginEnabled":"","isAdfreeArticle":""};
+//# sourceURL=digisubs_settings-js-extra
+</script>
+<script id="connext_utils-js-extra">
+var authentication_config = {"debug":"","entitlementsEnabled":"1","oneTapEnabled":"1","useTribMainGoogle":"","googleClientId":"965743605721-47pms82rfheevdkrbj8qv4c0lo9rj0fp.apps.googleusercontent.com","gotPositionEnabled":"","gotModalPosition":"","dropdownEnabled":"1","forceLogoutOnExpiredIdToken":"","auth0Domain":"login.npuserlogin.com","auth0ClientId":"REDACTED________________________","auth0RegwallUserEmail":"","sessionManagement":"1","sessionServer":"https://session.mcall.com","newsletterId":"277","newslettersEnabled":"","myAccountLink":"https://myaccount.mcall.com/","entitlementsEndpoint":"https://user.mng-digisubs-prod.com/","entitlementsAPIKey":"REDACTED________________________________","linaCheckOnArticles":"1","serverEntitlements":"1","bcLowaSegements":"","blueconicEnabled":"1","enableReaderDashboardLink":"1","enableDashboardCancel":"","enableReaderDashboardv2":"","enableDashboardBenefitHub":"","prosperstackClientid":"","enableUpdatePayment":"1","enableUpgradeSubscription":"1","enableDatadog":"","sophiOnDevice":"1","sophiSDKEnabled":"","regwallPrefId":"","cookieSize":"","whiteList":"","paywallId":"paywall-sspw-mg2pw01-fg24","articleSavingEnabled":"","articleSharingEnabled":"1","isEmbedLoginEnabled":"","isAdfreeArticle":""};
+//# sourceURL=connext_utils-js-extra
+</script>
+<script type="text/javascript" src="https://www.mcall.com/_static/??-eJydzD0OwjAMQOELkVgRP2VBXICVAySNZblK3Kh21HJ7WJA6MLE+6XuwNjfOYigGrXRiUShzzLi4tYFaNB4BhSLhg9MSl5evLH7SA/yQVchlJtae9Iv3zSuasZD61CUX/PvzAYKbPY3L7nWvtzBch3A+hctxegPeA1Hu" ></script><script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js?ver=6.9.7" id="auth0_sdk-js"></script>
+<script src="https://accounts.google.com/gsi/client?ver=6.9.7" id="google_one_tap-js"></script>
+<script type="text/javascript" src="https://www.mcall.com/_static/??-eJylzEsKgDAMBNALaUPxuxG3XqNqKZE2iknR41tX4lZXA8PMg2PLp5XEksDmo0NiCOTyGR1yHBlYjOD06lQwSGqMNHurFs7gi5EOZE/5y6QxirchJf+1Ig7mBvYH6kOnm7bRVanrYrkAv4FxGw==" ></script><script id="auth0-session-storage-js-before">
+window.auth0WPAdminMeta = '{"auth0WPAdminMeta":{"auth0UserMeta":null,"auth0AppMeta":null}}';
+//# sourceURL=auth0-session-storage-js-before
+</script>
+<script src="https://www.mcall.com/wp-content/client-mu-plugins/src/Auth0/assets/dist/auth0-session-storage.min.js?ver=1.0.4" id="auth0-session-storage-js"></script>
+<script src="https://s211.mcall.com/script.js" id="s211-js"></script>
+<script id="trinity-script-js-extra">
+var trinity_script_vars = {"player_id":"2900022627"};
+//# sourceURL=trinity-script-js-extra
+</script>
+<script src="https://www.mcall.com/var/www/wp-content/client-mu-plugins/src/Trinity/assets/js/trinitymin.js?v=1.0.1" id="trinity-script-js"></script>
+<script type="text/javascript" src="https://www.mcall.com/_static/??/wp-content/plugins/dfm-ad-mods/dist/js/hhslCheck.min.js,/wp-content/plugins/mng-digisubs/assets/js/sophi/mather.min.js?m=1785197931j" ></script><script id="static-sophi-script-handle-js-after">
+				 window.sophi = window.sophi || {};
+    sophi.demeter = { actions: [], initStatus: "" };
+
+    // Lightweight lifecycle tracking helper: appends "{code}{seconds}" to
+    // demeter.initStatus, seconds since navigation start truncated to 10ms.
+    window._s = function (c) {
+        var d = window.sophi.demeter;
+        var f = String(Math.floor(performance.now() / 10) / 100).replace(/^0\./, ".");
+        d.initStatus = (d.initStatus ? d.initStatus + "," : "") + c + f;
+    };
+
+    window.demeter = window.demeter || function () {
+        var resolve, reject;
+        var s = new Promise(function (res, rej) {
+            resolve = res;
+            reject = rej;
+        });
+        sophi.demeter.actions.push([arguments, resolve, reject]);
+        return s;
+    };
+
+    _s("i");
+//# sourceURL=static-sophi-script-handle-js-after
+</script>
+<script id="mng_sophi-js-extra">
+var sophi_config = {"sophiGetDesicionTimer":"","sophiPluginEnabled":"1","sophiHostname":"","enableSophiSSPW":"","useEventListener":"","enableSophiEngageVsSophiSSPW":""};
+//# sourceURL=mng_sophi-js-extra
+</script>
+<script type="text/javascript" src="https://www.mcall.com/wp-content/plugins/mng-digisubs/static/mng-digisubs.sophi.bundle.js?m=1787154163g" ></script><script>if(window._s){_s('l');}</script>
+<script onerror="if(window._s){_s('xsl');}" src="https://cdn.sophi.io/assets/demeter/1/stable/2845824249.js?ver=6.9.7" id="sophi_demeter-js" async data-wp-strategy="async"></script>
+<script id="article_sharing-js-extra">
+var article_config = {"article_sharing_faq":""};
+//# sourceURL=article_sharing-js-extra
+</script>
+<script type="text/javascript" src="https://www.mcall.com/wp-content/plugins/mng-digisubs/static/mng-digisubs.articleShare.bundle.js?m=1787154162g" ></script><link rel="https://api.w.org/" href="https://www.mcall.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.mcall.com/wp-json/wp/v2/posts/12584" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mcall.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.7" />
+<link rel='shortlink' href='https://wp.me/pe82Ys-3gY' />
+<script id="cnx-init-script">!function(n){if(!window.cnx){window.cnx={},window.cnx.cmd=[];var t=n.createElement('iframe');t.display='none',t.onload=function(){var n=t.contentWindow.document,c=n.createElement('script');c.src='//cd.connatix.com/connatix.player.js',c.setAttribute('async','1'),c.setAttribute('type','text/javascript'),n.body.appendChild(c)},n.head.appendChild(t)}}(document);</script>        <style>
+        .getty.aligncenter {
+            text-align: center;
+        }
+        .getty.alignleft {
+            float: none;
+            margin-right: 0;
+        }
+        .getty.alignleft > div {
+            float: left;
+            margin-right: 5px;
+        }
+        .getty.alignright {
+            float: none;
+            margin-left: 0;
+        }
+        .getty.alignright > div {
+            float: right;
+            margin-left: 5px;
+        }
+        </style>
+        	<style>img#wpstats{display:none}</style>
+		<script type="application/ld+json" id="mng-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay.","url":"https:\/\/www.mcall.com\/2021\/04\/22\/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay\/","mainEntityOfPage":{"@type":"NewsArticle","@id":"https:\/\/www.mcall.com\/2021\/04\/22\/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay\/"},"thumbnailUrl":"https:\/\/www.mcall.com\/wp-content\/uploads\/migration\/2021\/04\/22\/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=150","image":[{"@context":"https:\/\/schema.org","@type":"ImageObject","url":"https:\/\/www.mcall.com\/wp-content\/uploads\/migration\/2021\/04\/22\/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1600&resize=1600,900","width":"1600","height":"900","contentUrl":"https:\/\/www.mcall.com\/wp-content\/uploads\/migration\/2021\/04\/22\/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1600&resize=1600,900"},{"@context":"https:\/\/schema.org","@type":"ImageObject","url":"https:\/\/www.mcall.com\/wp-content\/uploads\/migration\/2021\/04\/22\/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1200&resize=1200,900","width":"1200","height":"900","contentUrl":"https:\/\/www.mcall.com\/wp-content\/uploads\/migration\/2021\/04\/22\/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1200&resize=1200,900"},{"@context":"https:\/\/schema.org","@type":"ImageObject","url":"https:\/\/www.mcall.com\/wp-content\/uploads\/migration\/2021\/04\/22\/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1800&resize=1800,1800","width":"1800","height":"1800","contentUrl":"https:\/\/www.mcall.com\/wp-content\/uploads\/migration\/2021\/04\/22\/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1800&resize=1800,1800"}],"articleSection":"Business","author":[{"@type":"Person","name":"Andrew Wagaman","workLocation":{"@type":"Place"},"contactPoint":{"@type":"ContactPoint","contactType":"Journalist"},"url":"https:\/\/www.mcall.com\/author\/andrew-wagaman\/"}],"creator":["Andrew Wagaman"],"publisher":{"@type":"Organization","name":"The Morning Call","logo":"https:\/\/www.mcall.com\/wp-content\/uploads\/2022\/11\/morning-call-new-site-fallback-image.png?w=600"},"keywords":["news","politics","allentown","city","county","lehigh county","pennsylvania","state","sub-county (region)","business","election","latest headlines","local news"],"dateCreated":"2021-04-22T23:13:09Z","datePublished":"2021-04-22T23:13:09Z","dateModified":"2021-04-23T19:13:45Z","isBasedOn":"https:\/\/www.mcall.com\/2021\/04\/22\/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay\/","isAccessibleForFree":true}</script><script type="application/ld+json" id="mng-breadcrumb-0">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.mcall.com","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.mcall.com\/2021\/","name":"2021"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.mcall.com\/2021\/04\/","name":"04"}},{"@type":"ListItem","position":4,"item":{"@id":"https:\/\/www.mcall.com\/2021\/04\/22\/","name":"22"}},{"@type":"ListItem","position":5,"item":{"@id":"https:\/\/www.mcall.com\/2021\/04\/22\/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay\/","name":"The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay."}}]}</script><script type="application/ld+json" id="mng-breadcrumb-1">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.mcall.com","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.mcall.com\/news\/","name":"News"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.mcall.com\/news\/politics\/","name":"Politics"}},{"@type":"ListItem","position":4,"item":{"@id":"https:\/\/www.mcall.com\/news\/politics\/election\/","name":"Election"}},{"@type":"ListItem","position":5,"item":{"@id":"https:\/\/www.mcall.com\/2021\/04\/22\/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay\/","name":"The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay."}}]}</script><script type="application/ld+json" id="mng-breadcrumb-2">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.mcall.com","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.mcall.com\/author\/andrew-wagaman\/","name":"Andrew Wagaman"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.mcall.com\/2021\/04\/22\/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay\/","name":"The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay."}}]}</script><link rel="prefetch" href="https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg"><link rel="canonical" href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/" /><script>
+    var PushlySDK = window.PushlySDK || [];
+    function pushly() { PushlySDK.push(arguments) }
+    pushly('load', {
+        domainKey: decodeURIComponent("HnjPWkvqhPCMapJBbTvU673katQWX5u2ML9M"),
+        sw: "https://www.mcall.com/wp-content/plugins/pushly/assets/js/pushly-sdk-worker.js.php",
+        swScope: "https://www.mcall.com/wp-content/plugins/pushly/"    });
+</script>
+
+<style id="customizer-styles">			div#page {
+			--primary: #014b78;
+			}
+						div#page {
+			--primary-light: #337ca9;
+			}
+						div#page {
+			--primary-dark: #014b78;
+			}
+			</style><script>window.addEventListener('message',
+		function s2nEventCallback(a){if('s2nEvent'===a.data.type)
+			{let t={event:'SendToNews load',sendtonews_player_key:
+				a.data.playerKey};window.dataLayer.push(t),
+				window.removeEventListener('message',s2nEventCallback)}});</script><!-- Google Tag Manager Data Layer -->
+<script type='text/javascript'>
+   analyticsEvent    = function() {};
+   analyticsSocial   = function() {};
+   analyticsVPV      = function() {};
+   analyticsClearVPV = function() {};
+   analyticsForm     = function() {};
+   window.dataLayer  = window.dataLayer || [];
+   dataLayer.push({
+      'quantcast' : '',
+      'quantcast label' : '',
+      'comscore' : '6035443',
+      'Publisher Domain' : 'mcall.com',
+      'Publisher Product' : 'mcall.com',
+      'kv' : 'Business',
+      'Platform' : 'Web CMS',
+      'Release Version' : '6.9.7',
+      'Digital Publisher' : '',
+      'Section' : 'Business',
+      'Taxonomy1' : 'Business',
+      'Taxonomy2' : '',
+      'Taxonomy3' : '',
+      'Taxonomy4' : '',
+      'Taxonomy5' : '',
+      'Publisher State' : 'PA',
+      'Page Type' : 'article',
+      'User ID' : '',
+      'SiteName' : 'The Morning Call',
+      'Cluster' : 'Trib Allentown',
+      'Mobile Presentation' : 'no',
+      'Content ID' : '12584',
+      'Publish Hour of Day' : '2021-04-22T19:13:09-04:00',
+      'Create Hour of Day' : '2021-04-22T19:13:09-04:00',
+      'Update Hour of Day' : '2021-04-23T19:13:45-04:00',
+      'Content Source' : '',
+      'Canonical URL' : 'https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/',
+      'Slug' : 'the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay',
+      'Primary_Section' : '',
+      'Primary_Tag' : '',
+      'Associated_Tags' : '',
+      'Associated_Sections' : 'Business,Election,Latest Headlines,Local News,News,Politics',
+      'Associated_Taxonomies' : 'Allentown,City,County,Lehigh County,Pennsylvania,State,Sub-County (Region)',
+      'Byline' : 'Andrew Wagaman',
+      'Byline_Email' : 'no_email',
+      'Affiliation' : 'no_affiliation',
+      'Content Title' : 'The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay.',
+      'URL' : 'https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/',
+      'Page Title' : 'The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay.',
+      'Article Characters' : '2334',
+      'Article Words' : '348',
+      'Print Export' : 'false',
+      'Paywall_Level' : 'metered',
+      'Dateline' : '',
+      'Paragraph Count' : '0',
+      'Behind Paywall' : 'true',
+      'Article Template' : 'default',
+      'Hierarchy' : 'Business'
+   });
+</script>
+<!-- End Google Tag Manager Data Layer -->
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i) {
+   w[l]=w[l]||[];
+   w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+   var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+   j.async=true;
+   j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})
+(window,document,'script','dataLayer','GTM-TLFP4R');
+</script><!-- End Google Tag Manager -->
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay." />
+<meta property="og:url" content="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/" />
+<meta property="og:description" content="Allentown voters next month will largely determine who represents them at City Hall through 2025.
+They face many choices, but The Morning Call is here to help. Last week, reporter Andrew Wagaman interviewed all five Allentown mayoral…" />
+<meta property="article:published_time" content="2021-04-22T23:13:09+00:00" />
+<meta property="article:modified_time" content="2021-04-23T19:13:45+00:00" />
+<meta property="og:site_name" content="The Morning Call" />
+<meta property="og:image" content="https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1200&#038;h=785" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="785" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay." />
+<meta name="twitter:image" content="https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://www.mcall.com/wp-content/uploads/2023/01/favicon.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://www.mcall.com/wp-content/uploads/2023/01/favicon.png?w=32" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.mcall.com/wp-content/uploads/2023/01/favicon.png?w=32" />
+<meta name="msapplication-TileImage" content="https://www.mcall.com/wp-content/uploads/2023/01/favicon.png?w=32" />
+			<link rel='stylesheet' id='all-css-a77e' href='https://www.mcall.com/wp-content/mu-plugins/jetpack-16.1/modules/widgets/top-posts/style.css?m=1787158381g' type='text/css' media='all' />
+
+</head>
+
+			<body class="wp-singular post-template-default single single-post postid-12584 single-format-standard wp-custom-logo wp-theme-wp-mason wp-child-theme-scng">
+
+			<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-TLFP4R' height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+			<a href="#content" class="sr-only">Skip to content</a>
+			
+			<div id="page" class="hfeed site">
+
+			<div class="header-placeholder"></div><header class="site-header default headroom--top">
+			<div class="nav-wrapper-primary">
+
+				<div class="nav-wrapper-secondary ">
+
+					<div class="screen-wrapper">
+
+						<div class="nav-primary-top">
+
+										<div class="pushnav-flex-wrapper">
+				<nav class="pushnav" role="navigation" aria-label="Main Menu" id="pushnav-container"><div id="menu-toggle" class="menu-toggle" role="button" aria-expanded="false" tabindex="0" aria-label="Open menu of all sections"><span class="icon-hamburger"></span><span class="menu-label">All Sections</span></div>
+					<div class="wrapper-nav pushnav">
+						<div class="border-container">
+							<div class="top-pushnav-container">
+															<a href="https://mktops.mcall.com/subscriptions/land-flash-sale-g-new/?market=mc&#038;source=index&#038;g2i_or_o=Internet&#038;g2i_or_p=nav&#038;g2i_source=SB&#038;g2i_medium=sub-nav&#038;g2i_campaign=FG24" id="mega-subscribe-button" class="subscribe-button" >
+									<span>Subscribe Now</span>								</a>
+												<div class="accuweather-wrap">
+					<div class="weather-date">
+								<div class='dfm_accuweather_current_conditions'>
+				<a target="_blank" href="http://www.accuweather.com/en/us/allentown-pa/18102/current-weather/7417_pc?lang=en-us&amp;partner=mng_regwx" title="Current Weather Conditions" aria-label="Current temperature is 73&deg;F, view full weather conditions in a new window">
+					<span>73&deg;F</span>
+					<i class="bi-cloud-rain" role="img" aria-label="weather icon cloud-rain"></i>
+				</a>
+			</div>						<div class="date">
+							Thursday, August 20th 2026									<a class="tribune-e-edition" title="Link to first E-Edition opens in a new window" target="_blank" href="https://www.mcall.com/util-clean-cookies/?callbackURL=https://enewspaper.mcall.com/shortcode/C04BFE">
+									<p class="e-edition">Daily e-Edition</p>									</a>
+									<a class="tribune-e-edition" title="Link to second E-Edition opens in a new window" target="_blank" href="/util-clean-cookies/?callbackURL=https://enewspaper.mcall.com/shortcode/C04BFE">
+									<p class="e-edition">Evening e-Edition</p>									</a>
+														</div>
+					</div>
+				</div>
+											<a href="https://www.mcall.com" class="home-link icon-home3" title="Link to Home Page">
+									<span>Home Page</span>
+								</a>
+							</div>
+							<ul id="pushnav" class="menu"><li id="menu-item-6118930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6118930 menu-large"><a href="/util-clean-cookies/?callbackURL=https://enewspaper.mcall.com/shortcode/C04BFE">Daily e-Edition</a></li>
+<li id="menu-item-6118929" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6118929 menu-large"><a href="/util-clean-cookies/?callbackURL=https://enewspaper.mcall.com/shortcode/C04BFE">Evening e-Edition</a></li>
+<li id="menu-item-32232" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-32232 menu-large"><a href="https://www.mcall.com/news/" aria-expanded="false" aria-haspopup="true">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-32233" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32233 menu-large"><a href="https://www.mcall.com/news/">News</a></li>
+	<li id="menu-item-7816703" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7816703 menu-large"><a href="https://www.mcall.com/top-stories-tmc/">Latest Headlines</a></li>
+	<li id="menu-item-32235" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32235 menu-large"><a href="https://www.mcall.com/news/crime-public-safety/">Crime &amp; Public Safety</a></li>
+	<li id="menu-item-32276" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32276 menu-large"><a href="https://www.mcall.com/tag/photos-and-videos/">Photos and Videos</a></li>
+	<li id="menu-item-32236" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32236 menu-large"><a href="https://www.mcall.com/news/politics/election/">Elections</a></li>
+	<li id="menu-item-32237" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32237 menu-large"><a href="https://www.mcall.com/news/weather/">Weather</a></li>
+	<li id="menu-item-32238" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32238 menu-large"><a href="https://www.mcall.com/tag/capitol-ideas/">Capitol Ideas</a></li>
+	<li id="menu-item-32239" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32239 menu-large"><a href="https://www.mcall.com/news/education/">Education</a></li>
+	<li id="menu-item-8033175" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8033175 menu-large"><a href="https://www.mcall.com/news/health/">Health</a></li>
+	<li id="menu-item-32240" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32240 menu-large"><a href="https://www.mcall.com/news/pennsylvania-news/">Pennsylvania News</a></li>
+	<li id="menu-item-32241" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32241 menu-large"><a href="https://www.mcall.com/tag/coronavirus/">Coronavirus</a></li>
+</ul>
+</li>
+<li id="menu-item-32242" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-32242 menu-large"><a href="https://www.mcall.com/local-news/" aria-expanded="false" aria-haspopup="true">Local News</a>
+<ul class="sub-menu">
+	<li id="menu-item-32243" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32243 menu-large"><a href="https://www.mcall.com/local-news/">Local News</a></li>
+	<li id="menu-item-32244" class="menu-item menu-item-type-taxonomy menu-item-object-location menu-item-32244 menu-large"><a href="https://www.mcall.com/location/pennsylvania/lehigh-county/allentown/">Allentown</a></li>
+	<li id="menu-item-32245" class="menu-item menu-item-type-taxonomy menu-item-object-location menu-item-32245 menu-large"><a href="https://www.mcall.com/location/pennsylvania/northampton-county/bethlehem/">Bethlehem</a></li>
+	<li id="menu-item-32246" class="menu-item menu-item-type-taxonomy menu-item-object-location menu-item-32246 menu-large"><a href="https://www.mcall.com/location/pennsylvania/northampton-county/easton/">Easton</a></li>
+	<li id="menu-item-32247" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32247 menu-large"><a href="https://www.mcall.com/tag/east-penn/">East Penn</a></li>
+	<li id="menu-item-32248" class="menu-item menu-item-type-taxonomy menu-item-object-location menu-item-32248 menu-large"><a href="https://www.mcall.com/location/pennsylvania/bucks-county/parkland/">Parkland</a></li>
+</ul>
+</li>
+<li id="menu-item-32249" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-32249 menu-large"><a href="https://www.mcall.com/sports/" aria-expanded="false" aria-haspopup="true">Sports</a>
+<ul class="sub-menu">
+	<li id="menu-item-32250" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32250 menu-large"><a href="https://www.mcall.com/sports/">Sports</a></li>
+	<li id="menu-item-32251" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32251 menu-large"><a href="https://www.mcall.com/sports/high-school-sports/">High School Sports</a></li>
+	<li id="menu-item-32252" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32252 menu-large"><a href="https://www.mcall.com/sports/college-sports/">College Sports</a></li>
+	<li id="menu-item-32253" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32253 menu-large"><a href="https://www.mcall.com/sports/mlb/philadelphia-phillies/">Philadelphia Phillies</a></li>
+	<li id="menu-item-32254" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32254 menu-large"><a href="https://www.mcall.com/tag/athlete-of-the-week/">Athlete of the Week</a></li>
+	<li id="menu-item-32255" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32255 menu-large"><a href="https://www.mcall.com/sports/nfl/philadelphia-eagles/">Philadelphia Eagles</a></li>
+	<li id="menu-item-32256" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32256 menu-large"><a href="https://www.mcall.com/things-to-do/outdoors/">Outdoors</a></li>
+	<li id="menu-item-32257" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32257 menu-large"><a href="https://www.mcall.com/sports/golf/">Golf</a></li>
+	<li id="menu-item-32258" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32258 menu-large"><a href="https://www.mcall.com/sports/nhl/">NHL</a></li>
+</ul>
+</li>
+<li id="menu-item-32259" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-32259 menu-large"><a href="https://www.mcall.com/business/" aria-expanded="false" aria-haspopup="true">Business</a>
+<ul class="sub-menu">
+	<li id="menu-item-32260" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32260 menu-large"><a href="https://www.mcall.com/business/">Business</a></li>
+	<li id="menu-item-32261" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32261 menu-large"><a href="https://www.mcall.com/business/real-estate/">Real Estate</a></li>
+	<li id="menu-item-32262" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32262 menu-large"><a href="https://www.mcall.com/business/retail/">Retail</a></li>
+	<li id="menu-item-6226544" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6226544 menu-large"><a href="https://www.mcall.com/best-reviews/">Consumer Reviews</a></li>
+</ul>
+</li>
+<li id="menu-item-32264" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-32264 menu-large"><a href="https://www.mcall.com/opinion/" aria-expanded="false" aria-haspopup="true">Opinion</a>
+<ul class="sub-menu">
+	<li id="menu-item-32265" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32265 menu-large"><a href="https://www.mcall.com/opinion/">Opinion</a></li>
+	<li id="menu-item-32266" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32266 menu-large"><a href="https://www.mcall.com/tag/readers-react/">Readers React</a></li>
+</ul>
+</li>
+<li id="menu-item-32567" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-32567 menu-large"><a href="https://www.mcall.com/things-to-do/" aria-expanded="false" aria-haspopup="true">Things to Do</a>
+<ul class="sub-menu">
+	<li id="menu-item-1075765" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1075765 menu-large"><a href="https://www.mcall.com/things-to-do/">Things to Do</a></li>
+	<li id="menu-item-32268" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32268 menu-large"><a href="https://www.mcall.com/things-to-do/entertainment/">Entertainment</a></li>
+	<li id="menu-item-32269" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32269 menu-large"><a href="https://www.mcall.com/things-to-do/restaurants-food-drink/">Restaurants Food and Drink</a></li>
+	<li id="menu-item-32270" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-32270 menu-large"><a href="https://www.mcall.com/tag/nightcrawler/">Nightcrawler</a></li>
+	<li id="menu-item-32271" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32271 menu-large"><a href="https://www.mcall.com/things-to-do/music-concerts/">Music and Concerts</a></li>
+	<li id="menu-item-32272" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32272 menu-large"><a href="https://www.mcall.com/things-to-do/theater/">Theater</a></li>
+	<li id="menu-item-32274" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32274 menu-large"><a href="https://www.mcall.com/things-to-do/movies/">Movies</a></li>
+	<li id="menu-item-32275" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32275 menu-large"><a href="https://www.mcall.com/things-to-do/tv-streaming/">TV and Streaming</a></li>
+</ul>
+</li>
+<li id="menu-item-6833707" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-6833707 menu-large"><a href="https://www.mcall.com/obituaries/" aria-expanded="false" aria-haspopup="true">Obituaries</a>
+<ul class="sub-menu">
+	<li id="menu-item-6833708" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6833708 menu-large"><a href="https://www.mcall.com/obituaries/">Obituaries</a></li>
+	<li id="menu-item-6833706" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6833706 menu-large"><a href="https://www.mcall.com/news/news-obituaries/">News Obituaries</a></li>
+	<li id="menu-item-6833709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6833709 menu-large"><a href="https://placeanad.mcall.com/obituaries/">Place an Obituary</a></li>
+</ul>
+</li>
+<li id="menu-item-6119988" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6119988 menu-large"><a href="https://www.mcall.com/tag/photos-and-videos/">Photos and Video</a></li>
+<li id="menu-item-24451554" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24451554 menu-large"><a href="https://www.mcall.com/best-reviews/">BestReviews</a></li>
+<li id="menu-item-6893739" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-6893739 menu-large"><a href="https://www.mcall.com/branded-content/" aria-expanded="false" aria-haspopup="true">Branded Content</a>
+<ul class="sub-menu">
+	<li id="menu-item-6897083" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6897083 menu-large"><a href="https://www.mcall.com/sponsor-content-hub/?ntv_adpz=1715">Paid Partner Content</a></li>
+	<li id="menu-item-6897084" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6897084 menu-large"><a href="https://www.mcall.com/branded-content/">Advertising by Ascend</a></li>
+	<li id="menu-item-6897085" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6897085 menu-large"><a href="https://www.mcall.com/sponsor-content-hub/?ntv_adpz=3198">Paid Content by Brandpoint</a></li>
+</ul>
+</li>
+<li id="menu-item-5992766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5992766 menu-large"><a href="https://classifieds.mcall.com/" aria-expanded="false" aria-haspopup="true">Classifieds</a>
+<ul class="sub-menu">
+	<li id="menu-item-5992767" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5992767 menu-large"><a href="https://classifieds.mcall.com/">Classifieds</a></li>
+	<li id="menu-item-5992768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5992768 menu-large"><a href="https://jobs.mcall.com">Jobs</a></li>
+	<li id="menu-item-8070781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8070781 menu-large"><a href="https://classifieds.mcall.com/pa/notices/search">Public Notices</a></li>
+</ul>
+</li>
+<li id="menu-item-8070782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8070782 menu-large"><a href="https://classifieds.mcall.com/pa/notices/search" aria-expanded="false" aria-haspopup="true">Public Notices</a>
+<ul class="sub-menu">
+	<li id="menu-item-8197815" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8197815"><a href="https://mktops.mcall.com/subscriptions/land-flash-sale-g-new/?market=mc&#038;source=index&#038;g2i_or_o=Internet&#038;g2i_or_p=nav&#038;g2i_source=SB&#038;g2i_medium=nav2&#038;g2i_campaign=FG24">Subscribe</a></li>
+</ul>
+</li>
+<li id="menu-item-3976856" class="log-out-button menu-item menu-item-type-custom menu-item-object-custom menu-item-3976856 menu-large"><a href="/logout">Logout</a></li>
+</ul>						</div>
+						<div class="newsletter-nav">
+								<div class="newsletter-simple">
+		<div class="newsletter-item">
+			<p class="prompt">Sign up for email newsletters</p>
+			<a class="sign-up-button" href="https://www.mcall.com/newsletters"
+			   aria-label="Click here to go to the newsletter sign up page">
+				Sign Up</a>
+		</div>
+	</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+						<div class="hidden-logo">
+				<div class="logo custom-logo"><a href="https://www.mcall.com" aria-label="The Morning Call"><img src="https://www.mcall.com/wp-content/uploads/2022/11/Morning_Call_black_vector-1.svg" alt="The Morning Call"></a></div>			</div>
+				<div class="entry-title hidden_article_headline">
+
+			<a class="article-title" href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/" title="The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay.">
+	
+				<span class="dfm-title metered">
+			The Morning Call held an Allentown City Council&#8230;		</span>
+
+
+
+			</a>
+	
+	
+	</div>
+
+				<div class="article-share" id="sharing-sticky">
+					<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-facebook-12584"
+				class="share-facebook sd-button share-icon no-text"
+				href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/?share=facebook"
+				target="_blank"
+				aria-labelledby="sharing-facebook-12584-2"
+				>
+				<span id="sharing-facebook-12584-2" hidden>Share on Facebook (Opens in new window)</span>
+				<span>Facebook</span>
+			</a></li><li class="share-x"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-x-12584"
+				class="share-x sd-button share-icon no-text"
+				href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/?share=x"
+				target="_blank"
+				aria-labelledby="sharing-x-12584-2"
+				>
+				<span id="sharing-x-12584-2" hidden>Share on X (Opens in new window)</span>
+				<span>X</span>
+			</a></li><li class="share-end"></li></ul></div></div></div>					<span class="share-alt">
+					<a href="#" class="icon-share-alt">
+						<span></span>
+					</a>
+				</span>
+				</div>
+								<div class="digisubs-wrapper">
+									<nav class="digisubs-pushmenu hidden" role="navigation" aria-label="Account Menu" id="digisubs-push-container">
+						<div id="digisubs-toggle" class="digisubs-toggle pushnav" role="button" aria-expanded="false" tabindex="0" aria-label="Open menu">
+							<div id="mng-icon-image">
+								<img id="pushnav-icon" alt="">
+								<div id="blank-icon-user">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32">
+										<path fill="#000000" d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"></path>
+									</svg>
+								</div>
+								<span class="icon-arrow-down"></span>
+							</div>
+						</div>
+						<div class="wrapper-nav-subs pushnav">
+							<div class="border-container">
+								<ul id="dfm-digisubs-push-menu" class="menu"><li id="menu-item-8197808" class="subscribe-visibility subscribe-special custom-button menu-item menu-item-type-custom menu-item-object-custom menu-item-8197808"><a href="https://mktops.mcall.com/subscriptions/land-flash-sale-g-new/?market=mc&#038;source=index&#038;g2i_or_o=Internet&#038;g2i_or_p=nav&#038;g2i_source=SB&#038;g2i_medium=nav2&#038;g2i_campaign=FG24">Subscribe</a></li>
+<li id="menu-item-8197809" class="log-in-button subscribe-special custom-button menu-item menu-item-type-custom menu-item-object-custom menu-item-8197809"><a href="/login">Log In</a></li>
+</ul>								<div id="push-account-content">
+									<div class="show-digisubs-push" id="email-source-wrapper">
+										<a class="account-link" id="push-email-link"></a>
+										<p class="logged-in-source" id="push-auth-source"></p>
+									</div>
+									<a class="show-digisubs-push account-link" id="push-account-link" data-mng-click="account-settings" data-mng-category="account-link" data-mng-action="account-settings">Account Settings</a>
+									<a class="show-digisubs-push" id="push-contact-us" href="/contact-us" data-mng-click="contact-us" data-mng-category="account-link" data-mng-action="contact-us">Contact Us</a>
+									<a class="show-digisubs-push" id="push-log-out" href="/logout" data-mng-click="log-out" data-mng-category="account-link" data-mng-action="log-out">Log Out</a>
+									<div class="show-digisubs-push marketing-slot" id="push-marketing-slot"></div>
+									<label class="user-spoof">Spoof a user</label>
+									<input id="push-user-spoof-control" class="user-spoof" type="checkbox">
+									<ul id="newsLetterItem-push" class="newsLetterContent"></ul>
+								</div>
+							</div>
+							<div class="newsletter-nav">
+									<div class="newsletter-simple">
+		<div class="newsletter-item">
+			<p class="prompt">Sign up for email newsletters</p>
+			<a class="sign-up-button" href="https://www.mcall.com/newsletters"
+			   aria-label="Click here to go to the newsletter sign up page">
+				Sign Up</a>
+		</div>
+	</div>
+							</div>
+						</div>
+					</nav>
+					<div class="digisubs-wrapper-large" id="digisubs-wrapper-large">
+						<ul id="dfm-digisubs-menu" class="menu"><li id="menu-item-8197806" class="subscribe-visibility subscribe-special custom-button menu-item menu-item-type-custom menu-item-object-custom menu-item-8197806"><a href="https://mktops.mcall.com/subscriptions/land-flash-sale-g-new/?market=mc&#038;source=index&#038;g2i_or_o=Internet&#038;g2i_or_p=nav&#038;g2i_source=SB&#038;g2i_medium=nav2&#038;g2i_campaign=FG24">Subscribe</a></li>
+<li id="menu-item-8197807" class="log-in-button subscribe-special custom-button menu-item menu-item-type-custom menu-item-object-custom menu-item-8197807"><a href="/login">Log In</a></li>
+</ul>					</div>
+									</div>
+			<div class="search-icon-wrapper"><span class="icon-search" aria-label="Click here or hit enter to open a Search box" id="dfm-search-icon" role="button" tabindex=0 aria-expanded="false"></span></div><form class="search-form header-search" method="GET" id="search-bar" action="https://www.mcall.com/">
+
+		<div class="input-wrapper">
+			<span class="icon-search" aria-hidden="true"></span>
+		<input id="mng-search-focus" type="text" placeholder="Type your search" name="s"  aria-label="Type your search">
+		<input name="orderby" type="hidden" value="relevance"/>
+		<input name="order" type="hidden" value="desc"/>
+				<div class="search-button-container">
+			<button class="search-button" type="submit">
+				<span>Search</span>
+			</button>
+		</div>
+	</div>
+	
+</form>
+
+
+						</div>
+
+					</div>
+
+					<div class="nav-primary-middle">
+
+										<div class="accuweather-wrap">
+					<div class="weather-date">
+								<div class='dfm_accuweather_current_conditions'>
+				<a target="_blank" href="http://www.accuweather.com/en/us/allentown-pa/18102/current-weather/7417_pc?lang=en-us&amp;partner=mng_regwx" title="Current Weather Conditions" aria-label="Current temperature is 73&deg;F, view full weather conditions in a new window">
+					<span>73&deg;F</span>
+					<i class="bi-cloud-rain" role="img" aria-label="weather icon cloud-rain"></i>
+				</a>
+			</div>						<div class="date">
+							Thursday, August 20th 2026									<a class="tribune-e-edition" title="Link to first E-Edition opens in a new window" target="_blank" href="https://www.mcall.com/util-clean-cookies/?callbackURL=https://enewspaper.mcall.com/shortcode/C04BFE">
+									<p class="e-edition">Daily e-Edition</p>									</a>
+									<a class="tribune-e-edition" title="Link to second E-Edition opens in a new window" target="_blank" href="/util-clean-cookies/?callbackURL=https://enewspaper.mcall.com/shortcode/C04BFE">
+									<p class="e-edition">Evening e-Edition</p>									</a>
+														</div>
+					</div>
+				</div>
+			<div class="hidden-logo"><div class="section-header"><a href="https://www.mcall.com/news/politics/election/">Election</a></div></div>			<div class="sponsorship-ad-wrapper">
+								<div class="dfp-ad dfp-sponsorship_1" id="div-gpt-ad-sponsorship_1" style="visibility:hidden">
+					<div class="htlad-sponsorship_1" data-unit='mcall.com/business/sponsorship_1' data-targeting=''></div>
+				</div>			</div>
+			
+					</div>
+
+					<div class="nav-primary-bottom">
+
+									<div class="nav-primary">
+			<ul id="subnav-fallback-menu" class="menu"><li id="menu-item-1075786" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1075786"><a href="https://www.mcall.com/news/">News</a></li>
+<li id="menu-item-1075796" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1075796"><a href="https://www.mcall.com/local-news/">Local News</a></li>
+<li id="menu-item-1075803" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1075803"><a href="https://www.mcall.com/sports/">Sports</a></li>
+<li id="menu-item-1075813" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1075813"><a href="https://www.mcall.com/business/">Business</a></li>
+<li id="menu-item-1075818" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1075818"><a href="https://www.mcall.com/opinion/">Opinion</a></li>
+<li id="menu-item-1075821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1075821"><a href="https://www.mcall.com/things-to-do/entertainment/">Entertainment</a></li>
+<li id="menu-item-1075830" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-1075830"><a href="https://www.mcall.com/tag/photos-and-videos/">Photos and Videos</a></li>
+<li id="menu-item-6833723" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6833723"><a href="https://www.mcall.com/obituaries/">Obituaries</a></li>
+<li id="menu-item-8070818" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8070818"><a href="https://classifieds.mcall.com/pa/notices/search">Public Notices</a></li>
+<li id="menu-item-24451553" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24451553"><a href="https://www.mcall.com/best-reviews/">BestReviews</a></li>
+</ul>			</div>
+			
+					</div>
+
+				</div>
+
+				
+<div class="widget widget-trending-stories"><div class="trending-bar trending">
+	<div class="trending-bar-wrapper">
+		<p class="label">
+			Trending:		</p>
+		<nav>
+			<ul>
+					<li class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/08/11/2026-election-issues-survey-lehigh-valley/" title="What 2026 election issues matter most to Lehigh Valley voters? Take our survey">
+	
+				<span class="dfm-title metered">
+			☑️ Election Issues Survey		</span>
+
+
+
+			</a>
+	
+	
+	</li>
+	<li class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/07/24/musikfest-2026-guide-when-lineup-food-parking/" title="Musikfest 2026 guide: Everything to know about Bethlehem’s famous festival, from lineup to food to parking">
+	
+				<span class="dfm-title metered">
+			🎶 Musikfest Guide		</span>
+
+
+
+			</a>
+	
+	
+	</li>
+	<li class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/07/24/september-11-share-your-memories-experiences-25th-anniversary/" title="Share your memories of the 9/11 terror attacks">
+	
+				<span class="dfm-title free">
+			Your 9/11 memories		</span>
+
+
+
+			</a>
+	
+	
+	</li>
+	<li class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/06/28/lehigh-valley-top-workplace-2027-launch/" title="Nominate a Lehigh Valley Top Workplace for 2027">
+	
+				<span class="dfm-title metered">
+			🏆 Nominate Top Workplaces		</span>
+
+
+
+			</a>
+	
+	
+	</li>
+	<li class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/06/08/2026-world-cup-the-latest-scores-standings-brackets-and-more/" title="2026 World Cup: The latest scores, standings, brackets and more">
+	
+				<span class="dfm-title metered">
+			World Cup 2026		</span>
+
+
+
+			</a>
+	
+	
+	</li>
+	<li class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2024/01/08/read-the-latest-lehigh-valley-food-safety-inspection-reports/" title="Read the latest Lehigh Valley food safety inspection reports">
+	
+				<span class="dfm-title metered">
+			📝 Food safety inspections		</span>
+
+
+
+			</a>
+	
+	
+	</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+</div>
+			</div>
+			</header><div id="content" class="site-content">
+						<div class="header-banners">
+								<div class="dfp-ad dfp-interstitial" id="div-gpt-ad-interstitial" style="visibility:hidden">
+					<div class="htlad-interstitial" data-unit='mcall.com/business/interstitial' data-targeting=''></div>
+				</div>				<div class="dfp-ad dfp-top_leaderboard" id="div-gpt-ad-top_leaderboard" style="visibility:hidden">
+					<div class="htlad-top_leaderboard" data-unit='mcall.com/business/top_leaderboard' data-targeting=''></div>
+				</div>			</div>
+			
+			<div id="primary" class="content-area"><main id="main" class="site-main" role="main">		<article id="post-12584" class="full-view post-12584 post type-post status-publish format-standard has-post-thumbnail hentry category-business category-election category-latest-headlines category-local-news category-news category-politics location-allentown location-city location-county location-lehigh-county location-pennsylvania location-state location-sub-county-region">
+			<header class="entry-header article-header">
+	<section class="breaking-bar">
+		<section class="breaking-bar-inner">
+			<h2 class="widget-title">Breaking News</h2>
+											<article class="archive-view headline-only post-12584 post type-post status-publish format-standard has-post-thumbnail hentry category-business category-election category-latest-headlines category-local-news category-news category-politics location-allentown location-city location-county location-lehigh-county location-pennsylvania location-state location-sub-county-region" id="breaking-article-id-26058908">
+					<div class="breaking-header">
+
+							<h3 class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/08/20/storms-heavy-rains-could-mean-a-messy-thursday-evening-commute-in-the-lehigh-valley/" title="Flood, severe thunderstorm watches issued for Lehigh Valley as heavy rain could make for messy commute">
+	
+				<span class="dfm-title metered">
+			Flood, severe thunderstorm watches issued for Lehigh Valley as heavy rain could make for messy commute		</span>
+
+
+
+			</a>
+	
+	
+	</h3>
+<time datetime="2026-08-20 08:08:33">August 20, 2026 at 3:19 pm</time>						
+					</div>
+				</article>
+			
+			<a href="#" class="icon-close" aria-label="Click here to close"></a>
+		</section>
+	</section>
+<div class="header-title-area"><div class="breadcrumbs">
+	<div class="breadcrumbs-bar"><a href="https://www.mcall.com/news/">News</a><span class="icon-arrow-right"></span><a href="https://www.mcall.com/news/politics/">Politics</a><span class="icon-arrow-right"></span><a href="https://www.mcall.com/news/politics/election/" class="category-election">Election</a></div></div>
+<div class="headline-area"><div class="headlines">	<h1 class="entry-title ">
+
+	
+				<span class="dfm-title metered">
+			The Morning Call held an Allentown City Council candidate forum Thursday. Watch a replay.		</span>
+
+
+
+	
+	
+	</h1>
+</div></div><div class="article-share" id="sharing-top"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-facebook-12584"
+				class="share-facebook sd-button share-icon no-text"
+				href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/?share=facebook"
+				target="_blank"
+				aria-labelledby="sharing-facebook-12584-3"
+				>
+				<span id="sharing-facebook-12584-3" hidden>Share on Facebook (Opens in new window)</span>
+				<span>Facebook</span>
+			</a></li><li class="share-x"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-x-12584"
+				class="share-x sd-button share-icon no-text"
+				href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/?share=x"
+				target="_blank"
+				aria-labelledby="sharing-x-12584-3"
+				>
+				<span id="sharing-x-12584-3" hidden>Share on X (Opens in new window)</span>
+				<span>X</span>
+			</a></li><li class="share-end"></li></ul></div></div></div></div></div></header><div class="article-content"><div class="article-content-wrapper article-content-two-column"><div class="header-features default">
+<figure>
+	<div class="image-wrapper"><img alt="Allentown City Hall" title="WPW6ZUW2IBGZHA2OHBL7Y25PTI" fetchpriority="high" src="https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg" class=" size-article_feature" sizes="(max-width: 40em) 620px,(min-width: 40em) and (max-width: 50em) 780px,(min-width: 50em) and (max-width: 65em) 1020px,(min-width: 65em) and (max-width: 80em) 1280px,(min-width: 80em) 1860px,1860px" srcset="https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=535 620w,https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=673 780w,https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=879 1020w,https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1101 1280w,https://www.mcall.com/wp-content/uploads/migration/2021/04/22/WPW6ZUW2IBGZHA2OHBL7Y25PTI.jpg?w=1200 1860w" ></div>			<figcaption>
+							<div class="photo-credit">Amy Shortell,Morning Call</div>
+						Allentown City Hall		</figcaption>
+	</figure>
+<div class="meta"><img alt='Author' src='https://secure.gravatar.com/avatar/?s=85&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/?s=170&#038;d=mm&#038;r=g 2x' class='avatar avatar-85 photo avatar-default coauthor-avatar' height='85' width='85' /><div class="coauthor-avatar-container"><div class="byline">By <a href="https://www.mcall.com/author/andrew-wagaman/" title="Posts by Andrew Wagaman" class=" author-name" aria-label="Author: Andrew Wagaman" rel="author">Andrew Wagaman</a></div><div class="time">PUBLISHED: <time datetime="2021-04-22 19:13:09">April 22, 2021 at 7:13 PM EDT</time> | UPDATED: <time datetime="2021-04-23 15:13:45">April 23, 2021 at 7:13 PM EDT</time></div></div></div></div><div class="article-body"><div class="trinity-tts-pb" dir="ltr" style="font: 12px / 18px Verdana, Arial;height: 80px;line-height: 80px;text-align: left;margin: 0 0 0 82px"><strong style="font-weight: 400">Getting your <a href="//trinityaudio.ai" style="color: #4b4a4a;text-decoration: none;font-weight: 700">Trinity Audio</a> player ready...</strong></div><div class="body-copy"><p>Allentown voters next month will largely determine who represents them at City Hall through 2025.</p>
+<p>They face many choices, but The Morning Call is here to help. Last week, reporter Andrew Wagaman <a href="https://www.mcall.com/news/local/allentown/mc-nws-allentown-mayoral-candidate-qas-20210411-rziatwvzfrf3lgd5kzxnd2wnym-story.html" target="_blank">interviewed all five Allentown mayoral candidates</a> on why they believe they deserve to lead Pennsylvania&#8217;s third-largest city.</p>
+<p>This week, The Morning Call hosted and moderated an <a href="https://www.facebook.com/mcall.lv/posts/10158329528987903" target="_blank">Allentown City Council candidate forum on Facebook</a>. Nine Democrats and one Republican are vying for four open seats on the seven-member legislative body.  The candidates discussed jobs, housing, taxes and policing, among other topics.</p>
+<p><b>Watch a replay above.</b></p><div class="s2nPlayer k-yDXFiiit" data-type="float" data-s2n-api="dfm_stn_player_script_id_yDXFiiit"></div><script>	function dfm_stn_player_script_id_yDXFiiit( getS2NApiForPlayer ) {
+		if( typeof window.MNGAuthentication !== 'undefined' ){
+			const s2nApi = getS2NApiForPlayer( document.querySelector('.k-yDXFiiit') );
+			s2nApi.float =  ! window.MNGAuthentication.isUserSubscriber();
+		}
+	}</script>
+
+<p>Three Democratic incumbents face competition from six challengers in the May 18 primary. Republican Tom Houck will join the four Democratic nominees in the general election race.</p>
+<p>The three Democratic incumbents are Daryl Hendricks, Cynthia Mota and Ed Zucal. The six Democratic challengers are Tino Babayan, Santo Napoli, Patrick Palmer, Justan Parker Fields, Erik Rodriguez and Natalie Santos. All but Santos participated in Thursday&#8217;s forum.</p>
+<p>The Morning Call asked candidates to reflect on how the COVID-19 pandemic has influenced how they have, or would, approach the role of a local public servant. Candidates also discussed how they would spend $57.5 million in general relief money Allentown is receiving via the American Rescue Plan, and what steps council should take to ensure there&#8217;s enough recurring revenue sources to cover rising personnel costs.</p>
+<p>Candidates argued over police officers&#8217; proper role responding to 911 calls involving mental health crises or substance use disorders, and whether some police funding should be reallocated to fund more social workers. They also debated whether the city should prioritize transitional housing, permanent supportive housing or preventive assistance in their effort to end chronic homelessness.</p>				<div class="dfp-ad dfp-outstream_video" id="div-gpt-ad-outstream_video" style="visibility:hidden">
+					<div class="htlad-outstream_video" data-unit='mcall.com/business/outstream_video' data-targeting=''></div>
+				</div>
+<p>The prospective councilmembers explained how they would streamline processes to start and run a small business in Allentown, and how they would provide more opportunities for youth and young families, among other topics.</p>
+<p>The primary election is May 18. <a href="https://www.votespa.com/Register-to-Vote/Pages/default.aspx" target="_blank">Register to vote before May 4 here</a>. Apply for a <a href="https://www.lehighcounty.org/Portals/0/PDF/Voter/campaignFinance/2020MailInApplication.pdf?ver=2020-07-10-110230-553" target="_blank">mail-in ballot here</a>. Find <a href="https://www.lehighcounty.org/Departments/Voter-Registration/Polling-Places" target="_blank">your polling place here</a>.</p>
+<p><i>Morning Call reporter Andrew Wagaman can be reached at 484-553-7413 or </i><a href="mailto:awagaman@mcall.com#nt=instory-link"><i>awagaman@mcall.com</i></a><i>.</i></p>
+			</div></div><div class="article-bottom-share"><div class="article-share" id="sharing-bottom" ><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-facebook-12584"
+				class="share-facebook sd-button share-icon no-text"
+				href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/?share=facebook"
+				target="_blank"
+				aria-labelledby="sharing-facebook-12584-4"
+				>
+				<span id="sharing-facebook-12584-4" hidden>Share on Facebook (Opens in new window)</span>
+				<span>Facebook</span>
+			</a></li><li class="share-x"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-x-12584"
+				class="share-x sd-button share-icon no-text"
+				href="https://www.mcall.com/2021/04/22/the-morning-call-held-an-allentown-city-council-candidate-forum-thursday-watch-a-replay/?share=x"
+				target="_blank"
+				aria-labelledby="sharing-x-12584-4"
+				>
+				<span id="sharing-x-12584-4" hidden>Share on X (Opens in new window)</span>
+				<span>X</span>
+			</a></li><li class="share-end"></li></ul></div></div></div></div></div><div class="blueconic-under-article-rec"></div></div><aside class="article-sidebar"><div class="sidebar-content">				<div class="dfp-ad dfp-cube1_rrail_atf" id="div-gpt-ad-cube1_rrail_atf" style="visibility:hidden">
+					<div class="htlad-cube1_rrail_atf" data-unit='mcall.com/business/cube1_rrail_atf' data-targeting=''></div>
+				</div><div id="Native_Cube"></div>				<div class="dfp-ad dfp-cube2_rrail_mid" id="div-gpt-ad-cube2_rrail_mid" style="visibility:hidden">
+					<div class="htlad-cube2_rrail_mid" data-unit='mcall.com/business/cube2_rrail_mid' data-targeting=''></div>
+				</div><h2 class="sr-only">Most Popular</h2><div class="dfm-sidebar-most-popular-flex-container">Most Popular<ul><li><h3 class="sr-only">Penn State football fans shocked by price increase for 2027 season tickets</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/19/penn-state-football-fans-shocked-by-price-increase-for-2027-season-tickets/" class="bump-view" data-bump-view="tp">Penn State football fans shocked by price increase for 2027 season tickets</a></div></li><li><h3 class="sr-only">Woman, 21, who died in Airport Road crash in Lehigh County identified</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/18/coroner-identifies-woman-21-who-died-in-lehigh-county-crash/" class="bump-view" data-bump-view="tp">Woman, 21, who died in Airport Road crash in Lehigh County identified</a></div></li><li><h3 class="sr-only">Pedestrian dies after being hit by car on Hamilton Boulevard, South Whitehall police say</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/19/pedestrian-dies-after-being-by-car-on-hamilton-boulevard-south-whitehall-police-say/" class="bump-view" data-bump-view="tp">Pedestrian dies after being hit by car on Hamilton Boulevard, South Whitehall police say</a></div></li><li><h3 class="sr-only">Airplane pilot killed in violent collision with Pennsylvania State Police helicopter</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/19/pennsylvania-state-police-helicopter-and-small-plane-collide-and-crash-no-word-on-possible-injuries/" class="bump-view" data-bump-view="tp">Airplane pilot killed in violent collision with Pennsylvania State Police helicopter</a></div></li><li><h3 class="sr-only">As part of Route 22 improvements, a bridge is set to close for more than a year for repairs. Here are the details</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/18/as-part-of-route-22-improvements-a-bridge-is-set-to-close-for-more-than-a-year-for-repairs-here-are-the-details/" class="bump-view" data-bump-view="tp">As part of Route 22 improvements, a bridge is set to close for more than a year for repairs. Here are the details</a></div></li><li><h3 class="sr-only">Cold front could bring storms, flooding to Lehigh Valley</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/19/allentown-weather-storms-flooding-thursday-forecast/" class="bump-view" data-bump-view="tp">Cold front could bring storms, flooding to Lehigh Valley</a></div></li><li><h3 class="sr-only">Plans for 2nd Allentown data center proposal revealed. It would be next to a school and this major attraction</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/20/allentown-second-data-center-coca-cola-park-plans/" class="bump-view" data-bump-view="tp">Plans for 2nd Allentown data center proposal revealed. It would be next to a school and this major attraction</a></div></li><li><h3 class="sr-only">Lehigh Valley high school wrestling: Notre Dame-GP names new head coach</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/19/lehigh-valley-high-school-wrestling-notre-dame-gp-names-new-head-coach/" class="bump-view" data-bump-view="tp">Lehigh Valley high school wrestling: Notre Dame-GP names new head coach</a></div></li><li><h3 class="sr-only">Lehigh Valley data center opponents react to Gov. Shapiro’s order to ‘rein in’ developers. What they’re saying</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/19/lehigh-valley-data-center-opponents-react-to-gov-shapiros-order-to-rein-in-developers-heres-what-theyre-saying/" class="bump-view" data-bump-view="tp">Lehigh Valley data center opponents react to Gov. Shapiro’s order to ‘rein in’ developers. What they’re saying</a></div></li><li><h3 class="sr-only">Lehigh Valley food safety report: Pork thawing on counter, gnats behind bar, ‘black mold-like substances’</h3><div class='widget widget-popular-stories'><a href="https://www.mcall.com/2026/08/17/lehigh-valley-food-safety-report-pork-thawing-counter-gnats-black-mold-like-substances/" class="bump-view" data-bump-view="tp">Lehigh Valley food safety report: Pork thawing on counter, gnats behind bar, ‘black mold-like substances’</a></div></li></ul></div><div class="cube-three">				<div class="dfp-ad dfp-cube3_rrail_lower" id="div-gpt-ad-cube3_rrail_lower" style="visibility:hidden">
+					<div class="htlad-cube3_rrail_lower" data-unit='mcall.com/business/cube3_rrail_lower' data-targeting=''></div>
+				</div></div><div class="sidebar-bottom-flex-single"><div class="dfm-sidebar-bottom-flex-container"><div id="stick-trigger"></div></div></div></div></aside></div><footer class="article-footer"><div class="footer-meta"><div class="footer-meta-content"><div class="recirc"></div><div id="Native_Bottom"></div></div></div>				<div class="dfp-ad dfp-bottom_leaderboard" id="div-gpt-ad-bottom_leaderboard" style="visibility:hidden">
+					<div class="htlad-bottom_leaderboard" data-unit='mcall.com/business/bottom_leaderboard' data-targeting=''></div>
+				</div></footer></article></main></div>		<div class="more-news">
+
+			<h2 class="widget-title">
+				More in Politics			</h2>
+
+			<ul>
+
+				
+					<li>
+						
+
+
+	<article
+		class=" more-posts-view archive-view has-image post-26081695 post type-post status-publish format-standard has-post-thumbnail hentry category-business category-national-politics category-news category-politics category-technology tag-donald-trump tag-network"		data-id="26081695"
+		data-timestamp="1787234041"
+	>
+
+		
+<figure>
+	
+	<a href="https://www.mcall.com/2026/08/20/trump-supporting-data-centers/" title="Trump keeps embracing data centers even as they become toxic in midterm races">
+		<div class="image-wrapper"><img alt="FILE &#8211; Cars drive past data centers, July 16, 2023, in Ashburn, Va. (AP Photo/Ted Shaffrey, File)
+" title="AP26232604650777" src="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/v3AgAA=" class="lazyload  size-more_news" data-sizes="auto" data-src="https://www.mcall.com/wp-content/uploads/2026/08/AP26232604650777.jpg?w=525" data-srcset="https://www.mcall.com/wp-content/uploads/2026/08/AP26232604650777.jpg?w=525 620w,https://www.mcall.com/wp-content/uploads/2026/08/AP26232604650777.jpg?w=323 380w,https://www.mcall.com/wp-content/uploads/2026/08/AP26232604650777.jpg?w=420 500w,https://www.mcall.com/wp-content/uploads/2026/08/AP26232604650777.jpg?w=458 540w" ></div>	</a>
+</figure>
+
+<div class="article-info">
+		<header>
+
+		
+		
+			<h3 class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/08/20/trump-supporting-data-centers/" title="Trump keeps embracing data centers even as they become toxic in midterm races">
+	
+				<span class="dfm-title metered">
+			Trump keeps embracing data centers even as they become toxic in midterm races		</span>
+
+
+
+			</a>
+	
+	
+	</h3>
+<!--		-->
+		
+		
+		
+		
+		
+	</header>
+
+	
+		</div><!-- .article-info -->
+
+		
+
+		
+	</article>
+
+
+					</li>
+
+				
+					<li>
+						
+
+
+	<article
+		class=" more-posts-view archive-view has-image post-26080176 post type-post status-publish format-standard has-post-thumbnail hentry category-national-politics category-news category-politics category-world tag-donald-trump tag-network"		data-id="26080176"
+		data-timestamp="1787232808"
+	>
+
+		
+<figure>
+	
+	<a href="https://www.mcall.com/2026/08/20/us-cuba-sanctions-detentions/" title="US ramps up Cuba sanctions and detentions of Americans returning from the island">
+		<div class="image-wrapper"><img alt="Secretary of State Marco Rubio arrives with Austrian Foreign Minister Beate Meinl-Reisinger, not shown, to the Treaty Room at the State Department, Tuesday, Aug. 11, 2026, in Washington. (AP Photo/Tierney L. Cross)
+" title="US_Austria_47387" src="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/v3AgAA=" class="lazyload  size-more_news" data-sizes="auto" data-src="https://www.mcall.com/wp-content/uploads/2026/08/US_Austria_47387.jpg?w=525" data-srcset="https://www.mcall.com/wp-content/uploads/2026/08/US_Austria_47387.jpg?w=525 620w,https://www.mcall.com/wp-content/uploads/2026/08/US_Austria_47387.jpg?w=322 380w,https://www.mcall.com/wp-content/uploads/2026/08/US_Austria_47387.jpg?w=420 500w,https://www.mcall.com/wp-content/uploads/2026/08/US_Austria_47387.jpg?w=457 540w" ></div>	</a>
+</figure>
+
+<div class="article-info">
+		<header>
+
+		
+		
+			<h3 class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/08/20/us-cuba-sanctions-detentions/" title="US ramps up Cuba sanctions and detentions of Americans returning from the island">
+	
+				<span class="dfm-title metered">
+			US ramps up Cuba sanctions and detentions of Americans returning from the island		</span>
+
+
+
+			</a>
+	
+	
+	</h3>
+<!--		-->
+		
+		
+		
+		
+		
+	</header>
+
+	
+		</div><!-- .article-info -->
+
+		
+
+		
+	</article>
+
+
+					</li>
+
+				
+					<li>
+						
+
+
+	<article
+		class=" more-posts-view archive-view has-image post-26076053 post type-post status-publish format-standard has-post-thumbnail hentry category-election category-news category-politics category-top-stories-tmc"		data-id="26076053"
+		data-timestamp="1787230837"
+	>
+
+		
+<figure>
+	
+	<a href="https://www.mcall.com/2026/08/20/political-earthquake-in-western-pennsylvania-as-democrats-flip-deep-red-district-in-special-election-2/" title="‘Political earthquake’ in Western Pennsylvania as Democrats flip deep-red district in special election">
+		<div class="image-wrapper"><img alt="The East Wing and Pennsylvania War Veterans&#8217; Memorial Fountain at the main public entrance to the Pennsylvania State Capitol on Commonwealth Avenue in Harrisburg, Pa., on Aug. 26, 2025. (Tom Gralish/The Philadelphia Inquirer/TNS)
+" title="202608192020MCT_____PHOTO____US-NEWS-PA-SPECIAL-ELECTION-UPSET-FILEPIC-PH-1" src="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/v3AgAA=" class="lazyload  size-more_news" data-sizes="auto" data-src="https://www.mcall.com/wp-content/uploads/2026/08/202608192020MCT_____PHOTO____US-NEWS-PA-SPECIAL-ELECTION-UPSET-FILEPIC-PH-1.jpg?w=525" data-srcset="https://www.mcall.com/wp-content/uploads/2026/08/202608192020MCT_____PHOTO____US-NEWS-PA-SPECIAL-ELECTION-UPSET-FILEPIC-PH-1.jpg?w=525 620w,https://www.mcall.com/wp-content/uploads/2026/08/202608192020MCT_____PHOTO____US-NEWS-PA-SPECIAL-ELECTION-UPSET-FILEPIC-PH-1.jpg?w=323 380w,https://www.mcall.com/wp-content/uploads/2026/08/202608192020MCT_____PHOTO____US-NEWS-PA-SPECIAL-ELECTION-UPSET-FILEPIC-PH-1.jpg?w=420 500w,https://www.mcall.com/wp-content/uploads/2026/08/202608192020MCT_____PHOTO____US-NEWS-PA-SPECIAL-ELECTION-UPSET-FILEPIC-PH-1.jpg?w=458 540w" ></div>	</a>
+</figure>
+
+<div class="article-info">
+		<header>
+
+		
+		
+			<h3 class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/08/20/political-earthquake-in-western-pennsylvania-as-democrats-flip-deep-red-district-in-special-election-2/" title="‘Political earthquake’ in Western Pennsylvania as Democrats flip deep-red district in special election">
+	
+				<span class="dfm-title metered">
+			‘Political earthquake’ in Western Pennsylvania as Democrats flip deep-red district in special election		</span>
+
+
+
+			</a>
+	
+	
+	</h3>
+<!--		-->
+		
+		
+		
+		
+		
+	</header>
+
+	
+		</div><!-- .article-info -->
+
+		
+
+		
+	</article>
+
+
+					</li>
+
+				
+					<li>
+						
+
+
+	<article
+		class=" more-posts-view archive-view has-image post-26075546 post type-post status-publish format-standard has-post-thumbnail hentry category-national-politics category-news category-politics tag-network"		data-id="26075546"
+		data-timestamp="1787228403"
+	>
+
+		
+<figure>
+	
+	<a href="https://www.mcall.com/2026/08/20/eric-swalwell-sexual-misconduct-probe/" title="Federal agents seize devices from ex-Rep. Eric Swalwell in sexual misconduct probe, AP source says">
+		<div class="image-wrapper"><img alt="FYI &#8211; Rep. Eric Swalwell, D-Calif., talks with reporters after holding a town hall meeting in Sacramento, Calif., April 7, 2026. (AP Photo/Rich Pedroncelli, File)
+" title="Eric_Swalwell_Investigation_98214" src="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/v3AgAA=" class="lazyload  size-more_news" data-sizes="auto" data-src="https://www.mcall.com/wp-content/uploads/2026/08/Eric_Swalwell_Investigation_98214.jpg?w=473" data-srcset="https://www.mcall.com/wp-content/uploads/2026/08/Eric_Swalwell_Investigation_98214.jpg?w=473 620w,https://www.mcall.com/wp-content/uploads/2026/08/Eric_Swalwell_Investigation_98214.jpg?w=291 380w,https://www.mcall.com/wp-content/uploads/2026/08/Eric_Swalwell_Investigation_98214.jpg?w=379 500w,https://www.mcall.com/wp-content/uploads/2026/08/Eric_Swalwell_Investigation_98214.jpg?w=412 540w" ></div>	</a>
+</figure>
+
+<div class="article-info">
+		<header>
+
+		
+		
+			<h3 class="entry-title ">
+
+			<a class="article-title" href="https://www.mcall.com/2026/08/20/eric-swalwell-sexual-misconduct-probe/" title="Federal agents seize devices from ex-Rep. Eric Swalwell in sexual misconduct probe, AP source says">
+	
+				<span class="dfm-title metered">
+			Federal agents seize devices from ex-Rep. Eric Swalwell in sexual misconduct probe, AP source says		</span>
+
+
+
+			</a>
+	
+	
+	</h3>
+<!--		-->
+		
+		
+		
+		
+		
+	</header>
+
+	
+		</div><!-- .article-info -->
+
+		
+
+		
+	</article>
+
+
+					</li>
+
+				
+			</ul>
+		</div>
+
+	<div class="dfm-page-bottom-flex-container"></div>				<div class="dfp-ad dfp-sponsorship_2" id="div-gpt-ad-sponsorship_2" style="visibility:hidden">
+					<div class="htlad-sponsorship_2" data-unit='mcall.com/business/sponsorship_2' data-targeting=''></div>
+				</div>  <div class="sm-breadcrumb">
+    <ul class="sitemap-parent">
+      <li class="sitemap-list"><a href="https://www.mcall.com/sitemap/2021/" aria-label="View sitemap for 2021">2021</a><span class="sitemap-span icon-arrow-right"></span></li>
+      <li class="sitemap-list"><a href="https://www.mcall.com/sitemap/2021/04/" aria-label="View sitemap for April 2021">April</a><span class="sitemap-span icon-arrow-right"></span></li>
+      <li class="sitemap-list"><a href="https://www.mcall.com/sitemap/2021/04/22/" aria-label="View sitemap for April 22, 2021">22</a></li>
+    </ul>
+  </div>
+			
+			</div><!-- #content -->
+
+						<footer class="site-footer">
+
+							<div class="main-footer-wrapper">
+
+				<div class="footer-logo">
+
+					<div class="logo custom-logo"><a href="https://www.mcall.com" aria-label="The Morning Call"><img src="https://www.mcall.com/wp-content/uploads/2022/11/Morning_Call_black_vector-1.svg" alt="The Morning Call"></a></div>
+				</div>
+
+				<ul id="footer-menu" class="footer-menus"><li id="menu-item-32278" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32278"><a href="#">Tribune Publishing</a><span class="expander"><a href="#" class="icon-plus" aria-label="Click here to expand the menu"></a></span>
+
+<ul class="footer-menu">
+	<li id="menu-item-32279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32279"><a href="https://www.chicagotribune.com/">Chicago Tribune</a></li>
+	<li id="menu-item-32281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32281"><a href="https://www.sun-sentinel.com/">Sun Sentinel of Fla.</a></li>
+	<li id="menu-item-32282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32282"><a href="https://www.dailypress.com/">Daily Press of Va.</a></li>
+	<li id="menu-item-32284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32284"><a href="https://www.nydailynews.com/">New York Daily News</a></li>
+	<li id="menu-item-32285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32285"><a href="https://www.orlandosentinel.com/">Orlando Sentinel</a></li>
+	<li id="menu-item-32286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32286"><a href="https://www.courant.com/">Hartford Courant</a></li>
+	<li id="menu-item-32287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32287"><a href="https://www.pilotonline.com/">The Virginian-Pilot</a></li>
+	<li id="menu-item-32288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32288"><a href="https://www.studio1847.io/">Studio 1847</a></li>
+</ul>
+</li>
+<li id="menu-item-32289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32289"><a href="#">Company Info</a><span class="expander"><a href="#" class="icon-plus" aria-label="Click here to expand the menu"></a></span>
+
+<ul class="footer-menu">
+	<li id="menu-item-32290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32290"><a href="https://careers.tribpub.com/">Careers</a></li>
+	<li id="menu-item-32291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32291"><a href="https://www.mcall.com/contact-us/">Contact Us</a></li>
+	<li id="menu-item-32296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32296"><a href="https://www.mcall.com/sitemap/">Sitemap</a></li>
+	<li id="menu-item-32297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32297"><a href="https://www.mcall.com/help-center/">Help Center</a></li>
+	<li id="menu-item-14357874" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14357874"><a href="https://www.tribpub.com/accessibility-statement/">Accessibility</a></li>
+	<li id="menu-item-32298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32298"><a href="https://www.tkqlhce.com/click-8479704-11570746?url=https%3A%2F%2Fmcall.newspapers.com%2F%3Fxid%3D2323%26utm_campaign%3Devergreen%26utm_medium%3Dreferral%26utm_source%3Dnavigation%26utm_content%3D%26utm_term%3DMorning%2520Call">Archives</a></li>
+	<li id="menu-item-32302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32302"><a href="https://www.mcall.com/about-us/">About Us</a></li>
+</ul>
+</li>
+<li id="menu-item-5821319" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5821319"><a href="http://placeanad.mcall.com/">Advertising</a><span class="expander"><a href="#" class="icon-plus" aria-label="Click here to expand the menu"></a></span>
+
+<ul class="footer-menu">
+	<li id="menu-item-32292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32292"><a href="http://placeanad.mcall.com/">Place an Ad</a></li>
+	<li id="menu-item-5992765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5992765"><a href="https://classifieds.mcall.com">Classifieds</a></li>
+	<li id="menu-item-32301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32301"><a href="https://mylocal.mcall.com/">Local Print Ads</a></li>
+	<li id="menu-item-5821185" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5821185"><a href="https://jobs.mcall.com/">Jobs</a></li>
+	<li id="menu-item-5992769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5992769"><a href="https://www.mcall.com/about-our-ads/">About Our Ads</a></li>
+</ul>
+</li>
+<li class="mng-follow"><div class="footer-follow"></div>
+							<a href="https://mktops.mcall.com/subscriptions/land-flash-sale-g-new/?market=mc&#038;source=index&#038;g2i_or_o=Internet&#038;g2i_or_p=nav&#038;g2i_source=SB&#038;g2i_medium=sub-nav&#038;g2i_campaign=FG24" class="subscribe-button">
+					<span>Subscribe Now</span>				</a>
+
+				</li></ul>
+			</div>
+			
+				<div class="dfm-site-info">
+
+								<div class="colophon">
+
+					<div class="footer-flex-menu-wrap"><ul id="footer-bottom-menu" class="menu"><li id="menu-item-4518756" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4518756"><a href="https://www.tribpub.com/subscriber-terms-and-conditions/">Subscriber Terms and Conditions</a></li>
+<li id="menu-item-6007929" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6007929"><a href="https://www.tribpub.com/central-terms-of-service/">Terms of Service</a></li>
+<li id="menu-item-6007928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6007928"><a href="https://www.tribpub.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-4518886" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4518886"><a href="https://www.tribpub.com/cookie-policy/">Cookie Policy</a></li>
+<li id="menu-item-6252401" class="cookie-policy-click menu-item menu-item-type-custom menu-item-object-custom menu-item-6252401"><a href="#">Cookie Preferences</a></li>
+<li id="menu-item-4519055" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4519055"><a href="https://www.tribpub.com/privacy-policy/#eb-table-content-53">CA Notice at Collection</a></li>
+<li id="menu-item-4519204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4519204"><a href="https://www.tribpub.com/privacy-policy/#916-notice-of-financial-incentive">CA Notice of Financial Incentive</a></li>
+<li id="menu-item-4519792" class="cookie-policy-click menu-item menu-item-type-custom menu-item-object-custom menu-item-4519792"><a href="#">Do Not Sell/Share My Personal Information</a></li>
+</ul><div class="footer-copyright-notice"><p>Copyright 2026 The Morning Call. All rights reserved. The use of any content on this website for the purpose of training artificial intelligence systems, algorithms, machine learning models, text and data mining, or similar use is strictly prohibited without explicit written consent.</p></div>	</div>
+			</div>
+			
+				</div>
+
+			</footer><!-- .site-footer -->
+			
+			</div><!-- #page -->
+
+			<script>
+		(function(w) {
+			if ( null !== document.cookie.match(/^(.*;)?\s*auth0_sub\s*=\s*[^;]+(.*)?$/) ) {
+				w.PARSELY = {
+	                autotrack: false,
+	                onReady: function() {
+	                    PARSELY.updateDefaults({
+	                        data: {
+	                            plan: "subscriber"
+	                        }
+	                    });
+	                    PARSELY.beacon.trackPageView();
+	                }
+            	};
+			}
+		})(window);
+        </script><div id="mobile-adhesion" class="closed"><button class="close-mobile-adhesion" onclick="closeMobileAdhesionAd()" onkeydown="keyboardHandler(event)">Close</button>
+			<script>
+				function closeMobileAdhesionAd() {
+				    document.getElementById("mobile-adhesion").classList.add("closed");
+				}
+
+				function keyboardHandler(e) {
+				    var keycode = ( e.keyCode ? e.keyCode : e.which );
+				    if (keycode == "13") {
+						closeMobileAdhesionAd();
+					}
+				}
+			</script>
+							<div class="dfp-ad dfp-mobile_adhesion" id="div-gpt-ad-mobile_adhesion" style="visibility:hidden">
+					<div class="htlad-mobile_adhesion" data-unit='mcall.com/business/mobile_adhesion' data-targeting=''></div>
+				</div></div><script type='text/javascript'>
+/* <![CDATA[ */
+if ( 'undefined' !== typeof _snaq ) {
+_snaq.push(['setAuthor', 'Andrew Wagaman']);
+_snaq.push(['setArticlePublishTime','2021-04-22T19:13:09-04:00']);
+_snaq.push(['setSection', 'Business']);
+}
+/* ]]> */
+</script>
+<script src="https://www.mcall.com/var/www/wp-content/plugins/mng-htl/dist/js/mngHtlMods.min.js?ver=1764602878" id="__htl_mods-js"></script>
+<script src="https://htlbid.com/v3/mcall.com/htlbid.js" id="__htl_script-js" data-wp-strategy="async"></script>
+<script id="__htl_script-js-after">
+			window.htlbid = window.htlbid || {};
+			htlbid.cmd    = htlbid.cmd    || [];
+			htlbid.cmd.push( function() {
+				htlbid.layout( 'universal' );
+				htlbid.setTargeting( "is_testing","no" );
+				htlbid.setTargeting( "kv", ["business","andrew-wagaman","allentown","city","county","lehigh-county","pennsylvania","state","sub-county-region"] );
+				htlbid.setTargeting( "page", "article" );
+				htlbid.setTargeting( "content", [] );
+				htlbid.setTargeting( "RPN", "379812242250" );
+				htlbid.setTargeting( "rurl", "" );
+				htlbid.setTargeting( "articleid", 12584 );
+				window.htlbid.pubads().setPublisherProvidedId( "01a07e441b866c597037001f67c7ecacb41fdc26baf2ab47de654b1e2122759a" );
+			} );
+			window.addEventListener( 'voltaxPlayerLoaded', ( event ) => {
+				const vplayer = event.detail.player;
+				vplayer.setExternalKVPs( {
+					kv: ["business","andrew-wagaman","allentown","city","county","lehigh-county","pennsylvania","state","sub-county-region"],
+					page: "article",
+					articleid: 12584
+				} );
+			} );
+//# sourceURL=__htl_script-js-after
+</script>
+<script type="text/javascript" src="https://www.mcall.com/_static/??-eJyVy0EKwjAQBdALaYcgUrsQF54ktKOdkMyE/knFnl4FF27dPnj0qPvR1FmdfObCoLeUCFOaBE4JZIhq1wa30hXRLmFHP63mdhcF1dnc9CY508o62UJVRm8Lf+i/mOP2hGyMb7uUc+hPxzD0wyGkF02wQ2Y=" ></script><script src="https://ak.sail-horizon.com/spm/spm.v1.min.js" id="mng-newsletters-sailthru-scout-js" data-wp-strategy="async"></script>
+<script id="mng-newsletters-sailthru-scout-js-after">
+Sailthru.init( {"customerId":"9f487ef4f9c443ed07b719f8e360ba07","autoTrackPageview":true,"useStoredTags":true,"excludeContent":false} );
+//# sourceURL=mng-newsletters-sailthru-scout-js-after
+</script>
+<script type="text/javascript" src="https://www.mcall.com/wp-includes/js/dist/hooks.min.js?m=1786548569g" ></script><script src="https://www.mcall.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-parsely-loader-js-before">
+window.wpParselySiteId = 'mcall.com';
+//# sourceURL=wp-parsely-loader-js-before
+</script>
+<script src="https://www.mcall.com/wp-content/mu-plugins/wp-parsely-3.23/build/loader.js?ver=ecf94842061bea03d54b" id="wp-parsely-loader-js"></script>
+<script data-parsely-site="mcall.com" src="https://cdn.parsely.com/keys/mcall.com/p.js?ver=3.23.7" id="parsely-cfg"></script>
+<script src="https://www.mcall.com/wp-content/themes/wp-mason/dist/js/ads.min.js?ver=1.0" id="can-run-ads-js"></script>
+<script type="text/javascript" src="https://www.mcall.com/_static/??-eJyVzssKwkAMheEXchrqrW5EuvQxhk46nWGSlCYqfXuruHAhotsDH+eH2+g6YUM2sAEJFbwqmoKat9RBVhilzH0qRStKXGVdwQ+IJODE6Ccb5i9uWcirMISk9nBFopwptmbTJzaWS0ysEHpyPrjlRd+oD+2z41+pa76mgPJyJzrWzaGpd9t6v8l3tD9rYA==" ></script><script src="//embed.sendtonews.com/player3/embedcode.js?fk=yDXFiiit&amp;cid=5187&amp;offsetx=0&amp;offsety=112&amp;floatwidth=400&amp;floatposition=bottom-right&amp;ver=1.0.0" id="dfm_stn_player_script-js"></script>
+<script type="text/javascript" src="https://www.mcall.com/wp-content/themes/wp-mason/dist/js/linkableImageWidget.min.js?m=1785366964g" ></script><script src="https://applepay.cdn-apple.com/jsapi/1.latest/apple-pay-sdk.js" id="apple_pay_sdk-js"></script>
+<script id="mng_apple-js-extra">
+var apple_config = {"applePayEnabled":"","sourceId":""};
+//# sourceURL=mng_apple-js-extra
+</script>
+<script type="text/javascript" src="https://www.mcall.com/wp-content/plugins/mng-digisubs/static/mng-digisubs.apple.bundle.js?m=1787154162g" ></script><script id="mng-cache-control-js-before">
+window.cache_control_adminbar_support = {"rootUrl":"https:\/\/www.mcall.com\/wp-admin\/admin-ajax.php","rootAction":"cache_control_adminbar_action","nonce":"4a7d07dec9","isSectionFront":true,"isHomepage":false}
+//# sourceURL=mng-cache-control-js-before
+</script>
+<script src="https://www.mcall.com/wp-content/plugins/mng-cache-control/Src/assets/dist/mng-cache-control-adminbar.js?ver=0.2.1" id="mng-cache-control-js"></script>
+<script id="jetpack-stats-js-before">
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"208786764","post":"12584","tz":"-4","srv":"www.mcall.com","hp":"vip","j":"1:16.1.1"} ]);
+_stq.push([ "clickTrackerInit", "208786764", "12584" ]);
+//# sourceURL=jetpack-stats-js-before
+</script>
+<script src="https://stats.wp.com/e-202634.js" id="jetpack-stats-js" defer data-wp-strategy="defer" fetchpriority="low"></script>
+<script async src="https://cdn.p-n.io/pushly-sdk.min.js?domain_key=HnjPWkvqhPCMapJBbTvU673katQWX5u2ML9M&amp;ver=6.9.7" id="pushly-sdk-js"></script>
+<script id="sharing-js-js-extra">
+var sharing_js_options = {"lang":"en","counts":"","is_stats_active":"1"};
+//# sourceURL=sharing-js-js-extra
+</script>
+<script src="https://www.mcall.com/wp-content/mu-plugins/jetpack-16.1/_inc/build/sharedaddy/sharing.min.js?ver=16.1.1" id="sharing-js-js"></script>
+<script id="sharing-js-js-after">
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-x' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-x' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomx', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+//# sourceURL=sharing-js-js-after
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.mcall.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.7"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.mcall.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+			<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"REDACTED________________","applicationID":"1055475745","transactionName":"b11bYBFVWxFUUURcDVYXeFcXXVoMGkFZWwVUXQ==","queueTime":0,"applicationTime":775,"atts":"QxpMFllPSE4XUxIPGUVF","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+            </html>
+			

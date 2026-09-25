@@ -1,11 +1,13 @@
 {
-  "classified_rows": 25614,
-  "corpus_segments": 38207,
-  "crosswalk_agreement": 0.0,
+  "classified_rows": 2557,
+  "completed_at": "2026-09-25T03:20:28.536930+00:00",
+  "config_sha256": "e65ce77bbf67162cc6a12412b01ad79496399ea2072300ceab8b65e99217355c",
+  "corpus_segments": 2866,
+  "crosswalk_agreement": null,
   "crosswalk_rows": 0,
   "device": "mps",
-  "input_sha256": "067968f8e6d9c19b076e3b3a4a811e329efd52ece799a1537833b41f2d3d586e",
-  "keyword_rows": 18722,
+  "input_sha256": "0dc041c4fcb1a2416f50ef9b4193d14d5d0ad582541e354ded10faa2c2194981",
+  "keyword_rows": 1761,
   "lineage": {
     "deduplication": "one exact-text segment per endorsed/opponent group and election cycle",
     "generated_from": [
@@ -15,12 +17,15 @@
     "input": "data/analysis/candidate_text_corpus.csv",
     "unit": "eligible substantive exact-text segment"
   },
-  "low_margin_rows": 14533,
+  "low_margin_rows": 751,
   "minimum_similarity": 0.2,
-  "model_keyword_agreement": 0.4563614998397607,
+  "model_keyword_agreement": 0.5763770584894946,
   "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "output_sha256": "57e0191926a014a28332cffc0f2840de60e9ad87332c97e1fa1918dde000cd15",
+  "resolved_model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
   "reviewed_crosswalk_applicable": false,
-  "source_documents": 1592,
-  "total_rows": 38207,
-  "unclassified_rows": 12593
+  "source_documents": 522,
+  "total_rows": 2866,
+  "unclassified_rows": 309
 }

@@ -13,10 +13,13 @@ from .archive_pages import fetch_archived_pages
 from .analysis import analyze
 from .audit import validate
 from .chapter_crawler import crawl_all_chapters
+from .census import audit_census
+from .congressional import build_congressional_inventory
+from .state_results import collect_state_primaries
 from .coverage import build_coverage_ledger
 from .collector import collect_sources
 from .database import initialize_database
-from .document_corpus import run_candidate_document_regather_batch
+from .document_corpus import run_candidate_document_regather_batch, rebuild_candidate_analysis_segments
 from .endorsement_mentions import extract_mentions
 from .full_text_audit import build_full_text_sufficiency_audit
 from .fec_presidential import (
@@ -43,6 +46,7 @@ from .statement_batches import (
 from .sticking_points import analyze_sticking_points
 from .text_analysis import analyze_text
 from .model_topics import classify_model_topics
+from .jev_topics import benchmark_jev
 from .voter_guides import collect_voter_guides
 from .wayback_crawler import discover_wayback_urls, filter_existing_wayback_urls
 
@@ -81,6 +85,8 @@ def main() -> None:
         help="Discover historical endorsement URLs in the Wayback CDX index.",
     )
     wayback_parser.add_argument("--workers", type=int, default=8)
+    wayback_parser.add_argument("--limit", type=int)
+    wayback_parser.add_argument("--timeout", type=int, default=60)
     subparsers.add_parser(
         "filter-wayback",
         help="Remove static assets and false-positive historical URLs.",
@@ -166,15 +172,42 @@ def main() -> None:
         help="Validate schemas, provenance, and coding values.",
     )
     validate_parser.add_argument("--strict", action="store_true")
+    subparsers.add_parser(
+        "audit-census",
+        help="Account for every known race and source gap, including pre-2016 evidence.",
+    )
+    congress_parser = subparsers.add_parser(
+        "collect-congressional",
+        help="Inventory all-party House/Senate results, independently of DSA endorsements.",
+    )
+    congress_parser.add_argument("--download", action="store_true")
+    state_parser = subparsers.add_parser(
+        "collect-state-primaries",
+        help="Import registered official state primary returns with complete candidate provenance.",
+    )
+    state_parser.add_argument("--download", action="store_true")
     subparsers.add_parser("analyze", help="Generate summary tables and the draft report.")
     subparsers.add_parser(
         "analyze-text",
         help="Generate TF-IDF, MPIF, similarity, topic, and sticking-point graphs.",
     )
     subparsers.add_parser(
+        "rebuild-analysis-segments",
+        help="Rebuild candidate model passages from retained paragraphs without fetching or renumbering sources.",
+    )
+    subparsers.add_parser(
         "classify-topics",
         help="Classify eligible exact-text candidate segments with a pinned local embedding model.",
     )
+    jev_parser = subparsers.add_parser(
+        "benchmark-jev",
+        help="Prepare an isolated Jev topic pilot; hosted requests require explicit opt-in.",
+    )
+    jev_parser.add_argument("--limit", type=int, default=220)
+    jev_parser.add_argument("--execute", action="store_true")
+    jev_parser.add_argument("--allow-hosted", action="store_true")
+    jev_parser.add_argument("--gold", type=Path)
+    jev_parser.add_argument("--output-dir", type=Path)
     subparsers.add_parser(
         "build-race-registry",
         help="Build the canonical nationwide DSA-endorsed primary race registry.",
@@ -228,6 +261,10 @@ def main() -> None:
     official_kde_parser.add_argument("--force-embeddings", action="store_true")
     args = parser.parse_args()
 
+    if args.command == "rebuild-analysis-segments":
+        count = rebuild_candidate_analysis_segments()
+        print(f"Rebuilt {count} candidate analysis segments; original source paragraphs preserved.")
+        return
     if args.command == "collect":
         successes, failures = collect_sources()
         print(f"Collected {successes} sources; {failures} failed.")
@@ -238,7 +275,7 @@ def main() -> None:
         return
     if args.command == "collect-chapters":
         count = collect_chapters()
-        print(f"Collected {count} current chapter-directory records.")
+        print(f"Collected {count} current/historical chapter-directory records.")
         return
     if args.command == "build-queue":
         candidates, coverage = build_research_queue()
@@ -256,8 +293,13 @@ def main() -> None:
         print(f"Extracted {mentions} mentions from {pages} pages.")
         return
     if args.command == "crawl-wayback":
-        chapters, urls = discover_wayback_urls(args.workers)
-        print(f"Searched {chapters} chapter domains; found {urls} historical URLs.")
+        chapters, urls = discover_wayback_urls(
+            args.workers, limit=args.limit, timeout=args.timeout,
+        )
+        print(
+            f"Attempted {chapters} chapter domains; retained {urls} historical URLs. "
+            "See wayback_crawl_status.csv for failures and truncated searches."
+        )
         return
     if args.command == "filter-wayback":
         before, after = filter_existing_wayback_urls()
@@ -373,6 +415,29 @@ def main() -> None:
             raise SystemExit(1)
         print("Validation passed.")
         return
+    if args.command == "audit-census":
+        stats = audit_census()
+        print(
+            f"Census audit: complete={stats['complete']}, "
+            f"races={stats['registry_races']}, gaps={stats['gaps']}. "
+            "See data/analysis/census_gaps.csv."
+        )
+        return
+    if args.command == "collect-congressional":
+        stats = build_congressional_inventory(download=args.download)
+        print(
+            f"Congressional inventory: source_rows={stats['source_result_rows']}, "
+            f"regular_seats={stats['regular_seat_inventory_rows']}, "
+            f"gaps={stats['gap_records']}, complete={stats['complete']}."
+        )
+        return
+    if args.command == "collect-state-primaries":
+        stats = collect_state_primaries(download=args.download)
+        print(
+            f"State primary returns: sources={stats['source_count']}, "
+            f"contests={stats['contests']}, candidate_rows={stats['candidate_rows']}."
+        )
+        return
     if args.command == "analyze":
         stats = analyze()
         print(
@@ -398,6 +463,18 @@ def main() -> None:
             "Model topic classification complete: "
             f"rows={stats['total_rows']}, classified={stats['classified_rows']}, "
             f"unclassified={stats['unclassified_rows']}."
+        )
+        return
+    if args.command == "benchmark-jev":
+        kwargs = {"output_dir": args.output_dir} if args.output_dir else {}
+        stats = benchmark_jev(
+            limit=args.limit, execute=args.execute, allow_hosted=args.allow_hosted,
+            gold_path=args.gold, **kwargs,
+        )
+        print(
+            f"Jev pilot: status={stats['status']}, sample={stats['sample_rows']}, "
+            f"predictions={stats['prediction_rows']}, reviewed={stats['reviewed_rows']}. "
+            "Canonical local classifications are unchanged."
         )
         return
     if args.command == "build-race-registry":

@@ -1,0 +1,57 @@
+{
+  "corrections": [
+    {
+      "race_id": "race-e4f88f1286d62b12a1ab",
+      "election_date": "2018-05-15",
+      "old_jurisdiction": "District 32",
+      "corrected_jurisdiction": "District 30",
+      "office": "State House",
+      "state_code": "PA",
+      "source_url": "https://www.electionreturns.pa.gov/api/ElectionReturn/GetOfficeData?officeId=13&methodName=GetOfficeDetails&electionid=63&electiontype=P&isactive=0",
+      "source_capture": "data/raw/policy_race_identity/pa2018-state-house-capture.json",
+      "source_sha256": "51c7bfe2a1332c10d04a5b9a7eb84335e76de0871a6bf92b4a40d9ec1af6a4a9",
+      "json_locator": "Election > Representative in the General Assembly > 30th Legislative District$$102$$ > Candidates > Democratic",
+      "official_rows": [
+        {"candidate_name": "KANDIL, KAREEM", "votes": 1487},
+        {"candidate_name": "PAVLECIC, JACOB ROBERT", "votes": 1889},
+        {"candidate_name": "MONROE, ELIZABETH", "votes": 2193}
+      ],
+      "interpretation": "This corrects election identity, not candidate policy. The original resolution's claim that official returns supported District32 was incorrect. The source is retained rather than citing only the statewide homepage."
+    },
+    {
+      "race_id": "race-aa5003c070b361f1e672",
+      "election_date": "2020-08-04",
+      "office": "Douglas County Commissioner District 3",
+      "state_code": "KS",
+      "old_candidates": ["Shannon Portillo", "Sara Taliaferro"],
+      "corrected_candidates": ["Shannon Portillo", "Karen Willey"],
+      "source_capture": "data/raw/policy_race_identity/douglas-2020-primary-archive-capture.json",
+      "source_sha256": "85f39a40b0a4e2b3591f22d17155646ed0eb39e4c2097519366d5beeda432a69",
+      "source_locator": "PDF page4, upper-right County Commission3rd Dist (Democratic) table",
+      "official_rows": [
+        {"candidate_name": "Shannon Portillo", "votes": 3889},
+        {"candidate_name": "Karen Willey", "votes": 2805}
+      ],
+      "interpretation": "The original source pair mixed candidates from two different districts. No policy comparison between Portillo and Taliaferro was admitted."
+    },
+    {
+      "race_id": "race-695f3443e4961cfa625f",
+      "election_date": "2020-08-04",
+      "office": "Douglas County Commissioner District 2",
+      "state_code": "KS",
+      "old_candidates": ["Shannon Reid"],
+      "old_role": "unopposed",
+      "corrected_candidates": ["Shannon Reid", "Nancy Thellman", "Sara Taliaferro"],
+      "corrected_endorsed_role": "endorsed",
+      "source_capture": "data/raw/policy_race_identity/douglas-2020-primary-archive-capture.json",
+      "source_sha256": "85f39a40b0a4e2b3591f22d17155646ed0eb39e4c2097519366d5beeda432a69",
+      "source_locator": "PDF page4, lower-left County Commissioner2nd (Democratic) table",
+      "official_rows": [
+        {"candidate_name": "Shannon Reid", "votes": 2349},
+        {"candidate_name": "Nancy Thellman", "votes": 2344},
+        {"candidate_name": "Sara L. Taliaferro", "votes": 1542}
+      ],
+      "interpretation": "The official return confirms a three-candidate contest. Sara Taliaferro is the canonical public-name form of Sara L. Taliaferro."
+    }
+  ]
+}

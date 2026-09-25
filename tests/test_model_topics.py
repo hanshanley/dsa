@@ -5,10 +5,17 @@ from dsa_analysis.model_topics import (
     _keyword_patterns,
     _keyword_predict,
     _topic_emphasis,
+    _validation_summary,
 )
 
 
 class ModelTopicTests(unittest.TestCase):
+    def test_no_reviewed_labels_do_not_mean_zero_accuracy(self):
+        summary = _validation_summary([])
+        self.assertEqual(summary["crosswalk_rows"], 0)
+        self.assertIsNone(summary["crosswalk_agreement"])
+        self.assertIsNone(summary["model_keyword_agreement"])
+
     def test_keyword_baseline_uses_configured_seeds(self):
         topics = [
             Topic(3, "Health", "Health care and insurance.", ("healthcare", "medicare")),

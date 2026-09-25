@@ -1,0 +1,24 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "questionnaire": {
+    "capture": "data/raw/policy_texas_2020_federal/capture.json",
+    "edition_date_as_printed": "2020-01-08",
+    "artifact": "Stonewall Democrats of Austin federal candidate-response compilation",
+    "withheld_candidate": "Heidi Sloan",
+    "withheld_pages": [7, 10, 12, 15, 17, 20],
+    "reason": "The same intersex/Equality Act paragraph is printed under Sloan across unrelated questions. It also matches Doggett's response to the intersex question. PDF table images were checked, so this is not merely a text-order extraction artifact. The cause cannot be independently determined; these rows do not support attributed Sloan positions or nonresponse labels.",
+    "accepted_candidate_scopes": "Julie Oliver's specific unique response rows used in the review were visually matched to their labels and read in full. Other rows are discovery material until separately reviewed."
+  },
+  "publisher_comparison_sheet": {
+    "capture": "data/raw/policy_texas_2020_federal/ortx-comparison-capture.json",
+    "status": "publisher_coded_context_not_independent_stance_gold",
+    "reason": "The Our Revolution comparison contains ordinal ratings and selected responses for both candidates, but it does not independently establish that every word is candidate-authored. It corroborates discovery and is retained in complete CSV/XLSX form, not counted as new source-reviewed claims."
+  },
+  "replacement_sources": [
+    "data/raw/policy_texas_2020_federal/sloan-home-capture.json",
+    "data/raw/policy_texas_2020_federal/sloan-health-capture.json",
+    "data/raw/policy_texas_2020_federal/sloan-housing-capture.json",
+    "data/raw/policy_texas_2020_federal/sloan-organizing-capture.json",
+    "data/raw/policy_texas_2020_federal/oliver-home-capture.json"
+  ]
+}

@@ -1,0 +1,666 @@
+{
+  "party_accounting_files": [
+    "gulf/party_contest_accounting.csv",
+    "wv/party_contest_accounting.csv",
+    "remaining_midwest/party_contest_accounting.csv",
+    "northwest/party_contest_accounting.csv",
+    "nh_ct/party_contest_accounting.csv",
+    "territories/party_accounting.csv",
+    "nomination_followup/party_contest_accounting_updates.csv"
+  ],
+  "supplemental_outputs": [
+    {
+      "provider": "territories",
+      "results": "territorial_primary_results.csv",
+      "source_manifest": "territories/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.territorial_primaries"
+    },
+    {
+      "provider": "gulf",
+      "results": "gulf_primary_results.csv",
+      "source_manifest": "gulf/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.gulf_primaries"
+    },
+    {
+      "provider": "northwest",
+      "results": "northwest_primary_results.csv",
+      "source_manifest": "northwest/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.northwest_primaries"
+    },
+    {
+      "provider": "nh_ct",
+      "results": "nh_ct_primary_results.csv",
+      "source_manifest": "nh_ct/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.nh_ct_nominations"
+    },
+    {
+      "provider": "remaining_midwest",
+      "results": "remaining_midwest_primary_results.csv",
+      "source_manifest": "remaining_midwest/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.remaining_midwest_primaries"
+    },
+    {
+      "provider": "sc_tn",
+      "results": "sc_tn_primary_results.csv",
+      "source_manifest": "sc_tn/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.sc_tn_primaries"
+    },
+    {
+      "provider": "northeast",
+      "results": "northeast_primary_results.csv",
+      "source_manifest": "northeast/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.northeast_primaries"
+    },
+    {
+      "provider": "nj_fl",
+      "results": "nj_fl_primary_results.csv",
+      "source_manifest": "nj_fl/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.nj_fl_primaries"
+    },
+    {
+      "provider": "western",
+      "results": "western_primary_results.csv",
+      "source_manifest": "western/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.western_primaries"
+    },
+    {
+      "provider": "il_oh",
+      "results": "il_oh_primary_results.csv",
+      "source_manifest": "il_oh/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.il_oh_primaries"
+    },
+    {
+      "provider": "ga_wi",
+      "results": "ga_wi_primary_results.csv",
+      "source_manifest": "ga_wi/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.ga_wi_primaries"
+    },
+    {
+      "provider": "ny_mi",
+      "results": "ny_mi_primary_results.csv",
+      "source_manifest": "ny_mi/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.ny_mi_primaries"
+    },
+    {
+      "provider": "tx_pa",
+      "results": "tx_pa_primary_results.csv",
+      "source_manifest": "tx_pa/source_manifest.csv",
+      "regenerate_module": "dsa_analysis.tx_pa_primaries"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "al-2024-runoff", "state": "AL", "date": "2024-04-16",
+      "adapter": "alabama", "filename": "al-2024-runoff.zip",
+      "url": "https://www.sos.alabama.gov/sites/default/files/election-data/2024-07/2024%20Primary%20Runoff%20Precinct%20Results.zip",
+      "publication": "https://www.sos.alabama.gov/alabama-votes/voter/election-data",
+      "election_system": "partisan_primary", "stage": "primary_runoff", "expected_counties": 28
+    },
+    {
+      "source_id": "al-2026-runoff", "state": "AL", "date": "2026-06-16",
+      "adapter": "alabama", "filename": "al-2026-runoff.zip",
+      "url": "https://www.sos.alabama.gov/sites/default/files/election-data/2026-07/2026_PRIMARY_RUNOFF_ELECTION.zip",
+      "publication": "https://www.sos.alabama.gov/alabama-votes/voter/election-data",
+      "election_system": "partisan_primary", "stage": "primary_runoff", "expected_counties": 67
+    },
+    {
+      "source_id": "al-2026-replacement-rep", "state": "AL", "date": "2026-08-11",
+      "adapter": "alabama_replacement_summary", "filename": "al-2026-special-congressional.xlsx",
+      "url": "https://www.sos.alabama.gov/sites/default/files/election-data/2026-09/Republication%20Results%20From%20The%20Special%20Congressional%20Election.xlsx",
+      "publication": "https://www.sos.alabama.gov/alabama-votes/voter/election-data",
+      "election_system": "partisan_primary", "stage": "special_primary",
+      "verified_districts": ["01", "02", "06"],
+      "excluded_districts": {"07": "Washington county Ammie Akin vote cell contains nonnumeric 'wa'; statewide total requires clarification."}
+    },
+    {
+      "source_id": "dc-2024-primary", "state": "DC", "date": "2024-06-04",
+      "adapter": "dc", "filename": "dc-2024-primary.csv",
+      "url": "https://electionresults.dcboe.org/Downloads/Reports/June_4_2024_Primary_Election_Certified_Results.csv",
+      "info_filename": "dc-2024-primary-info.json",
+      "info_url": "https://electionresults.dcboe.org/electionResults/getElectionInfo/2024-Primary-Election",
+      "publication": "https://electionresults.dcboe.org/election_results/2024-Primary-Election",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "dc-2026-primary", "state": "DC", "date": "2026-06-16",
+      "adapter": "dc", "filename": "dc-2026-primary.csv",
+      "url": "https://electionresults.dcboe.org/Downloads/Reports/June_16_2026_Primary_and_Special_Election_Certified_Results.csv",
+      "info_filename": "dc-2026-primary-info.json",
+      "info_url": "https://electionresults.dcboe.org/electionResults/getElectionInfo/2026-Primary-Election",
+      "publication": "https://electionresults.dcboe.org/election_results/2026-Primary-Election",
+      "election_system": "partisan_ranked_choice_first_preferences"
+    },
+    {
+      "source_id": "al-2026-replacement-dem", "state": "AL", "date": "2026-08-11",
+      "adapter": "reviewed_contests", "filename": "al-2026-replacement-dem-certification.pdf",
+      "url": "https://www.sos.alabama.gov/sites/default/files/election-2026/DemocraticCertificationofResultsforSpecialPrimary.pdf",
+      "publication": "https://www.sos.alabama.gov/alabama-votes/voter/election-information/2026",
+      "extraction_file": "alabama_replacement_primary_extractions.json",
+      "election_system": "partisan_primary", "stage": "special_primary",
+      "expected_ballot_options": 4,
+      "expected_reporting_units": ["Autauga", "Bibb", "Chilton", "Coosa", "Elmore", "Jefferson", "Shelby", "Talladega"]
+    },
+    {
+      "source_id": "co-2026-primary", "state": "CO", "date": "2026-06-30",
+      "adapter": "reviewed_contests", "filename": "co-2026-primary.pdf",
+      "url": "https://www.sos.state.co.us/pubs/elections/Results/2026/2026PrimaryStateAbstractofResultsCast.pdf",
+      "publication": "https://www.sos.state.co.us/pubs/elections/Results/Archives.html",
+      "extraction_file": "colorado_primary_extractions.json",
+      "election_system": "partisan_primary", "expected_ballot_options": 28
+    },
+    {
+      "source_id": "ky-2024-primary", "state": "KY", "date": "2024-05-21",
+      "adapter": "reviewed_contests", "filename": "ky-2024-primary.pdf",
+      "url": "https://elect.ky.gov/results/2020-2029/Documents/2024%20Primary%20Results.pdf",
+      "publication": "https://elect.ky.gov/results/2020-2029/Pages/2024.aspx",
+      "extraction_file": "kentucky_primary_extractions.json",
+      "election_system": "partisan_primary", "expected_ballot_options": 19
+    },
+    {
+      "source_id": "ky-2026-primary", "state": "KY", "date": "2026-05-19",
+      "adapter": "reviewed_contests", "filename": "ky-2026-primary.pdf",
+      "url": "https://elect.ky.gov/Documents/2026%20Primary%20Certification%20of%20Vote%20Totals%20Final.pdf",
+      "publication": "https://elect.ky.gov/results/2020-2029/Pages/2026.aspx",
+      "extraction_file": "kentucky_primary_extractions.json",
+      "election_system": "partisan_primary", "expected_ballot_options": 54
+    },
+    {
+      "source_id": "ks-2024-primary", "state": "KS", "date": "2024-08-06",
+      "adapter": "kansas", "filename": "ks-2024-primary.pdf",
+      "url": "https://sos.ks.gov/elections/24elec/2024-Primary-Official-Vote-Totals.pdf",
+      "publication": "https://sos.ks.gov/elections/election-results.html",
+      "election_system": "partisan_primary", "expected_ballot_options": 15,
+      "expected_contests": 8, "federal_section_end": "Kansas Senate 1"
+    },
+    {
+      "source_id": "ks-2026-primary", "state": "KS", "date": "2026-08-04",
+      "adapter": "kansas", "filename": "ks-2026-primary.pdf",
+      "url": "https://sos.ks.gov/elections/26elec/2026-Primary-Election-Official-Vote-Totals.pdf",
+      "publication": "https://sos.ks.gov/elections/election-results.html",
+      "election_system": "partisan_primary", "expected_ballot_options": 30,
+      "expected_contests": 10, "federal_section_end": "Governor / Lt. Governor"
+    },
+    {
+      "source_id": "mo-2024-primary", "state": "MO", "date": "2024-08-06",
+      "adapter": "missouri", "filename": "mo-2024-primary.pdf",
+      "url": "https://www.sos.mo.gov/CMSImages/ElectionResultsStatistics/2024PrimaryElection.pdf",
+      "publication": "https://www.sos.mo.gov/elections/s_default/results",
+      "election_system": "partisan_primary", "expected_house_districts": 8
+    },
+    {
+      "source_id": "ne-2024-primary", "state": "NE", "date": "2024-05-14",
+      "adapter": "reviewed_totals", "filename": "ne-2024-primary.pdf",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2024/2024%20Primary%20Canvass%20Book.pdf",
+      "publication": "https://sos.nebraska.gov/elections/previous-elections",
+      "election_system": "partisan_primary", "expected_ballot_options": 19
+    },
+    {
+      "source_id": "ne-2026-primary", "state": "NE", "date": "2026-05-12",
+      "adapter": "reviewed_totals", "filename": "ne-2026-primary.pdf",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/2026_Primary_Canvass_Book.pdf",
+      "publication": "https://sos.nebraska.gov/elections",
+      "election_system": "partisan_primary", "expected_ballot_options": 26
+    },
+    {
+      "source_id": "ia-2024-primary", "state": "IA", "date": "2024-06-04",
+      "adapter": "iowa", "filename": "ia-2024-primary.pdf",
+      "url": "https://sos.iowa.gov/elections/pdf/2024/primary/canvsummary.pdf",
+      "publication": "https://sos.iowa.gov/iowans/election-results-statistics",
+      "election_system": "partisan_primary", "expected_contests": 12
+    },
+    {
+      "source_id": "ia-2026-primary", "state": "IA", "date": "2026-06-02",
+      "adapter": "iowa", "filename": "ia-2026-primary.pdf",
+      "url": "https://sos.iowa.gov/sites/default/files/2026-07/5.%20Canvass%20Summary%20Report.pdf",
+      "publication": "https://sos.iowa.gov/iowans/election-results-statistics",
+      "election_system": "partisan_primary", "expected_contests": 10
+    },
+    {
+      "source_id": "de-2024-primary", "state": "DE", "date": "2024-09-10",
+      "adapter": "delaware", "filename": "de-2024-primary.csv",
+      "url": "https://elections.delaware.gov/reports/PR2024.csv",
+      "publication": "https://elections.delaware.gov/reports/PR2024.html",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "wy-2024-primary", "state": "WY", "date": "2024-08-20",
+      "adapter": "wyoming", "filename": "wy-2024-primary.zip",
+      "url": "https://sos.wyo.gov/Elections/Docs/2024/Results/Primary/2024_Wyoming_Primary_Results.zip",
+      "publication": "https://sos.wyo.gov/Elections/Docs/2024/2024PrimaryResults.aspx",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "wy-2026-primary", "state": "WY", "date": "2026-08-18",
+      "adapter": "wyoming", "filename": "wy-2026-primary.zip",
+      "url": "https://sos.wyo.gov/Elections/Docs/2026/Results/Primary/2026_Wyoming_Primary_Results.zip",
+      "publication": "https://sos.wyo.gov/Elections/Docs/2026/2026PrimaryResults.aspx",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "sd-2026-primary", "state": "SD", "date": "2026-06-02",
+      "adapter": "reviewed_totals", "filename": "sd-2026-primary.pdf",
+      "url": "https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026%20Election%20Information/2026%20Election%20Assets/Primary/State%20Canvass%20and%20Certificate.pdf",
+      "publication": "https://sdsos.gov/elections-voting/upcoming-elections/general-information/2026%20Election%20Information/default.aspx",
+      "election_system": "partisan_primary", "expected_ballot_options": 4
+    },
+    {
+      "source_id": "hi-2024-primary", "state": "HI", "date": "2024-08-10",
+      "adapter": "hawaii", "filename": "hi-2024-primary.txt",
+      "url": "https://files.hawaii.gov/elections/files/results/2024/Primary/summary.txt",
+      "publication": "https://elections.hawaii.gov/election-result/primary-election-5/",
+      "election_system": "partisan_primary", "expected_contests": 12
+    },
+    {
+      "source_id": "hi-2026-primary", "state": "HI", "date": "2026-08-08",
+      "adapter": "hawaii", "filename": "hi-2026-primary.txt",
+      "url": "https://elections.hawaii.gov/wp-content/results/2026%20Primary/summary.txt",
+      "publication": "https://elections.hawaii.gov/election-result/primary-election-6/",
+      "election_system": "partisan_primary", "expected_contests": 7
+    },
+    {
+      "source_id": "nd-2024-primary", "state": "ND", "date": "2024-06-11",
+      "adapter": "statewide_export", "filename": "nd-2024-statewide.csv",
+      "url": "https://results.sos.nd.gov/ResultsExport.aspx?eid=OhimOTJtayc.",
+      "publication": "https://www.sos.nd.gov/elections/election-results",
+      "election_system": "partisan_primary", "expected_contests": 4,
+      "form_fields": {
+        "ctl00$MainContent$rblTypes": "1",
+        "ctl00$MainContent$btnAllStatewide": "All Statewide"
+      },
+      "offices": {
+        "United States Senator": {"chamber": "Senate", "district": "S"},
+        "Representative in Congress": {"chamber": "House", "district": "00"}
+      },
+      "party_names": {"DEM": "Democratic-NPL", "REP": "Republican"}
+    },
+    {
+      "source_id": "mt-2024-primary", "state": "MT", "date": "2024-06-04",
+      "adapter": "montana", "filename": "mt-2024-precinct.xlsx",
+      "url": "https://sosmt.gov/docs/32/results/64925/2024-primary-precinct-by-precinct",
+      "publication": "https://sosmt.gov/elections/results/",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "mt-2026-primary", "state": "MT", "date": "2026-06-02",
+      "adapter": "montana", "filename": "mt-2026-precinct.xlsx",
+      "url": "https://sosmt.gov/docs/31/post-election/76697/2026-primary-election-precinct-by-precinct-report",
+      "publication": "https://sosmt.gov/elections/results/",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "nd-2026-primary", "state": "ND", "date": "2026-06-09",
+      "adapter": "tally", "filename": "nd-2026-primary.json",
+      "url": "https://resultsnd.sos.nd.gov/results/north-dakota/346/FullDataFile.json",
+      "info_filename": "nd-2026-primary-info.json",
+      "info_url": "https://api.resultsnd.sos.nd.gov/Election/GetElectionInfo?cid=north-dakota&electionID=346",
+      "contests_filename": "nd-2026-primary-contests.json",
+      "contests_url": "https://api.resultsnd.sos.nd.gov/Contest/GetContestSearchList?cid=north-dakota&electionID=346",
+      "publication": "https://www.sos.nd.gov/elections/election-results",
+      "election_system": "partisan_primary",
+      "contest_overrides": {
+        "Representative in Congress Republican": {"chamber": "House", "district": "00", "primary_party": "Republican"},
+        "Representative in Congress Democratic-NPL": {"chamber": "House", "district": "00", "primary_party": "Democratic-NPL"}
+      }
+    },
+    {
+      "source_id": "ar-2024-primary", "state": "AR", "date": "2024-03-05",
+      "adapter": "tally", "filename": "ar-2024-primary.json",
+      "url": "https://results.tally-enr.com/results/arkansas/1845/FullDataFile.json",
+      "info_filename": "ar-2024-primary-info.json",
+      "info_url": "https://enr-results-api.totalresults.com/Election/GetElectionInfo?cid=arkansas&electionID=1845",
+      "contests_filename": "ar-2024-primary-contests.json",
+      "contests_url": "https://enr-results-api.totalresults.com/Contest/GetContestSearchList?cid=arkansas&electionID=1845",
+      "publication": "https://www.sos.arkansas.gov/elections/research/election-results",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "ar-2026-primary", "state": "AR", "date": "2026-03-03",
+      "adapter": "tally", "filename": "ar-2026-primary.json",
+      "url": "https://results.tally-enr.com/results/arkansas/7f77a178-af02-40ec-92db-c5cc50882c68/FullDataFile.json",
+      "info_filename": "ar-2026-primary-info.json",
+      "info_url": "https://enr-results-api.totalresults.com/Election/GetElectionInfo?cid=arkansas&electionID=7f77a178-af02-40ec-92db-c5cc50882c68",
+      "contests_filename": "ar-2026-primary-contests.json",
+      "contests_url": "https://enr-results-api.totalresults.com/Contest/GetContestSearchList?cid=arkansas&electionID=7f77a178-af02-40ec-92db-c5cc50882c68",
+      "publication": "https://www.sos.arkansas.gov/elections/research/election-results",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "wa-2024-primary", "state": "WA", "date": "2024-08-06",
+      "adapter": "washington", "filename": "wa-2024-primary.csv",
+      "url": "https://results.vote.wa.gov/results/20240806/export/20240806_Congressional.csv",
+      "publication": "https://results.vote.wa.gov/results/20240806/export.html",
+      "election_system": "nonpartisan_top_two", "expected_contests": 11
+    },
+    {
+      "source_id": "wa-2026-primary", "state": "WA", "date": "2026-08-04",
+      "adapter": "reviewed_totals", "filename": "wa-2026-primary.pdf",
+      "url": "https://www.sos.wa.gov/sites/default/files/2026-08/Official%20Canvass%20of%20Returns%20of%20the%20Primary%202026.pdf",
+      "publication": "https://www.sos.wa.gov/elections/data-research/election-data-and-maps/election-results-and-voters-pamphlets/2026-primary-election",
+      "election_system": "nonpartisan_top_two", "expected_ballot_options": 79
+    },
+    {
+      "source_id": "co-2024-primary", "state": "CO", "date": "2024-06-25",
+      "adapter": "civera", "filename": "co-2024-public-export.csv.gz",
+      "storage_compression": "gzip",
+      "url": "https://historicalelectiondata.coloradosos.gov/api/download_search.csv",
+      "search": {
+        "global": {"years": {"from": 2024, "to": 2024}},
+        "ballotQuestions": {"text": "", "types": [], "number": "", "divisions": []},
+        "contests": {"candidates": [], "offices": [], "divisions": []},
+        "voterStats": false, "stages": [], "specialElectionsOnly": false
+      },
+      "publication": "https://historicalelectiondata.coloradosos.gov/search?df=2024&dt=2024",
+      "election_system": "partisan_primary", "chamber": "House",
+      "office_name": "United States Congressperson", "office_modifiers": [""],
+      "expected_contests": 16
+    },
+    {
+      "source_id": "al-2024-primary", "state": "AL", "date": "2024-03-05",
+      "adapter": "alabama", "filename": "al-2024-primary.zip",
+      "url": "https://www.sos.alabama.gov/sites/default/files/election-data/2024-04/2024%20Primary%20Precinct%20Results.ZIP",
+      "publication": "https://www.sos.alabama.gov/alabama-votes/voter/election-data",
+      "election_system": "partisan_primary", "expected_counties": 67
+    },
+    {
+      "source_id": "al-2026-primary", "state": "AL", "date": "2026-05-19",
+      "adapter": "alabama", "filename": "al-2026-primary.zip",
+      "url": "https://www.sos.alabama.gov/sites/default/files/election-data/2026-07/2026_Primary_Election.zip",
+      "publication": "https://www.sos.alabama.gov/alabama-votes/voter/election-data",
+      "election_system": "partisan_primary", "expected_counties": 67,
+      "superseded_house_districts": ["01", "02", "06", "07"],
+      "superseding_election_date": "2026-08-11",
+      "superseded_publication": "https://www.sos.alabama.gov/newsroom/secretary-state-wes-allen-holds-press-conference-provide-updates-redistricting-may-19"
+    },
+    {
+      "source_id": "me-2024-senate-dem", "state": "ME", "date": "2024-06-11",
+      "adapter": "maine_totals", "filename": "me-2024-senate-dem.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/1-20US-20Senate-20Dem-20--20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/node/2479#state-primary",
+      "election_system": "partisan_primary", "party": "Democratic",
+      "chamber": "Senate", "district": "S", "first_candidate_column": 3,
+      "expected_sha256": "47d12313b62aef3eade3e65c0ca584b1509eceaa400fbb994b2c6ec264027b3b"
+    },
+    {
+      "source_id": "me-2024-senate-rep", "state": "ME", "date": "2024-06-11",
+      "adapter": "maine_totals", "filename": "me-2024-senate-rep.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/1-20US-20Senate-20Rep-20--20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/node/2479#state-primary",
+      "election_system": "partisan_primary", "party": "Republican",
+      "chamber": "Senate", "district": "S", "first_candidate_column": 3, "totals_label": "TOTAL",
+      "expected_sha256": "125b5be54a83dfeb2ef2ddda3226699f35abe7389204b00063eec630155d0db9"
+    },
+    {
+      "source_id": "me-2024-house-01-dem", "state": "ME", "date": "2024-06-11",
+      "adapter": "maine_totals", "filename": "me-2024-house-01-dem.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/2-20Rep-20to-20Congress-20Dist-201-20Dem-20--20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/node/2479#state-primary",
+      "election_system": "partisan_primary", "party": "Democratic",
+      "chamber": "House", "district": "01", "first_candidate_column": 4,
+      "expected_sha256": "d5bc8beab80e6d93b0d46c925b36d604e2168b339545b92a960c928a5061179e"
+    },
+    {
+      "source_id": "me-2024-house-01-rep", "state": "ME", "date": "2024-06-11",
+      "adapter": "maine_totals", "filename": "me-2024-house-01-rep.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/2-20Rep-20to-20Congress-20Dist-201-20Rep-20-FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/node/2479#state-primary",
+      "election_system": "partisan_primary", "party": "Republican",
+      "chamber": "House", "district": "01", "first_candidate_column": 4,
+      "expected_sha256": "e3b5d8ad69bfac213daa5a0a5c10f3f7f3bc6aba3bf82ed2ea5c760fea60e908"
+    },
+    {
+      "source_id": "me-2024-house-02-dem", "state": "ME", "date": "2024-06-11",
+      "adapter": "maine_totals", "filename": "me-2024-house-02-dem.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/3-20Rep-20to-20Congress-20Dist-202-20Dem--20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/node/2479#state-primary",
+      "election_system": "partisan_primary", "party": "Democratic",
+      "chamber": "House", "district": "02", "first_candidate_column": 4,
+      "expected_sha256": "9b52fa0124f30b6bc3fd296b52d81270720ce49ddcefe4c6ef11412d77ab13d4"
+    },
+    {
+      "source_id": "me-2024-house-02-rep", "state": "ME", "date": "2024-06-11",
+      "adapter": "maine_totals", "filename": "me-2024-house-02-rep.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/3-20Rep-20to-20Congress-20Dist-202-20Rep-20-FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/node/2479#state-primary",
+      "election_system": "partisan_primary", "party": "Republican",
+      "chamber": "House", "district": "02", "first_candidate_column": 4, "totals_label": "TOTAL",
+      "expected_sha256": "f9389e6b2cb5033c448a274f7bc480de75d399f4ea1b22e2c1e310b9067fc136"
+    },
+    {
+      "source_id": "me-2024-house-01-green", "state": "ME", "date": "2024-06-11",
+      "adapter": "maine_totals", "filename": "me-2024-house-green.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/content/assets/Green-20Rep-20to-20Congress-20--20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/node/2479#state-primary",
+      "election_system": "partisan_primary", "party": "Green Independent",
+      "chamber": "House", "district": "01", "first_candidate_column": 4, "totals_label": "TOTALS",
+      "expected_sha256": "0e8815c9ec55aa2f045a5f38d76e591b9ab6f2f3f4ef9c8be25a1ef9048a9c4f"
+    },
+    {
+      "source_id": "ri-2024-primary", "state": "RI", "date": "2024-09-10",
+      "adapter": "rhode_island", "filename": "ri-2024-primary.xlsx",
+      "url": "https://elections.ri.gov/sites/g/files/xkgbur756/files/2024-12/Primary%2024%20Summary%20EX.xlsx",
+      "publication": "https://elections.ri.gov/elections/previous-election-results",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "ri-2026-primary", "state": "RI", "date": "2026-09-09",
+      "adapter": "reviewed_totals", "filename": "ri-2026-primary.pdf",
+      "url": "https://elections.ri.gov/sites/g/files/xkgbur756/files/2026-09/Prim26_Summary.pdf",
+      "publication": "https://elections.ri.gov/elections/previous-election-results",
+      "election_system": "partisan_primary", "expected_ballot_options": 9
+    },
+    {
+      "source_id": "me-2026-senate-dem",
+      "state": "ME", "date": "2026-06-09", "adapter": "maine_totals",
+      "filename": "me-2026-senate-dem.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/US%20Senate%20DEM%20-%20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/elections-voting/election-results-data",
+      "election_system": "partisan_primary", "party": "Democratic",
+      "chamber": "Senate", "district": "S", "first_candidate_column": 3,
+      "expected_sha256": "4a0589f56c18e9ef8d54aab13d673a4856c713ca81a277ad6412159fa9091a5d"
+    },
+    {
+      "source_id": "me-2026-senate-rep",
+      "state": "ME", "date": "2026-06-09", "adapter": "maine_totals",
+      "filename": "me-2026-senate-rep.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/US%20Senate%20REP%20-%20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/elections-voting/election-results-data",
+      "election_system": "partisan_primary", "party": "Republican",
+      "chamber": "Senate", "district": "S", "first_candidate_column": 3,
+      "expected_sha256": "dcc924fc76a39c30c759a3756e35579a9d70d502ee9a0315bd9c6d03e981a854"
+    },
+    {
+      "source_id": "me-2026-house-01-dem",
+      "state": "ME", "date": "2026-06-09", "adapter": "maine_totals",
+      "filename": "me-2026-house-01-dem.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/Rep%20to%20Congress%20Dist%201%20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/elections-voting/election-results-data",
+      "election_system": "partisan_primary", "party": "Democratic",
+      "chamber": "House", "district": "01", "first_candidate_column": 4,
+      "expected_sha256": "18656f07026c2dd1532f8597f920295f13700ca7ab7b1e7e841c805f0a16c11a"
+    },
+    {
+      "source_id": "me-2026-house-01-rep",
+      "state": "ME", "date": "2026-06-09", "adapter": "maine_totals",
+      "filename": "me-2026-house-01-rep.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/Rep%20to%20Congress%20Dis%201%20REP%20-%20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/elections-voting/election-results-data",
+      "election_system": "partisan_primary", "party": "Republican",
+      "chamber": "House", "district": "01", "first_candidate_column": 4,
+      "expected_sha256": "4895a15d9dad94bad3a04e374cfd9f3fe866589357c4657ea63fdfa0c85baf36"
+    },
+    {
+      "source_id": "me-2026-house-02-rep",
+      "state": "ME", "date": "2026-06-09", "adapter": "maine_totals",
+      "filename": "me-2026-house-02-rep.xlsx",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/Rep%20to%20Congress%20Dis%202%20REP%20-%20FINAL.xlsx",
+      "publication": "https://www.maine.gov/sos/elections-voting/election-results-data",
+      "election_system": "partisan_primary", "party": "Republican",
+      "chamber": "House", "district": "02", "first_candidate_column": 3,
+      "expected_sha256": "b9d63f1352afeec680c9fbdbc9671d0b7e8ac7f0c36704f79c2847fa91b9ce76"
+    },
+    {
+      "source_id": "me-2026-house-02-dem",
+      "state": "ME", "date": "2026-06-09", "adapter": "reviewed_totals",
+      "filename": "me-2026-house-02-dem-rcv-summary.pdf",
+      "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/CG2%20Democratic%20RCV%20Summary%20Report.pdf",
+      "publication": "https://www.maine.gov/sos/elections-voting/election-results-data",
+      "election_system": "partisan_ranked_choice_first_preferences", "party": "Democratic",
+      "chamber": "House", "district": "02", "expected_ballot_options": 4
+    },
+    {
+      "source_id": "vt-2024-primary",
+      "state": "VT",
+      "date": "2024-08-13",
+      "adapter": "reviewed_totals",
+      "filename": "vt-2024-primary.pdf",
+      "url": "https://outside.vermont.gov/dept/sos/Elections_Division/election_info_resources/elections_results_data/2024_primary_election_official_report_canvassing_committee_united_states_vermont_statewide_offices.pdf",
+      "publication": "https://sos.vermont.gov/elections/election-info-resources/elections-results-data",
+      "election_system": "partisan_primary",
+      "expected_ballot_options": 10
+    },
+    {
+      "source_id": "vt-2026-primary",
+      "state": "VT",
+      "date": "2026-08-11",
+      "adapter": "reviewed_totals",
+      "filename": "vt-2026-primary.pdf",
+      "url": "https://outside.vermont.gov/dept/sos/Elections_Division/election_info_resources/elections_results_data/2026-august-primary-official-canvass-town-by-town.pdf",
+      "publication": "https://sos.vermont.gov/elections/election-info-resources/elections-results-data",
+      "election_system": "partisan_primary",
+      "expected_ballot_options": 6
+    },
+    {
+      "source_id": "va-2024-dem-primary",
+      "state": "VA",
+      "date": "2024-06-18",
+      "adapter": "virginia",
+      "filename": "va-2024-dem-primary.csv",
+      "url": "https://enr.elections.virginia.gov/results/public/api/elections/Virginia/2024_June_Democratic_Primary",
+      "publication": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2024_June_Democratic_Primary",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "va-2024-rep-primary",
+      "state": "VA",
+      "date": "2024-06-18",
+      "adapter": "virginia",
+      "filename": "va-2024-rep-primary.csv",
+      "url": "https://enr.elections.virginia.gov/results/public/api/elections/Virginia/2024_June_Republican_Primary",
+      "publication": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2024_June_Republican_Primary",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "va-2026-dem-primary",
+      "state": "VA",
+      "date": "2026-08-04",
+      "adapter": "virginia",
+      "filename": "va-2026-dem-primary.csv",
+      "url": "https://enr.elections.virginia.gov/results/public/api/elections/virginia/2026-August-Democratic-Primary",
+      "publication": "https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Democratic-Primary",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "va-2026-rep-primary",
+      "state": "VA",
+      "date": "2026-08-04",
+      "adapter": "virginia",
+      "filename": "va-2026-rep-primary.csv",
+      "url": "https://enr.elections.virginia.gov/results/public/api/elections/virginia/2026-August-Republican-Primary",
+      "publication": "https://enr.elections.virginia.gov/results/public/virginia/elections/2026-August-Republican-Primary",
+      "election_system": "partisan_primary"
+    },
+    {
+      "source_id": "ca-2024-primary",
+      "state": "CA",
+      "date": "2024-03-05",
+      "adapter": "california",
+      "filename": "ca-2024-primary.xlsx",
+      "url": "https://elections.cdn.sos.ca.gov/sov/2024-primary/sov/csv-all-candidates-updated.xlsx",
+      "publication": "https://www.sos.ca.gov/elections/prior-elections/statewide-election-results/pres-prim-march-2024/statement-vote",
+      "election_system": "nonpartisan_top_two",
+      "expected_house_districts": 52,
+      "expected_senate_contests": 2,
+      "expected_counties": 58
+    },
+    {
+      "source_id": "ca-2026-primary",
+      "state": "CA",
+      "date": "2026-06-02",
+      "adapter": "california",
+      "filename": "ca-2026-primary.xlsx",
+      "url": "https://elections.cdn.sos.ca.gov/sov/2026-primary/sov/csv-voter-nominated.xlsx",
+      "publication": "https://www.sos.ca.gov/elections/prior-elections/statewide-election-results/primary-election-june-2-2026/statement-vote",
+      "election_system": "nonpartisan_top_two",
+      "expected_house_districts": 52,
+      "expected_senate_contests": 0,
+      "expected_counties": 58
+    },
+    {
+      "source_id": "fl-2024-primary",
+      "state": "FL",
+      "date": "2024-08-20",
+      "adapter": "florida",
+      "filename": "fl-2024-primary.zip",
+      "url": "https://dos.fl.gov/media/708691/2024-pri-outputofficial.zip",
+      "publication": "https://dos.fl.gov/elections/data-statistics/elections-data/precinct-level-election-results/",
+      "election_system": "partisan_primary",
+      "expected_counties": 67
+    },
+    {
+      "source_id": "nc-2024-primary",
+      "state": "NC",
+      "date": "2024-03-05",
+      "adapter": "north_carolina",
+      "filename": "nc-2024-primary.zip",
+      "url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2024_03_05/results_pct_20240305.zip",
+      "publication": "https://www.ncsbe.gov/results-data/election-results/historical-election-results-data",
+      "election_system": "partisan_primary",
+      "expected_counties": 100
+    },
+    {
+      "source_id": "nc-2026-primary",
+      "state": "NC",
+      "date": "2026-03-03",
+      "adapter": "north_carolina",
+      "filename": "nc-2026-primary.zip",
+      "url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2026_03_03/results_pct_20260303.zip",
+      "publication": "https://www.ncsbe.gov/results-data/election-results/historical-election-results-data",
+      "election_system": "partisan_primary",
+      "expected_counties": 100
+    },
+    {
+      "source_id": "nc-2019-cd03-special-primary",
+      "state": "NC",
+      "date": "2019-04-30",
+      "adapter": "north_carolina",
+      "filename": "nc-2019-cd03-special-primary.zip",
+      "url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2019_04_30/results_pct_20190430.zip",
+      "publication": "https://www.ncsbe.gov/results-data/election-results/historical-election-results-data",
+      "election_system": "partisan_primary",
+      "term": "special"
+    },
+    {
+      "source_id": "nc-2019-cd09-repeat-primary",
+      "state": "NC",
+      "date": "2019-05-14",
+      "adapter": "north_carolina",
+      "filename": "nc-2019-cd09-repeat-primary.zip",
+      "url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2019_05_14/results_pct_20190514.zip",
+      "publication": "https://www.ncsbe.gov/results-data/election-results/historical-election-results-data",
+      "election_system": "partisan_primary",
+      "term": "special"
+    },
+    {
+      "source_id": "nc-2019-cd03-special-runoff",
+      "state": "NC",
+      "date": "2019-07-09",
+      "adapter": "north_carolina",
+      "filename": "nc-2019-cd03-special-runoff.zip",
+      "url": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2019_07_09/results_pct_20190709.zip",
+      "publication": "https://www.ncsbe.gov/results-data/election-results/historical-election-results-data",
+      "election_system": "partisan_primary",
+      "term": "special",
+      "stage": "primary_runoff"
+    }
+  ]
+}

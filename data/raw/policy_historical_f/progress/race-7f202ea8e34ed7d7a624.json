@@ -1,0 +1,105 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-7f202ea8e34ed7d7a624",
+  "sources": [
+    {
+      "document_id": "53e9cf275b149975ae219e4e",
+      "metadata_document_id": "53e9cf275b149975ae219e4e",
+      "url": "https://jimowles.org/news/candidate-answers-to-joldc-nikki-lucas-for-ny-assembly-district-60-2022",
+      "final_url": "https://jimowles.org/news/candidate-answers-to-joldc-nikki-lucas-for-ny-assembly-district-60-2022",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:50:46.628327+00:00",
+      "raw_path": "data/raw/policy_historical_f/sources/53e9cf275b149975ae219e4e.html",
+      "sha256": "1ab65d36f0caed502f965f44aeec665d0796c2d5b6e9b6a349b0147e77d48c1a",
+      "bytes": 114296,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "notes": "Semantically reviewed against candidate-scoped retained paragraphs; exact metadata, raw bytes, and temporal qualification preserved.",
+      "historical_cycle_evidence": {
+        "election_year": "2022",
+        "exact_quote": "Liberal Democratic Club March 12, 2022 nys assembly 2022",
+        "source_locator": "paragraph 141"
+      }
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hf-race-7f202ea8e34ed7d7a624-nikki-lucas-reallocation",
+      "metadata_document_id": "53e9cf275b149975ae219e4e",
+      "document_id": "53e9cf275b149975ae219e4e",
+      "speaker": "Nikki Lucas",
+      "role": "opponent_candidate",
+      "race_id": "race-7f202ea8e34ed7d7a624",
+      "election_date": "2022-06-28",
+      "topic": "public_safety",
+      "subtopic": "reallocate_law_enforcement_funds_to_services",
+      "stance": "support",
+      "short_exact_quote": "I support reallocating resources toward social services and preventative violence interruption.",
+      "locator": "paragraph 120",
+      "representation_kind": "policy_position",
+      "claim_summary": "Lucas supports reallocating law-enforcement resources to social services and preventive violence-interruption programs.",
+      "notes": "Direct candidate answer to the law-enforcement-budget question.",
+      "attribution_notes": "paragraph 120 is within the retained candidate-associated answer block for Nikki Lucas; prompt and publisher narration are not treated as candidate speech."
+    },
+    {
+      "excerpt_id": "ex-hf-race-7f202ea8e34ed7d7a624-nikki-lucas-reproductive",
+      "metadata_document_id": "53e9cf275b149975ae219e4e",
+      "document_id": "53e9cf275b149975ae219e4e",
+      "speaker": "Nikki Lucas",
+      "role": "opponent_candidate",
+      "race_id": "race-7f202ea8e34ed7d7a624",
+      "election_date": "2022-06-28",
+      "topic": "civil_rights",
+      "subtopic": "reproductive_rights",
+      "stance": "support",
+      "short_exact_quote": "I wholeheartedly support reproductive rights",
+      "locator": "paragraph 94",
+      "representation_kind": "policy_position",
+      "claim_summary": "Lucas supports reproductive rights and access to requested reproductive health care.",
+      "notes": "Candidate answer continues with healthcare access for women who seek it.",
+      "attribution_notes": "paragraph 94 is within the retained candidate-associated answer block for Nikki Lucas; prompt and publisher narration are not treated as candidate speech."
+    }
+  ],
+  "comparisons": [],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-7f202ea8e34ed7d7a624",
+      "candidate": "Keron W. Alleyne",
+      "role": "endorsed",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-7f202ea8e34ed7d7a624",
+      "candidate": "Keron W. Alleyne",
+      "url": "https://workingfamilies.org/",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/c9265c3fb0b5dfcb2986f0cd/3dabf5dbef9537b235ff7bfb0e7956584d0f20ddf1e6a7e3f859cddfdb1ec1d9.html"
+    }
+  ],
+  "case_disposition": {
+    "race_id": "race-7f202ea8e34ed7d7a624",
+    "election_date": "2022-06-28",
+    "status": "reviewed_with_evidence",
+    "candidates": [
+      {
+        "candidate_name": "Keron W. Alleyne",
+        "role": "endorsed",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Nikki Lucas",
+        "role": "opponent",
+        "status": "evidence_recovered"
+      }
+    ],
+    "source_count": 1,
+    "excerpt_count": 2,
+    "comparison_count": 0
+  }
+}

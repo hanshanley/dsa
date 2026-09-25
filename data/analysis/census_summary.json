@@ -1,0 +1,35 @@
+{
+  "as_of": "2026-09-22",
+  "complete": false,
+  "expected_chapter_years": 2988,
+  "gaps": 4061,
+  "gaps_by_kind": {
+    "candidacy": 266,
+    "chapter_year": 2988,
+    "local_endorsement": 1,
+    "national_endorsement": 294,
+    "race": 512
+  },
+  "input_sha256": {
+    "coverage_ledger.csv": "89c4cfdd9562ca42ceabb38bce2ba7596d49ad16f124c6686be731ebafc7df3a",
+    "full_text_race_summary.csv": "f5be1a65054c3108f7980d9b2f4dee1a1516c9acf552369a06204cc51724d69e",
+    "local_endorsement_candidates.csv": "dd79a07918be53a5d9790d6a954b82a24e0ad6d0a9a5cc762cbf28008c8e9c50",
+    "local_endorsements_rejected.csv": "258cbfc3e676e4c46d2158a307c144f452545fbe5c10a1f438f116d73b535941",
+    "local_endorsements_verified.csv": "c98469571b04e236127c994beec57dad8882ffd490eb599d848ee67dec9c4dd5",
+    "national_endorsement_archive.csv": "8df52088692831fa5ec1a919cbd5ac2c1a07bc5908b0cebb53b439c4ee3b2c08",
+    "opponent_research_queue.csv": "1fdf54deab8eb45aaf69dcb00359b68f215fa5335b90125f75428878ee00c119",
+    "race_registry.csv": "60bfe108fbaaddd0b7f174bd32f4349ba13510fef30e5d4adf7cbcaea156f794"
+  },
+  "limitations": [
+    "This is an audit of discovered sources, not proof that all historical chapters or races have been discovered.",
+    "Endorsement source dates, primary dates, and general election dates are distinct.",
+    "One verified endorsement does not establish an exhaustive chapter-year search.",
+    "National DSA primary outcomes are organization-reported, not certified results."
+  ],
+  "national_archive_rows": 369,
+  "national_candidate_endorsements": 317,
+  "registry_races": 578,
+  "source_start": "2015-01-01",
+  "strict_primary_races": 420,
+  "study_start": "2016-01-01"
+}

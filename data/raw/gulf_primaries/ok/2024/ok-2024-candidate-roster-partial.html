@@ -1,0 +1,294 @@
+<html lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>OK Candidate Filing</title>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="/css/vendor.css?v=RWIGijZolAyYznkqtar08k3jx0yQLPpJZiTnjbWJ3qA">
+    <link rel="stylesheet" href="/css/Site.css?v=M9H349gjLtmI4OGGrW67x7yfz_KCuVWoUZ2hxK5tKxs">
+    <script src="/js/vendor.js?v=2IoHo8vbDjP9NBrC8eUNjhvFh_RnD4DqU1Ju8zx00FA"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HM8WDKV1DG"></script>
+    <script src="/js/LoadGoogleAnalytics.js?v=YIQaUCtwamtC64wetREDD8K1pWFMT45DqusaccVcpt4"></script>
+    
+</head>
+
+<body onload="dsfixbody()" onresize="dsfixbody()" class="dx-device-desktop dx-device-generic" style="padding-top: 109.984px;">
+    <div class="Container fixed-top bg-light" id="TopContainer">
+        <div class="row pt-2 pb-2 ">
+            <div class="navtitle col-sm-7 float-left">
+                <div class="pl-2">
+                    <img src="/Images/OKLogoSq.png" width="45" height="45" class="dsSiteLogo" alt="Oklahoma Web Logo">&nbsp;<div class="d-inline-block" style="line-height:17px; margin-top:6px;">
+                        <b>
+                            OK Candidate Filing<span>&nbsp;Beta</span>                        </b><br><span class="dsSmallTitleFont">&nbsp;<i>Official Data from the Oklahoma State Election Board</i> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark navbar-expand-sm shadow-sm dsNavBarAdj">
+            <a class="navbar-brand" style="color: #FFFFFF !important" href="/">OK Candidate Filing</a>
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="active nav-item dstopnavitem"><a class="nav-link" href="/">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="modal dsLogoutDivTop" id="homeLogout" role="dialog" aria-label="Inactivity Logout" aria-atomic="true" aria-live="assertive" tabindex="-1" style="cursor: pointer;">
+        <div class="modal-dialog modal-dialog-centered dsLogout" id="LogoutDoc" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="LogoutTitle" class="modal-title">Session Expiration</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="container align-items-center">
+                        <div id="sessExpirDiv" class="mx-auto col-12 alert-danger text-white dsErrorBack shadow border border-secondary rounded text-center">
+                            <p>Due to inactivity your session will expire in&nbsp;<span id="sessExpirDivTime"></span>&nbsp;seconds.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main role="main" class="container">
+        
+
+<br>
+<br>
+
+<iframe id="download_iframe" style="display:none;"></iframe>
+
+<div class="text-center" id="CandSummary">
+    <div class="col-sm-12">
+        <div class="text-left">
+            <p class="alert-secondary p-2 pl-3 pr-3 shadow-sm" style="font-size:.9rem;">
+                    The Candidate Filing Portal is automatically updated at 6 p.m. each night.  Candidates filing with the State Election Board will be manually added to the portal upon acceptance of the candidate’s Declaration of Candidacy.
+            </p>
+            <hr>
+            <h3 class="text-center" tabindex="0"><b>View Candidates</b></h3> <br>
+        <div class="row ml-1 mr-1">
+            <div class="container ml-0 pl-0 pr-0">
+                <div class="d-flex align-items-center">
+                    <div class="col-6 p-0">
+                        <div class="card shadow-sm p-0 h-100" tabindex="0" role="group" aria-label="Summary Filing Statistics">
+                            <div class="card-header dsStatsBoxHeader text-white ml-0 mr-0">
+                                <div class="text-center" tabindex="0" role="heading">
+                                    <b>Candidate Statistics</b>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-1 pl-0" tabindex="0" aria-label="Filing Statistics for this request range:">
+                                    <b>Filing Date Range</b>: 4/3/2024 - 4/5/2024 <br>
+                                    <b>County</b>: <span>State &nbsp;(</span><span id="CurrentCounty">99</span>) <br>
+                                    <b>Total Filings</b>: 285<br>
+                                    <b>Avg Age</b>: 52<br>
+                                    <b>Most Recent Candidate Filing</b>: Rob Crowley on 04/05/2024
+                                    <input id="ActiveFilingRange" name="ActiveFilingRange" type="hidden" value="N">
+                                    <input id="FilingEnds" name="FilingEnds" type="hidden" value="">
+                                    <input id="ContestEnds" name="ContestEnds" type="hidden" value="">
+<input id="AutoRefreshSecs" name="AutoRefreshSecs" type="hidden" value="20">                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 p-0 ">
+                        <div>
+                            <div id="FilingAlert" class="alert text-white dsFilingAlert ml-3 text-center shadow pt-1 pb-1" style="display: none;">
+                                <b>
+                                    <span id="FilingEndDate"></span>
+                                    <span id="ContestEndDate"></span>
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+            
+            <br>
+            <div class="card shadow" tabindex="0" role="group" aria-label="Candidate Search and Result Information">
+                <div class="card-body bg-light">
+                    <div class="dsQueryContainer pl-xl-4">
+                        <div class="d-flex flex-row align-items-center pl-2 mb-1" role="group" aria-label="Office Search Type" tabindex="0">
+                            <div class="dsOfficeLabel"><b>Office</b>:</div>
+                            <div class="dsOfficeDropDown">
+                                <script>
+DevExpress.config({"serverDecimalSeparator":"."});
+DevExpress.aspnet.setTemplateEngine();
+DevExpress.assertDevExtremeVersion('DevExtreme.AspNet.Core', '25.2.8');
+DevExpress.config({ "licenseKey": window.atob("TENQdjFTTCsrIVEsNj5ROkBjKzpvPlFhVlNpZVtJYmM4KGohSzc3NHA+PDxvY2ktcDolOUBWYjp5OkwtRywlLVslSCt5KG5lRmVRK3BTSm06Wmo4ODI+YXAoMW1YVissZTNlPEI3cGZ5KDwrWChZZSQ5N3kxZWVlYjdlLVlJUiFbITxYWzc8K1EhYlFAM2J0UiUlVjQsPG1SIUxjeT4rLTkyPEY2M2l0LWNfLTdWJSx6Y2J0aiVKY21rJVgtNnBSRjZpLTZwblhCU0tGUSUlWC1wbi1RMiVkNnBnRkYlJWY8STxGRj4lLSlwZ0A2cDwtKSFqeVFhTlJRcGchRjY8NCQyN3lARzwtNnA8ZFFJJSE6YVEhKTI3QFFJJTR2Pmp6dmFqQEYyJTRRMiUhKUlpLTpJN0A6PlE0OkdfQEA5UWR2NjwhRjY8ZEZJN3lGSTd5Rkk3TGw=") });
+</script>
+<div id="CandidateSearchSelect" class="dx-show-invalid-badge dx-selectbox dx-textbox dx-texteditor dx-dropdowneditor-button-visible dx-editor-outlined dx-widget dx-dropdowneditor dx-dropdowneditor-field-clickable"><div class="dx-dropdowneditor-input-wrapper dx-selectbox-container"><input type="hidden" value="-1"><div class="dx-texteditor-container"><div class="dx-texteditor-input-container"><input autocomplete="off" placeholder="Select..." aria-label="Office" class="dx-texteditor-input" aria-haspopup="listbox" aria-autocomplete="none" role="combobox" type="text" readonly="" spellcheck="false" tabindex="0" aria-expanded="false"><div id="dx-470ebde3-5d39-4d18-9193-4cbd626e1b21" data-dx_placeholder="Select..." class="dx-placeholder dx-state-invisible"></div></div><div class="dx-texteditor-buttons-container"><div></div><div role="button" class="dx-widget dx-button-normal dx-dropdowneditor-button" aria-label="Select"><div class="dx-button-content"><div class="dx-dropdowneditor-icon"></div></div></div></div></div></div></div><script>
+DevExpress.utils.readyCallbacks.add((function($){$("#CandidateSearchSelect").dxSelectBox({"dataSource":{"store":DevExpress.data.AspNet.createStore({"key":"OfficeID","loadUrl":"/api/Home/GetOfficeList"}),"onLoadError":onLoadError},"onValueChanged":OfficeChanged,"displayExpr":"OfficeDesc","valueExpr":"OfficeID","value":"-1","inputAttr":{"aria-label":"Office"},"dropDownOptions":{"height":200}});}).bind(this, jQuery));</script>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="dsCustQueryContainer mx-auto" role="group" aria-label="Candidate Summary Information" tabindex="0">
+                            <div id="CandGrid" class="dx-widget dx-visibility-change-handler" role="presentation" style="height: 425px;"><div class="dx-datagrid dx-gridbase-container dx-datagrid-borders" role="group" aria-label="Data grid with 606 rows and 10 columns"><div class="dx-hidden"></div><div class="dx-gridbase-a11y-status-container" role="status" e2e-a11y-general-status-container="true"></div><div class="dx-hidden"></div><div class="dx-hidden"></div><div class="dx-datagrid-header-panel"><div aria-label="Data grid toolbar" class="dx-toolbar dx-widget dx-visibility-change-handler dx-collection" role="toolbar"><div class="dx-toolbar-items-container"><div class="dx-toolbar-before" role="presentation"></div><div class="dx-toolbar-center" role="presentation" style="margin: 0px auto; float: none;"></div><div class="dx-toolbar-after" role="presentation"><div class="dx-item dx-toolbar-item dx-toolbar-button"><div class="dx-item-content dx-toolbar-item-content"><div class="dx-datagrid-search-panel dx-show-invalid-badge dx-textbox dx-texteditor dx-editor-outlined dx-searchbox dx-show-clear-button dx-texteditor-empty dx-widget" style="width: 300px;"><div class="dx-texteditor-container"><div class="dx-texteditor-input-container"><div class="dx-icon dx-icon-search"></div><input autocomplete="off" placeholder="Search..." aria-label="Search in the data grid" class="dx-texteditor-input" type="text" spellcheck="false" tabindex="0" role="textbox"><div id="dx-bc29d996-ee01-82bc-4685-f99624e00265" data-dx_placeholder="Search..." class="dx-placeholder"></div></div><div class="dx-texteditor-buttons-container"><span class="dx-clear-button-area"><span class="dx-icon dx-icon-clear"></span></span></div></div></div></div></div></div></div></div></div><div class="dx-datagrid-headers dx-datagrid-nowrap dx-bordered-top-view" role="presentation" style="padding-right: 0px;"><div class="dx-datagrid-content dx-datagrid-scroll-container" role="presentation"><table class="dx-datagrid-table dx-datagrid-table-fixed" id="dx-23d9e233-55b8-11bd-75a5-d700df7ec1d1" role="presentation"><colgroup><col style="width: 30px;"><col style="width: 30px;"><col style="width: 300px;"><col style="width: 75px;"><col style="width: 65px;"><col style="width: 40px;"><col style="width: 70px;"><col style="width: 70px;"><col style="width: 35px;"><col></colgroup><tbody role="presentation" class=""><tr class="dx-row dx-header-row" role="row"><td class="dx-command-expand dx-datagrid-group-space dx-cell-focus-disabled" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space dx-cell-focus-disabled" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap dx-datagrid-action dx-cell-focus-disabled bg-primary" role="columnheader" aria-colindex="3" id="dx-col-4" aria-label="Column Candidate Name" aria-sort="none" tabindex="0" style="text-align: left;"><div class="dx-datagrid-text-content dx-text-content-alignment-left" role="presentation"><div class="dsSummaryTableHeader">Candidate Name</div></div><div class="dx-column-indicators" role="presentation"><span class="dx-sort dx-sort-none"></span></div></td><td class="dsSummaryTableCell dx-datagrid-action dx-cell-focus-disabled bg-primary" role="columnheader" aria-colindex="4" id="dx-col-5" aria-label="Column Filing Date" aria-sort="none" tabindex="0" style="text-align: left;"><div class="dx-datagrid-text-content dx-text-content-alignment-left" role="presentation"><div class="dsSummaryTableHeader">Filing Date</div></div><div class="dx-column-indicators" role="presentation"><span class="dx-sort dx-sort-none"></span></div></td><td class="dsSummaryTableCell dx-datagrid-action dx-cell-focus-disabled bg-primary" role="columnheader" aria-colindex="5" id="dx-col-6" aria-label="Column Filing ID" aria-sort="none" tabindex="0" style="text-align: right;"><div class="dx-column-indicators" role="presentation"><span class="dx-sort dx-sort-none"></span></div><div class="dx-datagrid-text-content dx-text-content-alignment-right" role="presentation"><div class="dsSummaryTableHeader">Filing ID</div></div></td><td class="dsSummaryTableCell dx-datagrid-action dx-cell-focus-disabled bg-primary" role="columnheader" aria-colindex="6" id="dx-col-7" aria-label="Column Age" aria-sort="none" tabindex="0" style="text-align: right;"><div class="dx-column-indicators" role="presentation"><span class="dx-sort dx-sort-none"></span></div><div class="dx-datagrid-text-content dx-text-content-alignment-right" role="presentation"><div class="dsSummaryTableHeader">Age</div></div></td><td class="dsSummaryTableCell dx-cell-focus-disabled bg-primary" role="columnheader" aria-colindex="7" id="dx-col-8" aria-label="Column Removed" aria-sort="none" tabindex="0" style="text-align: center;"><div class="dx-datagrid-text-content" role="presentation"><div class="dsSummaryTableHeader">Removed</div></div></td><td class="dsSummaryTableCell dx-datagrid-action dx-cell-focus-disabled bg-primary" role="columnheader" aria-colindex="8" id="dx-col-9" aria-label="Column Empty Item" aria-sort="none" tabindex="0" style="text-align: center;"><div class="dx-column-indicators dx-visibility-hidden" role="presentation"><span class="dx-sort dx-sort-none"></span></div><div class="dx-datagrid-text-content dx-text-content-alignment-left dx-text-content-alignment-right" role="presentation"><div class="dsSummaryTableHeader"></div></div><div class="dx-column-indicators" role="presentation"><span class="dx-sort dx-sort-none"></span></div></td><td class="dsSummaryTableCell dx-datagrid-action dx-cell-focus-disabled bg-primary" role="columnheader" aria-colindex="9" id="dx-col-10" aria-label="Column Empty Item" aria-sort="none" tabindex="0" style="text-align: center;"><div class="dx-column-indicators dx-visibility-hidden" role="presentation"><span class="dx-sort dx-sort-none"></span></div><div class="dx-datagrid-text-content dx-text-content-alignment-left dx-text-content-alignment-right" role="presentation"><div class="dsSummaryTableHeader"></div></div><div class="dx-column-indicators" role="presentation"><span class="dx-sort dx-sort-none"></span></div></td><td class="dsSummaryTableCell dx-cell-focus-disabled bg-primary" role="columnheader" aria-colindex="10" id="dx-col-14" aria-label="Column Empty Item" aria-sort="none" tabindex="0" style="text-align: left;"><div class="dx-datagrid-text-content" role="presentation"><div class="dsSummaryTableHeader"></div></div></td></tr></tbody></table></div></div><div class="dx-bordered-bottom-view dx-datagrid-rowsview dx-datagrid-nowrap dx-scrollable dx-visibility-change-handler dx-scrollable-both dx-scrollable-native dx-scrollable-native-generic dx-last-row-border" role="presentation"><div class="dx-scrollable-wrapper"><div class="dx-scrollable-container"><div class="dx-scrollable-content"><div class="dx-datagrid-content" role="grid" aria-owns="dx-23d9e233-55b8-11bd-75a5-d700df7ec1d1 dx-e3ad26cd-9916-ee74-8cf0-07c246ab2a87" style=""><table class="dx-datagrid-table dx-datagrid-table-fixed" id="dx-e3ad26cd-9916-ee74-8cf0-07c246ab2a87" role="presentation" style="table-layout: fixed;"><colgroup style=""><col style="width: 30px;"><col style="width: 30px;"><col style="width: 300px;"><col style="width: 75px;"><col style="width: 65px;"><col style="width: 40px;"><col style="width: 70px;"><col style="width: 70px;"><col style="width: 35px;"><col></colgroup><tbody role="presentation"><tr class="dx-row dx-group-row" role="row" aria-roledescription="Expanded row" aria-selected="undefined" tabindex="0"><td class="dx-command-expand dx-datagrid-group-space dx-datagrid-expand dx-selection-disabled" role="gridcell" aria-colindex="1" aria-label="Collapse" style="text-align: left;"><div class="dx-datagrid-group-opened"></div></td><td colspan="9" role="gridcell" aria-colindex="2" class="dx-group-cell" style="text-align: left;">Office: UNITED STATES REPRESENTATIVE - DISTRICT 01</td></tr><tr class="dx-row dx-group-row" role="row" aria-roledescription="Expanded row" aria-selected="undefined"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;"></td><td class="dx-command-expand dx-datagrid-group-space dx-datagrid-expand dx-selection-disabled" role="gridcell" aria-colindex="2" aria-label="Collapse" style="text-align: left;"><div class="dx-datagrid-group-opened"></div></td><td colspan="8" role="gridcell" aria-colindex="3" class="dx-group-cell" style="text-align: left;">Party: Republican</td></tr><tr class="dx-row dx-data-row dx-row-lines" role="row" aria-selected="false" aria-rowindex="3"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap" role="gridcell" aria-colindex="3" style="text-align: left;">Kevin Hern</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="4" style="text-align: left;">04/03/2024</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="5" style="text-align: right;">82</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="6" style="text-align: right;">62</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="7" style="text-align: center;">
+                    <div>
+                         <div id="dx-57ce5aac-b118-5a71-6342-aaf028dc8dca" aria-readonly="true" aria-invalid="false" role="checkbox" aria-checked="false" class="dx-widget dx-state-readonly dx-checkbox" tabindex="0"><input type="hidden" value="false"><div class="dx-checkbox-container"><span class="dx-checkbox-icon"></span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="8" style="text-align: center;">
+                    <div>
+                        <div id="dx-29d5a573-a266-713c-24ac-51089ce3816c" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-text dsTightButtonPadding" role="button" aria-label="More Info" tabindex="0" title="See More Candidate Info"><div class="dx-button-content"><span class="dx-button-text">More Info</span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="9" style="text-align: center;">
+                    <div>
+                        <div id="dx-44c69db7-7401-057e-7a2c-5955e6654cbe" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-icon dsTightButtonPadding" role="button" aria-label="file" tabindex="0" title="Download Declaration of Candidacy"><div class="dx-button-content"><i class="dx-icon dx-icon-file"></i></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="10" style="text-align: left;">&nbsp;</td></tr><tr class="dx-row dx-data-row dx-row-lines" role="row" aria-selected="false" aria-rowindex="4"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap" role="gridcell" aria-colindex="3" style="text-align: left;">Paul Royse</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="4" style="text-align: left;">04/05/2024</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="5" style="text-align: right;">275</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="6" style="text-align: right;">53</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="7" style="text-align: center;">
+                    <div>
+                         <div id="dx-26341ae6-1b69-58de-8857-5235c4d60d55" aria-readonly="true" aria-invalid="false" role="checkbox" aria-checked="false" class="dx-widget dx-state-readonly dx-checkbox" tabindex="0"><input type="hidden" value="false"><div class="dx-checkbox-container"><span class="dx-checkbox-icon"></span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="8" style="text-align: center;">
+                    <div>
+                        <div id="dx-f95ad51a-4a6c-7edb-ae18-ad65b01aa752" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-text dsTightButtonPadding" role="button" aria-label="More Info" tabindex="0" title="See More Candidate Info"><div class="dx-button-content"><span class="dx-button-text">More Info</span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="9" style="text-align: center;">
+                    <div>
+                        <div id="dx-f62f1605-87ba-acc7-debe-c25856942f7a" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-icon dsTightButtonPadding" role="button" aria-label="file" tabindex="0" title="Download Declaration of Candidacy"><div class="dx-button-content"><i class="dx-icon dx-icon-file"></i></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="10" style="text-align: left;">&nbsp;</td></tr><tr class="dx-row dx-group-row" role="row" aria-roledescription="Expanded row" aria-selected="undefined"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;"></td><td class="dx-command-expand dx-datagrid-group-space dx-datagrid-expand dx-selection-disabled" role="gridcell" aria-colindex="2" aria-label="Collapse" style="text-align: left;"><div class="dx-datagrid-group-opened"></div></td><td colspan="8" role="gridcell" aria-colindex="3" class="dx-group-cell" style="text-align: left;">Party: Democrat</td></tr><tr class="dx-row dx-data-row dx-row-lines" role="row" aria-selected="false" aria-rowindex="6"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap" role="gridcell" aria-colindex="3" style="text-align: left;">Evelyn L. Rogers</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="4" style="text-align: left;">04/03/2024</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="5" style="text-align: right;">200</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="6" style="text-align: right;">71</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="7" style="text-align: center;">
+                    <div>
+                         <div id="dx-a6e9c5b5-c934-55be-c7c7-f8296e644ecb" aria-readonly="true" aria-invalid="false" role="checkbox" aria-checked="false" class="dx-widget dx-state-readonly dx-checkbox" tabindex="0"><input type="hidden" value="false"><div class="dx-checkbox-container"><span class="dx-checkbox-icon"></span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="8" style="text-align: center;">
+                    <div>
+                        <div id="dx-8b2cb68d-129b-d6e5-18c4-8921a6fd7eaf" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-text dsTightButtonPadding" role="button" aria-label="More Info" tabindex="0" title="See More Candidate Info"><div class="dx-button-content"><span class="dx-button-text">More Info</span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="9" style="text-align: center;">
+                    <div>
+                        <div id="dx-27bd2d95-74c5-c1b9-ea82-9401189e24ff" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-icon dsTightButtonPadding" role="button" aria-label="file" tabindex="0" title="Download Declaration of Candidacy"><div class="dx-button-content"><i class="dx-icon dx-icon-file"></i></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="10" style="text-align: left;">&nbsp;</td></tr><tr class="dx-row dx-data-row dx-row-lines" role="row" aria-selected="false" aria-rowindex="7"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap" role="gridcell" aria-colindex="3" style="text-align: left;">Dennis Baker</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="4" style="text-align: left;">04/04/2024</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="5" style="text-align: right;">220</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="6" style="text-align: right;">69</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="7" style="text-align: center;">
+                    <div>
+                         <div id="dx-6d265754-61cf-30d1-eb5c-23e2c2bbfb99" aria-readonly="true" aria-invalid="false" role="checkbox" aria-checked="false" class="dx-widget dx-state-readonly dx-checkbox" tabindex="0"><input type="hidden" value="false"><div class="dx-checkbox-container"><span class="dx-checkbox-icon"></span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="8" style="text-align: center;">
+                    <div>
+                        <div id="dx-371e03dc-3913-93b5-b923-522dd02477e9" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-text dsTightButtonPadding" role="button" aria-label="More Info" tabindex="0" title="See More Candidate Info"><div class="dx-button-content"><span class="dx-button-text">More Info</span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="9" style="text-align: center;">
+                    <div>
+                        <div id="dx-d442dfb8-44b3-8e68-aab0-2c74748b8884" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-icon dsTightButtonPadding" role="button" aria-label="file" tabindex="0" title="Download Declaration of Candidacy"><div class="dx-button-content"><i class="dx-icon dx-icon-file"></i></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="10" style="text-align: left;">&nbsp;</td></tr><tr class="dx-row dx-group-row" role="row" aria-roledescription="Expanded row" aria-selected="undefined"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;"></td><td class="dx-command-expand dx-datagrid-group-space dx-datagrid-expand dx-selection-disabled" role="gridcell" aria-colindex="2" aria-label="Collapse" style="text-align: left;"><div class="dx-datagrid-group-opened"></div></td><td colspan="8" role="gridcell" aria-colindex="3" class="dx-group-cell" style="text-align: left;">Party: Independent</td></tr><tr class="dx-row dx-data-row dx-row-lines" role="row" aria-selected="false" aria-rowindex="9"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap" role="gridcell" aria-colindex="3" style="text-align: left;">Mark David Garcia Sanders</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="4" style="text-align: left;">04/04/2024</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="5" style="text-align: right;">225</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="6" style="text-align: right;">64</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="7" style="text-align: center;">
+                    <div>
+                         <div id="dx-0dcf539a-eae8-db37-92c0-c5ca176832c2" aria-readonly="true" aria-invalid="false" role="checkbox" aria-checked="false" class="dx-widget dx-state-readonly dx-checkbox" tabindex="0"><input type="hidden" value="false"><div class="dx-checkbox-container"><span class="dx-checkbox-icon"></span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="8" style="text-align: center;">
+                    <div>
+                        <div id="dx-d7bce237-752f-2862-bd6f-242c804125c4" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-text dsTightButtonPadding" role="button" aria-label="More Info" tabindex="0" title="See More Candidate Info"><div class="dx-button-content"><span class="dx-button-text">More Info</span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="9" style="text-align: center;">
+                    <div>
+                        <div id="dx-ee37b2bf-8265-6942-9b4b-35ede04c2e61" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-icon dsTightButtonPadding" role="button" aria-label="file" tabindex="0" title="Download Declaration of Candidacy"><div class="dx-button-content"><i class="dx-icon dx-icon-file"></i></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="10" style="text-align: left;">&nbsp;</td></tr><tr class="dx-row dx-group-row" role="row" aria-roledescription="Expanded row" aria-selected="undefined"><td class="dx-command-expand dx-datagrid-group-space dx-datagrid-expand dx-selection-disabled" role="gridcell" aria-colindex="1" aria-label="Collapse" style="text-align: left;"><div class="dx-datagrid-group-opened"></div></td><td colspan="9" role="gridcell" aria-colindex="2" class="dx-group-cell" style="text-align: left;">Office: UNITED STATES REPRESENTATIVE - DISTRICT 02</td></tr><tr class="dx-row dx-group-row" role="row" aria-roledescription="Expanded row" aria-selected="undefined"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;"></td><td class="dx-command-expand dx-datagrid-group-space dx-datagrid-expand dx-selection-disabled" role="gridcell" aria-colindex="2" aria-label="Collapse" style="text-align: left;"><div class="dx-datagrid-group-opened"></div></td><td colspan="8" role="gridcell" aria-colindex="3" class="dx-group-cell" style="text-align: left;">Party: Republican</td></tr><tr class="dx-row dx-data-row dx-row-lines" role="row" aria-selected="false" aria-rowindex="12"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap" role="gridcell" aria-colindex="3" style="text-align: left;">Josh Brecheen</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="4" style="text-align: left;">04/03/2024</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="5" style="text-align: right;">99</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="6" style="text-align: right;">44</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="7" style="text-align: center;">
+                    <div>
+                         <div id="dx-77e4956f-bbc6-aa9a-07ee-2343529e594e" aria-readonly="true" aria-invalid="false" role="checkbox" aria-checked="false" class="dx-widget dx-state-readonly dx-checkbox" tabindex="0"><input type="hidden" value="false"><div class="dx-checkbox-container"><span class="dx-checkbox-icon"></span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="8" style="text-align: center;">
+                    <div>
+                        <div id="dx-e7d48958-edcf-cdea-b399-61f84b8bc252" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-text dsTightButtonPadding" role="button" aria-label="More Info" tabindex="0" title="See More Candidate Info"><div class="dx-button-content"><span class="dx-button-text">More Info</span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="9" style="text-align: center;">
+                    <div>
+                        <div id="dx-32325a0f-c2bd-e98c-991e-894a3f77e4ad" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-icon dsTightButtonPadding" role="button" aria-label="file" tabindex="0" title="Download Declaration of Candidacy"><div class="dx-button-content"><i class="dx-icon dx-icon-file"></i></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="10" style="text-align: left;">&nbsp;</td></tr><tr class="dx-row dx-group-row" role="row" aria-roledescription="Expanded row" aria-selected="undefined"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;"></td><td class="dx-command-expand dx-datagrid-group-space dx-datagrid-expand dx-selection-disabled" role="gridcell" aria-colindex="2" aria-label="Collapse" style="text-align: left;"><div class="dx-datagrid-group-opened"></div></td><td colspan="8" role="gridcell" aria-colindex="3" class="dx-group-cell" style="text-align: left;">Party: Democrat</td></tr><tr class="dx-row dx-data-row dx-row-lines" role="row" aria-selected="false" aria-rowindex="14"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap" role="gridcell" aria-colindex="3" style="text-align: left;">Brandon Wade</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="4" style="text-align: left;">04/04/2024</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="5" style="text-align: right;">208</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="6" style="text-align: right;">47</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="7" style="text-align: center;">
+                    <div>
+                         <div id="dx-d545b56d-aab8-9d9d-81e9-ce809fc99a89" aria-readonly="true" aria-invalid="false" role="checkbox" aria-checked="false" class="dx-widget dx-state-readonly dx-checkbox" tabindex="0"><input type="hidden" value="false"><div class="dx-checkbox-container"><span class="dx-checkbox-icon"></span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="8" style="text-align: center;">
+                    <div>
+                        <div id="dx-c464ca8a-7b9d-a6bd-691e-d641223efe2e" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-text dsTightButtonPadding" role="button" aria-label="More Info" tabindex="0" title="See More Candidate Info"><div class="dx-button-content"><span class="dx-button-text">More Info</span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="9" style="text-align: center;">
+                    <div>
+                        <div id="dx-a4441ce9-8202-c4b6-c11b-98c06ce89977" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-icon dsTightButtonPadding" role="button" aria-label="file" tabindex="0" title="Download Declaration of Candidacy"><div class="dx-button-content"><i class="dx-icon dx-icon-file"></i></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="10" style="text-align: left;">&nbsp;</td></tr><tr class="dx-row dx-group-row" role="row" aria-roledescription="Expanded row" aria-selected="undefined"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;"></td><td class="dx-command-expand dx-datagrid-group-space dx-datagrid-expand dx-selection-disabled" role="gridcell" aria-colindex="2" aria-label="Collapse" style="text-align: left;"><div class="dx-datagrid-group-opened"></div></td><td colspan="8" role="gridcell" aria-colindex="3" class="dx-group-cell" style="text-align: left;">Party: Independent</td></tr><tr class="dx-row dx-data-row dx-row-lines" role="row" aria-selected="false" aria-rowindex="16"><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="1" style="text-align: left;">&nbsp;</td><td class="dx-command-expand dx-datagrid-group-space" role="gridcell" aria-colindex="2" style="text-align: left;">&nbsp;</td><td class="dsSummaryTableCellWrap" role="gridcell" aria-colindex="3" style="text-align: left;">Ronnie Hopkins</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="4" style="text-align: left;">04/03/2024</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="5" style="text-align: right;">109</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="6" style="text-align: right;">67</td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="7" style="text-align: center;">
+                    <div>
+                         <div id="dx-1187555a-d8e6-64e5-7d97-55382ae16965" aria-readonly="true" aria-invalid="false" role="checkbox" aria-checked="false" class="dx-widget dx-state-readonly dx-checkbox" tabindex="0"><input type="hidden" value="false"><div class="dx-checkbox-container"><span class="dx-checkbox-icon"></span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="8" style="text-align: center;">
+                    <div>
+                        <div id="dx-6c86ea2b-436f-7739-22a5-99e98c17c28c" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-text dsTightButtonPadding" role="button" aria-label="More Info" tabindex="0" title="See More Candidate Info"><div class="dx-button-content"><span class="dx-button-text">More Info</span></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="9" style="text-align: center;">
+                    <div>
+                        <div id="dx-fd3f4b7d-679c-89ee-f17e-d38bbc40596e" class="dx-widget dx-button dx-button-mode-contained dx-button-default dx-button-has-icon dsTightButtonPadding" role="button" aria-label="file" tabindex="0" title="Download Declaration of Candidacy"><div class="dx-button-content"><i class="dx-icon dx-icon-file"></i></div></div>
+                    </div>
+                </td><td class="dsSummaryTableCell" role="gridcell" aria-colindex="10" style="text-align: left;">&nbsp;</td></tr><tr class="dx-row dx-freespace-row" role="presentation" style="display: none;"><td class="dx-command-expand dx-datagrid-group-space" style="text-align: left;"></td><td class="dx-command-expand dx-datagrid-group-space" style="text-align: left;"></td><td class="dsSummaryTableCellWrap" style="text-align: left;"></td><td class="dsSummaryTableCell" style="text-align: left;"></td><td class="dsSummaryTableCell" style="text-align: right;"></td><td class="dsSummaryTableCell" style="text-align: right;"></td><td class="dsSummaryTableCell" style="text-align: center;"></td><td class="dsSummaryTableCell" style="text-align: center;"></td><td class="dsSummaryTableCell" style="text-align: center;"></td><td class="dsSummaryTableCell" style="text-align: left;"></td></tr><tr class="dx-row dx-virtual-row" role="presentation"><td class="dx-command-expand dx-datagrid-group-space" style="text-align: left; height: 17681.6px;"></td><td class="dx-command-expand dx-datagrid-group-space" style="text-align: left; height: 17681.6px;"></td><td class="dsSummaryTableCellWrap" style="text-align: left; height: 17681.6px;"></td><td class="dsSummaryTableCell" style="text-align: left; height: 17681.6px;"></td><td class="dsSummaryTableCell" style="text-align: right; height: 17681.6px;"></td><td class="dsSummaryTableCell" style="text-align: right; height: 17681.6px;"></td><td class="dsSummaryTableCell" style="text-align: center; height: 17681.6px;"></td><td class="dsSummaryTableCell" style="text-align: center; height: 17681.6px;"></td><td class="dsSummaryTableCell" style="text-align: center; height: 17681.6px;"></td><td class="dsSummaryTableCell" style="text-align: left; height: 17681.6px;"></td></tr></tbody></table></div></div></div></div><span class="dx-datagrid-nodata dx-hidden"></span></div><div class="dx-overlay dx-widget dx-visibility-change-handler dx-loadpanel dx-state-invisible"><div class="dx-overlay-content dx-loadpanel-content dx-state-invisible" style="width: 200px; height: 90px; z-index: 1000; left: 0px; top: 0px; transform: translate(329px, 194px); transition: all;"><div class="dx-loadpanel-content-wrapper"><div class="dx-loadpanel-indicator dx-loadindicator dx-widget" role="alert" aria-label="Loading..."><div class="dx-loadindicator-wrapper"><div class="dx-loadindicator-content dx-loadindicator-content-circle"><div class="dx-loadindicator-icon"><div class="dx-loadindicator-segment dx-loadindicator-segment7"></div><div class="dx-loadindicator-segment dx-loadindicator-segment6"></div><div class="dx-loadindicator-segment dx-loadindicator-segment5"></div><div class="dx-loadindicator-segment dx-loadindicator-segment4"></div><div class="dx-loadindicator-segment dx-loadindicator-segment3"></div><div class="dx-loadindicator-segment dx-loadindicator-segment2"></div><div class="dx-loadindicator-segment dx-loadindicator-segment1"></div><div class="dx-loadindicator-segment dx-loadindicator-segment0"></div></div></div></div></div><div class="dx-loadpanel-message">Loading...</div></div></div></div><div class="dx-hidden" style="padding-right: 0px;"></div><div></div><div class="dx-hidden"></div><div class="dx-hidden"></div><div class="dx-datagrid-drag-header dx-datagrid-text-content dx-widget" style="display: none;"></div><div class="dx-context-menu dx-has-context-menu dx-widget dx-visibility-change-handler dx-collection" role="presentation"></div><div class="dx-header-filter-menu"></div><div></div><div></div><div></div></div></div><script>
+DevExpress.utils.readyCallbacks.add((function($){$("#CandGrid").dxDataGrid({"dataSource":{"store":DevExpress.data.AspNet.createStore({"key":"CandidateID","loadParams":{"OfficeID":function() {return CurrentOffice;}},"loadUrl":"/api/Home/GetCandList"}),"onLoadError":onLoadError},"selection":{"mode":"single"},"scrolling":{"mode":"virtual","showScrollbar":"always","useNative":true},"showColumnLines":false,"showRowLines":true,"searchPanel":{"visible":true,"width":300,"placeholder":"Search..."},"rowAlternationEnabled":false,"showBorders":true,"grouping":{"autoExpandAll":true},"groupPanel":{"visible":false},"height":425,"onCellPrepared":onCellPrepared,"autoNavigateToFocusedRow":true,"columns":[{"dataField":"CandidateID","caption":"ID","dataType":"number","validationRules":[{"type":"required","message":"The ID field is required."}],"headerCellTemplate":formatHeader,"cssClass":"dsSummaryTableCell","allowFiltering":false,"allowSearch":false,"visible":false},{"dataField":"OfficeDesc","caption":"Office","dataType":"string","headerCellTemplate":formatHeader,"cssClass":"dsSummaryTableCell","allowSearch":true,"groupIndex":0,"calculateGroupValue":calcOfficeSort,"groupCellTemplate":calcOfficeCellTemplate},{"dataField":"CandidateAffiliation","caption":"Party","dataType":"string","headerCellTemplate":formatHeader,"cssClass":"dsSummaryTableCell","allowSearch":false,"groupIndex":1,"calculateGroupValue":calcAffSort,"groupCellTemplate":calcAffCellTemplate},{"dataField":"CandidateCombinedName","caption":"Candidate Name","dataType":"string","headerCellTemplate":formatHeader,"cssClass":"dsSummaryTableCellWrap","width":300,"allowSearch":true,"calculateSortValue":calcCandSort},{"dataField":"FilingDate","caption":"Filing Date","dataType":"date","validationRules":[{"type":"required","message":"The Filing Date field is required."}],"headerCellTemplate":formatHeader,"cssClass":"dsSummaryTableCell","allowSearch":false,"width":75,"format":"MM/dd/yyyy"},{"dataField":"FilingID","caption":"Filing ID","dataType":"number","validationRules":[{"type":"required","message":"The Filing ID field is required."}],"headerCellTemplate":formatHeader,"cssClass":"dsSummaryTableCell","width":65,"allowSearch":false},{"dataField":"Age","caption":"Age","dataType":"number","validationRules":[{"type":"required","message":"The Age field is required."}],"headerCellTemplate":formatHeader,"cssClass":"dsSummaryTableCell","width":40,"allowSearch":false},{"dataField":"IsRemoved","caption":"Removed","dataType":"boolean","headerCellTemplate":formatHeader,"cellTemplate":$("#RemovedTemplate"),"width":70,"cssClass":"dsSummaryTableCell","allowSearch":false,"allowSorting":false},{"dataField":"EmptyItem","dataType":"string","name":"More Info","headerCellTemplate":formatEmptyHeader,"cellTemplate":$("#MoreInfoButtonTemplate"),"width":70,"alignment":"center","cssClass":"dsSummaryTableCell"},{"dataField":"EmptyItem","dataType":"string","name":"Download Declaration","headerCellTemplate":formatEmptyHeader,"cellTemplate":$("#DownloadButtonTemplate"),"width":35,"alignment":"center","cssClass":"dsSummaryTableCell"},{"dataField":"CandSort","dataType":"string","visible":false,"allowSearch":false},{"dataField":"OfficeSort","dataType":"string","visible":false,"allowSearch":false},{"dataField":"PartySort","dataType":"string","visible":false,"allowSearch":false},{"dataField":"EmptyItem","dataType":"string","headerCellTemplate":formatEmptyHeader,"cssClass":"dsSummaryTableCell","allowSorting":false,"allowSearch":false}]});}).bind(this, jQuery));</script>
+                        </div>
+                    <div>
+                        <div id="CandCMDToolbar" class="dx-toolbar dx-widget dx-visibility-change-handler dx-collection" role="toolbar"><div class="dx-toolbar-items-container"><div class="dx-toolbar-before" role="presentation"></div><div class="dx-toolbar-center" role="presentation" style="margin: 0px auto; float: none;"></div><div class="dx-toolbar-after" role="presentation"><div class="dx-item dx-toolbar-item dx-toolbar-button"><div class="dx-item-content dx-toolbar-item-content"><div role="button" aria-label="Start Auto-Refresh" class="dx-widget dx-button dx-button-mode-contained dx-button-normal dx-button-has-text" id="RefreshButton" tabindex="0"><div class="dx-button-content"><span class="dx-button-text">Start Auto-Refresh</span></div></div></div></div><div class="dx-item dx-toolbar-item dx-toolbar-button"><div class="dx-item-content dx-toolbar-item-content"><div class="dx-widget dx-dropdownbutton dx-dropdownbutton-has-arrow" title="Export data from All counties in date range"><div role="group" class="dx-buttongroup dx-buttongroup-mode-contained dx-widget" tabindex="0" style="width: 100%; height: 100%;"><div class="dx-buttongroup-wrapper dx-widget dx-collection"><div class="dx-widget dx-button dx-button-mode-contained dx-button-normal dx-button-has-text dx-button-has-icon dx-item dx-buttongroup-item dx-item-content dx-buttongroup-item-content dx-buttongroup-first-item dx-buttongroup-last-item dx-shape-standard dx-dropdownbutton-action dx-buttongroup-item-has-width" role="button" aria-label="Export All Counties" aria-expanded="false" aria-haspopup="listbox"><div class="dx-button-content"><i class="dx-icon dx-icon-save"></i><span class="dx-button-text">Export All Counties</span><i class="dx-icon dx-icon-spindown dx-icon-right"></i></div></div></div></div></div></div></div><div class="dx-item dx-toolbar-item dx-toolbar-button"><div class="dx-item-content dx-toolbar-item-content"><div class="dx-widget dx-dropdownbutton dx-dropdownbutton-has-arrow" title="Export data from current county in date range" style="width: 160px;"><div role="group" class="dx-buttongroup dx-buttongroup-mode-contained dx-widget" tabindex="0" style="width: 100%; height: 100%;"><div class="dx-buttongroup-wrapper dx-widget dx-collection"><div class="dx-widget dx-button dx-button-mode-contained dx-button-normal dx-button-has-text dx-button-has-icon dx-item dx-buttongroup-item dx-item-content dx-buttongroup-item-content dx-buttongroup-first-item dx-buttongroup-last-item dx-shape-standard dx-dropdownbutton-action dx-buttongroup-item-has-width" role="button" aria-label="Export Current" aria-expanded="false" aria-haspopup="listbox"><div class="dx-button-content"><i class="dx-icon dx-icon-save"></i><span class="dx-button-text">Export Current</span><i class="dx-icon dx-icon-spindown dx-icon-right"></i></div></div></div></div></div></div></div></div></div></div><script>
+DevExpress.utils.readyCallbacks.add((function($){$("#CandCMDToolbar").dxToolbar({"items":[{"options":{"text":"Start Auto-Refresh","type":"normal","onClick":onRefreshClicked,"_ignoreElementAttrDeprecation":true,"elementAttr":{"id":"RefreshButton"}},"widget":"dxButton","location":"after"},{"options":{"dataSource":{"store":new DevExpress.data.ArrayStore({"data":[{"Value":"EAP","Text":"Export All to PDF"},{"Value":"EAX","Text":"Export All to XML"},{"Value":"EAC","Text":"Export All to CSV"}]})},"displayExpr":"Text","keyExpr":"Value","text":"Export All Counties","icon":"save","hint":"Export data from All counties in date range","onItemClick":exportClicked},"widget":"dxDropDownButton","location":"after"},{"options":{"dataSource":{"store":new DevExpress.data.ArrayStore({"data":[{"Value":"ECP","Text":"Export Current to PDF"},{"Value":"ECX","Text":"Export Current to XML"},{"Value":"ECC","Text":"Export Current to CSV"}]})},"displayExpr":"Text","keyExpr":"Value","text":"Export Current","width":160,"icon":"save","hint":"Export data from current county in date range","onItemClick":exportClicked},"widget":"dxDropDownButton","location":"after"}]});}).bind(this, jQuery));</script>
+                    </div>
+                </div>
+            </div>
+<script type="text/html" id="RemovedTemplate">
+                    <div>
+                         <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxCheckBox",{"value":value,"readOnly":true},arguments[0])%><%}("dx-" + new DevExpress.data.Guid())%>
+                    </div>
+                </script><script type="text/html" id="MoreInfoButtonTemplate">
+                    <div>
+                        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"text":"More Info","hint":"See More Candidate Info","type":"default","onClick":function () { doMoreInfoCounty(data); },"onInitialized":function (e) { e.element.addClass('dsTightButtonPadding'); }},arguments[0])%><%}("dx-" + new DevExpress.data.Guid())%>
+                    </div>
+                </script><script type="text/html" id="DownloadButtonTemplate">
+                    <div>
+                        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"visible":isDownloadVisible(data),"icon":"file","hint":"Download Declaration of Candidacy","type":"default","onClick":function () { doDownload(data); },"onInitialized":function (e) { e.element.addClass('dsTightButtonPadding'); }},arguments[0])%><%}("dx-" + new DevExpress.data.Guid())%>
+                    </div>
+                </script>
+<script type="text/html" id="EditPopup_Template"><%!function(){%><div id="<%=arguments[0]%>">
+                        <br />
+                            <div class="w-100 m-0 p-2 bg-primary text-white" tabindex="0">
+                                <h1 class="dsCQH1Card" id="CandWindowTitle">Candidate Information</h1>
+                            </div>
+                            <div class="card customerInfoCard mx-auto" id="CustomerInfoCard" tabindex="0">
+                                <div class="card-body bg-light">
+                                    <div id="EditPartialContent" tabindex="0" role="group" aria-label="Candidate Information">
+
+                                    </div>
+                                    <div class="float-right">
+                                        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"text":"Download Declaration","visible":doesCandHaveDeclaration(),"type":"default","width":145,"onClick":doDownloadFromDetail},arguments[0])%><%}("PopUpDownload")%>
+                                        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"text":"OK","type":"default","width":60,"onClick":EditOKClicked},arguments[0])%><%}("dx-" + new DevExpress.data.Guid())%>
+                                    </div>
+                                </div>
+                            </div>
+                    </div><%DevExpress.aspnet.createComponent("dxScrollView",{"width":"100%","height":"100%"},arguments[0])%><%}("dx-" + new DevExpress.data.Guid())%></script>        </div>
+    </div>
+</div>
+
+<div id="loadPanel" class="dx-overlay dx-widget dx-state-invisible dx-visibility-change-handler dx-loadpanel"><div class="dx-overlay-content" style="width: 222px; height: 90px;"></div></div><script>
+DevExpress.utils.readyCallbacks.add((function($){$("#loadPanel").dxLoadPanel({"shadingColor":"rgba(0,0,0,0.4)","position":{"of":"#CandGrid"},"visible":false,"showIndicator":true,"indicatorOptions":{"src":"/images/spinner.gif"},"showPane":true,"shading":false,"hideOnOutsideClick":false,"message":"One Moment Please..."});}).bind(this, jQuery));</script>
+
+<div id="EditPopUp" class="dx-overlay dx-popup dx-widget dx-state-invisible dx-visibility-change-handler"><div class="dx-overlay-content dx-popup-normal" role="dialog" tabindex="0" style="max-height: 440px; width: 80vw; height: 80vh;"><div class="dx-popup-content dx-popup-content-scrollable"></div></div></div><script>
+DevExpress.utils.readyCallbacks.add((function($){$("#EditPopUp").dxPopup({"showTitle":false,"showCloseButton":false,"hideOnOutsideClick":false,"onShowing":EditPopUpContentReady,"maxHeight":440,"shading":true,"contentTemplate":$("#EditPopup_Template")});}).bind(this, jQuery));</script>
+
+<script src="/js/LoadViewCandidates.js?v=77UUUgVJckAETGfg-miTdjrlCIBvCtVfUCH1eahXhdY"></script>
+    </main>
+    <footer class="text-muted">
+        <div class="container">
+            <hr>
+            <p>© 2026 <a href="https://www.oklahoma.gov/elections/"> Oklahoma State Election Board.</a> - OK Candidate Filing Version 4.0.0.0.&nbsp;This website supports the latest versions of the following browsers: Microsoft Edge, Google Chrome, Mozilla Firefox, Apple Safari.</p>
+        </div>
+    </footer>
+
+
+</body></html>

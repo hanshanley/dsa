@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the Issues | Erik Dilan for New York State Assembly</title>
+  <meta
+    name="description"
+    content="Learn more about Assembly Member Erik Dilan's priorities and positions on key issues."
+  />
+
+  <!-- Tab icon -->
+  <link rel="icon" type="image/png" href="favicon_io_erik/favicon-32x32.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome (for icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+ <link rel="icon" type="image/png" href="website-logo-512x512.jpg">
+
+
+  <!-- Main site stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-specific styling -->
+  <style>
+    /* PAGE BACKGROUND TWEAK FOR ISSUES */
+    body.issues-page {
+      background: linear-gradient(180deg, #0038a8 0%, #0b1b4f 55%, #001229 100%);
+      color: #f9fafb;
+    }
+
+    body.issues-page {
+  min-height: calc(100vh + 1px);
+}
+
+    /* HERO BAND */
+    .issues-hero {
+      padding: 52px 0 24px;
+      background: radial-gradient(
+        circle at top left,
+        #2563eb 0%,
+        #0038a8 45%,
+        #0b1b4f 100%
+      );
+    }
+
+    .issues-hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .issues-kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #F5841F;
+      margin-bottom: 6px;
+    }
+
+    .issues-title-main {
+      margin: 0 0 10px;
+      font-size: clamp(2.1rem, 3.8vw, 2.7rem);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .issues-hero-copy {
+      max-width: 720px;
+      font-size: 0.98rem;
+      color: #e5e7eb;
+    }
+
+    /* MAIN ISSUES SECTION */
+    .issues-section {
+      padding: 32px 0 56px;
+    }
+
+    .issues-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .issues-subtitle {
+      margin: 0 0 18px;
+      font-size: 1rem;
+      color: #e5e7eb;
+    }
+
+/* GRID / CARD LAYOUT */
+.issues-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+/* Two columns on desktop */
+.issue-card {
+  background: #001229;
+  border-radius: 18px;
+  border: 1px solid rgba(191, 219, 254, 0.55);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 calc(50% - 11px);  /* two columns */
+  align-self: flex-start;       /* card height = its content, not row */
+}
+
+@media (max-width: 900px) {
+  .issues-grid {
+    display: block;   /* stack cards */
+  }
+
+  .issue-card {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+    .issue-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at top right,
+        rgba(248, 250, 252, 0.08),
+        transparent 55%
+      );
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    /* TOGGLE BUTTON (HEADER ROW) */
+    .issue-toggle {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 18px 16px;
+      background: transparent;
+      border: none;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .issue-toggle:focus-visible {
+      outline: 2px solid #F5841F;
+      outline-offset: 3px;
+    }
+
+    .issue-icon-wrap {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle at 30% 0%,
+        #F5841F 0%,
+        #2563eb 40%,
+        #0b1b4f 90%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .issue-icon-wrap i {
+      color: #f9fafb;
+      font-size: 1.25rem;
+    }
+
+    .issue-header-text {
+      flex: 1;
+    }
+
+    .issue-heading {
+      margin: 0 0 4px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #F5841F;
+    }
+
+    .issue-tagline {
+      margin: 0;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #cbd5f5;
+    }
+
+    .issue-chevron {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+    }
+
+    .issue-chevron i {
+      font-size: 0.9rem;
+      transition: transform 0.25s ease;
+      color: #e5e7eb;
+    }
+
+/* COLLAPSIBLE PANEL */
+.issue-panel {
+  position: relative;
+  z-index: 1;
+  padding: 0 18px 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.25s ease, padding-bottom 0.25s ease;
+}
+
+/* When the card is open, only then expand the panel */
+.issue-card.is-open .issue-panel {
+  max-height: 500px; /* big enough for the content */
+  opacity: 1;
+  padding-bottom: 16px;
+}
+
+    .issue-copy {
+      margin: 0;
+      padding-bottom: 4px;
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: #e5e7eb;
+    }
+  </style>
+</head>
+
+<body class="issues-page">
+  <!-- NAVBAR INJECTION TARGET -->
+  <div id="site-header"></div>
+
+  <main>
+    <!-- HERO BAND -->
+    <section class="issues-hero">
+      <div class="issues-hero-inner">
+        <p class="issues-kicker">Erik Dilan on the issues</p>
+        <h1 class="issues-title-main">Fighting for Fairness and Stability</h1>
+        <p class="issues-hero-copy">
+          Assemblymember Erik Dilan is on the frontlines every day fighting to stop Donald Trump’s
+          assault on New York, protect our immigrant neighbors from ICE, and deliver for North Brooklyn
+          families. Whether it’s protecting tenants and working for more affordable housing, improving
+          access to health care and our public schools, or delivering a justice system that prioritizes both
+          fairness and safety, Erik is always there for us.
+        </p>
+      </div>
+    </section>
+
+    <!-- ISSUES GRID (ACCORDION CARDS) -->
+    <section class="issues-section">
+      <div class="issues-inner">
+        <p class="issues-subtitle">
+        </p>
+
+        <div class="issues-grid">
+          <!-- ISSUE 1: Housing -->
+    <article class="issue-card" id="housing-tenant-rights">
+    <button
+    class="issue-toggle"
+    aria-expanded="false"
+    aria-controls="panel-housing-tenant-rights"
+  
+            >
+              <div class="issue-icon-wrap">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <div class="issue-header-text">
+                <h2 class="issue-heading">Housing</h2>
+                <p class="issue-tagline">Focusing on Affordability</p>
+              </div>
+              <span class="issue-chevron">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </button>
+
+            <div
+              id="panel-housing-tenant-rights"
+              class="issue-panel"
+              role="region"
+              aria-labelledby="heading-housing-tenant-rights"
+            >
+              <p class="issue-copy">
+            Nothing is more important to Erik than working to protect tenants and fighting to keep homes
+            in North Brooklyn affordable. In the Assembly, Erik led the fight to pass the strongest rent laws
+            in a generation. He brings proven leadership to the fight from his years chairing the Housing &
+            Buildings Committee on the City Council where he forged consensus on legislation that shaped
+            citywide housing policy. Erik remains committed to legislation that supports vulnerable people
+            and that will bring more lower and middle income homes apartments to Brooklyn. And he’ll
+            continue to fight to keep private equity investors out of the market for small homes and rentals.            </div>
+          </article>
+
+          <!-- ISSUE 2: Corrections / Criminal Justice -->
+          <article class="issue-card" id="corrections-reform">
+            <button
+              class="issue-toggle"
+              aria-expanded="false"
+              aria-controls="panel-corrections-reform"
+            >
+              <div class="issue-icon-wrap">
+                <i class="fa-solid fa-gavel"></i>
+              </div>
+              <div class="issue-header-text">
+                <h2 class="issue-heading">
+                  Sentencing & Corrections Reform
+                </h2>
+                <p class="issue-tagline">Delivering Fairness and Safety Together</p>
+              </div>
+              <span class="issue-chevron">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </button>
+
+            <div
+              id="panel-corrections-reform"
+              class="issue-panel"
+              role="region"
+              aria-labelledby="heading-corrections-reform"
+            >
+              <p class="issue-copy">
+              As Chair of the Assembly’s Committee on Corrections, Erik led the fight to pass the Correction
+              Reform Law of 2025 to require more accountability and oversight in the operation of New York
+              State prisons. He continues to focus on improving conditions and expanding support for reentry
+              programs. Erik has championed some of the most important criminal justice reform legislation
+              of the past two decades, including the Clean Slate Act, the Second Look Act and Earned Time
+              Act. He’ll continue to fight for a justice system that recognizes fundamental fairness and public
+              safety should be delivered together.              </p>
+            </div>
+          </article>
+
+          <!-- ISSUE 3: Childcare -->
+          <article class="issue-card" id="economic-equity">
+            <button
+              class="issue-toggle"
+              aria-expanded="false"
+              aria-controls="panel-economic-equity"
+            >
+              <div class="issue-icon-wrap">
+                <i class="fa-solid fa-baby"></i>
+              </div>
+              <div class="issue-header-text">
+                <h2 class="issue-heading">
+                  Childcare
+                </h2>
+                <p class="issue-tagline">Standing up for Working Families</p>
+              </div>
+              <span class="issue-chevron">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </button>
+
+            <div
+              id="panel-economic-equity"
+              class="issue-panel"
+              role="region"
+              aria-labelledby="heading-economic-equity"
+            >
+              <p class="issue-copy">
+            As a father of three, Erik has experienced firsthand the challenge of finding reliable and
+            affordable childcare. That’s one reason is an enthusiastic supporter of Mayor Mamdani and
+            Governor Hochul’s plan to bring universal, free childcare to children under the age of 5. He
+            understands it’s both critical to giving parents flexibility to work and to giving our kids the headstart 
+            they need deserve in life. At every turn, he has worked to expand pre-K and 3-K
+            throughout New York. And Erik has always fought to address needs here in North Brooklyn
+            which is why he’s working hard with City Hall to re-open the recently shuttered Audrey Johnson
+            and John Coker Day Care centers.              </p>
+            </div>
+          </article>
+
+<!-- ISSUE 4: Healthcare -->
+<article class="issue-card" id="healthcare">
+  <button
+    class="issue-toggle"
+    aria-expanded="false"
+    aria-controls="panel-healthcare"
+  >
+    <div class="issue-icon-wrap">
+      <i class="fa-solid fa-heart-pulse"></i>
+    </div>
+
+    <div class="issue-header-text">
+      <h2 class="issue-heading" id="heading-healthcare">Healthcare</h2>
+      <p class="issue-tagline">Ensuring Care for every New Yorker</p>
+    </div>
+
+    <span class="issue-chevron">
+      <i class="fa-solid fa-chevron-down"></i>
+    </span>
+  </button>
+
+  <!-- Panel -->
+<div
+  id="panel-healthcare"
+  class="issue-panel"
+  role="region"
+  aria-labelledby="heading-healthcare"
+>
+  <p class="issue-copy">
+      Over the past year, Donald Trump and his MAGA Republican enablers have done everything
+      they can to undermine the delivery of health care—from drastic cuts to Medicaid to eliminating
+      Affordable Care Act subsidies to undermining vaccines. Erik Dilan will continue to do everything
+      he can to fight back. Whether it’s defending safety-net and public hospitals, supporting nurses
+      and frontline workers by fixing dangerous staffing shortages, or closing insurance coverage gaps
+      for young people, immigrants and freelancers, Erik is leading the charge. He’s proud to have
+      supported the state’s billion-dollar investment in expanding mental health care throughout the
+      state. And he’ll continue working to expand access to health care, especially here in North
+      Brooklyn.  
+    <div> 
+</article>
+
+<!-- ISSUE 5: Standing Up To Ice -->
+<article class="issue-card" id="healthcare">
+  <button
+    class="issue-toggle"
+    aria-expanded="false"
+    aria-controls="panel-healthcare"
+  >
+    <div class="issue-icon-wrap">
+      <i class="fa-solid fa-heart-pulse"></i>
+    </div>
+
+    <div class="issue-header-text">
+      <h2 class="issue-heading" id="heading-healthcare">Standing Up To Ice</h2>
+      <p class="issue-tagline">Protecting Our Immigrant Neighbors</p>
+    </div>
+
+    <span class="issue-chevron">
+      <i class="fa-solid fa-chevron-down"></i>
+    </span>
+  </button>
+
+  <!-- Panel -->
+<div
+  id="panel-healthcare"
+  class="issue-panel"
+  role="region"
+  aria-labelledby="heading-healthcare"
+>
+  <p class="issue-copy">
+      Donald Trump and the Republicans in Congress have turned ICE into a paramilitary secret police
+      force. Erik Dilan believes it must be abolished. Until it is, he will continue to do everything he
+      can in the state legislature to protect immigrants in New York and defend their rights. That’s
+      why he’s fighting for legislation to let residents sue ICE agents in court for violations of their
+      civil rights. And why he’s supporting new legislation that would keep ICE agents away from
+      sensitive locations—our churches, schools and hospitals. Too many immigrants in New York,
+      and all across the country, live in fear today as they go about their daily lives. Erik will not stop
+      fighting back until that changes.    
+      <div> 
+</article>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- SOCIAL FOOTER -->
+      <div class="footer-social">
+        <a
+          href="https://www.facebook.com/erikmartindilan/"
+          class="footer-social-pill social-pill--facebook"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/edilan54/?hl=en"
+          class="footer-social-pill social-pill--instagram"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://assembly.state.ny.us/mem/Erik-M-Dilan/video/"
+          class="footer-social-pill social-pill--youtube"
+          target="_blank"
+          rel="noopener"
+          aria-label="YouTube"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@erik.dilan54"
+          class="footer-social-pill social-pill--tiktok"
+          target="_blank"
+          rel="noopener"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a
+  href="privacy.html"
+  class="footer-social-pill footer-social-pill--privacy"
+  aria-label="Privacy Policy"
+  title="Privacy Policy"
+>
+  <i class="fa-solid fa-shield-halved"></i>
+</a>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS (outside footer) -->
+  <script>
+    function setupIssueAccordion() {
+      const cards = document.querySelectorAll(".issue-card");
+
+      cards.forEach((card) => {
+        const toggle = card.querySelector(".issue-toggle");
+        if (!toggle) return;
+
+        card.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+
+        toggle.addEventListener("click", () => {
+          const isOpen = card.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      });
+    }
+
+    fetch("navbar.html")
+      .then((response) => response.text())
+      .then((html) => {
+        document.getElementById("site-header").innerHTML = html;
+
+        const navToggle = document.querySelector(".nav-toggle");
+        const mainMenu = document.getElementById("primary-nav");
+
+        if (navToggle && mainMenu) {
+          navToggle.addEventListener("click", () => {
+            const isOpen = mainMenu.classList.toggle("is-open");
+            navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            document.body.classList.toggle("menu-open", isOpen);
+          });
+        }
+
+        const links = document.querySelectorAll(".main-menu .nav-link");
+        const path = window.location.pathname.split("/").pop() || "index.html";
+
+        links.forEach((link) => {
+          if (link.getAttribute("href") === path) link.classList.add("active");
+        });
+      })
+      .catch((err) => console.error("Error loading navbar:", err));
+
+    document.addEventListener("DOMContentLoaded", setupIssueAccordion);
+  </script>
+</body>
+</html>

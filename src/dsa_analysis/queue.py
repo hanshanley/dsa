@@ -1,12 +1,13 @@
+from .coverage import coverage_chapters
 from .io import read_csv, read_json, write_csv
 from .paths import CONFIG_DIR, PROCESSED_DIR
 
 
 def build_research_queue() -> tuple[int, int]:
     endorsements = read_csv(PROCESSED_DIR / "national_endorsement_archive.csv")
-    chapters = read_csv(PROCESSED_DIR / "chapter_directory.csv")
+    chapters = coverage_chapters()
     config = read_json(CONFIG_DIR / "sources.json")
-    first_year = int(config["study_start"][:4])
+    first_year = int(config.get("source_start", config["study_start"])[:4])
     final_year = int(config["research_cutoff"][:4])
 
     candidate_rows = []
@@ -65,7 +66,10 @@ def build_research_queue() -> tuple[int, int]:
                     "website": chapter.get("Website", ""),
                     "status": "not_searched",
                     "searched_on": "",
-                    "notes": "Seeded from current directory; historical chapter status needs review",
+                    "notes": (
+                        "Discovery year, not an inferred election year. "
+                        "Includes historically identified chapters and pre-primary sources."
+                    ),
                 }
             )
     write_csv(

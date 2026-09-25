@@ -1,0 +1,87 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-41ad8ea70f3bdbc7e4e4",
+  "sources": [
+    {
+      "document_id": "398f69f6e55a16f93331112d",
+      "metadata_document_id": "398f69f6e55a16f93331112d",
+      "url": "https://www.offthekuff.com/wp?p=103735",
+      "final_url": "https://www.offthekuff.com/wp/?p=103735",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:50:40.164619+00:00",
+      "raw_path": "data/raw/policy_historical_f/sources/398f69f6e55a16f93331112d.html",
+      "sha256": "d0b36760d4791a3a6be1edee3f5c66d31756faefd659b382c78afe1c6620ff35",
+      "bytes": 188903,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "notes": "Semantically reviewed against candidate-scoped retained paragraphs; exact metadata, raw bytes, and temporal qualification preserved.",
+      "historical_cycle_evidence": {
+        "election_year": "2022",
+        "exact_quote": "Posted on January 31, 2022 by Charles Kuffner",
+        "source_locator": "paragraph 14"
+      }
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hf-race-41ad8ea70f3bdbc7e4e4-erika-ramirez-judicial-frame",
+      "metadata_document_id": "398f69f6e55a16f93331112d",
+      "document_id": "398f69f6e55a16f93331112d",
+      "speaker": "Erika Ramirez",
+      "role": "opponent_candidate",
+      "race_id": "race-41ad8ea70f3bdbc7e4e4",
+      "election_date": "2022-03-01",
+      "topic": "public_safety",
+      "subtopic": "fair_accessible_judicial_process",
+      "stance": "support",
+      "short_exact_quote": "assuring a fair, accessible, and just process for all persons who enter the courtroom.",
+      "locator": "paragraph 37",
+      "representation_kind": "campaign_frame",
+      "claim_summary": "Ramirez campaigns on administering a fair, accessible, and just misdemeanor-court process while remaining visible and involved in the community.",
+      "notes": "Candidate-authored reason voters should support her; retained as campaign framing rather than a legislative promise.",
+      "attribution_notes": "paragraph 37 is within the retained candidate-associated answer block for Erika Ramirez; prompt and publisher narration are not treated as candidate speech."
+    }
+  ],
+  "comparisons": [],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-41ad8ea70f3bdbc7e4e4",
+      "candidate": "Franklin Bynum",
+      "role": "endorsed",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-41ad8ea70f3bdbc7e4e4",
+      "candidate": "Franklin Bynum",
+      "url": "https://www.harrisvotes.com/Candidates/Candidate-Listings/Democratic-Primary-Candidates",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/00f5d6d178844d52baad1a6c/859ee991b63356971c526f6552d9963827efa12a8958aedbe7836e41e3e05015.html"
+    }
+  ],
+  "case_disposition": {
+    "race_id": "race-41ad8ea70f3bdbc7e4e4",
+    "election_date": "2022-03-01",
+    "status": "reviewed_with_evidence",
+    "candidates": [
+      {
+        "candidate_name": "Erika Ramirez",
+        "role": "opponent",
+        "status": "evidence_recovered"
+      },
+      {
+        "candidate_name": "Franklin Bynum",
+        "role": "endorsed",
+        "status": "source_gap_after_candidate_specific_routes"
+      }
+    ],
+    "source_count": 1,
+    "excerpt_count": 1,
+    "comparison_count": 0
+  }
+}

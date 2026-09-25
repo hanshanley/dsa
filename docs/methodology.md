@@ -7,9 +7,36 @@ DSA-endorsed candidates from other Democrats in the same primaries?
 
 ## Scope
 
-The study begins January 1, 2016 and uses a dated research cutoff. A “DSA candidate” is a
+The election study begins January 1, 2016 and uses a dated research cutoff. Source discovery
+begins January 1, 2015, independently of election-cycle attribution. A “DSA candidate” is a
 candidate officially endorsed by DSA National or a local DSA chapter. Membership or a
 self-description alone is not sufficient.
+Primary-election dates are not document-publication dates. The persistent
+`candidate_source_date_corrections.json` ledger rejects known unsupported dates using the
+exact source URL and byte hash, including when a legacy queue reintroduces the same date under
+another document ID. Corrected undated, post-primary live captures are excluded from dated
+model inputs while their actual candidate statements remain in timing-qualified exports.
+Extraction never substitutes a document's `effective_date` for a missing publication date.
+An effective date can describe election context or a policy's intended application, not when
+the public could read it. Genuine pre-primary archive captures still establish availability
+without inventing an original publication day.
+Discovery timestamps, sitemap revision dates and requested archive timestamps likewise do not
+become publication dates. A requested archive that resolves to a live page is not an archived
+version. Unscoped campaign redirects to another domain require identity and election-cycle
+review, and known wrong-content versions are excluded by exact candidate/race/hash.
+A job naming an archive replay fetches that replay first, not a currently live replacement.
+Cached live bytes cannot satisfy an archive request merely because a manifest preserved the
+requested timestamp. Failed archive requests remain explicit failures rather than silently
+falling back to a different live edition.
+An endorsement formally revoked before the primary does not qualify as active support at that
+primary. Such candidacies stay in the historical registry with a sourced scope exclusion.
+Their candidate statements remain in `excluded_candidate_statements.csv`, rather than being
+deleted or counted as currently endorsed evidence. For example, the chapter's April 26, 2022
+revocation notice excludes Brandy Brooks's July 19, 2022 primary candidacy; it does not alter
+her separate 2018 endorsement.
+Official returns also govern candidate-to-race corrections. The source-association correction
+ledger binds a correction to an exact candidate, election date, source URL and retained byte
+hash so a stale discovery queue cannot silently restore a cross-district pairing.
 
 The endorsement census seeks every identifiable federal, state, and local Democratic primary
 endorsement nationwide. Because local archives are decentralized and may be deleted, results
@@ -21,6 +48,21 @@ National records are classified as Democratic primary, nonpartisan primary, gene
 unopposed, ballot or party position, noncandidate, or source unavailable. Only dated Democratic
 primaries enter the candidate-group comparison; exclusions remain in the reconciliation
 table. This prevents quotation availability from silently determining which races exist.
+
+The separate nationwide congressional inventory is not endorsement-filtered. It preserves
+every candidate-bearing source row in the recovered official FEC House/Senate results
+workbooks, including all parties, zero-vote candidates, nonnumeric nomination flags, and
+special-election appendices. It retains source cells and hashes rather than silently repairing
+inconsistent source dates or IDs. Rows from overlapping publications and fusion ballot lines
+are observations, not deduplicated candidates or elections.
+
+Regular Senate seat expectations come from the Senate's independent Class I/II/III inventories;
+the importer checks 100 class memberships and two seats per state. House seat counts are checked
+against 435 voting seats per cycle, with nonvoting delegations separate. Where a current results
+workbook is missing, a prior apportionment-era map supplies a checklist only, not an invented
+roster. The 2024 general-ballot workbook is retained separately and never fills missing primary
+results. Special-election calendars retain their own update dates and cannot imply coverage
+through a later research cutoff.
 
 National presidential endorsements are expanded into state and territory contests rather than
 stored as one synthetic nationwide primary. `import-2016-presidential-primaries` and
@@ -45,6 +87,13 @@ Party texts are compared within election cycles. DSA is not projected backward f
 documents, and the Democratic national platform is not treated as identical to every Democratic
 candidate.
 
+Reviewed national presidential platforms may be displayed in other same-cycle primary
+records only through the separately checked applicability table. The browser resolves
+quotations and interpretations from the original review, verifies candidate identities and
+the presidential election context, and labels every reused card. Such displays create no new
+independent observations, do not imply state-specific campaigning, and do not establish
+whether a candidate was still active after suspending a campaign.
+
 Primary sticking points have two separate measures:
 
 - **Explicit conflict:** a candidate or another Democrat directly contrasts positions, attacks a policy,
@@ -55,11 +104,186 @@ Primary sticking points have two separate measures:
 Mention counts are descriptive, not proof of importance. Salience requires corroboration such as
 prominent platform placement, repeated treatment, debate time, or direct contrast.
 
+Policy positions, campaign framing, and agenda items are counted separately. Previously
+uncategorized statements receive a representation label only through an explicit review bound
+to the exact quotation and source hashes; the topic name alone is not a classification rule.
+This review adds no new statements or comparisons and does not turn assistant reviews into
+independent human gold.
+
 ## Automated assistance
 
 Scripts may retrieve documents, find candidate passages, transcribe media, and suggest topic
-codes. A human reviewer must verify every excerpt used in the report against the original page,
-PDF, audio, or video. Generated summaries are never evidence.
+codes. Independent human certification requires a human reviewer to verify each excerpt against
+the original page, PDF, audio, or video. The separately labeled assistant-source-reviewed
+comparisons remain provisional with respect to that requirement. Generated summaries are never
+evidence.
+
+The September 2026 policy-evidence cleanup does not equate a successful fetch with attribution.
+Candidate analysis excludes known post-primary documents, undated sources captured outside the
+campaign window, unrelated homepage seeds, rolling indexes without article/excerpt scope,
+unscoped shared documents, and races outside the
+tracked Democratic-primary comparison. Exclusions remain in
+`data/analysis/candidate_document_eligibility.csv`; raw sources are not erased.
+These are eligibility screens, not a claim that every retained paragraph is a verified position.
+Both sides must have substantive eligible text before a race counts as paired.
+The candidate KDE applies the same metadata eligibility rules and primary-registry scope;
+it cannot fall back to the older unscoped segment pool. Its manifest binds the exact segment,
+metadata, registry and classifier-corpus hashes. A change to any of those invalidates the run.
+The screening-version identifier also invalidates outputs when eligibility rules change without
+changing raw source bytes. Both the local topic model and the GTE embedding model use pinned
+model revisions.
+
+Archive toolbar blocks and exact page controls are excluded before model passages are
+assembled, without renumbering or altering the retained original paragraphs used for citations.
+`rebuild-analysis-segments` replays this preparation from local retained text and exports the
+excluded paragraph locators. Repeated substantive wording is a duplicate signal, not proof of
+boilerplate: shared candidate positions must survive into the group-aware deduplication stage.
+The preparation parser annotates HTML navigation, site controls, forms, and footers without
+removing text from the retained extraction. A paragraph is structurally excluded only when all
+its text fragments belong to a recognized control; mixed fragments remain for review. Every
+structural exclusion must match the retained source hash and exact original paragraph text.
+Class-based exclusions require specific component names, not substrings such as "menu" in
+whole-page theme configuration classes. Regression tests and an actual-source audit check that
+policy paragraphs survive as well as checking that publisher controls disappear.
+Short exact control phrases are screened separately. These checks do not certify every retained
+passage semantically. Speeches, candidate statements and press releases now require explicit
+candidate-only scope just like interviews: a campaign-related article may still include other
+speakers, reporter narration and publisher menus.
+
+Original publication, revision, and archive capture are separate dates. Known revisions are
+not backdated to initial publication. An explicitly identified official campaign-platform page
+created before the current campaign window can enter through its retained in-window archived
+edition; this exception does not admit old interviews as current policy. The original publication
+date stays unchanged and the exact edition date used for eligibility is exported as
+`temporal_evidence_date`. National-platform reuse checks that date, not only page creation.
+The source-date correction ledger now repairs 339 metadata associations against retained bytes.
+Many are copies of the same national source, not 339 independent sources.
+
+`analyze` writes `data/analysis/execution_audit.json` and `report/analysis_execution.md`.
+The receipt distinguishes audit observation time from actual recorded model completion times,
+checks source-preparation dependencies as well as output-corpus hashes, and matches topic
+prediction text and IDs to the actual input rows. A completed model with stale upstream
+preparation is not current. The receipt separately counts policy positions and campaign frames,
+shows timing-supported versus timing-qualified policy relationships, and keeps missing
+candidate/race records visible by cycle. These are selected-evidence counts, not inferential
+estimates of national agreement. Prepared Jev pilots are checked against the current corpus and
+local prediction hashes; a request file does not prove inference or accuracy.
+
+Registered complete interview blocks replay through `dsa_analysis.reviewed_interviews` before
+the model corpus is rebuilt. Their source/candidate association must already have a validated
+review, and the selected original paragraph locators are explicit in the bundle's specification.
+Separate document IDs prevent a short reviewed quote from masquerading as full-text input.
+The complete-response export preserves publisher edits and ellipses; it is not an unedited
+transcript. Full response blocks add no independent stance labels by themselves.
+The same replay mechanism exports complete captured campaign-platform sources and separately
+scoped model blocks. Historical quotations, navigation and ambiguous questionnaire choice lists
+can remain in the complete download without entering current candidate-model text. Existing
+eligible documents are referenced rather than enrolled again to inflate text weight.
+
+Edited broadcast topic rounds are explicitly distinguished from same-question questionnaires.
+Their complete *published* response blocks are preserved, but the edit does not establish the
+complete unedited answer or identical original interviewer wording. Each round binds its own
+speaker heading and original paragraph range, preventing a later speaker from being attributed
+to the first candidate.
+
+Policy coverage distinguishes individual candidate/race records, endorsed ballot campaigns,
+and other non-person ballot choices. Generic Scattered or No Preference totals remain in the
+election data but are not people with missing platforms. An endorsed Uncommitted campaign still
+requires campaign evidence. The acquisition worklist groups repeated presidential records by
+cycle and an explicit name-alias map only for research efficiency; it does not create evidence,
+merge election records, or establish that a platform version preceded every state primary.
+Elizabeth Warren's middle-name variants are bound to the same FEC candidate ID in the retained
+2020 workbook; those variants no longer make one national platform look like a multi-speaker
+document or multiple independent KDE candidate units.
+
+`python -m dsa_analysis.policy_comparison --ingest` reproduces the separately identified
+assistant-source-reviewed candidate examples from retained, hash-pinned sources. The Colorado
+interview check requires each quotation in a named-speaker paragraph. The supplemental New York
+reviews combine exact retained-text matching with a separate semantic attribution review of
+campaign-authored platforms and candidate answers; substring matching alone is not attribution.
+Their candidates must also match the recovered Democratic primary ballot. Archive-capture dates
+are recorded separately from unknown original publication dates.
+An explicit reviewed alias can link a display name to an exact ballot-source candidate ID.
+Direct official alias evidence and contextual same-race corroboration are separately labeled;
+names are not fuzzily merged and the canonical speaker is not silently renamed. Identity-only
+documents do not become campaign-policy evidence.
+Shared nonpartisan ballots use an explicit separate comparison scope: the focal endorsed
+candidate's actual party preference is preserved, and only declared Democrats are comparators.
+Certified candidate lists can establish identity when numeric returns are unavailable, but
+cannot supply votes or winners. Upcoming elections remain marked future; no other Democrat is
+invented when the official qualified field contains only the focal candidate in that category.
+Only explicitly registered
+`candidate_excerpt` paragraphs enter the candidate corpus, not the interviewer's questions,
+reporter's narration, or page navigation. The original edited interview remains the authority;
+the candidate's factual claims are not independently verified by quote matching.
+Interview, questionnaire, debate, forum, voter-guide and profile/op-ed sources require explicit
+candidate-only scoping even if the source is associated with only one candidate. Otherwise the
+full text is withheld with `mixed_speaker_source_requires_candidate_scope`. Curated, verified
+quotations from those sources can still support the separate comparison dataset.
+Assistant-reviewed examples keep `reviewed=false` in the human-review excerpt ledger and are
+labeled `assistant_source_review_not_independent_human_gold` in the separate export.
+
+Comparisons preserve shared positions, different policy scope, different emphasis, and different strategies.
+For compound questionnaires, a stance must be bound to the specific proposition being compared:
+answering that a candidate has never opposed a shelter is not opposition to housing assistance.
+Question hashes and generic default labels are not policy claims. Reviewers must read the full
+answer, retain a coherent short quotation, and summarize the actual commitment with its
+conditions. File/hash/date validation is not itself semantic verification.
+For repeated checkbox answers within a PDF page, an exact `answer_context` binds the short
+response to its specific question. This context is retained for audit but is not treated as
+candidate-authored quotation text or added to the quote-only model scope.
+The complete-answer questionnaire export replays separately reviewed answer boundaries,
+checks every numbered prompt and the final article-stop marker, and enrolls answer-only
+paragraphs under distinct full-answer document IDs. It never overwrites quote-only records.
+Matching questions does not assign a stance relationship or add to reviewed-comparison counts.
+Interleaved surveys require an explicit answer-paragraph selection within each question and
+a matching speaker prefix; other candidates' answers cannot enter that candidate's corpus.
+When one shared question precedes several named candidate sections, explicit answer ranges
+must lie inside the reviewed section boundary and follow an exact candidate-name heading.
+Other offices' candidates, biographies, and publisher nonresponse notices remain outside the
+candidate-answer corpus.
+Interleaved multi-paragraph responses must begin with the reviewed candidate's name prefix
+and cannot contain another listed candidate's response prefix. The full answer is retained
+across its reviewed paragraphs; a first-paragraph snippet is not substituted for the complete
+response.
+Nonpolicy prompts and individually flagged attribution concerns remain in the complete
+downloads but are excluded from policy-model inputs. Suspected publisher duplication is
+preserved with a caveat, not silently repaired or treated as independent agreement.
+All full answers, not just metadata, are included in both response and matched-pair downloads.
+Publisher insertions within an answer, such as newsletter advertisements, are removed only
+through exact-text, paragraph-bound exclusions with a review reason. The exported locator
+lists only retained candidate paragraphs, so later corpus enrollment cannot reintroduce the
+advertisement. These exclusions are separately recorded in the complete-answer download.
+Publisher-controlled questions constrain the subject distribution, so even complete responses
+cannot establish a whole campaign's relative issue salience. Embedded quotations and apparent
+source wording errors remain visible rather than being silently converted into commitments.
+For later-revised historical webpages, retained JSON-LD can verify the publisher's original
+publication and later revision dates. The metadata node must identify the same page, not a
+linked image or unrelated article, and both dates must match the retained bytes. A later
+revision still makes the current answers timing-qualified; an old publication date does not
+certify that the current body was available before the primary.
+When a publisher explicitly says responses were added after first publication but gives no
+revision day, the original date is retained and the exact update notice is bound to its source
+paragraph. That source remains timing-qualified; the original date is neither erased nor
+silently applied to the later contribution.
+Opposite stance codes on different propositions do not establish disagreement. A dated party
+platform comparison cannot project a current undated DSA page backward into an earlier cycle;
+such pairs are withheld in `platform_comparison_eligibility.csv`. Organizational platforms remain
+distinct from positions attributable to individual candidates.
+
+Input hashes prevent the report from displaying a candidate topic or KDE figure as current after
+the candidate corpus changes. Legacy automated contrast snapshots that lack their original
+statement-evidence input are labeled unvalidated; they are not the new source-reviewed examples.
+
+Archived URL identity preserves query parameters, and the actual final replay capture date takes
+precedence over the requested snapshot date. Gzip responses are decoded with a bounded output
+size while retaining the original wire bytes and source hash. Partial re-extraction batches
+retain knowledge of other speakers sharing the same source; missing locators do not assign a
+whole multi-candidate page to one person. Candidate filings/results are context, not policy
+text, unless a reviewed candidate-authored section is explicitly scoped.
+Year-only publication values remain unknown exact dates, with the supplied year retained in
+notes; they are not promoted to January 1. Historical source-version uncertainty remains a
+qualification even when the actual candidate answer has been recovered.
 
 ## Missing data
 
@@ -150,7 +374,7 @@ an older extraction artifact remains on disk.
 Topic emphasis follows the `state-politics` design:
 
 - a published Comparative Agendas Project major-topic taxonomy in `config/cap_topics.json`;
-- pinned `sentence-transformers/all-MiniLM-L6-v2` weights;
+- the configured `sentence-transformers/all-MiniLM-L6-v2` model;
 - local MPS execution when available, otherwise local CPU;
 - normalized embeddings and nearest-topic cosine similarity;
 - a 0.20 minimum-similarity threshold, with below-threshold rows explicitly unclassified;
@@ -159,12 +383,43 @@ Topic emphasis follows the `state-politics` design:
 - a retained schema marker that the legacy quotation-level reviewed-code crosswalk is not
   applicable to full-document segments.
 
-No hosted model API is used. The model classifies the exact segment text in
+The default classifier uses no hosted model API. The model classifies the exact segment text in
 `data/analysis/candidate_text_corpus.csv`; it does not generate replacement text or factual
 claims. `data/analysis/model_topic_classifications.csv` retains exact text and aggregated
 candidate, race, document, URL, and locator provenance beside every prediction and score.
 
 Low-similarity and low-margin rows remain directly filterable.
+
+### Optional Jev benchmark
+
+`benchmark-jev` prepares a deterministic, round-robin sample across group and election-cycle
+strata. Each request uses the exact passage, all CAP major-topic descriptions, and an explicit
+`unclassified` choice. Candidate identity, endorsement group, local predictions, and reviewed
+labels are not added to the request. The pilot compares topic assignment, not political stance.
+
+Hosted execution requires both `--execute --allow-hosted` and `TYPESAFE_API_KEY`. The request
+uses TypeSafe's documented Choice primitive and the versioned `jev-1.13.0` model; the model,
+complete probability keys, finite probability range, probability sum, selected option, and
+usage fields are validated before a response can become a prediction. Responses are cached by
+the full request hash, so changing the rubric or model cannot reuse an incompatible prediction.
+The canonical local output is never overwritten.
+
+The API contract is documented at `https://docs.typesafe.ai/introduction/quickstart`,
+`https://docs.typesafe.ai/primitives/choice`, and `https://docs.typesafe.ai/models` (checked
+September 22, 2026). The live integration has not been exercised without API credentials.
+
+`review.csv` omits both model predictions and endorsement-group metadata. Blank
+`gold_topic_code` means unreviewed; the literal `unclassified` is an affirmative gold label.
+A reviewed row requires a matching segment hash and `reviewed_by`. Accuracy, macro-F1 over
+gold-supported classes, multiclass Brier score, and log loss are computed on the same reviewed
+rows for the compared models where applicable. Cosine similarity is not a probability, so
+probabilistic scores are reported only for Jev.
+
+Without gold labels, agreement and classification coverage are diagnostic only and accuracy
+remains null. The pilot is balanced across strata, not population-weighted, and overlapping
+passages are not independent trials. Even a positive pilot accuracy difference does not by
+itself establish a production improvement. No classifier replacement or nationwide conclusion
+is authorized by the pilot.
 
 ## Full-document narrative corpus
 

@@ -1,0 +1,62 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-c5cb5879430c2ad69f6b",
+  "sources": [],
+  "excerpts": [],
+  "comparisons": [],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-c5cb5879430c2ad69f6b",
+      "candidate": "Eric Mattson",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    },
+    {
+      "race_id": "race-c5cb5879430c2ad69f6b",
+      "candidate": "Rachel Ventura",
+      "role": "endorsed",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-c5cb5879430c2ad69f6b",
+      "candidate": "Eric Mattson",
+      "url": "https://www.elections.il.gov/electionoperations/ElectionVoteTotalsSearch.aspx",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/87a38d934bbe667e20372d9e/014d6341ca7c9e878784e2100fabad5a5f17340fa4e671cb2245f1fd89c2bdaf.aspx"
+    },
+    {
+      "race_id": "race-c5cb5879430c2ad69f6b",
+      "candidate": "Rachel Ventura",
+      "url": "http://www.mysuburbanlife.com/2019/07/18/foster-draws-2020-primary-challenge-from-will-county-board-member/auem5j1",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/4d11156bdd22f1dd4b3431d1/bf2f314d9a2b53235ca92a3c0dfb13ea412143691011a7a95f92d5e065773f95.html"
+    }
+  ],
+  "case_disposition": {
+    "race_id": "race-c5cb5879430c2ad69f6b",
+    "election_date": "2022-06-28",
+    "status": "reviewed_no_usable_candidate_words",
+    "candidates": [
+      {
+        "candidate_name": "Eric Mattson",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Rachel Ventura",
+        "role": "endorsed",
+        "status": "source_gap_after_candidate_specific_routes"
+      }
+    ],
+    "source_count": 0,
+    "excerpt_count": 0,
+    "comparison_count": 0
+  }
+}

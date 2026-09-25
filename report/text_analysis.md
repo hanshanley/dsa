@@ -5,10 +5,10 @@ registry and recoverable full-text corpus.
 
 ## Corpus
 
-- Deduplicated candidate analysis documents: 1341
-- Underlying eligible candidate source documents: 1592
-- Eligible candidate source segments: 39310
-- Candidate segments after shared-text deduplication: 38207
+- Deduplicated candidate analysis documents: 209
+- Underlying eligible candidate source documents: 522
+- Eligible candidate source segments: 13334
+- Candidate segments after shared-text deduplication: 2866
 - Eligible full-platform organizational documents: 44
 - DSA official documents: 6; Democratic official
   documents: 38
@@ -20,7 +20,13 @@ registry and recoverable full-text corpus.
 - Official-platform segments after exact-text deduplication: 5437
 - DSA official segments after deduplication: 328;
   Democratic official segments: 5109
-- Unique source-supported primary contrasts: 1251
+- Automated primary contrasts eligible for current analysis: 0
+- Retained older contrast rows: 1251
+- Contrast evidence status: **legacy_snapshot_not_revalidated**
+
+Retained older contrast rows without their source-evidence input are not counted in current
+conflict charts. Separately source-reviewed candidate comparisons are published in
+`data/analysis/policy_evidence/reviewed_candidate_comparisons.csv`.
 
 Exact candidate passage text is counted once per DSA-endorsed/other-Democrat group and election cycle.
 This prevents a shared national platform from being multiplied across state races while retaining
@@ -60,34 +66,34 @@ all contributing candidates, races, source documents, URLs, and locators in the 
 ## Main language differences
 
 - **Rights and labor:** DSA-endorsed documents mention human rights
-  (23% versus
-  7%), working class
-  (20% versus
-  7%), workers
-  (39% versus
-  26%), and unions
-  (30% versus
-  19%) more often.
+  (16% versus
+  13%), working class
+  (16% versus
+  3%), workers
+  (34% versus
+  29%), and unions
+  (29% versus
+  17%) more often.
 - **Housing, health, and climate:** DSA-endorsed documents more often mention health care
-  (44% versus
-  34%), tenants
-  (17% versus
-  9%), the Green New Deal
-  (12% versus
-  4%), and rent
-  (20% versus
-  13%).
+  (53% versus
+  48%), tenants
+  (10% versus
+  7%), the Green New Deal
+  (10% versus
+  7%), and rent
+  (15% versus
+  11%).
 - **Business and development:** other-Democrat documents more often mention business
-  (39% versus
-  27%), small business
+  (18% versus
+  22%), small business
+  (13% versus
+  1%), technology
   (20% versus
-  10%), technology
-  (16% versus
-  7%), markets
-  (16% versus
-  11%), and training
-  (19% versus
-  15%).
+  8%), markets
+  (15% versus
+  10%), and training
+  (18% versus
+  10%).
 - Official-platform MPIF remains available in the generated tables. The strongest broad
   organizational distinction is working-class, worker, union, and movement language in DSA
   texts versus family, nation, access, and institutional-party language in Democratic texts.
@@ -137,7 +143,7 @@ percentage points. Shared emphasis is reported separately rather than displaying
 `0.00` difference as if it were substantively distinctive.
 
 - Highest shared-emphasis features:
-  Healthcare, Business, Worker, Affordable Housing, Union, Training, Climate Change, Rent.
+  Healthcare, Worker, Climate Change, Affordable Housing, Business, Union, Corporate, Human Right.
 
 ![Shared policy emphasis](../outputs/figures/text_analysis/policy_language_overlap.svg)
 
@@ -145,22 +151,20 @@ Both groups discussing a feature does not establish identical policy positions. 
 identifies common agenda space; the exact texts and reviewed mechanism comparisons are required
 to determine agreement, disagreement, or different proposed means.
 
-## Shared affirmative mechanism language within primaries
+## Shared named-policy language within primaries
 
-As a stricter agreement-oriented check, we identify races where an endorsed candidate and
-another Democrat both use the same concrete normalized policy-mechanism phrase. Mentions preceded by
-oppositional or negating language are excluded. The most common shared mechanisms are:
+This automated review aid finds races where both groups use the same normalized policy phrase
+after a local-negation screen. It does not establish shared implementation or policy agreement.
+For example, Medicare-for-All wording can accompany different insurance designs.
+The most common shared phrases are:
 
-- **Affordable Housing:** 50 races
-- **Minimum Wage:** 13 races
-- **Green New Deal:** 9 races
-- **Public Housing:** 8 races
-- **Medicare For All:** 7 races
-- **Single Payer:** 7 races
-- **Rent Control:** 5 races
-- **Universal Basic Income:** 2 races
+- **Affordable Housing:** 36 races
+- **Green New Deal:** 31 races
+- **Medicare For All:** 30 races
+- **Single Payer:** 29 races
+- **Living Wage:** 1 races
 
-![Shared affirmative policy mechanisms](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
+![Shared named-policy language](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
 
 This is stronger evidence of common policy language than topic overlap, but it is still not a
 complete stance classifier. The generated table retains both sides' exact source excerpts for
@@ -169,9 +173,9 @@ review.
 ## Document-prevalence robustness check
 
 - More common across DSA-endorsed candidate documents:
-  Fight, Human Right, Justice, Corporate, Working Class, Worker, Profit, Organizing.
+  Labor, Fight, Senator, Corporate, End, York, Why, Crisis.
 - More common across other-Democrat documents:
-  Business, Challenge, Small Business, Veteran, Technology, Success, Today, Opportunity.
+  America, Thing, Opportunity, Administration, Security, Well, Include, Think.
 
 When MPIF and document prevalence point in the same direction, the result is less likely to be
 driven by one unusually repetitive campaign.
@@ -180,14 +184,14 @@ driven by one unusually repetitive campaign.
 
 The largest differences in the kinds of real sources recovered are:
 
-- **Interview:** +5.1%
-- **Policy Page:** +5.0%
-- **Official Voter Guide:** -4.8%
-- **Press Release:** -4.3%
-- **Debate Transcript:** -3.6%
-- **Campaign Page:** +2.8%
-- **Campaign Website:** +1.5%
-- **Official Campaign Page:** -1.4%
+- **Archived Campaign Platform:** -12.2%
+- **Archived Campaign Page:** +10.0%
+- **Official Campaign Platform:** -9.8%
+- **Campaign Issue Page:** +7.4%
+- **Campaign Platform:** +5.8%
+- **Archived Campaign Policy Page:** -5.8%
+- **Campaign Page:** +3.2%
+- **Campaign Platform | Policy Page:** +1.7%
 
 Positive values indicate a larger share of DSA-endorsed excerpts; negative values indicate a
 larger share of other-Democrat excerpts.
@@ -196,11 +200,11 @@ larger share of other-Democrat excerpts.
 
 ## Evidence volume by election cycle
 
-- **2020:** 2001 DSA-endorsed and 7449 other-Democrat passages
-- **2026:** 2369 DSA-endorsed and 6922 other-Democrat passages
-- **2018:** 1306 DSA-endorsed and 2505 other-Democrat passages
-- **2022:** 2014 DSA-endorsed and 1624 other-Democrat passages
-- **2024:** 1928 DSA-endorsed and 1647 other-Democrat passages
+- **2020:** 236 DSA-endorsed and 828 other-Democrat passages
+- **2022:** 229 DSA-endorsed and 199 other-Democrat passages
+- **2018:** 207 DSA-endorsed and 190 other-Democrat passages
+- **2024:** 130 DSA-endorsed and 140 other-Democrat passages
+- **2026:** 43 DSA-endorsed and 167 other-Democrat passages
 
 ![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
 
@@ -208,11 +212,7 @@ These are direct counts of eligible exact-text segments, not estimates of issue 
 
 ## Explicitly stated conflicts
 
-- **2020:** 142 explicit conflicts
-- **2023:** 65 explicit conflicts
-- **2019:** 40 explicit conflicts
-- **2025:** 38 explicit conflicts
-- **2026:** 37 explicit conflicts
+
 
 ![Explicit conflicts by cycle](../outputs/figures/text_analysis/explicit_conflicts_by_cycle.svg)
 
@@ -221,11 +221,11 @@ records.
 
 ## Evidence coverage
 
-The denominator is the registry-wide 1927 candidate/race records summarized in
+The denominator is the registry-wide 1928 candidate/race records summarized in
 `data/processed/full_text_queue_summary.csv`; only `verified` is counted as extracted.
 
-- **Endorsed:** 281 candidate/race records with extracted text, 150 without extracted text (65.2% extracted).
-- **Other Democrats:** 751 candidate/race records with extracted text, 745 without extracted text (50.2% extracted).
+- **Endorsed:** 279 candidate/race records with extracted text, 151 without extracted text (64.9% extracted).
+- **Other Democrats:** 748 candidate/race records with extracted text, 750 without extracted text (49.9% extracted).
 
 ## Limitations
 

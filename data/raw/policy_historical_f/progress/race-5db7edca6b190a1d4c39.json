@@ -1,0 +1,223 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-5db7edca6b190a1d4c39",
+  "sources": [
+    {
+      "document_id": "a3a0ad2fb4aabe30b6b3472a",
+      "metadata_document_id": "a3a0ad2fb4aabe30b6b3472a",
+      "url": "https://patch.com/district-columbia/washingtondc/candidate-profile-art-lloyd-city-council-ward-5",
+      "final_url": "https://patch.com/district-columbia/washingtondc/candidate-profile-art-lloyd-city-council-ward-5",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:50:45.576929+00:00",
+      "raw_path": "data/raw/policy_historical_f/sources/a3a0ad2fb4aabe30b6b3472a.html",
+      "sha256": "8012573cee9b310cd0c96418cb0df4f6ac0c491dda4ef3dbe5535785b44b006e",
+      "bytes": 354661,
+      "content_type": "text/html",
+      "status": "timing_unverified",
+      "notes": "Semantically reviewed against candidate-scoped retained paragraphs; exact metadata, raw bytes, and temporal qualification preserved.",
+      "historical_cycle_evidence": {
+        "election_year": "2022",
+        "exact_quote": "Posted Thu, Jun 2, 2022 at 9:52 am ET | Updated Thu, Jun 2, 2022",
+        "source_locator": "paragraph 37"
+      }
+    },
+    {
+      "document_id": "1c7e5793f8c218e62b4e57e4",
+      "metadata_document_id": "1c7e5793f8c218e62b4e57e4",
+      "url": "https://waba.org/wp-content/uploads/2022/04/Zachary-Parker-DC-Council-Ward-5-Candidate-2022-WABA-Primary-Election-Questionnaire.pdf",
+      "final_url": "https://waba.org/wp-content/uploads/2022/04/Zachary-Parker-DC-Council-Ward-5-Candidate-2022-WABA-Primary-Election-Questionnaire.pdf",
+      "publication_date": null,
+      "retrieved_at": "2026-08-19T23:41:57.215759+00:00",
+      "raw_path": "data/raw/policy_historical_f/sources/1c7e5793f8c218e62b4e57e4.pdf",
+      "sha256": "c7b8a66c79975779f65238586f4b6c90d208538c8420c170bbe67ed5a10ab24f",
+      "bytes": 76786,
+      "content_type": "application/pdf",
+      "status": "timing_unverified",
+      "notes": "Semantically reviewed against candidate-scoped retained paragraphs; exact metadata, raw bytes, and temporal qualification preserved.",
+      "historical_cycle_evidence": {
+        "election_year": "2022",
+        "exact_quote": "[PDF page 1] 2022 Primary Election Candidate Questionnaire for Ward Races Dear Candidate, We ask",
+        "source_locator": "paragraph 1"
+      }
+    }
+  ],
+  "excerpts": [
+    {
+      "excerpt_id": "ex-hf-race-5db7edca6b190a1d4c39-zachary-parker-transit",
+      "metadata_document_id": "1c7e5793f8c218e62b4e57e4",
+      "document_id": "1c7e5793f8c218e62b4e57e4",
+      "speaker": "Zachary Parker",
+      "role": "endorsed_candidate",
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "election_date": "2022-06-21",
+      "topic": "transportation",
+      "subtopic": "bus_lanes_and_free_public_transit",
+      "stance": "support",
+      "short_exact_quote": "support funding to create more dedicated bus lanes, as well as to move toward free public transit.",
+      "locator": "paragraph 3",
+      "representation_kind": "policy_position",
+      "claim_summary": "Parker supports funding dedicated bus lanes and moving toward fare-free public transit, alongside possible congestion-pricing revenue.",
+      "notes": "Candidate response in the WABA ward-race questionnaire.",
+      "attribution_notes": "paragraph 3 is within the retained candidate-associated answer block for Zachary Parker; prompt and publisher narration are not treated as candidate speech."
+    },
+    {
+      "excerpt_id": "ex-hf-race-5db7edca6b190a1d4c39-art-lloyd-jobs",
+      "metadata_document_id": "a3a0ad2fb4aabe30b6b3472a",
+      "document_id": "a3a0ad2fb4aabe30b6b3472a",
+      "speaker": "Art Lloyd",
+      "role": "opponent_candidate",
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "election_date": "2022-06-21",
+      "topic": "workforce_development",
+      "subtopic": "vocational_job_training",
+      "stance": "support",
+      "short_exact_quote": "I believe the community is in need of more vocational job training programs",
+      "locator": "paragraph 81",
+      "representation_kind": "policy_position",
+      "claim_summary": "Lloyd supports expanding vocational job-training programs and revising youth and adult education programs.",
+      "notes": "Candidate answer identifies vocational training as a community need.",
+      "attribution_notes": "paragraph 81 is within the retained candidate-associated answer block for Art Lloyd; prompt and publisher narration are not treated as candidate speech."
+    },
+    {
+      "excerpt_id": "ex-hf-race-5db7edca6b190a1d4c39-art-lloyd-mental-health",
+      "metadata_document_id": "a3a0ad2fb4aabe30b6b3472a",
+      "document_id": "a3a0ad2fb4aabe30b6b3472a",
+      "speaker": "Art Lloyd",
+      "role": "opponent_candidate",
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "election_date": "2022-06-21",
+      "topic": "healthcare",
+      "subtopic": "restore_mental_health_treatment_centers",
+      "stance": "support",
+      "short_exact_quote": "The re-establishment of mental health treatment centers",
+      "locator": "paragraph 83",
+      "representation_kind": "policy_position",
+      "claim_summary": "Lloyd supports re-establishing mental-health treatment centers and retraining police on use of force involving mentally ill people and youth.",
+      "notes": "First item in the candidate answer listing changes he would pursue.",
+      "attribution_notes": "paragraph 83 is within the retained candidate-associated answer block for Art Lloyd; prompt and publisher narration are not treated as candidate speech."
+    }
+  ],
+  "comparisons": [],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Faith Gibson Hubbard",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    },
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Gary To-To Johnson",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    },
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Gordon \"The People's Champion\" Fletcher",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    },
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Kathy Henderson",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    },
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Vincent Orange \"VO\"",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Faith Gibson Hubbard",
+      "url": "https://www.dcwomeninpolitics.org/2022_faith_gibson_hubbard",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/b54940ffc0860618385db24d/02ae4d916fc8898d1863233c721d38ad293f43f8e2aba721cc7a85faeeb4405d.html"
+    },
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Gary To-To Johnson",
+      "url": "https://electionresults.dcboe.org/election_results/2022-Primary-Election",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/21ec9124eb0ba33b51058550/d5104d424c4a0c290e54a7193a3b1e990091a5caad9296a4faaa20a26d7efeca.html"
+    },
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Gordon \"The People's Champion\" Fletcher",
+      "url": "https://electionresults.dcboe.org/election_results/2022-Primary-Election",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/21ec9124eb0ba33b51058550/d5104d424c4a0c290e54a7193a3b1e990091a5caad9296a4faaa20a26d7efeca.html"
+    },
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Kathy Henderson",
+      "url": "https://electionresults.dcboe.org/election_results/2022-Primary-Election",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/21ec9124eb0ba33b51058550/d5104d424c4a0c290e54a7193a3b1e990091a5caad9296a4faaa20a26d7efeca.html"
+    },
+    {
+      "race_id": "race-5db7edca6b190a1d4c39",
+      "candidate": "Vincent Orange \"VO\"",
+      "url": "https://electionresults.dcboe.org/election_results/2022-Primary-Election",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/21ec9124eb0ba33b51058550/d5104d424c4a0c290e54a7193a3b1e990091a5caad9296a4faaa20a26d7efeca.html"
+    }
+  ],
+  "case_disposition": {
+    "race_id": "race-5db7edca6b190a1d4c39",
+    "election_date": "2022-06-21",
+    "status": "reviewed_with_evidence",
+    "candidates": [
+      {
+        "candidate_name": "Art Lloyd",
+        "role": "opponent",
+        "status": "evidence_recovered"
+      },
+      {
+        "candidate_name": "Faith Gibson Hubbard",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Gary To-To Johnson",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Gordon \"The People's Champion\" Fletcher",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Kathy Henderson",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Vincent Orange \"VO\"",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Zachary Parker",
+        "role": "endorsed",
+        "status": "evidence_recovered"
+      }
+    ],
+    "source_count": 2,
+    "excerpt_count": 3,
+    "comparison_count": 0
+  }
+}

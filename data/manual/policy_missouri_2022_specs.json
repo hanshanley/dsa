@@ -1,0 +1,21 @@
+{
+  "raw_folder": "data/raw/policy_missouri_2022",
+  "source_defaults": {
+    "status": "used", "source_type": "candidate_interview",
+    "publication_date": "2022-07-28", "source_updated_date": "2022-07-28",
+    "notes": "Direct candidate quotations in the original STLPR campaign interviews and event reporting, published before the August2 primary. Reporter summaries, supporter statements and allegations against candidates are not substituted for their own policy words."
+  },
+  "sources": [
+    {"key": "bush", "capture": "bush-roberts-capture.json", "race_id": "race-4add975df09b0b0aaa6d", "speaker": "Cori Bush"},
+    {"key": "roberts", "capture": "bush-roberts-capture.json", "race_id": "race-4add975df09b0b0aaa6d", "speaker": "Steve Roberts"}
+  ],
+  "statements": [
+    {"id": "mo22-bush-strategy", "source": "bush", "topic": "campaign_approach", "subtopic": "activism_and_legislating", "stance": "integrate_activism_with_congressional_work", "kind": "campaign_frame", "quote": "the activist also on the ground even at the U.S. Capitol", "locator": "paragraph 282", "claim": "Presents Capitol-step activism to extend the eviction moratorium as part of her congressional work, not as a substitute for all legislation."},
+    {"id": "mo22-bush-eviction", "source": "bush", "topic": "housing", "subtopic": "eviction_moratorium", "stance": "support_extension", "quote": "get an extension to the eviction moratorium", "locator": "paragraph 282", "claim": "Describes campaigning for an extension of the eviction moratorium through direct action. Her account of its effect is attributed rather than independently certified."},
+    {"id": "mo22-roberts-strategy", "source": "roberts", "topic": "campaign_approach", "subtopic": "activism_and_legislating", "stance": "prioritize_institutional_legislating", "kind": "campaign_frame", "quote": "The work of a legislator is done in the Capitol building", "locator": "paragraph 297", "claim": "Contrasts institutional legislative work with street activism while explicitly acknowledging shared passions and Bush's ability to draw attention to issues."},
+    {"id": "mo22-roberts-cooperation", "source": "roberts", "topic": "campaign_approach", "subtopic": "legislative_strategy", "stance": "emphasize_cross_party_cooperation", "kind": "campaign_frame", "quote": "work with folks on both sides of the aisle", "locator": "paragraph 295", "claim": "Argues for cross-party cooperation and bringing resources to St. Louis rather than withholding support whenever a bill lacks every desired provision."}
+  ],
+  "comparisons": [
+    {"id": "mo22-bush-roberts-activism", "left": "mo22-bush-strategy", "right": "mo22-roberts-strategy", "relationship": "different_strategy", "kind": "campaign_framing", "analysis": "Bush explicitly presents direct action as part of congressional work, citing the eviction moratorium. Roberts says the legislator's work should happen inside the Capitol rather than on the streets, while acknowledging shared issue concerns. This is a source-backed difference in political strategy, not proof that their entire platforms are opposites."}
+  ]
+}

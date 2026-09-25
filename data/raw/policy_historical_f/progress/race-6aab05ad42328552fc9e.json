@@ -1,0 +1,62 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-6aab05ad42328552fc9e",
+  "sources": [],
+  "excerpts": [],
+  "comparisons": [],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-6aab05ad42328552fc9e",
+      "candidate": "Anthony Hardy Williams",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    },
+    {
+      "race_id": "race-6aab05ad42328552fc9e",
+      "candidate": "Paul Prescod",
+      "role": "endorsed",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-6aab05ad42328552fc9e",
+      "candidate": "Anthony Hardy Williams",
+      "url": "https://www.electionreturns.pa.gov/Home/SummaryResults?ElectionID=94&ElectionType=P&IsActive=0",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/ee19a72a35d337fff7e13cff/35a118994d6b3e1072eb10c3b1bd036414794c1d03cdaaf03d297c2c3302ec09.html"
+    },
+    {
+      "race_id": "race-6aab05ad42328552fc9e",
+      "candidate": "Paul Prescod",
+      "url": "https://therealnews.com/a-socialist-high-school-teacher-looks-to-shake-up-pa-state-senate-race",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/a00b187f18203c6d81765619/e0ccde2b391e51ff017913f2ec12ff87e22477ebcd00761541588e28eb2bf62a.html"
+    }
+  ],
+  "case_disposition": {
+    "race_id": "race-6aab05ad42328552fc9e",
+    "election_date": "2022-05-17",
+    "status": "reviewed_no_usable_candidate_words",
+    "candidates": [
+      {
+        "candidate_name": "Anthony Hardy Williams",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Paul Prescod",
+        "role": "endorsed",
+        "status": "source_gap_after_candidate_specific_routes"
+      }
+    ],
+    "source_count": 0,
+    "excerpt_count": 0,
+    "comparison_count": 0
+  }
+}

@@ -1,10 +1,12 @@
 import csv
+import hashlib
 import json
 import tempfile
 import unittest
 from pathlib import Path
 
 from dsa_analysis.analysis import _load_canonical_metrics, analyze
+from dsa_analysis.document_corpus import CANDIDATE_SCREENING_VERSION
 from dsa_analysis.paths import PROCESSED_DIR, REPORT_DIR
 
 
@@ -143,6 +145,43 @@ class AnalysisTests(unittest.TestCase):
             self.assertEqual(result["stats"]["local_unresolved_rows"], 2)
             self.assertEqual(result["stats"]["candidate_analysis_segments"], 90)
             self.assertEqual(result["stats"]["kde_status"], "provisional")
+            corpus = analysis / "candidate_text_corpus.csv"
+            corpus.write_text("corpus\n", encoding="utf-8")
+            metadata = processed / "candidate_document_metadata.csv"
+            segments = processed / "candidate_document_analysis_segments.csv"
+            metadata.write_text("metadata\n", encoding="utf-8")
+            segments.write_text("segments\n", encoding="utf-8")
+            kde_path = analysis / "provisional_gte_kde" / "summary.json"
+            kde = fixtures[kde_path]
+            kde["screening_version"] = CANDIDATE_SCREENING_VERSION
+            for key, path in (
+                ("candidate_corpus_sha256", corpus),
+                ("input_sha256", segments),
+                ("metadata_sha256", metadata),
+                ("registry_sha256", processed / "race_registry.csv"),
+            ):
+                kde[key] = hashlib.sha256(path.read_bytes()).hexdigest()
+            kde_path.write_text(json.dumps(kde), encoding="utf-8")
+            lexical_path = output / "tables" / "text_analysis" / "analysis_manifest.json"
+            lexical = fixtures[lexical_path]
+            lexical["screening_version"] = CANDIDATE_SCREENING_VERSION
+            lexical["input_hashes"] = {
+                f"data/processed/{path.name}": hashlib.sha256(path.read_bytes()).hexdigest()
+                for path in (segments, metadata, processed / "race_registry.csv")
+            }
+            lexical_path.write_text(json.dumps(lexical), encoding="utf-8")
+            self.assertEqual(
+                _load_canonical_metrics(processed, analysis, output)["stats"]["kde_status"],
+                "provisional",
+            )
+            for changed in (metadata, processed / "race_registry.csv", segments):
+                original = changed.read_bytes()
+                changed.write_bytes(original + b"\n")
+                with self.subTest(changed=changed.name):
+                    stats = _load_canonical_metrics(processed, analysis, output)["stats"]
+                    self.assertEqual(stats["kde_status"], "stale_input")
+                    self.assertEqual(stats["model_input_status"], "stale_input")
+                changed.write_bytes(original)
 
     @staticmethod
     def _write_csv(path: Path, fieldnames: list[str], rows: list[list[str]]) -> None:

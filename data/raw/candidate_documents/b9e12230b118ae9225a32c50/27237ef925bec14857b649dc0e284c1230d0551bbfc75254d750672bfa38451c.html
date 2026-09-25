@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	
+		<meta charset="utf-8">
+	<meta name="author" content="Elections">
+	<link rel="pingback" href="https://onondaga.gov/elections/xmlrpc.php">
+
+		<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="apple-mobile-web-app-title" content="">
+
+		<meta name="application-name" content="Elections">
+
+	
+		<script>
+			function is_browser() {
+				return (navigator.userAgent.indexOf("Chrome") !== - 1 || navigator.userAgent.indexOf("Opera") !== - 1 || navigator.userAgent.indexOf("Firefox") !== - 1 || navigator.userAgent.indexOf("MSIE") !== - 1 || navigator.userAgent.indexOf("Safari") !== - 1 || navigator.userAgent.indexOf("Edge") !== - 1);
+			}
+
+			function less_than_ie11() {
+				return (!window.atob || // IE9 and below
+						Function('/*@cc_on return document.documentMode===10@*/')() // IE10
+				);
+			}
+
+			function not_excluded_page() {
+				return (window.location.href.indexOf("/unsupported-browser/") === - 1 && document.title.toLowerCase().indexOf('page not found') === - 1);
+			}
+
+			if (is_browser() && less_than_ie11() && not_excluded_page()) {
+				window.location = location.protocol + '//' + location.host + '/unsupported-browser/';
+			}
+		</script>
+
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v24.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home - Elections</title>
+	<link rel="canonical" href="https://onondaga.gov/elections/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home - Elections" />
+	<meta property="og:url" content="https://onondaga.gov/elections/" />
+	<meta property="og:site_name" content="Elections" />
+	<meta property="article:modified_time" content="2026-03-23T14:34:32+00:00" />
+	<meta property="og:image" content="https://onondaga.gov/elections/wp-content/uploads/sites/191/2022/03/flag-1200x630.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//translate.google.com' />
+<link rel='dns-prefetch' href='//use.typekit.net' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v9.4.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-BJF2HW3P31"  data-cfasync="false" data-wpfc-render="false" async></script>
+			<script data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '9.4.1';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+								var MonsterInsightsDefaultLocations = {"page_location":"https:\/\/onondaga.gov\/elections\/"};
+				if ( typeof MonsterInsightsPrivacyGuardFilter === 'function' ) {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations );
+				} else {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsExcludeQuery : MonsterInsightsDefaultLocations;
+				}
+
+								var disableStrs = [
+										'ga-disable-G-BJF2HW3P31',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+					if ( MonsterInsightsLocations.page_location ) {
+						__gtagTracker('set', MonsterInsightsLocations);
+					}
+										__gtagTracker('config', 'G-BJF2HW3P31', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<link rel='stylesheet' id='tribe-typekit-css' href='https://use.typekit.net/kil6ggz.css' media='all' />
+<link rel='stylesheet' id='tribe-events-pro-mini-calendar-block-styles-css' href='https://onondaga.gov/elections/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-mini-calendar-block.min.css?ver=7.4.5' media='all' />
+<style id='elasticpress-related-posts-style-inline-css'>
+.editor-styles-wrapper .wp-block-elasticpress-related-posts ul,.wp-block-elasticpress-related-posts ul{list-style-type:none;padding:0}.editor-styles-wrapper .wp-block-elasticpress-related-posts ul li a>div{display:inline}
+
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='google-language-translator-css' href='https://onondaga.gov/elections/wp-content/plugins/google-language-translator/css/style.css?ver=6.0.20' media='' />
+<link rel='stylesheet' id='acffa_font-awesome-fe-css' href='https://use.fontawesome.com/releases/v6.7.2/css/all.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='tribe-styles-master-css' href='https://onondaga.gov/elections/wp-content/themes/core/assets/css/dist/theme/master.min.css?ver=42527c0352f4fec5d4ff0276532e0344' media='all' />
+<link rel='stylesheet' id='tribe-styles-print-css' href='https://onondaga.gov/elections/wp-content/themes/core/assets/css/dist/theme/print.min.css?ver=55cb7fa1948c016b68f9afe94d5c20ec' media='print' />
+<link rel='stylesheet' id='elasticpress-facets-css' href='https://onondaga.gov/elections/wp-content/plugins/elasticpress/dist/css/facets-styles.css?ver=5797fb4036fc4007a87a' media='all' />
+<style id='kadence-blocks-global-variables-inline-css'>
+:root {--global-kb-font-size-sm:clamp(0.8rem, 0.73rem + 0.217vw, 0.9rem);--global-kb-font-size-md:clamp(1.1rem, 0.995rem + 0.326vw, 1.25rem);--global-kb-font-size-lg:clamp(1.75rem, 1.576rem + 0.543vw, 2rem);--global-kb-font-size-xl:clamp(2.25rem, 1.728rem + 1.63vw, 3rem);--global-kb-font-size-xxl:clamp(2.5rem, 1.456rem + 3.26vw, 4rem);--global-kb-font-size-xxxl:clamp(2.75rem, 0.489rem + 7.065vw, 6rem);}:root {--global-palette1: #3182CE;--global-palette2: #2B6CB0;--global-palette3: #1A202C;--global-palette4: #2D3748;--global-palette5: #4A5568;--global-palette6: #718096;--global-palette7: #EDF2F7;--global-palette8: #F7FAFC;--global-palette9: #ffffff;}
+</style>
+<script src="https://onondaga.gov/elections/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=9.4.1" id="monsterinsights-frontend-script-js" async data-wp-strategy="async"></script>
+<script data-cfasync="false" data-wpfc-render="false" id='monsterinsights-frontend-script-js-extra'>var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/onondaga.gov\/elections","hash_tracking":"false","v4_id":"G-BJF2HW3P31"};</script>
+<link rel="https://api.w.org/" href="https://onondaga.gov/elections/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://onondaga.gov/elections/wp-json/wp/v2/pages/24" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://onondaga.gov/elections/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.2" />
+<link rel='shortlink' href='https://onondaga.gov/elections/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://onondaga.gov/elections/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fonondaga.gov%2Felections%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://onondaga.gov/elections/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fonondaga.gov%2Felections%2F&#038;format=xml" />
+<style>#google_language_translator{width:auto!important;}div.skiptranslate.goog-te-gadget{display:inline!important;}.goog-tooltip{display: none!important;}.goog-tooltip:hover{display: none!important;}.goog-text-highlight{background-color:transparent!important;border:none!important;box-shadow:none!important;}#google_language_translator select.goog-te-combo{color:#32373c;}#flags{display:none;}#google_language_translator{color:transparent;}body{top:0px!important;}#goog-gt-{display:none!important;}font font{background-color:transparent!important;box-shadow:none!important;position:initial!important;}#glt-translate-trigger{left:20px;right:auto;}#glt-translate-trigger > span{color:#ffffff;}#glt-translate-trigger{background:#f89406;}.goog-te-gadget .goog-te-combo{width:100%;}</style><link rel='preload' href='https://onondaga.gov/elections/wp-content/plugins/google-language-translator/js/scripts.js?ver=6.0.20' as='script'/>
+<link rel='preload' href='//translate.google.com/translate_a/element.js?cb=GoogleLanguageTranslatorInit' as='script'/>
+<link rel='preload' href='https://onondaga.gov/elections/wp-content/themes/core/assets/js/dist/theme/scripts.min.js?ver=d01806b879aab03809acaeebbd46a6d6' as='script'/>
+<link rel='preload' href='https://onondaga.gov/elections/wp-content/themes/core/assets/js/dist/theme/vendor.min.js?ver=557b1c451a6dae10152f4b68e7e8b860' as='script'/>
+<meta name="theme-color" content="#ffffff"><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://onondaga.gov/elections"><link rel="alternate" href="https://onondaga.gov/elections/wp-json/tribe/events/v1/" />
+<script async src="https://docaccess.com/docbox.js"></script>
+<link rel="icon" href="https://onondaga.gov/elections/wp-content/uploads/sites/191/2025/03/cropped-blue-seal_512x512-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://onondaga.gov/elections/wp-content/uploads/sites/191/2025/03/cropped-blue-seal_512x512-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://onondaga.gov/elections/wp-content/uploads/sites/191/2025/03/cropped-blue-seal_512x512-180x180.png" />
+<meta name="msapplication-TileImage" content="https://onondaga.gov/elections/wp-content/uploads/sites/191/2025/03/cropped-blue-seal_512x512-270x270.png" />
+		<style id="wp-custom-css">
+			/*Make Parallelogram Smaller*/
+.c-homepage-slide__mask--parallelogram {
+width: 31.25rem !important;
+height: 100% !important;
+min-height: 14.438rem !important;
+overflow: hidden !important;
+}
+
+/*Slider Background*/
+.c-slider--homepage-imagemask, .tribe-events-virtual-link-button {
+background: radial-gradient(ellipse at bottom, #5091DD 0%, #030617 100%);
+}
+
+/*Menu Bugfix*/
+.c-header--nav-open .masthead_subsite__list-child--active {
+	top: 0 !important;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.admin-bar .c-header--nav-open .masthead_subsite__list-child--active {
+	top: 44px !important;
+}
+		</style>
+		
+</head>
+
+<body class="home page-template page-template-page-templates page-template-page-homepage-mask page-template-page-templatespage-homepage-mask-php page page-id-24 wp-embed-responsive tribe-no-js" style="--theme-color: #3E73D2;--theme-color-alpha: rgba(62, 115, 210, 0.88);--theme-color-dark: rgb(31, 67, 132);">
+
+	
+	<div  class="l-wrapper site-wrap--subsite" data-js="site-wrap">
+
+		<a href="#main-content" class="a11y-skip-link">
+			Skip to main content		</a>
+
+		
+
+<header  class="c-header c-header--subsite" data-js="c-header">
+
+
+	<div id="navigation-flyout" class="c-header__inner-wrapper" data-js="navigation-flyout">
+
+		<h1 class="c-header__logo logo" data-js="logo">
+			<a href="https://onondaga.gov" rel="home" aria-label="Back to Onondaga County main site." class="logo__link">
+<figure	 class="c-image"	>
+
+	
+		<img  class="logo__svg c-image__image" alt="Onondaga County Seal" src="https://onondaga.gov/elections/wp-content/uploads/2023/04/SealBlu555x555-150x150.png" sizes="(min-width: 1260px) 1260px, 100vw" srcset="" />
+	
+	
+</figure>
+</a>			<span class="logo__site-name"><a href="https://onondaga.gov" rel="home" aria-label="Back to Onondaga County main site." class="logo__text">Onondaga County</a></span>		</h1>
+
+		<div id="search-flyout" class="c-header__search" data-js="search-flyout" role="dialog" aria-label="Site Search" aria-hidden="true">
+			<div class="l-container">
+				
+<form
+	 class="c-search--header c-search"	role="search"
+	method="get"
+	action="https://onondaga.gov/elections"
+	data-js="search-form"
+>
+
+	<label class="c-search__label" for="s-6a876ee8323a6">
+		<span class="u-visually-hidden">Search</span>Search Onondaga County	</label>
+
+	<div class="c-search__container">
+		<input
+			class="c-search__input"
+			type="text"
+			id="s-6a876ee8323a6"
+			name="s"
+			placeholder="Search"
+			data-js="search-form-input"
+			value=""
+		/>
+
+		<span class="c-search__input-helper u-visually-hidden t-overline u-fc-theme-color" data-js="search-input-helper">
+			Press &quot;enter&quot; to search		</span>
+
+		<button  class="c-search__clear-button" name="reset" data-js="search-form-clear" type="reset">
+	<span>Clear</span></button>
+
+		<button  class="c-search__submit-button" name="submit" type="submit">
+	<span>Search</span></button>
+	</div>
+
+</form>
+
+									<div class="search-flyout__curated">
+												<ul class="search-flyout__curated-list">
+							<li><a href="https://onondaga.gov/elections?s=Additional+Results+Can+Be+Found+on+onondaga.gov" class="a-pill-large">Additional Results Can Be Found on onondaga.gov</a></li>						</ul>
+					</div>
+							</div>
+		</div>
+
+					<nav  class="site-header__nav site-header__nav--main" aria-label="Primary Navigation" data-js="nav-primary-mainsite">
+
+	<span class="site-header__nav-title">Onondaga County</span>
+	<ol  class="site-header__nav-list">
+		<li class="masthead_primary__list-item masthead_primary__list-item--depth-0"><a href="/about/" class="masthead_primary__action masthead_primary__action--depth-0">About</a></li>
+<li class="masthead_primary__list-item masthead_primary__list-item--depth-0"><a href="/departments/" class="masthead_primary__action masthead_primary__action--depth-0">Departments</a></li>
+<li class="masthead_primary__list-item masthead_primary__list-item--depth-0"><a href="https://onondaga.gov/online-services/" class="masthead_primary__action masthead_primary__action--depth-0">Online Services</a></li>
+<li class="masthead_primary__list-item masthead_primary__list-item--depth-0"><a href="/employment/" class="masthead_primary__action masthead_primary__action--depth-0">Employment</a></li>
+	</ol>
+
+</nav>
+		
+		<div class="c-header__toggles">
+			<button  class="c-header__toggle-btn c-header__translate-toggle" id="btn-translate-trigger" data-js="btn-translate-trigger" aria-expanded="false" aria-controls="site-translate" aria-label="Toggle site translation options">
+	<i class="c-header__translate-toggle-icon icon icon-globe"></i></button>
+			<button  class="c-header__toggle-btn c-header__search-toggle" id="btn-search-flyout-open" data-js="btn-search-flyout-open" aria-expanded="false" aria-haspopup="dialog" aria-controls="search-flyout" aria-label="Toggle site search">
+	<i class="c-header__search-toggle-icon icon icon-search"></i></button>
+			<button  class="c-header__nav-toggle c-header__toggle-btn" id="main-nav-trigger-toggle" data-js="main-nav-trigger-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="navigation-flyout" aria-label="Toggle site navigation menu">
+	<i class="c-header__nav-toggle-icon icon icon-three-line"></i></button>
+		</div>
+
+								<div class="c-header__section-subsite ">
+				<div class="c-header__container-subsite">
+					<div class="c-header__subsite">
+						<div class="c-header__subsite-name"><a href="https://onondaga.gov/elections">Elections</a></div>
+											</div>
+
+					<nav  class="site-header__nav site-header__nav--subsite" aria-label="Site Navigation" data-js="nav-primary-subsite">
+
+	
+	<ol  class="site-header__nav-list">
+		<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-0"><a href="https://onondaga.gov/elections/about/" id="menu-item-532" class="masthead_subsite__action masthead_subsite__action--depth-0">About Us</a></li>
+<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-0 masthead_subsite__list-item--has-children"><button class="masthead_subsite__close" data-js="close-child-menu" aria-expanded="false" aria-controls="menu-item-child-720">Close Menu</button><button id="menu-item-720" class="masthead_subsite__action masthead_subsite__action--depth-0 masthead_subsite__action--has-children" data-js="trigger-child-menu" aria-label="Toggle Sub-Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu-item-child-720"><span>Voting Information</span><span class="masthead_subsite__icon-nav icon icon-chevron-right" aria-hidden="true"></span></button>
+<ul id="menu-item-child-720" class="masthead_subsite__list-child masthead_subsite__list-child--depth-0"role="menu" aria-labelled-by="menu-item-720" aria-hidden="true" data-js="child-menu">
+<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1 masthead_subsite__list-item--back"><button class="masthead_subsite__action masthead_subsite__action--depth-1 masthead_subsite__action--back" data-js="trigger-menu-return" title="Voting Information" aria-label="Voting Information" aria-controls="menu-item-child-720" aria-expanded="false"><span class="masthead_subsite__action--back-icon icon icon-arrow-left" aria-hidden="true"></span> Voting Information</button></li>	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/polling/" id="menu-item-547" class="masthead_subsite__action masthead_subsite__action--depth-1">Polling Places</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/sample-ballots/" id="menu-item-548" class="masthead_subsite__action masthead_subsite__action--depth-1">Sample Ballots</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/voter-registration/" id="menu-item-550" class="masthead_subsite__action masthead_subsite__action--depth-1">Voter Registration</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/request-a-ballot/" id="menu-item-1676" class="masthead_subsite__action masthead_subsite__action--depth-1">Request a Ballot</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/early-voting/" id="menu-item-537" class="masthead_subsite__action masthead_subsite__action--depth-1">Early Voting Information</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/military-and-overseas-voting/" id="menu-item-1672" class="masthead_subsite__action masthead_subsite__action--depth-1">Military &#038; Overseas Voting</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/links/" id="menu-item-723" class="masthead_subsite__action masthead_subsite__action--depth-1">Additional Resources (Links)</a></li>
+</ul>
+</li>
+<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-0 masthead_subsite__list-item--has-children"><button class="masthead_subsite__close" data-js="close-child-menu" aria-expanded="false" aria-controls="menu-item-child-721">Close Menu</button><button id="menu-item-721" class="masthead_subsite__action masthead_subsite__action--depth-0 masthead_subsite__action--has-children" data-js="trigger-child-menu" aria-label="Toggle Sub-Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu-item-child-721"><span>Campaign Information</span><span class="masthead_subsite__icon-nav icon icon-chevron-right" aria-hidden="true"></span></button>
+<ul id="menu-item-child-721" class="masthead_subsite__list-child masthead_subsite__list-child--depth-0"role="menu" aria-labelled-by="menu-item-721" aria-hidden="true" data-js="child-menu">
+<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1 masthead_subsite__list-item--back"><button class="masthead_subsite__action masthead_subsite__action--depth-1 masthead_subsite__action--back" data-js="trigger-menu-return" title="Campaign Information" aria-label="Campaign Information" aria-controls="menu-item-child-721" aria-expanded="false"><span class="masthead_subsite__action--back-icon icon icon-arrow-left" aria-hidden="true"></span> Campaign Information</button></li>	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/campaignfinance/" id="menu-item-534" class="masthead_subsite__action masthead_subsite__action--depth-1">Campaign Finances</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/candidate-information/" id="menu-item-535" class="masthead_subsite__action masthead_subsite__action--depth-1">Candidate Information</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/notices/" id="menu-item-539" class="masthead_subsite__action masthead_subsite__action--depth-1">Caucus Notices</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/regulations/" id="menu-item-540" class="masthead_subsite__action masthead_subsite__action--depth-1">Election Regulations</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/filings/" id="menu-item-543" class="masthead_subsite__action masthead_subsite__action--depth-1">Filings</a></li>
+</ul>
+</li>
+<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-0 masthead_subsite__list-item--has-children"><button class="masthead_subsite__close" data-js="close-child-menu" aria-expanded="false" aria-controls="menu-item-child-724">Close Menu</button><button id="menu-item-724" class="masthead_subsite__action masthead_subsite__action--depth-0 masthead_subsite__action--has-children" data-js="trigger-child-menu" aria-label="Toggle Sub-Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu-item-child-724"><span>Elections Info</span><span class="masthead_subsite__icon-nav icon icon-chevron-right" aria-hidden="true"></span></button>
+<ul id="menu-item-child-724" class="masthead_subsite__list-child masthead_subsite__list-child--depth-0"role="menu" aria-labelled-by="menu-item-724" aria-hidden="true" data-js="child-menu">
+<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1 masthead_subsite__list-item--back"><button class="masthead_subsite__action masthead_subsite__action--depth-1 masthead_subsite__action--back" data-js="trigger-menu-return" title="Elections Info" aria-label="Elections Info" aria-controls="menu-item-child-724" aria-expanded="false"><span class="masthead_subsite__action--back-icon icon icon-arrow-left" aria-hidden="true"></span> Elections Info</button></li>	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/election-results/" id="menu-item-1268" class="masthead_subsite__action masthead_subsite__action--depth-1">Election Results </a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/election-inspectors/" id="menu-item-538" class="masthead_subsite__action masthead_subsite__action--depth-1">Election Inspectors</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/calendar/" id="menu-item-545" class="masthead_subsite__action masthead_subsite__action--depth-1">Political Calendar</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/maps/" id="menu-item-546" class="masthead_subsite__action masthead_subsite__action--depth-1">Maps</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/elections/press/" id="menu-item-740" class="masthead_subsite__action masthead_subsite__action--depth-1">Press Releases</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1"><a href="https://onondaga.gov/forms/foil/" id="menu-item-785" class="masthead_subsite__action masthead_subsite__action--depth-1">FOIL Requests</a></li>
+	<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-1 masthead_subsite__list-item--has-children"><a href="#" id="menu-item-1003" class="masthead_subsite__action masthead_subsite__action--depth-1 masthead_subsite__action--has-children" tabindex="-1">Statistics</a>
+	<ul id="menu-item-child-1003" class="masthead_subsite__list-child masthead_subsite__list-child--depth-1"role="menu" aria-labelled-by="menu-item-1003" aria-hidden="true" data-js="child-menu">
+		<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-2"><a href="https://onondaga.gov/elections/elections-statistics/" id="menu-item-1002" class="masthead_subsite__action masthead_subsite__action--depth-2">Elections Statistics</a></li>
+		<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-2"><a href="https://onondaga.gov/elections/tri-annual-enrollment-updates/" id="menu-item-549" class="masthead_subsite__action masthead_subsite__action--depth-2">Tri-Annual Enrollment Updates</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-0"><a href="https://onondaga.gov/elections/faqs/" id="menu-item-542" class="masthead_subsite__action masthead_subsite__action--depth-0">FAQs</a></li>
+<li class="masthead_subsite__list-item masthead_subsite__list-item--depth-0"><a href="https://onondaga.gov/elections/contact/" id="menu-item-536" class="masthead_subsite__action masthead_subsite__action--depth-0">Contact Us</a></li>
+	</ol>
+
+	
+<div class="social-follow">
+
+	<ul class="social-follow__list">
+					<li class="social-follow__item social-follow__item--facebook">
+				<a href="https://www.facebook.com/OCBOfE" class="social-follow__anchor" rel="me noopener"
+				   title="Like us on Facebook" target="_blank">
+					<i class="icon icon-facebook"></i>
+					<span class="u-visually-hidden">Like us on Facebook</span>
+				</a>
+			</li>
+					<li class="social-follow__item social-follow__item--twitter">
+				<a href="https://twitter.com/OCBOE" class="social-follow__anchor" rel="me noopener"
+				   title="Follow us on Twitter" target="_blank">
+					<i class="icon icon-twitter"></i>
+					<span class="u-visually-hidden">Follow us on Twitter</span>
+				</a>
+			</li>
+			</ul>
+
+</div>
+
+</nav>
+				</div>
+			</div>
+		
+		<div id="site-translate" class="c-header__translate" data-js="site-translate" aria-labelledby="btn-translate-trigger" aria-hidden="true">
+			<div class="l-container">
+				<div id="google_language_translator" class="default-language-en"></div>			</div>
+		</div>
+
+	</div>
+
+</header>
+
+	<main id="main-content">
+
+		
+<div  class="b-gallery-slider__slider c-slider--homepage c-slider--homepage-imagemask c-slider">
+
+	<div  class="b-gallery-slider--fixed c-slider__main--is-homepage c-slider__main swiper-container c-slider__main--has-arrows c-slider__main--has-pagination" data-swiper-options="{&quot;slidesPerView&quot;:1,&quot;spaceBetween&quot;:0,&quot;preloadImages&quot;:true,&quot;keyboard&quot;:true,&quot;centeredSlides&quot;:true,&quot;updateOnImagesReady&quot;:true,&quot;loop&quot;:false,&quot;grabCursor&quot;:false,&quot;watchOverflow&quot;:true}" data-js="c-slider">
+
+		<div  class="c-slider__wrapper swiper-wrapper">
+							<div  class="c-slider__slide swiper-slide">
+					<div  class="c-homepage-slide">
+	<div class="c-homepage-slide__content-wrapper l-container">
+		<div class="c-homepage-slide__content">
+			
+<p  class="c-homepage-slide__leadin c-block__leadin" >
+	Welcome to the</p>
+			
+<h2  class="c-homepage-slide__title c-block__title" >
+	Board of Elections</h2>
+			<div class="c-homepage-slide__description c-block__description">
+<p>1000 Erie Blvd West, Syracuse, NY 13204<br />
+Hours: Monday-Friday 8:30AM-4:30PM<br />
+Phone: (315) 435-8683<br />
+Fax: (315) 435-8451</p>
+<p>&nbsp;</p>
+<p><strong>Commissioner Dustin M. Czarny (D)</strong><br />
+<strong>Commissioner Kevin P. Ryan (R)</strong></p>
+<p>&nbsp;</p>
+</div>
+			<div class="c-homepage-slide__cta-wrap">
+				
+<a  >
+	</a>
+
+			</div>
+		</div>
+		<div class="c-homepage-slide__image-wrapper">
+			
+<figure	 class="c-homepage-slide__image c-image"	>
+
+	
+		<img  class="c-homepage-slide__mask--parallelogram c-image__image lazyload" alt="Zoomed in American flag." data-expand="200" data-parent-fit="width" data-src="https://onondaga.gov/elections/wp-content/uploads/sites/191/2022/03/1200x1200-2-1200x1200.jpg" srcset="https://onondaga.gov/elections/wp-content/themes/core/assets/img/theme/shims/square-xlarge.png" data-sizes="(min-width: 1260px) 1260px, 100vw" data-srcset="https://onondaga.gov/elections/wp-content/uploads/sites/191/2022/03/1200x1200-2-1200x1200.jpg 1200w 1200h, 
+https://onondaga.gov/elections/wp-content/uploads/sites/191/2022/03/1200x1200-2-650x650.jpg 650w 650h, 
+https://onondaga.gov/elections/wp-content/uploads/sites/191/2022/03/1200x1200-2-376x376.jpg 376w 376h" src="https://onondaga.gov/elections/wp-content/themes/core/assets/img/theme/shims/square-xlarge.png" />
+	
+	
+</figure>
+		</div>
+	</div>
+
+</div>
+				</div>
+			
+					<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<clipPath id="homepage-slide-mask--star" clipPathUnits="objectBoundingBox">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M0.998251 0.498303C0.998245 0.223097 0.775144 0 0.499937 0C0.498769 0 0.497602 4.01832e-06 0.496435 1.20419e-05L0.496436 0.000685748C0.222088 0.00169839 2.4005e-08 0.224412 0 0.498997C-1.02115e-10 0.500165 4.02146e-06 0.501332 1.20328e-05 0.502498C0.000122015 0.502498 0.000231989 0.502498 0.000341955 0.502498C0.000783043 0.777334 0.223717 0.999996 0.498656 0.999996C0.498972 0.999996 0.499288 0.999996 0.499603 0.999995L0.499603 1C0.774809 0.999993 0.997906 0.776893 0.997906 0.501685C0.997906 0.501006 0.997905 0.500327 0.997902 0.499648C0.9979 0.4992 0.997898 0.498752 0.997895 0.498305L0.998251 0.498303ZM0.500749 0.962256C0.51813 0.706164 0.728992 0.503165 0.988323 0.498274C0.727087 0.494972 0.514291 0.290651 0.497503 0.0328751C0.483054 0.287402 0.277581 0.490818 0.022197 0.502013C0.27632 0.511214 0.481913 0.710703 0.500749 0.962256Z" fill="black"/>
+			</clipPath>
+		</defs>
+	</svg>
+
+		<svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<clipPath id="homepage-slide-mask--arch" clipPathUnits="objectBoundingBox">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M1 0.473384C1 0.211941 0.776142 0 0.5 0C0.223858 0 0 0.211941 0 0.473384V0.480989V0.5V1H0.5H1V0.500428C1 0.500285 1 0.500143 1 0.5V0.473384Z" fill="black"/>
+			</clipPath>
+		</defs>
+	</svg>
+
+		<svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<clipPath id="homepage-slide-mask--none" clipPathUnits="objectBoundingBox">
+			<path d="M0 0.0285137C0 0.012766 0.0111372 0 0.0248756 0H0.975124C0.988863 0 1 0.012766 1 0.0285137V0.971486C1 0.987234 0.988863 1 0.975124 1H0.0248756C0.0111372 1 0 0.987234 0 0.971486V0.0285137Z" fill="black"/>
+			</clipPath>
+		</defs>
+	</svg>
+
+		<svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<clipPath id="homepage-slide-mask--parallelogram"  clipPathUnits="objectBoundingBox">
+			<path d="M0.0942419 0.0265855C0.0957508 0.0114956 0.108524 0 0.123782 0H0.970311C0.987867 0 1.00159 0.0150588 0.999852 0.0324207L0.905758 0.973414C0.904249 0.988504 0.891476 1 0.876218 1H0.0296885C0.0121331 1 -0.00158771 0.984941 0.000148371 0.967579L0.0942419 0.0265855Z" fill="black"/>
+			</clipPath>
+		</defs>
+	</svg>
+
+		<svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<clipPath id="homepage-slide-mask--circle"  clipPathUnits="objectBoundingBox">
+			<circle cx="0.5" cy="0.5" r="0.5" fill="black"/>
+			</clipPath>
+		</defs>
+	</svg>
+		</div>
+
+	</div>
+
+	<div class="c-slider__control-wrapper l-container">
+		<div  class="u-hidden c-slider__control">
+			<div class="c-slider__pagination swiper-pagination" data-js="c-slider-pagination"></div>
+
+			<div class="c-slider__pagination-numeric" data-js="c-slider-pagination-numeric" data-slidecount="1">
+				1/1			</div>
+
+			<div class="c-slider__arrows">
+				<button class="c-slider__button c-slider__button--prev swiper-button-prev"></button>
+				<button class="c-slider__button c-slider__button--next swiper-button-next"></button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+		<div class="s-sink t-sink l-sink l-sink--double">
+			<section  class=" c-block b-icon-grid" >
+	<div  class="l-container">
+
+		
+<div	 class="c-content-block c-content-block--layout-left"	>
+
+	<div class="c-content-block__header">
+					</div>
+
+	
+	
+</div>
+
+		<ul  class="g-4-up g-centered">
+
+							
+<li  class="is-centered-text b-icon-grid__card c-card has-target-link c-card--style-icon post-24" data-js="target-link">
+
+	<div  class="c-card__media">
+		
+<figure	 class="c-card__image c-image--bg c-image"	>
+
+	
+		<i class="fa-classic fa-solid fa-user-check" aria-hidden="true"></i>
+	
+	
+</figure>
+	</div>
+
+	<div  class="c-card__content">
+
+		
+		
+		
+<h3  class="c-card__title" id="p-6a876ee836e3c-title">
+	Check Your Voter Registration and Polling Place</h3>
+
+		
+		
+		<p class="c-card__cta">
+
+<a  class="is-target-link c-card__cta-link" id="p-6a876ee836e3c-link" aria-labelledby="p-6a876ee836e3c-title" aria-describedby="p-6a876ee836e3c-link" data-js="target-link" href="https://voterlookup.elections.ny.gov/" target="_blank" rel="noopener">
+	<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+	</div>
+
+</li>
+							
+<li  class="is-centered-text b-icon-grid__card c-card has-target-link c-card--style-icon post-24" data-js="target-link">
+
+	<div  class="c-card__media">
+		
+<figure	 class="c-card__image c-image--bg c-image"	>
+
+	
+		<i class="fa-classic fa-solid fa-trophy" aria-hidden="true"></i>
+	
+	
+</figure>
+	</div>
+
+	<div  class="c-card__content">
+
+		
+		
+		
+<h3  class="c-card__title" id="p-6a876ee836ea6-title">
+	Election Results</h3>
+
+		
+		
+		<p class="c-card__cta">
+
+<a  class="is-target-link c-card__cta-link" id="p-6a876ee836ea6-link" aria-labelledby="p-6a876ee836ea6-title" aria-describedby="p-6a876ee836ea6-link" data-js="target-link" href="https://ongov.resultscaster.com/feed.aspx?usersessionid=none" target="_blank" rel="noopener">
+	<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+	</div>
+
+</li>
+							
+<li  class="is-centered-text b-icon-grid__card c-card has-target-link c-card--style-icon post-24" data-js="target-link">
+
+	<div  class="c-card__media">
+		
+<figure	 class="c-card__image c-image--bg c-image"	>
+
+	
+		<i class="fa-classic fa-regular fa-address-card" aria-hidden="true"></i>
+	
+	
+</figure>
+	</div>
+
+	<div  class="c-card__content">
+
+		
+		
+		
+<h3  class="c-card__title" id="p-6a876ee836ea9-title">
+	Register to Vote or Update Address/Party</h3>
+
+		
+		
+		<p class="c-card__cta">
+
+<a  class="is-target-link c-card__cta-link" id="p-6a876ee836ea9-link" aria-labelledby="p-6a876ee836ea9-title" aria-describedby="p-6a876ee836ea9-link" data-js="target-link" href="https://www.elections.ny.gov/OnlineVoterReg.html" target="_blank" rel="noopener">
+	<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+	</div>
+
+</li>
+							
+<li  class="is-centered-text b-icon-grid__card c-card has-target-link c-card--style-icon post-24" data-js="target-link">
+
+	<div  class="c-card__media">
+		
+<figure	 class="c-card__image c-image--bg c-image"	>
+
+	
+		<i class="fa-classic fa-solid fa-envelope" aria-hidden="true"></i>
+	
+	
+</figure>
+	</div>
+
+	<div  class="c-card__content">
+
+		
+		
+		
+<h3  class="c-card__title" id="p-6a876ee836eaa-title">
+	Request Your Ballot (Early &amp; Absentee)</h3>
+
+		
+		
+		<p class="c-card__cta">
+
+<a  class="is-target-link c-card__cta-link" id="p-6a876ee836eaa-link" aria-labelledby="p-6a876ee836eaa-title" aria-describedby="p-6a876ee836eaa-link" data-js="target-link" href="https://onondaga.gov/elections/request-a-ballot/" target="_blank" rel="noopener">
+	<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+	</div>
+
+</li>
+							
+<li  class="is-centered-text b-icon-grid__card c-card has-target-link c-card--style-icon post-24" data-js="target-link">
+
+	<div  class="c-card__media">
+		
+<figure	 class="c-card__image c-image--bg c-image"	>
+
+	
+		<i class="fa-classic fa-regular fa-file-lines" aria-hidden="true"></i>
+	
+	
+</figure>
+	</div>
+
+	<div  class="c-card__content">
+
+		
+		
+		
+<h3  class="c-card__title" id="p-6a876ee836eac-title">
+	Sample Ballots</h3>
+
+		
+		
+		<p class="c-card__cta">
+
+<a  class="is-target-link c-card__cta-link" id="p-6a876ee836eac-link" aria-labelledby="p-6a876ee836eac-title" aria-describedby="p-6a876ee836eac-link" data-js="target-link" href="https://onondaga.gov/elections/sample-ballots/" target="_blank" rel="noopener">
+	<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+	</div>
+
+</li>
+							
+<li  class="is-centered-text b-icon-grid__card c-card has-target-link c-card--style-icon post-24" data-js="target-link">
+
+	<div  class="c-card__media">
+		
+<figure	 class="c-card__image c-image--bg c-image"	>
+
+	
+		<i class="fa-classic fa-solid fa-location-pin" aria-hidden="true"></i>
+	
+	
+</figure>
+	</div>
+
+	<div  class="c-card__content">
+
+		
+		
+		
+<h3  class="c-card__title" id="p-6a876ee836ead-title">
+	Early Voting Information</h3>
+
+		
+		
+		<p class="c-card__cta">
+
+<a  class="is-target-link c-card__cta-link" id="p-6a876ee836ead-link" aria-labelledby="p-6a876ee836ead-title" aria-describedby="p-6a876ee836ead-link" data-js="target-link" href="https://onondaga.gov/elections/early-voting/">
+	</a>
+
+</p>
+
+	</div>
+
+</li>
+			
+		</ul>
+
+	</div>
+</section>
+
+
+
+
+<section  class=" c-block b-accordion c-block--layout-inline c-block--vertical-padding c-block--has-background">
+	<div  class="b-accordion__container l-container">
+
+		
+<header	 class="c-block__content-block c-block__header b-accordion__header c-content-block c-content-block--layout-left"	>
+
+	<div class="c-content-block__header">
+				
+<h2  class="c-block__title b-accordion__title h2 c-content-block__title" >
+	Upcoming Elections</h2>
+	</div>
+
+	<div class="c-block__description b-accordion__description s-sink c-content-block__content t-sink">
+<p>Interested in becoming an Election Inspector?</p>
+</div>
+
+	<p class="c-content-block__cta">
+
+<a  class="c-block__cta-link a-cta c-content-block__cta-link" href="https://onondaga.gov/elections/election-inspectors/" target="_blank" rel="noopener">
+	Click here<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+</header>
+
+		<div  class="b-accordion__content">
+			<div  class="c-accordion"	data-js="c-accordion">
+		<article  class="c-accordion__row">
+		<h3>
+		<button  class="c-accordion__header h5"			aria-controls="accordion-content-6a876ee837e47" id="accordion-header-6a876ee837e48" aria-expanded="false">
+					<span  class="c-accordion__header-container">
+						Various Village Elections: Wednesday, March 18, 2026					</span>
+		</button>
+		</h3>
+		<div  class="c-accordion__content"			id="accordion-content-6a876ee837e47" aria-labelledby="accordion-header-6a876ee837e48" hidden="true" aria-hidden="true">
+			<div  class="c-accordion__content-container s-sink"				data-depth="0" data-autop="true">
+				<ul>
+<li><a href="https://onondaga.gov/elections/wp-content/uploads/sites/191/2026/03/March-2026-CANDIDATES-LIST.pdf" target="_blank" rel="noopener">Click here for a list of villages</a></li>
+</ul>
+			</div>
+		</div>
+		</article>
+		<article  class="c-accordion__row">
+		<h3>
+		<button  class="c-accordion__header h5"			aria-controls="accordion-content-6a876ee837e49" id="accordion-header-6a876ee837e4a" aria-expanded="false">
+					<span  class="c-accordion__header-container">
+						Various Village Elections: June 16, 2026					</span>
+		</button>
+		</h3>
+		<div  class="c-accordion__content"			id="accordion-content-6a876ee837e49" aria-labelledby="accordion-header-6a876ee837e4a" hidden="true" aria-hidden="true">
+			<div  class="c-accordion__content-container s-sink"				data-depth="0" data-autop="true">
+				<p>Click here for a list of villages (TBD)</p>
+<ul>
+<li>Polls are open: 12pm-9pm</li>
+</ul>
+			</div>
+		</div>
+		</article>
+		<article  class="c-accordion__row">
+		<h3>
+		<button  class="c-accordion__header h5"			aria-controls="accordion-content-6a876ee837e4b" id="accordion-header-6a876ee837e4c" aria-expanded="false">
+					<span  class="c-accordion__header-container">
+						Primary Election: Tuesday, June 23, 2026					</span>
+		</button>
+		</h3>
+		<div  class="c-accordion__content"			id="accordion-content-6a876ee837e4b" aria-labelledby="accordion-header-6a876ee837e4c" hidden="true" aria-hidden="true">
+			<div  class="c-accordion__content-container s-sink"				data-depth="0" data-autop="true">
+				<p><span style="font-weight: 400">Polls Are Open: </span><span style="font-weight: 400">6:00am- 9:00pm<br />
+</span>Early Voting: June 13, 2026 &#8211; June 21, 2026</p>
+			</div>
+		</div>
+		</article>
+		<article  class="c-accordion__row">
+		<h3>
+		<button  class="c-accordion__header h5"			aria-controls="accordion-content-6a876ee837e4d" id="accordion-header-6a876ee837e4e" aria-expanded="false">
+					<span  class="c-accordion__header-container">
+						General Election: Tuesday, November 3, 2026					</span>
+		</button>
+		</h3>
+		<div  class="c-accordion__content"			id="accordion-content-6a876ee837e4d" aria-labelledby="accordion-header-6a876ee837e4e" hidden="true" aria-hidden="true">
+			<div  class="c-accordion__content-container s-sink"				data-depth="0" data-autop="true">
+				<p><span style="font-weight: 400">Polls Are Open: </span><span style="font-weight: 400">6:00am- 9:00pm<br />
+</span>Early Voting: October 24, 2026 &#8211; November 1, 2026</p>
+			</div>
+		</div>
+		</article>
+	</div>
+		</div>
+
+	</div>
+</section>
+
+
+
+<section  class=" c-block b-content-columns b-content-columns--count-4" >
+	<div  class="l-container b-content-columns__container">
+
+		
+<header	 class="c-block__content-block c-block__header b-content-columns__header c-content-block c-content-block--layout-split"	>
+
+	<div class="c-content-block__header">
+				
+<h2  class="c-block__title b-content-columns__title h2 c-content-block__title" >
+	Voter Resources</h2>
+	</div>
+
+	
+	
+</header>
+
+		<div  class="b-content-columns__content g-centered g-4-up">
+
+							<div  class="b-content-columns__column">
+					
+<div	 class="c-content-block c-content-block--layout-left"	>
+
+	<div class="c-content-block__header">
+				
+<h3  class="t-display-x-small c-content-block__title" >
+	Request Registration Forms</h3>
+	</div>
+
+	<div class="c-content-block__content t-sink s-sink">
+<p>Voter Registration forms are available from:<br />
+• U.S. Post Offices<br />
+• Public Libraries<br />
+• Village/Town Clerk Offices</p>
+<p>To request registration forms by mail, please call our office at (315) 435-8683.</p>
+</div>
+
+	<p class="c-content-block__cta">
+
+<a  class="a-cta c-content-block__cta-link" href="https://elections.ny.gov/voter-registration-process" target="_blank" rel="noopener">
+	Register now<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+</div>
+				</div>
+							<div  class="b-content-columns__column">
+					
+<div	 class="c-content-block c-content-block--layout-left"	>
+
+	<div class="c-content-block__header">
+				
+<h3  class="t-display-x-small c-content-block__title" >
+	Register Online </h3>
+	</div>
+
+	<div class="c-content-block__content t-sink s-sink">
+<p>Register online at the MYDMV website.</p>
+</div>
+
+	<p class="c-content-block__cta">
+
+<a  class="a-cta c-content-block__cta-link" href="http://dmv.ny.gov/" target="_blank" rel="noopener">
+	Register here<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+</div>
+				</div>
+							<div  class="b-content-columns__column">
+					
+<div	 class="c-content-block c-content-block--layout-left"	>
+
+	<div class="c-content-block__header">
+				
+<h3  class="t-display-x-small c-content-block__title" >
+	Download PDF</h3>
+	</div>
+
+	<div class="c-content-block__content t-sink s-sink">
+<p>You may also Download a PDF copy of a Registration Form and submit it at the Board of Elections Office or by mail:</p>
+</div>
+
+	<p class="c-content-block__cta">
+
+<a  class="a-cta c-content-block__cta-link" href="https://elections.ny.gov/voter-registration-process#registration-forms" target="_blank" rel="noopener">
+	Download form<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+</div>
+				</div>
+							<div  class="b-content-columns__column">
+					
+<div	 class="c-content-block c-content-block--layout-left"	>
+
+	<div class="c-content-block__header">
+				
+<h3  class="t-display-x-small c-content-block__title" >
+	Accessible Forms</h3>
+	</div>
+
+	<div class="c-content-block__content t-sink s-sink">
+<p>The Accessible version of the New York State Voter Registration Form is available at the link below. Complete the form by typing the necessary information and selecting the appropriate boxes, then saving the completed form to your device.</p>
+<p>Once the form is completed, you need to print the form and sign and date it. Then, mail or deliver to our office.</p>
+</div>
+
+	<p class="c-content-block__cta">
+
+<a  class="a-cta c-content-block__cta-link" href="https://elections.ny.gov/accessible-voting" target="_blank" rel="noopener">
+	Download and complete form<span class="u-visually-hidden">Opens new window</span></a>
+
+</p>
+
+</div>
+				</div>
+			
+		</div>
+
+	</div>
+</section>
+
+
+
+<p></p>
+		</div>
+
+	</main>
+
+
+		
+<footer class="c-site-footer">
+
+	<div class="c-site-footer__row c-site-footer__nav-wrapper">
+		
+<nav  class="c-site-footer__nav--primary c-site-footer__nav" aria-label="Footer Primary Navigation">
+
+	<ul  class="c-site-footer__nav-list">
+		<li class="footer_primary__list-item footer_primary__list-item--depth-0"><a href="https://onondaga.gov/departments/" class="footer_primary__action footer_primary__action--depth-0">Departments Directory</a></li>
+<li class="footer_primary__list-item footer_primary__list-item--depth-0"><a href="https://onondaga.gov/directions/" class="footer_primary__action footer_primary__action--depth-0">Directions</a></li>
+	</ul>
+
+</nav>
+	</div>
+
+	<div class="c-site-footer__row c-site-footer__info-wrapper">
+		<div class="c-site-footer__info">
+
+			<div class="c-footer-profile">
+				
+<figure	 class="c-footer-profile__image c-image"	>
+
+	
+		<img  class="c-image__image" alt="" src="https://onondaga.gov/elections/wp-content/uploads/2022/10/RyanMcMahon150x156-150x150.png" sizes="(min-width: 1260px) 1260px, 100vw" srcset="" />
+	
+	
+</figure>
+
+				<div class="c-footer-profile__info">
+					
+<p  class="c-footer-profile__name t-display-x-small" >
+	J.Ryan McMahon, II</p>
+					
+<p  class="c-footer-profile__title t-label" >
+	County Executive</p>
+				</div>
+			</div>
+
+			<div class="c-site-footer__divider-image">
+				
+<figure	 class="c-image"	0="aria-hidden">
+
+	
+		<img  class="c-image__image" alt="" src="https://onondaga.gov/elections/wp-content/uploads/2023/02/lt-blue_seal200x200v2-1-150x150.png" sizes="(min-width: 1260px) 1260px, 100vw" srcset="" />
+	
+	
+</figure>
+			</div>
+
+			
+<div class="social-follow">
+
+	<ul class="social-follow__list">
+					<li class="social-follow__item social-follow__item--facebook">
+				<a href="https://www.facebook.com/OnondagaCounty/" class="social-follow__anchor" rel="me noopener"
+				   title="Like us on Facebook" target="_blank">
+					<i class="icon icon-facebook"></i>
+					<span class="u-visually-hidden">Like us on Facebook</span>
+				</a>
+			</li>
+					<li class="social-follow__item social-follow__item--twitter">
+				<a href="https://twitter.com/OnondagaCounty" class="social-follow__anchor" rel="me noopener"
+				   title="Follow us on Twitter" target="_blank">
+					<i class="icon icon-twitter"></i>
+					<span class="u-visually-hidden">Follow us on Twitter</span>
+				</a>
+			</li>
+					<li class="social-follow__item social-follow__item--youtube">
+				<a href="https://www.youtube.com/channel/UCzYjCdBCKjulv56AdYh18UA/" class="social-follow__anchor" rel="me noopener"
+				   title="Follow us on YouTube" target="_blank">
+					<i class="icon icon-youtube"></i>
+					<span class="u-visually-hidden">Follow us on YouTube</span>
+				</a>
+			</li>
+					<li class="social-follow__item social-follow__item--linkedin">
+				<a href="https://www.linkedin.com/company/onondaga-county/" class="social-follow__anchor" rel="me noopener"
+				   title="Add us on LinkedIn" target="_blank">
+					<i class="icon icon-linkedin"></i>
+					<span class="u-visually-hidden">Add us on LinkedIn</span>
+				</a>
+			</li>
+			</ul>
+
+</div>
+		</div>
+	</div>
+
+	<div class="c-site-footer__row c-site-footer__nav-wrapper">
+		
+<nav  class="c-site-footer__nav--secondary c-site-footer__nav" aria-label="Footer Secondary Navigation">
+
+	<ul  class="c-site-footer__nav-list">
+		<li class="footer_secondary__list-item footer_secondary__list-item--depth-0"><a target="_blank" href="https://onondaga.gov/wp-content/uploads/2023/02/TitleVI.ADA_.LEP_.Plan_.pdf" class="footer_secondary__action footer_secondary__action--depth-0">Non-Discrimination Policy</a></li>
+<li class="footer_secondary__list-item footer_secondary__list-item--depth-0"><a href="https://onondaga.gov/privacy/" class="footer_secondary__action footer_secondary__action--depth-0">Privacy Policy</a></li>
+<li class="footer_secondary__list-item footer_secondary__list-item--depth-0"><a href="https://onondaga.gov/humanrights/titlevi/" class="footer_secondary__action footer_secondary__action--depth-0">Complaint Process</a></li>
+<li class="footer_secondary__list-item footer_secondary__list-item--depth-0"><a href="https://onondaga.gov/humanrights/langaccessadatitlevihowto/" class="footer_secondary__action footer_secondary__action--depth-0">Language or Disability Assistance</a></li>
+	</ul>
+
+</nav>
+
+		<p class="c-site-footer__copyright t-overline">
+			<span class="c-site-footer__copyright-l1">
+				&copy; 2001-2026 Onondaga County, New York			</span>
+			<span class="c-site-footer__copyright-l2">
+				All Rights Reserved.			</span>
+		</p>
+	</div>
+
+			<div class="c-site-footer__row c-site-footer__bottom-message-wrapper">
+			<div class="c-site-footer__bottom-message">
+			
+<p  >
+	V2.0K</p>
+			</div>
+		</div>
+	
+</footer>
+
+	</div><!-- .l-wrapper -->
+
+	<div id="flags" style="display:none" class="size18"><ul id="sortable" class="ui-sortable"><li id="Afrikaans"><a href="#" title="Afrikaans" class="nturl notranslate af flag Afrikaans"></a></li><li id="Albanian"><a href="#" title="Albanian" class="nturl notranslate sq flag Albanian"></a></li><li id="Amharic"><a href="#" title="Amharic" class="nturl notranslate am flag Amharic"></a></li><li id="Arabic"><a href="#" title="Arabic" class="nturl notranslate ar flag Arabic"></a></li><li id="Armenian"><a href="#" title="Armenian" class="nturl notranslate hy flag Armenian"></a></li><li id="Azerbaijani"><a href="#" title="Azerbaijani" class="nturl notranslate az flag Azerbaijani"></a></li><li id="Basque"><a href="#" title="Basque" class="nturl notranslate eu flag Basque"></a></li><li id="Belarusian"><a href="#" title="Belarusian" class="nturl notranslate be flag Belarusian"></a></li><li id="Bengali"><a href="#" title="Bengali" class="nturl notranslate bn flag Bengali"></a></li><li id="Bosnian"><a href="#" title="Bosnian" class="nturl notranslate bs flag Bosnian"></a></li><li id="Bulgarian"><a href="#" title="Bulgarian" class="nturl notranslate bg flag Bulgarian"></a></li><li id="Catalan"><a href="#" title="Catalan" class="nturl notranslate ca flag Catalan"></a></li><li id="Cebuano"><a href="#" title="Cebuano" class="nturl notranslate ceb flag Cebuano"></a></li><li id="Chichewa"><a href="#" title="Chichewa" class="nturl notranslate ny flag Chichewa"></a></li><li id="Chinese (Simplified)"><a href="#" title="Chinese (Simplified)" class="nturl notranslate zh-CN flag Chinese (Simplified)"></a></li><li id="Chinese (Traditional)"><a href="#" title="Chinese (Traditional)" class="nturl notranslate zh-TW flag Chinese (Traditional)"></a></li><li id="Corsican"><a href="#" title="Corsican" class="nturl notranslate co flag Corsican"></a></li><li id="Croatian"><a href="#" title="Croatian" class="nturl notranslate hr flag Croatian"></a></li><li id="Czech"><a href="#" title="Czech" class="nturl notranslate cs flag Czech"></a></li><li id="Danish"><a href="#" title="Danish" class="nturl notranslate da flag Danish"></a></li><li id="Dutch"><a href="#" title="Dutch" class="nturl notranslate nl flag Dutch"></a></li><li id="English"><a href="#" title="English" class="nturl notranslate en flag united-states"></a></li><li id="Esperanto"><a href="#" title="Esperanto" class="nturl notranslate eo flag Esperanto"></a></li><li id="Estonian"><a href="#" title="Estonian" class="nturl notranslate et flag Estonian"></a></li><li id="Filipino"><a href="#" title="Filipino" class="nturl notranslate tl flag Filipino"></a></li><li id="Finnish"><a href="#" title="Finnish" class="nturl notranslate fi flag Finnish"></a></li><li id="French"><a href="#" title="French" class="nturl notranslate fr flag French"></a></li><li id="Frisian"><a href="#" title="Frisian" class="nturl notranslate fy flag Frisian"></a></li><li id="Galician"><a href="#" title="Galician" class="nturl notranslate gl flag Galician"></a></li><li id="Georgian"><a href="#" title="Georgian" class="nturl notranslate ka flag Georgian"></a></li><li id="German"><a href="#" title="German" class="nturl notranslate de flag German"></a></li><li id="Greek"><a href="#" title="Greek" class="nturl notranslate el flag Greek"></a></li><li id="Gujarati"><a href="#" title="Gujarati" class="nturl notranslate gu flag Gujarati"></a></li><li id="Haitian"><a href="#" title="Haitian" class="nturl notranslate ht flag Haitian"></a></li><li id="Hausa"><a href="#" title="Hausa" class="nturl notranslate ha flag Hausa"></a></li><li id="Hawaiian"><a href="#" title="Hawaiian" class="nturl notranslate haw flag Hawaiian"></a></li><li id="Hebrew"><a href="#" title="Hebrew" class="nturl notranslate iw flag Hebrew"></a></li><li id="Hindi"><a href="#" title="Hindi" class="nturl notranslate hi flag Hindi"></a></li><li id="Hmong"><a href="#" title="Hmong" class="nturl notranslate hmn flag Hmong"></a></li><li id="Hungarian"><a href="#" title="Hungarian" class="nturl notranslate hu flag Hungarian"></a></li><li id="Icelandic"><a href="#" title="Icelandic" class="nturl notranslate is flag Icelandic"></a></li><li id="Igbo"><a href="#" title="Igbo" class="nturl notranslate ig flag Igbo"></a></li><li id="Indonesian"><a href="#" title="Indonesian" class="nturl notranslate id flag Indonesian"></a></li><li id="Irish"><a href="#" title="Irish" class="nturl notranslate ga flag Irish"></a></li><li id="Italian"><a href="#" title="Italian" class="nturl notranslate it flag Italian"></a></li><li id="Japanese"><a href="#" title="Japanese" class="nturl notranslate ja flag Japanese"></a></li><li id="Javanese"><a href="#" title="Javanese" class="nturl notranslate jw flag Javanese"></a></li><li id="Kannada"><a href="#" title="Kannada" class="nturl notranslate kn flag Kannada"></a></li><li id="Kazakh"><a href="#" title="Kazakh" class="nturl notranslate kk flag Kazakh"></a></li><li id="Khmer"><a href="#" title="Khmer" class="nturl notranslate km flag Khmer"></a></li><li id="Korean"><a href="#" title="Korean" class="nturl notranslate ko flag Korean"></a></li><li id="Kurdish"><a href="#" title="Kurdish" class="nturl notranslate ku flag Kurdish"></a></li><li id="Kyrgyz"><a href="#" title="Kyrgyz" class="nturl notranslate ky flag Kyrgyz"></a></li><li id="Lao"><a href="#" title="Lao" class="nturl notranslate lo flag Lao"></a></li><li id="Latin"><a href="#" title="Latin" class="nturl notranslate la flag Latin"></a></li><li id="Latvian"><a href="#" title="Latvian" class="nturl notranslate lv flag Latvian"></a></li><li id="Lithuanian"><a href="#" title="Lithuanian" class="nturl notranslate lt flag Lithuanian"></a></li><li id="Luxembourgish"><a href="#" title="Luxembourgish" class="nturl notranslate lb flag Luxembourgish"></a></li><li id="Macedonian"><a href="#" title="Macedonian" class="nturl notranslate mk flag Macedonian"></a></li><li id="Malagasy"><a href="#" title="Malagasy" class="nturl notranslate mg flag Malagasy"></a></li><li id="Malayalam"><a href="#" title="Malayalam" class="nturl notranslate ml flag Malayalam"></a></li><li id="Malay"><a href="#" title="Malay" class="nturl notranslate ms flag Malay"></a></li><li id="Maltese"><a href="#" title="Maltese" class="nturl notranslate mt flag Maltese"></a></li><li id="Maori"><a href="#" title="Maori" class="nturl notranslate mi flag Maori"></a></li><li id="Marathi"><a href="#" title="Marathi" class="nturl notranslate mr flag Marathi"></a></li><li id="Mongolian"><a href="#" title="Mongolian" class="nturl notranslate mn flag Mongolian"></a></li><li id="Myanmar (Burmese)"><a href="#" title="Myanmar (Burmese)" class="nturl notranslate my flag Myanmar (Burmese)"></a></li><li id="Nepali"><a href="#" title="Nepali" class="nturl notranslate ne flag Nepali"></a></li><li id="Norwegian"><a href="#" title="Norwegian" class="nturl notranslate no flag Norwegian"></a></li><li id="Pashto"><a href="#" title="Pashto" class="nturl notranslate ps flag Pashto"></a></li><li id="Persian"><a href="#" title="Persian" class="nturl notranslate fa flag Persian"></a></li><li id="Polish"><a href="#" title="Polish" class="nturl notranslate pl flag Polish"></a></li><li id="Portuguese"><a href="#" title="Portuguese" class="nturl notranslate pt flag Portuguese"></a></li><li id="Punjabi"><a href="#" title="Punjabi" class="nturl notranslate pa flag Punjabi"></a></li><li id="Romanian"><a href="#" title="Romanian" class="nturl notranslate ro flag Romanian"></a></li><li id="Russian"><a href="#" title="Russian" class="nturl notranslate ru flag Russian"></a></li><li id="Serbian"><a href="#" title="Serbian" class="nturl notranslate sr flag Serbian"></a></li><li id="Shona"><a href="#" title="Shona" class="nturl notranslate sn flag Shona"></a></li><li id="Sesotho"><a href="#" title="Sesotho" class="nturl notranslate st flag Sesotho"></a></li><li id="Sindhi"><a href="#" title="Sindhi" class="nturl notranslate sd flag Sindhi"></a></li><li id="Sinhala"><a href="#" title="Sinhala" class="nturl notranslate si flag Sinhala"></a></li><li id="Slovak"><a href="#" title="Slovak" class="nturl notranslate sk flag Slovak"></a></li><li id="Slovenian"><a href="#" title="Slovenian" class="nturl notranslate sl flag Slovenian"></a></li><li id="Samoan"><a href="#" title="Samoan" class="nturl notranslate sm flag Samoan"></a></li><li id="Scots Gaelic"><a href="#" title="Scots Gaelic" class="nturl notranslate gd flag Scots Gaelic"></a></li><li id="Somali"><a href="#" title="Somali" class="nturl notranslate so flag Somali"></a></li><li id="Spanish"><a href="#" title="Spanish" class="nturl notranslate es flag Spanish"></a></li><li id="Sundanese"><a href="#" title="Sundanese" class="nturl notranslate su flag Sundanese"></a></li><li id="Swahili"><a href="#" title="Swahili" class="nturl notranslate sw flag Swahili"></a></li><li id="Swedish"><a href="#" title="Swedish" class="nturl notranslate sv flag Swedish"></a></li><li id="Tajik"><a href="#" title="Tajik" class="nturl notranslate tg flag Tajik"></a></li><li id="Tamil"><a href="#" title="Tamil" class="nturl notranslate ta flag Tamil"></a></li><li id="Telugu"><a href="#" title="Telugu" class="nturl notranslate te flag Telugu"></a></li><li id="Thai"><a href="#" title="Thai" class="nturl notranslate th flag Thai"></a></li><li id="Turkish"><a href="#" title="Turkish" class="nturl notranslate tr flag Turkish"></a></li><li id="Ukrainian"><a href="#" title="Ukrainian" class="nturl notranslate uk flag Ukrainian"></a></li><li id="Urdu"><a href="#" title="Urdu" class="nturl notranslate ur flag Urdu"></a></li><li id="Uzbek"><a href="#" title="Uzbek" class="nturl notranslate uz flag Uzbek"></a></li><li id="Vietnamese"><a href="#" title="Vietnamese" class="nturl notranslate vi flag Vietnamese"></a></li><li id="Welsh"><a href="#" title="Welsh" class="nturl notranslate cy flag Welsh"></a></li><li id="Xhosa"><a href="#" title="Xhosa" class="nturl notranslate xh flag Xhosa"></a></li><li id="Yiddish"><a href="#" title="Yiddish" class="nturl notranslate yi flag Yiddish"></a></li><li id="Yoruba"><a href="#" title="Yoruba" class="nturl notranslate yo flag Yoruba"></a></li><li id="Zulu"><a href="#" title="Zulu" class="nturl notranslate zu flag Zulu"></a></li></ul></div><div id='glt-footer'></div><script>function GoogleLanguageTranslatorInit() { new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages:'af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,tl,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,iw,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ml,ms,mt,mi,mr,mn,my,ne,no,ps,fa,pl,pt,pa,ro,ru,sr,sn,st,sd,si,sk,sl,sm,gd,so,es,su,sw,sv,tg,ta,te,th,tr,uk,ur,uz,vi,cy,xh,yi,yo,zu', autoDisplay: false}, 'google_language_translator');}</script>		<script>window.Promise ||
+			document.write('<script src="https://onondaga.gov/elections/wp-content/themes/core/assets/js/vendor/es6-promise.auto.js"><\/script>');
+		</script>
+				<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script src="https://onondaga.gov/elections/wp-content/themes/core/assets/js/vendor/jquery.min.js?ver=3.4.1" id="jquery-core-js"></script>
+<script src="https://onondaga.gov/elections/wp-content/plugins/google-language-translator/js/scripts.js?ver=6.0.20" id="scripts-js"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=GoogleLanguageTranslatorInit" id="scripts-google-js"></script>
+<script src="https://onondaga.gov/elections/wp-content/themes/core/assets/js/dist/theme/vendor.min.js?ver=557b1c451a6dae10152f4b68e7e8b860" id="tribe-scripts-vendor-js"></script>
+<script id="tribe-scripts-scripts-js-extra">
+var modern_tribe_i18n = {"help_text":{"msg_limit":"There is a limit to the messages you can post."},"tooltips":{"add_to_save":"Add Photo to Saved Items","in_this_photo":"Products in this photo"}};
+var modern_tribe_config = {"images_url":"https:\/\/onondaga.gov\/elections\/wp-content\/themes\/core\/assets\/img\/theme","template_url":"https:\/\/onondaga.gov\/elections\/wp-content\/themes\/core\/","script_debug":"","hmr_dev":"","block_theme_service_worker":""};
+</script>
+<script src="https://onondaga.gov/elections/wp-content/themes/core/assets/js/dist/theme/scripts.min.js?ver=d01806b879aab03809acaeebbd46a6d6" id="tribe-scripts-scripts-js"></script>
+
+</body>
+</html>

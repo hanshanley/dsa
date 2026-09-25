@@ -1,0 +1,62 @@
+{
+  "review_method": "assistant_source_review_not_independent_human_gold",
+  "identity_basis": "canonical_registry_and_cached_source_association",
+  "created_at": "2026-09-23",
+  "created_at_precision": "date_only",
+  "race_id": "race-c5296c20ca06b0713b08",
+  "sources": [],
+  "excerpts": [],
+  "comparisons": [],
+  "unsuccessful_sources": [
+    {
+      "race_id": "race-c5296c20ca06b0713b08",
+      "candidate": "Alfonso Lopez",
+      "role": "opponent",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    },
+    {
+      "race_id": "race-c5296c20ca06b0713b08",
+      "candidate": "Karishma Mehta",
+      "role": "endorsed",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "notes": "Retained routes were checked for candidate attribution, office/cycle fit, substantive content, and temporal provenance; no publishable statement survived all checks."
+    }
+  ],
+  "source_attempts": [
+    {
+      "race_id": "race-c5296c20ca06b0713b08",
+      "candidate": "Alfonso Lopez",
+      "url": "https://historical.elections.virginia.gov/elections/view/147532",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": ""
+    },
+    {
+      "race_id": "race-c5296c20ca06b0713b08",
+      "candidate": "Karishma Mehta",
+      "url": "https://www.arlnow.com/2021/06/04/karishma-mehta-why-you-should-vote-for-me",
+      "outcome": "retained_candidate_routes_reviewed_no_usable_attributable_temporally_valid_statement",
+      "raw_path": "data/raw/candidate_documents/38714fad48382d773873721f/962bccf256e5478adc63647f9107eb5b2b867297cb5b292d7316d35590549446.html"
+    }
+  ],
+  "case_disposition": {
+    "race_id": "race-c5296c20ca06b0713b08",
+    "election_date": "2021-06-08",
+    "status": "reviewed_no_usable_candidate_words",
+    "candidates": [
+      {
+        "candidate_name": "Alfonso Lopez",
+        "role": "opponent",
+        "status": "source_gap_after_candidate_specific_routes"
+      },
+      {
+        "candidate_name": "Karishma Mehta",
+        "role": "endorsed",
+        "status": "source_gap_after_candidate_specific_routes"
+      }
+    ],
+    "source_count": 0,
+    "excerpt_count": 0,
+    "comparison_count": 0
+  }
+}

@@ -381,7 +381,7 @@ class TextAnalysisTests(unittest.TestCase):
                         }
                     )
             metadata_fields = [
-                "document_id", "election_date", "source_url", "archive_url", "final_url",
+                "document_id", "race_id", "election_date", "source_url", "archive_url", "final_url",
                 "publication_date", "text_sha256",
             ]
             with metadata_path.open("w", newline="", encoding="utf-8") as handle:
@@ -391,6 +391,7 @@ class TextAnalysisTests(unittest.TestCase):
                     writer.writerow(
                         {
                             "document_id": document_id,
+                            "race_id": document_id.replace("doc-", "race-", 1),
                             "election_date": "2016-02-09",
                             "source_url": "https://example.org/platform",
                             "text_sha256": "document-hash",
@@ -401,6 +402,14 @@ class TextAnalysisTests(unittest.TestCase):
                 patch("dsa_analysis.text_analysis.CANDIDATE_METADATA_PATH", metadata_path),
                 patch("dsa_analysis.text_analysis.CORPUS_PATH", output_path),
             ):
+                registry_path = metadata_path.with_name("race_registry.csv")
+                with registry_path.open("w", newline="", encoding="utf-8") as handle:
+                    writer = csv.DictWriter(handle, fieldnames=["race_id", "scope_kind"])
+                    writer.writeheader()
+                    for race_id in ("race-nh", "race-ia"):
+                        writer.writerow({
+                            "race_id": race_id, "scope_kind": "tracked_dsa_endorsed_democratic_primary",
+                        })
                 documents, segments = _candidate_segment_corpus()
             self.assertEqual(len(documents), 1)
             self.assertEqual(len(segments), 1)
@@ -418,7 +427,9 @@ class TextAnalysisTests(unittest.TestCase):
             self.assertGreater(stats["candidate_documents"], 0)
             self.assertGreater(stats["candidate_segments"], 0)
             self.assertGreater(stats["official_segments"], 0)
-            self.assertGreater(stats["sticking_points"], 0)
+            self.assertGreater(stats["stored_sticking_points"], 0)
+            if stats["sticking_points_input_status"] == "legacy_snapshot_not_revalidated":
+                self.assertEqual(stats["sticking_points"], 0)
             self.assertEqual(stats["figure_count"], 10)
             self.assertEqual(stats["generated_figure_count"], 9)
             self.assertTrue((FIGURE_DIR / "policy_language_difference.svg").exists())
