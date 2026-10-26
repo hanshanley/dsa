@@ -358,6 +358,8 @@ def prepare_corpus(
                         "sha256",
                     )
                 }
+                if saved.get("requested_url"):
+                    meta["requested_url"] = saved["requested_url"]
             else:
                 data = capture_path.read_bytes()
                 meta = json.loads(meta_path.read_text())

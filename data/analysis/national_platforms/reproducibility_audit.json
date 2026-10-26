@@ -29,10 +29,16 @@
     }
   },
   "offline_reproduction": {
-    "status": "pending"
+    "HF_HUB_OFFLINE": true,
+    "byte_identical_csv_jsonl_tables": 22,
+    "embedding_cache_reused": true,
+    "raw_captures_available": false,
+    "socket_connections_permitted": false,
+    "source_extraction_permitted": false,
+    "source_fetch_permitted": false
   },
   "ruff_check": "passed for both national modules and the changed corpus tests",
-  "status": "pending_offline_revalidation_after_historical_recovery",
+  "status": "passed",
   "table_sha256": {
     "complete_sources.csv": "d8279847104b47b526613a568a649f2492163d611e828b6341daffedc09f04ed",
     "complete_sources.jsonl": "c2d1d63b69b7d7a6bdb70bfd4c9d1a4907c35598451fc07fa4e35ca2c347d8bb",

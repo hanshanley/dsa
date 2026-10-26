@@ -270,8 +270,16 @@ class NationalCorpusTests(unittest.TestCase):
                     "</p></article>"
                 ),
             )
+            metadata_path = raw / f"{row['document_id']}.json"
+            metadata = json.loads(metadata_path.read_text())
+            metadata["requested_url"] = "https://web.archive.org/web/20241231/https://example.org/"
+            write_json(metadata_path, metadata)
             output = raw / "out"
             original, _ = prepare_corpus([row], Tokenizer(), raw=raw, output=output)
+            exports = {
+                name: (output / name).read_bytes()
+                for name in ("complete_sources.csv", "complete_sources.jsonl")
+            }
             with patch(
                 "dsa_analysis.national_platforms.extract_document_text",
                 side_effect=AssertionError("Raw extractor must not run"),
@@ -284,3 +292,5 @@ class NationalCorpusTests(unittest.TestCase):
                 )
             self.assertEqual(original, offline)
             self.assertEqual(coverage[0]["status"], "sparse_bundle")
+            for name, content in exports.items():
+                self.assertEqual((output / name).read_bytes(), content)
