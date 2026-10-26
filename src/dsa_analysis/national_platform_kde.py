@@ -790,6 +790,9 @@ def write_report(
             "Empty years in `year_coverage.csv` mean no recovered publication in this "
             "inventory, not that an organization had no platform or position. The GOP 2020 "
             "reuse record contributes no second independent copy of its 2016 text. "
+            "The DSA 2025 R34 decision likewise retains the 2024 program until replacement "
+            "without adding a second independent text; the adopted resolution and vote "
+            "are retained in the full-text resolution inventory. "
             "Every currently exposed official statement-catalog entry from December 2012 "
             "through December 2020 was screened, with full included and excluded text "
             "preserved. This does not recover deleted pages or establish exhaustive coverage "
@@ -829,7 +832,11 @@ def write_report(
             "`complete_sources.csv` and `.jsonl` (complete extracted and scoped texts), "
             "`passages.csv` (full model passages, not metadata alone), `coverage.csv`, "
             "`year_coverage.csv`, `historical_statement_inventory.csv` and `.jsonl` "
-            "(complete text and screening reasons for every catalog entry), and the "
+            "(complete text and screening reasons for every catalog entry), "
+            "`historical_resolution_inventory.csv` and `.jsonl` (original convention "
+            "documents and adoption evidence, including complete 2025 results with "
+            "R34 separately scoped), `historical_strategy_inventory.csv` and `.jsonl` "
+            "(all strategy-catalog texts and screening decisions), and the "
             "expanded/strict analysis tables. Sources retain "
             "their original attribution and rights; institutional reproductions are labeled "
             "as such rather than represented as party-hosted originals.",
@@ -846,12 +853,19 @@ def write_report(
             "## Historical DSA recovery",
             "",
             "Recovered national resolutions include the 2001 priorities and war/terrorism "
-            "texts, the 2004 NPC resolution, the 2005 priorities, the November 2007 Economic "
-            "Justice Agenda, the 2009 priorities, the complete 2013 priorities, and the 2017 "
-            "priorities. The 2011 priorities and 2016 strategy publications explicitly identify "
-            "themselves as summaries; their full underlying resolutions are not claimed "
-            "recovered. Magazine issues remain complete in source downloads, while model "
-            "scopes remove other authors' articles, contents, captions, fundraising and "
+            "texts, the complete 2003 priorities and accompanying policy resolutions, the "
+            "2004 NPC resolution, the 2005 priorities, the November 2007 Economic Justice "
+            "Agenda, the 2009 priorities, the full ten-page 2011 priorities and accompanying "
+            "adopted resolutions, the complete 2013 and 2015 priorities, and the 2017 "
+            "priorities. The 2011 full original replaces its magazine summary in model "
+            "input; the summary remains in the full-text resolution inventory. The official "
+            "Social and Economic Bill of Rights, identified as DSA's 2010 document in the "
+            "adopted 2011 priorities, is recovered from its December 2012 republication. "
+            "Its bundle follows republication because the original adoption date is not "
+            "established. The 2016 strategy remains an explicitly labeled summary, not the "
+            "unrecovered longer 2015 strategy. Complete original pages, PDFs and magazine "
+            "issues remain downloadable, while model scopes remove other authors' articles, "
+            "contents, repeated summaries, fundraising, internal administration and "
             "candidate-specific sections. Early scan OCR and print hyphenation are retained "
             "and can affect the semantic analysis.",
             "",
@@ -886,16 +900,29 @@ def write_report(
         recovery_lines.extend(
             [
                 "",
+                "The additional full-text recovery inventories screen all five linked 2003 "
+                "resolution pages, recover all four visibly listed adopted 2011 resolutions "
+                "(including the already modeled LGBTQ resolution, not counted twice), "
+                "and retain every entry in the 14-record strategy catalog. The pre-2000 "
+                "*Where We Stand* text is preserved as applicability context, not mislabeled "
+                "as a new post-2000 platform. Other background essays are not promoted "
+                "to adopted organizational policy merely because DSA hosts them.",
+                "",
                 "Bundles follow verified adoption periods where available and otherwise "
                 "publication; December 2012 migration/republication dates are not original "
                 "adoption dates. All six fallback period bundles meet the unchanged "
                 "ten-passage gate, but this does not establish annual or comprehensive "
-                "platform coverage. The 2000 editorial remains unverified, the 2003 "
-                "priorities and full 2011/2015 underlying texts remain unrecovered, and no "
-                "separate final 2025 platform is invented. The October 16, 2025 program-site "
-                "snapshot describes the 2024 program; the December 2025 NPC newsletter "
-                "confirms a program-development resolution/committee, not a recovered "
-                "final new platform.",
+                "platform coverage. The 2000 editorial remains unverified and the full "
+                "underlying 2015 strategy remains unrecovered despite checks of the "
+                "convention report, archived convention/FAQ/agenda/resolution pages, "
+                "strategy pages and official media catalogs. The 2015 priorities are a "
+                "different, now recovered adopted resolution. The official 2025 "
+                "post-convention compendium records R34 adopted unamended 900–291 after "
+                "its substitute was rejected 532–651. R34 supersedes the 2021 platform "
+                "and retains the current Workers Deserve More program pending revision. "
+                "The October 16, 2025 site snapshot identifies that current text as the "
+                "2024 program. This establishes 2025 reuse, not a newly written platform; "
+                "the nominal 2025 PDF URL serving 2026-drafted content is not backdated.",
                 "",
             ]
         )

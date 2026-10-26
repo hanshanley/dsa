@@ -1,13 +1,24 @@
 {
+  "additional_recovery_inventories": {
+    "historical_resolution_inventory": {
+      "all_text_hashes_verified": true,
+      "complete_text_records": 15
+    },
+    "historical_strategy_inventory": {
+      "all_text_hashes_verified": true,
+      "complete_text_records": 14
+    }
+  },
   "corpus_audit": {
     "all_passage_hashes_and_source_hashes_reconciled": true,
     "all_passages_reconstructed_from_source_scopes_and_locators": true,
     "complete_html_exports": "Complete document article only; surrounding website scripts and chrome excluded",
-    "complete_sources": 126,
-    "dsa_documents": 113,
-    "dsa_passages": 1410,
-    "eligible_passages": 6119,
-    "full_passages": 6119,
+    "complete_source_csv_jsonl_records_identical": true,
+    "complete_sources": 135,
+    "dsa_documents": 122,
+    "dsa_passages": 1539,
+    "eligible_passages": 6248,
+    "full_passages": 6248,
     "maximum_tokens_including_special_tokens": 256,
     "strict_passages": 5018,
     "verified_policy_evidence_spans": 9
@@ -30,7 +41,8 @@
   },
   "offline_reproduction": {
     "HF_HUB_OFFLINE": true,
-    "byte_identical_csv_jsonl_tables": 22,
+    "byte_identical_csv_jsonl_tables": 26,
+    "byte_identical_png_figures": 3,
     "embedding_cache_reused": true,
     "raw_captures_available": false,
     "socket_connections_permitted": false,
@@ -40,20 +52,24 @@
   "ruff_check": "passed for both national modules and the changed corpus tests",
   "status": "passed",
   "table_sha256": {
-    "complete_sources.csv": "d8279847104b47b526613a568a649f2492163d611e828b6341daffedc09f04ed",
-    "complete_sources.jsonl": "c2d1d63b69b7d7a6bdb70bfd4c9d1a4907c35598451fc07fa4e35ca2c347d8bb",
-    "coverage.csv": "a5c4129f263ba7affad397b88479e0c0f9b66b29f6f35a9642487ec7f407dea0",
-    "expanded/clustering_audit.csv": "0f448a1539a6c00a5931ef2423ab739968e93771df6b5e9db9fee31ede00c7e0",
-    "expanded/dimension_sweep.csv": "210030ddada66137b969bad51336c07411912d21440c0c1a33b537df71086b10",
-    "expanded/document_chronology.csv": "2bfc4a07956ddebf1ac1eca96b6b6344f52c1543961f72531ae2a27f0fbe1ed6",
-    "expanded/pairwise_summary.csv": "068d77a0fecb70d946307dd0aecd769075365381e13a1e94a1e3321a92cfa1d4",
-    "expanded/regions.csv": "7cf6c764c4a1848818c853a2646ea7bd39ae811f8fb9d73f814ab62603e8acae",
-    "expanded/sampling.csv": "cfe24f24c7f15f8da53f8baf682e63daa45e6649e930b381f7cec1ccef4fc63d",
-    "expanded/scored_passages.csv": "c667c9baad8fbdf8c064c193625c70e420e855e601bd626ca3b21b803047bb75",
-    "fetch_attempts.jsonl": "cb44d3aa98669f269cf56097d835c415beb0a5a12225de39e1fba62f986a5062",
+    "complete_sources.csv": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
+    "complete_sources.jsonl": "1a408f022c3fcf34a19423bfcea54c0baa89dc2405b08bb001fc2094a8296c2d",
+    "coverage.csv": "40bac1ed857eb35ef492dfbe056aebbfca5bc2b28db2b8dd401fad625fe2921e",
+    "expanded/clustering_audit.csv": "37100043eaf43e6593dff53668b7085771a2efbdf2aae6e48dc8c7b20293d8af",
+    "expanded/dimension_sweep.csv": "0e8433f53c301dff0f904b1d1d83dfd473e523bb326d55509041bc00c7001a2e",
+    "expanded/document_chronology.csv": "1d831bdbab5bc9fdd4cfa0582fb6b97e23e515eece421a9608b30b78d3942e91",
+    "expanded/pairwise_summary.csv": "fab8653c452d8751cdd31b388e923ae4626e5ba162bb863a2f7e8b0c5cb11ab9",
+    "expanded/regions.csv": "1d5254cc028780da6e1e9aecb481cd6e0effa6dcef94d68b62e9851c985731dc",
+    "expanded/sampling.csv": "dac7b90cb1570ba4dada4cea13d98ec2e3de0205e76b952b4b77826429e410cc",
+    "expanded/scored_passages.csv": "bfbaca8f87037d118fde1b3193a88854185077174b4970f16dd89554014549cb",
+    "fetch_attempts.jsonl": "2404518bffd0a7daf0f367632f72b5c4835d0cefcfa61664c242b2c3b8cd2516",
+    "historical_resolution_inventory.csv": "16c208c86fe87e659d085d08902ce76dc3407c05812e7b66abbe42c09e033568",
+    "historical_resolution_inventory.jsonl": "ee23b8bf48f50c8c5a9e74e041acf1805a78e7f97edb9b2ebb046a05c4576a52",
     "historical_statement_inventory.csv": "522cecc6ce52c2bd0074d88955d9caa55eb0327f8d2f17451bc0c6f81ca5570c",
     "historical_statement_inventory.jsonl": "13cff78ddbbb6913274167639334347307bd1b043c1a9b97115e170f003b014d",
-    "passages.csv": "24467e2374672dd8fcdf34b738f8ce10184bcf81aba5f6fa1c118d94185caed1",
+    "historical_strategy_inventory.csv": "31c11ecb93a5160db8035e15dd7e550ccc7c776217666718d6952554267b1d58",
+    "historical_strategy_inventory.jsonl": "2f6228fb091682e777bb87f0f2f386249aace11c7151c0ac9aa50c6bc26eb2e6",
+    "passages.csv": "fae36d6cdda70ec387ce1a11d4fed683616106c6e54b2c6f99946b6abfb94550",
     "strict/clustering_audit.csv": "0cfd531f50be4631cbe84cad3a56244f51bf50cb736e543132a14e3eb0216c1b",
     "strict/dimension_sweep.csv": "ce3cf1cfc260caa4f56ea771150834631164133f2c571c87992f29f2db8cfcf6",
     "strict/document_chronology.csv": "2173bc95b7af320a78c754007a1fe90ff4bb49c279154b0626bdd2a4000b8715",
@@ -61,6 +77,6 @@
     "strict/regions.csv": "c571d703f31f91a39a461c26d6dfac5fd1ff503bc23054fed684fedb8a3600e5",
     "strict/sampling.csv": "5982ce41070271427334d9656295573280ef5fbec860ceb92d0340e3731d3814",
     "strict/scored_passages.csv": "24beca5b4ced68ab2ef36419eaf5497b614038efd8d5177f7832a16459371f90",
-    "year_coverage.csv": "f22520f83cb454eaea0082b56a9358cc466b7d88d710a4d0751f3b9e9bb6cf03"
+    "year_coverage.csv": "fcd36e8fbba759f1d4a2947595309fdf6afec0a587ee173b85d1e354b83acb0b"
   }
 }
