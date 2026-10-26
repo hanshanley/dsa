@@ -219,6 +219,29 @@ class NationalCorpusTests(unittest.TestCase):
                 "Public policy supporting every working person without exclusion.",
             )
 
+    def test_complete_html_export_excludes_website_credentials_and_chrome(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            raw = Path(temporary)
+            row = entry(scope_start="Start policy", scope_end="End policy")
+            capture(
+                raw,
+                row,
+                '<script>window.theme_token="website-only"</script>'
+                '<nav>Site navigation</nav><article class="content">'
+                "<p>Document preface</p><p>Start policy supporting every working person "
+                "without exclusion.</p><p>End policy</p></article>",
+            )
+            with patch(
+                "dsa_analysis.national_platforms.extract_document_text",
+                side_effect=AssertionError("Do not export the surrounding website"),
+            ):
+                prepare_corpus([row], Tokenizer(), raw=raw, output=raw / "out")
+            source = read_rows(raw / "out/complete_sources.csv")[0]
+            self.assertIn("Document preface", source["complete_text"])
+            self.assertNotIn("Document preface", source["scoped_text"])
+            self.assertNotIn("theme_token", source["complete_text"])
+            self.assertNotIn("Site navigation", source["complete_text"])
+
     def test_offline_snapshot_reproduces_corpus_without_raw_files(self):
         with tempfile.TemporaryDirectory() as temporary:
             raw = Path(temporary)

@@ -554,12 +554,15 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                 if any(np.linalg.norm(position - other) < span * 0.16 for other in positions):
                     continue
                 positions.append(position)
+                x_min, x_max = axis.get_xlim()
+                fraction = (position[0] - x_min) / (x_max - x_min)
+                align = "left" if fraction < 0.2 else "right" if fraction > 0.8 else "center"
                 axis.text(
                     *position,
                     " / ".join(regions[0]["terms"].split(", ")[:2]),
                     fontsize=8,
                     color="#333333",
-                    ha="center",
+                    ha=align,
                     bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.85, "pad": 2},
                 )
         fig.subplots_adjust(bottom=0.25, right=0.92, wspace=0.08)
@@ -586,6 +589,8 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                     if (r["document_type"] not in {"platform", "program"}) == fallback
                     and r["cosine_distance_from_previous"] != ""
                 ]
+                if not selected:
+                    continue
                 axis.scatter(
                     [int(r["publication_date"][:4]) for r in selected],
                     [r["cosine_distance_from_previous"] for r in selected],
@@ -595,7 +600,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                     label=f"{LABELS[group]}{' fallback' if fallback else ''}",
                 )
         axis.set_xlim(1999.5, 2026.5)
-        axis.set_ylabel("Cosine distance from preceding recovered document")
+        axis.set_ylabel("Change from preceding document\n(cosine distance)")
         axis.set_xlabel("Document year (gaps are not interpolated)")
         axis.legend(frameon=False, fontsize=8, ncol=3)
         fig.tight_layout()
@@ -741,7 +746,8 @@ def write_report(
             "",
             "Terms are descriptive TF-IDF labels, not independently reviewed policy categories. "
             "HDBSCAN regions require at least two independent document/period bundles; noise "
-            "and excluded regions remain in `clustering_audit.csv`. Shared regions must contain "
+            "and retained-region counts are recorded in `clustering_audit.csv`. Shared regions "
+            "must contain "
             "passages from both organizations. At most two regions per "
             "pairwise zone are shown. Source-linked short excerpts are in `regions.csv`; "
             "complete passage text is in `scored_passages.csv`.",
@@ -817,7 +823,7 @@ def write_report(
             "## Reviewed policy examples (2024)",
             "",
             "These matched-cycle examples distinguish common policy subjects from different "
-            "proposed mechanisms. They come directly from the three 2024 documents, not "
+            "proposed mechanisms. They come directly from available 2024 documents, not "
             "from KDE labels or a presumed ideological ordering.",
             "",
             "| Topic | Democratic | Republican | DSA |",
@@ -833,21 +839,20 @@ def write_report(
             topics[row["topic"]][row["group"]] = row["finding"]
         for topic, positions in topics.items():
             cells = " | ".join(positions.get(group, "Not recovered") for group in GROUPS)
-            findings_lines.append(
-                f"| {topic} | {cells} |"
-            )
+            findings_lines.append(f"| {topic} | {cells} |")
         findings_lines.extend(
             [
                 "",
-                "Evidence: `democratic-2024`, `republican-2024`, and `dsa-2024-program`. "
-                "The reviewed findings ledger records an exact supporting span for every cell "
+                "The reviewed findings ledger records the source document identifier and "
+                "an exact supporting span for every recovered cell "
                 "and the report builder checks each against the complete source text. "
                 "These examples do not imply that a document lacks other relevant proposals.",
                 "",
             ]
         )
-        position = lines.index("## Pooled semantic comparison")
-        lines[position:position] = findings_lines
+        if topics:
+            position = lines.index("## Pooled semantic comparison")
+            lines[position:position] = findings_lines
     if results["expanded"]["status"] != "complete":
         lines = [
             line
@@ -855,7 +860,7 @@ def write_report(
             if not line.startswith(("![Pairwise density]", "![Document language change]"))
         ]
     report.parent.mkdir(parents=True, exist_ok=True)
-    report.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    report.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
 def run_national_platform_analysis(

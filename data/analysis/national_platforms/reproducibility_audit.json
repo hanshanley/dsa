@@ -1,0 +1,46 @@
+{
+  "corpus_audit": {
+    "all_passage_hashes_and_source_hashes_reconciled": true,
+    "complete_html_exports": "Complete document article only; surrounding website scripts and chrome excluded",
+    "complete_sources": 21,
+    "eligible_passages": 5061,
+    "full_passages": 5070,
+    "maximum_tokens_including_special_tokens": 256,
+    "strict_passages": 5020,
+    "verified_policy_evidence_spans": 9
+  },
+  "focused_unit_tests": 27,
+  "offline_reproduction": {
+    "HF_HUB_OFFLINE": true,
+    "byte_identical_csv_jsonl_tables": 20,
+    "embedding_cache_reused": true,
+    "raw_captures_available": false,
+    "socket_connections_permitted": false,
+    "source_extraction_permitted": false,
+    "source_fetch_permitted": false
+  },
+  "ruff_check": "passed for new national modules and tests; legacy CLI baseline findings unchanged",
+  "status": "passed",
+  "table_sha256": {
+    "complete_sources.csv": "fbccdac0dc79bcad37d4d90e145f766e0b738a723a1f1ecfc6c9d9bc4ef56b58",
+    "complete_sources.jsonl": "076e40e1db6543689d4ff1cfae877a36613ef20c5a1415a1882b46aaf7b4c533",
+    "coverage.csv": "4625dce0f6cd62e6a654ce6fcb695135771c0b3e3863c7d01332e4d109e14bea",
+    "expanded/clustering_audit.csv": "e57280ed5b1b6fa24f6bf1d5d18feb82a177013b932081d4cb7166d433381248",
+    "expanded/dimension_sweep.csv": "f82a737adb1e214e6d50bb84c00366fae6fdd3b88c4522b9cde33a06bb5ca7fd",
+    "expanded/document_chronology.csv": "8155e843c073c7296b7c88096561886061d2f70237b4cda60e5dbfdf9f4204d7",
+    "expanded/pairwise_summary.csv": "8e9d745e990da309b82b12b68ce97c27046854a195c31da6e1a99d79c842ffbf",
+    "expanded/regions.csv": "da3ca2b030a42a9ed1f7416c334badf066d1a556410906a7c8203bc717ba2275",
+    "expanded/sampling.csv": "00874abc006b43aea0312f41cfe891f85b0cdea451205858a38c9538455617e3",
+    "expanded/scored_passages.csv": "3964f6596e93d9fc13b2daebb87ceddf6916e468f38dc6d9afc9283a43022667",
+    "fetch_attempts.jsonl": "42fc4bba594a2d906689d8d051d16aefcabc54bb16585fe9efe35ffcdcfa8eba",
+    "passages.csv": "d2fee100863dc0e71dffae50df7f2e1c7fdc792cbd0cebe4289da54b63dfcb47",
+    "strict/clustering_audit.csv": "7f3f745e7496eafb80f2d4d856865828b72e953c8ad1c3e9c6ff1dc5aeccdd5d",
+    "strict/dimension_sweep.csv": "d7e59fcde3d38f394b224911638292cb1439e73c59c26093d61fe6a73a46a177",
+    "strict/document_chronology.csv": "09989d2ed6495078166d83c4ec41f32fc81c02ec7d62f9cc34dc6b35c9d20f2c",
+    "strict/pairwise_summary.csv": "d895f01e792a1d318b49d3ef03395da492e09a5cf638293c1fe6ebdb2a01d4a1",
+    "strict/regions.csv": "0b0f0ccd2c7733dd35038d6f2dedef0ad7f24eae18c499840a4be2fa566f804c",
+    "strict/sampling.csv": "663759dda863bc7e4515abb9fcdf3be2f39b4ec3a4540a797e3a3c2283a29a7a",
+    "strict/scored_passages.csv": "3df712689e9df4733f8b46098644bc6f5d823c1f777fc987641ce1025856ae96",
+    "year_coverage.csv": "0ed0eedcf18f3fd46aa6e6cd24561ecaa98ca2726df20cd17df0db147afbecda"
+  }
+}

@@ -385,16 +385,17 @@ def prepare_corpus(
                     complete = parser.text()
                     selected = complete
                 elif row["html_class"]:
-                    complete = extract_document_text(capture).text
                     parser = ContentParser(row["html_class"])
                     parser.feed(data.decode("utf-8"))
-                    selected = parser.text()
+                    complete = parser.text()
+                    selected = complete
                 else:
                     complete = extract_document_text(capture).text
                     selected = complete
                 selected = scope_text(selected, row)
             if meta["source_url"] not in {row["source_url"], row.get("alternate_url")}:
                 raise ValueError("Capture URL no longer matches the source ledger; refetch")
+            meta = {key: meta[key] for key in sorted(meta)}
             text_hash = digest(selected)
             duplicate = hashes.get((row["group"], text_hash), "")
             chunks = split_passages(selected, tokenizer)

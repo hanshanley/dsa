@@ -14,8 +14,9 @@ from dsa_analysis.national_platform_kde import (
     fit_indices,
     pairwise_scores,
     region_summaries,
+    write_report,
 )
-from dsa_analysis.national_platforms import GROUPS, write_json
+from dsa_analysis.national_platforms import GROUPS, write_json, write_rows
 
 
 def rows():
@@ -38,6 +39,32 @@ def rows():
 
 
 class NationalKDETests(unittest.TestCase):
+    def test_early_cutoff_report_omits_unavailable_policy_examples(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            sources = root / "sources.csv"
+            report = root / "report.md"
+            write_rows(sources, [], fields=["document_id", "scoped_text"])
+            results = {view: {"status": "complete"} for view in ("expanded", "strict")}
+            write_report(results, [], "2020-12-31", report, sources)
+            self.assertNotIn("## Reviewed policy examples", report.read_text())
+            self.assertNotIn("Evidence: `democratic-2024`", report.read_text())
+
+    def test_narrow_cli_does_not_invoke_candidate_pipeline(self):
+        from dsa_analysis.cli import main
+
+        with (
+            patch("sys.argv", ["dsa-analysis", "national-platform-analysis", "--fetch-only"]),
+            patch(
+                "dsa_analysis.national_platform_kde.run_national_platform_analysis",
+                return_value={"status": "sources_collected"},
+            ) as run,
+            patch("dsa_analysis.cli.build_race_registry", side_effect=AssertionError),
+            patch("dsa_analysis.cli.analyze_text", side_effect=AssertionError),
+        ):
+            main()
+        self.assertTrue(run.call_args.kwargs["fetch_only"])
+
     def test_balancing_covers_all_groups_and_documents_deterministically(self):
         corpus = rows()
         selected = fit_indices(corpus)

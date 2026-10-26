@@ -1,0 +1,107 @@
+{
+  "cutoff": "2026-10-26",
+  "embedding_cache_reused": true,
+  "ledger_sha256": "88bd626d8b6ff15c2ec73a7b1deeee8ece6f3fb967dd082cf3295fbf878ecd57",
+  "source_status_counts": {
+    "eligible": 20,
+    "found_unverified": 3,
+    "reused_document": 1,
+    "sparse_bundle": 1
+  },
+  "views": {
+    "expanded": {
+      "bandwidth": 0.5212556977120323,
+      "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
+      "dimensions": 5,
+      "document_types": {
+        "democratic": {
+          "platform": 7
+        },
+        "dsa": {
+          "platform": 1,
+          "program": 2,
+          "resolution": 1,
+          "statement": 3
+        },
+        "republican": {
+          "platform": 6
+        }
+      },
+      "group_bundles": {
+        "democratic": 7,
+        "dsa": 5,
+        "republican": 6
+      },
+      "group_documents": {
+        "democratic": 7,
+        "dsa": 7,
+        "republican": 6
+      },
+      "group_passages": {
+        "democratic": 2333,
+        "dsa": 352,
+        "republican": 2376
+      },
+      "group_sample_sizes": {
+        "democratic": 352,
+        "dsa": 352,
+        "republican": 352
+      },
+      "groups": [
+        "democratic",
+        "republican",
+        "dsa"
+      ],
+      "region_count": 18,
+      "seed": 1729,
+      "status": "complete",
+      "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass"
+    },
+    "strict": {
+      "bandwidth": 0.5284776479097318,
+      "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
+      "dimensions": 5,
+      "document_types": {
+        "democratic": {
+          "platform": 7
+        },
+        "dsa": {
+          "platform": 1,
+          "program": 2
+        },
+        "republican": {
+          "platform": 6
+        }
+      },
+      "group_bundles": {
+        "democratic": 7,
+        "dsa": 3,
+        "republican": 6
+      },
+      "group_documents": {
+        "democratic": 7,
+        "dsa": 3,
+        "republican": 6
+      },
+      "group_passages": {
+        "democratic": 2333,
+        "dsa": 311,
+        "republican": 2376
+      },
+      "group_sample_sizes": {
+        "democratic": 311,
+        "dsa": 311,
+        "republican": 311
+      },
+      "groups": [
+        "democratic",
+        "republican",
+        "dsa"
+      ],
+      "region_count": 18,
+      "seed": 1729,
+      "status": "complete",
+      "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass"
+    }
+  }
+}
