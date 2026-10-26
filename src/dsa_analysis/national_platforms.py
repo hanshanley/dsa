@@ -8,6 +8,7 @@ import hashlib
 import json
 import re
 import subprocess
+import zipfile
 from collections import Counter
 from datetime import UTC, date, datetime
 from html.parser import HTMLParser
@@ -48,6 +49,125 @@ def write_json(path: Path, value: object) -> None:
 
 def digest(value: str | bytes) -> str:
     return hashlib.sha256(value.encode() if isinstance(value, str) else value).hexdigest()
+
+
+def export_document_archive(output: Path = OUTPUT, raw: Path = RAW) -> Path:
+    """Bundle complete document texts and deduplicated original PDFs, not website chrome."""
+    target = output / "source_documents.zip"
+    previous = zipfile.ZipFile(target) if target.exists() else None
+    members: dict[str, bytes] = {}
+    manifest = []
+    collections = [
+        ("complete_sources", "document_id"),
+        ("historical_resolution_inventory", "capture_id"),
+        ("historical_statement_inventory", "statement_id"),
+        ("historical_strategy_inventory", "strategy_id"),
+        ("historical_convention_inventory", "record_id"),
+    ]
+    captures = {}
+    for collection, key in collections[:2]:
+        path = output / f"{collection}.csv"
+        if path.exists():
+            captures.update({row[key]: row for row in read_rows(path)})
+    temporary = target.with_suffix(".zip.tmp")
+    try:
+        for collection, key in collections:
+            path = output / f"{collection}.csv"
+            if not path.exists():
+                continue
+            for row in read_rows(path):
+                identifier = row[key]
+                if not re.fullmatch(r"[a-zA-Z0-9_-]+", identifier):
+                    raise ValueError(f"Unsafe archive document ID: {identifier}")
+                text = row["complete_text"].encode("utf-8")
+                text_hash = digest(text)
+                if text_hash != row["complete_text_sha256"]:
+                    raise ValueError(f"Document text hash mismatch: {identifier}")
+                text_path = f"texts/{collection}/{identifier}.txt"
+                members[text_path] = text
+                metadata = {
+                    name: value
+                    for name, value in row.items()
+                    if name not in {"complete_text", "scoped_text"}
+                }
+                metadata.update(collection=collection, text_path=text_path)
+                if row.get("scoped_text"):
+                    scoped = row["scoped_text"].encode("utf-8")
+                    expected = row.get("scoped_text_sha256") or row.get("text_sha256")
+                    if digest(scoped) != expected:
+                        raise ValueError(f"Scoped document hash mismatch: {identifier}")
+                    scoped_path = f"scoped/{collection}/{identifier}.txt"
+                    members[scoped_path] = scoped
+                    metadata["scoped_text_path"] = scoped_path
+                capture_id = row.get("capture_id") or row.get("document_id") or ""
+                meta_path = raw / f"{capture_id}.json"
+                capture_meta = (
+                    json.loads(meta_path.read_text())
+                    if meta_path.exists()
+                    else captures.get(capture_id, row)
+                )
+                document_format = row.get("document_format") or captures.get(
+                    capture_id, {}
+                ).get("document_format")
+                if (
+                    "application/pdf" in capture_meta.get("content_type", "")
+                    or document_format == "pdf"
+                ):
+                    pdf_hash = capture_meta["sha256"]
+                    expected = row.get("sha256") or row.get("source_sha256")
+                    if expected and expected != pdf_hash:
+                        raise ValueError(f"Original PDF provenance mismatch: {capture_id}")
+                    pdf_path = f"pdfs/{pdf_hash}.pdf"
+                    capture_path = raw / f"{capture_id}.source"
+                    if pdf_path not in members:
+                        if capture_path.exists():
+                            data = capture_path.read_bytes()
+                        elif previous is not None and pdf_path in previous.namelist():
+                            data = previous.read(pdf_path)
+                        else:
+                            data = None
+                        if data is not None and (
+                            not data.startswith(b"%PDF-") or digest(data) != pdf_hash
+                        ):
+                            raise ValueError(f"Original PDF hash or format mismatch: {capture_id}")
+                        if data is not None:
+                            members[pdf_path] = data
+                    if pdf_path in members:
+                        metadata["pdf_path"] = pdf_path
+                        metadata["pdf_status"] = "original_capture_included"
+                    else:
+                        metadata["pdf_status"] = "capture_unavailable_complete_text_included"
+                    metadata["pdf_sha256"] = pdf_hash
+                    metadata["pdf_source_url"] = capture_meta["source_url"]
+                    metadata["pdf_retrieved_at"] = capture_meta["retrieved_at"]
+                manifest.append(metadata)
+        members["manifest.json"] = (
+            json.dumps(manifest, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
+        ).encode("utf-8")
+        disposition = output / "historical_document_link_disposition.csv"
+        if disposition.exists():
+            members[disposition.name] = disposition.read_bytes()
+        members["README.txt"] = (
+            b"Complete document texts and original PDF captures; see manifest.json for "
+            b"source URLs, hashes, attribution, and screening status.\n"
+            b"PDFs are deduplicated by SHA-256. Non-PDF documents are supplied as complete "
+            b"article text, not surrounding website scripts, forms, or navigation.\n"
+            b"Proposal packets and evidence-only records are not adopted platforms. "
+            b"Check each record's screening status; unamended proposal text must not be "
+            b"substituted for a resolution adopted with amendments.\n"
+            b"Original authors and publishers retain their rights.\n"
+        )
+        with zipfile.ZipFile(temporary, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+            for name, data in sorted(members.items()):
+                info = zipfile.ZipInfo(name, date_time=(2000, 1, 1, 0, 0, 0))
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.external_attr = 0o100644 << 16
+                archive.writestr(info, data)
+    finally:
+        if previous is not None:
+            previous.close()
+    temporary.replace(target)
+    return target
 
 
 def date_bounds(value: str) -> tuple[date, date]:
@@ -482,4 +602,5 @@ def prepare_corpus(
                 }
             )
     write_rows(output / "year_coverage.csv", years)
+    export_document_archive(output, raw)
     return passages, coverage

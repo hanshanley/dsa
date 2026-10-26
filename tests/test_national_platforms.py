@@ -2,12 +2,14 @@ import json
 import re
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
 from dsa_analysis.national_platforms import (
     ContentParser,
     digest,
+    export_document_archive,
     fetch_sources,
     ledger_status,
     load_ledger,
@@ -256,6 +258,65 @@ class NationalCorpusTests(unittest.TestCase):
             self.assertNotIn("Document preface", source["scoped_text"])
             self.assertNotIn("theme_token", source["complete_text"])
             self.assertNotIn("Site navigation", source["complete_text"])
+            with zipfile.ZipFile(raw / "out/source_documents.zip") as archive:
+                texts = b"\n".join(archive.read(name) for name in archive.namelist())
+                self.assertIn(b"Document preface", texts)
+                self.assertNotIn(b"theme_token", texts)
+                self.assertNotIn(b"Site navigation", texts)
+
+    def test_document_archive_deduplicates_pdfs_and_rebuilds_without_raw_captures(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            raw, output = root / "raw", root / "out"
+            raw.mkdir()
+            output.mkdir()
+            pdf = b"%PDF-1.4\noriginal public document\n%%EOF\n"
+            rows = []
+            for identifier in ("dsa-first", "dsa-second"):
+                row = entry(identifier)
+                capture(raw, row, pdf.decode())
+                meta_path = raw / f"{identifier}.json"
+                metadata = json.loads(meta_path.read_text())
+                metadata["content_type"] = "application/octet-stream"
+                write_json(meta_path, metadata)
+                rows.append(
+                    {
+                        **row,
+                        **metadata,
+                        "document_format": "pdf",
+                        "complete_text": "Complete policy text including its preface.",
+                        "complete_text_sha256": digest(
+                            "Complete policy text including its preface."
+                        ),
+                    }
+                )
+            write_rows(output / "complete_sources.csv", rows)
+            path = export_document_archive(output, raw)
+            original = path.read_bytes()
+            with zipfile.ZipFile(path) as archive:
+                pdfs = [name for name in archive.namelist() if name.startswith("pdfs/")]
+                self.assertEqual(len(pdfs), 1)
+                self.assertEqual(archive.read(pdfs[0]), pdf)
+                manifest = json.loads(archive.read("manifest.json"))
+                self.assertEqual(len(manifest), 2)
+                self.assertEqual(manifest[0]["pdf_path"], manifest[1]["pdf_path"])
+                self.assertEqual(manifest[0]["pdf_source_url"], rows[0]["source_url"])
+                self.assertEqual(manifest[0]["pdf_retrieved_at"], rows[0]["retrieved_at"])
+            export_document_archive(output, root / "absent")
+            self.assertEqual(path.read_bytes(), original)
+            (raw / "dsa-first.source").write_bytes(b"%PDF-1.4\ncorrupt capture")
+            with self.assertRaisesRegex(ValueError, "hash or format mismatch"):
+                export_document_archive(output, raw)
+            self.assertEqual(path.read_bytes(), original)
+            path.unlink()
+            export_document_archive(output, root / "absent")
+            with zipfile.ZipFile(path) as archive:
+                manifest = json.loads(archive.read("manifest.json"))
+                self.assertTrue(all(
+                    row["pdf_status"] == "capture_unavailable_complete_text_included"
+                    for row in manifest
+                ))
+                self.assertTrue(all(row["text_path"] in archive.namelist() for row in manifest))
 
     def test_offline_snapshot_reproduces_corpus_without_raw_files(self):
         with tempfile.TemporaryDirectory() as temporary:

@@ -836,10 +836,27 @@ def write_report(
             "`historical_resolution_inventory.csv` and `.jsonl` (original convention "
             "documents and adoption evidence, including complete 2025 results with "
             "R34 separately scoped), `historical_strategy_inventory.csv` and `.jsonl` "
-            "(all strategy-catalog texts and screening decisions), and the "
+            "(all strategy-catalog texts and screening decisions), "
+            "`historical_convention_inventory.csv` and `.jsonl` (complete 2019 proposals "
+            "cross-referenced to final votes), `source_documents.zip` (individual complete "
+            "texts, scoped texts, deduplicated original PDFs and a provenance manifest), "
+            "`historical_document_link_disposition.csv` (all 61 final-results links and "
+            "recovery outcomes), and the "
             "expanded/strict analysis tables. Sources retain "
             "their original attribution and rights; institutional reproductions are labeled "
             "as such rather than represented as party-hosted originals.",
+            "",
+            "Supplementary recovery records preserve the complete 2017 convention minutes, "
+            "June 2019 proposal packet, official final 2019 results, and six original 2015 "
+            "proposal PDFs without changing the fitted corpus or figures. All 85 proposals "
+            "extracted from the June packet are retained with voting-status checks. A "
+            "further 58 original PDFs were recovered from the 61 final-results links, "
+            "including R34's base text, passed Amendment #1, and separately linked R74. "
+            "The three unavailable exports are explicitly recorded; R41's complete "
+            "proposal is already available in the public packet. A "
+            "pre-convention proposal is not automatically adopted: R34 passed as amended, "
+            "so its unamended packet text is not verified final wording; candidate-specific "
+            "R74 is absent from this packet. The full final 2015 strategy remains unrecovered.",
             "",
         ]
     )

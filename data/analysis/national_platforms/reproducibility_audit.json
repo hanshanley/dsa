@@ -1,8 +1,12 @@
 {
   "additional_recovery_inventories": {
+    "historical_convention_inventory": {
+      "all_text_hashes_verified": true,
+      "complete_text_records": 85
+    },
     "historical_resolution_inventory": {
       "all_text_hashes_verified": true,
-      "complete_text_records": 15
+      "complete_text_records": 82
     },
     "historical_strategy_inventory": {
       "all_text_hashes_verified": true,
@@ -23,7 +27,13 @@
     "strict_passages": 5018,
     "verified_policy_evidence_spans": 9
   },
-  "focused_unit_tests": 28,
+  "document_archive": {
+    "all_text_and_pdf_hashes_verified": true,
+    "complete_text_records": 472,
+    "deduplicated_original_pdfs": 81,
+    "sha256": "dc74ee757ff231be51c02a5947fa187494bfc58ae2e9fe22d298158a3be13fd6"
+  },
+  "focused_unit_tests": 29,
   "historical_statement_inventory": {
     "all_text_hashes_verified": true,
     "complete_text_records": 156,
@@ -41,7 +51,8 @@
   },
   "offline_reproduction": {
     "HF_HUB_OFFLINE": true,
-    "byte_identical_csv_jsonl_tables": 26,
+    "byte_identical_csv_jsonl_tables": 29,
+    "byte_identical_document_archive": true,
     "byte_identical_png_figures": 3,
     "embedding_cache_reused": true,
     "raw_captures_available": false,
@@ -62,9 +73,12 @@
     "expanded/regions.csv": "1d5254cc028780da6e1e9aecb481cd6e0effa6dcef94d68b62e9851c985731dc",
     "expanded/sampling.csv": "dac7b90cb1570ba4dada4cea13d98ec2e3de0205e76b952b4b77826429e410cc",
     "expanded/scored_passages.csv": "bfbaca8f87037d118fde1b3193a88854185077174b4970f16dd89554014549cb",
-    "fetch_attempts.jsonl": "2404518bffd0a7daf0f367632f72b5c4835d0cefcfa61664c242b2c3b8cd2516",
-    "historical_resolution_inventory.csv": "16c208c86fe87e659d085d08902ce76dc3407c05812e7b66abbe42c09e033568",
-    "historical_resolution_inventory.jsonl": "ee23b8bf48f50c8c5a9e74e041acf1805a78e7f97edb9b2ebb046a05c4576a52",
+    "fetch_attempts.jsonl": "485deb4dde5147c8299878b5c86497973b0fa2ae2daf49aa23e511e6bd2e6754",
+    "historical_convention_inventory.csv": "0ed54fb0862ce918c36eb05971635d1fe82747a3141393afd38ac04bf7fbe30d",
+    "historical_convention_inventory.jsonl": "5bbca786b99e047e4a910670fe90fee4c2d60092a9ac8352d05743b76eecfd02",
+    "historical_document_link_disposition.csv": "9f53de5b5ae905db5ecc4c3bf3979b367eb599281d749b37263884127a720f76",
+    "historical_resolution_inventory.csv": "b3bd3f010a4b6c5c7cb0ff15df7a076b27ed932de0ffd9d8597f7d548862c819",
+    "historical_resolution_inventory.jsonl": "181b4a07fc601945daecdc254d0a199ffc28e8d20ee9447f64734059fd9126f2",
     "historical_statement_inventory.csv": "522cecc6ce52c2bd0074d88955d9caa55eb0327f8d2f17451bc0c6f81ca5570c",
     "historical_statement_inventory.jsonl": "13cff78ddbbb6913274167639334347307bd1b043c1a9b97115e170f003b014d",
     "historical_strategy_inventory.csv": "31c11ecb93a5160db8035e15dd7e550ccc7c776217666718d6952554267b1d58",

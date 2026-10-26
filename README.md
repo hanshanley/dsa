@@ -54,6 +54,23 @@ The final 2025 convention results verify R34's adoption and continued use of the
 All six historical fallback bundles meet the unchanged passage gate; that does
 not imply annual coverage or recovery of every original underlying resolution.
 
+`data/analysis/national_platforms/source_documents.zip` contains individual complete
+texts, separately scoped model texts, 81 deduplicated original PDFs, and a
+hash/provenance manifest. Non-PDF documents are provided as complete article text,
+without surrounding website scripts or credentials.
+Supplementary recovery now also preserves the full 2017 convention minutes,
+the June 2019 resolution packet, official 2019 final results, and six original
+2015 proposal PDFs. `historical_convention_inventory.csv` and `.jsonl` retain
+all 85 proposals extracted from the 2019 packet, cross-referenced to voting results.
+An additional 58 original PDFs were recovered from the 61 links in the final results,
+including R34's base text, passed Amendment #1, and separately linked R74.
+`historical_document_link_disposition.csv` records the three unavailable exports
+(R41 requires authentication; two committee-report links return 404).
+These supplementary records do not change the fitted corpus or figures.
+Proposal approval is not adoption; R34 passed with an amendment not incorporated
+in this packet, and candidate-specific R74 is absent from the June packet.
+The full final 2015 strategy remains unrecovered.
+
 ## What this project asks
 
 How do DSA-endorsed candidates describe politics differently from other Democrats in the same
