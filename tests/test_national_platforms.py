@@ -179,6 +179,21 @@ class NationalCorpusTests(unittest.TestCase):
                 len((raw / "output/complete_sources.jsonl").read_text().splitlines()),
             )
 
+    def test_historical_winter_footers_do_not_enter_model_passages(self):
+        for footer in (
+            "page 4 • Democratic Left • Winter 2002",
+            "Democratic Left • Winter 2006 • Page 4",
+            "page 2 • Democratic Left • Fall-Winter 2001",
+        ):
+            text = (
+                "Workers need public healthcare and democratic control of the economy. "
+                f"{footer} Protect labor rights and expand access to public education."
+            )
+            passages = split_passages(text, Tokenizer())
+            self.assertEqual(len(passages), 1)
+            self.assertNotIn("Democratic Left", passages[0]["text"])
+            self.assertIn(footer, text)
+
     def test_changed_source_url_invalidates_fetch_and_prepare_cache(self):
         with tempfile.TemporaryDirectory() as temporary:
             raw = Path(temporary)

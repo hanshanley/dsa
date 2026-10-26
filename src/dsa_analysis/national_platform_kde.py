@@ -22,6 +22,7 @@ from .national_platforms import (
     OUTPUT,
     RAW,
     ROOT,
+    date_bounds,
     digest,
     fetch_sources,
     load_ledger,
@@ -500,6 +501,12 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
     import matplotlib.pyplot as plt
     from matplotlib.colors import TwoSlopeNorm
 
+    def publication_year(value):
+        lower, upper = date_bounds(value)
+        start = lower.replace(month=1, day=1)
+        days = (start.replace(year=start.year + 1) - start).days
+        return lower.year + ((lower - start).days + (upper - lower).days / 2) / days
+
     figures.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update(
         {
@@ -513,6 +520,14 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
     if result["status"] == "complete":
         rows = result["_scored"]
         fig, axes = plt.subplots(1, 3, figsize=(13, 4.2), sharex=True, sharey=True)
+        fig.subplots_adjust(bottom=0.25, right=0.92, wspace=0.08)
+        for coordinate, set_limits in (
+            ("umap_x", axes[0].set_xlim),
+            ("umap_y", axes[0].set_ylim),
+        ):
+            values = [r[coordinate] for r in rows]
+            padding = max(float(np.ptp(values)) * 0.05, 1e-6)
+            set_limits(min(values) - padding, max(values) + padding)
         all_values = [
             abs(row[f"{a}_vs_{b}"]) for a, b in PAIRS for row in rows if row["group"] in {a, b}
         ]
@@ -535,7 +550,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
             axis.set_xticks([])
             axis.set_yticks([])
             axis.set_xlabel("Shared 2D semantic display")
-            positions = []
+            label_bounds = []
             for zone in (f"{first}_relative", f"{second}_relative", "shared_language"):
                 regions = [
                     r
@@ -546,18 +561,10 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                     continue
                 evidence = next(r for r in selected if r["segment_id"] == regions[0]["segment_id"])
                 position = np.array([evidence["umap_x"], evidence["umap_y"]])
-                span = max(
-                    np.ptp([r["umap_x"] for r in selected]),
-                    np.ptp([r["umap_y"] for r in selected]),
-                    1e-6,
-                )
-                if any(np.linalg.norm(position - other) < span * 0.16 for other in positions):
-                    continue
-                positions.append(position)
                 x_min, x_max = axis.get_xlim()
                 fraction = (position[0] - x_min) / (x_max - x_min)
                 align = "left" if fraction < 0.2 else "right" if fraction > 0.8 else "center"
-                axis.text(
+                label = axis.text(
                     *position,
                     " / ".join(regions[0]["terms"].split(", ")[:2]),
                     fontsize=8,
@@ -565,7 +572,12 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                     ha=align,
                     bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.85, "pad": 2},
                 )
-        fig.subplots_adjust(bottom=0.25, right=0.92, wspace=0.08)
+                fig.canvas.draw()
+                bounds = label.get_window_extent(fig.canvas.get_renderer()).expanded(1.06, 1.3)
+                if any(bounds.overlaps(other) for other in label_bounds):
+                    label.remove()
+                else:
+                    label_bounds.append(bounds)
         bar = fig.colorbar(image, cax=fig.add_axes((0.94, 0.29, 0.012, 0.53)))
         bar.set_label("Log density ratio: + first / − second", fontsize=9)
         fig.text(
@@ -592,14 +604,15 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                 if not selected:
                     continue
                 axis.scatter(
-                    [int(r["publication_date"][:4]) for r in selected],
+                    [publication_year(r["publication_date"]) for r in selected],
                     [r["cosine_distance_from_previous"] for r in selected],
                     color=COLORS[group],
                     marker="x" if fallback else "o",
-                    s=38,
+                    s=25 if fallback else 38,
+                    alpha=0.65 if fallback else 1,
                     label=f"{LABELS[group]}{' fallback' if fallback else ''}",
                 )
-        axis.set_xlim(1999.5, 2026.5)
+        axis.set_xlim(1999.5, 2027)
         axis.set_ylabel("Change from preceding document\n(cosine distance)")
         axis.set_xlabel("Document year (gaps are not interpolated)")
         axis.legend(frameon=False, fontsize=8, ncol=3)
@@ -628,11 +641,12 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                 )
             ]
             axis.scatter(
-                [int(row["publication_date"][:4]) for row in selected],
+                [publication_year(row["publication_date"]) for row in selected],
                 [index] * len(selected),
                 marker=marker,
                 c=COLORS[group],
-                s=46,
+                s=32,
+                alpha=0.65,
                 label={
                     "eligible": "Eligible source",
                     "reused_document": "Reused text",
@@ -642,9 +656,9 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                 else None,
             )
     axis.set_yticks(range(3), [LABELS[g] for g in GROUPS])
-    axis.set_xlim(1999.5, 2026.5)
+    axis.set_xlim(1999.5, 2027)
     axis.set_xticks(range(2000, 2027, 2))
-    axis.set_xlabel("Publication/adoption year; empty years are not evidence of no position")
+    axis.set_xlabel("Publication year (known date precision); empty years do not imply no position")
     axis.legend(frameon=False, ncol=3, fontsize=8, loc="upper center", bbox_to_anchor=(0.5, 1.24))
     fig.tight_layout()
     fig.savefig(figures / "coverage.png", dpi=180)
@@ -693,9 +707,10 @@ def write_report(
             "The strict and expanded results both retain the same underlying party-platform "
             "documents; only labeled fallback evidence differs. DSA's recovered platforms are "
             "from 2021 onward, not a representative sample of its entire 2000–2026 history. "
-            "The recovered 2021 platform page was last modified in April 2025: its publication, "
-            "adoption, and version dates are separate fields, and earlier cutoffs exclude that "
-            "later page version.",
+            "The complete adopted 2021 platform is preserved in an immutable December 30, "
+            "2021 archive snapshot, whose page metadata records publication and modification "
+            "on November 9, 2021. It replaces the previously used API page modified in 2025; "
+            "the versions are not counted as independent platforms.",
             "",
             "| View | Balanced passages per organization | KDE dimensions | "
             "DSA source composition |",
@@ -775,8 +790,11 @@ def write_report(
             "Empty years in `year_coverage.csv` mean no recovered publication in this "
             "inventory, not that an organization had no platform or position. The GOP 2020 "
             "reuse record contributes no second independent copy of its 2016 text. "
-            "DSA fallback recovery is selective rather than exhaustive, and many historical "
-            "years remain uncovered. See the source ledger, fetch-attempt log, and "
+            "Every currently exposed official statement-catalog entry from December 2012 "
+            "through December 2020 was screened, with full included and excluded text "
+            "preserved. This does not recover deleted pages or establish exhaustive coverage "
+            "of other publication types or all historical years. See the source ledger, "
+            "full-text historical statement inventory, fetch-attempt log, and "
             "`data/manual/national_platform_search_disposition.csv` for period-specific "
             "searches and explicit unsearched boundaries.",
             "",
@@ -810,12 +828,79 @@ def write_report(
             "All outputs: `data/analysis/national_platforms/`. Downloads include "
             "`complete_sources.csv` and `.jsonl` (complete extracted and scoped texts), "
             "`passages.csv` (full model passages, not metadata alone), `coverage.csv`, "
-            "`year_coverage.csv`, and the expanded/strict analysis tables. Sources retain "
+            "`year_coverage.csv`, `historical_statement_inventory.csv` and `.jsonl` "
+            "(complete text and screening reasons for every catalog entry), and the "
+            "expanded/strict analysis tables. Sources retain "
             "their original attribution and rights; institutional reproductions are labeled "
             "as such rather than represented as party-hosted originals.",
             "",
         ]
     )
+    historical = [
+        row
+        for row in coverage
+        if row["group"] == "dsa" and row["status"] == "eligible" and row["bundle_id"]
+    ]
+    if historical:
+        recovery_lines = [
+            "## Historical DSA recovery",
+            "",
+            "Recovered national resolutions include the 2001 priorities and war/terrorism "
+            "texts, the 2004 NPC resolution, the 2005 priorities, the November 2007 Economic "
+            "Justice Agenda, the 2009 priorities, the complete 2013 priorities, and the 2017 "
+            "priorities. The 2011 priorities and 2016 strategy publications explicitly identify "
+            "themselves as summaries; their full underlying resolutions are not claimed "
+            "recovered. Magazine issues remain complete in source downloads, while model "
+            "scopes remove other authors' articles, contents, captions, fundraising and "
+            "candidate-specific sections. Early scan OCR and print hyphenation are retained "
+            "and can affect the semantic analysis.",
+            "",
+            "| Fallback period bundle | Eligible documents | Model passages |",
+            "|---|---:|---:|",
+        ]
+        for bundle in sorted({row["bundle_id"] for row in historical}):
+            documents = [row for row in historical if row["bundle_id"] == bundle]
+            recovery_lines.append(
+                f"| {bundle.removeprefix('dsa-fallback-')} | {len(documents)} | "
+                f"{sum(int(row['passage_count']) for row in documents)} |"
+            )
+        inventory_path = sources_path.parent / "historical_statement_inventory.csv"
+        if inventory_path.exists():
+            inventory = read_rows(inventory_path)
+            included = sum(row["screening_status"] == "included_fallback" for row in inventory)
+            recovery_lines.extend(
+                [
+                    "",
+                    f"The full-text historical statement inventory contains {len(inventory)} "
+                    f"catalog records: {included} included as fallback evidence and "
+                    f"{len(inventory) - included} excluded with individual reasons. "
+                    "The rule retains nationally issued policy statements and broad policy "
+                    "agendas, but excludes campaign endorsements/results-only pieces, "
+                    "administration, personal tributes/case appeals, chapter authorship, "
+                    "unverified affiliated-body-only positions, link indexes and duplicate "
+                    "translations. Translations remain in complete downloads but do not "
+                    "double-count model passages. Twelve-month or four-year coverage is "
+                    "not inferred from a single document.",
+                ]
+            )
+        recovery_lines.extend(
+            [
+                "",
+                "Bundles follow verified adoption periods where available and otherwise "
+                "publication; December 2012 migration/republication dates are not original "
+                "adoption dates. All six fallback period bundles meet the unchanged "
+                "ten-passage gate, but this does not establish annual or comprehensive "
+                "platform coverage. The 2000 editorial remains unverified, the 2003 "
+                "priorities and full 2011/2015 underlying texts remain unrecovered, and no "
+                "separate final 2025 platform is invented. The October 16, 2025 program-site "
+                "snapshot describes the 2024 program; the December 2025 NPC newsletter "
+                "confirms a program-development resolution/committee, not a recovered "
+                "final new platform.",
+                "",
+            ]
+        )
+        position = lines.index("## Pooled semantic comparison")
+        lines[position:position] = recovery_lines
     findings = ROOT / "data/manual/national_platform_findings.csv"
     if findings.exists():
         sources = {row["document_id"]: row for row in read_rows(sources_path)}

@@ -1,16 +1,15 @@
 {
   "cutoff": "2026-10-26",
-  "embedding_cache_reused": true,
-  "ledger_sha256": "88bd626d8b6ff15c2ec73a7b1deeee8ece6f3fb967dd082cf3295fbf878ecd57",
+  "embedding_cache_reused": false,
+  "ledger_sha256": "126bb2a2887eb154db1b93e91c0460cfb521d1bfb126a0674cc19efaacb841e5",
   "source_status_counts": {
-    "eligible": 20,
+    "eligible": 126,
     "found_unverified": 3,
-    "reused_document": 1,
-    "sparse_bundle": 1
+    "reused_document": 1
   },
   "views": {
     "expanded": {
-      "bandwidth": 0.5212556977120323,
+      "bandwidth": 0.446772841477392,
       "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
       "dimensions": 5,
       "document_types": {
@@ -20,8 +19,8 @@
         "dsa": {
           "platform": 1,
           "program": 2,
-          "resolution": 1,
-          "statement": 3
+          "resolution": 9,
+          "statement": 101
         },
         "republican": {
           "platform": 6
@@ -29,23 +28,23 @@
       },
       "group_bundles": {
         "democratic": 7,
-        "dsa": 5,
+        "dsa": 9,
         "republican": 6
       },
       "group_documents": {
         "democratic": 7,
-        "dsa": 7,
+        "dsa": 113,
         "republican": 6
       },
       "group_passages": {
         "democratic": 2333,
-        "dsa": 352,
+        "dsa": 1410,
         "republican": 2376
       },
       "group_sample_sizes": {
-        "democratic": 352,
-        "dsa": 352,
-        "republican": 352
+        "democratic": 1410,
+        "dsa": 1410,
+        "republican": 1410
       },
       "groups": [
         "democratic",
@@ -58,7 +57,7 @@
       "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass"
     },
     "strict": {
-      "bandwidth": 0.5284776479097318,
+      "bandwidth": 0.5288566220646417,
       "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
       "dimensions": 5,
       "document_types": {
@@ -85,13 +84,13 @@
       },
       "group_passages": {
         "democratic": 2333,
-        "dsa": 311,
+        "dsa": 309,
         "republican": 2376
       },
       "group_sample_sizes": {
-        "democratic": 311,
-        "dsa": 311,
-        "republican": 311
+        "democratic": 309,
+        "dsa": 309,
+        "republican": 309
       },
       "groups": [
         "democratic",

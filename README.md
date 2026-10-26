@@ -36,6 +36,15 @@ excluded; official national statements are labeled fallback evidence, never pres
 as recovered historical platforms. Historical DSA gaps remain explicit. Complete extracted
 source text and model passages are exported, not metadata-only downloads.
 
+Historical recovery now includes adopted DSA resolutions from 2001, 2004, 2005,
+2007, 2009, 2013 and 2017, plus explicitly labeled 2011/2016 published summaries.
+The complete adopted 2021 platform uses an immutable December 2021 snapshot,
+not the page revised in 2025. `historical_statement_inventory.csv` and `.jsonl`
+preserve all 156 currently exposed statement-catalog entries from December 2012
+through December 2020, including full excluded text and screening reasons.
+All six historical fallback bundles meet the unchanged passage gate; that does
+not imply annual coverage or recovery of every original underlying resolution.
+
 ## What this project asks
 
 How do DSA-endorsed candidates describe politics differently from other Democrats in the same

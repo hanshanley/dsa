@@ -181,6 +181,7 @@ def fetch_sources(rows: list[dict], raw: Path = RAW) -> list[dict]:
                 [
                     "curl",
                     "--location",
+                    "--compressed",
                     "--fail",
                     "--silent",
                     "--show-error",
@@ -246,8 +247,10 @@ def split_passages(text: str, tokenizer, max_length: int = MAX_LENGTH) -> list[d
         )
         paragraph = re.sub(r"^\s*\d+\s+", "", paragraph).strip()
         paragraph = re.sub(
-            r"(?:page \d+ [•·] Democratic Left [•·] (?:Spring-Summer|Summer|Fall) \d{4}"
-            r"|Democratic Left [•·] (?:Summer|Fall) \d{4} [•·] Page \d+)",
+            r"(?:page \d+ [•·] Democratic Left [•·] "
+            r"(?:Spring(?:-Summer)?|Summer|Fall(?:-Winter)?|Winter) \d{4}"
+            r"|Democratic Left [•·] (?:Spring(?:-Summer)?|Summer|Fall(?:-Winter)?|Winter) "
+            r"\d{4} [•·] Page \d+)",
             "",
             paragraph,
             flags=re.IGNORECASE,
