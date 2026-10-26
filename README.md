@@ -13,6 +13,29 @@
 
 ---
 
+## Standalone national platform comparison
+
+The slimmed-down study compares **national Democratic, Republican, and DSA documents,
+2000–October 26, 2026**, without running candidate or state/local analysis.
+Read [the national report](report/national_platform_analysis.md); its full-text downloads,
+coverage ledger, separate strict/expanded sensitivity results, and source-linked semantic
+regions are under `data/analysis/national_platforms/`.
+
+```sh
+uv run dsa-analysis national-platform-analysis --fetch-only  # explicit source collection
+uv run dsa-analysis national-platform-analysis             # offline local analysis
+```
+
+The offline command uses collected captures or the checked-in, hash-verified complete-text
+exports, plus the pinned GTE model in the local cache; `--download-model` explicitly
+permits a model download. `--fetch` collects and
+analyzes in one run. The source inventory is `data/manual/national_platform_sources.csv`.
+Democratic/Republican historical texts are labeled APP reproductions; GOP 2020 reuses
+2016 rather than adding another document. Drafts and date-uncertain DSA versions are
+excluded; official national statements are labeled fallback evidence, never presented
+as recovered historical platforms. Historical DSA gaps remain explicit. Complete extracted
+source text and model passages are exported, not metadata-only downloads.
+
 ## What this project asks
 
 How do DSA-endorsed candidates describe politics differently from other Democrats in the same

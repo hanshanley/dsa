@@ -259,8 +259,28 @@ def main() -> None:
     official_kde_parser.add_argument("--batch-size", type=int, default=48)
     official_kde_parser.add_argument("--max-length", type=int, default=256)
     official_kde_parser.add_argument("--force-embeddings", action="store_true")
+    national_parser = subparsers.add_parser(
+        "national-platform-analysis",
+        help="Compare national Democratic, Republican, and DSA documents, without candidate data.",
+    )
+    national_parser.add_argument("--fetch", action="store_true")
+    national_parser.add_argument("--fetch-only", action="store_true")
+    national_parser.add_argument("--cutoff", default="2026-10-26")
+    national_parser.add_argument("--batch-size", type=int, default=48)
+    national_parser.add_argument("--download-model", action="store_true")
+    national_parser.add_argument("--force-embeddings", action="store_true")
     args = parser.parse_args()
 
+    if args.command == "national-platform-analysis":
+        from .national_platform_kde import run_national_platform_analysis
+
+        result = run_national_platform_analysis(
+            cutoff=args.cutoff, fetch=args.fetch, fetch_only=args.fetch_only,
+            batch_size=args.batch_size, download_model=args.download_model,
+            force_embeddings=args.force_embeddings,
+        )
+        print(f"National platform analysis: {result.get('status', 'complete')}.")
+        return
     if args.command == "rebuild-analysis-segments":
         count = rebuild_candidate_analysis_segments()
         print(f"Rebuilt {count} candidate analysis segments; original source paragraphs preserved.")
