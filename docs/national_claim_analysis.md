@@ -99,6 +99,11 @@ model downloads with `--download-model`; Gemma expects its pinned cached snapsho
 The MLX script declares its isolated dependencies instead of changing the root
 analysis environment.
 
+If the isolated MLX environment is already installed, its Python can run the
+same script directly without resolving another environment:
+`/path/to/gemma-env/bin/python scripts/national_claim_corpus.py`.
+Replace the interpreter path with that environment's actual Python path.
+
 Outputs are separated under `data/analysis/national_claims/{full,reviewed_sample}/`
 and `figures/national_claims/`. The command refuses to present an unfinished full
 extraction as a completed comparison. `source_coverage.csv`, `block_status.csv`,
