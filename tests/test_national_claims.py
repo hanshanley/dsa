@@ -94,6 +94,10 @@ class ClaimPilotTests(unittest.TestCase):
         rows[1]["scoped_text"] += "tampered"
         with self.assertRaisesRegex(ValueError, "hash mismatch"):
             select_blocks(rows, screened, 1)
+        rows = sources()
+        rows[0]["document_id"] = "../outside"
+        with self.assertRaisesRegex(ValueError, "Unsafe source"):
+            select_blocks(rows, coverage(rows), 1)
 
     def test_short_claims_are_retained_with_exact_source_offsets(self):
         block = select_blocks(sources(), coverage(sources()), 1)[0]
@@ -172,12 +176,26 @@ class ClaimPilotTests(unittest.TestCase):
                         "review_status": "issues_found",
                         "flagged_claim_numbers": "1",
                         "notes": "Example fidelity issue, not a truth judgment",
-                    }
+                    },
+                    {
+                        "block_id": blocks[1]["block_id"],
+                        "review_status": "no_issue_observed",
+                        "flagged_claim_numbers": "",
+                        "notes": "No fidelity issue observed",
+                    },
                 ],
             )
             reviewed = run(corpus=corpus, output=output, per_group=1, max_tokens=2048)
-            self.assertEqual(reviewed["blocks_semantically_reviewed"], 1)
+            self.assertEqual(reviewed["blocks_semantically_reviewed"], 2)
             self.assertEqual(reviewed["candidate_claims_flagged_in_review"], 1)
+            self.assertEqual(
+                reviewed["blocks_by_status"],
+                {
+                    "reviewed_issues_found": 1,
+                    "reviewed_no_issue_observed": 1,
+                    "pending_semantic_review": 1,
+                },
+            )
             self.assertTrue(
                 all(row["analysis_eligible"] == "False" for row in read_rows(output / "claims.csv"))
             )

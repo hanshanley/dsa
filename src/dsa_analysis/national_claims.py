@@ -105,6 +105,8 @@ def select_blocks(sources: list[dict], coverage: list[dict], per_group: int = 20
         identifier = source["document_id"]
         if identifier not in eligible or source.get("duplicate_of"):
             continue
+        if not re.fullmatch(r"[a-zA-Z0-9_-]+", identifier):
+            raise ValueError(f"Unsafe source document ID: {identifier}")
         group = source["group"]
         if group not in pools:
             raise ValueError(f"Unknown organization: {group}")
@@ -413,6 +415,12 @@ def export_results(blocks: list[dict], output: Path, fingerprint: str) -> dict:
             status["semantic_review_status"] = reviews.get(status["block_id"], {}).get(
                 "review_status", "not_reviewed"
             )
+            if status["status"] == "pending_semantic_review" and status["block_id"] in reviews:
+                status["status"] = (
+                    "reviewed_issues_found"
+                    if status["semantic_review_status"] == "issues_found"
+                    else "reviewed_no_issue_observed"
+                )
     write_rows(output / "claims.csv", claims, CLAIM_FIELDS)
     write_rows(output / "block_status.csv", statuses)
     with (output / "claims.jsonl").open("w") as handle:

@@ -1,0 +1,50 @@
+{
+  "fingerprint": "f8942834211f8a60747327cda74f684f389a720d7b64e3857388f209c1e11757",
+  "blocks": 60,
+  "blocks_by_group": {
+    "democratic": 20,
+    "republican": 20,
+    "dsa": 20
+  },
+  "complete_sampled_documents": 28,
+  "documents_by_group": {
+    "democratic": 7,
+    "republican": 6,
+    "dsa": 15
+  },
+  "claims": 341,
+  "source_and_evidence_offsets_reconciled": true,
+  "all_60_blocks_assistant_reviewed": true,
+  "independent_human_review": false,
+  "analysis_eligible_claims": 0,
+  "model_and_network_disabled_during_cached_replay": true,
+  "byte_identical_replayed_files": {
+    "complete_sources.csv": "4be575be81bd38ff0e24508b2efe2f798c88bd5fc6e92f5fdedcef73c1c22a65",
+    "blocks.csv": "a4a72bdb40c84743e73c547fc3e4e67aecd3c851d2f12a559d1a2da2fd6a76c4",
+    "claims.csv": "3510b7486d00289abfd00e724368a8243520eee1f03ff0551647579ba97172bd",
+    "claims.jsonl": "db25feb30f5aebbf51bf931ad4455dc5fc1cf807403e4fc1a6f68b700bd07a77",
+    "block_status.csv": "1d5a28a34e36552db2384b410e1a8f9e7e9e15eff0f5130685127207412a8c5d",
+    "pilot_manifest.json": "ccdbd2567887e748db4fe910674baddf321d24c5a25fb080736ff74f5bf33a86",
+    "summary.json": "78e142773643c0077900807b71952bfcc7d21e4242abb01463bad4908470ccae",
+    "pilot_documents.zip": "a3e2d6c38d0d23ee55ca9c9ff44fd4ea47ef2b9655e5f1a74c04e5f5eb7f435b"
+  },
+  "zip_members": 74,
+  "raw_responses_in_zip": 60,
+  "calibration_responses_in_zip": 3,
+  "generation_tps_median": 15.067121576733118,
+  "generation_tps_min": 13.764796933762675,
+  "generation_tps_max": 15.790934060165428,
+  "generation_tokens_per_total_inference_second": 13.805564785018461,
+  "baseline_reference": "f23f2f2753b3c3d5fe7b1c2e67ca600cb26e7203",
+  "baseline_paths_verified_unchanged": [
+    "data/analysis/national_platforms",
+    "figures/national_platforms",
+    "report/national_platform_analysis.md",
+    "src/dsa_analysis/national_platforms.py",
+    "src/dsa_analysis/national_platform_kde.py",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "unit_tests_passed": 35,
+  "website_deployed": false
+}

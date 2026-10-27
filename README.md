@@ -104,8 +104,9 @@ for model revision, segmentation, sampling, bandwidth, and exploratory-region ch
 Source URLs, hashes, dates, and paragraph/page locators remain traceable.
 
 An isolated [local Gemma claim-extraction pilot](docs/national_claim_pilot.md)
-tests self-contained claims as a possible preprocessing step. It preserves exact
-source evidence and does not replace these passage-based results or fit a new KDE.
+completed 60 source blocks on a Mac. Local inference works, but source-fidelity
+issues prevent unattended rollout. Its source-linked candidates and complete audit
+bundle do not replace these passage-based results or fit a new KDE.
 
 ## Setup
 

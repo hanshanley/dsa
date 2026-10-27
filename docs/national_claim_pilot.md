@@ -5,6 +5,78 @@ Republican, and DSA corpus, **not a replacement for the published passage-based
 analysis**. No claim-based embeddings, UMAP, or KDE are fitted by this command.
 Nothing is deployed to The Margin of Error.
 
+## Completed pilot: local execution works; unattended replacement does not
+
+The fixed-prompt run completed all **60 blocks from 28 documents** on an Apple
+M5 Max Mac with 128 GB unified memory. There were 20 blocks per organization,
+covering seven Democratic platforms, six independent Republican platforms, and
+15 DSA documents. The reused 2020 Republican platform is not an additional
+independent document.
+
+| Observed measure | Result |
+|---|---:|
+| Structurally valid candidate claims | 341: Democratic 131; Republican 115; DSA 95 |
+| Responses passing structural/evidence checks | 59 of 60 |
+| Inference time, excluding setup/download/model loading | 1,831.58 seconds / 30.53 minutes |
+| Generated tokens, including the rejected response | 25,286 |
+| Median reported generation throughput | 15.07 tokens/second; range 13.76–15.79 |
+| Maximum reported MLX allocation | 32.96 GB; not whole-system RAM usage |
+| Blocks examined in assistant source-fidelity review | 60 of 60 |
+| Reviewed blocks with fidelity/self-containment/omission issues | 47 of 60 |
+| Structurally valid candidates individually flagged | 142 of 341 |
+| Candidates eligible for downstream analysis | 0 |
+
+These are observed local timings, not a controlled hardware benchmark. The
+47-block count includes the malformed response and a block with an omitted
+evaluation but no individually flagged candidate. The malformed response
+contributes no accepted candidates to the 341 or 142 counts; its raw output is
+preserved. These counts are **not independently validated error rates**.
+
+Every source block and its actual generated claims were read by the assistant
+against the source text and supplied context. The
+[review ledger](../data/analysis/national_claim_pilot/semantic_review.csv)
+records original raw-response claim numbers, omissions, and explanations.
+This is **assistant source-fidelity review, not independent human gold,
+fact-checking, or a representative population-quality estimate**. A
+`no_issue_observed` label does not certify correctness.
+
+Recurring problems were substantive, not just malformed output:
+
+- **Actors and attribution:** promises to invest, legislate, or protect troops
+  became actions by “the document”; quoted testimony lost its reported-speech
+  status.
+- **Modality and conditions:** anticipated screening access became an
+  accomplished outcome; possible post-election organizing became a promise;
+  split proposals lost second-term or local-relevance qualifications.
+- **Self-containment:** claims retained unresolved pronouns, unnamed programs,
+  courts, beneficiary groups, countries, and cross-references.
+- **Coverage and granularity:** some evaluations disappeared; list items were
+  inconsistently split into separate observations. One malformed OCR-source
+  response also extracted material from context rather than the target block.
+
+An exact evidence span often survived these failures. Structural validation is
+therefore necessary but insufficient. The prompt's generic document-attribution
+strategy also needs revision: avoiding repeated party names must not remove
+the actual governing or organizing actor. This evaluates the present extraction
+recipe and quantized checkpoint, not every possible Gemma configuration.
+
+**Decision:** retain the passage-based baseline. Before any full rollout, test a
+revised, actor/modality-aware or more extractive representation on a separate
+held-out sample, with independent fidelity/completeness review and explicit
+granularity criteria. No claim-based embeddings, UMAP, or KDE have been run, and
+the pilot does not establish that claim-based KDE improves the analysis.
+
+Download the [complete pilot audit bundle](../data/analysis/national_claim_pilot/pilot_documents.zip):
+all 28 complete sampled source texts, 60 input blocks and raw responses,
+candidate claims, rejection details, the review ledger, pinned configuration,
+runtime metadata, and the separate three-block calibration. See the
+[machine-readable results](../data/analysis/national_claim_pilot/summary.json)
+and [validation evidence](../data/analysis/national_claim_pilot/validation.json).
+The latter records reconciliation of source/evidence offsets, **byte-identical
+cached replay with model loading and network access disabled**, 35 passing
+pilot/baseline tests, and unchanged baseline paths. The review ledger is included
+in the ZIP; validation evidence is provided separately.
+
 ## Design
 
 The pilot takes 20 source blocks per organization from the existing
@@ -85,6 +157,10 @@ Outputs are under `data/analysis/national_claim_pilot/`:
   claims, statuses, configuration, and summary—not a metadata-only download.
 - `summary.json`: observed counts, inference time, generated tokens, and peak
   memory. Inference time excludes download, installation, and model loading.
+- `semantic_review.csv`: assistant review findings for all 60 blocks, separate
+  from structural validation and not independent human annotations.
+- `validation.json`: real-data reconciliation, offline replay hashes, and
+  regression-test evidence.
 
 Validation accepts a bare JSON object or one complete JSON code fence, never
 arbitrary JSON extracted from surrounding prose. Unknown types, malformed
@@ -114,3 +190,11 @@ preserves each document's assertions while standardizing the unit of analysis.
 It can also remove rhetorical emphasis or introduce a shared model writing
 style. Passing a small pilot would justify broader testing, not demonstrate that
 claim-based KDE is a superior or unbiased measure of organizational positions.
+
+Focused regression checks:
+
+```bash
+uv run python -m unittest tests.test_national_claims \
+  tests.test_national_platforms tests.test_national_platform_kde \
+  tests.test_official_platform_kde tests.test_organizational_context_corpus -q
+```
