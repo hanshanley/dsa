@@ -103,6 +103,10 @@ See the [report's methods](report/national_platform_analysis.md#methods-and-repr
 for model revision, segmentation, sampling, bandwidth, and exploratory-region checks.
 Source URLs, hashes, dates, and paragraph/page locators remain traceable.
 
+An isolated [local Gemma claim-extraction pilot](docs/national_claim_pilot.md)
+tests self-contained claims as a possible preprocessing step. It preserves exact
+source evidence and does not replace these passage-based results or fit a new KDE.
+
 ## Setup
 
 Use Python 3.12 or later and `uv`. From the repository root:
