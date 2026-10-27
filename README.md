@@ -62,10 +62,14 @@ Supplementary recovery now also preserves the full 2017 convention minutes,
 the June 2019 resolution packet, official 2019 final results, and six original
 2015 proposal PDFs. `historical_convention_inventory.csv` and `.jsonl` retain
 all 85 proposals extracted from the 2019 packet, cross-referenced to voting results.
-An additional 58 original PDFs were recovered from the 61 links in the final results,
-including R34's base text, passed Amendment #1, and separately linked R74.
-`historical_document_link_disposition.csv` records the three unavailable exports
-(R41 requires authentication; two committee-report links return 404).
+All 61 documents linked from the final results are now recovered: 60 original PDFs
+and R41's complete archived Google Doc text. These include R34's base text,
+passed Amendment #1, separately linked R74, the 87-page Credentials Committee
+report, and the 16-page Medicare for All report. Public archived captures recovered
+the three documents whose live exports were unavailable.
+`historical_document_link_disposition.csv` retains the live failures and successful
+archive routes; `source_documents.zip` contains 475 complete-text records and
+83 deduplicated original PDFs.
 These supplementary records do not change the fitted corpus or figures.
 Proposal approval is not adoption; R34 passed with an amendment not incorporated
 in this packet, and candidate-specific R74 is absent from the June packet.
