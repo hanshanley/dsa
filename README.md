@@ -55,7 +55,7 @@ All six historical fallback bundles meet the unchanged passage gate; that does
 not imply annual coverage or recovery of every original underlying resolution.
 
 `data/analysis/national_platforms/source_documents.zip` contains individual complete
-texts, separately scoped model texts, 81 deduplicated original PDFs, and a
+texts, separately scoped model texts, 85 deduplicated original PDFs, and a
 hash/provenance manifest. Non-PDF documents are provided as complete article text,
 without surrounding website scripts or credentials.
 Supplementary recovery now also preserves the full 2017 convention minutes,
@@ -68,8 +68,15 @@ passed Amendment #1, separately linked R74, the 87-page Credentials Committee
 report, and the 16-page Medicare for All report. Public archived captures recovered
 the three documents whose live exports were unavailable.
 `historical_document_link_disposition.csv` retains the live failures and successful
-archive routes; `source_documents.zip` contains 475 complete-text records and
-83 deduplicated original PDFs.
+archive routes; `source_documents.zip` contains 478 complete-text records and
+85 deduplicated original PDFs.
+The bundle also includes the complete archived 2017 resolution proposal packet,
+the original 18-page results/rationales PDF, and the original 13-page harassment
+policy PDF. All 34 text operations from an independent archived viewer were
+checked against the complete packet, including its final footnotes. The results
+PDF contains rationales, not full resolutions; packet proposals and later
+annotations are not blanket evidence of final adopted wording. A live policy
+export is not independently a frozen 2017 capture.
 These supplementary records do not change the fitted corpus or figures.
 Proposal approval is not adoption; R34 passed with an amendment not incorporated
 in this packet, and candidate-specific R74 is absent from the June packet.
