@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 15.826582169142933,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1507,
+      "prompt_tps": 472.1603214483766,
+      "request_sha256": "69b12da6a345a93171fb9a6f9de0cdd76fd49dafef46baeabb2810c371511ff8",
+      "seconds": 28.160304666962475,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The achievement gap between students of color and other students in America should be eliminated by the end of the next presidential term.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A major national investment is required for revolutionary improvements in public schools.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Accountability should be demanded from all for revolutionary improvements in public schools.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public school choice should be genuinely expanded for revolutionary improvements in public schools.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A renewed focus on discipline, character, and safety is required for revolutionary improvements in public schools.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Schools should have a zero-tolerance policy towards guns.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Each school should institute strict, firm, and fair discipline policies agreed upon on the first day of the school year at a meeting of teachers, parents, and students.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Family Leave Law should be expanded to allow parents to attend school meetings and parent-teacher conferences without fear of job loss.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Education is about passing on values to the next generation of American citizens, not just test scores.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Children and teachers deserve schools of safety and classrooms free of fear.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 15.592187855300063,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2070,
+      "prompt_tps": 505.82781242834056,
+      "request_sha256": "1d6ae0625e9102add5a65913a7696c974fd703dcbd7115718b4469cda0334a8e",
+      "seconds": 30.27066862490028,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The achievement gap between students of color and the rest of America's students should be eliminated by the end of the next presidential term.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Revolutionary improvements in public schools require a major national investment.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Revolutionary improvements in public schools require a demand of accountability from all.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Revolutionary improvements in public schools require a genuine expansion of public school choice.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Revolutionary improvements in public schools require a renewed focus on discipline, character, and safety.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There should be a zero-tolerance policy towards guns in schools.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Each school should institute strict, firm, and fair discipline policies that are agreed upon on the first day of the school year at a meeting of teachers, parents, and students.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Family Leave Law should be expanded to make sure parents can attend school meetings and all parent-teacher conferences without being scared they will lose their jobs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Education is not just about test scores, but about passing on values to the next generation of American citizens.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Children and teachers deserve schools of safety and classrooms free of fear.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "69b12da6a345a93171fb9a6f9de0cdd76fd49dafef46baeabb2810c371511ff8"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 487,
+      "generation_tps": 16.503650032317704,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1508,
+      "prompt_tps": 494.79916743699044,
+      "request_sha256": "0a00ca594a91750f20c012d42930782bcb9efbe013ea8c05ac997e823fd8953f",
+      "seconds": 32.566636957926676,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican party wants to expand opportunity instead of government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Governor Bush calls expanding opportunity \\\"the Duty of Hope.\\\"\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party sees expanding opportunity as its duty to act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The old left-liberal order of social policy has collapsed in failure.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The failure of the old left-liberal order of social policy was most egregious among the poor and those on the margins of society.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The time is here to act, to bring hope, and to expand opportunity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republican governors sparked a revolution that brought about the greatest social policy change in nearly 60 years \u2014 welfare reform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congressional Republicans passed landmark welfare reform legislation in 1996.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Welfare reform legislation has helped millions of Americans break the cycle of welfare and gain independence for their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"About six million Americans are now gainfully employed because of welfare reform legislation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Welfare reform legislation turned welfare resources and decision-making back to the states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Welfare reform legislation requires recipients to meet a work requirement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Assistance provided through welfare reform legislation is only temporary.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 440,
+      "generation_tps": 16.740557733999,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2163,
+      "prompt_tps": 542.6048040729879,
+      "request_sha256": "aed7484fc73a0bcded98ba2b9305742af8192c8765bb7a8c61170fba04633659",
+      "seconds": 30.281278083100915,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican party wants to expand opportunity instead of government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Governor Bush calls expanding opportunity \\\"the Duty of Hope.\\\"\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party sees expanding opportunity as its duty to act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The old left-liberal order of social policy has collapsed in failure.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The failure of the old left-liberal order of social policy was most egregious among the poor and those on the margins of society.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The time is here to act, to bring hope, and to expand opportunity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republican governors sparked a revolution that brought about the greatest social policy change in nearly 60 years \u2014 welfare reform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congressional Republicans passed landmark welfare reform legislation in 1996.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Welfare reform legislation has helped millions of Americans break the cycle of welfare and gain independence for their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"About six million Americans are now gainfully employed because of welfare reform legislation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Welfare reform legislation turned welfare resources and decision-making back to the states, with the understanding that recipients must meet a work requirement and such assistance would be only temporary.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0a00ca594a91750f20c012d42930782bcb9efbe013ea8c05ac997e823fd8953f"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 293,
+      "generation_tps": 16.03477682205309,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1557,
+      "prompt_tps": 457.1203094043988,
+      "request_sha256": "2519f6671c744c425e46e2e25f1b36290a5d083d7de4287e1bad5e8fec7653dd",
+      "seconds": 21.68916712515056,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Corporate developers will attempt to buy property from poor residents at low prices and transform New Orleans into a tourist destination.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mainstream politicians will advocate for privatization and tax incentives for investment zones.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are no calls from political leaders for a Marshall Plan for cities that would train residents in skilled trades and rebuild infrastructure and affordable housing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are no leaders ready to reverse practices that exacerbate climate change and ecological devastation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is pursuing a corporate-friendly and union-busting path by suspending prevailing-wage and affirmative action rules for contractors.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Paying nine dollars an hour and employing Black New Orleans residents is considered too much by George Bush and his corporate associates.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's proposed solutions are inadequate and underfunded weeks after the tragedy.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 339,
+      "generation_tps": 16.033164751382277,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2018,
+      "prompt_tps": 497.21061786805274,
+      "request_sha256": "c3f8cd9720d3e25c1bb12da375982e941aa9d2a770df601d6eaee3b06044bb55",
+      "seconds": 25.21322795911692,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Corporate developers will be quick to attempt to buy out poor residents at bargain basement prices as they attempt to transform New Orleans from a unique cultural community into a corporate tourist magnet.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mainstream politicians of all stripes will counsel in favor of privatization and tax give-away investment zones.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are no calls from political leaders for a true Marshall Plan for cities, which would train residents in the skilled trades needed to rebuild crumbling infrastructure and affordable, quality housing while simultaneously providing one way out of decades and centuries of economic and racial oppression.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are no leaders ready to reverse the practices that accentuate climate change and resulting eco-devastations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is already pursuing a corporate-friendly, union-busting path by suspending prevailing-wage and affirmative action rules for contractors.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Paying nine dollars an hour and employing Black New Orleans residents is evidently too much for George Bush and his corporate friends.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President still proposes solutions that are inadequate and underfunded weeks after the tragedy.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2519f6671c744c425e46e2e25f1b36290a5d083d7de4287e1bad5e8fec7653dd"
+}

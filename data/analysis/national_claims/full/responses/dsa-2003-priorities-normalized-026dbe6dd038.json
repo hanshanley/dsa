@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 269,
+      "generation_tps": 16.002181809528647,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1432,
+      "prompt_tps": 465.6323733150771,
+      "request_sha256": "755966ad2dfe015b26274e461cfd7ab54e845ef44ec9f36010624dadffd3479e",
+      "seconds": 19.89659587503411,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for developing a project around a public dialogue between progressive elected officials in the United States and other countries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The importance of a genuine multilateral approach to international crises should be developed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a need for international leadership on human rights and peace issues from outside the United States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Opposition to American jingoism, anti-Europe bashing, simplistic unilateralist or phony multilateral foreign policy programs, and contempt for international law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The economic and social welfare systems of other advanced industrial nations are superior.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"International solidarity is needed to meet human needs and further popular aspirations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Opposition to corporate-driven globalization.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 253,
+      "generation_tps": 15.987545975162865,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1869,
+      "prompt_tps": 484.26733050405284,
+      "request_sha256": "a3c6e90bf845720e5a8c111c623705c9f18e4e1dfbe3671619ec03b3ae5ca613",
+      "seconds": 19.694561374839395,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for developing a project around a public dialogue between progressive elected officials in the United States and other countries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The importance of a genuine multilateral approach to international crises should be developed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a need for international leadership on human rights and peace issues from outside the United States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Opposition to American jingoism, anti-Europe bashing, simplistic unilateralist or phony multilateral foreign policy programs, and contempt for international law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The economic and social welfare systems of other advanced industrial nations are superior, according to the source.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for international solidarity to meet human needs and further popular aspirations while opposing corporate-driven globalization.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "755966ad2dfe015b26274e461cfd7ab54e845ef44ec9f36010624dadffd3479e"
+}

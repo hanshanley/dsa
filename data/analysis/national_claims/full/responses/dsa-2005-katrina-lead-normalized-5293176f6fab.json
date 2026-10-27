@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 271,
+      "generation_tps": 16.730444153909865,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1460,
+      "prompt_tps": 490.47989592824507,
+      "request_sha256": "29e16aa2dcd1df60ca3a5c06a49470558b98efe1156a6ac9bb887c7a345c8c8c",
+      "seconds": 19.184539041947573,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA is raising funds for relief efforts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA's relief efforts will be geared toward aiding community-based organizations that fight for the interests of poor and working people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA challenges itself and its allies in the larger progressive community to redouble efforts to take back political and ideological ground lost to the Right.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the trend toward gutting the capacity of the democratic state continues, more events like Hurricane Katrina will result in further collapses of basic civic decency and civic responsibility.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The failure of the federal and state governments to respond adequately to the ongoing crisis is unconscionable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican effort to gut entitlement programs to pay for Katrina relief demonstrates the callous racism of the governing majority in Congress.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 306,
+      "generation_tps": 16.712862308901933,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1899,
+      "prompt_tps": 527.0532431855564,
+      "request_sha256": "adef79b078b278478dfbd9498d285b4b2f164331beb060a8d0ab7153c0a957e8",
+      "seconds": 21.92219337495044,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA is raising funds for relief.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA\u2019s efforts will be geared toward aiding community-based organizations that fight for the interests of poor and working people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA challenges itself and its allies in the larger progressive community to redouble efforts to take back the political and ideological ground lost to the Right.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the trend toward gutting the capacity of the democratic state continues, more Katrinas will result in further collapses of basic civic decency and civic responsibility.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The failure of the federal and state governments to respond adequately to this ongoing crisis is unconscionable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican effort to gut entitlement programs to pay for Katrina relief demonstrates the callous racism of the governing majority in Congress.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA must do everything in its power to keep the issue in the public eye.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "29e16aa2dcd1df60ca3a5c06a49470558b98efe1156a6ac9bb887c7a345c8c8c"
+}

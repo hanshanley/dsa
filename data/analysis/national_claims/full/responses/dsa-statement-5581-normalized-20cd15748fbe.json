@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 177,
+      "generation_tps": 16.083716256950275,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1384,
+      "prompt_tps": 449.3072564833052,
+      "request_sha256": "9579c31a017c18a57fc4aa47a1bc9fe94ebf7343f3249f72551253eb61ce4d4c",
+      "seconds": 14.098742792150006,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Jacob Blake and his family suffer a lifetime of psychological trauma as victims of police brutality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The lack of a national healthcare system like Medicare For All means Jacob Blake's family must carry a lifetime of economic burden if they hope to acquire the kind of care Mr. Blake and his family will need.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a national healthcare system like Medicare For All.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Solidarity is expressed with all those who are grieving and raging today.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 183,
+      "generation_tps": 15.682297561049118,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1729,
+      "prompt_tps": 464.7090718878573,
+      "request_sha256": "0f6f487906ebefb77d9d9f9866b61ca4911c311fc228695cc7e9c1c28c766772",
+      "seconds": 15.400164416991174,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Victims of police brutality like Jacob Blake and his family suffer a lifetime of psychological trauma.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The lack of a national healthcare system like Medicare For All means Jacob Blake's family must carry a lifetime of economic burden if they hope to acquire the kind of care Mr. Blake and his family will need.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a national healthcare system like Medicare For All.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Solidarity is expressed with all those who are grieving and raging today.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "9579c31a017c18a57fc4aa47a1bc9fe94ebf7343f3249f72551253eb61ce4d4c"
+}

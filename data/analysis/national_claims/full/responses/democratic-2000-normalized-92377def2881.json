@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 343,
+      "generation_tps": 15.887119376630762,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1489,
+      "prompt_tps": 471.27348364668273,
+      "request_sha256": "5486ccb58fda87fcc413d813706b6fbd21f473d6beeee0642a2e13875bbd7687",
+      "seconds": 24.760155249852687,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"During the past decade, the birth of the global, information-based new economy has changed most every aspect of Americans' lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As the transition from the Industrial Age to the Information Age continues, it will be difficult for some.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats must lead the way in equipping all Americans with new tools for economic success and security in the decade to come.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Equipping all Americans with new tools for economic success and security is the only sure means of ensuring that America's prosperity is broadly shared.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans time after time opposed the ideas that brought prosperity to America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans have been proven wrong time after time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans now propose to rewind to the policies that brought America the days of deficits, doubt, debt, and decline.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans propose a retreat to the thinking of the era of recessions, repossessions, and retrenchment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 15.960669827316712,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2000,
+      "prompt_tps": 487.48949115470464,
+      "request_sha256": "9c4c7e76c719402f6364953c1546d575a9df3ee20140f262c8fa50ead2c87746",
+      "seconds": 26.606250583892688,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"During the past decade, the birth of the global, information-based new economy has changed most every aspect of Americans' lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As the transition from the Industrial Age to the Information Age continues, the transition will be difficult for some.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the decade to come, Democrats must lead the way in equipping all Americans with new tools for economic success and security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Equipping all Americans with new tools for economic success and security is the only sure means of ensuring that America's prosperity is one that is broadly shared.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Time after time, Republicans opposed the ideas that brought prosperity to America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Time after time, Republicans have been proven wrong.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Despite a Democratic record of success, Republicans now propose to rewind to the policies that brought America the days of deficits, doubt, debt, and decline.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans propose a retreat to the thinking of the era of recessions, repossessions, and retrenchment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5486ccb58fda87fcc413d813706b6fbd21f473d6beeee0642a2e13875bbd7687"
+}

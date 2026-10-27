@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 282,
+      "generation_tps": 15.774064457155323,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1505,
+      "prompt_tps": 454.45613490568894,
+      "request_sha256": "035bae4fb6b9853e3888a510d04a781a1a018a81008384c8caac2027828c5a2a",
+      "seconds": 21.200827124994248,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The men and women of law enforcement deserve gratitude and support.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The jobs of law enforcement are never easy, especially in crisis situations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration's lack of respect for law enforcement has been unprecedented, including White House intervention in local arrests and the Attorney General's harassment of police forces.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Department of Justice has refused to enforce laws, stonewalled congressional committees, destroyed evidence, and recklessly dealt with firearms, leading to deaths on both sides of the border.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Department of Justice has urged leniency for rioters while ignoring mob attacks on peaceful citizens exercising their political rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A new administration must ensure the immediate dismissal and, where appropriate, prosecution of any Department officials who have violated their oath of office.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 307,
+      "generation_tps": 15.55406998148984,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1955,
+      "prompt_tps": 477.66222091740974,
+      "request_sha256": "7957c76e94dc07f2d930a05e82114fc9138c9891d92859bd8356aeab8bac0f7e",
+      "seconds": 23.84226470813155,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The men and women of law enforcement deserve gratitude and support.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The jobs of law enforcement are never easy, especially in crisis situations, and should not be made more difficult by politicized second-guessing from federal officials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration's lack of respect for law enforcement has been unprecedented, including White House intervention in local arrests and the Attorney General's harassment of police forces around the country.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Department of Justice has refused to enforce laws, stonewalled congressional committees, destroyed evidence, and recklessly dealt with firearms that led to several deaths on both sides of the border.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Department of Justice has urged leniency for rioters while turning a blind eye to mob attacks on peaceful citizens exercising their political rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A new administration must ensure the immediate dismissal and, where appropriate, prosecution of any Department officials who have violated their oath of office.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "035bae4fb6b9853e3888a510d04a781a1a018a81008384c8caac2027828c5a2a"
+}

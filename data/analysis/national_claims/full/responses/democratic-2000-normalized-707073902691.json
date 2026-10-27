@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 350,
+      "generation_tps": 16.7355089133845,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1479,
+      "prompt_tps": 510.0840539330357,
+      "request_sha256": "6f561a829122f7f80a9be297c7489333ad06d1084d5f7c9efb978b4b785caa26",
+      "seconds": 23.823329583043233,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe that building upon the record-breaking prosperity and growth achieved in the past eight years, no community should be left behind.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under the leadership of Al Gore, the Empowerment Zones and Enterprise Communities programs have brought new hope to cities and rural areas all across America.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will seek a new round of Empowerment Zones to spread prosperity further.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will extend the Clinton-Gore New Markets Initiative to see that the prosperity of the mainstream economy flows to Main Streets everywhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will continue the fight to strengthen the Community Reinvestment Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will continue the fight to create a network of Community Development Banks.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are committed to building an America in which no neighborhood or town sees joblessness and shuttered businesses as commonplace or inevitable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are committed to building an America in which no families or young adults surrender their right to work hard and live the American dream.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 355,
+      "generation_tps": 16.738458018313434,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1997,
+      "prompt_tps": 529.66906550472,
+      "request_sha256": "9622fd180672261092a0ab183b4e970355c2dab1da575f20ffca0f44e1929eaf",
+      "seconds": 24.988917166134343,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe that in building upon the record-breaking prosperity and growth achieved in the past eight years, no community should be left behind.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under the leadership of Al Gore, the Empowerment Zones and Enterprise Communities programs have brought new hope to cities and rural areas all across America.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will seek a new round of Empowerment Zones to spread prosperity even further.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will extend the Clinton-Gore New Markets Initiative to see that the prosperity of the mainstream economy flows to Main Streets everywhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will continue the fight to strengthen the Community Reinvestment Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will continue the fight to create a network of Community Development Banks.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are committed to building an America in which no neighborhood or town sees joblessness and shuttered businesses as commonplace or inevitable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are committed to building an America in which no families or young adults surrender their God-given right to work hard and live the American dream.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6f561a829122f7f80a9be297c7489333ad06d1084d5f7c9efb978b4b785caa26"
+}

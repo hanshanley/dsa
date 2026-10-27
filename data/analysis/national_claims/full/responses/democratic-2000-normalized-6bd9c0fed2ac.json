@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 347,
+      "generation_tps": 15.973108006835808,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1441,
+      "prompt_tps": 469.84230285174806,
+      "request_sha256": "df62e3266e745051e01587e370cd651262ac371d17c81dbbe5d0f19310a30d17",
+      "seconds": 24.801971167093143,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"A dramatic increase in after-school care for America's children is needed if the group is serious about fighting school violence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The average two-parent family works 500 more hours a year than they did a generation ago.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The most dangerous hours for children are those between the end of the school day and the end of the work day.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children are most likely to get into trouble and fall under bad influences during the hours between the end of the school day and the end of the work day.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group has increased after-school assistance 500 times over in the last four years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes in expanding after-school programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes in providing Americans with an after-school tax credit.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Providing Americans with an after-school tax credit will allow children to have a safe, supervised after-school environment where they can continue to learn and learn right from wrong.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 356,
+      "generation_tps": 15.960157707958937,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1956,
+      "prompt_tps": 479.3830663567112,
+      "request_sha256": "416242bd3d435c1f8c15fca3159c340959c3882e114e9315d0aeba55d1d7b780",
+      "seconds": 26.39590649981983,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"If the group is serious about fighting school violence, a dramatic increase in after-school care for America's children is needed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The average two-parent family works 500 more hours a year than they did a generation ago.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The most dangerous hours for children are those between the end of the school day and the end of the work day.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children are most likely to get into trouble and fall under bad influences during the hours between the end of the school day and the end of the work day.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group has increased after-school assistance 500 times over in the last four years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes in expanding after-school programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes in providing Americans with an after-school tax credit.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes providing Americans with an after-school tax credit will allow children to have a safe, supervised after-school environment where they can continue to learn and learn right from wrong.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "df62e3266e745051e01587e370cd651262ac371d17c81dbbe5d0f19310a30d17"
+}

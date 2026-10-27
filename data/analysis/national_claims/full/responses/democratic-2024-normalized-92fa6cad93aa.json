@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 416,
+      "generation_tps": 15.782087960418716,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1512,
+      "prompt_tps": 457.93730157417923,
+      "request_sha256": "55da4bf67856e3b2ea47139806c81de623f9e6859d621ad0f9096f613b1e1477",
+      "seconds": 29.671860249945894,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats oppose unfair loopholes and wasteful subsidies that benefit special interests at everyone else's expense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to eliminate these loopholes and wasteful subsidies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will eliminate tens of billions of dollars in subsidies for oil and gas companies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will end special tax breaks for corporate jets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will boost fuel taxes on corporate and private jet travel, saving taxpayers $4 billion over 10 years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will no longer permit companies to deduct the cost of paying executives more than $1 million a year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Corporations should not get a tax break for giving huge pay packages to CEOs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will eliminate the \u201clike-kind exchange\u201d loophole that allows wealthy real estate investors to avoid paying taxes on real estate profits, as long as they keep investing in real estate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 2017 tax law protected the \u201clike-kind exchange\u201d loophole for Donald Trump and other corporate landlords.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"No other industry has a tax break like the \u201clike-kind exchange\u201d loophole.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 431,
+      "generation_tps": 15.768671828146083,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 2096,
+      "prompt_tps": 501.69935395046184,
+      "request_sha256": "7379f518be5d610e4d1384c56709b48d5f130dc79ca8fe4bb11e4ef8630e4202",
+      "seconds": 31.521657624980435,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats oppose unfair loopholes and wasteful subsidies that benefit special interests at everyone else's expense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to get rid of unfair loopholes and wasteful subsidies that benefit special interests at everyone else's expense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will eliminate tens of billions of dollars in subsidies for oil and gas companies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will end special tax breaks for corporate jets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will boost fuel taxes on corporate and private jet travel, saving taxpayers $4 billion over 10 years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will no longer permit companies to deduct the cost of paying executives more than $1 million a year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Corporations should not get a tax break for giving huge pay packages to CEOs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will eliminate the so-called \u201clike-kind exchange\u201d loophole that allows wealthy real estate investors to avoid paying taxes on real estate profits, as long as they keep investing in real estate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 2017 tax law protected the \u201clike-kind exchange\u201d loophole for Donald Trump and other corporate landlords.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"No other industry has a tax break like the \u201clike-kind exchange\u201d loophole.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "55da4bf67856e3b2ea47139806c81de623f9e6859d621ad0f9096f613b1e1477"
+}

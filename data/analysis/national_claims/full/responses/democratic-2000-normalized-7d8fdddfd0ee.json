@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 267,
+      "generation_tps": 16.66085075175686,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1441,
+      "prompt_tps": 480.30804385055933,
+      "request_sha256": "7185b8f36def1f4140ee4ea32784c015227ca9c88d5043ab155fdbdd53c72960",
+      "seconds": 19.036449416074902,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe every American should be able to reach across a computer keyboard and access knowledge, commerce, and communication available on the Internet.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats fought for the e-rate to wire every classroom and library to the Internet.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the next four years, Democrats must finish connecting jobs to the Internet and then go further.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will launch a new crusade calling on government, employers, the high-tech industry, community organizations, and unions to move toward full Internet access in every home and for every family across the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats must ensure no family or community is left out of Internet access.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will not rest until Internet access is universal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 297,
+      "generation_tps": 16.666963427523545,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1876,
+      "prompt_tps": 505.8025519285793,
+      "request_sha256": "78267dc4b0269325505022545cf54675b17007d34d46bd10f4ecc8b5ac074f91",
+      "seconds": 21.53808066691272,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe every American - regardless of income, geography, race, or disability - should be able to reach across a computer keyboard and reach the vast new worlds of knowledge, commerce, and communication that are available at the touch of a fingertip.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats fought for the e-rate to wire every classroom and library to the Internet.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the next four years, Democrats must finish connecting jobs to the Internet and then go further.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will launch a new crusade - calling on the resources of government, employers, the high-tech industry, community organizations, and unions - to move toward full Internet access in every home, for every family, all across the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats must ensure no family or community is left out of Internet access.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will not rest until Internet access is universal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7185b8f36def1f4140ee4ea32784c015227ca9c88d5043ab155fdbdd53c72960"
+}

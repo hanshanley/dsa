@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 335,
+      "generation_tps": 16.65725669810461,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1517,
+      "prompt_tps": 495.6577262872348,
+      "request_sha256": "20481136e2511f7742ed6b985670cda09034e05e16646a95738804eafa3165da",
+      "seconds": 23.182364790933207,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for tax reform that takes 6 million families off the tax rolls, cuts the rate for those who remain on the rolls, and doubles the child tax credit to $1,000.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the \\\"American Dream Down Payment\\\" program, which will allow a half million families who currently draw federal rental assistance to become homeowners.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for allowing families receiving federal rental payments to apply one year's worth of their existing assistance money toward the purchase of their own first home.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for establishing the Renewing the Dream tax credit to increase the supply of affordable housing for low-income working families and rehabilitate abandoned housing.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Renewing the Dream tax credit will create or renovate more than 100,000 single-family housing units in distressed communities.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Welfare reform was not easy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Six million Americans are now gainfully employed because of the 1996 welfare reform legislation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 389,
+      "generation_tps": 16.63566195814657,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2020,
+      "prompt_tps": 492.31506637836486,
+      "request_sha256": "8ced37a034ec084a834b5a80c2ea2e89d56822741fe5e96688070af25b53c7a5",
+      "seconds": 27.496708041988313,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for taking more steps in the right direction by helping families climb the opportunity ladder.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for tax reform that takes 6 million families off the tax rolls, cuts the rate for those who remain on the tax rolls, and doubles the child tax credit to $1,000.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for implementing the \\\"American Dream Down Payment\\\" program, which will allow a half million families who currently draw federal rental assistance to become homeowners.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for allowing families receiving federal rental payments to apply one year's worth of their existing assistance money toward the purchase of their own first home, thus becoming independent of any further government housing assistance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for establishing the Renewing the Dream tax credit to increase the supply of affordable housing for low-income working families and rehabilitate abandoned housing that blights neighborhoods.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Renewing the Dream tax credit will create or renovate more than 100,000 single-family housing units in distressed communities.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Welfare reform was not easy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"About six million Americans are now gainfully employed because of the 1996 welfare reform legislation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "20481136e2511f7742ed6b985670cda09034e05e16646a95738804eafa3165da"
+}

@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 196,
+      "generation_tps": 16.01938039831539,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1473,
+      "prompt_tps": 460.4006055556798,
+      "request_sha256": "952e03c4ad1a84482fdc3a0215c9150fff76639e626df35bd02fdb218e5f8807",
+      "seconds": 15.445489542093128,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Judith Smith says the Affordable Care Act saved Judith Smith's life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Irresponsible lenders tricked buyers into signing subprime loans for more than a decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Too many homeowners bought homes they could not afford for more than a decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The housing bubble's burst hurt everyone, including responsible homeowners.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The housing market's dramatic collapse triggered the economy's downward spiral into recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 224,
+      "generation_tps": 15.952855986788295,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1837,
+      "prompt_tps": 480.4727308604492,
+      "request_sha256": "41e73ce5824dffed5bc8a8d50c85a99a170b3c81762834392422851ce8f93007",
+      "seconds": 17.87528350017965,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Judith Smith says the Affordable Care Act saved Judith Smith's life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"For more than a decade, irresponsible lenders tricked buyers into signing subprime loans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"For more than a decade, too many homeowners got in over their heads by buying homes they couldn't afford.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"When the housing bubble burst, it hurt everyone, including responsible homeowners who played by the rules, but saw their home values decline and their neighbors' houses sit vacant.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The housing market's dramatic collapse triggered the economy's downward spiral into recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "952e03c4ad1a84482fdc3a0215c9150fff76639e626df35bd02fdb218e5f8807"
+}

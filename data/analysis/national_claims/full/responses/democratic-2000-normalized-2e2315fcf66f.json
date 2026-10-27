@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 467,
+      "generation_tps": 16.629797296803368,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1526,
+      "prompt_tps": 481.4245244980102,
+      "request_sha256": "e9f9b9263254c4e4903aabd07ed2f02dfd70139a684473dd32317926d4a3645f",
+      "seconds": 31.26257445802912,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Al Gore supports the completion of the Human Genome Project.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore championed legislation to ban genetic discrimination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore led the Administration's efforts to give parents, schools, and communities effective tools to protect children from inappropriate content online.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore focused on protecting Americans' personal privacy online, as well as medical and financial information.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore has called for an Electronic Bill of Rights for the electronic age.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Electronic Bill of Rights includes the right to choose whether personal information is disclosed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Electronic Bill of Rights includes the right to know how, when, and how much personal information is being used.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Electronic Bill of Rights includes the right to see personal information.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Electronic Bill of Rights includes the right to know if personal information is accurate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe there ought to be a modern, science-based food safety system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats believe there ought to be meaningful food labeling that discloses where food comes from.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Communities should have the right to know about toxins released into the air and water, according to Democrats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 457,
+      "generation_tps": 16.67463348674903,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2161,
+      "prompt_tps": 550.5333317180191,
+      "request_sha256": "80881af948f11c4cce93ed34da7b292c1dca3d7de2c6b15bb4bafd055f0b2eb7",
+      "seconds": 31.342521332902834,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Al Gore supports the completion of the Human Genome Project while championing legislation to ban genetic discrimination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore led the Administration's efforts to give parents, schools, and communities effective tools to protect children from inappropriate content online.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore focused on protecting Americans' personal privacy online, as well as medical and financial information that can all too easily be intercepted and abused by others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore has called for an Electronic Bill of Rights for the electronic age.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Electronic Bill of Rights includes the right to choose whether personal information is disclosed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Electronic Bill of Rights includes the right to know how, when, and how much of personal information is being used.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Electronic Bill of Rights includes the right to see personal information.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Electronic Bill of Rights includes the right to know if personal information is accurate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe there ought to be a modern, science-based food safety system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats believe there ought to be meaningful food labeling that discloses where food comes from.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Communities should have the right to know about toxins released into the air and water, according to Democrats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e9f9b9263254c4e4903aabd07ed2f02dfd70139a684473dd32317926d4a3645f"
+}

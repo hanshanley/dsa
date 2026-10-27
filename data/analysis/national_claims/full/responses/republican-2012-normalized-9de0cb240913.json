@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 432,
+      "generation_tps": 16.027853664141333,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1501,
+      "prompt_tps": 468.0338433816631,
+      "request_sha256": "41800acca6a2962e196f12c618e264f1d82815d0afedf590969e13385f1d02ff",
+      "seconds": 30.171029167016968,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Uncertainty is threatening the survival of farmers in the nation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's growers and farmers are aging.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Much of America's farmland will be passed to the next generation of farmers with families.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Uncertainties in estate and capital gains tax laws threaten the survival of multigenerational family farms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Proposals for tax reforms contained elsewhere in this document will ensure that family farms will not be lost.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agricultural producers and the jobs they generate throughout the entire food chain must confront volatility in both the weather and the markets.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for farm programs that enable agricultural producers to manage the extraordinary risk they meet in the fields every year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Farm programs should be as cost-effective as they are functional, offering risk management tools that improve producers' ability to operate when times are tough.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Farm programs must contribute to balancing the budget.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Direct Payment program should end.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for programs like crop insurance that help manage risk and are counter-cyclical in nature.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 432,
+      "generation_tps": 15.960538872850828,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 2101,
+      "prompt_tps": 490.2692578137383,
+      "request_sha256": "07b442f34386831c68c81786e973b7e3228097c2dd9956ed8f46b21d1cdbccce",
+      "seconds": 31.36271333298646,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Uncertainty is threatening the survival of farmers in the nation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's growers and farmers are aging.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Much of America's farmland will be passed to the next generation of farmers with families.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Uncertainties in estate and capital gains tax laws threaten the survival of multigenerational family farms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Proposals for tax reforms contained elsewhere in this document will ensure that family farms will not be lost.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agricultural producers and the jobs they generate throughout the entire food chain must confront volatility in both the weather and the markets.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for farm programs that enable agricultural producers to manage the extraordinary risk they meet in the fields every year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Farm programs should be as cost-effective as they are functional, offering risk management tools that improve producers' ability to operate when times are tough.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Farm programs must contribute to balancing the budget.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Opposition to the Direct Payment program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for programs like crop insurance that help manage risk and are counter-cyclical in nature.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "41800acca6a2962e196f12c618e264f1d82815d0afedf590969e13385f1d02ff"
+}

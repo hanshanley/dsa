@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 301,
+      "generation_tps": 15.779871560996051,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1537,
+      "prompt_tps": 456.4200569118446,
+      "request_sha256": "4a924ca771e44ef89daa15bfe0b5dc812437418dcfca2f21f591828844cbd2ef",
+      "seconds": 22.453275334089994,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"George W. Bush said the economy is far from perfect even in times of large surpluses and should not be satisfied with the status quo.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Budget surpluses are the result of over-taxation of the American people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The weak link in the chain of prosperity is the tax system.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal tax code is dysfunctional.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal tax code penalizes hard work, marriage, thrift, and success.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Federal taxes are the highest they have ever been in peacetime.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Taxes at all levels of government absorb 36 percent of the net national product.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The average American family has to work more than four months out of every year to fund all levels of government.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 309,
+      "generation_tps": 15.89540214912857,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2006,
+      "prompt_tps": 481.62196152217683,
+      "request_sha256": "46b1c17fe203a6af19fdc60f2bd403128178fccdd46e431804646221b0d14e08",
+      "seconds": 23.61682558315806,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"George W. Bush said the economy is far from perfect even in times of large surpluses and should not be satisfied with the status quo.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Budget surpluses are the result of over-taxation of the American people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The tax system is the weak link in the chain of prosperity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal tax code is dysfunctional.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal tax code penalizes hard work, marriage, thrift, and success, which are the foundations for lasting prosperity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Federal taxes are the highest they have ever been in peacetime.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Taxes at all levels of government absorb 36 percent of the net national product.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The average American family has to work more than four months out of every year to fund all levels of government.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "4a924ca771e44ef89daa15bfe0b5dc812437418dcfca2f21f591828844cbd2ef"
+}

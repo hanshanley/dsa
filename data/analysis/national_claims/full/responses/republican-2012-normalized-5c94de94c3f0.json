@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 228,
+      "generation_tps": 16.529163080729543,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1739,
+      "prompt_tps": 618.8712217950393,
+      "request_sha256": "93136221b57965a7ccd39f456cc93469e2f87cbad25fdde3bf5399beb0c97a26",
+      "seconds": 16.613249000161886,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Republican Party supports appointing public officials to federal agencies who will properly and correctly apply environmental laws and regulations, always in support of economic development, job creation, and American prosperity and leadership.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal agencies charged with enforcing environmental laws must stop regulating beyond their authority.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no place in regulatory agencies for activist regulators.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 2009, the EPA has moved forward with expansive regulations that will impose tens of billions of dollars in new costs on American businesses and consumers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"These regulations are creating regulatory uncertainty, preventing new projects from going forward, discouraging new investment, and stifling job creation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 236,
+      "generation_tps": 16.61411957622117,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 2082,
+      "prompt_tps": 595.5523794980506,
+      "request_sha256": "9950d01dcc56d3db2d6ee68002f03f4f1d17e201942256944bfe89acc4a4ef9e",
+      "seconds": 17.710011958144605,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party supports appointing public officials to federal agencies who will properly and correctly apply environmental laws and regulations, always in support of economic development, job creation, and American prosperity and leadership.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal agencies charged with enforcing environmental laws must stop regulating beyond their authority.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no place in regulatory agencies for activist regulators.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 2009, the EPA has moved forward with expansive regulations that will impose tens of billions of dollars in new costs on American businesses and consumers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The EPA's regulations are creating regulatory uncertainty, preventing new projects from going forward, discouraging new investment, and stifling job creation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 236,
+      "generation_tps": 16.669056319545405,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1800,
+      "prompt_tps": 494.52955864673606,
+      "request_sha256": "07353630fb9f36bc3899f5ce60bc000289df71731c8fa678e2b6f635427ac6c8",
+      "seconds": 17.806937417015433,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party supports appointing public officials to federal agencies who will properly and correctly apply environmental laws and regulations, always in support of economic development, job creation, and American prosperity and leadership.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal agencies charged with enforcing environmental laws must stop regulating beyond their authority.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no place in regulatory agencies for activist regulators.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 2009, the EPA has moved forward with expansive regulations that will impose tens of billions of dollars in new costs on American businesses and consumers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The EPA's regulations are creating regulatory uncertainty, preventing new projects from going forward, discouraging new investment, and stifling job creation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "61f54d7dd2128926baa020fec582c37eb5ac1e409e0dc21dfab2b8b32c02ee6d"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 56,
+      "generation_tps": 16.665027032206883,
+      "peak_memory": 33.797721866,
+      "prompt_tokens": 1299,
+      "prompt_tps": 455.6061121728589,
+      "request_sha256": "7877fe00ee53cbd503fe2689a6afd4973061e5b85e915fcd7ec3845e00775982",
+      "seconds": 6.221455874852836,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The DSA NPC Steering Committee approved this statement on September 16, 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 56,
+      "generation_tps": 16.88418327220753,
+      "peak_memory": 33.797721866,
+      "prompt_tokens": 1523,
+      "prompt_tps": 476.90027968794743,
+      "request_sha256": "4d70e73f0da2b19b6a1c7e0a02bda1492eb75c799d39d001d168b822647d8259",
+      "seconds": 6.5191873328294605,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The DSA NPC Steering Committee approved this statement on September 16, 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7877fe00ee53cbd503fe2689a6afd4973061e5b85e915fcd7ec3845e00775982"
+}

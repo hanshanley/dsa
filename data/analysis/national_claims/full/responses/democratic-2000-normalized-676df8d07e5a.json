@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 181,
+      "generation_tps": 15.925181677625677,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1422,
+      "prompt_tps": 467.12787427617155,
+      "request_sha256": "f661d0b8261f2958bbaabf393257615e5d272c75fd12ce2b7a32c6764e0d1625",
+      "seconds": 14.419482291908935,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for encouraging active parental involvement in schools.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Parents have a responsibility to actively participate in their children's education, read to their children, and help their children with their homework.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools should welcome parents into the education process and give them a voice in the education of their children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe in \u201csecond-chance schools\u201d where kids expelled from school and those headed for trouble can get concentrated help, services, and guidance to get back on the path to success.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 195,
+      "generation_tps": 15.978556177319813,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1771,
+      "prompt_tps": 483.8255163045247,
+      "request_sha256": "59eab4f0dad62902482b10dd86fafabfc114fc877d1733f865ba2ea1318d0782",
+      "seconds": 15.875036499928683,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for encouraging active parental involvement in schools.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Parents have a responsibility to actively participate in their children's education, to read to their children, and to help their children with their homework.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools should do their part by welcoming parents into the education process and giving them a voice in the education of their children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe in \u201csecond-chance schools\u201d where kids expelled from school and those headed for trouble can get the concentrated help, services, and guidance they need to get back on the path to success.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f661d0b8261f2958bbaabf393257615e5d272c75fd12ce2b7a32c6764e0d1625"
+}

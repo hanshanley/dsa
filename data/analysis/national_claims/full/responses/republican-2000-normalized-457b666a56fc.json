@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 178,
+      "generation_tps": 16.76163020837663,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1351,
+      "prompt_tps": 490.62340200236844,
+      "request_sha256": "ade64877066204e73e5ae43c3bf932ac710a63b5d8f7e0451acfc32d679b8bc7",
+      "seconds": 13.382866415893659,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The participation of faith-based and community groups will be especially important in dealing with non-marital pregnancy and substance abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reducing non-marital pregnancy and substance abuse is the surest way to end the cycle of child poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After-school programs should be fully open to the community and faith-based groups.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Community and faith-based groups know best how to reach out to children and help them reach their true potential.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 160,
+      "generation_tps": 16.764938676859906,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1697,
+      "prompt_tps": 521.4624136130559,
+      "request_sha256": "dd8c974ccedc438426ff5223bc211a52c434dcfaf4a8fe889e4955767a7b380e",
+      "seconds": 12.807098916033283,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The participation of faith-based and community groups will be especially important in dealing with the twin problems of non-marital pregnancy and substance abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reducing non-marital pregnancy and substance abuse is the surest way to end the cycle of child poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After-school programs should be fully open to the community and faith-based groups that know best how to reach out to children and help them reach their true potential.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ade64877066204e73e5ae43c3bf932ac710a63b5d8f7e0451acfc32d679b8bc7"
+}

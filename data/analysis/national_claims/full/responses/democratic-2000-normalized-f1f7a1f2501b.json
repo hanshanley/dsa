@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 324,
+      "generation_tps": 16.67511258803652,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1454,
+      "prompt_tps": 473.26564474155833,
+      "request_sha256": "2757cca0972dbe54e4ec0e9d8fffdaf0466e748a04672f863c64d416b65c517d",
+      "seconds": 22.513336417032406,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats recognize that sustained public investment in long-term basic research has been the foundation for America's scientific and technological leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe public and private investment in research and development is crucial to sustaining prosperity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe in doubling the current levels of investment in information technology research and biomedical research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in supporting the continued development of the Next Generation Internet, moving 1,000 times faster than today's Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in helping universities and federal laboratories become centers of innovation that support and catalyze private sector growth.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in the use of creative public-private partnerships that will, when appropriate, help bring new products to market faster.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats continue to support technology transfer, forming partnerships between industry and government that can help ensure that American companies and workers develop the technological tools needed to compete in tomorrow's global markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 327,
+      "generation_tps": 16.671607889906767,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1946,
+      "prompt_tps": 514.4084480537709,
+      "request_sha256": "039ca0abb597cc922e2ee1cfeeabbe5188be10d97bf0dbf531554dda8257238e",
+      "seconds": 23.40723970788531,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats recognize that a sustained public investment in long-term basic research has been the foundation for America's scientific and technological leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that both public and private investment in research and development is crucial to sustaining prosperity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support doubling the current levels of investment in information technology research and biomedical research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support the continued development of the Next Generation Internet, moving 1,000 times faster than today's Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support helping universities and federal laboratories become centers of innovation that support and catalyze private sector growth.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support the use of creative public-private partnerships that will, when appropriate, help bring new products to market faster.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats continue to support technology transfer, forming partnerships between industry and government that can help ensure that American companies and workers develop the technological tools needed to compete in tomorrow's global markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2757cca0972dbe54e4ec0e9d8fffdaf0466e748a04672f863c64d416b65c517d"
+}

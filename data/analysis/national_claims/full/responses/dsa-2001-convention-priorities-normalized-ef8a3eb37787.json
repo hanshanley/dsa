@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 206,
+      "generation_tps": 16.05378542829484,
+      "peak_memory": 33.797721866,
+      "prompt_tokens": 1148,
+      "prompt_tps": 452.1368907584438,
+      "request_sha256": "2fdf8ef8b59e7f3a626ae9540c9eb2962cdc7c475977e20faa738e73f7e2f468",
+      "seconds": 15.381220916984603,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The economic expansion of the last decade primarily benefited the well-off.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic recession will increase already morally unacceptable levels of inequality.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic recession will worsen the conditions of low-wage workers.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic recession will threaten the living standards of the middle class.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans are deeply concerned about the security of their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans have been subject to terrorist attacks.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 224,
+      "generation_tps": 16.042791376394383,
+      "peak_memory": 33.797721866,
+      "prompt_tokens": 1522,
+      "prompt_tps": 473.992872203017,
+      "request_sha256": "cd561df8cfdb8ee65cf3a67917997af0312abc844bdc9e88caea80669dfbde57",
+      "seconds": 17.183064500102773,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The economic expansion of the last decade primarily benefited the well-off.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic recession will increase already morally unacceptable levels of inequality by worsening the conditions of low-wage workers and threatening the living standards of the middle class.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic recession will worsen the conditions of low-wage workers.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic recession will threaten the living standards of the middle class.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans are deeply concerned about the security of their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans have been subject to terrorist attacks.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2fdf8ef8b59e7f3a626ae9540c9eb2962cdc7c475977e20faa738e73f7e2f468"
+}

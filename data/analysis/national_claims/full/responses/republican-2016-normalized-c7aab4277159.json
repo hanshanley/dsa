@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 264,
+      "generation_tps": 16.03331796353726,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1390,
+      "prompt_tps": 463.07814499953696,
+      "request_sha256": "3c9645724ff2af68144dac30e2f9ce9bbbdf11e33c5daf9b0642d01974853c0c",
+      "seconds": 19.47771383402869,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The War on Poverty has been fought for 50 years and poverty is winning.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The social safety net consists of about 80 separate means-tested programs costing over $1 trillion every year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The social safety net is designed to help people born into or falling into poverty, but rarely lifts them out.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Success of poverty programs is judged by the amount of money spent to keep people in the system, which is considered a cruel measurement.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans propose to evaluate a poverty program by whether it actually reduces poverty and increases the personal independence of its participants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Intergenerational poverty has persisted and worsened since 1966.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 267,
+      "generation_tps": 15.699243304506354,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1822,
+      "prompt_tps": 483.4164490102922,
+      "request_sha256": "7f36e3b5ea871626afa75c41825434920fa9b096940ab8f8ba4d119fe175e283",
+      "seconds": 20.786288457922637,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The War on Poverty has been fought for 50 years and poverty is winning.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The social safety net consists of about 80 separate means-tested programs costing over $1 trillion every year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The social safety net is designed to help people born into or falling into poverty, but rarely lifts them out.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Apologists for the social safety net judge success by the amount of money spent to keep people in the system, which is considered a cruel measurement.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans propose to evaluate a poverty program by whether it actually reduces poverty and increases the personal independence of its participants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Intergenerational poverty has persisted and worsened since 1966.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3c9645724ff2af68144dac30e2f9ce9bbbdf11e33c5daf9b0642d01974853c0c"
+}

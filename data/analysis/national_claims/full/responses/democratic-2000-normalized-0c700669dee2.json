@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 325,
+      "generation_tps": 15.848897135222755,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1539,
+      "prompt_tps": 475.40085652728317,
+      "request_sha256": "91521285530535101c91e9a0cf84b7824e8f0506a60745a2f7346b56f3662e3f",
+      "seconds": 23.754878332838416,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Social Security has lifted millions of elderly Americans out of poverty and helped them make ends meet.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security is a solemn compact between generations.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security is the nation's most important family protection.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in using prosperity to save Social Security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican tax cut would prevent America from ensuring senior citizens have a secure retirement.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"It is a national priority to make the strength and solvency of Social Security a major national priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore is committed to making Social Security safe and secure for more than half a century by using savings from current prosperity to strengthen the Social Security Trust Fund in preparation for the retirement of the Baby Boom generation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Social Security can be reformed with fiscal discipline and by making it fairer for widows, widowers, and mothers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 326,
+      "generation_tps": 15.97024746109498,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2032,
+      "prompt_tps": 489.5161899165622,
+      "request_sha256": "6a953474b0e35825807587262c034116392652ca2678f0ea44ff74671bfb960b",
+      "seconds": 24.57508804113604,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Social Security has lifted millions of elderly Americans out of poverty and helped them make ends meet.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security is a solemn compact between the generations.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security is the nation's most important family protection.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in using prosperity to save Social Security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican tax cut would prevent America from ensuring senior citizens have a secure retirement.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Making the strength and solvency of Social Security a major national priority is a national priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore is committed to making Social Security safe and secure for more than half a century by using the savings from current unprecedented prosperity to strengthen the Social Security Trust Fund in preparation for the retirement of the Baby Boom generation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Social Security can be reformed with fiscal discipline and by making it fairer for widows, widowers, and mothers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "91521285530535101c91e9a0cf84b7824e8f0506a60745a2f7346b56f3662e3f"
+}

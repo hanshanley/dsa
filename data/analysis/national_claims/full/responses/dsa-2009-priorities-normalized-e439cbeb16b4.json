@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 411,
+      "generation_tps": 16.652000081937544,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1511,
+      "prompt_tps": 508.2131698345349,
+      "request_sha256": "4744eb326c3fd5693519aaff8aa9ea5b506d6a9258bfde955e166d81debf459d",
+      "seconds": 27.66413295804523,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA will join the peace movement in demanding an end to war in Afghanistan and Iraq.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will call for massive cuts in wasteful and misguided defense spending.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will call for conversion from imperial war policies and arms manufacturing to meeting domestic needs and stressing humanitarian foreign aid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will begin a public dialogue among progressives about how to restructure the United States and global economy so that it creates productive jobs that provide living wages for all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States economy can be restructured in an ecologically sustainable direction and provide good jobs at good wages only if the federal government invests significantly in infrastructure development, alternative energy, and mass-transit technologies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"An effective right to organize must be restored so a strengthened union movement can force employers to pay wages and benefits that justly reward workers who labor under safe and humane working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Private capital has shown no willingness to take on the massive investments needed to create new technologies nor has it been willing to recognize the rights of working people to form democratic unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will work in 2010 to ensure that progressive Democrats who support many of the above items are re-elected to Congress or replace right-wing Democratic or Republican incumbents.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 373,
+      "generation_tps": 16.68153494794004,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2090,
+      "prompt_tps": 522.5606713984351,
+      "request_sha256": "a8c42b668dcaa62d0a5b324eb803fdf6015e7544f407dc54518b370924335e52",
+      "seconds": 26.370630291989073,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA will join the peace movement in demanding an end to war in Afghanistan as well as Iraq and in calling for massive cuts in wasteful and misguided defense spending and for conversion from imperial war policies and arms manufacturing to those meeting domestic needs and stressing humanitarian foreign aid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will begin a public dialogue among progressives about how to restructure the United States and global economy so that it creates productive jobs that provide living wages for all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States economy can be restructured in an ecologically sustainable direction and one that provides good jobs at good wages only if the federal government invests significantly in infrastructure development, alternative energy, and mass-transit technologies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only if the federal government restores an effective right to organize can a strengthened union movement force employers to pay wages and benefits that justly reward workers who labor under safe and humane working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Private capital has shown no willingness to take on the massive investments needed to create such new technologies nor has it been willing to recognize the rights of working people to form democratic unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will work in 2010 to insure that progressive Democrats who support many of the above items are re-elected to Congress or replace right-wing Democratic or Republican incumbents.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4744eb326c3fd5693519aaff8aa9ea5b506d6a9258bfde955e166d81debf459d"
+}

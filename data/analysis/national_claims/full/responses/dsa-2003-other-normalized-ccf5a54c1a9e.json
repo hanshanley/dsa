@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 176,
+      "generation_tps": 15.83376721576747,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1119,
+      "prompt_tps": 432.1727439255712,
+      "request_sha256": "f30b3646b8d8b3908c72a19e4564e3c3eaaeb14650e26cdc1f3a0df4a28f2d43",
+      "seconds": 13.71452545793727,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The designation of corporations as artificial persons has given them a degree of power exceeding that of natural persons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for examining and pursuing ways to reduce the power of corporations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for limiting the power of corporations by defining persons only as living individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for coalition-building with Programs on Corporations, Law and Democracy (POCLAD) and Alliance for Democracy to reduce and limit corporate power.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 157,
+      "generation_tps": 15.951864047042289,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1463,
+      "prompt_tps": 460.82661406208683,
+      "request_sha256": "ed4c1331dbf8487c5b24c3a526ed537baa9523c4d33f78f14fbbb4a716deeae1",
+      "seconds": 13.026707584038377,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The designation of corporations as artificial persons has given them a degree of power exceeding that of natural persons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for examining and pursuing ways to reduce and eventually limit the power of corporations by defining persons only as living individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for examining and pursuing ways to reduce and eventually limit corporate power in coalition with groups such as Programs on Corporations, Law and Democracy (POCLAD) and Alliance for Democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f30b3646b8d8b3908c72a19e4564e3c3eaaeb14650e26cdc1f3a0df4a28f2d43"
+}

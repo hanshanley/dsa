@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 314,
+      "generation_tps": 16.669747193316965,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1407,
+      "prompt_tps": 490.89071937142364,
+      "request_sha256": "b37f1388c30bc63b6dc5a16f216830f693ccb443d0c6d596eb0d4c6c1c1e54f8",
+      "seconds": 21.71261258306913,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats support making the Research and Experimentation tax credit permanent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support expanding the Research and Experimentation tax credit to make it partially refundable.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support keeping cyberspace a duty-free zone so that American companies can sell goods around the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats insist that other countries refrain from actions that impede commerce.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore has advanced a vision for a new Global Information Infrastructure, a network of networks that sends messages and images at the speed of light across every continent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Global Information Infrastructure is intended to expand access to phone service and communications.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Global Information Infrastructure is intended to further improve the delivery of education and health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Global Information Infrastructure is intended to create new jobs and industries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 371,
+      "generation_tps": 16.707852066197063,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1889,
+      "prompt_tps": 523.533341126466,
+      "request_sha256": "3cb14daf8984d3e3428bf4786b9b0fc7055551c7ad50f5d4aacaddb2b04b6e2c",
+      "seconds": 25.823198582977057,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support making the Research and Experimentation tax credit permanent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support expanding the Research and Experimentation tax credit to make it partially refundable so that small businesses can use it more easily.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support keeping cyberspace a duty-free zone so that American companies can sell goods around the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats insist that other countries refrain from actions that impede commerce.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore has advanced a vision for a new Global Information Infrastructure, a network of networks that sends messages and images at the speed of light across every continent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Global Information Infrastructure is intended to expand access to phone service and communications.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Global Information Infrastructure is intended to further improve the delivery of education and health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Global Information Infrastructure is intended to create new jobs and industries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe in supporting the startups, the small businesses, and the entrepreneurs that are making the New Economy go.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b37f1388c30bc63b6dc5a16f216830f693ccb443d0c6d596eb0d4c6c1c1e54f8"
+}

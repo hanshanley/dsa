@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 372,
+      "generation_tps": 15.87281099476996,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1455,
+      "prompt_tps": 471.7371046960436,
+      "request_sha256": "f5dd38f815b1f1bcb8837c95572915f6c4e3cf0c27d4098ea4db866459e67ebd",
+      "seconds": 26.53198045818135,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for caution in the creation of new crimes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a bipartisan presidential commission to purge the U.S. Code and regulations of old crimes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for mens rea elements in the definition of any new crimes to protect Americans who act unknowingly or without criminal intent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Congress to codify the Common Law's Rule of Lenity, which requires courts to interpret unclear statutes in favor of a defendant.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of criminal offenses in the U.S. Code increased from 3,000 in the early 1980s to more than 4,500 today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are an estimated 300,000 regulations containing criminal penalties.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The power of career civil servants and political appointees to criminalize behavior is a violation of constitutional order.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The essential role of federal law enforcement personnel in protecting federal property and combating interstate crime should not be compromised by diversion to matters properly handled by state and local authorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 389,
+      "generation_tps": 15.875050052066864,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1995,
+      "prompt_tps": 462.8133843903125,
+      "request_sha256": "4512bcae616eb4b7f574941b7a71dbf7e11a2c1b7ea5a3c9d8fc0f0e6218522c",
+      "seconds": 28.825712374877185,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for caution in the creation of new crimes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a bipartisan presidential commission to purge the U.S. Code and the body of regulations of old crimes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for mens rea elements in the definition of any new crimes to protect Americans who, in violating a law, act unknowingly or without criminal intent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Congress to codify the Common Law's Rule of Lenity, which requires courts to interpret unclear statutes in favor of a defendant.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of criminal offenses in the U.S. Code increased from 3,000 in the early 1980s to more than 4,500 today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are an estimated 300,000 regulations containing criminal penalties.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The power of career civil servants and political appointees to criminalize behavior is one of the worst violations of constitutional order perpetrated by the administrative state.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The essential role of federal law enforcement personnel in protecting federal property and combating interstate crime should not be compromised by diversion to matters properly handled by state and local authorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "f5dd38f815b1f1bcb8837c95572915f6c4e3cf0c27d4098ea4db866459e67ebd"
+}

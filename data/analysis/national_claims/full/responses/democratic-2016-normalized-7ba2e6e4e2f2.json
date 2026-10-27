@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 393,
+      "generation_tps": 15.917104690882901,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1486,
+      "prompt_tps": 458.2138553684565,
+      "request_sha256": "511fa0cc36277216dbc865f6016392ba18755260d2fd94da8fd7b19740073194",
+      "seconds": 27.94378041685559,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party believes that when workers are strong, America is strong.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will make it easier for workers, public and private, to exercise their right to organize and join unions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to pass laws that direct the National Labor Relations Board to certify a union if a simple majority of eligible workers sign valid authorization cards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to pass laws that bring companies to the negotiating table.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support binding arbitration to help workers who have voted to join a union reach a first contract.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A major factor in the 40-year decline in the middle class is that the rights of workers to bargain collectively for better wages and benefits have been under attack at all levels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump would make matters worse by creating a race to the bottom where the middle class is fighting over fewer and fewer good-paying jobs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump rejected some attempts by his own employees to unionize.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump has personally hired union-busting firms to undermine workers' rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 391,
+      "generation_tps": 15.773586769491422,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2047,
+      "prompt_tps": 493.12690335354597,
+      "request_sha256": "35c78d105d4f90780dd65e2b56bea4a85ec34741b73a82cd18600d3fb9ff80d1",
+      "seconds": 28.949524542083964,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party believes that when workers are strong, America is strong.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will make it easier for public and private workers to exercise their right to organize and join unions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to pass laws that direct the National Labor Relations Board to certify a union if a simple majority of eligible workers sign valid authorization cards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to pass laws that bring companies to the negotiating table.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support binding arbitration to help workers who have voted to join a union reach a first contract.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A major factor in the 40-year decline in the middle class is that the rights of workers to bargain collectively for better wages and benefits have been under attack at all levels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump would make matters worse by creating a race to the bottom where the middle class is fighting over fewer and fewer good-paying jobs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump rejected some attempts by his own employees to unionize.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump has personally hired union-busting firms to undermine workers' rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "511fa0cc36277216dbc865f6016392ba18755260d2fd94da8fd7b19740073194"
+}

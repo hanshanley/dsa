@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 475,
+      "generation_tps": 15.35927908249874,
+      "peak_memory": 33.135267594,
+      "prompt_tokens": 1493,
+      "prompt_tps": 443.07398827102463,
+      "request_sha256": "5b5236998cb6e31a71a4b0e50383302cca77bd504d850c2af520fd7a6dcad6ab",
+      "seconds": 34.30811495799571,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support a \\\"Make it in America\\\" plan to support American manufacturing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats aim to revitalize hard-hit manufacturing communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats aim to create thriving hubs of manufacturing and innovation throughout the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support clawing back tax breaks for companies that ship jobs overseas and reinvesting the proceeds in communities and workers at home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats state they rescued the auto industry from collapse, which saved more than a million jobs and led the auto industry to record sales.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will defend the Export-Import Bank.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Export-Import Bank supports good-paying jobs across the country and allows American workers and manufacturers to compete on a level playing field.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has consistently outsourced his own products.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American workers deserve better than Donald Trump's outsourcing.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats aim to help American workers and businesses compete for jobs and investments in global clean energy, high-tech products, internet technology products, and advanced manufacturing and vehicles.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats aim to make American manufacturing more internationally competitive by making it the greenest and most efficient in the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats aim to invest in industrial energy efficiency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 481,
+      "generation_tps": 15.330409018744897,
+      "peak_memory": 33.135267594,
+      "prompt_tokens": 2136,
+      "prompt_tps": 481.944696429287,
+      "request_sha256": "6ea75ee16b26f59da43d2c9c3479054bd591004f2b634b39def62923ab82a3b6",
+      "seconds": 35.82391908299178,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe one of the best ways to innovate, prosper, and create good-paying jobs is to make more in America, and therefore firmly support American manufacturing with a \\\"Make it in America\\\" plan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats aim to revitalize hard-hit manufacturing communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats aim to create thriving hubs of manufacturing and innovation throughout the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support clawing back tax breaks for companies that ship jobs overseas, using the proceeds to reinvest in communities and workers at home instead.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats state they rescued the auto industry from collapse, which saved more than a million jobs and led the auto industry to record sales.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will defend the Export-Import Bank.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Export-Import Bank supports good-paying jobs across the country and allows American workers and manufacturers to compete on a level playing field.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has consistently outsourced his own products.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American workers deserve better than Donald Trump's outsourcing.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats aim to help American workers and businesses compete for jobs and investments in global clean energy, high-tech products, internet technology products, and advanced manufacturing and vehicles.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats aim to make American manufacturing more internationally competitive by making it the greenest and most efficient in the world, including by investing in industrial energy efficiency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "5b5236998cb6e31a71a4b0e50383302cca77bd504d850c2af520fd7a6dcad6ab"
+}

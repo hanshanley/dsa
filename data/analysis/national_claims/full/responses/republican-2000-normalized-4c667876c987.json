@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 205,
+      "generation_tps": 16.06063718430822,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1489,
+      "prompt_tps": 472.32805997154514,
+      "request_sha256": "735abe278ee29aaf125755d1ad313f85ef94f919a2296f9f953552cb44b9212b",
+      "seconds": 15.92697862512432,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America seemed to move away from qualities that make it great in recent years, but is now relearning important lessons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A good and civil society cannot be packaged into government programs but must originate in homes, neighborhoods, and private institutions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The approach to America's enduring challenges is compassionate conservatism, in which everyone has responsibility to follow the rules, but no one will be left behind.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"George W. Bush said no child in America should be segregated by low expectations, imprisoned by illiteracy, or abandoned to frustration and self-doubt.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 239,
+      "generation_tps": 16.045902066137803,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1862,
+      "prompt_tps": 488.4844448570734,
+      "request_sha256": "11a0cee750305baf69b9ad39360ee5a8d0c99e41d980a695e74ffae1f31e1243",
+      "seconds": 18.7163246658165,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America seemed to move away from some of the qualities that make her great in recent years, but is now relearning some important lessons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A good and civil society cannot be packaged into government programs but must originate in homes, in neighborhoods, and in the private institutions that bring people together, in all their diversity, for the works of mercy and labors of love.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The approach to America's enduring, and seemingly intractable, challenges is compassionate conservatism, in which everyone has responsibility to follow the rules, but no one will be left behind.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"George W. Bush said no child in America should be segregated by low expectations, imprisoned by illiteracy, or abandoned to frustration and the darkness of self-doubt.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "735abe278ee29aaf125755d1ad313f85ef94f919a2296f9f953552cb44b9212b"
+}

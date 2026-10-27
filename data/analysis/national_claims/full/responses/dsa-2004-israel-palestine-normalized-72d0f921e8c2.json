@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 321,
+      "generation_tps": 15.969470451791977,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1302,
+      "prompt_tps": 456.88938404355304,
+      "request_sha256": "e508bca03f5e42cf8dcc6e3ab927e6e24f81a1550df0b6a19198405762fc2607",
+      "seconds": 22.96097041713074,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America is appalled by the escalating violence in the Middle East.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Two competing nationalist movements are ratcheting up the use of military power as the prime tool for resolving differences.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The damage to civilians in life and property is incalculable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The deepening hostilities are rapidly becoming a permanent source of war and brutality in the Holy Land.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The fratricide must stop and differences must be resolved if there are to be just and egalitarian societies in Israel and Palestine.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Peace can only come today when the Israeli and Palestinian communities renounce armed struggle and commit to live within two economically and strategically viable states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America has consistently held that peace would only come to the Middle East in a settlement that recognized both the Palestinian and Jewish peoples\u2019 right to self-determination since 1983.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 367,
+      "generation_tps": 15.833253407501713,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1791,
+      "prompt_tps": 486.300835160315,
+      "request_sha256": "ca0524a29b3937ebf5e2a5812eda0b7e6d5d0bc756aeaf5e659bde2a041ed209",
+      "seconds": 26.87337587494403,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America is appalled by the escalating violence in the Middle East.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Two competing nationalist movements are ratcheting up the use of military power as the prime tool for resolving differences.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The damage to civilians in life and property is incalculable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The deepening hostilities are rapidly becoming a permanent source of war and brutality in the Holy Land.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The fratricide must stop and differences must be resolved if there are to be just and egalitarian societies in Israel and Palestine.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Peace can only come today when the Israeli and Palestinian communities renounce armed struggle and commit to live within two economically and strategically viable states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since its founding in 1983, Democratic Socialists of America has consistently held that peace would only come to the Middle East in a settlement that recognized both the Palestinian and Jewish peoples\u2019 right to self-determination.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rights and security of both Israelis and Palestinians cannot be won through armed struggle, but through arbitrating legitimate grievances.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e508bca03f5e42cf8dcc6e3ab927e6e24f81a1550df0b6a19198405762fc2607"
+}

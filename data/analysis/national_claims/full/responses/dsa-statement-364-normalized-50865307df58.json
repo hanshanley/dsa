@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 421,
+      "generation_tps": 16.094544374270612,
+      "peak_memory": 33.797721866,
+      "prompt_tokens": 1256,
+      "prompt_tps": 450.75331607951466,
+      "request_sha256": "451d749b583d47877e573b8d223ab23dc5fdfb67af73bf4c62a3f467383f004c",
+      "seconds": 28.954649665858597,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America opposes United States military intervention in the civil war in Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America supports the secular pro-democracy elements in the mass Syrian uprising against the Assad regime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"U.S. military power cannot liberate the Syrian people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America urges its members and friends to lobby Congress to reject the president\u2019s request for the authorization of the use of force against Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The international community must condemn the use of chemical weapons on civilians in Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The international community must support the United Nations inspectors\u2019 efforts to discover the perpetrators of violence involving chemical weapons in Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Even if it is determined that the Assad regime used chemical weapons, a unilateral air strike by the United States would not cease that threat.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"U.S. air power cannot surgically take out individuals who can deploy chemical weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A U.S. air strike will kill many innocent civilians.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"United States troops on the ground only serve to increase the level of violence in civil wars, based on experience in Iraq and Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 426,
+      "generation_tps": 16.041355619185353,
+      "peak_memory": 33.797721866,
+      "prompt_tokens": 1845,
+      "prompt_tps": 478.99498286282835,
+      "request_sha256": "23a14a7ee4b5fd3c23b589f8d3dfd98adf858461f443dfc853fbd9480dc05bde",
+      "seconds": 30.41813650005497,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America opposes United States military intervention in the civil war in Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America supports the secular pro-democracy elements in the mass Syrian uprising against the Assad regime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"U.S. military power cannot liberate the Syrian people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America urges its members and friends to lobby Congress to reject the president\u2019s request for the authorization of the use of force against Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The international community must condemn the use of chemical weapons on civilians in Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The international community must support the United Nations inspectors\u2019 efforts to discover the perpetrators of violence involving chemical weapons in Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Even if it is determined that the Assad regime used chemical weapons, a unilateral air strike by the United States would not cease that threat.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"U.S. air power cannot surgically take out individuals who can deploy chemical weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A U.S. air strike will kill many innocent civilians.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"United States troops on the ground only serve to increase the level of violence in civil wars, based on experience in Iraq and Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "451d749b583d47877e573b8d223ab23dc5fdfb67af73bf4c62a3f467383f004c"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 564,
+      "generation_tps": 15.839044435652742,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1612,
+      "prompt_tps": 476.95014638447003,
+      "request_sha256": "7c2b9744fe37eaf26a4a63b403a91674968b1536a2a08ebb911dd8afcf3039c7",
+      "seconds": 38.99889091704972,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The economy experienced the longest economic boom in the Twentieth Century.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"40 million new jobs were created.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Inflation and unemployment were at their lowest levels in memory.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The stock market now includes modest investments from tens of millions of households.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ownership in America's economy has become the norm rather than the exception.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Congress passed the largest tax hike in history in 1993.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax hike threatened to bring back the tax-and-spend follies of the past.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Voters put Republican majorities in charge of both Houses of Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"From 1954 to 1994, government spending increased at an average annual rate of 7.9 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"From 1954 to 1994, the public's debt increased from $224 billion to $3.4 trillion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since 1994, with Republicans leading the House and Senate, spending has been held to an annual 3.1 percent rate of growth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since 1994, the nation's debt will be nearly $400 billion lower by the end of this year.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The federal government has operated in the black for the last two years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The federal government is projected to run a surplus of nearly $5 trillion over ten years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 529,
+      "generation_tps": 15.9048367415293,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2344,
+      "prompt_tps": 511.52225805854573,
+      "request_sha256": "41733a9dc55a6256667ac139d0f6028b4712b065af88f4df774a62c3aca20916",
+      "seconds": 37.85448470781557,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The economy experienced the longest economic boom in the Twentieth Century, with 40 million new jobs created, the lowest inflation and unemployment in memory.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The stock market now includes modest investments from tens of millions of households.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ownership in America's economy has become the norm rather than the exception.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Congress passed the largest tax hike in history in 1993.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax hike threatened to bring back the tax-and-spend follies of the past.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Voters put Republican majorities in charge of both Houses of Congress after the 1993 tax hike.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"From 1954 to 1994, government spending increased at an average annual rate of 7.9 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"From 1954 to 1994, the public's debt increased from $224 billion to $3.4 trillion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since 1994, with Republicans leading the House and Senate, spending has been held to an annual 3.1 percent rate of growth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since 1994, the nation's debt will be nearly $400 billion lower by the end of this year.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The federal government has operated in the black for the last two years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The federal government is projected to run a surplus of nearly $5 trillion over ten years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7c2b9744fe37eaf26a4a63b403a91674968b1536a2a08ebb911dd8afcf3039c7"
+}

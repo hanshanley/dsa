@@ -1,0 +1,39 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 528,
+      "generation_tps": 15.499512104449208,
+      "peak_memory": 33.801146122,
+      "prompt_tokens": 1471,
+      "prompt_tps": 469.6729236514568,
+      "request_sha256": "33f928eaaa7790c4334350294899b0ee314d877787fc33689765adc0109c19b2",
+      "seconds": 37.209597958019,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Zeng Feiyang, the director of the Panyu Center, has been arrested and placed under criminal detention on charges of \u201cdisrupting public order\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Zhu Xiaomei, a key worker activist, has been arrested and placed under criminal detention on charges of \u201cdisrupting public order\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Zhu Xiaomei played a leading role in assisting workers at the Lide Shoe factory.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Zhu Xiaomei played a leading role in assisting sanitation workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Zhu Xiaomei has been separated from her one-year-old daughter while breastfeeding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Several staff and activists from four worker centers remain in detention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Those detained are being held incommunicado.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Those detained are being refused their right to see lawyers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Local government authorities in the Guangdong province are panicked by the growth of unofficial protests and strikes by migrant workers.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Migrant workers in the Guangdong province are suffering from the closures or relocations of their workplaces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Authorities appear to be trying to deprive workers of their right to support or representation by jailing those who have offered them legal support and advice.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Numerous labor unions and worker rights activists based in Hong Kong have been organizing a campaign of protest.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The campaign of protest is in support of colleagues on the Mainland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 15.527646974340145,
+      "peak_memory": 33.801146122,
+      "prompt_tokens": 1517,
+      "prompt_tps": 448.5548888230087,
+      "request_sha256": "8b404b89b3fb715c2b68796ffb8df77312a57199ccbd08482456052a762b3682",
+      "seconds": 29.66900833393447,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Zeng Feiyang, the director of the Panyu Center, and Zhu Xiaomei, a key worker activist, have been arrested and placed under criminal detention on charges of \u201cdisrupting public order\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Zhu Xiaomei, who played a leading role in assisting workers at the Lide Shoe factory and sanitation workers, has been separated from her one-year-old daughter while breastfeeding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Several staff and activists from four worker centers remain in detention, held incommunicado and refused their right to see lawyers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The repression is motivated by the panic of local government authorities in the Guangdong province due to the growth of unofficial protests and strikes by migrant workers.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Migrant workers in the Guangdong province are suffering from the closures or relocations of their workplaces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Authorities appear to be trying to deprive workers of their right to support or representation by jailing those who have offered them legal support and advice.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support is offered for protests organized by labor unions and worker rights activists based in Hong Kong in support of their colleagues on the Mainland.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Labor unions and worker rights activists based in Hong Kong are organizing a campaign of protest in support of their colleagues on the Mainland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 418,
+      "generation_tps": 15.663265228653586,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2047,
+      "prompt_tps": 482.27205037855305,
+      "request_sha256": "9c4d27d1177807aa6a58e3a79f6ab5c4c50da8f605ffb881e3528563dd5918e4",
+      "seconds": 30.94602966704406,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Zeng Feiyang, the director of the Panyu Center, and Zhu Xiaomei, a key worker activist, have been arrested and placed under criminal detention on charges of \u201cdisrupting public order\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Zhu Xiaomei, who played a leading role in assisting workers at the Lide Shoe factory and sanitation workers, has been separated from her one-year-old daughter that she was breastfeeding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Several staff and activists from four worker centers remain in detention, held incommunicado and refused their right to see lawyers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The repression is motivated by the panic of local government authorities in the Guangdong province occasioned by the growth of unofficial protests and strikes by migrant workers.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Migrant workers in the Guangdong province are suffering from the closures or relocations of their workplaces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Authorities appear to be trying to deprive workers of their right to any kind of support or representation by jailing those who have offered them legal support and advice.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support is offered for protests organized by labor unions and worker rights activists based in Hong Kong in support of their colleagues on the Mainland.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Labor unions and worker rights activists based in Hong Kong are organizing a campaign of protest in support of their colleagues on the Mainland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "33f928eaaa7790c4334350294899b0ee314d877787fc33689765adc0109c19b2"
+}

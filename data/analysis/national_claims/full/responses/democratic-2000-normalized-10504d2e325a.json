@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 367,
+      "generation_tps": 15.928557943579168,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1471,
+      "prompt_tps": 478.6298432334212,
+      "request_sha256": "91faa173e9d0039b3040c2b7671be164c4aba23cad4fef44aa31e1c6cf7f3ec8",
+      "seconds": 26.124064167030156,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The federal government should redirect money from state bureaucrats to schools that need it in states that do not make progress in improving student performance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"States that succeed in raising student success should receive bonuses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools that are making a positive difference should receive bonuses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Teachers who earn a National Board Certification should be especially rewarded.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Classrooms are overcrowded.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Teachers are overburdened.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Textbooks and technology are out-of-date.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"High-quality preschool should no longer be a luxury.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Giving kids a smart start can lead to higher reading and achievement levels.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Giving kids a smart start can lead to higher graduation rates.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Giving kids a smart start can lead to greater success in the workplace.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 339,
+      "generation_tps": 16.024168732432756,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2006,
+      "prompt_tps": 486.00949527204875,
+      "request_sha256": "9fca0cc2072e38fe87e21659049fe3b500477f2ed9f152f21728f39e8838ecf9",
+      "seconds": 25.292966875014827,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The federal government should redirect money from state bureaucrats and transfer it directly to schools that need it in states that do not make progress in improving student performance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"States that do succeed in raising student success should receive bonuses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools that are making a positive difference should receive bonuses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Teachers who earn a National Board Certification should be especially rewarded.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Classrooms are overcrowded, with teachers that are overburdened, and with textbooks and technology that are out-of-date.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"High-quality preschool should no longer be a luxury.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Giving kids a smart start can lead to higher reading and achievement levels.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Giving kids a smart start can lead to higher graduation rates.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Giving kids a smart start can lead to greater success in the workplace.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "91faa173e9d0039b3040c2b7671be164c4aba23cad4fef44aa31e1c6cf7f3ec8"
+}

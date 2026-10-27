@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 506,
+      "generation_tps": 15.900570048520699,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1541,
+      "prompt_tps": 464.6410241390436,
+      "request_sha256": "e861ed4ad7de2b65f5766e25c48bd5c644ac1514006f0334e44b0894dab81541",
+      "seconds": 35.15141312498599,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"For 12 years before Bill Clinton and Al Gore took office, Republicans talked about fiscal discipline while they quadrupled the national debt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans ran up monstrous yearly deficits and nearly ran the American economy into the ground.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 1992, Democrats promised to cut the deficit in half in four years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut the deficit in half in four years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore's tie-breaking vote in the Senate overcame unanimous Republican opposition to deficit reduction.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, America has gone from the biggest deficits in history to the biggest surpluses in history.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fiscal discipline keeps interest rates low and investment rates high.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fiscal discipline has helped fuel America's remarkable prosperity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats vow to balance the budget every year, barring a national emergency.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In the 160 years since the very first Democratic Platform, America has always struggled under a national debt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe they should pay down the debt every year until they can give their children the independence, self-sufficiency, and prosperity that will come from an America that is debt-free.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In 12 years of rule, Republicans quadrupled the national debt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats vow to wipe out the publicly-held national debt in the next 12 years.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 519,
+      "generation_tps": 15.891601599580484,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2215,
+      "prompt_tps": 478.85610242764767,
+      "request_sha256": "8c4ca0c61d898e2d4124a8a747d2c5178c5996bb159791b267c6fcf0d0a8f14d",
+      "seconds": 37.29540979210287,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"For the 12 years before Bill Clinton and Al Gore took office, Republicans talked about fiscal discipline while they quadrupled the national debt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans ran up monstrous yearly deficits and nearly ran the American economy into the ground.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 1992, Democrats promised to cut the deficit in half in four years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut the deficit in half in four years and went even further.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It took Al Gore's tie-breaking vote in the Senate to overcome unanimous Republican opposition to deficit reduction.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, America has gone from the biggest deficits in history to the biggest surpluses in history.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fiscal discipline keeps interest rates low and investment rates high.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fiscal discipline has helped fuel America's remarkable prosperity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats vow to balance the budget every year, barring a national emergency.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In the 160 years since the very first Democratic Platform, America has always struggled under a national debt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe they should pay down the debt every year until they can give their children the independence, self-sufficiency, and prosperity that will come from an America that is debt-free.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In 12 years of rule, Republicans quadrupled the national debt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats vow to wipe out the publicly-held national debt in the next 12 years.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e861ed4ad7de2b65f5766e25c48bd5c644ac1514006f0334e44b0894dab81541"
+}

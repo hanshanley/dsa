@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 250,
+      "generation_tps": 15.887188505992334,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1444,
+      "prompt_tps": 465.4269096596437,
+      "request_sha256": "c77bcb52c1078fff92862ccf16bcb181e2994ec133cfe25ddb557d23934a4ef1",
+      "seconds": 18.849623083136976,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for extending full voting rights to people with criminal convictions and noncitizens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for establishing statehood for Washington D.C.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for replacing the two-party system with a multi-party democracy through proportional representation elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding the number of seats in the House of Representatives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending the Senate filibuster.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for replacing the Electoral College with a national popular vote for President.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for limiting the Court\u2019s power of judicial review.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 268,
+      "generation_tps": 15.751155757855921,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1862,
+      "prompt_tps": 481.74776637381535,
+      "request_sha256": "ee3c771bcf440e249c6a7bc128b73b5912da48efd6e311426e7d08809141c8cb",
+      "seconds": 20.89052433311008,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for extending full voting rights to people with criminal convictions and noncitizens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for establishing statehood for Washington D.C.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for replacing the two-party system with a multi-party democracy through proportional representation elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding the number of seats in the House of Representatives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending the Senate filibuster.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for replacing the Electoral College with a national popular vote for President.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for limiting the Court\u2019s power of judicial review which it uses to effectively create and abolish laws outside the legislative process.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c77bcb52c1078fff92862ccf16bcb181e2994ec133cfe25ddb557d23934a4ef1"
+}

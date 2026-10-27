@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 325,
+      "generation_tps": 16.01910765792377,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1445,
+      "prompt_tps": 466.6293605436211,
+      "request_sha256": "2c4e9d22791636a597778e88af10589ff27bff9047a445f99f6a704b8b2e828b",
+      "seconds": 23.396112541900948,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"For the past eight years, Democrats have been working to offer tax relief to Americans who need it the most and where they need it the most.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for working parents who were struggling to make ends meet.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for parents who were working hard and trying to raise good kids.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for Americans who had studied hard and made it to college.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for Americans who were continuing their educations and gaining new skills to stay on the cutting-edge of the economy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for companies that were helping Americans make the transition from welfare to work.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for more than 90% of America's dynamic small businesses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, for most families, the federal tax burden is the lowest it has been in twenty years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 329,
+      "generation_tps": 15.952864892997308,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1938,
+      "prompt_tps": 485.3575863183699,
+      "request_sha256": "a7eb14bba87a16ed44c1fb0b437a983a64408ceb91517b888d6821ed2c5fe466",
+      "seconds": 24.62694637500681,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"For the past eight years, Democrats have been working to offer tax relief to Americans who need it the most where they need it the most.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for working parents who were struggling to make ends meet.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for parents who were working hard and trying to raise good kids.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for Americans who had studied hard and made it to college.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for Americans who were continuing their educations and gaining new skills to stay on the cutting-edge of the economy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for companies that were helping Americans make the transition from welfare to work.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats cut taxes for more than 90% of America's dynamic small businesses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, for most families, the federal tax burden is the lowest it has been in twenty years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2c4e9d22791636a597778e88af10589ff27bff9047a445f99f6a704b8b2e828b"
+}

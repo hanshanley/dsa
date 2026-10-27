@@ -58,6 +58,10 @@ CAP topics, and expanded/strict KDEs—not the original passages.
 [Download complete claims and source texts](data/analysis/national_claims/reviewed_sample/claim_documents.zip).
 The full eligible-source job uses **2,623 bounded chunks, at most 240 words each**;
 the sample result is not presented as full-corpus coverage.
+[Download the in-progress full-corpus checkpoint](data/analysis/national_claims/full/claim_documents.zip)
+for current claims, complete input source texts, raw responses, failure history,
+and explicit processed/failed/unprocessed accounting. This is an incomplete
+extraction, not final results or a representative sample.
 
 ## Sources and coverage
 

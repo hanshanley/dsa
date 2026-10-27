@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 433,
+      "generation_tps": 15.786655899368828,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1552,
+      "prompt_tps": 419.4171918188353,
+      "request_sha256": "0bf83ed742749f8d177485f9189a80649f04d2f0ac3affbd5bd23e85b8d44e9d",
+      "seconds": 31.140027875080705,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for passage of HR 1, the For the People Act, providing for nationwide online, election day, and automatic voter registration; providing for nationwide early voting; making Election Day a federal holiday; ending felony disenfranchisement upon a voter\u2019s release from prison; public financing for Congressional campaigns with a 6:1 match; requiring independent nonpartisan redistricting commissions for Congressional districts; and reforming the broken FEC.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for passage of the John Lewis Voting Rights Act, reenacting and strengthening the Voting Rights Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for no-fault vote by mail in every state.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for protection of voting rights for disabled and ill individuals who cannot leave their homes or care facilities, including universal use of accessible polling sites and voting machines, and secure ballot solutions for those who cannot mark, verify, and cast paper ballots privately and independently under the current system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for abolition of the Carceral State.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The power to create a truly democratic society is found in the organization and self-activity of the working class.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"The tools of opposition, enforcing exploitation and oppression under capitalism, are the repressive forces of the state.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[6]},{\"claim_text\":\"A vast, brutal machinery of police and prisons, security and surveillance agencies, immigration and border enforcement, courts and prosecutors disorganize working class communities through the routine application of violence, intimidation, and coercion.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 433,
+      "generation_tps": 15.712297455472347,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 2153,
+      "prompt_tps": 498.6925727215828,
+      "request_sha256": "fe99b5841d481ffc2b4faaf06c2eb108254036ee3a53851c60fec4b1a73a71e4",
+      "seconds": 31.886315332958475,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for passage of HR 1, the For the People Act, providing for nationwide online, election day, and automatic voter registration; providing for nationwide early voting; making Election Day a federal holiday; ending felony disenfranchisement upon a voter\u2019s release from prison; public financing for Congressional campaigns with a 6:1 match; requiring independent nonpartisan redistricting commissions for Congressional districts; and reforming the broken FEC.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for passage of the John Lewis Voting Rights Act, reenacting and strengthening the Voting Rights Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for no-fault vote by mail in every state.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for protection of voting rights for disabled and ill individuals who cannot leave their homes or care facilities, including universal use of accessible polling sites and voting machines, and secure ballot solutions for those who cannot mark, verify, and cast paper ballots privately and independently under the current system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for abolition of the Carceral State.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The power to create a truly democratic society is found in the organization and self-activity of the working class.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"The tools of opposition, enforcing exploitation and oppression under capitalism, are the repressive forces of the state.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[6]},{\"claim_text\":\"A vast, brutal machinery of police and prisons, security and surveillance agencies, immigration and border enforcement, courts and prosecutors disorganize working class communities through the routine application of violence, intimidation, and coercion.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0bf83ed742749f8d177485f9189a80649f04d2f0ac3affbd5bd23e85b8d44e9d"
+}

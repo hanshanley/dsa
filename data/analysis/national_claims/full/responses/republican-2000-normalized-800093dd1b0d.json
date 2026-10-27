@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 368,
+      "generation_tps": 16.020404248526425,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1499,
+      "prompt_tps": 472.78848374397853,
+      "request_sha256": "8f1be0c1500556c0de376683e144ef72d16a3669208513038746e7b855befe9c",
+      "seconds": 26.15171204204671,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Income taxes and payroll taxes are the most obvious parts of the public's tax burden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Consumers pay higher prices for user fees that function as under-radar taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Excise taxes have increased because they shift public resentment from government to businesses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The gas tax was enacted in 1993.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The phone tax was imposed to finance the Spanish-American War and is still in place a century later.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the immediate repeal of the phone tax.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Homeownership is central to the American dream.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans want to make homeownership more accessible for everyone.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Access to capital for entrepreneurs and access to credit for consumers are important for homeownership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Low interest rates make mortgages affordable and open up more housing opportunities than any government program.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 377,
+      "generation_tps": 15.998435859851208,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2035,
+      "prompt_tps": 499.3577721840798,
+      "request_sha256": "31fcec8408ae7d3026fabd68aa3156fd84bf6570925f2aae84ea6271edc367c2",
+      "seconds": 27.650220499839634,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Income taxes and payroll taxes are the most obvious parts of the public's tax burden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Consumers pay higher prices for user fees that function as under-radar taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Excise taxes have increased because they shift public resentment from government to businesses that are forced to collect them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The gas tax was enacted in 1993.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The phone tax was imposed to finance the Spanish-American War and is still in place a century later.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the immediate repeal of the phone tax.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Homeownership is central to the American dream.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans want to make homeownership more accessible for everyone.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Access to capital for entrepreneurs and access to credit for consumers are important for making homeownership more accessible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Low interest rates make mortgages affordable and open up more housing opportunities than any government program.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8f1be0c1500556c0de376683e144ef72d16a3669208513038746e7b855befe9c"
+}

@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 160,
+      "generation_tps": 15.999311162386409,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1377,
+      "prompt_tps": 461.31543178167965,
+      "request_sha256": "f6cd2ddd314de087231aa5705839199f4664a802ff0b2ad7870f7a2ddc4eda16",
+      "seconds": 12.996015999931842,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Americans have been told they must choose between investing in education and demanding accountability.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans believe that more investment is needed in children's educations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans believe that money should not be poured into a system producing bad results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More of what is currently being done right should be done, and less of what is currently being done wrong.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 170,
+      "generation_tps": 15.849192201770823,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1705,
+      "prompt_tps": 476.1790720903424,
+      "request_sha256": "82fa22b9c8ae34330ae2b8aae26bfe33059b99062d4f98ed374c40aa432738ed",
+      "seconds": 14.316801333101466,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans have been told they must choose between investing in education and demanding accountability.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans believe that we need to invest more in our children's educations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans believe that we should not be pouring more money into a system that is producing bad results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We should do more of what we're doing right and less of what we're doing wrong.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 165,
+      "generation_tps": 15.806845520679104,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2286,
+      "prompt_tps": 490.7226856146656,
+      "request_sha256": "110319c0643b1f3589e56658bab95c8fb31e055867b34e7315c6c1f43082a448",
+      "seconds": 15.107800333062187,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans have been told they must choose between investing in education and demanding accountability.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans believe that more investment is needed in children's educations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans believe that money should not be poured into a system producing bad results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More of what is currently being done right should be done, and less of what is currently being done wrong.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f6cd2ddd314de087231aa5705839199f4664a802ff0b2ad7870f7a2ddc4eda16"
+}

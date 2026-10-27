@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 364,
+      "generation_tps": 16.524147158758847,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 2013,
+      "prompt_tps": 665.6254901664058,
+      "request_sha256": "ef5748508abbe7e6d2c1ecae78bdc58dbdccd5051489f6e6e8e2ea5399a5db1c",
+      "seconds": 25.062521916115656,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Keeping weapons of mass destruction out of the hands of terrorists is a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The possibility of terrorists armed with weapons of mass destruction is the greatest threat to American security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Preventing terrorists from gaining access to weapons of mass destruction must be America's number one security goal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Containing the threat of weapons of mass destruction requires American leadership that brings allies, friends, and partners to greater collaboration and participation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Containing the threat of weapons of mass destruction compels problem states to join and comply with international agreements and abandon their weapons programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration's policies have weakened international agreements and efforts to enforce non-proliferation instead of strengthening them.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration has not done nearly enough to secure existing stockpiles and bomb-making materials.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration has failed to take effective steps to stop the North Korean and Iranian nuclear programs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"A change in course is necessary now.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 361,
+      "generation_tps": 16.563619123182225,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1960,
+      "prompt_tps": 620.3757427616176,
+      "request_sha256": "110f68a766ccfdf55d78b42569689c1703d33d82304bde996128fe418ce228d2",
+      "seconds": 24.963484207866713,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Keeping weapons of mass destruction out of the hands of terrorists is a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The possibility of terrorists armed with weapons of mass destruction is the greatest threat to American security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Preventing terrorists from gaining access to weapons of mass destruction must be America's number one security goal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Containing this massive threat requires American leadership that brings allies, friends, and partners to greater collaboration and participation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Containing this massive threat compels problem states to join and comply with international agreements and abandon their weapons programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration's policies have weakened international agreements and efforts to enforce non-proliferation instead of strengthening them.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration has not done nearly enough to secure existing stockpiles and bomb-making materials.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration has failed to take effective steps to stop the North Korean and Iranian nuclear programs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"A change in course is necessary now.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4619499ec581862e52fdcffba112d02cec85f4cef2e53cb2afea688808cf7c57"
+}

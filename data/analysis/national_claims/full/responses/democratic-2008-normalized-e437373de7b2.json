@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 205,
+      "generation_tps": 16.258737745652287,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1350,
+      "prompt_tps": 467.6884582725805,
+      "request_sha256": "6af7850f69a4eeb4582f2d9d9af32ddd93732f90549ef2565d77033ed33e6046",
+      "seconds": 15.505439874948934,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for a participatory government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to use the most current technology available to improve the quality of government decision-making.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to make government less beholden to special interest groups and lobbyists.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to enhance the flow of information between citizens and government in both directions by involving the public in the work of government agencies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to use new technology to tap into the vast expertise of the American citizenry for the benefit of government and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 212,
+      "generation_tps": 16.146102066184767,
+      "peak_memory": 33.77496449,
+      "prompt_tokens": 1723,
+      "prompt_tps": 496.4650338444187,
+      "request_sha256": "c09156c728f001d83a3c6b89a2ed0beb0f25c15b9a192359e75ef58eb4162ced",
+      "seconds": 16.610566958086565,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for a participatory government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to use the most current technology available to improve the quality of government decision-making.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to make government less beholden to special interest groups and lobbyists.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to enhance the flow of information between citizens and government\u2014in both directions\u2014by involving the public in the work of government agencies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to use new technology to tap into the vast expertise of the American citizenry for the benefit of government and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6af7850f69a4eeb4582f2d9d9af32ddd93732f90549ef2565d77033ed33e6046"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 398,
+      "generation_tps": 16.62061709982564,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1488,
+      "prompt_tps": 490.6775591956332,
+      "request_sha256": "aed7c9e932731be9320147656b5e24d1629f7eddcdda4344a8977fc205c274dc",
+      "seconds": 26.98893425008282,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Interest rates on federally guaranteed student loans are lower than ever before under Republican fiscal discipline.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pell Grants are greater than ever before.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pell Grants will become a dynamic force in math, science, and technology when a Republican Congress enacts Governor Bush's proposal.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican Congress will target increased Pell Grant benefits to students taking challenging courses in math, science, and technology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican Congress will form partnerships with colleges and universities to improve science and math education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican Congress will attract science, math, and engineering graduates to low-income schools and areas with shortages of those teachers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overall college costs continue to climb, usually far ahead of inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Rising college costs squeeze the budgets of the middle class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"A presidentially directed study on the effect of government regulation and paperwork demands will be proposed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Campus administrators should search for ways to hold down the price spiral of college costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 396,
+      "generation_tps": 16.297353165456585,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2054,
+      "prompt_tps": 502.4253827139735,
+      "request_sha256": "498c3f777b6d45604d6608b35b419ec195ece0922e60f62c7a98d52500ea835d",
+      "seconds": 28.397245791042224,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Interest rates on federally guaranteed student loans are lower than ever before under Republican fiscal discipline.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pell Grants are greater than ever before.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"When a Republican Congress enacts Governor Bush's proposal, Pell Grants will become a dynamic force in math, science, and technology.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican Congress will target increased benefits to students taking challenging courses in math, science, and technology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican Congress will form partnerships with colleges and universities to improve science and math education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican Congress will attract science, math, and engineering graduates to low-income schools and areas with shortages of those teachers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Overall college costs continue to climb, usually far ahead of inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Rising college costs squeeze the budgets of the middle class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"A presidentially directed study on the effect of government regulation and paperwork demands will be proposed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Campus administrators should search for ways to hold down the price spiral of college costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "aed7c9e932731be9320147656b5e24d1629f7eddcdda4344a8977fc205c274dc"
+}

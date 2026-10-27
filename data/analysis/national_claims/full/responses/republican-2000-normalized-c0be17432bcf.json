@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 305,
+      "generation_tps": 16.71700029123483,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1435,
+      "prompt_tps": 485.88774725515253,
+      "request_sha256": "a9cd8f8eb7dda21c4d6db510ffc03e6696be76c2fb7e1e4f4d436cf27dcbef09",
+      "seconds": 21.208086665952578,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Texas was the first state to implement charitable choice in welfare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The governor of Texas intends to expand charitable choice to all federally-funded human services programs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the governor of Texas' plans to expand charitable choice to all federally-funded human services programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for applying charitable choice to all federal social service programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to extend the current federal charity tax deduction to the 70 percent of all tax filers who do not itemize their deductions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Recommendation to allow people to make donations tax-free from their IRAs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Recommendation to raise the cap on corporate charitable deductions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Recommendation to assure corporations liability protection for their in-kind donations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 346,
+      "generation_tps": 16.729050674511804,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1908,
+      "prompt_tps": 498.29754868587577,
+      "request_sha256": "2ff3d13d5c70c4818a5ca70d47bceb1eb0035aa10d959e71f502a633040de92d",
+      "seconds": 24.521334833931178,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Texas was the first state to implement charitable choice in welfare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The governor of Texas intends to expand charitable choice to all federally-funded human services programs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the governor of Texas' plans to expand charitable choice to all federally-funded human services programs and to unbar the gates of the government ghetto, inviting into the American dream those who are now in its shadows and using the dedication and expertise of faith communities to make it happen.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for applying charitable choice to all federal social service programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to extend the current federal charity tax deduction to the 70 percent of all tax filers who do not itemize their deductions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Recommendation to allow people to make donations tax-free from their IRAs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Recommendation to raise the cap on corporate charitable deductions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Recommendation to assure corporations liability protection for their in-kind donations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a9cd8f8eb7dda21c4d6db510ffc03e6696be76c2fb7e1e4f4d436cf27dcbef09"
+}

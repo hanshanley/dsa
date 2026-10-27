@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 310,
+      "generation_tps": 16.779196286200627,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1504,
+      "prompt_tps": 506.8325794976922,
+      "request_sha256": "3e0faa97efbff431efa138aba87f6b431926c984800e6f7b54495dd99a376d43",
+      "seconds": 21.452718999935314,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to build savings and personal wealth through Individual Development Accounts, in partnership with banks, to accelerate the savings of low-income earners.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]}, {\"claim_text\":\"The Republican Congress mandated charitable choice in the welfare reform law of 1996, allowing states to contract with faith-based providers for welfare services on the same basis as any other providers.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The current administration has done its utmost to block the implementation of the charitable choice provision, insisting that all symbols of religion must be removed or covered over.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The 1996 provisions set out to prevent the removal or covering over of religious symbols.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Many of the most successful service programs are essentially blacklisted because they will neither conceal nor compromise the faith that makes them so effective in changing lives.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Concealing or compromising faith is unjust to those whom faith-based organizations could help conquer abuse, addiction, and hopelessness.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 308,
+      "generation_tps": 16.713622706897265,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1982,
+      "prompt_tps": 512.3938880567767,
+      "request_sha256": "62f929dbed1c09df3df01b71d9d55905985b1b74bc22739eebe85de7a75ae16b",
+      "seconds": 22.305810208199546,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to build savings and personal wealth through Individual Development Accounts, in partnership with banks, to accelerate the savings of low-income earners.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]}, {\"claim_text\":\"The Republican Congress mandated charitable choice in the welfare reform law of 1996, allowing states to contract with faith-based providers for welfare services on the same basis as any other providers.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The current administration has done its utmost to block the implementation of that provision, insisting that all symbols of religion must be removed or covered over.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The 1996 provisions set out to prevent the removal or covering over of religious symbols.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Many of the most successful service programs are essentially blacklisted because they will neither conceal nor compromise the faith that makes them so effective in changing lives.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Concealing or compromising faith is unjust to those whom faith-based organizations could help conquer abuse, addiction, and hopelessness.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3e0faa97efbff431efa138aba87f6b431926c984800e6f7b54495dd99a376d43"
+}

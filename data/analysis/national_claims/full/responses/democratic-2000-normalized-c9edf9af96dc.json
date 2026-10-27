@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 284,
+      "generation_tps": 15.834287306405841,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1473,
+      "prompt_tps": 458.69759776176113,
+      "request_sha256": "c40cf530bf6e1a1ff942f6a3c771c1ea8fda5f30f082c66c93a19aa675b8c445",
+      "seconds": 21.15762958303094,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe investments in education, lifelong learning, skill development, and research and development are needed to take advantage of opportunities in the Information Age.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe Americans need the skills and tools to compete and win in the new knowledge-based, global economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats understand ensuring every child receives a high-quality education is essential for American strength and competitiveness in today's economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Al Gore will make education his top domestic priority.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Nine out of ten children in the United States attend public schools.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Public education allows the United States to have one of the highest standards of living in the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Public education provides equality of opportunity for all regardless of socioeconomic status.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 288,
+      "generation_tps": 15.939422042360833,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1925,
+      "prompt_tps": 478.9399479627505,
+      "request_sha256": "33e7d4c2d192ce06c11e49a967631b96fc11c83b1ee47b42afe3b97eff2bb8e6",
+      "seconds": 22.099689583061263,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe investments in education, lifelong learning, skill development, and research and development are needed to take advantage of the vast opportunities of the Information Age.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe Americans need the skills and tools to compete and win in the new knowledge-based, global economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats understand ensuring every child the highest quality education is essential if America is to remain strong and competitive in today's economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Al Gore will make education his top domestic priority.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Nine out of every ten children in this country attend a public school.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Public education allows the United States to have one of the highest standards of living in the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Public education provides equality of opportunity for all regardless of socioeconomic status.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c40cf530bf6e1a1ff942f6a3c771c1ea8fda5f30f082c66c93a19aa675b8c445"
+}

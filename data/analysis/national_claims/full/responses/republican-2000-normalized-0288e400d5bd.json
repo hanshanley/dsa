@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 427,
+      "generation_tps": 16.601259249268374,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1507,
+      "prompt_tps": 486.0165167653274,
+      "request_sha256": "a1ead1fabc4b6633b951fc963ae9f657c0e3f2110794a0f42ed5d85bedc1d048",
+      "seconds": 28.83399804099463,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Illegal drugs and alcohol abuse are closely related to the incidence of child abuse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government at all levels spends about $20 billion annually on programs to help either children or adults in abusive or neglectful families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The largest federal effort is open-ended entitlements aimed at foster care and adoption.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Very little is allotted to preventive and family support services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for decreasing abuse caseloads and increasing accountability throughout the child protection system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Proposal to restructure the child protection system by combining separate and competing funding sources into a Child Protection Block Grant with guaranteed levels of funding.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Child Protection Block Grant will empower the states to respond more quickly, more flexibly, and with greater compassion to children in peril.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the stringent and effective enforcement of laws against the abuse of children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"For many children, adoption may be the only route to a stable and loving home.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for government at all levels working with charitable and faith-based groups that provide adoption services to remove obstacles they sometimes encounter in their efforts to unite children in need with families who need them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 443,
+      "generation_tps": 16.488590381839828,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2102,
+      "prompt_tps": 527.3672481466563,
+      "request_sha256": "67142818bf1a7d7f3696549f147f75e41dbc638a6dc1b5d056af64f5a2e212ed",
+      "seconds": 30.864440124947578,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Illegal drugs and alcohol abuse are closely related to the incidence of child abuse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government at all levels spends about $20 billion annually on a confusing array of programs to help either children or adults in abusive or neglectful families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The largest federal effort is open-ended entitlements aimed at foster care and adoption.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Very little is allotted to preventive and family support services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for decreasing abuse caseloads and increasing accountability throughout the child protection system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Proposal to restructure the child protection system along the lines of welfare reform success, by combining the separate and competing funding sources into a Child Protection Block Grant with guaranteed levels of funding.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Child Protection Block Grant will empower the states to respond more quickly, more flexibly, and with greater compassion to children in peril.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the stringent and effective enforcement of laws against the abuse of children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"For many of those children, adoption may be the only route to a stable and loving home.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for government at all levels working with charitable and faith-based groups that provide adoption services to remove the obstacles they sometimes encounter in their efforts to unite children in need with families who need them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a1ead1fabc4b6633b951fc963ae9f657c0e3f2110794a0f42ed5d85bedc1d048"
+}

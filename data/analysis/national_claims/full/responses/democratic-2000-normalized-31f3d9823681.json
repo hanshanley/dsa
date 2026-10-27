@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 461,
+      "generation_tps": 15.951811710750832,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1538,
+      "prompt_tps": 464.5981542630673,
+      "request_sha256": "0984ec1cefb5c2c5e4c83b6e8e7d21ee45bf3400e2327ac354ded9137368477f",
+      "seconds": 32.22330233408138,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans propose a scheme that would reduce Social Security funding by $1 trillion in payroll taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican scheme would reduce the life of Social Security by 14 years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican scheme would eliminate the guaranteed retirement security provided by Social Security.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican scheme would raise the possibility of massive government bail-outs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Independent analyses suggest the Republican privatization plan would cut guaranteed benefits for young workers by as much as 54 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican scheme would remove the \\\"security\\\" from Social Security.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Retirement Savings Plus does not threaten Social Security's guaranteed benefit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security is 65 years old but is not ready to be retired.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"George W. Bush's $2 trillion tax cut, campaign-season spending proposals, support for an unspecified missile defense system, and support for privatizing Social Security constitute an assault on the surplus.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Americans would have to choose between cuts in education and health care or a return to deficit spending if George W. Bush's policies are enacted.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"With fiscal discipline and a commitment to values, it is possible to both save Social Security and allow Americans to create a nest egg without reversing prosperity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 484,
+      "generation_tps": 15.77581002892814,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2167,
+      "prompt_tps": 503.5674347108244,
+      "request_sha256": "d189c31bc94a9d0484d8efac516909440f9f426b90aa25537080b8a7162c5f19",
+      "seconds": 34.997687000082806,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republicans propose a scheme that would siphon $1 trillion in payroll taxes away from the Social Security trust fund.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican scheme would take 14 years off the life of Social Security.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican scheme would eliminate the fundamental guarantee of retirement security.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican scheme would raise the specter of massive government bail-outs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"According to independent analyses, the Republicans' privatization plan would cut the guaranteed benefits for young workers by as much as 54 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican scheme would take the \\\"security\\\" out of Social Security.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Retirement Savings Plus does not threaten Social Security's guaranteed benefit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security is 65 years old but is not ready to be retired.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"George W. Bush's $2 trillion tax cut, campaign-season spending proposals, support for an unspecified but unprecedented missile defense system, and support for privatizing Social Security add up to an assault on the surplus.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"If George W. Bush's policies are enacted, Americans would have to choose between drastic cuts in education and health care or a return to the days of deficit spending.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"With fiscal discipline and a commitment to honoring values, it is possible to both save Social Security and give Americans the ability to create a nest egg without turning back the clock on prosperity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0984ec1cefb5c2c5e4c83b6e8e7d21ee45bf3400e2327ac354ded9137368477f"
+}

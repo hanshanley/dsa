@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 390,
+      "generation_tps": 15.973645123947064,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1575,
+      "prompt_tps": 477.56841564740233,
+      "request_sha256": "995f2fe3fd2b1d6e8366cb8f563da2bbe82e61332ffd0f81bee7d6d3bb3e6252",
+      "seconds": 27.725459083914757,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA condemns suicide bombings and calls on the Palestinian Authority to do all within its power to stop them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as Palestinian desires for self-determination are violently denied by the Israeli occupation, terrorist acts of desperation will continue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Israeli government has pursued a ruinous policy of occupation for 37 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Peace will not be possible until the United States government stops framing the Israeli-Palestinian conflict as part of the \u201cwar on terrorism\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The roots of the Israeli-Palestinian conflict lie not in a nihilistic global conspiracy but in denying self-determination to the Palestinians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The legitimate cause of Palestinian self-rule should not be left in the hands of Islamist religious extremists who use the cause to whip up anti-Jewish hatred.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The legitimate cause of Palestinian self-rule should not be allowed to be exploited by authoritarian Arab regimes to deflect their own people\u2019s attention away from their undemocratic domestic practices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Sharon government can pursue its destructive policies only because the Bush administration (and both parties in the U.S.) allows it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 453,
+      "generation_tps": 15.907370364113769,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2133,
+      "prompt_tps": 507.84754514957035,
+      "request_sha256": "5441576f771364c8997cd947dc25135339ecd6e335ad689af78597f35b43c704",
+      "seconds": 32.687940375180915,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA has forthrightly condemned suicide bombings and calls on the Palestinian Authority to do all within its power to stop them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as Palestinian desires for self-determination are violently denied by the Israeli occupation, terrorist acts of desperation will continue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Israeli government, an American ally that talks in the name of the Enlightenment and of democratic values, has pursued a ruinous policy of occupation for 37 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Peace will not be possible until the United States government stops framing the Israeli-Palestinian conflict as part of the \u201cwar on terrorism\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The roots of the Israeli-Palestinian conflict lie not in some nihilistic global conspiracy but in denying self-determination to the Palestinians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The legitimate cause of Palestinian self-rule should not be left in the hands of Islamist religious extremists who use the cause to whip up anti-Jewish hatred.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The legitimate cause of Palestinian self-rule should not be allowed to be exploited by authoritarian Arab regimes to deflect their own people\u2019s attention away from their undemocratic domestic practices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Sharon government can pursue its destructive policies only because the Bush administration (and both parties in the U.S.) allows it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"That leadership has been negligent \u2013 if not criminally implicated \u2013 in the failure to bring peace and justice to the region.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "995f2fe3fd2b1d6e8366cb8f563da2bbe82e61332ffd0f81bee7d6d3bb3e6252"
+}
