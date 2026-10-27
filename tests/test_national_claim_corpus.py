@@ -115,15 +115,38 @@ class ClaimCorpusTests(unittest.TestCase):
             response(claim_text="We will expand services"),
             response(claim_text="The document will expand services"),
             response(claim_text="These will expand services"),
+            response(claim_text='"We will expand services."'),
+            response(claim_text='"No, we cannot", we say.'),
             response(claim_types=["ideology"]),
             response(extra_field="none"),
         ]
         for text in invalid:
             with self.subTest(text=text):
                 self.assertTrue(validate_response(text, block)[1])
+        errors = validate_response(response(claim_text="These investments reduce costs."), block)[1]
+        self.assertIn("Forbidden opening='These'", errors[0])
+        self.assertIn("claim_text=", errors[0])
+        errors = validate_response(
+            response(claim_text="Republicans will secure our Borders."), block
+        )[1]
+        self.assertIn('Forbidden narrator tokens=["our"]', errors[0])
+        self.assertIn("possessives and objects", errors[0])
         payload = json.loads(response())
         payload["claims"] *= 2
         self.assertTrue(validate_response(json.dumps(payload), block)[1])
+
+    def test_relative_time_and_quoted_slogans_are_not_narrator_pronouns(self):
+        block = build_blocks(sources(), coverage(sources()))[0]
+        for text in (
+            "This winter, American families will spend more on heat.",
+            "This year, employment may grow.",
+            'The slogan "No, we cannot" is not a viable energy policy.',
+            "The slogan \u201cNo, we cannot\u201d is not a viable energy policy.",
+        ):
+            with self.subTest(text=text):
+                accepted, errors, _ = validate_response(response(claim_text=text), block)
+                self.assertEqual(errors, [])
+                self.assertEqual(accepted[0]["claim_text"], text)
 
     def test_resume_retries_complete_download_and_baseline_isolation(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -148,6 +171,8 @@ class ClaimCorpusTests(unittest.TestCase):
             summary = extract_corpus(output=output, corpus=corpus, extractor=extractor)
             self.assertEqual(summary["status"], "complete")
             self.assertEqual(len(calls), 2 * summary["blocks"] + 1)
+            self.assertIn("PREVIOUS FAILED RESPONSE", calls[1])
+            self.assertIn("\ninvalid\nYour previous response failed", calls[1])
             self.assertEqual(baseline, {path.name: path.read_bytes() for path in corpus.iterdir()})
             with zipfile.ZipFile(output / "claim_documents.zip") as archive:
                 self.assertIn("complete_sources.csv", archive.namelist())
@@ -215,6 +240,40 @@ class ClaimCorpusTests(unittest.TestCase):
                     for row in read_rows(output / "block_status.csv")
                 )
             )
+            previous = {p.name: p.read_bytes() for p in (output / "responses").glob("*.json")}
+            with patch(
+                "dsa_analysis.national_claim_corpus.LocalGemma",
+                side_effect=AssertionError("failed records are not retried implicitly"),
+            ):
+                extract_corpus(output=output, corpus=corpus)
+
+            def repaired(prompt, max_tokens):
+                return {
+                    "text": response(),
+                    "generation_tokens": 25,
+                    "seconds": 0.1,
+                    "peak_memory": 1,
+                }
+
+            recovered = extract_corpus(
+                output=output, corpus=corpus, extractor=repaired, retry_failed=True
+            )
+            self.assertEqual(recovered["status"], "complete")
+            self.assertEqual(recovered["analysis_claims"], recovered["blocks"])
+            history = list((output / "response_history").glob("*.json"))
+            self.assertEqual(len(history), len(previous))
+            self.assertEqual({p.read_bytes() for p in history}, set(previous.values()))
+            with zipfile.ZipFile(output / "claim_documents.zip") as archive:
+                self.assertEqual(
+                    len(
+                        [
+                            name
+                            for name in archive.namelist()
+                            if name.startswith("response_history/")
+                        ]
+                    ),
+                    len(previous),
+                )
 
 
 if __name__ == "__main__":

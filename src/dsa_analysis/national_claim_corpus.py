@@ -228,6 +228,17 @@ def make_prompt(block: dict) -> str:
     )
 
 
+def repair_request(base: str, previous: str, errors: list[str]) -> str:
+    return (
+        base
+        + "\nPREVIOUS FAILED RESPONSE (proposals, not source evidence):\n"
+        + previous
+        + "\nYour previous response failed these checks: "
+        + canonical(errors)
+        + "\nReturn a fresh complete response obeying the schema and source only."
+    )
+
+
 def validate_response(text: str, block: dict) -> tuple[list[dict], list[str], list[str]]:
     wrapper = re.fullmatch(r"\s*```(?:json)?\s*\n(.*?)\n```\s*", text, re.S)
     try:
@@ -269,12 +280,38 @@ def validate_response(text: str, block: dict) -> tuple[list[dict], list[str], li
             errors.append(f"claim_{number}: invalid_schema_or_evidence_ids")
             continue
         normalized = claim["claim_text"].strip()
-        if (
-            re.search(r"\b(?:[Ww]e|[Oo]ur|[Oo]urs|us)\b", normalized)
-            or re.search(r"\bthe document\b", normalized, re.I)
-            or re.match(r"^(?:This|These|Those|They|Its)\b", normalized, re.I)
-        ):
-            errors.append(f"claim_{number}: unresolved_or_document_actor")
+        narration = re.sub(r'"[^"]*"|\u201c[^\u201d]*\u201d', "", normalized).strip() or normalized
+        relative_time = re.match(
+            r"^(?:This (?:winter|summer|spring|autumn|fall|year|month|week|day|decade|century)"
+            r"|These days)\b",
+            normalized,
+            re.I,
+        )
+        problem = None
+        opening = re.match(r"^(?:This|These|Those|They|Its)\b", normalized, re.I)
+        pronouns = re.findall(r"\b(?:[Ww]e|[Oo]ur|[Oo]urs|us)\b", narration)
+        if pronouns:
+            problem = (
+                f"Forbidden narrator tokens={canonical(sorted(set(pronouns)))}. "
+                "Replace ALL first-person references, including possessives and objects "
+                "inside a sentence, with their source-resolved referents. A third-person "
+                "subject alone is not enough. For example, 'Republicans will' does not "
+                "resolve 'our Borders'; use 'U.S. borders' only if SOURCE/CONTEXT establishes "
+                "the United States as the referent. Do not copy the forbidden tokens back."
+            )
+        elif re.search(r"\bthe document\b", normalized, re.I):
+            problem = "Do not make the document an actor; use the actual actor or policy stance."
+        elif opening and not relative_time:
+            problem = (
+                f"Forbidden opening={opening.group()!r}. Replace the opening with the actual "
+                "named referent or actor from SOURCE/CONTEXT, not another demonstrative. "
+                "Do not merely delete the word and generalize a specific claim."
+            )
+        if problem:
+            errors.append(
+                f"claim_{number}: unresolved_or_document_actor; {problem} "
+                f"claim_text={canonical(normalized)}"
+            )
             continue
         if normalized.casefold() in seen:
             errors.append(f"claim_{number}: duplicate_claim")
@@ -501,6 +538,7 @@ def extract_corpus(
     corpus: Path = OUTPUT,
     prepare_only: bool = False,
     max_new_blocks: int | None = None,
+    retry_failed: bool = False,
     extractor=None,
 ) -> dict:
     if max_new_blocks is not None and max_new_blocks < 1:
@@ -511,7 +549,16 @@ def extract_corpus(
         return summary
     directory = output / "responses"
     directory.mkdir(exist_ok=True)
-    missing = [block for block in blocks if not (directory / f"{block['block_id']}.json").exists()]
+    failed = {
+        row["block_id"]
+        for row in read_rows(output / "block_status.csv")
+        if retry_failed and row["status"] == "validation_failed"
+    }
+    missing = [
+        block
+        for block in blocks
+        if block["block_id"] in failed or not (directory / f"{block['block_id']}.json").exists()
+    ]
     if max_new_blocks is not None:
         missing = missing[:max_new_blocks]
     if missing:
@@ -520,19 +567,22 @@ def extract_corpus(
             write_json(output / "runtime.json", extractor.metadata)
     for index, block in enumerate(missing, 1):
         prompt = make_prompt(block)
+        path = directory / f"{block['block_id']}.json"
+        previous = json.loads(path.read_text())["attempts"][-1] if path.exists() else None
         attempts, errors = [], []
         for stage in ("extraction", "source_fidelity_revision"):
             base = prompt
             if stage == "source_fidelity_revision":
                 base += REVIEW_PROMPT + "\nPROPOSED CLAIMS:\n" + attempts[-1]["text"]
+            elif previous is not None:
+                previous_errors = validate_response(previous["text"], block)[1]
+                if previous.get("generation_tokens", 0) >= manifest["generation"]["max_tokens"]:
+                    previous_errors.append("output_token_limit_reached")
+                base = repair_request(base, previous["text"], previous_errors)
             for attempt in range(manifest["generation"]["max_attempts"]):
                 request = base
                 if attempt:
-                    request += (
-                        "\nYour previous response failed these checks: "
-                        + canonical(errors)
-                        + "\nReturn a fresh complete response obeying the schema and source only."
-                    )
+                    request = repair_request(base, attempts[-1]["text"], errors)
                 result = extractor(request, manifest["generation"]["max_tokens"])
                 attempts.append(
                     {
@@ -551,9 +601,14 @@ def extract_corpus(
         record = {
             "fingerprint": manifest["fingerprint"],
             "prompt_sha256": digest(prompt),
+            "implementation_version": 3,
             "attempts": attempts,
         }
-        path = directory / f"{block['block_id']}.json"
+        if path.exists():
+            original = path.read_bytes()
+            history = output / "response_history"
+            history.mkdir(exist_ok=True)
+            (history / f"{block['block_id']}-{digest(original)[:12]}.json").write_bytes(original)
         temporary = path.with_suffix(".tmp")
         write_json(temporary, record)
         temporary.replace(path)
@@ -577,6 +632,11 @@ def main() -> None:
     parser.add_argument("--corpus", type=Path, default=OUTPUT)
     parser.add_argument("--prepare-only", action="store_true")
     parser.add_argument("--max-new-blocks", type=int)
+    parser.add_argument(
+        "--retry-failed",
+        action="store_true",
+        help="Retry failed blocks, preserving prior responses",
+    )
     args = parser.parse_args()
     started = time.perf_counter()
     print(
@@ -585,6 +645,7 @@ def main() -> None:
             corpus=args.corpus,
             prepare_only=args.prepare_only,
             max_new_blocks=args.max_new_blocks,
+            retry_failed=args.retry_failed,
         ),
         flush=True,
     )

@@ -87,6 +87,9 @@ uv run scripts/national_claim_corpus.py
 # Optional bounded smoke test, using exactly the same resumable input/cache.
 uv run scripts/national_claim_corpus.py --max-new-blocks 3
 
+# Explicitly retry failed blocks while retaining their previous raw responses.
+uv run scripts/national_claim_corpus.py --retry-failed
+
 # After extraction finishes: embeddings, topics, both KDE views, report and ZIP.
 uv run python -m dsa_analysis.national_claim_analysis
 
@@ -103,6 +106,9 @@ If the isolated MLX environment is already installed, its Python can run the
 same script directly without resolving another environment:
 `/path/to/gemma-env/bin/python scripts/national_claim_corpus.py`.
 Replace the interpreter path with that environment's actual Python path.
+Successful cached chunks are revalidated and reused. Failed chunks are not
+retried implicitly; `--retry-failed` preserves their old records in
+`response_history/`. Repair attempts include the failed response and its errors.
 
 Outputs are separated under `data/analysis/national_claims/{full,reviewed_sample}/`
 and `figures/national_claims/`. The command refuses to present an unfinished full
