@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 459,
+      "generation_tps": 16.44007097158439,
+      "peak_memory": 33.777291018,
+      "prompt_tokens": 1488,
+      "prompt_tps": 579.631973890152,
+      "request_sha256": "be9eac190282667062c755f7387bf5e0e3659baea2414e05834002c076d6a0eb",
+      "seconds": 30.49595050001517,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The COVID-19 pandemic has killed hundreds of thousands of people in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The COVID-19 pandemic exposed America\u2019s massive racial and economic health disparities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Free healthcare for all is necessary, according to the assessment of the pandemic\u2019s effects.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-sanctioned police violence, socio-economic and environmental factors, and co-morbidities rooted in the for-profit healthcare system account for the disproportionate deaths from illness and disease including COVID-19 among Black and Indigenous people in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"National oppression, racism, and colonialism exacerbate the consequences of the pandemic for the Global South.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare for All redirects resources and establishes healthcare as a public good.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare for All provides a model for a society based on solidarity and caregiving.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Food insecurity, environmental racism, mass incarceration, police violence, and the violence of mass detention of immigrants must all be addressed as interlocking public health crises.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A comprehensive, transformative response is needed to address food insecurity, environmental racism, mass incarceration, police violence, and the violence of mass detention of immigrants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A culturally competent healthcare system should listen to, honor, and respond to the experience of Black and brown patients.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 360,
+      "generation_tps": 15.785140357896568,
+      "peak_memory": 33.777291018,
+      "prompt_tokens": 2115,
+      "prompt_tps": 484.1912556540134,
+      "request_sha256": "463628af325005b96c4c4b34df761bd44cb3cc85875602e72cfec2d953fc9ab7",
+      "seconds": 27.184454874834046,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The COVID-19 pandemic has killed hundreds of thousands of people, exposed America\u2019s massive racial and economic health disparities, and made clear the necessity of free healthcare for all.\",\n\"claim_types\":[\"factual_assertion\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-sanctioned police violence, socio-economic and environmental factors, and co-morbidities rooted in the for-profit healthcare system account for the disproportionate deaths from illness and disease including COVID-19 among Black and Indigenous people in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"National oppression, racism, and colonialism exacerbate the consequences of the pandemic for the Global South.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare for All provides the model for a society based on solidarity and caregiving.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare for All redirects resources and establishes healthcare as a public good.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Food insecurity, environmental racism, mass incarceration, police violence, and the violence of mass detention of immigrants must all be addressed as interlocking public health crises that demand a comprehensive, transformative response.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A culturally competent healthcare system should listen to, honor, and respond to the experience of Black and brown patients.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "be9eac190282667062c755f7387bf5e0e3659baea2414e05834002c076d6a0eb"
+}

@@ -1,0 +1,155 @@
+{
+  "analytical_unit": "Normalized claim text; original source evidence is audit-only",
+  "baseline_modified": false,
+  "bundles_by_group": {
+    "democratic": 7,
+    "dsa": 9,
+    "republican": 6
+  },
+  "claims": 199,
+  "claims_by_group": {
+    "democratic": 59,
+    "dsa": 58,
+    "republican": 82
+  },
+  "claims_sha256": "5d0fc4aff7120ced7e30c8dfc62e2254adaac76a3dd4f819e94571ea1c527df9",
+  "complete_sources_sha256": "4be575be81bd38ff0e24508b2efe2f798c88bd5fc6e92f5fdedcef73c1c22a65",
+  "corpus": {
+    "analysis_claims": 199,
+    "claims": 199,
+    "claims_by_group": {
+      "democratic": 59,
+      "dsa": 58,
+      "republican": 82
+    },
+    "normalization": "Frozen pilot claim wording; full extraction uses the structured schema",
+    "pilot_claims_sha256": "3510b7486d00289abfd00e724368a8243520eee1f03ff0551647579ba97172bd",
+    "pilot_review_sha256": "86ef7f396351b9a009c657b08720eebe8b409f67cf5d15b965ebd17fc7f6260d",
+    "quality": "Selected pilot candidates with no individually observed assistant-review issue; not a representative sample, independent human gold or semantic certification",
+    "sample_blocks": 60,
+    "sample_documents": 28,
+    "status": "reviewed_sample_not_full_corpus"
+  },
+  "documents_by_group": {
+    "democratic": 7,
+    "dsa": 12,
+    "republican": 6
+  },
+  "embedding_cache_reused": true,
+  "tokenization": {
+    "limit": 256,
+    "maximum_tokens": {
+      "gte": 64,
+      "topics": 62
+    },
+    "truncated_claims": 0
+  },
+  "topic_model": {
+    "cache_reused": true,
+    "claims": 199,
+    "config_sha256": "e65ce77bbf67162cc6a12412b01ad79496399ea2072300ceab8b65e99217355c",
+    "max_length": 256,
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "normalization": "l2",
+    "ordered_text_hash": "af81643ee8dcf1aa1570fb5e15fd6ecc5e226a0142fe16a11eb42e40210d357d",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "topics": 21
+  },
+  "views": {
+    "expanded": {
+      "bandwidth": 0.6368887187536851,
+      "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
+      "dimensions": 5,
+      "document_types": {
+        "democratic": {
+          "platform": 7
+        },
+        "dsa": {
+          "platform": 1,
+          "program": 2,
+          "resolution": 5,
+          "statement": 4
+        },
+        "republican": {
+          "platform": 6
+        }
+      },
+      "group_bundles": {
+        "democratic": 7,
+        "dsa": 9,
+        "republican": 6
+      },
+      "group_documents": {
+        "democratic": 7,
+        "dsa": 12,
+        "republican": 6
+      },
+      "group_passages": {
+        "democratic": 59,
+        "dsa": 58,
+        "republican": 82
+      },
+      "group_sample_sizes": {
+        "democratic": 58,
+        "dsa": 58,
+        "republican": 58
+      },
+      "groups": [
+        "democratic",
+        "republican",
+        "dsa"
+      ],
+      "region_count": 11,
+      "seed": 1729,
+      "status": "complete",
+      "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass"
+    },
+    "strict": {
+      "bandwidth": 0.6758272140904427,
+      "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
+      "dimensions": 5,
+      "document_types": {
+        "democratic": {
+          "platform": 7
+        },
+        "dsa": {
+          "platform": 1,
+          "program": 2
+        },
+        "republican": {
+          "platform": 6
+        }
+      },
+      "group_bundles": {
+        "democratic": 7,
+        "dsa": 3,
+        "republican": 6
+      },
+      "group_documents": {
+        "democratic": 7,
+        "dsa": 3,
+        "republican": 6
+      },
+      "group_passages": {
+        "democratic": 59,
+        "dsa": 34,
+        "republican": 82
+      },
+      "group_sample_sizes": {
+        "democratic": 34,
+        "dsa": 34,
+        "republican": 34
+      },
+      "groups": [
+        "democratic",
+        "republican",
+        "dsa"
+      ],
+      "region_count": 6,
+      "seed": 1729,
+      "status": "complete",
+      "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass"
+    }
+  },
+  "website_deployed": false
+}

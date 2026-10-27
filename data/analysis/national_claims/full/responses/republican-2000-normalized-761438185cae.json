@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 279,
+      "generation_tps": 16.41570560216298,
+      "peak_memory": 33.777291018,
+      "prompt_tokens": 1484,
+      "prompt_tps": 794.6723218333857,
+      "request_sha256": "e64054d270b2d30ed7d9b75e4934947c282b37a4ee2ce81388a6bdc5938af161",
+      "seconds": 18.872672999976203,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A Republican president and a Republican Congress will restore the health of a defense industry weakened by neglect and misguided policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must align its military power with the strengths of American society: skilled people, advanced technology, and proficiency at integrating fast-paced systems into potent networks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans are justly proud of their armed forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. military faces growing problems in readiness, morale, and its ability to prepare for the threats of the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Defense spending has been cut to its lowest percentage of gross domestic product since before Pearl Harbor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current administration has sent American armed forces on dozens of missions without clear goals, realizable objectives, favorable rules of engagement, or defined exit strategies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 328,
+      "generation_tps": 16.444209469495032,
+      "peak_memory": 33.777291018,
+      "prompt_tokens": 1931,
+      "prompt_tps": 715.2486303589391,
+      "request_sha256": "27a61ec86139ff9e51b3ccb7ec70892b618c18ff47f8797fe9439e5d3f16d592",
+      "seconds": 22.6554738341365,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A Republican president and a Republican Congress will restore the health of a defense industry weakened by a combination of neglect and misguided policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must align its military power with the strengths of American society: skilled people, advanced technology, and proficiency at integrating fast-paced systems into potent networks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans are justly proud of their armed forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. military faces growing problems in readiness, morale, and its ability to prepare for the threats of the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Defense spending has been cut to its lowest percentage of gross domestic product since before Pearl Harbor, according to the current administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current administration has sent American armed forces on dozens of missions without clear goals, realizable objectives, favorable rules of engagement, or defined exit strategies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The strength of the military lies with the combat soldier, sailor, airman, and Marine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "prompt_sha256": "e64054d270b2d30ed7d9b75e4934947c282b37a4ee2ce81388a6bdc5938af161"
+}

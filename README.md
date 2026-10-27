@@ -51,6 +51,14 @@ Separate [expanded](data/analysis/national_platforms/expanded/) and
 [platforms/programs-only](data/analysis/national_platforms/strict/) tables retain
 the sensitivity comparison.
 
+**Claim-based preprocessing:** [Method and local commands](docs/national_claim_analysis.md)
+and [first completed claim-based report](report/national_claim_analysis_sample.md).
+The selected-sample run analyzes **199 reviewed pilot claims** with GTE, weighted
+CAP topics, and expanded/strict KDEs—not the original passages.
+[Download complete claims and source texts](data/analysis/national_claims/reviewed_sample/claim_documents.zip).
+The full eligible-source job uses **2,623 bounded chunks, at most 240 words each**;
+the sample result is not presented as full-corpus coverage.
+
 ## Sources and coverage
 
 | Organization | Expanded-view documents | Model passages |
@@ -103,10 +111,11 @@ See the [report's methods](report/national_platform_analysis.md#methods-and-repr
 for model revision, segmentation, sampling, bandwidth, and exploratory-region checks.
 Source URLs, hashes, dates, and paragraph/page locators remain traceable.
 
-An isolated [local Gemma claim-extraction pilot](docs/national_claim_pilot.md)
-completed 60 source blocks on a Mac. Local inference works, but source-fidelity
-issues prevent unattended rollout. Its source-linked candidates and complete audit
-bundle do not replace these passage-based results or fit a new KDE.
+An isolated [local Gemma pilot](docs/national_claim_pilot.md) completed 60 blocks
+and exposed source-fidelity issues. The [claim-analysis path](docs/national_claim_analysis.md)
+now adds bounded full-source chunking, a source-fidelity revision pass, provenance
+checks, and a separate downstream claim corpus. These automated checks are not
+human certification; the published passage-based baseline remains unchanged.
 
 ## Setup
 
