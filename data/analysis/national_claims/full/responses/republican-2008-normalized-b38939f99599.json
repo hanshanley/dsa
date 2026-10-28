@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 338,
+      "generation_tps": 15.787299887927782,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1480,
+      "prompt_tps": 465.06791359965405,
+      "request_sha256": "e02bf678e6a1a9106e93e88cb6240251e6a2e838adcaa0cdb3d4c220459f821c",
+      "seconds": 24.60284858290106,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Opposition to amnesty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rule of law suffers if government policies encourage or reward illegal activity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American people reject en masse legalizations, especially given the federal government's past failures to enforce the law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's immigrants are seeking the American dream and contributing culturally and economically to the U.S.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The U.S. celebrates the industry and love of liberty of immigrants.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Both government and the private sector must do more to foster legally present immigrants' integration into American life to advance respect for the rule of law and a common American identity.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"It is a national disgrace that new Americans' first experience is with a dysfunctional immigration bureaucracy defined by delay and confusion, and this will no longer be tolerated.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Everyone\u2014immigrants and native-born alike\u2014must embrace the core values of liberty, equality, meritocracy, and respect for human dignity and the rights of women.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 360,
+      "generation_tps": 15.873230560568933,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1986,
+      "prompt_tps": 487.1776824857546,
+      "request_sha256": "7b21bf4bcac15f7047f7621c55d9f21cccbed3dfc5f93a8239badf4952d9d516",
+      "seconds": 26.768597959075123,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Opposition to amnesty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rule of law suffers if government policies encourage or reward illegal activity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American people's rejection of en masse legalizations is especially appropriate given the federal government's past failures to enforce the law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's immigrants are walking in the steps of most other Americans' ancestors, seeking the American dream and contributing culturally and economically to the U.S.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The U.S. celebrates the industry and love of liberty of these fellow Americans.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Both government and the private sector must do more to foster legally present immigrants' integration into American life to advance respect for the rule of law and a common American identity.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"It is a national disgrace that new Americans' first experience is with a dysfunctional immigration bureaucracy defined by delay and confusion, and this will no longer be tolerated.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Everyone\u2014immigrants and native-born alike\u2014must embrace the core values of liberty, equality, meritocracy, and respect for human dignity and the rights of women.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e02bf678e6a1a9106e93e88cb6240251e6a2e838adcaa0cdb3d4c220459f821c"
+}

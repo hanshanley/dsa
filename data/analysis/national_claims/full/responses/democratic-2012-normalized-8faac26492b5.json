@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 278,
+      "generation_tps": 15.59665479805063,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1408,
+      "prompt_tps": 452.3570637811887,
+      "request_sha256": "b1dfe1f9d96e8238096ffb276486ec28c163ca77d21036958a5744e02bff899c",
+      "seconds": 20.94845570786856,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama launched the Open Government Initiative to empower the public through greater openness and new technologies to influence decisions affecting their lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to using government as a platform to spur innovation and collaboration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Forums such as Data.gov release more information to the public so that the private sector can pioneer innovative new services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The political system is under assault by those who believe that special interests should be able to buy whatever they want in society, including the government.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opponents have applauded the Supreme Court's decision in Citizens United and welcomed the new flow of special interest money.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"There is a belief that immediate action must be taken to curb the influence of lobbyists and special interests on political institutions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 285,
+      "generation_tps": 15.816173517941358,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1854,
+      "prompt_tps": 482.4985512663957,
+      "request_sha256": "18326b6641457e21d545eccafff74758ef466ae7fc4cc5139aaa76078c42c4db",
+      "seconds": 21.874160250183195,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama launched the Open Government Initiative to empower the public - through greater openness and new technologies - to influence the decisions that affect their lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to using government as a platform to spur innovation and collaboration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Forums such as Data.gov release more information to the public so that the private sector can pioneer innovative new services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The political system is under assault by those who believe that special interests should be able to buy whatever they want in society, including the government.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opponents have applauded the Supreme Court's decision in Citizens United and welcomed the new flow of special interest money with open arms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"There is a belief that immediate action must be taken to curb the influence of lobbyists and special interests on political institutions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b1dfe1f9d96e8238096ffb276486ec28c163ca77d21036958a5744e02bff899c"
+}

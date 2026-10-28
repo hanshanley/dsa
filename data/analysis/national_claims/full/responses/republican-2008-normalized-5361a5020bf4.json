@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 368,
+      "generation_tps": 15.305880429447347,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1533,
+      "prompt_tps": 439.7386796009808,
+      "request_sha256": "ce1d2843133b6c697bf6266a056dd835650f6ca616de226b5e7794ebb51d97e8",
+      "seconds": 27.542524582939222,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for English as the official language in the United States and the territories.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrants should be encouraged to learn English.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"English empowers newcomers and provides the fastest route to prosperity in America.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools should provide better education in U.S. history and civics for all children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States continues to accept refugees from troubled lands all over the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"People who stood with America in dangerous times have first call on the United States' hospitality.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to granting refugee status on the basis of lifestyle or other non-political factors.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thousands of new immigrants are serving in the Armed Forces.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The patriotism of new immigrants serving in the Armed Forces is inspiring.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Institutions of civil society should embrace newcomers, assist their journey to full citizenship, and help their communities avoid patterns of isolation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 400,
+      "generation_tps": 15.446696300450444,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2069,
+      "prompt_tps": 485.9168181097545,
+      "request_sha256": "32018148a87b85ce4a24e0d95c8bca6e490e82f1f79e2749ff0017c6db4e5ffa",
+      "seconds": 30.16590983304195,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for English as the official language in the United States and the territories, while welcoming ethnic diversity, including language.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrants should be encouraged to learn English.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"English empowers newcomers and provides the fastest route to prosperity in America.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools should provide better education in U.S. history and civics for all children, thereby fostering a commitment to the national motto, E Pluribus Unum.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States continues to accept refugees from troubled lands all over the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"People who stood with America in dangerous times have first call on the United States' hospitality.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Opposition to granting refugee status on the basis of lifestyle or other non-political factors.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Thousands of new immigrants, many of them not yet citizens, are serving in the Armed Forces.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The patriotism of new immigrants serving in the Armed Forces is inspiring.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Institutions of civil society should embrace newcomers, assist their journey to full citizenship, and help their communities avoid patterns of isolation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ce1d2843133b6c697bf6266a056dd835650f6ca616de226b5e7794ebb51d97e8"
+}

@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 417,
+      "generation_tps": 15.646804421238837,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1516,
+      "prompt_tps": 459.10186477484837,
+      "request_sha256": "db4ed8f4c389d3c4c8f775eac20756cd4fdcd3fa2d7cc0445a0be2abf71f32cc",
+      "seconds": 29.96456649992615,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama has asked Congress to reinstate the authority that past presidents had to reorganize and consolidate government agencies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has called for an ambitious, transparent, and unprecedented government-wide review of existing federal regulations to eliminate unnecessary rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than two dozen agencies have released plans to streamline existing requirements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A small fraction of initiatives will save billions of dollars in the near future without sacrificing consumer protections, the environment, workplace safety, or health.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overlapping responsibilities among agencies have made it harder for small businesses to interact with their government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to working with states and U.S. territories to support innovation in exchange for accountability and results.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to the most open, efficient, and accountable government in history.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Government is more accountable when it is transparent.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"This administration was the first to make public the list of visitors to the White House and create a centralized ethics and lobbying database available to the public online.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats led the fight to enact the STOCK Act to ban congressional insider trading.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 418,
+      "generation_tps": 15.683650022849804,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2054,
+      "prompt_tps": 505.93615956694265,
+      "request_sha256": "76aac526a18cf179322ecb6ea58894137ca8dbff53cc7e53db467a4603365c8a",
+      "seconds": 30.723778875079006,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama has asked Congress to reinstate the authority that past presidents had to reorganize and consolidate government agencies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has called for an ambitious, transparent, and unprecedented government-wide review of existing federal regulations to eliminate unnecessary rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than two dozen agencies have released plans to streamline existing requirements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A small fraction of these initiatives will save billions of dollars in the near future without sacrificing consumer protections, the environment, workplace safety, or health.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overlapping responsibilities among agencies have made it harder for small businesses to interact with their government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to working with states and U.S. territories to support innovation in exchange for accountability and results.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to the most open, efficient, and accountable government in history.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Government is more accountable when it is transparent.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The administration was the first to make public the list of visitors to the White House and create a centralized ethics and lobbying database available to the public online.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats led the fight to enact the STOCK Act to ban congressional insider trading.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 423,
+      "generation_tps": 15.80286716452961,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2102,
+      "prompt_tps": 492.29554738322065,
+      "request_sha256": "2db8c930dd4187c9737a30fd0eed0f56c27f48ea7adf36599f7be53fb9a60ea6",
+      "seconds": 31.050997582962736,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama has asked Congress to reinstate the authority that past presidents had to reorganize and consolidate government agencies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has called for an ambitious, transparent, and unprecedented government-wide review of existing federal regulations to eliminate unnecessary rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than two dozen agencies have released plans to streamline existing requirements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A small fraction of these initiatives will save billions of dollars in the near future without sacrificing consumer protections, the environment, workplace safety, or health.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overlapping responsibilities among agencies have made it harder, rather than easier, for small businesses to interact with their government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to working with states and U.S. territories to support innovation in exchange for accountability and results.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to the most open, efficient, and accountable government in history.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Government is more accountable when it is transparent.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The administration was the first to make public the list of visitors to the White House and create a centralized ethics and lobbying database available to the public online.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats led the fight to enact the STOCK Act to ban congressional insider trading.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "db4ed8f4c389d3c4c8f775eac20756cd4fdcd3fa2d7cc0445a0be2abf71f32cc"
+}

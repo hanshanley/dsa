@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 367,
+      "generation_tps": 15.980384679879231,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1486,
+      "prompt_tps": 458.13066700149267,
+      "request_sha256": "2d052caedf3e7a487c95c5a61501828df96f427cc5c346c98fbca3082cd2497a",
+      "seconds": 26.222952208016068,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Mitt Romney opposes commonsense campaign finance, which the source characterizes as support for corporate and special-interest takeovers in elections.\",\n\"claim_types\":[\"characterization\",\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source believes America prospers when everyone does their fair share and plays by the same rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source will not back down from preventing oil companies from taking reckless actions that could lead to an oil spill like the one in the Gulf of Mexico two years ago.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source will not back down from protecting children from toxic mercury pollution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source will not back down from ensuring food safety and clean water.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source will not back down from ensuring everyone has a seat at the American table and the opportunity to climb the ladder to the middle class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A strong middle class can only exist in an economy where everyone plays by the same rules, from Wall Street to Main Street.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"President Obama and Democrats in Congress passed the most far-reaching Wall Street reform in generations despite fierce opposition from the financial industry.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 386,
+      "generation_tps": 15.764657782370902,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2021,
+      "prompt_tps": 489.72925070812516,
+      "request_sha256": "84aefc53598f88b03c7d6487a51bab264b698845e818a0c0e7fe6a6005bd723d",
+      "seconds": 28.62776937521994,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Mitt Romney's opposition to commonsense campaign finance is support for corporate and special-interest takeovers in elections.\",\n\"claim_types\":[\"characterization\",\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source believes America prospers when everyone, from Main Street to Wall Street, does their fair share and plays by the same rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source will not back down from making sure an oil company can't take the same reckless actions that led to the kind of oil spill seen in the Gulf of Mexico two years ago.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source will not back down from protecting children from toxic mercury pollution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source will not back down from ensuring that food is safe and water is clean.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source will not back down from ensuring that everyone has a seat at the American table and the opportunity to grab the first rung on the ladder to the middle class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A strong middle class can only exist in an economy where everyone plays by the same rules, from Wall Street to Main Street.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"President Obama and Democrats in Congress passed the most far-reaching Wall Street reform in generations despite fierce opposition from the financial industry.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2d052caedf3e7a487c95c5a61501828df96f427cc5c346c98fbca3082cd2497a"
+}

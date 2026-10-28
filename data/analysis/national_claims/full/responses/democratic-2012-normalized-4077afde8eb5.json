@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 14.776214580576754,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1494,
+      "prompt_tps": 459.7024211731826,
+      "request_sha256": "5676b9aab9ab0f8cd631d6f4f8b8612031451da219f58be81989aee471f62a1c",
+      "seconds": 30.005701166810468,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and Democrats have been fighting to bring the country back from an historic economic crisis for the past three and a half years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Wall Street reform with smarter, tougher, commonsense rules was put in place to prevent a financial crisis from happening again.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The free market only works when there are rules of the road to ensure that competition is fair, open, and honest.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mitt Romney and the Republicans would roll back financial reform and allow Wall Street to write its own rules again.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President put in place government reform that has led to the most open, efficient, and accountable government in history.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Transparent and effective government makes economic sense.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans would continue to allow lobbyists too much sway over lawmakers, leading to gridlock in Washington, an outdated regulatory system, and a tax code riddled with loopholes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The President put in place unprecedented ethics reforms and is fighting for campaign finance reform.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Millions of Americans are struggling to get by, and their voices shouldn't be drowned out by millions of dollars in secret special-interest lobbying and advertising.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 404,
+      "generation_tps": 15.237341799922763,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2057,
+      "prompt_tps": 488.94447007038906,
+      "request_sha256": "35be9a3661706fd57c3fc39acd4b3f68a1a8aa69fc446f791561c0e72a3f8567",
+      "seconds": 30.73934791702777,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"For the past three and a half years, President Obama and Democrats around the country have been fighting to bring the country back from this historic economic crisis.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and Democrats put in place Wall Street reform with smarter, tougher, commonsense rules that will prevent a crisis like that from ever happening again.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The free market only works when there are rules of the road to ensure that competition is fair, open, and honest.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mitt Romney and the Republicans would roll back financial reform and let Wall Street write its own rules again.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President put in place government reform that has led to the most open, efficient, and accountable government in history.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Transparent and effective government makes economic sense.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans would continue to allow lobbyists too much sway over lawmakers, leading to gridlock in Washington, an outdated regulatory system, and a tax code riddled with loopholes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The President put in place unprecedented ethics reforms and is fighting for campaign finance reform.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Millions of Americans are struggling to get by, and their voices shouldn't be drowned out by millions of dollars in secret special-interest lobbying and advertising.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5676b9aab9ab0f8cd631d6f4f8b8612031451da219f58be81989aee471f62a1c"
+}

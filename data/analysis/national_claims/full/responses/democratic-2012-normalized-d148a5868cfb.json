@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 425,
+      "generation_tps": 15.654020414633246,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1520,
+      "prompt_tps": 444.4274373029832,
+      "request_sha256": "a046b556163bcddc6bfe9c9ce2babfc56b135b6f212f1857b9fe19e115a75b17",
+      "seconds": 30.581337208859622,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Mitt Romney and his allies in Congress believe that growing the economy from the top down benefited a few, crashed the economy, hurt the middle class, and contributed to soaring income inequality.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mitt Romney and his allies in Congress would roll back financial reform and allow Wall Street to write its own rules again.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democrats are committed to rethinking, reforming, and remaking the government to meet the challenges of the time.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democrats reject the idea that people need to choose between their jobs and their safety.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democrats reject the argument that economic growth requires rolling back protections banning hidden fees by credit card companies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democrats reject the argument that economic growth requires rolling back rules keeping children from exposure to mercury.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democrats reject the argument that economic growth requires rolling back laws preventing the health insurance industry from shortchanging patients.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Rules should be simpler and more flexible.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Regulations should be based on sound science and secure Americans' freedom of choice.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A 21st century regulatory system must promote economic growth, innovation, and job creation while also protecting public health and welfare.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 458,
+      "generation_tps": 15.60366017196791,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2113,
+      "prompt_tps": 512.8560902051534,
+      "request_sha256": "a9948bf86c8a4e995cfeb1f6d9a6734caa48d033c981cf4591e54663fcd7cc46",
+      "seconds": 33.48374649998732,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Mitt Romney and his allies in Congress believe that the best way to grow the economy is from the top down \u2013 the same approach that benefited a few, but crashed the economy, hurt the middle class, and contributed to soaring income inequality.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mitt Romney and his allies in Congress would roll back financial reform and let Wall Street write its own rules again.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democrats are committed to rethinking, reforming, and remaking the government so that it can meet the challenges of the time.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democrats reject the idea that people need to ask to choose between their jobs and their safety.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democrats reject the argument that for the economy to grow, protections banning hidden fees by credit card companies need to be rolled back.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democrats reject the argument that for the economy to grow, rules keeping children from exposure to mercury need to be rolled back.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democrats reject the argument that for the economy to grow, laws preventing the health insurance industry from shortchanging patients need to be rolled back.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Rules should be simpler and more flexible.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Regulations should be based on sound science and secure Americans' freedom of choice.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A 21st century regulatory system must promote economic growth, innovation, and job creation while also protecting public health and welfare.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a046b556163bcddc6bfe9c9ce2babfc56b135b6f212f1857b9fe19e115a75b17"
+}

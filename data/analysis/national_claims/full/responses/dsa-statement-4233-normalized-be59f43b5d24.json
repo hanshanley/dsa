@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 430,
+      "generation_tps": 15.821415538697197,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1541,
+      "prompt_tps": 468.26655297624285,
+      "request_sha256": "5bcdae6238a0f9995b0f83a992e506c853a93820e3f6330ed8c1595ebaf1afe6",
+      "seconds": 30.480742207961157,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for the Communication Workers Union.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for postal workers around the UK.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for halting efforts to break up the Royal Mail Group.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for management ratifying a new contract that guarantees full job and retirement security for Communication Workers Union workers across the Royal Mail Group including pay rises, secure pensions, and a 35-hour workweek by 2022.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urge workers to stand united in withdrawing their labor if their demands are not met.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Communication of full solidarity to workers and their union on behalf of the Democratic Socialists of America, with more than 55,000 dues-paying members.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the Communication Workers Union in its fight for a socialist Labour Party government that will introduce democratic public ownership of the postal service.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a socialist Labour Party government fighting for the reduction of working hours with no loss in pay.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recognition and appreciation of the support provided to the Labour Party by the Communication Workers Union.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recognition and appreciation of the support provided to the Labour Party by socialist organizers and political education networks within the party, such as Momentum and The World Transformed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 392,
+      "generation_tps": 15.87134833517869,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2139,
+      "prompt_tps": 485.1130598602802,
+      "request_sha256": "0f3c86a17490053bafd29c950865a6faeb6d82b0459b6187bf2e26dab8c6a8b5",
+      "seconds": 29.119582041865215,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the Communication Workers Union and postal workers around the UK.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for halting efforts to break up the Royal Mail Group and for management ratifying a new contract that guarantees full job and retirement security for Communication Workers Union workers across the Royal Mail Group including pay rises, secure pensions, and a 35-hour workweek by 2022.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urge workers to stand united in withdrawing their labor if their demands are not met.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Communication of full solidarity to workers and their union on behalf of the Democratic Socialists of America, with more than 55,000 dues-paying members.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the Communication Workers Union in its fight for a socialist Labour Party government that will introduce democratic public ownership of the postal service.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a socialist Labour Party government fighting for the reduction of working hours with no loss in pay.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recognition and appreciation of the support provided to the Labour Party by the Communication Workers Union.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recognition and appreciation of the support provided to the Labour Party by socialist organizers and political education networks within the party, such as Momentum and The World Transformed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5bcdae6238a0f9995b0f83a992e506c853a93820e3f6330ed8c1595ebaf1afe6"
+}

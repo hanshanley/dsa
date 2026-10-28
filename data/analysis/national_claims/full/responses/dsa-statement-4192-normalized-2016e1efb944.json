@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 344,
+      "generation_tps": 15.19773182421974,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1491,
+      "prompt_tps": 448.5396738971754,
+      "request_sha256": "7038a556f7696a8a4b75ff65fac914f2d43ae8c30903c6b0c3d8d49f9c34bc30",
+      "seconds": 25.974440917139873,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"People powered movements can bring change.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"People have come together to support UAW workers against the corporate greed of GM.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"SEIU 73 park workers are ready to go on strike to fight for better working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Education workers, like the teachers of the Chicago Teachers Union and the support staff of SEIU 73, are prepared to withhold their labor to secure better learning conditions for their students.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"More than 1 million people have contributed to Bernie Sanders\u2019s presidential campaign.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of people across the globe, led by the young, many of whom are not even voting age yet, have taken to the streets to demand immediate action addressing the climate crisis with the speed and urgency required.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The American working class is hungry for change and ready to fight for it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American working class is ready to fight for change.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 334,
+      "generation_tps": 15.779152120595137,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2003,
+      "prompt_tps": 476.63305733215014,
+      "request_sha256": "67f744765d947f0e894289e023d574ec3abe01c1335bb23183bf812dc813fd2d",
+      "seconds": 25.39041950018145,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"People powered movements can bring change.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"People have come together to support UAW workers, at the forefront of the largest private-sector strike in over a decade, against the corporate greed of GM.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The readiness of SEIU 73 park workers to go on strike and fight for better working conditions has been seen.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Education workers, like the teachers of the Chicago Teachers Union and the support staff of SEIU 73, are prepared to withhold their labor in order to secure better learning conditions for their students.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"More than 1 million people have contributed to Bernie Sanders\u2019s presidential campaign.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of people across the globe, led by the young, many of whom are not even voting age yet, have taken to the streets to demand immediate action addressing the climate crisis with the speed and urgency required.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The American working class is hungry for change and ready to fight for it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7038a556f7696a8a4b75ff65fac914f2d43ae8c30903c6b0c3d8d49f9c34bc30"
+}

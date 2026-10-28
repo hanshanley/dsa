@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 424,
+      "generation_tps": 15.597838166772453,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1541,
+      "prompt_tps": 448.2332962233611,
+      "request_sha256": "a17d6806274b78d489845febf792f1dca2b9767f975da53452b466c7ee90ea9a",
+      "seconds": 30.633292665937915,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Intelligence is key to fighting bioterrorism and cyberterrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bioterrorism and cyberterrorism are immediate threats to the nation's health and safety.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A well-placed cyber-attack could cripple the economy, shut down energy and transportation systems, wreck health care delivery systems, and put millions of lives at risk.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The country has thwarted new terrorist attacks since 2001, but those threats persist.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reform of the Foreign Intelligence Surveillance Act was vital.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Opposition to reform of the Foreign Intelligence Surveillance Act was wrong.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigration policy should be evaluated based on whether it serves the national interest.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"America can have a strong immigration system without sacrificing the rule of law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Border security is essential to national security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Allowing millions of unidentified persons to enter and remain in the country poses grave risks to the sovereignty of the United States and the security of its people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[6]},{\"claim_text\":\"The country must be able to track who is entering and leaving.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 438,
+      "generation_tps": 15.706666527412594,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2133,
+      "prompt_tps": 483.49304568805627,
+      "request_sha256": "bc026e039a2f87c175a0edb7ed1aa37e3abcd3e2b44f350c8b86c1ada70fd1e4",
+      "seconds": 32.31377562484704,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Intelligence is key to fighting bioterrorism and cyberterrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bioterrorism and cyberterrorism, once the stuff of science fiction films, are immediate threats to the nation's health and safety.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A well-placed cyber-attack could cripple the economy, shut down energy and transportation systems, wreck health care delivery systems, and put millions of lives at risk.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Although the country has thwarted new terrorist attacks since 2001, those threats do persist.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reform of the Foreign Intelligence Surveillance Act was vital.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats' opposition to reform of the Foreign Intelligence Surveillance Act was wrong.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigration policy should be evaluated based on whether it serves the national interest.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"America can have a strong immigration system without sacrificing the rule of law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Border security is essential to national security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Allowing millions of unidentified persons to enter and remain in the country poses grave risks to the sovereignty of the United States and the security of its people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[6]},{\"claim_text\":\"The country must be able to track who is entering and leaving the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a17d6806274b78d489845febf792f1dca2b9767f975da53452b466c7ee90ea9a"
+}
