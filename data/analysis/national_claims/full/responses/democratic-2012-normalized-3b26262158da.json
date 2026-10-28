@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 409,
+      "generation_tps": 15.695149265653583,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1524,
+      "prompt_tps": 476.25245568502777,
+      "request_sha256": "445b96855a611f29863f893c03d1d20dd77be73948b545a45b1248378aec3302",
+      "seconds": 29.275192666100338,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American people can vote for Republicans who opposed saving the auto industry, favor a tax code that would encourage outsourcing, and would gut investments in federally financed labs and universities.\", \"claim_types\":[\"characterization\", \"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"The American people can elect Democrats who bet on the American worker, reward those who create private-sector jobs in America, and make investments that strengthen the middle class.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"American manufacturers have created jobs for the first time since the 1990s, including more than 500,000 jobs since the beginning of 2010, thanks to President Obama's recovery program.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]},{\"claim_text\":\"Many American companies are now bringing overseas jobs back home, a process called \u201cinsourcing\u201d.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]},{\"claim_text\":\"President Obama and the Democrats rescued America's auto industry, saving more than one million jobs, preventing the collapse of the industry's supply chain, and shoring up countless communities.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Rescuing America's auto industry revitalized the backbone of America's manufacturing sector.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Mitt Romney thought the government's action would destroy the auto industry.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[4]},{\"claim_text\":\"Mitt Romney and Republican leaders opposed the support President Obama extended to rescue the auto industry.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 15.621575975074595,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2101,
+      "prompt_tps": 522.7356306559016,
+      "request_sha256": "f535e0dc49d974d6b01e1b2b03aa8dc3245eb571e534b6a3907d359e4ef8233b",
+      "seconds": 30.155008000088856,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American people can vote for Republicans who opposed saving the auto industry, favor a tax code that would encourage outsourcing, and would gut investments in federally financed labs and universities.\", \"claim_types\":[\"characterization\", \"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"The American people can elect Democrats who bet on the American worker, will reward those who create private-sector jobs here in America, and make investments that strengthen the middle class.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Thanks to President Obama's recovery program, American manufacturers have created jobs for the first time since the 1990s, including more than 500,000 jobs since the beginning of 2010.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]},{\"claim_text\":\"Many American companies are now \u201cinsourcing,\u201d or bringing overseas jobs back home.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]},{\"claim_text\":\"President Obama and the Democrats rescued America's auto industry, saving more than one million jobs, preventing the collapse of the industry's supply chain, and shoring up countless communities.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Rescuing America's auto industry revitalized the backbone of America's manufacturing sector.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Mitt Romney thought the government's action would destroy the auto industry.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[4]},{\"claim_text\":\"Mitt Romney and Republican leaders opposed the support President Obama extended to rescue an iconic industry.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "445b96855a611f29863f893c03d1d20dd77be73948b545a45b1248378aec3302"
+}

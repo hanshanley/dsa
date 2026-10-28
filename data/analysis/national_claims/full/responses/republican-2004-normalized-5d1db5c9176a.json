@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 241,
+      "generation_tps": 15.494852173529877,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1368,
+      "prompt_tps": 444.2860526947946,
+      "request_sha256": "8bff67956a3a71ac3e7368e72904546543acc70b2488e28d79c816222317f478",
+      "seconds": 18.647962749935687,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for a Constitutional amendment that fully protects marriage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that neither federal nor state judges nor bureaucrats should force states to recognize living arrangements as equivalent to marriage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that the well-being of children is best accomplished in the environment of the home, nurtured by their mother and father anchored by the bonds of marriage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that legal recognition and accompanying benefits should be preserved for the union of one man and one woman historically called marriage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social science confirms that the well-being of children is best accomplished in the environment of the home, nurtured by their mother and father anchored by the bonds of marriage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 202,
+      "generation_tps": 15.052732254275249,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1777,
+      "prompt_tps": 489.5752375137228,
+      "request_sha256": "ca394630a40d7f125ebed19e68c85d9b20771b6e12ffb926ffcd124e50be3307",
+      "seconds": 17.066480333916843,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for a Constitutional amendment that fully protects marriage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that neither federal nor state judges nor bureaucrats should force states to recognize living arrangements as equivalent to marriage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief, and social science confirms, that the well-being of children is best accomplished in the environment of the home, nurtured by their mother and father anchored by the bonds of marriage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that legal recognition and the accompanying benefits afforded couples should be preserved for that unique and special union of one man and one woman which has historically been called marriage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8bff67956a3a71ac3e7368e72904546543acc70b2488e28d79c816222317f478"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 290,
+      "generation_tps": 15.420186421250232,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1447,
+      "prompt_tps": 475.6079071159091,
+      "request_sha256": "7f6733cb1490adbc63fcdc4c2865e3d90cf8e1918b923f9ab38955624cfbf87f",
+      "seconds": 21.862869208911434,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to balancing environmental protection with development.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to preserving sensitive public lands from exploration, including the Arctic National Wildlife Refuge, Pacific West Coast, Gulf of Maine, and other irreplaceable national landscapes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to cut tax subsidies for Big Oil.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will promote job growth in the clean energy sector.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Cutting tax subsidies for Big Oil will allow Democrats to cut the deficit and increase jobs and growth in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republican energy policy is full of empty rhetoric and bad ideas that would make Big Oil donors richer at the expense of the middle class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans would keep giving billions of taxpayer dollars a year to profitable oil companies and increase costs on consumers.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 309,
+      "generation_tps": 14.900945512616099,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1905,
+      "prompt_tps": 479.5229237862161,
+      "request_sha256": "8b5ce3649c45d53a33c1c38dde9c92976b61ea85b4f09500968eb7de6326235b",
+      "seconds": 24.725830583134666,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to balancing environmental protection with development.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to preserving sensitive public lands from exploration, including the Arctic National Wildlife Refuge, Pacific West Coast, Gulf of Maine, and other irreplaceable national landscapes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to cut tax subsidies for Big Oil while promoting job growth in the clean energy sector.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Cutting tax subsidies for Big Oil will allow Democrats to cut the deficit and increase jobs and growth in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republican energy policy is full of empty rhetoric and bad ideas that would make Big Oil donors richer at the expense of the middle class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans would keep giving billions of taxpayer dollars a year to profitable oil companies and increase costs on consumers.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The approval process is being expedited to build out critical oil and gas lines essential to transporting energy for consumers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7f6733cb1490adbc63fcdc4c2865e3d90cf8e1918b923f9ab38955624cfbf87f"
+}

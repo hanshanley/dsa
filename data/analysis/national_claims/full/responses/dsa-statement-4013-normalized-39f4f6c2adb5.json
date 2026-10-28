@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 359,
+      "generation_tps": 12.812257073653281,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1571,
+      "prompt_tps": 830.7824737155969,
+      "request_sha256": "808f934553c56454b6b53e5cd4d05bcb5ef44474bb3a20cd675c502bf16fa264",
+      "seconds": 29.92016112501733,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Bernie Sanders identifies the fossil fuel industry, the military industrial complex, and agribusiness as class enemies that must be organized against.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fossil fuel executives deserve criminal prosecution for the destruction they have knowingly caused.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bernie Sanders identifies the fossil fuel industry\u2019s drive for profit as the source of problems.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bernie Sanders will not leave the fate of the planet to the market.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Pentagon is a massive source of emissions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bernie Sanders promises to redirect funds from the military budget and lead a shift away from militarism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A shift away from militarism contrasts with Democrats who propose to green the war machine without challenging U.S. imperialism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The climate crisis and its solutions must address housing and immigration, considering the international and neighborhood levels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A united mass movement can win the Green New Deal against ecocidal fascism.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 348,
+      "generation_tps": 9.560250587926495,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2098,
+      "prompt_tps": 780.0607959517004,
+      "request_sha256": "e919d694729ea4ada63340e49c2a4836580844c836e392720bb36d4afcf77eca",
+      "seconds": 39.09966095793061,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Bernie identifies the fossil fuel industry, the military industrial complex, and agribusiness as class enemies that must be organized against and taken down.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fossil fuel executives deserve criminal prosecution for the destruction they have knowingly caused.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bernie names the fossil fuel industry\u2019s drive for profit as the source of problems and says he will not leave the fate of the planet to the market.\",\n\"claim_types\":[\"characterization\",\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bernie promises to redirect funds from the massive military budget and lead the planet in a wholesale shift away from militarism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A shift away from militarism contrasts with Democrats who propose to green the war machine without challenging the basis of U.S. imperialism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The climate crisis and its solutions must address everything from housing to immigration, considering everything from the international to the neighborhood level.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A united mass movement can win the Green New Deal against the rising tides of ecocidal fascism and lay the groundwork to more fully enact the principles being fought for in a future beyond capitalism and colonialism.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "808f934553c56454b6b53e5cd4d05bcb5ef44474bb3a20cd675c502bf16fa264"
+}

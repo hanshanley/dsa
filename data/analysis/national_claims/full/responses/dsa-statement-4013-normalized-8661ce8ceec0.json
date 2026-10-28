@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 240,
+      "generation_tps": 5.380737958653752,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1446,
+      "prompt_tps": 83.36201604962658,
+      "request_sha256": "628d2dc8316da871a84bc8ba66229c40693f1d51124bf210bcb76e7623199c74",
+      "seconds": 61.98462262493558,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA \u2014 the largest socialist organization in the country \u2014 unanimously passed a resolution to fight for a Green New Deal as a national priority.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Members of DSA have already begun work in unions and communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Sanders\u2019 Green New Deal is needed to get through the immediate climate emergency and create a future worth fighting for.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA will not settle for anything less than Senator Sanders\u2019 Green New Deal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A better world is possible and necessary.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA, together with others, will win Senator Sanders\u2019 Green New Deal, a better world, and an ecosocialist future.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 261,
+      "generation_tps": 8.73963977734855,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1854,
+      "prompt_tps": 319.3342391853128,
+      "request_sha256": "fc8ba2cd847c6dcfe8992893afb378947b7fbcb71917167bcb9f270e7ef2fbc9",
+      "seconds": 35.693540417123586,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA \u2014 the largest socialist organization in the country \u2014 unanimously passed a resolution to fight for a Green New Deal as a national priority.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In unions and communities, DSA members have already begun this work.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Sanders\u2019 Green New Deal is what is needed to get through the immediate climate emergency and come out on the other side with a future worth fighting for.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA will not settle for anything less than Senator Sanders\u2019 Green New Deal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A better world is not only possible, but necessary.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Together, DSA and others will win Senator Sanders\u2019 Green New Deal, a better world, and then an ecosocialist future that belongs to all.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "628d2dc8316da871a84bc8ba66229c40693f1d51124bf210bcb76e7623199c74"
+}

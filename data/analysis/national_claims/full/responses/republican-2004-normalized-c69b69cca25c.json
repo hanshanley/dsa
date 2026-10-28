@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 413,
+      "generation_tps": 8.002516271378703,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1494,
+      "prompt_tps": 466.05508286634296,
+      "request_sha256": "1effc1350e897319f51aa09e8d236e3357ccd6899c95fbff88c00fa8d30d1e8f",
+      "seconds": 54.83178379107267,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush said judges who undermine democracy by legislating from the bench and try to remake America by court order will not be stood for.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican House of Representatives passed H.R. 3313, a bill to withdraw jurisdiction from the federal courts over the Defense of Marriage Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Congress to enact H.R. 3313 into law, so that activist federal judges cannot force 49 other states to approve and recognize Massachusetts' attempt to redefine marriage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The unborn child has a fundamental individual right to life which cannot be infringed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a human life amendment to the Constitution.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Endorsement of legislation to make it clear that the Fourteenth Amendment's protections apply to unborn children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Purpose is to have legislative and judicial protection of the right to life against those who perform abortions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to using public revenues for abortion.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to funding organizations which advocate abortion.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for the appointment of judges who respect traditional family values and the sanctity of innocent human life.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 414,
+      "generation_tps": 5.290340124891073,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2075,
+      "prompt_tps": 210.93437817594491,
+      "request_sha256": "2516731d6113bc696b88cc25aed427be8268c6f7e2a84149ad94cd0fc3d62519",
+      "seconds": 88.158545833081,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush said judges who undermine democracy by legislating from the bench and try to remake America by court order will not be stood for.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican House of Representatives passed H.R. 3313, a bill to withdraw jurisdiction from the federal courts over the Defense of Marriage Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urge for Congress to enact H.R. 3313 into law, so that activist federal judges cannot force 49 other states to approve and recognize Massachusetts' attempt to redefine marriage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The unborn child has a fundamental individual right to life which cannot be infringed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a human life amendment to the Constitution.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Endorsement of legislation to make it clear that the Fourteenth Amendment's protections apply to unborn children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Purpose is to have legislative and judicial protection of the right to life against those who perform abortions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to using public revenues for abortion.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to funding organizations which advocate abortion.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for the appointment of judges who respect traditional family values and the sanctity of innocent human life.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1effc1350e897319f51aa09e8d236e3357ccd6899c95fbff88c00fa8d30d1e8f"
+}
