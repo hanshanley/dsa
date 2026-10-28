@@ -3,7 +3,7 @@ from pathlib import Path
 from urllib.request import Request,urlopen
 from urllib.parse import quote
 from concurrent.futures import ThreadPoolExecutor,as_completed
-archive_dir=Path(__file__).resolve().parent/'files'/'research_archive'
+archive_dir=Path(__file__).resolve().parent
 archive_dir.mkdir(parents=True,exist_ok=True)
 rows=json.load((archive_dir/'research_cdx_twitter.json').open())[1:]
 ids={re.search(r'/status/(\d+)',r[1]).group(1) for r in rows if re.search(r'/status/(\d+)',r[1])}
