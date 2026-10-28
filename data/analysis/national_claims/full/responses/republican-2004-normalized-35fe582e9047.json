@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 414,
+      "generation_tps": 16.581152327325995,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1491,
+      "prompt_tps": 572.2533410676805,
+      "request_sha256": "89f1e8cd5d75a97e4fe300a93e503d10e3f87fa33b3f3037e708f975e2cead6b",
+      "seconds": 27.582859667018056,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans support President Bush's goal of ensuring that most Americans have electronic health records within the next 10 years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has requested funding for demonstration projects for broader adoption of health IT systems in communities and states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of health IT in the Veterans Administration has shown improvements in the quality of care and reductions in the cost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is working with private sector innovators to develop reliable, secure methods of storing personal medical information that will broaden the benefits of health IT.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Privacy is paramount, and participation by patients will be voluntary.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"These electronic health records will be designed to share information among and between health care providers only when authorized by a patient.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medical conditions have been linked to certain genetic markers, but there is no certainty that many of these diseases will actually develop.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is growing concern that employers and insurance companies will use genetic information to discriminate by denying jobs or insurance coverage to individuals who have predictive genetic markers for certain diseases.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans support efforts to enact genetic discrimination legislation that is fair, reasonable, and consistent with existing laws to prevent discrimination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 412,
+      "generation_tps": 16.55228149594947,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2019,
+      "prompt_tps": 578.3905387819124,
+      "request_sha256": "4a6b7b31216bb727da9b23188f963d2d7c6ddbac3a72841a5a1ba15f93038353",
+      "seconds": 28.390768291894346,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans support President Bush's goal of ensuring that most Americans have electronic health records within the next 10 years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has requested funding for demonstration projects for broader adoption of health IT systems in communities and states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of health IT in the Veterans Administration has shown improvements in the quality of care and reductions in the cost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is working with private sector innovators to develop reliable, secure methods of storing personal medical information that will broaden the benefits of health IT.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Privacy is paramount, and patient participation will be voluntary.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electronic health records will be designed to share information among and between health care providers only when authorized by a patient.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medical conditions have been linked to certain genetic markers, but there is no certainty that many of these diseases will actually develop.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is growing concern that employers and insurance companies will use genetic information to discriminate by denying jobs or insurance coverage to individuals who have predictive genetic markers for certain diseases.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans support efforts to enact genetic discrimination legislation that is fair, reasonable, and consistent with existing laws to prevent discrimination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 413,
+      "generation_tps": 16.565531495205825,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2071,
+      "prompt_tps": 580.319294874334,
+      "request_sha256": "d1448c73f9c50319ea3388bc5caf76a1b3391243f4a47466f0c77a4af4afaeca",
+      "seconds": 28.509324416983873,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans support President Bush's goal of ensuring that most Americans have electronic health records within the next 10 years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has requested funding for demonstration projects for broader adoption of health IT systems in communities and states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of health IT in the Veterans Administration has shown improvements in the quality of care and reductions in the cost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is working with private sector innovators to develop reliable, secure methods of storing personal medical information that will broaden the benefits of health IT.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Privacy is paramount, and participation by patients will be voluntary.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electronic health records will be designed to share information among and between health care providers only when authorized by a patient.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medical conditions have been linked to certain genetic markers, but there is no certainty that many of these diseases will actually develop.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is growing concern that employers and insurance companies will use genetic information to discriminate by denying jobs or insurance coverage to individuals who have predictive genetic markers for certain diseases.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans support efforts to enact genetic discrimination legislation that is fair, reasonable, and consistent with existing laws to prevent discrimination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "89f1e8cd5d75a97e4fe300a93e503d10e3f87fa33b3f3037e708f975e2cead6b"
+}

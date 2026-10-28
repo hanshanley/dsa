@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 108,
+      "generation_tps": 16.6953086971766,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1318,
+      "prompt_tps": 459.816070081287,
+      "request_sha256": "253ce94cc0f9ddf30d4af90bcd6021ea17a4e7158ba3ddd6cc216ed6e0b6c635",
+      "seconds": 9.345017167041078,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America has a statement on Lesbian, Gay, Bisexual, Transgender, Queer and Intersex Rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America Queer Socialists Committee can be contacted at queersocialists@dsausa.org.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 108,
+      "generation_tps": 16.679825623240035,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1594,
+      "prompt_tps": 485.78151308356854,
+      "request_sha256": "f74013fba2f0768dd4e97e063cdf7f38a1c79a3f57d62fe6519c0e383d744e6b",
+      "seconds": 9.765900125028566,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America has a statement on Lesbian, Gay, Bisexual, Transgender, Queer and Intersex Rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America Queer Socialists Committee can be contacted at queersocialists@dsausa.org.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "253ce94cc0f9ddf30d4af90bcd6021ea17a4e7158ba3ddd6cc216ed6e0b6c635"
+}

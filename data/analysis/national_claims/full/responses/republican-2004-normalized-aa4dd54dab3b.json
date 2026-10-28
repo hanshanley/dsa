@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 16.6531404696462,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1465,
+      "prompt_tps": 485.1537167511604,
+      "request_sha256": "19a1606942b6723d7d9f3674e78862f5c407674e9310b248f1d466e470634c39",
+      "seconds": 26.748549290932715,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans recognize health care is intrinsic to every family's economic comfort.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans must have the security to know the next illness will not wipe out their savings or drive them into debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Market-based health care has given America the most advanced medical system in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Health Savings Accounts and Association Health Plans provide economic benefits while also making health care more consumer-driven and increasing access to high-quality, affordable health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans reject any notion of government-run universal health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government-run health care leads to inefficiencies, long waiting periods, and often substandard health care, based on evidence from around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud efforts by President Bush and the Republican Congress to reform the broken medical liability system that is raising health care costs and limiting patients' access to doctors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Excessive medical liability costs are driving doctors out of their practices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support continued efforts to make health care more affordable, more accessible, and more consumer-driven.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 385,
+      "generation_tps": 16.623490747641338,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2028,
+      "prompt_tps": 513.4853467760665,
+      "request_sha256": "bc4bc1ad5ae62c9deb45980b233eecb3512915ec1fcdf3404729f717afad7603",
+      "seconds": 27.118666124995798,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans recognize that health care is intrinsic to every family's economic comfort.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans must have the security to know that the next illness will not wipe out their savings or drive them into debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Market-based health care has given America the most advanced medical system in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Proposals such as Health Savings Accounts and Association Health Plans provide economic benefits while also making health care more consumer-driven and increasing access to high-quality, affordable health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans reject any notion of government-run universal health care because they have seen evidence from around the world that government-run health care leads to inefficiencies, long waiting periods, and often substandard health care.\",\n\"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud efforts by President Bush and the Republican Congress to reform the broken medical liability system that is raising health care costs and limiting patients' access to doctors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Excessive medical liability costs are driving doctors out of their practices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support continued efforts to make health care more affordable, more accessible, and more consumer-driven.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "19a1606942b6723d7d9f3674e78862f5c407674e9310b248f1d466e470634c39"
+}

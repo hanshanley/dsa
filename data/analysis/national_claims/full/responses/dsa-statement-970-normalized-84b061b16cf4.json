@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 100,
+      "generation_tps": 14.995818696080239,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1314,
+      "prompt_tps": 403.31197707969307,
+      "request_sha256": "edf4456bc67cd1c4a4027e083358bb83573814b363a4c641a9f016067e2e6c44",
+      "seconds": 9.93836412508972,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for releasing all detained student supporters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for protecting detained student supporters from retaliation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for releasing all detained labor rights group staff.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 76,
+      "generation_tps": 15.38724546684475,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1582,
+      "prompt_tps": 388.62430098662986,
+      "request_sha256": "5d243b20c71d05775f4599b95c22b381978d48516cf95a874fc8c03bdb4235b9",
+      "seconds": 9.020722874905914,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for releasing all detained student supporters, and protecting them from retaliation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for releasing all detained labor rights group staff.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "edf4456bc67cd1c4a4027e083358bb83573814b363a4c641a9f016067e2e6c44"
+}

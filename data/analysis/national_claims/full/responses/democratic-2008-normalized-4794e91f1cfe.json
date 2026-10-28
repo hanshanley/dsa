@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 423,
+      "generation_tps": 15.435768273894945,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1530,
+      "prompt_tps": 413.25048516890445,
+      "request_sha256": "e97ecee548f993e2045f2b17f2c27e9c7df9d53a8f0923d163dfe3d73310746d",
+      "seconds": 31.11716908402741,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for full inclusion of all families, including same-sex couples, in the life of the nation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for equal responsibility, benefits, and protections for all families, including same-sex couples.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to enact a comprehensive bipartisan employment non-discrimination act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the Defense of Marriage Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to all attempts to use the issue of same-sex marriage to divide the nation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to work to provide real opportunities for all Americans suffering from disadvantage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to pioneer new policies and remedies against poverty and violence that address real human needs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to close the achievement gap in education.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to provide every child a world-class education.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for affirmative action, including in federal contracting and higher education.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ann Richards said: \\\"We offer a vision where opportunity knows no race, no gender, no color, a glimpse of what can happen in government if we simply open the doors let the people in.\\\"\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 442,
+      "generation_tps": 15.220414021358991,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2121,
+      "prompt_tps": 460.2463108186998,
+      "request_sha256": "116880e71b4f8f2a3e49415e05dbf010f77df808e2ee1a2eea00a25f7093b01b",
+      "seconds": 33.659514457918704,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for full inclusion of all families, including same-sex couples, in the life of the nation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for equal responsibility, benefits, and protections for all families, including same-sex couples.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to enact a comprehensive bipartisan employment non-discrimination act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the Defense of Marriage Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to all attempts to use this issue to divide the nation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to work to provide real opportunities for all Americans suffering from disadvantage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to pioneer new policies and remedies against poverty and violence that address real human needs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to close the achievement gap in education.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to provide every child a world-class education.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for affirmative action, including in federal contracting and higher education, to make sure that those locked out of the doors of opportunity will be able to walk through those doors in the future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ann Richards said: \\\"We offer a vision where opportunity knows no race, no gender, no color, a glimpse of what can happen in government if we simply open the doors let the people in.\\\"\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e97ecee548f993e2045f2b17f2c27e9c7df9d53a8f0923d163dfe3d73310746d"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 392,
+      "generation_tps": 13.294700715264282,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1471,
+      "prompt_tps": 804.5087673227669,
+      "request_sha256": "6499b2ec1bb12f48c75010513075637109f841c0cc49132f618072ac3a6b6a3b",
+      "seconds": 31.325118666049093,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans have supported important scientific research and will continue to support it without undermining fundamental ethical principles guiding medical research in this country for decades.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans welcome and encourage a stronger emphasis on adult stem cell and cord blood stem cell research, which has already provided benefits to hundreds of patients and provides real promise for treatments to help millions of Americans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush made a carefully considered decision to allow federal funding for stem cell research for the first time, and this decision did not affect stem cell research in the private sector.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the President's policy that prevents taxpayer dollars from being used to encourage the future destruction of human embryos.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the President's call for a comprehensive ban on human cloning and on the creation of human embryos solely for experimentation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush stated in August 2001: \\\"[The hope [it offers is amazing\u2026. Yet the ethics of medicine are not infinitely adaptable. There is at least one bright line: We do not end some lives for the medical benefit of others.\\\"\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Agreement with President Bush's statement in August 2001 that ethics of medicine are not infinitely adaptable and that lives should not be ended for medical benefit of others.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 401,
+      "generation_tps": 15.216795410762328,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2031,
+      "prompt_tps": 452.14016911051465,
+      "request_sha256": "741c6374ca0502f8b4201b53768a048efa23e28dd32a946d48fc350c278c3e6e",
+      "seconds": 30.86132716597058,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans have supported important scientific research and will continue to support it without undermining the fundamental ethical principles that have guided medical research in this country for decades.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans welcome and encourage a stronger emphasis on adult stem cell and cord blood stem cell research, which has already provided benefits to hundreds of patients and provides real promise for treatments to help millions of Americans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source recognizes that President Bush made a carefully considered decision to allow federal funding for stem cell research for the first time, and this decision did not affect stem cell research in the private sector.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the President's policy that prevents taxpayer dollars from being used to encourage the future destruction of human embryos.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the President's call for a comprehensive ban on human cloning and on the creation of human embryos solely for experimentation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush stated in August 2001: \\\"[The hope [it offers is amazing\u2026. Yet the ethics of medicine are not infinitely adaptable. There is at least one bright line: We do not end some lives for the medical benefit of others.\\\"\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Agreement with President Bush's statement in August 2001 that the ethics of medicine are not infinitely adaptable and that lives should not be ended for the medical benefit of others.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6499b2ec1bb12f48c75010513075637109f841c0cc49132f618072ac3a6b6a3b"
+}

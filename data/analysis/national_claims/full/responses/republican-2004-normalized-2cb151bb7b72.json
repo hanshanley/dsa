@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 499,
+      "generation_tps": 16.52655856685501,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1504,
+      "prompt_tps": 523.4249258443931,
+      "request_sha256": "2c6a81ed5169e17ac733f2b4f5f238ec8dc1f1ffc1867796a6c6bad5b859f965",
+      "seconds": 33.0761717078276,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2003, Congress passed and President Bush signed legislation that strengthens Medicare and adds a prescription drug benefit.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The new prescription drug benefit will be available to 40 million seniors and people with disabilities on January 1, 2006.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Until January 1, 2006, Medicare beneficiaries have access to immediate and significant savings on prescription drugs through Medicare-approved prescription drug discount cards.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since June 1, four million Medicare beneficiaries have enrolled in the prescription drug discount card program.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Approximately 100,000 more Medicare beneficiaries enroll in the prescription drug discount card program each week.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Seniors are saving up to 30 percent off the retail price of brand name drugs through the prescription drug discount card program.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Seniors are saving up to 60 percent off the price of generic drugs through the prescription drug discount card program.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Low-income seniors receive $600 this year and next year to assist them with the costs of their prescriptions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Seniors who like the coverage they have today can keep it under the new drug benefit.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The new law will encourage employers to continue their retiree health benefits by offering them subsidies for their current plans.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The new law gives employers the option to supplement the new Medicare drug benefit in the same way they supplement current Medicare doctor and hospital benefits.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 499,
+      "generation_tps": 16.611073779136888,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2171,
+      "prompt_tps": 532.448556829709,
+      "request_sha256": "2f402d2dd6ebe2461c54e184a39e873dea76f6b67af7cd130cb9d80053eea412",
+      "seconds": 34.12701874994673,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2003, Congress passed and President Bush signed legislation that strengthens Medicare and adds a prescription drug benefit.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The new prescription drug benefit will be available to 40 million seniors and people with disabilities on January 1, 2006.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Until January 1, 2006, Medicare beneficiaries have access to immediate and significant savings on prescription drugs through Medicare-approved prescription drug discount cards.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since June 1, four million Medicare beneficiaries have enrolled in the prescription drug discount card program.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Approximately 100,000 more Medicare beneficiaries enroll in the prescription drug discount card program each week.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Seniors are saving up to 30 percent off the retail price of brand name drugs through the prescription drug discount card program.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Seniors are saving up to 60 percent off the price of generic drugs through the prescription drug discount card program.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Low-income seniors receive $600 this year and next year to assist them with the costs of their prescriptions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Seniors who like the coverage they have today can keep it under the new drug benefit.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The new law will encourage employers to continue their retiree health benefits by offering them subsidies for their current plans.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The new law gives employers the option to supplement the new Medicare drug benefit in the same way they supplement current Medicare doctor and hospital benefits.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2c6a81ed5169e17ac733f2b4f5f238ec8dc1f1ffc1867796a6c6bad5b859f965"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 500,
+      "generation_tps": 16.404832192916395,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1295,
+      "prompt_tps": 509.6221933485928,
+      "request_sha256": "46b21056f16e56da0a1c6d86a100af8dea33131b2e5a8577b661cd5918191d27",
+      "seconds": 33.028870958136395,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA condemns the attack by the Trump administration on the rights of transgender and genderqueer people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A recent memo from the Trump administration proposes to establish a legal definition of sex under Title IX.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The memo from the Department of Health and Human Services would force government agencies to comply with a definition of gender expressed on a \u201cbiological basis\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Health and Human Services proposal would define sex as either male or female, determined by the genitals that a person is born with.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In cases of questions about a person\u2019s sex, genetic testing would be used to determine sex according to the Department of Health and Human Services proposal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Department of Health and Human Services proposal would cause great harm to transgender, intersex, and genderqueer people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Department of Health and Human Services proposal reflects the administration\u2019s sexist and transphobic positions.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The administration has sought to prevent transgender people from serving in the military.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The administration has challenged civil rights protections included in the nation\u2019s health care law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Federal agencies have withdrawn policies that recognized gender identity in schools, prisons and homeless shelters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA recognizes this as part of the administration\u2019s attack on human rights.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"DSA encourages chapters to work with local organizations fighting against these proposals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 505,
+      "generation_tps": 16.417491810185304,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1963,
+      "prompt_tps": 488.1981981693803,
+      "request_sha256": "8d11d5a065b34123c016992460fdc35247ae7c02a4e2a66307043c721a0d69e6",
+      "seconds": 34.790877874940634,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA condemns the attack by the Trump administration on the rights of transgender and genderqueer people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A recent memo from the Trump administration proposes to establish a legal definition of sex under Title IX.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The memo from the Department of Health and Human Services would force government agencies to comply with a definition of gender expressed on a \u201cbiological basis\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Health and Human Services proposal would define sex as either male or female, determined by the genitals that a person is born with.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In cases of questions about a person\u2019s sex, genetic testing would be used to determine sex according to the Department of Health and Human Services proposal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Department of Health and Human Services proposal would cause great harm to transgender, intersex, and genderqueer people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Department of Health and Human Services proposal reflects the administration\u2019s sexist and transphobic positions.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The administration has sought to prevent transgender people from serving in the military.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The administration has challenged civil rights protections included in the nation\u2019s health care law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Federal agencies have withdrawn policies that recognized gender identity in schools, prisons and homeless shelters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA recognizes this as part of the administration\u2019s attack on human rights.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"DSA encourages chapters to work with local organizations fighting against these proposals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "46b21056f16e56da0a1c6d86a100af8dea33131b2e5a8577b661cd5918191d27"
+}

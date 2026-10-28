@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 396,
+      "generation_tps": 16.53971887158535,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1265,
+      "prompt_tps": 491.728346883965,
+      "request_sha256": "886f7992d188085100a934abe524e5b1031c5f06d8621d7ddbbd2174524d118d",
+      "seconds": 26.52402212494053,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Trump came to office allegedly aiming to \u201cdrain the swamp\u201d of privileged \u201cspecial interests\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax proposals put forth by Trump and the GOP are a gift to privileged \u201cspecial interests\u201d.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax proposals put forth by Trump and the GOP are an all-out assault on equality.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax proposals put forth by Trump and the GOP constitute class warfare waged by capital.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for DSA locals to join the Communications Workers of America (CWA) and Jobs with Justice rallies against the tax cuts at local Senate offices on Wednesday November 29th.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to call Republican Senators and urge them to vote no on the tax cuts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The House and Senate versions of the Tax Cuts and Jobs legislation differ in some respects.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The goals of the House and Senate versions of the Tax Cuts and Jobs legislation are identical: more money for the top 1%, especially for income from capital, and tiny tax cuts for most.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The tiny tax cuts for most will mostly disappear by 2027.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 398,
+      "generation_tps": 16.632948581706806,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1829,
+      "prompt_tps": 492.3954980543923,
+      "request_sha256": "a997b17ff4a27fb043cf9a0cb4bafcad7bdf92e0eac0c51b6196789354d1c9ee",
+      "seconds": 27.651846249820665,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Trump came to office allegedly aiming to \u201cdrain the swamp\u201d of privileged \u201cspecial interests\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax proposals put forth by Trump and the GOP are a gift to these same privileged \u201cspecial interests\u201d.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax proposals put forth by Trump and the GOP are an all-out assault on equality.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax proposals put forth by Trump and the GOP constitute class warfare waged by capital.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for DSA locals to join the Communications Workers of America (CWA) and Jobs with Justice rallies against the tax cuts at local Senate offices on Wednesday November 29th.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to call Republican Senators and urge them to vote no on the tax cuts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The House and Senate versions of the Tax Cuts and Jobs legislation differ in some respects.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The goals of the House and Senate versions of the Tax Cuts and Jobs legislation are identical: more money for the top 1%, especially for income from capital, and tiny tax cuts for most.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The tiny tax cuts for most will mostly disappear by 2027.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "886f7992d188085100a934abe524e5b1031c5f06d8621d7ddbbd2174524d118d"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 296,
+      "generation_tps": 16.57124577596968,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1381,
+      "prompt_tps": 525.970316024562,
+      "request_sha256": "89a708c03ec1d4e104f2874d8b8dd72b8bda7cbe9b5561992779689763516ce2",
+      "seconds": 20.496722833020613,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The right to bear arms is an important part of the American tradition, and Americans' Second Amendment right to own and use firearms will be preserved.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The right to own firearms is subject to reasonable regulation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"What works in Chicago may not work in Cheyenne.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for enacting and enforcing commonsense laws and improvements like closing the gun show loophole.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for improving the background check system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for reinstating the assault weapons ban.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The goal is to prevent guns from falling into the hands of terrorists or criminals.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Acting responsibly and with respect for differing views, it is possible to both protect the constitutional right to bear arms and keep communities and children safe.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 305,
+      "generation_tps": 16.5823728249527,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1845,
+      "prompt_tps": 554.4658448354302,
+      "request_sha256": "09b0a7f1fef81bdc9413131fa33ca87fd90010e23f1a4f1b721a572d9be8468a",
+      "seconds": 21.73003645800054,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The right to bear arms is an important part of the American tradition, and Americans' Second Amendment right to own and use firearms will be preserved.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The right to own firearms is subject to reasonable regulation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"What works in Chicago may not work in Cheyenne.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for enacting and enforcing commonsense laws and improvements, like closing the gun show loophole.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for improving the background check system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for reinstating the assault weapons ban.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The goal is to prevent guns from falling into the hands of terrorists or criminals.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Acting responsibly and with respect for differing views on this issue, it is possible to both protect the constitutional right to bear arms and keep communities and children safe.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "89a708c03ec1d4e104f2874d8b8dd72b8bda7cbe9b5561992779689763516ce2"
+}

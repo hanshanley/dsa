@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 277,
+      "generation_tps": 16.58515227394011,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1410,
+      "prompt_tps": 577.9180583801634,
+      "request_sha256": "27ea491f337f5dd75f30f83cc4695a54c8a14d760f4e109d9b6f2746a3fd1c87",
+      "seconds": 19.150451875058934,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for helping local communities in the American West preserve water to meet their fast growing needs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a comprehensive solution for restoring national treasures\u2014such as the Great Lakes, Everglades, and Chesapeake Bay\u2014including expanded scientific research and protections for species and habitats there.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to reinvigorate the Environmental Protection Agency to work with communities to reduce air and water pollution and protect children from environmental toxins.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to not sacrifice science to politics.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the high-level nuclear waste dump at Yucca Mountain in Nevada, which has not been proven to be safe by sound science.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring the \u201cpolluter pays\u201d principle to fund the cleanup of the most polluted sites, so that those who cause environmental problems pay to fix them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 263,
+      "generation_tps": 16.544333265904378,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1855,
+      "prompt_tps": 596.7209139680514,
+      "request_sha256": "59c3eb5f9f0d965941958e18dc989cbc29cf9d41228deef19fc7d3fe4c21f1dc",
+      "seconds": 19.01473412499763,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for helping local communities in the American West preserve water to meet their fast growing needs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a comprehensive solution for restoring national treasures\u2014such as the Great Lakes, Everglades, and Chesapeake Bay\u2014including expanded scientific research and protections for species and habitats there.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to reinvigorate the Environmental Protection Agency so that it can work with communities to reduce air and water pollution and protect children from environmental toxins, and never sacrifice science to politics.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the high-level nuclear waste dump at Yucca Mountain in Nevada, which has not been proven to be safe by sound science.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring the \u201cpolluter pays\u201d principle to fund the cleanup of the most polluted sites, so that those who cause environmental problems pay to fix them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "27ea491f337f5dd75f30f83cc4695a54c8a14d760f4e109d9b6f2746a3fd1c87"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 300,
+      "generation_tps": 16.556169260574467,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1514,
+      "prompt_tps": 495.10734043022796,
+      "request_sha256": "769c5395f735499582cf634fd7274a2f12aff308f388223e95d6fc12bdeb052f",
+      "seconds": 21.187159958062693,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Trump/GOP tax proposals modify the Estate Tax to allow more wealth to flow freely across generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The proposed elimination of the estate tax would only benefit the top 0.2% of people who die every year and owe the tax \u2013 2 people out of every 1000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most budget watchers estimate that the Republican tax cuts would deny the federal government over three to seven trillion dollars of revenue over the next ten years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for a truly fair tax system that taxes the rich and corporations at levels comparable to other major post-industrial economies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recognition that building a multi-racial coalition of working people, grounded in a revitalized and democratic trade union movement, is necessary to achieve fairness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Defeating the Trump tax cuts for the rich and corporate America would be the first step towards achieving a fair tax system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 303,
+      "generation_tps": 16.471242612826252,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1982,
+      "prompt_tps": 492.70542607343026,
+      "request_sha256": "a4a29f90dd50e902dae12980ee5244fff20b3754b7797e6da5bc37c9f2bbfe6d",
+      "seconds": 22.427788082975894,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Trump/GOP tax proposals modify the Estate Tax to allow more wealth to flow freely across generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The proposed elimination of the estate tax would only benefit the top 0.2% of people who die every year and owe the tax \u2013 2 people out of every 1000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most budget watchers estimate that the Republican tax cuts would deny the federal government over three to seven trillion dollars of revenue over the next ten years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for a truly fair tax system that taxes the rich and corporations at levels comparable to other major post-industrial economies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recognition that building a multi-racial coalition of working people, grounded in a revitalized and democratic trade union movement, is necessary to achieve fairness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Defeating the Trump tax cuts for the rich and corporate America would be the first step towards achieving that goal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "769c5395f735499582cf634fd7274a2f12aff308f388223e95d6fc12bdeb052f"
+}

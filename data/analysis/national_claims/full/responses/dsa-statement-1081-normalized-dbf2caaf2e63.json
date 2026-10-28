@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 60,
+      "generation_tps": 14.6641891519557,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1315,
+      "prompt_tps": 386.4512115466901,
+      "request_sha256": "52600e469d0b6090d364e99602e82f20a26aa8abe9a5285d03dd3e9f028885a4",
+      "seconds": 7.508826166857034,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"People interested in helping with Marriott strike support should email the DSLC at dslc@dsausa.org.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 60,
+      "generation_tps": 15.491847438122132,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1543,
+      "prompt_tps": 387.7111277086444,
+      "request_sha256": "4e62f71b0e5469c86bf2b85a9c5f9d388744e278577601286df60d4e664eadfc",
+      "seconds": 7.86502516688779,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"People interested in helping with Marriott strike support should email the DSLC at dslc@dsausa.org.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "52600e469d0b6090d364e99602e82f20a26aa8abe9a5285d03dd3e9f028885a4"
+}

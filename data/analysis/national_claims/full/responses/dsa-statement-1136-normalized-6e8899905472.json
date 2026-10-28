@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 354,
+      "generation_tps": 16.222224309843885,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1214,
+      "prompt_tps": 464.18762070899777,
+      "request_sha256": "f6733b355a9fe76d3c5d864da2ea8b6c54f95e2d60bafa7736d277bc3ac5494a",
+      "seconds": 24.44768316601403,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA condemns the heaviest Israeli airstrikes in Gaza since 2014.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"At least six people have been killed in the Israeli airstrikes in Gaza.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Scores of buildings, including the TV station Al-Aqsa TV, have been destroyed in the Israeli airstrikes in Gaza.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Israeli attacks are part of an escalation of violence that began when a team of Israeli commandos killed seven Hamas members, including a commander, in a clandestine raid in the southern city of Khan Younis on Sunday.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA mourns the most recent casualties in the ongoing conflict.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA decries the act of unilateral Israeli aggression that triggered the latest round of violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Palestinian groups in the Gaza Strip claim they have agreed to an Egyptian-brokered ceasefire with Israel as of this writing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA demands that Israel immediately stop all airstrikes and land incursions into Palestinian territory.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 296,
+      "generation_tps": 16.037149876600747,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1736,
+      "prompt_tps": 485.1849559110446,
+      "request_sha256": "55f44c0b275bcaadb30e2038e8607c6e4f771af496d2c047ad2d1d26e1ff9381",
+      "seconds": 22.047925166087225,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA condemns the heaviest Israeli airstrikes in Gaza since 2014, which have killed at least six people and destroyed scores of buildings, including the TV station Al-Aqsa TV.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"These most recent attacks are part of an escalation of violence that began when a team of Israeli commandos killed seven Hamas members, including a commander, in a clandestine raid in the southern city of Khan Younis on Sunday.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA mourns the most recent casualties in this ongoing conflict.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA decries the act of unilateral Israeli aggression that triggered this latest round of violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"As of this writing, Palestinian groups in the Gaza Strip claim they have agreed to an Egyptian-brokered ceasefire with Israel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA demands that Israel immediately stop all airstrikes and land incursions into Palestinian territory.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 349,
+      "generation_tps": 15.940287622019074,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2167,
+      "prompt_tps": 482.1885307752632,
+      "request_sha256": "9b3e181f25aad7b3bfdfc08424fc87fdd836fe9be67c589f1296a7655c514344",
+      "seconds": 26.401482499903068,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA condemns the heaviest Israeli airstrikes in Gaza since 2014.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Israeli airstrikes in Gaza have killed at least six people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Israeli airstrikes in Gaza have destroyed scores of buildings, including the TV station Al-Aqsa TV.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Israeli attacks are part of an escalation of violence that began when a team of Israeli commandos killed seven Hamas members, including a commander, in a clandestine raid in the southern city of Khan Younis on Sunday.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA mourns the most recent casualties in this ongoing conflict.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA decries the act of unilateral Israeli aggression that triggered this latest round of violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Palestinian groups in the Gaza Strip claim they have agreed to an Egyptian-brokered ceasefire with Israel as of this writing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA demands that Israel immediately stop all airstrikes and land incursions into Palestinian territory.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f6733b355a9fe76d3c5d864da2ea8b6c54f95e2d60bafa7736d277bc3ac5494a"
+}

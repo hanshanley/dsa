@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 396,
+      "generation_tps": 16.200548996242414,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1482,
+      "prompt_tps": 507.75765125091317,
+      "request_sha256": "b460453323e97acb2da6e2f1c2810e6736d8dba4baf308fac2941214ef28c6c5",
+      "seconds": 27.37328916694969,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Medicare Prescription Drug and Modernization Act improves many facets of the Medicare program.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Medicare Prescription Drug and Modernization Act increases funding for doctors, hospitals, and other health care providers, especially in rural areas where reimbursement levels are far below what is paid in other regions of the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Medicare Prescription Drug and Modernization Act transforms Medicare into a program that not only enables the treatment of disease, but helps people stay healthy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The program will contain new services and screenings to help detect and prevent heart disease, diabetes, and other major illnesses.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The addition of income relation for the Medicare Part B premium further protects the Medicare program for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The addition of income relation for the Medicare Part B premium protects low income seniors from increased costs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President and Republicans in Congress demonstrated determination to follow through on a promise to America's seniors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Others spent many years talking about adding a prescription drug benefit to Medicare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President and Congress got a prescription drug benefit added to Medicare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 398,
+      "generation_tps": 16.063724525954477,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2046,
+      "prompt_tps": 421.7992707551042,
+      "request_sha256": "06e9ccd382a3a15628bf63da25082665e9c13f77ca15c660fbe7ec662a4135cb",
+      "seconds": 29.638441083021462,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Medicare Prescription Drug and Modernization Act improves many facets of the Medicare program.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Medicare Prescription Drug and Modernization Act increases funding for doctors, hospitals, and other health care providers, especially in rural areas where reimbursement levels are far below what is paid in other regions of the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Medicare Prescription Drug and Modernization Act transforms Medicare into a program that not only enables the treatment of disease, but helps people stay healthy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The program will contain new services and screenings to help detect and prevent heart disease, diabetes, and other major illnesses.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The addition of income relation for the Medicare Part B premium further protects the Medicare program for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The addition of income relation for the Medicare Part B premium protects low income seniors from increased costs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President and Republicans in Congress demonstrated determination to follow through on a promise to America's seniors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Others spent many years talking about adding a prescription drug benefit to Medicare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President and Republicans in Congress got a prescription drug benefit added to Medicare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b460453323e97acb2da6e2f1c2810e6736d8dba4baf308fac2941214ef28c6c5"
+}

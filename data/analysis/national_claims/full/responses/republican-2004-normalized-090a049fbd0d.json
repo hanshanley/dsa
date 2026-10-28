@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 363,
+      "generation_tps": 16.6403155534352,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1554,
+      "prompt_tps": 466.9836569826884,
+      "request_sha256": "688cd0c52f3e347ffe64b6bc34dc724a8f8b63d77e5c63b41a3edfaec8a937b6",
+      "seconds": 25.15294920792803,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Veterans have fought and defended the country in wars at places such as San Juan Hill, Iwo Jima, and Pork Chop Hill.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American flag is a symbol of American spirit and unity.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Deliberate desecration of the American flag is not \\\"free speech\\\", but an assault against American history and hopes.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a Constitutional amendment that will restore to the people, through their elected representatives, their right to safeguard the American flag.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economic prosperity is essential to environmental progress.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Over the last 30 years, air pollution from the six major pollutants decreased even as the population grew, energy consumption increased, and the economy expanded.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Air pollution has been reduced, water quality has improved, wetlands have been restored, and more than a thousand brownfields sites are being revitalized thanks to President Bush's leadership and Congressional Republicans' commitment to reform and innovation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"States and local communities should be given flexibility and authority to address environmental concerns as laboratories of innovation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 385,
+      "generation_tps": 16.50774596536743,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2085,
+      "prompt_tps": 506.0711956971343,
+      "request_sha256": "2b91315e4dc36b95a1b238e5df23dbfc94296b06e6417eb0afa56a45eb0636a3",
+      "seconds": 27.451777417212725,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Veterans have fought and defended this country in many wars and proudly raised the American flag on such far-away places as San Juan Hill, Iwo Jima, and Pork Chop Hill.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American flag is a symbol of American spirit and unity.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Deliberate desecration of the American flag is not \\\"free speech,\\\" but rather an assault against both American history and American hopes.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a Constitutional amendment that will restore to the people, through their elected representatives, their right to safeguard Old Glory.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans know that economic prosperity is essential to environmental progress.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Over the last 30 years, air pollution from the six major pollutants decreased substantially, even as the population grew, energy consumption increased, and the economy expanded.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Thanks to President Bush's strong leadership and the commitment of Congressional Republicans to reform and innovation, air pollution has been reduced, water quality has improved, wetlands have been restored, and more than a thousand brownfields sites are being revitalized.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"States and local communities should be given flexibility and authority to address many environmental concerns as laboratories of innovation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "688cd0c52f3e347ffe64b6bc34dc724a8f8b63d77e5c63b41a3edfaec8a937b6"
+}

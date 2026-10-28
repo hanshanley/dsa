@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 399,
+      "generation_tps": 16.547543733964194,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1512,
+      "prompt_tps": 564.193770768764,
+      "request_sha256": "3325f5a4305cb737d342ba1d5221de461fd4bcc2b769c8f3bfc8e98866b6e28b",
+      "seconds": 26.801882917061448,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans have provided unprecedented support for federal research and development to help spur innovation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal R&D funding increased by 44 percent from 2001 to $132 billion in 2005.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for basic research increased by 26 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President doubled the budget for the National Institutes of Health.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The National Science Foundation budget increased by 30 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republican Party support making the R&D tax credit permanent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are committed to providing the investment and incentives needed to foster next generation technologies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 21st Century Nanotechnology Research and Development Act increased funding for nanotechnology research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush dedicated $1.7 billion over five years to develop hydrogen fuel cells and related next-generation energy technologies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush's support for NASA and vision for space exploration will enhance scientific development and technological breakthroughs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 423,
+      "generation_tps": 16.54969737679708,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2079,
+      "prompt_tps": 555.253721115466,
+      "request_sha256": "92121863057acea152cf76c8007163ab861ed99257fec6969e6574b75b2b8564",
+      "seconds": 29.312936292029917,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans have provided unprecedented support for federal research and development to help spur innovation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal R&D funding increased by 44 percent from 2001 to $132 billion in 2005.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for basic research increased by 26 percent from 2001 to 2005.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President doubled the budget for the National Institutes of Health.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The National Science Foundation budget increased by 30 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republican Party support making the R&D tax credit permanent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are committed to providing the investment and incentives needed to foster next generation technologies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 21st Century Nanotechnology Research and Development Act, passed by a Republican Congress and signed by President Bush, increased funding for nanotechnology research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush dedicated $1.7 billion over five years to develop hydrogen fuel cells and related next-generation energy technologies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush's support for NASA and vision for space exploration will enhance scientific development and technological breakthroughs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3325f5a4305cb737d342ba1d5221de461fd4bcc2b769c8f3bfc8e98866b6e28b"
+}

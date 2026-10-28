@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 304,
+      "generation_tps": 16.60607104696991,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1396,
+      "prompt_tps": 491.1078823249771,
+      "request_sha256": "310dd0b5a107cbe2b041d9461d12051c3eae5d6817cc5fa9d83f9132335dbf27",
+      "seconds": 21.15782191697508,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for protecting and strengthening Medicare by cutting costs, protecting seniors from fraud, and fixing Medicare's prescription drug program.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for repealing the prohibition on negotiating prescription drug prices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for banning drug companies from paying generic producers to refrain from entering drug markets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for eliminating drug company interference with generic competition.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for dedicating all savings from repealing the prohibition on negotiating prescription drug prices, banning drug companies from paying generic producers, and eliminating drug company interference with generic competition towards closing the donut hole.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending special preferences for insurance companies and private plans like Medicare Advantage to force them to compete on a level playing field.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for addressing the challenges that older Americans who are not yet eligible for Medicare face in finding affordable and quality health insurance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 312,
+      "generation_tps": 16.586438740284365,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1868,
+      "prompt_tps": 504.41952720249947,
+      "request_sha256": "d463290cc3a9ab22c464ace952500b39344eb7fad24b559f7a900a1badbcf5ac",
+      "seconds": 22.523101500002667,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for protecting and strengthening Medicare by cutting costs, protecting seniors from fraud, and fixing Medicare's prescription drug program.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for repealing the prohibition on negotiating prescription drug prices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for banning drug companies from paying generic producers to refrain from entering drug markets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for eliminating drug company interference with generic competition.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for dedicating all of the savings from repealing the prohibition on negotiating prescription drug prices, banning drug companies from paying generic producers to refrain from entering drug markets, and eliminating drug company interference with generic competition towards closing the donut hole.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending special preferences for insurance companies and private plans like Medicare Advantage to force them to compete on a level playing field.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for addressing the challenges that older Americans who are not yet eligible for Medicare face in finding affordable and quality health insurance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "310dd0b5a107cbe2b041d9461d12051c3eae5d6817cc5fa9d83f9132335dbf27"
+}

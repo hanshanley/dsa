@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 463,
+      "generation_tps": 16.63048690169707,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1596,
+      "prompt_tps": 538.8367683118663,
+      "request_sha256": "879e1cb2f93e10c6c16b4fddfec22cefc2285ee6df63072e01525535f8a3db78",
+      "seconds": 30.811566000105813,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The corporate tax rate is cut from 35% to 20% in both bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The average effective tax rate on US corporations is about 15%.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 1962 corporate taxes represented 25% of federal revenue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today corporate taxes represent under 8% of federal revenue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Both the House and Senate versions will do nothing to aid the one-third of American families who pay little if any federal income taxes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Both bills would penalize states that use taxation to fund public goods by cutting or eliminating the tax deduction for state and local taxes (SALT).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The top six states targeted by the cut in the SALT deduction are CA, CT, MD, NJ, NY, and OR.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"CA, CT, MD, NJ, NY, and OR all voted for Clinton.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"CA, CT, MD, NJ, NY, and OR all have minimum wages well above the federal level.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"CA, CT, MD, NJ, NY, and OR are more unionized than the US as a whole.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Trump/GOP tax proposals punish liberal states.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 478,
+      "generation_tps": 16.532440385590167,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2227,
+      "prompt_tps": 537.7381013736821,
+      "request_sha256": "af23bbfb4d278666bb869ff5b234dc8fc49b1e5605b454e251ba3f4705560653",
+      "seconds": 33.06355299986899,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The corporate tax rate is cut from the present 35% to 20% in both bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The average effective tax rate on US corporations is about 15%.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 1962 corporate taxes represented 25% of federal revenue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today corporate taxes represent under 8% of federal revenue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Both the House and Senate versions will do nothing to aid the one-third of American families who pay little if any federal income taxes, but who pay regressive state and local property and sales taxes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"By cutting or eliminating the tax deduction for state and local taxes (SALT), both bills would penalize states that use taxation to fund public goods.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The top six states targeted by the cut in the SALT deduction are CA, CT, MD, NJ, NY, and OR.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"CA, CT, MD, NJ, NY, and OR all voted for Clinton.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"CA, CT, MD, NJ, NY, and OR all have minimum wages well above the federal level.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"CA, CT, MD, NJ, NY, and OR are more unionized than the US as a whole.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Trump/GOP tax proposals punish liberal states.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "879e1cb2f93e10c6c16b4fddfec22cefc2285ee6df63072e01525535f8a3db78"
+}

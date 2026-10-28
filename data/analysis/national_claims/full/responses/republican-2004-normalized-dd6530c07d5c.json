@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 241,
+      "generation_tps": 16.65440477496644,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1488,
+      "prompt_tps": 483.8320342924027,
+      "request_sha256": "f289e4c342d9bca8dfe8070cef93b52f3b779d2a5209cd8a275b344f25d04047",
+      "seconds": 17.55543208308518,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The strength of communities is the people who inhabit them, the American citizens who spend their days working, striving, and caring for their families, and advancing toward the realization of their dreams.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"To ensure that all Americans have an opportunity to build better lives, access to affordable and accessible health care, protection of America's environment and natural resources, the maintenance of public safety and prosecution of people who violate the peace of communities, guaranteed rights and equal opportunities for all members of society, and compassionate help for our fellow citizens who are trapped in unhealthy or harmful situations are required.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans know that the heart and soul of America are found in communities across the nation.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans seek to help citizens strengthen the places they call home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 233,
+      "generation_tps": 16.51794046354145,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1946,
+      "prompt_tps": 511.75404945201984,
+      "request_sha256": "8b28e43339de908aa1835304e876ea8378a59936740c641d043030c60dba9835",
+      "seconds": 17.917831500060856,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The strength of communities is the people who inhabit them, the American citizens who spend their days working, striving, and caring for their families, and advancing toward the realization of their dreams.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Providing access to affordable and accessible health care, protecting America's environment and natural resources, maintaining public safety and prosecuting people who violate the peace of communities, guaranteeing rights and equal opportunities for all members of society, and providing compassionate help for citizens trapped in unhealthy or harmful situations are necessary to ensure that all Americans have an opportunity to build better lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans believe the heart and soul of America are found in communities across the nation.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans aim to help citizens strengthen the places they call home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 272,
+      "generation_tps": 16.507836481699687,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1889,
+      "prompt_tps": 514.5577414749616,
+      "request_sha256": "6dae42c5b8e8f5a9a9a2ca874630a21f9c2dc18a5227250d168059efb28cdc06",
+      "seconds": 20.157445000018924,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The strength of communities is the people who inhabit them, the American citizens who spend their days working, striving, and caring for their families, and advancing toward the realization of their dreams.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"To ensure that all Americans have an opportunity to build better lives, access to affordable and accessible health care, protection of America's environment and natural resources, the maintenance of public safety and prosecution of people who violate the peace of communities, guaranteed rights and equal opportunities for all members of society, and compassionate help for citizens who are trapped in unhealthy or harmful situations are required.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans know that the heart and soul of America are found in communities across the nation.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans seek to help citizens strengthen the places they call home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans honor the individual character and diversity of communities throughout America.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f289e4c342d9bca8dfe8070cef93b52f3b779d2a5209cd8a275b344f25d04047"
+}

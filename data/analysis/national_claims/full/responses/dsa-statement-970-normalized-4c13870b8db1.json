@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 379,
+      "generation_tps": 16.1229623894606,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1295,
+      "prompt_tps": 448.90630877684805,
+      "request_sha256": "520d6656bccf24aa0dd818ec5894314fa90689700220ec23f2879a0ec434700e",
+      "seconds": 26.401729500154033,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The NPC voted unanimously to endorse the Global Call on China to Release Arrested Jasic Labor Activists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers at Shenzhen Jasic Technology reported labor rights violations to local authorities in May, including illegal work rotas, an illegal system of fines, and underpayment of social insurance contributions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Workers at Shenzhen Jasic Technology organized a union drive in accordance with China Trade Union Law, and co-workers signed a petition in support of union recognition.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Management and the All-China Federation of Trade Unions (ACFTU) accused worker organizers of illegally unionizing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Jasic threatened and fired worker organizers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Authorities arrested protesting workers on July 27.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Amnesty International states that thirty people detained at a factory worker protest must be released.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Fourteen of the twenty-nine arrested workers and their allies remain in detention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Workers and their allies were unjustly arrested for unionizing and organizing solidarity actions in China.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 384,
+      "generation_tps": 16.245130359143023,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1842,
+      "prompt_tps": 471.6813338514184,
+      "request_sha256": "09cbb968a7a2231f457842bccd5b995a816b6635f1d70a8d7d6430e239e830fa",
+      "seconds": 27.553446583915502,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The NPC voted unanimously to endorse the Global Call on China to Release Arrested Jasic Labor Activists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In May, workers at Shenzhen Jasic Technology reported to local authorities labor rights violations including illegal work rotas, an illegal system of fines, and underpayment of social insurance contributions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Workers at Shenzhen Jasic Technology organized a union drive in accordance with China Trade Union Law, and co-workers signed a petition in support of union recognition.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Management and the All-China Federation of Trade Unions (ACFTU) accused worker organizers of illegally unionizing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Jasic threatened and fired worker organizers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Authorities arrested protesting workers on July 27.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Amnesty International states that thirty people detained at a factory worker protest must be released.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Fourteen of the twenty-nine arrested workers and their allies remain in detention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Workers and their allies were unjustly arrested for unionizing and organizing solidarity actions in China.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "520d6656bccf24aa0dd818ec5894314fa90689700220ec23f2879a0ec434700e"
+}

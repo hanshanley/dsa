@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 16.574144810482824,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1298,
+      "prompt_tps": 574.5856197952089,
+      "request_sha256": "e78cc36ce8e78da817b0283c7050429a50fef3cb4185d3b2147aa7bc11cf4987",
+      "seconds": 28.513556249905378,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America enthusiastically endorses the Medicare for All Act of 2017 and will fight tirelessly for its passage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bernie Sanders filed the Medicare for All Act of 2017.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Four years ago, Sen. Sanders was alone when he introduced a previous version of the bill.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today, the Medicare for All Act of 2017 has sixteen co-sponsors.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The increase in co-sponsors for the Medicare for All Act of 2017 happened because of sustained, grassroots organizing and pressure by Democratic Socialists of America members and many other organizations across the country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"People are fed up with a system where workers\u2019 wages and benefits shrivel while health insurance costs continue to soar.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The U.S. health insurance system is enormously wasteful.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The top executives of private health insurance companies pull in tens of millions of dollars in compensation annually.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. health outcomes remain among the worst when compared to similar countries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Medicare for All is a solution to a system where people are fed up with workers\u2019 wages and benefits shriveling while health insurance costs continue to soar.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 441,
+      "generation_tps": 16.526164651838652,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1901,
+      "prompt_tps": 574.8066275893581,
+      "request_sha256": "b979869596ae4cd1024c94295e74aebf9323d085e8c9ad4fd32840f3036a10f7",
+      "seconds": 30.001723458059132,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America enthusiastically endorses the Medicare for All Act of 2017 and will fight tirelessly for its passage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bernie Sanders filed the Medicare for All Act of 2017.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Four years ago, Sen. Sanders was alone when he introduced a previous version of the bill.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today, the Medicare for All Act of 2017 has sixteen co-sponsors.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The increase in co-sponsors for the Medicare for All Act of 2017 happened only because of sustained, grassroots organizing and pressure by Democratic Socialists of America members and many other organizations across the country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"People are fed up with a system where workers\u2019 wages and benefits shrivel while health insurance costs continue to soar.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The U.S. health insurance system is enormously wasteful.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The top executives of private health insurance companies pull in tens of millions of dollars in compensation annually.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. health outcomes remain among the worst when compared to similar countries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Medicare for All is a solution to a system where people are fed up with workers\u2019 wages and benefits shriveling while health insurance costs continue to soar.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e78cc36ce8e78da817b0283c7050429a50fef3cb4185d3b2147aa7bc11cf4987"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 58,
+      "generation_tps": 16.89351099912152,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1321,
+      "prompt_tps": 566.6496545100205,
+      "request_sha256": "9c3d99001f3b3863f98acd1d1dd3933d5aeddc187eb538ac55df3198dff505a5",
+      "seconds": 5.773531417129561,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Disability Caucus and Working Group can be reached for questions or concerns about accessibility or actions to support disabled comrades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 74,
+      "generation_tps": 16.771930836485442,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1547,
+      "prompt_tps": 587.9014294349012,
+      "request_sha256": "2a9d206860d5b0f124b9d24dff57b230f2df67c4428d19cf1ecfe2e2e259d575",
+      "seconds": 7.052874792134389,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"If you or your chapter has questions or concerns about accessibility or actions you can take to support your disabled comrades, please reach out to the Disability Caucus and Working Group (email, Twitter).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9c3d99001f3b3863f98acd1d1dd3933d5aeddc187eb538ac55df3198dff505a5"
+}

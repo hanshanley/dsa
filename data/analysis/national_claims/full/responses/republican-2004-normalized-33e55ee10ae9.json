@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 447,
+      "generation_tps": 15.09617434540137,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1457,
+      "prompt_tps": 416.15324377511104,
+      "request_sha256": "35420693b9ef582508524dd14817bcb90fa103c2a9e53a4f1f23fb3dce89b0f4",
+      "seconds": 33.123208709061146,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America is the world's leader in developing medical and pharmaceutical breakthroughs that have revolutionized health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republican Congress recognize and strongly support scientific advancement, especially in the area of biomedical research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress has fulfilled its pledge to double funding for the National Institutes of Health, working together with President Bush.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With increased funding, the National Institutes of Health is now supporting nearly 40,000 projects, an all-time high.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government investment in biomedical research yields tangible benefits, resulting in decreased death rates, better access to health care, and a better quality of life for all Americans, especially for underserved and minority populations.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Quality research provides benefits including disease prevention, early detection, and new, more effective treatments for heart disease, stroke, diabetes, cancer, Parkinson's Disease, Alzheimer's, and HIV/AIDS.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans continue to be active leaders in setting sound biomedical research policy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans remain committed to placing a high priority on continued world leadership in research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans remain committed to maintaining accountability for the use of resources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans remain committed to upholding the highest ethical standards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 377,
+      "generation_tps": 9.718100659265644,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2072,
+      "prompt_tps": 453.29226066294785,
+      "request_sha256": "76ded489d333932ae2be2602f44065a28fd651e7a78855223670235e23e1758c",
+      "seconds": 43.379100708058104,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America is the world's leader in developing the medical and pharmaceutical breakthroughs that have revolutionized health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republican Congress recognize and strongly support scientific advancement, especially in the area of biomedical research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Working together with President Bush, the Republican Congress has fulfilled its pledge to double funding for the National Institutes of Health.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With increased funding, the National Institutes of Health is now supporting nearly 40,000 projects, an all-time high.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government investment in biomedical research yields tangible benefits, resulting in decreased death rates, better access to health care, and a better quality of life for all Americans \u2013 especially for underserved and minority populations.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Quality research provides benefits including disease prevention, early detection, and new, more effective treatments for heart disease, stroke, diabetes, cancer, Parkinson's Disease, Alzheimer's, and HIV/AIDS.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans continue to be active leaders in setting sound biomedical research policy and remain committed to placing a high priority on continued world leadership in research, while maintaining accountability for the use of resources and a responsibility to uphold the highest ethical standards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "35420693b9ef582508524dd14817bcb90fa103c2a9e53a4f1f23fb3dce89b0f4"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 278,
+      "generation_tps": 16.56831921468416,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1476,
+      "prompt_tps": 480.2307384325978,
+      "request_sha256": "01354a25ad4b119f8afcf71525e046c7aac763e0c7dd476311a83f6fc09bb0a3",
+      "seconds": 19.861431166995317,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republican policies are working.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]},{\"claim_text\":\"Broadband adoption has grown 300 percent from December 2000 to December 2003, increasing from 7 million to 28 million lines.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]},{\"claim_text\":\"Over 93 percent of zip codes have broadband access.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Ninety-four percent of public schools have broadband access to the Internet.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[4]},{\"claim_text\":\"Applying 21st century policy to 21st century technology will encourage new investment that will bring broadband to more homes in more areas of America.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[5]},{\"claim_text\":\"President George W. Bush says the measure of compassion is good results, not just good intentions, and that involvement and responsibility contribute to the life of the country, making people citizens rather than spectators.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[7,8]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 283,
+      "generation_tps": 16.547642735100517,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1922,
+      "prompt_tps": 510.50181408488737,
+      "request_sha256": "f5c44c5844e6950f51f91da8c57ea54029539e53bba46496ccd1102bf145b3c1",
+      "seconds": 20.877058624988422,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republican policies are working.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]},{\"claim_text\":\"Broadband adoption grew 300 percent from December 2000 to December 2003, increasing from 7 million to 28 million lines.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]},{\"claim_text\":\"Over 93 percent of zip codes have broadband access.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Ninety-four percent of public schools have broadband access to the Internet.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[4]},{\"claim_text\":\"Applying 21st century policy to 21st century technology will encourage new investment that will bring broadband to more homes in more areas of America.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[5]},{\"claim_text\":\"President George W. Bush says the measure of compassion is more than good intentions, it is good results, and that by being involved and taking responsibility, people contribute to the life of the country, becoming citizens rather than spectators.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[7,8]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "01354a25ad4b119f8afcf71525e046c7aac763e0c7dd476311a83f6fc09bb0a3"
+}

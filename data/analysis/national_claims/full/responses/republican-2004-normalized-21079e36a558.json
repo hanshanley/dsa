@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 372,
+      "generation_tps": 16.55506768412296,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1461,
+      "prompt_tps": 487.28107312418973,
+      "request_sha256": "d76a85e7ecb2b0d94921fd08f112c1243f538d91e45b604dbd5db02f4fe4dacf",
+      "seconds": 25.479956292081624,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Endangered Species Act serves a noble purpose, which Americans overwhelmingly support.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party remains committed to the goal of protecting species to enhance their chances for survival.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Successes under the Endangered Species Act have been limited over the last 30 years due to confrontation and polarization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"An ever-growing barrage of litigation has prevented the Fish and Wildlife Service from protecting new species and recovering plants and animals already listed as threatened or endangered.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans believe greater progress in protecting species for future generations can be achieved through results-based cooperative conservation programs and voluntary agreements that encourage private stewardship.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Endangered Species Act must be updated to reflect new approaches that focus resources on species in need of recovery, not lawsuits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Endangered Species Act should require peer-reviewed science so resources can be focused on the most pressing recovery efforts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Endangered Species Act should encourage expansion of voluntary agreements with private property owners while ensuring that Endangered Species Act enforcement respects and upholds private property rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 372,
+      "generation_tps": 16.26366040031811,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2001,
+      "prompt_tps": 510.7400473142825,
+      "request_sha256": "e7c5b740130dac27d51894aa50498b29d5b73fabe314498d6104221dc3bbc08f",
+      "seconds": 26.801637375028804,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Endangered Species Act serves a noble purpose, which Americans overwhelmingly support.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party remains committed to the goal of protecting species to enhance their chances for survival.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over the last 30 years, successes under the Endangered Species Act have been limited due to confrontation and polarization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"An ever-growing barrage of litigation has prevented the Fish and Wildlife Service from protecting new species and recovering plants and animals already listed as threatened or endangered.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans believe greater progress in protecting species for future generations can be achieved through results-based cooperative conservation programs and voluntary agreements that encourage private stewardship.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Endangered Species Act must be updated to reflect new approaches that focus resources on species in need of recovery, not lawsuits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Endangered Species Act should require peer-reviewed science so resources can be focused on the most pressing recovery efforts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Endangered Species Act should encourage expansion of voluntary agreements with private property owners while ensuring that Endangered Species Act enforcement respects and upholds private property rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d76a85e7ecb2b0d94921fd08f112c1243f538d91e45b604dbd5db02f4fe4dacf"
+}

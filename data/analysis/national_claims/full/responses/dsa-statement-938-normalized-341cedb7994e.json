@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 292,
+      "generation_tps": 16.213439341755432,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1518,
+      "prompt_tps": 466.591147845114,
+      "request_sha256": "026a3f0099f0fdd91ba71914b18b5a5870b2eb6258e15fcf3df8cc7562871396",
+      "seconds": 21.272434999933466,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Temer government\u2019s attacks on Brazilian democracy are viewed as part of a larger attack by the Latin American right on gains made for working and poor Latin Americans between 2000 and 2014.\", \"claim_types\":[\"evaluation\", \"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"Socialists in the United States have a special obligation to stand in solidarity against the political retrenchment in Brazil and for a deepening of the socialist and social-democratic political and social movement power that emerged in Latin America between 2000 and 2014.\", \"claim_types\":[\"policy_position\", \"evaluation\"], \"evidence_ids\":[1]}, {\"claim_text\":\"DSA chapters across the country should seek out Brazil solidarity groups and work with them to organize actions in solidarity with the people of Brazil and in condemnation of the Temer government\u2019s attacks on democracy and working-class and poor Brazilians.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Organizing actions is particularly important in cities with Brazilian consulates including Atlanta, Boston, Chicago, Hartford, Houston, Los Angeles, Miami, New York, San Francisco and Washington D.C.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 321,
+      "generation_tps": 16.210835807550424,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1978,
+      "prompt_tps": 498.15039943217727,
+      "request_sha256": "99e7429463d1deffdcfca79dda193d98109132ec4fdedbd9e57a45e6ae5d6b8e",
+      "seconds": 23.781464291969314,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Temer government\u2019s attacks on Brazilian democracy are viewed as part of a larger attack by the Latin American right on significant gains made for working and poor Latin Americans across the region between 2000 and 2014.\", \"claim_types\":[\"evaluation\", \"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"Given the government\u2019s consistent and ongoing efforts to undermine popular governments and movements representing Latin America\u2019s working class and poor, socialists in the United States have a special obligation to stand in solidarity against this political retrenchment and for a deepening of the socialist and social-democratic political and social movement power that emerged during the first decade and a half of this century in Latin America.\", \"claim_types\":[\"policy_position\", \"evaluation\"], \"evidence_ids\":[1]}, {\"claim_text\":\"DSA chapters across the country should seek out Brazil solidarity groups in their cities and towns and work with them to organize actions in solidarity with the people of Brazil and in condemnation of the Temer government\u2019s attacks on democracy and working-class and poor Brazilians.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Organizing actions is particularly important in cities with Brazilian consulates including Atlanta, Boston, Chicago, Hartford, Houston, Los Angeles, Miami, New York, San Francisco and Washington D.C.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "026a3f0099f0fdd91ba71914b18b5a5870b2eb6258e15fcf3df8cc7562871396"
+}

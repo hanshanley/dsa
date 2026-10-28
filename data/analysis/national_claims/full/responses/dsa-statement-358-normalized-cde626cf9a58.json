@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 134,
+      "generation_tps": 16.655804227846986,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1341,
+      "prompt_tps": 549.0717710809895,
+      "request_sha256": "3ac7a0280752d1f8ad692b2759f8afbe322ddb80f5f83fb1ae1338cdd2edb691",
+      "seconds": 10.49635879183188,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Socialists and progressives have been fighting for universal health coverage for decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thanks to the efforts of socialists and progressives and the political leadership of Bernie Sanders, achieving universal health coverage no longer feels like an impossible dream.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is time to turn the dream of universal health coverage into reality.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 128,
+      "generation_tps": 16.606161927274062,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1643,
+      "prompt_tps": 569.2726181682359,
+      "request_sha256": "c7f44bcc1c206d7d53153569dfa823e6efa2be5f260b47d07459c7cf7f94eb65",
+      "seconds": 10.603194582974538,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Socialists and progressives have been fighting for universal health coverage for decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thanks to their efforts and the political leadership of Bernie Sanders, universal health coverage no longer feels like an impossible dream.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is time to turn the dream of universal health coverage into reality.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3ac7a0280752d1f8ad692b2759f8afbe322ddb80f5f83fb1ae1338cdd2edb691"
+}

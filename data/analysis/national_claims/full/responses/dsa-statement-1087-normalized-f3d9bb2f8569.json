@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 207,
+      "generation_tps": 16.517294589079405,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1387,
+      "prompt_tps": 489.24293840120265,
+      "request_sha256": "d7f02893f979a586b3cba35de018bb621b2b5b1154853f1294c61f8e2f1228b8",
+      "seconds": 15.37748433300294,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Right-wing violence is occurring not only in the United States, but around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The murder of Jamal Khashoggi was carried out by Saudi agents.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rise of the right in Europe demonstrates the increasing threat of fascism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The election of Bolonasaro in Brazil demonstrates the increasing threat of fascism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA is committed to fighting against right-wing violence and to continue its struggle in solidarity with all those committed to a just, sane, and peaceful world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 212,
+      "generation_tps": 16.51753230877077,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1762,
+      "prompt_tps": 505.319054207083,
+      "request_sha256": "60394cd282c9e9dcb83d61b5f639c2dcd5d6b4e7cece90412fedcd98d2cd529a",
+      "seconds": 16.331353166839108,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Right-wing violence is occurring not only in the United States, but around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The murder of Jamal Khashoggi was carried out by Saudi agents.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rise of the right in Europe demonstrates the increasing threat of fascism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The election of Bolonasaro in Brazil demonstrates the increasing threat of fascism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA is committed to fighting against right-wing violence and to continue its struggle in solidarity with all those committed to a just, sane, and peaceful world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d7f02893f979a586b3cba35de018bb621b2b5b1154853f1294c61f8e2f1228b8"
+}

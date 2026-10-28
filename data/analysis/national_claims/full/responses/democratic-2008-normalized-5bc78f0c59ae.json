@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 386,
+      "generation_tps": 16.603181154548132,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1436,
+      "prompt_tps": 502.0725058553184,
+      "request_sha256": "b79ba835380304a2b83b623d6f6f24d33925779e75e341e4e9584e8deed1f798",
+      "seconds": 26.117601208155975,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Children who grow up without a father are five times more likely to live in poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who grow up without a father are more likely to commit crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who grow up without a father are more likely to drop out of school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who grow up without a father are more likely to abuse drugs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who grow up without a father are more likely to end up in prison.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for providing transitional training to fathers to get jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for removing tax penalties on married families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for expanding maternity and paternity leave.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for giving a tax credit to those responsibly supporting their children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for cracking down on men who avoid child support payments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for ensuring child support payments go directly to families instead of bureaucracies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 466,
+      "generation_tps": 16.5629865524442,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1990,
+      "prompt_tps": 502.58643124091924,
+      "request_sha256": "a7f5ebf9c21274d3beb78e6a982c81322d4db20c3ca036e157e0e44be8073e7a",
+      "seconds": 32.10407637478784,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Children who grow up without a father are five times more likely to live in poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who grow up without a father are more likely to commit crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who grow up without a father are more likely to drop out of school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who grow up without a father are more likely to abuse drugs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who grow up without a father are more likely to end up in prison.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for providing transitional training to fathers to get jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for removing tax penalties on married families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for expanding maternity and paternity leave.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for giving a tax credit to those responsibly supporting their children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for cracking down on men who avoid child support payments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for ensuring child support payments go directly to families instead of bureaucracies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Fathers need to realize that responsibility does not end at conception.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"What makes a man is not the ability to have a child\u2013it's the courage to raise one.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b79ba835380304a2b83b623d6f6f24d33925779e75e341e4e9584e8deed1f798"
+}
