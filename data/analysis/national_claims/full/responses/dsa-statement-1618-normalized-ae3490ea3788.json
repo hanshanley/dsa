@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 332,
+      "generation_tps": 16.417796086295617,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1284,
+      "prompt_tps": 477.07950791933814,
+      "request_sha256": "9339ff3c2aad4d18a87bb2116e2694f8698a74e21f8af838d879eed3a38e8320",
+      "seconds": 22.923372874967754,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Airport workers threatened a strike last month and brought Trump to his knees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pelosi agreed to increases for immigration enforcement, including $7.6 billion for ICE ($512 million over FY2018) and $14.9 billion for CBP ($942 million over FY2018).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"$1.375 billion is allocated towards border barriers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increased spending on the border and surveillance will result in working people having less power.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Citizen and non-citizen workers attempting to unite and form unions will face a harder time when bosses can create division and a climate of fear with threats of ICE raids.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrant families will continue to perish in the desert as they flee conditions of violence in their home countries exacerbated by US intervention and regime change.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"DHS will continue to avoid accountability for kidnapping, torturing, and then losing children, perhaps never to be reunited with their parents.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 348,
+      "generation_tps": 16.33803404999033,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1784,
+      "prompt_tps": 519.3625517944545,
+      "request_sha256": "29bdc0caba5be42cd01c1bae4bf98e6ddd26df59a1936abc361809e9800fe95a",
+      "seconds": 24.744583792053163,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Airport workers threatened a strike last month and brought Trump to his knees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pelosi agreed to increases for immigration enforcement, including $7.6 billion for ICE ($512 million over FY2018) and $14.9 billion for CBP ($942 million over FY2018).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"$1.375 billion is allocated towards border barriers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If there is increased spending on the border and surveillance, working people will have less power.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Citizen and non-citizen workers trying to unite across that difference and form unions to bargain collectively with their bosses will face a harder time when bosses can create division and a climate of fear with threats of ICE raids.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrant families will continue to perish in the desert as they flee conditions of violence in their home countries exacerbated by US intervention and regime change.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"DHS will continue to avoid accountability for kidnapping, torturing, and then losing children, perhaps never to be reunited with their parents.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9339ff3c2aad4d18a87bb2116e2694f8698a74e21f8af838d879eed3a38e8320"
+}

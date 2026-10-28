@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 15.590847536109976,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1500,
+      "prompt_tps": 478.81087009151184,
+      "request_sha256": "cfe10c49227aac315ef6dd638ef92035c9a028019ddccc3aeef95c6c9f7873f1",
+      "seconds": 31.048968416871503,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for the expansion of programs providing support for those orphaned by HIV/AIDS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the use of faith-based organizations as partners in HIV/AIDS relief efforts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Belief that treatment and prevention of drug abuse are essential components of HIV protection.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commendation of the President for support of the Ryan White CARE Act.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Call for reauthorization of the Ryan White CARE Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that ensuring access to treatment must be the priority of HIV/AIDS care programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President's policy is to provide safe, effective, high quality HIV/AIDS drugs at the lowest possible cost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President has accelerated the FDA review process for HIV/AIDS drugs and therapies for use under the Emergency Plan for HIV/AIDS Relief.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush led the G-8 in endorsing the establishment of a Global HIV Vaccine Enterprise.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush announced plans to establish a second HIV Vaccine Research and Development Center in the U.S.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The new center will become a key component of the Global HIV Vaccine Enterprise.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 480,
+      "generation_tps": 16.233706343468082,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2103,
+      "prompt_tps": 515.911413558003,
+      "request_sha256": "f2e5b35c90bac2e370982639dacc540469719216981a51b56eeae217dbea428d",
+      "seconds": 33.66680054087192,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the expansion of programs providing support for those orphaned by HIV/AIDS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the use of faith-based organizations as partners on the ground in HIV/AIDS relief efforts because they often have the most capability, credibility, and conviction for performing this important work in different communities, regions, and countries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Belief that treatment and prevention of drug abuse are essential components of HIV protection.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commendation of the President for support of the Ryan White CARE Act.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Call for reauthorization of the Ryan White CARE Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that ensuring access to treatment must be the priority of HIV/AIDS care programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President's policy is to provide safe, effective, high quality HIV/AIDS drugs at the lowest possible cost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President has accelerated the FDA review process for HIV/AIDS drugs and therapies for use under the Emergency Plan for HIV/AIDS Relief.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush led the G-8 in endorsing the establishment of a Global HIV Vaccine Enterprise.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush announced plans to establish a second HIV Vaccine Research and Development Center in the U.S., in addition to the one at the National Institutes of Health.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The new center will become a key component of the Global HIV Vaccine Enterprise.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cfe10c49227aac315ef6dd638ef92035c9a028019ddccc3aeef95c6c9f7873f1"
+}

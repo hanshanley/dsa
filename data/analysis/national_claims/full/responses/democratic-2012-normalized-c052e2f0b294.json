@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 320,
+      "generation_tps": 16.062845044257447,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1411,
+      "prompt_tps": 478.84452211954476,
+      "request_sha256": "6935685d08f6f756f8bbbba68978395c7548d00c149a47ddf735fa0e2d08a344",
+      "seconds": 22.880070209037513,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Every American deserves a secure, healthy, and dignified retirement.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's seniors have earned their Medicare and Social Security through a lifetime of hard work and personal responsibility.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama is committed to preserving Medicare and Social Security for this and future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans contribute to Social Security during their working years in exchange for a promise of income in retirement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"We will find a solution to protect Social Security for future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"We will block Republican efforts to subject Americans' guaranteed retirement income to the whims of the stock market through privatization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"We reject approaches that insist that cutting benefits is the only answer to Social Security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama will make it easier for Americans to save for retirement and prepare for unforeseen expenses by participating in retirement accounts at work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 332,
+      "generation_tps": 15.928989524199517,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2133,
+      "prompt_tps": 508.5890014676086,
+      "request_sha256": "bfa44bb1c4b35601524d31b503c25e7500cb8a4f2902a6a533bf21bd31f439d8",
+      "seconds": 25.051010875031352,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Every American deserves a secure, healthy, and dignified retirement.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's seniors have earned their Medicare and Social Security through a lifetime of hard work and personal responsibility.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama is committed to preserving Medicare and Social Security for this and future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"During their working years, Americans contribute to Social Security in exchange for a promise of income in retirement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will find a solution to protect Social Security for future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will block Republican efforts to subject Americans' guaranteed retirement income to the whims of the stock market through privatization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party rejects approaches that insist that cutting benefits is the only answer to Social Security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama will make it easier for Americans to save for retirement and prepare for unforeseen expenses by participating in retirement accounts at work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 346,
+      "generation_tps": 15.831587748361773,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1911,
+      "prompt_tps": 497.83950418380294,
+      "request_sha256": "4008d2255156b63e68b3b7893801ec4968e8f0f3e36be752dbf745218d37a082",
+      "seconds": 25.7083519580774,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Every American deserves a secure, healthy, and dignified retirement.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's seniors have earned their Medicare and Social Security through a lifetime of hard work and personal responsibility.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama is committed to preserving Medicare and Social Security for this and future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"During their working years, Americans contribute to Social Security in exchange for a promise that they will receive an income in retirement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Unlike those in the other party, the Democratic Party will find a solution to protect Social Security for future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will block Republican efforts to subject Americans' guaranteed retirement income to the whims of the stock market through privatization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party rejects approaches that insist that cutting benefits is the only answer to Social Security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama will make it easier for Americans to save on their own for retirement and prepare for unforeseen expenses by participating in retirement accounts at work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6935685d08f6f756f8bbbba68978395c7548d00c149a47ddf735fa0e2d08a344"
+}

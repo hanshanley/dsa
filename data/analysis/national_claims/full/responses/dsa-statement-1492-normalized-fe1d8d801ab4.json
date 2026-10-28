@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 71,
+      "generation_tps": 16.476913667504345,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1270,
+      "prompt_tps": 484.0896889201932,
+      "request_sha256": "e6657e4d16333f4ea8476443cd9db5132d2115cff32cbe5b4f5d6e90cecf7fca",
+      "seconds": 6.942733708070591,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the people of Venezuela.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the Bolivarian Revolution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 71,
+      "generation_tps": 16.418519627039135,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1509,
+      "prompt_tps": 494.3783573733813,
+      "request_sha256": "4cf6f72210d24c5b531f80d97362e4df248d93c8834acb542c26054f68520b16",
+      "seconds": 7.38599466602318,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the people of Venezuela.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the Bolivarian Revolution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e6657e4d16333f4ea8476443cd9db5132d2115cff32cbe5b4f5d6e90cecf7fca"
+}

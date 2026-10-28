@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 214,
+      "generation_tps": 16.35856715258995,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1134,
+      "prompt_tps": 465.7726339163303,
+      "request_sha256": "d501944889ab8e7253267bf50ef8fe4473bc0c642686c23fb5fa03fd88989865",
+      "seconds": 15.526602542027831,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA stands with the people of Venezuela against the U.S.-sponsored coup attempt led by Juan Guaid\u00f3 and Leopoldo L\u00f3pez.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA affirms a commitment to defending the sovereign right of the Venezuelan people to determine their internal matters through the democratic process.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA opposes any foreign interventions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The statements and actions of the U.S. government in support of the attempted coup are an expression of U.S. imperialism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The statements and actions of the U.S. government in support of the attempted coup must be opposed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 219,
+      "generation_tps": 16.373796426715288,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1516,
+      "prompt_tps": 460.1546353833215,
+      "request_sha256": "ac6c4a12edf759c3304b9c3cf41ca870dcd3f5f11a0f12ce7d598da976bdcf4e",
+      "seconds": 16.678694625152275,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA stands with the people of Venezuela against the U.S.-sponsored coup attempt led by Juan Guaid\u00f3 and Leopoldo L\u00f3pez.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA affirms a commitment to defending the sovereign right of the Venezuelan people to determine their internal matters through the democratic process.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA opposes any foreign interventions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The statements and actions of the U.S. government in support of the attempted coup are an expression of U.S. imperialism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The statements and actions of the U.S. government in support of the attempted coup must be opposed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d501944889ab8e7253267bf50ef8fe4473bc0c642686c23fb5fa03fd88989865"
+}

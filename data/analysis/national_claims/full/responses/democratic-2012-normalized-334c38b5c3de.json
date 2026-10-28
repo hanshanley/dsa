@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 321,
+      "generation_tps": 16.182577314828297,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1527,
+      "prompt_tps": 431.3165623871732,
+      "request_sha256": "d69d3ca89a090e2f293aa891f59b43921fa175a557fd7d61c1b3cfac08320947",
+      "seconds": 23.38935758289881,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2008, the U.S. was experiencing the worst economic downturn since the Great Depression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In the month President Obama took office in 2008, 800,000 Americans lost their jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since early 2010, the private sector has created 4.5 million jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"American manufacturing is growing for the first time since the 1990s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"To rebuild middle class security, the U.S. must out-educate, out-innovate, and out-build the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The U.S. needs an economy that creates jobs of the future and makes things the rest of the world buys.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"An economy built on outsourcing, loopholes, or risky financial deals jeopardizes everyone, especially the middle class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 339,
+      "generation_tps": 16.312098923264166,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2016,
+      "prompt_tps": 509.5624312824718,
+      "request_sha256": "b21aff65bf8380e1cc0974318dd475081eb72ee9303f93caca89fd7cf4488dd9",
+      "seconds": 24.748656624928117,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2008, the U.S. was experiencing the worst economic downturn since the Great Depression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In the month President Obama took office in 2008, 800,000 Americans lost their jobs, which was more than in any single month in the previous 60 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since early 2010, the private sector has created 4.5 million jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"American manufacturing is growing for the first time since the 1990s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"To rebuild true middle class security, the U.S. must out-educate, out-innovate, and out-build the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The U.S. needs an economy that creates the jobs of the future and makes things the rest of the world buys.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"An economy built on outsourcing, loopholes, or risky financial deals jeopardizes everyone, especially the middle class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d69d3ca89a090e2f293aa891f59b43921fa175a557fd7d61c1b3cfac08320947"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 282,
+      "generation_tps": 16.32899469329622,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1500,
+      "prompt_tps": 481.03746312344515,
+      "request_sha256": "600cc74356924be834037ae14558a3261ebaa9f7a8c6ef366272c070debbd19c",
+      "seconds": 20.40055362484418,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe Social Security and Medicare must be kept strong for seniors, people with disabilities, and future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats oppose approaches that gut Social Security and Medicare to pay for tax cuts for the wealthiest.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe getting an education is the surest path to the middle class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are committed to ensuring every child in America has access to a world-class public education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats aim to ensure America has the world's highest proportion of college graduates by 2020.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats intend to close the achievement gap in America's schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats intend to ensure children in every neighborhood in the country benefit from high-quality educational opportunities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 335,
+      "generation_tps": 16.251767400490298,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1950,
+      "prompt_tps": 504.9502931629427,
+      "request_sha256": "2e99d280989a724f83d20d1b45fe1de51bc0dbabf85458debe8ab2fdc50446c0",
+      "seconds": 24.48654495808296,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe Social Security and Medicare must be kept strong for seniors, people with disabilities, and future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats oppose approaches that gut Social Security and Medicare to pay for tax cuts for the wealthiest.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe getting an education is the surest path to the middle class, giving all students the opportunity to fulfill their dreams and contribute to the economy and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are committed to ensuring every child in America has access to a world-class public education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats aim to ensure America has the world's highest proportion of college graduates by 2020.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats intend to close the achievement gap in America's schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats intend to ensure children in every neighborhood in the country benefit from high-quality educational opportunities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public education is one of the critical democratic institutions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "600cc74356924be834037ae14558a3261ebaa9f7a8c6ef366272c070debbd19c"
+}

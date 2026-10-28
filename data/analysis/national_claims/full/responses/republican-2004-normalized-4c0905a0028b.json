@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 385,
+      "generation_tps": 16.28903023950057,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1477,
+      "prompt_tps": 477.19334702360493,
+      "request_sha256": "deb2fffdf3471f5bc72ffe79073ed5ffbdb5f1a88df80b7e6a81eb9429cb98a6",
+      "seconds": 26.744306709151715,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Reconnaissance cameras, border patrol agents, and unmanned aerial flights have been increased at the border.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Border Patrol agents now have sweeping new powers to deport illegal aliens without first going through a hearing before an immigration judge.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to enforce the law while welcoming immigrants who enter America through legal avenues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Families are the cornerstone of culture and the building blocks of a strong society.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children learn values and ideals, as well as basic lessons for education, in families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every child deserves the chance to be born and grow up in a loving family.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children have the best chance at success when raised by a mother and a father who love and respect each other and their children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Family breakdown makes America less stable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for policies that promote strong families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for a government that makes it easier for parents to raise their children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 419,
+      "generation_tps": 16.293178256851796,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2030,
+      "prompt_tps": 508.8957844817553,
+      "request_sha256": "ec3ca2f78a31372e540c54f3fa08c351910b35faa0bddaa58846a12aee424679",
+      "seconds": 29.718699207995087,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Reconnaissance cameras, border patrol agents, and unmanned aerial flights have been increased at the border.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Border Patrol agents now have sweeping new powers to deport illegal aliens without first having to go through the cumbersome process of allowing the illegal alien to have a hearing before an immigration judge.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to enforce the law while welcoming immigrants who enter America through legal avenues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Families are the cornerstone of culture and the building blocks of a strong society.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"In families, children learn values and ideals, as well as the basic lessons that get them started on a lifelong path of education.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every child deserves the chance to be born and grow up in a loving family.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children have the best chance at success when raised by a mother and a father who love and respect each other as well as their children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Family breakdown makes America less stable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans support policies that promote strong families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for a government that makes it easier for parents to raise their children in a world that offers unprecedented opportunities and new challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "deb2fffdf3471f5bc72ffe79073ed5ffbdb5f1a88df80b7e6a81eb9429cb98a6"
+}

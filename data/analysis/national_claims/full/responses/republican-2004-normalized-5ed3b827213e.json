@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 302,
+      "generation_tps": 15.79268946988971,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1485,
+      "prompt_tps": 468.918622447677,
+      "request_sha256": "88756ab2eeefc52fdbf58ffc80d6c75e314ae669787c28d4787d06a858f5b085",
+      "seconds": 22.301150457933545,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for maintaining the unique status of the nation's capital and its independence from any individual state.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to end chronic homelessness by providing support services and housing for chronically homeless individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Chronically homeless individuals comprise roughly ten percent of the homeless population and consume a disproportionately large share of all homeless emergency services because their housing, health, and other needs have not been comprehensively addressed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for an individual right to own guns, which is explicitly protected by the Constitution's Second Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for efforts by the Bush Administration to make more public lands available to hunters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for increasing access to hunting clinics and safety programs for children and adults.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for improving opportunities for hunting for Americans with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 303,
+      "generation_tps": 16.363352619207237,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1955,
+      "prompt_tps": 510.8875337695978,
+      "request_sha256": "4203a41973f36a3cd2f0765b4c21fbde056e600ab408289b233bf30d94fcea69",
+      "seconds": 22.354417958064005,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for maintaining the unique status of the nation's capital and its independence from any individual state.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to end chronic homelessness by providing support services and housing for chronically homeless individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Chronically homeless individuals comprise roughly ten percent of the homeless population and consume a disproportionately large share of all homeless emergency services because their housing, health, and other needs have not before been comprehensively addressed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for an individual right to own guns, which is explicitly protected by the Constitution's Second Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for efforts by the Bush Administration to make more public lands available to hunters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for increasing access to hunting clinics and safety programs for children and adults.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for improving opportunities for hunting for Americans with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "88756ab2eeefc52fdbf58ffc80d6c75e314ae669787c28d4787d06a858f5b085"
+}

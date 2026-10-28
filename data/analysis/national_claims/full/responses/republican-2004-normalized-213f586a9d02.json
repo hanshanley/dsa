@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 314,
+      "generation_tps": 16.159710779189847,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1417,
+      "prompt_tps": 468.0046413961843,
+      "request_sha256": "92a26a3eb906d3b891583b876faefabb8a93ade0be585155c4b8424c00694792",
+      "seconds": 22.46979329106398,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the President's efforts to encourage volunteer service and civic involvement to strengthen communities and the nation, and to help people in need.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President called on all Americans to dedicate at least two years or 4,000 hours over the course of their lifetimes to serving others in 2002.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The USA Freedom Corps was created in 2002 to strengthen America's culture of service.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than 63 million Americans are answering the call to serve today.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of volunteers has increased by 4 million since 2002.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The new Citizens Corps is training people to respond to law enforcement and emergency needs in more than 1,300 communities across America.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Peace Corps enrollment is at its highest level in 28 years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 316,
+      "generation_tps": 16.21530989456738,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1899,
+      "prompt_tps": 491.9290010421737,
+      "request_sha256": "a42d9b3b11ca849face15d8ed87c57092a0480a261065e6cc9f904b101589302",
+      "seconds": 23.358860332984477,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the President's efforts to encourage volunteer service and civic involvement to strengthen communities and the nation, and to help people in need.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2002, the President called on all Americans to dedicate at least two years or 4,000 hours over the course of their lifetimes to serving others.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2002, the USA Freedom Corps was created to strengthen America's culture of service.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today more than 63 million Americans are answering the call to serve.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of volunteers has increased by 4 million since 2002.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The new Citizens Corps is training people to respond to law enforcement and emergency needs in more than 1,300 communities across America.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Peace Corps enrollment is at its highest level in 28 years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "92a26a3eb906d3b891583b876faefabb8a93ade0be585155c4b8424c00694792"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 333,
+      "generation_tps": 16.44140024814644,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1526,
+      "prompt_tps": 590.3189242387747,
+      "request_sha256": "74808c6d88b56d07671d371fba4f2d47c64fa4911a1da57422aec83802ebd348",
+      "seconds": 22.848497083876282,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. unilaterally withdrew from the nuclear agreement it signed with Iran in 2015, along with the UK, France, China, Russia and Germany.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iran has remained compliant with the terms of the nuclear agreement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unless the U.S. sanctions are offset by the European signatories, Iran will increase its nuclear stockpile beyond the limit set in the agreement.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. has claimed its aggression against Iran was predicated on preventing the country from developing nuclear weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Both the U.S. and Israel have nuclear weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A 2007 National Intelligence Assessment concluded Iran halted its nuclear weapons program in 2003.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The claim that Iran is developing nuclear weapons is an example of Washington\u2019s willingness to manipulate facts to create a pretext for war, similar to the Gulf of Tonkin and Iraq\u2019s alleged Weapons of Mass Destruction.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 333,
+      "generation_tps": 16.21115402981324,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2027,
+      "prompt_tps": 507.24295036545766,
+      "request_sha256": "ae73058bfc00c497702ffa398829ea665e2f0de9625b001400fa87a682ccf830",
+      "seconds": 24.549665416125208,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. unilaterally withdrew from the nuclear agreement it signed with Iran in 2015, along with the UK, France, China, Russia and Germany.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iran has remained compliant with the terms of the nuclear agreement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unless the U.S. sanctions are offset by the European signatories, Iran will increase its nuclear stockpile beyond the limit set in the agreement.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. has claimed its aggression against Iran was predicated on preventing the country from developing nuclear weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Both the U.S. and Israel have nuclear weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A 2007 National Intelligence Assessment concluded Iran halted its nuclear weapons program in 2003.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The claim that Iran is developing nuclear weapons is an example of Washington\u2019s willingness to manipulate facts to create a pretext for war, similar to the Gulf of Tonkin and Iraq\u2019s alleged Weapons of Mass Destruction.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "74808c6d88b56d07671d371fba4f2d47c64fa4911a1da57422aec83802ebd348"
+}

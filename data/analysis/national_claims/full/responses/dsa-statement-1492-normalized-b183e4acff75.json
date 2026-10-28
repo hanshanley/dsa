@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 417,
+      "generation_tps": 16.226180662273432,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1446,
+      "prompt_tps": 489.7777453662453,
+      "request_sha256": "06d9985a00361ede46f41cb7f013bc8f89ef42c909a338f39664085bfc913fa1",
+      "seconds": 28.66420495812781,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States government's role in the unfolding situation over the last two weeks has been substantial and extremely counterproductive.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States government's actions have served only to deepen political divisions and decrease the likelihood of a peaceful solution to the crisis.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump and Vice President Pence have expressed their full support for Juan Guaid\u00f3 as acting President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump and Vice President Pence are working tirelessly to organize other nations to support Juan Guaid\u00f3 as acting President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump is contemplating a military intervention in Venezuela.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US National Security Council is strongly considering an embargo on Venezuelan oil imports to the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A military intervention in Venezuela would have catastrophic consequences for the Venezuelan people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"An embargo on Venezuelan oil imports to the United States would have catastrophic consequences for the Venezuelan people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government is more interested in using Venezuela as a boogeyman to show the dangers of socialism than in playing a constructive role in resolving the crisis.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The consequences of the US government's rhetorical posturing are all too real for the Venezuelan people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 425,
+      "generation_tps": 16.089616235002588,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2031,
+      "prompt_tps": 475.8126750663923,
+      "request_sha256": "2595b45620abfef6576e248f184080dd99e2daa304de4b7d67df75788b166319",
+      "seconds": 30.6964570840355,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States government's role in the unfolding situation over the last two weeks has been substantial and extremely counterproductive.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States government's actions have served only to deepen political divisions and decrease the likelihood of a peaceful solution to the crisis.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump and Vice President Pence have expressed their full support for Juan Guaid\u00f3 as acting President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump and Vice President Pence are working tirelessly to organize other nations to do the same, supporting Juan Guaid\u00f3 as acting President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump is contemplating a military intervention in Venezuela.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US National Security Council is strongly considering an embargo on Venezuelan oil imports to the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A military intervention in Venezuela would have catastrophic consequences for the already suffering Venezuelan people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"An embargo on Venezuelan oil imports to the United States would have catastrophic consequences for the already suffering Venezuelan people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government is more interested in using Venezuela as a boogeyman to show the dangers of socialism than in playing a constructive role in resolving the crisis.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The consequences of this rhetorical posturing by the US government are all too real for the Venezuelan people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "06d9985a00361ede46f41cb7f013bc8f89ef42c909a338f39664085bfc913fa1"
+}

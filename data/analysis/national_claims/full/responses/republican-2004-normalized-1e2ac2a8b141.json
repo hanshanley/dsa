@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 231,
+      "generation_tps": 15.240287082739421,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1423,
+      "prompt_tps": 500.267902241391,
+      "request_sha256": "914647a3ddaac0ebdbdcf185ea04d5afcfbdbe7a182a71b8cfdab502224fe1c6",
+      "seconds": 18.013788832817227,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for President Bush's efforts to promote the work of America's faith-based and neighborhood charities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President established the Office of Faith-Based and Community Initiatives in the White House to coordinate federal, state, and local efforts to remove barriers preventing religiously affiliated groups from applying for government grants on an equal footing with secular organizations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government must not promote religious activity, advocate on behalf of any religion, or fund any organization that discriminates on the basis of religion when providing taxpayer-funded services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No organization should be disqualified from receiving federal funds simply because it displays religious symbols, has a statement of faith in its mission statement, or has a religious leader on its board.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 242,
+      "generation_tps": 16.31717821004916,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1822,
+      "prompt_tps": 493.57575506640336,
+      "request_sha256": "69965961e1c4fc48ebd5a2a5c8e6a772bef26fae0fa8f8f896653894007bb83b",
+      "seconds": 18.532993708038703,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's efforts to promote the generous and compassionate work of America's faith-based and neighborhood charities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush established the Office of Faith-Based and Community Initiatives in the White House to coordinate federal, state, and local efforts to tear down barriers that have prevented religiously affiliated groups from applying for government grants on an equal footing with secular organizations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government must not promote religious activity, advocate on behalf of any religion, or fund any organization that discriminates on the basis of religion when providing taxpayer-funded services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No organization should be disqualified from receiving federal funds simply because it displays religious symbols, has a statement of faith in its mission statement, or has a religious leader on its board.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "914647a3ddaac0ebdbdcf185ea04d5afcfbdbe7a182a71b8cfdab502224fe1c6"
+}

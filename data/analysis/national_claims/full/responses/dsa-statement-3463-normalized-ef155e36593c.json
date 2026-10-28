@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 408,
+      "generation_tps": 16.06277352869056,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1513,
+      "prompt_tps": 478.2899411230623,
+      "request_sha256": "d5ce625329ec21797c063358753d52ad71e6b08e5f27a24458a76379a131206a",
+      "seconds": 28.58096112520434,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Concerns for the erosion of the \u201cone country, two systems\u201d framework, losing judicial independence, and losing political and civil rights drove a million protesters to take to the street on June 9, 2019.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thousands of demonstrators blocked the areas where the government headquarters and legislative council are located when the bill was supposed to be debated in the legislative council.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The police used tear gas, rubber bullets, and bean bags to suppress the unarmed protesters, resulting in at least 80 injuries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite the large-scale protests, the government refused to make any compromises and smeared the occupy actions as riots.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The government decided to pause the legislation temporarily the day before another protest on June 16.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Two million people joined the rally to demand that the extradition bill be completely scrapped and the chief executive step down.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA stands in solidarity with the Hong Kong people, whose actions are legitimate and well-grounded.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA condemns the Hong Kong government for using violence and coercion to suppress the peaceful protesters.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA urges the Hong Kong government to respond positively to the Hong Kong peoples\u2019 demands.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 427,
+      "generation_tps": 16.09366823976648,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2089,
+      "prompt_tps": 501.46418418893415,
+      "request_sha256": "72f0abae3e605644b9c55e1be17014c13def13711ece9eb3a1d5a43b0549ffde",
+      "seconds": 30.712901124963537,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Concerns for the erosion of the \u201cone country, two systems\u201d framework, losing judicial independence, and losing political and civil rights drove a million protesters to take to the street on June 9, 2019.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three days after June 9, 2019, thousands of demonstrators blocked the areas where the government headquarters and legislative council are located when the bill was supposed to be debated in the legislative council.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To suppress the unarmed protesters, the police used tear gas, rubber bullets, and bean bags, resulting in at least 80 injuries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite the large-scale protests, the government refused to make any compromises and smeared the occupy actions as riots.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The government decided to pause the legislation temporarily the day before another protest on June 16.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Two million people joined the rally to demand that the extradition bill be completely scrapped and the chief executive step down.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA stands in solidarity with the Hong Kong people, whose actions are legitimate and well-grounded.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA condemns the Hong Kong government for using violence and coercion to suppress the peaceful protesters.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA urges the Hong Kong government to respond positively to the Hong Kong peoples\u2019 demands.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d5ce625329ec21797c063358753d52ad71e6b08e5f27a24458a76379a131206a"
+}

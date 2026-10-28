@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 259,
+      "generation_tps": 16.33749848757989,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1424,
+      "prompt_tps": 497.5276401624335,
+      "request_sha256": "c0f97b1157471e9d34493bfef3db3027a03661b272045d1e6462182f95f5fea6",
+      "seconds": 18.727792124962434,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The flight attendants\u2019 union called for a general strike this Saturday.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bargain struck includes less funding than was passed by Congress at the end of 2019.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA condemns this deal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A vote is likely to be held TODAY, Thursday February 14.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA urges all members to call the Congressional switchboard at (202) 224-3121 right away.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"DSA urges members of Congress to join DSAers Congresswomen Alexandria Ocasio Cortez and Rashida Tlaib and Congresswomen Ilhan Omar and Ayanna Pressley and VOTE NO.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 267,
+      "generation_tps": 15.376788034310326,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1851,
+      "prompt_tps": 495.36340562589635,
+      "request_sha256": "6b0c0784beb351b35fa69cc60ac483b4e36ffc814671bf640673423c024b05bb",
+      "seconds": 21.111387458164245,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The flight attendants\u2019 union called for a general strike this Saturday and has shown the power of organized workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bargain struck includes less funding than was passed by Congress at the end of 2019.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA condemns this deal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A vote is likely to be held TODAY, Thursday February 14.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA urges all members to call the Congressional switchboard at (202) 224-3121 right away.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"DSA urges members of Congress to join DSAers Congresswomen Alexandria Ocasio Cortez and Rashida Tlaib and Congresswomen Ilhan Omar and Ayanna Pressley and VOTE NO.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c0f97b1157471e9d34493bfef3db3027a03661b272045d1e6462182f95f5fea6"
+}

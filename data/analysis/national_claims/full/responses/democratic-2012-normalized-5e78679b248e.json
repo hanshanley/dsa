@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 358,
+      "generation_tps": 16.362937261519807,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1419,
+      "prompt_tps": 485.94072989174646,
+      "request_sha256": "9a7e2e3b54e8bf399c3593b09b2307aacafd214ec48eca0b8f80a99269f304fa",
+      "seconds": 24.810964291915298,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Obama helped school districts save more than 400,000 educator jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats honor the nation's teachers.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe listening to teachers is necessary for high-quality education for all children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President has laid out a plan to prevent more teacher layoffs while attracting and rewarding great teachers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The plan includes raising standards for teacher preparation programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The plan includes recognizing and rewarding good teaching.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The plan includes retaining good teachers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in carefully crafted evaluation systems that give struggling teachers a chance to succeed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in protecting due process if another teacher has to be put in the classroom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats recognize there is no substitute for a parent's involvement in their child's education.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 386,
+      "generation_tps": 16.185820600541255,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1945,
+      "prompt_tps": 502.94621651455793,
+      "request_sha256": "657e73b6ce06da7fb4d4e0312ef161bdaf9b4ed3d2359d9d8622f75178bb871f",
+      "seconds": 27.727228791918606,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama helped school districts save more than 400,000 educator jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats honor the nation's teachers, who do a heroic job for their students every day.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe that if high-quality education for all children is desired, people must listen to teachers who are on the front lines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President has laid out a plan to prevent more teacher layoffs while attracting and rewarding great teachers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The plan includes raising standards for the programs that prepare teachers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The plan includes recognizing and rewarding good teaching.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The plan includes retaining good teachers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in carefully crafted evaluation systems that give struggling teachers a chance to succeed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in protecting due process if another teacher has to be put in the classroom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats recognize there is no substitute for a parent's involvement in their child's education.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9a7e2e3b54e8bf399c3593b09b2307aacafd214ec48eca0b8f80a99269f304fa"
+}

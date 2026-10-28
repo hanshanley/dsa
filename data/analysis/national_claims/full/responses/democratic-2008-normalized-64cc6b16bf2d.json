@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 256,
+      "generation_tps": 15.9189487967835,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1357,
+      "prompt_tps": 437.10829875810487,
+      "request_sha256": "86dba9d689f15a8f7b609c8bc7114f9e782b8131ffc9e22c2442ff95c43b0603",
+      "seconds": 19.19622916704975,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for full self-government and self-determination for the people of Guam, American Samoa, the Northern Mariana Islands, and the Virgin Islands.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the right of the people of Guam, American Samoa, the Northern Mariana Islands, and the Virgin Islands to decide their future status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to seek input from Guam on relevant military matters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Acknowledgement that Pacific Island communities face unique health care challenges.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for strong economic development for all those who live under the U.S. flag.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for fair and equitable treatment under federal programs for all those who live under the U.S. flag.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 221,
+      "generation_tps": 15.989265969524785,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1781,
+      "prompt_tps": 458.37942392564537,
+      "request_sha256": "bf514584b3155503d071c54f7bc3eb2b97e15ec44d8ed2c5facd25e83fb0d555",
+      "seconds": 17.717365042073652,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for full self-government and self-determination for the people of Guam, American Samoa, the Northern Mariana Islands, and the Virgin Islands, and their right to decide their future status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to seek input from Guam on relevant military matters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Acknowledgement that Pacific Island communities face unique health care challenges.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for strong economic development for all those who live under the U.S. flag.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for fair and equitable treatment under federal programs for all those who live under the U.S. flag.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "86dba9d689f15a8f7b609c8bc7114f9e782b8131ffc9e22c2442ff95c43b0603"
+}

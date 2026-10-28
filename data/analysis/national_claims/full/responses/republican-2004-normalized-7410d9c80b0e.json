@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 424,
+      "generation_tps": 15.982092517578298,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1493,
+      "prompt_tps": 467.1872657216815,
+      "request_sha256": "d46bd618692844b092fc8cebffb251891661c7a4dc2b5596bddbf43d36a192a3",
+      "seconds": 29.735164999961853,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Lower taxes, passed by the Republican Congress, are stimulating development and investment in cities around the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"New homeownership opportunities are giving residents a stake in urban neighborhoods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Violent crime rates, including robberies and rapes, were down in 2003.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President is committed to cleaning up brownfields and making them ready for productive purposes, which is transforming once-crumbling communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Faith-Based Initiative is extending the work of religious and charitable groups that operate in cities \u2013 serving meals, helping the homeless, and providing mentors for children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The No Child Left Behind law is bringing new hope to parents and students in inner city schools.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush is building on the successes of Republican mayors who bring opportunity to inner cities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush is working with mayors and local leaders across America to ensure that homeland security funding provided by the Republican Congress is spent on shoring up the security of major cities and preparing first responders for any potential future attack.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Making America's cities places of opportunity and safety, attractive to citizens of all backgrounds, will ensure that urban centers remain vital and vibrant communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 423,
+      "generation_tps": 16.140071963873023,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2085,
+      "prompt_tps": 478.5194401892653,
+      "request_sha256": "d6cfd67fc0287dd597689a8514320cda2656a4096e8bb5863f96fb404abed9e4",
+      "seconds": 30.57540904218331,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Lower taxes, passed by the Republican Congress, are stimulating development and investment in cities around the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"New homeownership opportunities are giving residents a stake in urban neighborhoods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Violent crime rates, including robberies and rapes, were down in 2003.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President is committed to cleaning up brownfields and making them ready for productive purposes, which is transforming once-crumbling communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Faith-Based Initiative is extending the work of religious and charitable groups that operate in cities \u2013 serving meals, helping the homeless, and providing mentors for children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The No Child Left Behind law is bringing new hope to parents and students in inner city schools.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush is building on the successes of Republican mayors who bring opportunity to inner cities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush is working with mayors and local leaders across America to ensure that homeland security funding provided by the Republican Congress is spent on shoring up the security of major cities and preparing first responders for any potential future attack.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"By making America's cities places of opportunity and safety, attractive to citizens of all backgrounds, urban centers will remain vital and vibrant communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d46bd618692844b092fc8cebffb251891661c7a4dc2b5596bddbf43d36a192a3"
+}

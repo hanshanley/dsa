@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 443,
+      "generation_tps": 16.30184198696248,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1503,
+      "prompt_tps": 446.92273957440403,
+      "request_sha256": "80ccaf02f7bd703fe7e51c1210ada8654f604569d5a065f1e57f35409e590031",
+      "seconds": 30.548600541893393,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"American farm and ranch families embody hard work, risk-taking, love of the land, and love of the country.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Farming is the first industry of America, feeding, clothing, and increasingly providing energy for the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The success of American farmers and ranchers is essential to the success of the American economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush signed the 2002 Farm Bill with strong support from Republicans in Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush continues to pursue and enforce international trade agreements that affect farmers and ranchers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican policies are working.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The recently revitalized WTO Doha round negotiations will create new opportunities for U.S. farmers and ranchers by cutting foreign tariffs, expanding quotas for American products, and eliminating agricultural export subsidies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since 2001, the U.S. farm economy has enjoyed tremendous improvement and is in a position of historic strength.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Farmers' net cash income for 2003 was $63 billion, an 11.5 percent increase from 2000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Farmers' equity reached a record $1.16 trillion last year, putting American agriculture in its best financial health ever.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 463,
+      "generation_tps": 16.090266138322313,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2114,
+      "prompt_tps": 494.3668621679239,
+      "request_sha256": "89e274b6e2cac66f9f700e8ffe7927ef045f1ee5ee7ed6857b5608660707f08e",
+      "seconds": 33.066566583001986,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"American farm and ranch families embody hard work and risk-taking, love of the land and love of the country.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Farming is the first industry of America \u2013 the industry that feeds the country, the industry that clothes the country, and the industry that increasingly provides more of the country's energy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The success of America's farmers and ranchers is essential to the success of the American economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush signed the 2002 Farm Bill, passed with strong support from Republicans in Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush continues to pursue and enforce international trade agreements that affect farmers and ranchers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican policies are working.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The recently revitalized WTO Doha round negotiations will create new opportunities for U.S. farmers and ranchers by cutting foreign tariffs, expanding quotas for American products, and eliminating agricultural export subsidies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since 2001, the U.S. farm economy has enjoyed tremendous improvement and is today in a position of historic strength.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Farmers' net cash income for 2003 was $63 billion, an 11.5 percent increase from 2000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Farmers' equity reached a record $1.16 trillion last year, putting American agriculture in its best financial health ever.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "80ccaf02f7bd703fe7e51c1210ada8654f604569d5a065f1e57f35409e590031"
+}

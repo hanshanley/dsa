@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 382,
+      "generation_tps": 16.20103167433205,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1276,
+      "prompt_tps": 478.4821838949407,
+      "request_sha256": "7da4c61dad5389eab0f00a0ae40397142b8a7ce093423d729cc1414de6f9cc0f",
+      "seconds": 26.258559957845137,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The people of Sudan have inspired the world by rising up against a brutal dictatorship and steadfastly demanding a civilian-led government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Sudanese uprising achieved a historic victory in ending the 30-year rule of Omar al-Bashir in April.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sudan\u2019s military junta (the so-called Transitional Military Council) asserts its counter-revolutionary power and attempts to thwart the will of the Sudanese people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA stands in solidarity with the Sudanese people in their struggle for democracy, justice, dignity, and self-determination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA strongly condemns the violence unleashed by the ruling military junta, which has opened fire on peaceful demonstrators, killing more than 100.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The ruling military junta tossed many bodies into the Nile.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA condemns the governments of Saudi Arabia and the United Arab Emirates (UAE) for their counter-revolutionary role in shoring up Sudan\u2019s military.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The governments of Saudi Arabia and the United Arab Emirates (UAE) embolden Sudan\u2019s military\u2019s no-mercy strategy of lethal repression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 440,
+      "generation_tps": 16.089730721641565,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1826,
+      "prompt_tps": 497.9351891707782,
+      "request_sha256": "802a92f6d8b0ee13616752c91367e50938b1377f5e5728b85dcec9ed616d8b2c",
+      "seconds": 31.027345875045285,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The people of Sudan have inspired the world by rising up against a brutal dictatorship and steadfastly demanding a civilian-led government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Sudanese uprising achieved a historic victory in ending the 30-year rule of Omar al-Bashir in April.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sudan\u2019s military junta (the so-called Transitional Military Council) asserts its counter-revolutionary power and attempts to thwart the will of the Sudanese people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA stands in solidarity with the Sudanese people in their struggle for democracy, justice, dignity, and self-determination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA strongly condemns the appalling violence unleashed by the ruling military junta, which has opened fire on peaceful demonstrators, killing more than 100.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The ruling military junta tossed many of their bodies into the Nile.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA condemns the governments of Saudi Arabia and the United Arab Emirates (UAE) for their nefarious counter-revolutionary role in shoring up Sudan\u2019s military and emboldening its no-mercy strategy of lethal repression.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The governments of Saudi Arabia and the United Arab Emirates (UAE) embolden Sudan\u2019s military\u2019s no-mercy strategy of lethal repression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Sudanese uprising faced horrific repression, including massacres, torture, and rape.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7da4c61dad5389eab0f00a0ae40397142b8a7ce093423d729cc1414de6f9cc0f"
+}

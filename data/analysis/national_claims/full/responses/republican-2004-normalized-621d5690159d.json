@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 364,
+      "generation_tps": 16.306395833719165,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1512,
+      "prompt_tps": 484.4190616540424,
+      "request_sha256": "1f0da3e60c507d2364f84627e9634f68056573a5f7f0bbe6c442e611afb54c68",
+      "seconds": 25.454790666000918,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party favors aggressive, proactive measures to ensure no individual is discriminated against on the basis of race, national origin, gender, or other characteristics covered by civil rights laws.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party favors recruitment and outreach policies that cast the widest possible net so that the best qualified individuals are encouraged to apply for jobs, contracts, and university admissions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party believes in the principle of affirmative access \u2013 taking steps to ensure that disadvantaged individuals of all colors and ethnic backgrounds have the opportunity to compete economically and that no child is left behind educationally.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports a reasonable approach to Title IX that seeks to expand opportunities for women without adversely affecting men's athletics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has a strong record on civil rights enforcement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush is the first President to ban racial profiling by the federal government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party rejects preferences, quotas, and set-asides based on skin color, ethnicity, or gender, which the party believes perpetuate divisions and can lead people to question the accomplishments of successful minorities and women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 363,
+      "generation_tps": 16.289411232103934,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2044,
+      "prompt_tps": 521.5537763998457,
+      "request_sha256": "5289444b45f8ec0c709034729eee71385457ce1d189bb19dcc583a4abef7ccc8",
+      "seconds": 26.213659374974668,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party favors aggressive, proactive measures to ensure that no individual is discriminated against on the basis of race, national origin, gender, or other characteristics covered by civil rights laws.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party favors recruitment and outreach policies that cast the widest possible net so that the best qualified individuals are encouraged to apply for jobs, contracts, and university admissions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party believes in the principle of affirmative access \u2013 taking steps to ensure that disadvantaged individuals of all colors and ethnic backgrounds have the opportunity to compete economically and that no child is left behind educationally.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports a reasonable approach to Title IX that seeks to expand opportunities for women without adversely affecting men's athletics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has a strong record on civil rights enforcement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush is the first President to ban racial profiling by the federal government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party rejects preferences, quotas, and set-asides based on skin color, ethnicity, or gender, believing these perpetuate divisions and can lead people to question the accomplishments of successful minorities and women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1f0da3e60c507d2364f84627e9634f68056573a5f7f0bbe6c442e611afb54c68"
+}

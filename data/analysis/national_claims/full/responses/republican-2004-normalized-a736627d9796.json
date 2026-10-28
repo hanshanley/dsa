@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 264,
+      "generation_tps": 16.283785464824934,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1475,
+      "prompt_tps": 489.6926949858081,
+      "request_sha256": "fd8f3f11df0631be8ef5a001ef8670a862a575f70cbd2437a2ffb7d7d39ff7ee",
+      "seconds": 19.23755537508987,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Reconnaissance cameras, border patrol agents, and unmanned aerial flights have been increased at the border to better ensure immigrants enter the United States only through legal means that allow for verification of their identity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Border Patrol agents now have sweeping new powers to deport illegal aliens without first going through the process of allowing the illegal alien to have a hearing before an immigration judge.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to enforce the law while welcoming immigrants who enter America through legal avenues.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Courage, compassion, reverence, and integrity are values that endure.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Families, schools, and religious congregations are fundamental institutions that must remain strong in America.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to defend families, schools, and religious congregations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 265,
+      "generation_tps": 16.166594375773975,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1907,
+      "prompt_tps": 505.71372095893514,
+      "request_sha256": "25ef386b1fb4da3d0f730cddcd4fa599d9a2351066730ffa1f4edae75def91fc",
+      "seconds": 20.175178583944216,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Reconnaissance cameras, border patrol agents, and unmanned aerial flights have been increased at the border to better ensure that immigrants enter the United States only through legal means that allow for verification of their identity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Border Patrol agents now have sweeping new powers to deport illegal aliens without first having to go through the process of allowing the illegal alien to have a hearing before an immigration judge.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for enforcing the law while welcoming immigrants who enter America through legal avenues.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Courage, compassion, reverence, and integrity are values that endure.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Families, schools, and religious congregations are fundamental institutions that must remain strong in America.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to defend families, schools, and religious congregations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fd8f3f11df0631be8ef5a001ef8670a862a575f70cbd2437a2ffb7d7d39ff7ee"
+}

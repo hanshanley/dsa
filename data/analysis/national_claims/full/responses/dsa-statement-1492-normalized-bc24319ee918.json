@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 402,
+      "generation_tps": 16.359484894161323,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1443,
+      "prompt_tps": 472.5088583093648,
+      "request_sha256": "1e9a5575e858d7265c43fb3b0a4e29f78afbd9a7983813b415a2a9042cf384a3",
+      "seconds": 27.638022999977693,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The US government has taken a long series of unfortunate actions to destabilize Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump and other members of his administration have made reckless and worrying comments about the need for foreign military intervention in Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government has imposed financial sanctions against Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Financial sanctions against Venezuela are putting further constraints on the importation of desperately needed food and medicine into Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions preclude Venezuelan firms from access to US credit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions effectively eliminate the Venezuelan oil sector\u2019s capacity to maintain current levels of production.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Venezuelan oil sector\u2019s capacity to return to pre-2015 levels is eliminated by the US government\u2019s sanctions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Venezuela depended heavily on oil exports to fund the importation of basic goods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions against Venezuela\u2019s oil sector are tantamount to direct sanctions against the Venezuelan people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic security of the Venezuelan people grows more precarious by the week.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 16.38656382322389,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2013,
+      "prompt_tps": 512.8262775166908,
+      "request_sha256": "54b7495ddd6cb04eefb7f18e0e059f13a750e133a3ba88f7a97bd56026ae8f06",
+      "seconds": 30.421405625063926,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The US government\u2019s recent actions to destabilize Venezuela are only the most recent in a long series of unfortunate actions it has taken over the past several years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump and other members of his administration have made reckless and worrying comments about the need for foreign military intervention in Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government has imposed financial sanctions against Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"These financial sanctions against Venezuela are putting further constraints on the importation of desperately needed food and medicine into Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions preclude Venezuelan firms from access to US credit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions effectively eliminate the Venezuelan oil sector\u2019s capacity to maintain current levels of production.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions effectively eliminate the Venezuelan oil sector\u2019s capacity to return to pre-2015 levels, which were more than twice as high as current levels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Venezuela depended heavily on oil exports to fund the importation of basic goods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions against Venezuela\u2019s oil sector are tantamount to direct sanctions against the Venezuelan people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic security of the Venezuelan people grows more precarious by the week.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 422,
+      "generation_tps": 16.36695208230452,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2559,
+      "prompt_tps": 528.3137766496404,
+      "request_sha256": "e45c8f79d6758c2cf73b210b2a876020d179e6a19de71d5ab2c11f13335991e2",
+      "seconds": 30.637894625077024,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The US government\u2019s recent actions to destabilize Venezuela are only the most recent in a long series of unfortunate actions it has taken over the past several years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump and other members of his administration have made reckless and worrying comments about the need for foreign military intervention in Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government has imposed financial sanctions against Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Financial sanctions against Venezuela are putting further constraints on the importation of desperately needed food and medicine into Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions preclude Venezuelan firms from access to US credit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions effectively eliminate the Venezuelan oil sector\u2019s capacity to maintain current levels of production.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions effectively eliminate the Venezuelan oil sector\u2019s capacity to return to pre-2015 levels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Venezuela depended heavily on oil exports to fund the importation of basic goods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The US government\u2019s sanctions against Venezuela\u2019s oil sector are tantamount to direct sanctions against the Venezuelan people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic security of the Venezuelan people grows more precarious by the week.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1e9a5575e858d7265c43fb3b0a4e29f78afbd9a7983813b415a2a9042cf384a3"
+}

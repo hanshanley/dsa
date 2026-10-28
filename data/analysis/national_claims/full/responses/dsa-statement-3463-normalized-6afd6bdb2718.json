@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 506,
+      "generation_tps": 16.006771285889986,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1269,
+      "prompt_tps": 459.45294573030526,
+      "request_sha256": "7bc2a112b6a1990c52209d2fbc202cf21124aca789442a528801c86b1c1a8b1a",
+      "seconds": 34.38770008296706,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America strongly supports the Hong Kong peoples\u2019 protests against the extradition bill.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The extradition bill would repress political, social, and labor activism in Hong Kong.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The extradition bill would endanger the political and civil rights of citizens in Hong Kong.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"In February 2019, the Hong Kong government proposed revisions to the Fugitive Offenders and Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Fugitive Offenders and Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill is commonly referred to as the extradition bill in the media.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"If passed, the extradition bill would allow the Hong Kong government to send criminal suspects, regardless of nationality and residential status, to countries with which the Hong Kong government has no extradition agreement.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The extradition bill would allow the Hong Kong government to send criminal suspects to China.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"China is an authoritarian regime without fair trials and rules of law.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"It is believed that the extradition bill has been imposed by the Chinese government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The extradition bill makes the Hong Kong people and foreigners living in the city worried of political abuses of the bill.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Political, social, and labor activists fear that the extradition bill would be turned into a tool of repression of their activism by the Chinese government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Chinese government is notorious for suppressing dissidents and violating human rights.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 354,
+      "generation_tps": 16.160222458425135,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1943,
+      "prompt_tps": 498.41276825086777,
+      "request_sha256": "3d694ad8b8d7d1a52e4e2415f3ef68de8396a6f3bd56fe2601f0851e1a0a12db",
+      "seconds": 25.816583833890036,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America strongly supports the Hong Kong peoples\u2019 protests against the extradition bill, which would not only repress political, social, and labor activism in the city, but would also endanger the political and civil rights of the citizens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In February 2019, the Hong Kong government proposed revisions to the Fugitive Offenders and Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill, commonly referred to as the extradition bill in the media.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"If passed, the extradition bill would allow the Hong Kong government to send criminal suspects, regardless of nationality and residential status, to countries with which the Hong Kong government has no extradition agreement, including China.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"China is an authoritarian regime without fair trials and rules of law.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"It is believed that the extradition bill has been imposed by the Chinese government, making the Hong Kong people and foreigners living in the city worried of political abuses of the bill.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Political, social, and labor activists fear that the extradition bill would be turned into a tool of repression of their activism by the Chinese government, which is notorious for suppressing dissidents and violating human rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7bc2a112b6a1990c52209d2fbc202cf21124aca789442a528801c86b1c1a8b1a"
+}
