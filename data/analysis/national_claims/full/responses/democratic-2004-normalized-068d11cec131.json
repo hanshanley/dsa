@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 292,
+      "generation_tps": 15.881456386310862,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1498,
+      "prompt_tps": 431.3947220990276,
+      "request_sha256": "14f3c8c10897a0fb139123c8a566f07aaa30ee93f0e38c112106612bfa8af26a",
+      "seconds": 21.869559792103246,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party honors the central place of faith in the lives of people.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes the nation, communities, and lives are made stronger and richer by faith and acts of justice and mercy it inspires.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will strengthen the role of faith-based organizations in meeting challenges like homelessness and youth violence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will not allow public funds to be used to proselytize or discriminate.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party recognizes that disagreements will remain and disagreement should not mean disrespect.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party views diversity of views as a source of strength and welcomes all Americans who seek to build a stronger America.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party is committed to resolving differences in a spirit of civility, hope and mutual respect.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 309,
+      "generation_tps": 15.890152217370055,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1958,
+      "prompt_tps": 454.7700013126566,
+      "request_sha256": "f1454912b74e1c2896f6bdd2e265a0a5a2c0b8ab3bd69b70f15a0a3a95484f4b",
+      "seconds": 23.762524499790743,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party honors the central place of faith in the lives of people.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Like the Founders, the Democratic Party believes the nation, communities, and lives are made vastly stronger and richer by faith and the countless acts of justice and mercy it inspires.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will strengthen the role of faith-based organizations in meeting challenges like homelessness, youth violence, and other social problems.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will not allow public funds to be used to proselytize or discriminate.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party recognizes that disagreements will remain and believes disagreement should not mean disrespect.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party views diversity of views as a source of strength and welcomes into its ranks all Americans who seek to build a stronger America.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party is committed to resolving its differences in a spirit of civility, hope and mutual respect.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "14f3c8c10897a0fb139123c8a566f07aaa30ee93f0e38c112106612bfa8af26a"
+}

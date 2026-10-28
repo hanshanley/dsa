@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 391,
+      "generation_tps": 16.43924801766348,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1628,
+      "prompt_tps": 589.424571907704,
+      "request_sha256": "d6a84fb9e1395319ee6e0f32c6725167cde9bf23489db83ad925772290cb801c",
+      "seconds": 26.555899875005707,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America's vision of democratic socialism is partial and speculative.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The specific contours of a future democratic socialist society will be democratically determined by those who live in it.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America members will disagree on specific aspects of their vision of democratic socialism.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under capitalism, a small, largely unaccountable group of corporate executives makes fundamental decisions about the management of companies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under capitalism, corporate executives have the power to determine how most people spend the majority of their waking hours.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under capitalism, corporate executives have the right to fire anyone for basically any reason.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under democratic socialism, the authoritarian system of corporate management would be replaced with economic democracy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economic democracy means expanding democracy beyond the election of political officials to include the democratic management of all businesses by the workers who comprise them and by the communities in which they operate.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The fight for democratic socialism is the fight for radical democracy and the freedom of all people to determine all aspects of their lives to the greatest extent possible.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 435,
+      "generation_tps": 16.413335351544813,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2187,
+      "prompt_tps": 631.0033481797441,
+      "request_sha256": "82deba577177c1c299beb0a15db7d7cd5d87a7e2d7b757ef120b8ebc41109970",
+      "seconds": 29.978990958072245,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America's vision of democratic socialism is necessarily partial and speculative, and is not intended as a blueprint for a democratic socialist society.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The specific contours of the future to which they aspire will be democratically determined not by the Democratic Socialists of America, but by those who live in it.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America members will\u2014and should\u2014disagree on specific aspects of their vision of democratic socialism.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under capitalism, a small, largely unaccountable group of corporate executives makes fundamental decisions about the management of a company comprised of thousands of people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under capitalism, corporate executives have the power to determine how most people spend the lion\u2019s share of their waking hours.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under capitalism, corporate executives have the right to fire anyone for basically any reason, no matter how arbitrary.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under democratic socialism, this authoritarian system of corporate management would be replaced with economic democracy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economic democracy means expanding democracy beyond the election of political officials to include the democratic management of all businesses by the workers who comprise them and by the communities in which they operate.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The fight for democratic socialism is the fight for radical democracy, the freedom of all people to determine all aspects of their lives to the greatest extent possible.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d6a84fb9e1395319ee6e0f32c6725167cde9bf23489db83ad925772290cb801c"
+}

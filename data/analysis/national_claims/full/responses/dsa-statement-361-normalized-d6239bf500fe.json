@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 332,
+      "generation_tps": 16.024553348107847,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1204,
+      "prompt_tps": 416.3364989531575,
+      "request_sha256": "156e645f51dc138ad3263efe86387d5144f39fb4d82fe3f2786c1590e7dc5951",
+      "seconds": 23.620247000129893,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The National Political Committee of the Democratic Socialists of America stands in solidarity with Dr. Cornel West, Rev. Osagyefo Uhuru Sekou, and other activists arrested in Ferguson, MO on Aug. 10 demanding justice for Michael Brown.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America urges that the charges against those arrested in Ferguson, MO on Aug. 10 be dismissed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America urges that all police who murder African Americans be charged and tried for their crimes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America urges that police throughout the United States protect, not assault, black youth and black communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America urges that structural racism be dismantled in all its aspects.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America continues to participate actively in #BlackLivesMatter.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America stands in solidarity with those fighting for social and racial justice in the United States and around the globe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 340,
+      "generation_tps": 15.981331329273031,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1704,
+      "prompt_tps": 447.5976643309439,
+      "request_sha256": "989c612457bc039736d0b71d27312af9013c9838eb0825262731634048af0837",
+      "seconds": 25.091866333968937,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The National Political Committee of the Democratic Socialists of America stands in solidarity with Honorary Co-Chair Dr. Cornel West, Rev. Osagyefo Uhuru Sekou and other activists arrested in Ferguson, MO on Aug. 10 demanding justice for Michael Brown.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America urges that the charges against those arrested in Ferguson, MO on Aug. 10 be dismissed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America urges that all police who murder African Americans be charged and tried for their crimes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America urges that police throughout the United States protect, not assault, black youth and black communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America urges that structural racism be dismantled in all its aspects.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America continues to participate actively in #BlackLivesMatter.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America stands in solidarity with those fighting for social and racial justice in the United States and around the globe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "156e645f51dc138ad3263efe86387d5144f39fb4d82fe3f2786c1590e7dc5951"
+}

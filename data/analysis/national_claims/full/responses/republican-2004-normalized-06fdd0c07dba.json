@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 481,
+      "generation_tps": 15.998992340995066,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1600,
+      "prompt_tps": 449.0674798832159,
+      "request_sha256": "1eba05fc7bf57b09cafc4b58755a2edc498d6ecaccb6aad609129e4d35018ab4",
+      "seconds": 33.63685275008902,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Enemies of the United States are determined to acquire and use biological and chemical weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Terrorists may use genetically engineered bioweapons incorporating anthrax, ebola, smallpox, sarin, or ricin.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Such weapons are capable of inflicting grievous harm on any nation caught unprepared.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President George W. Bush made bolstering the nation's defenses against bioterrorism a central focus of his Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal bioterrorism budget increased by more than 1,600 percent, from $294 million in 2001 to $5.2 billion in 2004.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bioterror research expanded by more than 3,100 percent, from $53 million in 2001 to $1.7 billion in 2005.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The size of the Strategic National Stockpile of vaccines and countermeasures increased by 50 percent since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"More than $5.5 billion was secured to enhance the stockpile and to encourage the development of new vaccines and countermeasures.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"President Bush's commitment to building up the biological defenses of the United States has made the nation less vulnerable to bioterrorism than it was three years ago.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"President Bush's continuing commitment to implement further biodefense projects holds the promise of an even more secure future.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 490,
+      "generation_tps": 15.929566910851822,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2249,
+      "prompt_tps": 476.6512505550993,
+      "request_sha256": "290c826b0575fa183201e16b01796f714b7b1045e0c0e8f3b76e833fb7b4cc33",
+      "seconds": 35.48970724991523,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Enemies of the United States are determined to acquire and use biological and chemical weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Terrorists may use genetically engineered bioweapons that incorporate anthrax, ebola, smallpox, sarin, or ricin.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Such weapons are capable of inflicting grievous harm on any nation caught unprepared.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President George W. Bush made bolstering the nation's defenses against bioterrorism a central focus of his Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal bioterrorism budget increased by more than 1,600 percent, from $294 million in 2001 to $5.2 billion in 2004.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bioterror research expanded by more than 3,100 percent, from $53 million in 2001 to $1.7 billion in 2005.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The size of the Strategic National Stockpile of vaccines and countermeasures increased by 50 percent since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"More than $5.5 billion was secured to enhance the stockpile and to encourage the development of new vaccines and countermeasures.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"President Bush's commitment to building up the biological defenses of the United States has made the nation less vulnerable to the threat of bioterrorism than it was three years ago.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"President Bush's continuing commitment to implement further biodefense projects holds the promise of an even more secure future.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1eba05fc7bf57b09cafc4b58755a2edc498d6ecaccb6aad609129e4d35018ab4"
+}

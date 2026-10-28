@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 329,
+      "generation_tps": 16.075001265180166,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1424,
+      "prompt_tps": 500.2535813343386,
+      "request_sha256": "8332e52d70b937fa6eaf80353553250cd8473b687bd639d3f6eab846c9f29732",
+      "seconds": 23.322539207991213,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's continued strong leadership in intelligence reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sharing of the guiding principles for reform that President Bush has laid out.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to increasing both the quality and quantity of human intelligence collection to disrupt terrorist attacks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to investing more in technical intelligence capabilities to stay ahead of enemies' changing communications technology and tactics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to ensuring the most effective and coordinated use of intelligence resources and personnel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for President Bush's request to Congress to create the position of a National Intelligence Director to be appointed by the President with the advice and consent of the Senate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The National Intelligence Director will serve as the President's principal intelligence advisor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The National Intelligence Director will oversee the foreign and domestic activities of the intelligence community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 390,
+      "generation_tps": 16.045917518332235,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1921,
+      "prompt_tps": 454.20503182149605,
+      "request_sha256": "e3fa59d2617c314213ace4a904a0f821726fbc9a5c2b8860df95dee5964abc2d",
+      "seconds": 28.545186250004917,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's continued strong leadership in intelligence reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sharing the guiding principles for reform that President Bush has laid out.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to increasing both the quality and quantity of human intelligence collection to disrupt terrorist attacks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to investing more in technical intelligence capabilities so that the U.S. stays ahead of enemies' changing communications technology and tactics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to ensuring the most effective and coordinated use of intelligence resources and personnel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for President Bush's request to Congress to create the position of a National Intelligence Director to be appointed by the President with the advice and consent of the Senate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The National Intelligence Director will serve as the President's principal intelligence advisor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The National Intelligence Director will oversee the foreign and domestic activities of the intelligence community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"It is essential that people in government responsible for defending the U.S. and countering terrorism have the best possible information to make the best decisions about the safety of the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8332e52d70b937fa6eaf80353553250cd8473b687bd639d3f6eab846c9f29732"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 181,
+      "generation_tps": 16.325615575405568,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1357,
+      "prompt_tps": 427.8168210994289,
+      "request_sha256": "63a24ec80dc62194ca03456afbf15a389e8af76eb74ed801f37ef089459ab3eb",
+      "seconds": 14.267727124970406,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America call on the Chinese government to immediately release all the detained labor activists.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America call on the Chinese government to stop suppressing labor activists, labor organizations and civil society organizations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America call on the Chinese government to respect and protect the development and freedom of civil society as prescribed by China\u2019s Constitution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Democratic Socialists of America supports universal human and labor rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 201,
+      "generation_tps": 16.26420074833472,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1706,
+      "prompt_tps": 470.5411357545813,
+      "request_sha256": "280bc4f8619d32ed6c1492fa29d11edd3d6b3a26b7b90cde928332c664d359ee",
+      "seconds": 15.993447625078261,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America, as an organization that supports universal human and labor rights, calls on the Chinese government to immediately release all the detained labor activists.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1, 2]},{\"claim_text\":\"The Democratic Socialists of America calls on the Chinese government to stop suppressing labor activists, labor organizations and civil society organizations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America calls on the Chinese government to respect and protect the development and freedom of civil society as prescribed by China\u2019s Constitution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Democratic Socialists of America supports universal human and labor rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "63a24ec80dc62194ca03456afbf15a389e8af76eb74ed801f37ef089459ab3eb"
+}

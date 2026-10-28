@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 459,
+      "generation_tps": 16.54343765410784,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1359,
+      "prompt_tps": 455.167234476624,
+      "request_sha256": "097d3adbdc59c73e91501a75be7616a42d9e185d2bcf066f889c13be56be0c60",
+      "seconds": 30.740568541921675,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America grieves the loss of the lives of nine people who were leading activists and mentors within the Emanuel African Methodist Episcopal Church and the Charleston community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America expresses solidarity with the members of the Charleston AME church and the larger Black community of Charleston.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Cynthia Hurd, Susie Jackson, Ethel Lance, Reverend DePayne Middleton-Doctor, Reverend and State Senator Clementa Pickney, Tywanza Sanders, Reverend Daniel Simmons, Sr., Reverend Sharonda Singleton and Myran Thompson were victims.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The shooting was perpetrated by a 21-year-old white man.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The shooting was shocking due to the massive loss of life and the murderer\u2019s use of hospitality to enter the historic Charleston AME Church.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Charleston AME Church, since its founding in 1816, has served as a safe haven and movement center for Charleston\u2019s Black community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The original Charleston AME Church was burned to the ground by the white community in 1822 after plans for a massive slave revolt by Denmark Vesey and other church activists were leaked to authorities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The murder of today\u2019s parishioners is accurately described as an act of white racist terror.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The choice of the Charleston AME Church as the site of the murder was unlikely to have been accidental.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 481,
+      "generation_tps": 16.501608885277466,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1986,
+      "prompt_tps": 484.80762187298944,
+      "request_sha256": "f01a0a82c1701eb69e830db5ba89c0526a2320e4d2bb91fe791eae1435a6e289",
+      "seconds": 33.25483679189347,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America grieves the loss of the lives of nine innocent human beings who were all leading activists and mentors within the Emanuel African Methodist Episcopal Church and the larger Charleston community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America expresses solidarity with the members of the Charleston AME church and the larger Black community of Charleston.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The lives and names of Cynthia Hurd, Susie Jackson, Ethel Lance, Reverend DePayne Middleton-Doctor, Reverend and State Senator Clementa Pickney, Tywanza Sanders, Reverend Daniel Simmons, Sr., Reverend Sharonda Singleton and Myran Thompson must not be forgotten.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The shooting was perpetrated by a 21-year-old white man.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The shooting was shocking not only in the massive loss of life but also in the murderer\u2019s use of the hospitality of a prayer group to enter the historic Charleston AME Church.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Charleston AME Church, since its founding in 1816, has served as a safe haven and movement center for Charleston\u2019s Black community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The original Charleston AME Church was burned to the ground by the white community in 1822 once the plans of Denmark Vesey and other church activists for a massive slave revolt were leaked to the authorities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The murder of today\u2019s parishioners is accurately described as an act of white racist terror.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The choice of the site of this heinous act, the Charleston AME Church, was unlikely to have been accidental.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "097d3adbdc59c73e91501a75be7616a42d9e185d2bcf066f889c13be56be0c60"
+}

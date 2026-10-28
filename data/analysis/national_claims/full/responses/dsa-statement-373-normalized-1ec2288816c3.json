@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 166,
+      "generation_tps": 16.55335478502622,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1401,
+      "prompt_tps": 480.4546384016209,
+      "request_sha256": "5065242daeebd86520c609e003058d7b5406c9adc2026022ef6346e6ae5756a9",
+      "seconds": 12.95458974991925,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA celebrates the coming end of more than fifty years of U.S. efforts to isolate Cuba diplomatically.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will join with others to pressure Congress to end the inhumane and counterproductive economic embargo.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration is working to restore diplomatic relations with Cuba.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"An improvement in the human condition, even if limited, is a victory for social justice.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 150,
+      "generation_tps": 16.547240862440226,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1735,
+      "prompt_tps": 489.60951367119736,
+      "request_sha256": "97e9ac8e19322d20fff01a7d779dc236ecf97d6f79ad403f494b89375fa7fc8d",
+      "seconds": 12.618256540969014,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA celebrates the coming end of more than fifty years of U.S. efforts to isolate Cuba diplomatically.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will join with others to pressure Congress to end the inhumane and counterproductive economic embargo.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration is working to restore diplomatic relations with Cuba, for an improvement in the human condition, even if limited, is a victory for social justice.\",\n\"claim_types\":[\"factual_assertion\",\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5065242daeebd86520c609e003058d7b5406c9adc2026022ef6346e6ae5756a9"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 423,
+      "generation_tps": 16.54905982959963,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1538,
+      "prompt_tps": 467.3861059629308,
+      "request_sha256": "96054ad032d5a0c2bb2c491948779caa748612183492b9c535732d8b7a285c74",
+      "seconds": 28.861552708083764,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush led an effort to merge 22 separate government entities into the Department of Homeland Security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Department of Homeland Security has the primary mission of keeping America safe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congress passed legislation enacting President Bush's plan to create the Department of Homeland Security after the American people returned control of the Senate to Republicans in the 2002 mid-term elections.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush and Congress have nearly tripled homeland security funding since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the efforts of President Bush and Republicans in Congress to keep the homeland safe by taking action on multiple fronts, all aimed at stopping terrorists before they strike.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The FBI has been refocused to track down terrorists before they attack.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The Treasury Department is leading the effort to find and eliminate sources of terrorist financing around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The United States and its allies have designated 345 terrorist-related entities since September 11, 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"More than $139 million in terrorist assets in more than 1,400 accounts worldwide have been frozen since September 11, 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 432,
+      "generation_tps": 16.501310947422926,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2129,
+      "prompt_tps": 516.3450658983381,
+      "request_sha256": "4602c891fb17937de6d3c0d615d5e7f733329ebf394094301480fde89e50f456",
+      "seconds": 30.313066832954064,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush led an effort to merge 22 separate government entities into the new Department of Homeland Security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Department of Homeland Security has the primary mission of keeping America safe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congress passed legislation enacting President Bush's plan to create the Department of Homeland Security after the American people returned control of the Senate to Republicans in the 2002 mid-term elections.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush and Congress have nearly tripled homeland security funding since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the efforts of President Bush and Republicans in Congress to keep the homeland safe by taking action on multiple fronts, all aimed at stopping terrorists before they strike.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The FBI has been refocused to track down terrorists before they attack.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The Treasury Department is now leading the effort to find and eliminate sources of terrorist financing around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Since September 11, 2001, the United States and its allies have designated 345 terrorist-related entities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Since September 11, 2001, the United States and its allies have frozen more than $139 million in terrorist assets in more than 1,400 accounts worldwide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "96054ad032d5a0c2bb2c491948779caa748612183492b9c535732d8b7a285c74"
+}

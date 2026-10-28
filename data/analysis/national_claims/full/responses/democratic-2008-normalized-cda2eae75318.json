@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 16.1555577344617,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1510,
+      "prompt_tps": 443.15624788279337,
+      "request_sha256": "f54321333ccb36b228520a9f9e5a99e739bb8767396cdf0784518b5ce0551374",
+      "seconds": 27.866854083025828,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Many Americans once worked 40 hours a week for 40 years for a single employer who provided pay to support a family, health insurance, and a pension.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, Americans change jobs more frequently than ever and compete against workers around the world for pay and benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, in the majority of families, all parents work.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Millions of working Americans are members of a new \\\"sandwich generation,\\\" playing dual roles as working parents and working children, responsible for their kids and their aging mothers and fathers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Members of the \\\"sandwich generation\\\" are working longer hours than ever while meeting a new and growing set of caregiving responsibilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Government policies, many designed in the New Deal era, have not kept up with the new economy and the changing nature of people's lives.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats believe it is time for policies and expectations to catch up with the new economy and the changing nature of people's lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats support modernizing policies from health care to pensions, from unemployment insurance to paid leave to provide working Americans the tools they need to meet new realities and challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 397,
+      "generation_tps": 16.176056449689128,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2073,
+      "prompt_tps": 477.8653779400199,
+      "request_sha256": "c5d7718ebd06b0578f237f97c727358a9b21fc949bb955240e5592e693d3ccc0",
+      "seconds": 28.890372874913737,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Many Americans once worked 40 hours a week for 40 years for a single employer who provided pay to support a family, health insurance, and a pension.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, Americans change jobs more frequently than ever and compete against workers around the world for pay and benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, in the majority of families, all parents work.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Millions of working Americans are members of a new \\\"sandwich generation,\\\" playing dual roles as working parents and working children, responsible for their kids and their aging mothers and fathers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Members of the \\\"sandwich generation\\\" are working longer hours than ever while meeting a new and growing set of caregiving responsibilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Government policies, many designed in the New Deal era, have not kept up with the new economy and the changing nature of people's lives.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats believe it is time for policies and expectations to catch up with the new economy and the changing nature of people's lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats support modernizing policies from health care to pensions, from unemployment insurance to paid leave in order to provide working Americans the tools they need to meet new realities and challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f54321333ccb36b228520a9f9e5a99e739bb8767396cdf0784518b5ce0551374"
+}

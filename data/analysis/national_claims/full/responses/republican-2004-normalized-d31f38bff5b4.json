@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 458,
+      "generation_tps": 15.938458225721995,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1510,
+      "prompt_tps": 435.76344245387185,
+      "request_sha256": "a6819dcbb6b10d23ad9b3c5dd754db1979af96650167cf245be00229b72b7a15",
+      "seconds": 32.211304917000234,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush has increased basic pay for servicemembers by nearly 21 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many servicemembers have seen increases exceeding 21 percent in pay.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The increase in basic salary and payments for food and housing has reached nearly 30 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans hail the increases in pay, as well as the funding of permanent increases for the Family Separation Allowance and Imminent Danger Pay in this year's Defense Appropriations Act.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Until the mid-1990s, servicemembers living off-base were expected to pay 15 percent of their housing costs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The cost of housing for servicemembers living off-base grew to almost 20 percent by the mid-1990s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans applaud the President and the Republican Congress for ensuring that out-of-pocket housing expenses will be eliminated by the end of 2005.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"By the end of 2005, the average servicemember living off-base will have all basic housing costs covered.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush and the Republican Congress have increased funds for defense health programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush and the Republican Congress have increased funds to improve medical services for Ready Reserve members and their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 476,
+      "generation_tps": 15.86698537310304,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2136,
+      "prompt_tps": 480.85421860894115,
+      "request_sha256": "a43ac368d1de2e657f46559c542e0e01dd7236fec381114550701a1193ee1335",
+      "seconds": 34.45215158397332,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Supported by the Republican Congress, President Bush has increased basic pay by nearly 21 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many servicemembers have seen increases exceeding 21 percent in pay.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The increase in basic salary and payments for food and housing has reached nearly 30 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans hail the increases in pay, as well as the action of the President and the Republican Congress in this year's Defense Appropriations Act to fund permanent increases for the Family Separation Allowance and Imminent Danger Pay.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Until the mid-1990s, servicemembers who lived off-base were expected to pay 15 percent of their housing costs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In reality, the cost of housing for servicemembers living off-base grew to almost 20 percent by the mid-1990s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans applaud the leadership of the President and the Republican Congress for ensuring that by the end of 2005, out-of-pocket expenses will be eliminated.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"By the end of 2005, the average servicemember who lives off-base will have all basic housing costs covered.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush and the Republican Congress have increased funds for defense health programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush and the Republican Congress have increased funds to improve medical services for Ready Reserve members and their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a6819dcbb6b10d23ad9b3c5dd754db1979af96650167cf245be00229b72b7a15"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 261,
+      "generation_tps": 16.577811467775053,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1459,
+      "prompt_tps": 479.39912461084884,
+      "request_sha256": "bce72274d9c4e6f1503d091da225288aa3f11d4d30566a637b8fdac4f5415a18",
+      "seconds": 18.797554083168507,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA recognizes this as a time for true international solidarity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The democratic will of the Greek people will only be realized if grassroots social movements across Europe force their governments to abandon their support for European Union-enforced austerity policies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is particularly important to end the pro-austerity policies of the moderate left governments in Italy and France.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is most important to end the pro-austerity policies of the Christian Democratic-Social Democratic coalition government in Germany.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the Greek people rejected not just austerity, but the false alternative of the nationalist and fascist right.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Work will continue to bring similar triumphs to the United States and beyond.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 262,
+      "generation_tps": 16.57003784605244,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1888,
+      "prompt_tps": 509.9578866265938,
+      "request_sha256": "3c2308ca6bc49ea2e0cf00d5601536a947b51ba769aeafd7940991f3f1263616",
+      "seconds": 19.523789749946445,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA recognizes this as a time for true international solidarity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The democratic will of the Greek people will only be realized if grassroots social movements across Europe force their governments to abandon their support for European Union-enforced austerity policies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ending the pro-austerity policies of the moderate left governments in Italy and France is particularly important.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ending the pro-austerity policies of the Christian Democratic-Social Democratic coalition government in Germany is most important.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the Greek people rejected not just austerity, but the false alternative of the nationalist and fascist right.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Work will continue to bring similar triumphs to the United States and beyond.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bce72274d9c4e6f1503d091da225288aa3f11d4d30566a637b8fdac4f5415a18"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 325,
+      "generation_tps": 16.245608372571482,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1248,
+      "prompt_tps": 428.61965197204074,
+      "request_sha256": "1abb965620b8289f62031bbae7cbde36531166d4eaa3c98f11dcce6909b851aa",
+      "seconds": 22.926114624831825,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America expresses support for The Disability Integration Act (SB 2427).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Disability Integration Act (SB 2427) would ensure seniors and people with disabilities have the financial resources necessary to receive in home and community-based services as an alternative to institutionalization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Disability Integration Act (SB 2427) would stop states and insurance companies from denying seniors and people with disabilities the right to continue living in their communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes the Disability Integration Act (SB 2427) is part of a larger fight to secure basic civil rights for seniors and people with disabilities.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America views ensuring all people have the capacity to lead flourishing lives and participate as equal members of society as part of the struggle for genuine equality.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America views the fight for a society that enables people with disabilities to live good lives with dignity as a central component of its democratic socialist vision.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 340,
+      "generation_tps": 16.1635909108981,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1741,
+      "prompt_tps": 430.2319403846316,
+      "request_sha256": "f3dd47798e7f66ec9c51fbfe896bdbac339250d970a83a579e4f9b6a2ccf6ad0",
+      "seconds": 25.090692125028,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America expresses support for The Disability Integration Act (SB 2427).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Disability Integration Act (SB 2427) would ensure seniors and people with disabilities have the financial resources necessary to receive in home and community-based services as an alternative to institutionalization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Disability Integration Act (SB 2427) would stop states and insurance companies from denying seniors and people with disabilities the right to continue living in their communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes the Disability Integration Act (SB 2427) is important because it is part of a larger fight to secure basic civil rights for seniors and people with disabilities who have lacked them for so long.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes the struggle for genuine equality involves ensuring all people have the capacity to lead flourishing lives and to participate as equal members of society.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America views the fight for a society that enables people with disabilities to live good lives with dignity as a central component of its democratic socialist vision.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1abb965620b8289f62031bbae7cbde36531166d4eaa3c98f11dcce6909b851aa"
+}

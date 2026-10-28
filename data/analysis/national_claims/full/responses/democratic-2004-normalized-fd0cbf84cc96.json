@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 38,
+      "generation_tps": 17.520577406649984,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1280,
+      "prompt_tps": 428.70387346991305,
+      "request_sha256": "34b2a2bf581992b09a3ad89fef401997078269037dbedf844abc06f4b53f653e",
+      "seconds": 5.164654166903347,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The source believes in a particular America.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 38,
+      "generation_tps": 17.528414729042662,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1486,
+      "prompt_tps": 443.7150219384494,
+      "request_sha256": "f521dd54a74a7a11016445f41cc776f9789dcfd7a039b88de10a7ba1822d3a89",
+      "seconds": 5.52578558283858,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"The source believes in a particular America.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "34b2a2bf581992b09a3ad89fef401997078269037dbedf844abc06f4b53f653e"
+}

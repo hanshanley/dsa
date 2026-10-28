@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 414,
+      "generation_tps": 16.415331301737748,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1548,
+      "prompt_tps": 460.12478506976555,
+      "request_sha256": "7f82c522f74e0dab3158669932db2cff09d2366f0714a9e31e4ecf8738f3ea72",
+      "seconds": 28.59475295781158,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President signed the PATRIOT Act into law, giving law enforcement and intelligence agents tools to fight terror similar to those available for organized crime and drug trafficking.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The PATRIOT Act made it possible for law enforcement and intelligence agents to share information and coordinate efforts to prevent terrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The 9/11 Commission praised the PATRIOT Act's role in improving information sharing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since the PATRIOT Act was passed, four terrorist cells have been broken up inside the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since the PATRIOT Act was passed, more than 189 individuals have been convicted or pled guilty to terrorism-related offenses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush recognizes the critical role of America's firefighters, local law enforcement, and other first responders in protecting the homeland.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Hundreds of firefighters and police officers gave their lives on September 11, 2001, and will likely be first at the scene of any future attack.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The President and Congress have massively increased spending for the nation's first responders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The President and Congress have worked with governors, mayors, and tribal and local leaders to implement an integrated and federally supported approach to protecting communities.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 424,
+      "generation_tps": 16.460055496934295,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2130,
+      "prompt_tps": 484.39775403820863,
+      "request_sha256": "18dc2f7d6f0530934908df330c1411b027b751c00a563379daf24c8373bb2a22",
+      "seconds": 30.1666146251373,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President signed the PATRIOT Act into law, giving law enforcement and intelligence agents tools to fight terror that have long been available to fight organized crime and drug trafficking.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The PATRIOT Act made it possible for law enforcement and intelligence agents to share information and coordinate efforts to prevent terrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The 9/11 Commission rightly praised the PATRIOT Act's role in improving information sharing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since the PATRIOT Act was passed, four terrorist cells have been broken up inside the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since the PATRIOT Act was passed, more than 189 individuals have been convicted or pled guilty to terrorism-related offenses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush knows that America's firefighters, local law enforcement, and other first responders play a critical role in protecting the homeland.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Hundreds of firefighters and police officers gave their lives to help their fellow citizens on September 11, 2001, and will be first at the scene again should another attack ever come.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The President and Congress have massively increased spending for the nation's first responders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The President and Congress have worked with governors, mayors, and tribal and local leaders to implement an integrated and federally supported approach to protecting communities.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7f82c522f74e0dab3158669932db2cff09d2366f0714a9e31e4ecf8738f3ea72"
+}

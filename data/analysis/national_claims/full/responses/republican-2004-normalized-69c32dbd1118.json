@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.616758693464963,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1494,
+      "prompt_tps": 535.0980187257608,
+      "request_sha256": "9d86ea59a98fc178b9fab31df53f155e01bb75ebc777bc41d093320aaee558fc",
+      "seconds": 25.730389000149444,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans are guided by the conviction that no nation can build a safer, better world alone.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is committed to lasting institutions like the United Nations and the World Trade Organization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"International organizations can serve the cause of peace, but can never serve as a substitute for, or exercise a veto over, principled American leadership.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"American troops must never serve under United Nations command, as a matter of U.S. sovereignty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United Nations can provide a valuable forum for nations to peacefully resolve their differences.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United Nations can help monitor international agreements and organize international humanitarian assistance.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under Republican leadership, the United States will pay a fair, not disproportionate, share of dues to the United Nations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United Nations must continue to reform its management and take steps to eliminate waste, fraud, and abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"All funds that the U.S. contributes for operations, conferences, and peacekeeping should count against its United Nations dues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.575555462999095,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2043,
+      "prompt_tps": 576.0276696266706,
+      "request_sha256": "49f20510488cdb261cb90002139741f13eca35298b0a85901439c5cacf19bb5d",
+      "seconds": 26.54234724980779,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans are guided by the conviction that no nation can build a safer, better world alone.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is committed to lasting institutions like the United Nations and the World Trade Organization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"International organizations can serve the cause of peace, but can never serve as a substitute for, or exercise a veto over, principled American leadership.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"As a matter of U.S. sovereignty, American troops must never serve under United Nations command.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United Nations can provide a valuable forum for nations to peacefully resolve their differences.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United Nations can help monitor international agreements and organize international humanitarian assistance.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under Republican leadership, the United States will pay a fair, not disproportionate, share of dues to the United Nations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United Nations must continue to reform its management and take steps to eliminate waste, fraud, and abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"All funds that the U.S. contributes for operations, conferences, and peacekeeping should count against its United Nations dues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9d86ea59a98fc178b9fab31df53f155e01bb75ebc777bc41d093320aaee558fc"
+}

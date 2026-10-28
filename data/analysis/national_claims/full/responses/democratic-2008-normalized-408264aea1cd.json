@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 226,
+      "generation_tps": 16.67835960869992,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1417,
+      "prompt_tps": 706.6857461752578,
+      "request_sha256": "2a45d412ec28c5b92446211463253d8a01d07c51a1aa8816caaca86ed0fa1a81",
+      "seconds": 15.565630791941658,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"One in eight Americans lives in poverty today all across the United States, in cities, suburbs, and rural communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Most people living in poverty work but still cannot pay their bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nearly thirteen million people living in poverty are children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bobby Kennedy asked how the United States could allow shacks and poverty along the Mississippi Delta forty years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will not allow poverty to exist.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Poverty exists in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 237,
+      "generation_tps": 16.629272438069208,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1811,
+      "prompt_tps": 614.4432937857085,
+      "request_sha256": "c9870ec4922a2a6e2821194ec6682d23477f5797d4c8555c37369e76acd161d7",
+      "seconds": 17.208754500141367,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"One in eight Americans lives in poverty today all across the country, in cities, in suburbs, and in rural communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Most of the people who are poor work but still cannot pay their bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nearly thirteen million of the poor are children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bobby Kennedy asked how a country like the United States could allow shacks and poverty along the Mississippi Delta forty years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The most American answer is that the United States will not allow poverty to exist.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Poverty exists in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2a45d412ec28c5b92446211463253d8a01d07c51a1aa8816caaca86ed0fa1a81"
+}

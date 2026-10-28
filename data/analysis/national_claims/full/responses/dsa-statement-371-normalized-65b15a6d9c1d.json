@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 422,
+      "generation_tps": 16.16861933839869,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1329,
+      "prompt_tps": 431.4493168209419,
+      "request_sha256": "36fb6234022efdd0d4e291ad938589d0a9f2e212b4870dfb7b465c31dbb8ecd3",
+      "seconds": 29.190283000003546,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The U.S. government is neglecting the fate of the people of Puerto Rico when it suits the interests of powerful, wealthy bondholders who own Puerto Rico\u2019s debt obligations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alejandro Garcia Padilla contends that Puerto Rico must be able to renegotiate payment on its roughly $72 billion in debts to pull the island out of a \u201cdeath spiral\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America calls on all political parties in Puerto Rico, the U.S. Congress, and the Obama Administration to join together to develop a long-term plan that addresses the root causes of the crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. government should provide economic aid to help restructure Puerto Rico\u2019s government and public corporate debt so as to lower its debt burden and the costs of repayment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Refusing to consider policies to provide economic aid will guarantee severe austerity programs and brutal cuts in ordinary people\u2019s living standards.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Lowering the quality of life for ordinary Puerto Ricans aims to ensure that the wealthy holders of Puerto Rican debt are repaid.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The repayment crisis is in large part due to a long-term economic crisis caused by corporate disinvestment from the island.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The costs of restoring economic health to the island should be borne primarily by those who continued to profit during the crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 432,
+      "generation_tps": 16.11513623216587,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1919,
+      "prompt_tps": 462.5093009472589,
+      "request_sha256": "629afd46fc6087e72434e6d99b2d67207b58ecc5de372221ba370d8d0aef9888",
+      "seconds": 30.966299917083234,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. government is neglecting the fate of the people of Puerto Rico when it suits the interests of powerful, wealthy bondholders who own Puerto Rico\u2019s debt obligations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alejandro Garcia Padilla contends that to pull the island out of a \u201cdeath spiral,\u201d the Commonwealth must be able to renegotiate payment on its roughly $72 billion in debts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America calls on all political parties in Puerto Rico, the U.S. Congress, and the Obama Administration to join together to develop a long-term plan that addresses the root causes of the crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. government should provide economic aid to help restructure Puerto Rico\u2019s government and public corporate debt so as to lower its debt burden and the costs of repayment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"By refusing to consider such policies, political elites in Washington are guaranteeing that severe austerity programs will lead to brutal cuts in ordinary people\u2019s living standards.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Lowering the quality of life for ordinary Puerto Ricans aims to ensure that the wealthy holders of Puerto Rican debt are repaid.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The repayment crisis is in large part due to a long-term economic crisis caused by corporate disinvestment from the island.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The costs of restoring economic health to the island should be borne primarily by those who continued to profit during the crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "36fb6234022efdd0d4e291ad938589d0a9f2e212b4870dfb7b465c31dbb8ecd3"
+}

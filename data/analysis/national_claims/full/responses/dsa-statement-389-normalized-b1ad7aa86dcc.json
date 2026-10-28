@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 439,
+      "generation_tps": 16.17743193621026,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1399,
+      "prompt_tps": 454.9848855496976,
+      "request_sha256": "5ff3122490fa2375d3eb62a069ebb2fb6c8566bf252a9a2a53ba972903945ac5",
+      "seconds": 30.2208361660596,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2014, the U.S. Congress, led by Sen. Robert Menendez (D-NJ), passed a sanctions bill targeting Venezuelan officials by threatening to deny them visas and to seize their assets.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Activities around the U.S. embassy in Caracas leading up to the protest, and cables released by Wikileaks about U.S. plans in 2006, suggest that the 2014 sanctions action came in the midst of political violence and upheaval in Venezuela that was at least partly fomented by the U.S. government in an effort to undermine the elected government of Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In March 2015, President Obama issued EO 13692, an executive order declaring Venezuela a national security threat to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama admitted in a press conference that the declaration of Venezuela as a national security threat was a \\\"pro-forma\\\" exercise to justify the imposition of sanctions that would otherwise be illegal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama stated that Venezuela does not, in fact, pose a real threat to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Rubio engineered a deal to extend the sanctions another three years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no factual basis for calling Venezuela a threat to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no legal justification for the sanctions against Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 444,
+      "generation_tps": 16.445057251092965,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2006,
+      "prompt_tps": 462.7018876515769,
+      "request_sha256": "d72f40503d37da626f43b2644e0412b9c9e0c73811a8bbef18b52392fb3613f1",
+      "seconds": 31.344162959139794,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2014, the U.S. Congress, led by Sen. Robert Menendez (D-NJ), passed a sanctions bill that targeted Venezuelan officials by threatening to deny them visas and to seize their assets.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Activities around the U.S. embassy in Caracas leading up to the protest, and cables released by Wikileaks about U.S. plans in 2006, suggest that the 2014 sanctions action came in the midst of political violence and upheaval in Venezuela that was at least partly fomented by the U.S. government in an effort to undermine the elected government of Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In March 2015, President Obama issued EO 13692, an executive order declaring Venezuela a national security threat to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama admitted in a press conference that the declaration of Venezuela as a national security threat was a \\\"pro-forma\\\" exercise to justify the imposition of sanctions that would otherwise be illegal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama stated in a press conference that Venezuela does not, in fact, pose a real threat to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Rubio engineered a deal to extend the sanctions another three years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no factual basis for calling Venezuela a threat to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no legal justification for the sanctions against Venezuela.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5ff3122490fa2375d3eb62a069ebb2fb6c8566bf252a9a2a53ba972903945ac5"
+}

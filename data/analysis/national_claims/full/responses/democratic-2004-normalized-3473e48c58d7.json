@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 316,
+      "generation_tps": 16.48191269763613,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1487,
+      "prompt_tps": 475.69552178571087,
+      "request_sha256": "03008f02b2931b35813018b04d15dbb26521b5923c0350a535d1b19880730c02",
+      "seconds": 22.308909374987707,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party believes in a better America that is more equal and more free.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party believes in common service to the commonwealth.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party will restore the commitment to ethics in government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush has sought political advantage in driving people apart instead of searching for common ground to bring people together.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush has neglected the opportunity of most Americans, choosing to lavish resources on those who need them least.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush has rejected the American vision of greater equality, appointing judges more interested in rolling back rights than protecting them.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush has abandoned the tradition of asking Americans to meet shared challenges in a spirit of shared sacrifice during a time of war.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush has regularly governed for the benefit of special interests, not the public interest.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 320,
+      "generation_tps": 16.53111108910747,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1971,
+      "prompt_tps": 508.84150292421197,
+      "request_sha256": "8893dd1cd308735acf392a7a1ecd3e56065c4fd882b0d4a98e496d1822b51d18",
+      "seconds": 23.241123832995072,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party believes in a better America that is more equal and more free \u2013 more American.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party believes in common service to the commonwealth.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party will restore the commitment to ethics in government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush has sought political advantage in driving people apart instead of searching for common ground to bring people together.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush has neglected the opportunity of most Americans, choosing instead to lavish resources on those who need them least.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush has rejected the American vision of greater equality, appointing judges more interested in rolling back rights than protecting them.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush has abandoned the tradition of asking Americans to meet shared challenges in a spirit of shared sacrifice during a time of war.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush has regularly governed for the benefit of special interests, not the public interest.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "03008f02b2931b35813018b04d15dbb26521b5923c0350a535d1b19880730c02"
+}

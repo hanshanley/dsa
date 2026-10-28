@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 377,
+      "generation_tps": 15.882813986454723,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1482,
+      "prompt_tps": 426.2120558166543,
+      "request_sha256": "341be2a5ad9a261fe1901f9e7ed7bd71f957ee20974684eed2a13b12521b981b",
+      "seconds": 27.224321792135015,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Over 2 million patients in Puerto Rico receive care through Medicare, Medicare Advantage or Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sixty percent of Puerto Rico\u2019s population receives their care through Medicare, Medicare Advantage or Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Ricans pay the same Social Security and Medicare taxes as the fifty states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico\u2019s Medicaid program receives a 70 percent lower reimbursement rate compared to mainland states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A federal grant temporarily supplements the low Medicaid reimbursement rate in Puerto Rico, but this grant will soon expire.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring federal Medicaid reimbursement parity for Puerto Ricans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Access to quality health care is a right, not a privilege.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government has not adequately addressed serious environmental legacy problems stemming from U.S. military exercises in Puerto Rico.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There has been a decades-long pattern of delay and inaction regarding remediating environmental problems left by the U.S. Navy on the island of Vieques and elsewhere in Puerto Rico.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 352,
+      "generation_tps": 15.843627180605598,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2027,
+      "prompt_tps": 449.02946120888987,
+      "request_sha256": "5c008a99a9667efb1aa3bfdf77e705926c7cb70462bc66072f0a748dae00acbc",
+      "seconds": 26.74169333302416,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Sixty percent of Puerto Rico\u2019s population \u2013 over 2 million patients \u2013 receives their care through Medicare, Medicare Advantage or Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Ricans pay the same Social Security and Medicare taxes as the fifty states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico\u2019s Medicaid program receives a 70 percent lower reimbursement rate compared to mainland states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"This low Medicaid reimbursement rate is being temporarily supplemented by a federal grant that will soon expire.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring federal Medicaid reimbursement parity for Puerto Ricans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Access to quality health care is a right, not a privilege.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government has not adequately addressed the serious environmental legacy problems stemming from U.S. military exercises in Puerto Rico.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There has been a decades-long pattern of delay and inaction when it comes to remediating the environmental problems that were left behind by the U.S. Navy on the island of Vieques and elsewhere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 351,
+      "generation_tps": 15.950828699830069,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2488,
+      "prompt_tps": 493.3108920878182,
+      "request_sha256": "e8a8aeba1d00f99877f21906f78b153d3287a120770a51dbac3b48849c09d483",
+      "seconds": 27.059132165974006,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Sixty percent of the island\u2019s population \u2013 over 2 million patients \u2013 receives their care through Medicare, Medicare Advantage or Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Ricans pay the same Social Security and Medicare taxes as the fifty states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico\u2019s Medicaid program receives a 70 percent lower reimbursement rate compared to mainland states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A federal grant temporarily supplements the low Medicaid reimbursement rate in Puerto Rico, but this grant will soon expire.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring federal Medicaid reimbursement parity for Puerto Ricans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Access to quality health care is a right, not a privilege.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government has not adequately addressed serious environmental legacy problems stemming from U.S. military exercises in Puerto Rico.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There has been a decades-long pattern of delay and inaction regarding remediating the environmental problems left by the U.S. Navy on the island of Vieques and elsewhere in Puerto Rico.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "341be2a5ad9a261fe1901f9e7ed7bd71f957ee20974684eed2a13b12521b981b"
+}

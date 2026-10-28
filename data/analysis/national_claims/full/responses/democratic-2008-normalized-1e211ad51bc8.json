@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 314,
+      "generation_tps": 16.5863727176293,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1374,
+      "prompt_tps": 740.2044626762922,
+      "request_sha256": "e4a967419d6a2a431ad4c098b1e497c6737c593b455351e7095316bdc9e0ecd7",
+      "seconds": 20.796213125111535,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for fighting HIV/AIDS in the United States and around the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increased funding into research, care and prevention of HIV/AIDS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a comprehensive national strategic plan to combat HIV/AIDS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a Ryan White Care Act designed and funded to meet today's epidemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending ADAP waiting lists.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for focusing on communities such as African Americans and Latino Americans who are disproportionately impacted by HIV/AIDS through an expanded and renewed minority HIV/AIDS initiative.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for focusing on new epicenters of HIV/AIDS such as the Southern part of the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for providing Medicaid coverage to more low-income HIV-positive Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 244,
+      "generation_tps": 16.636213484546442,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1856,
+      "prompt_tps": 730.0416002801874,
+      "request_sha256": "59e1185895525d7bb4f761de4bbe3f477d11e6bd3cac5fb84e92b76dba9eb006",
+      "seconds": 17.218474708031863,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for fighting HIV/AIDS in the United States and around the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increased funding into research, care and prevention of HIV/AIDS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a comprehensive national strategic plan to combat HIV/AIDS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a Ryan White Care Act designed and funded to meet today's epidemic, that ends ADAP waiting lists and that focuses on communities such as African Americans and Latino Americans who are disproportionately impacted through an expanded and renewed minority HIV/AIDS initiative, and on new epicenters such as the Southern part of the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for providing Medicaid coverage to more low-income HIV-positive Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e4a967419d6a2a431ad4c098b1e497c6737c593b455351e7095316bdc9e0ecd7"
+}

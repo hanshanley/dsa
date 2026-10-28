@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 320,
+      "generation_tps": 16.104384628924187,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1427,
+      "prompt_tps": 446.0535379012993,
+      "request_sha256": "abaf381f41085e681aa090107484e1bd074549af1d2fd14bcc7d4194735fe14c",
+      "seconds": 23.07891470892355,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Republican Party has continued to fulfill America's obligations to its veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many programs designed to assist veterans cried out for modernization and reform when President Bush took office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and Congress have increased funding for VA health care by more than 40 percent since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increased funding has made it possible for the VA to improve health care access for veterans who need it most, including low-income veterans, those with service-related disabilities, and those who need VA's specialized services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush signed into law authorization for the concurrent receipt of both military retired pay and VA disability compensation for combat-injured and highly-disabled veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for actions to keep faith with America's veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Appreciation for President Bush and the Republican Congress for attending to the solemn duty of maintaining and expanding national cemeteries.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 329,
+      "generation_tps": 16.10334950217005,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1915,
+      "prompt_tps": 470.51932797370375,
+      "request_sha256": "8186f2f8f1e49cb469b369e7aa84fe81b80f0dd56ae61aaaea397a6dddae8088",
+      "seconds": 24.50980304204859,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party has continued to fulfill America's obligations to its veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"When President Bush took office, many of the programs designed to assist veterans cried out for modernization and reform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and Congress have increased funding for VA health care by more than 40 percent since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"This additional funding has made it possible for the VA to improve health care access for veterans who need it most, including low-income veterans, those with service-related disabilities, and those who need VA's specialized services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush signed into law authorization for the concurrent receipt of both military retired pay and VA disability compensation for combat-injured and highly-disabled veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for actions to keep faith with America's veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Appreciation for President Bush and the Republican Congress for attending to the solemn duty of maintaining and expanding national cemeteries.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 329,
+      "generation_tps": 16.263637753622618,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2380,
+      "prompt_tps": 506.9507950900685,
+      "request_sha256": "e188c4a91e8e7813e321a38078af808331786b7cb1306ac3470c915585420535",
+      "seconds": 24.933501084102318,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party has continued to fulfill America's obligations to its veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"When President Bush took office, many of the programs designed to assist veterans cried out for modernization and reform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and Congress have increased funding for VA health care by more than 40 percent since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The increased funding has made it possible for the VA to improve health care access for veterans who need it most, including low-income veterans, those with service-related disabilities, and those who need VA's specialized services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush signed into law authorization for the concurrent receipt of both military retired pay and VA disability compensation for combat-injured and highly-disabled veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for actions to keep faith with America's veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Appreciation for President Bush and the Republican Congress for attending to the solemn duty of maintaining and expanding national cemeteries.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "abaf381f41085e681aa090107484e1bd074549af1d2fd14bcc7d4194735fe14c"
+}

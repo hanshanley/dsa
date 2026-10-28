@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 386,
+      "generation_tps": 15.986482365934517,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1468,
+      "prompt_tps": 469.8730389714794,
+      "request_sha256": "d9f789b8185d806ac7c2f92196c1a2eb705b36c5177b4b6109bd53722bcf84f7",
+      "seconds": 27.278849417110905,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The vast majority of Americans agree that the U.S. has a responsibility to provide troops with everything they need to complete their mission.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is irresponsible for public officials to support sending U.S. troops into battle and then reject funding for ammunition, body armor, and better health care for their dependents.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic nominees for President and Vice President voted to authorize war in Iraq and then rejected legislation to provide $87 billion in critical supplies and benefits for servicemembers and their families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Kerry claimed to have voted for the $87 billion before voting against it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Kerry said he was proud of his vote against supporting U.S. troops.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Kerry claimed his decision to vote against supporting U.S. troops was complicated.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans affirm that there is nothing complicated about supporting soldiers in battle.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's Commander in Chief must always support the men and women on the frontlines.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group applauds President Bush for his steadfast support of the military.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 401,
+      "generation_tps": 15.943558451261953,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2022,
+      "prompt_tps": 474.1093160589941,
+      "request_sha256": "797204647791abdd843047286c97601fdc68b1ba0c79c6736d8b90d676794ec7",
+      "seconds": 29.42550658318214,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The vast majority of Americans agree that when U.S. troops are engaged in battle, the U.S. has a responsibility to provide everything they need to complete their mission.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is irresponsible for public officials to support sending U.S. troops into battle and then reject funding they need for such things as ammunition, body armor, and better health care for their dependents.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic nominees for President and Vice President voted to authorize war in Iraq then later rejected legislation to provide $87 billion in critical supplies and benefits for servicemembers and their families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Kerry claimed to have voted for the $87 billion before he voted against it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Kerry said he was proud of his vote against supporting U.S. troops.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senator Kerry claimed his decision to vote against supporting U.S. troops was complicated.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans affirm that there is nothing complicated about supporting soldiers in battle.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's Commander in Chief must always support the men and women on the frontlines.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group applauds President Bush for his steadfast support of the military.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d9f789b8185d806ac7c2f92196c1a2eb705b36c5177b4b6109bd53722bcf84f7"
+}

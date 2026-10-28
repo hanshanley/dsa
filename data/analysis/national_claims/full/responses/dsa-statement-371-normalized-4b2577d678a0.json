@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 195,
+      "generation_tps": 16.064915549883477,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1424,
+      "prompt_tps": 426.3940619197777,
+      "request_sha256": "a36c41f21526b93df6c42ce0dab3dfbc501ec34b7934b9da0ff4f336987a2234",
+      "seconds": 15.488520457874984,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America calls on Congress to support the right of the people of Puerto Rico to self-determination, including the right to define their relationship with the United States in accordance with international law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Puerto Rico must have a democratic voice in all issues and policies that directly affect them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America urges Congress to grant Puerto Rico debt relief, debt rescheduling, and federal aid that will allow Puerto Rico to grow its way out of the long-term depression in a manner that enhances the quality of life of all residents of the island, not just its elite.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 195,
+      "generation_tps": 16.205806878089458,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1787,
+      "prompt_tps": 449.58812339411253,
+      "request_sha256": "92d92d3a0b498ed02bb9d8e7f9a2c1dd873c6be93fd6bb5b24f7bf3a48897342",
+      "seconds": 16.01692270883359,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America calls on Congress to support the right of the people of Puerto Rico to self-determination, including the right to define their relationship with the United States in accordance with international law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Puerto Rico must have a democratic voice in all issues and policies that directly affect them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America urges Congress to grant Puerto Rico debt relief, debt rescheduling, and federal aid that will allow Puerto Rico to grow its way out of the long-term depression in a manner that enhances the quality of life of all residents of the island, not just its elite.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a36c41f21526b93df6c42ce0dab3dfbc501ec34b7934b9da0ff4f336987a2234"
+}

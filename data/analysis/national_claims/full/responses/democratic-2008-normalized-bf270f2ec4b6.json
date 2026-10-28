@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 263,
+      "generation_tps": 16.21292223306008,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1437,
+      "prompt_tps": 438.69848814937427,
+      "request_sha256": "d599940e2179a6902152bda383fb7e2d5d1981c1ad37cde029e5a503beb1322e",
+      "seconds": 19.506353958975524,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans reaffirmed a belief that the nation can compete and succeed in the 21st Century only if a new approach is taken.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats want a government led by Barack Obama that looks out for families in the new economy with health care, retirement security, and help, especially in bad times.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats pledge a government led by Barack Obama that looks out for families in the new economy with health care, retirement security, and help, especially in bad times.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats see investment in energy, education, infrastructure, and science as pillars of a more competitive and fair economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in energy, education, infrastructure, and science will create a more competitive and fair economy that will allow all Americans to take advantage of the opportunities of the new era, according to Democrats.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 222,
+      "generation_tps": 16.303843569737175,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1868,
+      "prompt_tps": 467.19821853902425,
+      "request_sha256": "5b9ccb3b5b43dd392211d71f52cb46ff2b4ba78599bd9182eac04f0fb95ba0b5",
+      "seconds": 17.62444741697982,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans reaffirmed a belief that the nation can compete and succeed in the 21st Century only if a new approach is taken.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats want a government led by Barack Obama that looks out for families in the new economy with health care, retirement security, and help, especially in bad times.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats pledge a government led by Barack Obama that looks out for families in the new economy with health care, retirement security, and help, especially in bad times.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats see investment in energy, education, infrastructure, and science as pillars of a more competitive and fair economy that will allow all Americans to take advantage of the opportunities of the new era.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d599940e2179a6902152bda383fb7e2d5d1981c1ad37cde029e5a503beb1322e"
+}

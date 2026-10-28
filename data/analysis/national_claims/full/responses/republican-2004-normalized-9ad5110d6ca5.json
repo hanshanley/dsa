@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 323,
+      "generation_tps": 16.222643238730683,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1526,
+      "prompt_tps": 445.79973966196684,
+      "request_sha256": "f28b05d0712fb9e6ad4a0969b7b17514aa019a8926b9411190c26415e5b3b111",
+      "seconds": 23.343251208076254,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans applaud President Bush for launching efforts to address the needs and hopes of the world's poor.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans agree with President Bush that the United States must extend the benefits of freedom across the globe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The events of September 11, 2001, taught that weak states, like Afghanistan, can pose a danger to national interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poverty does not make poor people into terrorists and murderers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poverty, weak institutions, and corruption can make weak states vulnerable to terrorist networks and drug cartels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A world where some live in comfort and plenty, while half of the human race lives on less than $2 a day, is neither just nor stable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans applaud President Bush and the Republican Congress for prioritizing the inclusion of the world's poor in an expanding circle of development and opportunity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 385,
+      "generation_tps": 16.137198827930632,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2017,
+      "prompt_tps": 470.3810731434237,
+      "request_sha256": "f8d87c85c9062408928a9bc73e3176c3bb3a62bd5bb49cf7b5d8d9e8fda8eeb9",
+      "seconds": 28.156088083982468,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans applaud President Bush for launching groundbreaking efforts to address the needs and hopes of the world's poor.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans agree with President Bush that the United States must use this moment of opportunity to extend the benefits of freedom across the globe \u2013 by actively working to bring the hope of democracy, development, free markets, and free trade to every corner of the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The events of September 11, 2001, taught that weak states, like Afghanistan, can pose as great a danger to national interests as strong states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poverty does not make poor people into terrorists and murderers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poverty, weak institutions, and corruption can make weak states vulnerable to terrorist networks and drug cartels within their borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A world where some live in comfort and plenty, while half of the human race lives on less than $2 a day, is neither just nor stable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans applaud President Bush and the Republican Congress for their leadership and moral clarity in making the inclusion of all of the world's poor in an expanding circle of development \u2013 and opportunity \u2013 one of the top priorities of U.S. international policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f28b05d0712fb9e6ad4a0969b7b17514aa019a8926b9411190c26415e5b3b111"
+}

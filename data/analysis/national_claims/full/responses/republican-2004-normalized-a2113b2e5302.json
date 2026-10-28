@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 282,
+      "generation_tps": 16.21632772849339,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1449,
+      "prompt_tps": 442.7512093883466,
+      "request_sha256": "f1f5026e20f51564eef1077dc65a0c3bb7f177bf5f561ad6c869d4ee5f120b91",
+      "seconds": 20.67172212502919,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Bush fulfilled a promise to begin transforming how the U.S. organizes and equips itself to fight 21st Century adversaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Republican Congress have led the transformation of the U.S. military to become lighter, faster, and more lethal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in missile defense systems was doubled to put America on track to field an operational system in 2004.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"R&D investments were dramatically increased.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A significant amount of the procurement budget was committed to transformation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Administration and the Republican Congress pursued transformational programs across the services such as the Army's Future Combat System, the Navy's conversion of ballistic missile submarines to guided missile submarines, and the Air Force's unmanned combat aerial vehicles.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 286,
+      "generation_tps": 16.212509301788185,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1899,
+      "prompt_tps": 467.4365221643711,
+      "request_sha256": "96b47b96a514749204c3b6a13f14307c277cefcfb4d124c938a8b8c9c27a14da",
+      "seconds": 21.712587957968935,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush fulfilled a promise to begin transforming how the nation organizes and equips itself to fight 21st Century adversaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Republican Congress have led the transformation of the U.S. military to become lighter, faster, and more lethal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in missile defense systems was doubled to put America on track to field an operational system in 2004.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"R&D investments were dramatically increased.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A significant amount of the procurement budget was committed to transformation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Administration worked with the Republican Congress to pursue transformational programs across the services such as the Army's Future Combat System, the Navy's conversion of ballistic missile submarines to guided missile submarines, and the Air Force's unmanned combat aerial vehicles.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f1f5026e20f51564eef1077dc65a0c3bb7f177bf5f561ad6c869d4ee5f120b91"
+}

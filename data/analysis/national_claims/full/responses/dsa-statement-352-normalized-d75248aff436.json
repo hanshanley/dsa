@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 209,
+      "generation_tps": 15.995298351938017,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1263,
+      "prompt_tps": 415.6825199385578,
+      "request_sha256": "88ffecb403f8cb197a41888bca12ccfe8b954fafb24328d7a2d620147ec748d4",
+      "seconds": 16.115306709194556,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America (DSA) call on all progressives across the United States to join together in a broad coalition against the rising tide of racist and nativist politics in the United States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1,2]},{\"claim_text\":\"Nativist fear-mongering by one Democratic and 27 Republican governors about the alleged threat posed to U.S. residents by Syrian refugees and undocumented immigrants obscures the true violent threat to collective security.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1,2]},{\"claim_text\":\"Syrian refugees are often fleeing ISIL violence.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1,2]},{\"claim_text\":\"Nativist, racist and misogynist terrorism is a true violent threat to collective security.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1,2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 224,
+      "generation_tps": 16.080801240931052,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1640,
+      "prompt_tps": 438.29072589079004,
+      "request_sha256": "4844962011f845fec9c991d5f7c84625869bfe95cd118147a7ddecc795dd335a",
+      "seconds": 17.681210458045825,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America (DSA) call on all progressives across the United States to join together in a broad coalition against the rising tide of racist and nativist politics in the United States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1,2]},{\"claim_text\":\"Nativist fear-mongering by one Democratic and 27 Republican governors about the alleged threat posed to U.S. residents by Syrian refugees and undocumented immigrants obscures the true violent threat to collective security: nativist, racist and misogynist terrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1,2]},{\"claim_text\":\"Syrian refugees are often fleeing ISIL violence.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1,2]},{\"claim_text\":\"Nativist, racist and misogynist terrorism is a true violent threat to collective security.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1,2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "88ffecb403f8cb197a41888bca12ccfe8b954fafb24328d7a2d620147ec748d4"
+}

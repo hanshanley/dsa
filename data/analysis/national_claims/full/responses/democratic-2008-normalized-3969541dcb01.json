@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 168,
+      "generation_tps": 16.017664115072858,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1362,
+      "prompt_tps": 427.44552832103403,
+      "request_sha256": "baea1b0f87c5d1e646f1e7c28f97a38aa52ede4e305f25ab3af6cacf36eb4628",
+      "seconds": 13.685569708002731,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party believes renewing American leadership on the world stage is the most important priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Renewing American leadership on the world stage will require diplomatic skill as capable as military might.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will use all elements of American power to keep the United States safe, prosperous, and free.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will enable the United States to lead the world again.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 188,
+      "generation_tps": 16.200159984605452,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1698,
+      "prompt_tps": 443.2265045112991,
+      "request_sha256": "0a679dd82b0b7456dacecbe1eefaec44447a2ab5d61cd161d86ba3d58faa8226",
+      "seconds": 15.446304582990706,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party believes that there is no more important priority than renewing American leadership on the world stage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Renewing American leadership on the world stage will require diplomatic skill as capable as military might.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Instead of refusing to confront pressing threats, the Democratic Party will use all elements of American power to keep the United States safe, prosperous, and free.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Instead of alienating the United States from the world, the Democratic Party will enable the United States to lead again.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "baea1b0f87c5d1e646f1e7c28f97a38aa52ede4e305f25ab3af6cacf36eb4628"
+}

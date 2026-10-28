@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 413,
+      "generation_tps": 15.84529553730179,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1509,
+      "prompt_tps": 430.76148442650907,
+      "request_sha256": "25811d44c8c98093a75483677e42ad253d1931d2c342361ceba5688794fc91c6",
+      "seconds": 29.577808040892705,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans have been promised change before and too often have been disappointed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to change not just policies, but politics as well.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group cannot expect different results by doing the same things.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to renew American democracy by promoting the use of new technologies to make it easier for Americans to participate in their government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to shine a light on government spending and Washington lobbying so that every American is empowered to be a watchdog and a whistleblower.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group is the party of inclusion and respect for differences of perspective and belief.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Even when disagreeing, the group will work together to move the country forward.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There can be no Republican or Democratic ideas, only policies that are smart, right, fair, and good for America, and those that aren't.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to form a government as decent, candid, purposeful, and compassionate as the American people themselves.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Being a patriot means declaring and showing love for the nation through deeds, priorities, and commitments.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 418,
+      "generation_tps": 15.862112703389684,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2090,
+      "prompt_tps": 485.94999969433513,
+      "request_sha256": "b0b594c4dcda7d5ad51f829942c9c08d5112665d5c4d00629fce25be07e4764b",
+      "seconds": 30.662437707884237,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans have been promised change before and too often have been disappointed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to change not just policies, but politics as well.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It cannot be expected to get different results by doing the same things.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to renew American democracy by promoting the use of new technologies to make it easier for Americans to participate in their government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to shine a light on government spending and Washington lobbying so that every American is empowered to be a watchdog and a whistleblower.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group is the party of inclusion and respect for differences of perspective and belief.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Even when disagreeing, the group will work together to move the country forward.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There can be no Republican or Democratic ideas, only policies that are smart, right, fair, and good for America, or those that are not.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to form a government as decent, candid, purposeful, and compassionate as the American people themselves.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Being a patriot means not only declaring love for the nation, but showing it through deeds, priorities, and commitments.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "25811d44c8c98093a75483677e42ad253d1931d2c342361ceba5688794fc91c6"
+}

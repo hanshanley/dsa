@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 530,
+      "generation_tps": 15.8755573966842,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1535,
+      "prompt_tps": 436.2708632426386,
+      "request_sha256": "895ff4bf2995a5418017acf64b1b64c6de85e7df29093d8f1675a8be46b59946",
+      "seconds": 36.913723666919395,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The island\u2019s economy has been shrinking or stagnant for a decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The official unemployment rate in Puerto Rico is nearly 12 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lawmakers in Washington and San Juan need to come up with a plan that addresses the financial and economic problems of Puerto Rico, which must include a lowering of the debt burden borne by Puerto Rico.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government failed to bail out Detroit devastated by disinvestment by the auto industry.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico must not be allowed to suffer due to disinvestment by biopharmaceuticals and other industries that have moved abroad in search of even cheaper production costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government-owned companies such as the electric utility in Puerto Rico are not allowed to restructure their debt in Chapter 9 bankruptcies because Puerto Rico is a territory.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Twenty-five percent of Puerto Rican debt is held by state-owned enterprises.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congress should approve a new bill that would allow Puerto Rican government-owned companies, as well as municipalities, to use Chapter 9.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Most Democrats support legislation allowing Puerto Rican government-owned companies and municipalities to use Chapter 9.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans are steadfastly opposed to legislation allowing Puerto Rican government-owned companies and municipalities to use Chapter 9.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"If need be, the entire government of Puerto Rico should be able to file for bankruptcy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"States cannot file under Chapter 9, but Puerto Rico is not a state.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 534,
+      "generation_tps": 15.833360111394937,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2233,
+      "prompt_tps": 482.4893425237171,
+      "request_sha256": "ec992df4b2fb1cb83514f00116bdd96b7d43aa332a7698fdab994a44d978091b",
+      "seconds": 38.36406545806676,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The island\u2019s economy has been shrinking or stagnant for a decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The official unemployment rate in Puerto Rico is nearly 12 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lawmakers in Washington and San Juan need to come up with a plan that addresses the financial and economic problems of the territory, which must include a lowering of the debt burden borne by Puerto Rico.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government failed to bail out Detroit devastated by disinvestment by the auto industry.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico must not be allowed to suffer due to disinvestment by biopharmaceuticals and other industries that have moved abroad in search of even cheaper production costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because Puerto Rico is a territory, government-owned companies such as the electric utility are not allowed to restructure their debt in Chapter 9 bankruptcies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Twenty-five percent of Puerto Rican debt is held by these state-owned enterprises.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congress should approve a new bill that would allow these and other Puerto Rican government-owned companies, as well as municipalities, to use Chapter 9.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Most Democrats support this legislation allowing Puerto Rican government-owned companies and municipalities to use Chapter 9.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans are steadfastly opposed to this legislation allowing Puerto Rican government-owned companies and municipalities to use Chapter 9.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"If need be, the entire government of Puerto Rico should be able to file for bankruptcy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"States cannot file under Chapter 9, but Puerto Rico is not a state.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "895ff4bf2995a5418017acf64b1b64c6de85e7df29093d8f1675a8be46b59946"
+}

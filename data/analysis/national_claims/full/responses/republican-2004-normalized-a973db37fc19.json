@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 289,
+      "generation_tps": 16.6339488777331,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1395,
+      "prompt_tps": 730.4556796045362,
+      "request_sha256": "b8f17b3d7a04f318e8aa9111c9cb41260d58a6287f181a96eec8c856e685d15f",
+      "seconds": 19.292829666053876,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans applaud President Bush's support for the people of Haiti.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans agree that it is essential that Haiti have a hopeful future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support the President's leadership of multilateral efforts to bring order and stability to Haiti.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support assisting the Haitian people in achieving a democratic and constitutional government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops and partners from France, Canada, and Chile responded swiftly and humanely to the needs of the Haitian people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud the contributions of Brazil, Argentina, Chile, Uruguay, Canada, Spain, and other nations to the current peacekeeping force.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud financial pledges from the international community to provide economic and humanitarian assistance to the Haitian people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 292,
+      "generation_tps": 16.595258628121393,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1852,
+      "prompt_tps": 667.2150434909728,
+      "request_sha256": "4107eb4f5e497c5fd7536f8681173268642ab4519aef1dc3e76a3c1071af0f5d",
+      "seconds": 20.380557666998357,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans applaud the strong support President Bush has demonstrated for the people of Haiti.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans agree that it is essential that Haiti have a hopeful future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support the President's leadership of multilateral efforts to bring order and stability to Haiti.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support assisting the Haitian people in achieving a democratic and constitutional government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops and their partners from France, Canada, and Chile responded swiftly and humanely to the needs of the Haitian people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud the contributions of Brazil, Argentina, Chile, Uruguay, Canada, Spain, and other nations to the current peacekeeping force.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud financial pledges from the international community to provide economic and humanitarian assistance to the Haitian people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b8f17b3d7a04f318e8aa9111c9cb41260d58a6287f181a96eec8c856e685d15f"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 379,
+      "generation_tps": 15.932737363820099,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1546,
+      "prompt_tps": 428.26141688383143,
+      "request_sha256": "d0041765b9f2dd00c9e71feadd78f945aecd50eac17a3fe3c57085bb8b13f149",
+      "seconds": 27.408584208926186,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans recognize the critical new role played by the U.S. Coast Guard in upholding America's maritime security against terrorist threats.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. Coast Guard demonstrated its vital contribution to homeland security in the aftermath of September 11, 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2,3]},{\"claim_text\":\"Republicans applaud the men and women of the Coast Guard for rising to meet new challenges while continuing to accomplish traditional missions such as search and rescue, navigation assistance, drug interdiction, fisheries enforcement, and environmental protection.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans applaud the Coast Guard men and women who serve and have served in the Persian Gulf and the Mediterranean in Operation Iraqi Freedom.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under the leadership of President Bush and the Republican Congress, the nation has significantly increased budget support for the Coast Guard to achieve its expanded mission.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans affirm the importance of continued strong support for the Coast Guard, including for efforts to recapitalize and enlarge the Coast Guard's fleet, which is a critical component of the overall national fleet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Recapitalization and enlargement of the Coast Guard's fleet should not be done at the expense of or by reducing other components.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 382,
+      "generation_tps": 16.008779908138248,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2093,
+      "prompt_tps": 475.2774273080093,
+      "request_sha256": "83dd50b06cfac57068aa6d90d674da3b241969eda29337267b63eb8d9af250b9",
+      "seconds": 28.275901041924953,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans recognize the critical new role played by the U.S. Coast Guard in upholding America's maritime security against terrorist threats.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. Coast Guard demonstrated its vital contribution to homeland security in the aftermath of September 11, 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2,3]},{\"claim_text\":\"Republicans applaud the men and women of the Coast Guard for rising to meet new challenges, even as they continue to accomplish traditional missions such as search and rescue, navigation assistance, drug interdiction, fisheries enforcement, and environmental protection.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans applaud the Coast Guard men and women who serve and have served in the Persian Gulf and the Mediterranean in Operation Iraqi Freedom.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under the leadership of President Bush and the Republican Congress, the nation has significantly increased budget support for the Coast Guard to achieve its expanded mission.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans affirm the importance of continued strong support for the Coast Guard, including for efforts to recapitalize and enlarge the Coast Guard's fleet, which is a critical component of the overall national fleet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Recapitalization and enlargement of the Coast Guard's fleet should not be done at the expense of or by reducing other components.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d0041765b9f2dd00c9e71feadd78f945aecd50eac17a3fe3c57085bb8b13f149"
+}

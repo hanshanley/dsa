@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 503,
+      "generation_tps": 16.190628415721257,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1521,
+      "prompt_tps": 446.13630121434426,
+      "request_sha256": "7dd68b7fb32ea6b0a8bc6b1e069fb9d2aac0eb8bc087cc77b4747c599094e6fa",
+      "seconds": 34.486649250146,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Leadership on these issues has been lacking for the past eight years.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]},{\"claim_text\":\"Under Bill Clinton's leadership in the 1990s, employment and incomes grew.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"Under Bill Clinton's leadership in the 1990s, a budget surplus was built.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"The current President pursued misguided policies.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]},{\"claim_text\":\"The current President missed opportunities.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]},{\"claim_text\":\"The current President maintained a rigid, ideological adherence to discredited ideas.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[1]},{\"claim_text\":\"The surplus has become a deficit.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"Almost a decade into this century, there is no coherent national strategy to compete in a global economy.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"The price for these failures is being passed on to families.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"Too many Americans have been invisible to the current President and his party for too long.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party has never been invisible to the people who do the work in America.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]},{\"claim_text\":\"It is time to make the American Dream real for working people again.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]},{\"claim_text\":\"A government is needed that stands up for the hopes, values, and interests of working people.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]},{\"claim_text\":\"Everyone willing to work hard should have the chance to make the most of their potential.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 507,
+      "generation_tps": 16.13646173943471,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2192,
+      "prompt_tps": 480.84588076378515,
+      "request_sha256": "05c1b4e6b0ae211285fe77853484c76588f6912f0a0fd5830c8fb5690d657257",
+      "seconds": 35.98861379199661,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Leadership on these issues has been sorely lacking for the past eight years.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]},{\"claim_text\":\"Under Bill Clinton's leadership in the 1990s, employment and incomes grew.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"Under Bill Clinton's leadership in the 1990s, a budget surplus was built.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"The current President pursued misguided policies.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]},{\"claim_text\":\"The current President missed opportunities.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]},{\"claim_text\":\"The current President maintained a rigid, ideological adherence to discredited ideas.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[1]},{\"claim_text\":\"The surplus is now a deficit.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"Almost a decade into this century, there is no coherent national strategy to compete in a global economy.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"The price for these failures is being passed on to families.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]},{\"claim_text\":\"Too many Americans have been invisible to the current President and his party for too long.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party has never been invisible to the people who do the work in America.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[2]},{\"claim_text\":\"It is time to make the American Dream real for working people again.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]},{\"claim_text\":\"A government is needed that stands up for the hopes, values, and interests of working people.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]},{\"claim_text\":\"Everyone willing to work hard should have the chance to make the most of their God-given potential.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7dd68b7fb32ea6b0a8bc6b1e069fb9d2aac0eb8bc087cc77b4747c599094e6fa"
+}

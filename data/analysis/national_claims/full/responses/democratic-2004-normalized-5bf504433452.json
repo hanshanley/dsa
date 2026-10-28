@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 280,
+      "generation_tps": 16.04206944877804,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1501,
+      "prompt_tps": 437.04096391203416,
+      "request_sha256": "cff26be97d8c784f06ecc4cad02b31da04fd594ee52b7722f2b8ab78f373c674",
+      "seconds": 20.899099667090923,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for full inclusion of gay and lesbian families in the life of the nation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for equal responsibilities, benefits, and protections for gay and lesbian families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Belief that marriage should continue to be defined at the state level.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Repudiation of President Bush's effort to politicize the Constitution by pursuing a Federal Marriage Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to do everything necessary to win the war on terror.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that the war on terror can and must be won without sacrificing values.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for equal rights to democratic self-government and Congressional representation for the citizens of the nation's capital.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 274,
+      "generation_tps": 16.093343349798307,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1949,
+      "prompt_tps": 454.9860306124588,
+      "request_sha256": "c41b02ea9b3d87ad313ba527e1eeef0000457ff05623dbfbc9a9cd604d9af332",
+      "seconds": 21.31973358313553,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for full inclusion of gay and lesbian families in the life of the nation and seeking equal responsibilities, benefits, and protections for these families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Belief that marriage should continue to be defined at the state level for 200 years, and should continue to be defined there.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Repudiation of President Bush's divisive effort to politicize the Constitution by pursuing a Federal Marriage Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to do everything necessary to win the war on terror.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that the war on terror can and must be won without sacrificing the values being defended.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for equal rights to democratic self-government and Congressional representation for the citizens of the nation's capital.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cff26be97d8c784f06ecc4cad02b31da04fd594ee52b7722f2b8ab78f373c674"
+}

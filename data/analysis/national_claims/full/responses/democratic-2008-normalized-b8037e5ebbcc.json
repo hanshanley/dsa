@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 382,
+      "generation_tps": 16.61023387394382,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1469,
+      "prompt_tps": 611.0268826542882,
+      "request_sha256": "d1a1df790818e1673d395e5087b297781a5e40baa1c8c71e9b63fe575388e00e",
+      "seconds": 25.4111219169572,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party believes the fight against poverty must be a national priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Eradicating poverty requires the sustained commitment of the President of the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The White House must offer leadership and resources to advance the agenda of eradicating poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party has produced more women Governors, Senators, and Members of Congress than any other party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party produced the first woman Secretary of State.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party produced the first woman Speaker of the House of Representatives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Hillary Rodham Clinton was the first woman in American history to win presidential primaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party believes daughters should have the same opportunities as sons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party has put eighteen million cracks in the highest glass ceiling.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"When America extends its promise to women, the result is increased opportunity for families, communities, and aspiring people everywhere.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 385,
+      "generation_tps": 16.55795236036498,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2019,
+      "prompt_tps": 601.1674753026946,
+      "request_sha256": "90cf9a0c663714990380e8c602b611edc7c1c9e08b3553afc9fd10a7ad6e5f89",
+      "seconds": 26.61958579090424,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party believes that the fight against poverty must be a national priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Eradicating poverty will require the sustained commitment of the President of the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The White House must offer leadership and resources to advance the agenda of eradicating poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party has produced more women Governors, Senators, and Members of Congress than any other party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party produced the first woman Secretary of State.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party produced the first woman Speaker of the House of Representatives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Hillary Rodham Clinton was the first woman in American history to win presidential primaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party believes that daughters should have the same opportunities as sons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Party has put eighteen million cracks in the highest glass ceiling.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"When America extends its promise to women, the result is increased opportunity for families, communities, and aspiring people everywhere.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d1a1df790818e1673d395e5087b297781a5e40baa1c8c71e9b63fe575388e00e"
+}

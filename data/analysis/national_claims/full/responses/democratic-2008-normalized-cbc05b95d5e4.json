@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 190,
+      "generation_tps": 16.564602740553298,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1381,
+      "prompt_tps": 768.5259230819848,
+      "request_sha256": "eec4b8ae0c41d4a7eeda7eb50cff023a960d77e5aff686930258708757f75c0e",
+      "seconds": 13.276349999941885,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Lower- and middle-income seniors should not have to worry about tax burdens, given their existing worries about high health care and energy costs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The presumptive Republican nominee's characterization of Social Security as a disgrace is rejected.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security is indispensable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a commitment to strengthen Social Security and ensure it provides guaranteed benefits for Americans now and in future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security will not be privatized.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 194,
+      "generation_tps": 16.585101699376256,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1739,
+      "prompt_tps": 683.3501514799818,
+      "request_sha256": "9d6ac744d89537d08f4a8b2ad99a9482d1a73e0c0ec3695231b91aa3351b3786",
+      "seconds": 14.251358416862786,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"Lower- and middle-income seniors should not have to worry about tax burdens, given their existing worries about high health care and energy costs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source rejects the presumptive Republican nominee's characterization of Social Security as a disgrace.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security is indispensable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source commits to strengthen Social Security and ensure it provides guaranteed benefits Americans can count on, now and in future generations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source opposes the privatization of Social Security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "eec4b8ae0c41d4a7eeda7eb50cff023a960d77e5aff686930258708757f75c0e"
+}

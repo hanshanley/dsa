@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 438,
+      "generation_tps": 16.43144225499105,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1513,
+      "prompt_tps": 490.46632432515435,
+      "request_sha256": "f283bfb9e8635148b3f12f84c270baee691939c96d09db2c2856e1ca587c843a",
+      "seconds": 29.751486374996603,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush, Vice President Cheney, the Congress, and governors across the nation have taken significant steps to streamline the federal government to make it more effective at combating terrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush, Vice President Cheney, the Congress, and governors across the nation have taken significant steps to tighten security at entry points like ports, airports, and borders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"President Bush, Vice President Cheney, the Congress, and governors across the nation have taken significant steps to strengthen protections at critical infrastructure landmarks such as power and water plants.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"President Bush, Vice President Cheney, the Congress, and governors across the nation have taken significant steps to reduce the threats of bioterrorism and cyberterrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"President Bush and Congress have been careful to protect the rights and liberties that make America a beacon of freedom and justice.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"President Bush and Congress have provided unprecedented resources to support local first responders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"The Department of Homeland Security and first responders at the state and local level vigilantly safeguard the security of America each and every day.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[8]},{\"claim_text\":\"The Department of Homeland Security and first responders at the state and local level have directed enhanced resources to counter dangers of new and shifting threats.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[8]},{\"claim_text\":\"The Department of Homeland Security and first responders at the state and local level have proved themselves equal to the task of safeguarding America.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[8]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 488,
+      "generation_tps": 16.41770805279222,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2119,
+      "prompt_tps": 519.8331856004363,
+      "request_sha256": "ec62dad44ce2da1f604a63baca50103371aa99b8e68a9c45f7302a1c2de2a6ae",
+      "seconds": 33.81085779098794,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Since September 11, 2001, President Bush, Vice President Cheney, the Congress, and governors across the nation have taken significant steps to streamline the federal government to make it more effective at combating terrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since September 11, 2001, President Bush, Vice President Cheney, the Congress, and governors across the nation have taken significant steps to tighten security at entry points like ports, airports, and borders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Since September 11, 2001, President Bush, Vice President Cheney, the Congress, and governors across the nation have taken significant steps to strengthen protections at critical infrastructure landmarks such as power and water plants.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Since September 11, 2001, President Bush, Vice President Cheney, the Congress, and governors across the nation have taken significant steps to reduce the threats of bioterrorism and cyberterrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Through their actions, President Bush and Congress have been careful to protect the rights and liberties that make America a beacon of freedom and justice.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"President Bush and Congress have provided unprecedented resources to support local first responders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"The Department of Homeland Security and first responders at the state and local level vigilantly safeguard the security of America each and every day.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[8]},{\"claim_text\":\"The Department of Homeland Security and first responders at the state and local level have directed enhanced resources to counter the dangers of new and shifting threats.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[8]},{\"claim_text\":\"The Department of Homeland Security and first responders at the state and local level have proved themselves equal to the task.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[8]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f283bfb9e8635148b3f12f84c270baee691939c96d09db2c2856e1ca587c843a"
+}

@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 380,
+      "generation_tps": 16.577815544044395,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1513,
+      "prompt_tps": 779.6184483849025,
+      "request_sha256": "c4959fb30c820b94f0714175a7eafdc508e2e711d921258b29a67f2d8e87b347",
+      "seconds": 24.872049208031967,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Health care reform must provide adequate incentives for innovation to ensure Americans have access to evidence-based and cost-effective health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Research should be based on science, not ideology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration has not promoted biomedical and stem cell research over the past eight years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration has actively stood in the way of biomedical and stem cell research over the past eight years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We cannot tolerate any further inaction or obstruction regarding biomedical and stem cell research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We need to invest in biomedical research and stem cell research to be at the leading edge of prevention and treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Institutes of Health.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Science Foundation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Cancer Institutes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Necessary nationwide health care reform should build on successful state models of care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.54638547587314,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2176,
+      "prompt_tps": 760.9239333280879,
+      "request_sha256": "4718dc0aa576fe2b855fd6d26a7a62efcacd2c255a948516320630f603556f8e",
+      "seconds": 25.895311957923695,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Health care reform must provide adequate incentives for innovation to ensure Americans have access to evidence-based and cost-effective health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Research should be based on science, not ideology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the past eight years, the current Administration has not promoted biomedical and stem cell research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the past eight years, the current Administration has actively stood in the way of biomedical and stem cell research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Further inaction or obstruction regarding biomedical and stem cell research will not be tolerated.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in biomedical research and stem cell research is needed to be at the leading edge of prevention and treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Institutes of Health.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Science Foundation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Cancer Institutes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Necessary nationwide health care reform should build on successful state models of care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 418,
+      "generation_tps": 16.544602507108795,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2062,
+      "prompt_tps": 758.1138656432614,
+      "request_sha256": "735b8feaca48c403d5751d9695a7a13f98d1bf7179cace815b11a32b01d371cb",
+      "seconds": 27.994248332921416,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Health care reform must provide adequate incentives for innovation to ensure Americans have access to evidence-based and cost-effective health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Research should be based on science, not ideology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the past eight years, the current Administration has not only failed to promote biomedical and stem cell research, but has actively stood in the way of that research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Further inaction or obstruction regarding biomedical and stem cell research will not be tolerated.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in biomedical research and stem cell research is needed so that the country is at the leading edge of prevention and treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Institutes of Health.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Science Foundation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Cancer Institutes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Necessary nationwide health care reform should build on successful state models of care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"This includes adequate funding for research into diseases such as heart disease, Alzheimer's disease, Parkinson's disease, multiple sclerosis, breast cancer, diabetes, autism and other common and rare diseases, and disorders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.523358336578198,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2614,
+      "prompt_tps": 754.1342874721896,
+      "request_sha256": "945d89b22775b28d3087b70af60a53439ceda0052e6ae14e5e2790e3fd847a3f",
+      "seconds": 26.53439108398743,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Health care reform must provide adequate incentives for innovation to ensure Americans have access to evidence-based and cost-effective health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Research should be based on science, not ideology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the past eight years, the current Administration has not promoted biomedical and stem cell research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the past eight years, the current Administration has actively stood in the way of biomedical and stem cell research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Further inaction or obstruction regarding biomedical and stem cell research will not be tolerated.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in biomedical research and stem cell research is needed to be at the leading edge of prevention and treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Institutes of Health.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Science Foundation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Funding will be increased to the National Cancer Institutes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Necessary nationwide health care reform should build on successful state models of care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c4959fb30c820b94f0714175a7eafdc508e2e711d921258b29a67f2d8e87b347"
+}

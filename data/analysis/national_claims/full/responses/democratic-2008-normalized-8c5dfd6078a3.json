@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 320,
+      "generation_tps": 16.11121781739736,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1496,
+      "prompt_tps": 448.08179768568687,
+      "request_sha256": "93bd32d7ec9ca1c7a2279820ae4fb76dbf862e835e67ecf602952d5ecbaa4be0",
+      "seconds": 23.211240083910525,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The belief that America can be made better has always been what makes America great.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"People who love America can change it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abraham Lincoln, Susan B. Anthony, Martin Luther King Jr., Cesar Chavez, and Rosa Parks believed their country could be a better place and worked to make it so.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"This Party has made the biggest difference in the lives of the American people when it summoned the entire nation to a common purpose.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a choice to stay on the current failed course.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a choice to build upon the best of who and what America is and reflect its highest values.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"America can rise together and create a new kind of government.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The time for change has come, and America must seize it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 307,
+      "generation_tps": 16.156360767749522,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1932,
+      "prompt_tps": 466.93365438071737,
+      "request_sha256": "e16b8a0acc4c65bfcae85fa6217c5e004f60eed9a224c493d83e205e1a37c76c",
+      "seconds": 23.149102166993544,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"If America chooses to change, it can achieve significant results.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's greatness has historically stemmed from the belief that it can be improved.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"People who love America have the capacity to change it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abraham Lincoln, Susan B. Anthony, Martin Luther King Jr., Cesar Chavez, and Rosa Parks believed their country could be a better place and worked to make it so.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A choice exists between continuing the current failed course and pursuing a different path.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A path exists that builds upon the best aspects of America and reflects its highest values.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"America can create a new kind of government by rising together.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The time for change has come, and America must seize it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 307,
+      "generation_tps": 16.129137757698746,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1971,
+      "prompt_tps": 469.0146489298608,
+      "request_sha256": "f6151b40bea3da82291868b72bfb7ffdeafe42a7b27bbcd0d7045f68efbab479",
+      "seconds": 23.245591582963243,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"If America chooses to change, it can achieve significant results.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"What makes America great has historically been the belief that it can be made better.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"People who love America can change it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abraham Lincoln, Susan B. Anthony, Martin Luther King Jr., Cesar Chavez, and Rosa Parks believed their country could be a better place and worked to make it so.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A choice exists between continuing the current failed course and pursuing a different path.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A path exists that builds upon the best of who and what America is and reflects its highest values.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"America can create a new kind of government by rising together.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The time for change has come, and America must seize it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "93bd32d7ec9ca1c7a2279820ae4fb76dbf862e835e67ecf602952d5ecbaa4be0"
+}

@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 278,
+      "generation_tps": 16.55809479431996,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1527,
+      "prompt_tps": 469.4154831858557,
+      "request_sha256": "bdb39422022e687d172a9d91673b2cbaf78dd9acd3b234c9c5098b0d1bf90515",
+      "seconds": 20.05221875011921,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"All cargo is now screened by customs agents.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Screening of cargo takes place in foreign ports before potentially dangerous cargo reaches the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All high-risk cargo is physically inspected.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Ensuring the integrity of borders is vital to ensuring the safety of citizens.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"The US-VISIT system, which uses biometric data to track the entry and exit of foreign travelers, has been implemented at more than 115 airports.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The US-VISIT system is presently being implemented at land border crossings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Reconnaissance cameras, border patrol agents, and unmanned aerial flights have been increased at borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 281,
+      "generation_tps": 16.51149654802582,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1973,
+      "prompt_tps": 492.77850839978163,
+      "request_sha256": "fd104c446b627a0ad4f94c5949b5788718f75933a362737c6cf375e78b814695",
+      "seconds": 21.031388708157465,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"All cargo is now screened by customs agents.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Screening takes place in foreign ports, well before potentially dangerous cargo ever reaches our shores.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All high-risk cargo is physically inspected.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Ensuring the integrity of borders is vital to ensuring the safety of citizens.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"The US-VISIT system, which uses biometric data to better track the entry and exit of foreign travelers, has been implemented at more than 115 airports.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The US-VISIT system is presently being implemented at land border crossings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Reconnaissance cameras, border patrol agents, and unmanned aerial flights have all been increased at our borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 280,
+      "generation_tps": 16.240657818768547,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2539,
+      "prompt_tps": 544.5315771510063,
+      "request_sha256": "4794d7fad00531a85e7738c805b59d0f18f5d2ee66b80b9e332174f572b51404",
+      "seconds": 21.91299175005406,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"All cargo is now screened by customs agents.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Screening takes place in foreign ports, well before potentially dangerous cargo ever reaches the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All high-risk cargo is physically inspected.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Ensuring the integrity of borders is vital to ensuring the safety of citizens.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"The US-VISIT system, which uses biometric data to track the entry and exit of foreign travelers, has been implemented at more than 115 airports.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The US-VISIT system is presently being implemented at land border crossings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Reconnaissance cameras, border patrol agents, and unmanned aerial flights have been increased at the borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bdb39422022e687d172a9d91673b2cbaf78dd9acd3b234c9c5098b0d1bf90515"
+}

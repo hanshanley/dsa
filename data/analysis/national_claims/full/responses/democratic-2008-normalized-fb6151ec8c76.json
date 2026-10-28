@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 428,
+      "generation_tps": 16.586960202848285,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1508,
+      "prompt_tps": 806.4198433953301,
+      "request_sha256": "799cc512d2d60d4880777a9e8b70a9f8ec1eb4a6af508d87b516da92e056e4b8",
+      "seconds": 27.6829608338885,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"There must be a commitment to sufficient and well-qualified primary care physicians and nurses as well as direct care workers through training and reimbursement incentives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Health care disparities among minorities, American Indians, women, and low-income people must be ended through better research and better funded community-based health centers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The health care system will be made culturally sensitive and accessible to those who speak different languages.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Programs that diversify the health care workforce will be supported to ensure culturally effective care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The social determinants that fuel health disparities will be addressed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Communities most impacted by health disparities will be empowered by providing them resources and technical assistance to be their own agents of wellness.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reimbursements by the Indian Health Service will be sped up and improved.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Health and wellness is a shared responsibility among individuals and families, school systems, employers, the medical and public health workforce and government at all levels.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Americans will benefit from healthy environments that allow them to pursue healthy choices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"As childhood obesity rates have more than doubled in the last 30 years, efforts will be made to ensure healthy environments in schools.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 428,
+      "generation_tps": 16.523693287123173,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2104,
+      "prompt_tps": 763.4749796026332,
+      "request_sha256": "9e64a62236dc2e5dd967260680535ba37e62538d56a229b55e5d00becfa28dee",
+      "seconds": 28.667494291905314,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"There must be a commitment to sufficient and well-qualified primary care physicians and nurses as well as direct care workers through training and reimbursement incentives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Health care disparities among minorities, American Indians, women, and low-income people must be ended through better research and better funded community-based health centers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The health care system will be made culturally sensitive and accessible to those who speak different languages.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Programs that diversify the health care workforce will be supported to ensure culturally effective care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The social determinants that fuel health disparities will be addressed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Communities most impacted by health disparities will be empowered by providing them resources and technical assistance to be their own agents of wellness.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reimbursements by the Indian Health Service will be sped up and improved.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Health and wellness is a shared responsibility among individuals and families, school systems, employers, the medical and public health workforce and government at all levels.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Americans will benefit from healthy environments that allow them to pursue healthy choices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"As childhood obesity rates have more than doubled in the last 30 years, efforts will be made to ensure healthy environments in schools.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "799cc512d2d60d4880777a9e8b70a9f8ec1eb4a6af508d87b516da92e056e4b8"
+}

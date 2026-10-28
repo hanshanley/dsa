@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 271,
+      "generation_tps": 16.572580790653443,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1416,
+      "prompt_tps": 658.5485088482312,
+      "request_sha256": "7a934a0396232362f0524c4c1e13a3837ee8fbeb3de461b5fba148f9a01c5f6b",
+      "seconds": 18.51149137504399,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe sound American foreign policy starts in the Americas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Family, faith, culture, and commerce are enduring bonds among the peoples of the Americas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation's future is fundamentally linked to its neighbors in the Western Hemisphere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans share President Bush's vision of a fully democratic Americas, working together to achieve representative democracy, security, and market-based development.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud President Bush's track record in advancing trade liberalization in the Americas to promote economic development and democratic governance.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans praise President Bush's strong record of attention to the Americas and coalition-building with Mexico, Canada, Brazil, Chile, and Colombia, which share democratic priorities.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 285,
+      "generation_tps": 16.493114652217415,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1855,
+      "prompt_tps": 619.3515989532219,
+      "request_sha256": "51c61fadeafee23341df956c764decc32c1ab7f200b0954de8800c52e5a283c1",
+      "seconds": 20.28453966602683,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe that sound American foreign policy starts in the Americas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Family, faith, culture, and commerce are enduring bonds among all the peoples of the Americas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation's future is fundamentally linked to its neighbors in the Western Hemisphere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans share President Bush's vision of the Americas as a fully democratic hemisphere, working together to achieve representative democracy, security, and market-based development.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud President Bush's proven track record in advancing trade liberalization in the Americas in order to promote economic development and democratic governance.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans praise President Bush's strong record of serious and sustained attention to the American neighborhood and coalition-building with countries such as Mexico, Canada, Brazil, Chile, and Colombia that share democratic priorities.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7a934a0396232362f0524c4c1e13a3837ee8fbeb3de461b5fba148f9a01c5f6b"
+}

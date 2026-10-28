@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 367,
+      "generation_tps": 16.453885589878684,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1461,
+      "prompt_tps": 441.5387418445407,
+      "request_sha256": "5773c0bea3ef92929e20bf807c0c9aa8f49ebd34833ab446133bd8500c2355c2",
+      "seconds": 25.622806874802336,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are united around a commitment to guarantee affordable, comprehensive healthcare to every American man, woman, and child.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of Americans lack health insurance, including nine million children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of Americans struggle to pay rising costs for poor quality healthcare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Half of all personal bankruptcies in America are caused by medical bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States spends more on health care than any other country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is ranked 47th in life expectancy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is ranked 43rd in child mortality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States faces epidemics of obesity and chronic diseases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States faces new threats like pandemic flu and bioterrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Less than four cents of every health care dollar is spent on prevention and public health.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 368,
+      "generation_tps": 11.571624892380063,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1996,
+      "prompt_tps": 480.96860229554545,
+      "request_sha256": "4f77706eb06c605b124f98698174d3694e88c944541a1f593b10aa12d1bc1fc5",
+      "seconds": 35.96653399989009,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are united around a commitment that every American man, woman, and child be guaranteed affordable, comprehensive healthcare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of Americans\u2013including nine million children\u2013lack health insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of Americans struggle to pay rising costs for poor quality care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Half of all personal bankruptcies in America are caused by medical bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States spends more on health care than any other country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is ranked 47th in life expectancy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is ranked 43rd in child mortality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States faces epidemics of obesity and chronic diseases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States faces new threats like pandemic flu and bioterrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Less than four cents of every health care dollar is spent on prevention and public health.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5773c0bea3ef92929e20bf807c0c9aa8f49ebd34833ab446133bd8500c2355c2"
+}
