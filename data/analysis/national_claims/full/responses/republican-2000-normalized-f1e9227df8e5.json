@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 365,
+      "generation_tps": 16.570220135308514,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1425,
+      "prompt_tps": 459.70179468388375,
+      "request_sha256": "ee7b0d359a5e7007b7916397262b375561979e4c2107ac623a1a9be9cf016ee5",
+      "seconds": 25.137386499904096,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The anti-Iraq coalition assembled to oppose Saddam Hussein has disintegrated.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration pretended to support the removal of Saddam Hussein from power.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration did nothing when Saddam Hussein's army smashed the democratic opposition in northern Iraq in August 1996.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration surrendered the diplomatic initiative to Iraq and Iraq's friends.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration failed to champion the international inspectors charged with erasing Iraq's nuclear, biological, chemical, and ballistic missile programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In late 1998, the administration decided to take military action, but did too little, too late.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the administration's failures, there is no coalition.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the administration's failures, there is no peace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the administration's failures, there is no effective inspection regime to prevent Saddam's development of weapons of mass destruction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 370,
+      "generation_tps": 16.5736103240071,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1958,
+      "prompt_tps": 493.1650329941215,
+      "request_sha256": "bb49b930d4687bb95a6adca3bc6f1230280046325813711889787d8061595081",
+      "seconds": 26.304554833099246,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The anti-Iraq coalition assembled to oppose Saddam Hussein has disintegrated.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration pretended to support the removal of Saddam Hussein from power.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration did nothing when Saddam Hussein's army smashed the democratic opposition in northern Iraq in August 1996.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration surrendered the diplomatic initiative to Iraq and Iraq's friends.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration failed to champion the international inspectors charged with erasing Iraq's nuclear, biological, chemical, and ballistic missile programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In late 1998, the administration decided to take military action, but did too little, too late.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the administration's failures, there is no coalition.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the administration's failures, there is no peace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the administration's failures, there is no effective inspection regime to prevent Saddam's development of weapons of mass destruction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ee7b0d359a5e7007b7916397262b375561979e4c2107ac623a1a9be9cf016ee5"
+}

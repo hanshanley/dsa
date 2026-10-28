@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 45,
+      "generation_tps": 17.012034057110252,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1311,
+      "prompt_tps": 472.58264422517703,
+      "request_sha256": "96a890f8dab705b51a3934de0c0e117fc599c53b1be7f66540a17e6310e33ce3",
+      "seconds": 5.430844125105068,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA is determined to refocus resolve and strengthen work for real social justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 62,
+      "generation_tps": 16.913224655105246,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1524,
+      "prompt_tps": 478.15294294087425,
+      "request_sha256": "b315147ca2b33cff65f7984b3f4c5c31979cea1a46f9a0371c2f69e5a1a1bc6b",
+      "seconds": 6.862436583964154,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA is determined to use the breathing space won in the election campaign to refocus its resolve and strengthen its work for real social justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "96a890f8dab705b51a3934de0c0e117fc599c53b1be7f66540a17e6310e33ce3"
+}

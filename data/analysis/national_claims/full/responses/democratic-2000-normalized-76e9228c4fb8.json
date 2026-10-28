@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 307,
+      "generation_tps": 8.457170185342163,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1461,
+      "prompt_tps": 329.70082899031786,
+      "request_sha256": "2df05f2b99840051274780bfe6f07b5d3098e0b3f91f4720a1936db562852648",
+      "seconds": 40.74611829104833,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Serious crime is down for seven years in a row, reaching its lowest level in a quarter-century.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Violent crime is down by 24 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The murder rate is down to levels unseen since the mid-1960's.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of juveniles committing homicides with guns is down by nearly 60 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group will not go back to finger-pointing and failed strategies that led to a steep rise in crime during the Bush-Quayle years.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group opposes surrendering to right-wing Republicans who threatened funding for new police, attempted to gut crime prevention, and would invite the NRA into the Oval Office.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group will not return to an old approach that was tough on the causes of crime but not tough enough on crime itself.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 312,
+      "generation_tps": 8.138288334347621,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1936,
+      "prompt_tps": 383.42876400526933,
+      "request_sha256": "9c056e849dba8ae5e878f272c33d46a0e269274bda7054b911bfcd03b0ddd0c6",
+      "seconds": 43.39789583301172,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Serious crime is down for seven years in a row, to its lowest level in a quarter-century.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Violent crime is down by 24 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The murder rate is down to levels unseen since the mid-1960's.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of juveniles committing homicides with guns is down by nearly 60 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group will not go back to finger-pointing and failed strategies that led to a steep rise in crime during the Bush-Quayle years.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group opposes surrendering to right-wing Republicans who threatened funding for new police, attempted to gut crime prevention, and would invite the NRA into the Oval Office.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group will not return to an old approach that was tough on the causes of crime but not tough enough on crime itself.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2df05f2b99840051274780bfe6f07b5d3098e0b3f91f4720a1936db562852648"
+}

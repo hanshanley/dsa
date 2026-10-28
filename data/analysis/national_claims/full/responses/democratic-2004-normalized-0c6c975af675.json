@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 375,
+      "generation_tps": 16.543513991184252,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1451,
+      "prompt_tps": 482.39757915460405,
+      "request_sha256": "1827c6c3e1b3c936f6f3faae96e8c7dc9c6877e6cdf1ec4e520cbcb77fbad5de",
+      "seconds": 25.684502750169486,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Promoting international economic development is a strategic imperative of the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will use American economic power to extend security and prosperity around the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will work with poor countries to help stabilize and diversify their economies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will consider sensible debt relief measures where appropriate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will support efforts to reach universal basic education and the other Millennium Development Goals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is committed to the best training, facilities and support for America's diplomats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"America's diplomats represent the United States and work to promote U.S. values around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today's American military is the best in the world.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Tomorrow's military must be stronger, faster, and better armed.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American military must not be stretched so thin again.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 393,
+      "generation_tps": 16.480312026361364,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1994,
+      "prompt_tps": 486.28793710783646,
+      "request_sha256": "5c6c693a736d199127b4acd117da4075e1117ed36f97ccad82b94fd0f9a6e62f",
+      "seconds": 27.956427209079266,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Promoting international economic development is a strategic imperative of the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will use American economic power to extend security and prosperity \u2013 which leads to peace \u2013 around the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will work with poor countries to help stabilize and diversify their economies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will consider sensible debt relief measures where appropriate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will support efforts to reach universal basic education and the other Millennium Development Goals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is committed to the best training, facilities and support for America's diplomats, the men and women of America's foreign affairs community.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"America's diplomats represent the United States and work to promote U.S. values around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today's American military is the best in the world.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Tomorrow's military must be stronger, faster, and better armed.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American military must not be stretched so thin again.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1827c6c3e1b3c936f6f3faae96e8c7dc9c6877e6cdf1ec4e520cbcb77fbad5de"
+}

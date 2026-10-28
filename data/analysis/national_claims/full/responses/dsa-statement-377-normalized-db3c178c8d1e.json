@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 237,
+      "generation_tps": 16.65789769503132,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1398,
+      "prompt_tps": 466.52584586851776,
+      "request_sha256": "17e8cdb7ad5830acb3667f3d3afa07c242ded522f5daefcd26b45a5aeeb6f6b1",
+      "seconds": 17.234029208077118,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Islamic State has carried out barbarous mass killings of Shiites, Kurds, Yazidis, Christians, feminists and secularists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Islamic State has brutally executed independent journalists and humanitarian workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Islamic State oppresses the people it rules over.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA supports the democratic aspirations of the Kurdish people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA supports the democratic forces fighting against the Assad regime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA condemns Turkey\u2019s refusal to open up a corridor to Kobani so that weapons and additional Kurdish fighters can reach besieged Kurds.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 288,
+      "generation_tps": 16.62823924367255,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1803,
+      "prompt_tps": 483.4913708073519,
+      "request_sha256": "eb9113965cf98115da11933394a4b44c174d7e96e4c0440abe440c8463b9c8e9",
+      "seconds": 21.058236917015165,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Islamic State has carried out barbarous mass killings of Shiites, Kurds, Yazidis, Christians, feminists and secularists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Islamic State has brutally executed independent journalists and humanitarian workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Islamic State oppresses the people it rules over.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA supports the democratic aspirations of the Kurdish people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA supports the democratic forces fighting against the brutal Assad regime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA condemns Turkey\u2019s refusal to open up a corridor to the besieged Syrian Kurdish town of Kobani so that weapons and additional Kurdish fighters can reach their fellow Kurds who are being besieged by the Islamic State.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Islamic State is not the only brutal force in the world today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "17e8cdb7ad5830acb3667f3d3afa07c242ded522f5daefcd26b45a5aeeb6f6b1"
+}

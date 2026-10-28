@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 239,
+      "generation_tps": 16.6117104125634,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1416,
+      "prompt_tps": 479.4525099059916,
+      "request_sha256": "3fbc9d505a9eba1228b25702855575d74983fff85edd92ede43d8551fcc1e2dd",
+      "seconds": 17.350502917077392,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA urges its members to join protests against the verdict and \u201cstand your ground laws\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA urges redoubled efforts to fight against racism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA urges efforts to fight against the \u201cNew Jim Crow\u201d prison-pipeline laws that subject hundreds of thousands of prisoners of color to absurdly long sentences for minor, non-violent drug law violations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA joins the NAACP in urging the United States Justice Department to indict George Zimmerman for violating the civil rights of Trayvon Martin.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"\u201cWalking while Black\u201d should not be a cause for armed citizens to harass and confront \u2013 and then murder \u2013 unarmed persons of color.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 216,
+      "generation_tps": 16.487369597118526,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1823,
+      "prompt_tps": 510.3572710719434,
+      "request_sha256": "c8affeb4a9f9c082c5e8a5b30709df8a08a554700d069c59c9bea03cf1d055a4",
+      "seconds": 16.682697040960193,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA urges its members to join protests against the verdict and \u201cstand your ground laws\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA urges its members to redouble efforts to fight against racism, including the outrageous \u201cNew Jim Crow\u201d prison-pipeline laws that subject hundreds of thousands of prisoners of color to absurdly long sentences for minor, non-violent drug law violations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA joins the NAACP in urging the United States Justice Department to indict George Zimmerman for violating the civil rights of Trayvon Martin.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"\u201cWalking while Black\u201d should not be a cause for armed citizens to harass and confront \u2013 and then murder \u2013 unarmed persons of color.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3fbc9d505a9eba1228b25702855575d74983fff85edd92ede43d8551fcc1e2dd"
+}

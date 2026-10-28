@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 95,
+      "generation_tps": 8.38705595219026,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1305,
+      "prompt_tps": 356.7940903363479,
+      "request_sha256": "213df9393b153264c3828d6aa2a7ac0d1ef24e190e418dc741970024de210b9f",
+      "seconds": 14.997478750068694,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Uncut campaign, led by the National Nurses/Progressive Democrats of America, aims to tax Wall Street and fund Main Street.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Move-On's campaign aims to rebuild the American Dream.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 102,
+      "generation_tps": 8.810545131529405,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1568,
+      "prompt_tps": 389.8283070327201,
+      "request_sha256": "ac3fc8feb7b8e07990e2f24b0049c8cc39fea69860975bcb846d8b92ada97da0",
+      "seconds": 15.611466250149533,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Uncut campaign, led by the National Nurses/Progressive Democrats of America, aims to tax Wall Street and fund Main Street.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Move-On\u2019s \u201cRebuild the American Dream\u201d campaign aims to rebuild the American Dream.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "213df9393b153264c3828d6aa2a7ac0d1ef24e190e418dc741970024de210b9f"
+}

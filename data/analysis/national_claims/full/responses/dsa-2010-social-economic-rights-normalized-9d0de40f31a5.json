@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 298,
+      "generation_tps": 16.604902057059423,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1448,
+      "prompt_tps": 464.9503160720006,
+      "request_sha256": "2a37d7fbdb9d7208032459c2a6455b1161d0442988f3df1115a0da4f876e5f3f",
+      "seconds": 21.07068237499334,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The employer-based system of providing health insurance contributes to runaway inflation in the cost of health insurance premiums and pharmaceuticals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The employer-based system of providing health insurance threatens the competitiveness of American manufacturing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The employer-based system of providing health insurance has become an untenable burden on small businesses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. lags behind most industrialized countries in terms of the quality of its health care system as measured by life expectancy, infant mortality and doctor visits per capita.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The contrast between U.S. spending levels and the quality of its health care exists because the U.S. treats health care as a commodity for sale rather than as a public good.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Health care should be treated as a public good, such as education, police protection, and the fire department, to which everyone is entitled.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 312,
+      "generation_tps": 16.592980323818736,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1914,
+      "prompt_tps": 491.8458897345257,
+      "request_sha256": "216b4dbef100f47a7b3b104bc1feac8963bd367812da0e53b06a4e3a7a000d30",
+      "seconds": 22.703891542041674,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The employer-based system of providing health insurance contributes to runaway inflation in the cost of health insurance premiums and pharmaceuticals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The employer-based system of providing health insurance threatens the competitiveness of American manufacturing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The employer-based system of providing health insurance has become an untenable burden on small businesses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. lags behind most industrialized countries in terms of the quality of its health care system as measured by life expectancy, infant mortality and doctor visits per capita.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The contrast between U.S. spending levels and the quality of its health care exists because the U.S. continues to utilize the wrong paradigm for health care delivery in this country, treating health care as a commodity for sale rather than as a public good.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Health care should be treated as a public good, such as education, police protection, and the fire department, to which everyone is entitled.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2a37d7fbdb9d7208032459c2a6455b1161d0442988f3df1115a0da4f876e5f3f"
+}

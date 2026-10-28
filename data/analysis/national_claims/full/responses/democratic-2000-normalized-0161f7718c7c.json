@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 140,
+      "generation_tps": 8.352605042971495,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1396,
+      "prompt_tps": 312.58428853137855,
+      "request_sha256": "c81a4935b7141ccadcac58cd9e953926154d97d6ffba7f4ed9403488fcb4d5b5",
+      "seconds": 21.246022291947156,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for imposing strict supervision of individuals released on parole, with insistence on obeying the law and staying off drugs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for helping individuals released on parole make it in the workplace.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes that ending the revolving door, in combination with more determined efforts at prevention, will both combat crime and ultimately reduce rates of incarceration that are so tragically high in many communities.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 236,
+      "generation_tps": 8.115476420725471,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1704,
+      "prompt_tps": 361.6234537474312,
+      "request_sha256": "77ded9121a2767a6bfba4f4c0906936e21ab0f85b7bd1a02a424956a05dcaf31",
+      "seconds": 33.81794812506996,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for imposing strict supervision of individuals released on parole, with insistence on obeying the law and staying off drugs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for helping individuals released on parole make it in the workplace.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes that ending the revolving door, in combination with more determined efforts at prevention, will both combat crime and ultimately reduce rates of incarceration that are so tragically high in many communities.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes that ending the revolving door, in combination with more determined efforts at prevention, will combat crime.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes that ending the revolving door, in combination with more determined efforts at prevention, will ultimately reduce rates of incarceration that are so tragically high in many communities.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c81a4935b7141ccadcac58cd9e953926154d97d6ffba7f4ed9403488fcb4d5b5"
+}

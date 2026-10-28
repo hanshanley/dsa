@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 317,
+      "generation_tps": 16.609466397706992,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1518,
+      "prompt_tps": 470.7852623819557,
+      "request_sha256": "cff5f3f04e9f94b5a61ee0c40e69b3840c707d33887b512d88ff9db611b64863",
+      "seconds": 22.320028292015195,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The great promise of America is a better life for all who work for it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"As an American, individuals live in a land offering possibilities based on hard work and talent.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The opportunity to build a better future starts with a good job.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The opportunity for work, rewards from work, and the dignity of work have made Americans successful and America strong.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a new economic plan that will put jobs first.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for renewing American competitiveness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for making honest budget choices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for investing in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"A strong America keeps the promise of opportunity for all and avoids special privileges for none.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 321,
+      "generation_tps": 16.578729532805145,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2003,
+      "prompt_tps": 491.3060886672433,
+      "request_sha256": "e4b6717d7b9d4cadb710f19a9109b1afc4c802f7fb45515d090a0ab1f067960d",
+      "seconds": 23.44821587507613,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The great promise of America is a better life for all who work for it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"As an American, individuals live in a land offering possibilities based on hard work and God-given talent.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The opportunity to build a better future starts with a good job.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The opportunity for work, the rewards from work, and the dignity of work have made Americans successful and America strong.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a new economic plan that will put jobs first.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for renewing American competitiveness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for making honest budget choices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for investing in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"A strong America keeps the promise of opportunity for all and avoids special privileges for none.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cff5f3f04e9f94b5a61ee0c40e69b3840c707d33887b512d88ff9db611b64863"
+}

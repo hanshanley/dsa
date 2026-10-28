@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 387,
+      "generation_tps": 16.564829112729264,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1498,
+      "prompt_tps": 473.92887621784996,
+      "request_sha256": "be0a35b2b85969e65d592ba6fb09e556c4779161785de7d85301a5287e13b027",
+      "seconds": 26.533928000135347,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States' relations with Vietnam are still overshadowed by uncertainty concerning Americans who became prisoners of war or were missing in action.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican president will accelerate efforts in every honorable way to obtain the fullest possible accounting for Americans still missing and for the repatriation of the remains of those who died in the cause of freedom.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The government of Vietnam continues retribution against its ethnic minorities and others who fought alongside United States forces.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States owes a debt of honor to individuals who fought alongside United States forces and will not be blind to their suffering.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"India is emerging as one of the great democracies of the twenty-first century.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"India will soon be the world's most populous state.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"India is now redefining its identity and future strategy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States should engage India, respecting its multicultural achievements and encouraging Indian choices for a more open world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will place a priority on the secure, stable development of the volatile region of Pakistan, where adversaries now face each other with nuclear arsenals.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 370,
+      "generation_tps": 16.560047128307854,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2053,
+      "prompt_tps": 509.7581830884899,
+      "request_sha256": "5ce6502f67d70cff13365379f399cb8c118b2146b5bb7264cd04e1902d3fda30",
+      "seconds": 26.380162457935512,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States' relations with Vietnam are still overshadowed by uncertainty concerning Americans who became prisoners of war or were missing in action and by continued retribution by the government of Vietnam against its ethnic minorities and others who fought alongside United States forces.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican president will accelerate efforts in every honorable way to obtain the fullest possible accounting for those Americans still missing and for the repatriation of the remains of those who died in the cause of freedom.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States owes those individuals who fought alongside United States forces a debt of honor and will not be blind to their suffering.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"India is emerging as one of the great democracies of the twenty-first century.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"India will soon be the world's most populous state.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"India is now redefining its identity and future strategy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States should engage India, respecting its multicultural achievements and encouraging Indian choices for a more open world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will place a priority on the secure, stable development of the volatile region of Pakistan, where adversaries now face each other with nuclear arsenals.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "be0a35b2b85969e65d592ba6fb09e556c4779161785de7d85301a5287e13b027"
+}

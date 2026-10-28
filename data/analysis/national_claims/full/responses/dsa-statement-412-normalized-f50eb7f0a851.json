@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 349,
+      "generation_tps": 16.59983752277289,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1570,
+      "prompt_tps": 470.6111398966024,
+      "request_sha256": "b257b44a53dda302861b6abc9b440e5a85575cd1022e05c56bd72ae83549eea2",
+      "seconds": 24.37042100005783,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Court ruled that \u201cpartial public employees\u201d cannot be compelled to pay \u201cagency fees\u201d.\",\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court\u2019s conservative majority continued its assault on the rights of workers to organize to improve their working conditions.\",\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The ruling in Harris v. Quinn should be the case, according to the five-member majority.\",\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The ruling in Harris v. Quinn threatens the union rights of other \u201cpartial public employees\u201d, such as museum workers, librarians, and other employees whose wages are paid for by the state but who work for non-profits or other non-government agencies.\",\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling in Harris v. Quinn could threaten the right of charter school teachers to build effective unions.\",\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling in Harris v. Quinn struck a blow against the gains the labor movement has made recently in organizing home care workers.\",\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Home care workers are made up predominately of women of color.\",\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Home care is one of the fastest growing sectors of the economy.\",\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 453,
+      "generation_tps": 16.44053533431524,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2087,
+      "prompt_tps": 503.25052130057566,
+      "request_sha256": "3899b48822a7dae41b60d65aa3a60316c08b3f39dc4b1e0df58b95841884e341",
+      "seconds": 31.710493125021458,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Court ruled that \u201cpartial public employees\u201d cannot be compelled to pay \u201cagency fees\u201d even if the contract has been freely negotiated between a private agency and a state, county or local government.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court\u2019s conservative majority continued its assault on the rights of workers to organize to improve their working conditions.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The five-member majority in Harris v. Quinn argued that \u201cpartial public employees\u201d should not be compelled to pay \u201cagency fees\u201d even if the contract has been freely negotiated between a private agency and a state, county or local government.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The ruling in Harris v. Quinn threatens the union rights of other \u201cpartial public employees\u201d, such as museum workers, librarians, and other employees whose wages are paid for by the state but who work for non-profits or other non-government agencies.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling in Harris v. Quinn could threaten the right of charter school teachers to build effective unions.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling in Harris v. Quinn struck a blow against the gains the labor movement has made recently in organizing home care workers.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Home care workers are made up predominately of women of color.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Home care is one of the fastest growing sectors of the economy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling in Harris v. Quinn applies to \u201cpartial public employees,\u201d such as home care and health care aides funded by Medicaid to care for ill, elderly or disabled persons.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b257b44a53dda302861b6abc9b440e5a85575cd1022e05c56bd72ae83549eea2"
+}

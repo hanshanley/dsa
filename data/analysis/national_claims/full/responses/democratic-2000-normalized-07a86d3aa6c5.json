@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 421,
+      "generation_tps": 16.4846111529422,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1514,
+      "prompt_tps": 492.88458914141665,
+      "request_sha256": "b4c02816d06f4a8dcfaeb59883ff5ff17b850fdfc94e2fdcc0358e61892d94e6",
+      "seconds": 28.624359708977863,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans are proposing to leave decisions about a prescription drug benefit \u2013 whether and where it might be offered, what it would include, and how much it would cost \u2013 to insurance companies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Studies suggest that less than half of seniors will be able to use the Republican prescription drug benefit.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe a guaranteed, universal prescription drug benefit should be added to Medicare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to redouble efforts to bring the uninsured into coverage step-by-step and as soon as possible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to guarantee access to affordable health care for every child in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to expand coverage to working families, including more Medicaid assistance to help with the transition from welfare to work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to ensure that dislocated workers are provided affordable health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to make health care accessible and affordable for small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to allow Americans aged 55 to 65 to buy into the Medicare program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to move the nation closer to the goal of providing universal health coverage for all Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 420,
+      "generation_tps": 12.061970282282495,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2103,
+      "prompt_tps": 512.2483188953929,
+      "request_sha256": "4e00baa1a1ad210c21e76d9fcfe7fe6238cda6c1022bc46db8121b8b13802405",
+      "seconds": 38.9419322500471,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans are proposing to leave decisions about whether and where a prescription drug benefit might be offered, what it would include, and how much it would cost to insurance companies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Studies suggest that less than half of seniors will be able to use the prescription drug benefit proposed by Republicans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe a guaranteed, universal prescription drug benefit should be added to Medicare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to redouble efforts to bring the uninsured into coverage step-by-step and as soon as possible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to guarantee access to affordable health care for every child in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to expand coverage to working families, including more Medicaid assistance to help with the transition from welfare to work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to ensure that dislocated workers are provided affordable health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to make health care accessible and affordable for small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to allow Americans aged 55 to 65 to buy into the Medicare program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to move the nation closer to the goal of providing universal health coverage for all Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b4c02816d06f4a8dcfaeb59883ff5ff17b850fdfc94e2fdcc0358e61892d94e6"
+}

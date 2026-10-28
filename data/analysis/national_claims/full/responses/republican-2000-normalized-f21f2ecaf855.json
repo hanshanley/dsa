@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 418,
+      "generation_tps": 16.609979702122544,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1512,
+      "prompt_tps": 469.6042113205463,
+      "request_sha256": "9681f8af6f783e12aac6c49cfa60ba0c61d743aa289d9c3432d47fba131cc391",
+      "seconds": 28.395362291950732,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America faces a new and rapidly evolving threat from terrorism and international crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Meeting the threat from terrorism and international crime requires new measures and consistent policies and determination from America's leaders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many established terrorist groups faded away in the 1990s after the Cold War ended.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Terrorists are increasingly motivated by amorphous religious causes or simple hatred of America rather than by specific political aims.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Terrorism crosses borders easily and frequently, including U.S. borders, and cannot easily be categorized as either domestic or international.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a response to terrorism that is resolute but not impulsive.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The most likely highly destructive terrorist attack remains a large bomb hidden in a car or truck.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The United States must be extremely vigilant about the possibility that future terrorists might use weapons of mass destruction, which are increasingly available and present an unprecedented threat to America.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The military will have to rethink its traditional doctrine and begin to focus on counterterrorism, human intelligence gathering, and unconventional warfare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Weapons of mass destruction are increasingly available.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 420,
+      "generation_tps": 16.565052830531865,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2098,
+      "prompt_tps": 508.4009439435639,
+      "request_sha256": "fe819ffdcc69e31689c14fb438a3d2a311d8a5a7446556ccb9215b18ccc0a3d6",
+      "seconds": 29.491048499941826,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America faces a new and rapidly evolving threat from terrorism and international crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Meeting this threat requires not just new measures, but also consistent policies and determination from America's leaders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many established terrorist groups faded away in the 1990s after the Cold War ended.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Increasingly, terrorists seem to be motivated by amorphous religious causes or simple hatred of America rather than by specific political aims.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Terrorism crosses borders easily and frequently, including U.S. borders, and cannot easily be categorized as either domestic or international.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a response to terrorism that is resolute but not impulsive.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The most likely highly destructive terrorist attack remains a large bomb hidden in a car or truck.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The United States must be extremely vigilant about the possibility that future terrorists might use weapons of mass destruction, which are increasingly available and present an unprecedented threat to America.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The military will have to rethink its traditional doctrine and begin to focus on counterterrorism, human intelligence gathering, and unconventional warfare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Weapons of mass destruction are increasingly available.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9681f8af6f783e12aac6c49cfa60ba0c61d743aa289d9c3432d47fba131cc391"
+}

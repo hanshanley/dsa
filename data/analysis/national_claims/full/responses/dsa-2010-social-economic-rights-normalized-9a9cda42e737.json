@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 399,
+      "generation_tps": 16.53288742014973,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1510,
+      "prompt_tps": 466.58191369147227,
+      "request_sha256": "ab63a99264f2324e67ca54f792537c04562e345896d6035693a89586d7e4d390",
+      "seconds": 27.38014049991034,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Banks ignored prudential lending rules.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Banks should absorb the losses on their speculative mortgages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A governmental agency, modeled on the Home Owners Loan Corporation of the New Deal, could require banks to renegotiate underwater mortgages, setting the loan at the home\u2019s present fair market value.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"If homeowners cannot meet the renegotiated mortgage payments, they would have the right to remain in their home and pay a current fair-value rent to the mortgage owner.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal anti-predatory legislation should be enacted prohibiting abusive loan practices, guaranteeing judicial review and just cause evictions and providing for assignee liability so that transferees of the mortgage would be held liable for any violations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bankruptcy code should be amended to allow a judge to modify the basic terms of a home mortgage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal of affordable and safe shelter can be realized by government programs and subsidies with mandated targets and timetables.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Then and only then will the right to housing be truly secured.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Everyone has a right to preventive, acute and long term health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 399,
+      "generation_tps": 16.4983447849882,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2077,
+      "prompt_tps": 502.3755354369619,
+      "request_sha256": "d5a16b6768c40290378e1ef739dd4dce94c0631d11bf17f983b61c0a541e3084",
+      "seconds": 28.328460708027706,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Banks ignored prudential lending rules.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Banks should absorb the losses on their speculative mortgages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A governmental agency, modeled on the Home Owners Loan Corporation of the New Deal, could require banks to renegotiate underwater mortgages, setting the loan at the home\u2019s present fair market value.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"If homeowners cannot meet the renegotiated mortgage payments, they would have the right to remain in their home and pay a current fair-value rent to the mortgage owner.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal anti-predatory legislation should be enacted prohibiting abusive loan practices, guaranteeing judicial review and just cause evictions and providing for assignee liability so that transferees of the mortgage would be held liable for any violations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bankruptcy code should be amended to allow a judge to modify the basic terms of a home mortgage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal of affordable and safe shelter can be realized by government programs and subsidies with mandated targets and timetables.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Then and only then will the right to housing be truly secured.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Everyone has a right to preventive, acute and long term health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ab63a99264f2324e67ca54f792537c04562e345896d6035693a89586d7e4d390"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 356,
+      "generation_tps": 8.134171297119217,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1484,
+      "prompt_tps": 382.89109365511564,
+      "request_sha256": "70722e3d9c8b8d35e492bfb876c8000770d1e220db5d355f085d09b4e77d52ef",
+      "seconds": 47.65713495784439,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America is blessed with abundant low-cost sources of coal, petroleum, and natural gas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that with the right incentives to encourage the development and deployment of clean energy technologies, all energy sources can be made cleaner, safer, and healthier for children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support disposing of nuclear waste in a scientifically-sound manner in accordance with standards designed to protect human health and the environment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Climate-disrupting and health-threatening pollution in this country must be dramatically reduced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All nations of the world should participate in reducing climate-disrupting and health-threatening pollution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Environmental standards should be raised throughout the world to preserve the Earth and prevent a destructive race to the bottom based on competition for production and jobs based on who can do the least to protect the environment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There will be no new bureaucracies, no new agencies, and no new organizations.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"There will be action and progress.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 388,
+      "generation_tps": 8.202773837748175,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2008,
+      "prompt_tps": 389.33446857006214,
+      "request_sha256": "c37dc1211b8acec43762ce9d4294f08848da61de087523010da103cc1e02f1ca",
+      "seconds": 52.469749125186354,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America is blessed with abundant low-cost sources of coal, petroleum, and natural gas, but these sources must be used wisely and in a way that promotes a workforce whose skills are expanded, utilized, and rewarded.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that with the right incentives to encourage the development and deployment of clean energy technologies, all energy sources can be made cleaner, safer, and healthier for children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support disposing of nuclear waste in a scientifically-sound manner in accordance with standards designed to protect human health and the environment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Climate-disrupting and health-threatening pollution in this country must be dramatically reduced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All nations of the world should participate in the effort to reduce climate-disrupting and health-threatening pollution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Environmental standards should be raised throughout the world to preserve the Earth and to prevent a destructive race to the bottom wherein countries compete for production and jobs based on who can do the least to protect the environment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There will be no new bureaucracies, no new agencies, and no new organizations.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"There will be action and there will be progress.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "70722e3d9c8b8d35e492bfb876c8000770d1e220db5d355f085d09b4e77d52ef"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 406,
+      "generation_tps": 16.627846373659036,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1505,
+      "prompt_tps": 467.84181391885784,
+      "request_sha256": "e995615e0d8f8302fbb638f9b8dab245e9af97e0b4b6e744c9f14ad2c2fdb7e2",
+      "seconds": 27.643799541983753,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Nearly 8.5 million children lack health insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for strengthening Medicaid for families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for expanding the children's health program created under President Clinton so no child goes without medical care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for offering individuals and businesses tax credits to make quality, reliable health coverage more affordable.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for providing tax credits to Americans who are approaching retirement age and those who are between jobs so they can afford quality, reliable coverage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for expanding coverage for low income adults through existing federal-state health care programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for providing all Americans with access to the same coverage that members of Congress give themselves.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a plan to reduce health costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for lifting a financial burden on families, businesses, and the self-employed by paying for the highest-cost medical cases.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"That plan to pay for the highest-cost medical cases will save America's families up to $1,000 on their premiums.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 449,
+      "generation_tps": 16.557603873718055,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2079,
+      "prompt_tps": 508.2695308229787,
+      "request_sha256": "555cad9ca343882be5ad5262dc4e6d3293a9ea8bd4707a47c6e418a5d93af0a2",
+      "seconds": 31.217542791040614,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Nearly 8.5 million children lack health insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for strengthening Medicaid for families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for expanding the children's health program created under President Clinton so no child goes without medical care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under the leadership of John Kerry and John Edwards, support for offering individuals and businesses tax credits to make quality, reliable health coverage more affordable.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under the leadership of John Kerry and John Edwards, support for providing tax credits to Americans who are approaching retirement age and those who are between jobs so they can afford quality, reliable coverage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under the leadership of John Kerry and John Edwards, support for expanding coverage for low income adults through existing federal-state health care programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under the leadership of John Kerry and John Edwards, support for providing all Americans with access to the same coverage that members of Congress give themselves.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a plan to reduce health costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for lifting a financial burden on families, businesses, and the self-employed by picking up the tab for the highest-cost medical cases.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Picking up the tab for the highest-cost medical cases will save America's families up to $1,000 on their premiums.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e995615e0d8f8302fbb638f9b8dab245e9af97e0b4b6e744c9f14ad2c2fdb7e2"
+}

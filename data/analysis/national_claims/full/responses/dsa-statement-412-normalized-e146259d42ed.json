@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 341,
+      "generation_tps": 16.631929629843732,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1335,
+      "prompt_tps": 457.9754887107305,
+      "request_sha256": "a9af79aec96b8b0b8261e0647c80d852342fd896067748629c2182fb880b1ec9",
+      "seconds": 23.427165291970596,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America (DSA) condemns three recent rulings of the Supreme Court of the United States (SCOTUS) as infringements on the rights of women and working people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The three rulings at the end of June threaten the rights of women to reproductive freedom.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The three rulings at the end of June threaten the rights of working people to form strong unions.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Five Republican-appointed judges on the Court are increasingly enacting a reactionary policy agenda that enhances the power of elites at the expense of the vast majority.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court ruled in a 5-4 decision that \u201cclosely held\u201d for-profit corporations run on religious principles could drop contraceptive coverage from their health insurance plans if the corporate owners objected to contraception on religious grounds.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The decision opens the way for corporate board of directors to claim on religious grounds that it opposes enacting.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The ruling favors the fictive \u201cindividual rights\u201d of corporations at the expense of human beings\u2019 ability to control their reproduction.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 378,
+      "generation_tps": 16.546632176903348,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1844,
+      "prompt_tps": 490.0237385184539,
+      "request_sha256": "21c452906f8903b253548d6c1e91a56c08bf7883a475468d990abebe3b763649",
+      "seconds": 26.617141583003104,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America (DSA) condemns three recent rulings of the Supreme Court of the United States (SCOTUS) as infringements on the rights of women and working people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The three rulings at the end of June threaten the rights of women to reproductive freedom.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The three rulings at the end of June threaten the rights of working people to form strong unions.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Despite conservative claims to be \u201cstrict constructionists\u201d who are opposed to \u201cjudicial activism,\u201d five Republican-appointed judges on the Court are increasingly enacting a reactionary policy agenda that enhances the power of elites at the expense of the vast majority.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"In Burwell v. Hobby Lobby Stores and Conestoga Wood Specialties v. Burwell, the Court ruled in a 5-4 decision that \u201cclosely held\u201d for-profit corporations run on religious principles could drop contraceptive coverage from their health insurance plans if the corporate owners objected to contraception on religious grounds.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The decision opens the way for corporate board of directors to claim on religious grounds that it opposes enacting.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The ruling favors the fictive \u201cindividual rights\u201d of corporations at the expense of human beings\u2019 ability to control their reproduction.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a9af79aec96b8b0b8261e0647c80d852342fd896067748629c2182fb880b1ec9"
+}

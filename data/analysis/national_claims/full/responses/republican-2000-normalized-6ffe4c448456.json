@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 362,
+      "generation_tps": 8.51169234556827,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1446,
+      "prompt_tps": 314.81281378788793,
+      "request_sha256": "8e350a2aad30fd740bf588c2d4a649ba7deec8990dae1e5e767961f45df64503",
+      "seconds": 47.13732308289036,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The president and the Congress should play a crucial leadership role in restoring public safety.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress has enacted legislation for an effective deterrent death penalty within proper federal jurisdiction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress has enacted legislation for restitution to victims within proper federal jurisdiction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress has enacted legislation for removal of criminal aliens within proper federal jurisdiction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress has enacted legislation for vigilance against terrorism within proper federal jurisdiction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress stopped federal judges from releasing criminals because of prison overcrowding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress made it harder to file lawsuits about prison conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress pushed states to make sure violent felons actually do time with a truth-in-sentencing law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress has provided billions of dollars in the form of block grants for law enforcement agencies to hire police and acquire new equipment and technology.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 8.536526462918914,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1976,
+      "prompt_tps": 381.9765111727543,
+      "request_sha256": "fd8e646843e6a5e22c5abfeac3a3ab29b71a3392e10861bf264021fa0f63cc28",
+      "seconds": 52.98280308302492,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The president and the Congress should play a crucial leadership role in restoring public safety.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Within proper federal jurisdiction, the Republican Congress has enacted legislation for an effective deterrent death penalty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Within proper federal jurisdiction, the Republican Congress has enacted legislation for restitution to victims.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Within proper federal jurisdiction, the Republican Congress has enacted legislation for removal of criminal aliens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Within proper federal jurisdiction, the Republican Congress has enacted legislation for vigilance against terrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress stopped federal judges from releasing criminals because of prison overcrowding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress made it harder to file lawsuits about prison conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress pushed states to make sure violent felons actually do time with a truth-in-sentencing law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Congress has provided billions of dollars in the form of block grants for law enforcement agencies to hire police and acquire new equipment and technology.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The congressional half of the team, in cooperation with governors and local officials, has been hard at work.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8e350a2aad30fd740bf588c2d4a649ba7deec8990dae1e5e767961f45df64503"
+}

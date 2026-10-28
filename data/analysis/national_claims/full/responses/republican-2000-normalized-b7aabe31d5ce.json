@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 394,
+      "generation_tps": 16.564301147926933,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1496,
+      "prompt_tps": 463.215826533887,
+      "request_sha256": "4a20fa4b565340f7c12e69aeba103abc242ba0cc6414bc84cf19c53df58e7b74",
+      "seconds": 27.025729791028425,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A comprehensive strategy for combating weapons of mass destruction must include political, economic, and military instruments to deter and defeat proliferation efforts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States needs the cooperation of friends and allies, and should seek the cooperation of Russia and China, in developing realistic strategies to deter and defeat proliferation efforts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Threats to the United States come from rogue states and terrorist groups, delivered by missile, aircraft, shipping container, or suitcase.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Comprehensive Test Ban Treaty is not verifiable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Comprehensive Test Ban Treaty is not enforceable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Comprehensive Test Ban Treaty would not enable the United States to ensure the reliability of the U.S. nuclear deterrent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Comprehensive Test Ban Treaty does not deal with the real dangers of nuclear proliferation, which are rogue regimes such as Iran, Iraq, and North Korea.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States can fight the spread of nuclear weapons, but cannot wish them away with unwise agreements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans in the Senate reacted responsibly in rejecting the Comprehensive Test Ban Treaty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 429,
+      "generation_tps": 16.571678778018835,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2058,
+      "prompt_tps": 505.27351091191025,
+      "request_sha256": "291a5e399a9836676bfd13ae2c52c1573e6df80bedc83e76b892d7b5524a5224",
+      "seconds": 29.970404249848798,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A comprehensive strategy for combating the new dangers posed by weapons of mass destruction must include a variety of other measures to contain and prevent the spread of such weapons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States needs the cooperation of friends and allies, and should seek the cooperation of Russia and China, in developing realistic strategies using political, economic, and military instruments to deter and defeat the proliferation efforts of others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Threats to the United States come from both rogue states and terrorist groups, whether delivered by missile, aircraft, shipping container, or suitcase.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Comprehensive Test Ban Treaty is not verifiable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Comprehensive Test Ban Treaty is not enforceable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Comprehensive Test Ban Treaty would not enable the United States to ensure the reliability of the U.S. nuclear deterrent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Comprehensive Test Ban Treaty does not deal with the real dangers of nuclear proliferation, which are rogue regimes \u2014 such as Iran, Iraq, and North Korea \u2014 that seek to hide their dangerous weapons programs behind weak international treaties.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States can fight the spread of nuclear weapons, but cannot wish them away with unwise agreements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans in the Senate reacted accordingly and responsibly in rejecting the Comprehensive Test Ban Treaty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4a20fa4b565340f7c12e69aeba103abc242ba0cc6414bc84cf19c53df58e7b74"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 246,
+      "generation_tps": 8.277964375032735,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1418,
+      "prompt_tps": 310.8616439736706,
+      "request_sha256": "26a0de2647427285e51d4f9e8bd20336c6b58a0993b13e3aec9baf9ae9592075",
+      "seconds": 34.29474754096009,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Agriculture accounts for 13 percent of the nation's economic output.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Agriculture employs, directly or indirectly, more than 22 million people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"When agriculture is hurting, the entire country aches.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican party is guided by the principle that farmers and ranchers benefit most from production and sales at a good price.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican party is guided by the principle that farmers and ranchers want to produce what makes sense on their own private property, not what the federal government thinks should be grown there.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under Republican leadership, the federal government will not run family farms.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 250,
+      "generation_tps": 8.110903223905519,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1832,
+      "prompt_tps": 389.04179824791333,
+      "request_sha256": "12df44ceb2d85187e641bdae350465ad2115bd4814f9ce52f3994b1b3a69e8b3",
+      "seconds": 35.54352066712454,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Agriculture accounts for 13 percent of the nation's economic output.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Agriculture employs, directly or indirectly, more than 22 million people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"When agriculture is hurting, the entire country aches.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican party is guided by the principle that farmers and ranchers benefit most from production and sales at a good price.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican party is guided by the principle that farmers and ranchers want to produce what makes sense on their own private property, not what official Washington thinks should be grown there.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under Republican leadership, the federal government will not run family farms.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "26a0de2647427285e51d4f9e8bd20336c6b58a0993b13e3aec9baf9ae9592075"
+}

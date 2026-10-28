@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 485,
+      "generation_tps": 16.5738851605815,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1330,
+      "prompt_tps": 455.0185249931938,
+      "request_sha256": "62412eed252a0c14bb5ac9fc6633f7dfc100e6517c3e005c2f03d63f6f675e9c",
+      "seconds": 32.19561858382076,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America (DSA) condemns the 5-4 Supreme Court decision in Shelby County v. Holder.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Supreme Court decision in Shelby County v. Holder threatens four decades of gains in the protection of voting rights and rights to representation of citizens of color.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hundreds of thousands of civil rights activists put their lives on the line to win the expansion of the suffrage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA views the fight to overturn the Supreme Court decision as part of a larger struggle to restore democracy to the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA supports placing strict limits on the role of money in politics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA supports providing an expeditious path to citizenship for undocumented immigrants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA supports enacting a constitutional right to vote and to be fairly represented.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"An almost exclusively white Republican Party is turning to undemocratic means to maintain political power.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The court\u2019s decision has already accelerated reactionary efforts to limit the franchise by means of restrictive voter ID laws, elimination of early voting, gerrymandering, and felony exclusion.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republican attorney generals in Texas, Alabama, South Carolina and Mississippi stated that they would immediately institute restrictive voter ID laws and gerrymandering schemes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Restrictive voter ID laws and gerrymandering schemes might have been overturned by the now-gutted enforcement procedures of the Voting Rights Act.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 510,
+      "generation_tps": 16.53709054607684,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1983,
+      "prompt_tps": 495.47801352180716,
+      "request_sha256": "abf8d98976cca1be6917ff15dbe9601178ef98330780b5983dfe1a8bd54695d2",
+      "seconds": 34.85152579192072,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America (DSA) condemns the partisan 5-4 Supreme Court decision in Shelby County v. Holder that threatens four decades of gains in the protection of voting rights and rights to representation of citizens of color.\",\n\"claim_types\":[\"factual_assertion\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hundreds of thousands of civil rights activists put their lives on the line to win the expansion of the suffrage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA views the fight to overturn the Supreme Court decision as part of a larger struggle to restore democracy to the United States, which includes placing strict limits on the role of money in politics, providing an expeditious path to citizenship for undocumented immigrants, and enacting a constitutional right to vote and to be fairly represented.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA supports placing strict limits on the role of money in politics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA supports providing an expeditious path to citizenship for undocumented immigrants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA supports enacting a constitutional right to vote and to be fairly represented.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"An almost exclusively white Republican Party is turning to undemocratic means to maintain political power.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The court\u2019s decision has already accelerated reactionary efforts to limit the franchise by means of restrictive voter ID laws, elimination of early voting, gerrymandering, and felony exclusion.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Within hours of the decision\u2019s announcement, Republican attorney generals in Texas, Alabama, South Carolina and Mississippi stated that they would immediately institute restrictive voter ID laws and gerrymandering schemes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Restrictive voter ID laws and gerrymandering schemes might have been overturned by the now-gutted enforcement procedures of the Voting Rights Act.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "62412eed252a0c14bb5ac9fc6633f7dfc100e6517c3e005c2f03d63f6f675e9c"
+}

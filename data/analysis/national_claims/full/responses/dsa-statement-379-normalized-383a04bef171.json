@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 348,
+      "generation_tps": 16.63820806674322,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1244,
+      "prompt_tps": 445.6051166480835,
+      "request_sha256": "20d0a188b9cb77cf3b075897c54eb1aa9e7223c0a876154972c0479ced321768",
+      "seconds": 23.718132250010967,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America condemns the massive and indiscriminate bombing of Gaza civilians by the Israeli armed forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America supports the immediate acceptance and implementation of a comprehensive cease fire that would end all combat in Gaza.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America supports lifting Israeli enforced restrictions on the ability of the people of Gaza to engage in the economic commerce and travel necessary for basic human survival.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes the Israeli government cynically used the brutal murder of three Israeli youths to justify police and army assaults on Palestinians who had no connection to the attacks themselves.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America condemns the Israeli right\u2019s use of the deaths of three Israeli youths and the subsequent murder of a Palestinian teenager to whip up racist hatred towards Palestinian Arabs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A just two-state peace settlement with the Palestinian people is possible only if Israeli civil society rejects racist hatred.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Full civil rights for Palestinian Arabs living within a non-expansionist Israel is possible only if Israeli civil society rejects racist hatred.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 333,
+      "generation_tps": 16.570716956317074,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1760,
+      "prompt_tps": 491.0992847651749,
+      "request_sha256": "0b29e578c4d0b371a14523b9e224c364b21ebedb4a7775c566431e2f2b3d725d",
+      "seconds": 23.68882012506947,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America condemns the massive and indiscriminate bombing of Gaza civilians by the Israeli armed forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America supports the immediate acceptance and implementation of a comprehensive cease fire that would end all combat in Gaza and lift Israeli enforced restrictions on the ability of the people of Gaza to engage in the economic commerce and travel necessary for basic human survival.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes that the Israeli government cynically used the brutal murder of three Israeli youths to justify police and army assaults on Palestinians who had no connection to the attacks themselves.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America condemns the Israeli right\u2019s use of these tragic deaths to whip up the racist hatred towards Palestinian Arabs that led to the brutal murder of an innocent Palestinian teenager by Israeli youths.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A just two-state peace settlement with the Palestinian people is possible only if Israeli civil society rejects such racist hatred.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Full civil rights for Palestinian Arabs living within a non-expansionist Israel is possible only if Israeli civil society rejects such racist hatred.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "20d0a188b9cb77cf3b075897c54eb1aa9e7223c0a876154972c0479ced321768"
+}

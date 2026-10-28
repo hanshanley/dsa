@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 202,
+      "generation_tps": 16.671610778627738,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1357,
+      "prompt_tps": 452.37994096987086,
+      "request_sha256": "be92cc860c59a592d5595b9184b3f8abd88ed316a9c7d244de8c3549694211e2",
+      "seconds": 15.125789375044405,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"For eight years, the Democratic Party's new thinking has helped America reach unparalleled heights of prosperity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"For eight years, the Democratic Party's new thinking has helped America reach unparalleled heights of progress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"For eight years, the Democratic Party's new thinking has helped America reach unparalleled heights of peace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is time to move forward, not to go back.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats have just begun to fight for a better America and a brighter future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 161,
+      "generation_tps": 16.676181671402638,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1727,
+      "prompt_tps": 483.16902374515064,
+      "request_sha256": "9cba57de03cff19fa351a20a38585fc99ec091ac633e2f44c449f95398058236",
+      "seconds": 13.237961667124182,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"For eight years, the Democratic Party's new thinking has helped America reach unparalleled heights of prosperity, progress, and peace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is time to move forward, not to go back.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats have just begun to fight for a better America and a brighter future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats say to America, \\\"You ain't seen nothing yet.\\\"\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "be92cc860c59a592d5595b9184b3f8abd88ed316a9c7d244de8c3549694211e2"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 452,
+      "generation_tps": 16.564823465782155,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1559,
+      "prompt_tps": 462.4822805887406,
+      "request_sha256": "b1ae00902c9daeca51e10cb701166e5c70d37dd933a15c5a492a15d344ff5d9c",
+      "seconds": 30.668938624905422,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"European and American bankers and bond vigilantes will resist efforts to promote equity and economic growth in France and elsewhere.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Economist magazine termed the moderate socialist president \u201crather dangerous\u201d because he \u201cgenuinely believes in the need to create a fairer society\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The fate of Hollande\u2019s program will not be decided solely in France.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A revived German left needs to overturn the bi-partisan German elite consensus favoring the politics of austerity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electoral victories by the broad left in upcoming German state elections could move the German political dynamic leftwards.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Germany pushing the European Central Bank (ECB) to drop its obsession with a phantom inflationary threat and adopt policies that would restore long-term economic growth is necessary for an equitable response to the European economic crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the ECB used its borrowing power to exchange existing sovereign debt for ECB-guaranteed Eurobonds, then the fiscal crisis in Spain, Italy, Greece, Portugal and Ireland could be eased, thus allowing for the adoption of full employment growth policies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The undemocratic terms of the European monetary union must be renegotiated because the European Union treaty agreements prioritize fighting inflation over promoting full employment and social justice in each member country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The European Union treaty agreements prioritize fighting inflation over promoting full employment and social justice in each member country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 488,
+      "generation_tps": 16.54107375333178,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2179,
+      "prompt_tps": 511.8759658061124,
+      "request_sha256": "1b480a04eac46a6d1973f8c4c03281f5de72dfb81120f6bf1b3297dec52c4356",
+      "seconds": 33.76924054091796,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"European and American bankers and bond vigilantes will resist such modest efforts to promote both equity and economic growth in France and elsewhere.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Economist magazine termed the moderate socialist president \u201crather dangerous\u201d because he \u201cgenuinely believes in the need to create a fairer society\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The fate of Hollande\u2019s program will not be decided solely in France.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A revived German left needs to overturn the bi-partisan German elite consensus favoring the politics of austerity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electoral victories by the broad left in upcoming German state elections could move the German political dynamic leftwards.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Germany pushing the European Central Bank (ECB) to drop its obsession with a phantom inflationary threat and adopt policies that would restore long-term economic growth is necessary for an equitable response to the European economic crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the ECB used its borrowing power to exchange existing sovereign debt for ECB-guaranteed Eurobonds, then the fiscal crisis in Spain, Italy, Greece, Portugal and Ireland could be eased, thus allowing for the adoption of full employment growth policies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The undemocratic terms of the European monetary union must be renegotiated because the European Union treaty agreements prioritize fighting inflation over promoting full employment and social justice in each member country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The European Union treaty agreements prioritize fighting inflation over promoting full employment and social justice in each member country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Europe are being crucified on a cross of the Euro.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b1ae00902c9daeca51e10cb701166e5c70d37dd933a15c5a492a15d344ff5d9c"
+}

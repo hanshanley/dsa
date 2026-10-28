@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 422,
+      "generation_tps": 16.57746697483468,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1496,
+      "prompt_tps": 464.10671522465327,
+      "request_sha256": "aae039cc9db344446077f210b3bf3bcb533b5cc14f901ac00c4b3afdd4becb1d",
+      "seconds": 28.689678499940783,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A major effort will be launched to harden the most vulnerable targets \u2013 from chemical and nuclear plants to rails and tunnels \u2013 and better protect them from attack.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Security upgrades at some nuclear weapons facilities are three years behind schedule.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current state of security at nuclear facilities and waste sites is too vulnerable to attack.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit rail and subway security will be improved by adding chemical release detectors to deter attacks.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than 100 chemical plants have the potential to endanger more than one million people in the event of an attack.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The FBI has warned that al Qaeda may target the chemical industry.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Bush Administration was moving toward a solution that would set minimum standards for safety at chemical plants.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Bush Administration backed down from setting minimum standards for safety at chemical plants after lobbying by the chemical industry.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Chemical plants will be made secure by requiring more guards, more fencing, and the use of less dangerous chemicals when possible.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Domestic readiness needs to be improved so people on the frontlines have the training and equipment to respond to any attack with speed, skill, and strength.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 428,
+      "generation_tps": 16.55376967331759,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2086,
+      "prompt_tps": 502.62190851682595,
+      "request_sha256": "549709dff4f66e846d32aa2324ac0c8a18a1912e63771b476c4849e061f98a86",
+      "seconds": 30.015198583016172,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A major effort will be launched to harden the most vulnerable targets \u2013 from chemical and nuclear plants to rails and tunnels \u2013 and better protect them from attack.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Security upgrades at some nuclear weapons facilities are three years behind schedule.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nuclear facilities and waste sites are too vulnerable to attack.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit rail and subway security will be improved by adding chemical release detectors to deter attacks like the one seen in Tokyo, and by taking other steps.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are more than 100 chemical plants where an attack could endanger more than one million people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The FBI has warned that al Qaeda may target the chemical industry.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Bush Administration was moving toward a solution that would set minimum standards for safety at chemical plants.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Bush Administration backed down from setting minimum standards for safety at chemical plants after heavy lobbying by the chemical industry.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Chemical plants will be made secure by requiring more guards, more fencing, and the use of less dangerous chemicals when possible.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Domestic readiness needs to be improved so people on the frontlines have the training and equipment to respond to any attack with all the speed, skill, and strength required.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "aae039cc9db344446077f210b3bf3bcb533b5cc14f901ac00c4b3afdd4becb1d"
+}

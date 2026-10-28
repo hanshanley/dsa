@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 389,
+      "generation_tps": 16.57462730257573,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1213,
+      "prompt_tps": 448.7347934798536,
+      "request_sha256": "45a5cc4cdac8873cc276e8fe812a67992999459faa8d993905c3b1041a7e0ec8",
+      "seconds": 26.182447375031188,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA supports single-payer health insurance as the most just, cost-effective and rational method for creating a universal health-care system in the United States.\", \"claim_types\":[\"policy_position\", \"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Conyers introduced H.R.676, the Expanded and Improved Medicare for All Act, in the House of Representatives.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"H.R.676, the Expanded and Improved Medicare for All Act, has 77 co-sponsors in the House of Representatives.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bernie Sanders introduced S.703, the American Health Security Act of 2009, in the Senate.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"S.703, the American Health Security Act of 2009, has not yet attracted co-sponsors in the Senate.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Both H.R.676 and S.703 take for-profit insurance companies out of the picture.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA asks its locals to contact their senators and representatives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA encourages senators and representatives to co-sponsor H.R.676 and S.703 if they have not already done so.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 420,
+      "generation_tps": 16.577092669284543,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1770,
+      "prompt_tps": 485.28480081820123,
+      "request_sha256": "ad0056a1056471a9def7cd6d49dc4d6a68b2951a386d826f2ee1367daf939dc9",
+      "seconds": 28.99277679179795,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA reaffirms its support for single-payer health insurance as the most just, cost-effective and rational method for creating a universal health-care system in the United States.\", \"claim_types\":[\"policy_position\", \"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the House of Representatives, John Conyers introduced H.R.676, the Expanded and Improved Medicare for All Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"H.R.676, the Expanded and Improved Medicare for All Act, has 77 co-sponsors in the House of Representatives.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the Senate, Bernie Sanders introduced S.703, the American Health Security Act of 2009.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"S.703, the American Health Security Act of 2009, has not yet attracted co-sponsors in the Senate.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Both H.R.676, the Expanded and Improved Medicare for All Act, and S.703, the American Health Security Act of 2009, take for-profit insurance companies out of the picture.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA asks its locals to contact their senators and representatives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA asks its locals to encourage their senators and representatives to co-sponsor H.R.676 and S.703 if they have not already done so.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "45a5cc4cdac8873cc276e8fe812a67992999459faa8d993905c3b1041a7e0ec8"
+}

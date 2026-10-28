@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 303,
+      "generation_tps": 16.350350783902204,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1428,
+      "prompt_tps": 454.04008031613733,
+      "request_sha256": "64a9a16869f790b08bc8b83c050c7e6b587bb8dbeca49ae5bd8c199a00fca9ed",
+      "seconds": 21.6868791251909,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Banks and mortgage companies created a maelstrom of foreclosures.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mortgage securitization, predatory lending practices and steering families into subprime loans generated over 4.5 million foreclosures in 2007 and 2008.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There was no let-up in foreclosures in 2009.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Another 8 million Americans may face foreclosures as Adjustable Rate Mortgages (ARMs) move well above the \u201cteaser\u201d rate, given high and long-term unemployment patterns.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Banks were saved from insolvency by the bailout.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Banks have refused to extend credit or negotiate affordable loan modifications with homeowners, especially for those with an \u201cunderwater mortgage\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Homeowners are bearing the burden of the housing market collapse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 323,
+      "generation_tps": 16.467527762125815,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1899,
+      "prompt_tps": 499.44595320924185,
+      "request_sha256": "801fc14da3e098435c171c5233558966b33a19821fc63fb777d1f77c74252106",
+      "seconds": 23.427846415899694,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Banks and mortgage companies created a maelstrom of foreclosures.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mortgage securitization, predatory lending practices and the steering of families into subprime loans generated over 4.5 million foreclosures in 2007 and 2008.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There was no let-up in foreclosures in 2009.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Another 8 million Americans may face foreclosures as Adjustable Rate Mortgages (ARMs) move well above the \u201cteaser\u201d rate, given high and long-term unemployment patterns.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Banks were saved from insolvency by the bailout.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Banks have refused to extend credit or negotiate affordable loan modifications with homeowners, especially for those with an \u201cunderwater mortgage\u201d (the mortgage amount being higher than the value of the home).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Homeowners are bearing the burden of the housing market collapse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "64a9a16869f790b08bc8b83c050c7e6b587bb8dbeca49ae5bd8c199a00fca9ed"
+}

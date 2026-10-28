@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 374,
+      "generation_tps": 16.575953976948696,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1506,
+      "prompt_tps": 465.224231371154,
+      "request_sha256": "f40b8130e47659f55b8368963a0a6b67163e019ec4a21212b9fae1e219c8f5d8",
+      "seconds": 25.809926750138402,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush is leading America in staying on the offensive against threats within the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush worked with Congress to establish the Department of Homeland Security, which is the most significant reorganization of the federal government since 1947.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The PATRIOT Act is being used to track terrorist activity and to break up terror cells.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FBI can now use tools previously available to fight organized crime and drug trafficking to fight terrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Intelligence and law enforcement officials are sharing information as never before.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President transformed the mission of the FBI to focus first and foremost on preventing terrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Terrorists are ruthless and resourceful and are preparing to attack the United States again.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is not possible to guarantee perfect security in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and Vice President, along with professionals in intelligence, homeland security, law enforcement, and the military, are working tirelessly to protect the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 388,
+      "generation_tps": 16.51342956506933,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2048,
+      "prompt_tps": 517.9271037835977,
+      "request_sha256": "e5e12cda658fb225261b5a88b2749026ebfd008f3d345418261414fbef3fe3ce",
+      "seconds": 27.46017950004898,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush is leading America, staying on the offensive against threats within the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush worked with Congress to establish the Department of Homeland Security, which is the most significant reorganization of the federal government since 1947.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The PATRIOT Act is being used to track terrorist activity and to break up terror cells.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FBI can now use tools that have been long available to fight organized crime and drug trafficking, but could not be used in the past to fight terrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Intelligence and law enforcement officials are sharing information as never before.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President transformed the mission of the FBI to focus first and foremost on preventing terrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Terrorists are ruthless and resourceful and are preparing to attack the United States again.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is not possible to guarantee perfect security in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and Vice President, along with many fine professionals in intelligence, homeland security, law enforcement, and the military, are working tirelessly to protect the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f40b8130e47659f55b8368963a0a6b67163e019ec4a21212b9fae1e219c8f5d8"
+}

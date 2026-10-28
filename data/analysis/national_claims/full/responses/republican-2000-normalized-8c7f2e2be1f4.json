@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 356,
+      "generation_tps": 16.50132387735305,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1490,
+      "prompt_tps": 467.5446176698926,
+      "request_sha256": "271902bd0d8081627ae0cae2faa601670f640739d9b209ebc34fb3ae53525318",
+      "seconds": 24.77133150002919,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Mapping of the human genome may, over time, translate into new treatments and cures for cancer, Alzheimer's, heart disease, and HIV/AIDS, as well as diseases affecting the very young, such as muscular dystrophy and juvenile diabetes.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The average American life span was 55 a century ago.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the average American life span is 78.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children born in this decade have the realistic prospect of living into the Twenty-Second Century.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A simple blood test can now screen for prostate cancer at its earliest appearance.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Biochemistry is revolutionizing the field of mental health.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of operations have been replaced with CAT scans.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party offers a new prescription for health care in the elections of 2000.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"After eight years of pressure from the current administration, the foundations of the health care system are cracking.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 361,
+      "generation_tps": 16.489259345792455,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2014,
+      "prompt_tps": 486.03078771955626,
+      "request_sha256": "89b8ce12592e9f42faef98d242c8834ff195bd108c37a3274329b4b6a4599df5",
+      "seconds": 26.047459332970902,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Mapping of the human genome may, over time, translate into new treatments and cures for scourges like cancer, Alzheimer's, heart disease, and HIV/AIDS, as well as diseases that affect the very young, such as muscular dystrophy and juvenile diabetes.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A century ago, the average American life span was 55.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the average American life span is 78.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children born in this decade have the realistic prospect of living into the Twenty-Second Century.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A simple blood test can now screen for prostate cancer at its earliest appearance.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Biochemistry is revolutionizing the field of mental health.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of operations have been replaced with CAT scans.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party offers a new prescription for health care in the elections of 2000.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"After eight years of pressure from the current administration, the foundations of the health care system are cracking.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "271902bd0d8081627ae0cae2faa601670f640739d9b209ebc34fb3ae53525318"
+}

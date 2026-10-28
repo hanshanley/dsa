@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 261,
+      "generation_tps": 16.647976318440534,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1436,
+      "prompt_tps": 458.7537894185397,
+      "request_sha256": "48accf12da2458c2d93f494579869a24c0620430b56b8c2be9daf18af973e2aa",
+      "seconds": 18.81774125015363,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President George W. Bush and Vice President Dick Cheney.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party proudly carries forward its time-honored banner of freedom.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President George W. Bush will defend the peace against threats from terrorists and tyrants.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"President George W. Bush will preserve the peace by building good relations among the great powers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"President George W. Bush will extend the peace by encouraging free and open societies on every continent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"The nation's cause has always been larger than the nation's defense.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[7]},{\"claim_text\":\"The nation fights for a just peace that favors liberty.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 297,
+      "generation_tps": 16.62642669463445,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1865,
+      "prompt_tps": 487.57160794887005,
+      "request_sha256": "7b53a0278c904871771d84ca709615ae3455b119081d70cb6ba934aaec99c989",
+      "seconds": 21.69729687506333,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President George W. Bush and Vice President Dick Cheney.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party proudly carries forward its time-honored banner of freedom.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President George W. Bush will defend the peace against threats from terrorists and tyrants.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"President George W. Bush will preserve the peace by building good relations among the great powers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"President George W. Bush will extend the peace by encouraging free and open societies on every continent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"The nation's cause has always been larger than the nation's defense.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[7]},{\"claim_text\":\"The nation fights for a just peace that favors liberty.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[7]},{\"claim_text\":\"The nation fights for a just peace, as it always fights, that favors liberty.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "48accf12da2458c2d93f494579869a24c0620430b56b8c2be9daf18af973e2aa"
+}

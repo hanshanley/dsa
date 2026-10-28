@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 357,
+      "generation_tps": 8.184153400855921,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1507,
+      "prompt_tps": 394.728928179371,
+      "request_sha256": "efaa36ad7d6ac0c0df22ca764bf6e2d404e08b3bbeee0ffb1beb9c245fa59e30",
+      "seconds": 47.45102291600779,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party supports the sovereignty of American Indians and Native Alaskans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party affirms a government-to-government relationship with tribal governments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party pledges to continue working to improve the lives of American Indians and Native Alaskans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party affirms the legal and political relationship between the United States and Native Hawaiians as an important step in reconciliation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will work to pass legislation establishing a process for Native Hawaiians to reorganize a governing body freely chosen by them, expressing their rights to self-determination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes justice provided to American Indians and Native Alaskans is a measure of the nation's character.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes progress has been made in the last eight years regarding American Indians and Native Alaskans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to expanding AmeriCorps so that more Americans can serve their country and further their educations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 412,
+      "generation_tps": 8.203400106463771,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2032,
+      "prompt_tps": 399.0502035485224,
+      "request_sha256": "b538ee4067eee9456682eac5d9433e5b5112855ffcdd11585b6c01e9eb02e659",
+      "seconds": 55.357298833085224,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party supports the sovereignty of American Indians and Native Alaskans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party affirms a strong government-to-government relationship with tribal governments as basic to its approach.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party pledges to continue its work to improve the lives of American Indians and Native Alaskans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party affirms the legal and political relationship between the United States and Native Hawaiians as an important step in the continuing process of reconciliation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will work to pass legislation establishing a process for Native Hawaiians to reorganize a governing body freely chosen by them, expressing their rights to self-determination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes justice provided to American Indians and Native Alaskans is a measure of the nation's character.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes progress has been made in the last eight years regarding American Indians and Native Alaskans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to expanding AmeriCorps so that more Americans can both serve their country and further their educations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party has trust obligations to renew and work to improve the lives of American Indians who live in poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "efaa36ad7d6ac0c0df22ca764bf6e2d404e08b3bbeee0ffb1beb9c245fa59e30"
+}

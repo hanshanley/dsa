@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 431,
+      "generation_tps": 8.324875069020708,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1498,
+      "prompt_tps": 338.2676132780093,
+      "request_sha256": "7a2c799f5572cf519a812838eb8357d16986e140e5874cca1d5b9f5b752d9195",
+      "seconds": 56.21398941613734,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The president has been ineffective in the fight against crime for the last eight years.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sixteen hard-core terrorists were granted clemency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration slashed the nation's funding for drug interdiction and overseas operations against the narcotics cartel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration presided over the near collapse of drug policy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Western Hemisphere Drug Elimination Act of 1998 has just begun to restore the nation's ability to strike at the source of illegal drugs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Congress is taking the lead to assist Colombia against the narco-insurgents who control large parts of that country, a stone's throw from the Panama Canal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican president will advance an agenda to restore the public's safety.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican president will establish no-frills prisons with productive work requirements that make the threat of jail a powerful deterrent to crime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican president will increase penalties and resources to combat the dramatic rise in production and use of methamphetamine and new drugs such as ecstasy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a dramatic rise in production and use of methamphetamine and new drugs such as ecstasy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 450,
+      "generation_tps": 8.390194568786791,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2097,
+      "prompt_tps": 402.6774111274859,
+      "request_sha256": "d1cd45e28b4e4f0f9429a9dc7515c8d097df42a6f4125402fc352ad7f6d00e92",
+      "seconds": 58.854776333784685,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The president has been ineffective in the fight against crime for the last eight years.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sixteen hard-core terrorists were granted clemency, sending the wrong signal to others who would use terror against the American people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration slashed the nation's funding for drug interdiction and overseas operations against the narcotics cartel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration finishes by presiding over the near collapse of drug policy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Western Hemisphere Drug Elimination Act of 1998 has just begun to restore the nation's ability to strike at the source of illegal drugs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Congress is taking the lead to assist Colombia against the narco-insurgents who control large parts of that country, a stone's throw from the Panama Canal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican president will advance an agenda to restore the public's safety.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican president will establish no-frills prisons, with productive work requirements, that make the threat of jail a powerful deterrent to crime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican president will increase penalties and resources to combat the dramatic rise in production and use of methamphetamine and new drugs such as ecstasy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a dramatic rise in production and use of methamphetamine and new drugs such as ecstasy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7a2c799f5572cf519a812838eb8357d16986e140e5874cca1d5b9f5b752d9195"
+}

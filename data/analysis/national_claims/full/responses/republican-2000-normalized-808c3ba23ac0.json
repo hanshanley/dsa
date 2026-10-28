@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 396,
+      "generation_tps": 16.513808066640348,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1457,
+      "prompt_tps": 475.591628038566,
+      "request_sha256": "274a069549e93380cd525fa1d66f87ef82753ba40c6a27835fc4a4544128553e",
+      "seconds": 27.053745500044897,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"George W. Bush will lead Republicans and Democrats to reform and strengthen Medicare and set it on firm financial ground.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare, at age 35, is critical for 39 million seniors and individuals with disabilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare needs a new lease on life and modernization to match current medical science.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Medicare program's financial stability needs improvement.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Medicare program is smothered by a bureaucratic jungle.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Older Americans should have access to the same health insurance plan as Members of Congress.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Current limitations and restrictions preventing the establishment of medical savings accounts should be eliminated.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The free market system should be used to build on Medicare's strengths.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Seniors should have real choices in coverage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare participants should have flexibility.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There should be incentives for the private sector to develop new and inexpensive drugs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 291,
+      "generation_tps": 16.5339476858063,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2021,
+      "prompt_tps": 502.93988181353205,
+      "request_sha256": "72c8d47c2329112903b9b69ccf1f0332de12a4fe4fb90f78a9ea9fbd27700da2",
+      "seconds": 21.62866866705008,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"George W. Bush will lead Republicans and Democrats to reform and strengthen Medicare and set it on firm financial ground.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare, at age 35, is critical for 39 million seniors and individuals with disabilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare needs a new lease on life, modernization to match current medical science, and improvement of its financial stability.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Medicare program is smothered by a bureaucratic jungle.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Older Americans should have access to the same health insurance plan the Congress has created for itself, including elimination of all current limitations and restrictions that prevent the establishment of medical savings accounts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The free market system should be used to build on Medicare's strengths, offer seniors real choices in coverage, give participants flexibility, and make sure there are incentives for the private sector to develop new and inexpensive drugs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "274a069549e93380cd525fa1d66f87ef82753ba40c6a27835fc4a4544128553e"
+}

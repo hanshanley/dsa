@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 315,
+      "generation_tps": 16.597462456225802,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1526,
+      "prompt_tps": 470.66220376808764,
+      "request_sha256": "ced5b3de3062befc23be3e76bc7ff6c5bb66f171e1c4d80607abdd8cdb03a3fc",
+      "seconds": 22.23015070799738,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Strengthening some provisions of the Patriot Act is supported, including restrictions on money laundering.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Changing portions of the Patriot Act that threaten individual rights is supported, such as the library provisions, while still allowing government to take needed steps to fight terror.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The government should not round up innocent people based on their religion or ethnicity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Free expression should not be stifled.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Terrorists target both lives and the way of life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America can be made safer, stronger, and more respected.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America can safeguard its greatness by protecting its people, securing its homeland, and reinforcing its values.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America can maintain its leadership role by being a builder of alliances, a defender of freedom, and a champion of human rights.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 338,
+      "generation_tps": 16.593615687240604,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2009,
+      "prompt_tps": 492.4798713604589,
+      "request_sha256": "c8faf73ee04be521ca08b2eb42f20f364ca948a2f38f35d0180d950ab3f46f35",
+      "seconds": 24.457886083051562,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Strengthening some provisions of the Patriot Act is supported, including restrictions on money laundering.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Changing portions of the Patriot Act that threaten individual rights is supported, such as the library provisions, while still allowing government to take all needed steps to fight terror.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The government should not round up innocent people only because of their religion or ethnicity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Free expression should not be stifled.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Terrorists target both lives and the way of life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America can be made safer, stronger, and more respected.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America can safeguard its greatness by protecting its people, securing its homeland, and reinforcing its values \u2013 faith and family, duty and service, individual freedom and a common purpose to build one nation under God.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America can maintain its leadership role by being a builder of alliances, a defender of freedom, and a champion of human rights.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ced5b3de3062befc23be3e76bc7ff6c5bb66f171e1c4d80607abdd8cdb03a3fc"
+}

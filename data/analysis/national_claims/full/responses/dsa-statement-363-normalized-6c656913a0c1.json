@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 129,
+      "generation_tps": 16.821878744662335,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1326,
+      "prompt_tps": 460.12852715316006,
+      "request_sha256": "064ec8dadd2894f40ceafc6a343ba988f3c9f7b5e3bcec73f21c9e6de27e0cd4",
+      "seconds": 10.560133707942441,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Austerity politics in Europe have had disastrous effects.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cutting spending will not resolve a Great Recession.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The sequester deepens the economic crisis.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The sequester must be reversed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 119,
+      "generation_tps": 16.822593832498857,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1623,
+      "prompt_tps": 462.453873090794,
+      "request_sha256": "2d4d95f671ddad31202247782d934a5aecd9a918650c19616d010095cde2778a",
+      "seconds": 10.592271625064313,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A brief glance at the disastrous effects of austerity politics in Europe demonstrates that you can\u2019t cut your way out of a Great Recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The sequester serves only to deepen the economic crisis.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The sequester must be reversed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "064ec8dadd2894f40ceafc6a343ba988f3c9f7b5e3bcec73f21c9e6de27e0cd4"
+}

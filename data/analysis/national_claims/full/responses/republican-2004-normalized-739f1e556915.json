@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 345,
+      "generation_tps": 16.57623741935626,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1517,
+      "prompt_tps": 468.8695438655127,
+      "request_sha256": "ef0c298f71453c36ba21fb9938c9e6ae77bda79210c8533146fcac4e870064f2",
+      "seconds": 24.058912000153214,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under the leadership of President George W. Bush, Americans have helped make the world safer and better since September 11, 2001.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President George W. Bush continues to lead a campaign to defend America against current dangers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is pursuing terrorists wherever they plot, plan, and hide, shifting from previous strategies of limited strikes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many of al Qaeda's key leaders have been eliminated.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nations that train, harbor, or finance terrorists are considered as guilty as the terrorists themselves.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will not allow the world's most dangerous regimes to possess the world's most dangerous weapons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Libya's leader decided to turn over weapons of mass destruction and cooperate with the international community.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Because America has acted and led, the forces of terror and tyranny have suffered defeats, and America and the world are safer.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 376,
+      "generation_tps": 16.570889228047406,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2030,
+      "prompt_tps": 497.19856871689706,
+      "request_sha256": "b5afac7efa14259c902e119be700a26385562e266ed5d0e2b3e90d0052874e61",
+      "seconds": 26.783054291969165,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under the leadership of President George W. Bush, Americans have helped make the world not only safer, but better since September 11, 2001.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President George W. Bush continues to lead a steady, confident, systematic campaign to defend America against the dangers of our time.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is going after terrorists wherever they plot and plan and hide, changing the old course of pinprick strikes that did little to get at the root of terrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many of al Qaeda's key leaders have been eliminated.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nations that train, harbor, or finance terrorists are just as guilty as the terrorists themselves.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will not allow the world's most dangerous regimes to possess the world's most dangerous weapons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Libya's leader decided to turn over weapons of mass destruction and cooperate with the international community.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today, because America has acted, and because America has led, the forces of terror and tyranny have suffered defeat after defeat, and America and the world are safer.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 375,
+      "generation_tps": 16.542232532311196,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2572,
+      "prompt_tps": 528.1726113784314,
+      "request_sha256": "e6bc6c4ada0be3dfc0372650fccf0b41beb7a3c54a4adc3b255fde7603ffe341",
+      "seconds": 27.549039708217606,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under the leadership of President George W. Bush, Americans have helped make the world not only safer, but better since September 11, 2001.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President George W. Bush continues to lead a steady, confident, systematic campaign to defend America against the dangers of our time.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is pursuing terrorists wherever they plot, plan, and hide, changing from the old course of pinprick strikes that did little to get at the root of terrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many of al Qaeda's key leaders have been eliminated.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nations that train, harbor, or finance terrorists are considered as guilty as the terrorists themselves.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will not allow the world's most dangerous regimes to possess the world's most dangerous weapons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Libya's leader decided to turn over weapons of mass destruction and cooperate with the international community.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today, because America has acted, and because America has led, the forces of terror and tyranny have suffered defeats, and America and the world are safer.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ef0c298f71453c36ba21fb9938c9e6ae77bda79210c8533146fcac4e870064f2"
+}

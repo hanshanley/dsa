@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 179,
+      "generation_tps": 16.685800766790265,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1424,
+      "prompt_tps": 457.2764802319079,
+      "request_sha256": "bab56ed6bb8957488d1aab1fe2b99f5b989bdedaf83da3481142d70afee3078b",
+      "seconds": 13.851436249911785,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America must launch and lead a new era of alliances for the post-September 11 world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The world's most powerful military must be modernized to meet new threats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America must deploy its diplomacy, intelligence system, economic power, and values and ideas, in addition to its military might.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America must end its dependence on Mideast oil to safeguard freedom and ensure the nation's future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 185,
+      "generation_tps": 16.641844206150488,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1771,
+      "prompt_tps": 483.8493039292742,
+      "request_sha256": "dbf1de878aa138c1d1c6e6eabab304c89b032cbe880c627d6dbbeb41613e7550",
+      "seconds": 14.785717917140573,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America must launch and lead a new era of alliances for the post-September 11 world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The world's most powerful military must be modernized to meet the new threats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In addition to its military might, America must deploy its diplomacy, intelligence system, economic power, and the appeal of its values and ideas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"To safeguard freedom and ensure the nation's future, America must end its dependence on Mideast oil.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bab56ed6bb8957488d1aab1fe2b99f5b989bdedaf83da3481142d70afee3078b"
+}

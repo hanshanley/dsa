@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 184,
+      "generation_tps": 16.463368362866436,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1401,
+      "prompt_tps": 479.6430990249152,
+      "request_sha256": "06be0e3e5c482a3effa245a03748510807d430b188c8e4fd5345a9d5d91c2eb7",
+      "seconds": 14.110646290937439,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Medicare denies coverage for necessary preventive services, like cholesterol screenings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare limits access to new life-saving technologies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every Medicare beneficiary should have a choice of health care options.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare beneficiaries should have access to the health plan that best fits their medical needs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Medicare program based on benefit packages and delivery models of the 1960s is undesirable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 233,
+      "generation_tps": 16.491331695255827,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1753,
+      "prompt_tps": 488.1376471490791,
+      "request_sha256": "684991be1ad97b1e6f65e7c8d089ccd024c5db946e2d9d7b4727f72cac762b37",
+      "seconds": 17.733679540921003,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Medicare denies coverage for necessary preventive services, like cholesterol screenings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare limits access to new life-saving technologies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every Medicare beneficiary should have a choice of health care options.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare beneficiaries should have access to the health plan that best fits their medical needs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Medicare program based on benefit packages and delivery models of the 1960s is undesirable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"No one should be content with a Medicare program based on benefit packages and delivery models of the 1960s.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "06be0e3e5c482a3effa245a03748510807d430b188c8e4fd5345a9d5d91c2eb7"
+}

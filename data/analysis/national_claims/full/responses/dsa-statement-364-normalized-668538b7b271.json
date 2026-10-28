@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 179,
+      "generation_tps": 16.693788827493435,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1332,
+      "prompt_tps": 457.7975410088967,
+      "request_sha256": "0bc7be2833e83dbd66567dd3f797e3f8c3380a282def0c8ac57842da23f64e7a",
+      "seconds": 13.641915041953325,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA believes the international community should provide humanitarian aid to the millions of Syrian refugees in Jordan, Turkey and elsewhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States and all other countries should engage in the necessary diplomacy to press Russia, Iran, and Hezbollah to cease their military aid to the Assad dictatorship.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Syrian people can liberate themselves if Russia, Iran, and Hezbollah cease their military aid to the Assad dictatorship.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"External powers cannot accomplish the liberation of the Syrian people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 181,
+      "generation_tps": 16.686432894292455,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1679,
+      "prompt_tps": 477.81410437444566,
+      "request_sha256": "3bafd1d31954b47a28e8a88397e82d1268ee8fbf77817531a1944a2556352f00",
+      "seconds": 14.370141125051305,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA believes the international community should provide humanitarian aid to the millions of Syrian refugees in Jordan, Turkey and elsewhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States and all other countries should engage in the necessary diplomacy to press Russia, Iran, and Hezbollah to cease their military aid to the Assad dictatorship.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Syrian people can liberate themselves if Russia, Iran, and Hezbollah cease their military aid to the Assad dictatorship.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The liberation of the Syrian people cannot be accomplished by external powers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0bc7be2833e83dbd66567dd3f797e3f8c3380a282def0c8ac57842da23f64e7a"
+}

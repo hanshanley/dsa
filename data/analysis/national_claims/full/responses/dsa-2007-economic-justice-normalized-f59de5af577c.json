@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 432,
+      "generation_tps": 8.179707504819646,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1495,
+      "prompt_tps": 378.1468512728529,
+      "request_sha256": "8de14305885d5647f1f0d4a5e76cf0c4375fcc771878655006ba7c38f45d9eb5",
+      "seconds": 56.778318082913756,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The federal government has spent more than $30 billion on border enforcement since the passage of the restrictive 1994 Immigration Reform Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increased border enforcement has not deterred unauthorized border crossings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increased border enforcement has benefited smugglers, or \u201ccoyotes,\u201d who serve the needs of exploitative employers searching for cheap labor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The practice of human smuggling has led to the deaths of some 4,000 people in the deserts of the Southwest and in the holds of ships.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to devoting additional resources to militarizing the nation\u2019s borders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding democracy to control corporations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for fighting the move to subcontract vote counting to roll back the privatization of inherently governmental functions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for organizing and protecting parts of the natural, social, and political commons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for bolstering community-based trusts and co-operative ventures with fiscal, tax, and financial policies that balance or eliminate \u201ccorporate welfare\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for curbing monopoly patents on property related to public health and products developed with research funded at least in part by taxpayers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 453,
+      "generation_tps": 8.131900564090268,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2095,
+      "prompt_tps": 386.8694746037639,
+      "request_sha256": "0459b3b56fd774d74de54792f0c851697e7d84b88f33c0620cd67da386352e5e",
+      "seconds": 61.13644116604701,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The federal government has spent more than $30 billion on border enforcement since the passage of the restrictive 1994 Immigration Reform Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Border enforcement since the passage of the restrictive 1994 Immigration Reform Act has not deterred unauthorized border crossings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increased border enforcement has lined the pockets of smugglers, or \u201ccoyotes,\u201d who serve the needs of exploitative employers searching for cheap labor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The practice of human smuggling has already led to the cruel, painful deaths of some 4,000 people in the deserts of the Southwest and in the holds of ships.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to devoting additional resources to militarizing the nation\u2019s borders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding democracy to control corporations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for fighting the move to subcontract vote counting to roll back the privatization of inherently governmental functions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for organizing and protecting certain parts of the natural, social, and political commons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for bolstering community-based trusts and co-operative ventures with fiscal, tax, and financial policies that balance or eliminate \u201ccorporate welfare\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for curbing monopoly patents on property related to public health and products developed with research funded at least in part by taxpayers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8de14305885d5647f1f0d4a5e76cf0c4375fcc771878655006ba7c38f45d9eb5"
+}

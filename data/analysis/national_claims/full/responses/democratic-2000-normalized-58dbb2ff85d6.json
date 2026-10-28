@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 224,
+      "generation_tps": 8.186740376358376,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1378,
+      "prompt_tps": 369.8635468669646,
+      "request_sha256": "16c85fc957540eac878af1d52f74fe0ad74f51e5c437e849122271da4e81beab",
+      "seconds": 31.103452041978016,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The nation must be prepared to use force when American interests and values are truly at stake.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation cannot be the world's policeman and must be discriminating in its approach.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"When the stakes are high, military engagement can secure national interest if nothing short of it can do so.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Military forces are available for the task.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Best efforts will be made to join with allies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The cost must be proportionate to the objective.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 266,
+      "generation_tps": 8.257600087718231,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1770,
+      "prompt_tps": 345.03843460460433,
+      "request_sha256": "fcd1643d033cb6625852afda5fa5358dacd1ff1c8f3e51639eba265f4b5b9df4",
+      "seconds": 37.359016166999936,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The nation must be prepared to use force when American interests and values are truly at stake.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation cannot be the world's policeman, and must be discriminating in its approach.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"When the stakes are high, when nothing short of military engagement can secure national interest, when the nation knows it has the military forces available for the task, when the nation has made its best efforts to join with allies, and when the cost is proportionate to the objective, the nation must be ready to act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Military forces are available for the task.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Best efforts will be made to join with allies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The cost must be proportionate to the objective.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "16c85fc957540eac878af1d52f74fe0ad74f51e5c437e849122271da4e81beab"
+}

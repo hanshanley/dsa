@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 374,
+      "generation_tps": 16.531557985045332,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1314,
+      "prompt_tps": 444.6618685150255,
+      "request_sha256": "9d18f8d96abf5da34ef72af1ddce15249ee4a16891a18d0942584e079df5d8f2",
+      "seconds": 25.58806487498805,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America supports the goals of the Hong Kong movement for democracy (the \u201cUmbrella Movement\u201d).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Chinese government promised to implement a democratic system in Hong Kong eventually, both in the Sino-British Joint Declaration and the mini constitution of Hong Kong (the Basic Law).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current resolution passed by the Chinese National People\u2019s Congress for implementing the promise of democracy by 2017 would sharply restrict candidates for political office to those preselected by an unrepresentative body representing mainly business interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Creating a political system with more democratic self-determination is an essential step towards rectifying the growing economic inequality in Hong Kong.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Democratic Socialists of America supports people in Hong Kong who are fighting for goals similar to those of the DSA in the USA.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"High school students organized in Scholarism and university students organized in the Hong Kong Federation of Students have taken the lead in organizing massive peaceful occupations and assemblies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The independent unions of the Hong Kong Confederation of Labor and numerous civic and neighborhood associations, and Occupy Central, widely support the students\u2019 organizing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 377,
+      "generation_tps": 16.57276680668325,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1856,
+      "prompt_tps": 484.0051741153775,
+      "request_sha256": "6e0f39047b3affa9ce62c12e36fda7c86ad5779bf46347eb699f449dfef6cd34",
+      "seconds": 26.5919958751183,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America supports the goals of the Hong Kong movement for democracy (the \u201cUmbrella Movement\u201d).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Chinese government promised both in the Sino-British Joint Declaration and the mini constitution of Hong Kong (the Basic Law) that a democratic system eventually would be implemented in Hong Kong.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current resolution passed by the Chinese National People\u2019s Congress for implementing that promise by 2017 would sharply restrict candidates for political office to those preselected by an unrepresentative body representing mainly business interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Creating a political system with more democratic self-determination is an essential step towards rectifying the growing economic inequality in Hong Kong.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Democratic Socialists of America supports people in Hong Kong who are fighting for the same goals the DSA has in the USA.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"High school students organized in Scholarism and university students organized in the Hong Kong Federation of Students have taken the lead in organizing massive peaceful occupations and assemblies to pursue legitimate political ends.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The independent unions of the Hong Kong Confederation of Labor and numerous civic and neighborhood associations, and Occupy Central, widely support the students\u2019 organizing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9d18f8d96abf5da34ef72af1ddce15249ee4a16891a18d0942584e079df5d8f2"
+}

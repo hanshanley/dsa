@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 292,
+      "generation_tps": 8.006057084932298,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1421,
+      "prompt_tps": 333.6081935363608,
+      "request_sha256": "a7a8f92d8a3f60c55702eea5ddac3730113d1571ec25e7d248195190c889bdb1",
+      "seconds": 40.75029637501575,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe immigrants enrich the tapestry of American life, making the U.S. economy more vibrant, U.S. workplaces more productive, and the U.S. stronger.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe all levels of government, in partnership with the private and voluntary sectors, must devise and pursue a comprehensive immigrant integration agenda to make the newest Americans full participants in the U.S. mainstream.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support reforming the INS to provide better services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support investing resources to reduce the backlog of citizenship applications from nearly two years to three months.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support increased resources for English language courses, which Democrats believe not only help newcomers learn the common language but also help promote common values.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe family reunification should continue to be the cornerstone of the U.S. legal immigration system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 294,
+      "generation_tps": 8.163031009328796,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1881,
+      "prompt_tps": 394.37464029623084,
+      "request_sha256": "3523d54ccc04e2283144df557b0867eae666a5e343ac2aa67cdf3e31ddadde23",
+      "seconds": 40.806531666079536,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe immigrants enrich the tapestry of American life, making the U.S. economy more vibrant, U.S. workplaces more productive, and the U.S. stronger.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe all levels of government, in partnership with the private and voluntary sectors, must devise and pursue a comprehensive immigrant integration agenda that will make the newest Americans full participants in the nation's mainstream.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support reforming the INS to provide better services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support investing the resources needed to reduce the backlog of citizenship applications from nearly two years to three months.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support increased resources for English language courses, which Democrats believe not only help newcomers learn the common language but also help promote common values.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe family reunification should continue to be the cornerstone of the U.S. legal immigration system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a7a8f92d8a3f60c55702eea5ddac3730113d1571ec25e7d248195190c889bdb1"
+}

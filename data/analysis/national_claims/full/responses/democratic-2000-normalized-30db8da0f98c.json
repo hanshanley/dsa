@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 227,
+      "generation_tps": 16.558513454623096,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1490,
+      "prompt_tps": 476.016800046467,
+      "request_sha256": "024e3205954f64f46fe596fa5784df242073e5871b8c6a7427e0ec3f0a426039",
+      "seconds": 16.849450584035367,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to sound and proven crime-prevention strategies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Solid investments in children and youth, job creation, and skills development are powerful antidotes to crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to fill vacancies on the federal bench to ensure enough judges to promptly decide all cases.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats oppose efforts to strip the federal courts of jurisdiction to decide critical issues affecting workers, immigrants, and veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Al Gore will appoint justices to the Supreme Court who have a demonstrated concern for and commitment to the individual rights protected by the Constitution, including the right to privacy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 269,
+      "generation_tps": 16.507102525454044,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1885,
+      "prompt_tps": 500.51941610149373,
+      "request_sha256": "715dc1e7afc4d2600b30d8a4cb301c665cc325a9e0a71dff12ca82ff114f537b",
+      "seconds": 20.07180904201232,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are firmly committed to sound and proven crime-prevention strategies that are good for all Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Solid investments in children and youth, in job creation, and in skills development are powerful antidotes to crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to fill the vacancies on the federal bench to make sure there are enough judges to promptly decide all cases and to end Republican delays in the Senate that have kept qualified nominees, especially women and minorities, waiting for a Senate vote.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats oppose efforts to strip the federal courts of jurisdiction to decide critical issues affecting workers, immigrants, veterans and others of access to justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Al Gore will appoint justices to the Supreme Court who have a demonstrated concern for and commitment to the individual rights protected by the Constitution, including the right to privacy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "024e3205954f64f46fe596fa5784df242073e5871b8c6a7427e0ec3f0a426039"
+}

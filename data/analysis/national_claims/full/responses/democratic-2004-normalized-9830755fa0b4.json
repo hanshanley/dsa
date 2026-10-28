@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 260,
+      "generation_tps": 16.64037358779404,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1394,
+      "prompt_tps": 459.7068194514531,
+      "request_sha256": "61d151542c09e22ad0c5e321cb06511cce8e52ef8e7ce4f21d70508f1f141ad6",
+      "seconds": 18.666687083197758,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Commitment to protect the retirement security of America's workers and their families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to bar employers from locking workers' savings into the company's own stock.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to require honest information and full disclosure regarding retirement savings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to protect older workers from unfair treatment when their benefits are converted to cash balance plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to strengthen and promote both defined-contribution and defined-benefit pension plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to increase the portability of retirement savings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to help all families save for retirement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 265,
+      "generation_tps": 16.634557959584587,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1822,
+      "prompt_tps": 485.0755622362434,
+      "request_sha256": "e3c27aec4e1a14630c05f2449266c7f15671ca12459f6d5abd77af889a661d00",
+      "seconds": 19.695865583838895,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to protect the retirement security of America's workers and their families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to bar employers from locking workers' savings into the company's own stock.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to require honest information and full disclosure regarding retirement savings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to protect older workers from unfair treatment when their benefits are converted to cash balance plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to strengthen and promote both defined-contribution and defined-benefit pension plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to increase the portability of retirement savings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to help all families save for retirement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "61d151542c09e22ad0c5e321cb06511cce8e52ef8e7ce4f21d70508f1f141ad6"
+}

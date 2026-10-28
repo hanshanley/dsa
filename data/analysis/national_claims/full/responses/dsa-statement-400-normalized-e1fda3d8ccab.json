@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 432,
+      "generation_tps": 16.59635418240988,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1309,
+      "prompt_tps": 448.16854971397237,
+      "request_sha256": "a700202b974816ab9d98c6ec8ba68b4243049a571ed6ea200c3af894d71106de",
+      "seconds": 28.96018745796755,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America calls for a full federal civil rights investigation into the killing of Michael Brown.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America calls for an end to the militarization of local police forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The action of the Ferguson, Missouri, police department exemplifies the dangers to the lives of ordinary Americans, particularly people of color, posed by overly aggressive, heavily armed police forces.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over the past thirty years, federal, state and local government have abandoned commitments to fighting poverty and unemployment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poverty and unemployment disproportionately limit the life opportunities of young persons of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Most low income youth only encounter the state as a repressive force that relegates them to a life within the prison-industrial complex, even for the most minor and non-violent of drug-related offenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"These activities rarely lead white youth to be arrested, let alone imprisoned.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the case of Ferguson, Missouri, police-mandated media blackouts and the pervasive detainment, harassment and arrest of journalists cloud public understanding of the ongoing crisis.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The constant barrage of tear gas canisters into crowds, backyards and neighborhood streets in recent days has further hampered a full understanding of the situation on the ground in Ferguson, Missouri.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 432,
+      "generation_tps": 16.5900379885267,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1846,
+      "prompt_tps": 490.63386982975493,
+      "request_sha256": "5a36dfdf97cf610ae0c1d26763bcbc87e20600103ad63c2f380c67ae82e8686e",
+      "seconds": 29.81180875003338,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America calls for a full federal civil rights investigation into the killing of Michael Brown.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America calls for an end to the militarization of local police forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The action of the Ferguson, Missouri, police department exemplifies the dangers to the lives of ordinary Americans, particularly people of color, posed by overly aggressive, heavily armed police forces.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over the past thirty years, federal, state and local government have abandoned commitments to fighting poverty and unemployment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poverty and unemployment disproportionately limit the life opportunities of young persons of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Most low income youth only encounter the state as a repressive force that relegates them to a life within the prison-industrial complex, even for the most minor and non-violent of drug-related offenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Activities related to drug-related offenses rarely lead to the arrest or imprisonment of white youth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In Ferguson, Missouri, police-mandated media blackouts and the pervasive detainment, harassment and arrest of journalists cloud public understanding of the ongoing crisis.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The constant barrage of tear gas canisters into crowds, backyards and neighborhood streets in recent days in Ferguson, Missouri has hampered a full understanding of the situation on the ground.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 433,
+      "generation_tps": 16.55823782700343,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1909,
+      "prompt_tps": 492.46507259715935,
+      "request_sha256": "a8469d284486607162b778357e03fc492a96c718195f249285d8d40643b42a09",
+      "seconds": 30.035826832987368,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America calls for a full federal civil rights investigation into the killing of Michael Brown.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America calls for an end to the militarization of local police forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The action of the Ferguson, Missouri, police department exemplifies the dangers to the lives of ordinary Americans, particularly people of color, posed by overly aggressive, heavily armed police forces.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over the past thirty years, federal, state and local government have abandoned commitments to fighting poverty and unemployment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poverty and unemployment disproportionately limit the life opportunities of young persons of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Most low income youth only encounter the state as a repressive force that relegates them to a life within the prison-industrial complex, even for the most minor and non-violent of drug-related offenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"These activities rarely lead white youth to be arrested, let alone imprisoned.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In Ferguson, Missouri, police-mandated media blackouts and the pervasive detainment, harassment and arrest of journalists cloud public understanding of the ongoing crisis.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The constant barrage of tear gas canisters into crowds, backyards and neighborhood streets in recent days in Ferguson, Missouri has hampered a full understanding of the situation on the ground.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 438,
+      "generation_tps": 16.54734389895481,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2447,
+      "prompt_tps": 535.735016192117,
+      "request_sha256": "e2ae37fefb076da0ab2c07f7a18b8dc76b27671ff0d63f7043ad24b1f0d2c9a9",
+      "seconds": 31.04693687497638,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America calls for a full federal civil rights investigation into the killing of Michael Brown.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America calls for an end to the militarization of local police forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The action of the Ferguson, Missouri, police department exemplifies the dangers to the lives of ordinary Americans, particularly people of color, posed by overly aggressive, heavily armed police forces.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over the past thirty years, federal, state and local government have abandoned commitments to fighting poverty and unemployment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poverty and unemployment disproportionately limit the life opportunities of young persons of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Most low income youth only encounter the state as a repressive force that relegates them to a life within the prison-industrial complex, even for the most minor and non-violent of drug-related offenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Activities related to drug-related offenses rarely lead white youth to be arrested, let alone imprisoned.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In Ferguson, Missouri, police-mandated media blackouts and the pervasive detainment, harassment and arrest of journalists cloud public understanding of the ongoing crisis.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The constant barrage of tear gas canisters into crowds, backyards and neighborhood streets in recent days in Ferguson, Missouri has hampered a full understanding of the situation on the ground.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a700202b974816ab9d98c6ec8ba68b4243049a571ed6ea200c3af894d71106de"
+}

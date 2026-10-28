@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 380,
+      "generation_tps": 8.312563500188755,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1551,
+      "prompt_tps": 373.7512632240245,
+      "request_sha256": "c8ade0eaf4bcf985c90da30de314ba3b9b259219df1855ab7f770d599f6cefd6",
+      "seconds": 49.873567749978974,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Thirty years of neoliberal Democratic and \u201cfree-market\u201d Republican administrations have destroyed the publicly accountable federal regulation of capital and financial markets that social movements imposed during the Great Depression.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Duplicitous accounting practices, corporate stripping of pension fund assets, predatory lending, and \u201cmega-bank\u201d marketing of nontransparent, speculative financial instruments have brought the productive economy to its knees.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic, public control of the financial system must be reasserted, rebuilt, and improved to rein in global capital\u2019s scavenging for short-term speculative gain.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Restoring the 1938 Glass-Steagall Act\u2019s separation of finance banks from commercial banks is necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Vigorous federal and state regulation of financial \u201crating agencies\u201d is necessary so highly risky, speculative financial instruments are no longer certified as \u201cinvestment grade\u201d and \u201ccredit worthy\u201d.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Re-creating a federally regulated savings and loan industry whose sole purpose is to provide affordable mortgages to middle- and working-class home buyers is necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Strengthening federal and state support for worker- and consumer-owned credit unions that provide affordable credit to working- and middle-class consumers is necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 8.284480785706247,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2099,
+      "prompt_tps": 320.55003069090696,
+      "request_sha256": "0cd2427813b2471511d26f9521682bdfcde0532b376717a26099febc09afb4b2",
+      "seconds": 55.81685991585255,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Thirty years of neoliberal Democratic and \u201cfree-market\u201d Republican administrations have destroyed the publicly accountable federal regulation of capital and financial markets that the social movements of the Great Depression imposed upon a resistant capitalist elite.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The disasters of 30 years of \u201cfree-market\u201d mania\u2014duplicitous accounting practices, corporate stripping of pension fund assets, predatory lending, and \u201cmega-bank\u201d marketing of nontransparent, speculative financial instruments\u2014has brought the productive economy to its knees.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"To rein in global capital\u2019s scavenging for short-term speculative gain, democratic, public control of the financial system must be reasserted, rebuilt, and improved.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Restoring the 1938 Glass-Steagall Act\u2019s separation of finance banks from commercial banks is necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Instituting vigorous federal and state regulation of financial \u201crating agencies\u201d is necessary so highly risky, speculative financial instruments are no longer certified as \u201cinvestment grade\u201d and \u201ccredit worthy\u201d.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Re-creating a federally regulated savings and loan industry whose sole purpose is to provide affordable mortgages to middle- and working-class home buyers is necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Strengthening federal and state support for worker- and consumer-owned credit unions that provide affordable credit to working- and middle-class consumers is necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c8ade0eaf4bcf985c90da30de314ba3b9b259219df1855ab7f770d599f6cefd6"
+}

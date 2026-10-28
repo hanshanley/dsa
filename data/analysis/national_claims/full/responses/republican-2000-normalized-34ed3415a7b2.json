@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 280,
+      "generation_tps": 8.109906368472618,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1420,
+      "prompt_tps": 382.66813810455193,
+      "request_sha256": "11a079cabe03d73df249ca090bbde664420abd6003b60e7587e36a69b8ef3c8e",
+      "seconds": 38.24821970798075,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for defined contribution plans and medical savings accounts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals should be free to manage their own health care needs through Flexible Savings Accounts (FSAs) and Medical Savings Accounts (MSAs).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Initiatives such as defined contribution plans and medical savings accounts make a government takeover of health care as anachronistic as surgery without anesthesia.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to make defined contribution plans and medical savings accounts the vanguard of a new consumer rights movement in health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals should be able to roll over excess FSA dollars from one year to the next, instead of losing their unspent money at the end of each year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"MSAs should be a permanent part of tax law, offered to all workers without restriction, with both employers and employees allowed to contribute.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 284,
+      "generation_tps": 8.163761168380484,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1868,
+      "prompt_tps": 410.4908541089827,
+      "request_sha256": "f418802a9001f2c5c31271b97fa2e1472613bd3fd68eca87b1fd588be468e9d0",
+      "seconds": 39.360566459130496,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Strongly encourage support of defined contribution plans and medical savings accounts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals should be free to manage their own health care needs through Flexible Savings Accounts (FSAs) and Medical Savings Accounts (MSAs).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Defined contribution plans and medical savings accounts make a government takeover of health care as anachronistic as surgery without anesthesia.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to make defined contribution plans and medical savings accounts the vanguard of a new consumer rights movement in health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals should be able to roll over excess FSA dollars from one year to the next, instead of losing their unspent money at the end of each year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"MSAs should be a permanent part of tax law, offered to all workers without restriction, with both employers and employees allowed to contribute.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "11a079cabe03d73df249ca090bbde664420abd6003b60e7587e36a69b8ef3c8e"
+}

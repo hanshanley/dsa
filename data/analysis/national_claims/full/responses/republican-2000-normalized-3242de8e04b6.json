@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 219,
+      "generation_tps": 8.238367908739308,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1394,
+      "prompt_tps": 384.4500172387517,
+      "request_sha256": "e8903c279c5f11383d86af102d41a2af9ba3e3e7b1883aee3f0bf3b0148c506e",
+      "seconds": 30.220052666030824,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The increasing focus on health problems of the very elderly, the majority of whom are women, holds the promise of advances concerning osteoporosis and other ailments.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans advocate for state flexibility in managing federal nutrition programs for low-income families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most recipients of TANF assistance are female-headed households.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The transition of recipients of TANF assistance to jobs and independence should include nutritional improvement for mothers and children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"United efforts of Republican leaders at all levels of government and within communities will ensure women gain greater access to relevant care, research, and education on health care issues.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 265,
+      "generation_tps": 8.23704017523648,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1781,
+      "prompt_tps": 371.2794047669184,
+      "request_sha256": "b3dd0bdd3e30cb7ec73f7070ac0f7f3feaa09e4555d12cc50501e515120daa32",
+      "seconds": 36.98023987491615,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The increasing focus upon health problems of the very elderly, the great majority of whom are women, holds the promise of advances concerning osteoporosis and other ailments which should no longer be considered the inevitable price of old age.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans advocate for state flexibility in managing the various federal nutrition programs for low-income families, especially those receiving TANF assistance, most of whom are female-headed households.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most recipients of TANF assistance are female-headed households.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The transition to jobs and independence of recipients of TANF assistance should include nutritional improvement both for mothers and for their children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The united efforts of Republican leaders at all levels of government and within our communities will make sure that women gain greater access to relevant care, research, and education on health care issues important to them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 259,
+      "generation_tps": 8.086031009609657,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2226,
+      "prompt_tps": 359.49670942801436,
+      "request_sha256": "3f93579c4523e7278d1e4f46c12ec3d6b75917366d22b28957f9114f03dbe292",
+      "seconds": 38.23578862519935,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The increasing focus upon health problems of the very elderly, the great majority of whom are women, holds the promise of advances concerning osteoporosis and other ailments which should no longer be considered the inevitable price of old age.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans advocate for state flexibility in managing the various federal nutrition programs for low-income families, especially those receiving TANF assistance, most of whom are female-headed households.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most recipients of TANF assistance are female-headed households.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The transition to jobs and independence of recipients of TANF assistance should include nutritional improvement both for mothers and for their children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The united efforts of Republican leaders at all levels of government and within communities will ensure women gain greater access to relevant care, research, and education on health care issues.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e8903c279c5f11383d86af102d41a2af9ba3e3e7b1883aee3f0bf3b0148c506e"
+}

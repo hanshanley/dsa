@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 433,
+      "generation_tps": 8.532490399483745,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1482,
+      "prompt_tps": 378.8250716107106,
+      "request_sha256": "24f9128da9d382626eec83911d03fa329c1a1f44f00f87cbc07da8c5ff8a772e",
+      "seconds": 54.67106704204343,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Prosperity and peace in Asia, the Middle East, and Africa will only be possible when those regions are fully integrated into the global economy.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"We are working to promote fair trade with Japan and China.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We are promoting regional trade, particularly among Israel, Jordan, and Egypt.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We must continue our work to reach out to moderate Arab states.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We must intensify our effort to foster closer ties to the Islamic World.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes in supporting what South African President Thabo Mbeki has called \\\"an African renaissance\\\".\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"South Africa is a great beacon of hope.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"We are encouraged by the restoration of democracy in Nigeria.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Botswana has a long-term continuation of a stable democratic system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mozambique is making courageous efforts of recovery after years of civil war.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"We see hope for the survival of the ideal of a multi-ethnic society in Zimbabwe's recent election.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The recently enacted African Growth and Opportunity Act is a major contribution toward the future.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 409,
+      "generation_tps": 8.633717275562567,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2673,
+      "prompt_tps": 407.950548701263,
+      "request_sha256": "91249885c8fbc031ca29828f0b8bbbb091a890a3f53d72a97cc03f305340b850",
+      "seconds": 53.94540295796469,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Prosperity and peace in Asia, the Middle East, and Africa will only be possible when those regions are fully integrated into the global economy.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Efforts are being made to promote fair trade with Japan and China.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Regional trade is being promoted, particularly among Israel, Jordan, and Egypt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Continued outreach to moderate Arab states is necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Intensified efforts to foster closer ties to the Islamic World are necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party supports what South African President Thabo Mbeki has called \\\"an African renaissance\\\".\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"South Africa is a beacon of hope.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democracy has been restored in Nigeria.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Botswana has a stable democratic system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mozambique is recovering after years of civil war.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Zimbabwe's recent election offers hope for the survival of a multi-ethnic society.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The African Growth and Opportunity Act is a major contribution to the future.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 433,
+      "generation_tps": 8.602170097832303,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2059,
+      "prompt_tps": 391.3068803484427,
+      "request_sha256": "713823baaf27463ddfa159b9fbcde8a3603070f97cd751f27c4cda696b1ec181",
+      "seconds": 55.615992832928896,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Prosperity and peace in Asia, the Middle East, and Africa will only be possible when those regions are fully integrated into the global economy.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"We are working to promote fair trade with Japan and China.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We are promoting regional trade, particularly among Israel, Jordan, and Egypt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We must continue our work to reach out to moderate Arab states.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We must intensify our effort to foster closer ties to the Islamic World.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes in supporting what South African President Thabo Mbeki has called \\\"an African renaissance\\\".\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"South Africa is a great beacon of hope.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democracy has been restored in Nigeria.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Botswana has a long-term continuation of a stable democratic system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mozambique is making courageous efforts of recovery after years of civil war.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Zimbabwe's recent election offers hope for the survival of the ideal of a multi-ethnic society.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The recently enacted African Growth and Opportunity Act is a major contribution toward the future.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 414,
+      "generation_tps": 8.530173350521945,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 3006,
+      "prompt_tps": 413.7827059461629,
+      "request_sha256": "081d7bf910ddc47357721a5f5f016edcb56347a128b326e9b8e2d0c185757060",
+      "seconds": 55.822301500011235,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Prosperity and peace in Asia, the Middle East, and Africa will only be possible when those regions are fully integrated into the global economy.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Efforts are being made to promote fair trade with Japan and China.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Regional trade is being promoted, particularly among Israel, Jordan, and Egypt.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Continued outreach to moderate Arab states is necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Intensified efforts to foster closer ties to the Islamic World are necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party supports what South African President Thabo Mbeki has called \\\"an African renaissance\\\".\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"South Africa is a beacon of hope.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democracy has been restored in Nigeria.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Botswana has a stable democratic system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mozambique is recovering after years of civil war.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Zimbabwe's recent election offers hope for the survival of a multi-ethnic society.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The African Growth and Opportunity Act is a major contribution to the future.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "24f9128da9d382626eec83911d03fa329c1a1f44f00f87cbc07da8c5ff8a772e"
+}

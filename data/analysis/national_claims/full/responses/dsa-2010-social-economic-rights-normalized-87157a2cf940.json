@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 424,
+      "generation_tps": 16.532655865167687,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1474,
+      "prompt_tps": 458.05533334598937,
+      "request_sha256": "58e2b767a69686823ed7d1ac3cfde41f7b0e6075d11693e95299457f52f22432",
+      "seconds": 28.874254583148286,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The justness of a society can be judged by the status of its most vulnerable members \u2013 its elderly and children.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has the highest child poverty rate among affluent societies, at 20 percent versus four percent in northern Europe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must institute a right to decent child care if it is to fulfill the promise of equal rights for all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone has the right to income security throughout their life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assurance of income security, when coupled with the right to a living wage job, provides a web of economic well-being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Living wage jobs alone are insufficient to create a web of economic well-being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Income security means that loss of a job will not force the sale of a house.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Income security means that loss of a job will not force the dissolution of a relationship with loved ones.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Income security means that life after working life ends will be lived in economic fullness rather than in a financial vacuum.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Income security means that a disabling accident or illness will not destroy economic well-being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 426,
+      "generation_tps": 16.525781951084614,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2066,
+      "prompt_tps": 500.71060226847715,
+      "request_sha256": "7637a01fa0253b2be9a255d3194cfe5097134d0fa7b3103f8371c5c22808c518",
+      "seconds": 29.913807415869087,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The justness of a society can well be judged by the status of its most vulnerable members \u2013 its elderly and children.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has the highest child poverty rate among affluent societies, at 20 percent versus four percent in northern Europe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the United States is to fulfill the promise of equal rights for all, it must institute a right to decent child care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone has the right to income security throughout their life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assurance of income security, when coupled with the right to a living wage job, provides a web of economic well-being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Living wage jobs alone are insufficient to create a web of economic well-being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Income security means that loss of a job will not force the sale of a house.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Income security means that loss of a job will not force the dissolution of a relationship with loved ones.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Income security means that life after working life ends will be lived in economic fullness rather than in a financial vacuum.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Income security means that a disabling accident or illness will not destroy economic well-being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "58e2b767a69686823ed7d1ac3cfde41f7b0e6075d11693e95299457f52f22432"
+}

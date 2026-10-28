@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 453,
+      "generation_tps": 16.537496805326697,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1501,
+      "prompt_tps": 465.25060725409463,
+      "request_sha256": "f5ca263a5318134585b028e0da1abde4f2003e3ef0a09b8f0cbd7633cd0d0cb4",
+      "seconds": 30.628723375033587,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The corporate model of health care is inefficient, creates barriers to access and produces unnecessary deaths.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2008, the U.S. spent $2.2 trillion on health care, which was 16 percent of the U.S. gross domestic product.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Consumer Reports estimates that one-quarter of U.S. health care spending in 2008 was wasted.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Duplication of administrative bureaucracies is the largest source of waste in U.S. health care spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are 1500 private health insurance companies in the U.S., each with its own administrative staff and paperwork.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three quarters of health care expenditures in the U.S. are consumed by the 10 percent of the population with chronic illnesses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Health insurance companies have a strong incentive to exclude people with chronic illnesses from their plans.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"If health insurance companies exclude people with chronic illnesses from their plans, they can improve their margins while simultaneously offering lower premiums to their healthy customers.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Institute of Medicine estimates that 45,000 people die each year due to lack of health insurance.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. market-driven model of health care is responsible for the high cost of care in the U.S.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 454,
+      "generation_tps": 16.53597845995818,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2016,
+      "prompt_tps": 500.85165702843193,
+      "request_sha256": "751d4c66d5453678471ee48630f4c77abdc8e8d14fadabec7d7c90872131e8aa",
+      "seconds": 31.490891250083223,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The corporate model of health care is inefficient, creates barriers to access and produces unnecessary deaths.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2008, the U.S. spent $2.2 trillion on health care, which was 16 percent of its gross domestic product.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Consumer Reports estimates that one-quarter of U.S. health care spending in 2008 was wasted.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Duplication of administrative bureaucracies is the largest source of waste in U.S. health care spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are 1500 private health insurance companies in the U.S., each with its own administrative staff and paperwork.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three quarters of health care expenditures in the U.S. are consumed by the 10 percent of the population with chronic illnesses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Health insurance companies have a strong incentive to exclude people with chronic illnesses from their plans.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"If health insurance companies exclude people with chronic illnesses from their plans, they can improve their margins while simultaneously offering lower premiums to their healthy customers.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Institute of Medicine estimates that 45,000 people die each year due to lack of health insurance.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. market-driven model of health care is responsible for the high cost of care in the U.S.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 454,
+      "generation_tps": 16.530676591410273,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2123,
+      "prompt_tps": 505.5788610202301,
+      "request_sha256": "7b880eda714ba10cbec97278ac49f943daa597e32ca6c3b2cc80caa1f16f3e3e",
+      "seconds": 31.67303687497042,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The corporate model of health care is inefficient, creates barriers to access and produces unnecessary deaths.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2008, the U.S. spent $2.2 trillion on health care, which was 16 percent of its gross domestic product.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Consumer Reports estimates that one-quarter of U.S. health care spending in 2008 was wasted.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Duplication of administrative bureaucracies is the largest source of waste in U.S. health care spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are 1500 private health insurance companies in the U.S., each with its own administrative staff and paperwork.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three quarters of health care expenditures in the U.S. are consumed by the 10 percent of the population with chronic illnesses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Health insurance companies have a strong incentive to exclude people with chronic illnesses from their plans.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"If health insurance companies exclude people with chronic illnesses from their plans, they can improve their margins while simultaneously offering lower premiums to their healthy customers.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Institute of Medicine estimates that 45,000 people die each year due to lack of health insurance.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. market-driven model of health care is responsible for the high cost of care in the U.S.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f5ca263a5318134585b028e0da1abde4f2003e3ef0a09b8f0cbd7633cd0d0cb4"
+}

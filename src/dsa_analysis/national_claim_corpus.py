@@ -103,6 +103,7 @@ FIELDS = [
     "source_sha256",
     "scoped_text_sha256",
     "claim_text",
+    "model_claim_text",
     "claim_types",
     "evidence",
     "source_start",
@@ -239,6 +240,35 @@ def repair_request(base: str, previous: str, errors: list[str]) -> str:
     )
 
 
+def standardize_stance(text: str, group: str, claim_types: list[str]) -> str:
+    if set(claim_types) != {"policy_position"}:
+        return text
+    labels = {
+        "democratic": r"Democratic Party|Democrats",
+        "republican": r"Republican Party|Republicans",
+        "dsa": r"Democratic Socialists of America|DSA",
+    }
+    match = re.fullmatch(
+        rf"(?:The\s+)?(?:{labels[group]})\s+"
+        r"(will|supports?|opposes?|is\s+committed\s+to)\s+(.+)",
+        text,
+        re.I | re.S,
+    )
+    if not match:
+        return text
+    stance, body = match.groups()
+    word = stance.lower().split()[0]
+    prefix = {
+        "will": "Commitment to ",
+        "support": "Support for ",
+        "supports": "Support for ",
+        "oppose": "Opposition to ",
+        "opposes": "Opposition to ",
+        "is": "Commitment to ",
+    }[word]
+    return prefix + body
+
+
 def validate_response(text: str, block: dict) -> tuple[list[dict], list[str], list[str]]:
     wrapper = re.fullmatch(r"\s*```(?:json)?\s*\n(.*?)\n```\s*", text, re.S)
     try:
@@ -331,7 +361,8 @@ def validate_response(text: str, block: dict) -> tuple[list[dict], list[str], li
         row = {key: block[key] for key in FIELDS if key in block}
         row.update(
             claim_id=f"{block['block_id']}-{number:03d}",
-            claim_text=normalized,
+            claim_text=standardize_stance(normalized, block["group"], claim["claim_types"]),
+            model_claim_text=normalized,
             claim_types=" | ".join(sorted(set(claim["claim_types"]))),
             evidence=block["text"][relative : relative + end - start],
             source_start=start,
@@ -509,6 +540,14 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
         "assistant_flagged_claims": sum(
             row["quality_status"] == "assistant_flagged_source_fidelity_issue" for row in claims
         ),
+        "claim_text_standardization": {
+            "version": 1,
+            "original_field": "model_claim_text",
+            "scope": "Recognized source-organization prefixes in policy-position-only claims",
+            "standardized_claims": sum(
+                row["claim_text"] != row["model_claim_text"] for row in claims
+            ),
+        },
         "blocks_with_unresolved_references": sum(
             bool(json.loads(row.get("unresolved_references") or "[]")) for row in statuses
         ),
@@ -609,7 +648,7 @@ def extract_corpus(
         record = {
             "fingerprint": manifest["fingerprint"],
             "prompt_sha256": digest(prompt),
-            "implementation_version": 4,
+            "implementation_version": 5,
             "attempts": attempts,
         }
         if path.exists():

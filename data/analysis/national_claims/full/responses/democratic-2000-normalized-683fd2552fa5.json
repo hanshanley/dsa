@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 345,
+      "generation_tps": 16.511580713979306,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1486,
+      "prompt_tps": 473.87587816900265,
+      "request_sha256": "f11728aa8b8cf659b9c11919cb7748d141e6316a93db67610aae306078232f8e",
+      "seconds": 24.040482708020136,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Promoting responsible fatherhood is a critical next phase of welfare reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Three times more men acknowledged paternity in 1998 than in 1993.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Acknowledging paternity is a first step toward giving a child emotional and financial support from a father.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in cracking down on parents who abandon their children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support requiring all fathers who owe child support to pay or go to work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support strengthening child support enforcement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support increasing the amount of child support paid directly to poor families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support making it harder for parents who owe child support to get new credit cards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support helping men who want to reconnect with their families and become a positive force in their children's lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 357,
+      "generation_tps": 16.46594206678132,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1999,
+      "prompt_tps": 510.1721040235727,
+      "request_sha256": "1a15a54d78e5666e80b6478dee464002fe55ea18d69c7d9dbae9a357c46656ad",
+      "seconds": 25.60942470910959,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Promoting responsible fatherhood is the critical next phase of welfare reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Three times more men acknowledged paternity in 1998 than in 1993.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Acknowledging paternity is a first step toward giving a child the emotional and financial support a father must give to merit the name.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in cracking down on parents who abandon their children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support requiring all fathers who owe child support to pay or go to work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support strengthening child support enforcement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support increasing the amount of child support that gets paid directly to poor families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support making it harder for parents who owe child support to get new credit cards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support helping those men who want to reconnect with their families and who want to become a positive force in the lives of their children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f11728aa8b8cf659b9c11919cb7748d141e6316a93db67610aae306078232f8e"
+}

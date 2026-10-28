@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 338,
+      "generation_tps": 16.591805416598532,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1459,
+      "prompt_tps": 465.7185414823596,
+      "request_sha256": "2647ddade4add3005af6b65b36473b319d14d88a7aa6c5181cbc9def823ba082",
+      "seconds": 23.514234208036214,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The United States is contributing to NATO's peacekeeping efforts in Bosnia-Herzegovina and Kosovo after trials and errors of the current administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops cannot stay indefinitely in Bosnia-Herzegovina and Kosovo without jeopardizing the American ability to defend other important U.S. and allied interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over time European troops should take the place of American forces under the NATO umbrella as the United States and its allies work together to bring peace and democracy to the Balkans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican president will not negotiate with indicted war criminals such as Slobodan Milosevic but will seek their arrest, trial, and imprisonment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Russia has the potential to be a great power and should be treated as such.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"If Russia can realize the enormous potential of its people and abundant resources, it can achieve the greatness that is currently defined solely by the reach of its weapons.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"With Russia, the United States needs patience, consistency, and a principled reliance on democratic forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 345,
+      "generation_tps": 16.57262343358597,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1965,
+      "prompt_tps": 495.4832592157893,
+      "request_sha256": "a43f6f82a210434e65c1147eac267e5a862c4a5e5931654c172cde22a183fb31",
+      "seconds": 24.79300675005652,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States is contributing to NATO's peacekeeping efforts in Bosnia-Herzegovina and Kosovo after the many trials and errors of the current administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops cannot stay indefinitely in Bosnia-Herzegovina and Kosovo without jeopardizing the American ability to defend other important U.S. and allied interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over time European troops should take the place of American forces under the NATO umbrella as the United States and its allies work together to bring peace and democracy to the Balkans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican president will not negotiate with indicted war criminals such as Slobodan Milosevic but will seek their arrest, trial, and imprisonment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Russia has the potential to be a great power and should be treated as such.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"If Russia can realize the enormous potential of its people and abundant resources, it can achieve the greatness that is currently defined solely by the reach of its weapons.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"With Russia, the United States needs patience, consistency, and a principled reliance on democratic forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2647ddade4add3005af6b65b36473b319d14d88a7aa6c5181cbc9def823ba082"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 382,
+      "generation_tps": 16.60778207396481,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1356,
+      "prompt_tps": 456.87398882365324,
+      "request_sha256": "6fe968de90c5922ddddbd9d3c81f4240432aae387671c4cb2562e5eeaf12fe6e",
+      "seconds": 25.97819058294408,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"LGBTQ activists and their allies recognize that basic human rights such as health care should not be tied to one\u2019s marital status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"LGBTQ activists and their allies recognize that basic human rights such as health care should not be tied to one\u2019s employment status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have quality healthcare regardless of their marital status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have quality healthcare regardless of their economic status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have quality healthcare regardless of their employment history.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have old-age income security regardless of their marital status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have old-age income security regardless of their economic status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have old-age income security regardless of their employment history.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is still a long way to go as a society and world in achieving equal rights.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to the struggle for equal rights for all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 388,
+      "generation_tps": 16.583944891695364,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1906,
+      "prompt_tps": 491.64442545275693,
+      "request_sha256": "24f30beda261135bac98e46adfc1d73f00f578a8490f644db1024f74f056de7d",
+      "seconds": 27.282406124984846,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"LGBTQ activists and their allies recognize that basic human rights such as health care should not be tied to one\u2019s marital status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"LGBTQ activists and their allies recognize that basic human rights such as health care should not be tied to one\u2019s employment status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have quality healthcare regardless of their marital status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have quality healthcare regardless of their economic status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have quality healthcare regardless of their employment history.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have old-age income security regardless of their marital status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have old-age income security regardless of their economic status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All people should have old-age income security regardless of their employment history.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As a society and world, there is still a long way to go in achieving equal rights.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to the struggle for equal rights for all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6fe968de90c5922ddddbd9d3c81f4240432aae387671c4cb2562e5eeaf12fe6e"
+}

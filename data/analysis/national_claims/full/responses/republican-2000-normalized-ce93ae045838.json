@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 336,
+      "generation_tps": 16.563774249507365,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1417,
+      "prompt_tps": 476.0092086109069,
+      "request_sha256": "25b478fe44094c1fd45060e7a12b49132faccdafd15723c42ca2dd2d3ef36407",
+      "seconds": 23.271106875035912,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"International organizations can serve the cause of peace, but they can never substitute for, or exercise a veto over, principled American leadership.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations was not designed to summon or lead armies in the field.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops must never serve under United Nations command, as a matter of U.S. sovereignty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops will not be subject to the jurisdiction of an International Criminal Court.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations can provide a valuable forum for nations to peacefully resolve their differences.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations can help monitor international agreements and organize international humanitarian assistance.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will pay a fair, not disproportionate, share of dues to the United Nations once it has reformed its management and taken steps to eliminate waste, fraud, and abuse.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All funds that the U.S. contributes for operations, conferences, and peacekeeping should count against its United Nations dues.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 341,
+      "generation_tps": 16.52898584307289,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1921,
+      "prompt_tps": 487.328378666416,
+      "request_sha256": "1fdeb27772b882a5be0db77cc69c25627d040b7168a8bfaa100ddb97a366ccf4",
+      "seconds": 24.581581708043814,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"International organizations can serve the cause of peace, but they can never serve as a substitute for, or exercise a veto over, principled American leadership.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations was not designed to summon or lead armies in the field.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As a matter of U.S. sovereignty, American troops must never serve under United Nations command.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops will not be subject to the jurisdiction of an International Criminal Court.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations can provide a valuable forum for nations to peacefully resolve their differences.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations can help monitor international agreements and organize international humanitarian assistance.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will pay a fair, not disproportionate, share of dues to the United Nations once the United Nations has reformed its management and taken steps to eliminate waste, fraud, and abuse.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All funds that the U.S. contributes for operations, conferences, and peacekeeping should count against its United Nations dues.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "25b478fe44094c1fd45060e7a12b49132faccdafd15723c42ca2dd2d3ef36407"
+}

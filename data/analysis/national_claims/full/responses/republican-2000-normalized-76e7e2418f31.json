@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 319,
+      "generation_tps": 8.143768714331225,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1471,
+      "prompt_tps": 350.18845394716254,
+      "request_sha256": "bf170b50189dfc48d3e1d15450a54ead163de03d757a3806479b5061f08008a4",
+      "seconds": 43.38602524995804,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Many state legislatures require all insurance policies to provide benefits and treatments which many families do not want and do not need.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-mandated insurance benefits and treatments increase costs for everyone.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-mandated insurance benefits and treatments price low-income families out of the insurance market.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-mandated insurance benefits and treatments advance the interests of specific providers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-mandated insurance benefits and treatments have no place in a health care system based on consumer rights and patient choice.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"People in rural and underserved areas need access to critical primary care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to boost funding for community health centers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to establish stronger public-private partnerships for safety net providers and hospitals in rural and underserved communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 326,
+      "generation_tps": 8.092968890315424,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1958,
+      "prompt_tps": 341.4323267968174,
+      "request_sha256": "7f200bb681876639e28b5999f928334a7a68b49c2084ff466e835f22b668a59b",
+      "seconds": 46.026720041874796,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Many state legislatures require all insurance policies to provide benefits and treatments which many families do not want and do not need.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-mandated insurance benefits and treatments increase costs for everyone.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-mandated insurance benefits and treatments price low-income families out of the insurance market.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-mandated insurance benefits and treatments advance the interests of specific providers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State-mandated insurance benefits and treatments, extending far beyond minimum standards, have no place in a health care system based on consumer rights and patient choice.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"People in rural and underserved areas need access to critical primary care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to boost funding for community health centers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to establish stronger public-private partnerships for safety net providers and hospitals in rural and underserved communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bf170b50189dfc48d3e1d15450a54ead163de03d757a3806479b5061f08008a4"
+}

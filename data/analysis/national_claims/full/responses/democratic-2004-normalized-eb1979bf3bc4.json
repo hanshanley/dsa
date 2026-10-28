@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 421,
+      "generation_tps": 16.53981793460828,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1285,
+      "prompt_tps": 439.57096506313064,
+      "request_sha256": "15e09e34dde82335d93aef8d3fc08863d3559d1a3c1c7b0e1b9a8a17cd29f550",
+      "seconds": 28.38713987497613,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The challenges of the current times are new and profound.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The choice Americans face in November may have more impact than any in their lifetimes.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States has been attacked on its own shores for the first time in generations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. service members are in harm's way in Iraq and Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. service members are in harm's way in the war against terror.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. alliances are frayed.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. credibility is in doubt.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The U.S. middle class is hard-pressed.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"Millions of Americans have lost their jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Millions of Americans are struggling under the mounting burden of life's everyday costs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The President and his allies stubbornly press on without regard to the needs of the people.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]},{\"claim_text\":\"The President and his allies stubbornly press on without regard to the challenges of the times.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 473,
+      "generation_tps": 16.51878707103485,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1874,
+      "prompt_tps": 482.2022024422824,
+      "request_sha256": "f42aadb6ee14a7e3f7650880073e768683db75a3b46011fb66702bde2f97faba",
+      "seconds": 32.52986420807429,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The challenges of the current times are new and profound.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The choice Americans face this November may have more impact on the people and the United States' place in the world than any in their lifetimes.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"For the first time in generations, the United States has been attacked on its own shores.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. service members are in harm's way in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. service members are in harm's way in Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. service members are in harm's way in the war against terror.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. alliances are frayed.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. credibility is in doubt.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The U.S. middle class is hard-pressed.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"Millions of Americans have lost their jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Millions of Americans are struggling under the mounting burden of life's everyday costs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The President and his allies stubbornly press on without regard to the needs of the people.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]},{\"claim_text\":\"The President and his allies stubbornly press on without regard to the challenges of the times.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "15e09e34dde82335d93aef8d3fc08863d3559d1a3c1c7b0e1b9a8a17cd29f550"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 438,
+      "generation_tps": 16.548067746856955,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1445,
+      "prompt_tps": 467.869538346933,
+      "request_sha256": "96407956f93edfcb1ae1f7840f3dad3130e4a47d197c05eb60a0807c79957c13",
+      "seconds": 29.566896667005494,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The men and women of the National Guard and Reserve are an important part of the nation's military readiness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party will maintain the strength of the National Guard and Reserve in the States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The role of citizen soldiers must continue to be a proud tradition that links every community in the country with the cause of national security.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party created the all-volunteer force.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party opposes reinstitution of the draft, whether directly or through compulsory national service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party supports the advancement of women in the military.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party supports exemption of women from ground combat units.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party calls for implementation of the recommendations of the Kassebaum Commission, which unanimously recommended that co-ed basic training be ended.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party supports restoration of sound priorities in the making of personnel policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party supports candid analysis of the consequences of unprecedented social changes in the military.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party will put renewed emphasis on encouraging the best and brightest of young people to join the armed forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 328,
+      "generation_tps": 16.551228296510423,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2051,
+      "prompt_tps": 509.0956636170771,
+      "request_sha256": "756c84a8cf606c3e04bfe3454face9ea561cccdd05ddc9a9b755e74e8cb2058d",
+      "seconds": 23.855762583902106,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The men and women of the National Guard and Reserve are an important part of the nation's military readiness, and the Republican party will maintain their strength in the States.\",\n\"claim_types\":[\"factual_assertion\",\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The role of citizen soldiers must continue to be a proud tradition that links every community in the country with the cause of national security.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party created the all-volunteer force and opposes reinstitution of the draft, whether directly or through compulsory national service.\",\n\"claim_types\":[\"factual_assertion\",\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party supports the advancement of women in the military, supports their exemption from ground combat units, and calls for implementation of the recommendations of the Kassebaum Commission, which unanimously recommended that co-ed basic training be ended.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party supports restoration of sound priorities in the making of personnel policies and candid analysis of the consequences of unprecedented social changes in the military.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party will put renewed emphasis on encouraging the best and brightest of young people to join the armed forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "96407956f93edfcb1ae1f7840f3dad3130e4a47d197c05eb60a0807c79957c13"
+}

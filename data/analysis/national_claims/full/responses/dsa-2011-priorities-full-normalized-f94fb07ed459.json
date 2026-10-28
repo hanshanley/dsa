@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 279,
+      "generation_tps": 8.091055041679432,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1518,
+      "prompt_tps": 372.9552339654607,
+      "request_sha256": "e09e1e6b88f0c170a96acd8f2fe4308a6e2c1be00dc5b88467f42ab0ae7e3bfa",
+      "seconds": 38.56405433290638,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A project would educate the public as to the war on poverty\u2019s considerable successes and shortcomings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government programs that are adequately designed and funded can increase social justice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The War on Poverty lowered the poverty rate among those over 65 from 30 percent in 1962 to under ten percent today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The creation of Medicare and Medicaid and the doubling of the value of Social Security and indexing it to inflation represent the great triumph of the War on Poverty.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional and administration proposals to weaken Social Security, Medicare and Medicaid threaten gains made by the War on Poverty.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The War on Poverty failed to stem unemployment and poverty brought by deindustrialization because it did not invest seriously in job training and job creation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 320,
+      "generation_tps": 8.168559310435496,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1965,
+      "prompt_tps": 396.7092947501696,
+      "request_sha256": "57233073e3387ad07ffb65869ca208ce3330bfc02663b7cb6890a6330111ebcd",
+      "seconds": 44.146598084131256,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A project, with the possibility of local events and actions as part of it, would educate the public as to the war on poverty\u2019s considerable successes -- as well as shortcomings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government programs that are adequately designed and funded can increase social justice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The War on Poverty lowered the poverty rate among those over 65 from 30 per cent in 1962 to under ten per cent today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Great Society\u2019s creation of Medicare and Medicaid -- and the doubling of the value of Social Security and indexing it to inflation (under Richard Nixon!) -- represent the great triumph of the War on Poverty.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional and administration proposals to weaken Social Security, Medicare and Medicaid today threaten gains made by the War on Poverty.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"By failing to invest seriously in job training and job creation, the War on Poverty did not stem the unemployment and poverty that deindustrialization would bring to inner cities and the industrial heartland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e09e1e6b88f0c170a96acd8f2fe4308a6e2c1be00dc5b88467f42ab0ae7e3bfa"
+}

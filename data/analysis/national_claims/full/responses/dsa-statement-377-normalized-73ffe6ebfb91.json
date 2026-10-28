@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.601067064203665,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1228,
+      "prompt_tps": 443.0272875362465,
+      "request_sha256": "251bbf9819bfecc9551309c3bdf16b0b862f2c20327d4e142cfcba0f6ea0ffeb",
+      "seconds": 25.731002541957423,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States government is ignoring history and attempting to solve the rise of the so-called Islamic State (I.S.) by aerial bombardment.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aerial bombardment is a blunt, indiscriminate tactic.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aerial bombardment kills innocent civilians.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aerial bombardment often drives innocent bystanders to support the foes being bombed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bombing by the U.S. and its \u201callies\u201d must stop.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The threat of further military escalation must stop.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Islamic State will best be opposed by a broad international coalition led by the peoples of Iraq, Syria, Turkey, Jordan and Iran.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The states of Iraq, Syria, Turkey, Jordan and Iran often have conflicting regional aims.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. can only act effectively against I.S. through multilateral action led by the peoples of the Islamic world.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Past failures of U.S. unilateral intervention demonstrate the need for multilateral action.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 16.58588152715015,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1777,
+      "prompt_tps": 486.84618058346774,
+      "request_sha256": "3f6878ba99bb93e9702687add074d6fa513494c6eeb09ee3309fe7824fcc4eca",
+      "seconds": 25.304027708014473,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States government is ignoring history and trying to solve the rise of the so-called Islamic State (I.S.) by aerial bombardment.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aerial bombardment is a blunt, indiscriminate tactic that kills innocent civilians and often drives innocent bystanders to support the very foes we bomb.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bombing by the U.S. and its \u201callies\u201d must stop.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The threat of further military escalation must stop.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Islamic State will best be opposed by a broad international coalition led by the peoples of Iraq, Syria, Turkey, Jordan and Iran.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The states of Iraq, Syria, Turkey, Jordan and Iran often have conflicting regional aims.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. can only act effectively against I.S. through multilateral action led by the peoples of the Islamic world.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Past failures of U.S. unilateral intervention demonstrate that the U.S. can only act effectively against I.S. through multilateral action led by the peoples of the Islamic world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 358,
+      "generation_tps": 16.582432752645285,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2302,
+      "prompt_tps": 532.1648925515846,
+      "request_sha256": "b3bf15ad53ed359a2a29b0fde9b66307c7c265ab1e9ed418c3dcffc7a48b2f5c",
+      "seconds": 25.924668833147734,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States government is ignoring history and attempting to solve the rise of the so-called Islamic State (I.S.) by aerial bombardment.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aerial bombardment is a blunt, indiscriminate tactic that kills innocent civilians and often drives innocent bystanders to support the foes being bombed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bombing by the U.S. and its \u201callies\u201d must stop.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The threat of further military escalation must stop.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Islamic State will best be opposed by a broad international coalition led by the peoples of Iraq, Syria, Turkey, Jordan and Iran.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The states of Iraq, Syria, Turkey, Jordan and Iran often have conflicting regional aims.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. can only act effectively against I.S. through multilateral action led by the peoples of the Islamic world.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Past failures of U.S. unilateral intervention demonstrate that the U.S. can only act effectively against I.S. through multilateral action led by the peoples of the Islamic world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "251bbf9819bfecc9551309c3bdf16b0b862f2c20327d4e142cfcba0f6ea0ffeb"
+}

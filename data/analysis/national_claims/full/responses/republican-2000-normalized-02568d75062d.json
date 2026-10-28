@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 431,
+      "generation_tps": 16.54867888468789,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1421,
+      "prompt_tps": 457.62842382797123,
+      "request_sha256": "bac142875448c2f947ee6aedd85f73067bba12494aa81237cfba3fa4b5ab1436",
+      "seconds": 29.159516250016168,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Ballistic missiles and weapons of mass destruction threaten the world's future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America is currently without defense against ballistic missiles and weapons of mass destruction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration's failure to guard America's nuclear secrets is allowing China to modernize its ballistic missile force.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"China's modernization of its ballistic missile force increases the threat to America and to America's allies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The theft of vital nuclear secrets by China represents one of the greatest security defeats in the history of the United States.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican president will protect America's nuclear secrets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican president will aggressively implement a sweeping reorganization of America's nuclear weapons program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over two dozen countries have ballistic missiles today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A number of countries, including North Korea, will be capable of striking the United States within a few years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Strikes by North Korea and other countries will occur with little warning.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America is now unable to counter the rampant proliferation of nuclear, biological, and chemical weapons and their missile delivery systems around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 443,
+      "generation_tps": 16.509658243454524,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2020,
+      "prompt_tps": 501.7737722483917,
+      "request_sha256": "c6e25e9c699c5025d9e5cac48c15edf705819db2412f60a5f48d240f82f98908",
+      "seconds": 30.868566875113174,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Ballistic missiles and weapons of mass destruction threaten the world's future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America is currently without defense against these threats of ballistic missiles and weapons of mass destruction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration's failure to guard America's nuclear secrets is allowing China to modernize its ballistic missile force.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"China's modernization of its ballistic missile force increases the threat to America and to America's allies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The theft of vital nuclear secrets by China represents one of the greatest security defeats in the history of the United States.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican president will protect America's nuclear secrets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican president will aggressively implement a sweeping reorganization of America's nuclear weapons program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over two dozen countries have ballistic missiles today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A number of countries, including North Korea, will be capable of striking the United States within a few years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Strikes by North Korea and other countries will occur with little warning within a few years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America is now unable to counter the rampant proliferation of nuclear, biological, and chemical weapons and their missile delivery systems around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bac142875448c2f947ee6aedd85f73067bba12494aa81237cfba3fa4b5ab1436"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 322,
+      "generation_tps": 16.534289899108124,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1367,
+      "prompt_tps": 479.78324460575556,
+      "request_sha256": "ca876816772a2777dba0be077f7f7b98f73363c99653cbf173038427ef5b3168",
+      "seconds": 22.333698709029704,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Immediately after the election, Wall Street-backed foundations such as Third Way and the Concord Coalition organized a \u201cCampaign to Fix the Debt\u201d to spin the election results as a mandate for a \u201cbi-partisan\u201d focus on reducing the deficit as the highest national priority.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"For decades, billionaire Pete Peterson has funded groups that claim that the universal entitlement programs Social Security and Medicare are bankrupting the nation and that their future growth must thus be drastically trimmed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2011, the Simpson-Bowles Congressional Commission put to a vote a long-term \u201cbudget compromise\u201d that would have instituted three times as much in budget cuts than in tax increases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite President Obama\u2019s evident willingness to reach a one-sided budget compromise, Tea Party insistence on no tax increases, even on the wealthiest, scuttled the deal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The \u201cresolution\u201d of the manufactured, alleged \u201cbudget crisis\u201d was to postpone a decision on further deficit reduction until the end of 2012, resulting in the contrived \u201cfiscal cliff\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 326,
+      "generation_tps": 16.505045237773047,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1857,
+      "prompt_tps": 496.2774459899194,
+      "request_sha256": "dabb9ab76667796a5614a918b994afaf95ebb105d22d852b76e41b6d70ee18af",
+      "seconds": 23.50306758307852,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Immediately after the election, Wall Street-backed foundations such as Third Way and the Concord Coalition organized a \u201cCampaign to Fix the Debt\u201d to spin the election results as a mandate for a \u201cbi-partisan\u201d focus on reducing the deficit as the highest national priority.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"For decades, billionaire Pete Peterson has funded groups that claim that the universal entitlement programs Social Security and Medicare are bankrupting the nation and that their future growth must thus be drastically trimmed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2011, the Simpson-Bowles Congressional Commission put to a vote a long-term \u201cbudget compromise\u201d that would have instituted three times as much in budget cuts than in tax increases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite President Obama\u2019s evident willingness to reach such a one-sided compromise, Tea Party insistence on no tax increases, even on the wealthiest, scuttled the deal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The \u201cresolution\u201d of this manufactured, alleged \u201cbudget crisis\u201d was to postpone a decision on further deficit reduction until the end of 2012, hence the contrived \u201cfiscal cliff\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ca876816772a2777dba0be077f7f7b98f73363c99653cbf173038427ef5b3168"
+}

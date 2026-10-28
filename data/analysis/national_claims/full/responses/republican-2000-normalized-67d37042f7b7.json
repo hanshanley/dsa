@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 294,
+      "generation_tps": 8.268527818946966,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1485,
+      "prompt_tps": 331.9803024806314,
+      "request_sha256": "280add8208c0e90fd26050cb6a17828a03058e9598b3846eab4e55e07c01c9f4",
+      "seconds": 40.041122208116576,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to restore the force of the Tenth Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ability of Congress to impose unfunded mandates on states and on local and tribal governments has been limited.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next logical step is to address unfunded mandates of the past in areas like education and social services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Welfare reform\u2019s dramatic success is an example of what happens when power is given back to the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government's role should be to set high standards and expectations in policies, then allow states to implement and operate those policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Washington must respect that one size does not fit all states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Washington must not overburden states with unnecessary strings and red tape attached to its policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 316,
+      "generation_tps": 8.282075152600216,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1947,
+      "prompt_tps": 337.35374705497327,
+      "request_sha256": "dd25d602764491b2cac7a73304e209d11b859500348c39a071e4137ac0ffa34f",
+      "seconds": 43.94238508399576,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to restore the force of the Tenth Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ability of Congress to impose unfunded mandates on states and on local and tribal governments has been limited.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next logical step is to address the unfunded mandates of the past in areas like education and social services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The dramatic success of welfare reform \u2014 once the States were allowed to manage their programs \u2014 is an example of what happens when power is given back to the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government's role should be to set high standards and expectations in policies, then get out of the way and let the states implement and operate those policies as they best know how.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Washington must respect that one size does not fit all states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Washington must not overburden states with unnecessary strings and red tape attached to its policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "280add8208c0e90fd26050cb6a17828a03058e9598b3846eab4e55e07c01c9f4"
+}

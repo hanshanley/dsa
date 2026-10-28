@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 266,
+      "generation_tps": 8.247343985139302,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1508,
+      "prompt_tps": 383.38580577638197,
+      "request_sha256": "d1c8747a397ac7d32993e304e0f3f02ebe2d46fcdc1267ffba03c750f92f4a7f",
+      "seconds": 36.199102374957874,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States military budget exceeds the defense expenditure of all other nations combined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most advanced industrial economies devote 4 to 7 percent of their budgets and only 2 percent or less of their GDP to defense expenditure.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. spends close to 25 percent of its national budget and more than 7 percent of its GDP on \u201cdefense\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Close to 15 percent of American production is military related, considering arms exports and indirect military spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Restoring progressive taxation to the levels of the late 1970s and a leaner, saner defense budget could immediately increase financial resources available for domestic social programs by well over 25 percent of the current federal budget\u2014approximately $700 billion.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 278,
+      "generation_tps": 8.167774740663145,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1942,
+      "prompt_tps": 387.84098865197393,
+      "request_sha256": "7f0708dff15e406da8a7810566aa5007472da23498f912ed80bfeb2b10e857c0",
+      "seconds": 39.05285450001247,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States military budget now incredibly and irrationally exceeds the defense expenditure of all other nations combined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most advanced industrial economies devote 4 to 7 percent of their budgets and only 2 percent or less of their GDP to defense expenditure.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. spends close to 25 percent of its national budget and more than 7 percent of its GDP on \u201cdefense\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If one takes into account arms exports and indirect military spending, close to 15 percent of American production is military related.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Restoring progressive taxation to the levels of even the late 1970s and a leaner, saner defense budget could immediately increase the financial resources available for domestic social programs by well over 25 percent of the current federal budget\u2014approximately $700 billion.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d1c8747a397ac7d32993e304e0f3f02ebe2d46fcdc1267ffba03c750f92f4a7f"
+}

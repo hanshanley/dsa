@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 420,
+      "generation_tps": 16.506798594722675,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1462,
+      "prompt_tps": 504.917796927322,
+      "request_sha256": "ec17cd2cd9e351d78146985a3ef87bb7f660f3aa1af5bd8f7dbf75404d969fe3",
+      "seconds": 28.348683250136673,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA notes with dismay that current discussions and hearings in Congress relating to national health insurance have excluded single-payer health insurance from the discussion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The plans under discussion presume a large role for the existing insurance industry, possibly in competition with a Medicare-like public option.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA strongly supports single payer over other alternatives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA feels it is vitally important to include supporters of single payer in the discussion around all possible plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA condemns the exclusion of single-payer supporters in both President Obama\u2019s Health Care Summit and in the hearings of the Senate Finance Committee.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ideas and experience of health-care professionals committed to the single-payer approach would provide essential input in discussions of public options.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current political situation provides the best opportunity for serious health-care reform in a generation.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA does not accept the position that unless they get everything they want, they are willing to see the opportunity for health-care reform disappear.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA believes the insurance industry is powerful enough that the current political dynamic could result in a \u201chealth care reform\u201d that is worse than nothing at all, because it would create a public plan that is designed to fail.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 420,
+      "generation_tps": 16.466043015187008,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2050,
+      "prompt_tps": 508.98729302574696,
+      "request_sha256": "18341f4b627e6c2ba652f16b59b3f2fe20bc25556d23d2eb4126280b1d0d7693",
+      "seconds": 29.544054582947865,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA notes with dismay that the current discussions and hearings in Congress relating to national health insurance have excluded single-payer health insurance from the discussion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The plans under discussion presume a large role for the existing insurance industry, possibly in competition with a Medicare-like public option.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA strongly supports single payer over these other alternatives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA feels it is vitally important to include supporters of single payer in the discussion around all possible plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA condemns the exclusion of these voices in both President Obama\u2019s Health Care Summit and in the hearings of the Senate Finance Committee.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In discussions of public options, the ideas and experience of health-care professionals committed to the single-payer approach would provide essential input.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current political situation provides the best opportunity for serious health-care reform in a generation.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA does not accept the position that unless they get everything they want, they are willing to see that opportunity disappear.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA believes the insurance industry is powerful enough that the current political dynamic could result in a \u201chealth care reform\u201d that is, in fact, worse than nothing at all, because it would create a public plan that is designed to fail.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ec17cd2cd9e351d78146985a3ef87bb7f660f3aa1af5bd8f7dbf75404d969fe3"
+}

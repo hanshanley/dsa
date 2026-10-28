@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 335,
+      "generation_tps": 16.44812805340938,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1515,
+      "prompt_tps": 491.577463734642,
+      "request_sha256": "76d6827bfc8235c056831a8ff25e584b088a37a3106960c4ad4294eb352890b9",
+      "seconds": 23.459794583031908,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Healthy communities require managing metropolitan land use in the public interest, developing public transit and halting suburban sprawl.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A political realignment that links older, working class suburbs with inner cities can be the basis of an environmental and social justice politics.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone has the right to associate in whatever organizational form they choose.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The right to freely organize and to participate in decision-making within the community and workplace is the keystone to the arch of social and economic rights.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Without the right to freely organize and participate in decision-making, formal democracy is a sham and the workplace remains a bulwark of repression.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Elites throughout history have opposed popular participation in decision-making, dismissing community organizing as agitation and labor organizing as interference in the employer\u2019s right to manage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The right-wing attack on ACORN stemmed from hatred of its success in mobilizing an interracial movement of poor and powerless communities to influence elections and political decisions on behalf of their interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 345,
+      "generation_tps": 16.542381437397385,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2018,
+      "prompt_tps": 503.04235615262803,
+      "request_sha256": "9ff36d5eaaad19492440a0b8c97e1d4ea4a917042a87d2c1acbd8fd83cd44097",
+      "seconds": 24.87720387498848,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Healthy communities require managing metropolitan land use in the public interest, developing public transit and halting suburban sprawl.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A political realignment that links older, working class suburbs with inner cities can be the basis of an environmental and social justice politics.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone has the right to associate in whatever organizational form they choose.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The right to freely organize and to participate in decision-making within the community and workplace is the keystone to the arch of social and economic rights.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Without the right to freely organize and participate in decision-making within the community and workplace, formal democracy is a sham and the workplace remains a bulwark of repression.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Elites throughout history have opposed popular participation in decision-making, dismissing community organizing as agitation and labor organizing as interference in the employer\u2019s right to manage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The right-wing attack on ACORN stemmed from hatred of its success in mobilizing an interracial movement of poor and powerless communities to influence elections and political decisions on behalf of their interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "76d6827bfc8235c056831a8ff25e584b088a37a3106960c4ad4294eb352890b9"
+}

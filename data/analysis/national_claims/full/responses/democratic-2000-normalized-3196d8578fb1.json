@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 327,
+      "generation_tps": 8.243100209163561,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1371,
+      "prompt_tps": 363.92271657777036,
+      "request_sha256": "c5382f27f4992305927180e75e89eafbf88f932de60ff425eb59d2b835374148",
+      "seconds": 43.449368624947965,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe in an immigration system that balances strong enforcement of laws with fair and evenhanded treatment of immigrants and their families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Clinton-Gore administration provided leadership in dramatically improving border management and law enforcement.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Clinton-Gore administration expanded the Border Patrol.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Clinton-Gore administration placed curbs on abuses of the asylum process.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current immigration system fails to effectively control illegal immigration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current immigration system has serious adverse impacts on state and local services.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current immigration system has serious adverse impacts on many communities and workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current immigration system has led to an alarming number of deaths of migrants on the border.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to reexamining and fixing failed immigration policies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 337,
+      "generation_tps": 8.161808515659796,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1866,
+      "prompt_tps": 368.62437620166446,
+      "request_sha256": "eaae3cacc6d0ed09bf8fe4015a40ec1af76aca06a4b415234cf8c435d49e4dbb",
+      "seconds": 46.36424049991183,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe in an effective immigration system that balances a strong enforcement of laws with fair and evenhanded treatment of immigrants and their families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Clinton-Gore administration provided long overdue leadership in dramatically improving border management and law enforcement.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Clinton-Gore administration expanded the Border Patrol.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Clinton-Gore administration placed curbs on abuses of the asylum process.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current immigration system fails to effectively control illegal immigration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current immigration system has serious adverse impacts on state and local services.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current immigration system has serious adverse impacts on many communities and workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current immigration system has led to an alarming number of deaths of migrants on the border.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to reexamining and fixing these failed immigration policies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c5382f27f4992305927180e75e89eafbf88f932de60ff425eb59d2b835374148"
+}

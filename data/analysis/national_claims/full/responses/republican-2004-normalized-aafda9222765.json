@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 452,
+      "generation_tps": 16.601922840676664,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1542,
+      "prompt_tps": 466.26853080146105,
+      "request_sha256": "d8c83ffdb2bc3c3e326bffc3ed976775137acbd889e2f9faaef24465e953fdb2",
+      "seconds": 30.542779207928106,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party strives to fulfill Abraham Lincoln's vision of a country united and free, in which all people are guaranteed equal rights and the opportunity to pursue their dreams.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abraham Lincoln's legacy extends beyond the borders of America and can be seen in free governments all over the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lincoln's successors have been united by a common purpose of defending freedom at home and promoting it abroad.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party gathers to renominate a candidate who carries on the best traditions of the Party by carrying the banner of freedom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President George W. Bush immediately realized the September 11, 2001 attacks were an act of war, not just a crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"President George W. Bush, working with Congress, drew up plans to take the fight to the enemy and vowed to bring the terrorists to justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"President George W. Bush and Congress took steps to help the wounded, honor the dead, and secure the homeland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Thanks to President George W. Bush's leadership, the skill of the American military, and the commitment of allies, there are more than 50 million newly free people in Afghanistan and Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"America is safer thanks to President George W. Bush's leadership, the skill of the American military, and the commitment of allies.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 464,
+      "generation_tps": 16.556483142910743,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2162,
+      "prompt_tps": 516.2424860982633,
+      "request_sha256": "c549d7dde9e0dde065a67c19dab0d58d033f7e1a7412146b5be9bb24007fb06c",
+      "seconds": 32.22288812510669,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party strives to fulfill Abraham Lincoln's vision: a country united and free, in which all people are guaranteed equal rights and the opportunity to pursue their dreams.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abraham Lincoln's legacy extends beyond the borders of America and can be seen in free governments all over the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lincoln's successors have been united by a common purpose \u2013 defending freedom at home and promoting it abroad.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party gathers to renominate a candidate who carries on the best traditions of the Party by carrying the banner of freedom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President George W. Bush immediately realized that the September 11, 2001 attacks were an act of war, not just a crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"President George W. Bush, working with Congress, drew up plans to take the fight to the enemy, vowing to bring the terrorists to justice, or bring justice to the terrorists.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"President George W. Bush and Congress took steps to help the wounded, honor the dead, and secure the homeland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Thanks to President George W. Bush's leadership, the skill of the American military, and the commitment of allies, there are more than 50 million newly free people in the nations of Afghanistan and Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"America is safer thanks to President George W. Bush's leadership, the skill of the American military, and the commitment of allies.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d8c83ffdb2bc3c3e326bffc3ed976775137acbd889e2f9faaef24465e953fdb2"
+}

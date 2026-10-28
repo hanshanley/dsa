@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.52870389758808,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1525,
+      "prompt_tps": 466.6088641724164,
+      "request_sha256": "9bb5375827ae95ffe001cfda5fc6c9ac98bcbd60aafa9be9ab4926bfa8cec6c4",
+      "seconds": 26.329590583918616,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The care burden falls disproportionately on women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As more women have entered the paid labor force, combining full-time work with the requirements of child and elder care has spread from working class and poor women to middle income women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A just society must guarantee that those who need care receive it and that families are able to care for their dependents.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A right to care must also mean the right for paid caregivers to be professionally trained so they can provide humane, high-quality care, and be paid a living wage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States underpays teacher aides, day care workers and in-home care providers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Coupled with often exploitative working conditions, underpayment of teacher aides, day care workers and in-home care providers results in high turnover, interrupted and all too often lower quality care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The average day care worker in the U.S. leaves their place of employment within a year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In France, professionally trained, unionized preschool teachers make more than well-paid elementary school teachers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 382,
+      "generation_tps": 16.503748999574402,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2074,
+      "prompt_tps": 498.87436061260803,
+      "request_sha256": "04bd39323fc3d3cdc58023a093e680070d49680c2dad671376c3f3fe3bc930cb",
+      "seconds": 27.31367083406076,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The care burden falls disproportionately on women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As more women have entered the paid labor force, combining full-time work with the requirements of child and elder care has spread from working class and poor women to middle income women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A just society must guarantee that those who need care receive it and that families are able to care for their dependents.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A right to care must also mean the right for paid caregivers to be professionally trained so they can provide humane, high-quality care, and be paid a living wage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States underpays teacher aides, day care workers and in-home care providers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Coupled with often exploitative working conditions, the underpayment of teacher aides, day care workers and in-home care providers results in high turnover, interrupted and all too often lower quality care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The average day care worker in the U.S. leaves their place of employment within a year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In France, professionally trained, unionized preschool teachers make more than well-paid elementary school teachers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9bb5375827ae95ffe001cfda5fc6c9ac98bcbd60aafa9be9ab4926bfa8cec6c4"
+}

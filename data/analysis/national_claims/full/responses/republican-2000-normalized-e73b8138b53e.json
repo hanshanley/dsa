@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 274,
+      "generation_tps": 8.005400645931074,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1404,
+      "prompt_tps": 368.2134856702987,
+      "request_sha256": "f8c55cf468979a51d62688f585b0787942b83e15bd8038667f53c2e604a05838",
+      "seconds": 38.054650916019455,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for defining legislatively the conditions for \\\"emergency\\\" spending.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are 342 economic development programs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are 788 education programs in 40 different agencies at a cost of over $100 billion a year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are 163 job training programs in 15 different agencies.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Twelve agencies administer over 35 food safety laws.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"One agency regulates pizzas with meat.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Another agency regulates vegetarian pizzas.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Another agency regulates the people who deliver pizzas.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 274,
+      "generation_tps": 8.08788583067448,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1846,
+      "prompt_tps": 397.08366850780686,
+      "request_sha256": "69f70a6044681884a2b074c9b145526cd8d80aa8b4a60602f602224e8bac78ea",
+      "seconds": 38.54411254101433,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for defining legislatively the conditions for \\\"emergency\\\" spending.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are 342 economic development programs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are 788 education programs in 40 different agencies at a cost of over $100 billion a year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are 163 job training programs in 15 different agencies.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Twelve agencies administer over 35 food safety laws.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"One agency regulates pizzas with meat.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Another agency regulates vegetarian pizzas.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Another agency regulates the people who deliver pizzas.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f8c55cf468979a51d62688f585b0787942b83e15bd8038667f53c2e604a05838"
+}

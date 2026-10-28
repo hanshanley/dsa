@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 404,
+      "generation_tps": 16.526882776850773,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1467,
+      "prompt_tps": 477.6212637221698,
+      "request_sha256": "ce48a605699ae5527d81641b7e04e241bbf46579b96ce4d8ab57c667a9e8282e",
+      "seconds": 27.525651791132987,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Obama administration is using every tool to cajole or threaten states from offering asylum to Edward Snowden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration is employing every measure to block Edward Snowden's safe passage out of the Moscow airport.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration judges that a whistleblower must be punished for the embarrassment he is causing the government by revealing the extent of its surveillance over potentially all of its citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Foreign citizens and friendly governments are enmeshed in a net spun mainly by private contractors like Booz, Allen and Hamilton.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Foreign citizens and friendly governments do not have even the scrap of constitutional protection that the fourth amendment should provide American citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Edward Snowden has a well-founded fear of political persecution in the USA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Edward Snowden has every right to seek asylum from a government that will accept his claim.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The excessively punitive and vindictive treatment of Bradley Manning shows that Edward Snowden is not likely to receive a timely, fair and impartial trial in the USA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The governments of Bolivia, Ecuador or Venezuela have every right to offer Edward Snowden asylum.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 16.4626248286937,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2039,
+      "prompt_tps": 492.31800411231325,
+      "request_sha256": "be1240f7bbb75d642bcb49195d609be37b2be035c25b467f0c98a8f4fd92bcaf",
+      "seconds": 28.93496199999936,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Obama administration is using every tool to cajole or threaten states from offering asylum to Edward Snowden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration is employing every measure to block Edward Snowden's safe passage out of the Moscow airport.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the Obama administration\u2019s judgment, a whistleblower must be punished for the embarrassment he is causing the government by revealing the extent of its surveillance over potentially all of its citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Foreign citizens and friendly governments are equally enmeshed in a net spun mainly by private contractors like Booz, Allen and Hamilton.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Foreign citizens and friendly governments do not have even the scrap of constitutional protection that the fourth amendment should provide American citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Edward Snowden has a well-founded fear of political persecution in the USA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Edward Snowden has every right to seek asylum from a government that will accept his claim.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The excessively punitive and vindictive treatment of Bradley Manning shows that Edward Snowden is not likely to receive a timely, fair and impartial trial in the USA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The governments of Bolivia, Ecuador or Venezuela have every right to offer Edward Snowden asylum.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ce48a605699ae5527d81641b7e04e241bbf46579b96ce4d8ab57c667a9e8282e"
+}

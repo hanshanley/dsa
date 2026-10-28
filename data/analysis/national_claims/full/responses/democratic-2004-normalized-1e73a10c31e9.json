@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 383,
+      "generation_tps": 16.046255026916764,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1427,
+      "prompt_tps": 533.3173957215934,
+      "request_sha256": "60edb111e1ba34d7468f9aeddedd594d96710338d0d10b2ee1bba9d78ff51d32",
+      "seconds": 26.554597875103354,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to make air cleaner.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to make water purer.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure children can safely play in neighborhoods.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure families can enjoy national parks.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure sportsmen can hunt and fish in lakes and forests.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to foster a healthy economy and a healthy environment by promoting new technologies that create good jobs and improve the world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to work with allies to achieve goals and to protect the global environment for this generation and future generations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Rejection of the false choice between a healthy economy and a healthy environment.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Farming, fishing, tourism, and other industries require a healthy environment.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"New technologies that protect the environment can create new high-paying jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A cleaner environment means a stronger economy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 313,
+      "generation_tps": 16.123639225631848,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1978,
+      "prompt_tps": 494.3769104060336,
+      "request_sha256": "d9650f68eeeb6079134d02c894951e28ef7f133dd6647c6dc4c3ad0017d4f509",
+      "seconds": 23.42879316699691,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to make air cleaner and water purer.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure children can safely play in neighborhoods, families can enjoy national parks, and sportsmen can hunt and fish in lakes and forests.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to foster a healthy economy and a healthy environment by promoting new technologies that create good jobs and improve the world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to work with allies to achieve these goals and to protect the global environment for this generation and future generations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Rejection of the false choice between a healthy economy and a healthy environment.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Farming, fishing, tourism, and other industries require a healthy environment.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"New technologies that protect the environment can create new high-paying jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A cleaner environment means a stronger economy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "60edb111e1ba34d7468f9aeddedd594d96710338d0d10b2ee1bba9d78ff51d32"
+}

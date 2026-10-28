@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 404,
+      "generation_tps": 8.145493117982472,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1434,
+      "prompt_tps": 376.5116999961802,
+      "request_sha256": "a58b6b8ae8c586fc6bb33d6a999e3c1744e2fd3fe9d907b1a3a7bda6418c0ffb",
+      "seconds": 53.42408379097469,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A high-tech fighting force must recruit, train, and retain a professional all-volunteer force of the highest caliber.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party understands that military pay must continue to increase in order to recruit, train, and retain a professional all-volunteer force.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The largest military pay increase in twenty years was enacted.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Military pay must be raised even more.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The military retirement system needs further reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Housing, health care, and childcare benefits for military personnel need improvement to support the general competitiveness of military careers during a period of unprecedented prosperity in the civilian economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of soldiers and families on food stamps is down by two-thirds over the past decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is unacceptable that any member of the armed forces should have to rely on food stamps.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore is committed to equal treatment of all service members.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes all patriotic Americans should be allowed to serve their country without discrimination, persecution, and violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 396,
+      "generation_tps": 7.973210215019786,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2006,
+      "prompt_tps": 391.76833407045103,
+      "request_sha256": "c3e4c9f1a8c86072d80337504c12fe23e3eff1f825a99262a89b1dfc13809ce7",
+      "seconds": 54.79889733414166,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A high-tech fighting force must recruit, train, and retain a professional all-volunteer force of the highest caliber.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party understands that in order to recruit, train, and retain a professional all-volunteer force, military pay must continue to increase.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The largest military pay increase in twenty years was enacted with Bill Clinton and Al Gore in the White House.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Military pay must be raised even more.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The military retirement system needs further reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Housing, health care, and childcare benefits need improvement to support the general competitiveness of military careers during a period of unprecedented prosperity in the civilian economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of soldiers and families on food stamps is down by two-thirds over the past decade, but it is unacceptable that any member of the armed forces should have to rely on food stamps.\",\n\"claim_types\":[\"factual_assertion\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore is committed to equal treatment of all service members.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore believes all patriotic Americans should be allowed to serve their country without discrimination, persecution, and violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a58b6b8ae8c586fc6bb33d6a999e3c1744e2fd3fe9d907b1a3a7bda6418c0ffb"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 367,
+      "generation_tps": 16.55795713607911,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1434,
+      "prompt_tps": 458.1295227038113,
+      "request_sha256": "881a4859380b71b8c719c7b202fcf547ea4779353e3c097f9ac93a1b90e93ce6",
+      "seconds": 25.304419124964625,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A special effort must be made to help women and children in societies devastated by war, disease and poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women are traditionally the backbone of the family.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"A special effort must be made to hear women when they resist or end war in their communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women are the first affected by the horrors of war and the misery of disease and poverty.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States Congress should pass the Convention to Eliminate all forms of Discrimination Against Women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Senate has consistently blocked the Convention to Eliminate all forms of Discrimination Against Women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children represent the future.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment programs must be more targeted toward women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Child labor must be ended by helping societies create educational opportunities for children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Child labor must be ended by helping societies create economic alternatives to employing the young.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 404,
+      "generation_tps": 16.539979199544373,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1969,
+      "prompt_tps": 492.5440539635723,
+      "request_sha256": "249952a77cf28dbfce4c24cfb856d672c5bff52c4d8f8f42e93e14e368539426",
+      "seconds": 28.433084167074412,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A special effort must be made to help women and children in societies devastated by war, disease and poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women are traditionally the backbone of the family.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"A special effort must be made to hear women when they rise up courageously to resist or end war in their communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women are in a sense the front lines \u2013 the first affected \u2013 by the horrors of war and the misery of disease and poverty.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States Congress should pass the Convention to Eliminate all forms of Discrimination Against Women, which has been consistently blocked by the Republican Senate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Senate has consistently blocked the Convention to Eliminate all forms of Discrimination Against Women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children represent the future, and when children are lost, the promise of a future is lost.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment programs must be more targeted toward women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Child labor must be ended by helping societies create educational opportunities for children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Child labor must be ended by helping societies create economic alternatives to employing the young.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "881a4859380b71b8c719c7b202fcf547ea4779353e3c097f9ac93a1b90e93ce6"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 310,
+      "generation_tps": 16.50297219231223,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1353,
+      "prompt_tps": 452.4417622489263,
+      "request_sha256": "016f2a315024ac34bcbeabf21c661706635c088c724ef489b58ec84f15b6ed9c",
+      "seconds": 21.78464312502183,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Party is committed to revitalizing the Atlantic partnership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"International goals pursued by the United States will be easier to attain if Europe and America are working together.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will ensure that NATO remains strong.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"NATO will continue to consolidate peace in Europe.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"NATO will take on new tasks in Afghanistan and Iraq.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party looks forward to the evolution of the European Union.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party looks forward to a prosperous and unified Europe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A prosperous and unified Europe will join the United States in meeting today's security challenges.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A prosperous and unified Europe will join the United States in expanding the global economy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 199,
+      "generation_tps": 16.64766314037502,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1831,
+      "prompt_tps": 489.92498108079127,
+      "request_sha256": "0f9c8d8785aa6790f70656546510104aac23d10fbdc1b5f7f89928eba9188581",
+      "seconds": 15.700443792156875,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party is committed to revitalizing the Atlantic partnership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"International goals that the United States pursues will be easier to attain if Europe and America are working together.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will ensure that NATO remains strong, continuing to consolidate peace in Europe even as the alliance takes on new tasks in Afghanistan and Iraq.\",\n\"claim_types\":[\"policy_position\",\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party looks forward to the evolution of the European Union and to a prosperous and unified Europe that joins the United States in meeting today's security challenges and expanding the global economy.\",\n\"claim_types\":[\"policy_position\",\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "016f2a315024ac34bcbeabf21c661706635c088c724ef489b58ec84f15b6ed9c"
+}

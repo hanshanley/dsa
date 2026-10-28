@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 303,
+      "generation_tps": 16.608885013553135,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1447,
+      "prompt_tps": 462.7076709132442,
+      "request_sha256": "d6c8c18290af2c7194d7e7364ace7fc389c715c628f1e312aa8da484639c975c",
+      "seconds": 21.380461333086714,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for preserving Social Security.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe in the progressive, guaranteed benefit of Social Security that ensures seniors and people with disabilities receive a benefit not subject to market fluctuations or economic conditions.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to privatizing Social Security.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to raising the retirement age.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to reducing Social Security benefits earned by workers who also receive benefits from certain public retirement plans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to repeal discriminatory laws that penalize some retired workers and their families while allowing others to receive full Social Security benefits.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The most important step to strengthen Social Security is to restore fiscal responsibility because the Bush Administration's deficits raided hundreds of billions of dollars from Social Security.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Strengthening Social Security should be a common cause for Democrats and Republicans.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 355,
+      "generation_tps": 16.532251698763034,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1918,
+      "prompt_tps": 457.739175056553,
+      "request_sha256": "b990ea2ab2bfdc30a24f9091bb7238b8b3314d565b6f81bf04813818dbe825fe",
+      "seconds": 25.6728777079843,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for preserving Social Security.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe in the progressive, guaranteed benefit that has ensured seniors and people with disabilities receive a benefit not subject to the whims of the market or the economy.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to privatizing Social Security.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to raising the retirement age.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to reducing the benefits earned by workers just because they have also earned a benefit from certain public retirement plans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to repeal discriminatory laws that penalize some retired workers and their families while allowing others to receive full benefits.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The most important step to strengthen Social Security is to restore fiscal responsibility because the Bush Administration's deficits raided hundreds of billions of dollars from Social Security.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Strengthening Social Security should be a common cause for Democrats and Republicans.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Social Security is a compact across the generations that has helped tens of millions of Americans live their retirement years in dignity instead of poverty.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d6c8c18290af2c7194d7e7364ace7fc389c715c628f1e312aa8da484639c975c"
+}

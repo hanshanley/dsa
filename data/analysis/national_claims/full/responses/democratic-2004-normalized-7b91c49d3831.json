@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 297,
+      "generation_tps": 16.60893612796262,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1538,
+      "prompt_tps": 463.8359620696374,
+      "request_sha256": "267f23f0254eb23c8acdeaf1d5f374c1b4f12865e08db7fd15db2bd9bb2d12c0",
+      "seconds": 21.20760383293964,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for cutting taxes for 98 percent of Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for setting taxes for families making more than $200,000 a year at the same level as in the late 1990s.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to tax increases on middle class families, including those living abroad.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The late 1990s was a period of great prosperity when the wealthiest Americans thrived without special treatment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reforming health care, offering tax credits to pay for it, and cutting health costs will raise wages for working people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Thousands of businesses are using money that would otherwise provide raises to pay climbing health care premiums.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Paying climbing health care premiums is cutting wages for working people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 358,
+      "generation_tps": 16.58275298962636,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2003,
+      "prompt_tps": 493.0508365322348,
+      "request_sha256": "26e4f358e0ba9282ef94feda0c80b4895a033d401219a9363502f9ab00636d7e",
+      "seconds": 25.660555416950956,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for cutting taxes for 98 percent of Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for setting taxes for families making more than $200,000 a year at the same level as in the late 1990s.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to tax increases on middle class families, including those living abroad.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The late 1990s was a period of great prosperity when the wealthiest Americans thrived without special treatment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reforming health care, offering tax credits to pay for it, and cutting health costs will raise wages for working people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Thousands of businesses are using money that would otherwise provide raises to pay climbing health care premiums.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Paying climbing health care premiums is cutting wages for working people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current tax code hoards wealth for those who already have it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The middle class is under assault.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "267f23f0254eb23c8acdeaf1d5f374c1b4f12865e08db7fd15db2bd9bb2d12c0"
+}

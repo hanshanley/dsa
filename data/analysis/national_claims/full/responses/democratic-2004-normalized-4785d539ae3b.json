@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 412,
+      "generation_tps": 16.591629784689065,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1495,
+      "prompt_tps": 462.34025969255356,
+      "request_sha256": "7ac7446200dba9ecd5f91a1803e220efee481f4c7f19fe52b149cf2e1fa4e533",
+      "seconds": 28.07533716596663,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President has not given troops clarity of mission, equipment, or international support they need and deserve.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Democratic Administration, helicopter pilots will fly battlefield missions with the best anti-missile systems.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Too many troops have died in attacks because tens of thousands were deployed to Iraq without the best bulletproof vests, and there is a shortage of armored vehicles on the ground.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Democratic Administration, troops will be deployed with the best bulletproof vests and the shortage of armored vehicles will be addressed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thousands of National Guardsmen and reservists have been forced to leave their families and jobs for more than a year with no end in sight because the current administration ignored the need for a true coalition.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Democratic Administration, the need for a true coalition will be addressed, and National Guardsmen and reservists will not be forced to leave their families and jobs for more than a year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America must engage the world's major political powers in the mission in Iraq.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"America must build a coalition of countries, including the other permanent members of the UN Security Council, to share the political, economic, and military responsibilities of Iraq with the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 16.5428150976482,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2075,
+      "prompt_tps": 504.4122192407899,
+      "request_sha256": "d5831d7b60f73b148708e608768df3b89db018bd0ecdbc4efc86c2d2437a63b9",
+      "seconds": 30.35836087493226,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President has not given troops clarity of mission, equipment, or the international support they need and deserve.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Democratic Administration, helicopter pilots will fly battlefield missions with the best anti-missile systems.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Too many of the nation's finest troops have died in attacks because tens of thousands were deployed to Iraq without the best bulletproof vests, and there is a shortage of armored vehicles on the ground.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Democratic Administration, that will change, and troops will be deployed with the best bulletproof vests and the shortage of armored vehicles will be addressed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thousands of National Guardsmen and reservists have been forced to leave their families and jobs for more than a year \u2013 with no end in sight \u2013 because this Administration ignored the pressing need for a true coalition.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Democratic Administration, that will change, and the need for a true coalition will be addressed, so National Guardsmen and reservists will not be forced to leave their families and jobs for more than a year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America must do the hard work of engaging the world's major political powers in the mission.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"America must build a coalition of countries, including the other permanent members of the UN Security Council, to share the political, economic, and military responsibilities of Iraq with the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7ac7446200dba9ecd5f91a1803e220efee481f4c7f19fe52b149cf2e1fa4e533"
+}

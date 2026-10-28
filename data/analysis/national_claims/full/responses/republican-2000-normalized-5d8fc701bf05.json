@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 307,
+      "generation_tps": 8.324504910240574,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1498,
+      "prompt_tps": 315.620984275868,
+      "request_sha256": "608e7f29aadfa7619850a657b379b3de03b77625c07703ecd50ce1555d8c2a44",
+      "seconds": 41.63806283310987,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican vision restores the balance most Americans seek by maintaining structures guarding against misfortune and encouraging individual decision-making and personal control.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Social Security is a defining American promise, and the group will not turn back.\", \"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"George W. Bush says Social Security is a defining American promise and the group will not turn back.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The group strongly agrees that Social Security is a defining American promise.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The Social Security program is the touchstone by which the American people gauge the reliability, competence, and integrity of government.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"The American people have known for years of the deterioration of Social Security's fiscal health but expected their leaders to address it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The gauge of Social Security's fiscal health has dropped into the red zone with each passing year, leading to a grimmer prognosis.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 326,
+      "generation_tps": 8.198329227655913,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1973,
+      "prompt_tps": 345.91088397683524,
+      "request_sha256": "8eb1014f5a9ffabad175aedf5ac304463de1b364b454b873191dc65ef3b3c27b",
+      "seconds": 45.48984112497419,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican vision restores the balance most Americans seek by maintaining structures that guard against unforeseen misfortune and, at the same time, encouraging individual decision-making and personal control.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group states it will not turn back on Social Security, as it is a defining American promise.\", \"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"George W. Bush says Social Security is a defining American promise and the group will not turn back.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The group strongly agrees that Social Security is a defining American promise.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The Social Security program is the touchstone by which the American people gauge the reliability, competence, and integrity of government.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"The American people have known for years of the deterioration of Social Security's fiscal health but fully expected their leaders to address it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The gauge of Social Security's fiscal health has dropped, notch by notch, into the red zone with each passing year, leading to an ever grimmer prognosis.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "608e7f29aadfa7619850a657b379b3de03b77625c07703ecd50ce1555d8c2a44"
+}

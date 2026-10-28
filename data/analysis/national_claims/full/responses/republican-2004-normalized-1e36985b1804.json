@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 286,
+      "generation_tps": 16.570609957942374,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1519,
+      "prompt_tps": 464.12432649754436,
+      "request_sha256": "8fadc39e1ccc20cca9e487830ce18dfbaf8369bd610fccf7fa533bffe212fb6a",
+      "seconds": 20.542216500034556,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Three years ago, a private weapons proliferation network operated by A.Q. Khan was selling nuclear plans and equipment to Libya, Iran, and North Korea.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the A.Q. Khan network is out of business.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ending the A.Q. Khan network has made the American people safer.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans applaud President Bush, Vice President Cheney, and those who have supported them in the Congress for the leadership that led to these successes.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans believe America and the world must keep commitments to the people of Afghanistan and Iraq, who are building democracies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Delivering Afghanistan and Iraq from tyranny has required sacrifice and loss.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Republicans believe the world should help Afghanistan and Iraq.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 358,
+      "generation_tps": 16.546086897389305,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1973,
+      "prompt_tps": 489.5437053716298,
+      "request_sha256": "99a285e949c56c9baff823a4152f2e937a0b9b9580f4256fea94b128df297ac0",
+      "seconds": 25.676527542062104,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Three years ago, a private weapons proliferation network operated by the Pakistani nuclear scientist A.Q. Khan was selling nuclear plans and equipment to the highest bidder, and found willing buyers in places like Libya, Iran, and North Korea.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the A.Q. Khan network is out of business.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, because the A.Q. Khan network is out of business, the American people are safer.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans applaud President Bush, Vice President Cheney, and those who have supported them in the Congress for the steady leadership that led to these successes.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans believe America and the world must keep commitments to the people of Afghanistan and Iraq, who are building the world's newest democracies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Delivering Afghanistan and Iraq from tyranny has required sacrifice and loss.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Republicans believe the world should help Afghanistan and Iraq.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}, {\"claim_text\":\"Republicans believe the world should honor the sacrifice made in delivering Afghanistan and Iraq from tyranny by finishing the great work begun there.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8fadc39e1ccc20cca9e487830ce18dfbaf8369bd610fccf7fa533bffe212fb6a"
+}

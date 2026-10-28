@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 316,
+      "generation_tps": 16.54008702091749,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1401,
+      "prompt_tps": 461.1569049708001,
+      "request_sha256": "916e6cc765bdd39c9785fb2eb11f727b95104ffd279ff58e28e7d25331978026",
+      "seconds": 22.152852416969836,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"In 1948, the United States ratified the United Nations Universal Declaration of Human Rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations Universal Declaration of Human Rights explicitly mentions the right to health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prior to the passage of health reform in 2010, 47 million United States citizens had no health insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prior to the passage of health reform in 2010, 50 to 70 million United States citizens had inadequate insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Inadequate insurance could leave 50 to 70 million United States citizens bankrupt in the event of a major illness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is not yet clear the extent to which the health care legislation passed in 2010 will address problems with the United States health care system.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Problems with the United States health care system are deep rooted and long lasting.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 333,
+      "generation_tps": 16.565178590197277,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1885,
+      "prompt_tps": 487.5835880807885,
+      "request_sha256": "f36287849fe11dcd3d5088a57c3172e6f2f542265824d2aba6cea36a5b3663a2",
+      "seconds": 23.97805687505752,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 1948, the United States ratified the United Nations Universal Declaration of Human Rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations Universal Declaration of Human Rights explicitly mentions the right to health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prior to the passage of health reform in 2010, 47 million United States citizens had no health insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prior to the passage of health reform in 2010, 50 to 70 million United States citizens had inadequate insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Inadequate insurance could leave 50 to 70 million United States citizens bankrupt in the event of a major illness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is not yet clear the extent to which the health care legislation passed in 2010 will address these problems because problems with the United States health care system are deep rooted and long lasting.\",\n\"claim_types\":[\"prediction\",\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Problems with the United States health care system are deep rooted and long lasting.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "916e6cc765bdd39c9785fb2eb11f727b95104ffd279ff58e28e7d25331978026"
+}

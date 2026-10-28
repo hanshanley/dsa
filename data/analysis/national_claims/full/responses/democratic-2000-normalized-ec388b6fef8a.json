@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 417,
+      "generation_tps": 8.469710475192558,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1522,
+      "prompt_tps": 389.93028936790836,
+      "request_sha256": "045c06a49fdef61b2b43f9dad8bf34ef87b68eae6190f7ab16ea8b13437686df",
+      "seconds": 53.1523507500533,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Eight years ago, many citizens believed America's best days were behind her, with expectations of continued increases in crime, welfare, teen births, divisiveness and irresponsibility, and continued deterioration of air and water quality, and the failure of social safety net programs.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"With the leadership of the Democratic Party, the past decade has seen a rebirth of American prosperity and progress in meeting challenges and fulfilling obligations.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Crime is down to its lowest levels in a generation, representing the longest decline on record.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Teen births have decreased for seven consecutive years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Adoptions have increased by 30 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Millions of Americans have moved from welfare rolls to payrolls.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"America is better off and is better.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats want to bring more progress to America to make it safer, healthier, and more secure.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats want to clean up the environment and politics.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats want to make the job of parents easier.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats want to bring the country together as one America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 445,
+      "generation_tps": 8.444992836305698,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2107,
+      "prompt_tps": 399.81115705310845,
+      "request_sha256": "e7d11b82d0bf32d8762135cde0cabe159d52ecf87958473571a199304bd40550",
+      "seconds": 57.97645025001839,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Eight years ago, many citizens had come to accept the idea that America's best days were behind her, expecting continued increases in crime, welfare, teen births, divisiveness and irresponsibility, and continued deterioration of air and water quality, and the failure of social safety net programs.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"With the leadership of today's Democratic Party, the past decade has seen not just a rebirth of American prosperity, but a new season of progress in meeting challenges and living up to obligations.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Crime is down to its lowest levels in a generation, representing the longest decline on record.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Teen births are down for seven years in a row.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Adoptions have increased by 30 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Millions of Americans have moved off the welfare rolls and onto the payrolls.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"America is not just better off, it is better.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats want to use this moment to bring even more progress to America to make it safer, healthier, and more secure.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats want to clean up the environment and politics.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats want to make the job of parents easier.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats want to bring the country together as one America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "045c06a49fdef61b2b43f9dad8bf34ef87b68eae6190f7ab16ea8b13437686df"
+}

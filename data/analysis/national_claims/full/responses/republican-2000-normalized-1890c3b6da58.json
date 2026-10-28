@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 256,
+      "generation_tps": 8.272039482148513,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1492,
+      "prompt_tps": 328.6378508761774,
+      "request_sha256": "2bd6859b506d5ccc7a1f31693e8ce430bbbead9020ab9ecef1c7dbb2b3fd197a",
+      "seconds": 35.498501332942396,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Scores of judges with activist backgrounds in the hard-left now have lifetime tenure in the federal courts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Governor Bush is determined to name only judges who have demonstrated respect for the Constitution and the processes of the republic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans do not have to choose between security and freedom.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Security and liberty are kindred means for advancing individual achievement when properly balanced.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"There were times in the past century when the exercise of independence left too many Americans insecure, especially in their old age.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"There were times in the past century when the governmental imposition of security smothered the freedoms that should be at the center of American life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 263,
+      "generation_tps": 8.153295145083014,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1916,
+      "prompt_tps": 399.36389077533005,
+      "request_sha256": "51172a2720b9a15fdaa3dd5f9a02d11643608dd7ec91a7c8a03bc64cd011ec83",
+      "seconds": 37.06467204215005,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Scores of judges with activist backgrounds in the hard-left now have lifetime tenure in the federal courts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Governor Bush is determined to name only judges who have demonstrated respect for the Constitution and the processes of the republic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans do not have to choose between security and freedom, according to the source.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Security and liberty are kindred means for advancing individual achievement when properly balanced.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the past century, there were times when the exercise of independence left too many Americans insecure, especially in their old age.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the past century, there were times when the governmental imposition of security smothered the freedoms that should be at the center of American life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2bd6859b506d5ccc7a1f31693e8ce430bbbead9020ab9ecef1c7dbb2b3fd197a"
+}

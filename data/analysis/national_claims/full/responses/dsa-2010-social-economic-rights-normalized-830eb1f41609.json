@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 377,
+      "generation_tps": 16.580954694457724,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1559,
+      "prompt_tps": 462.02355554350225,
+      "request_sha256": "18f5da720ac0fc8068182491b0a2d147b67d0f51aec387e42dc1aa020481254c",
+      "seconds": 26.121982083888724,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Congressional Budget Office estimates that adopting a single-payer health insurance system could save in excess of $400 billion per year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A single-payer national health system is the simplest, most efficient alternative to the current market-driven approach to health care delivery.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under a single-payer system, everyone receives a health care card giving them access to a wide range of health care services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Out-of-pocket payments create barriers to access for the poor and add administrative cost to the health care system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Under a single-payer system, hospitals are paid \u201clump sum\u201d operating budgets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Under a single-payer system, clinical staff\u2019s time is no longer devoted to billing for every item administered but can instead be devoted to patient care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Under a single-payer system, health insurance is no longer linked to employment or geography but instead follows the worker from job to job and from state to state.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Under a single-payer system, money for expensive technology is distributed according to a regional plan based on the needs of the local population.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 398,
+      "generation_tps": 16.497207997637187,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2104,
+      "prompt_tps": 501.16363038508945,
+      "request_sha256": "e5ede9488185994c2b354482d094aeb2e3ec1f7d04a4c3a117e2b99dcead4a00",
+      "seconds": 28.333590666996315,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Congressional Budget Office estimates that if the U.S. were to adopt a single-payer health insurance system, we could save in excess of $400 billion per year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A single-payer national health system is the simplest, most efficient alternative to the current market-driven approach to health care delivery.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under a single-payer system, everyone receives a health care card giving them access to a wide range of health care services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Out-of-pocket payments create barriers to access for the poor and add administrative cost to the health care system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Under a single-payer system, hospitals are paid \u201clump sum\u201d operating budgets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Under a single-payer system, the valuable time of clinical staff is no longer devoted to making sure a bill is generated for every aspirin administered but can instead be devoted to patient care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Under a single-payer system, health insurance is no longer linked to employment or geography but instead follows the worker from job to job and from state to state.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Under a single-payer system, money for expensive technology is distributed according to a regional plan based on the needs of the local population.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 395,
+      "generation_tps": 16.49766901772916,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2680,
+      "prompt_tps": 544.8455124153692,
+      "request_sha256": "75235202987146c7c70704fc272d897f6305bd9db204ab399e21008e6426220b",
+      "seconds": 28.87222179211676,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Congressional Budget Office estimates that if the U.S. were to adopt a single-payer health insurance system, over $400 billion per year could be saved.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A single-payer national health system is the simplest, most efficient alternative to the current market-driven approach to health care delivery.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under a single-payer system, everyone receives a health care card giving them access to a wide range of health care services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Out-of-pocket payments create barriers to access for the poor and add administrative cost to the health care system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Under a single-payer system, hospitals are paid \u201clump sum\u201d operating budgets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Under a single-payer system, clinical staff\u2019s time is no longer devoted to making sure a bill is generated for every aspirin administered but can instead be devoted to patient care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Under a single-payer system, health insurance is no longer linked to employment or geography but instead follows the worker from job to job and from state to state.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Under a single-payer system, money for expensive technology is distributed according to a regional plan based on the needs of the local population.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "18f5da720ac0fc8068182491b0a2d147b67d0f51aec387e42dc1aa020481254c"
+}

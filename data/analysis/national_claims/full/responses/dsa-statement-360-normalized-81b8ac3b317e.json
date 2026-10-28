@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 201,
+      "generation_tps": 16.663055819749236,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1407,
+      "prompt_tps": 459.67607725027716,
+      "request_sha256": "2fa467815f5839ed755a8277f4354a2dedf1160659678993a26f3b27bd383130",
+      "seconds": 15.133202540921047,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans are entitled to a full and honest debate about the fundamental requirements of democracy, liberty and security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With its crusade against Snowden and other whistleblowers, the American government has lost all credibility as to its willingness to allow a rational debate to go forward.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"So long as the Obama administration is more invested in shooting the messenger than in addressing the issues Edward Snowden raised by his courageous actions, a democratic state should offer him asylum.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. government should stop trying to block Edward Snowden's access to asylum.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 203,
+      "generation_tps": 16.657139582566465,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1776,
+      "prompt_tps": 485.54049270829,
+      "request_sha256": "03ff9cc520ce3a1435ea646da380e4ac07ceeeed992f31934a3fab83c9bcc179",
+      "seconds": 15.853808916872367,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans are entitled to a full and honest debate about the fundamental requirements of democracy, liberty and security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With its crusade against Snowden and other whistleblowers, the American government has lost all credibility as to its willingness to allow such a rational debate to go forward.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"So long as the Obama administration is more invested in shooting the messenger than in addressing the issues Edward Snowden raised by his courageous actions, a democratic state should offer Edward Snowden asylum.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. government should stop trying to block Edward Snowden's access to asylum.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2fa467815f5839ed755a8277f4354a2dedf1160659678993a26f3b27bd383130"
+}

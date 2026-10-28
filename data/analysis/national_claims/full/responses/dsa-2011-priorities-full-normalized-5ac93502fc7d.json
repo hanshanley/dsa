@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 134,
+      "generation_tps": 8.476205607906426,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1310,
+      "prompt_tps": 329.74755595640994,
+      "request_sha256": "f0560ea9e4c2669b10a4c4cfdcdf8ff4c13a1538ad7f3423684ea6f06152bfd7",
+      "seconds": 19.792996667092666,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Immigrant rights work will highlight support for \u201cel derecho de no migrar\u201d or the right to not migrate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"\u201cEl derecho de no migrar\u201d encapsulates structural problems in a global capitalist economic system which impoverishes communities abroad.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"A global capitalist economic system criminalizes those who migrate.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 87,
+      "generation_tps": 8.45027350343035,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1612,
+      "prompt_tps": 384.9362145096864,
+      "request_sha256": "f37f7f3d005dfb31efb6895a147e34782ab42a33ef041a3321f3f9dd2202d9c7",
+      "seconds": 14.494765374809504,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Immigrant rights work will highlight support for \u201cel derecho de no migrar\u201d or the right to not migrate, which encapsulates the structural problems in a global capitalist economic system which impoverishes communities abroad, then criminalizes those who migrate.\",\n\"claim_types\":[\"policy_position\",\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f0560ea9e4c2669b10a4c4cfdcdf8ff4c13a1538ad7f3423684ea6f06152bfd7"
+}

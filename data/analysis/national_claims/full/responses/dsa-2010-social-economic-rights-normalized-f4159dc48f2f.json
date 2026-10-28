@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 447,
+      "generation_tps": 16.52756716612724,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1526,
+      "prompt_tps": 471.59576789918464,
+      "request_sha256": "5d0d8acb61b87cb70fb27be5b7e526f2de0751459973c588c8f6f284bb051b4b",
+      "seconds": 30.292110833106562,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The United States has a growing \u201ccare deficit\u201d as the number of people who need care has grown.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans work, on average, 160 hours per year longer in the formal labor market than they did 30 years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States ranks 168th out of 173 countries surveyed in regards to guaranteed paid parental leave, alongside Lesotho and Swaziland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States ranks 146th in mandated paid sick days for short or long-term illness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States fails to legislate a maximum length for the workweek, unlike 134 other countries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States uniquely makes caring for one\u2019s loved ones primarily a private burden among advanced democratic nations.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Northern and Western European nations use policies that include high-quality public day care and preschool.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Northern and Western European nations use policies that include paid maternity and paternity leave.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Northern and Western European nations have initiated child allowances to enable working families to better afford the costs of raising children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Northern and Western European health and social insurance systems enable a high proportion of the dependent elderly to afford dignified, professional, in-home care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 480,
+      "generation_tps": 16.533185662157223,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2141,
+      "prompt_tps": 508.19507580716646,
+      "request_sha256": "90bf6308fb49b50bc34e0feb5a140f64ead90170d830a3f049921992051e0dcb",
+      "seconds": 33.255208040820435,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"As the number of people who need care has grown, the United States has a growing \u201ccare deficit\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans now work in the formal labor market, on average, 160 hours per year longer than they did 30 years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nearly 40 years after President Nixon\u2019s 1971 veto of a publicly funded child care bill, the United States ranks 168th out of 173 countries surveyed in regards to guaranteed paid parental leave, alongside Lesotho and Swaziland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States ranks 146th in mandated paid sick days for short or long-term illness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unlike 134 other countries, the United States fails to legislate a maximum length for the workweek.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is unique among advanced democratic nations by making caring for one\u2019s loved ones primarily a private burden.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Northern and Western European nations use policies that include high-quality public day care and preschool.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Northern and Western European nations use policies that include paid maternity and paternity leave.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Northern and Western European nations have initiated child allowances to enable working families to better afford the costs of raising children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Northern and Western European health and social insurance systems enable a high proportion of the dependent elderly to afford dignified, professional, in-home care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5d0d8acb61b87cb70fb27be5b7e526f2de0751459973c588c8f6f284bb051b4b"
+}

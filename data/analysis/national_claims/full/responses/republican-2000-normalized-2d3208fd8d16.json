@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 206,
+      "generation_tps": 8.353879740422325,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1397,
+      "prompt_tps": 379.82089776217924,
+      "request_sha256": "92b28508a7364ec5979d17df850ca420907d9f49eb5c4573c4253ed5d3c2e6c1",
+      "seconds": 28.350743459071964,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Freedom to Farm Act replaced decades of controls by a federal bureaucracy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Farmers were promised reforms in tax, trade, and regulatory policy alongside the end of governmental protection for commodities markets.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition from the current administration minimized progress in tax, trade, and regulatory policy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American farmers were hard pressed to deal with increased global production and slack demand in Asia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ineptitude of current U.S. trade policy worsened the challenges faced by American farmers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 216,
+      "generation_tps": 8.30210148099672,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1771,
+      "prompt_tps": 384.5524144192784,
+      "request_sha256": "eb7293ee4f685fe5ac786e834eaf470c333d83252ed0dde5417b5f8aeaad152c",
+      "seconds": 30.643825290957466,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Freedom to Farm Act replaced decades of controls by a federal bureaucracy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Farmers were promised that, along with the end of governmental protection for commodities markets, there would be reforms in tax, trade, and regulatory policy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition from the current administration minimized progress in tax, trade, and regulatory policy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American farmers were hard pressed to deal with the challenge of increased global production and slack demand in Asia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ineptitude of current U.S. trade policy only made it worse for American farmers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "92b28508a7364ec5979d17df850ca420907d9f49eb5c4573c4253ed5d3c2e6c1"
+}

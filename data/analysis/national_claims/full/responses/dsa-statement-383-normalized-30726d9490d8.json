@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 16.490048220421826,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1503,
+      "prompt_tps": 477.4900795894039,
+      "request_sha256": "c41ba0729a0d946fc43520d46b294598b627ef1f152ae287ac9d73ce4abdbb95",
+      "seconds": 29.541246165987104,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Prosecutor Robert McCullough acted more as a defense attorney than a district attorney working diligently to indict someone whose actions created sufficient suspicion of illegal activity to summon a grand jury.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2012, more than 160,000 grand jury proceedings yielded indictments, with only 12 not resulting in some form of criminal indictment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Blacks are 21 times more likely to be shot by police than whites.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The prosecution of police for violent crimes, even involuntary homicide, is rare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA urges its members to join protests against the Ferguson grand jury decision.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA urges its members and locals to deepen their organizing against mass incarceration, police violence and systematic voter suppression.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A strong, multi-racial and anti-racist Left can break the color line that defines injustice in the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The events in Ferguson are a product of systemic, structural racism that continues to characterize American society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The system of racialized capitalism yields radically unequal life chances for people of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The system of racialized capitalism devalues the worth of people of color as human beings.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 444,
+      "generation_tps": 16.24782891550273,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2106,
+      "prompt_tps": 499.14414505690894,
+      "request_sha256": "3d957421a1fd5c56303e3a70284c0bf089388bbfbe743e680f87e48677e9eb5d",
+      "seconds": 31.560804250184447,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Prosecutor Robert McCullough acted more as a defense attorney than a district attorney working diligently to indict someone whose actions created sufficient suspicion of illegal activity to summon a grand jury.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2012, in more than 160,000 grand jury proceedings, only 12 did not yield some form of criminal indictment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Blacks are 21 times more likely to be shot by police than whites.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The prosecution of police for violent crimes, even involuntary homicide, is rare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA urges its members to join protests against the Ferguson grand jury decision.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA urges its members and locals to deepen their organizing against mass incarceration, police violence and systematic voter suppression.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A strong, multi-racial and anti-racist Left can break the color line that defines injustice in the United States through solidarity with movements in communities of color struggling for racial justice.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The events in Ferguson are a product of systemic, structural racism that continues to characterize American society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The system of racialized capitalism yields radically unequal life chances for people of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The system of racialized capitalism devalues the worth of people of color as human beings.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c41ba0729a0d946fc43520d46b294598b627ef1f152ae287ac9d73ce4abdbb95"
+}

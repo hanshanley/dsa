@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 480,
+      "generation_tps": 16.5131154536283,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1511,
+      "prompt_tps": 468.38002779682796,
+      "request_sha256": "dc1c2fd48a760b6f6fdaff3c3b50651c56a75dcc6d69591d4d98a5043f926709",
+      "seconds": 32.30415937490761,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Bush Administration has no coherent plan for domestic defense.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe America can do better in domestic defense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe America must do better in domestic defense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe America will do better in domestic defense.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A new strategy for homeland security is needed to address five major challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The ability to gather, analyze, and share information needs improvement to track down terrorists and stop them before they cause harm.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Securing airports, seaports, and borders needs improvement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Likely terrorist targets need hardening.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Domestic readiness needs improvement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Winning the war on terror should not result in losing the values of freedom and justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many of the same flaws in intelligence-sharing that existed before September 11th still exist.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The government has missed its own deadlines for upgrading and integrating security databases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The government still fails to share information with state and local law enforcement agencies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 495,
+      "generation_tps": 16.52870022849745,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2159,
+      "prompt_tps": 519.3416685787076,
+      "request_sha256": "05904767e9a446feb20d190fc86424941168e90b20a094ab6391b8cdfa350b49",
+      "seconds": 34.114873042097315,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Bush Administration has no coherent plan for domestic defense.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe America can do better in domestic defense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe America must do better in domestic defense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe America will do better in domestic defense.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A new strategy for homeland security is needed to address five major challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The ability to gather, analyze, and share information needs improvement so terrorists can be tracked down and stopped before they cause harm.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Securing airports, seaports, and borders needs improvement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Likely terrorist targets need hardening.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Domestic readiness needs improvement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Winning the war on terror should not result in losing the values of freedom and justice for all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many of the same flaws in intelligence-sharing that allowed terrorists to slip in and out of America before September 11th still exist.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The government has missed its own deadlines for upgrading and integrating security databases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The government still fails to share information with state and local law enforcement agencies on the frontlines.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "dc1c2fd48a760b6f6fdaff3c3b50651c56a75dcc6d69591d4d98a5043f926709"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 345,
+      "generation_tps": 8.147687510773132,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1450,
+      "prompt_tps": 371.5688618945578,
+      "request_sha256": "85c113127ac9c52db8e0a4a5dabc51ee9460649e99212a318d4f713ed5269c8d",
+      "seconds": 46.25813683308661,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Congressional Republicans established the State Children's Health Insurance Program (S-CHIP) program in 1997, enabling health insurance coverage for approximately 8 million youngsters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans want to ensure that children have access to quality health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans want states to have the flexibility to innovate and expand family coverage without interference from the Health Care Financing Administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans want states to reach out to eligible households that are currently not enrolled in a health insurance program or in Medicaid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Republican administration, the first order of business at the Department of Health and Human Services will be to eliminate regulations that are stymieing the effectiveness of S-CHIP program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Republican administration, the Department of Health and Human Services will stop imposing unwarranted mandates, so states can make sure children who need health care can get it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A streamlined enrollment process and energetic outreach efforts will fulfill the promise of S-CHIP.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 298,
+      "generation_tps": 8.348877923773703,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1963,
+      "prompt_tps": 392.57169228519075,
+      "request_sha256": "b031b6e5d30d362c53d9a278dfe394145dfd0b3fd9f878211cc7ecd74590f93e",
+      "seconds": 40.71244483394548,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Congressional Republicans established the State Children's Health Insurance Program (S-CHIP) program in 1997, enabling health insurance coverage for approximately 8 million youngsters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans want to ensure that children have access to quality health care, and that states have the flexibility to innovate, expand family coverage without interference from the Health Care Financing Administration, and reach out to eligible households that are currently not enrolled in a health insurance program or in Medicaid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Republican administration, the first order of business at the Department of Health and Human Services will be to eliminate regulations that are stymieing the effectiveness of S-CHIP program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Republican administration, the Department of Health and Human Services will stop imposing unwarranted mandates, so states can make sure children who need health care can get it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A streamlined enrollment process and energetic outreach efforts will finally fulfill the promise of S-CHIP.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "85c113127ac9c52db8e0a4a5dabc51ee9460649e99212a318d4f713ed5269c8d"
+}

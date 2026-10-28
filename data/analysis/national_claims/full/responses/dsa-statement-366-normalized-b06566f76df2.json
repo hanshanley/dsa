@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 455,
+      "generation_tps": 16.51690602483126,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1470,
+      "prompt_tps": 476.40282160326666,
+      "request_sha256": "9926d6201fb87851b0157e4b2e3ec01f9b90c143bf0da7d2b1c7883311827449",
+      "seconds": 30.64347662497312,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The national electorate remains sharply and almost evenly divided.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"African-American voters demonstrated steadfastness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A progressive Latino and Asian electorate is growing in importance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Female voters were mobilized.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A majority of white voters, in particular older males, voted for the preferred candidates of the 1 percent across vast swatches of the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Those states awarded their electoral votes to Romney.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Statehouses and governors in those states remain committed to austerity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Statehouses and governors in those states remain committed to gerrymandering election districts to favor Republicans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Statehouses and governors in those states remain committed to suppressing social movements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In lower-turnout non-presidential election years, a toxic flood of campaign cash, voter suppression and gerrymandering could keep the current status quo.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"To sustain the progressive coalition and ensure future victories, the election has to lead to legislative accomplishments that favor the 99 percent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Passively relying on demographic changes in the electorate would be a disastrous strategy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 440,
+      "generation_tps": 16.501879151437148,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2025,
+      "prompt_tps": 507.52952952999067,
+      "request_sha256": "6f8fb9875af5ea264ab933bf89ed2a19d363296844c6b2fbf61533020aafa202",
+      "seconds": 30.663830291014165,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The national electorate remains sharply and almost evenly divided.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"African-American voters demonstrated steadfastness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A progressive Latino and Asian electorate is growing in importance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Female voters were mobilized.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A majority of white voters, in particular older males, voted for the preferred candidates of the 1 percent across vast swatches of the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"States that awarded their electoral votes to Romney have statehouses and governors committed to austerity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"States that awarded their electoral votes to Romney have statehouses and governors committed to gerrymandering election districts to favor Republicans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"States that awarded their electoral votes to Romney have statehouses and governors committed to suppressing social movements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In lower-turnout non-presidential election years, a toxic flood of campaign cash, voter suppression and gerrymandering could maintain the current status quo.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"To sustain the progressive coalition and ensure future victories, the election has to lead to legislative accomplishments that favor the 99 percent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Passively relying on demographic changes in the electorate would be a disastrous strategy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 440,
+      "generation_tps": 16.506780882191688,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2078,
+      "prompt_tps": 513.9005291740089,
+      "request_sha256": "8312ee4c66231eb4b653492d7dd3be4e6f017104cf5e2ea102681f5341304bde",
+      "seconds": 30.709303457988426,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The national electorate remains sharply and almost evenly divided.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"African-American voters demonstrated steadfastness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A progressive Latino and Asian electorate is growing in importance.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Female voters were mobilized.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Across vast swatches of the country, a majority of white voters, in particular older males, voted for the preferred candidates of the 1 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"States that awarded their electoral votes to Romney have statehouses and governors committed to austerity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"States that awarded their electoral votes to Romney have statehouses and governors committed to gerrymandering election districts to favor Republicans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"States that awarded their electoral votes to Romney have statehouses and governors committed to suppressing social movements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In lower-turnout non-presidential election years, a toxic flood of campaign cash, voter suppression and gerrymandering could keep the current status quo.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"To sustain the progressive coalition and ensure future victories, the election has to lead to legislative accomplishments that favor the 99 percent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Passively relying on demographic changes in the electorate would be a disastrous strategy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9926d6201fb87851b0157e4b2e3ec01f9b90c143bf0da7d2b1c7883311827449"
+}

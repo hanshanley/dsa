@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 458,
+      "generation_tps": 16.595451666532565,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1547,
+      "prompt_tps": 464.8771409907894,
+      "request_sha256": "64ee7347b49ac42a5d830c901f40b074b6183b31daa0437cbc8f06c365ad9c2d",
+      "seconds": 30.935795166995376,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Court claims that \u201cagency fees\u201d impinge on the individual freedom of workers subject to them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Court has long recognized that states may choose to negotiate with unions \u201cagency fee\u201d or \u201cunion security\u201d clauses as all workers benefit from the provisions of the union contract.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"\u201cAgency fee\u201d or \u201cunion security\u201d clauses give employees the right not to contribute to the political activity of unions while requiring all workers covered by the contract to pay the per capita cost of the union representing them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If workers are given the \u201cright\u201d to \u201cfree ride\u201d on the cost of unions negotiating better working conditions for all workers, such free-riding can deny unions the revenue necessary to represent their workers in an effective manner.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A proper analogy to \u201cright to work\u201d legislation would be a law allowing citizens to refuse to pay taxes for the services from which they benefit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Court majority claims it will not revisit the 1977 ruling in Abood v. Detroit Board of Education that found legal \u201cagency fee\u201d provisions in collective bargaining agreements between public sector unions and government entities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The four most conservative judges indicated that they would welcome further challenges to \u201cagency fee\u201d agreements by \u201cdirectly employed\u201d public employees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The four most conservative judges implied that they would likely rule that all \u201cagency fee\u201d agreements violate the right of the individual to choose not to pay any funds to the union.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 460,
+      "generation_tps": 16.53355348987753,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2173,
+      "prompt_tps": 518.4801509205967,
+      "request_sha256": "c174339801b3d1a63b66502974e561d5782866f9f03833b224f727b5e25d00a3",
+      "seconds": 32.02304224995896,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Court claims that \u201cagency fees\u201d impinge on the individual freedom of the workers subject to them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Court has long recognized that states may choose to negotiate with unions \u201cagency fee\u201d or \u201cunion security\u201d clauses because all workers benefit from the provisions of the union contract.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"\u201cAgency fee\u201d or \u201cunion security\u201d clauses give employees the right not to contribute to the political activity of unions, while requiring all workers covered by the contract to pay the per capita cost of the union representing them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If workers are given the \u201cright\u201d to \u201cfree ride\u201d on the cost of unions negotiating better working conditions for all workers, such free-riding can deny unions the revenue necessary to represent their workers in an effective manner.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A proper analogy to \u201cright to work\u201d legislation would be a law allowing citizens to refuse to pay taxes for the services from which they benefit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Court majority claims it will not revisit the 1977 ruling in Abood v. Detroit Board of Education that found legal \u201cagency fee\u201d provisions in collective bargaining agreements between public sector unions and government entities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The four most conservative judges indicated that they would welcome further challenges to \u201cagency fee\u201d agreements by \u201cdirectly employed\u201d public employees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The four most conservative judges implied that they would likely rule that all \u201cagency fee\u201d agreements violate the right of the individual to choose not to pay any funds to the union.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "64ee7347b49ac42a5d830c901f40b074b6183b31daa0437cbc8f06c365ad9c2d"
+}

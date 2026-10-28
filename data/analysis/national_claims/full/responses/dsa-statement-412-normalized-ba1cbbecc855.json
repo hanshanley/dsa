@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 90,
+      "generation_tps": 16.895552382153035,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1349,
+      "prompt_tps": 449.87767172498945,
+      "request_sha256": "5c3127642379068624a8f17e32320e79e51c252114164bc7c4f1dea7731dc6fe",
+      "seconds": 8.334300625137985,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA understands that unless the labor movement and the Left build the independent political capacity to challenge the mainstream leadership of the Democratic Party, from the inside and the outside, the Democratic Party\u2019s embrace of pro-corporate, pro-austerity neoliberal economic and social policies will continue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 86,
+      "generation_tps": 16.908030439427428,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1607,
+      "prompt_tps": 490.7273361175837,
+      "request_sha256": "6cfc41806df3a4979b3b8a5096eb6fda5841b0c6d1864a981d70488a22e46d86",
+      "seconds": 8.369928000029176,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA understands that unless the labor movement and the Left build the independent political capacity to challenge the mainstream leadership of the Democratic Party, from the inside and the outside, its embrace of pro-corporate, pro-austerity neoliberal economic and social policies will continue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5c3127642379068624a8f17e32320e79e51c252114164bc7c4f1dea7731dc6fe"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 418,
+      "generation_tps": 16.567436140741428,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1571,
+      "prompt_tps": 473.23859227257327,
+      "request_sha256": "61c08950b0e23e5eb255ba2935c3307febd2179a3cb538e2212b913266964623",
+      "seconds": 28.559044500114396,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"On August 9th, Ferguson police officer Darren Wilson shot and killed an unarmed 18-year-old Michael Brown.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"African Americans constitute 65% of the Ferguson community\u2019s population.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Whites constitute 96% of the Ferguson police department.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Following a night of mass protest and unrest, hundreds of para-militarized officers swarmed Ferguson, creating an atmosphere of occupation and terror.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The massive use of police force against peaceful protestors exacerbated the understandable anger of a community in which the police are justifiably viewed as a foreign occupying force.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The killing of unarmed young persons of color by both police forces and white vigilantes demonstrates how racism takes the lives of people of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Neoliberal capitalism greatly contributes to the decline in life opportunities for low-income Americans.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Neoliberal policies weaken the state\u2019s ability to regulate powerful economic actors so they contribute to the common good rather than their own particular interest.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Deregulation, deunionization, decreases in taxation on the rich, and defunding of essential social services, including public education, weaken the ability of the state to develop the potential of the less advantaged.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 442,
+      "generation_tps": 16.57365626519945,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2157,
+      "prompt_tps": 513.8070253473675,
+      "request_sha256": "c819a012f930ffbb439d82c585dc0c0712bb5f430d1d356d3a582b8b8afdd1dd",
+      "seconds": 30.876326208002865,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"On August 9th, Ferguson police officer Darren Wilson shot and killed an unarmed 18-year-old Michael Brown.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"African Americans constitute 65% of the Ferguson community\u2019s population.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Whites constitute 96% of the Ferguson police department.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Following a night of mass protest and unrest, hundreds of para-militarized officers swarmed Ferguson, creating an atmosphere of occupation and terror.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The massive use of police force against peaceful protestors only exacerbated the understandable anger of a community in which the police are justifiably viewed as a foreign occupying force.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The unrelenting killing of unarmed young persons of color by both police forces and white vigilantes \u2013 from Trayvon Martin to Oscar Grant to Eric Garner \u2013 demonstrates how racism literally takes the lives of people of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Neoliberal capitalism greatly contributes to the decline in life opportunities for low-income Americans.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Neoliberal policies weaken the state\u2019s ability to regulate powerful economic actors so they contribute to the common good rather than their own particular interest.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Neoliberal policies such as deregulation, deunionization, decreases in taxation on the rich, and defunding of essential social services, including public education, weaken the ability of the state to develop the potential of the less advantaged.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "61c08950b0e23e5eb255ba2935c3307febd2179a3cb538e2212b913266964623"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 413,
+      "generation_tps": 8.192447494706746,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1434,
+      "prompt_tps": 373.2198572187642,
+      "request_sha256": "4a2cfe1187411ce421fba246d2aa4b20e5b36b2fe16bb23a04d5a5d0bb39f16c",
+      "seconds": 54.26861954201013,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Millions of Americans suffer from problem or pathological gambling that can destroy families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation prohibiting gambling over the Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation prohibiting gambling in student athletics by student athletes who are participating in competitive sports.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"On both the federal and state levels, juvenile crime demands special attention, as the age of young offenders has fallen and their brutality has increased.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Renewed call for a complete overhaul of the juvenile justice system that will punish juvenile offenders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Renewed call for a complete overhaul of the juvenile justice system that will open criminal proceedings to victims and the public.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Renewed call for a complete overhaul of the juvenile justice system that will make conviction records more available.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Renewed call for a complete overhaul of the juvenile justice system that will enforce accountability for offenders, parents, and judges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Encouragement of local school systems to develop a single system of discipline for all students who commit offenses involving drugs or violence in school.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to a federally imposed dual system of discipline in schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 8.231515911689863,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2015,
+      "prompt_tps": 411.46852631215063,
+      "request_sha256": "cc3576156ba4ef326103549c8521546b72d787416359af7aa650a8e4291e1cd2",
+      "seconds": 57.63918812503107,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Millions of Americans suffer from problem or pathological gambling that can destroy families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation prohibiting gambling over the Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation prohibiting gambling in student athletics by student athletes who are participating in competitive sports.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"On both the federal and state levels, juvenile crime demands special attention, as the age of young offenders has fallen and their brutality has increased.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Renewed call for a complete overhaul of the juvenile justice system that will punish juvenile offenders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Renewed call for a complete overhaul of the juvenile justice system that will open criminal proceedings to victims and the public.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Renewed call for a complete overhaul of the juvenile justice system that will make conviction records more available.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Renewed call for a complete overhaul of the juvenile justice system that will enforce accountability for offenders, parents, and judges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Encouragement of local school systems to develop a single system of discipline for all students who commit offenses involving drugs or violence in school.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to a federally imposed dual system of discipline in schools, which leaves today's teachers and students at risk from the behavior of others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4a2cfe1187411ce421fba246d2aa4b20e5b36b2fe16bb23a04d5a5d0bb39f16c"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 357,
+      "generation_tps": 16.58427307684919,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1523,
+      "prompt_tps": 468.91051573999886,
+      "request_sha256": "5aae11e5e31053d129535f96a98684c6f1903bc0d1c09f5b6d3f806329ad1b20",
+      "seconds": 24.784480000147596,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans know the American commitment to freedom is the true source of the nation's strength.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans have made political and religious liberty a cornerstone of their approach to international affairs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The basic values of human freedom and dignity are universal.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are the party of peace through strength.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A strong and well-trained American military is the world's best guarantee of peace.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"A strong American military is the shield of the republic's liberty, security, and prosperity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Only a President, as Commander-in-Chief of the Armed Forces, can ensure the U.S. military stands ready to defend America and triumph against new challenges.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican president and a Republican Congress will transform America's defense capabilities for the information age.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Transforming America's defense capabilities will ensure U.S. armed forces remain paramount against emerging dangers.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 390,
+      "generation_tps": 16.53575390373954,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2048,
+      "prompt_tps": 502.98845357526636,
+      "request_sha256": "cda008a888ea7db696f1eaca4cc15e859b020d1041a27e52e7ea5d31601ea730",
+      "seconds": 27.66670454083942,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans know the American commitment to freedom is the true source of the nation's strength.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans have made political and religious liberty a cornerstone of their approach to international affairs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The basic values of human freedom and dignity are universal.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are the party of peace through strength.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A strong and well-trained American military is the world's best guarantee of peace.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"A strong American military is the shield of the republic's liberty, security, and prosperity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Only a President, as Commander-in-Chief of the Armed Forces, can ensure that the U.S. military stands ready to defend America and triumph against new challenges.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican president and a Republican Congress will transform America's defense capabilities for the information age.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Transforming America's defense capabilities will ensure U.S. armed forces remain paramount against emerging dangers.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans propose their principles but must not impose their culture.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5aae11e5e31053d129535f96a98684c6f1903bc0d1c09f5b6d3f806329ad1b20"
+}

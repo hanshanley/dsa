@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 460,
+      "generation_tps": 16.580071685570275,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1483,
+      "prompt_tps": 463.79398728579633,
+      "request_sha256": "5eafea05665abbd927411a84fefbb08d3b7183046600cd17429b43a14b2fc9c8",
+      "seconds": 30.951638833153993,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans are troubled by humanitarian catastrophes in Africa including conflicts in Sierra Leone, the Great Lakes region, the Horn of Africa, and elsewhere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The risk of famine is never far away in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of people in Africa live in poverty and suffer from disease, especially AIDS and vaccine-preventable diseases that prey on children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The situation in Sudan demands special attention due to its employment of the slave trade and its persecution of Sudanese Christians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The government of Zimbabwe's refusal to adhere to the rule of law is deplored.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The conflict in Angola should be resolved through dialogue leading to the release of political prisoners and democratic government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Africa need economic opportunity, foreign investment, and access to markets, food, and medicine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will support international organizations and non-governmental organizations that can improve the daily lives of Africans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States must work to promote democracy and sound governance in Africa, and the prevention and resolution of conflict.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will help Africa achieve its economic potential by implementing measures to reduce trade barriers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans will not ignore the challenges of Africa.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 469,
+      "generation_tps": 16.510361996482537,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2111,
+      "prompt_tps": 509.4669761858707,
+      "request_sha256": "8a4acf6fbb1045c32ada47520d096f4cd7e615c7563ae109eef5c447edadb267",
+      "seconds": 32.5597638329491,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans are troubled by humanitarian catastrophes that have plagued the people of Africa including conflicts in Sierra Leone, the Great Lakes region, the Horn of Africa, and elsewhere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The risk of famine is never far away in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of people in Africa live in poverty and suffer from disease, especially AIDS and the vaccine-preventable diseases that prey on innocent children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The situation in the Sudan demands special attention due to its employment of the slave trade and its persecution of Sudanese Christians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The government of Zimbabwe's refusal to adhere to the rule of law is deplored.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The conflict in Angola should be resolved through dialogue leading to the release of political prisoners and democratic government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Africa need economic opportunity, foreign investment, and access to markets, food, and medicine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will support international organizations and non-governmental organizations that can improve the daily lives of Africans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States must work to promote democracy and sound governance in Africa, and the prevention and resolution of conflict.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will help the continent achieve its economic potential by implementing measures to reduce trade barriers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans will not ignore the challenges of Africa.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5eafea05665abbd927411a84fefbb08d3b7183046600cd17429b43a14b2fc9c8"
+}

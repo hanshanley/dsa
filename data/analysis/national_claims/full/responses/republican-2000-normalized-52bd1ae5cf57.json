@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 256,
+      "generation_tps": 8.020680248508022,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1373,
+      "prompt_tps": 367.7151745882832,
+      "request_sha256": "151a42dc2535f9f04ad5b0e29bfaaedee2d3cec94aa06de6f077d52afc6fef06",
+      "seconds": 35.67076124995947,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"National parks are the crown jewels of the country's environmental heritage.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"National parks belong to all Americans and should be accessible to all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans have taken the lead in reversing years of neglect and abuse of national parks.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans will continue a proactive agenda to keep the park system healthy and accessible to all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alleviating the maintenance and operations backlog at national parks should be a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Rather than adding to the legacy of national parks by unilateral executive branch action, such as recent National Monument designations, Congress, affected states and local communities will be actively involved in land acquisition decisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 266,
+      "generation_tps": 8.191988205491606,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1797,
+      "prompt_tps": 365.24114642699425,
+      "request_sha256": "b7703dcf6f94dd200e985f8ae44fa1122d9983e7101a8977a85b8343b08338df",
+      "seconds": 37.404251208063215,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"National parks are the crown jewels of the country's environmental heritage.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"National parks belong to all Americans and should be accessible to all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans have taken the lead in reversing years of neglect and abuse of these treasures, the national parks.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans will continue that proactive agenda to keep the park system healthy and accessible to all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Making alleviating the maintenance and operations backlog at national parks a priority should be done.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Rather than adding to this magnificent legacy by unilateral executive branch action, such as the administration's recent National Monument designations, Congress, as well as affected states and local communities, will be actively involved in land acquisition decisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "151a42dc2535f9f04ad5b0e29bfaaedee2d3cec94aa06de6f077d52afc6fef06"
+}

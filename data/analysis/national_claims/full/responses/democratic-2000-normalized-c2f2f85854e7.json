@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 452,
+      "generation_tps": 8.163767641292834,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1464,
+      "prompt_tps": 379.2589153760804,
+      "request_sha256": "1d375e8040b1c3ab24213b6d4b7e851617d3db21205045ce731d4f48c807a037",
+      "seconds": 59.23915983410552,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Clinton-Gore Administration ended ethnic cleansing in Bosnia and Kosovo by the resolute use of military power and vigorous diplomacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party first opposed the Administration's efforts to restore peace in the Balkans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party now tries to impede the Administration's efforts to rebuild Balkan societies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We look forward to the day when Serbia will be free from the grip of Slobodan Milosevic.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will work to make Serbia free from the grip of Slobodan Milosevic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America did right in the Balkans.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"We must finish the job in the Balkans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recognizing the need of the modern Armenian state for security and economic growth, Al Gore and the Democratic Party are committed to continuing efforts to bring a permanent end to tensions between Armenia and Azerbaijan over Nagorno-Karabakh.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore and the Democratic Party are committed to the restoration of diplomatic, commercial, and economic ties between Armenia and her neighbors, including Turkey.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore helped bring about a special task force to intensify economic cooperation between the United States and Armenia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Remembering the historic suffering of the people of Armenia.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 452,
+      "generation_tps": 8.23181426388214,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2314,
+      "prompt_tps": 344.25496506567634,
+      "request_sha256": "cd47a05a8ffc39739277b46b25f2b26ded5fe5827e5bec189c59db3f019730ea",
+      "seconds": 61.64864845899865,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Clinton-Gore Administration ended ethnic cleansing in Bosnia and Kosovo by the resolute use of military power and vigorous diplomacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party first opposed the Clinton-Gore Administration's efforts to restore peace in the Balkans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party now tries to impede the Clinton-Gore Administration's efforts to rebuild Balkan societies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party looks forward to the day when Serbia will be free from the grip of Slobodan Milosevic.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will work to make Serbia free from the grip of Slobodan Milosevic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America did right in the Balkans.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The job in the Balkans must be finished.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore and the Democratic Party are committed to continuing efforts to bring a permanent end to tensions between Armenia and Azerbaijan over Nagorno-Karabakh.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore and the Democratic Party are committed to the restoration of diplomatic, commercial, and economic ties between Armenia and her neighbors, including Turkey.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore helped bring about a special task force to intensify economic cooperation between the United States and Armenia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The people of Armenia have experienced historic suffering.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 485,
+      "generation_tps": 8.107392425727728,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2084,
+      "prompt_tps": 377.67499495143437,
+      "request_sha256": "771df074509de148acd9055c0e60c57253d9576579e8199246f0323c346a0d42",
+      "seconds": 65.36053908290341,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Clinton-Gore Administration ended ethnic cleansing in Bosnia and Kosovo by the resolute use of military power and vigorous diplomacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party first opposed the Clinton-Gore Administration's efforts to restore peace in the Balkans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party now tries to impede the Clinton-Gore Administration's efforts to rebuild Balkan societies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party looks forward to the day when Serbia will be free from the grip of Slobodan Milosevic.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will work to make Serbia free from the grip of Slobodan Milosevic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America did right in the Balkans.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The job in the Balkans must be finished.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore and the Democratic Party are committed to continuing efforts to bring a permanent end to tensions between Armenia and Azerbaijan over Nagorno-Karabakh.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore and the Democratic Party are committed to the restoration of diplomatic, commercial, and economic ties between Armenia and her neighbors, including Turkey.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore helped bring about a special task force to intensify economic cooperation between the United States and Armenia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The people of Armenia have experienced historic suffering.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The modern Armenian state has a need for security and economic growth.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1d375e8040b1c3ab24213b6d4b7e851617d3db21205045ce731d4f48c807a037"
+}

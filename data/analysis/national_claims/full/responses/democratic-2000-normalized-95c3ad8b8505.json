@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 326,
+      "generation_tps": 8.20388438612193,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1430,
+      "prompt_tps": 373.6011064062531,
+      "request_sha256": "a6d50291b16c722c14f6f4d045633f4f16e1215a953bc9d8191496ae5333f9ed",
+      "seconds": 43.58572354190983,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Party honors America's veterans for their willingness to defend the United States and promote values around the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will expand access to health care for all eligible veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will pursue the causes of illness suffered by Vietnam and Gulf War veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will press for more research on diseases caused by exposure to toxic battlefields and treat fairly veterans suffering from those ailments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will back research efforts to screen and treat hepatitis C.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will expand programs in the areas of mental health, spinal cord injury, and vision impairment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation will streamline the disability claims process to ensure it continues to live up to its commitment to service members.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts of Filipino American Veterans who fought in World War II to obtain equity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 341,
+      "generation_tps": 8.150399472874367,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1924,
+      "prompt_tps": 382.99365507029404,
+      "request_sha256": "499bd633eb428449e3b81f5e91a3db089b94d09604bc7ea11617a65f7744bd4d",
+      "seconds": 46.87470900011249,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party honors America's veterans for their selfless willingness to defend the United States and promote values around the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will expand access to health care for all eligible veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will pursue the causes of illness suffered by Vietnam and Gulf War veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will press for more research on diseases caused by exposure to toxic battlefields and treat fairly veterans suffering from those ailments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will back research efforts to screen and treat hepatitis C.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore will expand programs in the areas of mental health, spinal cord injury, and vision impairment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation will streamline the disability claims process to ensure that the nation continues to live up to its sacred commitment to the men and women who served in uniform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts of Filipino American Veterans who fought in World War II to obtain equity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a6d50291b16c722c14f6f4d045633f4f16e1215a953bc9d8191496ae5333f9ed"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 259,
+      "generation_tps": 16.565389447780912,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1151,
+      "prompt_tps": 461.26799862693446,
+      "request_sha256": "89cf4396cded1623bced69b4b40e8c97b66b4f43f403e6f326d4d8af8b005c3c",
+      "seconds": 18.140452582854778,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA rejects the \u201cfiscal cliff\u201d hysteria of the corporate establishment and the pressure for a \u201cGrand Bargain\u201d that would cut Social Security, Medicare and Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA asserts that while unemployment remains high and economic growth is slow, the government should not impose austerity measures that reduce essential programs benefiting the middle and working classes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA asserts that austerity measures would further shred the safety net for the most vulnerable.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA recommends that government policy prioritize investments in job creation, public education and healthcare reform.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA recommends raising essential revenues by taxing large corporations and the wealthiest citizens.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA asserts that large corporations and the wealthiest citizens can afford to pay more taxes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 213,
+      "generation_tps": 16.569234950945738,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1578,
+      "prompt_tps": 486.1503503963557,
+      "request_sha256": "39c96a46bb06d3f8b63cb88b39e6c037bc21f5ed75073e477adac3e82139ea67",
+      "seconds": 16.11036429204978,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA rejects the \u201cfiscal cliff\u201d hysteria of the corporate establishment and the pressure for a \u201cGrand Bargain\u201d that would cut Social Security, Medicare and Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"While unemployment remains high and economic growth is slow, the government should not impose austerity measures that reduce essential programs that benefit the middle and working classes and that further shred the safety net for the most vulnerable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government policy should prioritize investments in job creation, public education and healthcare reform, while raising essential revenues by taxing the large corporations and wealthiest citizens who can afford to pay.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Large corporations and the wealthiest citizens can afford to pay more taxes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "89cf4396cded1623bced69b4b40e8c97b66b4f43f403e6f326d4d8af8b005c3c"
+}

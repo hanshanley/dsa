@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 314,
+      "generation_tps": 16.615017904614678,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1453,
+      "prompt_tps": 462.23622682363884,
+      "request_sha256": "0b9f1f82d8e55d641b15610275288673dc54f69e73313ad2de04f2c05c1f0213",
+      "seconds": 22.051913667004555,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Most gains in working conditions for home care workers in the past decade have come through state and county governments negotiating collective bargaining agreements with unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Collective bargaining agreements require private agencies that hire home care workers to employ them according to standards of a union contract negotiated with the government, which then contracts with these private agencies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is particularly justifiable that agencies employ workers according to union contract standards given that the agencies receive public funding to pay these workers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Union contracts have lifted hundreds of thousands of low-wage workers out of poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Union contracts have compelled agencies employing workers to grant employees greater break and vacation time and more humane working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Union contracts have led to less turnover and higher quality care for the clients for whom these workers care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court\u2019s decision threatens the gains made by union contracts.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 321,
+      "generation_tps": 16.592068620289293,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1935,
+      "prompt_tps": 489.9404227325859,
+      "request_sha256": "7b307ead8263f5bc27f75d1898f7d2fd5ab562011cae4bf5b9a9708ee0e0a0c4",
+      "seconds": 23.305312083102763,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Most gains in working conditions for home care workers in the past decade have come through state and county governments negotiating collective bargaining agreements with unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"These collective bargaining agreements require the private agencies that hire these workers to employ them according to the standards of a union contract negotiated with the government which then contracts with these private agencies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is particularly justifiable that agencies employ workers according to union contract standards given that the agencies receive public funding to pay these workers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Union contracts have lifted hundreds of thousands of low-wage workers out of poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Union contracts have compelled the agencies employing these workers to grant their employees\u2019 greater break and vacation time and more humane working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Union contracts have led to less turnover and higher quality care for the \u201cclients\u201d for whom these workers care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court\u2019s decision threatens the gains made by union contracts.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 318,
+      "generation_tps": 16.55831816237575,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2382,
+      "prompt_tps": 528.2494436712266,
+      "request_sha256": "4a22c15ecfa387a30d4d2ae1ac857acced77c0ca2f49da95ce1f2795e664d065",
+      "seconds": 23.72388658300042,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Most gains in working conditions for home care workers in the past decade have come through state and county governments negotiating collective bargaining agreements with unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Collective bargaining agreements require the private agencies that hire these workers to employ them according to the standards of a union contract negotiated with the government which then contracts with these private agencies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is particularly justifiable that agencies employ workers according to union contract standards given that the agencies receive public funding to pay these workers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Union contracts have lifted hundreds of thousands of low-wage workers out of poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Union contracts have compelled the agencies employing these workers to grant their employees\u2019 greater break and vacation time and more humane working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Union contracts have led to less turnover and higher quality care for the clients for whom these workers care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court\u2019s decision threatens the gains made by union contracts.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0b9f1f82d8e55d641b15610275288673dc54f69e73313ad2de04f2c05c1f0213"
+}

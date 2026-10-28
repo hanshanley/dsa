@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 142,
+      "generation_tps": 16.732787525760457,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1308,
+      "prompt_tps": 448.6643937603255,
+      "request_sha256": "ce2cc99d2650a61b46b985b93d7b161e929f6b27ec018dd8f1c0806c3352f8f0",
+      "seconds": 11.411358708050102,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA welcomes the creation of a Commission to advocate for LGBTQ rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA supports the Commission coordinating efforts with like-minded groups.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA supports the Commission publishing papers and pamphlets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA supports the Commission supporting legislation to abolish discrimination against the LGBTQ community.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 72,
+      "generation_tps": 16.944928942593965,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1618,
+      "prompt_tps": 469.26137975077256,
+      "request_sha256": "f7fd1d97bf9e494844fac389d621b0a9b616d201ee0bf653cc5d22b8f388a416",
+      "seconds": 7.705780707998201,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA welcomes the creation of a Commission to advocate for LGBTQ rights, coordinate efforts with like-minded groups, publish papers and pamphlets, and support legislation to abolish discrimination against the LGBTQ community, among other activities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ce2cc99d2650a61b46b985b93d7b161e929f6b27ec018dd8f1c0806c3352f8f0"
+}

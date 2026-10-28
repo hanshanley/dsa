@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 339,
+      "generation_tps": 16.58371388779178,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1475,
+      "prompt_tps": 517.3510857724982,
+      "request_sha256": "eae8960b837af815eaa76082cbb4c0a5ba5c4d6715213d6568a296bba4bb60fe",
+      "seconds": 23.301908042049035,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush rejected calls from Nancy Reagan, Christopher Reeve and Americans for assistance with embryonic stem cell research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for reversing President Bush's policy on embryonic stem cell research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Stem cell therapy offers hope to more than 100 million Americans who have serious illnesses \u2013 from Alzheimer's to heart disease to juvenile diabetes to Parkinson's.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to pursue stem cell research under the strictest ethical guidelines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"This Administration has broken its promises to veterans \u2013 raising their health costs and reducing their access to care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to continue the fight for mandatory funding for veterans' health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to ensure that disabled veterans and military retirees are not penalized with reductions in their pension benefits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to aggressively address the inexcusable backlogs in veterans' compensation and pension claims.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 336,
+      "generation_tps": 16.586063280341648,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1925,
+      "prompt_tps": 489.33215136604144,
+      "request_sha256": "f5644bf232d31ece15d57e21293b7cc5a9f2a9bac55a7586763bab1bad364339",
+      "seconds": 24.20125816599466,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush rejected calls from Nancy Reagan, Christopher Reeve and Americans for assistance with embryonic stem cell research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for reversing President Bush's policy on embryonic stem cell research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Stem cell therapy offers hope to more than 100 million Americans who have serious illnesses \u2013 from Alzheimer's to heart disease to juvenile diabetes to Parkinson's.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to pursue stem cell research under the strictest ethical guidelines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration has broken promises to veterans by raising their health costs and reducing their access to care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to continue the fight for mandatory funding for veterans' health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to ensure that disabled veterans and military retirees are not penalized with reductions in their pension benefits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to aggressively address the backlogs in veterans' compensation and pension claims.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 355,
+      "generation_tps": 16.39125535584618,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1979,
+      "prompt_tps": 488.2711253279766,
+      "request_sha256": "2b74e1a021ee27b203f0f7cf2afb5b0fb57e1267bb85ed23463724f7de81a47a",
+      "seconds": 25.72078620805405,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush rejected calls from Nancy Reagan, Christopher Reeve and Americans for assistance with embryonic stem cell research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for reversing President Bush's policy on embryonic stem cell research.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Stem cell therapy offers hope to more than 100 million Americans who have serious illnesses \u2013 from Alzheimer's to heart disease to juvenile diabetes to Parkinson's.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to pursue stem cell research under the strictest ethical guidelines, but not to walk away from the chance to save lives and reduce human suffering.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration has broken promises to veterans by raising their health costs and reducing their access to care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to continue the fight for mandatory funding for veterans' health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to ensure that disabled veterans and military retirees are not penalized with reductions in their pension benefits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to aggressively address the inexcusable backlogs in veterans' compensation and pension claims.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "eae8960b837af815eaa76082cbb4c0a5ba5c4d6715213d6568a296bba4bb60fe"
+}

@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 427,
+      "generation_tps": 16.572991047069188,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1536,
+      "prompt_tps": 478.5851080061129,
+      "request_sha256": "f8318f62ba4cd04bae3c1373380b5e9fb70524c4a353c2c6a53c5b89eac41c47",
+      "seconds": 28.98440712504089,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Everyone has the right to a healthy environment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Environmental health is inherently collective.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Owners of polluting factories may locate themselves upstream and the impact of pollution may vary, but toxic substances circulate though air, water and food.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"When species and ecosystems are driven to extinction, their loss affects and is felt by every person.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The oil spilled by BP in the Gulf did not stop at the wellhead.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Everyone deserves the right to air, water, topsoil, food and a workplace and community free of pollution that degrades health and well-being.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"All should have access to parks, natural areas and information about the known hazards and uncertain risks to which we are exposed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"We demand the right to participate in decisions on resource use and living conditions, so that the natural world and its fantastic diversity of living creatures, habitats and interactions will be sustained and survive for posterity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The grossly unequal distribution of wealth and power exposes communities with the least power to the greatest environmental abuse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The struggle for environmental justice in the United States began with low-income communities of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 419,
+      "generation_tps": 16.52728913040148,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2272,
+      "prompt_tps": 523.6736645242389,
+      "request_sha256": "4a012e47ec129cb0df94d842bc8c05e9e1f2a6ccd0dfac1d8f842b2e68a6cc20",
+      "seconds": 29.70057695894502,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Everyone has the right to a healthy environment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Environmental health is inherently collective because toxic substances circulate through air, water and food.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Owners of polluting factories may locate themselves upstream, but the impact of pollution may vary.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"When species and ecosystems are driven to extinction, their loss affects every person.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The oil spilled by BP in the Gulf did not stop at the wellhead.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Everyone deserves the right to air, water, topsoil, food, and a workplace and community free of pollution that degrades health and well-being.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"All should have access to parks, natural areas, and information about known hazards and uncertain risks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"There is a demand for the right to participate in decisions on resource use and living conditions, so that the natural world and its diversity of living creatures, habitats and interactions will be sustained for posterity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The grossly unequal distribution of wealth and power exposes communities with the least power to the greatest environmental abuse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The struggle for environmental justice in the United States began with low-income communities of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 398,
+      "generation_tps": 16.534921151055773,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2123,
+      "prompt_tps": 504.3205759121543,
+      "request_sha256": "31b965762e0055d21431701640345babc53a262e3044bc27aec0f0af92535d53",
+      "seconds": 28.289643249940127,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Everyone has the right to a healthy environment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Owners of polluting factories may locate themselves upstream, and the impact of pollution may vary, but toxic substances circulate through air, water and food.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"When species and ecosystems are driven to extinction, their loss affects every person.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The oil spilled by BP in the Gulf did not stop at the wellhead.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Everyone deserves the right to air, water, topsoil, food, and a workplace and community free of pollution that degrades health and well-being.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"All should have access to parks, natural areas, and information about known hazards and uncertain risks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"There is a demand for the right to participate in decisions on resource use and living conditions, so that the natural world and its diversity of living creatures, habitats and interactions will be sustained for posterity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The grossly unequal distribution of wealth and power exposes communities with the least power to the greatest environmental abuse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The struggle for environmental justice in the United States began with low-income communities of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f8318f62ba4cd04bae3c1373380b5e9fb70524c4a353c2c6a53c5b89eac41c47"
+}

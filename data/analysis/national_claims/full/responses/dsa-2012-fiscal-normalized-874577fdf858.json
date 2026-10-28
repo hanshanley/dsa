@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 274,
+      "generation_tps": 16.562776966526854,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1439,
+      "prompt_tps": 473.80261576331833,
+      "request_sha256": "de27104be8656f849e728c028deda17580f1e1a12a01a363277c55c903c78bc4",
+      "seconds": 19.591123790945858,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"If Congress makes no changes to the Budget Control Act of 2011, the Bush tax cuts will expire on January 1, 2013.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Congress makes no changes to the Budget Control Act of 2011, automatic cuts of $55 billion each in annual defense and \u201cdiscretionary domestic\u201d spending will begin.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The expiration of the FICA payroll tax cut and the end of extended unemployment benefits will create a significant fiscal drag on the economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The annual budget deficit will fall from over $1 trillion in 2012 to $500 billion dollars in 2013.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The resulting drop in aggregate demand from a combination of spending cuts and increases in taxes would almost definitely cause a double-dip recession.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 274,
+      "generation_tps": 16.459183012696663,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1881,
+      "prompt_tps": 507.56275700714536,
+      "request_sha256": "d37881f75a0b8500dd15c97ff384165b551a304e917892d8efe70e64655deb08",
+      "seconds": 20.363257500110194,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"If Congress makes no changes to the Budget Control Act of 2011, the Bush tax cuts will expire on January 1, 2013.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Congress makes no changes to the Budget Control Act of 2011, automatic cuts of $55 billion each in annual defense and \u201cdiscretionary domestic\u201d spending will begin.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The expiration of the FICA payroll tax cut and the end of extended unemployment benefits will create a significant fiscal drag on the economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The annual budget deficit will fall from over $1 trillion in 2012 to $500 billion dollars in 2013.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The resulting drop in aggregate demand from a combination of spending cuts and increases in taxes would almost definitely cause a double-dip recession.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "de27104be8656f849e728c028deda17580f1e1a12a01a363277c55c903c78bc4"
+}

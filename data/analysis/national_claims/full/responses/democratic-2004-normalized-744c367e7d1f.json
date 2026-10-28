@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 406,
+      "generation_tps": 16.62160019314486,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1475,
+      "prompt_tps": 459.26807247898927,
+      "request_sha256": "c32fdb13f301524ba7ade2d9eff601e7d44c69a2f3e6f6b52dbd65a29e95a9cb",
+      "seconds": 27.6474537497852,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President George Bush and the Republican Party have ignored the middle class since the beginning of the Bush Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President George Bush and the Republican Party have catered to the wealth of the richest instead of honoring the work of the rest of the population.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President George Bush and the Republican Party have promised almost everything and paid for almost nothing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The middle class is shouldering more taxes, earning less money, and bearing higher costs under President George Bush and the Republican Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The middle class is working hard just to get by under President George Bush and the Republican Party.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in a stronger, more prosperous America for all people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in an America where the great American promise of upward mobility is alive and well.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in an America where the middle class is growing, the economy is thriving, and America is strong.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party have a plan to build a stronger America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 402,
+      "generation_tps": 16.570922983742,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2049,
+      "prompt_tps": 519.6383423861689,
+      "request_sha256": "1ff22dae4cac6ef967bccac479fe29d7be6bf55529fb6c9c4c9bcea4eecbb3ce",
+      "seconds": 28.212044874904677,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush and the Republicans in Congress have ignored the middle class since day one of this Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republicans in Congress have catered to the wealth of the richest instead of honoring the work of the rest of the population.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republicans in Congress have promised almost everything and paid for almost nothing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The middle class is shouldering more taxes, earning less money, and bearing higher costs under President Bush and the Republican Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The middle class is working hard just to get by under President Bush and the Republican Party.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in a stronger, more prosperous America for all people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in an America where the great American promise of upward mobility is alive and well.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in an America where the middle class is growing, the economy is thriving, and America is strong.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party have a plan to build that America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c32fdb13f301524ba7ade2d9eff601e7d44c69a2f3e6f6b52dbd65a29e95a9cb"
+}

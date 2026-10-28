@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 364,
+      "generation_tps": 16.601233053410937,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1535,
+      "prompt_tps": 470.6745421380841,
+      "request_sha256": "d6b14a13cf8ba3610ac11dfe2f6558a89fdcf54d09e3d10fe8492c6ce6bef174",
+      "seconds": 25.197407708968967,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In the Bush Administration, energy independence does not receive consideration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration's energy policy prioritizes the interests of large oil companies.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration allowed oil industry lobbyists and executives to write the nation's energy policy in secret.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration went to the Supreme Court to prevent the public from learning about its energy policy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration's energy plan will not reduce gas prices, according to the Administration's own economists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration's approach to energy policy leaves America dependent on foreign oil, vulnerable, and exposed.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party are committed to achieving energy independence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe a strong America must move toward energy independence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party pledge to solve the problem of energy dependence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 460,
+      "generation_tps": 16.531295620763412,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2067,
+      "prompt_tps": 504.15843301512103,
+      "request_sha256": "732c960f00a7b6532ce56ed51a8e64e0a3db68d0ba19608b18b5067601861363",
+      "seconds": 31.9355171660427,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In the Bush Administration, energy independence does not get a thought.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration's energy policy is to govern by, of, and for big oil.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration let oil industry lobbyists and executives write the nation's energy policy in secret.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration went to the Supreme Court to stop the public from learning what it was doing regarding energy policy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration's energy plan will do nothing to reduce gas prices, according to the Administration's own economists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration's approach to energy policy leaves America shackled to foreign oil, dependent, vulnerable, and exposed.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in a better, stronger, more independent America.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party are committed to achieving energy independence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe a strong America must move toward energy independence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party pledge to solve the problem of energy dependence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"When a problem is seen, John Kerry, John Edwards and the Democratic Party will roll up their sleeves and solve it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d6b14a13cf8ba3610ac11dfe2f6558a89fdcf54d09e3d10fe8492c6ce6bef174"
+}

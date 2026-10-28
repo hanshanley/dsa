@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 355,
+      "generation_tps": 16.578978110196513,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1501,
+      "prompt_tps": 461.83882964773517,
+      "request_sha256": "a6f4f0118c139723fe42701ef96161b01aaded5c60f7daff8d5f856f509fc7f2",
+      "seconds": 24.673230499960482,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Police departments in small cities have lost more than 15 percent of their full-time paid police and employees under the Bush Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Two-thirds of the nation's fire departments are not fully staffed today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to provide direct assistance to police officers and firefighters on the frontlines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure that front line workers throughout the transportation system receive the security training necessary to respond to terrorist threats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to modernize the emergency warning system to provide localized warnings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to treat the fighters on the frontlines as partners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to give families all the information they need.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration's budgets prioritize first responders last in line in the event of an emergency.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration thinks homeland security is about changing the alert from yellow to orange.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 406,
+      "generation_tps": 16.53834821838299,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2024,
+      "prompt_tps": 497.05472361534044,
+      "request_sha256": "55ef1986fe90be50da78035f55dbf6ae9c4cf6dc206e618544d0cc35c01719bd",
+      "seconds": 28.630579250166193,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Police departments in small cities have lost more than 15 percent of their full-time paid police and employees under the Bush Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Two-thirds of the nation's fire departments are not fully staffed today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to provide direct assistance to police officers and firefighters on the frontlines, providing them with the equipment and manpower they need to protect citizens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure that front line workers throughout the transportation system receive the security training necessary to respond to terrorist threats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to modernize the emergency warning system to provide localized warnings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to treat the fighters on the frontlines as partners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to give families all the information they need.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is wrong that today first responders are last in line when it comes to this administration's budgets.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"This Administration thinks that homeland security is about changing the alert from yellow to orange.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The colors of safety are firefighter red, EMT white, and police officer blue.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 357,
+      "generation_tps": 16.531723004578335,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2537,
+      "prompt_tps": 546.6017392080713,
+      "request_sha256": "030f63b16a5b997a9e5ddaccda1e4e4b8bf0059859985689c8cbacba0b8ebd69",
+      "seconds": 26.246188041055575,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Police departments in small cities have lost more than 15 percent of their full-time paid police and employees under the Bush Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Two-thirds of the nation's fire departments are not fully staffed today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to provide direct assistance to police officers and firefighters on the frontlines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure that front line workers throughout the transportation system receive the security training necessary to respond to terrorist threats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to modernize the emergency warning system to provide localized warnings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to treat the fighters on the frontlines as partners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to give families all the information they need.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is wrong that today first responders are last in line when it comes to this administration's budgets.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration thinks homeland security is about changing the alert from yellow to orange.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a6f4f0118c139723fe42701ef96161b01aaded5c60f7daff8d5f856f509fc7f2"
+}

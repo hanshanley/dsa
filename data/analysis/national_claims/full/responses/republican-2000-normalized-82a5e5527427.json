@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 353,
+      "generation_tps": 16.514826109411203,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1533,
+      "prompt_tps": 471.17427580410845,
+      "request_sha256": "aa9e4e7f81c2f491114e6faf2503774348358fc0dc216ccc5778b5ef81e6f433",
+      "seconds": 24.63756995787844,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Vice President Gore's \\\"new security agenda\\\" adds disease, climate, and all the world's ethnic or religious conflicts to an undiminished set of existing American responsibilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Candidate Gore has yet to define any limit to his \\\"new security agenda\\\" for America as global social worker.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As idle indulgence gives way to a new Republican president in the coming new \\\"period of consequences,\\\" the United States can again regain the hope it lost eight years ago.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States can restore its country's sense of international purpose and national honor under a new Republican president.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican president will identify and pursue vital American national interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"A Republican president will set priorities and stick to them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Under a Republican president's leadership, the United States will build and secure the peace.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Robust military forces, strong alliances, expanding trade, and resolute diplomacy are what Republicans know it takes to build and secure the peace.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 364,
+      "generation_tps": 16.391391453429662,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2054,
+      "prompt_tps": 511.72580925117074,
+      "request_sha256": "5f856c9323f7422988dc62dc787f49c4d3d72f7ad07c639df0403bcb4d0a163d",
+      "seconds": 26.23052666708827,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Vice President Gore's \\\"new security agenda\\\" adds disease, climate, and all the world's ethnic or religious conflicts to an undiminished set of existing American responsibilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If there is some limit to candidate Gore's new agenda for America as global social worker, he has yet to define it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As idle indulgence gives way to a new Republican president in the coming new \\\"period of consequences,\\\" the United States can again regain the hope it lost eight years ago.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States can restore its country's sense of international purpose and national honor under a new Republican president.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican president will identify and pursue vital American national interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"A Republican president will set priorities and stick to them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Under a Republican president's leadership, the United States will build and secure the peace.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans know that robust military forces, strong alliances, expanding trade, and resolute diplomacy are what it takes to build and secure the peace.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "aa9e4e7f81c2f491114e6faf2503774348358fc0dc216ccc5778b5ef81e6f433"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 399,
+      "generation_tps": 16.603369527940888,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1536,
+      "prompt_tps": 481.26163236072637,
+      "request_sha256": "926161ca73e943838e071bf0f6f9341d077dd8b60bdadb9245cf7aade1c60fa9",
+      "seconds": 27.233678082935512,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for coalition allies whose efforts deserve respect and admiration.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The efforts of coalition allies are worthy of respect and admiration.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops remain on the ground in Iraq working to help the Iraqi people achieve stability and democracy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for persevering in the mission in Iraq and opposing cutting and running.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Responsible political leaders of both parties have declared the nation will persevere in its mission in Iraq.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Inconsistent, ambiguous, and politically expedient statements on the mission in Iraq are condemned.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Wavering statements encourage adversaries to fight harder, resulting in consequences for American service members.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Uncertainty about America's commitment to the mission in Iraq makes the mission immeasurably more difficult for service members.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"America is serving the cause of liberty, peace, and its own security in Iraq.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"America accepted a difficult task in Iraq.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"America will finish the task in Iraq.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 413,
+      "generation_tps": 16.49944727086066,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2103,
+      "prompt_tps": 500.0481253997185,
+      "request_sha256": "de5fe1f3594b7b596f0ea37dd0fad36f2571308f7e4299f1a1e403174c8bf64c",
+      "seconds": 29.246500000124797,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for coalition allies whose efforts deserve respect and admiration.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The efforts of coalition allies deserve respect and admiration, and their sacrifice does not go unnoticed.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"American troops remain on the ground in Iraq working steadfastly to help the Iraqi people achieve stability and democracy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for persevering in the mission in Iraq and opposition to cutting and running.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Responsible political leaders of both parties have declared that the nation will persevere in its mission in Iraq.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Inconsistent, ambiguous, and politically expedient statements on the mission in Iraq are condemned.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"To the extent that wavering statements encourage adversaries to fight harder, American service members suffer the consequences.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Uncertainty about America's commitment to the mission in Iraq makes the mission immeasurably more difficult for American service members.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In Iraq, America is serving the cause of liberty, peace, and its own security.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"America accepted a difficult task in Iraq.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"America will finish the task in Iraq.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "926161ca73e943838e071bf0f6f9341d077dd8b60bdadb9245cf7aade1c60fa9"
+}

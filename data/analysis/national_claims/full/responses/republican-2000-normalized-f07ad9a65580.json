@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 247,
+      "generation_tps": 8.024802324798015,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1443,
+      "prompt_tps": 379.30355436222214,
+      "request_sha256": "73af16a2c2213157ef28c8390f7148badcf2b162a165797e005ef1d31eec5348",
+      "seconds": 34.60498904087581,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Republican party is determined to change federal law to give small employers the liberty to band together to purchase group insurance for their employees at reduced rates.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With a Republican president, the expansion of coverage for small employers will no longer be blocked by veto threats.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"27 million individuals and families will be enabled to purchase private health insurance through a proposed tax credit.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Health insurance premiums will be fully deductible for the self-employed, according to the proposal.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Uninsured Americans have varying situations related to family status, age, and income.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"It makes sense to let uninsured Americans decide what kind of coverage best suits their needs.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 250,
+      "generation_tps": 8.240102863716356,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1858,
+      "prompt_tps": 331.51731846465066,
+      "request_sha256": "d6a891ad81b90c51e62f59dc9949abf820d1af22fbb07a7154d390120c2715f0",
+      "seconds": 35.95618641702458,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican party is determined to change federal law to give small employers the liberty to band together to purchase group insurance for their employees at reduced rates.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With a Republican president, the expansion of coverage for small employers will no longer be blocked by veto threats.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A proposed tax credit will enable 27 million individuals and families to purchase private health insurance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Full deductibility of health insurance premiums for the self-employed is supported.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Situations of uninsured Americans vary tremendously with changes in family status, age, and income.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"It makes sense to let uninsured Americans decide what kind of coverage best suits their needs.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "73af16a2c2213157ef28c8390f7148badcf2b162a165797e005ef1d31eec5348"
+}

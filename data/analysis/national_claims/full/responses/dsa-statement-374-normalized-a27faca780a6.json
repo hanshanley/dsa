@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 353,
+      "generation_tps": 16.60328953994479,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1321,
+      "prompt_tps": 455.10984604905576,
+      "request_sha256": "ae50c36fc603402919cddcf7ce765827b5ac9a75a7ea93aa317db61822c1dbc7",
+      "seconds": 24.172904666978866,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America expresses outrage at the acquittal of George Zimmerman in the murder of Trayvon Martin.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"An insane, ALEC-inspired \u201cstand your ground law\u201d combined with the racist assumption that African Americans automatically pose a threat to anyone\u2019s person and property enabled George Zimmerman to be acquitted.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In most other societies, the armed party would be responsible for \u201cstanding down\u201d and avoiding an altercation with an unarmed party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the United States, an unarmed black teenager walking in his father\u2019s neighborhood is viewed by all too many as a threat to an armed vigilante who initiated the deadly encounter and stalked the victim.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"If the \u201cstand your ground\u201d law and a lax prosecution enabled George Zimmerman to get off, this is one in a long series of cases where racist laws and true justice fail to coincide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"George Zimmerman said to the police dispatcher: \u201cFucking punks; these assholes always get away.\u201d\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"George Zimmerman got away.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 374,
+      "generation_tps": 16.524016351178876,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1842,
+      "prompt_tps": 489.6933767163691,
+      "request_sha256": "423308a36aed6fa79359afd1b0ae550b6a6f58bcfc0ab0144b46cf4ef7a92a7f",
+      "seconds": 26.404684124980122,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America joins the broad civil rights and progressive community in expressing outrage at the acquittal of George Zimmerman in the murder of Trayvon Martin.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Only an insane, ALEC-inspired \u201cstand your ground law\u201d combined with the racist assumption that African Americans automatically pose a threat to anyone\u2019s person and property enabled George Zimmerman to be acquitted.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In the law of most other societies, the armed party would be responsible for \u201cstanding down\u201d and avoiding an altercation with an unarmed party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the United States, an unarmed black teenager walking in his father\u2019s neighborhood is viewed by all too many as a threat to an armed vigilante who not only initiated the deadly encounter, but stalked the victim.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"If the \u201cstand your ground\u201d law and a lax prosecution enabled George Zimmerman to get off, this is clearly one in a long series of cases in the United States where racist laws and true justice fail to coincide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"George Zimmerman said to the police dispatcher: \u201cFucking punks; these assholes always get away.\u201d\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"George Zimmerman got away.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ae50c36fc603402919cddcf7ce765827b5ac9a75a7ea93aa317db61822c1dbc7"
+}

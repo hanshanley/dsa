@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 295,
+      "generation_tps": 16.628089342615215,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1420,
+      "prompt_tps": 458.26967194242565,
+      "request_sha256": "f6a96cd136c6a88de146eba66821c3821142e2f7936bffcea1c84ff176d82bb4",
+      "seconds": 20.84948324994184,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Creating a stable and secure environment in Iraq is a necessary first step.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A US-only presence is insufficient to create a stable and secure environment in Iraq.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Other nations have a vital interest in the outcome in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration missed three opportunities to build a legitimate coalition in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President broke a promise to build a legitimate coalition in Iraq by exhausting diplomacy before resorting to military force.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Kofi Annan invited the United States to discuss international support after the statue fell in Baghdad, but the United States rejected the offer.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"When the President addressed the United Nations last fall, the President refused to acknowledge difficulties faced in Iraq and failed to elicit support from other nations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 319,
+      "generation_tps": 16.59098341550255,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1883,
+      "prompt_tps": 487.8130975179613,
+      "request_sha256": "91cd23721ed1e4538a1e75f11ed85a8590742608490a8a4e2b2c36da57294a94",
+      "seconds": 23.096923290984705,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Creating a stable and secure environment in Iraq is a necessary first step.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"To create a stable and secure environment in Iraq, it is necessary to truly internationalize both politically and militarily and not depend on a US-only presence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Other nations have a vital interest in the outcome in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration missed three opportunities to build a legitimate coalition in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President broke a promise to build a legitimate coalition in Iraq by exhausting diplomacy before resorting to the use of military force.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After the statue fell in Baghdad, Kofi Annan invited the United States to come to the table to discuss international support, but the United States rejected the offer.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"When the President addressed the United Nations last fall, the President refused to acknowledge the difficulties faced in Iraq and failed to elicit support from other nations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f6a96cd136c6a88de146eba66821c3821142e2f7936bffcea1c84ff176d82bb4"
+}

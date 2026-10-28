@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 55,
+      "generation_tps": 16.666076621563832,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1283,
+      "prompt_tps": 463.9294967944112,
+      "request_sha256": "758b5adf9e411d8ab94376e0f5e0db96b5d2698df09a4130dad220c6c7869a98",
+      "seconds": 6.078303333139047,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The National Political Committee passed a resolution on November 25, 2014.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 55,
+      "generation_tps": 16.99198377249935,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1506,
+      "prompt_tps": 462.1444211127509,
+      "request_sha256": "74da2b543e4873de68abee33307d2fd583dce2fbd7b7e999c959a02baabe0e31",
+      "seconds": 6.505319542018697,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The National Political Committee passed a resolution on November 25, 2014.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "758b5adf9e411d8ab94376e0f5e0db96b5d2698df09a4130dad220c6c7869a98"
+}

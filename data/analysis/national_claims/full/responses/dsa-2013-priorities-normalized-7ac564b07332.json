@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 290,
+      "generation_tps": 16.597871510376812,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1420,
+      "prompt_tps": 461.161138807992,
+      "request_sha256": "52ef96f7d9cbef615e41fe65c501b69763659eebe2b85d817fe7684f5403de8c",
+      "seconds": 20.56125137512572,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Commitment to continue public education work of Grassroots Economics Training for Understanding and Power (GET UP).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to defend the War on Poverty as a partial success whose work remains unfinished.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to reexamine the political and organizational strategy from the ground up.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to invite members to evaluate political conditions and possibilities and contribute fresh ideas and perspectives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to produce an updated official political statement at the 2015 Convention.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to produce some DSA materials in both English and Spanish, and other languages where appropriate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Production of DSA materials in other languages will depend at least initially on the talents of DSA members and friends at the local level.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 232,
+      "generation_tps": 16.649438075706634,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1878,
+      "prompt_tps": 488.517831249562,
+      "request_sha256": "46985b531c70420f06236896d10444d88fd17a90d43b3c15f92e9f53fd3f6c33",
+      "seconds": 17.78836387488991,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to continue public education work of Grassroots Economics Training for Understanding and Power (GET UP) and the 50th anniversary project defending the War on Poverty as a partial success whose work remains unfinished.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to reexamine the political and organizational strategy from the ground up, inviting members to use readings and their own experiences as DSA activists to evaluate political conditions and possibilities and contribute fresh ideas and perspectives, for the purpose of producing an updated official political statement at the 2015 Convention.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to produce some DSA materials in both English and Spanish, and other languages where appropriate, to extend the reach as well as content of the educational capacity, depending at least initially on the talents of DSA members and friends at the local level.\",\n\"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "52ef96f7d9cbef615e41fe65c501b69763659eebe2b85d817fe7684f5403de8c"
+}

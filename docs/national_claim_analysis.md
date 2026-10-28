@@ -43,11 +43,28 @@ Schema validity and exact evidence offsets do not establish semantic entailment
 or factual truth. Known unresolved references and failures remain explicit.
 Failed blocks do not silently become analysis input.
 
+After extraction, a deterministic step replaces recognized source-organization
+stance prefixes in **policy-position-only** claims: for example, "Democrats will
+seek ..." becomes "Commitment to seek ...". The predicate is retained verbatim,
+including negation, mechanisms and qualifications. Other organizations' names,
+past actions, predictions and mixed-type claims are not rewritten. The original
+model wording remains in `model_claim_text` and the raw responses; `claim_text`
+contains the analysis wording. The extraction summary records this step's version
+and affected count. Changed analysis text invalidates its downstream text caches,
+without regenerating or overwriting the original inference records.
+
 Exact case-insensitive claim duplicates within a document remain downloadable
 with `duplicate_of`, but are excluded from fitting. Identical claims in different
 documents retain their respective attributions. Model settings, prompts, input
 hashes, and chunk ordering fingerprint the cache; changed configurations cannot
 silently reuse old responses.
+
+Assistant source-fidelity reviews exclude identified candidates without deleting
+their raw wording or source evidence. A metadata-only adoption chunk was observed
+to copy policy claims from reference-only context; those candidates are excluded.
+This demonstrates that same-model revision and valid evidence offsets do not
+guarantee that a claim is supported by its cited target unit. The reviews are
+targeted checks, not a representative error estimate or corpus-wide certification.
 
 ## Downstream analysis
 

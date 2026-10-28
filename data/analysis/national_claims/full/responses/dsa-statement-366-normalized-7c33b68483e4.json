@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 401,
+      "generation_tps": 16.53852787458078,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1554,
+      "prompt_tps": 487.248349054628,
+      "request_sha256": "277b1df02c8113860ebf188473c2c04ce5d10a8bf7d0e8523b386d58ad69daae",
+      "seconds": 27.445795000065118,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama avoided commitments to substantive change in economic policy or worker rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic campaign demonstrated tactical brilliance in holding the line in crucial swing states.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The myriad and growing problems facing the working poor and the most vulnerable segments of the population were studiously ignored.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Labor unions, feminist groups, communities of color and progressive organizations will have to mobilize strongly to reap any real benefit for the people they represent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Moderate neoliberal groups like the Third Way and the Concord Coalition started placing editorials in the liberal media calling for a \u201cGrand Bargain\u201d that would cut \u201centitlements\u201d in return for modest reforms in taxation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama has cautious centrist instincts that demand he return to seeking \u201cbi-partisanship\u201d with Republicans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA will work together in local coalitions with the many organizations of the Coalition on Human Needs to defend the interests of the working poor and most vulnerable members of society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The \u201cFiscal Cliff\u201d is an illegitimate offspring of the \u201cDeficit Crisis\u201d mania that paralyzed Washington in Obama\u2019s first term.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[\"Third Way\",\"Concord Coalition\",\"Coalition on Human Needs\",\"Deficit Crisis\",\"Fiscal Cliff\"]}\n```"
+    },
+    {
+      "generation_tokens": 402,
+      "generation_tps": 16.487404000042044,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2123,
+      "prompt_tps": 513.564707199504,
+      "request_sha256": "b32240f570f1a68e5638bb74449d55b7ac8d400265afd25725862f2e87ee417b",
+      "seconds": 28.526227792026475,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama avoided commitments to substantive change in economic policy or worker rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic campaign demonstrated tactical brilliance in holding the line in crucial swing states.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The myriad and growing problems facing the working poor and the most vulnerable segments of the population were studiously ignored.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Labor unions, feminist groups, communities of color and progressive organizations will have to mobilize strongly now to reap any real benefit for the people they represent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Moderate neoliberal groups like the Third Way and the Concord Coalition started placing editorials in the liberal media calling for a \u201cGrand Bargain\u201d that would cut \u201centitlements\u201d in return for modest reforms in taxation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama has cautious centrist instincts that demand he return to seeking \u201cbi-partisanship\u201d with Republicans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA will work together in local coalitions with the many organizations of the Coalition on Human Needs to defend the interests of the working poor and most vulnerable members of society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The \u201cFiscal Cliff\u201d is an illegitimate offspring of the \u201cDeficit Crisis\u201d mania that paralyzed Washington in Obama\u2019s first term.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[\"Third Way\",\"Concord Coalition\",\"Coalition on Human Needs\",\"Deficit Crisis\",\"Fiscal Cliff\"]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "277b1df02c8113860ebf188473c2c04ce5d10a8bf7d0e8523b386d58ad69daae"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 298,
+      "generation_tps": 8.299519416027463,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1475,
+      "prompt_tps": 324.76277342548326,
+      "request_sha256": "bd99065607ecd9df795571d3c093674502aa4021d6d01f0f3269c5343a8691ba",
+      "seconds": 40.46395887504332,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. does not function as it did previously, and this negatively impacts both the U.S. and the world.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Replacing the current free-market orthodoxy requires waging an ideological battle.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialist, liberal, and democratic movements are accustomed to waging ideological battles.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialist, liberal, and democratic movements would not dispute the need for government intervention to rein in undemocratic corporate power.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Even those members of the public with the most to gain from government intervention no longer take for granted that federal and state aid is desirable or winnable today.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"A large number of nonvoters in elections speaks to alienation from government.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The mentality \u201cIf the pols can\u2019t help, why vote?\u201d creates a self-fulfilling nightmare.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 301,
+      "generation_tps": 8.039484311281216,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1941,
+      "prompt_tps": 391.0264105998178,
+      "request_sha256": "3569b2c3a9b10556d6f97a236a55c668c6bed4e5ad0eac6dfd20d4e4267395c0",
+      "seconds": 42.41396058280952,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. does not function as it did previously, and the U.S. and the world are poorer for it.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Replacing the current free-market orthodoxy means waging an ideological battle.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialist, liberal, and democratic movements are used to waging ideological battles.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialist, liberal, and democratic movements would not dispute the need for government intervention to rein in undemocratic corporate power.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, even those members of the public with the most to gain from government intervention no longer take for granted that federal and state aid is desirable, let alone winnable.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The huge number of nonvoters in elections speaks to alienation from government.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The mentality \u201cIf the pols can\u2019t help, why vote?\u201d creates a self-fulfilling nightmare.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bd99065607ecd9df795571d3c093674502aa4021d6d01f0f3269c5343a8691ba"
+}

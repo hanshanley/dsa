@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 490,
+      "generation_tps": 16.406298431528807,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1498,
+      "prompt_tps": 462.3469454455515,
+      "request_sha256": "d3853598acd1d8eb64d9ccfeae5c53f06a7f4a2bd3c25744145ef8f9dd468ed3",
+      "seconds": 33.11674145888537,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In President George Bush's America, drug company and HMO profits are prioritized over family and small business health costs.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[1]}, {\"claim_text\":\"Health care costs increased four times as fast as wages in the last year.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"Prescription drug spending has more than doubled during the past five years.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"Nearly 82 million Americans went without health care coverage at some point in the last two years.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"The then-U.S. administration has done nothing to bring health care costs down or lift burdens on Americans.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"The few small proposals offered by the then-U.S. administration would further divide the health system between affordable care for the healthy and wealthy and unaffordable care for the elderly, the sick, and increasingly, America's broad middle class.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[1]}, {\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in a better, stronger, healthier America.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Party's resolve to fix the health crisis is stronger than ever.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Every expectant mother should get quality prenatal care.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Every child should get regular check-ups.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Every senior should be able to get safe, affordable prescription drugs.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"No hard-working family should ever lose everything because illness strikes a loved one.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}], \"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 491,
+      "generation_tps": 16.46628745384947,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2156,
+      "prompt_tps": 510.46701038631744,
+      "request_sha256": "dad14089653df24d5ea60271d07603388789ff0a233242237f5f961cae616386",
+      "seconds": 34.05206733313389,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In President George Bush's America, drug company and HMO profits count for more than family and small business health costs.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[1]}, {\"claim_text\":\"Health care costs increased four times as fast as wages in the last year.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"Prescription drug spending has more than doubled during the past five years.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"Nearly 82 million Americans went without health care coverage at some point in the last two years.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"The then-U.S. administration has done nothing to bring costs down or lift these burdens.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[1]}, {\"claim_text\":\"The few small proposals offered by the then-U.S. administration would further divide the health system between one that is affordable for the healthy and wealthy and one that is unaffordable for the elderly, the sick, and increasingly, America's broad middle class.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[1]}, {\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in a better, stronger, healthier America.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Party has a stronger resolve than ever to fix the health crisis.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Every expectant mother should get quality prenatal care.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Every child should get regular check-ups.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Every senior should be able to get safe, affordable prescription drugs.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"No hard-working family should ever lose everything because illness strikes a loved one.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}], \"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d3853598acd1d8eb64d9ccfeae5c53f06a7f4a2bd3c25744145ef8f9dd468ed3"
+}

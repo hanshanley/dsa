@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 275,
+      "generation_tps": 16.630998592260188,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1425,
+      "prompt_tps": 457.50715665216944,
+      "request_sha256": "d358329ee89d3da8405b0e774e4e8183081a9200f1e01d072681194e9915ef58",
+      "seconds": 19.659764708019793,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Republican Party remains committed to fulfilling America's obligations to veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party defeated the administration's attempt to replace veterans' health care with a national system for everybody.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans enacted the Veterans Employment Opportunities Act of 1998 to thwart attempts to water down veterans' preference in federal civil service hiring and retention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans created the National Veterans Business Development Corporation to assist veterans in becoming entrepreneurs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Veterans Millennium Health Care and Benefits Act is a first step toward correcting deficiencies in medical care for veterans and ensuring a medical infrastructure that will better honor the nation's commitment to those who served.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Republican administration, a true advocate for veterans will become Secretary of Veteran Affairs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 280,
+      "generation_tps": 16.553870963724627,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1868,
+      "prompt_tps": 483.8415882641546,
+      "request_sha256": "976073855012ef07497dc1723ed2737c29a622e8848e2a65cd9b5fe209fc3a98",
+      "seconds": 20.784792124992236,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party remains committed to fulfilling America's obligations to veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party defeated the administration's attempt to replace veterans' health care with a national system for everybody.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans enacted the Veterans Employment Opportunities Act of 1998 to thwart attempts to water down veterans' preference in federal civil service hiring and retention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans created the National Veterans Business Development Corporation to assist veterans in becoming entrepreneurs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Veterans Millennium Health Care and Benefits Act is a first step toward correcting deficiencies in medical care for veterans and ensuring a medical infrastructure that will better honor the nation's commitment to those who served.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a Republican administration, a true advocate for veterans will become Secretary of Veteran Affairs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d358329ee89d3da8405b0e774e4e8183081a9200f1e01d072681194e9915ef58"
+}

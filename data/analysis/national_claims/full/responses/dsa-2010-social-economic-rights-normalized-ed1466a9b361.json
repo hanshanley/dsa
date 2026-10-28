@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 454,
+      "generation_tps": 16.55981097555462,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1540,
+      "prompt_tps": 464.97877609365173,
+      "request_sha256": "3cbfe24fde61346bebbd766b699135c17630e80e70623361ebbfa531aaeea73e",
+      "seconds": 30.736833792179823,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Everyone has the right to leisure time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A truly participatory democracy requires that every citizen have adequate leisure time to fully develop intellectually, culturally, politically and spiritually in the manner of their own choosing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A democracy\u2019s strength is the thoughtful and full engagement of all of its citizens in the decision-making processes in their communities and at all levels of government.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"To reach full potential, people must have adequate leisure time to think, learn and play.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All the art that a society produces is only possible when people have enough time free from the demands of earning a living to freely express their creativity and ingenuity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The pursuit of profits by capitalists is in direct opposition to leisure time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The relentless effort to squeeze the most work possible out of employees denies working people the supposed efficiencies of capitalism because they do not benefit from more leisure time to enjoy the fruits of their labor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"If it were left to the unregulated market to determine workers\u2019 hours, we would quickly see a return to the 12-16 hour workday, six or even seven days a week.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under conditions of a 12-16 hour workday, six or even seven days a week, working people are simply too exhausted to think, let alone fully engage in the politics of their communities, receive an education or enjoy art and beauty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 458,
+      "generation_tps": 16.519438076582915,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2174,
+      "prompt_tps": 514.4169197600642,
+      "request_sha256": "a6e3971be08f22a8f358064fc53cf97fc2c186d80c0a4cdbf2747ebbfcf4a1c7",
+      "seconds": 31.96111183287576,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Everyone has the right to leisure time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A truly participatory democracy requires that every citizen have adequate leisure time to fully develop intellectually, culturally, politically and spiritually in the manner of their own choosing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A democracy\u2019s strength is the thoughtful and full engagement of all of its citizens in the decision-making processes in their communities and at all levels of government.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"To reach full potential, people must have adequate leisure time to think, learn and play.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All the art that a society produces is only possible when people have enough time free from the demands of earning a living to freely express their creativity and ingenuity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The pursuit of profits by capitalists is in direct opposition to leisure time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The relentless effort to squeeze the most work possible out of employees denies working people the supposed efficiencies of capitalism because they do not benefit from more leisure time to enjoy the fruits of their labor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"If it were left to the unregulated market to determine workers\u2019 hours, a return to the 12-16 hour workday, six or even seven days a week, would quickly occur.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under conditions of a 12-16 hour workday, six or even seven days a week, working people are too exhausted to think, let alone fully engage in the politics of their communities, receive an education or enjoy art and beauty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 463,
+      "generation_tps": 16.51803450771604,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2166,
+      "prompt_tps": 514.7105184651263,
+      "request_sha256": "ef71608ae8a48a1e9ea091d6da5cededf4f9f5dcef7e93a41adbbaf704902607",
+      "seconds": 32.248033916112036,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Everyone has the right to leisure time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A truly participatory democracy requires that every citizen have adequate leisure time, in which to fully develop intellectually, culturally, politically and spiritually in the manner of their own choosing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A democracy\u2019s strength is the thoughtful and full engagement of all of its citizens in the decision-making processes in their communities and at all levels of government.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"To reach full potential, people must have adequate leisure time in which to think, learn and play.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All the art that a society produces is only possible when people have enough time free from the demands of earning a living to freely express their creativity and ingenuity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The pursuit of profits by capitalists is in direct opposition to leisure time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The relentless effort to squeeze the most work possible out of employees denies working people the supposed efficiencies of capitalism because they do not benefit from more leisure time to enjoy the fruits of their labor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"If it were left to the unregulated market to determine workers\u2019 hours, a return to the 12-16 hour workday, six or even seven days a week, would quickly occur.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under conditions of a 12-16 hour workday, six or even seven days a week, working people are too exhausted to think, let alone fully engage in the politics of their communities, receive an education or enjoy art and beauty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3cbfe24fde61346bebbd766b699135c17630e80e70623361ebbfa531aaeea73e"
+}

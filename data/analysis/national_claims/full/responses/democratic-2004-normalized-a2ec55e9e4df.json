@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 354,
+      "generation_tps": 16.615862174636245,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1437,
+      "prompt_tps": 459.4473808135344,
+      "request_sha256": "eb54e6f9c5ea8f97e87b495f802f6987bddcc23553cef3a5a1fe8ce38ad21cbf",
+      "seconds": 24.442117624916136,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"With the leadership of John Kerry and John Edwards, we will make college more affordable, so that more young people get higher education.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With the leadership of John Kerry and John Edwards, more of those who graduate will get relief from the crushing burden of debt.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will make student aid faster and simpler to get so students aren't scared off by the complicated process.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will offer generous tax credits to reduce the price of four years of college for all students, including those who pay their own way and can least afford college now.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will strengthen our aid programs for students while eliminating wasteful subsidies for lenders.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"At a time when all good jobs increasingly depend on advanced skills, we will strengthen technical training for those who do not attend college.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We must place a special emphasis on expanding achievement in math and science.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America has always led the world in math and science and must continue to lead in the 21st century.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 370,
+      "generation_tps": 16.56635517863717,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2595,
+      "prompt_tps": 545.0320191150295,
+      "request_sha256": "4451c2f0ed7fe3c4931652176e5ed9d394dcc0a4698027d45ee92bc246c4fb86",
+      "seconds": 27.105982959037647,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"With the leadership of John Kerry and John Edwards, the Democratic Party will make college more affordable, so that more young people get higher education.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With the leadership of John Kerry and John Edwards, more of those who graduate will get relief from the crushing burden of debt.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will make student aid faster and simpler to get so students aren't scared off by the complicated process.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will offer generous tax credits to reduce the price of four years of college for all students, including those who pay their own way and can least afford college now.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will strengthen aid programs for students while eliminating wasteful subsidies for lenders.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"At a time when all good jobs increasingly depend on advanced skills, the Democratic Party will strengthen technical training for those who do not attend college.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party must place a special emphasis on expanding achievement in math and science.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America has always led the world in math and science and must continue to lead in the 21st century.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 370,
+      "generation_tps": 16.471725586945187,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1975,
+      "prompt_tps": 497.26413456629587,
+      "request_sha256": "8bfda0f6584990313bc66cc5c1f4cfcb86f804964e2b3df5e2f28ae6a8bb34bd",
+      "seconds": 26.443769083125517,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"With the leadership of John Kerry and John Edwards, the Democratic Party will make college more affordable, so that more young people get higher education.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With the leadership of John Kerry and John Edwards, more of those who graduate will get relief from the crushing burden of debt.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will make student aid faster and simpler to get so students aren't scared off by the complicated process.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will offer generous tax credits to reduce the price of four years of college for all students, including those who pay their own way and can least afford college now.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will strengthen aid programs for students while eliminating wasteful subsidies for lenders.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"At a time when all good jobs increasingly depend on advanced skills, the Democratic Party will strengthen technical training for those who do not attend college.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party must place a special emphasis on expanding achievement in math and science.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America has always led the world in math and science and must continue to lead in the 21st century.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "eb54e6f9c5ea8f97e87b495f802f6987bddcc23553cef3a5a1fe8ce38ad21cbf"
+}

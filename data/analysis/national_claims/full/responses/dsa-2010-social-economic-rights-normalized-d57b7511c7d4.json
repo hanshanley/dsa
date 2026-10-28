@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 368,
+      "generation_tps": 8.529372861189842,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1448,
+      "prompt_tps": 376.73437576975596,
+      "request_sha256": "83105dd2dfed974d1a53cf9ca5b77bcb7408fcf6066e2a678b013a12f5a16d0f",
+      "seconds": 47.004079666920006,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In some inner city neighborhoods, urban gardening is taking hold.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fresh and healthy foods can be supplied directly to the families who need them in some inner city neighborhoods.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many urban gardening projects use sustainable agricultural practices to continue to produce at greater rates, contrary to agribusiness practices that deplete the soil.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Farmers\u2019 markets should be expanded to inner city neighborhoods.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Repeated cuts in the staff of public agencies such as the Food and Drug Administration have crippled the agency's vital work overseeing the food chain.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Global trade results in widespread importation of foods that may not be safe, and these practices have already spawned food scares and recalls.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Federal funding and a new respect for the governmental role in ensuring food safety are needed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Profit alone cannot be the standard for ensuring the safety of food, as it is a necessity.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Everyone has the right to affordable and safe housing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 367,
+      "generation_tps": 8.502483959398122,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1984,
+      "prompt_tps": 404.00340422397187,
+      "request_sha256": "2a7b769e306130ec0a380d636a44ff2e77b68967b11da284bd6b3d0bc94a889c",
+      "seconds": 48.085238083964214,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In some inner city neighborhoods, urban gardening is taking hold.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fresh and healthy foods can be supplied directly to the families who need them in some inner city neighborhoods.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many urban gardening projects use sustainable agricultural practices to continue to produce at greater rates, contrary to agribusiness practices that deplete the soil.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Farmers\u2019 markets should be expanded to these inner city neighborhoods.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Repeated cuts in the staff of public agencies such as the Food and Drug Administration that oversees the food chain have crippled this vital work.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Global trade results in widespread importation of foods that may not be safe, and these practices have already spawned food scares and recalls.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Federal funding and a new respect for the governmental role in ensuring food safety are needed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Profit alone cannot be the standard for ensuring the safety of food, as it is a necessity.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Everyone has the right to affordable and safe housing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "83105dd2dfed974d1a53cf9ca5b77bcb7408fcf6066e2a678b013a12f5a16d0f"
+}

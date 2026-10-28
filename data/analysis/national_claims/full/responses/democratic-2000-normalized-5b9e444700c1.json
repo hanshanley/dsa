@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 366,
+      "generation_tps": 8.426133102728924,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 1513,
+      "prompt_tps": 377.5388936842055,
+      "request_sha256": "c8ab0d8ec60196790e4c4a9b2a0ad8613fe6fbd56b9ea002a6c871e30644f5c6",
+      "seconds": 47.45588695909828,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"With Bill Clinton and Al Gore in the White House, the nation's welfare system was changed to transform the program into one that encourages and promotes work.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 1993, welfare rolls have fallen to their lowest levels in over 30 years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, millions of parents have the dignity of a paycheck, rather than the stigma of a welfare check.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore is committed to helping new workers and those still on the rolls get help with childcare, transportation and other supports to ensure that anyone who can work, does work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe it is part of their vision to abolish poverty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe legal immigrants also deserve access to the American dream.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"For the past eight years, Americans have counted on Democrats to make the right choices.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The resulting prosperity is clear.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats stand ready to lead again with a record of results and a vision for the future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 366,
+      "generation_tps": 8.395522909686022,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2047,
+      "prompt_tps": 402.97984931888254,
+      "request_sha256": "bf9787674f4199d00af2f4eb4eb043c0036e2849bb9f90d49075e09c5ed61440",
+      "seconds": 48.68573816702701,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"With Bill Clinton and Al Gore in the White House, the nation's welfare system was changed, transforming the program into one that encourages and promotes work.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 1993, welfare rolls have fallen to their lowest levels in over 30 years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, millions of parents have the dignity of a paycheck, rather than the stigma of a welfare check.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore is committed to helping new workers and those still on the rolls get help with childcare, transportation and other supports to ensure that anyone who can work, does work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe it is part of their vision to abolish poverty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe legal immigrants also deserve access to the American dream.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"For the past eight years, Americans have counted on Democrats to make the right choices.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The resulting prosperity is clear.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats stand ready to lead again with a record of results and a vision for the future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c8ab0d8ec60196790e4c4a9b2a0ad8613fe6fbd56b9ea002a6c871e30644f5c6"
+}

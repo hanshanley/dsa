@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 414,
+      "generation_tps": 8.15656023519896,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1556,
+      "prompt_tps": 364.35947687066863,
+      "request_sha256": "ce192e397de2465e1baf4fd0eb6b71935127bcdb20b145cda03634729701e21d",
+      "seconds": 55.04836766701192,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Good policing demands mutual trust and respect between the community and the police.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling is an unjust practice in America.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling is inconsistent with America's community policing success.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling violates the American principle of innocent until proven guilty.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling views Americans as members of groups instead of as individuals.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling is shoddy policing.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a zero-tolerance policy toward racial profiling in all law enforcement agencies in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The purpose of hate crimes is to dehumanize and stigmatize.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Hate crimes are assaults on the idea of America.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Hate crimes should be punished with extra force.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Protections should include hate violence based on gender, disability or sexual orientation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Republican Congress should stop standing in the way of pro-civil rights, anti-crime legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 477,
+      "generation_tps": 8.27432044208893,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2138,
+      "prompt_tps": 359.6598926045921,
+      "request_sha256": "77073413b6f5f4d1d318f0638ae9b732d689928dfed0868fac9ab65c27a91d81",
+      "seconds": 63.611458957893774,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Good policing demands mutual trust and respect between the community and the police.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Acts by a few rogue officers should not undermine trust in policing or the reputation of dedicated police officers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling is an unjust practice in America.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling is inconsistent with America's community policing success.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling violates the American principle of innocent until proven guilty.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling views Americans as members of groups instead of as individuals.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Racial profiling is shoddy policing.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a zero-tolerance policy toward racial profiling in all law enforcement agencies in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The purpose of hate crimes is to dehumanize and stigmatize, not only to wound the victim, but also to distort the American conscience.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Hate crimes are more than assaults on people; they are assaults on the very idea of America.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Hate crimes should be punished with extra force.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Protections should include hate violence based on gender, disability or sexual orientation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Republican Congress should stop standing in the way of pro-civil rights, anti-crime legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ce192e397de2465e1baf4fd0eb6b71935127bcdb20b145cda03634729701e21d"
+}

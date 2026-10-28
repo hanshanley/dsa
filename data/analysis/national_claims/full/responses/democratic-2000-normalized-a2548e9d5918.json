@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 231,
+      "generation_tps": 8.294649307429367,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1440,
+      "prompt_tps": 391.5046393675815,
+      "request_sha256": "60052c781d67e02ea53b1676410a3c6ae4e5fbcf91505b9722928e06838b65dc",
+      "seconds": 31.53982862480916,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Passage of the Civil Rights Act of 1964 was one of the proudest moments of the nation's history and a testament to the nation's aspirations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Inequality and polarization persist in many American workplaces, schools, and communities.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over the last eight years, efforts have been made to end discrimination.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Funding for civil rights enforcement has been increased.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore strongly opposed efforts to roll back affirmative action programs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Clinton-Gore Administration appointed the most diverse administration in American history.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 285,
+      "generation_tps": 8.145800763643418,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1839,
+      "prompt_tps": 383.15969390619927,
+      "request_sha256": "0ea8c44bf54467be54982f7c55d91aed807359c418a107559dce9369e8bf24bc",
+      "seconds": 39.798751999856904,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Passage of the Civil Rights Act of 1964 was one of the proudest moments of the nation's history and a sterling testament to the nation's aspirations as a people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Despite undeniable progress over the last several decades, inequality and polarization nevertheless persist in far too many American workplaces, schools, and communities.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over the last eight years, efforts have been made to end discrimination.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Funding for civil rights enforcement has been increased so that the laws on the books are not just pleasant words, but pledges of justice.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore strongly opposed efforts to roll back affirmative action programs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Clinton-Gore Administration appointed the most diverse administration in American history, demonstrating that pursuing excellence means including all of the best that the nation has to offer.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "60052c781d67e02ea53b1676410a3c6ae4e5fbcf91505b9722928e06838b65dc"
+}

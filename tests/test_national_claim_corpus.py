@@ -140,6 +140,62 @@ class ClaimCorpusTests(unittest.TestCase):
         payload["claims"] *= 2
         self.assertTrue(validate_response(json.dumps(payload), block)[1])
 
+    def test_source_stance_prefixes_preserve_qualifiers_and_original_wording(self):
+        block = build_blocks(sources(), coverage(sources()))[0]
+        cases = [
+            (
+                "democratic",
+                "The Democratic Party will seek funding next year only if Congress agrees.",
+                ["policy_position"],
+                "Commitment to seek funding next year only if Congress agrees.",
+            ),
+            (
+                "republican",
+                "Republicans will not only support clinics but also fund hospitals.",
+                ["policy_position"],
+                "Commitment to not only support clinics but also fund hospitals.",
+            ),
+            (
+                "dsa",
+                "DSA opposes cuts to Medicare.",
+                ["policy_position"],
+                "Opposition to cuts to Medicare.",
+            ),
+            (
+                "democratic",
+                "Democrats support Medicare.",
+                ["policy_position"],
+                "Support for Medicare.",
+            ),
+            (
+                "dsa",
+                "The Democratic Socialists of America is committed to seeking reform.",
+                ["policy_position"],
+                "Commitment to seeking reform.",
+            ),
+        ]
+        unchanged = [
+            ("democratic", "Republicans will cut funding.", ["policy_position"]),
+            ("democratic", "Democrats supported the agreement.", ["policy_position"]),
+            ("democratic", "Democrats will receive more votes.", ["prediction"]),
+            (
+                "democratic",
+                "Democrats will receive more votes.",
+                ["prediction", "policy_position"],
+            ),
+            ("democratic", "Democrats may seek funding.", ["policy_position"]),
+            ("democratic", 'Judith Smith says "Democrats will help".', ["factual_assertion"]),
+        ]
+        cases.extend((group, text, types, text) for group, text, types in unchanged)
+        for group, original, types, expected in cases:
+            with self.subTest(original=original):
+                accepted, errors, _ = validate_response(
+                    response(claim_text=original, claim_types=types), {**block, "group": group}
+                )
+                self.assertEqual(errors, [])
+                self.assertEqual(accepted[0]["claim_text"], expected)
+                self.assertEqual(accepted[0]["model_claim_text"], original)
+
     def test_relative_time_and_quoted_slogans_are_not_narrator_pronouns(self):
         block = build_blocks(sources(), coverage(sources()))[0]
         for text in (

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 346,
+      "generation_tps": 16.570721378835692,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1424,
+      "prompt_tps": 456.6691941334568,
+      "request_sha256": "c058ed2f891d26ba2807c6ad55536a0e8c50aebfba978be7de56d0cf21ea04c4",
+      "seconds": 24.008266791934147,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The current administration initially denied the need for a national missile defense system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration subsequently delayed action despite expressed concern from the Republican Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration is committed to an obsolete treaty signed in 1972 with the Soviet Union.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration's commitment to the treaty constrains its exploration of technological possibilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration supports an inadequate national missile defense design based on a single site.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration's approach to missile defense does not defend America's allies.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's allies must be consulted as U.S. plans for missile defense are developed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration's concept for missile defense is a symbolic political solution designed on a cynical political timetable.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration's missile defense concept will not protect America.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 375,
+      "generation_tps": 16.557626479234006,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1938,
+      "prompt_tps": 484.9299965167358,
+      "request_sha256": "892e1b17cc986e8bff7eac0361247b0776c16dc9d37c6989ca37f52de647498a",
+      "seconds": 26.654198416974396,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current administration at first denied the need for a national missile defense system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration then endlessly delayed, despite constant concern expressed by the Republican Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration is committed to an obsolete treaty signed in 1972 with a Soviet Union that no longer exists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration's commitment to the treaty constrains its exploration of technological possibilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In order to avoid the need for any significant revisions to the ABM Treaty, the current administration supports an inadequate national missile defense design based on a single site, instead of a system based on the most effective means available.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration's approach does not defend America's allies.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's allies must be consulted as U.S. plans are developed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration's concept is a symbolic political solution designed on a cynical political timetable.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current administration's concept will not protect America.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c058ed2f891d26ba2807c6ad55536a0e8c50aebfba978be7de56d0cf21ea04c4"
+}

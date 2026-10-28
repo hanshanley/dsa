@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 135,
+      "generation_tps": 8.435252379079445,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1358,
+      "prompt_tps": 310.8009894693016,
+      "request_sha256": "c5c7699cc5ee90743bcf827b31c08dbdf0c6ae0d3affd73a3c264f8efe960d4c",
+      "seconds": 20.389292374951765,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Most advanced industrial democracies provide goods through progressive taxation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most advanced industrial democracies control health care costs either by providing publicly funded national health insurance or regulated insurance options offered by nonprofit health care providers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most advanced industrial democracies expend a smaller portion of their GDP on the military than does the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 88,
+      "generation_tps": 8.387780633570278,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1661,
+      "prompt_tps": 339.90049674387393,
+      "request_sha256": "6a533473dc620c32a3ec44ac3def41145a2b38a77508c766e0c3e8d3bdc945dd",
+      "seconds": 15.38977333297953,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Most advanced industrial democracies provide goods through progressive taxation, control of health care costs (either by providing publicly funded national health insurance or regulated insurance options offered by nonprofit health care providers), and expend a smaller portion of their GDP on the military than does the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c5c7699cc5ee90743bcf827b31c08dbdf0c6ae0d3affd73a3c264f8efe960d4c"
+}

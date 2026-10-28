@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 396,
+      "generation_tps": 8.227203340804323,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1541,
+      "prompt_tps": 321.5536626970303,
+      "request_sha256": "dde8a70d29d850acef28227b99a9b0bd09efaf70042ff410b0ba0a5f940fc2ed",
+      "seconds": 52.9371981669683,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats have worked for eight years to produce a cleaner environment with cleaner air, cleaner water, and a safer food supply.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A record number of toxic waste dumps have been cleaned up.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"New smog and soot standards were established so that children with asthma and the elderly would be able to live better lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A strong international treaty was established to begin combating global warming in a market-based and realistic way that does not lead to economic cooling.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of acres of natural lands have been protected, including Redwood forests, the Florida Everglades, the Grand Canyon, Yellowstone, and Yosemite.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Development in America's last wild places was stopped.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today's Republicans see national parks as a playground for big businesses to exploit with drilling and mining.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans have tried to sell off national parks, gut air, water, and endangered species protections, let polluters off the hook, and put special interests ahead of the people's interest.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The natural environment is too precious and too important to waste.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 401,
+      "generation_tps": 8.171484283100401,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2105,
+      "prompt_tps": 392.8369433976671,
+      "request_sha256": "93db67763844b1cb99b02f35cb619ac5785b68d1d5899e64ccf04c00d3d58893",
+      "seconds": 54.44233445893042,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats have worked for eight years to produce the cleanest environment in decades with cleaner air, cleaner water, and a safer food supply.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A record number of toxic waste dumps have been cleaned up.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"New smog and soot standards were established so that children with asthma and the elderly would be able to live better lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A strong international treaty was established to begin combating global warming in a way that is market-based and realistic, and does not lead to economic cooling.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of acres of natural lands have been protected, including Redwood forests, the Florida Everglades, the Grand Canyon, Yellowstone, and Yosemite.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Development in America's last wild places was stopped.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today's Republicans see national parks as a playground for big businesses to exploit with drilling and mining.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans have tried to sell off national parks, gut air, water, and endangered species protections, let polluters off the hook, and put special interests ahead of the people's interest.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The natural environment is too precious and too important to waste.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "dde8a70d29d850acef28227b99a9b0bd09efaf70042ff410b0ba0a5f940fc2ed"
+}

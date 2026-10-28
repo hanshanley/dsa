@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 360,
+      "generation_tps": 8.299874376753241,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1439,
+      "prompt_tps": 356.81135741717236,
+      "request_sha256": "8eaa3b7b8d009b3a1e7ee03cbde1f4be6ac23961b827ddc64e8c27d13f6fa3cd",
+      "seconds": 47.423820791067556,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Department of Energy has utterly failed in its mission to safeguard America's energy security.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Federal Energy Regulatory Commission has been no better.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Environmental Protection Agency (EPA) has been shutting off America's energy pipeline with a regulatory blitz that has only just begun.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"36 oil refineries have closed in the last eight years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Not a single new refinery has been built in this country in the last quarter-century.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"EPA's patchwork of regulations has driven fuel prices higher in some areas than in others.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"EPA's patchwork of regulations has made energy supplies no longer fungible.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"What meets EPA's standards in one city may not be legally sold in another.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The result has been localized shortages and sharp price spikes, as suppliers scramble to get acceptable fuels to the markets where they are needed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 360,
+      "generation_tps": 8.0898525768391,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1967,
+      "prompt_tps": 385.1610960302007,
+      "request_sha256": "c09beb3112100bf78711f5776d97649ac2cefceaf05552ab462ff7bee1c8260a",
+      "seconds": 49.616414916934446,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Department of Energy has utterly failed in its mission to safeguard America's energy security.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Federal Energy Regulatory Commission has been no better.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Environmental Protection Agency (EPA) has been shutting off America's energy pipeline with a regulatory blitz that has only just begun.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"36 oil refineries have closed in the last eight years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Not a single new refinery has been built in this country in the last quarter-century.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"EPA's patchwork of regulations has driven fuel prices higher in some areas than in others.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"EPA's patchwork of regulations has made energy supplies no longer fungible.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"What meets EPA's standards in one city may not be legally sold in another.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The result has been localized shortages and sharp price spikes, as suppliers scramble to get acceptable fuels to the markets where they are needed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8eaa3b7b8d009b3a1e7ee03cbde1f4be6ac23961b827ddc64e8c27d13f6fa3cd"
+}

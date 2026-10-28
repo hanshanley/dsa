@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 456,
+      "generation_tps": 16.51099494432945,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1329,
+      "prompt_tps": 467.86561484712024,
+      "request_sha256": "0a4140fa3cf06aa90ed5678d21ad66d88cb3f5b9ba3e6fed4a7f99c1b4e8d4e3",
+      "seconds": 30.46861470816657,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Douglas Fraser, then president of the United Auto Workers union, warned that leaders of corporate America, in combination with the American Right, were waging a one-sided class war.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Douglas Fraser described the war as being against working people, the unemployed, the poor, minorities, the very young, the very old, and many in the middle class of society.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Living standards have eroded.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Union density is at its thinnest in more than 100 years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public services are underfunded.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Government agencies whose job it is to temper or limit the inequalities of a capitalist society have been hamstrung.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party and neoliberal Democrats favor cuts in social spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Neoliberal Democrats advocate deregulation and privatization.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Neoliberal Democrats reject accommodations with unions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The idea that the promise of each human being can develop only in a society embodying the values of liberty, equality, and solidarity has been displaced.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Social problems have uniquely social solutions, but this idea has been displaced.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"An efficient economy is equated with a deregulated one.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 491,
+      "generation_tps": 16.502456464606123,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1953,
+      "prompt_tps": 505.7970753441691,
+      "request_sha256": "08e9e1a59952aa4a8b718ea469314bd03e6f6d3fc89f915016090c77d3035031",
+      "seconds": 33.624688708921894,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Douglas Fraser, then president of the United Auto Workers union, warned that leaders of corporate America, in combination with the American Right, were waging a one-sided class war.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Douglas Fraser described the war as being against working people, the unemployed, the poor, minorities, the very young, the very old, and many in the middle class of society.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Living standards have eroded.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Union density is at its thinnest in more than 100 years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public services are underfunded.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Government agencies whose job it is to temper or limit the inequalities of a capitalist society have been hamstrung.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party favors cuts in social spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Neoliberal Democrats favor cuts in social spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Neoliberal Democrats advocate deregulation and privatization.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Neoliberal Democrats reject accommodations with unions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The idea that the promise of each human being can develop only in a society embodying the values of liberty, equality, and solidarity has been displaced by a vicious economics.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The idea that social problems have uniquely social solutions has been displaced by a vicious economics.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A vicious economics equates an efficient economy with a deregulated one.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0a4140fa3cf06aa90ed5678d21ad66d88cb3f5b9ba3e6fed4a7f99c1b4e8d4e3"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 333,
+      "generation_tps": 8.095462332041718,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1572,
+      "prompt_tps": 350.69671551389854,
+      "request_sha256": "50b9185208c81ddd207d9dfc7038af43d0fca4ecf958fa2efbf8fa6d78ea7e53",
+      "seconds": 45.62589708296582,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The present system of financing political campaigns with private contributions is fundamentally anti-democratic.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The present system of financing political campaigns operates as a system of one-dollar/one-vote instead of one-person/one-vote.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Even with the netroots sparking wider interest in campaign funding, the bulk of contributions still come from less than 1 percent of the population.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A system of legalized bribery exists where big contributors buy privileged access to public officials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Politicians favorable to wealth and privilege benefit, tilting the legislative playing field toward concentrated wealth on every issue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public financing of campaigns should be enacted nationally.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Public financing of campaigns has been adopted by several states under the slogan \u201cClean Money, Clean Elections\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Senator Paul Wellstone of Minnesota proposed public financing of campaigns.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 314,
+      "generation_tps": 8.15169458168398,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2073,
+      "prompt_tps": 391.5111025341557,
+      "request_sha256": "ea4f8c8cc89f4f8ea2206ce81f315ed80b00222d20fe081108d36828c95839a6",
+      "seconds": 43.83076779101975,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The present system of financing political campaigns with private contributions is fundamentally anti-democratic.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The present system of financing political campaigns operates as a system of one-dollar/one-vote instead of one-person/one-vote.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Even with the netroots sparking wider interest in campaign funding, the bulk of contributions still come from less than 1 percent of the population.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A system of legalized bribery exists where big contributors buy privileged access to public officials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Politicians favorable to wealth and privilege benefit, tilting the legislative playing field toward concentrated wealth on every issue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public financing of campaigns should be enacted nationally, as proposed by Minnesota\u2019s late Senator Paul Wellstone and others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Public financing of campaigns has been adopted by several states under the slogan \u201cClean Money, Clean Elections\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "50b9185208c81ddd207d9dfc7038af43d0fca4ecf958fa2efbf8fa6d78ea7e53"
+}

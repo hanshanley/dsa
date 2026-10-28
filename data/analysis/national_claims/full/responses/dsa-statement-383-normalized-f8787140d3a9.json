@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 371,
+      "generation_tps": 16.204580808472237,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1526,
+      "prompt_tps": 486.0317559509759,
+      "request_sha256": "cc17fe30f84e90c8538f14a07cf7defe66d96ad2cc9d05f15f411aa4843f0d52",
+      "seconds": 26.050471666967496,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The inability of many whites to see the failure to indict Officer Wilson as a product of systematic racism highlights the need for white progressives to step up their work against racism in white communities.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Throughout United States history, powers have stoked racism and racial division to divide working people and to convince some whites of modest means that their racial privilege trumps their economic oppression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socio-economic inequality is greater now than at any point since the 1920s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA favors the appointment of a presidential commission to explore alternatives to the militarization of local police forces and the excessive use of armed police violence against unarmed civilians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Better training and demographic representation of police officers will not alone solve the problem of police violence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The failure to break today\u2019s Jim Crow sustains bi-partisan policies of neo-liberal attacks on social services and public education that harm working and poor people of all races.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA hopes that the multi-racial protests against Ferguson marks the beginning of a new coalition politics that recognizes that justice for all is not possible unless systemic forms of racial exclusion and domination are abolished.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 385,
+      "generation_tps": 16.177646356480512,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2065,
+      "prompt_tps": 507.7527627116372,
+      "request_sha256": "ab4319231fba204db2fc03df7f3d1c02f7f774ea494e1a6ca09db113e3f8fb65",
+      "seconds": 27.883292000042275,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The inability of many whites to see the failure to indict Officer Wilson as a product of systematic racism highlights the need for white progressives to step up their work against racism in white communities.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Throughout United States history, powers have stoked racism and racial division to divide working people and to convince too many whites of modest means that their racial privilege trumps their economic oppression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socio-economic inequality is greater now than at any point since the 1920s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA favors the appointment of a presidential commission to explore alternatives to the militarization of local police forces and the excessive use of armed police violence against unarmed civilians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Police officers need to be better trained and must be demographically more representative of the communities they police, but such necessary interventions alone will not solve the problem.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The failure to break today\u2019s Jim Crow sustains bi-partisan policies of neo-liberal attacks on social services and public education that harm working and poor people of all races.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA hopes that the multi-racial protests against Ferguson marks the beginning of a new coalition politics that recognizes that justice for all is not possible unless systemic forms of racial exclusion and domination are abolished.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cc17fe30f84e90c8538f14a07cf7defe66d96ad2cc9d05f15f411aa4843f0d52"
+}

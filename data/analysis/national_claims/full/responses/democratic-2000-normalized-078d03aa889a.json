@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 233,
+      "generation_tps": 16.536015631897566,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1460,
+      "prompt_tps": 478.02899474634495,
+      "request_sha256": "6a289aa97c4ca41d2610c5d448ba90c3942fbe934b7c27fc10e6157db09a79f2",
+      "seconds": 17.15477200015448,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Government can help make the job of being a parent easier.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Family and Medical Leave law has been used by 20 million Americans to care for a newborn baby or a sick loved one.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore led efforts to create the voluntary TV ratings system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore led efforts to put the V-chip in all new TV sets sold in America so that parents can stop graphic images in their children's lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore led efforts to insist on a quick and easy way for all Internet users to be able to make offensive web sites off limits to their children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 236,
+      "generation_tps": 16.532844712181163,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1861,
+      "prompt_tps": 492.2281262666971,
+      "request_sha256": "a23526835a5db75ae8287240ccd029f8cc956aa3484d01484c1fba9b74710ac4",
+      "seconds": 18.06524712499231,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Government can help make the job of being a parent easier.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Family and Medical Leave law has been used by 20 million Americans to care for a newborn baby or a sick loved one.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore led efforts to create the voluntary TV ratings system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore led efforts to put the V-chip in all new TV sets sold in America so that parents can stop the assault of graphic images in their children's lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore led efforts to insist on a quick and easy way for all Internet users to be able to make offensive web sites off limits to their children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6a289aa97c4ca41d2610c5d448ba90c3942fbe934b7c27fc10e6157db09a79f2"
+}

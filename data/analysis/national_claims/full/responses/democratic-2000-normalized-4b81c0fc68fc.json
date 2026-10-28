@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 237,
+      "generation_tps": 8.176135309142651,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1494,
+      "prompt_tps": 374.5454342931113,
+      "request_sha256": "446d9a8973b19bcac718144258d1ac63d18b20e0f9e3dce8469fa21ecfc6d10b",
+      "seconds": 32.99639045796357,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe God has given the people of the nation a chance and a mission to prove people of different racial and ethnic backgrounds and faiths can work and live together and enrich themselves and the nation's purpose.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"America's diversity is expanding, yet there is widespread evidence of persistent discrimination, growing racial segregation of schools and neighborhoods, and barriers to opportunity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support the creation of a commission of distinguished scholars and civic leaders to examine the history of slavery, discrimination, and exclusion suffered by all minorities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The commission will report on the continuing effects of slavery, discrimination, and exclusion.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The commission will make recommendations on behalf of the American people.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 269,
+      "generation_tps": 8.269229862531873,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1899,
+      "prompt_tps": 341.07123610340994,
+      "request_sha256": "b7f86a2f448266bef489ca8baa358968f792b99b21834568fb28e96864d65104",
+      "seconds": 38.117357457987964,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe God has given the people of the nation not only a chance, but a mission to prove to men and women throughout this world that people of different racial and ethnic backgrounds, of all faiths and creeds, can not only work and live together, but can enrich and ennoble both themselves and the nation's purpose.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"America's diversity is expanding, yet there is widespread evidence of persistent discrimination, growing racial segregation of schools and neighborhoods, and dream-crushing barriers to opportunity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support creation of a commission of distinguished scholars and civic leaders to examine the history of slavery, discrimination, and exclusion suffered by all minorities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The commission will report on the continuing effects of those tragic chapters in the nation's history.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The commission will make appropriate recommendations on behalf of the American people.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "446d9a8973b19bcac718144258d1ac63d18b20e0f9e3dce8469fa21ecfc6d10b"
+}

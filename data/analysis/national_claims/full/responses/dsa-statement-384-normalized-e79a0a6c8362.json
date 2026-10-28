@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 282,
+      "generation_tps": 16.630541026088945,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1483,
+      "prompt_tps": 462.467143948907,
+      "request_sha256": "091b6196e76c82c43178d344a750c470b80f498e243eddd22d746f4271cd342a",
+      "seconds": 20.173537166090682,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Backsliding on civil and political rights for minorities is the goal of the Republican court majority and of many Republican governors and legislators even in northern states like Wisconsin and Pennsylvania.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will join with the broad civil rights, labor, immigrant and progressive community to push Congress to revive Section 4 preclearance provisions by expanding them to all states where electoral rights have been threatened.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American political elites have long worked to restrict access to the ballot for working class and poor people of all races through burdensome registration requirements and the refusal to hold elections on weekends or on a national holiday.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Electoral politics is only one form of civic participation and grassroots social activism also plays a central role in political life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"If the electorate is fully reflective of the nation\u2019s economic and racial diversity, the people can rebuff elite efforts at undemocratic rule.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 282,
+      "generation_tps": 16.603434354428042,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1933,
+      "prompt_tps": 489.6009350440368,
+      "request_sha256": "97d4bbf11e5bfd876c9a737e034be868269992a827171520175fce1d170b2258",
+      "seconds": 20.942140457918867,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Backsliding on civil and political rights for minorities is the goal of the Republican court majority and of many Republican governors and legislators even in northern states like Wisconsin and Pennsylvania.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will join with the broad civil rights, labor, immigrant and progressive community to push Congress to revive Section 4 preclearance provisions by expanding them to all states where electoral rights have been threatened.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American political elites have long worked to restrict access to the ballot for working class and poor people of all races through burdensome registration requirements and the refusal to hold elections on weekends or on a national holiday.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Electoral politics is only one form of civic participation and grassroots social activism also plays a central role in political life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Only if the electorate is fully reflective of the nation\u2019s economic and racial diversity can the people rebuff elite efforts at undemocratic rule.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "091b6196e76c82c43178d344a750c470b80f498e243eddd22d746f4271cd342a"
+}

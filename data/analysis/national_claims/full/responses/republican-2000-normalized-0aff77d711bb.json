@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 243,
+      "generation_tps": 16.61997707921864,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1401,
+      "prompt_tps": 458.7721259178808,
+      "request_sha256": "490ff82f458b66b36ac4c49c00e13d76b26ffdd14f016ed919d702f2b07cb8cc",
+      "seconds": 17.68453299999237,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Republican party is committed to democracy in Burma.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party is committed to Nobel Laureate Aung San Suu Kyi and other democratic leaders whose election in 1990 was brutally suppressed and who have been arrested and imprisoned for their belief in freedom and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party shares with Aung San Suu Kyi the view that the basic principles of human freedom and dignity are universal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party is committed to working with allies in Europe and Asia to maintain firm and resolute opposition to the military junta in Rangoon.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican administration will work closely with the countries of the Pacific island nations on a wide variety of issues of common concern.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 224,
+      "generation_tps": 16.614172556857916,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1812,
+      "prompt_tps": 481.4611815084926,
+      "request_sha256": "77ddd0c819e30d20c00f6b8e359c9aac064b49a8928ac8c1404a536bb12fb14b",
+      "seconds": 17.255064375000075,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican party is committed to democracy in Burma, and to Nobel Laureate Aung San Suu Kyi and other democratic leaders whose election in 1990 was brutally suppressed and who have been arrested and imprisoned for their belief in freedom and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party shares with Aung San Suu Kyi the view that the basic principles of human freedom and dignity are universal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican party is committed to working with allies in Europe and Asia to maintain a firm and resolute opposition to the military junta in Rangoon.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican administration will work closely with the countries of the Pacific island nations on a wide variety of issues of common concern.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "490ff82f458b66b36ac4c49c00e13d76b26ffdd14f016ed919d702f2b07cb8cc"
+}

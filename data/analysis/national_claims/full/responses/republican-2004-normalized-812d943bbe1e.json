@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 285,
+      "generation_tps": 16.64858477807321,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1302,
+      "prompt_tps": 447.3787112334297,
+      "request_sha256": "ee90f8ce1168e26288f6733d14ff0793e42c4744d29f3bb85aa68f85a1572185",
+      "seconds": 20.038357249926776,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Ronald Reagan believed people were basically good and had the right to be free.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ronald Reagan believed bigotry and prejudice were the worst things a person could be guilty of.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ronald Reagan believed in the Golden Rule and in the power of prayer.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ronald Reagan believed America was not just a place in the world, but the hope of the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party was founded by Americans who gathered to protest the expansion of slavery 150 years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Abraham Lincoln of Illinois carried the Republican banner in the 1860 Presidential election and was elected the Party's first President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"Abraham Lincoln became the nation's greatest leader and one of the Party's greatest heroes.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 292,
+      "generation_tps": 16.56280893607713,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1755,
+      "prompt_tps": 474.0495731107514,
+      "request_sha256": "ab87908cced1124d736d7038c38b773ffa38ec17acc71feb0a50ebaeb3fa8959",
+      "seconds": 21.34113912517205,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Ronald Reagan believed people were basically good and had the right to be free.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ronald Reagan believed bigotry and prejudice were the worst things a person could be guilty of.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ronald Reagan believed in the Golden Rule and in the power of prayer.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ronald Reagan believed America was not just a place in the world, but the hope of the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"150 years ago, Americans who gathered to protest the expansion of slavery gave birth to the Republican Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"In 1860, Abraham Lincoln of Illinois carried the Republican banner in the Presidential election and was elected the Party's first President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"Abraham Lincoln became the nation's greatest leader and one of the Party's greatest heroes.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ee90f8ce1168e26288f6733d14ff0793e42c4744d29f3bb85aa68f85a1572185"
+}

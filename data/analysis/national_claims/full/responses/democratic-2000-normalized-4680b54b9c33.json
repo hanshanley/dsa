@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 418,
+      "generation_tps": 8.138318715678782,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1438,
+      "prompt_tps": 391.47319834585204,
+      "request_sha256": "b7818eb1f2c6ddd690b23cbbd895bfc788335c07cc0d63ad16a39e850f0b123a",
+      "seconds": 55.04605395812541,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe gun crime should be fought on all fronts with stronger laws and stronger enforcement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats fought to pass the Brady Law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats fought to pass the Assault Weapons Ban.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal, state, and local gun crime prosecution increased by 22 percent since 1992.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Gun crime is down by 35 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for mandatory child safety locks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for requiring a photo license I.D. to buy a new handgun in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for requiring a full background check to buy a new handgun in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for requiring a gun safety test to buy a new handgun in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for more federal gun prosecutors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for more ATF agents and inspectors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for giving states and communities another 10,000 prosecutors to fight gun crime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 424,
+      "generation_tps": 8.185961379062043,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2024,
+      "prompt_tps": 319.0416224701241,
+      "request_sha256": "8218545c7acbbd970c440cdafc02b712e23075d112029196bca2766cca7fd9f4",
+      "seconds": 58.160219833953306,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe that gun crime should be fought on all fronts with stronger laws and stronger enforcement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats fought to pass the Brady Law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats fought to pass the Assault Weapons Ban.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal, state, and local gun crime prosecution increased by 22 percent since 1992.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Gun crime is down by 35 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for mandatory child safety locks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for requiring a photo license I.D. to buy a new handgun in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for requiring a full background check to buy a new handgun in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for requiring a gun safety test to buy a new handgun in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for more federal gun prosecutors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for more ATF agents and inspectors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for giving states and communities another 10,000 prosecutors to fight gun crime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b7818eb1f2c6ddd690b23cbbd895bfc788335c07cc0d63ad16a39e850f0b123a"
+}

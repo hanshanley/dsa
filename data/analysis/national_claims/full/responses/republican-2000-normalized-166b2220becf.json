@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 357,
+      "generation_tps": 16.575294100345484,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1445,
+      "prompt_tps": 462.69389695529117,
+      "request_sha256": "12180727d3910337f74f998e0c68e26ff94c00a0e3c00d239cb1a6ef17b0d5f9",
+      "seconds": 24.67123429221101,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The promotion of freedom and democracy is a critical national interest.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Reagan established the National Endowment for Democracy in 1983 as an instrument of U.S. public diplomacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The National Endowment for Democracy continues today to advance and protect American ideals and interests abroad.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States must commit itself to doing more to assist refugees and displaced persons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican administration will improve America's longstanding practice of aiding the innocent victims of political repression, conflict, famine, and natural disasters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States will lead other countries in responding to the needs of innocent victims of political repression, conflict, famine, and natural disasters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The spread of AIDS is a terrible humanitarian disaster.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans will continue to emphasize action over rhetoric regarding AIDS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Republican Congress recently approved legislation to assist victims of AIDS in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 370,
+      "generation_tps": 16.579454380382476,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1970,
+      "prompt_tps": 493.8295434656065,
+      "request_sha256": "97f389b08ca71e7c1f4c65b43cffe42414a64ccd825fabe79931a97f4f0f7f58",
+      "seconds": 26.315692957956344,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The promotion of freedom and democracy is a critical national interest.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Reagan established the National Endowment for Democracy in 1983 as an instrument of U.S. public diplomacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The National Endowment for Democracy, and other American public diplomacy institutions, continues today to advance and protect American ideals and interests abroad.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States must commit itself to doing more to assist refugees and displaced persons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Republican administration will improve America's longstanding practice of aiding the innocent victims of political repression, conflict, famine, and natural disasters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States will lead other countries in responding to the needs of innocent victims of political repression, conflict, famine, and natural disasters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The spread of AIDS is a terrible humanitarian disaster.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans will continue to emphasize action over rhetoric regarding AIDS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Republican Congress recently approved legislation to assist victims of AIDS in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "12180727d3910337f74f998e0c68e26ff94c00a0e3c00d239cb1a6ef17b0d5f9"
+}

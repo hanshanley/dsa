@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 420,
+      "generation_tps": 16.602494921353276,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1512,
+      "prompt_tps": 467.68104607463846,
+      "request_sha256": "4e7eba5363433d1d088c1f973390eb09901875820546099f0b7254bb16e3bb97",
+      "seconds": 28.539491457864642,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Saddam Hussein twice invaded his neighbors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Saddam Hussein harbored terrorist leaders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Saddam Hussein used chemical weapons on innocent men, women, and children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iraq, which once had the worst government in the Middle East, is now becoming an example of reform to the region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iraqi security forces are fighting beside coalition troops to defeat terrorists and foreign fighters who threaten their nation and the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because America and its coalition helped to end the violent regime of Saddam Hussein, and because they are helping to raise a peaceful democracy in its place, 25 million Iraqis are free and the American people are safer.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three years ago, Libya was spending millions to acquire chemical and nuclear weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Thousands of Libya's chemical munitions have been destroyed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Libya's nuclear equipment that could ultimately have threatened the lives of hundreds of thousands is stored away in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Because the Libyan government saw the seriousness of the civilized world, and correctly judged its own interests, the American people are safer.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 401,
+      "generation_tps": 16.56099635911194,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2100,
+      "prompt_tps": 507.29815330959985,
+      "request_sha256": "e913994b5da200b3b65c42b39f2480289c81b7ec6f06fa0dbce6f399ae34a91e",
+      "seconds": 28.36294999998063,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Today, Saddam Hussein, who twice invaded his neighbors, harbored terrorist leaders, and used chemical weapons on innocent men, women, and children, finally stands before the bar of justice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, Iraq, which once had the worst government in the Middle East, is now becoming an example of reform to the region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iraqi security forces are fighting beside coalition troops to defeat the terrorists and foreign fighters who threaten their nation and the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, because America and its coalition helped to end the violent regime of Saddam Hussein, and because they are helping to raise a peaceful democracy in its place, 25 million Iraqis are free and the American people are safer.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three years ago, Libya, a longtime supporter of terror, was spending millions to acquire chemical and nuclear weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, thousands of Libya's chemical munitions have been destroyed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today, Libya's nuclear equipment that could ultimately have threatened the lives of hundreds of thousands is stored away in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today, because the Libyan government saw the seriousness of the civilized world, and correctly judged its own interests, the American people are safer.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4e7eba5363433d1d088c1f973390eb09901875820546099f0b7254bb16e3bb97"
+}

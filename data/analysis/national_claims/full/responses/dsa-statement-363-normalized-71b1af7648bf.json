@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 501,
+      "generation_tps": 16.56863934000986,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1300,
+      "prompt_tps": 447.2640813356115,
+      "request_sha256": "85c2f5d73df5594298c2aefc072cffc759ba9986e859339a9a97f15d9b6503b5",
+      "seconds": 33.153934333939105,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America supports HR 900 to cancel $85 billion in sequestration cuts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sequestration cuts will harm millions of low-income Americans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sequestration cuts will weaken an already anemic, jobless recovery.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the sequestration cuts are fully carried out, GDP will drop by 0.6%.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"If the sequestration cuts are fully carried out, over 700,000 jobs will be lost.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Layoffs of 700,000 public employees since 2008 have contributed to unconscionable levels of unemployment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The country does not have a deficit crisis; it has a jobs crisis.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sequestering will increase the deficit by slowing the economic recovery.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sequestering will increase the deficit by keeping more people out of work and not paying taxes.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"A 21st-century full employment program is needed to make public investments that help the long-term unemployed and returning veterans find decent jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Decent jobs contribute to the economy and to society.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The sequester adds to the jobs crisis by reducing extended unemployment benefits.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The sequester adds to the jobs crisis by slashing job training programs for returning veterans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 500,
+      "generation_tps": 16.54388101479496,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1969,
+      "prompt_tps": 492.7694919946167,
+      "request_sha256": "66472d727f9da453676154c5392ad225f81818d0d1cfd1ee85cd4a686afb8c68",
+      "seconds": 34.22798362514004,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America supports HR 900 to cancel $85 billion in sequestration cuts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"These cuts will harm millions of low-income Americans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"These cuts will weaken an already anemic, jobless recovery.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the cuts are fully carried out, GDP will drop by 0.6%.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"If the cuts are fully carried out, over 700,000 jobs will be lost.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Layoffs of 700,000 public employees since 2008 have contributed to unconscionable levels of unemployment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The country does not have a deficit crisis; it has a jobs crisis.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sequestering will increase the deficit by slowing the economic recovery.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sequestering will increase the deficit by keeping more people out of work and not paying taxes.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"A 21st-century full employment program is needed to make public investments that help the long-term unemployed and returning veterans find decent jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Decent jobs contribute to the economy and to society.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The sequester adds to the jobs crisis by reducing extended unemployment benefits.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The sequester adds to the jobs crisis by slashing job training programs for returning veterans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 525,
+      "generation_tps": 16.489387300677908,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2638,
+      "prompt_tps": 544.7223998447216,
+      "request_sha256": "93f2ff701e4d84bf2b9c300ba32bbe19e946682e711c2542f0220d3bc547b7e6",
+      "seconds": 36.69118804205209,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America supports the bill advanced by John Conyers (D-MI), HR 900, to simply cancel the $85 billion in \u201csequestration\u201d cuts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sequestration cuts will harm millions of low-income Americans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sequestration cuts will weaken an already anemic, jobless recovery.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the sequestration cuts are fully carried out, GDP will drop by 0.6%.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"If the sequestration cuts are fully carried out, over 700,000 jobs will be lost.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Layoffs of 700,000 public employees since 2008 have contributed to unconscionable levels of unemployment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The country does not have a deficit crisis; it has a jobs crisis.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sequestering will increase the deficit by slowing the economic recovery.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sequestering will increase the deficit by keeping more people out of work and not paying taxes.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"A 21st-century full employment program is needed to make public investments that help the long-term unemployed and returning veterans find decent jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Decent jobs contribute to the economy and to society.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The sequester adds to the jobs crisis by reducing extended unemployment benefits.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The sequester adds to the jobs crisis by slashing job training programs for returning veterans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "85c2f5d73df5594298c2aefc072cffc759ba9986e859339a9a97f15d9b6503b5"
+}

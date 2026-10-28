@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 401,
+      "generation_tps": 16.597981137031816,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1491,
+      "prompt_tps": 462.8455230897637,
+      "request_sha256": "eeb6d7e3070a94a42d745b6f4b6998463108456d06174119537171e02fcbc4b8",
+      "seconds": 27.39090379094705,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Three years ago, Pakistan recognized the Taliban regime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three years ago, al Qaeda was active and recruiting in Pakistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three years ago, Pakistan served as a transit point for al Qaeda terrorists leaving Afghanistan on missions of murder.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three years ago, the United States could not count on the support of Pakistan's military and civilian leaders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the governments of the United States and Pakistan are working closely in the fight against terror.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Pakistan has helped capture Khalid Sheik Mohammed, the operational planner behind the September 11 attacks, and other terrorists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Pakistani forces are rounding up terrorists along their nation's western border today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Because the United States is working with Pakistani leaders today, Pakistan is an ally in the War on Terror.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Three years ago, terrorists were well-established in Saudi Arabia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Inside Saudi Arabia three years ago, fundraisers and other facilitators gave al Qaeda financial and logistical help with little scrutiny or opposition.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 413,
+      "generation_tps": 16.57929205269186,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2060,
+      "prompt_tps": 505.7984668954227,
+      "request_sha256": "7e7695717bbc8a2bc8c60601831d0b52823e1532b8bc0f9d5d6d24aadf02cbf4",
+      "seconds": 28.993218833114952,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Three years ago, Pakistan recognized the Taliban regime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three years ago, al Qaeda was active and recruiting in Pakistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three years ago, Pakistan served as a transit point for al Qaeda terrorists leaving Afghanistan on missions of murder.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three years ago, the United States could not count on the support of Pakistan's military and civilian leaders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the governments of the United States and Pakistan are working closely in the fight against terror.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Pakistan has helped capture Khalid Sheik Mohammed, the operational planner behind the September 11 attacks, and other terrorists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Pakistani forces are rounding up terrorists along their nation's western border today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Because the United States is working with Pakistani leaders today, Pakistan is an ally in the War on Terror, and the American people are safer.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Three years ago, terrorists were well-established in Saudi Arabia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Inside Saudi Arabia three years ago, fundraisers and other facilitators gave al Qaeda financial and logistical help with little scrutiny or opposition.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "eeb6d7e3070a94a42d745b6f4b6998463108456d06174119537171e02fcbc4b8"
+}

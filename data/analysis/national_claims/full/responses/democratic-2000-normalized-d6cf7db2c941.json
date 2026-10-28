@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 424,
+      "generation_tps": 8.166319355934052,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1521,
+      "prompt_tps": 385.61688320846616,
+      "request_sha256": "4c135c59a75f42142a5320cf32d8e2a986d4807f7dc160a3da328f32284e6cfb",
+      "seconds": 55.883727208012715,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic leadership has brought peace and security to Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic leadership has brought peace and security to millions of freedom-loving people around the globe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Victory was achieved and ethnic cleansing was ended in Kosovo.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hundreds of thousands of refugees were allowed to return to their homes in safety in Kosovo.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Historic breakthroughs were achieved in the Middle East peace process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Efforts were led to produce the Good Friday Accord in Northern Ireland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Good Friday Accord in Northern Ireland offers the best hope yet of ending decades of bloodshed.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Work is being done to build a self-sustaining peace in Bosnia through the implementation of the Dayton Peace accords.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The military dictatorship was ended in Haiti.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democracy was given a chance in Haiti.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans are safer because Russian nuclear arsenals were reduced.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"NATO was strengthened and expanded for a new century.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 323,
+      "generation_tps": 8.23886866017905,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2113,
+      "prompt_tps": 396.3592783666968,
+      "request_sha256": "2061138aed0b3fca6e55d8d25a6dbd48e2b02e948d4f625534c188490f7150de",
+      "seconds": 44.547406792175025,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic leadership has brought peace and security to Americans and to millions of freedom-loving people around the globe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Victory was achieved and ethnic cleansing was ended in Kosovo, allowing hundreds of thousands of refugees to return to their homes in safety.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Historic breakthroughs were achieved in the Middle East peace process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Efforts were led to produce the Good Friday Accord in Northern Ireland, offering the best hope yet of ending decades of bloodshed.\",\n\"claim_types\":[\"factual_assertion\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Work is being done to build a self-sustaining peace in Bosnia through the implementation of the Dayton Peace accords.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The military dictatorship was ended in Haiti, giving democracy a chance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans are safer because Russian nuclear arsenals were reduced.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"NATO was strengthened and expanded for a new century.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4c135c59a75f42142a5320cf32d8e2a986d4807f7dc160a3da328f32284e6cfb"
+}

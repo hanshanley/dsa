@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 386,
+      "generation_tps": 16.594722020677274,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1499,
+      "prompt_tps": 462.49565344116365,
+      "request_sha256": "fd9d0bdbb0d6c00bfae56bd4ccc6451e4e20ac53662540feeeccec7b1dfe1d57",
+      "seconds": 26.51157066691667,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA recognizes strong support for a single-payer plan in several states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Senate Bill 840 had not been vetoed by Gov. Schwarzenegger, California would have a single-payer system today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA insists on an opt-out provision from any national plan that would allow individual states to set up their own single-payer plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA insists that individual states can use Medicare, Medicaid and similar federal funds allocated within the state in that state plan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA asks its locals and activists to urge Senators and Representatives to co-sponsor H.R.676 and S.703.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA asks its locals and activists to support the right of single-payer proponents to have their position heard in the congressional debate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA asks its locals and activists to insist on the inclusion of a strong public component in any health-care reform legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2,5]},{\"claim_text\":\"DSA asks its locals and activists to insist on the inclusion of a state opt-out so that individual states can enact their own single-payer plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2,6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 393,
+      "generation_tps": 16.56241546261488,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2053,
+      "prompt_tps": 509.5617180199026,
+      "request_sha256": "a7d98aec73c585fad74ed6c7cb8516ad27da59c8318526ab8eba8dd383b28c18",
+      "seconds": 27.766945166978985,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA recognizes that there is strong support for a single-payer plan in several states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Senate Bill 840 had not been vetoed by Gov. Schwarzenegger, California would have a single-payer system today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA insists on an opt-out provision from any national plan that would allow individual states to set up their own single-payer plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA insists that individual states can use Medicare, Medicaid and similar federal funds allocated within the state in that state plan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA asks its locals and activists to urge Senators and Representatives to co-sponsor H.R.676 and S.703.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2,3]},{\"claim_text\":\"DSA asks its locals and activists to support the right of single-payer proponents to have their position heard in the congressional debate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2,4]},{\"claim_text\":\"DSA asks its locals and activists to insist on the inclusion of a strong public component in any health-care reform legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2,5]},{\"claim_text\":\"DSA asks its locals and activists to insist on the inclusion of a state opt-out so that individual states can enact their own single-payer plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2,6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fd9d0bdbb0d6c00bfae56bd4ccc6451e4e20ac53662540feeeccec7b1dfe1d57"
+}

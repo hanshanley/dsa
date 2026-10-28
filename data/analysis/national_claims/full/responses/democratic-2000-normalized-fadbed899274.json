@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 428,
+      "generation_tps": 8.353156222029522,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1536,
+      "prompt_tps": 392.8637971175095,
+      "request_sha256": "863236da1420a662fb82a1c6ba04b31e51d19fcff9c4ffacd0e2ca958fb30c16",
+      "seconds": 55.15915087517351,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"With Al Gore as President, the U.S. will not revert to past policies.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will fight to increase the number of community police on its streets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will fight to provide police with high-tech tools and training.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will toughen laws against serious and violent crime.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will reform the justice system to address the release of half a million prisoners annually.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will make schools safe havens for students and teachers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In death penalty cases, DNA testing should be used when appropriate.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Defendants in death row cases should have effective assistance of counsel.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thorough post-conviction reviews should be encouraged in all death row cases.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rights of victims and families will be prioritized.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"More crime prevention efforts will be pursued.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 479,
+      "generation_tps": 8.225353807515997,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2132,
+      "prompt_tps": 373.5744660209532,
+      "request_sha256": "9e3056f127ef4513f482116d7911132e58602d05ff2ad8e24f55c8f14d5d9c6e",
+      "seconds": 63.95513829193078,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"With Al Gore as President, the U.S. will not revert to past policies.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will fight to increase the number of community police on its streets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will fight to give police the high-tech tools and the training they need to keep streets safe and families secure.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will toughen the laws against serious and violent crime to restore a sense of order.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will reform a justice system that releases half a million prisoners back onto streets each year, many of them addicted to drugs and unrehabilitated.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Al Gore as President, the U.S. will make schools safe havens for students to learn and teachers to teach.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In death penalty cases, DNA testing should be used in all appropriate circumstances.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Defendants should have effective assistance of counsel in all death row cases.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thorough post-conviction reviews should be encouraged in all death row cases.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rights of victims and families will be put first again.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"More crime prevention efforts will be pursued to stop the next generation of crime before it's too late.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "863236da1420a662fb82a1c6ba04b31e51d19fcff9c4ffacd0e2ca958fb30c16"
+}

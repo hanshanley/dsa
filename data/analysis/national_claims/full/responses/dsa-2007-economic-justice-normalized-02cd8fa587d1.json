@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 339,
+      "generation_tps": 8.150102750330204,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1440,
+      "prompt_tps": 376.6895359541882,
+      "request_sha256": "ef964cbb8a4f5f4c43e7e16abe370249324f3f6e36a8643052b2dbecd76ae0c5",
+      "seconds": 45.429199333069846,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Left politics in the U.S. is currently less than the sum of its parts because different constituencies focus on their own immediate needs, which are sometimes conflicting.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unions narrowly focus on organizing the unorganized and changing the unfavorable legislative and labor board climate for organizing.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Organizing the unorganized and changing the unfavorable legislative and labor board climate for organizing is a valuable goal.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Organizing the unorganized and changing the unfavorable legislative and labor board climate for organizing is not sufficient on its own.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Organizing the unorganized and changing the unfavorable legislative and labor board climate for organizing cannot succeed except in the context of a broad, progressive political climate.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social service providers defend social provision.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Social service providers do not always see the relevance of union organizing.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Public sector advocates by themselves do not have the political weight to tackle the main cause of public sector vulnerability, which is systematic reductions in revenue.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 358,
+      "generation_tps": 8.16255875596083,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1947,
+      "prompt_tps": 392.2603362402373,
+      "request_sha256": "b8e498c895df4f9fd87ccc31e1ebb9375c95402e88c2bcbdbdf6b01827c325bb",
+      "seconds": 48.83369491691701,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Left politics in the U.S. continues to be less than the sum of its parts because different constituencies of the Left focus on their own most immediate, particular\u2014and sometimes conflicting\u2014 needs.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unions narrowly focus on organizing the unorganized and changing the unfavorable legislative and labor board climate for organizing.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Organizing the unorganized and changing the unfavorable legislative and labor board climate for organizing is a valuable goal in itself, one that is clearly necessary.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Organizing the unorganized and changing the unfavorable legislative and labor board climate for organizing is not sufficient on its own.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Organizing the unorganized and changing the unfavorable legislative and labor board climate for organizing cannot succeed except in the context of a broad, progressive political climate.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social service providers defend social provision, as they should.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Social service providers do not always see the relevance of union organizing.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Public sector advocates by themselves do not have the political weight to tackle the main cause of public sector vulnerability, which is systematic reductions in revenue.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ef964cbb8a4f5f4c43e7e16abe370249324f3f6e36a8643052b2dbecd76ae0c5"
+}

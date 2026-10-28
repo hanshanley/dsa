@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 295,
+      "generation_tps": 16.573840635041662,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1503,
+      "prompt_tps": 488.5676497596643,
+      "request_sha256": "d83c0e2a9da401aea9169d4a998a1c43ce4300fe28fdc1d3eb993e026ad64dd0",
+      "seconds": 20.88681016699411,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Everyone has the right to a living wage job.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A living-wage job provides sufficient income to support both the worker and any dependents that rely on the worker\u2019s income for their economic well-being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The right to a living wage job for all means the elimination of a low-wage sector of the labor force.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The right to a living wage job for all means the end of unequal access to good jobs by race, ethnicity and gender.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Low wage labor is a subsidy to inefficient capital, discouraging both skill development and the creation of career ladders that allow workers to move up the wage scale over time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The low wage labor sector, coupled with the unemployed, puts downward pressure on all wages as capital can replace workers who seek higher wages with those willing to accept less.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 304,
+      "generation_tps": 16.496774684292053,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1966,
+      "prompt_tps": 509.86359788170114,
+      "request_sha256": "16cf532c5002a250cf3b9701afaeeebc6f903829c1d49044e5ae717c79472ff3",
+      "seconds": 22.295859250007197,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Everyone has the right to a living wage job.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A living-wage job is one that provides sufficient income to support both the worker and any dependents that rely on the worker\u2019s income for their economic well-being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The right to a living wage job for all means the elimination of a low-wage sector of the labor force.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The right to a living wage job for all means the end of unequal access to good jobs by race, ethnicity and gender.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Low wage labor is a subsidy to inefficient capital, discouraging both skill development and the creation of career ladders that allow workers to move up the wage scale over time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The low wage labor sector, coupled with the unemployed, puts downward pressure on all wages as capital can replace workers who seek \u201ctoo much\u201d at the bargaining table with those willing to accept less.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d83c0e2a9da401aea9169d4a998a1c43ce4300fe28fdc1d3eb993e026ad64dd0"
+}

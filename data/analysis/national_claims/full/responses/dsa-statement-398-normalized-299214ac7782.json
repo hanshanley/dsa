@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 500,
+      "generation_tps": 8.181730614945186,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1272,
+      "prompt_tps": 335.6843516460007,
+      "request_sha256": "d50594ac877a9a808fa45eab879b2a323bd86f07eb65d678b5dcfd8002c90eff",
+      "seconds": 64.92237341706641,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America endorses the United Nations\u2019 decision to grant Palestine Non-Member Observer State status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America regards the United Nations\u2019 recognition of a Palestinian state as a vital step forward towards a durable, just, comprehensive, negotiated two-state peace.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America regrets that Israel actively opposed the Palestinian application.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America regrets that the United States actively opposed the Palestinian application.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Peace in the Middle East and justice for both the Palestinian and Israeli people can only be achieved through mutual recognition by each side of the right of each people to viable and secure states of their own.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Peace in the Middle East and justice for both the Palestinian and Israeli people can only be achieved if the rights of minorities are also guaranteed.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to retaliatory measures against the PLO.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Opposition to retaliatory measures against the Palestinian Authority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Opposition to Congressional efforts to cut funding to the PLO.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Opposition to Congressional efforts to cut funding to the Palestinian Authority, which could lead to the collapse of the PA.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Congressional efforts to cut funding to the Palestinian Authority could jeopardize the important progress it has made in recent years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Recommendation to President Obama to swiftly adopt serious and vigorous efforts that promote Israeli-Palestinian peace.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 488,
+      "generation_tps": 8.135890172407656,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1940,
+      "prompt_tps": 333.2792160066883,
+      "request_sha256": "d8957312f8dc02cfed4ab6bb8fd4dc59e338f211c8369185652f7ff93a0644c4",
+      "seconds": 65.81634058384225,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America endorses the decision of the United Nations to grant Palestine Non-Member Observer State status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America regards the United Nations\u2019 recognition of a Palestinian state as a vital step forward towards a durable, just, comprehensive, negotiated two-state peace.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America regrets that Israel actively opposed the Palestinian application.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America regrets that the United States actively opposed the Palestinian application.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Peace in the Middle East and justice for both the Palestinian and Israeli people can only be achieved through mutual recognition by each side of the right of each people to viable and secure states of their own, in which the rights of minorities are also guaranteed.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democratic Socialists of America opposes retaliatory measures against the PLO.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democratic Socialists of America opposes retaliatory measures against the Palestinian Authority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democratic Socialists of America opposes Congressional efforts to cut funding to the PLO, which could lead to the collapse of the Palestinian Authority and jeopardize the important progress it has made in recent years.\",\n\"claim_types\":[\"policy_position\",\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democratic Socialists of America opposes Congressional efforts to cut funding to the Palestinian Authority, which could lead to the collapse of the Palestinian Authority and jeopardize the important progress it has made in recent years.\",\n\"claim_types\":[\"policy_position\",\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democratic Socialists of America recommends that President Obama swiftly adopt serious and vigorous efforts that promote Israeli-Palestinian peace.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d50594ac877a9a808fa45eab879b2a323bd86f07eb65d678b5dcfd8002c90eff"
+}

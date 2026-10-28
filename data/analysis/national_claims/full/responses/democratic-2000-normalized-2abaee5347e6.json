@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 390,
+      "generation_tps": 8.250708416497897,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1460,
+      "prompt_tps": 401.33399110504297,
+      "request_sha256": "826fd80599966fa276f10c765cd29d578e46002d3e53af5f481d69b80752c5a1",
+      "seconds": 50.91880020801909,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe that the United States must invest in biomedical research to make significant progress in battling diseases such as AIDS, Alzheimers, Diabetes, Parkinsons, and spinal cord injuries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that the development of new drugs should be sped up and they should be made available to patients sooner while maintaining essential health and safety standards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support allowing stem cell research to make important new discoveries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support expanding prevention and widening access to clinical trials.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support devoting more resources to eliminating disease disparities among racial and ethnic groups.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A top priority for Democrats will be continued investment in research, prevention, care, and treatment for HIV and AIDS.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are deeply committed to the search for a cure for HIV and AIDS.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats continue to support the Ryan White CARE Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats continue to support the Housing Opportunities for People with AIDS program.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats continue to support incentives to return Americans with HIV/AIDS to work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 395,
+      "generation_tps": 8.09606861974085,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2018,
+      "prompt_tps": 344.08874965776704,
+      "request_sha256": "e10c316bddd49f1c31320101abf54e7cd0b7d35ad4259895a128ff666cb6b0f0",
+      "seconds": 54.67048787488602,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe that the United States must invest in biomedical research and continue to fight and conquer diseases such as AIDS, Alzheimers, Diabetes, Parkinsons, and spinal cord injuries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that new drugs should be sped up in development and made available to patients sooner while maintaining essential health and safety standards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support allowing stem cell research to make important new discoveries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support expanding prevention and widening access to clinical trials.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support devoting more resources to eliminating disease disparities among racial and ethnic groups.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A top priority for Democrats will be continued investment in research, prevention, care, and treatment for HIV and AIDS.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are deeply committed to the search for a cure for HIV and AIDS.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats continue to support important programs such as the Ryan White CARE Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats continue to support the Housing Opportunities for People with AIDS program.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats continue to support incentives to return Americans with HIV/AIDS to work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "826fd80599966fa276f10c765cd29d578e46002d3e53af5f481d69b80752c5a1"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 192,
+      "generation_tps": 16.649254923527455,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1400,
+      "prompt_tps": 460.1931046503497,
+      "request_sha256": "2e7b542f6a5cf8066e6237c40f661834514a7f98fb167481eec8663dd2411d34",
+      "seconds": 14.583886082982644,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Bush responded to the events of September 11, 2001, with steadfast resolve, vision, optimism, and unshakable confidence in the will and faith of the American people.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush stood with workers at Ground Zero on September 14, 2001, and assured the nation that America would have the last word despite the terrorists striking first.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Protecting the country is the President's most solemn duty.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"George W. Bush fulfilled the duty of protecting the country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 216,
+      "generation_tps": 16.655697916586128,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1760,
+      "prompt_tps": 486.98413269194054,
+      "request_sha256": "abff9338c4c2016835462264ce00c49b2ca22401baa9103d7c370c47fda82174",
+      "seconds": 16.591806249925867,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush responded to the challenge of September 11, 2001, not only with steadfast resolve, but also with vision, optimism, and unshakable confidence in the will and faith of the American people.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"On September 14, 2001, President Bush stood with the brave workers at Ground Zero and resolutely assured the nation amidst shock, anger, and grief that while the terrorists had struck first, America would have the last word.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's most solemn duty is to protect the country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"George W. Bush has kept the charge of protecting the country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2e7b542f6a5cf8066e6237c40f661834514a7f98fb167481eec8663dd2411d34"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 437,
+      "generation_tps": 16.58575158788,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1507,
+      "prompt_tps": 472.50962814211834,
+      "request_sha256": "be22be889f28510920b3e76c62a2d0546e704dbefc1cc5f78fe7ac2e66bb39f5",
+      "seconds": 29.54811583296396,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Tax reform will create jobs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's tax law provides big breaks for companies that send American jobs overseas.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Current deferral policies allow American companies to avoid paying American taxes on the income earned by their foreign subsidiaries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry and John Edwards will end deferral that encourages companies to ship jobs overseas.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry and John Edwards will close other loopholes to make the tax code work for the American worker.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The savings from ending deferral and closing loopholes will be used to offer tax cuts for companies that produce goods and create jobs here at home.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under John Kerry and John Edwards, 99 percent of American businesses will pay lower taxes than today.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Manufacturing has lost 2.5 million jobs under President Bush in its worst jobs crisis since the Depression.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democrats will launch a concerted effort to revitalize American manufacturing.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"New investment corporations will be established to give small and medium-sized businesses access to capital.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Growth of high-technology clusters will be supported to invest in new industries around research institutions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 443,
+      "generation_tps": 16.564970544481273,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2112,
+      "prompt_tps": 509.6767339379507,
+      "request_sha256": "4a16d1c3ebac46394cf8a7f938c3cc7597b443cd3cf026910260d97853b9c0e6",
+      "seconds": 30.89679054217413,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for tax reform to create jobs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's tax law provides big breaks for companies that send American jobs overseas.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Current \\\"deferral\\\" policies allow American companies to avoid paying American taxes on the income earned by their foreign subsidiaries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry and John Edwards will end deferral that encourages companies to ship jobs overseas.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"John Kerry and John Edwards will close other loopholes to make the tax code work for the American worker.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The savings from ending deferral and closing loopholes will be used to offer tax cuts for companies that produce goods and create jobs here at home.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under John Kerry and John Edwards, 99 percent of American businesses will pay lower taxes than today.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Manufacturing has lost 2.5 million jobs under President Bush in its worst jobs crisis since the Depression.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democrats will launch a concerted effort to revitalize American manufacturing.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"New investment corporations will be established to give small and medium-sized businesses access to capital.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the growth of high-technology \\\"clusters\\\" that invest in new industries around research institutions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "be22be889f28510920b3e76c62a2d0546e704dbefc1cc5f78fe7ac2e66bb39f5"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 229,
+      "generation_tps": 16.62004053886362,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1368,
+      "prompt_tps": 454.23544673184756,
+      "request_sha256": "f964c384c98a1733eff7046ae2e6f10961e62022782359821d70f8973f1f2c8d",
+      "seconds": 16.7999613750726,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Building U.S. military forces requires foresight and steadfast commitment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Acting now is necessary to provide the next generation of Americans with what they will need to protect the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A new spirit of innovation is required.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans believe military leaders will welcome and meet the challenges.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Moments of national opportunity are either seized or lost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America has an opportunity to demonstrate that a new approach to U.S. defense can shape the future with new concepts, new strategies, and new resolve.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 231,
+      "generation_tps": 16.618673053929918,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1765,
+      "prompt_tps": 483.06268863652656,
+      "request_sha256": "cfa529913dcb3a86d515ad934009125750f47f1bad21b18cdd9da27e3af65a6c",
+      "seconds": 17.562924042111263,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"Building U.S. military forces requires foresight and steadfast commitment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Acting now is necessary to give the next generation of Americans what they will need to protect the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A new spirit of innovation is required.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans believe that military leaders will welcome and meet these challenges.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Moments of national opportunity are either seized or lost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's opportunity beckons to demonstrate that a new approach to U.S. defense can shape the future with new concepts, new strategies, and new resolve.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f964c384c98a1733eff7046ae2e6f10961e62022782359821d70f8973f1f2c8d"
+}

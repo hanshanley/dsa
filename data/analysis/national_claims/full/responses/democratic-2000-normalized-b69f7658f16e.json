@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 321,
+      "generation_tps": 16.54650199149013,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1493,
+      "prompt_tps": 481.5797686650245,
+      "request_sha256": "b99996c3a672d041874f74f19539ab4c5b8ddfcb80536d1f8f8c628c653fdb74",
+      "seconds": 22.51019804086536,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for tougher penalties against all sex offenders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for raising penalties for crimes against the elderly.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for giving federal prosecutors new tools to fight fraud and abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for aggressively shutting down fraudulent telemarketers who target the elderly.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for overcoming constitutional objections and reenacting a strong new law to combat violence against women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for increasing penalties for violent crimes committed in front of a child.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Violence in the home is an often silent terror in the lives of millions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Stopping domestic violence can break the generational cycle of violence.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Children who grow up in abusive families are more likely to become abusers themselves.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 379,
+      "generation_tps": 16.50189717683709,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1982,
+      "prompt_tps": 511.89691128729476,
+      "request_sha256": "9166134879fc5c1e6b317ccab236f79e0438d3cb69061231ff1d2913f3fda4b9",
+      "seconds": 26.848763915942982,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for tougher penalties against all sex offenders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for raising the penalties for those who commit crimes against the elderly.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for giving federal prosecutors new tools to fight fraud and abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for aggressively shutting down fraudulent telemarketers who target the elderly.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for overcoming constitutional objections and reenacting a strong new law to combat violence against women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for increasing penalties for violent crimes committed in front of a child, resulting in more time in jail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Violence in the home is an often silent terror in the lives of millions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Stopping domestic violence can break the generational cycle of violence.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Children who grow up in abusive families are more likely to become abusers themselves.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"All battered women should have the legal protection and support they need to be safe in their own communities and to keep their attackers away.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b99996c3a672d041874f74f19539ab4c5b8ddfcb80536d1f8f8c628c653fdb74"
+}

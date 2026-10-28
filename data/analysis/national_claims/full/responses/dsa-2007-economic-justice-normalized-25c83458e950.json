@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 285,
+      "generation_tps": 8.147426462153698,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1469,
+      "prompt_tps": 384.4646237417027,
+      "request_sha256": "61f9516f4d74eb7fcbbd1e9a58db59ff62bea8be8ec09c8a23689fd17465c67a",
+      "seconds": 38.81545670912601,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Restoring progressive taxation is necessary to restore social equity and equality of opportunity in the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Bush administration\u2019s lowering of marginal tax rates on high-income earners, cutting the capital gains tax, and eliminating the wealth tax have contributed to an annual loss of more than $200 billion in federal revenues.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The annual loss of federal revenues is nearly 7 percent of the federal budget.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Making the Bush tax cuts permanent after 2010 will worsen the gutting of the treasury.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Neoliberals and conservatives claim the United States cannot afford to expand public provision.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Restoring the marginal income tax rates and corporate taxation that prevailed before the Reagan era would net the treasury at least 20 percent more in annual revenue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 288,
+      "generation_tps": 8.112465741699275,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1922,
+      "prompt_tps": 388.35504993372473,
+      "request_sha256": "0289844d636f19e3609d483cfb1c268dfcbe2b91bc21eb7b7084c5978a29c222",
+      "seconds": 40.46697625005618,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Restoring progressive taxation is necessary to restore social equity and equality of opportunity in the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Bush administration\u2019s lowering of marginal tax rates on high-income earners, cutting the capital gains tax, and eliminating the wealth tax have contributed to an annual loss of more than $200 billion in federal revenues.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The annual loss of federal revenues is nearly 7 percent of the federal budget.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"If the Bush tax cuts are made permanent after 2010, the gutting of the treasury will worsen.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Neoliberals and conservatives claim the United States cannot afford to expand public provision.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Restoring the marginal income tax rates and corporate taxation that prevailed before the Reagan era would net the treasury at least 20 percent more in annual revenue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "61f9516f4d74eb7fcbbd1e9a58db59ff62bea8be8ec09c8a23689fd17465c67a"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 360,
+      "generation_tps": 16.331559480228215,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1503,
+      "prompt_tps": 462.8308655329885,
+      "request_sha256": "a44bcc23d33d594858bebd50efcbff5ec5735105d598dcbe037caf436c4b1ad9",
+      "seconds": 25.30090987496078,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"State attorneys general across America have recovered billions of dollars from the tobacco industry for damages caused by tobacco advertising directed at children and for death and disease created by cigarettes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are trying to stop the United States Justice Department from pursuing litigation against tobacco companies to hold them accountable for damages to American taxpayers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is wrong to insulate tobacco companies from liability for their wrongdoing.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mental illness affects nearly one in five Americans each year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Nearly two-thirds of Americans affected by mental disorders do not receive help.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe in supporting families caring for loved ones with mental illness by strengthening the community mental health system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe in providing access to full mental health coverage for every child in America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe in giving teachers and schools more mental health resources.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe in ensuring that mental illness and physical illness are treated equally by the nation's health plans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 411,
+      "generation_tps": 16.41267606726474,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2031,
+      "prompt_tps": 496.65232453361347,
+      "request_sha256": "c7f1865c9d9b178ed8e4e92521800b9e84752e877cdca7c7df8251767fca2d03",
+      "seconds": 29.141441208077595,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"State attorneys general across America have recovered billions of dollars from the tobacco industry for damages caused by tobacco advertising directed at children and for death and disease created by cigarettes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are trying to stop the United States Justice Department from pursuing litigation against tobacco companies to hold them accountable for damages to American taxpayers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is wrong to insulate tobacco companies from liability for their wrongdoing.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mental illness affects nearly one in five Americans each year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Nearly two-thirds of Americans affected by mental disorders do not receive help.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe in supporting families caring for loved ones with mental illness by strengthening the community mental health system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe in providing access to full mental health coverage for every child in America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe in giving teachers and schools more mental health resources.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe in ensuring that mental illness and physical illness are treated equally by the nation's health plans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"When mental illness goes untreated, undiagnosed, and unmentioned, people are denied the opportunity to live full lives and the nation is denied their full contribution.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a44bcc23d33d594858bebd50efcbff5ec5735105d598dcbe037caf436c4b1ad9"
+}

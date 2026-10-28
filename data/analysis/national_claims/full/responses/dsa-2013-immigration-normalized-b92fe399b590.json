@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 59,
+      "generation_tps": 17.021284574788535,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1297,
+      "prompt_tps": 448.3399668216538,
+      "request_sha256": "fcaabd8b5908b3a511b41840b0aca42bf5f1739d7019e83b28456815ae676fa3",
+      "seconds": 6.368785042082891,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA views the struggle for just immigration reform as an integral part of the ongoing struggle for workers\u2019 rights and for democracy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 59,
+      "generation_tps": 16.99796227094014,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1524,
+      "prompt_tps": 518.9204208043972,
+      "request_sha256": "81c87ba8c968400a3b6883bd39488225c9d3000121d9c35f4afb22412a287d03",
+      "seconds": 6.416835125070065,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA views the struggle for just immigration reform as an integral part of the ongoing struggle for workers\u2019 rights and for democracy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fcaabd8b5908b3a511b41840b0aca42bf5f1739d7019e83b28456815ae676fa3"
+}

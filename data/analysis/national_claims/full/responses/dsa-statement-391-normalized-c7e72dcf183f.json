@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 212,
+      "generation_tps": 16.59739775747146,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1435,
+      "prompt_tps": 462.8570210501636,
+      "request_sha256": "d31363afe4d028726766b949eb4cbe9f96c6fc427d8f241a1f51488a298f72db",
+      "seconds": 15.883671957999468,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA recognizes that right-wing populism represents an alternative, noxious form of popular response to capitalist crisis.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The politics of Le Pen in France, the Freedom Party in the Netherlands, and the Golden Dawn in Greece are replicated in conservative efforts in the United States to blame the plight of downwardly mobile native workers on immigrants, rather than on the corporate elites who outsourced workers\u2019 jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only a popular left speaking to the needs of working people of all races can forestall the rise of right-wing populism.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Occupy movement may organize mass protest at both the Republican and Democratic convention.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 212,
+      "generation_tps": 16.53058236258594,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1815,
+      "prompt_tps": 480.26357082465074,
+      "request_sha256": "efedf6d83970b24dc98cb12c4fc9c6e48437c2de6fba0ed5398de8bcdb362ae7",
+      "seconds": 16.612909459043294,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA recognizes that right-wing populism represents an alternative, noxious form of popular response to capitalist crisis.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The politics of Le Pen in France, the Freedom Party in the Netherlands, and the Golden Dawn in Greece are replicated in conservative efforts in the United States to blame the plight of downwardly mobile native workers on immigrants, rather than on the corporate elites who outsourced workers\u2019 jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only a popular left speaking to the needs of working people of all races can forestall the rise of right-wing populism.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Occupy movement may organize mass protest at both the Republican and Democratic convention.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d31363afe4d028726766b949eb4cbe9f96c6fc427d8f241a1f51488a298f72db"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 396,
+      "generation_tps": 16.585922913329092,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1511,
+      "prompt_tps": 469.5050974838752,
+      "request_sha256": "cfaf2df654b3d27b51416a65ce84470c21ee708c68d0ab11c65b639035e0714e",
+      "seconds": 27.10413487488404,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Rejection of Chief Justice Roberts\u2019 claim that present realities no longer merit Section 4 \u201cpreclearance\u201d procedures for changes in electoral laws in the affected states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since Congress\u2019s reauthorization of Section 4 in 2006, the Justice Department struck down thirty-six electoral law changes in the affected jurisdictions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Two restrictive voter ID laws in South Carolina and Texas were struck down by the Justice Department.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A state legislative redistricting plan in Texas that severely limited representation for Latino voters was struck down by the Justice Department.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Previously proscribed laws will likely take effect.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Chief Justice Roberts\u2019 majority decision claims that Section 4 \u201csharply departs\u201d from the principles of states\u2019 rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican majority on the court would return to the tradition of states\u2019 rights trumping federal guarantees of civil rights.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court overturned Congress\u2019 commitment to enforce the Fifteenth Amendment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Justice Ginsburg said continuance of Section 4 would facilitate completion of impressive gains and guard against backsliding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 16.510067056718523,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2075,
+      "prompt_tps": 506.22036573659693,
+      "request_sha256": "6ef982a0821b39209a9d9a9559172281fb5cf52d8b50b21343f3b249158e058d",
+      "seconds": 28.821089791134,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Rejection of Chief Justice Roberts\u2019 claim that present realities no longer merit Section 4 \u201cpreclearance\u201d procedures for changes in electoral laws in the affected states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since Congress\u2019s reauthorization of Section 4 in 2006, the Justice Department struck down thirty-six electoral law changes in the affected jurisdictions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Justice Department struck down two restrictive voter ID laws in South Carolina and Texas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Justice Department struck down a state legislative redistricting plan in Texas that severely limited representation for Latino voters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Previously proscribed laws will now likely take effect.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Chief Justice Roberts\u2019 majority decision claims that Section 4 \u201csharply departs\u201d from the principles of states\u2019 rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican majority on the court would return to the tradition of states\u2019 rights trumping federal guarantees of civil rights.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court overturned Congress\u2019 commitment to enforce the Fifteenth Amendment, a core provision of Reconstruction\u2019s second bill of rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Justice Ginsburg said continuance of Section 4 would facilitate completion of impressive gains thus far made and guard against backsliding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cfaf2df654b3d27b51416a65ce84470c21ee708c68d0ab11c65b639035e0714e"
+}

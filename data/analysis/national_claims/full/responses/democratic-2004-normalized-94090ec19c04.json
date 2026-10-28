@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 360,
+      "generation_tps": 16.517540897197506,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1499,
+      "prompt_tps": 479.2739079359431,
+      "request_sha256": "a579e1fc355ebd39b164a14c651d2790e06a5e3188d0551834016fd3e6795e09",
+      "seconds": 24.93406374985352,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In President George Bush's government, polluters write environmental laws and oil company profits matter more than science and facts.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration bowed to energy industry lobbying and rewrote rules to allow 20,000 facilities to spew more smog, soot, and mercury into the air.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public water systems in many cities are polluted.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Bush Administration took environmental cops off the beat and pushed to allow more arsenic in water.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President promised more than five billion dollars for national parks but delivered a fraction of that, resulting in trails being closed, historic structures collapsing, and parks losing luster.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Overwhelming scientific evidence shows that global climate change is a scientific fact, but this administration rewrote government reports to hide that fact.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in a stronger, safer, healthier America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A strong America depends on healthy families, and healthy families depend on fresh air, pure water, and clean neighborhoods.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 391,
+      "generation_tps": 16.250365375893413,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2027,
+      "prompt_tps": 513.168887459522,
+      "request_sha256": "1ba89a4ff0c663ccb325d3fa4efdc4394b79529c941a4c9d032410d0b245f5e5",
+      "seconds": 28.02172654098831,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In President George Bush's government, polluters write environmental laws and oil company profits matter more than hard science and cold facts.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration bowed to energy industry lobbying and rewrote rules to allow 20,000 facilities to spew more smog, soot, and mercury into the air.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"133 million Americans already live with unhealthy air.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public water systems in many cities are polluted.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Bush Administration took environmental cops off the beat and pushed to allow more arsenic in water.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President promised more than five billion dollars for national parks but delivered a fraction of that, leaving trails closed, historic structures collapsing, and parks losing luster.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Overwhelming scientific evidence shows that global climate change is a scientific fact, but this administration rewrote government reports to hide that fact.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"John Kerry, John Edwards and the Democratic Party believe in a stronger, safer, healthier America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A strong America depends on healthy families, and healthy families depend on fresh air, pure water, and clean neighborhoods.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a579e1fc355ebd39b164a14c651d2790e06a5e3188d0551834016fd3e6795e09"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 477,
+      "generation_tps": 16.548416607979348,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1531,
+      "prompt_tps": 469.7002677222802,
+      "request_sha256": "ea5ad0a13f370438d485c908b0690ca4aabbfa85fdc4c917725da1fa70a22f5f",
+      "seconds": 32.09408037504181,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Presidents Reagan and Bush's leadership resulted in the end of the Cold War, the unification of Germany, and the return of Poland, the Czech Republic, and Hungary to the Euro-Atlantic Community.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The security of the United States is inseparable from the security of Europe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A strong NATO is the foundation of peace in its second half-century.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sustained American commitment to the security of Europe has paid off.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"European allies face no conventional external threats.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American military deployments are a fraction of their Cold War size.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alliances are sustained by joint planning, political and economic as well as military, that defines and reinforces common interests and mutual trust.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican president will give consistent direction on the alliance's purpose.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The next Republican president will direct Europe to invest more in defense capabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The next Republican president will direct joint action with the United States in military conflict when necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States needs its European allies to help with key regional security problems as they arise, since America also has global responsibilities.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The goal for NATO is a strong political and security fellowship of independent nations in which consultations are mutually respected and defense burdens mutually shared.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 485,
+      "generation_tps": 16.511786112898818,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2176,
+      "prompt_tps": 517.2252119620131,
+      "request_sha256": "378890f7da5bfe06e8cd8da2d34aa89406fbb19ad6370a14f271b670175024c1",
+      "seconds": 33.58984400006011,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Presidents Reagan and Bush's leadership resulted in the end of the Cold War, the unification of Germany, and the return of Poland, the Czech Republic, and Hungary to the Euro-Atlantic Community.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The security of the United States is inseparable from the security of Europe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A strong NATO is the foundation of peace in its second half-century.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sustained American commitment to the security of Europe has paid off.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"European allies face no conventional external threats.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American military deployments are a fraction of their Cold War size.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alliances are sustained by the kind of joint planning, political and economic as well as military, that defines and reinforces common interests and mutual trust.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican president will give consistent direction on the alliance's purpose.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The next Republican president will direct Europe to invest more in defense capabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The next Republican president will direct joint action with the United States in military conflict when necessary.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States needs its European allies to help with key regional security problems as they arise, since America also has global responsibilities.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The goal for NATO is a strong political and security fellowship of independent nations in which consultations are mutually respected and defense burdens mutually shared.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ea5ad0a13f370438d485c908b0690ca4aabbfa85fdc4c917725da1fa70a22f5f"
+}

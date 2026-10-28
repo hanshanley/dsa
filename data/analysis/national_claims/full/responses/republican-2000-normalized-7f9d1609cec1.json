@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 286,
+      "generation_tps": 8.297072413165251,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1523,
+      "prompt_tps": 398.080123799823,
+      "request_sha256": "68fe4ac3995393b07b6403d4179bff25abf8d92090a9b85a4f83ee0402b0547f",
+      "seconds": 38.30978970811702,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican party stands in the tradition of Teddy Roosevelt, who stressed the importance of environmental conservation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Air and water are cleaner than they were over the past three decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Some endangered species have made comebacks over the past three decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Wetlands are being preserved.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recycling is commonplace in homes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation should treat natural resources as assets to be increased in value and passed on to the next generation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Current laws have fostered costly litigation and discouraged personal innovation in environmental conservation.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A cooperative approach between the people and the government is needed to focus on real environmental problems.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 352,
+      "generation_tps": 8.21523742337585,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1977,
+      "prompt_tps": 395.8334805729337,
+      "request_sha256": "0cacc8820e74471218a4f5ba1347c296b4512b8570637d695eeeed9a24dc8b3c",
+      "seconds": 47.85589083307423,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican party stands in the proud tradition of Teddy Roosevelt, the first president to stress the importance of environmental conservation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the past three decades, air and water are cleaner.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the past three decades, some endangered species have made comebacks.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Wetlands are being preserved.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recycling is commonplace in homes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation should treat natural resources as assets which must be turned over to the next generation increased, and not impaired, in value.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Current laws have been implemented in a way that has fostered costly litigation and discouraged personal innovation in environmental conservation.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A cooperative approach between the people and their government is needed to jointly focus on real environmental problems.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The lessons learned over the last three decades, along with the steady advance of environmental technology, gives the opportunity to explore better ways to achieve even higher environmental goals.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "68fe4ac3995393b07b6403d4179bff25abf8d92090a9b85a4f83ee0402b0547f"
+}

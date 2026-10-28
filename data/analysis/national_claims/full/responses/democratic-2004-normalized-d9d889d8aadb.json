@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 189,
+      "generation_tps": 16.65874482688508,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1311,
+      "prompt_tps": 447.9349698185959,
+      "request_sha256": "208453738ec7911874cb979331db5afc7b9a96f3074226cf340b620e313164aa",
+      "seconds": 14.2810303340666,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under John Kerry and John Edwards, the group will meet the challenges in Iraq.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under John Kerry and John Edwards, the group will win the peace in Iraq.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under John Kerry and John Edwards, the group will help to create new hope and opportunity for the entire Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The challenges in Iraq are great.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The opportunity in Iraq is significant.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 168,
+      "generation_tps": 16.651945264955394,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1668,
+      "prompt_tps": 476.43017273992643,
+      "request_sha256": "df9056452092e10b226d32843fd86d11d992bce74c2b55f8394aa967db232b70",
+      "seconds": 13.599007959011942,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under John Kerry and John Edwards, the group will meet the challenges in Iraq.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under John Kerry and John Edwards, the group will win the peace in Iraq.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under John Kerry and John Edwards, the group will help to create new hope and opportunity for the entire Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The challenges in Iraq are great, but the opportunity is also significant.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "208453738ec7911874cb979331db5afc7b9a96f3074226cf340b620e313164aa"
+}

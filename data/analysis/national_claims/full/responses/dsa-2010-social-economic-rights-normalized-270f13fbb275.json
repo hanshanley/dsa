@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 428,
+      "generation_tps": 16.417623633803796,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 1587,
+      "prompt_tps": 474.3121929446904,
+      "request_sha256": "fd8a0b3bb4171f0bd68dc7f68acd2d0a244f916f89f8cc573148dad50127b889",
+      "seconds": 29.427591583924368,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current federal budget deficit is nearly $1.4 trillion, which is 10 percent of GDP.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most economists, both conservative and liberal, believe that half of the current federal budget deficit was caused by counter-cyclical spending to combat the financial crisis of 2008 and the ensuing Great Recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal budget deficit will shrink as the economy recovers, job growth resumes, and personal incomes rise.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Approximately $700 billion of the current federal budget deficit resulted from the Reagan and Bush tax cuts, the failure to raise taxes to finance two wars, and a profit-driven health system that drives up costs for Medicare and Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reversing the Bush tax cuts would yield $125 billion in additional federal revenue per year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Restoring corporate and income tax rates to those of the Eisenhower era would yield another $300 billion in revenue per year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating weapons programs and reducing the number of foreign military bases (more than 200) would yield another $200-300 billion in yearly revenues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A modest transaction tax of 0.25 percent on all financial trading could raise over $600 billion in annual revenue and tamp down destabilizing financial speculation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 433,
+      "generation_tps": 16.260542102908666,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2183,
+      "prompt_tps": 474.1190602215995,
+      "request_sha256": "d26a5444054e9d769541d22cf91c8bbc7037a3457886c9fa6ca876c9d8b5afdd",
+      "seconds": 31.244437750196084,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current federal budget deficit is nearly $1.4 trillion, which is 10 percent of GDP.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most economists, both conservative and liberal, believe that half of the current federal budget deficit was caused by the counter-cyclical spending required to combat the financial crisis of 2008 and the ensuing Great Recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The deficit will shrink as the economy recovers, job growth resumes, and personal incomes rise.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The remainder of the current deficit, some $700 billion, was largely the result of the Reagan and Bush tax cuts, the failure to raise taxes to finance two wars, and a profit-driven health system that drives up costs for Medicare and Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reversing the Bush tax cuts would yield $125 billion in additional federal revenue per year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Restoring corporate and income tax rates to those of the Eisenhower era would yield another $300 billion in revenue per year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating weapons programs we no longer need and reducing our more than 200 foreign military bases would yield another $200-300 billion in yearly revenues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A modest transaction tax of 0.25 percent on all financial trading could raise over $600 billion in annual revenue and tamp down destabilizing financial speculation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 422,
+      "generation_tps": 16.245329394059567,
+      "peak_memory": 33.817333514,
+      "prompt_tokens": 2795,
+      "prompt_tps": 546.0446359540715,
+      "request_sha256": "fed247f82c06d2d0bf5e9eb190dfb0b6102a0bce452d2f15f4e9ce47b9c1eca3",
+      "seconds": 31.1090741250664,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current federal budget deficit is nearly $1.4 trillion, which is 10 percent of GDP.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Most economists, both conservative and liberal, believe that half of the current federal budget deficit was caused by counter-cyclical spending required to combat the financial crisis of 2008 and the ensuing Great Recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The deficit will shrink as the economy recovers, job growth resumes, and personal incomes rise.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Approximately $700 billion of the current federal budget deficit resulted from the Reagan and Bush tax cuts, the failure to raise taxes to finance two wars, and a profit-driven health system that drives up costs for Medicare and Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reversing the Bush tax cuts would yield $125 billion in additional federal revenue per year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Restoring corporate and income tax rates to those of the Eisenhower era would yield another $300 billion in revenue per year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating weapons programs and reducing more than 200 foreign military bases would yield another $200-300 billion in yearly revenues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A modest transaction tax of 0.25 percent on all financial trading could raise over $600 billion in annual revenue and tamp down destabilizing financial speculation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fd8a0b3bb4171f0bd68dc7f68acd2d0a244f916f89f8cc573148dad50127b889"
+}
