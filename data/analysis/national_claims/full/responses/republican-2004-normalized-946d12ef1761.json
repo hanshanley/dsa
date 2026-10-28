@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 332,
+      "generation_tps": 16.465927251067786,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1560,
+      "prompt_tps": 451.74992283532794,
+      "request_sha256": "fb6809be4c5d1bcc1aadbff742ff4a50fdc461bc06fc27c38229468d5df12950",
+      "seconds": 23.626743166008964,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Iranian government represses its people, pursues weapons of mass destruction, and supports terror.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iranian citizens are risking intimidation and death as they speak out for liberty, human rights, and democracy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Iranian people have a right to choose their own government and determine their own destiny.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States supports the Iranian people's aspirations to live in freedom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States broadcasts uncensored information to the Iranian people nearly 24 hours a day.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Policy toward Iran is based on Iranian actions, not words.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is working to convince America's friends and allies, most importantly in Europe, to join in a firm, common approach to ending Iran's nuclear weapons programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The development of a nuclear weapon in Iran is intolerable to the international community.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 377,
+      "generation_tps": 16.587053393467713,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2060,
+      "prompt_tps": 488.16976268675387,
+      "request_sha256": "7c2fd5bc9af33c586a83e019c980b508dd8e899af877abd14437fd19717691b8",
+      "seconds": 26.959219750016928,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Iranian government represses its people, pursues weapons of mass destruction, and supports terror.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iranian citizens are risking intimidation and death as they speak out for liberty, human rights, and democracy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Iranian people have a right to choose their own government and determine their own destiny.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States supports the Iranian people's aspirations to live in freedom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States broadcasts uncensored information to the Iranian people nearly 24 hours a day.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States forms policy toward Iran based on Iranian actions, not words.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is working to convince America's friends and allies, most importantly in Europe, to join in a firm, common approach to ending Iran's nuclear weapons programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The development of a nuclear weapon in Iran is intolerable to the international community.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under President Bush's leadership, the United States and its European allies are speaking plainly to the Iranians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fb6809be4c5d1bcc1aadbff742ff4a50fdc461bc06fc27c38229468d5df12950"
+}

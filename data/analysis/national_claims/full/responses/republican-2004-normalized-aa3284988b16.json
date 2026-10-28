@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 475,
+      "generation_tps": 16.626525688499466,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1561,
+      "prompt_tps": 458.3278010509247,
+      "request_sha256": "501f5163969a79ad76d0b98106141c03cfc6a0ea51f05b66689c7c3be03c1ce9",
+      "seconds": 31.984434416051954,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"George W. Bush ran for President on a promise of lower taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Everyone who pays income taxes should see their income taxes reduced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President offered a plan to lower all tax rates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans in Congress strongly supported the President's plan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In 2001, President Bush signed historic tax relief into law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"43 million families with children are receiving an average tax cut of over $2,000 this year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new 10 percent income tax bracket was created.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Individual income tax rates for all Americans who pay income taxes were lowered.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The child tax credit was doubled to $1,000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The marriage penalty was reduced for 33 million married couples.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Education IRAs were expanded, pre-paid tuition plans were made tax-free, and a deduction for higher education expenses was created.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"The death tax was phased-out.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[8]},{\"claim_text\":\"IRAs and 401(k)s were simplified and expanded.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[9]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 482,
+      "generation_tps": 16.55763504066347,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2204,
+      "prompt_tps": 499.4483605300254,
+      "request_sha256": "ebe8f6f4aa1b5a427954a24c7cef160dc8e566314ab55f382615c6c580380733",
+      "seconds": 33.53378937486559,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"George W. Bush ran for President on a promise of lower taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Everyone who pays income taxes should see their income taxes reduced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President offered a plan to lower all tax rates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans in Congress strongly supported the President's plan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In 2001, President Bush signed historic tax relief into law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"This year, 43 million families with children are receiving an average tax cut of over $2,000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new 10 percent income tax bracket was created.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Individual income tax rates for all Americans who pay income taxes were lowered.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The child tax credit was doubled to $1,000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The marriage penalty was reduced for 33 million married couples.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Education IRAs were expanded, pre-paid tuition plans were made tax-free, and a deduction for higher education expenses was created.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"The death tax was phased-out.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[8]},{\"claim_text\":\"IRAs and 401(k)s were simplified and expanded.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[9]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "501f5163969a79ad76d0b98106141c03cfc6a0ea51f05b66689c7c3be03c1ce9"
+}

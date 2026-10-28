@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 434,
+      "generation_tps": 16.666613437203406,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1521,
+      "prompt_tps": 472.0763124191824,
+      "request_sha256": "363946eb44c22da2258816661a0a6879fdd091db3773d1207bcc51bf6c6b706c",
+      "seconds": 29.27286250004545,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican bill\u2019s tax credits do not match the ACA\u2019s insurance subsidies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many of the ten million individuals on the ACA exchanges will lose coverage.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican tax credits would start at $2,000 a year for a young person.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican tax credits would rise to $4,000 for those in their 50s and 60s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican tax credits will not rise with the cost of insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ACA subsidies rise with the cost of insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone, regardless of income up to $75,000 for individuals and $150,000 for families, receives the same amount of Republican tax credit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ACA\u2019s subsidies covered almost the entire premium costs for families earning the median family income of $52,000 or below.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ACA limited health care insurance costs to 8.5% of family total income.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ending the ACA\u2019s subsidies in favor of tax credits will cost 12 million people health insurance coverage, according to the CBO.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 16.620291410250037,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2123,
+      "prompt_tps": 497.787540938042,
+      "request_sha256": "fe81f9ff93d8b3da390df237117354f051720a1e20043a32bf3efccef9417cbe",
+      "seconds": 30.389042540919036,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican bill\u2019s tax credits do not match the ACA\u2019s insurance subsidies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many of the ten million individuals on the ACA exchanges will lose coverage.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican tax credits would start at $2,000 a year for a young person.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican tax credits would rise to $4,000 for those in their 50s and 60s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican tax credits will not rise with the cost of insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ACA subsidies rise with the cost of insurance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone, regardless of income up to $75,000 for individuals and $150,000 for families, receives the same amount of Republican tax credit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ACA\u2019s subsidies covered almost the entire premium costs for families earning the median family income of $52,000 or below.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ACA limited health care insurance costs to 8.5% of family total income.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ending the ACA\u2019s subsidies in favor of tax credits will cost 12 million people health insurance coverage, according to the CBO.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "363946eb44c22da2258816661a0a6879fdd091db3773d1207bcc51bf6c6b706c"
+}

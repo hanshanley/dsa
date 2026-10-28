@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 467,
+      "generation_tps": 16.590452229346617,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1565,
+      "prompt_tps": 680.1726697933581,
+      "request_sha256": "8d8987c27f3d4df79fbecbffa0c688d2d1fc781fec14ebcd59ae2e1ee821e98b",
+      "seconds": 30.45860012504272,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Republicans are proud of President Bush's leadership in helping the people of Africa, their governments, and private groups combat the HIV/AIDS pandemic.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Emergency Plan for AIDS Relief is a five-year, $15 billion initiative strongly backed by the Congress to turn the tide against HIV/AIDS in the most afflicted nations of Africa and the Caribbean.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Emergency Plan for AIDS Relief involves education, abstinence, prevention, testing, treatment, and care \u2013 including advanced antiretroviral drugs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Emergency Plan for AIDS Relief follows in the finest American tradition of harnessing the power of human technology in the service of human compassion.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration and the Republican Congress made fighting the HIV/AIDS pandemic a priority of U.S. foreign policy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America contributes to the Global Fund to Fight HIV/AIDS, Tuberculosis, and Malaria.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is leading the world by example.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The global community must do more to halt the advance of the HIV/AIDS pandemic.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Numerous African, American, and other international private organizations \u2013 including faith-based groups, hospitals, medical schools, corporations, and philanthropies \u2013 are helping the people of Africa as they fight HIV/AIDS with courage.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Progress is already being seen in parts of Africa, which is proof that HIV/AIDS can be defeated.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 491,
+      "generation_tps": 16.528762681480156,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2200,
+      "prompt_tps": 687.2051818920584,
+      "request_sha256": "1a695227a41e2735467d14399cfac1112083469659c772527935569f26e55349",
+      "seconds": 32.916695959167555,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans are proud of President Bush's historic leadership that has placed America at the forefront of helping the people of Africa, their governments, and private groups combat the catastrophic HIV/AIDS pandemic.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Emergency Plan for AIDS Relief is a five-year, $15 billion initiative, strongly backed by the Congress, to turn the tide against HIV/AIDS in the most afflicted nations of Africa and the Caribbean.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Emergency Plan for AIDS Relief involves a comprehensive approach to the pandemic that includes education, abstinence, prevention, testing, treatment, and care \u2013 including advanced antiretroviral drugs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Emergency Plan for AIDS Relief follows in the finest American tradition of harnessing the power of human technology in the service of human compassion.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bush Administration and the Republican Congress made fighting the HIV/AIDS pandemic a priority of U.S. foreign policy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America contributes to the Global Fund to Fight HIV/AIDS, Tuberculosis, and Malaria.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is leading the world by example.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The global community must do more to halt the advance of the HIV/AIDS pandemic.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Numerous African, American, and other international private organizations \u2013 including faith-based groups, hospitals, medical schools, corporations, and philanthropies \u2013 are helping the people of Africa as they fight HIV/AIDS with courage.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Progress is already being seen in parts of Africa, which is proof that HIV/AIDS can be defeated.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8d8987c27f3d4df79fbecbffa0c688d2d1fc781fec14ebcd59ae2e1ee821e98b"
+}

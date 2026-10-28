@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 326,
+      "generation_tps": 16.559902704903486,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1400,
+      "prompt_tps": 633.8156017208248,
+      "request_sha256": "1d3dc0eed4a32943d60559f122b7a8bf0161d07ecbef1fe380da99bd8bccde5d",
+      "seconds": 21.904636749997735,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe South Africa, Nigeria, Kenya, and Ethiopia are leaders for regional engagement and require focused attention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud the President and the Republican Congress for deepening American engagement with South Africa, Nigeria, Kenya, and Ethiopia.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud increased support for African nations that have chosen economic, political, and social reform and are therefore eligible for funding from the Millennium Challenge Account (MCA).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senegal, Ghana, Benin, Cape Verde, Mali, Mozambique, Madagascar, and Lesotho are eligible for funding from the Millennium Challenge Account (MCA) because they have chosen economic, political, and social reform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans believe that effective development aid requires pro-growth policies and strong reforms in the nations that receive aid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans endorse the Millennium Challenge Account's (MCA) direction of resources to countries with governments that rule justly, root out corruption, encourage entrepreneurship, and invest in the health and education of their people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 329,
+      "generation_tps": 16.51896575275327,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1894,
+      "prompt_tps": 586.778704644908,
+      "request_sha256": "ce1826108e84f8753a8b902b9bbd904c86bf81023fb3127f9092de6ca5cec52b",
+      "seconds": 23.15357662504539,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe that South Africa, Nigeria, Kenya, and Ethiopia are leaders for regional engagement and require focused attention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud the President and the Republican Congress for deepening American engagement with those nations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud increased support for African nations that have chosen the path of economic, political, and social reform and are therefore eligible for funding from the Millennium Challenge Account (MCA).\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Senegal, Ghana, Benin, Cape Verde, Mali, Mozambique, Madagascar, and Lesotho are eligible for funding from the Millennium Challenge Account (MCA) because they have chosen the path of economic, political, and social reform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans believe that to be effective, development aid requires pro-growth policies and strong reforms in the nations that receive aid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans endorse the Millennium Challenge Account's (MCA) direction of resources to countries with governments that rule justly, root out corruption, encourage entrepreneurship, and invest in the health and education of their people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1d3dc0eed4a32943d60559f122b7a8bf0161d07ecbef1fe380da99bd8bccde5d"
+}

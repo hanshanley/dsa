@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 420,
+      "generation_tps": 16.435818073900776,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1308,
+      "prompt_tps": 512.5301305544034,
+      "request_sha256": "3741d50d9549018b5871e6024e9ca61355005514fc63041c2507800957e33e8f",
+      "seconds": 28.117373374989256,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America consistently opposed U.S. military intervention in the civil war in Syria.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democratic Socialists of America condemns the Tomahawk cruise missile attack by the Trump administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democratic Socialists of America supported the Syrian uprising against the Assad regime from spring 2011 onwards.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Assad regime has shown no hesitation to use massive force, including chemical weapons, to suppress its people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Trump administration committed an act of war that violates domestic law by not being authorized by Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Trump administration committed an act of war that violates international law by not being authorized by the United Nations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Foreign power intervention by Russia, the United States, Iran or the Gulf States has only served to militarize the conflict in Syria and severely weaken the democratic forces within Syria.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"United States imperialist and unilateral military power cannot liberate the Syrian people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. air power cannot surgically take out those individuals who develop and deploy chemical weapons.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. air power will kill scores of innocent civilians.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 426,
+      "generation_tps": 16.687711506921737,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1896,
+      "prompt_tps": 498.39968068055117,
+      "request_sha256": "2f08939f190006eaa32fbddb938f1bb3cb98b9fae85c167680de013670cec4a2",
+      "seconds": 29.342288583982736,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America has consistently opposed U.S. military intervention in the civil war in Syria.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democratic Socialists of America condemns the Tomahawk cruise missile attack by the Trump administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democratic Socialists of America supported the massive and democratic Syrian uprising against the brutal Assad regime from spring 2011 onwards.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Assad regime has shown no hesitation to use massive force, including chemical weapons, to suppress its people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Trump administration committed an act of war that violates domestic law by not being authorized by Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Trump administration committed an act of war that violates international law by not being authorized by the United Nations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Foreign power intervention, whether by Russia, the United States, Iran or the Gulf States, has only served to militarize the conflict and severely weaken the democratic forces within Syria.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"United States imperialist and unilateral military power cannot liberate the Syrian people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. air power cannot surgically take out those individuals who develop and deploy chemical weapons.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"U.S. air power will kill scores of innocent civilians.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3741d50d9549018b5871e6024e9ca61355005514fc63041c2507800957e33e8f"
+}

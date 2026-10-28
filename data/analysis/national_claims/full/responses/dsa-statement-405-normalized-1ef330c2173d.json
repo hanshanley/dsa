@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 418,
+      "generation_tps": 16.187501168033545,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1358,
+      "prompt_tps": 459.3749445346828,
+      "request_sha256": "cb82b581fcb4fa79afb1ac1115de6f797df604156dfc53f1a8b4f9e83a04ffd6",
+      "seconds": 28.789004707941785,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America consider gutting Medicaid coverage and weakening Medicare\u2019s viability as a single-payer system the most reprehensible aspect of the House Reconciliation Budget Bill to \u201cRepeal and Replace\u201d the Affordable Care Act.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The House Reconciliation Budget Bill to \u201cRepeal and Replace\u201d the Affordable Care Act provides a $650 billion tax cut for the wealthy over ten years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The House Reconciliation Budget Bill to \u201cRepeal and Replace\u201d the Affordable Care Act would lead over 24 million individuals to lose health insurance coverage, according to the Congressional Budget Office.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The House Reconciliation Budget Bill to \u201cRepeal and Replace\u201d the Affordable Care Act attacks the single-payer aspects of the U.S. health system, specifically Medicaid and Medicare.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Medicaid and Medicare allow the government as the sole insurer to have bargaining potential to curtail healthcare costs forced on people by private hospitals and pharmaceutical companies.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"TrumpCare takes the U.S. backwards from the goal of Medicare for All.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democratic Socialists of America members should tell their Congresspersons and Senators to reject the Republican plan in whatever form it ultimately takes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Organized visits to Congresspersons\u2019 and Senators\u2019 home offices or personalized letters of protest are the most effective forms of pressure.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 429,
+      "generation_tps": 16.642955143207455,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1944,
+      "prompt_tps": 452.31707359506083,
+      "request_sha256": "a26edf76273098da2ea1d7ca0d902755f642b03bd142d6f767bc04a2e85c3bf2",
+      "seconds": 30.08536241692491,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America consider gutting Medicaid coverage and severely weakening Medicare\u2019s viability as a single-payer system for the elderly and disabled the most reprehensible aspect of the House Reconciliation Budget Bill to \u201cRepeal and Replace\u201d the Affordable Care Act.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The House Reconciliation Budget Bill to \u201cRepeal and Replace\u201d the Affordable Care Act provides a $650 billion tax cut for the wealthy over ten years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The House Reconciliation Budget Bill to \u201cRepeal and Replace\u201d the Affordable Care Act would lead over 24 million individuals to lose health insurance coverage, according to the Congressional Budget Office.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The House Reconciliation Budget Bill to \u201cRepeal and Replace\u201d the Affordable Care Act attacks the single-payer aspects of the U.S. health system, specifically Medicaid and Medicare.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Medicaid and Medicare allow the government as the sole insurer to have bargaining potential to curtail healthcare costs forced on people by private hospitals and pharmaceutical companies.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"TrumpCare takes the U.S. backwards from the goal of Medicare for All.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democratic Socialists of America members should tell their Congresspersons and Senators to reject the Republican plan in whatever form it ultimately takes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Organized visits to Congresspersons\u2019 and Senators\u2019 home offices or, at a minimum, personalized letters of protest are the most effective forms of pressure.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cb82b581fcb4fa79afb1ac1115de6f797df604156dfc53f1a8b4f9e83a04ffd6"
+}

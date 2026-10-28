@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 365,
+      "generation_tps": 16.61426834296721,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1272,
+      "prompt_tps": 671.7752509478962,
+      "request_sha256": "526fbdd12d05fc84ffaf316028f6b61eab0f9f9e6686972d66c80fed3b072d3d",
+      "seconds": 23.87159658316523,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Voters in the United States narrowly elected Donald Trump as president on November 8.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Donald Trump defined himself as an anti-establishment candidate who will end dynastic rule in Washington, D.C., by elites who care little for \u201cforgotten Americans\u201d.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Donald Trump\u2019s rhetoric masked an ideological appeal to a \u201cwhite identity\u201d that Republicans have long cultivated.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The appeal to a \u201cwhite identity\u201d focused on fear of immigrants, Muslims and people of color.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The narrative that \u201cpoor white people\u201d were the primary force behind Donald Trump\u2019s rise is not supported by the facts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"\u201cTrumpism\u201d is a cross-class white nativist alliance.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The median family income of the 62 percent of white voters who supported Donald Trump was higher than that of Hillary Clinton voters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The median family income of the 62 percent of white voters who supported Donald Trump was higher than that of Bernie Sanders\u2019 primary base.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 374,
+      "generation_tps": 16.583205532649423,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1805,
+      "prompt_tps": 648.1696039598788,
+      "request_sha256": "1615e5fc1728226e32514687f68cd0ce1971d9f13d7ad80600a8a8d82fb8ed9e",
+      "seconds": 25.34673975012265,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"On November 8, voters in the United States narrowly elected Donald Trump as president.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Donald Trump succeeded in defining himself as an anti-establishment candidate who will end dynastic rule in Washington, D.C., by elites who care little for \u201cforgotten Americans\u201d.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The grain of truth in Donald Trump\u2019s rhetoric masked an ideological appeal to a \u201cwhite identity\u201d that Republicans have long cultivated.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"In this instance, the appeal to a \u201cwhite identity\u201d focused on fear of immigrants, Muslims and people of color.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The facts go against the narrative that \u201cpoor white people\u201d were the primary force behind Donald Trump\u2019s rise.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"\u201cTrumpism\u201d is a cross-class white nativist alliance.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The median family income of the 62 percent of white voters who supported Donald Trump was higher than that of Hillary Clinton voters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The median family income of the 62 percent of white voters who supported Donald Trump was higher than that of Bernie Sanders\u2019 primary base.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "526fbdd12d05fc84ffaf316028f6b61eab0f9f9e6686972d66c80fed3b072d3d"
+}

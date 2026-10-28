@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 380,
+      "generation_tps": 16.5870168238125,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1516,
+      "prompt_tps": 654.1886087090577,
+      "request_sha256": "f053a49abcc2f6229c64c2b4668f6e7f73a248f429192da10ac4677db12cd511",
+      "seconds": 25.235903250053525,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe America's foreign policy in Asia starts with its allies: Australia, Japan, the Republic of Korea, Thailand, and the Philippines.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans believe strong relationships with American friends such as Singapore, India, Indonesia, Taiwan, and New Zealand bolster alliances in the Asia-Pacific region.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans recognize that under President Bush's leadership, alliance relations in Asia have never been better.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans recognize that allies in Asia are providing unprecedented cooperation in every major security issue, including counterterrorism, nonproliferation, Iraq, and North Korea.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Republican Party hails the brave and energetic response of America's allies in the Asia-Pacific region in the wake of the September 11th attacks.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Australia invoked the ANZUS Treaty to declare that the September 11th attacks were attacks on Australia itself.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Australia dispatched some of the world's finest combat forces for Operation Enduring Freedom following the invocation of the ANZUS Treaty.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Japan and the Republic of Korea provided unprecedented levels of military logistical support within weeks of the terrorist attacks.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 384,
+      "generation_tps": 16.57935228287592,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2064,
+      "prompt_tps": 633.5338539200385,
+      "request_sha256": "a55f6b81c1afb997bcf290e1f2aa7b0ec9e05cb4188276d5846203d6ac7e02ae",
+      "seconds": 26.4285259579774,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe that America's foreign policy in Asia starts with its allies: Australia, Japan, the Republic of Korea, Thailand, and the Philippines.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans believe that strong relationships with American friends such as Singapore, India, Indonesia, Taiwan, and New Zealand bolster alliances in the Asia-Pacific region.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans recognize that under President Bush's leadership, alliance relations in Asia have never been better.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans recognize that allies in Asia are providing unprecedented cooperation in every major security issue \u2013 including counterterrorism, nonproliferation, Iraq, and North Korea.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Republican Party hails the brave and energetic response of America's allies in the Asia-Pacific region in the wake of the September 11th attacks.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Australia invoked the ANZUS Treaty to declare that the September 11th attacks were attacks on Australia itself.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Following the invocation of the ANZUS Treaty, Australia dispatched some of the world's finest combat forces for Operation Enduring Freedom.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Within weeks of the terrorist attacks, Japan and the Republic of Korea provided unprecedented levels of military logistical support.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f053a49abcc2f6229c64c2b4668f6e7f73a248f429192da10ac4677db12cd511"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 372,
+      "generation_tps": 16.616572051076908,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1484,
+      "prompt_tps": 482.6235861052384,
+      "request_sha256": "8b5316ebdb988d0d1dbb45c26264af2f057b0b84e4e06b0fd813c2e1a7f55f75",
+      "seconds": 25.471667625010014,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Trump offers no viable plan to address voters\u2019 economic anxieties by increasing employment, transforming U.S. trade policy, or any other means.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump's call to \u201cmake America great again\u201d by rebuilding infrastructure and creating \u201cjobs, jobs, jobs\u201d was powerful among many white voters who associate better economic conditions with a past of white privilege and a politics of \u201claw and order\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republicans will not address the needs of working-class people in the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republicans can be expected to propose massive tax cuts for the rich and corporations, running up huge budget deficits and exacerbating income and wealth inequality.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republicans will only maintain or expand parts of the federal budget that should be shrunk, such as the military and prison systems.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many Trump voters will resent tax giveaways to the rich.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Most Americans today are wary of military interventions overseas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Left has a real opportunity to mobilize against national priorities such as tax cuts for the rich and military interventions and advance an alternative vision.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 378,
+      "generation_tps": 16.46452553495666,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2024,
+      "prompt_tps": 449.12074735860955,
+      "request_sha256": "68b93a212f965f71e80e8e480faf334f7643fc34f9c181a3edc01835b3ca6d8d",
+      "seconds": 27.47516041691415,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Trump offers no viable plan to actually address voters\u2019 economic anxieties by increasing employment, transforming U.S. trade policy, or any other means.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump's call to \u201cmake America great again\u201d by rebuilding infrastructure and creating \u201cjobs, jobs, jobs\u201d was powerful among many white voters who associate the memory of better economic conditions with a past of white privilege and a politics of \u201claw and order\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republicans will not address the needs of working-class people in the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republicans can be expected to propose massive tax cuts for the rich and corporations, running up huge budget deficits and exacerbating income and wealth inequality.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republicans will only maintain or expand those parts of the federal budget that really should be shrunk, such as the military and prison systems.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many Trump voters will resent tax giveaways to the rich.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Most Americans today are wary of military interventions overseas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Left has a real opportunity to mobilize against such national priorities as tax cuts for the rich and military interventions and advance an alternative vision.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8b5316ebdb988d0d1dbb45c26264af2f057b0b84e4e06b0fd813c2e1a7f55f75"
+}

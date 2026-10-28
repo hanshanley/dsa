@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 330,
+      "generation_tps": 16.61329673029794,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1448,
+      "prompt_tps": 670.0591495597,
+      "request_sha256": "281c27a007214f80cbb78a4f9c349e6f3ff8897e3dadfe11f33d6aef9cac9a93",
+      "seconds": 22.033637083135545,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America has deepened cooperation on counterterrorism with alliance partners in Thailand and the Philippines.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America has received invaluable assistance from close friends like Singapore and New Zealand.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud Australia, Japan, the Republic of Korea, and other nations in the Asia-Pacific region for their contributions to the multinational effort to achieve security and democracy for the Iraqi people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Japan is a key partner of the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The U.S.-Japan alliance is an important foundation of peace, stability, security, and prosperity in Asia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"America supports an economically vibrant and open Japan that serves as an engine of expanding prosperity and trade in the Asia-Pacific region.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans support an American policy in the Asia-Pacific region that looks to Japan to continue forging a leading role in regional and global affairs based on common interests, common values, and close defense and diplomatic cooperation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 286,
+      "generation_tps": 16.588137599606647,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1946,
+      "prompt_tps": 657.7282063218162,
+      "request_sha256": "bf19d3622ef71a6520eb195363760be196e162b1190e6db881ccf776c3be92d9",
+      "seconds": 20.209087792085484,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America has deepened cooperation on counterterrorism with alliance partners in Thailand and the Philippines and received invaluable assistance from close friends like Singapore and New Zealand.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud Australia, Japan, the Republic of Korea, and other nations in the Asia-Pacific region for their contributions to the multinational effort to achieve security and democracy for the Iraqi people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Japan is a key partner of the United States and the U.S.-Japan alliance is an important foundation of peace, stability, security, and prosperity in Asia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"America supports an economically vibrant and open Japan that serves as an engine of expanding prosperity and trade in the Asia-Pacific region.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans support an American policy in the Asia-Pacific region that looks to Japan to continue forging a leading role in regional and global affairs based on common interests, common values, and close defense and diplomatic cooperation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "281c27a007214f80cbb78a4f9c349e6f3ff8897e3dadfe11f33d6aef9cac9a93"
+}

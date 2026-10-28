@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 333,
+      "generation_tps": 16.619163280354336,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1445,
+      "prompt_tps": 435.1412004198106,
+      "request_sha256": "8949c19594631c64c50190114e7c8e3d52cf76e8833c94b06c5c1c728a670465",
+      "seconds": 23.368867457844317,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"More than half of all Americans save and invest in private markets.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party wants more people to build assets that they own and can use to meet a variety of needs over the course of their lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush and Congressional Republicans have passed measures to improve, simplify, expand, and protect retirement savings in IRAs, 401(k)s, and other retirement plans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The amount individuals can save each year tax-free has increased.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"It is easier to take a retirement plan from one job to the next.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Women who take time off from work to start a family can catch up on their missed retirement plan contributions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"More disclosure is required for employer sponsored retirement plans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Rules apply to both executives and rank-and-file employees regarding employer sponsored retirement plans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 340,
+      "generation_tps": 16.60620559508248,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1946,
+      "prompt_tps": 476.2918403462976,
+      "request_sha256": "f65772919f3368a04403978989b559e83b8a7c2e93b3523f467da1531591338f",
+      "seconds": 24.571224666200578,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"More than half of all Americans save and invest in private markets.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party wants more people to build assets that they own and can use to meet a variety of needs over the course of their lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush and Congressional Republicans have passed into law measures to improve, simplify, expand, and protect retirement savings in IRAs, 401(k)s, and other retirement plans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The amount individuals can save each year tax-free has increased.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"It is easier to take a retirement plan from one job to the next.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Women who take time off from work to start a family can catch up on their missed retirement plan contributions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"More disclosure is required for employer sponsored retirement plans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Rules apply to both executives and rank-and-file employees regarding employer sponsored retirement plans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8949c19594631c64c50190114e7c8e3d52cf76e8833c94b06c5c1c728a670465"
+}

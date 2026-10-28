@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 334,
+      "generation_tps": 16.58608428534698,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1559,
+      "prompt_tps": 661.7423667923418,
+      "request_sha256": "48fda300225606de47902db29b948559e008b20b949a8bb0f72f38e0ffa50652",
+      "seconds": 22.502516124863178,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Left must press Democrats in the Senate to use the filibuster to prevent the passage of disastrous legislation and extreme conservative appointments to the Supreme Court.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Left must urge Democratic state and local governments to resist disastrous changes in Federal policy in whatever ways they can.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Clinton underperformed among white voters in the rust-belt states because many older voters suffered from Clinton\u2019s support of neoliberal policies that failed to address economic suffering caused by deindustrialization, mechanization and corporate outsourcing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Clinton narrowly lost the vote of white women because Trump set himself up as the anti-establishment candidate who would \u201cdrain the swamp\u201d of Washington \u201cspecial interests\u201d.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trump\u2019s rhetoric resonated deeply with over-45 white voters facing stagnant living standards, downward mobility and a soon-to-be majority-minority status in the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Racist and sexist diatribes blaming the end of America\u2019s golden era on women, immigrants and people of color resonated deeply with over-45 white voters.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 357,
+      "generation_tps": 16.528239445956512,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2061,
+      "prompt_tps": 636.0538613501764,
+      "request_sha256": "6db0777655296a0d540db20fe82c1bff38207131c4a53242a1dfc20d2b4c2393",
+      "seconds": 24.849333208985627,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Left must press Democrats in the Senate to use the power of the filibuster to prevent the passage of disastrous legislation and extreme conservative appointments to the Supreme Court.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Left must urge Democratic state and local governments to resist disastrous changes in Federal policy in whatever ways they can.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Clinton underperformed among white voters in the rust-belt states in part because many older voters suffered from the Clinton dynasty\u2019s support of neoliberal policies that failed to address the economic suffering caused by deindustrialization, mechanization and corporate outsourcing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Clinton narrowly lost the vote of white women in part because Trump set himself up as the anti-establishment candidate who would \u201cdrain the swamp\u201d of Washington \u201cspecial interests\u201d.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trump\u2019s rhetoric resonated deeply with over-45 white voters (both men and women) facing stagnant living standards, downward mobility and a soon-to-be majority-minority status in the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Racist and sexist diatribes blaming the end of America\u2019s supposedly golden era on women, immigrants and people of color resonated deeply with over-45 white voters (both men and women).\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "48fda300225606de47902db29b948559e008b20b949a8bb0f72f38e0ffa50652"
+}

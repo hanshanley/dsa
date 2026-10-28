@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 408,
+      "generation_tps": 16.725297957088124,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1507,
+      "prompt_tps": 460.38392376621005,
+      "request_sha256": "5436b256bbc4cac74b04967a06d9e3405bb2c9a5d8a4fab6a827d0e0a1261a0c",
+      "seconds": 27.68085258291103,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to reform the tax code.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to shut down corporate loopholes and tax havens and use the money to provide an immediate middle-class tax cut.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to eliminate federal income taxes for millions of retirees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to increasing taxes on any family earning under $250,000.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to offer additional tax cuts for middle class families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ask families making more than $250,000 to give back a portion of the Bush tax cuts to invest in health care and other key priorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to end the penalty within the current Social Security system for public service that exists in several states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to expand the Earned Income Tax Credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to dramatically simplify tax filings so that millions of Americans can do their taxes in less than five minutes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The tax code is thousands of pages long and rigged with special interest loopholes and tax shelters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 427,
+      "generation_tps": 16.696550554300646,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2083,
+      "prompt_tps": 489.7947858573428,
+      "request_sha256": "89c1c48681b0296404faad047fe29330617e5a1d664d17474f5d066901ab0de2",
+      "seconds": 29.83628633292392,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to reform the tax code.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to shut down corporate loopholes and tax havens and use the money so that a middle-class tax cut can be provided.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to eliminate federal income taxes for millions of retirees, because all seniors deserve to live out their lives with dignity and respect.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to increasing taxes on any family earning under $250,000.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to offer additional tax cuts for middle class families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ask families making more than $250,000 to give back a portion of the Bush tax cuts to invest in health care and other key priorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to end the penalty within the current Social Security system for public service that exists in several states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to expand the Earned Income Tax Credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to dramatically simplify tax filings so that millions of Americans can do their taxes in less than five minutes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The tax code is thousands of pages long and a monstrosity rigged with special interest loopholes and tax shelters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5436b256bbc4cac74b04967a06d9e3405bb2c9a5d8a4fab6a827d0e0a1261a0c"
+}

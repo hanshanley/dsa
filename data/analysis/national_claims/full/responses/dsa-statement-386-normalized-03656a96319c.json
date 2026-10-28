@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 279,
+      "generation_tps": 16.720240521675564,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1480,
+      "prompt_tps": 570.2067640772426,
+      "request_sha256": "b8c843dfbe1104a5d9f3f039b7672891153bc516fca023c546f98450ac3f55f9",
+      "seconds": 19.291186249814928,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A continued effort is necessary to press a progressive agenda by electing more insurgent candidates at all levels of government and by building working-class and socialist power in trade unions, social movements, and electoral work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Winning progressive programs requires a radical shift in power relations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Without mass pressure from democratic social movements willing to disrupt undemocratic institutions and the development of independent electoral capacity of activists of color, feminists, LGBTQ activists and trade unionists, corporate interests will continue to dominate the policy agenda.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The campaigns of DSA-endorsed candidates, such as State Representative Mike Sylvester (D-Maine) and Ian Schlakman in Baltimore, demonstrate that building a multiracial base for explicitly socialist candidates is both possible and necessary.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Explicitly socialist candidates may run as Democrats, independents, Greens or in nonpartisan races, depending on local circumstances.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 304,
+      "generation_tps": 16.715156044926786,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1927,
+      "prompt_tps": 592.0523653724575,
+      "request_sha256": "7591ccae4489c04e0cca84be8ccaf9c465ae4d9cc6d95688afee7df9b1144036",
+      "seconds": 21.452439832966775,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A continued effort is necessary to press a progressive agenda by electing more insurgent candidates at all levels of government and by building working-class and socialist power in trade union, social-movement and electoral work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"None of these programs can be won without a radical shift in power relations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Without mass pressure from democratic social movements willing to disrupt the everyday workings of undemocratic institutions and the development of independent electoral capacity of activists of color, feminists, LGBTQ activists and trade unionists, corporate interests will continue to dominate the policy agenda.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The campaigns of DSA-endorsed candidates at the local and state level, such as victorious State Representative Mike Sylvester (D-Maine) and the impressive second-place finish of Baltimore City Council Green candidate Ian Schlakman, demonstrate that building a multiracial base for explicitly socialist candidates is both possible and necessary.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Explicitly socialist candidates may run as Democrats, independents, Greens or in nonpartisan races, depending on local circumstances.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b8c843dfbe1104a5d9f3f039b7672891153bc516fca023c546f98450ac3f55f9"
+}

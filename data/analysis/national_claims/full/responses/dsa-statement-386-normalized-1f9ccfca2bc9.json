@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 372,
+      "generation_tps": 16.60657537347634,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1509,
+      "prompt_tps": 649.7942405851555,
+      "request_sha256": "42dba2d31ed01a5f5b085bd55b68ce2e56ce1a92a2305fdba5c03b7f1f5d473f",
+      "seconds": 24.73217429104261,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Trans Pacific Partnership may be a dead letter under Trump\u2019s presidency.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump is not committed to a global trade policy that serves the interests of workers at home or abroad.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"In response to Trump\u2019s anti-worker policy prescriptions, the Left must advance an alternative vision of global economic policy that raises global living, labor and environmental standards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A nativist protectionism blames foreign workers and immigrants for declining working-class living standards at home.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump will move quickly to destroy organized labor in the United States, particularly in the public sector.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Left must resist Trump\u2019s moves to destroy organized labor, though efforts will be complicated by the AFL-CIO\u2019s conciliatory stance toward the President-elect.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Unions are the most powerful tool for building inter-racial solidarity among working class people around a shared economic interest.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The AFL-CIO\u2019s support for Clinton in the Democratic primaries and commitment to working with Trump demonstrate the necessity of a bottom-up left insurgency within the house of labor.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 404,
+      "generation_tps": 16.58427920780986,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2049,
+      "prompt_tps": 687.2970000684192,
+      "request_sha256": "131d8309cf7455d9ca813bdd22f812ae041337c448614a599a407d065c8c5b47",
+      "seconds": 27.3509279161226,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Trans Pacific Partnership may be a dead letter under Trump\u2019s presidency.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump is not committed to a global trade policy that serves the interests of workers at home or abroad.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"In response to Trump\u2019s savagely anti-worker policy prescriptions, the Left must advance an alternative vision of global economic policy that raises global living, labor and environmental standards as an alternative to a nativist protectionism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A nativist protectionism blames foreign workers and immigrants for declining working-class living standards at home.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump will move quickly to destroy organized labor in the United States, particularly in the public sector.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Left must resist Trump\u2019s moves to destroy organized labor, though efforts will be complicated by the AFL-CIO\u2019s self-defeating conciliatory stance toward the President-elect.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Unions are the most powerful tool for building inter-racial solidarity among working class people around a shared economic interest.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The questionable strategic and tactical choices made by much of the AFL-CIO\u2019s leadership, both to support Clinton in the Democratic primaries and to commit themselves to working with Trump, show the absolute necessity of a bottom-up left insurgency within the house of labor.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "42dba2d31ed01a5f5b085bd55b68ce2e56ce1a92a2305fdba5c03b7f1f5d473f"
+}

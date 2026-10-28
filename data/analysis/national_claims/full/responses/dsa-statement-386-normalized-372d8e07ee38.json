@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 332,
+      "generation_tps": 16.917123210853166,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1456,
+      "prompt_tps": 488.75042511986555,
+      "request_sha256": "04196d82b5533c7b17733064f278fbb57872f30f05edec63c9fbb49a508605e8",
+      "seconds": 22.61310395784676,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Changing demographics alone will not automatically threaten the success of white nativist politics.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The undemocratic nature of the Electoral College prevented the winner of the popular vote from taking office in the 2016 election and in 2000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Voter suppression drove down the turnout of working-class citizens of all races as well as the elderly and students.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Voter suppression was particularly severe in North Carolina, Wisconsin and Ohio.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The progressive, black and Latino electorates are heavily concentrated in strongly Democratic states and mostly in urban and inner suburban areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of votes from the progressive, black and Latino electorates are effectively not counted in the outcome of the presidential election.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"100,000 additional votes beyond those needed to reach 50 percent in California do nothing to change the number of votes California receives in the electoral college.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 333,
+      "generation_tps": 16.77316721876645,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1956,
+      "prompt_tps": 500.23135061717716,
+      "request_sha256": "b3ece015f04ba1c7ead237ec740e45280f9a1664241250abce56ff1c12e546ea",
+      "seconds": 23.77268600021489,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Changing demographics alone will not automatically threaten the success of white nativist politics.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the 2016 election and in 2000, the undemocratic nature of the Electoral College prevented the winner of the popular vote from taking office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Voter suppression drove down the turnout of working-class citizens of all races as well as the elderly and students.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Voter suppression was particularly severe in North Carolina, Wisconsin and Ohio.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The progressive, black and Latino electorates are heavily concentrated in strongly Democratic states and mostly in urban and inner suburban areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of votes from the progressive, black and Latino electorates are effectively not counted in the outcome of the presidential election.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"100,000 additional votes beyond those needed to reach 50 percent in California do nothing to change the number of votes California receives in the electoral college.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "04196d82b5533c7b17733064f278fbb57872f30f05edec63c9fbb49a508605e8"
+}

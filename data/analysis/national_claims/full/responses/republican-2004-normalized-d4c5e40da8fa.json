@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 416,
+      "generation_tps": 16.591345078894562,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1481,
+      "prompt_tps": 640.3927512894492,
+      "request_sha256": "d13079cf111e0bf6c528f808b20c1553588e06302d589736cd83e31aadba0dff",
+      "seconds": 27.39507233304903,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party is committed to democracy in Burma.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party is committed to Nobel Laureate Aung San Suu Kyi and other democratic leaders whose election in 1990 was brutally suppressed and who have been arrested and imprisoned for their belief in freedom and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party shares the view of Aung San Suu Kyi that the basic principles of human freedom and dignity are universal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party is committed to working with allies in Europe and Asia to maintain firm and resolute opposition to the military junta in Rangoon.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans will continue to work closely with the countries of the Pacific island nations on a wide variety of issues of common concern because of the strategic location and historical ties of those nations to the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush set forth an agenda at the beginning of his Administration to establish a Europe whole, free, and at peace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The agenda to establish a Europe whole, free, and at peace is in the tradition of America's historical commitment to the freedom and security of Europe.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The agenda to establish a Europe whole, free, and at peace builds on the legacy of Presidents Ronald Reagan and George H.W. Bush, through which the Cold War was won.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 394,
+      "generation_tps": 16.59758227276264,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2065,
+      "prompt_tps": 640.3130888692797,
+      "request_sha256": "457d4b906e3cf2dfe303085c59030c9f99fe3b0454e1e2bea162de1e1853609d",
+      "seconds": 26.97274045809172,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party is committed to democracy in Burma, and to Nobel Laureate Aung San Suu Kyi and other democratic leaders whose election in 1990 was brutally suppressed and who have been arrested and imprisoned for their belief in freedom and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party shares with Aung San Suu Kyi the view that the basic principles of human freedom and dignity are universal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party is committed to working with its allies in Europe and Asia to maintain a firm and resolute opposition to the military junta in Rangoon.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the strategic location and historical ties of the Pacific island nations to the United States, Republicans will continue to work closely with the countries of this region on a wide variety of issues of common concern.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush set forth an agenda at the beginning of his Administration to establish a Europe whole, free, and at peace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The agenda to establish a Europe whole, free, and at peace is in the finest tradition of America's historical commitment to the freedom and security of Europe.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The agenda to establish a Europe whole, free, and at peace builds on the legacy of Presidents Ronald Reagan and George H.W. Bush, through which the Cold War was won.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d13079cf111e0bf6c528f808b20c1553588e06302d589736cd83e31aadba0dff"
+}

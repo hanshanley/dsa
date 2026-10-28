@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 313,
+      "generation_tps": 16.63188988345285,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1476,
+      "prompt_tps": 658.7155916288986,
+      "request_sha256": "1c1bd6c5e6a3a2241821943bd58b2f2159578a05c371dc7f4215199795bfc036",
+      "seconds": 21.069199749967083,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to make quality, affordable early childhood care and education available to every American child from the day he or she is born.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to increase funding for Head Start and Early Head Start.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to invest in high-quality Pre-K.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Presidential Early Learning Council will coordinate early childhood efforts.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to recruit a new generation of teachers and principals by paying for their college education if they commit to teaching.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to provide better preparation, mentoring and career ladders for teachers and principals.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to provide individual help and support to struggling and underperforming teachers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to find a quick and fair way\u2013consistent with due process\u2013to replace underperforming teachers after providing support.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 330,
+      "generation_tps": 16.622293502966606,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1957,
+      "prompt_tps": 656.6326447421433,
+      "request_sha256": "c3f66253ebae157dab783f54e3c6be652948fe4f60ac0e58b135eceb15b9d3be",
+      "seconds": 22.842393291881308,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to make quality, affordable early childhood care and education available to every American child from the day he or she is born.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to increase funding for Head Start and Early Head Start.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to invest in high-quality Pre-K.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Presidential Early Learning Council will coordinate these early childhood efforts.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to recruit a new generation of teachers and principals by making a pledge to pay for their college education if they commit to teaching.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to provide better preparation, mentoring and career ladders for teachers and principals.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to provide individual help and support to teachers who are struggling and underperforming.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to find a quick and fair way\u2013consistent with due process\u2013to put another teacher in the classroom if teachers are still underperforming after receiving help and support.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1c1bd6c5e6a3a2241821943bd58b2f2159578a05c371dc7f4215199795bfc036"
+}

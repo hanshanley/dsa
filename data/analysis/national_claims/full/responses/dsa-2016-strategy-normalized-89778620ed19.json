@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 363,
+      "generation_tps": 16.600547978318026,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1460,
+      "prompt_tps": 686.8498324279517,
+      "request_sha256": "e9e36dc95b312d399e8cb1b96cdac41b08d652c3b065fc70ec37ab9a87df2d30",
+      "seconds": 24.001691166078672,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Free public higher education would take what should be a universal public good out of the marketplace, put it under democratic control, and guarantee it as a right to all citizens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Free public higher education would be funded by a truly progressive tax system that makes the wealthy and corporations pay their fair share of government revenue.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A campaign for free public higher education would show people that socialist policies are both desirable and achievable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Gaining free public higher education could serve as a crucial step in making democratic socialist politics more attractive to a wider cross-section of the U.S. public.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Achieving goals will require grassroots organizing and \u201cstreet heat\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Achieving goals will require a critical mass of political office holders to implement them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Elections in and of themselves will not bring about major political, economic or social reforms, nor establish a pathway to socialism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is difficult to imagine achieving objectives in the United States without taking part in the electoral process.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 317,
+      "generation_tps": 16.538193438514885,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1991,
+      "prompt_tps": 680.3723497589957,
+      "request_sha256": "944f9cc63ddc914ca49cf944a90c0f994a32d5696105cbe1fd8d8558ce81e050",
+      "seconds": 22.10341841704212,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Free public higher education would take what should be a universal public good out of the marketplace, put it under democratic control, and guarantee it as a right to all citizens \u2014 and fund it by a truly progressive tax system that makes the wealthy and corporations pay their fair share of government revenue.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A campaign for free public higher education would show people that socialist policies are both desirable and achievable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Gaining free public higher education could serve as a crucial step in making democratic socialist politics more attractive to a wider cross-section of the U.S. public.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Achieving goals will require grassroots organizing and \u201cstreet heat,\u201d but it will also require a critical mass of political office holders to implement them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Elections in and of themselves will not bring about major political, economic or social reforms \u2014 let alone establish a pathway to socialism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is difficult to imagine achieving objectives in the United States without taking part in the electoral process.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e9e36dc95b312d399e8cb1b96cdac41b08d652c3b065fc70ec37ab9a87df2d30"
+}

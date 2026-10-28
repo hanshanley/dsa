@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 335,
+      "generation_tps": 16.57621250161,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1475,
+      "prompt_tps": 656.3655713445124,
+      "request_sha256": "0279c93cf20ecdeaf833e91b5dddb2204e0a3b92e13320278c9efb0569337c89",
+      "seconds": 22.465996332932264,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Republicans recognize and applaud that since September 11, 2001, some of America's strongest allies and friends have been the democracies of Central and Eastern Europe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans hail the participation in the multinational coalition in Iraq of Poland, Hungary, the Czech Republic, Bulgaria, Estonia, Latvia, Lithuania, Romania, and Slovakia, which joined NATO in 1999 and 2004.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans hail the contributions of Ukraine, Georgia, Moldova, Albania, and Macedonia to the multinational coalition in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Through their dedication to the cause of security and freedom in Iraq, Ukraine, Georgia, Moldova, Albania, Macedonia, the United Kingdom, Italy, the Netherlands, Denmark, Portugal, and Norway are demonstrating their commitment to the values shared by members of the transatlantic community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud the contribution of forces in Iraq by Azerbaijan and Kazakhstan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support strengthening NATO's partnerships with Azerbaijan, Kazakhstan, and their neighbors in the Caucasus and Central Asia.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 376,
+      "generation_tps": 16.570578580853958,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1978,
+      "prompt_tps": 612.2671499437306,
+      "request_sha256": "8597d36f805cf446bace1e4f39b845fe6da0c809698d5bbd2b643be90de005dc",
+      "seconds": 25.930680459132418,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans recognize and applaud that especially since September 11, 2001, some of America's strongest allies and friends have been the democracies of Central and Eastern Europe \u2013 many of whom inspired the world during the Cold War by assaulting the Iron Curtain again and again until it finally crashed down forever.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans hail the participation in the multinational coalition in Iraq of NATO members that joined the Alliance in 1999 and 2004 \u2013 Poland, Hungary, the Czech Republic, Bulgaria, Estonia, Latvia, Lithuania, Romania, and Slovakia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans hail the contributions of Ukraine, Georgia, Moldova, Albania, and Macedonia to the multinational coalition in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Through their dedication to the cause of security and freedom in Iraq, these nations \u2013 Ukraine, Georgia, Moldova, Albania, and Macedonia \u2013 together with the United Kingdom, Italy, the Netherlands, Denmark, Portugal, and Norway \u2013 are demonstrating their commitment to the values shared by members of the transatlantic community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans applaud the contribution of forces in Iraq by Azerbaijan and Kazakhstan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support strengthening NATO's partnerships with Azerbaijan, Kazakhstan, and their neighbors in the Caucasus and Central Asia.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0279c93cf20ecdeaf833e91b5dddb2204e0a3b92e13320278c9efb0569337c89"
+}

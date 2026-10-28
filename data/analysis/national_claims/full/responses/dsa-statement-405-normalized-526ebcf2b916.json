@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 368,
+      "generation_tps": 16.60288445140717,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1486,
+      "prompt_tps": 429.5081853290168,
+      "request_sha256": "5204190cbb5c0a5763f8fd452ac362ad1aa5840d97508f88b174862afdff900b",
+      "seconds": 25.637371709104627,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Repealing the extra taxes on individuals and large corporations in the ACA will hasten the depletion of the Medicare trust fund by four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans will use the depletion of the Medicare trust fund as a justification for privatizing Medicare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican repeal of the ACA\u2019s tax increases would give a $50,000 tax cut to families earning a million dollars a year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican repeal of the ACA\u2019s tax increases would give a $195,000 tax cut to families in the top 0.1 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over 10 years, the Republican repeal of the ACA\u2019s tax increases would mean a loss of $650 billion in revenues to the Medicare trust fund.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Eliminating the ACA\u2019s cap at $500,000 on insurance company CEO\u2019s ability to deduct \u201cexpenses\u201d from their taxes is included in the bill.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lifting the expenses cap could yield a $400 million tax break for a few score insurance company CEOs over the next decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 364,
+      "generation_tps": 16.53003790644918,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2022,
+      "prompt_tps": 469.8234383860548,
+      "request_sha256": "73df960c8cabb113c6893c3070510e04f554eb21f1a29d5dd254b1a519d52a70",
+      "seconds": 26.334985665977,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Repealing the extra taxes on individuals and large corporations in the ACA will hasten the depletion of the Medicare trust fund by four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans will use the depletion of the Medicare trust fund as a justification for privatizing Medicare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican repeal of the ACA\u2019s tax increases would give a $50,000 tax cut to families earning a million dollars a year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican repeal of the ACA\u2019s tax increases would give a $195,000 tax cut to families in the top 0.1 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over 10 years, the Republican repeal of the ACA\u2019s tax increases would mean a loss of $650 billion in revenues to the Medicare trust fund.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bill eliminates the ACA\u2019s cap at $500,000 on insurance company CEO\u2019s ability to deduct \u201cexpenses\u201d from their taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lifting the expenses cap could yield a $400 million tax break for a few score insurance company CEOs over the next decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5204190cbb5c0a5763f8fd452ac362ad1aa5840d97508f88b174862afdff900b"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 60,
+      "generation_tps": 16.987861308466332,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1310,
+      "prompt_tps": 692.4441786012223,
+      "request_sha256": "5444afdec62f435b7bf2a55835b61c685842d364a9c8fea2571ad19e69c9dd39",
+      "seconds": 5.43253583391197,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America National Political Committee issued a statement on June 13, 2016.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 60,
+      "generation_tps": 16.96573386889602,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1538,
+      "prompt_tps": 595.1941460545834,
+      "request_sha256": "3753b386d089d61f508cdc8424b170ca9d3821449b72690d7dce80f2bc22e881",
+      "seconds": 6.129498624941334,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America National Political Committee issued a statement on June 13, 2016.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5444afdec62f435b7bf2a55835b61c685842d364a9c8fea2571ad19e69c9dd39"
+}

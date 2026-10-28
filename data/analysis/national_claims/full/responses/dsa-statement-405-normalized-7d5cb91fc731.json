@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 322,
+      "generation_tps": 16.263196262114306,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1487,
+      "prompt_tps": 438.62769747974994,
+      "request_sha256": "9e44c863e11e0c36af39b3c68105db7594a319467f87bae14f31c85d352e71ef",
+      "seconds": 23.201815749984235,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By 2020, the Republican bill will end the ACA\u2019s expansion of Medicaid to close to 14 million individuals from working families that earn between $22,000 and $34,000 a year, an expansion paid for almost exclusively by federal funds for the 31 states that accepted the funding.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nineteen Republican-governed states kept over 8 million individuals from receiving the Medicaid expansion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican plan would turn Medicaid\u2019s guarantee of coverage to nearly 70 million individuals from an individual entitlement to a less generously funded federal \u201cblock grant\u201d or \u201cper capita\u201d allotment.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans claim the federal \u201cblock grant\u201d or \u201cper capita\u201d allotment would provide \u201cflexibility for the states\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Such flexibility will allow states to reduce benefits and remove people from Medicaid.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Medicare trust fund will be drained of income by ending the ACA\u2019s surtax on the wealthy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 374,
+      "generation_tps": 16.264151830067814,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1977,
+      "prompt_tps": 461.65239273907866,
+      "request_sha256": "fa26ef82cb4df651a9eb98ebf38a22a9f2bffa724ed421672276ebb55c881070",
+      "seconds": 27.288902999833226,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By 2020, the Republican bill will end the ACA\u2019s expansion of Medicaid to close to 14 million individuals from working families that earn between $22,000 and $34,000 a year, an expansion paid for almost exclusively by federal funds for the 31 states that accepted the funding.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nineteen Republican-governed states kept over 8 million individuals from receiving the Medicaid expansion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican plan would turn Medicaid\u2019s guarantee of coverage to nearly 70 million individuals from an individual entitlement to a less generously funded federal \u201cblock grant\u201d or \u201cper capita\u201d allotment that Republicans claim would provide \u201cflexibility for the states\u201d.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans claim the federal \u201cblock grant\u201d or \u201cper capita\u201d allotment would provide \u201cflexibility for the states\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Such flexibility will allow states to reduce benefits and remove people from Medicaid.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Medicare trust fund will be drained of income by ending the ACA\u2019s surtax on the wealthy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican plan is cynically timed to be implemented only after the 2020 presidential election.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9e44c863e11e0c36af39b3c68105db7594a319467f87bae14f31c85d352e71ef"
+}

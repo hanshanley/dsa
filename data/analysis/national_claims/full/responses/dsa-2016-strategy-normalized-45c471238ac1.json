@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 171,
+      "generation_tps": 16.65350442021128,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1455,
+      "prompt_tps": 675.2711526961501,
+      "request_sha256": "f8ea94b65b7b5dcc619694ea4a2ac7ea5e5297390cfe2d1fd73703bcf31d1fc0",
+      "seconds": 12.431788749992847,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The primary focus for the foreseeable future will be on building a vibrant, independent democratic socialist movement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The organization will help cultivate progressive coalitions capable of wielding political power at all levels.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists believe that both the economy and society should be run democratically to meet human needs, not to make profits for a few.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA is a member funded and member run organization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 172,
+      "generation_tps": 16.64355438200606,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1794,
+      "prompt_tps": 644.2717104171512,
+      "request_sha256": "956337281af20cd492f9cc5e7ec519e83eaeb9fecf3401904a6c5dbc2b1912c7",
+      "seconds": 13.128508292138577,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"For the foreseeable future, the primary focus will be on building a vibrant, independent democratic socialist movement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The organization will help cultivate progressive coalitions capable of wielding political power at all levels.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists believe that both the economy and society should be run democratically to meet human needs, not to make profits for a few.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA is a member funded and member run organization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f8ea94b65b7b5dcc619694ea4a2ac7ea5e5297390cfe2d1fd73703bcf31d1fc0"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 16.72820667858904,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1476,
+      "prompt_tps": 505.1191510807907,
+      "request_sha256": "11d2a8fb0e4e710be37255af61eda5deb5ebff23ebf15a2da6c9b2e635b1da1a",
+      "seconds": 28.934959542006254,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's Forward Strategy of Freedom in the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the Broader Middle East and North Africa Initiative adopted at the G-8 Summit this year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts by the President, Vice President, and Republican Congress to ensure that America takes the side of reformers who are committed to democratic change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for doubling the budget for the National Endowment for Democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for focusing the National Endowment for Democracy's new work on bringing free elections, free markets, free speech, and free labor unions to the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the President's expansion of America's public diplomacy efforts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for using radio and television to broadcast uncensored information and a message of tolerance in Arabic and Persian to tens of millions of people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Applaud the commitment represented by the President's Middle East Partnership Initiative.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's Middle East Partnership Initiative funds economic, political, and educational reform efforts in the Middle East.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's Middle East Partnership Initiative champions opportunity for all people of the region, especially women and youth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 387,
+      "generation_tps": 16.897562666586992,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2079,
+      "prompt_tps": 522.9539482109445,
+      "request_sha256": "178b9fee961f914972fe7630c479ebec40ab18dea3ac9fcdcb637bb4d7b4b7fd",
+      "seconds": 26.887444416992366,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's Forward Strategy of Freedom in the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the Broader Middle East and North Africa Initiative adopted at the G-8 Summit this year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts by the President, Vice President, and Republican Congress to ensure that America takes the side of reformers who are committed to democratic change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for doubling the budget for the National Endowment for Democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for focusing the National Endowment for Democracy's new work on bringing free elections, free markets, free speech, and free labor unions to the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the President's expansion of America's public diplomacy efforts, including the use of radio and television to broadcast uncensored information and a message of tolerance in Arabic and Persian to tens of millions of people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Applaud the commitment represented by the President's Middle East Partnership Initiative, which funds economic, political, and educational reform efforts in the Middle East.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's Middle East Partnership Initiative champions opportunity for all people of the region, especially women and youth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "11d2a8fb0e4e710be37255af61eda5deb5ebff23ebf15a2da6c9b2e635b1da1a"
+}

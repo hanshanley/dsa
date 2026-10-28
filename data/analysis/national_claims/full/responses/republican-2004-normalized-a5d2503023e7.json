@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 402,
+      "generation_tps": 16.94565905083502,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1430,
+      "prompt_tps": 476.3094346060902,
+      "request_sha256": "08e7f2474c138d6431d6c77533249b62e534df95ae098e09df5eaace13d3486b",
+      "seconds": 26.735402083955705,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Bush formed a bipartisan commission that recommended three models for reform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many Republicans in Congress have exhibited leadership in sponsoring six different bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Non-partisan analysis shows that each of the proposed reform models strengthens Social Security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Each of the proposed reform models shares a common characteristic: giving workers the option of supplementing Social Security with personal retirement accounts that they own.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports the efforts of President Bush and Congressional Republicans to enact legislation during the next term.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Homeownership is central to the American dream.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans want to make homeownership a reality for everyone.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Access to capital for entrepreneurs has improved immensely in the past four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Access to credit for consumers has improved immensely in the past four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Record levels of homeownership have been achieved.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"For the first time, more than half of all minorities own their home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 407,
+      "generation_tps": 16.777928857308634,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2000,
+      "prompt_tps": 534.3597910263315,
+      "request_sha256": "7b0d8d5c9fa59d9079f8ebfc40b2d1f6dad723cb56467db6c3b32ec338f3af1b",
+      "seconds": 28.011923416052014,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush formed a bipartisan commission that recommended three models for reform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many Republicans in Congress have exhibited leadership in sponsoring six different bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Non-partisan analysis shows that each of the proposed reform models strengthens Social Security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Each of the proposed reform models shares a common characteristic: giving workers the option of supplementing Social Security with personal retirement accounts that they own.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports the efforts of President Bush and Congressional Republicans to enact legislation during the next term.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Homeownership is central to the American dream.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans want to make homeownership a reality for everyone.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Access to capital for entrepreneurs has improved immensely in the past four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Access to credit for consumers has improved immensely in the past four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Record levels of homeownership have been achieved.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"For the first time, more than half of all minorities own their home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "08e7f2474c138d6431d6c77533249b62e534df95ae098e09df5eaace13d3486b"
+}

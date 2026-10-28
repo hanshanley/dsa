@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 187,
+      "generation_tps": 16.17410207151966,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1401,
+      "prompt_tps": 513.0683581204244,
+      "request_sha256": "fc705e67a36773763b4d69054bd47d562e4c8088f4ed2be795881a77acb4092b",
+      "seconds": 14.30270850006491,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Individuals can find out how many people in their Congressional district have insurance through the ACA.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals can find how to contact their member of Congress and Senators and also the addresses of their DC and district offices by entering their full address on GovTrack.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Arranging a delegation to visit a House member\u2019s and Senators\u2019 district offices and/or holding a protest outside are the best ways to make collective voices heard.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Diligent work to get media coverage is necessary when holding a protest outside.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 187,
+      "generation_tps": 16.253519206673705,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1756,
+      "prompt_tps": 503.4645924499682,
+      "request_sha256": "d8f9834bb00259864b5912bc8f1a008a54c5c7f14c49c911cfe3b9aaffbe773e",
+      "seconds": 15.003869083011523,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Individuals can find out how many people in their Congressional district have insurance through the ACA.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals can find how to contact their member of Congress and Senators and also the addresses of their DC and district offices by entering their full address on GovTrack.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Arranging a delegation to visit a House member\u2019s and Senators\u2019 district offices and/or holding a protest outside are the best ways to make collective voices heard.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Diligent work to get media coverage is necessary when holding a protest outside.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fc705e67a36773763b4d69054bd47d562e4c8088f4ed2be795881a77acb4092b"
+}

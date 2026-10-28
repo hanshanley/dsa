@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 363,
+      "generation_tps": 16.379082386231385,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1506,
+      "prompt_tps": 421.4810111465141,
+      "request_sha256": "e6e8bf29034ee32b6a5d72cbca216dbc13d4bb467db2cc054aa3ccc2bcab626f",
+      "seconds": 25.74705387488939,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Many Democrats believe the federal government has a right to claim money earned by working Americans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats fight any attempt to return the balance of power from Washington to individual families and businesses.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"All of the tax relief provided over the last four years will be eliminated in the next six years if Congress does not take action to make the relief permanent.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party endorses the President's proposals to make tax relief permanent, so that families and businesses can plan for the future with confidence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Anything less than making the tax relief permanent will result in a significant tax increase on Americans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Making the tax cuts permanent is a crucial first step toward expanding ownership and ensuring that America turns economic growth into lasting prosperity.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The only way to accomplish the goal of making tax cuts permanent is to elect a solid Republican majority to both houses of Congress.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party looks forward to a new Congress with larger Republican majorities working with President Bush to ensure that taxes do not go back up on American families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 413,
+      "generation_tps": 16.45142170048661,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2037,
+      "prompt_tps": 486.3675564647863,
+      "request_sha256": "f060229b6f9bce43975066667230256456d572cff2a59f696ab4b75c6a44e927",
+      "seconds": 29.304293791064993,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Many Democrats believe the federal government has a right to claim money earned by working Americans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats fight any attempt to return the balance of power from Washington to individual families and businesses.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"All of the tax relief provided over the last four years will be eliminated in the next six years if Congress does not take action to make the relief permanent.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party endorses the President's proposals to make tax relief permanent, so that families and businesses can plan for the future with confidence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Anything less than making the tax relief permanent will result in a significant tax increase on Americans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Making the tax cuts permanent is a crucial first step toward expanding ownership and ensuring that America turns economic growth into lasting prosperity.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The only way to accomplish the goal of making tax cuts permanent is to elect a solid Republican majority to both houses of Congress.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party looks forward to a new Congress with larger Republican majorities working with President Bush to ensure that taxes do not go back up on American families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The slim majority held by Republicans in the Senate and the rules of the Senate make it difficult to pass permanent tax relief.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e6e8bf29034ee32b6a5d72cbca216dbc13d4bb467db2cc054aa3ccc2bcab626f"
+}

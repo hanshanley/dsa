@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 236,
+      "generation_tps": 16.127133977975625,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1441,
+      "prompt_tps": 450.9763748683128,
+      "request_sha256": "0ac274aac359947a9be0f6861535dd4a8471bb2089e6044e16305baece0465ec",
+      "seconds": 17.840907874982804,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Rejection of proposals to continue George Bush's economic policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Franklin Roosevelt, Harry Truman, and John F. Kennedy managed to protect the American people and expand opportunity for the next generation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Franklin Roosevelt, Harry Truman, and John F. Kennedy ensured that America led and lifted the world and fought for freedoms sought by billions beyond U.S. borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Franklin Roosevelt, Harry Truman, and John F. Kennedy used U.S. strengths to demonstrate America at its best.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"After the experience of the last eight years, Barack Obama is needed, as Franklin Roosevelt was needed after Hoover.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 285,
+      "generation_tps": 16.28937342253744,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1845,
+      "prompt_tps": 456.39259931901796,
+      "request_sha256": "b25b0d4255be568d75f2117380d32a53ae5d58bec9299e0cc7193f10f27ca3b0",
+      "seconds": 21.549469582969323,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Rejection of proposals to continue George Bush's economic policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"At moments of great peril in the last century, American leaders such as Franklin Roosevelt, Harry Truman, and John F. Kennedy managed both to protect the American people and to expand opportunity for the next generation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"At moments of great peril in the last century, American leaders such as Franklin Roosevelt, Harry Truman, and John F. Kennedy ensured that America led and lifted the world and fought for the freedoms sought by billions of people beyond U.S. borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"At moments of great peril in the last century, American leaders such as Franklin Roosevelt, Harry Truman, and John F. Kennedy used U.S. strengths to show people everywhere America at its best.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"After the experience of the last eight years, Barack Obama is needed, as Franklin Roosevelt was needed after Hoover.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0ac274aac359947a9be0f6861535dd4a8471bb2089e6044e16305baece0465ec"
+}

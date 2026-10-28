@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 493,
+      "generation_tps": 16.639574199655428,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1494,
+      "prompt_tps": 508.5875785562179,
+      "request_sha256": "432a28fdbfa4770fac321bc4344405b9d1fa54d64481e3568210930820fb6fce",
+      "seconds": 32.57561708288267,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for the President's goal of increasing the number of minority homeowners by at least 5.5 million families by the end of the decade.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 2002, an additional 1.6 million minorities have become homeowners.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the Self-Help Homeownership Opportunities Program, which helps low-income families purchase a home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The most significant barrier to homeownership is the down payment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to reduce the barrier of down payments, like the American Dream Downpayment Act and Zero Downpayment Mortgages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and Congress have taken action to provide counseling and education to help first-time homebuyers navigate the process of buying a home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration has taken steps to alert people to the dangers of predatory lending, in an effort to help Americans maintain a positive credit history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affordable housing is in the national interest.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The mortgage interest deduction for primary residences was put into the federal tax code.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Tax reform of any kind should continue to encourage homeownership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for efforts to enact the Single-Family Affordable Housing Tax Credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A balanced national housing policy must recognize that decent housing includes apartments and addresses the needs of all citizens, including renters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 504,
+      "generation_tps": 16.54355914008528,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2155,
+      "prompt_tps": 534.7862037056622,
+      "request_sha256": "7e570ff983f516f274605c50ec36bd5f5a6065d2d743316085f8635fa90034e9",
+      "seconds": 34.50436075008474,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the President's goal of increasing the number of minority homeowners by at least 5.5 million families by the end of the decade.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since President Bush announced the initiative in 2002, an additional 1.6 million minorities have become homeowners.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the Self-Help Homeownership Opportunities Program, which helps low-income families purchase a home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The most significant barrier to homeownership is the down payment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to reduce the barrier of down payments, like the American Dream Downpayment Act and Zero Downpayment Mortgages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and Congress have taken action to provide counseling and education to help first-time homebuyers navigate the process of buying a home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration has taken steps to alert people to the dangers of predatory lending, in an effort to help Americans maintain a positive credit history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affordable housing is in the national interest.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The mortgage interest deduction for primary residences was put into the federal tax code.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Tax reform of any kind should continue to encourage homeownership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for efforts to enact the Single-Family Affordable Housing Tax Credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A balanced national housing policy must recognize that decent housing includes apartments and addresses the needs of all citizens, including renters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "432a28fdbfa4770fac321bc4344405b9d1fa54d64481e3568210930820fb6fce"
+}

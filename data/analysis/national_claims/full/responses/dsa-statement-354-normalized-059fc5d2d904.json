@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 239,
+      "generation_tps": 16.59945546326455,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1398,
+      "prompt_tps": 657.0027678007068,
+      "request_sha256": "3895a906bbe58671216f4d163b687a203ffa5e44e34abc7b3d0fc27fa021adf2",
+      "seconds": 16.534942166879773,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States can only achieve democratic forms of peacekeeping and dispute resolution if it comprehends the historic role of the police in reinforcing forms of racial and class domination.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Armed and professional police forces arose in the United States to capture fugitive slaves and to repress striking workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The struggle for a democratic judicial and criminal justice system is integrally tied to the fight for racial, gender, and class equality.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mass incarceration and repressive policing cannot redress the absence of economic and educational opportunities that beset inner cities and increasingly inner suburbs and deindustrialized small towns.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nothing short of radical democratic change can alter a criminal justice system that works to perpetuate American apartheid.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 240,
+      "generation_tps": 16.624168585566093,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1805,
+      "prompt_tps": 628.3839918160029,
+      "request_sha256": "45ba8b4f549338a804a964938c8e58a7f03e2ba4fedd245f85d447634d81ad28",
+      "seconds": 17.318355082999915,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States can only achieve democratic forms of peacekeeping and dispute resolution if it comprehends the historic role of the police in reinforcing forms of racial and class domination.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Armed and professional police forces arose in the United States to capture fugitive slaves and to repress striking workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The struggle for a democratic judicial and criminal justice system is integrally tied to the fight for racial, gender, and class equality.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mass incarceration and repressive policing cannot redress the absence of economic and educational opportunities that beset inner cities, increasingly inner suburbs, and deindustrialized small towns.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nothing short of radical democratic change can alter a criminal justice system that works to perpetuate American apartheid.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3895a906bbe58671216f4d163b687a203ffa5e44e34abc7b3d0fc27fa021adf2"
+}

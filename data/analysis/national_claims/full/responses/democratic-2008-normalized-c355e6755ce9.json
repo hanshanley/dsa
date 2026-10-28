@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 220,
+      "generation_tps": 16.47419975521587,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1401,
+      "prompt_tps": 648.6717865191175,
+      "request_sha256": "6bda42d9ec320ab9a7b51dfc2de8414e49dbffbd0374505859b8bca4ba173330",
+      "seconds": 15.523352042073384,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to maintain fiscal responsibility.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to not mortgage children's future on a mountain of debt.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to invest in the future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to restore fairness to the tax code.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to bring balance back to the housing markets, so that people do not have to lose their homes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to encourage personal savings, so that the economy remains strong and Americans can live well in their retirements.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 236,
+      "generation_tps": 16.755768215373468,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1789,
+      "prompt_tps": 562.9084621489354,
+      "request_sha256": "3fb97bea02f4c92ddc26a69794a2ca0ed32aa8407e6af35b4e46d38cef3a0d6e",
+      "seconds": 17.271888749906793,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to maintain fiscal responsibility.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to not mortgage children's future on a mountain of debt.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to invest in the future at the same time as maintaining fiscal responsibility and not mortgaging children's future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to restore fairness to the tax code.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to bring balance back to the housing markets, so that people do not have to lose their homes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to encourage personal savings, so that the economy remains strong and Americans can live well in their retirements.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6bda42d9ec320ab9a7b51dfc2de8414e49dbffbd0374505859b8bca4ba173330"
+}

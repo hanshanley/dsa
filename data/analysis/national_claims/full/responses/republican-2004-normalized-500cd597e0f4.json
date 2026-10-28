@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 478,
+      "generation_tps": 16.591653216524865,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1457,
+      "prompt_tps": 675.3719759208178,
+      "request_sha256": "88f8c35ba9e1c45cc9a5ba9cbc6c08ef718f207e5bbadcb3bc28b9bdb91ca71e",
+      "seconds": 30.97621529106982,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"American ties to the Philippines have been close for more than a hundred years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support the victory of Filipino democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans cherish the continuing friendship with the Philippines and its people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Philippines has been by the side of the United States in war and in peace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under President Bush's leadership, the United States has undertaken an historic transformation in its bilateral relationship with India.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush believes U.S. interests require a strong relationship between the world's largest democracies.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since 2001, the United States has viewed India as a growing world power.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States and India have common security interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States and India share a fundamental commitment to political freedom and representative government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Through a strong partnership with India, the United States can best address any differences and shape a dynamic future.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The prospects for the partnership between the United States and India were further enhanced by the announcement this January of the \\\"Next Steps in Strategic Partnership\\\".\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The \\\"Next Steps in Strategic Partnership\\\" is a new effort to further deepen and accelerate cooperation between the United States and India.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 433,
+      "generation_tps": 16.566976389972485,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2103,
+      "prompt_tps": 694.4124466114835,
+      "request_sha256": "565a741d1dea1c5fb2383609e4049ae7db7393fc8ffaa8f770bdc6ca84773897",
+      "seconds": 29.174115707864985,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"American ties to the Philippines have been close for more than a hundred years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans have supported the victory of Filipino democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans cherish the continuing friendship with the Philippines and its people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Philippines has been by the side of the United States in war and in peace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under President Bush's leadership, the United States has undertaken an historic transformation in its bilateral relationship with India.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Bush believes that U.S. interests require a strong relationship between the world's largest democracies.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since 2001, the United States has viewed India as a growing world power with which the United States has common security interests and a shared, fundamental commitment to political freedom and representative government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Through a strong partnership with India, the United States can best address any differences and shape a dynamic future.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The prospects for that partnership were further enhanced by the announcement this January of the \\\"Next Steps in Strategic Partnership\\\" between the United States and India.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The \\\"Next Steps in Strategic Partnership\\\" is a new effort to further deepen and accelerate cooperation between the United States and India.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "88f8c35ba9e1c45cc9a5ba9cbc6c08ef718f207e5bbadcb3bc28b9bdb91ca71e"
+}

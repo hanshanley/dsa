@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 327,
+      "generation_tps": 16.61029139765509,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1467,
+      "prompt_tps": 649.6190137556454,
+      "request_sha256": "a33e082d5fd6cd419407dc24b5104680f6a15a86d3a230ea8435cbd3b17f56f1",
+      "seconds": 21.95391616714187,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. is spending less on infrastructure than at any time in recent history and less than its international competitors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A National Infrastructure Reinvestment Bank will be started to leverage private investment in infrastructure improvements and create nearly two million new jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Infrastructure improvements will be funded as the war in Iraq is brought to a responsible close.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Modernizing the power grid will help conservation and spur the development and distribution of clean energy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A national transportation policy, including high-speed rail and light rail, is needed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in bridges, roads, and public transportation will allow people choices in how they get to work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every American will have access to high-speed broadband.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The power of the wireless spectrum will be unleashed by taking on special interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 369,
+      "generation_tps": 16.587218274040683,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1962,
+      "prompt_tps": 637.4415785294242,
+      "request_sha256": "b2d1371a2aafd1b2484d1744ad9e8d97d29caf3fbc38c839d3ed66ba2d91fd89",
+      "seconds": 25.333292207913473,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. is spending less on infrastructure than at any time in recent history and less than its international competitors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A National Infrastructure Reinvestment Bank will be started to leverage private investment in infrastructure improvements and create nearly two million new jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Infrastructure improvements will be funded as the war in Iraq is brought to a responsible close.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Modernizing the power grid will help conservation and spur the development and distribution of clean energy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A national transportation policy, including high-speed rail and light rail, is needed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in bridges, roads, and public transportation will allow people choices in how they get to work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every American will have access to high-speed broadband.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The power of the wireless spectrum will be unleashed by taking on special interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Teddy Roosevelt called together leaders from business and government to develop a plan for the next century's infrastructure.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a33e082d5fd6cd419407dc24b5104680f6a15a86d3a230ea8435cbd3b17f56f1"
+}

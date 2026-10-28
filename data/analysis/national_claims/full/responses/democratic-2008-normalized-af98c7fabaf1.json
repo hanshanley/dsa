@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 427,
+      "generation_tps": 16.606094903500576,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1526,
+      "prompt_tps": 645.3941871783995,
+      "request_sha256": "a9bd8909c7fb18528c8eb37e65348c0e8d2babb27db5d521c02cf6292c381346",
+      "seconds": 28.087302083149552,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In the 21st Century, countries that out-educate the United States will out-compete the United States.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"American high-schoolers continue to score lower on math and science tests than most other students in the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American high-schoolers continue to drop out at higher rates than their peers in other industrialized nations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A persistent achievement gap exists between minority and white students.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Harmful disparities exist between different schools within a state or even a district.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes graduation from a quality public school and the opportunity to succeed in college must be the birthright of every child.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party believes all students need 21st Century skills to succeed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new era of mutual responsibility in education is needed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"High standards must be set for children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Schools, teachers, parents, business leaders, the community, and elected leaders must be held accountable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Partnerships must be formed to provide resources and reforms to help every child reach their full potential.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 435,
+      "generation_tps": 16.5764304964635,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2121,
+      "prompt_tps": 656.3801031997256,
+      "request_sha256": "68ffdd7e418421a314510723ecf214b3ed3c0df4a62d19e8f715aa85133b4b5e",
+      "seconds": 29.482693125028163,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In the 21st Century, countries that out-educate the United States will out-compete the United States.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"American high-schoolers continue to score lower on math and science tests than most other students in the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American high-schoolers continue to drop out at higher rates than their peers in other industrialized nations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A persistent achievement gap exists between minority and white students.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Harmful disparities exist between different schools within a state or even a district.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party believes graduation from a quality public school and the opportunity to succeed in college must be the birthright of every child.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party believes all students need 21st Century skills to succeed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Progressing to a new era of mutual responsibility in education is needed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"High standards must be set for children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Schools, teachers, parents, business leaders, the community, and elected leaders must be held accountable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Partnerships must be formed, and resources and reforms must be committed to, to help every child reach their full potential.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a9bd8909c7fb18528c8eb37e65348c0e8d2babb27db5d521c02cf6292c381346"
+}

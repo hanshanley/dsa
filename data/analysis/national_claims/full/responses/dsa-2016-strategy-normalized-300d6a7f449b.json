@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 365,
+      "generation_tps": 16.601047834571574,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1538,
+      "prompt_tps": 662.9595626209461,
+      "request_sha256": "45e5195a12991bbc7076aae6ba9a46ba94866f9d18cec566d69f394ac56c337b",
+      "seconds": 24.315551541978493,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA will stand in solidarity with movements around the world fighting to raise global labor, environmental, and human rights standards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will oppose corporate \u201crace to the bottom\u201d policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will oppose the U.S. government\u2019s foreign policy, which supports undemocratic international institutions, including pro-corporate \u201cfree trade agreements\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will oppose the U.S. government\u2019s support for authoritarian regimes that support U.S. government and economic interests, often through military intervention.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Building DSA and the socialist left is essential to DSA\u2019s work.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA\u2019s coalition work and community organizing will provide invaluable organizing skills and ways to improve DSA\u2019s work.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a need to dramatically increase the ranks of the socialist movement in the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The socialist movement in the United States has room for growth, especially in the wake of Sanders\u2019 Political Revolution, which exposed countless young people to the idea of democratic socialism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 16.565360973238647,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2071,
+      "prompt_tps": 655.1233469068436,
+      "request_sha256": "9627b7dfa52119cdb14b484ff66155e07dc6361feb959fdf70ced88f16a3164a",
+      "seconds": 24.8427057499066,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA will stand in solidarity with movements around the world fighting to raise global labor, environmental, and human rights standards in opposition to corporate \u201crace to the bottom\u201d policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will oppose the U.S. government\u2019s own foreign policy, which supports undemocratic international institutions, including pro-corporate \u201cfree trade agreements\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will oppose the U.S. government\u2019s support for authoritarian regimes that support U.S. government and economic interests, often through military intervention.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Building DSA and the socialist left is essential to DSA\u2019s work, regardless of what DSA gains as an organization from this work.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA\u2019s coalition work and community organizing will provide invaluable organizing skills and discover countless ways to improve the work that DSA does.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a need to dramatically increase the ranks of the socialist movement in the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The socialist movement in the United States has room for growth, especially in the wake of Sanders\u2019 Political Revolution, which exposed countless young people to the idea of democratic socialism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "45e5195a12991bbc7076aae6ba9a46ba94866f9d18cec566d69f394ac56c337b"
+}

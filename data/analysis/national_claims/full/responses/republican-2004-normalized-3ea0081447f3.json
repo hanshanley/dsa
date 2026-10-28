@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 322,
+      "generation_tps": 16.57648377396623,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1403,
+      "prompt_tps": 663.9916903952891,
+      "request_sha256": "70937ea16c16fb25e152f836a5995d73b7dc329ff8ad7780d066260467c25f7b",
+      "seconds": 21.546972332987934,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the efforts of the Bush Administration in working closely with the Government of Sudan and the Sudanese People's Liberation Movement to bring peace to Sudan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sudan's civil war is responsible for the deaths of two million people over two decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Achieving peace and concluding a just and comprehensive agreement must be an urgent priority for both sides in Sudan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has made peace in Sudan a top priority of his foreign policy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush appointed a Special Envoy to facilitate discussions regarding Sudan.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush signed the Sudan Peace Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's commitment has paved the way for significant progress toward peace in Sudan.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for continued movement this year toward a comprehensive peace agreement that will put an end to 20 years of conflict in southern Sudan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 273,
+      "generation_tps": 16.6027388585699,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1893,
+      "prompt_tps": 690.6258020065516,
+      "request_sha256": "0d12fd3c671323c3e5dd2e0a9dc69f3dd4e099f4f7c7baf94b89129e828edd12",
+      "seconds": 19.19317666697316,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the efforts of the Bush Administration in working closely with the Government of Sudan and the Sudanese People's Liberation Movement to bring peace to Sudan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sudan's civil war is one of the worst humanitarian tragedies of our time and is responsible for the deaths of two million people over two decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Achieving peace, and concluding a just and comprehensive agreement, must be an urgent priority for both sides in Sudan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has made peace in Sudan a top priority of his foreign policy, including the appointment of a Special Envoy to facilitate discussions and the signing of the Sudan Peace Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's commitment has paved the way for significant progress and welcomes continued movement this year toward a comprehensive peace agreement that will put an end to 20 years of conflict in southern Sudan.\", \"claim_types\":[\"evaluation\",\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 320,
+      "generation_tps": 16.5743164315421,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2337,
+      "prompt_tps": 686.4563836908994,
+      "request_sha256": "cb5dd7f6b94ad51cf5239f54df51d3a4bebb50384e6bf4834d171dc813af9c68",
+      "seconds": 22.720869291806594,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the efforts of the Bush Administration in working closely with the Government of Sudan and the Sudanese People's Liberation Movement to bring peace to Sudan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Sudan's civil war is responsible for the deaths of two million people over two decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Achieving peace, and concluding a just and comprehensive agreement, must be an urgent priority for both sides in Sudan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has made peace in Sudan a top priority of his foreign policy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush appointed a Special Envoy to facilitate discussions regarding Sudan.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush signed the Sudan Peace Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's commitment has paved the way for significant progress.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for continued movement this year toward a comprehensive peace agreement that will put an end to 20 years of conflict in southern Sudan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "70937ea16c16fb25e152f836a5995d73b7dc329ff8ad7780d066260467c25f7b"
+}

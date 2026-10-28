@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 402,
+      "generation_tps": 16.608695324655542,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1470,
+      "prompt_tps": 649.7612230756729,
+      "request_sha256": "7062fb096fd8e04a1ef1400767cee1a14700ae2cfc29c77ce421dc8aefa19266",
+      "seconds": 26.475688874954358,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"There are profound disagreements regarding human rights, China's observance of its nonproliferation commitments, and America's commitment to the self-defense of Taiwan under the Taiwan Relations Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for President Bush's efforts to narrow differences with China where they exist, but not to allow them to preclude cooperation where there is agreement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States government's policy is that there is one China, as reflected in the three communiqu\u00e9s and the Taiwan Relations Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to any unilateral decision by either China or Taiwan to change the status quo.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recognition that America's policy is based on the principle that there must be no use of force by China against Taiwan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Denial of the right of Beijing to impose its rule on the free Taiwanese people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"All issues regarding Taiwan's future must be resolved peacefully and must be agreeable to the people of Taiwan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"If China violates principles and attacks Taiwan, then the United States will respond appropriately in accordance with the Taiwan Relations Act.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"America will help Taiwan defend itself.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 401,
+      "generation_tps": 16.556804224860276,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2040,
+      "prompt_tps": 648.4543527378038,
+      "request_sha256": "ed46a515bcfdcfbc2f47c3b36d28d86d03d2d7ad35191a09028615c9bc4660e4",
+      "seconds": 27.37502545909956,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"There are profound disagreements regarding human rights, China's observance of its nonproliferation commitments, and America's commitment to the self-defense of Taiwan under the Taiwan Relations Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for President Bush's efforts to narrow differences where they exist, but not to allow them to preclude cooperation where there is agreement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States government's policy is that there is one China, as reflected in the three communiqu\u00e9s and the Taiwan Relations Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to any unilateral decision by either China or Taiwan to change the status quo.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recognition that America's policy is based on the principle that there must be no use of force by China against Taiwan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Denial of the right of Beijing to impose its rule on the free Taiwanese people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"All issues regarding Taiwan's future must be resolved peacefully and must be agreeable to the people of Taiwan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"If China violates these principles and attacks Taiwan, then the United States will respond appropriately in accordance with the Taiwan Relations Act.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"America will help Taiwan defend itself.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7062fb096fd8e04a1ef1400767cee1a14700ae2cfc29c77ce421dc8aefa19266"
+}

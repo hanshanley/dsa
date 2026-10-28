@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 341,
+      "generation_tps": 16.652567770931142,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1536,
+      "prompt_tps": 529.1343855710041,
+      "request_sha256": "3c422995f60c757197029ad2d87272d8c7590362ea9ddb39dcd2b0266d1c06ba",
+      "seconds": 23.38939662487246,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Affordable Care Act prevented a public insurer from bargaining strenuously with the private hospital and pharmaceutical industry to control costs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A public option allowing individuals to use their subsidies to join Medicare would have lessened problems with cost control.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA believes the only realistic way to achieve equitable and affordable universal health care in this country would be to adopt a single-payer \u201cMedicare for All\u201d plan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Single-payer \u201cMedicare for All\u201d plans similar to those in Canada, France and Taiwan are successful and lower cost.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA chapters in many states are organizing in favor of state-level single payer programs now.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA will join broad multiracial coalitions fighting Republican efforts to \u201crepeal and replace\u201d the Affordable Care Act in the near term.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"\u201cRepeal and Replace\u201d would deny health provision to millions.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"\u201cRepeal and Replace\u201d would gut single-payer Medicaid and Medicare systems.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 353,
+      "generation_tps": 16.541929544588278,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2045,
+      "prompt_tps": 506.0392140350415,
+      "request_sha256": "60b1b2bc25f9f1a8af7fbd48ce567b320efd18ee40a15c37873d2a43cf641b9d",
+      "seconds": 25.390491417143494,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By keeping the private insurance system in place, the ACA prevented a public insurer from bargaining strenuously with the private hospital and pharmaceutical industry to control costs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If a public option had allowed individuals to use their subsidies to join Medicare, problems with cost control would have been lessened.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA believes the only realistic way to achieve equitable and affordable universal health care in this country would be to adopt a single-payer \u201cMedicare for All\u201d plan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Single-payer \u201cMedicare for All\u201d plans similar to those in Canada, France and Taiwan are successful and lower cost.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA chapters in many states are organizing now in favor of state-level single payer programs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In the near term, DSA will join broad multiracial coalitions fighting Republican efforts to \u201crepeal and replace\u201d the Affordable Care Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"\u201cRepeal and Replace\u201d would deny health provision to millions.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"\u201cRepeal and Replace\u201d would gut single-payer Medicaid and Medicare systems.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3c422995f60c757197029ad2d87272d8c7590362ea9ddb39dcd2b0266d1c06ba"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 195,
+      "generation_tps": 16.67766008423457,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1356,
+      "prompt_tps": 633.5051949838781,
+      "request_sha256": "4d301e6bd42b7f7a3d90501dd93bbccb79b206860b62d09234e4aba5693fdabd",
+      "seconds": 13.841845374787226,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Manufacturing communities need immediate relief.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for helping states and localities whose budgets are strained in times of need.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for modernizing and expanding Trade Adjustment Assistance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for helping workers build a safety net, with health care, retirement security, and a way to stay out of crippling debt.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for partnering with community colleges and other higher education institutions to train workers to meet the demands of local industry, including environmentally-friendly technology.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 200,
+      "generation_tps": 16.644421282490804,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1719,
+      "prompt_tps": 609.4319971429422,
+      "request_sha256": "d4ad50360a19fc664b11295d3623d7b23339e3fce5fb5e5cd5c2d6f271bac9db",
+      "seconds": 14.846966749988496,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Manufacturing communities need immediate relief.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for helping states and localities whose budgets are strained in times of need.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for modernizing and expanding Trade Adjustment Assistance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for helping workers build a safety net, with health care, retirement security, and a way to stay out of crippling debt.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for partnering with community colleges and other higher education institutions to train workers to meet the demands of local industry, including environmentally-friendly technology.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4d301e6bd42b7f7a3d90501dd93bbccb79b206860b62d09234e4aba5693fdabd"
+}

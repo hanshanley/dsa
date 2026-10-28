@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 378,
+      "generation_tps": 16.549901776212984,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1427,
+      "prompt_tps": 438.40734569056804,
+      "request_sha256": "d1e6bba4821aa0b7b87d2b2b63506d963461ca16b00856c92d93a0f6f720e28c",
+      "seconds": 26.105095291044563,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The vast majority of Democratic Socialists of America members reside in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes the belated endorsement by the Obama administration of an end to the occupation is a start.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America fears that the incoming presidency of Donald Trump will reverse the modest progress made by the Obama administration regarding the occupation.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes massive public pressure must be put on the next administration to support the Palestinian people\u2019s right to self-determination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"David Friedman backs continued settlements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"David Friedman is an extreme advocate of annexing the occupied territories into one \u201cGreater Israel\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Annexing the occupied territories into one \u201cGreater Israel\u201d would codify Israel as an apartheid state.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Annexing the occupied territories into one \u201cGreater Israel\u201d would permanently threaten the rights and security of all peoples living in the region.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America will pressure the Senate to reject the confirmation of David Friedman as Ambassador to Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 393,
+      "generation_tps": 16.499026274184178,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1973,
+      "prompt_tps": 491.5674516313773,
+      "request_sha256": "a4c661c9636723df46f29f708625a63c6a61c207b034c5e8f70089231c623ab2",
+      "seconds": 27.84479379095137,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Because the vast majority of Democratic Socialists of America members reside in the United States, Democratic Socialists of America takes particular responsibility for influencing the policies of its own government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes the belated endorsement by the Obama administration of an end to the occupation is a start.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America fears that the incoming presidency of Donald Trump will reverse this modest progress.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America believes massive public pressure must be put on the next administration to support the Palestinian people\u2019s right to self-determination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"David Friedman backs continued settlements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"David Friedman is an extreme advocate of annexing the occupied territories into one \u201cGreater Israel\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Annexing the occupied territories into one \u201cGreater Israel\u201d would codify Israel as an apartheid state.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Annexing the occupied territories into one \u201cGreater Israel\u201d would permanently threaten the rights and security of all peoples living in the region.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democratic Socialists of America will pressure the Senate to reject the confirmation of David Friedman as Ambassador to Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d1e6bba4821aa0b7b87d2b2b63506d963461ca16b00856c92d93a0f6f720e28c"
+}
