@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 344,
+      "generation_tps": 16.591555413301343,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1454,
+      "prompt_tps": 504.64322089983943,
+      "request_sha256": "25824025ad153f93fe98079c24a5c8bffb11414346e2b2e7080c6d45f3db44e4",
+      "seconds": 23.627051915973425,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to addressing the problem of manipulative corporate tax shelters, including in the international context, that undermine the public's faith in the fairness of the voluntary tax system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to ensuring no tax provision has the effect of encouraging corporations to locate in other countries at the expense of American workers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al Gore led the way in reinventing government since he took office, making government more effective in its mission of service to the public.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under Al Gore's leadership, the federal workforce has been cut by 377,000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The federal government is the smallest it has been since the New Deal, as a percentage of the workforce.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sixteen thousand pages of regulations were scrapped under Al Gore's leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Over 200 outdated and unnecessary government programs have been eliminated under Al Gore's leadership, including tea testers, mohair subsidies, and the Navy's dairy farm.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 346,
+      "generation_tps": 16.618359719890076,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1966,
+      "prompt_tps": 526.4592348912649,
+      "request_sha256": "9a35d4126ebd8be151b71f38eb610ada79cd7e5381725f1f1883060bacad086e",
+      "seconds": 24.567358084023,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to addressing the problem of manipulative corporate tax shelters, including in the international context, that undermine the public's faith in the fairness of the voluntary tax system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to ensuring no tax provision has the effect of encouraging corporations to locate in other countries at the expense of American workers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since he took office, Al Gore has led the way in reinventing government, making government more effective in its mission of service to the public.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Under Al Gore's leadership, the federal workforce has been cut by 377,000.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The federal government is the smallest it has been since the New Deal, as a percentage of the workforce.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sixteen thousand pages of regulations were scrapped under Al Gore's leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Over 200 outdated and unnecessary government programs have been eliminated under Al Gore's leadership, including tea testers, mohair subsidies, and the Navy's dairy farm.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "25824025ad153f93fe98079c24a5c8bffb11414346e2b2e7080c6d45f3db44e4"
+}

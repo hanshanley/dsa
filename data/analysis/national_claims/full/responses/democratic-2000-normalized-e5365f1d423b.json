@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 489,
+      "generation_tps": 8.286962900178624,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 1483,
+      "prompt_tps": 393.9821157799878,
+      "request_sha256": "7b4b26a47380180b31e8a224154f13125b17422a995788511d5ad315f44da2fe",
+      "seconds": 62.78387858392671,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe workers' freedom to choose a voice at work is a fundamental American right that must never be threatened, obstructed, or taken away.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Unions have given working people the chance to improve their living standards and have a voice on the job from the Industrial Age to the Information Age.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Clinton-Gore Administration stopped the Team Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Clinton-Gore Administration defeated a national right-to-work law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Clinton-Gore Administration fought for resources to enforce worker protections.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will protect wage and hour laws, including the forty-hour workweek and overtime requirements.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will stand firm in support of the Davis-Bacon act and the Service Contract act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore has proposed reforming government contracting rules to ensure taxpayer dollars do not go to companies that break basic labor laws.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in making work pay.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are fighting for a new ergonomic standard.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are fighting for whistle-blower protections.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats have stood up for the National Labor Relations Board.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats have fought to protect the right of working families to participate in the political process.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 494,
+      "generation_tps": 8.37518795125448,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 2140,
+      "prompt_tps": 413.36708096640143,
+      "request_sha256": "e60bf7ff339265965b922d33e68eecdcf2175e6476a5cb875c3e311ac4e05dd9",
+      "seconds": 64.17499016690999,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe workers' freedom to choose a voice at work is a fundamental American right that must never be threatened, obstructed, or taken away.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"From the Industrial Age to the Information Age, unions have given working people the chance to improve their living standards and have a voice on the job.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Clinton-Gore Administration stopped the Team Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Clinton-Gore Administration defeated a national right-to-work law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Clinton-Gore Administration fought for resources to enforce worker protections.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will protect wage and hour laws, including the forty-hour workweek and overtime requirements.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will stand firm in support of the Davis-Bacon act and the Service Contract act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore has proposed reforming government contracting rules to ensure taxpayer dollars do not go to companies that break basic labor laws.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in making work pay.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are fighting for a new ergonomic standard.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are fighting for whistle-blower protections.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats have stood up for the National Labor Relations Board.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats have fought to protect the right of working families to participate in the political process when it was under attack.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7b4b26a47380180b31e8a224154f13125b17422a995788511d5ad315f44da2fe"
+}

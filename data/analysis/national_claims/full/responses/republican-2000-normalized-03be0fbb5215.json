@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 471,
+      "generation_tps": 15.798184598297517,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1535,
+      "prompt_tps": 523.5392274747637,
+      "request_sha256": "fe54ef16fb7995f267dd4fa4f4beaa5ea49d399d58969fa61bb32cae2f42f4d2",
+      "seconds": 32.75954045797698,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Environmental pollution affects physical health, and cultural pollution affects the health of communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is much to celebrate in contemporary culture, but also much to deplore, including the glorification of violence, the glamorizing of drugs, and the abuse of women and children.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals and organizations are using their power as citizens and consumers to advance a cultural renewal in all aspects of American life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for individuals and organizations using their power as citizens and consumers to advance a cultural renewal in all aspects of American life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Porn sites are the most frequently accessed on the Internet, according to the FBI.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Parents at home and communities through their public institutions should take action because porn sites are the most frequently accessed on the Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for Republican legislation pending in the Congress to require schools and libraries to secure their computers against on-line porn and predators if they accept federal subsidies to connect to the Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Securing computers against on-line porn and predators is not a question of free speech.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Kids in a public library should not be victims of filth.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Porn addicts should not use library facilities for their addiction.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public libraries and schools should secure their computers against on-line pornography.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 491,
+      "generation_tps": 15.770509367968126,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2174,
+      "prompt_tps": 526.1313623828531,
+      "request_sha256": "eba608fc3f6ad0ada35db6bca715ba29c8c7abc55a3f09e316f7134e0b58dc09",
+      "seconds": 35.28439920791425,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Environmental pollution affects physical health, and cultural pollution affects the health of communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is much to celebrate in contemporary culture, but also much to deplore, including the glorification of violence, the glamorizing of drugs, and the abuse of women and children, whether in music or videos, advertising, or tabloid journalism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals and organizations are using their power as citizens and consumers to advance a cultural renewal in all aspects of American life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for individuals and organizations using their power as citizens and consumers to advance a cultural renewal in all aspects of American life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FBI reports that porn sites are the most frequently accessed on the Internet.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Parents at home and communities through their public institutions should take action because porn sites are the most frequently accessed on the Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for Republican legislation pending in the Congress to require schools and libraries to secure their computers against on-line porn and predators if they accept federal subsidies to connect to the Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Securing computers against on-line porn and predators is not a question of free speech.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Kids in a public library should not be victims of filth.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Porn addicts should not use library facilities for their addiction.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public libraries and schools should secure their computers against on-line pornography if they accept federal subsidies to connect to the Internet.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fe54ef16fb7995f267dd4fa4f4beaa5ea49d399d58969fa61bb32cae2f42f4d2"
+}

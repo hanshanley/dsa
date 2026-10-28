@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 250,
+      "generation_tps": 15.817744698077956,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1451,
+      "prompt_tps": 498.39691903411267,
+      "request_sha256": "9d9556a4d1e7352c50fb409c1124157539a35019669bb33923ae673dce452014",
+      "seconds": 18.729719874914736,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe they must be leaders in the new global economy, not followers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Globalization is neither good nor evil; it is a fact.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Globalization will work for all Americans only if there are rules of the road that promote both a strong economy and American values.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trade agreements should contain provisions to protect the environment and labor standards, as well as open markets in other countries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will insist on and use the authority to enforce worker rights, human rights, and environmental protections in trade agreements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trade should be used to lift up standards around the world, not drag down standards at home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 265,
+      "generation_tps": 15.602322164635853,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1869,
+      "prompt_tps": 492.18924984385177,
+      "request_sha256": "c94ffe8dc01afd630c6062b6a6655a598e22aefe0762a09d4758d5ae77903a58",
+      "seconds": 20.79660249990411,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe they must be leaders in the new global economy, not followers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Globalization is neither good nor evil; it is a fact, and we have to deal with it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Globalization will work for all Americans only if there are rules of the road that promote both a strong economy and basic American values.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trade agreements should contain provisions that will protect the environment and labor standards, as well as open markets in other countries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will insist on and use the authority to enforce worker rights, human rights, and environmental protections in trade agreements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trade should be used to lift up standards around the world, not drag down standards at home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 265,
+      "generation_tps": 15.6527206276969,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2295,
+      "prompt_tps": 526.4470188777951,
+      "request_sha256": "dfc0193913044bb0e082f5cd4e2a0f270345a69063083dbe80286b937d5e2859",
+      "seconds": 21.301050334004685,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe they must be leaders in the new global economy, not followers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Globalization is neither good nor evil; it is a fact, and Democrats have to deal with it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Globalization will work for all Americans only if there are rules of the road that promote both a strong economy and basic American values.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trade agreements should contain provisions that will protect the environment and labor standards, as well as open markets in other countries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Gore will insist on and use the authority to enforce worker rights, human rights, and environmental protections in trade agreements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trade should be used to lift up standards around the world, not drag down standards at home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9d9556a4d1e7352c50fb409c1124157539a35019669bb33923ae673dce452014"
+}

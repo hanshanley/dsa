@@ -277,7 +277,15 @@ def validate_response(text: str, block: dict) -> tuple[list[dict], list[str], li
             or not claim["evidence_ids"]
             or any(type(value) is not int or value not in units for value in claim["evidence_ids"])
         ):
-            errors.append(f"claim_{number}: invalid_schema_or_evidence_ids")
+            errors.append(
+                f"claim_{number}: invalid_schema_or_evidence_ids; "
+                f"allowed_source_unit_ids={canonical(sorted(units))}; "
+                f"received_evidence_ids={canonical(claim['evidence_ids'])}; "
+                "Cite only the bracketed SOURCE UNIT IDs, not numbered list items, "
+                "headings or page numbers inside the quoted text. "
+                f"allowed_claim_types={canonical(sorted(TYPES))}; "
+                f"received_claim_types={canonical(claim['claim_types'])}"
+            )
             continue
         normalized = claim["claim_text"].strip()
         narration = re.sub(r'"[^"]*"|\u201c[^\u201d]*\u201d', "", normalized).strip() or normalized
@@ -601,7 +609,7 @@ def extract_corpus(
         record = {
             "fingerprint": manifest["fingerprint"],
             "prompt_sha256": digest(prompt),
-            "implementation_version": 3,
+            "implementation_version": 4,
             "attempts": attempts,
         }
         if path.exists():

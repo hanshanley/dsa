@@ -123,6 +123,11 @@ class ClaimCorpusTests(unittest.TestCase):
         for text in invalid:
             with self.subTest(text=text):
                 self.assertTrue(validate_response(text, block)[1])
+        errors = validate_response(response(evidence_ids=[99]), block)[1]
+        allowed = json.dumps(sorted(unit["id"] for unit in block["units"]), separators=(",", ":"))
+        self.assertIn(f"allowed_source_unit_ids={allowed}", errors[0])
+        self.assertIn("received_evidence_ids=[99]", errors[0])
+        self.assertIn("not numbered list items", errors[0])
         errors = validate_response(response(claim_text="These investments reduce costs."), block)[1]
         self.assertIn("Forbidden opening='These'", errors[0])
         self.assertIn("claim_text=", errors[0])

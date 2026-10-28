@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 431,
+      "generation_tps": 15.876003038371481,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1501,
+      "prompt_tps": 490.18066367956163,
+      "request_sha256": "e51ce9dbd9abb3b7b9adf2a8469cf4b94d629d5b7444b4724fb2cd746c7b3f76",
+      "seconds": 30.222759749973193,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Congressional Republicans made adoption easier.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congressional Republicans enacted the child tax credit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Governor Bush wants to double the child tax credit to $1,000 per child.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Governor Bush wants to increase the adoption credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for a family-friendly tax code.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for comp-time and flex-time to accommodate family needs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for choice in childcare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the traditional definition of \\\"marriage\\\" as the legal union of one man and one woman.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that federal judges and bureaucrats should not force states to recognize living arrangements other than the legal union of one man and one woman as marriages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reliance on the home to instill virtues that sustain democracy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican Department of Justice will energetically defend the Defense of Marriage Act in the courts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that sexual preference should not be given special legal protection or standing in law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 442,
+      "generation_tps": 16.327002350272394,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2100,
+      "prompt_tps": 527.3017104555228,
+      "request_sha256": "ce0f80a0427cb43b5935f8dd1b1d68d78ff146adc692321ed5b45bc794bb428f",
+      "seconds": 31.067568292142823,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Congressional Republicans made adoption easier.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congressional Republicans enacted the child tax credit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Governor Bush wants to double the child tax credit to $1,000 per child.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Governor Bush wants to increase the adoption credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for a family-friendly tax code.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for comp-time and flex-time to accommodate family needs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for choice in childcare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the traditional definition of \\\"marriage\\\" as the legal union of one man and one woman.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that federal judges and bureaucrats should not force states to recognize living arrangements other than the legal union of one man and one woman as marriages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reliance on the home, as did the founders of the American Republic, to instill the virtues that sustain democracy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican Department of Justice will energetically defend the Defense of Marriage Act in the courts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that sexual preference should not be given special legal protection or standing in law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e51ce9dbd9abb3b7b9adf2a8469cf4b94d629d5b7444b4724fb2cd746c7b3f76"
+}

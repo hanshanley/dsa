@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 242,
+      "generation_tps": 8.194752873510721,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 1423,
+      "prompt_tps": 384.115423595653,
+      "request_sha256": "3078c2f4ab51e181ccc41215fb13874ec2751b75d4dc2e74c4834035f046f300",
+      "seconds": 33.24723712494597,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Congress enacted the Ticket-to-Work law, empowering persons with disabilities to choose their own support services by voucher, after seeking counsel from those who would be most affected.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican governors inspired initiatives that made it possible for millions of individuals with disabilities to rejoin the work force without losing their health benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to full enforcement of the Ticket-to-Work law and prior enactments that have helped bring individuals with disabilities into the mainstream of society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for full access to the polls and to the entire political process for individuals with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The expanding economy sustains the investment necessary to make assistive technology possible.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 259,
+      "generation_tps": 8.194858937852828,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 1833,
+      "prompt_tps": 336.85787500384265,
+      "request_sha256": "514aa625f21cec1239b617f05e7542214948238c827eed6386a5922dec4b6447",
+      "seconds": 37.05790020781569,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Congress enacted the Ticket-to-Work law, empowering persons with disabilities to choose their own support services by voucher, after seeking counsel from those who would be most affected by it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Initiatives inspired by some Republican governors made it possible for millions of individuals with disabilities to rejoin the work force without losing their health benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to full enforcement of the Ticket-to-Work law and prior enactments that have helped bring individuals with disabilities into the mainstream of a society that needs their skills and their industry.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for full access to the polls and to the entire political process for individuals with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The expanding economy sustains the investment necessary to make assistive technology possible, offering hope to many.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3078c2f4ab51e181ccc41215fb13874ec2751b75d4dc2e74c4834035f046f300"
+}

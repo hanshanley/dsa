@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 468,
+      "generation_tps": 7.919770798303478,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 1513,
+      "prompt_tps": 368.08809614807495,
+      "request_sha256": "5750eabb23f3224ba14f1e6d850e8af3548f06cbd479192208f3fea360b09320",
+      "seconds": 63.21276937518269,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The administration's lax enforcement of borders has led to tragic exploitation of smuggled immigrants and untold suffering at the hands of law-breakers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for harsh penalties against smugglers and those who provide fake documents.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the creation of any national ID card.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The long-term solution for illegal immigration is economic growth in Mexico, Central America, and the Caribbean because free trade is the most powerful force for development that creates a middle class and offers opportunity at home.\", \"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Decisive action is needed in the short run to address illegal immigration.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the recommendations of the U.S. Commission on Immigration Reform.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for devoting more resources to border control.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for devoting more resources to internal operations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for reorganizing family unification preferences to prioritize spouses and children over extended family members.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for emphasizing needed skills in determining eligibility for admission.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for overhauling the Labor Certification Program to end delays in matching qualified workers with urgent work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Support for reforming the Immigration and Naturalization Service by splitting its functions into two agencies: one focusing on enforcement and one exclusively devoted to service.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 494,
+      "generation_tps": 8.252002876735176,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 2149,
+      "prompt_tps": 371.4957537145979,
+      "request_sha256": "fb9f09d364da64b14a080cae8e56e37d8f113449419df971340e070538b9d35f",
+      "seconds": 65.66810354101472,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The administration's lax enforcement of borders has led to tragic exploitation of smuggled immigrants and untold suffering at the hands of law-breakers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for harsh penalties against smugglers and those who provide fake documents.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the creation of any national ID card.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because free trade is the most powerful force for the kind of development that creates a middle class and offers opportunity at home, the long-term solution for illegal immigration is economic growth in Mexico, Central America, and the Caribbean.\", \"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Decisive action is needed in the short run to address illegal immigration.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the recommendations of the U.S. Commission on Immigration Reform.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for restoring credibility to enforcement by devoting more resources to border control.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for restoring credibility to enforcement by devoting more resources to internal operations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for reorganizing family unification preferences to give priority to spouses and children, rather than extended family members.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for emphasizing needed skills in determining eligibility for admission.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Support for overhauling the failed Labor Certification Program to end the huge delays in matching qualified workers with urgent work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Support for reforming the Immigration and Naturalization Service by splitting its functions into two agencies, one focusing on enforcement and one exclusively devoted to service.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5750eabb23f3224ba14f1e6d850e8af3548f06cbd479192208f3fea360b09320"
+}

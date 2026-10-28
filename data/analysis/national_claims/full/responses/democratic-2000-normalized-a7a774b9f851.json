@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 440,
+      "generation_tps": 16.33145479313926,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1500,
+      "prompt_tps": 447.41855715323373,
+      "request_sha256": "05321c6b4372523d21aaddf87347e4722b54a74bf93f132e3e83103d4056999d",
+      "seconds": 30.305178583133966,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Over $135 billion has been saved, contributing to the surplus and prosperity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trust in government has almost doubled.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A customer survey found that 60 percent of Americans felt government services had improved in the last two years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The survey rated government services at levels almost as high as services in the private sector.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The government is focused on emphasizing results over red tape, offering quality service, and common sense.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The government works in partnership with the private sector to achieve common goals.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans attack public workers and tear down public services.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Government workers have been empowered.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Public services have been improved.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The era of big government has ended.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The era of old government should end.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A government should be created where Americans can easily find the services they need.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The government should be on-line all the time with no need to wait in line.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 486,
+      "generation_tps": 16.206540329142662,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2108,
+      "prompt_tps": 515.2727360833421,
+      "request_sha256": "e6d934dcf97d35549e88042ecefab9f554b55eaf61c3f4f42c88af1274a7c16e",
+      "seconds": 34.09382170904428,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Over $135 billion has been saved, contributing to the surplus and prosperity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Saving over $135 billion has contributed to earning back the faith and trust of the American people in their democratic institutions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trust in government has almost doubled.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The first customer survey ever taken of American's satisfaction with the services government delivers found that fully 60 percent felt service had improved in the last two years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The survey rated government services at levels almost as high as services in the private sector.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the government is focused on emphasizing results over red tape, offering Americans quality service, old-fashioned common sense, and working in partnership with the private sector to achieve common goals.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans attack public workers and tear down public services.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The government has empowered government workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The government has improved public services.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The era of big government has ended.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"It is time to end the era of old government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A government should be created where Americans can easily find the services they need.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The government should be on-line all the time with no need to wait in line.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "05321c6b4372523d21aaddf87347e4722b54a74bf93f132e3e83103d4056999d"
+}

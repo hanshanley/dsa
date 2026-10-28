@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 140,
+      "generation_tps": 8.08682087882167,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 1364,
+      "prompt_tps": 352.05994105106294,
+      "request_sha256": "353590b9745ee3c60c7cf26ff414c404f26d47a33e30074730eb49f56306cb42",
+      "seconds": 21.196275040972978,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America enthusiastically support the Occupy Wall Street movement.\",\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All democratic forces of the 99% can remake society and remodel it in keeping with values of liberty, equality and solidarity.\",\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dr. Martin Luther King, Jr. said there is a choice between \u201cchaos or community,\u201d and community must be chosen.\",\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 146,
+      "generation_tps": 8.44183844245411,
+      "peak_memory": 33.813073674,
+      "prompt_tokens": 1672,
+      "prompt_tps": 314.37796188540636,
+      "request_sha256": "b0611126aa0652a18c042563c3a06311236856cafca79e0968c9c2b204d01cd6",
+      "seconds": 22.627989165950567,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America enthusiastically support the Occupy Wall Street movement.\",\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Together, all the democratic forces of the 99% can remake society and remodel it in keeping with age-old values of liberty, equality and solidarity.\",\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dr. Martin Luther King, Jr. said there is a choice between \u201cchaos or community,\u201d and community must be chosen.\",\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "353590b9745ee3c60c7cf26ff414c404f26d47a33e30074730eb49f56306cb42"
+}

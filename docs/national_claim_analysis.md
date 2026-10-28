@@ -109,6 +109,11 @@ Replace the interpreter path with that environment's actual Python path.
 Successful cached chunks are revalidated and reused. Failed chunks are not
 retried implicitly; `--retry-failed` preserves their old records in
 `response_history/`. Repair attempts include the failed response and its errors.
+Citation errors list the allowed bracketed source-unit IDs explicitly; numbered
+list items, headings, and page numbers inside source text are not evidence IDs.
+New responses record the implementation version. An already-running worker keeps
+its loaded code; later invocations pick up updated repair feedback without
+changing the source/model configuration or silently rewriting successful caches.
 
 Outputs are separated under `data/analysis/national_claims/{full,reviewed_sample}/`
 and `figures/national_claims/`. The command refuses to present an unfinished full

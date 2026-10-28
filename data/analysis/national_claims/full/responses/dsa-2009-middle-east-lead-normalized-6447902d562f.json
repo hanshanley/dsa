@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 450,
+      "generation_tps": 16.570495576231313,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1562,
+      "prompt_tps": 495.54539870328745,
+      "request_sha256": "536b5624667be2d9fd8f74bd01a91f792af0c22847aba5e2672c92705764cd33",
+      "seconds": 30.321821833960712,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The loss of civilian life among the Gazan population is greater than the loss of Israeli life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Gazan civilians live in squalid conditions within borders policed by Israel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If indirect negotiations with Hamas had not been abandoned by Israel, the 2008 ceasefire likely would have been maintained.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel\u2019s three-week military operation resulted in the deaths of hundreds of Palestinian civilians, wounded thousands more, and left upwards of 50,000 homeless.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel\u2019s three-week military operation turned whole sections of Gaza City into what even Israeli observers call \u201can earthquake zone\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel\u2019s three-week military operation was an excessive and inhumane response to Hamas\u2019s rocket launchings into Israeli population centers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel\u2019s three-week military operation did little to enhance the long-term security of the Israeli people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ehud Olmert admits Israel can neither gain physical security nor perpetuate its status as a majority Jewish state unless it ends its unjust occupation of the Gaza Strip and West Bank.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America urges the U.S. government and the international community to ensure that the temporary ceasefire in Gaza leads to a sustained diplomatic effort to negotiate a just, two-state solution to the conflict between the Palestinian and Israeli peoples.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 467,
+      "generation_tps": 16.569728898267584,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2180,
+      "prompt_tps": 531.5687903779243,
+      "request_sha256": "60001f3e8f628210224a89a8448a122fdd85babbff6a23419c99bb3963323d1f",
+      "seconds": 32.297526417067274,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The loss of civilian life among the Gazan population is greater than the loss of Israeli life, as 22 Israelis have been killed while hundreds of Palestinian civilians have been killed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Gazan civilians live in squalid conditions within borders policed by Israel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If indirect negotiations with Hamas had not been abandoned by Israel, the 2008 ceasefire likely would have been maintained.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel\u2019s three-week military operation resulted in the deaths of hundreds of Palestinian civilians, wounded thousands more, and left upwards of 50,000 homeless.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel\u2019s three-week military operation turned whole sections of Gaza City into what even Israeli observers call \u201can earthquake zone\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel\u2019s three-week military operation was an excessive and inhumane response to Hamas\u2019s rocket launchings into Israeli population centers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel\u2019s three-week military operation did little to enhance the long-term security of the Israeli people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ehud Olmert admits Israel can neither gain physical security nor perpetuate its status as a majority Jewish state unless it ends its unjust occupation of the Gaza Strip and West Bank.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America urges the U.S. government and the international community to ensure that the temporary ceasefire in Gaza leads to a sustained diplomatic effort to negotiate a just, two-state solution to the conflict between the Palestinian and Israeli peoples.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "536b5624667be2d9fd8f74bd01a91f792af0c22847aba5e2672c92705764cd33"
+}

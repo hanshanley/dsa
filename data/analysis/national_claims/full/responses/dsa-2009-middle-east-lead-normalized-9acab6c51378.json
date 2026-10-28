@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 128,
+      "generation_tps": 7.563497947320119,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1368,
+      "prompt_tps": 381.49393289724276,
+      "request_sha256": "963a036cee54cd53054cc153b49218031eacd6ea35d9652e02a6b84f320ac0e8",
+      "seconds": 20.518688540905714,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A policy should use carrots and sticks to encourage both sides in the conflict to make the hard choices and compromises that must be the foundation of an enduring peace.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. cannot contribute to the security of all the peoples of the Middle East if it continues to embrace Israeli governments that block the peace process, according to activists in the Israeli peace movement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 127,
+      "generation_tps": 7.947972260678451,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1664,
+      "prompt_tps": 381.298747653384,
+      "request_sha256": "a3472244e3c4176cff1d897435d50857c90a20d0eb580067fd3d124af5dddd40",
+      "seconds": 20.358138457871974,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A policy should use carrots and sticks to encourage both sides in the conflict to make the hard choices and compromises that must be the foundation of an enduring peace.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Activists in the Israeli peace movement say the U.S. cannot contribute to the security of all the peoples of the Middle East if it continues to embrace Israeli governments that block the peace process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "963a036cee54cd53054cc153b49218031eacd6ea35d9652e02a6b84f320ac0e8"
+}

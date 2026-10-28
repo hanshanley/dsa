@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 131,
+      "generation_tps": 16.338212386897336,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1498,
+      "prompt_tps": 487.7628863580859,
+      "request_sha256": "5669b2c7067018a333ace91ae0ae3682438ef409489d0794d5f86acaf72e8b03",
+      "seconds": 11.10313112498261,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for state and local efforts to help more than two million children of prisoners through pre-schools, mentoring, and family rebuilding programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"These children are often the ignored victims of crime.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Early intervention in the plight of these children is essential to reduce the cycle of violence and to save a child.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 133,
+      "generation_tps": 15.920969504410747,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1730,
+      "prompt_tps": 489.145211493259,
+      "request_sha256": "1d06de8acf6f297dc46203aae0ef945d0364a3507600d65099a6ec6f20f90ce1",
+      "seconds": 11.901175917126238,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for state and local efforts to help more than two million children of prisoners through pre-schools, mentoring, and family rebuilding programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children of prisoners are often the ignored victims of crime.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Early intervention in the plight of children of prisoners is essential to reduce the cycle of violence and to save a child.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 134,
+      "generation_tps": 15.458999692793228,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1799,
+      "prompt_tps": 489.778122199626,
+      "request_sha256": "9784a7c09845f4df5a662e60aabf4419476ebde8f95e73e5a59ca5fffd96efbd",
+      "seconds": 12.356047208188102,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for state and local efforts to help the more than two million children of prisoners through pre-schools, mentoring, and family rebuilding programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children of prisoners are often the ignored victims of crime.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Early intervention in the plight of children of prisoners is essential to reduce the cycle of violence and to save a child.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5669b2c7067018a333ace91ae0ae3682438ef409489d0794d5f86acaf72e8b03"
+}

@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.238395270295673,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1430,
+      "prompt_tps": 480.2926493000025,
+      "request_sha256": "e06483762bbf062ae92d3916d92eaea526b81798984ccafe16884cb51ced7338",
+      "seconds": 26.45365258399397,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The goal is to ensure women with problem pregnancies have support, material and otherwise, for themselves and their babies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The pro-life agenda does not include punitive action against women who have an abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Salute those who provide alternatives to abortion and offer adoption services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commend congressional Republicans for expanding assistance to adopting families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commend congressional Republicans for removing racial barriers to adoption.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Adoption and Safe Families Act of 1997 has had a spectacular impact.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Adoptions out of foster care have jumped forty percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The incidence of child abuse and neglect has actually declined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for making permanent the adoption tax credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding the adoption tax credit to $7,500.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 407,
+      "generation_tps": 16.31664083861829,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 1979,
+      "prompt_tps": 512.1336843704482,
+      "request_sha256": "1898b7d82fc7e4c175656e459b1246c4432388bf2747f509b6a67c37b1742970",
+      "seconds": 28.823491167044267,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The goal is to ensure women with problem pregnancies have the kind of support, material and otherwise, they need for themselves and for their babies, not to be punitive towards those for whose difficult situation we have only compassion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The pro-life agenda does not include punitive action against women who have an abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Salute those who provide alternatives to abortion and offer adoption services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commend congressional Republicans for expanding assistance to adopting families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commend congressional Republicans for removing racial barriers to adoption.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Adoption and Safe Families Act of 1997 has had a spectacular impact.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Adoptions out of foster care have jumped forty percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The incidence of child abuse and neglect has actually declined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for making permanent the adoption tax credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding the adoption tax credit to $7,500.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 8.612235535724759,
+      "peak_memory": 33.812205322,
+      "prompt_tokens": 2570,
+      "prompt_tps": 538.8064749910294,
+      "request_sha256": "f0194a4da0b3614988fd96cf05699aae7bd2fed7e980cc817355884e306a7669",
+      "seconds": 52.16407866589725,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The goal is to ensure women with problem pregnancies have the kind of support, material and otherwise, they need for themselves and for their babies, not to be punitive towards those for whose difficult situation the group has only compassion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The pro-life agenda does not include punitive action against women who have an abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Salute those who provide alternatives to abortion and offer adoption services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commend congressional Republicans for expanding assistance to adopting families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commend congressional Republicans for removing racial barriers to adoption.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Adoption and Safe Families Act of 1997 has had a spectacular impact.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Adoptions out of foster care have jumped forty percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The incidence of child abuse and neglect has actually declined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for making permanent the adoption tax credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding the adoption tax credit to $7,500.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e06483762bbf062ae92d3916d92eaea526b81798984ccafe16884cb51ced7338"
+}
