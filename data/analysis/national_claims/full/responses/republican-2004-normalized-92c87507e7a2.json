@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 405,
+      "generation_tps": 15.968017808093606,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1550,
+      "prompt_tps": 480.0520499698126,
+      "request_sha256": "e3754646be4137131fe5447f20c82aef0d7549debe609ffcb15ba5b1a7916e09",
+      "seconds": 28.606400166871026,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for school choice initiatives that give parents more control over their children's education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Defense of the option for home schooling.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Call for vigilant enforcement of laws designed to protect family rights and privacy in education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that children should not be compelled to answer offensive or intrusive questionnaires.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to work for the return of voluntary school prayer to schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to strongly enforce Republican legislation that guarantees equal access to school facilities by student religious groups.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Strong support for voluntary student-initiated prayer in school without governmental interference.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Strong disagreement with the Supreme Court's rulings against student-initiated prayer.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party shares the position of the United States Supreme Court in Miller v. California, 413 U.S. 15 (1973), that obscene material is unprotected by the first amendment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for vigorous prosecution of obscene material by the U.S. Department of Justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 544,
+      "generation_tps": 15.446272977144089,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2123,
+      "prompt_tps": 474.4109562492888,
+      "request_sha256": "9c94ff1dcc20be019120f90c0834627b2f446e47905effb41ea7dad6f46668c5",
+      "seconds": 39.7101269159466,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for school choice initiatives that give parents more control over their children's education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Defense of the option for home schooling.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Call for vigilant enforcement of laws designed to protect family rights and privacy in education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that children should not be compelled to answer offensive or intrusive questionnaires.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to work for the return of voluntary school prayer to schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to strongly enforce Republican legislation that guarantees equal access to school facilities by student religious groups.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Strong support for voluntary student-initiated prayer in school without governmental interference.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Strong disagreement with the Supreme Court's rulings against student-initiated prayer.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party shares the position of the United States Supreme Court in Miller v. California, 413 U.S. 15 (1973), that obscene material is unprotected by the first amendment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for vigorous prosecution of obscene material by the U.S. Department of Justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Obscene material is \\\"unprotected by the first amendment\\\" according to the United States Supreme Court in Miller v. California, 413 U.S. 15 (1973).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Equating the free exchange of ideas with commercial exploitation of obscene material demeans the first amendment and its high purposes, according to the United States Supreme Court in Miller v. California, 413 U.S. 15 (1973).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e3754646be4137131fe5447f20c82aef0d7549debe609ffcb15ba5b1a7916e09"
+}

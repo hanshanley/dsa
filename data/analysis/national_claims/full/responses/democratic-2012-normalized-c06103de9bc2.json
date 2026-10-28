@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 219,
+      "generation_tps": 16.301524307697193,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1488,
+      "prompt_tps": 488.3719824133017,
+      "request_sha256": "46b4c3a2bbb6189ae594731ee5e4e904bb6101418f16079250c408fe60e318d7",
+      "seconds": 16.493836916983128,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Maytee Lopez says financial aid allows Maytee Lopez to pursue a degree in Public Administration at Florida International University.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Maytee Lopez says President Obama's doubling of Pell Grants and enactment of college tax credits make college more affordable and accessible.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hannah Pultz says a quality STEM education is critical to students and the economy of the future.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Hannah Pultz says President Obama understands the importance of a quality STEM education.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama is challenging the country to support STEM teachers like Hannah Pultz and train more teachers like Hannah Pultz.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 270,
+      "generation_tps": 16.20367495347839,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1875,
+      "prompt_tps": 497.7053791379621,
+      "request_sha256": "40cd9659437d241c133fc8fe5a7b974e9d72ea2c9525be97d6943e560dad5243",
+      "seconds": 20.44228933402337,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Maytee Lopez says that if it wasn't for financial aid, Maytee Lopez wouldn't be able to pursue a degree in Public Administration at Florida International University and would have to put education on hold.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Maytee Lopez says that because of President Obama, Maytee Lopez does not have to put education on hold, due to President Obama doubling Pell Grants and enacting college tax credits.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hannah Pultz says a quality STEM education is critical to Hannah Pultz's students and to the economy of the future.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Hannah Pultz says President Obama understands that a quality STEM education is critical to Hannah Pultz's students and to the economy of the future.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama is challenging the country to support the work Hannah Pultz does and to train more teachers like Hannah Pultz.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "46b4c3a2bbb6189ae594731ee5e4e904bb6101418f16079250c408fe60e318d7"
+}

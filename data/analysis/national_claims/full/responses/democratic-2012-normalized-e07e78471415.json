@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 369,
+      "generation_tps": 16.128266369160617,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1536,
+      "prompt_tps": 494.58900391430194,
+      "request_sha256": "7db123ab67a56b1e6504568892763cde404062aec1e3eb755d5e17b914d5ab29",
+      "seconds": 25.99833850003779,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats took decisive steps to restore fiscal responsibility to Washington after the previous administration put two wars and tax cuts weighted towards the wealthy on the nation's credit card and in the wake of the worst recession since the Great Depression.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The tough pay-as-you-go budget rules of the 1990s were reinstated so that all permanent new spending and tax cuts must now be offset by savings or revenue increases.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama signed into law $2 trillion in spending reductions as part of a balanced plan to reduce deficits by over $4 trillion over the next decade while taking immediate steps to strengthen the economy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Annual domestic spending will be brought to its lowest level as a share of the economy in 50 years.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Investments will be made that benefit the middle class now and reduce deficits over a decade.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for defeating efforts that would return to economic policies in which tax relief for the wealthy explodes the deficit and asks the middle class to shoulder that burden.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to economic policies in which tax relief for the wealthy explodes the deficit and asks the middle class to shoulder that burden.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 349,
+      "generation_tps": 16.002819216537542,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2073,
+      "prompt_tps": 511.83828711222145,
+      "request_sha256": "7a77bad6d99338e68aa52cc58697dac53d439a8b1add0d6535c32ed0c00a8963",
+      "seconds": 25.87240029196255,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats took decisive steps to restore fiscal responsibility to Washington after the previous administration put two wars and tax cuts weighted towards the wealthy on the nation's credit card and in the wake of the worst recession since the Great Depression.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The tough pay-as-you-go budget rules of the 1990s were reinstated so that all permanent new spending and tax cuts must now be offset by savings or revenue increases.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama signed into law $2 trillion in spending reductions as part of a balanced plan to reduce deficits by over $4 trillion over the next decade while taking immediate steps to strengthen the economy now.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Annual domestic spending will be brought to its lowest level as a share of the economy in 50 years, while still allowing investments that benefit the middle class now and reduce deficits over a decade.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for defeating efforts that would return to economic policies in which tax relief for the wealthy explodes the deficit and asks the middle class to shoulder that burden.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to economic policies in which tax relief for the wealthy explodes the deficit and asks the middle class to shoulder that burden.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7db123ab67a56b1e6504568892763cde404062aec1e3eb755d5e17b914d5ab29"
+}

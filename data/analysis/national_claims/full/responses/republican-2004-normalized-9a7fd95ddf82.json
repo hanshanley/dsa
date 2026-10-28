@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 388,
+      "generation_tps": 16.090905098515332,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1457,
+      "prompt_tps": 583.6843887947562,
+      "request_sha256": "e8434711d9b224ba94f441963e9e8b2b8f1ba178026887b416a95e2f713c2284",
+      "seconds": 26.619116625050083,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush created the National Do Not Call Registry to help ensure telemarketers respect the privacy of U.S. citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The National Do Not Call Registry allows people to limit unwanted telemarketing calls by registering their home or cell phone numbers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Registration for the National Do Not Call Registry can be completed by phone or over the Internet, and is free of charge.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The National Do Not Call Registry comes at no expense to taxpayers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Unauthorized and unwelcome email, commonly known as spam, interferes with efficient and effective business and family communications.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for efforts to address the problem of spam.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Nearly 10 million Americans had their identities stolen last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Identity theft resulted in nearly $50 billion in fraudulent transactions last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Identity theft undermines the basic trust on which the U.S. economy depends.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Identity theft leaves victims feeling violated.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 404,
+      "generation_tps": 16.040777323463214,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2013,
+      "prompt_tps": 491.0144268507998,
+      "request_sha256": "d5bb32ef8c2a950df70249da14ec73234cbdf3300dc9b2cc391a2245d788ca38",
+      "seconds": 29.29933641687967,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush created the National Do Not Call Registry, a tool that will help ensure that telemarketers respect the privacy of U.S. citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The National Do Not Call Registry allows people to limit most unwanted telemarketing calls by registering their home or cell phone numbers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Registration for the National Do Not Call Registry can be completed by phone or over the Internet, and is free of charge.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The National Do Not Call Registry comes at no expense to taxpayers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Unauthorized and unwelcome email, commonly known as spam, interferes with efficient and effective business and family communications.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for efforts to address this growing problem of spam.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Last year alone, nearly 10 million Americans had their identities stolen by criminals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Last year alone, identity theft resulted in nearly $50 billion in fraudulent transactions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Identity theft undermines the basic trust on which the U.S. economy depends.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Identity theft leaves victims poorer and feeling terribly violated.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e8434711d9b224ba94f441963e9e8b2b8f1ba178026887b416a95e2f713c2284"
+}

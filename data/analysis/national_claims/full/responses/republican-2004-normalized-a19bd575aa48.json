@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 401,
+      "generation_tps": 16.45285888178899,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1494,
+      "prompt_tps": 493.59548299311206,
+      "request_sha256": "a964258b5add1010e54158fb3eed8eb1efd3def088f64e02998306edc3eb81ed",
+      "seconds": 27.411860791034997,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Children's health is a top priority for every family and for the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alarming trends in overweight children and childhood obesity jeopardize the health of millions of children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Too many of America's youth do not exercise, are overweight, and have poor dietary habits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Poor exercise, being overweight, and poor dietary habits lead to complications in childhood and as adults.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Five chronic diseases \u2013 heart disease, cancer, stroke, chronic obstructive pulmonary disease, and diabetes \u2013 account for more than two-thirds of all deaths in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Improving overall health and preventing disease and premature death is as easy as making small adjustments and improvements in daily life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group applauds the President's effort to increase public awareness about the benefits of physical fitness through programs like \\\"HealthierUS\\\" and \\\"VERB\\\".\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"\\\"HealthierUS\\\" focuses on physical activity, a nutritious diet, medical screenings, and healthy choices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"\\\"VERB\\\" encourages young people to be physically active every day.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 442,
+      "generation_tps": 16.377861220066382,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2063,
+      "prompt_tps": 519.7322426345556,
+      "request_sha256": "c9aba91494a855b52bd1945aa401238f61b99d3489817a1b2fa4a5c6795f6101",
+      "seconds": 30.968804042087868,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Children's health remains a top priority for every family and for the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alarming trends in overweight children and childhood obesity jeopardize the health of millions of children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Too many of America's youth do not exercise, are overweight, and have poor dietary habits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Too many of America's youth not exercising, being overweight, and having poor dietary habits leads to complications in childhood and as adults.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Five chronic diseases \u2013 heart disease, cancer, stroke, chronic obstructive pulmonary disease (such as bronchitis, emphysema, and asthma), and diabetes \u2013 account for more than two-thirds of all deaths in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Improving overall health, and thus preventing disease and premature death, is as easy as making small adjustments and improvements in the activities of daily life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group applauds the President's effort to increase public awareness about the benefits of physical fitness through programs like \\\"HealthierUS,\\\" which focuses on physical activity, a nutritious diet, medical screenings, and healthy choices, and \\\"VERB\\\".\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"\\\"HealthierUS\\\" focuses on physical activity, a nutritious diet, medical screenings, and healthy choices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"\\\"VERB\\\" encourages young people to be physically active every day.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a964258b5add1010e54158fb3eed8eb1efd3def088f64e02998306edc3eb81ed"
+}

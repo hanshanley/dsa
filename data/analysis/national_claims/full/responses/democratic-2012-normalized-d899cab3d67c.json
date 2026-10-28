@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 340,
+      "generation_tps": 16.253322240521943,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1444,
+      "prompt_tps": 474.70418186495993,
+      "request_sha256": "6ab33e55f99f1a01bd13a522cb7616db576d60d7f5dc5c3a6dfc14a765400c78",
+      "seconds": 23.97382116713561,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party supports slashing taxes for corporations and the wealthiest Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports allowing Wall Street to write its own rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports balancing the budget on the backs of the middle class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney and Congressional Republicans share the same view of the economy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney and Congressional Republicans support the same budget.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney would roll back tax relief provided to working families and college students.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney's $5 trillion tax plan primarily benefits the wealthy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney's $5 trillion tax plan would require massive new taxes on the middle class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party opposes efforts to give additional tax cuts to the wealthiest Americans at the expense of the middle class and investments in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 348,
+      "generation_tps": 16.251020326842575,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1952,
+      "prompt_tps": 512.4964101403208,
+      "request_sha256": "d517ce836312e1e67e65df6b3817dee8de84f9f86cf59020c943f29ab00e686a",
+      "seconds": 25.236001540906727,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party supports slashing taxes for corporations and the wealthiest Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports allowing Wall Street to write its own rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports balancing the budget on the backs of the middle class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney and Congressional Republicans share the same, distorted view of the economy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney and Congressional Republicans support the same, lopsided budget.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney would roll back the tax relief Democrats provided to working families and college students.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney's $5 trillion tax plan primarily benefits the wealthy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Romney's $5 trillion tax plan would require massive new taxes on the middle class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party opposes efforts to give additional tax cuts to the wealthiest Americans at the expense of the middle class and investments in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6ab33e55f99f1a01bd13a522cb7616db576d60d7f5dc5c3a6dfc14a765400c78"
+}

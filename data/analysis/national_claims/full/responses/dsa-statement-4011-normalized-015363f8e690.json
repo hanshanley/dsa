@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 404,
+      "generation_tps": 16.209134804056585,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1570,
+      "prompt_tps": 495.2238044118571,
+      "request_sha256": "9c3be8af7f2204a5d375a2b1a5833cc919c88433e042458fb74eafe40781457a",
+      "seconds": 28.107052334118634,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"After the U.S. conquered Puerto Rico, Puerto Rico\u2019s economy was transformed from a mix of small landowners and subsistence farmers into an agro-industrial economy dominated by U.S. companies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the 1940s, U.S. policy Operation Bootstrap promoted a manufacturing sector in Puerto Rico, combined with the forced sterilization of many Puerto Rican women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico was never allowed to define its own economic destiny by negotiating bilateral trade agreements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico has had to adhere to fiscal policy directed by the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"U.S. control has stunted Puerto Rico\u2019s productive base while extracting profits for U.S. corporations.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recent changes in the U.S. tax code have caused the loss of thousands of manufacturing jobs in Puerto Rico and have been one of the factors leading to the current crisis.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government has not adequately addressed the serious environmental legacy problems stemming from U.S. military exercises in Puerto Rico.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There has been a decades-long pattern of delay and inaction when it comes to remediating the environmental problems left behind by the U.S. Navy on the island of Vieques and elsewhere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 439,
+      "generation_tps": 16.19888332122086,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2142,
+      "prompt_tps": 510.2583334425589,
+      "request_sha256": "749b27a9916503baec82f21f79ac33868a3ccfce2671f0f6decfbb4f82545918",
+      "seconds": 31.311476832954213,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"After the U.S. conquered Puerto Rico, Puerto Rico\u2019s economy, which had been based on a mix of small landowners and subsistence farmers, was transformed into an agro-industrial economy dominated by U.S. companies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Later, in the 1940s, the U.S. policy Operation Bootstrap promoted a manufacturing sector in Puerto Rico, combined with the forced sterilization of many Puerto Rican women, but one limited to manufacturing industries that benefited U.S. transnational corporations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico was never allowed to define its own economic destiny by, for example, negotiating bilateral trade agreements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Puerto Rico has had to adhere to fiscal policy directed by the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"U.S. control has stunted Puerto Rico\u2019s productive base while extracting profits for U.S. corporations.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recent changes in the U.S. tax code have caused the loss of thousands of manufacturing jobs in Puerto Rico and have been one of the factors leading to the current crisis.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government has not adequately addressed the serious environmental legacy problems stemming from U.S. military exercises in Puerto Rico.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There has been a decades-long pattern of delay and inaction when it comes to remediating the environmental problems that were left behind by the U.S. Navy on the island of Vieques and elsewhere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9c3be8af7f2204a5d375a2b1a5833cc919c88433e042458fb74eafe40781457a"
+}

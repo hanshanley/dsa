@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 340,
+      "generation_tps": 15.973915503975084,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1369,
+      "prompt_tps": 479.5534583358947,
+      "request_sha256": "f8146dcd488311077db31c48c93fab6de3e8ca7662e462a3e8c4038a61cd3560",
+      "seconds": 24.15250112512149,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America calls on the U.S. Congress to support the right of oppressed nations to self-determination.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America calls on the U.S. Congress to support the right of oppressed nations to define their relationship with the United States in accordance with international law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America gives its full commitment to decolonization.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America gives its full commitment to deoccupation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America gives its full commitment to demilitarization.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America gives its full commitment to full repatriation of indigenous lands.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Decolonization, deoccupation, demilitarization, and full repatriation of indigenous lands are essential to ensuring a socially just future.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Decolonization, deoccupation, demilitarization, and full repatriation of indigenous lands are essential to ensuring an environmentally sustainable future.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 174,
+      "generation_tps": 15.957325649108105,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1877,
+      "prompt_tps": 492.2948715882933,
+      "request_sha256": "170f967079fd4dac33e851f93d3b4c1ae9607f3f8362eb9d12fac22f9531e39a",
+      "seconds": 14.732428082963452,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America calls on the U.S. Congress to support the right of oppressed nations to self-determination, including the right to define their relationship with the United States in accordance with international law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America gives its full commitment to decolonization, deoccupation, demilitarization, and full repatriation of indigenous lands.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Decolonization, deoccupation, demilitarization, and full repatriation of indigenous lands are essential to ensuring a socially just and environmentally sustainable future.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f8146dcd488311077db31c48c93fab6de3e8ca7662e462a3e8c4038a61cd3560"
+}

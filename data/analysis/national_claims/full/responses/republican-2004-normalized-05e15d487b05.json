@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 389,
+      "generation_tps": 16.175270771162523,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1503,
+      "prompt_tps": 485.84372712867116,
+      "request_sha256": "f52e950aa745318b417b9ab53c97639fa19f5b47dc481d1640bc3a16b84512c8",
+      "seconds": 27.154988249996677,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's welfare reform proposals that promote child wellbeing and stronger marriages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Recognition of the importance of having a father and a mother who are married in the home.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The two-parent family provides the best environment of stability, discipline, responsibility, and character.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Fathers play a critical role in providing stability for their children.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children are more likely to do well in school and avoid crime and drugs when they have a responsible father in their lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Promoting responsible fatherhood will have long-lasting benefits for families and for communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for President Bush's initiatives to reaffirm the important role fathers play in their children's lives and to help men meet the responsibilities of fatherhood.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the President's strong efforts to promote adoption through increased tax incentives and bonuses to states that place older children in permanent family homes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for the President's efforts to promote foster care by increasing the allocation of funds for preventive and family services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 389,
+      "generation_tps": 16.304271516744173,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2060,
+      "prompt_tps": 514.5238992047998,
+      "request_sha256": "086afb63e21c0f05334f6971348c4a6fd59537b77a65a4dd4d51ff38e633c927",
+      "seconds": 27.876183749875054,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's welfare reform proposals that promote child wellbeing and stronger marriages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Recognition of the importance of having in the home a father and a mother who are married.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The two-parent family provides the best environment of stability, discipline, responsibility, and character.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Fathers play a critical role in providing stability for their children.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children are more likely to do well in school and avoid crime and drugs when they have a responsible father in their lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Promoting responsible fatherhood will have long-lasting benefits for families and for communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for President Bush's initiatives to reaffirm the important role fathers play in their children's lives and to help men meet the responsibilities of fatherhood.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the President's strong efforts to promote adoption through increased tax incentives and bonuses to states that place older children in permanent family homes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for the President's efforts to promote foster care by increasing the allocation of funds for preventive and family services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f52e950aa745318b417b9ab53c97639fa19f5b47dc481d1640bc3a16b84512c8"
+}
