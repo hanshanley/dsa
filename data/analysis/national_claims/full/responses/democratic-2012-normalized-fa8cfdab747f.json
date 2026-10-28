@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 418,
+      "generation_tps": 15.575141078072106,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1498,
+      "prompt_tps": 466.2410038705855,
+      "request_sha256": "2cf0d7654f77135ae479940d82670f6f4b011c5a5e1551ec52979cbcde8a4889",
+      "seconds": 30.06944474996999,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Upon taking office, President Obama began work to restore an economy built to last that creates good jobs that pay well.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe in the right to organize and in supporting America's workers with strong labor laws.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President rolled back harmful labor policies designed to undermine collective bargaining rights.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President appointed members of the National Labor Relations Board and National Mediation Board who understand the importance of standing up for the rights of workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President placed his bet on the American worker when he rescued the auto industry.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration will continue its fight against the exploitative practice of employers fraudulently misclassifying workers as independent contractors or white-collar workers to evade taxes or deny them protections and overtime benefits.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As new employment relationships evolve away from the traditional employee-employer model, labor laws need to be modernized and keep pace with changes in the economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party would return to the failed policies of the last administration, vilifying the American worker, undermining unions, and arguing that everyone should fend for themselves.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party opposes the attacks on collective bargaining that Republican governors and state legislatures are mounting in states around the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 419,
+      "generation_tps": 15.838355657499404,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2084,
+      "prompt_tps": 500.77710261937943,
+      "request_sha256": "460c1fae3ac50c7382363686b4b8250382960893dbc4c811a9bf9bc9ec38e71b",
+      "seconds": 30.632457417203113,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Upon taking office, President Obama began the work of restoring an economy built to last that creates good jobs that pay well.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe in the right to organize and in supporting America's workers with strong labor laws.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President rolled back harmful labor policies designed to undermine collective bargaining rights.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President appointed members of the National Labor Relations Board and National Mediation Board who understand the importance of standing up for the rights of workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President placed his bet on the American worker when he rescued the auto industry.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration will continue its fight against the exploitative practice of employers fraudulently misclassifying workers as independent contractors or white-collar workers to evade taxes or deny them protections and overtime benefits.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As new employment relationships evolve away from the traditional employee-employer model, labor laws need to be modernized and keep pace with changes in the economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party would return to the failed policies of the last administration, vilifying the American worker, undermining unions, and arguing that everyone should fend for themselves.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party opposes the attacks on collective bargaining that Republican governors and state legislatures are mounting in states around the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2cf0d7654f77135ae479940d82670f6f4b011c5a5e1551ec52979cbcde8a4889"
+}

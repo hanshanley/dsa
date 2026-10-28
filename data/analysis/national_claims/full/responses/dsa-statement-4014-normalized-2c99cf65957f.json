@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 365,
+      "generation_tps": 14.98020109912798,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1293,
+      "prompt_tps": 463.68247218968526,
+      "request_sha256": "b7be3246c7978a22abe15ebddde1afdb712bdb445ad919e82a6b46f2af224204",
+      "seconds": 27.168769417097792,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA\u2019s National Political Committee approved this statement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Planned Parenthood Federation of America announced it has been forced to stop receiving funding through Title X.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Trump Administration\u2019s new gag rule prohibits groups that provide abortions or abortion referrals from receiving federal funding under Title X.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Organizations providing reproductive healthcare services such as Planned Parenthood are prohibited from providing or telling patients about all their healthcare options, or face the loss of federal funding under Title X.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The loss of Title X funds will have a greater impact on independent clinics.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Planned Parenthood and other providers are pursuing legal options to challenge the rule.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Legislators have incorporated language into spending packages to prevent the implementation of the rule.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The rule is a direct attack on healthcare services available to the working class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Demand for Medicare for All is crucial, including the repeal of the Hyde Amendment and the implementation of full funding for abortion services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 426,
+      "generation_tps": 14.585547953043665,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1826,
+      "prompt_tps": 495.1370220218622,
+      "request_sha256": "093bf7d3078f68e39f50318d384c16ad70aeaa39829b0fd4eb1dee213cb6941f",
+      "seconds": 32.91068874998018,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA\u2019s National Political Committee approved this statement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Planned Parenthood Federation of America announced that it has been forced out of continuing to receive funding through Title X, a decades-old program for affordable birth control and reproductive healthcare, by the Trump Administration\u2019s new gag rule.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Trump Administration\u2019s new gag rule prohibits groups that provide abortions or abortion referrals from receiving any federal funding under Title X.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Organizations providing reproductive healthcare services such as Planned Parenthood are prohibited from providing or telling patients about all their healthcare options, or face the loss of millions of dollars that go toward providing other essential healthcare services, such as birth control, breast exams, STD screening and treatment, and PreP.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The loss of Title X funds will have an even greater impact on similar independent clinics.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Planned Parenthood and other providers are continuing to pursue legal options in challenging the rule.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Legislators have incorporated language into spending packages to prevent the implementation of the rule.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The rule is a direct attack on the healthcare services available to the working class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"It is crucial to demand Medicare for All, including the repeal of the Hyde Amendment and the implementation of full funding for abortion services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b7be3246c7978a22abe15ebddde1afdb712bdb445ad919e82a6b46f2af224204"
+}

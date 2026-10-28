@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 126,
+      "generation_tps": 14.001589245545713,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1368,
+      "prompt_tps": 556.2106024095489,
+      "request_sha256": "66ec40a0d63042a734a4e8227afc55d78477a9a6cd210aa0d8ac1d19b74e8a00",
+      "seconds": 11.467973040882498,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America stand in solidarity with Indigenous peoples, Afro-Brazilians, rural workers in Brazil such as those agitating through the Landless Workers\u2019 movement (MST), and the masses everywhere threatened by the destruction of the Brazilian Amazon.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America demand an immediate halt of the plunder and destruction of the Brazilian Amazon consigning millions to misery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 133,
+      "generation_tps": 15.935246506404406,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1662,
+      "prompt_tps": 484.6196969902186,
+      "request_sha256": "74d5290147cda11b8ed15abafbee0327faaca0f6de649ebbd5ce04bb5296feb0",
+      "seconds": 11.787546375067905,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America stand in solidarity with Indigenous peoples, Afro-Brazilians, rural workers in Brazil such as those agitating through the Landless Workers\u2019 movement (MST), and the masses everywhere threatened by this accelerant of our global climate emergency.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America demand an immediate halt of the plunder and destruction of the Brazilian Amazon consigning millions to misery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 131,
+      "generation_tps": 16.11383898298579,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1989,
+      "prompt_tps": 494.6097833611204,
+      "request_sha256": "d8094b0413bc90866822dd684ca4ad20cbfa5ccf7eb1b9bf361876bda09a9ab2",
+      "seconds": 12.167545541888103,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America stand in solidarity with Indigenous peoples, Afro-Brazilians, rural workers in Brazil such as those agitating through the Landless Workers\u2019 movement (MST), and the masses everywhere threatened by the destruction of the Brazilian Amazon.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America demand an immediate halt of the plunder and destruction of the Brazilian Amazon consigning millions to misery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "66ec40a0d63042a734a4e8227afc55d78477a9a6cd210aa0d8ac1d19b74e8a00"
+}

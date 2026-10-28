@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 426,
+      "generation_tps": 15.015847667455354,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1488,
+      "prompt_tps": 474.5155190107997,
+      "request_sha256": "8da624decd198603d1725f416b6acd4c01195c3bf2c0a2da22fd1d0d6352e007",
+      "seconds": 31.52388795814477,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American people face a choice between moving forward and looking back, reforming government and settling for the status quo, and producing results or playing politics.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans know who they are and what they believe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As the Party of the open door, Republicans respect and accept that members of the Party can have deeply held and sometimes differing views.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Diversity is a source of strength, not a sign of weakness, for Republicans.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans welcome into their ranks all who may hold differing positions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans commit to resolve their differences with civility, trust, and mutual respect.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans commit to affirm the common goals and beliefs that unite them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans stand for freedom.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans stand for the freedom of families and individuals to have good schools, good health care, and affordable housing and services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans stand for the freedom that comes with a good paying job in a growing economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans stand for the freedom and dignity of every human life, in every stage of life.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 431,
+      "generation_tps": 15.075214850474365,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2082,
+      "prompt_tps": 475.68470809576024,
+      "request_sha256": "f927fe8a91f9358534e326d9432667f50f85d9933a081afc7c563b3fe9aa88b3",
+      "seconds": 32.98449437506497,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American people face a choice between moving forward or looking back, reforming government or settling for the status quo, and producing results or playing politics.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans know who they are and what they believe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As the Party of the open door, Republicans respect and accept that members of the Party can have deeply held and sometimes differing views.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Diversity is a source of strength, not a sign of weakness, for Republicans.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans welcome into their ranks all who may hold differing positions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans commit to resolve their differences with civility, trust, and mutual respect.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans commit to affirm the common goals and beliefs that unite them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As the Party of Lincoln, Republicans stand for freedom.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans stand for the freedom of families and individuals to have good schools, good health care, and affordable housing and services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans stand for the freedom that comes with a good paying job in a growing economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans stand for the freedom and dignity of every human life, in every stage of life.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8da624decd198603d1725f416b6acd4c01195c3bf2c0a2da22fd1d0d6352e007"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 391,
+      "generation_tps": 15.24655381020523,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1481,
+      "prompt_tps": 465.7357498050184,
+      "request_sha256": "aadee47666d8cc36ef1438bb7644debf14edfe72b01a195d617c61e15fbc629c",
+      "seconds": 28.842998708132654,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The administration is vigorously protecting U.S. intellectual property at home and abroad through better enforcement and innovative approaches such as voluntary efforts by all parties to minimize infringement while supporting the free flow of information.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Customs seizures of counterfeit drugs have increased by 600 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Seizures of fake consumer safety and critical technology have increased nearly 200 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Justice has aggressively prosecuted the illegal overseas transfer of trade secrets.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As technology advances, the administration will continue to work with all stakeholders to protect the security of the nation and its knowledge assets, U.S. intellectual property, the functioning of fair and competitive markets, and the privacy, free expression, and due process rights of Americans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"From 2001 to 2007, the United States had the slowest private-sector job growth in an economic expansion since World War II.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The typical family saw its income stall and inequality climb from 2001 to 2007, even as the economy grew.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A previous administration thought the answer to economic issues was limiting unions.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 400,
+      "generation_tps": 15.371685506117597,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2040,
+      "prompt_tps": 490.3935940636756,
+      "request_sha256": "fc845e7f9d8c5dda0af8538151b6a1dc22678b3bfeeff35c96b507cdc0727e4a",
+      "seconds": 30.20486145792529,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The administration is vigorously protecting U.S. intellectual property - U.S. technology and creativity - at home and abroad through better enforcement and innovative approaches such as voluntary efforts by all parties to minimize infringement while supporting the free flow of information.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Customs seizures of counterfeit drugs are up 600 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Seizures of fake consumer safety and critical technology have increased nearly 200 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Justice has aggressively prosecuted the illegal overseas transfer of trade secrets.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As technology advances, the administration will continue to work with all stakeholders to protect the security of the nation and its knowledge assets, U.S. intellectual property, the functioning of fair and competitive markets, and the privacy, free expression, and due process rights of Americans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"From 2001 to 2007, the United States had the slowest private-sector job growth in an economic expansion since World War II.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"From 2001 to 2007, the typical family saw its income stall and inequality climb, even as the economy grew.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A previous administration thought limiting unions was the answer to economic issues.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "aadee47666d8cc36ef1438bb7644debf14edfe72b01a195d617c61e15fbc629c"
+}
