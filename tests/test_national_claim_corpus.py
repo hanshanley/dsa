@@ -274,6 +274,65 @@ class ClaimCorpusTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "separate"):
                 prepare(corpus, corpus)
 
+    def test_flagged_claims_cannot_anchor_within_document_duplicates(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            corpus = Path(temporary) / "baseline"
+            corpus.mkdir()
+            output = Path(temporary) / "claims"
+            rows = sources()[:1]
+            text = "\n\n".join([claim()["claim_text"]] * 40)
+            rows[0].update(
+                scoped_text=text,
+                complete_text=text,
+                text_sha256=digest(text),
+                complete_text_sha256=digest(text),
+            )
+            write_rows(corpus / "complete_sources.csv", rows)
+            write_rows(corpus / "coverage.csv", coverage(rows))
+
+            def extractor(prompt, max_tokens):
+                return {
+                    "text": response(),
+                    "seconds": 0.1,
+                    "generation_tokens": 25,
+                    "peak_memory": 1,
+                }
+
+            extract_corpus(output=output, corpus=corpus, extractor=extractor)
+            original = read_rows(output / "claims.csv")
+            self.assertGreaterEqual(len(original), 3)
+            for flagged_indices in ((0,), (0, 1), tuple(range(len(original)))):
+                with self.subTest(flagged_indices=flagged_indices):
+                    write_rows(
+                        output / "semantic_review.csv",
+                        [
+                            {
+                                "block_id": original[index]["block_id"],
+                                "review_status": "issues_found",
+                                "flagged_claim_numbers": "1",
+                            }
+                            for index in flagged_indices
+                        ],
+                    )
+                    summary = extract_corpus(output=output, corpus=corpus, prepare_only=True)
+                    exported = read_rows(output / "claims.csv")
+                    flagged_ids = {original[index]["claim_id"] for index in flagged_indices}
+                    self.assertEqual(
+                        summary["analysis_claims"], int(len(flagged_ids) < len(original))
+                    )
+                    self.assertEqual(summary["assistant_flagged_claims"], len(flagged_ids))
+                    self.assertTrue(all(row["duplicate_of"] not in flagged_ids for row in exported))
+                    eligible = [row for row in exported if row["analysis_eligible"] == "True"]
+                    if eligible:
+                        self.assertNotIn(eligible[0]["claim_id"], flagged_ids)
+                        self.assertTrue(
+                            all(
+                                not row["duplicate_of"]
+                                or row["duplicate_of"] == eligible[0]["claim_id"]
+                                for row in exported
+                            )
+                        )
+
     def test_failed_and_token_capped_blocks_are_not_analysis_input(self):
         with tempfile.TemporaryDirectory() as temporary:
             corpus = Path(temporary) / "baseline"

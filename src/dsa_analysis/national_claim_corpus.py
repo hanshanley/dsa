@@ -487,7 +487,8 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
                         if number in flagged
                         else "assistant_reviewed_no_individual_issue_observed_not_human_gold"
                     )
-                seen.setdefault(key, claim["claim_id"])
+                if claim["analysis_eligible"]:
+                    seen[key] = claim["claim_id"]
             claims.extend(accepted)
         statuses.append(
             {

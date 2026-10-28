@@ -55,8 +55,9 @@ without regenerating or overwriting the original inference records.
 
 Exact case-insensitive claim duplicates within a document remain downloadable
 with `duplicate_of`, but are excluded from fitting. Identical claims in different
-documents retain their respective attributions. Model settings, prompts, input
-hashes, and chunk ordering fingerprint the cache; changed configurations cannot
+documents retain their respective attributions. Flagged candidates cannot serve
+as duplicate anchors: a later unflagged copy remains eligible. Model settings,
+prompts, input hashes, and chunk ordering fingerprint the cache; changed configurations cannot
 silently reuse old responses.
 
 Assistant source-fidelity reviews exclude identified candidates without deleting

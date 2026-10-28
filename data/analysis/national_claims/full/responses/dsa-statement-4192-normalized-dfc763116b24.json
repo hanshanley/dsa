@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 368,
+      "generation_tps": 14.05662613491556,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1528,
+      "prompt_tps": 471.35759075030893,
+      "request_sha256": "ce3ee8b4800a7f4e252a27d9161516b3b76bd0ceb78ab23c3a83183ddf7d0826",
+      "seconds": 29.436654624994844,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"People like Botham Jean are shot in their own apartments by the police.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite a conviction, the sentence for the shooting of Botham Jean is comparatively light, given the longer terms typically given to Black and brown people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. justice system places little value on people of color.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Water protectors face 110 years in prison for protecting Indigenous rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The police and prison system has no place in a socialist future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The impeachment of Trump will not address injustices.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The impeachment of Trump will not improve the lives of millions of working class people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Calls for impeachment from Representatives Alexandria Ocasio-Cortez, Ilhan Omar, Ayanna Pressley, and Rashida Tlaib were ignored by the political elite until one of their own was targeted by the Trump administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The impeachment process will not bring working class people into the political process.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 390,
+      "generation_tps": 15.027199037157589,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2064,
+      "prompt_tps": 481.67924495503803,
+      "request_sha256": "db2ecbf0a437da1f6faaf634cc4a58b4d77ce5157fc9e8cc36a735922265c538",
+      "seconds": 30.256554584018886,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"People like Botham Jean are shot in their own apartments by the police.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite a conviction, the sentence in the case of Botham Jean is comparatively light, given the longer terms typically given to Black and brown people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. justice system places little value on people of color.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Water protectors face 110 years in prison for protecting Indigenous rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The police and prison system has no place in a socialist future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The impeachment of Trump will not address these injustices.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The impeachment of Trump will not improve the lives of millions of working class people who make enormous sacrifices just to make ends meet.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Calls for impeachment from Representatives Alexandria Ocasio-Cortez, Ilhan Omar, Ayanna Pressley, and Rashida Tlaib, known as \u201cthe squad\u201d, had long been ignored by the political elite until one of their own was targeted by the Trump administration\u2019s agenda.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The impeachment process will not bring working class people into the political process.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ce3ee8b4800a7f4e252a27d9161516b3b76bd0ceb78ab23c3a83183ddf7d0826"
+}
