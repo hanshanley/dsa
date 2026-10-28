@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 310,
+      "generation_tps": 16.16069605365706,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1455,
+      "prompt_tps": 483.55946957454483,
+      "request_sha256": "821f91fcaba25444cc5ad0a46881e2e9b635d4dc3f27261ff1f94a1c40a8b9a4",
+      "seconds": 22.20288937492296,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's vision for government reform, which is guided by the principles of being citizen-centered, results-oriented, and market-based.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President's management agenda is an effective tool for making sure government is active but limited, focusing on results and obtaining them efficiently.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"New government programs are frequently created with little review of programs that already exist to address the same perceived problem.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Numerous programs with overlapping missions and competing agendas grow up alongside one another, wasting money and baffling citizens.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party respects and appreciates the private sector as the primary creator of jobs, economic growth, opportunity, and prosperity.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The private sector functions most effectively when laws are transparent and people respect them, including people in positions of power.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"When corporate leaders break the law, they should be punished.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 315,
+      "generation_tps": 15.91320888744373,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1933,
+      "prompt_tps": 497.9114752751093,
+      "request_sha256": "1223fe6907b17f5cd31ea6b34bd5699ecfc45fcfe198eaecbf7a4bb3dbd02fbe",
+      "seconds": 23.68721600016579,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Bush's vision for government reform, which is guided by the principles of being citizen-centered, results-oriented, and market-based.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President's management agenda is an effective tool for making sure government is active but limited, focusing on results and obtaining them efficiently.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"New government programs are frequently created with little review of programs that already exist to address the same perceived problem.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over time, numerous programs with overlapping missions and competing agendas grow up alongside one another, wasting money and baffling citizens.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party respects and appreciates the private sector as the primary creator of jobs, economic growth, opportunity, and prosperity in society.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The private sector functions most effectively when laws are transparent and people respect them, including people in positions of power.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"When corporate leaders break the law, they should be punished.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "821f91fcaba25444cc5ad0a46881e2e9b635d4dc3f27261ff1f94a1c40a8b9a4"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 327,
+      "generation_tps": 16.67778483627316,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1457,
+      "prompt_tps": 549.728714370744,
+      "request_sha256": "259966b2c0f92bfd7a9a8f0e9ea528583d2cbc01069ca6fa92da90c424880183",
+      "seconds": 22.266170375049114,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA was an early and strong supporter of Bernie Sanders in his campaign for the Democratic nomination for president.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is likely that DSA members hold a range of views on whether or not Bernie Sanders should have endorsed Heath Mello.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Some argue that Bernie Sanders should not endorse any candidate who does not have a strong track record supporting reproductive justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"If DSA does not denounce Bernie Sanders\u2019 action, it is failing in its commitment to reproductive justice, according to some.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Others argue that electoral politics rarely involves supporting a 100% perfect candidate.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are good strategic reasons to support Heath Mello, namely to stop the election of a conservative anti-abortion, anti-choice candidate who brought in Wisconsin governor Scott Walker to campaign for her.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Heath Mello's opponent is a conservative anti-abortion, anti-choice candidate who brought in Wisconsin governor Scott Walker to campaign for her.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 417,
+      "generation_tps": 16.60801516046572,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1952,
+      "prompt_tps": 603.3765593937384,
+      "request_sha256": "470c918b35f7abbbb4e4feceb26f2c9138f6c7d02960ca0c54169948bfd2d87f",
+      "seconds": 28.352782166097313,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA was an early and strong supporter of Bernie Sanders in his campaign for the Democratic nomination for president.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is likely that DSA members hold a range of views on whether or not Bernie Sanders should have endorsed Heath Mello.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Some argue that Bernie Sanders should not endorse any candidate who does not have a strong track record supporting reproductive justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"If DSA does not denounce Bernie Sanders\u2019 action, it is failing in its commitment to reproductive justice, according to some.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Others argue that electoral politics rarely involves supporting a 100% perfect candidate.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are good strategic reasons to support Heath Mello, namely to stop the election of a conservative anti-abortion, anti-choice candidate who brought in Wisconsin governor Scott Walker to campaign for her.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Heath Mello's opponent is a conservative anti-abortion, anti-choice candidate who brought in Wisconsin governor Scott Walker to campaign for her.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Bernie Sanders has recently been under fire for endorsing Heath Mello, a Democratic candidate for mayor in Omaha, Nebraska.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many DSA members found Bernie Sanders\u2019 remarks on the endorsement of Heath Mello to be problematic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "259966b2c0f92bfd7a9a8f0e9ea528583d2cbc01069ca6fa92da90c424880183"
+}

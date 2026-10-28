@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 287,
+      "generation_tps": 16.0570645317382,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1447,
+      "prompt_tps": 498.47242332496626,
+      "request_sha256": "1cf3d0fda1903e5f9b230cad6d5f8826410ac79a53c7d003746acc0dfd7124ae",
+      "seconds": 20.787174249999225,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for considering the use of military force in circumstances beyond self-defense to provide for global stability, support friends, participate in stability and reconstruction operations, or confront mass atrocities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for garnering clear support and participation from others when using force in situations other than self-defense.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The consequences of not garnering support in the context of the current conflict in Iraq have been grave.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for plans to increase the size of the Army by 65,000 troops.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for plans to increase the size of the Marines by 27,000 troops.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Increasing end strength will help units retrain and re-equip properly between deployments.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Increasing end strength will decrease the strain on military families.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 307,
+      "generation_tps": 16.046510034373576,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1902,
+      "prompt_tps": 494.21778290317405,
+      "request_sha256": "82a3e156af4356f6a961f807050a57d12381c4c119d036aeeafd9ec9adeb6da2",
+      "seconds": 22.990107707912102,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for considering the use of military force in circumstances beyond self-defense in order to provide for the common security that underpins global stability, to support friends, to participate in stability and reconstruction operations, or to confront mass atrocities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for making every effort to garner the clear support and participation of others when using force in situations other than self-defense.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The consequences of forgetting to garner support in the context of the current conflict in Iraq have been grave.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for plans to increase the size of the Army by 65,000 troops.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for plans to increase the size of the Marines by 27,000 troops.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Increasing end strength will help units retrain and re-equip properly between deployments.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Increasing end strength will decrease the strain on military families.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1cf3d0fda1903e5f9b230cad6d5f8826410ac79a53c7d003746acc0dfd7124ae"
+}

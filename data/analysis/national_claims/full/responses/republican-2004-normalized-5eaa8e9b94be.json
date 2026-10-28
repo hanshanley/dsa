@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 459,
+      "generation_tps": 16.616424984065183,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1546,
+      "prompt_tps": 493.26235716695277,
+      "request_sha256": "8a3015911f6d54a9412b4c49924d5cec68f5845edeea97afb25adb4a39fb380c",
+      "seconds": 30.766893999883905,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President has requested record levels of Pell Grant funding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Approximately 5.3 million low-income students will be helped by Pell Grants to pay for higher education.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of students helped by Pell Grants is estimated to be one million more than when President Bush and Vice President Cheney came to office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Low-income students who take a rigorous high school curriculum will be eligible to receive an additional $1,000 per year under a new Enhanced Pell Grant proposal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush proposes to expand opportunities for math and science education in colleges and universities to ensure America remains the world leader in the innovation economy and to ensure America's graduates have the training they need to compete for the best jobs of the 21st century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Needy students studying math and science will be eligible to receive additional college aid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans have made Historically Black Colleges and Universities (HBCUs) and Hispanic Serving Institutions (HSIs) a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Historically Black Colleges and Universities (HBCUs) and Hispanic Serving Institutions (HSIs) have played a vital role in providing opportunities for excellence in higher education to millions of African American and Hispanic students for more than a century.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Funding for HBCUs and HSIs has increased by 30 percent since 2001 due to President Bush.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 457,
+      "generation_tps": 16.56758178762782,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2173,
+      "prompt_tps": 536.6085912112131,
+      "request_sha256": "498b28f1b087f1edc5bbe9d07dd0fdecd8fd3b0be561493a1e7d0a774d2f5e28",
+      "seconds": 31.642930041998625,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President has requested record levels of Pell Grant funding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pell Grants will help an estimated 5.3 million low-income students pay for higher education.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of students helped by Pell Grants is one million more than when President Bush and Vice President Cheney came to office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under a new Enhanced Pell Grant proposal, low-income students who take a rigorous high school curriculum will be eligible to receive an additional $1,000 per year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush proposes to expand opportunities for math and science education in colleges and universities to ensure America remains the world leader in the innovation economy and to ensure America's graduates have the training they need to compete for the best jobs of the 21st century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Needy students studying math and science will be eligible to receive additional college aid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans have made Historically Black Colleges and Universities (HBCUs) and Hispanic Serving Institutions (HSIs) a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Historically Black Colleges and Universities (HBCUs) and Hispanic Serving Institutions (HSIs) have played a vital role in providing opportunities for excellence in higher education to millions of African American and Hispanic students for more than a century.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush fulfilled a pledge to increase funding for HBCUs and HSIs by 30 percent since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8a3015911f6d54a9412b4c49924d5cec68f5845edeea97afb25adb4a39fb380c"
+}

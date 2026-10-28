@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 15.53133805393449,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1324,
+      "prompt_tps": 469.366397933496,
+      "request_sha256": "b9a62af3dfb14faf7424dab3246c89aca8f9cd61d47c0c2ea53d8b2a0518e3a2",
+      "seconds": 30.843058542115614,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In May of this year, the Federal Communications Commission voted in favor of dismantling net neutrality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Net neutrality is the principle that Internet service providers should allow users equal access to all online content and applications regardless of the source.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Net neutrality classifies broadband as a utility.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Net neutrality prevents providers such as Comcast, Verizon, and AT&T from accelerating traffic to preferred sites.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Net neutrality prevents providers such as Comcast, Verizon, and AT&T from obstructing traffic to sites they deem unfavorable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA believes that net neutrality is an essential component of online democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Without net neutrality, corporations will have license to control the content and delivery of information hundreds of millions of people rely on daily.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"In 2007, Verizon severed subscriber access to a text-messaging program from the pro-choice nonprofit NARAL.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Verizon explained that it would not host communications from any group that seeks to promote an agenda or distribute content that, in its discretion, may be seen as controversial or unsavory to any of its users.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Verizon reversed its censorship of NARAL after large user protests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 401,
+      "generation_tps": 14.837198332561563,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1927,
+      "prompt_tps": 478.99735191889346,
+      "request_sha256": "d80b8104df20bfa9ae357ab548573f94a6db9bc43a39045f5a2f628ea2081734",
+      "seconds": 31.063413459109142,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In May of this year, the Federal Communications Commission voted in favor of dismantling one of the fundamental tenets of an open Internet: net neutrality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Net neutrality is the principle that Internet service providers should allow users equal access to all online content and applications regardless of the source.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Net neutrality classifies broadband as a utility, thus preventing providers such as Comcast, Verizon, and AT&T from accelerating traffic to preferred sites.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Net neutrality prevents providers such as Comcast, Verizon, and AT&T from obstructing traffic to sites they deem unfavorable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA believes that net neutrality is an essential component of online democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Without net neutrality, corporations will have license to control the content and delivery of information hundreds of millions of people rely on daily.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"In 2007, Verizon severed subscriber access to a text-messaging program from the pro-choice nonprofit NARAL, explaining that it would not host communications from any group that seeks to promote an agenda or distribute content that, in its discretion, may be seen as controversial or unsavory to any of its users.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Verizon reversed its censorship of NARAL after large user protests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b9a62af3dfb14faf7424dab3246c89aca8f9cd61d47c0c2ea53d8b2a0518e3a2"
+}

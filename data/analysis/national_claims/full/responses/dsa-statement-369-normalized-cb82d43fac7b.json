@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 330,
+      "generation_tps": 15.946410011325174,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1286,
+      "prompt_tps": 473.0509695526172,
+      "request_sha256": "cce89fcf0ed66bef3a832a38f1e7ac710c0c66dbf0f09fa0c7f73691a23614ef",
+      "seconds": 23.424696875037625,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Texas Senate Bill 4 allows local law enforcement to check the immigration status of people in most instances, such as routine traffic stops.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Texas Senate Bill 4 will result in racial profiling throughout Texas communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Arrests resulting from Texas Senate Bill 4 are characterized as illegal.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Texas Senate Bill 4 will increase tensions between law enforcement and the communities they seek to protect and serve.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Texas Senate Bill 4 allows law enforcement to detain Texas residents lacking legal status until Immigration and Customs Enforcement (ICE) arrives to take them to privatized detention centers for processing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All Texans will be endangered when fear of law enforcement and their continuous collaboration with ICE outweighs the need for help from those same government agencies when the victim of a crime.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Civil Liberties Union issued a travel advisory for those planning to visit Texas after September 1, 2017, due to restrictions on civil liberties brought by the bill.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 348,
+      "generation_tps": 16.054490354454632,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1784,
+      "prompt_tps": 493.7508447820965,
+      "request_sha256": "f3604ccee241310d3790a18d46e6a015d63edeb7ad36afc2a496c24226508f5b",
+      "seconds": 25.304117375053465,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Texas Senate Bill 4 allows local law enforcement to check the immigration status of people in most instances, such as routine traffic stops.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Texas Senate Bill 4 will result in racial profiling throughout Texas communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Arrests resulting from Texas Senate Bill 4 are characterized as illegal.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Texas Senate Bill 4 will increase tensions between law enforcement and the communities they seek to protect and serve.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Texas Senate Bill 4 allows law enforcement to detain Texas residents lacking legal status until Immigration and Customs Enforcement (ICE) arrives to take them to privatized detention centers for processing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All Texans will be endangered when fear of law enforcement and their continuous collaboration with ICE outweighs the need for help from those same government agencies when the victim of a crime.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Civil Liberties Union issued a travel advisory for those planning to visit Texas after September 1, 2017, showing the severe restrictions on civil liberties that the bill brings to not only Texas residents, but to those visiting as well.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cce89fcf0ed66bef3a832a38f1e7ac710c0c66dbf0f09fa0c7f73691a23614ef"
+}

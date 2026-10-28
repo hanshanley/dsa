@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 16.74635591468566,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1458,
+      "prompt_tps": 468.0883709862387,
+      "request_sha256": "9698333ff2ab609ec9a94a7282fcae03b7d09509fb8edb4308268e5aa1f3c4f8",
+      "seconds": 26.71152620902285,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Republicans support a healthy intercity passenger rail system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Amtrak provides a valuable service to passengers, especially in the Northeast corridor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal of establishing a national passenger rail system with modest federal support has failed to materialize.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The financial problems plaguing Amtrak cannot be solved simply by continued infusions of taxpayer dollars.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fundamental reforms should be enacted to transition Amtrak into operational self-sufficiency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A stable, affordable, more independent energy supply is vital to fueling America's economic growth, increasing prosperity, helping families afford prices at the pump, and making America more secure.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush and Republicans in Congress recognize the need for a balanced energy policy that increases both energy production and conservation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A comprehensive energy policy is needed so that the United States will no longer lurch from one energy crisis to the next.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recent electricity blackouts, the California energy crisis, natural gas and oil price spikes, and high gasoline prices remind us that only a comprehensive energy policy will produce energy stability for America's families and businesses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 393,
+      "generation_tps": 16.686255295785443,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2035,
+      "prompt_tps": 524.6787044002633,
+      "request_sha256": "c2147d0496318518f2f5b4c13aceae5acfeb6c617edf7beeb627c71cd69f31d6",
+      "seconds": 27.44023641687818,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans support a healthy intercity passenger rail system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Amtrak provides a valuable service to passengers, especially in the Northeast corridor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal of establishing a national passenger rail system with modest federal support has failed to materialize.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The financial problems plaguing Amtrak cannot be solved simply by continued infusions of taxpayer dollars.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fundamental reforms should be enacted to transition Amtrak into operational self-sufficiency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A stable, affordable, more independent energy supply is vital to fueling America's economic growth, increasing prosperity, helping families afford prices at the pump, and making America more secure.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush and Republicans in Congress recognize the need for a balanced energy policy that increases both energy production and conservation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A comprehensive energy policy is needed so that the United States will no longer experience energy crises.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recent electricity blackouts, the California energy crisis, natural gas and oil price spikes, and high gasoline prices demonstrate that only a comprehensive energy policy will produce energy stability for America's families and businesses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 393,
+      "generation_tps": 16.623619652026363,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2019,
+      "prompt_tps": 508.49359341368853,
+      "request_sha256": "de6b3778f5cc1fde7e4240fec098706aeca3d0494ce433d3951dbecda504e64c",
+      "seconds": 27.620858249953017,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans support a healthy intercity passenger rail system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Amtrak provides a valuable service to passengers, especially in the Northeast corridor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal of establishing a national passenger rail system with modest federal support has failed to materialize.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The financial problems plaguing Amtrak cannot be solved simply by continued infusions of taxpayer dollars.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fundamental reforms should be enacted to transition Amtrak into operational self-sufficiency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A stable, affordable, more independent energy supply is vital to fueling America's economic growth, increasing prosperity, helping families afford prices at the pump, and making America more secure.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Bush and Republicans in Congress recognize the need for a balanced energy policy that increases both energy production and conservation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A comprehensive energy policy is needed so that the United States will no longer experience energy crises.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recent electricity blackouts, the California energy crisis, natural gas and oil price spikes, and high gasoline prices demonstrate that only a comprehensive energy policy will produce energy stability for America's families and businesses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9698333ff2ab609ec9a94a7282fcae03b7d09509fb8edb4308268e5aa1f3c4f8"
+}

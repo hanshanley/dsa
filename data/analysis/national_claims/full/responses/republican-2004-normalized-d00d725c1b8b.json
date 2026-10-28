@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 308,
+      "generation_tps": 15.735530955559312,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1527,
+      "prompt_tps": 468.13306294661464,
+      "request_sha256": "699d959a500bf351505b46014de743e579313af1db610ced47f0d57f293619eb",
+      "seconds": 22.849686082918197,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for creating a line-item veto, which the President could use consistent with the Constitution to reject new appropriations, new mandatory spending, or limited grants of tax benefits (to 100 or fewer beneficiaries) whenever the President determines the spending or tax benefits are not essential priorities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All savings from the line-item veto would be used for deficit reduction and could not be applied to other spending.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Governors across the nation already have and use a line-item veto to reduce unnecessary spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for creating a commission to evaluate discretionary spending on federal agencies and programs to ensure taxpayer funds are being used for the best, most efficient purposes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The commission would determine whether certain programs are duplicative, wasteful or inefficient, outdated or irrelevant, or failed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The commission would recommend to Congress programs that could be terminated, moved, or restructured to make the government more efficient.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 305,
+      "generation_tps": 16.069076940272033,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2003,
+      "prompt_tps": 498.0981565397386,
+      "request_sha256": "14d940e5f6f2235ba195cefa94461f311f4789a7c078dac5f4ffc64975fbb55d",
+      "seconds": 23.014972999924794,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for creating a line-item veto, which the President could use consistent with the Constitution to reject new appropriations, new mandatory spending, or limited grants of tax benefits (to 100 or fewer beneficiaries) whenever the President determines the spending or tax benefits are not essential priorities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All savings from the line-item veto would be used for deficit reduction and could not be applied to other spending.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Governors across the nation already have and use this tool to reduce unnecessary spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for creating a commission to evaluate discretionary spending on federal agencies and programs to ensure taxpayer funds are being used for the best, most efficient purposes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The commission would determine whether certain programs are duplicative, wasteful or inefficient, outdated or irrelevant, or failed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The commission would recommend to Congress programs that could be terminated, moved, or restructured to make the government more efficient.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "699d959a500bf351505b46014de743e579313af1db610ced47f0d57f293619eb"
+}

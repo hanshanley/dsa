@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 315,
+      "generation_tps": 16.625776420036424,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1522,
+      "prompt_tps": 469.5534899470573,
+      "request_sha256": "dad912d81fc3ee880b6e9e1bb566ebb856ba405e7dd55591d17b57368c3ed2be",
+      "seconds": 22.196915249805897,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By 2050, global demand for low-carbon energy could create an annual market worth $500 billion.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Meeting the demand for low-carbon energy would open new frontiers for American entrepreneurs and workers.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If we act with boldness and foresight, we will be able to tell our grandchildren that this was the time we confronted climate change and secured the weapons that could destroy the human race.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"If we act with boldness and foresight, we will be able to tell our grandchildren that this was the time we defeated global terrorists and brought opportunity to forgotten corners of the world.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"If we act with boldness and foresight, we will be able to tell our grandchildren that this was the time when we helped forge peace in the Middle East.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"If we act with boldness and foresight, we will be able to tell our grandchildren that this was the time when we renewed the America that has led generations of weary travelers from all over the world to find opportunity and liberty and hope.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 90,
+      "generation_tps": 16.69597699557517,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2449,
+      "prompt_tps": 559.1682830516397,
+      "request_sha256": "2c8593823b86cf96cfeeb3292852ef73577e28f47c25dd9864c6a37b01b0fe23",
+      "seconds": 9.779823292046785,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By 2050, global demand for low-carbon energy could create an annual market worth $500 billion.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Meeting that demand would open new frontiers for American entrepreneurs and workers.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 123,
+      "generation_tps": 16.562249594054286,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1780,
+      "prompt_tps": 598.6061723751603,
+      "request_sha256": "493a85deea9026afe3a865a86b51e1d7a153a123395f45d864e66e4b8866563e",
+      "seconds": 10.409428125014529,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By 2050, global demand for low-carbon energy could create an annual market worth $500 billion.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Meeting that demand would open new frontiers for American entrepreneurs and workers.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Rising to the challenge of climate change will also bring new benefits to America.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "dad912d81fc3ee880b6e9e1bb566ebb856ba405e7dd55591d17b57368c3ed2be"
+}

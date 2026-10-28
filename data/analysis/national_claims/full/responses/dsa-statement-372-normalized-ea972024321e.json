@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 317,
+      "generation_tps": 16.635220423112806,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1262,
+      "prompt_tps": 479.7245042357626,
+      "request_sha256": "0635d33dc54e8979ca45b7d3dd35fe11e69fcbadea3e2cd01e8ac2b365c8375c",
+      "seconds": 21.6953226251062,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Senate version of the American Health Care Act poses a grave threat to the well-being of all but the wealthy few.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Senate version of the American Health Care Act aims to take coverage away from tens of millions of low-to-moderate income families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Senate version of the American Health Care Act provides a $400 billion tax cut to the top five percent of income tax payers and to medical instrument and prescription drug companies over the next ten years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA urges its members to mobilize and press their Senators (of both parties) to vote against the Senate bill.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The fight to defeat a Senate bill will continue through the summer.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans failed to pass the bill before the July 4th recess.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA is committed to working on state and federal \u201cMedicare for all\u201d legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 289,
+      "generation_tps": 16.60069879448105,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1747,
+      "prompt_tps": 502.1962402818475,
+      "request_sha256": "63ac52af5e365f49c95d40c8471ea356761c9661e104d4a71a525fd5b2876f8c",
+      "seconds": 20.896567083895206,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Senate version of the American Health Care Act poses a grave threat to the well-being of all but the wealthy few.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Senate version of the American Health Care Act aims to take coverage away from tens of millions of low-to-moderate income families in order to provide a $400 billion tax cut to the top five percent of income tax payers and to medical instrument and prescription drug companies over the next ten years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA urges its members to mobilize and press their Senators (of both parties) to vote against the Senate bill.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The fight to defeat a Senate bill will continue through the summer.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans failed to pass the bill before the July 4th recess.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA is committed to working on state and federal \u201cMedicare for all\u201d legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0635d33dc54e8979ca45b7d3dd35fe11e69fcbadea3e2cd01e8ac2b365c8375c"
+}

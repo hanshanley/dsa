@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 247,
+      "generation_tps": 16.635847225405186,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1411,
+      "prompt_tps": 529.8773678084667,
+      "request_sha256": "40aa91ca0f789d4b07e99a69e272e8607ebb12b315d3e7e602030c83783dc8ec",
+      "seconds": 17.519235583022237,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Militant constituent visits to Senators\u2019 home or DC offices, alone or with coalition partners, are the best way to resist the Senate bill, particularly when Senators return to their home districts during the July 4th recess.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Constituent phone calls to Senators are important, especially those who have said the bill is too harsh and/or have hundreds of thousands of people in their states added to Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ron Portman (R-OH), Shelley Moore Capito (R-WV), Susan Collins (R-ME), Lisa Murkowski (R-AK) and Dean Heller (R-NV) are key Republican swing votes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A list of Senate phone numbers and email addresses can be found at https://www.senate.gov/senators/contact/\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 248,
+      "generation_tps": 16.576436258112075,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1826,
+      "prompt_tps": 560.7075150845436,
+      "request_sha256": "3c70f699bef4739ee73c7bbfb030c57924789c3dfe05e01d85945066aeff9b37",
+      "seconds": 18.227053666021675,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Militant constituent visits to Senators\u2019 home or DC offices, alone or with other coalition partners, are the best way to resist the Senate bill, particularly when Senators return to their home districts during the July 4th recess.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Constituent phone calls to Senators are important, especially those who have said the bill is too harsh and/or have hundreds of thousands of people in their states added to Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ron Portman (R-OH), Shelley Moore Capito (R-WV), Susan Collins (R-ME), Lisa Murkowski (R-AK) and Dean Heller (R-NV) are key Republican swing votes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A list of Senate phone numbers and email addresses can be found at https://www.senate.gov/senators/contact/\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "40aa91ca0f789d4b07e99a69e272e8607ebb12b315d3e7e602030c83783dc8ec"
+}

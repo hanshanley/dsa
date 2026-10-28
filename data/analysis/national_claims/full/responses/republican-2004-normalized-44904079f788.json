@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 383,
+      "generation_tps": 16.573642650346557,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1470,
+      "prompt_tps": 478.984676195907,
+      "request_sha256": "8a8bb658992035d8f70b3b614fbd7a6b793a6eda7d8453425738b044be0f76f3",
+      "seconds": 26.187301083933562,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans support developing new technologies for more efficient generation and use of power.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"New technologies will allow the creation of new job-producing industries and save jobs in industries that have long been staples of America's economy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President has committed $2 billion over 10 years for clean coal research and development.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The $2 billion commitment for clean coal research and development helps keep America's coal industry strong and reduces the emissions associated with coal use.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support FutureGen, an international, public-private initiative to build the world's first integrated sequestration and hydrogen research power plant that would burn coal more cleanly.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush's Clear Skies Initiative would create a $50 billion private market to deploy clean coal technologies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports research and investment designed to realize the benefits of a hydrogen economy and put the United States on the cutting edge of energy technology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The FreedomCar Partnership and Hydrogen Fuel Initiative include $1.7 billion over five years to begin building hydrogen cars and the infrastructure to support them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 384,
+      "generation_tps": 16.583194502214322,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2021,
+      "prompt_tps": 536.4820871505468,
+      "request_sha256": "3a53bf03c00e7c956abb01af8969e728299399707cb4e0cd8275416b294fd1a2",
+      "seconds": 26.93231554189697,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans support developing new technologies for more efficient generation and use of power.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"New technologies will allow the creation of new job-producing industries and save jobs in industries that have long been staples of America's economy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President has committed $2 billion over 10 years for clean coal research and development.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The $2 billion commitment for clean coal research and development helps keep America's coal industry strong and reduces the emissions associated with coal use.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans support FutureGen, an international, public-private initiative to build the world's first integrated sequestration and hydrogen research power plant that would burn coal more cleanly.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush's Clear Skies Initiative would create a $50 billion private market to deploy clean coal technologies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports research and investment designed to realize the enormous benefits of a hydrogen economy and put the United States on the cutting edge of energy technology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The FreedomCar Partnership and Hydrogen Fuel Initiative include $1.7 billion over five years to begin building hydrogen cars and the infrastructure to support them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8a8bb658992035d8f70b3b614fbd7a6b793a6eda7d8453425738b044be0f76f3"
+}

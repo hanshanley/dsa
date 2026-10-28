@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 397,
+      "generation_tps": 16.07205196735311,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1349,
+      "prompt_tps": 484.4555474156537,
+      "request_sha256": "8cb4fe3d3216e010338718e4619c40e90273a82be2c3959831ec2094bf632c4d",
+      "seconds": 27.49638874991797,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American Health Care Act (AHCA) poses a grave threat to the well-being of all but the wealthy few.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Health Care Act (AHCA) will deny insurance coverage to far more than the 24 million Americans the Congressional Budget Office (CBO) estimated would have lost coverage under the initial \u201crepeal and replace\u201d bill that the House rejected in late March.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Health Care Act (AHCA) cuts health coverage for tens of millions in order to fund a tax cut of $346 billion over the next ten years to the top five percent of income tax payers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Health Care Act (AHCA) will gut Medicaid, a single-payer system that covers 74 million low-income, disabled and elderly Americans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[5]},{\"claim_text\":\"The American Health Care Act (AHCA) would cut $880 billion over ten years from Medicaid, over one-quarter of the previous allocation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Ten million working adults and children added to Medicaid by the Affordable Care Act (ACA) will be denied coverage at the end of 2020.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[5]},{\"claim_text\":\"An additional 14 million more Medicaid recipients will likely lose Medicaid coverage as states trim their rolls to deal with the lost federal revenue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 429,
+      "generation_tps": 16.01079859324911,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1914,
+      "prompt_tps": 510.35555933333046,
+      "request_sha256": "a27321adab8dc427441a7619728156e2dc59941e50794bc2d69ca41fffd79d06",
+      "seconds": 30.554713750025257,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American Health Care Act (AHCA) that President Trump and the Republican House majority just rammed through Congress\u2014without subjecting the bill to review of its likely consequences by the Congressional Budget Office (CBO)\u2014poses a grave threat to the well-being of all but the wealthy few.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Health Care Act (AHCA) will deny insurance coverage to far more than the 24 million Americans the Congressional Budget Office (CBO) estimated would have lost coverage under the initial \u201crepeal and replace\u201d bill that the House rejected in late March.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Health Care Act (AHCA) cuts health coverage for tens of millions in order to fund a tax cut of $346 billion over the next ten years to the top five percent of income tax payers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Health Care Act (AHCA) will gut Medicaid, a single-payer system that covers 74 million low-income, disabled and elderly Americans.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[5]},{\"claim_text\":\"The American Health Care Act (AHCA) would cut $880 billion over ten years from Medicaid, over one-quarter of the previous allocation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Ten million working adults and children added to Medicaid by the Affordable Care Act (ACA) will be denied coverage at the end of 2020.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[5]},{\"claim_text\":\"An additional 14 million more Medicaid recipients will likely lose Medicaid coverage as states trim their rolls to deal with the lost federal revenue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8cb4fe3d3216e010338718e4619c40e90273a82be2c3959831ec2094bf632c4d"
+}

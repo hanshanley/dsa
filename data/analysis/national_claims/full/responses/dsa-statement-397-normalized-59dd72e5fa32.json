@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 376,
+      "generation_tps": 16.563986135554618,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1462,
+      "prompt_tps": 497.44565028474506,
+      "request_sha256": "f69b5df5a391ffb339ecfed9deada54fb2bf09e5aca31f7ddc4ee44b2d8ffd14",
+      "seconds": 25.648270666133612,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America condemn H.R. 620.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America call on comrades to demand that members of the House of Representatives vote down H.R. 620.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Comrades are encouraged to call, tweet, and write to Representatives asking them to oppose H.R. 620 and #ProtectADA.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Templates for writing to members of Congress have been made available by a number of disability rights organizations, including the National Association of the Deaf.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Members should reach out to the Representatives from their district and to the 51 Representatives that have co-sponsored the legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"H.R. 620 has already made it out of committee.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Calls for direct action are anticipated when the vote on H.R. 620 is scheduled.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Disability Caucus and Working Group will provide updates on this legislation as they become available, including information on how DSA members can get involved in this struggle for disability justice.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 379,
+      "generation_tps": 16.537098728697025,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2006,
+      "prompt_tps": 551.6548942148086,
+      "request_sha256": "c94d7649b456c529cad64987be915f9ae717a886d566a64da1405242f108dc52",
+      "seconds": 26.563976583071053,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America condemn H.R. 620.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America call on all of their comrades to demand that members of the House of Representatives vote down H.R. 620.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Comrades are encouraged to call, tweet, and write to Representatives asking them to oppose H.R. 620 and #ProtectADA.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Templates for writing to members of Congress have been made available by a number of disability rights organizations, including the National Association of the Deaf.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Members should reach out to the Representatives from their district and to the 51 Representatives that have co-sponsored the legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"H.R. 620 has already made it out of committee.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Calls for direct action are anticipated when the vote on H.R. 620 is scheduled.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Disability Caucus and Working Group will provide updates on this legislation as they become available, including information on how DSA members can get involved in this struggle for disability justice.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f69b5df5a391ffb339ecfed9deada54fb2bf09e5aca31f7ddc4ee44b2d8ffd14"
+}

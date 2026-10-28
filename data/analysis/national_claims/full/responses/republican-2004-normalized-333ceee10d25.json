@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 397,
+      "generation_tps": 16.162372596426692,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1527,
+      "prompt_tps": 495.6374424110559,
+      "request_sha256": "c74ca2cc0c9b501645aa9bd57d2df8fb1dbaf86abbfc68d8e322b4e567cf900f",
+      "seconds": 27.655122417025268,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush and the Republican Congress passed the most sweeping tax relief in a generation in 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Tax relief helped bring America from recession to a steadily expanding economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. economy has grown for 33 straight months.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are no signs of an end to the current economic growth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The economy is strong and growing stronger.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Gross domestic product (GDP) grew at one of the fastest rates in two decades over the past year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Without the President's tax relief, real GDP would have been more than 3 percent lower.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Without the President's tax relief, 2 million fewer Americans would have been working at the end of last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"1.5 million new jobs have been created since last August.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The President Bush administration and the Republican Congress will continue to ensure that America is the best nation in the world in which to create jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 480,
+      "generation_tps": 16.010512279842267,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2092,
+      "prompt_tps": 517.0199000671113,
+      "request_sha256": "06c5a186c9ce8d657bd6070889ceb06548e1aa550aea337e1de962741c298b4b",
+      "seconds": 34.03623833414167,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2001, President Bush and the Republican Congress passed the most sweeping tax relief in a generation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"By letting families, workers, and small business owners keep more of the money they earn, the tax relief helped bring America from recession to a steadily expanding economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. economy has grown for 33 straight months, despite enduring the after-effects of the stock market's irrational exuberance in the late 1990s, terrorist attacks, and corporate scandals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Unlike four years ago, there are no signs of an end to the current economic growth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The economy is strong and growing stronger.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Over the past year, gross domestic product (GDP) grew at one of the fastest rates in two decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Without the President's tax relief, real GDP would have been more than 3 percent lower.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Without the President's tax relief, 2 million fewer Americans would have been working at the end of last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Since last August, 1.5 million new jobs have been created.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The President Bush administration and the Republican Congress will continue to ensure that America is the best nation in the world in which to create jobs by keeping the costs of running a business low and ensuring that workers have the skills to compete in a dynamic global economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c74ca2cc0c9b501645aa9bd57d2df8fb1dbaf86abbfc68d8e322b4e567cf900f"
+}

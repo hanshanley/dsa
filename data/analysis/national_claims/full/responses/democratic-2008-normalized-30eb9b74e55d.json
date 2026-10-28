@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 135,
+      "generation_tps": 15.991918670473256,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1379,
+      "prompt_tps": 482.43017468698065,
+      "request_sha256": "256bec763b23e986148dcb9d4226b5818e181e2e75b7e57652d30976443db3ba",
+      "seconds": 11.31044258386828,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Every servicemember is a hero who deserves respect and gratitude every day.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Servicemembers are treated as daughters and sons of the nation.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current administration has not repaid the sacrifice of servicemembers, as shown by events at Walter Reed hospital and reports on homeless and unemployed veterans.\",\n\"claim_types\":[\"evaluation\",\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 167,
+      "generation_tps": 15.738295146761521,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1682,
+      "prompt_tps": 476.02316324780475,
+      "request_sha256": "48421cc55252a4be2e20c749c502c5dfadbdd394849823d3ab33c43ef358b67c",
+      "seconds": 14.15449700015597,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Every servicemember is a hero who deserves respect and gratitude not just on Veterans Day or Memorial Day, but every day.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Servicemembers all become daughters and sons of the nation when they put on their uniforms, and it is time they started being treated as such.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current administration has not repaid the sacrifice of servicemembers, as shown by the shameful events at Walter Reed hospital and recent reports on growing numbers of homeless and unemployed veterans.\",\n\"claim_types\":[\"evaluation\",\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "256bec763b23e986148dcb9d4226b5818e181e2e75b7e57652d30976443db3ba"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 383,
+      "generation_tps": 16.443942481911918,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1431,
+      "prompt_tps": 488.60877445751163,
+      "request_sha256": "b2f74fb43a656966121de4d691d6617ad8b43d04b71bc201b32dea0236888939",
+      "seconds": 26.229113458190113,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Policies will recognize that human rights are women's rights and that women's rights are human rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women make up the majority of the poor in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding access to women's economic development opportunities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding microcredit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women produce half of the world's food but only own one percent of the land upon which it is grown.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ensuring that women have equal protection under the law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for preventing women from being denied rights and locked into poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Policies will modernize foreign assistance policies, tools, and operations in an elevated, empowered, consolidated, and streamlined U.S. development agency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Development and diplomacy will be reinforced as key pillars of U.S. foreign policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Civilian agencies will be staffed, resourced, and equipped to address effectively new global challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 389,
+      "generation_tps": 16.599794382196027,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1982,
+      "prompt_tps": 513.542386351371,
+      "request_sha256": "b36db088b6ce2054e92e044aee88f9cd7f97a6aaf9e0f7b9b5b29b4ec86aaf58",
+      "seconds": 27.302758124889806,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Policies will recognize that human rights are women's rights and that women's rights are human rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women make up the majority of the poor in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding access to women's economic development opportunities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding microcredit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women produce half of the world's food but only own one percent of the land upon which it is grown.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ensuring that women have equal protection under the law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for preventing women from being denied rights and therefore locked into poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Policies will modernize foreign assistance policies, tools, and operations in an elevated, empowered, consolidated, and streamlined U.S. development agency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Development and diplomacy will be reinforced as key pillars of U.S. foreign policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Civilian agencies will be staffed, resourced, and equipped to address effectively new global challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b2f74fb43a656966121de4d691d6617ad8b43d04b71bc201b32dea0236888939"
+}

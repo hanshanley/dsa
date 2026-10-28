@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 278,
+      "generation_tps": 16.82195785351924,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1411,
+      "prompt_tps": 441.9577720833875,
+      "request_sha256": "fbbf328801c177cfc065ed4a1a6a4515ae33db56237932d20d5d155cdec38575",
+      "seconds": 19.727544208988547,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States can only achieve democratic forms of peacekeeping and dispute resolution if it comprehends the historic role of the police in reinforcing racial and class domination.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Armed and professional police forces arose in the United States to capture fugitive slaves and to repress striking workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The struggle for a democratic justice system is integrally tied to the fight for racial, gender and class equality.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mass incarceration and repressive policing cannot redress the absence of economic and educational opportunities that beset working-class communities across the country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is crucial to set up a program of reparations for slavery for black communities in particular.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nothing short of radical democratic change can alter a justice system that works to perpetuate American apartheid, a racial caste system and the control of labor by corporate America.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 281,
+      "generation_tps": 16.57824057510453,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1857,
+      "prompt_tps": 504.3751785676655,
+      "request_sha256": "eb6902a58e1b9cb0605c90bf894583830585cf2ced5d90643ec0fde71505a910",
+      "seconds": 20.640982791082934,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States can only achieve democratic forms of peacekeeping and dispute resolution if it comprehends the historic role of the police in reinforcing forms of racial and class domination.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Armed and professional police forces arose in the United States to capture fugitive slaves and to repress striking workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The struggle for a democratic justice system is integrally tied to the fight for racial, gender and class equality.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mass incarceration and repressive policing cannot redress the absence of economic and educational opportunities that beset working-class communities across the country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"For black communities in particular, it is crucial to set up a program of reparations for slavery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nothing short of radical democratic change can alter a justice system that works to perpetuate American apartheid, a racial caste system and the control of labor by corporate America.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fbbf328801c177cfc065ed4a1a6a4515ae33db56237932d20d5d155cdec38575"
+}

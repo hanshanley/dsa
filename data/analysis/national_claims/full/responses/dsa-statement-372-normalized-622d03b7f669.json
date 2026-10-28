@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 292,
+      "generation_tps": 16.597293076597698,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1458,
+      "prompt_tps": 491.5762981528361,
+      "request_sha256": "db104a6a7b8dba41ca84b67217ad5a7b4e12a044f965be9d73311df585fd33d4",
+      "seconds": 20.568435041001067,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA recognizes the Affordable Care Act would prove an inefficient, flawed, and politically vulnerable means for expanding health care coverage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Affordable Care Act expands health care coverage inefficiently by providing huge federal subsidies to the private health care industry.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many moderate-to-low income families have insufficient health insurance coverage characterized by outrageously high deductibles and limited access to providers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will redouble efforts to create state single-payer systems wherever possible, particularly in blue states such as California, New York, New Jersey, Minnesota, etc.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will continue to join with other coalition partners to build a mass national movement for \u201cMedicare for All\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The movement for \u201cMedicare for All\u201d is capable of electing to state legislatures and Congress those truly committed to \u201chealthcare for all\u201d.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 315,
+      "generation_tps": 16.532603508376976,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1918,
+      "prompt_tps": 557.3123509983939,
+      "request_sha256": "36c25aef6eeb616eb2e1c91e5cc8506985dbe299bd564ff4a172125d9981e3f4",
+      "seconds": 22.5039132500533,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA has always recognized that the Affordable Care Act would prove an inefficient, flawed, and politically vulnerable means for expanding health care coverage, because it did so only by providing huge subsidies to an inefficient and profit-seeking private insurance system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Affordable Care Act inefficiently expands health care coverage by providing huge federal subsidies to the private health care industry.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many moderate-to-low income families have insufficient health insurance coverage characterized by outrageously high deductibles and limited access to providers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will redouble efforts to create state single-payer systems wherever possible, particularly in blue states such as California, New York, New Jersey, Minnesota, etc.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA will continue to join with other coalition partners to build a mass national movement for \u201cMedicare for All\u201d.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The movement for \u201cMedicare for All\u201d is capable of electing to state legislatures and Congress those truly committed to \u201chealthcare for all\u201d.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "db104a6a7b8dba41ca84b67217ad5a7b4e12a044f965be9d73311df585fd33d4"
+}

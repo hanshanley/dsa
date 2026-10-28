@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 444,
+      "generation_tps": 15.841672685745229,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1562,
+      "prompt_tps": 476.8242649528356,
+      "request_sha256": "f6595f6476b3e4bb6595e3e0724499122d6decb1f78be599f88baecf55ea2887",
+      "seconds": 31.315852834144607,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"SB4 forces local law enforcement to comply with the law by threatening departments and officers who do not with heavy fines and/or termination.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Governor Abbott and the Texas legislature have disregarded pleas from local law enforcement and community advocates who maintain that SB4 undermines the safety of all Texas residents, regardless of status.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"People of Latin American descent make up 40% of the population in Texas, including citizens as well as residents, DACA holders, and undocumented individuals.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"SB4 relies on a trope in U.S. politics in which reactionary leaders overplay the dangers that immigrants represent to communities.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reactionary leaders aim to assuage fear among their base by passing legislation which virtually assures their reelection.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The law is political theatre ahead of the 2018 state elections and future federal ones.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America condemns the law for creating organized state terror.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America is committed to anti-racist organizing aimed at building a diverse, multi-racial movement to demand just immigration reform.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America supports full and equal rights for all.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sanctuary means sanctuary for undocumented immigrants, victims of domestic violence, transgender people, and other vulnerable communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 454,
+      "generation_tps": 15.74796444330257,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2174,
+      "prompt_tps": 509.74213590141505,
+      "request_sha256": "c096ca77a0da72cd54de095ce4f98bcaab737cf01c8f0a0b655e56f9edb59b74",
+      "seconds": 33.11289250012487,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"SB4 forces local law enforcement to comply with SB4 by threatening those departments and officers who don\u2019t with heavy fines and/or termination.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Governor Abbott and the Texas legislature have continued to disregard pleas from local law enforcement and community advocates who maintain that this legislation undermines the safety of all Texas residents, regardless of status.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"People of Latin American descent make up 40% of the population in the state, including citizens as well as residents, DACA holders, and undocumented individuals.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"SB4 relies on a trope in U.S. politics in which reactionary leaders overplay the dangers that immigrants represent to communities.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reactionary leaders aim to assuage fear among their base by passing legislation which virtually assures their reelection.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The law is political theatre ahead of the 2018 state elections and future federal ones.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America condemns this law for creating organized state terror.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America is committed to anti-racist organizing aimed at building a diverse, multi-racial movement to demand just immigration reform.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America supports full and equal rights for all.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Sanctuary means sanctuary for undocumented immigrants, victims of domestic violence, transgender people, and other vulnerable communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f6595f6476b3e4bb6595e3e0724499122d6decb1f78be599f88baecf55ea2887"
+}

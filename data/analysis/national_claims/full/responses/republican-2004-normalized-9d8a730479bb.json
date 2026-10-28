@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 418,
+      "generation_tps": 16.566186273647485,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1409,
+      "prompt_tps": 483.89642744814205,
+      "request_sha256": "b8fa7a6959527a48234cfb54ca09e7cd2a78395f32b7ec3b13d4e64a5c11562d",
+      "seconds": 28.15290162502788,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush released the National Energy Policy (NEP) report as one of his first acts in office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The National Energy Policy (NEP) report is a comprehensive plan to reduce America's dependence on foreign sources of energy by increasing domestic energy production and supporting conservation and alternative and renewable energy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's proposal would make America more energy independent while creating jobs and promoting economic growth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The National Energy Policy (NEP) report includes over 100 recommendations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nearly half of the recommendations in the National Energy Policy (NEP) report addressed renewable energy, energy efficiency, and conservation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has implemented nearly every non-legislative recommendation outlined in the National Energy Policy (NEP) report.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans in the House and Senate have stood solidly with the President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the President's policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Appreciation for the hard work of Congressional Republicans in the face of intractable partisan opposition.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recommendation for final passage of a bill to secure America's energy future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 448,
+      "generation_tps": 16.742578762605586,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1995,
+      "prompt_tps": 483.2302843001631,
+      "request_sha256": "bf6bb30dffcc6417be2697f0f851e8925619749eaf2862fa056d0ac6d797cfc6",
+      "seconds": 30.8960307079833,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Bush released the National Energy Policy (NEP) report as one of his first acts in office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The National Energy Policy (NEP) report is a comprehensive plan to reduce America's dependence on foreign sources of energy by increasing domestic energy production and supporting conservation and alternative and renewable energy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's proposal would make America more energy independent while creating jobs and promoting economic growth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The National Energy Policy (NEP) report includes over 100 recommendations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nearly half of the recommendations in the National Energy Policy (NEP) report addressed renewable energy, energy efficiency, and conservation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush has implemented nearly every non-legislative recommendation outlined in the National Energy Policy (NEP) report.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans in the House and Senate have stood solidly with the President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the President's policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Appreciation for the hard work of Congressional Republicans in the face of intractable partisan opposition.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recommendation for final passage of a bill to secure America's energy future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Endorsement of the President's policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b8fa7a6959527a48234cfb54ca09e7cd2a78395f32b7ec3b13d4e64a5c11562d"
+}

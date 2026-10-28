@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 318,
+      "generation_tps": 15.274788735751567,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1413,
+      "prompt_tps": 456.56962249286397,
+      "request_sha256": "56cc255d2ece4be9dbb8164d427247569bb27935cd6819b49f3168d89fc13818",
+      "seconds": 23.929409708129242,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"After fraudulent corporate practices began to surface in the closing months of 2001, President Bush worked with the Congress to take decisive action to restore honesty and integrity to America's corporate boardrooms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In July 2002, President Bush signed the Sarbanes-Oxley Act, the most far-reaching reform of American business practices since the 1940s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the Sarbanes-Oxley Act, CEOs and Chief Financial Officers are required to personally vouch for the truth and fairness of their companies' disclosures.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the Sarbanes-Oxley Act, an independent board has been established to oversee the accounting profession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the Sarbanes-Oxley Act, investigators have been given new tools to root out corporate fraud.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the Sarbanes-Oxley Act, enhanced penalties are ensuring that dishonest corporate officials do hard time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 338,
+      "generation_tps": 15.763117436237977,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1899,
+      "prompt_tps": 492.1875645850554,
+      "request_sha256": "747c623e9ea399f00c67586bff580316ad493487121682800ce99ff7322a9881",
+      "seconds": 25.316716500092298,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"After fraudulent corporate practices rooted in the irrational exuberance of the late 1990s began to surface in the closing months of 2001, President Bush worked with the Congress to take decisive action to restore honesty and integrity to America's corporate boardrooms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In July 2002, President Bush signed the Sarbanes-Oxley Act, the most far-reaching reform of American business practices since the 1940s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the Sarbanes-Oxley Act, CEOs and Chief Financial Officers are required to personally vouch for the truth and fairness of their companies' disclosures.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the Sarbanes-Oxley Act, for the first time, an independent board has been established to oversee the accounting profession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the Sarbanes-Oxley Act, investigators have been given new tools to root out corporate fraud.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the Sarbanes-Oxley Act, enhanced penalties are ensuring that dishonest corporate officials do hard time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "56cc255d2ece4be9dbb8164d427247569bb27935cd6819b49f3168d89fc13818"
+}

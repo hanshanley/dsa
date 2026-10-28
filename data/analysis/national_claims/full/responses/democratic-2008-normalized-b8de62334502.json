@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 295,
+      "generation_tps": 16.572816422368962,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1543,
+      "prompt_tps": 545.745504597862,
+      "request_sha256": "e6660d3fa9ed56b30410b399637b3a8707487e7761d5adb2cb0359d67cf9d3a9",
+      "seconds": 20.636681250063702,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans expressed a need for compassion, empathy, a commitment to values, and unity in local platform hearings around the country and the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans expressed similar themes in town halls in Nevada, policy roundtables in Philadelphia, and online gatherings held by Democrats Abroad.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Barack Obama's message emphasizes that Americans are connected to each other alongside their individualism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Focusing solely on individual concerns and separating individual stories from the larger story of America is not representative of American identity.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"A child in Chicago who cannot read affects all Americans.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"A senior citizen in Elko, Nevada who must choose between medicine and rent diminishes the lives of all Americans.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Joining together in something larger than oneself is necessary to write the next chapter in America's story.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 382,
+      "generation_tps": 16.55970385818533,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2006,
+      "prompt_tps": 551.366695056848,
+      "request_sha256": "5d1002e30857957a0c4dc4fb0fdec7e369c697302c5d6ff914ab27d56057ac51",
+      "seconds": 26.71583391702734,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In local platform hearings around the country and the world, Americans talked of the need for compassion, empathy, a commitment to values, and the importance of being united in order to take on the challenges and opportunities of the new century.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans expressed similar themes in town halls in Nevada, policy roundtables in Philadelphia, and online gatherings held by Democrats Abroad.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Barack Obama's message emphasizes that alongside Americans' famous individualism, there's a belief that Americans are connected to each other.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans could choose to focus on their own concerns and live their lives in a way that tries to keep their individual stories separate from the larger story of America, but that is not who they are.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"If there's a child on the south side of Chicago who can't read, that matters to Americans, even if it's not their child.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"If there's a senior citizen in Elko, Nevada who has to choose between medicine and the rent, that makes Americans' lives poorer, even if it's not their grandmother.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is only when Americans join together in something larger than themselves that they can write the next great chapter in America's story.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e6660d3fa9ed56b30410b399637b3a8707487e7761d5adb2cb0359d67cf9d3a9"
+}

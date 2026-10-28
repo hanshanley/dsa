@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 404,
+      "generation_tps": 16.12578197748261,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1513,
+      "prompt_tps": 504.61741191474425,
+      "request_sha256": "053d62598d4bfbfd39aa92d18dcbd9d4793372b1bb67fbc2529efc60ab996ff1",
+      "seconds": 28.06084283394739,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Heath Mello has been reported as an anti-abortion, anti-choice candidate.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Wall Street Journal stated that Heath Mello, as a practicing Catholic, was pro-life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2012, Heath Mello voted with Planned Parenthood on two out of three bills tracked by the group and was excused from voting on the third.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After 2012, Heath Mello, as chair of the state legislature\u2019s budget committee, voted with Planned Parenthood 100 percent of the time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Heath Mello\u2019s votes contributed to a four-year period without any new laws regulating abortion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To build a strong national movement for liberation in a complicated world, the group should trust its grassroots.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Critics of Sanders and Mello failed to object to Tim Kaine, who had a consistent voting record for supporting laws that limited access to abortions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group reaffirms its commitment to reproductive justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Some attacks on Sanders are potentially cynical attempts to undermine a politician who challenges the ruling class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 415,
+      "generation_tps": 16.21039396108047,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2085,
+      "prompt_tps": 503.8138324030123,
+      "request_sha256": "f8605da08aae4a984848b4e8139d033e2d74926f06d6485fb1879e6c77ec0678",
+      "seconds": 29.748638082994148,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Heath Mello has been reported as an anti-abortion, anti-choice candidate.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Wall Street Journal stated that Heath Mello, as a practicing Catholic, was pro-life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2012, Heath Mello voted with Planned Parenthood on two out of three bills tracked by the group, and was excused from voting on the third.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After 2012, Heath Mello, as chair of the state legislature\u2019s budget committee, voted with Planned Parenthood 100 percent of the time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Heath Mello\u2019s votes contributed to a four-year period without any new laws regulating abortion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To build a strong national movement for liberation in a complicated world, the group should trust its grassroots.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Some critics of Sanders and Mello failed to object to Tim Kaine, who had a consistent voting record for supporting laws that limited access to abortions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group reaffirms its commitment to reproductive justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group asks whether some of the current attacks on Sanders are simply the latest cynical attempt to undermine a politician who challenges the ruling class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "053d62598d4bfbfd39aa92d18dcbd9d4793372b1bb67fbc2529efc60ab996ff1"
+}

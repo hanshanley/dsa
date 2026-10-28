@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 287,
+      "generation_tps": 16.56485314315516,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1498,
+      "prompt_tps": 492.8538117011485,
+      "request_sha256": "3f7819f7f1b9e290e8c2f6c54d340959057137e33b997b50a31a0258cebec6c9",
+      "seconds": 20.374890875071287,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The nation's naturalization process should be fair and accessible to legal permanent residents eager to become citizens.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The immigration bureaucracy is dysfunctional and hampers family reunification.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of immigration visas for family members and for immigrants meeting job demand will be increased, as long as appropriate labor market protections and standards are in place.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Discrimination against Americans who follow immigration rules should be fought.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Undocumented immigrants in good standing should be required to pay a fine, pay taxes, and learn English.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Undocumented immigrants who meet requirements should go to the back of the line for the opportunity to become citizens.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Undocumented immigrants who follow rules can become full tax-paying, law-abiding, productive members of society.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 350,
+      "generation_tps": 16.541389566634148,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1953,
+      "prompt_tps": 518.7735494867271,
+      "request_sha256": "ed668cdc8faf861e680124249f814a0b2dc4e3b44a67cd8d1edb6a0d97613ead",
+      "seconds": 24.932910332921892,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The nation's naturalization process should be fair and accessible to the thousands of legal permanent residents who are eager to become full Americans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The immigration bureaucracy is dysfunctional and hampers family reunification, which has been a cornerstone of U.S. immigration policy for years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of immigration visas for family members of people living in the U.S. and for immigrants who meet the demand for jobs that employers cannot fill will be increased, as long as appropriate labor market protections and standards are in place.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Discrimination against Americans who have always played by U.S. immigration rules but are sometimes treated as if they had not should be fought.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Undocumented immigrants who are in good standing should be required to pay a fine, pay taxes, and learn English.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Undocumented immigrants who are in good standing should go to the back of the line for the opportunity to become citizens.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Undocumented immigrants who follow the rules can become full tax-paying, law-abiding, productive members of society.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3f7819f7f1b9e290e8c2f6c54d340959057137e33b997b50a31a0258cebec6c9"
+}

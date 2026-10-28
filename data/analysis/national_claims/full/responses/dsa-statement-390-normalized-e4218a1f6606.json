@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 230,
+      "generation_tps": 15.707274900089798,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1434,
+      "prompt_tps": 459.47274438861245,
+      "request_sha256": "26b39a891de25b825a25cea164441013e018b0263d9d23f57f7c3fbe1c07c420",
+      "seconds": 17.777109458111227,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"If net neutrality were razed, Comcast might charge users $5 per month to visit popular free sites such as Facebook or Wikipedia, justifying the charge with labels such as \u201cconvenience fee\u201d or \u201cservice fee\u201d.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If net neutrality were razed, Comcast\u2019s action would stymie the flow of information to low-income Internet users, who are already subject to slow speeds and prohibitive broadband costs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If AT&T workers strike due to poor working conditions and create a website to publicize their grievances and seek support, AT&T might prevent its broadband subscribers from accessing it.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Preventing broadband subscribers from accessing a website created by striking AT&T workers would be an act of union-busting censorship.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 261,
+      "generation_tps": 15.66194004531947,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1832,
+      "prompt_tps": 486.11143439970874,
+      "request_sha256": "4816c37801ccaee2b5efeb0d28bf7a2924f01062d68b785824dfb5f132489921",
+      "seconds": 20.44679091591388,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"If net neutrality were razed, Comcast might charge users $5 per month to visit popular free sites such as Facebook or Wikipedia, justifying the charge with labels such as \u201cconvenience fee\u201d or \u201cservice fee\u201d.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If net neutrality were razed, Comcast\u2019s action would stymie the flow of information to low-income Internet users, who are already subject to slow speeds and prohibitive broadband costs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If AT&T workers strike due to poor working conditions and create a website to publicize their grievances and seek support, AT&T might prevent its broadband subscribers from accessing it.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Preventing broadband subscribers from accessing a website created by striking AT&T workers would be an act of union-busting censorship.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The repercussions would be infinite if net neutrality were razed.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "26b39a891de25b825a25cea164441013e018b0263d9d23f57f7c3fbe1c07c420"
+}

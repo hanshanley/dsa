@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 321,
+      "generation_tps": 16.603108520594866,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1454,
+      "prompt_tps": 597.6264797374644,
+      "request_sha256": "55255683a083cf543e593fb9072c3659a3006e575ab17978019152e068acde02",
+      "seconds": 21.775543957948685,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Student achievement scores for fourth- and eighth-graders have increased in classrooms across America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The No Child Left Behind Act is already showing gains in elementary school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The value of a high school diploma has declined because students leave school without basic skills like reading and math, and also without advanced math and science skills the modern workforce demands.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to bring real reform to high schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to apply reforms known to be working in elementary schools up and down the education ladder, starting in early childhood education and finishing in high school.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure every young adult who graduates high school has the skills he or she needs to succeed in the 21st century economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush's vision and the success of the No Child Left Behind Act have created a track record worthy of Americans' trust.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 326,
+      "generation_tps": 16.593715047948276,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1943,
+      "prompt_tps": 600.4862687703181,
+      "request_sha256": "4e90c939895394ec3bf0b08f202ef03d332dfe4731f2d14c6ce8101168e1d079",
+      "seconds": 22.891138500068337,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Student achievement scores for fourth- and eighth-graders have increased in classrooms across America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The No Child Left Behind Act is already showing gains in elementary school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The value of a high school diploma has declined because students leave school without even basic skills like reading and math, let alone the advanced math and science skills the modern workforce demands.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to bring real reform to high schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to apply reforms that are known to be working in elementary schools up and down the education ladder, starting in early childhood education and finishing in high school.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure every young adult who graduates has the skills he or she needs to succeed in the 21st century economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thanks to President Bush's vision and the success of the No Child Left Behind Act, a track record worthy of Americans' trust has been created.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "55255683a083cf543e593fb9072c3659a3006e575ab17978019152e068acde02"
+}

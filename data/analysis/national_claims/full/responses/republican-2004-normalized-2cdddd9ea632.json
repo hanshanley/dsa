@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 288,
+      "generation_tps": 16.650847357697693,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1491,
+      "prompt_tps": 522.0365084737185,
+      "request_sha256": "adc898a11dde0554d647aebf000f8a2e7d450853b98a14763300017fb98af5e5",
+      "seconds": 20.16197883314453,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Bush Administration has imposed more anti-dumping orders on average each year than the previous Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States was the first country in the world to impose a safeguard action against Chinese textile and apparel imports.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States filed a case against China in the World Trade Organization (WTO).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"China settled the case against the United States, agreeing to repeal its subsidy of semiconductors that was penalizing U.S. manufacturers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Through bilateral consultations with China, the United States resolved seven other potential trade disputes over high technology products, agriculture, and intellectual property protection this year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the Bush Administration's effort to persuade and encourage China to desist in its policy of manipulating its currency to give Chinese manufacturers an artificial advantage in global markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 377,
+      "generation_tps": 16.56826758260864,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1947,
+      "prompt_tps": 533.3818226133608,
+      "request_sha256": "878eaed4eb65242c14ad1328e355f2420ed169b71c5e477c4c8c7bcf82b938c2",
+      "seconds": 26.413763833930716,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Bush Administration has imposed more anti-dumping orders on average each year than the previous Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States was the first country in the world to impose a safeguard action against Chinese textile and apparel imports.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States filed a case against China in the World Trade Organization (WTO).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"China settled that case, agreeing to repeal its subsidy of semiconductors that was penalizing U.S. manufacturers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Through bilateral consultations with China, the United States resolved seven other potential trade disputes over high technology products, agriculture, and intellectual property protection this year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the Bush Administration's unprecedented effort to persuade and encourage China to desist in its policy of manipulating its currency to give Chinese manufacturers an artificial advantage in global markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States will not tolerate foreign practices, rules, and subsidization that put U.S. exports and manufacturers on an unequal footing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is not enough to secure signatures on trade agreements; trading partners must follow through on the promises they make.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "adc898a11dde0554d647aebf000f8a2e7d450853b98a14763300017fb98af5e5"
+}

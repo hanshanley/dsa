@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 317,
+      "generation_tps": 16.52954990812932,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1460,
+      "prompt_tps": 569.9270107214353,
+      "request_sha256": "dd349652be565702313b4e89b038c16279cab1e10070e78606af490ff9a41803",
+      "seconds": 21.748576333047822,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Community colleges cultivate citizens for the 21st century and equip them with essential skills and training for jobs in the new economy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Community colleges are increasingly critical providers of job training for degree-seekers and workers seeking to retool, refine, and broaden their skills.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the President's High-Growth Job Training Initiative, which has provided seed money to fund job training partnerships between community colleges and local high-growth industries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are working to ensure that college is affordable and accessible for America's low- and middle-income families through increased funding of grants, low interest student loans, and tax breaks for working families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Total student aid for higher education has increased to a proposed $73 billion for 2005 as a result of Republican leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Almost 10 million students and parents will receive one or more grants, loans, or work-study awards next year.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 334,
+      "generation_tps": 16.49118904580218,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1945,
+      "prompt_tps": 536.2239002099889,
+      "request_sha256": "a1a5e85f14de92917d3924a99e9509bb7da72dfcf4c339183edd91ba52475e93",
+      "seconds": 23.8897260830272,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Community colleges play a vital role in cultivating citizens for the 21st century and equipping them with essential skills and training needed for jobs in the new economy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because they are adaptable and accessible, community colleges are increasingly critical providers of job training, both for degree-seekers and for workers seeking to retool, refine, and broaden their skills.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the President's High-Growth Job Training Initiative, which has provided seed money to fund job training partnerships between community colleges and local high-growth industries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are working to ensure that college is affordable and accessible for America's low- and middle-income families through increased funding of grants, low interest student loans, and tax breaks for working families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Total student aid for higher education has increased to a proposed $73 billion for 2005 as a result of Republican leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Next year, almost 10 million students and parents will receive one or more grants, loans, or work-study awards.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "dd349652be565702313b4e89b038c16279cab1e10070e78606af490ff9a41803"
+}

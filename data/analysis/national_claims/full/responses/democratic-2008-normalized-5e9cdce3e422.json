@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 358,
+      "generation_tps": 15.70303249576461,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1441,
+      "prompt_tps": 426.98124942428865,
+      "request_sha256": "511c2389da380f345f78d45b4b4d39b30d370846d2fac8d0a8ccfd60895f4a6f",
+      "seconds": 26.18594479211606,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Ending the war in Iraq will be the beginning of addressing defense challenges, but not the end.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will rebuild its military.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will prepare its military for future missions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must retain the capacity to swiftly defeat any conventional threat to the country and its vital interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must become better prepared to take on foes that fight asymmetrical and highly adaptive campaigns on a global scale.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will not hesitate to use force to protect the American people or its vital interests when attacked or imminently threatened.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will use its armed forces wisely, with others when possible, and unilaterally when necessary.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"When sending armed forces into harm's way, the United States must clearly define the mission, listen to the advice of military commanders, objectively evaluate intelligence, and ensure troops have the strategy, resources, and support they need to prevail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 363,
+      "generation_tps": 15.889709106344078,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1967,
+      "prompt_tps": 481.05848033205604,
+      "request_sha256": "a1ed56ff7833baf29d2bb034f9da20a98925999150f1a538e0fb2146477c387e",
+      "seconds": 26.946812000125647,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Ending the war in Iraq will be the beginning, but not the end, of addressing defense challenges.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will rebuild its military.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will prepare its military for the missions of the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must retain the capacity to swiftly defeat any conventional threat to the country and its vital interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must become better prepared to take on foes that fight asymmetrical and highly adaptive campaigns on a global scale.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will not hesitate to use force to protect the American people or its vital interests whenever attacked or imminently threatened.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will use its armed forces wisely, with others when possible, and unilaterally when necessary.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"When sending armed forces into harm's way, the United States must clearly define the mission, listen to the advice of military commanders, objectively evaluate intelligence, and ensure that troops have the strategy, resources, and support they need to prevail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "511c2389da380f345f78d45b4b4d39b30d370846d2fac8d0a8ccfd60895f4a6f"
+}

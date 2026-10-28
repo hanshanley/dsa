@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 252,
+      "generation_tps": 16.771058137837954,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1436,
+      "prompt_tps": 521.7552121459072,
+      "request_sha256": "ded22308cb30de0a0cb0a67b1b8d1a4dccedd3444d6bf9d5cdd5362b2dfecdc0",
+      "seconds": 17.786986167076975,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"America has always been a nation of immigrants.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of people have come to America hoping to succeed through effort.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Each successive wave of immigrants has contributed to America's culture, economy, and spirit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today's immigrants will shape their own destinies and enrich America.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current immigration system has been broken for a long time.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Comprehensive immigration reform is needed, not piecemeal efforts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to pursue tough, practical, and humane immigration reform in the first year of the next administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 264,
+      "generation_tps": 16.565109594915725,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1856,
+      "prompt_tps": 499.2927582578597,
+      "request_sha256": "4756f608e3d216a6ca223828d7c122cc4689974e1adfea5cefcd15525274ffbb",
+      "seconds": 19.663486959179863,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America has always been a nation of immigrants.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of people have come to America hoping that in America, you can make it if you try.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Each successive wave of immigrants has contributed to America's culture, economy, and spirit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today's immigrants will shape their own destinies and enrich America.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current immigration system has been broken for a long time.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Comprehensive immigration reform is needed, not piecemeal efforts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to pursue tough, practical, and humane immigration reform in the first year of the next administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ded22308cb30de0a0cb0a67b1b8d1a4dccedd3444d6bf9d5cdd5362b2dfecdc0"
+}

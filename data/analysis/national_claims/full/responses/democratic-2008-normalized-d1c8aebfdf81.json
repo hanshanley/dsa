@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 291,
+      "generation_tps": 16.506473007992263,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1450,
+      "prompt_tps": 471.09459031068917,
+      "request_sha256": "3123dad3cbf7015e3fd4d2358c5020b1025d012c58bc5f2758a4f701ae688769",
+      "seconds": 20.71631691697985,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The United States has a special relationship with Israel grounded in shared interests and shared values.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States has a clear, strong, fundamental commitment to the security of Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will ensure Israel retains a qualitative edge for its national security and its right to self-defense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States supports the implementation of the memorandum of understanding that pledges $30 billion in assistance to Israel over the next decade to enhance and ensure its security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Iran is a growing threat in the region.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Iraq is chaotic.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Qaeda is experiencing a resurgence.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Hamas and Hezbollah are experiencing reinvigoration.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 296,
+      "generation_tps": 16.501355174345356,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1909,
+      "prompt_tps": 501.4722318481228,
+      "request_sha256": "79c90a76c6e972a2be108fa65525dc2b877c5099fe04c885b6fac4ac0f4a8638",
+      "seconds": 21.754048499977216,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has a special relationship with Israel grounded in shared interests and shared values.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States has a clear, strong, fundamental commitment to the security of Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will ensure Israel retains a qualitative edge for its national security and its right to self-defense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States supports the implementation of the memorandum of understanding that pledges $30 billion in assistance to Israel over the next decade to enhance and ensure its security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Iran is a growing threat in the region.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Iraq is chaotic.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al Qaeda is experiencing a resurgence.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Hamas and Hezbollah are experiencing reinvigoration.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3123dad3cbf7015e3fd4d2358c5020b1025d012c58bc5f2758a4f701ae688769"
+}

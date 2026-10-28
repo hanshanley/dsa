@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 478,
+      "generation_tps": 16.75581709803131,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1540,
+      "prompt_tps": 501.1750494626234,
+      "request_sha256": "d28bd1bba255cec41128438f536c85e9bf2385762aea81602b32ff05ea68a02b",
+      "seconds": 31.609974165912718,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"All American workers deserve workplaces that are safe, healthy, and fair.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Republican Congress have supported efforts to improve workplace safety without burdening businesses with costly and unnecessary regulations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overall workplace fatalities and injuries are at record low levels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American workers deserve fair wages for hours spent working overtime.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"1.3 million additional workers now have guaranteed overtime protections as a result of Republican efforts to modernize labor laws left untouched since 1949.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Regulations explicitly guarantee overtime protection to blue collar workers, police, firefighters, EMTs, factory workers, construction workers, and licensed practical nurses, among others, for the first time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Clearly defined overtime rules will lead to a greater understanding of rights and responsibilities for employees and employers.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Workers who pay dues through their workplace deserve to know how their dues are being used, especially when the money is being used to support political activity.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans have enhanced financial disclosure requirements for political campaigns, corporations, and pension funds in order to bring about more transparency and accountability in the political system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Bush Administration improved union financial disclosure forms to offer union members more information about how their dues money is spent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Management and unions should find common ground to ensure economic viability for both.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 487,
+      "generation_tps": 16.617641094928555,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2186,
+      "prompt_tps": 549.7819346806142,
+      "request_sha256": "c83d559f0e18b8a50371fee8e1adb95fb7829093fa85dc27175ffb43c2979f40",
+      "seconds": 33.292030583135784,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"All American workers deserve workplaces that are safe, healthy, and fair.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Republican Congress have supported efforts to improve workplace safety without burdening businesses with costly and unnecessary regulations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overall workplace fatalities and injuries are at record low levels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American workers deserve fair wages for hours spent working overtime.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"1.3 million additional workers now have guaranteed overtime protections as a result of Republican efforts to modernize labor laws left untouched since 1949.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Regulations explicitly guarantee overtime protection to blue collar workers, police, firefighters, EMTs, factory workers, construction workers, and licensed practical nurses, among others, for the first time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"With clearly defined overtime rules that recognize the realities of the modern workforce, employees and employers will have a greater understanding of their rights and responsibilities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Workers who pay dues through their workplace deserve to know how their dues are being used, especially when the money is being used to support political activity.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans have enhanced financial disclosure requirements for political campaigns, corporations, and pension funds in order to bring about more transparency and accountability in the political system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Bush Administration improved union financial disclosure forms to offer union members more information about how their dues money is spent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Management and unions should find common ground thereby ensuring economic viability for both.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d28bd1bba255cec41128438f536c85e9bf2385762aea81602b32ff05ea68a02b"
+}

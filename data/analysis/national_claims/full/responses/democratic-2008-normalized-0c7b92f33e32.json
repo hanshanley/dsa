@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 299,
+      "generation_tps": 16.791176815389644,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1405,
+      "prompt_tps": 440.5384069324077,
+      "request_sha256": "f809a55b4c70f0c726de1347f13922b768fee5c6b65a47a5248e8a2b113fee42",
+      "seconds": 21.005159290973097,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America will seek a world with no nuclear weapons and take concrete actions to move in this direction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The growing threat of terrorists acquiring nuclear weapons or the materials to make them exists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"More countries seek nuclear weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nuclear materials remain unsecured in too many places.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Current measures are not adequate to address the dangers of nuclear weapons and materials.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"America will maintain a strong and reliable deterrent as long as nuclear weapons exist.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"America will be safer in a world that is reducing reliance on nuclear weapons and ultimately eliminates all of them.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating nuclear weapons worldwide will be a central element of U.S. nuclear weapons policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 340,
+      "generation_tps": 16.702839538758724,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1872,
+      "prompt_tps": 498.3800208085087,
+      "request_sha256": "c2499e93a815fc5637504b24650d00f5e443591b8bd9c9d52a10c92d1eca4941",
+      "seconds": 24.121611207956448,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America will seek a world with no nuclear weapons and take concrete actions to move in this direction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The growing threat of terrorists acquiring nuclear weapons or the materials to make them exists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"More countries seek nuclear weapons.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nuclear materials remain unsecured in too many places.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Current measures are not adequate to address these dangers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"America will maintain a strong and reliable deterrent as long as nuclear weapons exist.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"America will be safer in a world that is reducing reliance on nuclear weapons and ultimately eliminates all of them.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating nuclear weapons worldwide will be a central element of U.S. nuclear weapons policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"George Shultz, Bill Perry, Henry Kissinger, and Sam Nunn warned that current measures are not adequate to address these dangers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f809a55b4c70f0c726de1347f13922b768fee5c6b65a47a5248e8a2b113fee42"
+}

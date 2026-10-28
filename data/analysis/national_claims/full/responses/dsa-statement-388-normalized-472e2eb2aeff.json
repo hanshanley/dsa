@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 455,
+      "generation_tps": 16.705930830632795,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1313,
+      "prompt_tps": 471.08530088414534,
+      "request_sha256": "e5c363fa142f448ae2932b24a74eea585bba60fda881dfb4f9c4b68c94cf9bf3",
+      "seconds": 30.031812583096325,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America is committed to socialist feminist organizing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Capitalism is built upon male supremacy and white supremacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Abortion access is an economic issue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poor and working-class people and people of color experience limited access to reproductive healthcare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Rural patients experience limited access to reproductive healthcare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Mandatory waiting periods force people to lose work and stay in a costly hotel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The cost of reproductive healthcare is high.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"People should have the right to make decisions for their own bodies that shape their reproductive destiny.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Women, gender nonconforming people and trans men who may become pregnant should have the right to decide whether to terminate or continue a pregnancy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Women, gender nonconforming people and trans men who may become pregnant should have the resources to support their choice regarding pregnancy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democratic Socialists of America consistently calls for Congress to overturn the 1976 Hyde Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The 1976 Hyde Amendment bans Medicaid funds being used for abortions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 473,
+      "generation_tps": 16.680378215523866,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1936,
+      "prompt_tps": 516.518044576194,
+      "request_sha256": "2e7e88f248178555457c23a46fbfa32bd691e90d66102dddc37ef3e5b04e0cb9",
+      "seconds": 32.11418725014664,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America is committed to socialist feminist organizing, knowing that capitalism is built upon male supremacy and white supremacy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Capitalism is built upon male supremacy and white supremacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Abortion access is an economic issue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Poor and working-class people and people of color experience limited access to reproductive healthcare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Rural patients experience limited access to reproductive healthcare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Mandatory waiting periods force people to lose work and stay in a costly hotel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The cost of reproductive healthcare is high.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"People should have the right to make decisions for their own bodies that shape their reproductive destiny.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Women, gender nonconforming people and trans men who may become pregnant should have the right to decide whether to terminate or continue a pregnancy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Women, gender nonconforming people and trans men who may become pregnant should have the resources to support that choice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democratic Socialists of America consistently calls for Congress to overturn the 1976 Hyde Amendment that bans Medicaid funds being used for abortions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The 1976 Hyde Amendment bans Medicaid funds being used for abortions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e5c363fa142f448ae2932b24a74eea585bba60fda881dfb4f9c4b68c94cf9bf3"
+}

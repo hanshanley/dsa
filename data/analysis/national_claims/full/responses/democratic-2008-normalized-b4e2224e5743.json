@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 388,
+      "generation_tps": 16.59101408332736,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1474,
+      "prompt_tps": 522.2013977299238,
+      "request_sha256": "4b4a0b012240e4932e76a7cd33ecbbc3b450dec86c3e920f6e32e3cfa1b776b8",
+      "seconds": 26.217876666923985,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to the rebuilding and restoration of Iowa communities affected by the floods of 2008.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to work to prevent future catastrophic response failures from hurricanes, earthquakes, floods, tornadoes, wild fires, drought, bridge collapses, or any other natural or man-made disaster.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Maintaining levees and dams is not pork barrel spending; it is an urgent priority.\",\n\"claim_types\":[\"evaluation\",\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to fix governmental agencies like the Federal Emergency Management Agency and ensure they are staffed with professionals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to create integrated communication and response plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to reform the Small Business Administration bureaucracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to develop a real National Response Plan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to develop a National Catastrophic Insurance Fund to offer an affordable insurance mechanism for high-risk catastrophes that no single private insurer can cover by itself for fear of bankruptcy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The National Catastrophic Insurance Fund will allow states and territories to deal comprehensively with the economic dislocation of natural disasters.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 347,
+      "generation_tps": 16.562017934363396,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2030,
+      "prompt_tps": 583.0428310656367,
+      "request_sha256": "fcc4d278c44049f070bd54345c6497fde565bfbf5fc306d1e07a811314f5c73a",
+      "seconds": 24.442691083997488,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to the rebuilding and restoration of Iowa communities affected by the floods of 2008.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to work to prevent future catastrophic response failures, whether the emergency comes from hurricanes, earthquakes, floods, tornadoes, wild fires, drought, bridge collapses, or any other natural or man-made disaster.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Maintaining levees and dams is not pork barrel spending; it is an urgent priority.\",\n\"claim_types\":[\"evaluation\",\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to fix governmental agencies like the Federal Emergency Management Agency, ensure that they are staffed with professionals, and create integrated communication and response plans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to reform the Small Business Administration bureaucracy and develop a real National Response Plan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to develop a National Catastrophic Insurance Fund to offer an affordable insurance mechanism for high-risk catastrophes that no single private insurer can cover by itself for fear of bankruptcy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The National Catastrophic Insurance Fund will allow states and territories to deal comprehensively with the economic dislocation of natural disasters.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4b4a0b012240e4932e76a7cd33ecbbc3b450dec86c3e920f6e32e3cfa1b776b8"
+}

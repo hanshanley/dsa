@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 308,
+      "generation_tps": 16.59774236344132,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1357,
+      "prompt_tps": 483.13355361534246,
+      "request_sha256": "17d2ab791679af30ae7385d508428a3eaff816ce4becf525b5e4a8aaaafe2b38",
+      "seconds": 21.374226917047054,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The U.N. Millennium Development Goals aim to cut extreme poverty in half by 2015.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States should make the U.N. Millennium Development Goals America's goals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investing in building capable, democratic states can establish healthy and educated communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investing in building capable, democratic states can develop markets.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investing in building capable, democratic states can generate wealth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capable, democratic states would have greater institutional capacities to fight terrorism.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capable, democratic states would have greater institutional capacities to halt the spread of deadly weapons.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capable, democratic states would have greater institutional capacities to build health-care infrastructures to prevent, detect, and treat deadly diseases such as HIV/AIDS, malaria, and avian flu.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 292,
+      "generation_tps": 16.589941501539393,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1833,
+      "prompt_tps": 518.1902542922276,
+      "request_sha256": "1df90536a62d1311cd94cc5f717db3f694ea80a71e8ab169a9f631075071d74a",
+      "seconds": 21.14777599996887,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"It is time for the United States to make the U.N. Millennium Development Goals, which aim to cut extreme poverty in half by 2015, America's goals as well.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investing in building capable, democratic states can establish healthy and educated communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investing in building capable, democratic states can develop markets.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investing in building capable, democratic states can generate wealth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capable, democratic states would have greater institutional capacities to fight terrorism.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capable, democratic states would have greater institutional capacities to halt the spread of deadly weapons.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capable, democratic states would have greater institutional capacities to build health-care infrastructures to prevent, detect, and treat deadly diseases such as HIV/AIDS, malaria, and avian flu.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "17d2ab791679af30ae7385d508428a3eaff816ce4becf525b5e4a8aaaafe2b38"
+}

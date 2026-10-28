@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 527,
+      "generation_tps": 16.655603687593246,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1628,
+      "prompt_tps": 494.0107331398694,
+      "request_sha256": "b785a02f88a6b5b9d47b7c9b47210873315febf391cf5e72798d33e966d8ee76",
+      "seconds": 34.9455891251564,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Senate bill should be militantly opposed because it will gut Medicaid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicaid is a single-payer system that covers 74 million low-income, disabled and elderly Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bill would cut $880 billion over 10 years from Medicaid, over one-quarter of the previous allocation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"13 million working adults and children added by the 31 states that accepted the Affordable Care Act\u2019s federal funding of Medicaid coverage for working families earning $22 to $34,000 dollars will lose their coverage by 2023.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Major rollbacks in the extent of Medicaid coverage will occur from 2020 on.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"An estimated additional 14 million more Medicaid recipients will likely lose Medicaid coverage as states trim their rolls to deal with lost federal revenue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"States unwilling to radically increase their own contributions to Medicaid will be denying nursing home coverage and disability rehabilitation services to millions.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bill cuts $300 billion over ten years for premium subsidies for people who do not get insurance through employers and who must buy their own policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The bill eliminates federal subsidies for low-income families\u2019 out-of-pocket expenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating federal subsidies for low-income families\u2019 out-of-pocket expenses would radically increase the already excessive premiums, co-pays and deductibles faced by many Affordable Care Act beneficiaries.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating the individual mandate will cause insurance pools to be increasingly dominated by the elderly and sick.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 529,
+      "generation_tps": 16.623015169264658,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2323,
+      "prompt_tps": 546.0146522970496,
+      "request_sha256": "7e0c7961487c377e5e455014b5e7ebeecb44d7aef0fb32555eeabfb8d08bf342",
+      "seconds": 36.08712749998085,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for militantly opposing the Senate bill because it will gut Medicaid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicaid is a single-payer system that covers 74 million low-income, disabled and elderly Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bill would cut $880 billion over 10 years from Medicaid, which is over one-quarter of the previous allocation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"13 million working adults and children added by the 31 states that accepted the Affordable Care Act\u2019s federal funding of Medicaid coverage for working families earning $22 to $34,000 dollars will lose their coverage by 2023.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Major rollbacks in the extent of Medicaid coverage will occur from 2020 on.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"An estimated additional 14 million more Medicaid recipients will likely lose Medicaid coverage as states trim their rolls to deal with lost federal revenue.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"States unwilling to radically increase their own contributions to Medicaid will be denying nursing home coverage and disability rehabilitation services to millions.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bill cuts $300 billion over ten years for premium subsidies for people who do not get insurance through employers and who must buy their own policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The bill eliminates federal subsidies for low-income families\u2019 out-of-pocket expenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating federal subsidies for low-income families\u2019 out-of-pocket expenses would radically increase the already excessive premiums, co-pays and deductibles faced by many Affordable Care Act beneficiaries.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eliminating the individual mandate will cause insurance pools to be increasingly dominated by the elderly and sick.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b785a02f88a6b5b9d47b7c9b47210873315febf391cf5e72798d33e966d8ee76"
+}

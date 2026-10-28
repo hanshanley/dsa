@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 352,
+      "generation_tps": 16.585602375444218,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1508,
+      "prompt_tps": 614.7857398285513,
+      "request_sha256": "a27141a3c07573b843889e5b58d4d70841ede37a874c8465c731d8d51548559c",
+      "seconds": 23.685251000104472,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump delivered a meandering and at times incoherent statement on Saturday.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump blamed \\\"all sides\\\" for the violence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The left does not have a centuries-long history of state, systemic, and societal violence against oppressed groups, according to the source.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The phrase \\\"law and order\\\" is a signal for more police and vigilante terrorism against Black and Brown communities and the left.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The terror unleashed on comrades can be defeated.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The wider system of racist oppression can be defeated only with the ending of the capitalist system.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source encourages donations to help with the medical costs of comrades injured in the attack.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA members across the country are turning out for solidarity actions in their communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Individuals can get in touch with their local chapter to find ways to participate in solidarity actions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 387,
+      "generation_tps": 16.525230143449313,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2028,
+      "prompt_tps": 615.4260732749775,
+      "request_sha256": "531d78be4a2b4438ca8410bab105ead514a0237a98b47b4e267c513ea6a226b6",
+      "seconds": 26.723451333120465,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump delivered a meandering and at times incoherent statement on Saturday.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"During the statement, Donald Trump predictably blamed \\\"all sides\\\" for the violence, as if the left has a centuries-long history of state, systemic, and societal violence against oppressed groups.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The right wing uses the line that the left has a centuries-long history of state, systemic, and societal violence against oppressed groups to justify its terror.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The phrase \\\"law and order\\\" is a signal for more police and vigilante terrorism against Black and Brown communities and the left, according to the source.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The terror unleashed on comrades can be defeated.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The wider system of racist oppression can be defeated only with the ending of the capitalist system.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source encourages donations to help with the medical costs of comrades injured in the attack.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA members across the country are turning out for solidarity actions in their communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Individuals can get in touch with their local chapter to find ways to participate in solidarity actions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a27141a3c07573b843889e5b58d4d70841ede37a874c8465c731d8d51548559c"
+}

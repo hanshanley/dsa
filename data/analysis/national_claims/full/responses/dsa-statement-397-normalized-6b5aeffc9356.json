@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 382,
+      "generation_tps": 16.901497282803746,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1351,
+      "prompt_tps": 500.3304753155997,
+      "request_sha256": "321ef6ea89df99b3f28c2aac42771d41a34264fd4175bacf56b2d8da3c51db7d",
+      "seconds": 25.31140900007449,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Disability is a social restriction that affects people of every class, race, and gender.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Liberation can only be universal.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Capitalist institutions oppress people with physical, mental, and developmental impairments.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Policies that isolate disabled people from their communities are inherently oppressive.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Separate cannot be equal.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Americans with Disabilities Act has already proven wildly insufficient in guaranteeing disabled people access to the major institutions of society in its 27 years of existence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"H.R. 620 would further weaken the Americans with Disabilities Act by removing the consequences associated with ADA non-compliance and further entrenching a system wherein disabled people are responsible for removing the barriers to accessing their communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Accessibility is a social responsibility and a precondition for justice.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"Disabled people have a material interest in ending both capitalism and ableism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The marginalization and exclusion of any social group diminishes collective capacity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 388,
+      "generation_tps": 16.804389605647277,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1901,
+      "prompt_tps": 527.0319485265035,
+      "request_sha256": "1eca6119e9979daaf1995e615a35611a9de234a13f648d81ff4a886943dc4e63",
+      "seconds": 26.706440583104268,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Disability is a social restriction that affects people of every class, race, and gender.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Liberation can only be universal.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Capitalist institutions oppress people with physical, mental, and developmental impairments.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Policies that isolate disabled people from their communities are inherently oppressive.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Separate cannot be equal.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"In its 27 years of existence, the Americans with Disabilities Act has already proven wildly insufficient in guaranteeing disabled people access to the major institutions of society.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"H.R. 620 would further weaken the Americans with Disabilities Act by removing the consequences associated with ADA non-compliance and further entrenching a system wherein disabled people are responsible for removing the barriers to accessing their communities.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Accessibility is a social responsibility and a precondition for justice.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"Disabled people have a material interest in ending both capitalism and ableism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The marginalization and exclusion of any social group diminishes collective capacity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "321ef6ea89df99b3f28c2aac42771d41a34264fd4175bacf56b2d8da3c51db7d"
+}

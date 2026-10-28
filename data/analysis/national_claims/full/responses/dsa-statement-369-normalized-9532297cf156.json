@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 157,
+      "generation_tps": 15.53074196243712,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1368,
+      "prompt_tps": 491.66420129805687,
+      "request_sha256": "de287803c5c57014f52c93c027e9ed5d19d97de0007e45614ad5516cab1d86b4",
+      "seconds": 12.90353395906277,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America is committed to building local power to stop racist policing, arrests, and deportations of communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Texas DSA stands with immigrant Texans to fight SB4 in the courts, the streets, and the legislature, however long it may take.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican attacks on immigrants, refugees, Black lives, indigenous communities, and LGBTQIA+ people have unified people and strengthened resolve to protect Texas\u2019 diversity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 157,
+      "generation_tps": 15.335995919754843,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1693,
+      "prompt_tps": 476.185118727832,
+      "request_sha256": "f448852beb8b6dacb5bf393ae01e886673e51f553fb895dccfb4812a0fb09f23",
+      "seconds": 13.80548054096289,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America is committed to building local power to stop racist policing, arrests, and deportations of communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Texas DSA stands with immigrant Texans to fight SB4 in the courts, the streets, and the legislature, however long it may take.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican attacks on immigrants, refugees, Black lives, indigenous communities, and LGBTQIA+ people have unified people and strengthened resolve to protect Texas\u2019 diversity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "de287803c5c57014f52c93c027e9ed5d19d97de0007e45614ad5516cab1d86b4"
+}

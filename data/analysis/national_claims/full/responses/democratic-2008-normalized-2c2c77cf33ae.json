@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 158,
+      "generation_tps": 15.705192333711059,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1330,
+      "prompt_tps": 590.0649366813274,
+      "request_sha256": "a0b6adb975c30d2f245c8043c7784b520d3e20f13fa1c08e8e3c1836a9477882",
+      "seconds": 12.324147958075628,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Many African countries have embraced democratization and economic liberalization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for strengthening Africa's democratic development and respect for human rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for encouraging political and economic reforms in Africa that result in improved transparency and accountability.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for defending democracy and the rule of law when under assault, such as in Zimbabwe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 160,
+      "generation_tps": 15.664148899310987,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1656,
+      "prompt_tps": 473.08898702676527,
+      "request_sha256": "e7a95e07a1d301cf0dfb14c76d49b5724170885e438c916dc2f0618e9e2954f7",
+      "seconds": 13.727512124925852,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Many African countries have embraced democratization and economic liberalization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for strengthening Africa's democratic development and respect for human rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for encouraging political and economic reforms that result in improved transparency and accountability in Africa.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for defending democracy and the rule of law when it is under assault, such as in Zimbabwe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a0b6adb975c30d2f245c8043c7784b520d3e20f13fa1c08e8e3c1836a9477882"
+}

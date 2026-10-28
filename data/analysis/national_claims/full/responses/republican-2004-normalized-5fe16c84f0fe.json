@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 424,
+      "generation_tps": 16.74725837649483,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1494,
+      "prompt_tps": 504.22484480733334,
+      "request_sha256": "3a8075bc5d330f9e84c45471c7fae8deb0e74b8744ad8ce34452f06c1e369f7c",
+      "seconds": 28.29039179207757,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Education is a state, local, and family responsibility, not a federal obligation, under the American Constitutional system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over 90 percent of public school funding is state and local, not federal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State and local governments must assume most of the responsibility to improve schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The role of the federal government in education must be limited as control is returned to parents, teachers, and local school boards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and Congressional Republicans have provided the largest increase in federal education funding in history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Federal education funding has had the highest percentage gain since the 1960s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for elementary and secondary education has had the largest increase in any single Presidential term since the 1960s \u2013 an increase of nearly 50 percent since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President and Congress are particularly focused on programs for America's neediest students, including minorities and children with special needs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Increased funding for education comes with a new focus on achievement and results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"High standards and accountability are priorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 394,
+      "generation_tps": 16.746761738329948,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2086,
+      "prompt_tps": 529.9425590194601,
+      "request_sha256": "e9fe24e7bbda60ac14c334f7c6e9273ff62b7c6aefd8cfe6e0531a5ad0ad29f3",
+      "seconds": 27.47344958409667,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under the American Constitutional system, education is a state, local, and family responsibility, not a federal obligation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over 90 percent of public school funding is state and local, not federal.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State and local governments must assume most of the responsibility to improve schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The role of the federal government must be limited as control is returned to parents, teachers, and local school boards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and Congressional Republicans have provided the largest increase in federal education funding in history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Federal education funding has had the highest percentage gain since the 1960s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for elementary and secondary education has had the largest increase in any single Presidential term since the 1960s \u2013 an increase of nearly 50 percent since 2001.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President and Congress are particularly focused on programs for America's neediest students, including minorities and children with special needs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"With increased funding, there is a new focus on achievement and results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3a8075bc5d330f9e84c45471c7fae8deb0e74b8744ad8ce34452f06c1e369f7c"
+}

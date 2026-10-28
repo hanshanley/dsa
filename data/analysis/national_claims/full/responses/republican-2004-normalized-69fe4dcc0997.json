@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 230,
+      "generation_tps": 16.60506813057525,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1428,
+      "prompt_tps": 600.6331043757457,
+      "request_sha256": "d06b69e64a1ed421dfe41356300f8384a64876269366ae4c6c06e55858966c0d",
+      "seconds": 16.237842458067462,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans respect the tradition of ownership of private property in America.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republican Congress will safeguard private property rights by enforcing the Takings Clause of the Fifth Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republican Congress will provide just compensation whenever private property is needed to achieve a compelling public purpose.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party opposes efforts to diminish the rights of private citizens to the land they own.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President George W. Bush says leading the world in innovation and change will make America a hopeful place for those who want to work, dream, and start their own business.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3,4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 233,
+      "generation_tps": 16.67166150719899,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1826,
+      "prompt_tps": 554.733306546784,
+      "request_sha256": "aa0295e8ed3a5219f6dd8c12983946bc204653a53dd13e110e45a87251636350",
+      "seconds": 17.276598915923387,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans respect the tradition of ownership of private property in America.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republican Congress will safeguard private property rights by enforcing the Takings Clause of the Fifth Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Bush and the Republican Congress will provide just compensation whenever private property is needed to achieve a compelling public purpose.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party opposes efforts to diminish the rights of private citizens to the land they own.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President George W. Bush says that by leading the world in innovation and change, America will be a hopeful place for those who want to work, dream, and start their own business.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3,4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d06b69e64a1ed421dfe41356300f8384a64876269366ae4c6c06e55858966c0d"
+}

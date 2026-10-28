@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 398,
+      "generation_tps": 16.565462477901203,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1497,
+      "prompt_tps": 574.5824783821618,
+      "request_sha256": "0ba32e286274e801794d1bec109a6704b20831505c682e3b2e4993dab9fbfdb5",
+      "seconds": 26.640341042075306,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for legislation to enable small employers to pool together to offer health insurance options to their employees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The legislation passed by the House gives small businesses the same purchasing power currently enjoyed by large employers and labor unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"60 percent of uninsured Americans work for or are dependent on someone who works for a small business.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The medical liability system is harming the medical delivery system.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Doctors are afraid to practice medicine.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Frequent, unwarranted lawsuits force doctors out of certain specialty areas and geographic regions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The declining availability of emergency trauma care and women's health services is a result of the medical liability system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Obstetrics/gynecology practices are scaling back service or choosing not to practice altogether in some cases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Junk lawsuits add at least $60 billion to health care costs in America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Doctors practice defensive medicine, ordering extensive, unnecessary, and expensive tests and procedures to keep trial lawyers at bay.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 403,
+      "generation_tps": 16.530735775235296,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2063,
+      "prompt_tps": 600.6449144901692,
+      "request_sha256": "11ddcfa454a30c9462c6cb1af6602b90a18a8dad2572b25faca340fa7cf576cc",
+      "seconds": 27.822783958166838,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for legislation to enable small employers to pool together to offer health insurance options to their employees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Legislation passed by the House enables small businesses to have the same purchasing power currently enjoyed by large employers and labor unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Approximately 60 percent of uninsured Americans work for or are dependent on someone who works for a small business.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The medical liability system is harming the medical delivery system.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Doctors are afraid to practice medicine.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Frequent, unwarranted lawsuits force doctors out of certain specialty areas and geographic regions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The declining availability of emergency trauma care and women's health services is a result of the medical liability system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"In some cases, obstetrics/gynecology practices are scaling back service or choosing not to practice altogether.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Junk lawsuits add at least $60 billion to health care costs in America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Doctors practice defensive medicine, ordering extensive, unnecessary, and expensive tests and procedures to keep trial lawyers at bay.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0ba32e286274e801794d1bec109a6704b20831505c682e3b2e4993dab9fbfdb5"
+}

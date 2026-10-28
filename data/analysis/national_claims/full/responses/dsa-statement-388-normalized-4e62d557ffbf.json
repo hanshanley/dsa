@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 91,
+      "generation_tps": 15.879650628194119,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1314,
+      "prompt_tps": 441.9233030304248,
+      "request_sha256": "753c8f6e5f6d883296f91ac3d712dfdf6336d3d32b03719cb1139ced895e6cf6",
+      "seconds": 8.71553925005719,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The NPC removed a sentence indicating that a majority of Omaha DSA members supported Mello.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The NPC apologizes for drawing a conclusion without having spoken to enough Omaha DSA members.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 91,
+      "generation_tps": 15.895255042609351,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1573,
+      "prompt_tps": 448.2965639291214,
+      "request_sha256": "97af0f4fd305ea7d11afd0c0cd6f7cf767153a5471aa0ec07d0ed64f3ecb09fb",
+      "seconds": 9.243770542088896,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The NPC removed a sentence indicating that a majority of Omaha DSA members supported Mello.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The NPC apologizes for drawing a conclusion without having spoken to enough Omaha DSA members.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "753c8f6e5f6d883296f91ac3d712dfdf6336d3d32b03719cb1139ced895e6cf6"
+}
