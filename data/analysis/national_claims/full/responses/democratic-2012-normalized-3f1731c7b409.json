@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 527,
+      "generation_tps": 15.565500062786223,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1397,
+      "prompt_tps": 452.0374608720602,
+      "request_sha256": "44f05377bc3853082f08ad0201b60ecb614372c5402b603969c3e125487f8783",
+      "seconds": 36.958360959077254,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for the Employment Non-Discrimination Act because people should not be fired based on their sexual orientation or gender identity.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[]},{\"claim_text\":\"Commitment to ensuring all Americans are treated fairly.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[]},{\"claim_text\":\"This administration hosted the first-ever White House Conference on Bullying Prevention.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[]},{\"claim_text\":\"Commitment to continue work to prevent bullying of young people and support LGBT youth.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[]},{\"claim_text\":\"President Obama ended \u201cDon't Ask, Don't Tell\u201d in full cooperation with military leadership.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[]},{\"claim_text\":\"President Obama passed the Matthew Shepard and James Byrd Jr. Hate Crimes Prevention Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[]},{\"claim_text\":\"President Obama ensured same-sex couples can visit each other in the hospital.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[]},{\"claim_text\":\"Democrats believe all Americans deserve the same chance to pursue happiness, earn a living, be safe in their communities, serve their country, and take care of the ones they love.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[]},{\"claim_text\":\"The Administration said that the word \u2018family' in immigration includes LGBT relationships in order to protect bi-national families threatened with deportation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[]},{\"claim_text\":\"Dr. Vito Imbasciani was unable to have family members at the armory to say goodbye or waiting at the airport when returning from war due to \u201cDon't Ask, Don't Tell\u201d.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dr. Vito Imbasciani and George Di Salvo started a family five years ago by adopting two boys, but Dr. Imbasciani kept their existence secret because of the law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dr. Vito Imbasciani can now serve the country openly and proudly with family by side due to the efforts of President Obama.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 184,
+      "generation_tps": 15.724238447636951,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2086,
+      "prompt_tps": 492.48520835023373,
+      "request_sha256": "ca8fe555ec5f98d9ad680fb31db7afe9b848e6f6eaa18f310613807c15ae267b",
+      "seconds": 15.947946249973029,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Dr. Vito Imbasciani was unable to have family members at the armory to say goodbye or waiting at the airport when returning from war due to \u201cDon't Ask, Don't Tell\u201d.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dr. Vito Imbasciani and George Di Salvo started a family five years ago by adopting two boys, but Dr. Imbasciani kept their existence secret because of the law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dr. Vito Imbasciani can now serve the country openly and proudly with family by side due to the efforts of President Obama.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 190,
+      "generation_tps": 15.72951151163026,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1749,
+      "prompt_tps": 470.35343031465675,
+      "request_sha256": "df6cd4860a1429848836c86126f7f8a09ac38d5999fd4c05a494f81671289942",
+      "seconds": 15.807616792153567,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Dr. Vito Imbasciani was unable to have family members at the armory to say goodbye or waiting at the airport when returning from war because of \u201cDon't Ask, Don't Tell\u201d.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dr. Vito Imbasciani and George Di Salvo started a family five years ago by adopting two boys, but Dr. Imbasciani kept their existence secret because that is what the law required.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thanks to the unyielding efforts of President Obama, Dr. Vito Imbasciani can now serve the country openly and proudly with family by side.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "44f05377bc3853082f08ad0201b60ecb614372c5402b603969c3e125487f8783"
+}

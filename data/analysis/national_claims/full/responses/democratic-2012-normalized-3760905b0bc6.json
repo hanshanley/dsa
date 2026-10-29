@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 399,
+      "generation_tps": 15.53637492138162,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1517,
+      "prompt_tps": 461.3391857775035,
+      "request_sha256": "b324069c10aa1b45632e039b1a42edeb72873654855658fe01e1b734c6668cac",
+      "seconds": 28.980492499889806,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama signed the Lilly Ledbetter Fair Pay Act into law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Lilly Ledbetter Fair Pay Act helps women fight back when they are paid less than men.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats continue to fight to overcome Republican opposition and pass the Paycheck Fairness Act to help stop gender discrimination in pay before it starts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Justice Department and Equal Employment Opportunity Commission, led by President Obama's appointees, have investigated and prosecuted numerous violations of the nation's civil rights laws.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Justice Department and Equal Employment Opportunity Commission obtained more than $140 million in relief for victims of gender discrimination.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to support efforts to ensure that workers can combat gender discrimination in the workplace.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to support efforts to protect women against pregnancy discrimination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support passing the Healthy Families Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support broadening the Family and Medical Leave Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support partnering with states to move toward paid leave.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 476,
+      "generation_tps": 15.431479651234868,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2084,
+      "prompt_tps": 486.8476333953881,
+      "request_sha256": "327e5bceb40aac32b274ab8327a990993a9e2a6d02cef8a0d0496a43f66c54b8",
+      "seconds": 35.137481207959354,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama signed the Lilly Ledbetter Fair Pay Act into law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Lilly Ledbetter Fair Pay Act helps women fight back when they are paid less than men.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats continue to fight to overcome Republican opposition and pass the Paycheck Fairness Act to help stop gender discrimination in pay before it starts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Justice Department and Equal Employment Opportunity Commission, led by President Obama's appointees, have investigated and prosecuted numerous violations of the nation's civil rights laws.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Justice Department and Equal Employment Opportunity Commission, led by President Obama's appointees, obtained more than $140 million in relief for victims of gender discrimination.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to support efforts to ensure that workers can combat gender discrimination in the workplace.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to support efforts to protect women against pregnancy discrimination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support passing the Healthy Families Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support broadening the Family and Medical Leave Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support partnering with states to move toward paid leave.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women are more than half of the country, according to President Obama.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Issues that affect women also affect families, according to President Obama.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b324069c10aa1b45632e039b1a42edeb72873654855658fe01e1b734c6668cac"
+}

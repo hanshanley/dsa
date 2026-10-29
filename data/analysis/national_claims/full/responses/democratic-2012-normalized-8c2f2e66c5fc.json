@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 314,
+      "generation_tps": 15.032120325713347,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1449,
+      "prompt_tps": 434.3647356806485,
+      "request_sha256": "bfa6ac8b852afeb35146b5d9e3d2e368700ad517d102e2c6d225d48d6ba1b0fa",
+      "seconds": 24.239980292040855,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Southwest border is more secure than at any time in the past 20 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unlawful crossings are at a 40-year low.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Border Patrol is better staffed than at any time in its history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Homeland Security is prioritizing the deportation of criminals who endanger communities over the deportation of immigrants who do not pose a threat, such as children who came here through no fault of their own and are pursuing an education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama's administration has streamlined the process of legal immigration for immediate relatives of U.S. citizens, supporting family reunification as a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama's administration has enhanced opportunities for English-language learning and immigrant integration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"This administration challenged states in court when they sought to interfere with federal immigration law by passing local measures targeting immigrants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 14.92553317812654,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1876,
+      "prompt_tps": 451.48323593122,
+      "request_sha256": "96ea71220e49e50e8356afb4f1575e94b9fba51a6df36d1d5a6502846eadafad",
+      "seconds": 28.226144124986604,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Obama has made important progress in implementing immigration policies that reward hard work and demand personal responsibility.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the Southwest border is more secure than at any time in the past 20 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unlawful crossings are at a 40-year low.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Border Patrol is better staffed than at any time in its history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Homeland Security is prioritizing the deportation of criminals who endanger communities over the deportation of immigrants who do not pose a threat, such as children who came here through no fault of their own and are pursuing an education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama's administration has streamlined the process of legal immigration for immediate relatives of U.S. citizens, supporting family reunification as a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama's administration has enhanced opportunities for English-language learning and immigrant integration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama's administration challenged states in court when they sought to interfere with federal immigration law by passing local measures targeting immigrants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 403,
+      "generation_tps": 15.190512872565664,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1976,
+      "prompt_tps": 465.760124353906,
+      "request_sha256": "2b6637f2828815b36fe4c74e63198ee3cff940168846f2cf311cf510e77574f4",
+      "seconds": 30.791944332886487,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama has made important progress in implementing immigration policies that reward hard work and demand personal responsibility.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the Southwest border is more secure than at any time in the past 20 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unlawful crossings are at a 40-year low.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Border Patrol is better staffed than at any time in its history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Homeland Security is prioritizing the deportation of criminals who endanger communities over the deportation of immigrants who do not pose a threat, such as children who came here through no fault of their own and are pursuing an education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama's administration has streamlined the process of legal immigration for immediate relatives of U.S. citizens, supporting family reunification as a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama's administration has enhanced opportunities for English-language learning and immigrant integration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama's administration challenged states in court when they sought to interfere with federal immigration law by passing local measures targeting immigrants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Homeland Security is continuing to work to hold employers accountable for whom they hire.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bfa6ac8b852afeb35146b5d9e3d2e368700ad517d102e2c6d225d48d6ba1b0fa"
+}

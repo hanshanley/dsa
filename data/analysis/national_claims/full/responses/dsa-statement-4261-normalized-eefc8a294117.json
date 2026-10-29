@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 326,
+      "generation_tps": 15.049744397118955,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1482,
+      "prompt_tps": 447.7230135236809,
+      "request_sha256": "e8d5ecee1161009c3303291fce85d677c3f2c038e7efdaf4e1fc57f8aec21ce7",
+      "seconds": 24.98765741707757,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Organization of American States receives the bulk of its funding from the U.S. government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Organization of American States published unsubstantiated and misleading claims regarding the integrity of Bolivia\u2019s presidential election on October 20th.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"An independent review of the Organization of American States\u2019 recent audit of the October 20th contest should be carried out by international electoral experts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA calls for the immediate reinstatement of Bolivia\u2019s constitutional order.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA calls for the cessation of all violence and threats of violence against Morales, MAS leaders, and other victims of right-wing violence in Bolivia.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. government and all other international actors should respect the sovereignty of the Bolivian people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. government and all other international actors should desist any and all further efforts to undermine Bolivia\u2019s democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 341,
+      "generation_tps": 15.225960934857993,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1976,
+      "prompt_tps": 468.4625404806231,
+      "request_sha256": "cb5e4707a3d46959b0777c5e037ef7350b1bbf09c48a4ba1c1e41414efa2056f",
+      "seconds": 26.63173362496309,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Organization of American States receives the bulk of its funding from the U.S. government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Organization of American States published unsubstantiated and misleading claims regarding the integrity of Bolivia\u2019s presidential election on October 20th.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Given the Organization of American States\u2019 biased and irresponsible behavior thus far, an independent review of its recent audit of the October 20th contest should be carried out by international electoral experts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA calls for the immediate reinstatement of Bolivia\u2019s constitutional order.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA calls for the cessation of all violence and threats of violence against Morales, MAS leaders, and other victims of right-wing violence in Bolivia.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA calls on the U.S. government and all other international actors to respect the sovereignty of the Bolivian people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA calls on the U.S. government and all other international actors to desist any and all further efforts to undermine Bolivia\u2019s democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e8d5ecee1161009c3303291fce85d677c3f2c038e7efdaf4e1fc57f8aec21ce7"
+}

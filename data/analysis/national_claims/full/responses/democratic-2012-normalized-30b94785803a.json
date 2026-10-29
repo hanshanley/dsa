@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 406,
+      "generation_tps": 15.271809383964818,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1458,
+      "prompt_tps": 461.82902949718414,
+      "request_sha256": "bfea4aefda096c01a83b2cab542b4d014105620ba3dc63eea4e9965f41fed551",
+      "seconds": 29.75375312496908,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for strengthening rural water, sewer, and broadband infrastructure to make rural businesses more competitive.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Expanded broadband access to nearly seven million rural Americans, including rural businesses, creating new jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in water and wastewater community infrastructure projects, safeguarding the health of 18 million rural residents and creating more jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to strengthen the American farm safety net by renewing crop disaster relief.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to maintain strong crop insurance programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to create a permanent disaster relief program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to improve access to education and health care, especially for rural veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to conserve millions of acres of public lands while supporting rural recreation and tourism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans in Congress have introduced a budget that would gut rural economic programs that invest in education, clean energy, infrastructure, and health care, undermining job growth and economic development in rural America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans in Congress would severely weaken the farm safety net for family farmers in times of natural disaster and economic hardship.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 415,
+      "generation_tps": 15.321912505104068,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2032,
+      "prompt_tps": 475.6936242963312,
+      "request_sha256": "65eb3ab7fca9854934ee2dd44e603b673c93d50d8019a100e97f918d705085d9",
+      "seconds": 31.371470290934667,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for strengthening rural water, sewer, and broadband infrastructure to make rural businesses more competitive.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Broadband access has been expanded to nearly seven million rural Americans, including rural businesses, creating new jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in water and wastewater community infrastructure projects has safeguarded the health of 18 million rural residents and created more jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to strengthen the American farm safety net by renewing crop disaster relief.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to maintain strong crop insurance programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to create a permanent disaster relief program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to improve access to education and health care, especially for rural veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to conserve millions of acres of public lands while supporting rural recreation and tourism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans in Congress have introduced a budget that would gut rural economic programs that invest in education, clean energy, infrastructure, and health care, undermining job growth and economic development in rural America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans in Congress would severely weaken the farm safety net for family farmers in times of natural disaster and economic hardship.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bfea4aefda096c01a83b2cab542b4d014105620ba3dc63eea4e9965f41fed551"
+}

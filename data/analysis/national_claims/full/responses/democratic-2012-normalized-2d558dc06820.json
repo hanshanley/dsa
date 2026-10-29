@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 406,
+      "generation_tps": 15.355252827619598,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1478,
+      "prompt_tps": 442.28261157487015,
+      "request_sha256": "136aa038710c0560a98808e3b60dadd851029a7a0666a23d7ea695e046af2ca5",
+      "seconds": 29.795447250129655,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"American farmers are seeing record farm income under President Obama.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"American agricultural exports are at record levels under President Obama.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of acres are enrolled in conservation programs under President Obama.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has expanded markets for American goods, supporting more than a million agriculture jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agriculture has been one of the fastest-growing parts of the economy in the past few years, creating one out of every 12 American jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support agriculture from small farms to large farms.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support a strong farm safety net, with increased availability of crop insurance and emergency disaster assistance to help farmers and ranchers keep their farms in business after natural disasters and crop loss.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are planning for a strong agricultural future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama has proposed increasing funding for research and development to improve agricultural productivity and continue to pursue global food security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Agriculture's role secures America's food security and makes the country an ambassador of food aid to countries across the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 419,
+      "generation_tps": 15.124409571799406,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2052,
+      "prompt_tps": 457.5476251565064,
+      "request_sha256": "caad2cb5fe5060b2aa14fd1889a4e3efb7ab97e06ac951c4c1e9ebd1db1f8541",
+      "seconds": 32.20215266710147,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under President Obama, American farmers are seeing record farm income.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under President Obama, American agricultural exports are at record levels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under President Obama, millions of acres are enrolled in conservation programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has expanded markets for American goods, which supports more than a million agriculture jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the past few years, agriculture has been one of the fastest-growing parts of the economy, creating one out of every 12 American jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support agriculture from small farms that feed the community to large farms that feed the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support a strong farm safety net, with increased availability of crop insurance and emergency disaster assistance to help farmers and ranchers keep their farms in business after natural disasters and crop loss.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are planning for a strong agricultural future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama has proposed increasing funding for research and development to improve agricultural productivity and continue to pursue global food security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Agriculture's role secures America's food security and makes the country an ambassador of food aid to countries across the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "136aa038710c0560a98808e3b60dadd851029a7a0666a23d7ea695e046af2ca5"
+}

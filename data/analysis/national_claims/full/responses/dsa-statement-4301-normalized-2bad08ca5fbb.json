@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 231,
+      "generation_tps": 15.75931294767043,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1395,
+      "prompt_tps": 463.1257430911072,
+      "request_sha256": "755ddb4f29a5824753f5a01451855fded828da2a3435df7925247dab31c7c09e",
+      "seconds": 17.681796041084453,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America calls on the U.S. government to immediately cease all funding and related support to the Duterte administration and the Philippine military and police.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America calls on all U.S. political actors to uphold the findings of the International People\u2019s Tribunal, which in 2018 found Duterte guilty of crimes against humanity and war crimes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America calls on its members to support peaceful resistance to the Duterte administration, through their local chapters and in solidarity with Filipino and Filipina comrades living in the U.S. and the Philippines.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The International People\u2019s Tribunal in 2018 found Duterte guilty of crimes against humanity and war crimes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 236,
+      "generation_tps": 16.113434482146587,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1794,
+      "prompt_tps": 486.1760895200346,
+      "request_sha256": "8c633143e1c823931654c6a4c1e98dea28d56e9729985ab90dd2a7e311737f6c",
+      "seconds": 18.346808166941628,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America calls on the U.S. government to immediately cease all funding and related support to the Duterte administration and the Philippine military and police.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America calls on all U.S. political actors to uphold the findings of the International People\u2019s Tribunal, which in 2018 found Duterte guilty of crimes against humanity and war crimes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic Socialists of America calls on its members to support peaceful resistance to the Duterte administration, through their local chapters and in solidarity with Filipino and Filipina comrades living in the U.S. and the Philippines.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The International People\u2019s Tribunal in 2018 found Duterte guilty of crimes against humanity and war crimes.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "755ddb4f29a5824753f5a01451855fded828da2a3435df7925247dab31c7c09e"
+}

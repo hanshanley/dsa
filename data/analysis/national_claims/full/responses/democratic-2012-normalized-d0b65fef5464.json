@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 279,
+      "generation_tps": 15.963554993942143,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1358,
+      "prompt_tps": 447.72008724417543,
+      "request_sha256": "485d40369c49d8eb154f45502078c0ce40ce37d6b11e60fc94a6caafd414059d",
+      "seconds": 20.520750541007146,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"No one should face discrimination based on disability status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party will continue to lead efforts to facilitate the access of Americans with disabilities to the middle class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party will continue to lead efforts to facilitate the access of Americans with disabilities to employment opportunities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party will continue to lead efforts to facilitate the access of Americans with disabilities to the ability to lead full, productive, and satisfying lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration and the Democratic Party are committed to assisting the approximately 50 million people in this country living with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration and the Democratic Party are committed to assuring the full integration of the approximately 50 million people in this country living with disabilities into society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 203,
+      "generation_tps": 15.935000217846765,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1805,
+      "prompt_tps": 464.9503928673299,
+      "request_sha256": "ef398ebc9ddc78a3e12cfdb3fd11316db6a0052eb850ffed68681401f32a0f1e",
+      "seconds": 16.631798750022426,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"No one should face discrimination based on disability status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party will continue to lead efforts to facilitate the access of Americans with disabilities to the middle class, employment opportunities, and the ability to lead full, productive, and satisfying lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration and the Democratic Party are committed to assisting the approximately 50 million people in this country living with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration and the Democratic Party are committed to assuring the full integration of the approximately 50 million people in this country living with disabilities into society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "485d40369c49d8eb154f45502078c0ce40ce37d6b11e60fc94a6caafd414059d"
+}

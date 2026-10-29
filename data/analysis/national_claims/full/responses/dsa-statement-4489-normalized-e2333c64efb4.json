@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 456,
+      "generation_tps": 15.475771652431307,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1550,
+      "prompt_tps": 457.79797949970174,
+      "request_sha256": "196b711974841ca3dbdc4bc89591bfede39f342ef340be5326793f68c3a0c829",
+      "seconds": 32.8622367081698,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. government uses $3.8 billion annually in taxpayer funds to bolster Israel\u2019s military.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of taxpayer funds to bolster Israel\u2019s military makes the U.S. complicit in Israel\u2019s violence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Palestinians in the U.S. are forced to fund their own oppression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending all military funding to Israel and other forms of military, economic, and diplomatic support until Israel upholds the rights of Palestinians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Demand for Palestinian self-determination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Palestinians have the right to dream, make choices, and shape their lives and futures.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Palestinians have the right to govern themselves without interference.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Palestinians have the right to preserve and express their language, culture, heritage, and peoplehood.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Palestinians have the right to their land and natural resources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Palestinians should be consulted and listened to regarding their future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Nothing about Palestinians should be decided without their participation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Demand for the right of return for Palestinians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 480,
+      "generation_tps": 15.552337142987234,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2174,
+      "prompt_tps": 497.65055725069215,
+      "request_sha256": "778e2a0cd54760b63a92e13d09a7afa5d9fe6a13c7b6c38f44d11957d1aca5fd",
+      "seconds": 35.24362291605212,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. government uses $3.8 billion annually in taxpayer funds to bolster Israel\u2019s military.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of $3.8 billion annually in taxpayer funds to bolster Israel\u2019s military makes the U.S. complicit in Israel\u2019s violence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Palestinians in the U.S. are forced to fund their own oppression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand that the U.S. immediately end all military funding to Israel and other forms of military, economic, and diplomatic support until Israel upholds the rights of Palestinians and their vision of justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Demand for Palestinian self-determination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Palestinians have the right to dream, to make choices, and to shape their lives and futures.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Palestinians have the right to govern themselves without interference.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Palestinians have the right to preserve and express their language, culture, heritage, and peoplehood.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Palestinians have the right to their land and natural resources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Palestinians speak for themselves and must be consulted and listened to regarding their future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Nothing about Palestinians should be decided without their participation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Demand for the right of return for Palestinians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "196b711974841ca3dbdc4bc89591bfede39f342ef340be5326793f68c3a0c829"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 233,
+      "generation_tps": 15.287349685227761,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1385,
+      "prompt_tps": 451.26717695931296,
+      "request_sha256": "cb50de208298825509a46d007328055e291d99ef56975d31b38b990563c2f22d",
+      "seconds": 18.32451987499371,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Gaby Pacheco congratulates President Barack Obama for announcing the Deferred Action for Childhood Arrivals program.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrant youth grow up attending schools, churches, and places of recreation in the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrant youth come to the United States with desires and ideals of liberty, justice, and the pursuit of happiness, similar to the forefathers.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lawmakers must work together to protect the rights of all and create a roadmap allowing immigrants to become full-fledged citizens, according to Gaby Pacheco.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrant youth can help make America a more just and prosperous country through their dreams, work, and talent, according to Gaby Pacheco.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 237,
+      "generation_tps": 14.965298897909802,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1786,
+      "prompt_tps": 463.2594331156463,
+      "request_sha256": "75f125ade2406c24a2ed93cada3a967b4064765f1103e4950d9017ca2f67e1e7",
+      "seconds": 19.711564916884527,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Gaby Pacheco congratulates President Barack Obama for announcing the Deferred Action for Childhood Arrivals program.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrant youth grow up attending schools, churches, and places of recreation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrant youth come to the United States with desires and ideals of liberty, justice, and the pursuit of happiness, similar to the ideals the forefathers had.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lawmakers must work together to protect the rights of all and create a roadmap allowing immigrants to become full-fledged citizens, according to Gaby Pacheco.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrant youth can help make America a more just and prosperous country through their dreams, work, and talent, according to Gaby Pacheco.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cb50de208298825509a46d007328055e291d99ef56975d31b38b990563c2f22d"
+}

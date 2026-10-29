@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 437,
+      "generation_tps": 15.915311193734768,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1239,
+      "prompt_tps": 436.831910954659,
+      "request_sha256": "0f1c300d33c79e0b51db529f42ced64211ff368fddf2e0c3176f9d1c50f8518b",
+      "seconds": 30.304256124887615,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Graduate Student Workers at UC Santa Cruz launched a wildcat grading strike on December 9th.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The UC Santa Cruz grading strike was spurred on by the university administration\u2019s responses to students\u2019 requests for a Cost of Living Adjustment (COLA).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Students at UC Santa Cruz requested a Cost of Living Adjustment (COLA) to alleviate rent burden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The UC Santa Cruz administration responded to students\u2019 requests for a Cost of Living Adjustment (COLA) with threats of student conduct discipline for organizing around a COLA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The UC Santa Cruz administration\u2019s response to students\u2019 requests for a Cost of Living Adjustment (COLA) caused the campaign to snowball quickly.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The wildcat strike at UC Santa Cruz is not officially sanctioned.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Students and their organizations at UC Santa Cruz are at greater risk for legal action and termination because of the wildcat strike.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DSA applauds the militancy of the students at UC Santa Cruz.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DSA applauds the ambitious demands the students at UC Santa Cruz are putting on their employer.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The working classes will not find victory if they are unable to exercise courage in the face of risks.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 468,
+      "generation_tps": 15.980149922178795,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1844,
+      "prompt_tps": 492.4888165482778,
+      "request_sha256": "79a0a49a20a899f5b15779a6f8ca3ce627f29c2239e7c1c7f339ca36a6783a36",
+      "seconds": 33.04119641589932,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Graduate Student Workers at UC Santa Cruz launched a wildcat grading strike on December 9th.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The UC Santa Cruz grading strike was spurred on by the university administration\u2019s responses to students\u2019 requests for a Cost of Living Adjustment (COLA) that would bring them out of rent burden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Students at UC Santa Cruz requested a Cost of Living Adjustment (COLA) to alleviate rent burden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The UC Santa Cruz administration responded to students\u2019 requests for a Cost of Living Adjustment (COLA) with threats of student conduct discipline for organizing around a COLA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The UC Santa Cruz administration\u2019s response to students\u2019 requests for a Cost of Living Adjustment (COLA) caused the campaign to snowball quickly, garnering support from graduate workers, faculty, and the broader campus community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The wildcat strike at UC Santa Cruz is not officially sanctioned.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because the action is a wildcat strike, students and their organizations at UC Santa Cruz are at greater risk for legal action and termination.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DSA applauds the militancy of the students at UC Santa Cruz.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DSA applauds the ambitious demands the students at UC Santa Cruz are putting on their employer.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The working classes will not find victory if they are unable to exercise courage in the face of risks.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0f1c300d33c79e0b51db529f42ced64211ff368fddf2e0c3176f9d1c50f8518b"
+}

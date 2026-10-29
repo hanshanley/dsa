@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 93,
+      "generation_tps": 15.578677404362109,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1294,
+      "prompt_tps": 442.21706928691464,
+      "request_sha256": "bee3c427d672b65fbf22b3d887a7c7fae046d2e8e5a2e852b086a4f2244d398b",
+      "seconds": 8.910305624827743,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for parents and their children as they work to lead healthier lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are leading the way on supporting healthier, more physically active families and healthy children with prevention and treatment initiatives on obesity and public health.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 98,
+      "generation_tps": 15.345564296205941,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1555,
+      "prompt_tps": 421.95773534894613,
+      "request_sha256": "5bb560e1116c3558386dc9de7e670d08afa5f8463a794e174ac4f1fe73b34d83",
+      "seconds": 10.085681791882962,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for parents and their children as they work to lead healthier lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are leading the way on supporting healthier, more physically active families and healthy children with prevention and treatment initiatives on obesity and public health.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bee3c427d672b65fbf22b3d887a7c7fae046d2e8e5a2e852b086a4f2244d398b"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 493,
+      "generation_tps": 15.32468291882409,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1283,
+      "prompt_tps": 437.6587067120967,
+      "request_sha256": "5a94bdf2720b7f7989420b6cd644ed188eb31f7b45defe7bdc8b26d61357644c",
+      "seconds": 35.11431933310814,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democratic Socialists of America (DSA) emphatically opposes a U.S. war with Iran.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. military assassinated Iranian General Qassim Suleimani on Iraqi soil on January 2, 2020.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, is an act of war.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, escalates an already tense military situation in Iraq and Iran.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, recklessly endangers millions of lives throughout the Middle East.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, violates the War Powers Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, violates the U.S. Constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, violates international law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Prior to the illegal, criminal invasion and subsequent occupation of Iraq in 2003, the U.S. was bombing Iraq an average of once every three days.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Prior to the illegal, criminal invasion and subsequent occupation of Iraq in 2003, the U.S. was imposing brutal sanctions on Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 547,
+      "generation_tps": 15.313172218721922,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1944,
+      "prompt_tps": 442.8648190574804,
+      "request_sha256": "a1ece30fa9612273e3c363bc7799f6d43cbf5150d92416d11422e24aecd4d7d5",
+      "seconds": 40.12215004186146,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democratic Socialists of America (DSA) emphatically opposes a U.S. war with Iran.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"On January 2, 2020, the U.S. military assassinated Iranian General Qassim Suleimani on Iraqi soil.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, is an act of war, according to the source.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, escalates an already tense military situation in Iraq and Iran.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, recklessly endangers millions of lives throughout the Middle East.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, violates the War Powers Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, violates the U.S. Constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The assassination of Iranian General Qassim Suleimani on January 2, 2020, violates international law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Prior to the illegal, criminal invasion and subsequent occupation of Iraq in 2003, the U.S. was bombing Iraq an average of once every three days.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Prior to the illegal, criminal invasion and subsequent occupation of Iraq in 2003, the U.S. was imposing brutal sanctions on Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA calls on all members and chapters to mobilize against yet another U.S. war in the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5a94bdf2720b7f7989420b6cd644ed188eb31f7b45defe7bdc8b26d61357644c"
+}

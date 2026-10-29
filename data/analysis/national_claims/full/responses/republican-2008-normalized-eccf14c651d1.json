@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 484,
+      "generation_tps": 15.264252836983857,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1544,
+      "prompt_tps": 444.8601294987254,
+      "request_sha256": "239b8cb4fa7f9f36a536655d6848aa0bd703f3e57f0a4dd5ddf67244418acfc1",
+      "seconds": 35.19454841688275,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republican leadership has given America the best-manned, best-trained, best-equipped, and best-led military in the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The military in the late 1990s was neglected and under-funded by the Clinton Administration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Armed Forces today are modern, agile, and adaptable to the unpredictable range of challenges in the years ahead.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to keep the Armed Forces modern, agile, and adaptable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The men and women who wear the country's uniform are the most important assets in the military arsenal.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The country's military personnel and their families must have the pay, health care, housing, education, and overall support they need.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to significantly increase the size of the Armed Forces.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Retention of combat veterans is crucial to increasing the size of the Armed Forces.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Injured military personnel deserve the best medical care the country has to offer.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The conflict in Iraq has resulted in an unprecedented incidence of traumatic brain injury.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Commitment to a new commitment of resources and personnel for the care and treatment of traumatic brain injury.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Military medicine must be the gold standard for advances in prosthetics and the treatment of trauma and eye injuries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 495,
+      "generation_tps": 14.943839522701241,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2196,
+      "prompt_tps": 469.35444283073684,
+      "request_sha256": "ef996f460f8e912f6b7713e44a45764cf7ef2b9f2c49a73711738c3ab4d287cf",
+      "seconds": 37.82434966717847,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republican leadership has given America the best-manned, best-trained, best-equipped, and best-led military in the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The military was neglected and under-funded by the Clinton Administration in the late 1990's.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Armed Forces today are modern, agile, and adaptable to the unpredictable range of challenges in the years ahead.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to keep the Armed Forces modern, agile, and adaptable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The men and women who wear the country's uniform \u2014 whether on active duty or in the Reserves or National Guard \u2014 are the most important assets in the military arsenal.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Military personnel and their families must have the pay, health care, housing, education, and overall support they need.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to significantly increase the size of the Armed Forces.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Retention of combat veterans is crucial to significantly increasing the size of the Armed Forces.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Injured military personnel deserve the best medical care the country has to offer.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The conflict in Iraq has resulted in an unprecedented incidence of traumatic brain injury.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Commitment to a new commitment of resources and personnel for the care and treatment of traumatic brain injury.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Military medicine must be the gold standard for advances in prosthetics and the treatment of trauma and eye injuries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "239b8cb4fa7f9f36a536655d6848aa0bd703f3e57f0a4dd5ddf67244418acfc1"
+}

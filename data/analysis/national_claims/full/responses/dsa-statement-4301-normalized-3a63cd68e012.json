@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 429,
+      "generation_tps": 15.599331261201497,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1612,
+      "prompt_tps": 468.6556776718235,
+      "request_sha256": "545ca8f7b72b2c8405d2bb943a9e7002ac5f3d586049dc3d3c633fed05cd8a87",
+      "seconds": 30.953064916888252,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Philippine government agencies report 4,948 suspected drug users and dealers, including 60 children, died during police operations from July 1st, 2016 to September 30, 2018.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Philippine National Police report 22,983 deaths classified as \u201chomicides under investigation\u201d since the \u201cWar on Drugs\u201d began.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Filipinos with actual drug addiction problems or histories of drug use are used as scapegoats, criminalized, and made targets by military and police.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Filipinos with actual drug addiction problems or histories of drug use are suffering immensely under regime policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Funding is used to systematically murder people, instead of directing funds to services to give medical and psychological help to those living with drug addiction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Extra-judicial killings in the Philippines, including those committed in the conduct of the anti-drug campaign, erode confidence in the Government of the Philippines\u2019 commitment to human rights, due process, and the rule of law.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The U.S. government continues to allocate money to the Philippines through Appropriations for the Department of State, and Foreign Operations and Related Programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Current annual appropriations for the Philippine military amount to $184.5 million.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 413,
+      "generation_tps": 15.782399409778085,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2209,
+      "prompt_tps": 499.5144582737317,
+      "request_sha256": "8856be483b5877825bd5b98e73d2cc0b8e01af22d3f3101bc6f663d0112c82e2",
+      "seconds": 30.604108292143792,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Philippine government agencies report that 4,948 suspected drug users and dealers, including 60 children, died during police operations from July 1st, 2016 to September 30, 2018.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Philippine National Police report 22,983 deaths classified as \u201chomicides under investigation\u201d since the \u201cWar on Drugs\u201d began.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Filipinos with actual drug addiction problems or histories of drug use are used as scapegoats, criminalized, and made targets by military and police, and are suffering immensely under regime policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Funding is used to systematically murder people, instead of alternatively directing funds to services to give the medical and psychological help those living with drug addiction need to alleviate their situation and contribute to their dignity and membership in Philippine society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Extra-judicial killings in the Philippines, including those committed in the conduct of the anti-drug campaign, erode confidence in the Government of the Philippines\u2019 commitment to human rights, due process, and the rule of law.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The U.S. government continues to allocate money to the Philippines through Appropriations for the Department of State, and Foreign Operations and Related Programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Current annual appropriations for the Philippine military amount to $184.5 million.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "545ca8f7b72b2c8405d2bb943a9e7002ac5f3d586049dc3d3c633fed05cd8a87"
+}

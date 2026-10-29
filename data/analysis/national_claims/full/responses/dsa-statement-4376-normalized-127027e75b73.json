@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 405,
+      "generation_tps": 15.183903692822419,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1507,
+      "prompt_tps": 455.58360858277865,
+      "request_sha256": "343b971c0827f72192737541490e7ee38096604e85e19d3d251d37fb5433b45a",
+      "seconds": 29.996481208130717,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The University of California raises the salaries of high-level administrators and spends money on real estate assets while refusing to pay campus workers living wages.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Regular tuition hikes are the norm at the University of California.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The status quo is unacceptable.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the University to immediately meet the students\u2019 demand for a COLA.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Urge for DSA members to get involved and support the strike.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Call/email administration and tell them that you support the strike and that Grad Students deserve a COLA.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Chancellor Cynthia Larive is the Chancellor.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The email address for Chancellor Cynthia Larive is chancellor@ucsc.edu.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The phone number for Chancellor Cynthia Larive is 831-459-4291.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"Recommendation to contribute to the strike fund to help defray costs incurred during the strike.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[8]},{\"claim_text\":\"Recommendation to seek more information on the strike and the ongoing campaign.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[9]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 425,
+      "generation_tps": 15.373491585179051,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2080,
+      "prompt_tps": 474.1941176439861,
+      "request_sha256": "d09053f1a33cfe12d3bef16dc2cc5d41994bf7f63fb73c63d4267eb743636106",
+      "seconds": 32.04876850009896,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The University of California, like many public universities caught in the grip of neoliberal governance, increasingly raises the salaries of high-level administrators and spends its money on real estate assets, while refusing to pay campus workers living wages.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Regular tuition hikes are the norm at the University of California.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The status quo is unacceptable.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the University to immediately meet the students\u2019 demand for a COLA.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Urge for DSA members to get involved and support the strike.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to call or email administration to tell them that you support the strike and that Grad Students deserve a COLA.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Chancellor Cynthia Larive is the Chancellor.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The email address for Chancellor Cynthia Larive is chancellor@ucsc.edu.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The phone number for Chancellor Cynthia Larive is 831-459-4291.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]},{\"claim_text\":\"Recommendation to contribute to the strike fund to help defray any costs incurred during this historic strike.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[8]},{\"claim_text\":\"Recommendation to seek more information on the strike and the ongoing campaign.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[9]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "343b971c0827f72192737541490e7ee38096604e85e19d3d251d37fb5433b45a"
+}

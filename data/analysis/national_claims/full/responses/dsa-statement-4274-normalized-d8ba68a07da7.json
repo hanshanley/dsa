@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 195,
+      "generation_tps": 15.687727971042463,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1462,
+      "prompt_tps": 462.01635772184176,
+      "request_sha256": "7fd2ce5edb7889240b1b5cfabc18065833b82727cfc47f8cb81634b930205d27",
+      "seconds": 15.60932841594331,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Politicians cannot achieve abolition, decolonization, and liberation without mass movements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The endorsement of The Red Deal and The Red Nation is consistent with DSA statements on Decolonization and Ecosocialism and reflects the consensus of attendees of the 2019 DSA National Convention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The DSA has a full commitment to decolonization, deoccupation, demilitarization, and full repatriation of indigenous lands.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The DSA anticipates a fruitful and mutually beneficial partnership with The Red Nation in all areas of activism moving forward.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 232,
+      "generation_tps": 15.048452124168413,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1825,
+      "prompt_tps": 464.25749388732714,
+      "request_sha256": "47abdd99a8c7d37452ddf83c0f30140d257057ffe301ee6b50d58efeb5f54b34",
+      "seconds": 19.365212458884344,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Politicians cannot achieve abolition, decolonization, and liberation without mass movements; embracing non-reformist reforms is necessary to achieve those goals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The endorsement of The Red Deal and The Red Nation is in line with DSA statements on Decolonization and Ecosocialism and reflects the consensus of the attendees of the 2019 DSA National Convention.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The DSA reiterates its full commitment to decolonization, deoccupation, demilitarization, and full repatriation of indigenous lands \u2014 policies that are essential to ensuring a socially just and environmentally sustainable future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The DSA looks forward to a fruitful and mutually beneficial partnership with The Red Nation in all areas of activism moving forward.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7fd2ce5edb7889240b1b5cfabc18065833b82727cfc47f8cb81634b930205d27"
+}

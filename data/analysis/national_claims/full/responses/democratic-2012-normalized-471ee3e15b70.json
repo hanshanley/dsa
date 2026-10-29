@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 314,
+      "generation_tps": 15.568816021199579,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1503,
+      "prompt_tps": 424.7498507431009,
+      "request_sha256": "00ff491aab6f380564dd9481c4ecabfc3dd9299be9788de41ccc1d16c60be963",
+      "seconds": 23.718461957992986,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Puerto Ricans have been American citizens for almost 100 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Puerto Rico have developed strong political, economic, social, and cultural ties to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lack of resolution about the status of Puerto Rico has held the island back.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to move resolution of the status issue forward with the goal of resolving it expeditiously.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"If local efforts in Puerto Rico to resolve the status issue do not provide a clear result in the short term, the President should support, and Congress should enact, self-executing legislation that specifies in advance for the people of Puerto Rico a set of clear status options, such as those recommended in the White House Task Force Report on Puerto Rico, which the United States is politically committed to fulfilling.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is politically committed to fulfilling the status options recommended in the White House Task Force Report on Puerto Rico.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 361,
+      "generation_tps": 15.58208421399695,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1985,
+      "prompt_tps": 474.7795158493251,
+      "request_sha256": "94e7a55f20bee97edc09059b5b17cb1b87fc4acd4e11599b00484b66aacf981c",
+      "seconds": 27.359155874932185,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Puerto Ricans have been American citizens for almost 100 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Puerto Rico have developed strong political, economic, social, and cultural ties to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lack of resolution about the status of Puerto Rico has held the island back.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is time for Puerto Rico to take the next step in the history of its status and its relationship to the rest of the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to move resolution of the status issue forward with the goal of resolving it expeditiously.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"If local efforts in Puerto Rico to resolve the status issue do not provide a clear result in the short term, the President should support, and Congress should enact, self-executing legislation that specifies in advance for the people of Puerto Rico a set of clear status options, such as those recommended in the White House Task Force Report on Puerto Rico, which the United States is politically committed to fulfilling.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is politically committed to fulfilling the status options recommended in the White House Task Force Report on Puerto Rico.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "00ff491aab6f380564dd9481c4ecabfc3dd9299be9788de41ccc1d16c60be963"
+}

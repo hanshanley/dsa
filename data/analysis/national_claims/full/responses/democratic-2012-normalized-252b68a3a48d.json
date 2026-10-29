@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 319,
+      "generation_tps": 15.266232110710988,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1430,
+      "prompt_tps": 422.86737652593234,
+      "request_sha256": "a999f20f21735f2b5d75b66fd9dd70f09ff314eae2a19b4a9f456e8eff88691c",
+      "seconds": 24.29210774996318,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Obama and the Democrats fought for the DREAM Act, legislation ensuring that young people who want to contribute fully to society and serve the country are able to become legal residents and ultimately citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DREAM Act has a long history of bipartisan support.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans decided to play politics with the DREAM Act rather than do what they considered the right thing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration provided temporary relief for youth who came to the United States as children, through no fault of their own, grew up as Americans and are poised to make a real contribution to the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only Congress can provide a permanent, comprehensive solution to immigration issues.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama and the Democratic Party support comprehensive immigration reform that intelligently prioritizes the country's security and economic needs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mitt Romney and the Republicans have opposed commonsense immigration reforms and pandered to the far right.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 301,
+      "generation_tps": 14.855903840823732,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1917,
+      "prompt_tps": 454.7269992368141,
+      "request_sha256": "0f10e693c2cf90159734b8250e02859177d48367de57d41e4b3acce91cc55865",
+      "seconds": 24.491455166833475,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and the Democrats fought for the DREAM Act, legislation ensuring that young people who want to contribute fully to society and serve the country are able to become legal residents and ultimately citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DREAM Act has a long history of bipartisan support, although Republicans decided to play politics with it rather than do what they considered the right thing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration provided temporary relief for youth who came to the United States as children, through no fault of their own, grew up as Americans and are poised to make a real contribution to the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only Congress can provide a permanent, comprehensive solution to immigration issues.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama and the Democratic Party support comprehensive immigration reform that intelligently prioritizes the country's security and economic needs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mitt Romney and the Republicans have opposed commonsense immigration reforms and pandered to the far right.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a999f20f21735f2b5d75b66fd9dd70f09ff314eae2a19b4a9f456e8eff88691c"
+}

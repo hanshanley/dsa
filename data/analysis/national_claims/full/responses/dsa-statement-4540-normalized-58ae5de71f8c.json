@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 359,
+      "generation_tps": 15.358239492363413,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1350,
+      "prompt_tps": 437.65408815948746,
+      "request_sha256": "73ddc4c890a4ea038b29875b6ed57d5aef0c60fe422b9895a457f42672f3771f",
+      "seconds": 26.470844916068017,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America offer solidarity and gratitude to the Wet\u2019suwet\u2019en Nation for their ongoing struggle to protect their traditional territories and land from the construction of TC Energy\u2019s 416-mile, $4.7 billion Coastal GasLink pipeline.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America extend deep admiration and support to the Mohawk, Gitxsan, and other Indigenous and non-Indigenous allies who have occupied railways, bridges, ports, industry offices, and the B.C. Legislature in support of the Wet\u2019suwet\u2019en.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalism, land exploitation, and settler-colonialism are closely intertwined, as capitalism was built on indigenous stolen land.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Police serve the interests of fossil capitalism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Indigenous land rights and self-determination are a crucial aspect of environmental justice and the fight against capitalist extractivism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America are committed to standing with the Wet\u2019suwet\u2019en people.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America pledge to amplify the Wet\u2019suwet\u2019en struggle as best as they can.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 342,
+      "generation_tps": 15.380961944580319,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1877,
+      "prompt_tps": 460.7243156663065,
+      "request_sha256": "ad02ad841d0e41fc7932d9827f87fdce0de42c6a99ebef18688214b3719ce6a6",
+      "seconds": 26.319596583023667,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America offer solidarity and gratitude to the Wet\u2019suwet\u2019en Nation for their ongoing struggle to protect their traditional territories and land from the construction of TC Energy\u2019s (a.k.a. TransCanada) 416-mile, $4.7 billion Coastal GasLink pipeline.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America extend deep admiration and support to the Mohawk, Gitxsan, and other Indigenous and non-Indigenous allies who have occupied railways, bridges, ports, industry offices, and the B.C. Legislature in support of the Wet\u2019suwet\u2019en.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalism, land exploitation, and settler-colonialism are closely intertwined, as capitalism was built on indigenous stolen land.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Police serve the interests of fossil capitalism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Indigenous land rights and self-determination are a crucial aspect of environmental justice and the fight against capitalist extractivism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America are committed to standing with the Wet\u2019suwet\u2019en people and pledge to amplify their struggle as best as they can.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "73ddc4c890a4ea038b29875b6ed57d5aef0c60fe422b9895a457f42672f3771f"
+}

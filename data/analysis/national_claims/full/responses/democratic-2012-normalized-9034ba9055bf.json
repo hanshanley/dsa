@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 475,
+      "generation_tps": 15.518517467752073,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1534,
+      "prompt_tps": 497.01969749134116,
+      "request_sha256": "e3c67b726072c112899b1130fd6460812c741e0d2b8dd6503bb9b9f550c8e858",
+      "seconds": 33.70470433309674,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Obama and the Democratic Party are committed to keeping a trust with troops, military families, and veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Troops, military families, and veterans have borne the burden of war and have made the military the best in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support will continue for troops in the field.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support will continue for wounded warriors, mental health, and the well-being of military families and veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Work will continue to give veterans health care, benefits, education, and job opportunities they have earned.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party supported the Post-9/11 G.I. Bill to provide opportunities for military personnel, veterans, and their families to get a better education.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President is working to ensure returning veterans are able to get good jobs and put their skills to good use at home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President launched partnerships with the private sector to help veterans transfer their experience into skilled manufacturing jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President proposed a new Veterans Jobs Corps to put veterans to work as first responders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President signed an executive order making it harder for for-profit colleges to prey on veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Returning Heroes Tax Credit and the Wounded Warrior Tax Credit were enacted to give companies incentives to hire veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 484,
+      "generation_tps": 15.577658522171681,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2177,
+      "prompt_tps": 496.87269671751193,
+      "request_sha256": "76391b76c1f825b52727985e52215a7997a46d7f8810caa7ab99f584d4b347ec",
+      "seconds": 35.463648250093684,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and the Democratic Party are committed to keeping the sacred trust with troops, military families, and veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Troops, military families, and veterans have borne the burden of war and have always made the military the best in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support will continue for troops in the field.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support will continue for wounded warriors, mental health, and the well-being of military families and veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Work will continue to give veterans the health care, benefits, education, and job opportunities that they have earned.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party supported the Post-9/11 G.I. Bill to provide opportunities for military personnel, veterans, and their families to get a better education.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President is working to ensure returning veterans are able to get good jobs and put their skills to good use at home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President launched partnerships with the private sector to help veterans transfer their experience into skilled manufacturing jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President proposed a new Veterans Jobs Corps to put veterans to work as first responders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President signed an executive order making it harder for for-profit colleges to prey on veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Returning Heroes Tax Credit and the Wounded Warrior Tax Credit were enacted to give companies incentives to hire veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e3c67b726072c112899b1130fd6460812c741e0d2b8dd6503bb9b9f550c8e858"
+}

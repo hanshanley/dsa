@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 431,
+      "generation_tps": 15.44155456690659,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1289,
+      "prompt_tps": 429.64888993769716,
+      "request_sha256": "1c0e3d4d6199b06ac70d4ff43e303c507bc249f03ae33e40661dffb85f377699",
+      "seconds": 30.9234058749862,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Over the past year, a culture of extreme corruption in UAW leadership has come to a head in the news.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"UAW leaders have allegedly stolen millions from member dues for lavish personal vacations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"UAW leaders have allegedly taken bribes directly from the Big Three auto companies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"UAW now faces the threat of a government takeover by hostile anti-union forces in the Trump administration.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Right has taken advantage of the UAW crisis by telling workers they should stop paying their dues and abandon the union.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As socialists, abandoning the union empowers bosses.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"A grassroots movement to democratize the UAW has developed to take control of the UAW and restore workers\u2019 faith in the union.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Members of Unite All Workers for Democracy (UAWD) are working to invoke Article 8 of the UAW\u2019s constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"If successful, UAWD will call a special convention and change the constitution so that members have a direct say in who leads the UAW at a national level.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Teamsters, Steelworkers, and Machinists already allow members a direct say in who leads at a national level.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 438,
+      "generation_tps": 15.599575725585243,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1888,
+      "prompt_tps": 483.36028071589277,
+      "request_sha256": "8f795e01875111d6aea36a89fced54614fb42872a6671312f90f923addf139fb",
+      "seconds": 31.994935458060354,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Over the past year, a culture of extreme corruption in UAW leadership has come to a head in the news.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"UAW leaders have allegedly stolen millions from member dues for lavish personal vacations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"UAW leaders have allegedly taken bribes directly from the Big Three auto companies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"UAW now faces the threat of a government takeover by hostile anti-union forces in the Trump administration.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Right has taken advantage of the UAW crisis by telling workers they should stop paying their dues and abandon the union.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As socialists, abandoning the union empowers bosses.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"A grassroots movement to democratize the UAW has developed through this crisis to take control of UAW and restore workers\u2019 faith in the union.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Members of Unite All Workers for Democracy (UAWD) are working to invoke Article 8 of the UAW\u2019s constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"If successful, UAWD will call a special convention and change the constitution so that members have a direct say in who leads the UAW at a national level.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Teamsters, Steelworkers, and Machinists already allow members a direct say in who leads at a national level.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1c0e3d4d6199b06ac70d4ff43e303c507bc249f03ae33e40661dffb85f377699"
+}
