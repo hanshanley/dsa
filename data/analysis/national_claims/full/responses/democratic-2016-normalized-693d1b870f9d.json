@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 227,
+      "generation_tps": 16.20962052760028,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1381,
+      "prompt_tps": 472.94301211646797,
+      "request_sha256": "42ad83efa0108acba18e063e8fec699a1808e18265eb25ee010bc6f7fe5873d8",
+      "seconds": 16.93457654188387,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will create an independent, national infrastructure bank to support critical infrastructure improvements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The infrastructure bank will provide loans and other financial assistance for investments in energy, water, broadband, transportation, and multi-modal infrastructure projects.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to support the interest tax exemption on municipal bonds.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to establish a permanent version of Build America Bonds as an additional tool to encourage infrastructure investment by state and local governments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to ensure resources and programs are adequately targeted to provide economic development, job training, and critical infrastructure investment in areas of the greatest need.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 233,
+      "generation_tps": 16.228692175941507,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1776,
+      "prompt_tps": 496.28215104565635,
+      "request_sha256": "b0e5283f00f9cc30c25cc3f2d952d860867b48265145713097249df56610ae83",
+      "seconds": 17.946007250109687,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will create an independent, national infrastructure bank that will support critical infrastructure improvements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The infrastructure bank will provide loans and other financial assistance for investments in energy, water, broadband, transportation, and multi-modal infrastructure projects.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to support the interest tax exemption on municipal bonds.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to establish a permanent version of Build America Bonds as an additional tool to encourage infrastructure investment by state and local governments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to ensure resources and programs are adequately targeted to provide economic development, job training, and critical infrastructure investment in areas of the greatest need.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "42ad83efa0108acba18e063e8fec699a1808e18265eb25ee010bc6f7fe5873d8"
+}

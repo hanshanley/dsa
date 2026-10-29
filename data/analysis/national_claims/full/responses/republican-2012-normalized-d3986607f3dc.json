@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 465,
+      "generation_tps": 16.11508255244186,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1520,
+      "prompt_tps": 484.97933381566617,
+      "request_sha256": "bea3e12830b37a00b4feedccf3400328e54137e2703bdb91036d897e192b61d0",
+      "seconds": 31.99930450017564,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The budget process has enabled reckless spending by giving procedural cover to Members of Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process defines any earnings the government allows a taxpayer to keep through a deduction, exemption, or credit as equivalent to spending the same amount on some program.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process lumps a broad range of diverse programs under the heading of \\\"entitlement\\\".\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process assumes every spending program will be permanent and every tax cut will be temporary.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process refuses to recognize the beneficial budgetary impact of lower tax rates.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process calls a spending increase a cut if it is less than the rate of inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican Members of Congress have repeatedly tried to reform the budget process to make it more transparent and accountable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican Members of Congress have voted for a Balanced Budget Amendment to the Constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"33 States have put a Balanced Budget Amendment into their own constitutions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a Constitutional amendment requiring a super-majority for any tax increase, with exceptions for only war and national emergencies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for imposing a cap limiting spending to the historical average percentage of GDP so that future Congresses cannot balance the budget by raising taxes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 501,
+      "generation_tps": 16.221238832601262,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2153,
+      "prompt_tps": 517.2416279262092,
+      "request_sha256": "9e2fe7108f4a1659314800e3800d4e04369e22b87fe0a71fd98f39a9d2711a64",
+      "seconds": 35.05819154204801,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The budget process has enabled, rather than restrained, reckless spending by giving procedural cover to Members of Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process defines any earnings the government allows a taxpayer to keep through a deduction, exemption, or credit as equivalent to spending the same amount on some program.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process lumps a broad range of diverse programs under the heading of \\\"entitlement\\\", as if veterans' benefits and welfare checks belong in the same category.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process assumes every spending program will be permanent and every tax cut will be temporary.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process refuses to recognize the beneficial budgetary impact of lower tax rates.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process calls a spending increase a cut if it is less than the rate of inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican Members of Congress have repeatedly tried to reform the budget process to make it more transparent and accountable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican Members of Congress have voted for a Balanced Budget Amendment to the Constitution, following the lead of 33 States which have put that restraint into their own constitutions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"33 States have put a Balanced Budget Amendment into their own constitutions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a Constitutional amendment requiring a super-majority for any tax increase, with exceptions for only war and national emergencies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for imposing a cap limiting spending to the historical average percentage of GDP so that future Congresses cannot balance the budget by raising taxes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bea3e12830b37a00b4feedccf3400328e54137e2703bdb91036d897e192b61d0"
+}

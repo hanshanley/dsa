@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 350,
+      "generation_tps": 15.86327752354811,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1456,
+      "prompt_tps": 466.5883472545202,
+      "request_sha256": "9712229987a8f93df0fff06bd849de9b1f923b9e85866ffb9d758a28c205fddd",
+      "seconds": 25.199290374992415,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Supreme Court has upheld prohibitions against partial-birth abortion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"States are now permitted to extend health-care coverage to children before birth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Born Alive Infants Protection Act has become law, ensuring that infants born alive during an abortion receive all treatment and care provided to newborn infants and are not neglected and left to die.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a moral obligation to assist, not penalize, women struggling with an unplanned pregnancy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abortion is a fundamental assault on the sanctity of innocent human life.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women deserve better than abortion.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every effort should be made to work with women considering abortion to enable and empower them to choose life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There has been a tremendous increase in adoptions following Republican legislative initiatives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There should be a parental notification requirement to protect girls from exploitation and statutory rape.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 368,
+      "generation_tps": 15.837877602835148,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1974,
+      "prompt_tps": 488.9053641899542,
+      "request_sha256": "cca8a4981e360d57e66838c51f867ae95e266d35fb53345a53a169f9eabcc22a",
+      "seconds": 27.285620833048597,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Supreme Court has upheld prohibitions against the barbaric practice of partial-birth abortion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"States are now permitted to extend health-care coverage to children before birth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Born Alive Infants Protection Act has become law, ensuring that infants who are born alive during an abortion receive all treatment and care that is provided to all newborn infants and are not neglected and left to die.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a moral obligation to assist, not to penalize, women struggling with the challenges of an unplanned pregnancy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"At its core, abortion is a fundamental assault on the sanctity of innocent human life.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Women deserve better than abortion.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every effort should be made to work with women considering abortion to enable and empower them to choose life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There has been a tremendous increase in adoptions that has followed Republican legislative initiatives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There should be a parental notification requirement to protect girls from exploitation and statutory rape.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9712229987a8f93df0fff06bd849de9b1f923b9e85866ffb9d758a28c205fddd"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 298,
+      "generation_tps": 16.299322323309692,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1328,
+      "prompt_tps": 462.5921420993806,
+      "request_sha256": "20d8352f7564225cc86a50a713008d9b1809213b7385fa7b15fab568dbdfa905",
+      "seconds": 21.163711916888133,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In the 2024 elections, working people have few good options.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In most races, Americans will have the choice between far-right Republicans and corporate Democrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the current status quo, inequality will continue to worsen.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the current status quo, corporations will continue to sell war and wreak havoc on the environment.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The worst impacts of crises will be felt by the poor, people of color, and working people generally.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America (DSA) is presenting a bold alternative course of action.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DSA hopes to bring together millions of people throughout the U.S. to fight for a true democracy where working people have control over their own lives, their government, and the economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 384,
+      "generation_tps": 16.262935154568797,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1794,
+      "prompt_tps": 495.0076723917183,
+      "request_sha256": "f3c363ef4044b09c53551b3a199f949249686c3d0a2364708c12ef79f2c17e21",
+      "seconds": 27.24567791610025,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In the 2024 elections, working people have few good options.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In most races, Americans will have the choice between far-right Republicans and corporate Democrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the current status quo, inequality will continue to worsen.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Under the current status quo, corporations will continue to sell war and wreak havoc on the environment.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The worst impacts of these crises will be felt by the poor, people of color, and working people generally.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America (DSA) is presenting a bold alternative course of action.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DSA hopes to bring together millions of people throughout the U.S. to fight for a true democracy where working people have control over their own lives, their government, and the economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Politicians will remain controlled by their corporate donors, not the ordinary people who voted for them.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Neither major party is capable of advancing a positive program for the 2024 elections that meets the needs of the majority of Americans.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "20d8352f7564225cc86a50a713008d9b1809213b7385fa7b15fab568dbdfa905"
+}

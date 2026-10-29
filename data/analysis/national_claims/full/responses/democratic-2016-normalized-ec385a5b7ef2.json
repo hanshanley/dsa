@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 478,
+      "generation_tps": 16.14120946842675,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1534,
+      "prompt_tps": 477.2413087050363,
+      "request_sha256": "4a7593c8b98362d2a899197bce1638c141c7dc399816dc9694d795e14e23a85f",
+      "seconds": 32.83720712503418,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will make investments to spur the creation of millions of jobs for young people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Roughly one in ten Americans between the ages of 16 and 24 is unemployed, which is more than twice the national average.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The unemployment rates for African American, Latino, Asian American and Pacific Islander (AAPI), and American Indian teenagers and youth with disabilities are far too high.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will provide direct federal funding for a range of local programs that will put young people to work and create new career opportunities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that today's extreme levels of income and wealth inequality are bad for people, businesses, and the economy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"A thriving middle class is necessary to drive economic growth, but the middle class is shrinking.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The top one-tenth of one percent of Americans now own almost as much wealth as the bottom 90 percent combined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trends in income and wealth create problems beyond insulting a sense of basic fairness.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Social mobility is lower than most believe it to be.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Children born to families in the lowest fifth of earnings are more than 10 times more likely to remain there as adults than to earn as much as those in the top fifth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Unless investments are made in building a level playing field, everyone will lose.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 483,
+      "generation_tps": 16.058988555079853,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2180,
+      "prompt_tps": 508.8269117134882,
+      "request_sha256": "09d09dc581545cac161dfa730b0a3a19fea5022de23e961c13782d7c37fa3dc4",
+      "seconds": 34.37126066698693,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will make investments to spur the creation of millions of jobs for young people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Roughly one in ten Americans between the ages of 16 and 24 is unemployed, which is more than twice the national average.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The unemployment rates for African American, Latino, Asian American and Pacific Islander (AAPI), and American Indian teenagers and youth with disabilities are far too high.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will provide direct federal funding for a range of local programs that will put young people to work and create new career opportunities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that today's extreme levels of income and wealth inequality are bad for people, businesses, and the economy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"A thriving middle class is necessary to drive economic growth, but the middle class is shrinking.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The top one-tenth of one percent of Americans now own almost as much wealth as the bottom 90 percent combined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trends in income and wealth create problems beyond insulting a sense of basic fairness.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Social mobility is lower than most believe it to be.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Children born to families in the lowest fifth of earnings are more than 10 times more likely to remain there as adults than to earn as much as those in the top fifth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Unless investments are made in building a level playing field, everyone will lose.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4a7593c8b98362d2a899197bce1638c141c7dc399816dc9694d795e14e23a85f"
+}

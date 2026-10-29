@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 349,
+      "generation_tps": 16.10030632348533,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1424,
+      "prompt_tps": 471.8112648997752,
+      "request_sha256": "58b28a15e690d9f299a3b7e8e09f800ae2ef21921512d68881b8a155e275b139",
+      "seconds": 24.705413334071636,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for blocking \\\"card check\\\" legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for enacting the Secret Ballot Protection Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for enforcing the Hobbs Act against labor violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for passing the Raise Act to allow all workers to receive raises without union approval.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand an end to Project Labor Agreements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call for repeal of the Davis-Bacon Act, which costs taxpayers billions of dollars annually in artificially high wages on government projects.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the right of States to enact Right-to-Work laws and encouragement for them to do so to promote greater economic liberty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the enactment of a National Right-to-Work law to promote worker freedom and greater economic liberty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to aggressively enforce the Supreme Court decision barring the use of union dues for political purposes without worker consent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 364,
+      "generation_tps": 16.192863138977682,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1941,
+      "prompt_tps": 486.2877886995869,
+      "request_sha256": "4855891bc2a2fa49edc2f15e354016f3108232b9bf278f8f05776e7f8cea4114",
+      "seconds": 26.482069874880835,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for blocking \\\"card check\\\" legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for enacting the Secret Ballot Protection Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for enforcing the Hobbs Act against labor violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for passing the Raise Act to allow all workers to receive well-earned raises without the approval of their union representative.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand an end to Project Labor Agreements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call for repeal of the Davis-Bacon Act, which costs taxpayers billions of dollars annually in artificially high wages on government projects.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support the right of States to enact Right-to-Work laws and encourage them to do so to promote greater economic liberty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support the enactment of a National Right-to-Work law to promote worker freedom and greater economic liberty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to aggressively enforce the recent decision by the Supreme Court barring the use of union dues for political purposes without the consent of the worker.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "58b28a15e690d9f299a3b7e8e09f800ae2ef21921512d68881b8a155e275b139"
+}

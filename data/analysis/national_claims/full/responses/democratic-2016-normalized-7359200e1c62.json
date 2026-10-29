@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 407,
+      "generation_tps": 16.093001441841018,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1520,
+      "prompt_tps": 486.6793344811063,
+      "request_sha256": "04459fc592a7e2489d39e3d4ef4149ae5db11779d764fec74051296cbd3937ef",
+      "seconds": 28.42439483292401,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to protect and defend the Federal Reserve's independence to carry out its dual mandate of full employment and low inflation against threats from new legislation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to reform the Federal Reserve to make it more representative of America as a whole.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to fight to enhance the Federal Reserve's independence by ensuring that executives of financial institutions are not allowed to serve on the boards of regional Federal Reserve banks or to select members of those boards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe Americans need affordable banking options, including by empowering the United States Postal Service to facilitate the delivery of basic banking services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will take steps to stop corporate concentration in any industry where it is unfairly limiting competition.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to make competition policy and antitrust stronger and more responsive to the current economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to enhance the antitrust enforcement arms of the Department of Justice (DOJ) and the Federal Trade Commission (FTC).\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to encourage other agencies to police anti-competitive practices in their areas of jurisdiction.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Large corporations have concentrated their control over markets to a greater degree than Americans have seen in decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 428,
+      "generation_tps": 16.106543934967135,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2095,
+      "prompt_tps": 505.0218435845351,
+      "request_sha256": "67632a72ad6041c94f5aec7fc525870270f23d3aac1a6b3bfa9c044cc57f640d",
+      "seconds": 30.734068957855925,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to protect and defend the Federal Reserve's independence to carry out the dual mandate assigned to it by Congress\u2014for both full employment and low inflation\u2014against threats from new legislation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to reform the Federal Reserve to make it more representative of America as a whole.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to fight to enhance the Federal Reserve's independence by ensuring that executives of financial institutions are not allowed to serve on the boards of regional Federal Reserve banks or to select members of those boards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe Americans need affordable banking options, including by empowering the United States Postal Service to facilitate the delivery of basic banking services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will take steps to stop corporate concentration in any industry where it is unfairly limiting competition.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to make competition policy and antitrust stronger and more responsive to the current economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to enhance the antitrust enforcement arms of the Department of Justice (DOJ) and the Federal Trade Commission (FTC).\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Commitment to encourage other agencies to police anti-competitive practices in their areas of jurisdiction.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Large corporations have concentrated their control over markets to a greater degree than Americans have seen in decades\u2014further evidence that the deck is stacked for those at the top.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "04459fc592a7e2489d39e3d4ef4149ae5db11779d764fec74051296cbd3937ef"
+}

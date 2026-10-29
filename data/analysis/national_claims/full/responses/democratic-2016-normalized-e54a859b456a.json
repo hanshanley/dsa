@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 473,
+      "generation_tps": 16.229617590474113,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1466,
+      "prompt_tps": 482.8717231381925,
+      "request_sha256": "0631885aacd2b94563971dd1bdbab975fa83e209c8858aa0c28a70bc9a570556",
+      "seconds": 32.19066354096867,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party will make it easier to start and grow a small business in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump has often stiffed small businesses, nearly bankrupting some, with deceptive and reckless corporate practices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Supporting small business and entrepreneurship can grow jobs faster in America.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will cut red tape that holds back small businesses and entrepreneurs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will open up access to credit for small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Small businesses are some of the best job creators in the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will provide tax relief and tax simplification for small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will expand access to new markets for American small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every American small business should be able to tap new markets, whether across their city, state, or around the world.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will provide targeted funding and support for entrepreneurship and small business growth in underserved communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Small businesses are critical engines of opportunity for women, people of color, tribes, and people in rural America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will work to nurture entrepreneurship for women, people of color, tribes, and people in rural America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 389,
+      "generation_tps": 16.227074364918206,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2107,
+      "prompt_tps": 514.1526704781676,
+      "request_sha256": "62a2028b4178fef1216c71279f859c05d17019729f7ee44cfb64afc5c8651d60",
+      "seconds": 28.080337584018707,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party will make it easier to start and grow a small business in America, unlike Donald Trump, who has often stiffed small businesses\u2014nearly bankrupting some\u2014with his deceptive and reckless corporate practices.\",\n\"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Supporting small business and entrepreneurship can grow jobs faster in America.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will cut the red tape that holds back small businesses and entrepreneurs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will open up access to credit because small businesses are some of the best job creators in the country.\",\n\"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will provide tax relief and tax simplification.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will expand access to new markets because every American small business should be able to tap new markets \u2014 whether across their city, across their state, or around the world.\",\n\"claim_types\":[\"policy_position\",\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will provide targeted funding and support for entrepreneurship and small business growth in underserved communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Small businesses are critical engines of opportunity for women, people of color, tribes, and people in rural America, and the Democratic Party will work to nurture entrepreneurship.\",\n\"claim_types\":[\"factual_assertion\",\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0631885aacd2b94563971dd1bdbab975fa83e209c8858aa0c28a70bc9a570556"
+}

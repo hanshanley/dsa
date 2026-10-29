@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 153,
+      "generation_tps": 16.365286164942294,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1375,
+      "prompt_tps": 458.739521665973,
+      "request_sha256": "271c85a947bd4c2231c23fd7e12dbc85cf85c8d1670f9477ed254115ff5097f6",
+      "seconds": 12.357112915953621,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Religious organizations, charities, and fraternal benevolent societies should not be subject to taxation because of their vital role in fostering benevolence and patriotism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donations to religious organizations, charities, and fraternal benevolent societies should continue to be tax deductible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Any value added tax or national sales tax must be tied to the simultaneous repeal of the Sixteenth Amendment, which established the federal income tax, in any restructuring of federal taxation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 158,
+      "generation_tps": 16.36865173444689,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1696,
+      "prompt_tps": 495.8441803783097,
+      "request_sha256": "f493cbecd5a75e2ede5ff3c21c934e926df632ec44b0ce5f5a6d6564a3f06588",
+      "seconds": 13.082630916964263,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Religious organizations, charities, and fraternal benevolent societies should not be subject to taxation because of their vital role in fostering benevolence and patriotism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donations to religious organizations, charities, and fraternal benevolent societies should continue to be tax deductible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In any restructuring of federal taxation, any value added tax or national sales tax must be tied to the simultaneous repeal of the Sixteenth Amendment, which established the federal income tax.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "271c85a947bd4c2231c23fd7e12dbc85cf85c8d1670f9477ed254115ff5097f6"
+}

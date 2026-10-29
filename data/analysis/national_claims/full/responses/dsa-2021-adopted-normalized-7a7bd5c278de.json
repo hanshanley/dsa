@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 290,
+      "generation_tps": 16.268258611181146,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1354,
+      "prompt_tps": 469.18430376316184,
+      "request_sha256": "5a23df39d92762614819772492079c6eb80118a071b9bd6f6f98ca3b33567f02",
+      "seconds": 20.7219430829864,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for protecting the right to asylum and safe entry and resettlement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for demilitarizing the border and ending all immigrant detention.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for abolishing ICE.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for ending all deportations and enforcement actions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for ending immigration detention.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for ending private prison contracts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for ending deputization of local police forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for creating an immigration court system independent from the executive branch.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Support for allowing for full federal court review of immigration court decisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 174,
+      "generation_tps": 16.37136779375116,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1812,
+      "prompt_tps": 479.70956398397493,
+      "request_sha256": "5f664ff21e2611fc52a17422f8da6c669e8f4d4c7d173c17a7f7e2fa68bc2072",
+      "seconds": 14.415249125100672,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for protecting the right to asylum and safe entry and resettlement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for demilitarizing the border and ending all immigrant detention and abolishing ICE.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for ending all deportations and enforcement actions, immigration detention, private prison contracts, and deputization of local police forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for creating an immigration court system independent from the executive branch and allowing for full federal court review.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5a23df39d92762614819772492079c6eb80118a071b9bd6f6f98ca3b33567f02"
+}

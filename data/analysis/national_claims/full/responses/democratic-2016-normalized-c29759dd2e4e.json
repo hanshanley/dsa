@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 302,
+      "generation_tps": 16.3196189449792,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1432,
+      "prompt_tps": 456.28044587660156,
+      "request_sha256": "7b59381eb9a5531510ca1d5f0358ff7abfc2c51555b6bf9136a57ae5e030a158",
+      "seconds": 21.65387708391063,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for investing more in jobs and education instead of more jails and incarceration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending the school-to-prison pipeline.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for removing barriers to help formerly incarcerated individuals successfully re-enter society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for banning the box for federal employers and contractors so applicants have an opportunity to demonstrate their qualifications before being asked about their criminal records.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The war on drugs has led to the imprisonment of millions of Americans, disproportionately people of color, without reducing drug use.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will prioritize prevention and treatment over incarceration when tackling addiction and substance use disorder whenever possible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for building on effective models of drug courts, veterans' courts, and other diversionary programs that seek to give nonviolent offenders opportunities for rehabilitation as opposed to incarceration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 330,
+      "generation_tps": 16.291667216468404,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1902,
+      "prompt_tps": 500.70716871811914,
+      "request_sha256": "d1b94d167058c2215974e1ae73382e561a6c656c277bfba8bc8f59601f800baf",
+      "seconds": 24.06412462494336,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for investing more in jobs and education instead of investing in more jails and incarceration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending the school-to-prison pipeline.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for removing barriers to help formerly incarcerated individuals successfully re-enter society by banning the box, expanding reentry programs, and restoring voting rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the next President to take executive action to ban the box for federal employers and contractors so applicants have an opportunity to demonstrate their qualifications before being asked about their criminal records.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The war on drugs has led to the imprisonment of millions of Americans, disproportionately people of color, without reducing drug use.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will prioritize prevention and treatment over incarceration when tackling addiction and substance use disorder whenever possible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for building on effective models of drug courts, veterans' courts, and other diversionary programs that seek to give nonviolent offenders opportunities for rehabilitation as opposed to incarceration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7b59381eb9a5531510ca1d5f0358ff7abfc2c51555b6bf9136a57ae5e030a158"
+}

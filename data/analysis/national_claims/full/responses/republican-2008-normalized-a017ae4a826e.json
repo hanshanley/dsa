@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 242,
+      "generation_tps": 16.17156614997036,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1420,
+      "prompt_tps": 466.67504080284374,
+      "request_sha256": "9b03941cb125cedbe5cefb7da36d4c975a8c192edb0e08aca2d854bece05345d",
+      "seconds": 18.017841124907136,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Opposition to initiatives to erode parental rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Constitution guarantees the free exercise of religion and forbids any religious test for public office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The balance between the free exercise of religion and the prohibition of a state-sponsored creed has been distorted by judicial rulings which attempt to drive faith out of the public arena.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The public display of the Ten Commandments does not violate the U.S. Constitution and accurately reflects the Judeo-Christian heritage of the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for the right of students to engage in student-initiated, student-led prayer in public schools, athletic events, and graduation ceremonies, when done in conformity with constitutional standards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 255,
+      "generation_tps": 16.23176128905172,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1830,
+      "prompt_tps": 498.7753995607933,
+      "request_sha256": "b4ef5826469cb0adc3d71365aa04591487a6866666b9e20950331bd53770472d",
+      "seconds": 19.38911445811391,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"Opposition to initiatives to erode parental rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Constitution guarantees the free exercise of religion and forbids any religious test for public office, and prohibits the establishment of a state-sponsored creed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The balance between guaranteeing the free exercise of religion and prohibiting the establishment of a state-sponsored creed has been distorted by judicial rulings which attempt to drive faith out of the public arena.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The public display of the Ten Commandments does not violate the U.S. Constitution and accurately reflects the Judeo-Christian heritage of the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for the right of students to engage in student-initiated, student-led prayer in public schools, athletic events, and graduation ceremonies, when done in conformity with constitutional standards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9b03941cb125cedbe5cefb7da36d4c975a8c192edb0e08aca2d854bece05345d"
+}

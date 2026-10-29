@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 390,
+      "generation_tps": 16.05959562163591,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1514,
+      "prompt_tps": 485.00338974157125,
+      "request_sha256": "9b690745a496b4f5d8fdbc2c6be1790fc54f624ec838e00d93a97fc8ce11b413",
+      "seconds": 27.41816958389245,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Taxes reduce a citizen's freedom.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The proper role of taxes in a free society is to fund services that are essential and authorized by the Constitution, such as national security, and the care of those who cannot care for themselves.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of taxation to redistribute income, fund unnecessary or ineffective programs, or foster crony capitalism corrupts politicians and corporations.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal is a tax system that is simple, transparent, flatter, and fair.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current IRS code is beyond the comprehension of the average citizen.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"A reformed tax code should promote simplicity and coherence, savings and innovation, and increase American competitiveness.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A reformed tax code should recognize the burdens on families with children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for extending the 2001 and 2003 tax relief packages pending reform of the tax code to keep tax rates from rising on income, interest, dividends, and capital gains.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for reducing marginal tax rates by 20 percent across-the-board in a revenue-neutral manner.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 372,
+      "generation_tps": 15.93002536494637,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2072,
+      "prompt_tps": 448.6655245208947,
+      "request_sha256": "cca646fcfcff532f82cf18a9b44a861f1a9df04da5684b301ddb7fd71bcee97e",
+      "seconds": 27.98145516612567,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Taxes, by their very nature, reduce a citizen's freedom.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The proper role of taxes in a free society is to fund services that are essential and authorized by the Constitution, such as national security, and the care of those who cannot care for themselves.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of taxation to redistribute income, fund unnecessary or ineffective programs, or foster crony capitalism corrupts both politicians and corporations.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal is a tax system that is simple, transparent, flatter, and fair.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current IRS code is beyond the comprehension of the average citizen.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"A reformed tax code should promote simplicity and coherence, savings and innovation, increase American competitiveness, and recognize the burdens on families with children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for extending the 2001 and 2003 tax relief packages pending reform of the tax code to keep tax rates from rising on income, interest, dividends, and capital gains.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for reducing marginal tax rates by 20 percent across-the-board in a revenue-neutral manner.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9b690745a496b4f5d8fdbc2c6be1790fc54f624ec838e00d93a97fc8ce11b413"
+}

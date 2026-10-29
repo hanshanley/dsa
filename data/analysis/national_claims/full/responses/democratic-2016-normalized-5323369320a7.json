@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 510,
+      "generation_tps": 16.075525001725524,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1509,
+      "prompt_tps": 470.0968811333084,
+      "request_sha256": "e1ffb21a4cdd4998e75063d2614bb75d80b7047b5609f7c0fba445441df89685",
+      "seconds": 34.94697199994698,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"More than 11 million people are living in the United States without proper documentation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"U.S. citizens are waiting for decades to be reunited with family members.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Green card holders are waiting for years to be reunited with their spouses and minor children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current quota system discriminates against certain immigrants, including immigrants of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current quota system needs to be reformed to the realities of the 21st century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are real questions about U.S. detention and deportation policies that must be addressed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support urgently fixing the broken immigration system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The broken immigration system tears families apart and keeps workers in the shadows.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support creating a path to citizenship for law-abiding families who are in the United States, making a better life for their families and contributing to their communities and the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support repealing the 3-year, 10-year and permanent bars to immigration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 3-year, 10-year and permanent bars force persons in mixed status families into the dilemma of either leaving the country and their loved ones or remaining in the shadows.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work with Congress to end the forced and prolonged expulsion from the country that immigrants endure when trying to adjust their status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 512,
+      "generation_tps": 16.059804474559147,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2187,
+      "prompt_tps": 509.4030614235247,
+      "request_sha256": "c58d2cf2cb67a0f28e927f7d6fda47af636682d1175fc2d30ace2e3d188b01e4",
+      "seconds": 36.18536741612479,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"More than 11 million people are living in the shadows without proper documentation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"U.S. citizens are waiting for decades to be reunited with family members.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Green card holders are waiting for years to be reunited with their spouses and minor children.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current quota system discriminates against certain immigrants, including immigrants of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current quota system needs to be reformed to the realities of the 21st century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are real questions about U.S. detention and deportation policies that must be addressed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe they need to urgently fix the broken immigration system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The broken immigration system tears families apart and keeps workers in the shadows.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support creating a path to citizenship for law-abiding families who are in the United States, making a better life for their families and contributing to their communities and the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support repealing the 3-year, 10-year and permanent bars to immigration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 3-year, 10-year and permanent bars force persons in mixed status families into the dilemma of either leaving the country and their loved ones or remaining in the shadows.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work with Congress to end the forced and prolonged expulsion from the country that immigrants endure when trying to adjust their status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e1ffb21a4cdd4998e75063d2614bb75d80b7047b5609f7c0fba445441df89685"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 318,
+      "generation_tps": 16.283437119398865,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1482,
+      "prompt_tps": 475.5284984115502,
+      "request_sha256": "0140e054305dce80a3cf5e9d63495d314bea690bba54b3f518848832a4be1734",
+      "seconds": 22.655800584005192,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe in an economics of inclusion enabling everyone to have a chance to own, invest, build, and prosper.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Policies of the last three and a half years have stifled growth, destroyed jobs, halted investment, created unprecedented uncertainty, and prolonged the worst economic downturn since the Great Depression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Excessive taxation and regulation impede economic development.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lowering taxes promotes substantial economic growth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reducing regulation encourages business formation and job creation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican President and Congress will jumpstart an economic renewal that creates opportunity, rewards work and saving, and unleashes the productive genius of the American people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The GOP pledges to get the country back on track, expanding its bounty, renewing its faith, and fulfilling its promise of a better life to workers without jobs, families without savings, and neighborhoods without hope.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 325,
+      "generation_tps": 16.206631829541294,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1968,
+      "prompt_tps": 505.27293579443096,
+      "request_sha256": "7d6254a75790d3327cd9c30ca87a4d94d07c9a7aa843be90aa2ac8d22ffa3c9e",
+      "seconds": 23.958271749783307,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe in the Great American Dream, with its economics of inclusion, enabling everyone to have a chance to own, invest, build, and prosper.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Policies of the last three and a half years have stifled growth, destroyed jobs, halted investment, created unprecedented uncertainty, and prolonged the worst economic downturn since the Great Depression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Excessive taxation and regulation impede economic development.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lowering taxes promotes substantial economic growth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reducing regulation encourages business formation and job creation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican President and Congress will jumpstart an economic renewal that creates opportunity, rewards work and saving, and unleashes the productive genius of the American people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The GOP pledges to get the country back on track, expanding its bounty, renewing its faith, and fulfilling its promise of a better life to workers without jobs, families without savings, and neighborhoods without hope.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0140e054305dce80a3cf5e9d63495d314bea690bba54b3f518848832a4be1734"
+}

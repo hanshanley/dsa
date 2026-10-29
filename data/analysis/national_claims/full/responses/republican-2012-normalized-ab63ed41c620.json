@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 16.24926178351515,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1473,
+      "prompt_tps": 458.5804570929827,
+      "request_sha256": "976e3732efe5e02fe92d21701667db02d31a8ed2af53219867d6afa9890277ca",
+      "seconds": 27.531605124939233,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Amtrak is an extremely expensive railroad for taxpayers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taxpayers subsidize every Amtrak ticket nearly $50.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government should allow private ventures to provide passenger service to the northeast corridor.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The same principle of allowing private ventures should apply to high-speed and intercity rail across the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"International trade is crucial for the U.S. economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"International trade means more American jobs, higher wages, and a better standard of living.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every $1 billion in additional U.S. exports means another 5,000 jobs in the U.S.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Free Trade Agreements negotiated with friendly democracies since 1985 facilitated the creation of nearly ten million jobs supported by U.S. exports.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration is slow in completing trade agreements begun by its predecessor.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration has failed to pursue any new trade agreements with friendly nations.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 16.140803162069528,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2036,
+      "prompt_tps": 494.2776668496889,
+      "request_sha256": "bc8d6ca2125dfd690a908331da2d9ad312390bd6de90b9916e5360d5babd97bf",
+      "seconds": 29.40862250002101,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Amtrak is an extremely expensive railroad for taxpayers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taxpayers subsidize every Amtrak ticket nearly $50.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government should get out of the way and allow private ventures to provide passenger service to the northeast corridor.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The same principle of allowing private ventures should apply to high-speed and intercity rail across the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"International trade is crucial for the U.S. economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"International trade means more American jobs, higher wages, and a better standard of living.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every $1 billion in additional U.S. exports means another 5,000 jobs in the U.S.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Free Trade Agreements negotiated with friendly democracies since President Reagan's 1985 pact with Israel facilitated the creation of nearly ten million jobs supported by U.S. exports.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration is slow in completing trade agreements begun by its predecessor.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current administration has failed to pursue any new trade agreements with friendly nations.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "976e3732efe5e02fe92d21701667db02d31a8ed2af53219867d6afa9890277ca"
+}

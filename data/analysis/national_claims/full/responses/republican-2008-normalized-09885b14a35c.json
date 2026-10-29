@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 174,
+      "generation_tps": 16.34839436799619,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1318,
+      "prompt_tps": 471.36059683159147,
+      "request_sha256": "a97c79e4a74430c92c766783e063890f2349d4396d4881f58a7bb884d3bb8874",
+      "seconds": 13.449638959020376,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for efforts to ensure equitable participation in federal programs by Native Americans, including Alaska Natives and Native Hawaiians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for preserving the culture and languages of Native Americans, including Alaska Natives and Native Hawaiians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Honor for the sacrifices of all Native Americans serving in the military today and in years past.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure that all Native American veterans receive the care and respect they have earned through their service to America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 147,
+      "generation_tps": 15.812812018940388,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1660,
+      "prompt_tps": 490.47510638310604,
+      "request_sha256": "67467a5117d1518b05a5639b88882e1b83b50367fdde14fb3a6919f90d2bb45c",
+      "seconds": 12.690832250053063,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for efforts to ensure equitable participation in federal programs by Native Americans, including Alaska Natives and Native Hawaiians, and to preserve their culture and languages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Honor for the sacrifices of all Native Americans serving in the military today and in years past.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure that all Native American veterans receive the care and respect they have earned through their service to America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a97c79e4a74430c92c766783e063890f2349d4396d4881f58a7bb884d3bb8874"
+}

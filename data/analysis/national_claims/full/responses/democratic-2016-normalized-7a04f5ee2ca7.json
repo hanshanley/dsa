@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 376,
+      "generation_tps": 16.135904714501216,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1514,
+      "prompt_tps": 468.6726827276469,
+      "request_sha256": "80e4412bd0f946b028574999f8c691f363d51587dfa047c43f974bb6a6029589",
+      "seconds": 26.545169499935582,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to ensure Social Security's guaranteed benefits continue for generations to come by asking those earning over $250,000 to pay more.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to provide all necessary financial support for the Social Security Administration so that it can provide timely benefits and high-quality service.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has referred to Social Security as a \\\"Ponzi scheme\\\".\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has called for privatizing Social Security.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has called for increasing the retirement age.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to defend the right of workers to collect their defined benefit pensions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to ensure workers get priority and protection when pension plans are in distress.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to enact legislation to ensure that earned pension benefits of Americans will not be cut, paid for by closing tax loopholes benefiting millionaires and billionaires.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to fight against any attempt to roll back the Conflict of Interest Rule, which requires retirement advisors to put clients' interests first.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 402,
+      "generation_tps": 16.17001526816452,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2058,
+      "prompt_tps": 513.3422315352841,
+      "request_sha256": "564d35249536281d72b6b3fb9bcdfacce1f4b58d2fbc0f9a3cdc9762b5d3ad5d",
+      "seconds": 28.88026437489316,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to ensure Social Security's guaranteed benefits continue for generations to come by asking those at the top earning over $250,000 to pay more.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to provide all necessary financial support for the Social Security Administration so that it can provide timely benefits and high-quality service for those it serves.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has referred to Social Security as a \\\"Ponzi scheme\\\".\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has called for privatizing Social Security.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has called for increasing the retirement age.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to defend the right of workers to collect their defined benefit pensions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to ensure workers get priority and protection when pension plans are in distress.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to enact legislation to ensure that earned pension benefits of Americans will not be cut, and to pay for it by closing tax loopholes that benefit millionaires and billionaires.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Commitment to fight against any attempt by Republicans in Congress or on Wall Street to roll back the Conflict of Interest Rule, which requires that retirement advisors put the best interests of their clients above their own financial gain.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "80e4412bd0f946b028574999f8c691f363d51587dfa047c43f974bb6a6029589"
+}

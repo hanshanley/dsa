@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 337,
+      "generation_tps": 16.241036353179087,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1537,
+      "prompt_tps": 477.46895482910713,
+      "request_sha256": "2cddf25566b07391f466b3b70dcd10f77fbc583a4f39a6e72cd932ce3c43aebd",
+      "seconds": 23.979306334163994,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to propose immediate reductions in federal spending if a Republican Senate and House are elected.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Commitment to propose a tripartite test for every federal activity: constitutional scope, effectiveness and necessity, and justification for borrowing.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Commitment to terminate programs that do not meet the proposed tripartite test.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Commitment to restructure the twentieth century entitlement state to succeed in the twenty-first century.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]},{\"claim_text\":\"Medicare is the largest driver of future debt.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Healthcare reform will empower millions of seniors to control their personal healthcare decisions.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]},{\"claim_text\":\"Obamacare empowers a handful of bureaucrats to cut Medicare in ways that will deny care for the elderly.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[3]},{\"claim_text\":\"Cutting spending is not enough; it must be accompanied by major structural reforms, increased productivity, use of technology, and long-term government downsizing to reduce debt and deficits and ignite economic growth.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 357,
+      "generation_tps": 16.213543755056033,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2042,
+      "prompt_tps": 505.0068926732664,
+      "request_sha256": "b80917cef8c163e3d2dba2e460a23c1f3fe7b7f953351fce4b96c11dc31c8de0",
+      "seconds": 26.072111249901354,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to propose immediate reductions in federal spending if a Republican Senate and House are elected.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Commitment to propose a tripartite test for every federal activity: whether it is within the constitutional scope of the federal government, whether it is effective and absolutely necessary, and whether it is sufficiently important to justify borrowing, especially foreign borrowing, to fund it.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Commitment to terminate programs that do not measure up to the proposed tripartite test.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Commitment to restructure the twentieth century entitlement state so the missions of important programs can succeed in the twenty-first century.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]},{\"claim_text\":\"Medicare is the largest driver of future debt.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Healthcare reform will empower millions of seniors to control their personal healthcare decisions, unlike Obamacare that empowers a handful of bureaucrats to cut Medicare in ways that will deny care for the elderly.\", \"claim_types\":[\"policy_position\", \"characterization\"], \"evidence_ids\":[3]},{\"claim_text\":\"Cutting spending is not enough; it must be accompanied by major structural reforms, increased productivity, use of technology, and long-term government downsizing that both reduce debt and deficits and ignite economic growth.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2cddf25566b07391f466b3b70dcd10f77fbc583a4f39a6e72cd932ce3c43aebd"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 379,
+      "generation_tps": 16.069229094184287,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1479,
+      "prompt_tps": 458.5569174322331,
+      "request_sha256": "1d0fb7eef54d5cae909bf7f4576d6892890f40250b1fb72614b28e6df0a23a56",
+      "seconds": 26.822974917013198,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will continue to fight for families who suffered the loss of their homes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will help those working toward a path of financial stability.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will put sustainable home ownership into the reach of more families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will combat the affordable housing crisis and skyrocketing rents in many parts of the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will preserve and increase the supply of affordable rental housing by expanding incentives to ease local barriers to building new affordable rental housing developments in areas of economic opportunity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will substantially increase funding for the National Housing Trust Fund to construct, preserve, and rehabilitate millions of affordable housing rental units.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Increasing funding for the National Housing Trust Fund will help address the affordable housing crisis.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Increasing funding for the National Housing Trust Fund will create millions of good-paying jobs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe that more federal resources should be provided to low-income families, people with disabilities, veterans, and the elderly who are struggling most with unaffordable housing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 404,
+      "generation_tps": 15.919357290304834,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2026,
+      "prompt_tps": 489.7043990977833,
+      "request_sha256": "34ac0118f39f12dfbcd6cb1ec42ead586f28dcdfd4f7cd7755533f8343879d72",
+      "seconds": 29.525669999886304,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will continue to fight for those families who suffered the loss of their homes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will help those who are working toward a path of financial stability.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will put sustainable home ownership into the reach of more families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will combat the affordable housing crisis and skyrocketing rents in many parts of the country, which is leading too many families and workers to be pushed out of communities where they work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will preserve and increase the supply of affordable rental housing by expanding incentives to ease local barriers to building new affordable rental housing developments in areas of economic opportunity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will substantially increase funding for the National Housing Trust Fund to construct, preserve, and rehabilitate millions of affordable housing rental units.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Substantially increasing funding for the National Housing Trust Fund will help address the affordable housing crisis.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Substantially increasing funding for the National Housing Trust Fund will create millions of good-paying jobs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe that more federal resources should be provided to low-income families, people with disabilities, veterans, and the elderly who are struggling most with unaffordable housing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1d0fb7eef54d5cae909bf7f4576d6892890f40250b1fb72614b28e6df0a23a56"
+}

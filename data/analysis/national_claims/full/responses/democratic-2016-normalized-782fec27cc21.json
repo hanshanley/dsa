@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 214,
+      "generation_tps": 16.184567292973895,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1388,
+      "prompt_tps": 476.47796283931416,
+      "request_sha256": "8e78815e4593aef76da47b69f8227b6362a6732ed30f43bedfcb33af70eb7f7e",
+      "seconds": 16.145895375171676,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for the historic purpose of the antitrust laws to protect competition and prevent excessively consolidated economic and political power.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for reinvigorating Department of Justice (DOJ) and Federal Trade Commission (FTC) enforcement of antitrust laws to prevent abusive behavior by dominant companies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for protecting the public interest against abusive, discriminatory, and unfair methods of commerce.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for President Obama's Executive Order directing all agencies to identify actions to detect anticompetitive practices\u2014such as tying arrangements, price fixing, and exclusionary conduct\u2014and to refer practices that appear to violate federal antitrust law to the DOJ and FTC.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 239,
+      "generation_tps": 16.21864199662047,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1770,
+      "prompt_tps": 497.95854003689635,
+      "request_sha256": "8d321203d758fe96890787c072f87209b593f6da88820a853d5a37da0ddbdbef",
+      "seconds": 18.300560540985316,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the historic purpose of the antitrust laws to protect competition and prevent excessively consolidated economic and political power, which can be corrosive to a healthy democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for reinvigorating Department of Justice (DOJ) and Federal Trade Commission (FTC) enforcement of antitrust laws to prevent abusive behavior by dominant companies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for protecting the public interest against abusive, discriminatory, and unfair methods of commerce.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for President Obama's recent Executive Order, directing all agencies to identify specific actions they can take in their areas of jurisdiction to detect anticompetitive practices\u2014such as tying arrangements, price fixing, and exclusionary conduct\u2014and to refer practices that appear to violate federal antitrust law to the DOJ and FTC.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8e78815e4593aef76da47b69f8227b6362a6732ed30f43bedfcb33af70eb7f7e"
+}

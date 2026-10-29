@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 235,
+      "generation_tps": 16.251434401213807,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1488,
+      "prompt_tps": 477.5068494027632,
+      "request_sha256": "a5496ffe494adc1d599bd1d65d4107b7ab106a268f3f6fa1617f09cce6de3674",
+      "seconds": 17.586761208018288,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Reagan established a commission to consider the feasibility of a metallic basis for U.S. currency shortly after his inauguration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The commission advised against a metallic basis for U.S. currency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We propose a similar commission to investigate possible ways to set a fixed value for the dollar, as we face the task of cleaning up the wreckage of the current Administration's policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Homeownership expands personal liberty, builds communities, and helps Americans create wealth.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Homeownership is best fostered by a growing economy with low interest rates, as well as prudent regulation, financial education, and targeted assistance to responsible borrowers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 237,
+      "generation_tps": 16.313551694890187,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1902,
+      "prompt_tps": 502.8997767009281,
+      "request_sha256": "a94e22ec81e0203f60918b43ddc6a68f13e9eb301c39820ec67ceef4a1039218",
+      "seconds": 18.319970999844372,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Reagan established a commission to consider the feasibility of a metallic basis for U.S. currency shortly after his inauguration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The commission advised against a metallic basis for U.S. currency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party proposes a similar commission to investigate possible ways to set a fixed value for the dollar, as it faces the task of cleaning up the wreckage of the current Administration's policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Homeownership expands personal liberty, builds communities, and helps Americans create wealth.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Homeownership is best fostered by a growing economy with low interest rates, as well as prudent regulation, financial education, and targeted assistance to responsible borrowers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 339,
+      "generation_tps": 15.9214228782395,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1893,
+      "prompt_tps": 485.8522429449333,
+      "request_sha256": "3ebac70b5e4cb351fc5d4571e5755858dd3d2462edeed8b00b61e9e2f763c623",
+      "seconds": 25.198351042112336,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Reagan established a commission to consider the feasibility of a metallic basis for U.S. currency shortly after his inauguration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The commission advised against a metallic basis for U.S. currency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party proposes a similar commission to investigate possible ways to set a fixed value for the dollar, as it faces the task of cleaning up the wreckage of the current Administration's policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Homeownership expands personal liberty, builds communities, and helps Americans create wealth.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Homeownership is best fostered by a growing economy with low interest rates, as well as prudent regulation, financial education, and targeted assistance to responsible borrowers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Dream is a lived reality that expresses the aspirations of all people, meaning a decent place to live, a safe place to raise kids, and a welcoming place to retire.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Homeownership bespeaks the quiet pride of those who work hard to shelter their family and, in the process, create caring neighborhoods.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a5496ffe494adc1d599bd1d65d4107b7ab106a268f3f6fa1617f09cce6de3674"
+}
