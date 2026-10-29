@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 150,
+      "generation_tps": 15.074276298826694,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1339,
+      "prompt_tps": 447.94331627379074,
+      "request_sha256": "416bff49fed0a5726a839a4476a1cc9826f6f1a4f62a3aef9a0a0149fd6c161e",
+      "seconds": 12.95479145902209,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for solidarity actions happening across the continent is requested from DSA members.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA members can join solidarity actions or organize their own.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ways to support the Wet\u2019suwet\u2019en can be found here.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donations to the Legal Fund can be made here.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 150,
+      "generation_tps": 14.835673772246388,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1657,
+      "prompt_tps": 459.250709227277,
+      "request_sha256": "7f9016eb570f98da714b64c9e9aa5b0ab8c944909042b30417c28d1c03f7f4ba",
+      "seconds": 13.730686958879232,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for solidarity actions happening across the continent is requested from DSA members.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA members can join solidarity actions or organize their own.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ways to support the Wet\u2019suwet\u2019en can be found here.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donations to the Legal Fund can be made here.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "416bff49fed0a5726a839a4476a1cc9826f6f1a4f62a3aef9a0a0149fd6c161e"
+}

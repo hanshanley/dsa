@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 280,
+      "generation_tps": 15.165529452390949,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1558,
+      "prompt_tps": 456.56296441777147,
+      "request_sha256": "a5620add1b38b06356b6ec175b877afdd41cfd900ac186e8db4ba898e8ea3230",
+      "seconds": 21.887219874886796,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Recent audits show that 22% of all federal programs are ineffective or incapable of demonstrating results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"69 separate programs, administered by 10 different agencies, provide education or care to children under the age of 5.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nine separate agencies administer 44 different programs for job training.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"23 separate programs, each with its own overhead, provide housing assistance to the elderly.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American people have little confidence in Washington to act effectively when federal action is really needed because of redundant, inefficient, and ineffective federal programs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[5]},{\"claim_text\":\"The federal government has operated within a rigged system lacking transparency for more than three decades since the enactment of the Budget Act of 1974 by a Democrat-controlled Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 287,
+      "generation_tps": 15.133563219871478,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2006,
+      "prompt_tps": 472.4347928635583,
+      "request_sha256": "caf4c49cff60eb089ca35f64afd52dc7c10fb4e705bc406771c2e0cfa768a619",
+      "seconds": 23.221945165889338,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Recent audits show that 22% of all federal programs are ineffective or incapable of demonstrating results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"69 separate programs, administered by 10 different agencies, provide education or care to children under the age of 5.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nine separate agencies administer 44 different programs for job training.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"23 separate programs, each with its own overhead, provide housing assistance to the elderly.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"With so many redundant, inefficient, and ineffective federal programs, the American people have little confidence in Washington to act effectively when federal action is really needed.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[5]},{\"claim_text\":\"For more than three decades since the enactment of the Budget Act of 1974 by a Democrat-controlled Congress, the federal government has operated within a rigged system notable for its lack of transparency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a5620add1b38b06356b6ec175b877afdd41cfd900ac186e8db4ba898e8ea3230"
+}
