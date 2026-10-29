@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 265,
+      "generation_tps": 16.336816075237515,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1406,
+      "prompt_tps": 484.6229860649991,
+      "request_sha256": "0b606c9ab0293ab6634ec07dadcd4338ebea33254aa7c4077287662a68fbb03d",
+      "seconds": 19.13218795787543,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The President's plan calls for funding to help build or renovate 2 million homes nationwide.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's plan expands the Low-Income Housing Tax Credit for developers to build affordable rental housing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's plan introduces a new Neighborhood Homes Tax Credit, focused on creating affordable housing for homeowners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's plan creates a Housing Innovation Fund to help state and local governments find new ways to increase housing supply.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Housing Innovation Fund will help state and local governments find new ways to increase supply by converting empty office or hotel space into apartments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's plan encourages state and local efforts to address barriers to building new housing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 192,
+      "generation_tps": 16.320496412577643,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1839,
+      "prompt_tps": 504.81408554495516,
+      "request_sha256": "fa6daf20f5cc8295c744d36551d487790937427fd6d2589318a4d1ab9c85d5ea",
+      "seconds": 15.416884874925017,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President's plan calls for funding to help build or renovate 2 million homes nationwide by expanding the Low-Income Housing Tax Credit for developers to build affordable rental housing and by introducing a new Neighborhood Homes Tax Credit, the first ever to focus on creating affordable housing not for renters, but for homeowners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's plan creates a Housing Innovation Fund to help state and local governments find new ways to increase supply, like by converting empty office or hotel space into apartments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's plan encourages state and local efforts to take on barriers to building new housing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0b606c9ab0293ab6634ec07dadcd4338ebea33254aa7c4077287662a68fbb03d"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 297,
+      "generation_tps": 16.35763510969245,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1454,
+      "prompt_tps": 483.4449408586321,
+      "request_sha256": "16e01aff234078e9e3616259bb89aad18f99199e40c38b4f4ec2c1838086718e",
+      "seconds": 21.173977749887854,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump and his MAGA allies are cutting Social Security to give billionaires a tax cut.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has called Social Security a \\\"Ponzi Scheme\\\" and warned \\\"there's a lot you can do in terms of cutting.\\\"\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As President, Donald Trump tried to slash both Social Security and Medicare programs in every budget and to gut Medicaid, which provides home care to over seven million seniors and people with disabilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"House Republicans have vowed to cut Social Security by over $1.5 trillion, to raise the retirement age, and to transform Medicare into a voucher-like system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump will eliminate protections for private retirement savings by undermining the Consumer Financial Protection Bureau and making it easier for banks to charge seniors expensive, hidden fees.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cutting Social Security to give billionaires a tax cut undermines a sacred trust.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 311,
+      "generation_tps": 16.285176053979683,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1919,
+      "prompt_tps": 510.9022373513852,
+      "request_sha256": "d1e71572069a5ab943b543dbf290c713cf0c9aecfa703db56a504b635a7d87f2",
+      "seconds": 22.86279245908372,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump and his MAGA allies are shredding a sacred trust by cutting Social Security to give billionaires another tax cut.\",\n\"claim_types\":[\"factual_assertion\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has called Social Security a \\\"Ponzi Scheme\\\" and warned \\\"there's a lot you can do in terms of cutting.\\\"\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As President, Donald Trump tried to slash both Social Security and Medicare programs in every budget and to gut Medicaid, which provides home care to over seven million seniors and people with disabilities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"House Republicans have vowed to cut Social Security by over $1.5 trillion, to raise the retirement age, and to transform Medicare into a voucher-like system, threatening the program.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump will eliminate protections for private retirement savings by undermining the Consumer Financial Protection Bureau and making it easier for banks to rip off seniors with expensive, hidden fees.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cutting Social Security to give billionaires a tax cut undermines a sacred trust.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "16e01aff234078e9e3616259bb89aad18f99199e40c38b4f4ec2c1838086718e"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 506,
+      "generation_tps": 16.252199098728028,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1530,
+      "prompt_tps": 584.422393025547,
+      "request_sha256": "4c7df335df794faee386b48ffb970b219a5b12ea4f26882162f93f9ba65f6f4b",
+      "seconds": 33.76144737494178,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Social Security and Medicare are in a stronger fiscal position today than when President Biden took office.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The strong economic recovery has helped to extend Medicare solvency by a decade.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's prescription drug reforms will save Medicare hundreds of billions of dollars.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's prescription drug reforms empower Medicare to directly negotiate lower prices with drug companies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's prescription drug reforms allow Medicare to collect rebates if Big Pharma hikes prices faster than inflation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Republicans repeal the reforms, they will erase the savings and put Medicare at risk.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make Medicare permanently solvent by making the wealthy pay their fair share in Medicare taxes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2021, the Butch-Lewis Act preserved the pensions of 3 million union workers and retirees.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Butch-Lewis Act reversed pension cuts for over 100,000 workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Going forward, federal bankruptcy laws will be amended to ensure no other retirees run the same risk.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration is cracking down on junk fees in retirement savings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Trump-era rule that allowed financial advisors to put their own interests before their clients' was reversed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats want to make it easier for everyone to save for retirement and retire with dignity.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 492,
+      "generation_tps": 16.074750880267118,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2204,
+      "prompt_tps": 531.1199747050493,
+      "request_sha256": "6415eae58b06657bec74ac56bb8e1eb0dbfd331c295335b75084b1f08c4afa53",
+      "seconds": 34.76674533309415,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Social Security and Medicare are in a stronger fiscal position today than when President Biden took office.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The strong economic recovery has helped to extend Medicare solvency by a decade.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's prescription drug reforms will save Medicare hundreds of billions of dollars, by finally empowering Medicare to directly negotiate lower prices with drug companies.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's prescription drug reforms will allow Medicare to collect rebates if Big Pharma hikes prices faster than inflation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Republicans repeal the reforms, they will erase the savings and put Medicare itself at risk.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make Medicare permanently solvent by making the wealthy pay their fair share in Medicare taxes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2021, the Butch-Lewis Act preserved the pensions of 3 million union workers and retirees who would've seen deep cuts.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Butch-Lewis Act reversed pension cuts for over 100,000 workers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Going forward, federal bankruptcy laws will be amended to ensure no other retirees ever run the same risk.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration is cracking down on junk fees in retirement savings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Trump-era rule that had allowed financial advisors to put their own interests before their clients' was reversed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats want to make it easier for everyone to save for retirement and retire with dignity.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4c7df335df794faee386b48ffb970b219a5b12ea4f26882162f93f9ba65f6f4b"
+}

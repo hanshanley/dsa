@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 401,
+      "generation_tps": 16.282494484232707,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1422,
+      "prompt_tps": 474.0294162049454,
+      "request_sha256": "5b72cde236d4621a9d640c0d35d605eea27d6e7613ca2201a4e211482871d319",
+      "seconds": 27.637401500018314,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will keep working to grow the health care workforce.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workplace and provider shortages no longer creating barriers to quality care and inflating health care costs is a goal of Democrats.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Programs training primary care practitioners, registered nurses, mental health specialists, and others will be invested in.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in training programs will include those for workers in rural and low-income areas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is cracking down on surprise medical billing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration is cracking down on junk health insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Patients will no longer be ambushed by unexpected bills as a result of the Administration's actions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Patients will no longer be scammed into buying low-quality health coverage as a result of the Administration's actions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will expand \\\"no-surprise billing\\\" to include costly ground ambulances.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will use antitrust laws to stop hospital, insurance, and Big Pharma mergers that undermine competition and increase health care prices for consumers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 295,
+      "generation_tps": 16.151027362110277,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1991,
+      "prompt_tps": 509.61011911884486,
+      "request_sha256": "7129b90a4bf7a55bb2a4e8b02d758662c2079245c22d08eea07e136501d93d17",
+      "seconds": 22.18245741701685,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will keep working to grow the health care workforce, so workplace and other provider shortages no longer create barriers to quality care and inflate health care costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are investing in programs that train primary care practitioners, registered nurses, mental health specialists, and others to work across the health care system, including in rural and low-income areas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is cracking down on surprise medical billing, so patients are no longer ambushed by unexpected bills.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration is cracking down on junk health insurance, so patients are no longer scammed into buying low-quality health coverage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will expand \\\"no-surprise billing\\\" to include costly ground ambulances.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will use antitrust laws to stop hospital, insurance, and Big Pharma mergers that undermine competition and increase health care prices for consumers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5b72cde236d4621a9d640c0d35d605eea27d6e7613ca2201a4e211482871d319"
+}

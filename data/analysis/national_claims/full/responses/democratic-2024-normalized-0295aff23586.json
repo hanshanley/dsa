@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 409,
+      "generation_tps": 16.417115308281048,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1522,
+      "prompt_tps": 484.7299708313479,
+      "request_sha256": "2d4401398db79547233a433007ab2d4e43ebc599ef394d8ad70c82c5d7c1734d",
+      "seconds": 28.063515624962747,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden's lowering costs agenda is historic in scope, attacking the issue from every angle to help cut costs for consumers, crack down on price gouging, and get companies to use their record profits to reduce prices long-term.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The agenda is also investing in making things in America again to boost supply, push down prices, and bring jobs home.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump hasn't offered a single solution to lower families' costs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump wants to drag America backwards, with extreme import tariffs that will make life more expensive for folks nationwide.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump wants to reward corporations that hiked prices and doubled profits since the pandemic with a massive tax cut.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Independent analysts say Donald Trump's MAGA tax and tariff plans will increase inflation, cost 3 million American jobs, and slow growth, triggering a recession in his first year back in office.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump's plan will increase costs for working families by $2,500 a year.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America has built its way back into the strongest economic recovery in the world today.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats won't let Donald Trump throw away the economic recovery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 409,
+      "generation_tps": 16.387025591326754,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2099,
+      "prompt_tps": 531.009803477642,
+      "request_sha256": "ba9a9ca55b7ec8ae9ffed25fc56e6902b56b378a86ba101f314b1a83d681d049",
+      "seconds": 28.92154537490569,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden's lowering costs agenda is historic in scope, attacking the issue from every angle to help cut costs for consumers, crack down on price gouging, and get companies to use their record profits to reduce prices long-term.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The agenda is also investing in making things in America again to boost supply, push down prices, and bring jobs home.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump hasn't offered a single solution to lower families' costs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump wants to drag America backwards, with extreme import tariffs that will make life more expensive for folks nationwide.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump wants to reward corporations that hiked prices and doubled profits since the pandemic with a massive tax cut.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Independent analysts predict Donald Trump's MAGA tax and tariff plans will increase inflation, cost 3 million American jobs, and slow growth, triggering a recession in his first year back in office.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump's plan will increase costs for working families by $2,500 a year.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, America has built its way back into the strongest economic recovery in the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will not let Donald Trump throw away the economic recovery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2d4401398db79547233a433007ab2d4e43ebc599ef394d8ad70c82c5d7c1734d"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 531,
+      "generation_tps": 16.409269197155897,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1570,
+      "prompt_tps": 502.4587741839517,
+      "request_sha256": "dc2253c9ad9503bd56e507294b2a965a48512920cc0127cb827d9241559261b1",
+      "seconds": 35.497481792001054,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The economy is growing, wages are rising, and a record number of Americans have good jobs today.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The cost of living is too high for many hard-working families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lowering costs is Democrats' number one economic priority.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are using every tool to bring prices down on health insurance and prescription drugs, including negotiating the price of commonly used drugs for diabetes and heart failure.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are using every tool to bring prices down on housing, child care, internet, banking, credit cards, and more.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats' actions are already putting thousands of dollars a year back in people's pockets.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The pandemic disrupted supply chains, making everyday items hard to get and raising prices.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Russia's invasion of Ukraine caused food and gas prices to spike.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As companies' costs went up, they raised prices.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden worked across industries to ease supply bottlenecks and get goods and energy flowing again.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Inflation has dropped two-thirds from its peak.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Some companies have not passed savings on to consumers despite their costs coming down.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Corporate profits have more than doubled since 2017.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"After-tax profit ratios for corporations outside the financial sector were their highest in 90 years last year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 534,
+      "generation_tps": 16.372495405305344,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2269,
+      "prompt_tps": 536.6866723911063,
+      "request_sha256": "11839c16670041649c22a4c359678edddaa488bb6d5fc7ee943b775ba5992af7",
+      "seconds": 36.85429000016302,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Today, the economy is growing, wages are rising, and a record number of Americans have good jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"For too many hard-working families, the cost of living is too high.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lowering costs is Democrats' number one economic priority.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are using every tool to bring prices down on health insurance and prescription drugs, including negotiating the price of commonly used drugs for diabetes and heart failure.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are using every tool to bring prices down on housing, child care, internet, banking, credit cards, and more.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats' actions are already putting thousands of dollars a year back in people's pockets.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"When the pandemic disrupted supply chains, everyday items became hard to get, raising prices.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"When Russia invaded Ukraine, food and gas prices spiked.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As companies' costs went up, they raised prices.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden worked across industries to ease supply bottlenecks and get goods and energy flowing again.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Inflation has dropped two-thirds from its peak.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Some companies have not passed those savings on to consumers despite their costs coming down.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Corporate profits have more than doubled since 2017.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Last year, after-tax profit ratios for corporations outside the financial sector were their highest in 90 years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "dc2253c9ad9503bd56e507294b2a965a48512920cc0127cb827d9241559261b1"
+}

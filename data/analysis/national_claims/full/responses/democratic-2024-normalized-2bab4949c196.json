@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 304,
+      "generation_tps": 16.28183662794271,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1430,
+      "prompt_tps": 469.7637364136111,
+      "request_sha256": "9ad3cb27418e5fb3bd6f96b0d889aa478ae2ae563fd16b4368b3f58e66d165f3",
+      "seconds": 21.726944457972422,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration is taking broad action to crack down on \u201cjunk fees,\u201d hidden charges added to people's bills without their knowledge, reducing consumer choice.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Actions have been taken to crack down on a range of junk fees charged by airlines, internet providers, hotels, and apartment buildings.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Banks have been pushed to slash unfair overdraft and bounced check charges.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Action has been taken to cap credit card late fees.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is cracking down on junk health insurance plans that advertise one rate but then stick patients with a much bigger medical bill.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Combined actions will save American families hundreds and even thousands of dollars a year, adding up to more than $20 billion a year across the economy, over time.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to ban all junk fees across the economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 312,
+      "generation_tps": 16.286062601563998,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1902,
+      "prompt_tps": 498.1475085930113,
+      "request_sha256": "b0e75aa1e5922885b66286b36a08f8074542cc3a9464fe017940f71c9e4525ab",
+      "seconds": 22.986232083057985,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration is taking broad action to crack down on \u201cjunk fees,\u201d hidden charges that companies add on to people's bills without their knowledge, reducing consumer choice.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Actions have been taken to crack down on a range of junk fees charged by airlines, internet providers, hotels, and apartment buildings.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Banks have been pushed to slash unfair overdraft and bounced check charges.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Action has been taken to cap credit card late fees.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is cracking down on junk health insurance plans that advertise one rate, but then stick patients with a much bigger medical bill.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over time, combined actions will save American families hundreds and even thousands of dollars a year \u2013 adding up to more than $20 billion a year across the economy.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to keep pushing until all junk fees are banned across the economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9ad3cb27418e5fb3bd6f96b0d889aa478ae2ae563fd16b4368b3f58e66d165f3"
+}

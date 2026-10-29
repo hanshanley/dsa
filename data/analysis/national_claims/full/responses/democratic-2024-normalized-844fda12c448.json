@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 16.289101520064005,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1602,
+      "prompt_tps": 439.3701880648673,
+      "request_sha256": "6199758224af2a504378a84cc09c2423ff785539069f86ace7e93f94f2e2a3b6",
+      "seconds": 30.361595541005954,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe every student deserves a quality education, regardless of their parents' zip code or income.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who attend preschool are nearly 50 percent more likely to finish high school and go on to earn a two- or four-year degree, no matter their background.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will provide free, universal preschool for four-year olds, saving the families of 5 million children $13,000 a year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Rescue Plan made the biggest investment in public education in history, providing $130 billion to help 15,000 districts reopen, rebuild, and catch kids up.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Funding from the American Rescue Plan has worked to help children learn.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Rescue Plan spurred long overdue improvements in school facilities and indoor air quality, creating safe and healthy learning environments for students and school staff.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"An additional $2 billion was provided to high-need, Title I schools.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Districts nationwide trained and hired 14,000 more counselors and social workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Increased investments in full-service community schools were made, five-fold, providing health care, nutrition, job training, and other wraparound services for kids at school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 16.22751097512026,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2205,
+      "prompt_tps": 529.7749329891903,
+      "request_sha256": "314e41c418911b57c7e6a2d4d9a2a1732d8c59c2c19918752b19d307cfc105c2",
+      "seconds": 30.9167155418545,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe every student deserves a quality education, regardless of their parents' zip code or income.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Children who attend preschool are nearly 50 percent more likely to finish high school and go on to earn a two- or four-year degree, no matter their background.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will provide free, universal preschool for four-year olds, saving the families of 5 million children $13,000 a year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Rescue Plan made the biggest investment in public education in history, providing $130 billion to help 15,000 districts reopen, rebuild, and catch kids up.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Funding from the American Rescue Plan has worked to help children learn.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Rescue Plan spurred long overdue improvements in school facilities and indoor air quality, creating safe and healthy learning environments for students and school staff.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"An additional $2 billion was provided to high-need, Title I schools.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Districts nationwide trained and hired 14,000 more counselors and social workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Investments in full-service community schools were increased five-fold, providing health care, nutrition, job training, and other wraparound services for kids at school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6199758224af2a504378a84cc09c2423ff785539069f86ace7e93f94f2e2a3b6"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 429,
+      "generation_tps": 16.19053840779468,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1512,
+      "prompt_tps": 485.72489754040976,
+      "request_sha256": "d3fc674c8da96ec30521d208d613901fb7e967342b42640d7b041b536d9c0d8d",
+      "seconds": 29.620549667160958,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are working to shore up a safe, secure banking system that protects consumer deposits and holds investors accountable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats have pushed for legislation to hold executives at all failed banks accountable, clawing back compensation and banning them from the industry.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are working to limit out-of-control Wall Street bonuses that encourage risky bank practices that jeopardize the economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep pushing to pass an updated Glass-Steagall Act, more clearly separating commercial and investment banking and expanding Volcker rule safeguards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats defeated Republican efforts to gut the Consumer Financial Protection Bureau at the Supreme Court this year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to protect and strengthen the Consumer Financial Protection Bureau and support its critical work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A home is more than a roof over your head, it's a place to raise your family, to build community, and to grow the American Dream.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"A home is the biggest investment and the biggest monthly expense that most people ever face.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The subprime mortgage crisis devastated homeowners and froze construction nationwide approximately 15 years ago.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A severe housing shortage is pushing up prices and keeping homes out of reach.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 411,
+      "generation_tps": 16.152607450758758,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2109,
+      "prompt_tps": 500.55122831158076,
+      "request_sha256": "24d6a9e52d4aeb8aa3adcbe0d5792692451821d2df0e8e240af646babce6055b",
+      "seconds": 29.669649082934484,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are working to shore up a safe, secure banking system that protects consumer deposits and holds investors accountable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats have pushed for legislation to hold executives at all failed banks accountable, clawing back compensation and banning them from the industry.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are working to limit out-of-control Wall Street bonuses that encourage risky bank practices that jeopardize the whole economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep pushing to pass an updated Glass-Steagall Act, more clearly separating commercial and investment banking and expanding Volcker rule safeguards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats defeated Republican efforts to gut the Consumer Financial Protection Bureau at the Supreme Court this year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to protect and strengthen the Consumer Financial Protection Bureau and support its critical work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A home is more than a roof over your head; it's a place to raise your family, to build community, and to grow the American Dream.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"A home is the biggest investment and the biggest monthly expense that most people ever face.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Approximately 15 years after the subprime mortgage crisis devastated homeowners and froze construction nationwide, a severe housing shortage is still pushing up prices and keeping homes out of reach.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d3fc674c8da96ec30521d208d613901fb7e967342b42640d7b041b536d9c0d8d"
+}

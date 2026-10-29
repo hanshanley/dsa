@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 493,
+      "generation_tps": 16.317539000189228,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1561,
+      "prompt_tps": 487.02429426312534,
+      "request_sha256": "e2e3372f2fd4e3621f820f8615a1779733e4286cf2c596e3f398367f9cbf2411",
+      "seconds": 33.42816354194656,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden, Vice President Harris, and Democrats capped the price of insulin at $35 a month, down from as much as $400, for nearly 4 million seniors on Medicare.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden persuaded the nation's top three insulin makers to lower their prices for everyone.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding the $35 insulin cap to cover everyone, saving millions of Americans with diabetes nearly $1,000 a year.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Starting next year, the Inflation Reduction Act caps total out-of-pocket drug costs at $2,000 a year for millions of seniors and others on Medicare.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for fighting until the $2,000 out-of-pocket drug cost cap covers every single American.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"For the first time, Medicare now has the ability to negotiate lower drug prices, as private insurers and the VA have done for decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare started negotiating lower drug prices this year, beginning with 10 commonly used medications for conditions such as diabetes and heart failure.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for pushing to add at least 50 drugs a year to the list of drugs Medicare negotiates lower prices for, lowering prices for 500 drugs this decade.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare Part-D is working to cap cost-sharing for life-saving generics at $2 a dose.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for making the $2 cost-sharing cap for life-saving generics mandatory for all Medicare beneficiaries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 493,
+      "generation_tps": 16.29984536503429,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2222,
+      "prompt_tps": 529.1615724706622,
+      "request_sha256": "5473859a51fa443358eaf52a41b4a06a3cd61d2cdc56c05f5e95d8c98990ab3d",
+      "seconds": 34.45459370804019,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden, Vice President Harris, and Democrats capped the price of insulin at $35 a month, down from as much as $400, for nearly 4 million seniors on Medicare.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden persuaded the nation's top three insulin makers to lower their prices for everyone.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding the $35 insulin cap to cover everyone, saving millions of Americans with diabetes nearly $1,000 a year.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Starting next year, the Inflation Reduction Act caps total out-of-pocket drug costs at $2,000 a year for millions of seniors and others on Medicare.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for fighting until the $2,000 out-of-pocket drug cost cap covers every single American.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"For the first time, Medicare now has the ability to negotiate lower drug prices, as private insurers and the VA have done for decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare started negotiating lower drug prices this year, beginning with 10 commonly used medications for conditions such as diabetes and heart failure.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for pushing to add at least 50 drugs a year to the list of drugs Medicare negotiates lower prices for, lowering prices for 500 drugs this decade.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicare Part-D is working to cap cost-sharing for life-saving generics at $2 a dose.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for making the $2 cost-sharing cap for life-saving generics mandatory for all Medicare beneficiaries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e2e3372f2fd4e3621f820f8615a1779733e4286cf2c596e3f398367f9cbf2411"
+}

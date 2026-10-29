@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 424,
+      "generation_tps": 16.309623116102742,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1534,
+      "prompt_tps": 488.982357263641,
+      "request_sha256": "ba2e313046a989918517e93eaae2a394240b3175983532766ab9e1af6c10abb2",
+      "seconds": 29.14415862504393,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats have a plan to expand access to care and make it more affordable and accessible.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump and his MAGA allies in Congress have voted to increase the cost of care, for example by slashing Head Start and child care programs, eliminating slots for half a million kids.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump has no plan to lower child care or home care costs for American families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"House Republicans have promised to slash Social Security, Medicare, Medicaid, and the Children's Health Insurance Program.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Continued efforts by House Republicans to repeal the Affordable Care Act will strip millions of seniors and people with disabilities of life-changing home support.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America is the only advanced economy not to guarantee paid leave.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nearly three-quarters of private-sector employees do not have paid family leave through their jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"94 percent of America's lowest-paid workers do not have paid family leave through their jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The pandemic made the economic consequences of the lack of paid leave more devastating.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"No one in the United States of America should have to choose between caring for a parent or child and the paycheck they need to survive.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 442,
+      "generation_tps": 16.202535828165857,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2126,
+      "prompt_tps": 521.0206678156408,
+      "request_sha256": "2e0795124d44cc448123ff3eac8778505fa966581aac679fce7a8219a37160a3",
+      "seconds": 31.370021999813616,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats have a plan to expand access to care and to make it more affordable and accessible for all.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump and his MAGA allies in Congress have voted repeatedly to increase the cost of care, for example by slashing Head Start and child care programs, eliminating slots for half a million kids.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump has no plan to lower child care or home care costs for American families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"House Republicans have promised to slash Social Security, Medicare, Medicaid, and the Children's Health Insurance Program.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Continued efforts by House Republicans to repeal the Affordable Care Act will strip millions of seniors and people with disabilities of life-changing home support.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America is the world's only advanced economy not to guarantee paid leave.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Nearly three-quarters of private-sector employees do not have paid family leave through their jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"94 percent of America's lowest-paid workers do not have paid family leave through their jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The pandemic made the economic consequences of the lack of paid leave more devastating.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the United States of America, no one should have to choose between caring for a parent who raised them, a child who depends on them, and the paycheck that they need to survive.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ba2e313046a989918517e93eaae2a394240b3175983532766ab9e1af6c10abb2"
+}

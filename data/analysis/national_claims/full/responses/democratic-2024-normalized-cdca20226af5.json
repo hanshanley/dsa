@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 380,
+      "generation_tps": 16.57442360789128,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1516,
+      "prompt_tps": 495.60066550971175,
+      "request_sha256": "26b6f6fc353591b062f16454084b0102ac511170d30d81c5695413715fce883d",
+      "seconds": 25.997337917098776,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2020, 55 of the biggest companies in America made $40 billion in profit, but paid zero in federal income taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Corporations' share of federal taxes has fallen below 10 percent, down from 30 percent in the 1950s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden will raise the corporate tax rate back to 28 percent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden signed a historic 15 percent corporate minimum tax into law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden reached a global minimum tax agreement with 140 countries, so that big multinational companies will no longer be able to pit nations against one another in a race to the bottom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden will double the tax rate that American multinationals pay on foreign earnings to 21 percent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden will end incentives, introduced by Trump, that encourage companies to shift jobs and operations overseas and book profits in low-tax countries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump slashed the corporate tax rate to 21 percent, down from 35 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 380,
+      "generation_tps": 16.422398819733495,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2064,
+      "prompt_tps": 523.666986626382,
+      "request_sha256": "6a7b3bc02169ce3107072b519bf87f0764e533d1c1a7d8b5ec88a3fb50019736",
+      "seconds": 27.093790540937334,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2020, 55 of the biggest companies in America made $40 billion in profit, but paid zero in federal income taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Corporations' share of federal taxes has fallen below 10 percent, down from 30 percent in the 1950s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden will raise the corporate tax rate back to 28 percent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden signed a historic 15 percent corporate minimum tax into law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden reached a global minimum tax agreement with 140 countries, so that big multinational companies will no longer be able to pit nations against one another in a race to the bottom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden will double the tax rate that American multinationals pay on foreign earnings to 21 percent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden will end incentives, introduced by Trump, that encourage companies to shift jobs and operations overseas and book profits in low-tax countries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump slashed the corporate tax rate to 21 percent, down from 35 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "26b6f6fc353591b062f16454084b0102ac511170d30d81c5695413715fce883d"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 477,
+      "generation_tps": 16.200332359022852,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1510,
+      "prompt_tps": 466.29961693796406,
+      "request_sha256": "be1aa212749582717d94d927482c2708fd48b5598a400a4f466b131507ad46a8",
+      "seconds": 32.69305562484078,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden took historic steps to help Americans rent, buy, and build.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American Rescue Plan kept 8 million families in their homes nationwide by preventing foreclosures and evictions during the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration eased rising rents by capping rent hikes in 2 million federally-funded apartments.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration led the biggest expansion of rental assistance for low-income families in 20 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is cracking down on slumlords who do not play by the rules.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration reduced mortgage-insurance premiums on federally-backed loans for 700,000 homeowners.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration waived the requirement for title insurance, saving families up to $1,500 to refinance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More people own homes today than did before the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are fewer foreclosures today than at any time in decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The surest way to bring housing costs down long-term is to build to boost supply.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration is cutting red tape to help more builders get federal financing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A record 1.7 million new housing units are under construction today nationwide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 481,
+      "generation_tps": 16.189088508561436,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2155,
+      "prompt_tps": 525.4837627735055,
+      "request_sha256": "f979339e8fc758c4a3ffba773fdfda0a6a1e9361bb4a5b51191638b2f63a409f",
+      "seconds": 33.822419124888256,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden has taken historic steps to help Americans rent, buy, and build.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American Rescue Plan kept 8 million families in their homes nationwide by preventing foreclosures and evictions during the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration eased rising rents by capping rent hikes in 2 million federally-funded apartments.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration led the biggest expansion of rental assistance for low-income families in 20 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is cracking down on slumlords who do not play by the rules.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration reduced mortgage-insurance premiums on federally-backed loans for 700,000 homeowners.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration waived the requirement for title insurance, saving families up to $1,500 to refinance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More people own homes today than did before the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are fewer foreclosures today than at any time in decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats evaluate that the surest way to bring housing costs down long-term is to build to boost supply.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration is cutting red tape to help more builders get federal financing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A record 1.7 million new housing units are under construction today nationwide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "be1aa212749582717d94d927482c2708fd48b5598a400a4f466b131507ad46a8"
+}

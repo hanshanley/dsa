@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 442,
+      "generation_tps": 16.292643798664404,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1585,
+      "prompt_tps": 493.32453058689066,
+      "request_sha256": "4320cd28dd8a61670e11541801a521965063423209300f6430a98fe3b8066446",
+      "seconds": 30.351885124808177,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration requires drugmakers that raise prices faster than inflation to pay the difference back to Medicare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare will pass savings from drugmaker rebates on to consumers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over 750,000 seniors could save as much as $4,500 per over-priced dose.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep fighting to expand these rebates, applying them when drugmakers overcharge not just Medicare, but private insurers as well.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are cracking down on improper drug patent listings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Once companies drop their improper patent listings, other companies will be free to make cheaper alternatives.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FTC's work has pushed three of the biggest makers of inhalers to lower prices to $35 a month, saving people with asthma hundreds of dollars a year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration enacted rules to make hearing aids available over-the-counter, saving millions of Americans up to $3,000 a pair.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue the Administration's work to require that any drugs developed with taxpayer dollars be available to taxpayers, including at reasonable prices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep working to lower drug prices by requiring more transparency from pharmacy benefit managers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 447,
+      "generation_tps": 16.28368936056775,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2195,
+      "prompt_tps": 532.9900666946883,
+      "request_sha256": "7a75e00b97dd3a0ec98a400cf0260be3010e49054c59e270150f7b33abe44e8c",
+      "seconds": 31.578876999905333,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration requires drugmakers that raise prices faster than inflation to pay the difference back to Medicare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicare will pass savings on to consumers from drugmakers that raise prices faster than inflation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over 750,000 seniors could save as much as $4,500 per over-priced dose.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep fighting to expand these rebates, applying them when drugmakers overcharge not just Medicare, but private insurers as well.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are cracking down on improper drug patent listings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Once companies drop their improper patent listings, other companies will be free to make cheaper alternatives.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FTC's work has pushed three of the biggest makers of inhalers to lower prices to $35 a month, saving people with asthma hundreds of dollars a year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration enacted rules to make hearing aids available over-the-counter, saving millions of Americans up to $3,000 a pair.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue the Administration's work to require that any drugs developed with taxpayer dollars be available to taxpayers, including at reasonable prices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep working to lower drug prices by requiring more transparency from pharmacy benefit managers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4320cd28dd8a61670e11541801a521965063423209300f6430a98fe3b8066446"
+}

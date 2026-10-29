@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 401,
+      "generation_tps": 16.283873008127713,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1521,
+      "prompt_tps": 490.33496508582607,
+      "request_sha256": "f5b1adfb2a93a3202642052122bc1375af3a23b07e1acd2d4dce6946f032ec9d",
+      "seconds": 27.73808008385822,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President has taken action to lower costs for hard-working families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Grocery CEOs and business leaders agreed this spring to lower prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is cracking down on price gouging.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is promoting competition in agriculture.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President signed into law the bipartisan Ocean Shipping Reform Act, which lowers shipping prices and helps American farmers export their goods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump and his MAGA allies fought changes to lower prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump wants to give oil companies and special interests another massive tax cut.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Corporate consolidation is allowing companies to keep raking in historic profits, while continuing to raise prices for working families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Three-quarters of American industries grew more concentrated in the two decades before President Biden came to office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Capitalism without competition is exploitation, according to the President.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American people are tired of being exploited.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 441,
+      "generation_tps": 16.205508831589306,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2090,
+      "prompt_tps": 494.0276236020485,
+      "request_sha256": "7201d5a0e3b839adb2a4ff9b895e238b036a206e98bc4d7e9564492be5e6cfb6",
+      "seconds": 31.454355124849826,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President has taken action to lower costs for hard-working families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Grocery CEOs and business leaders agreed this spring to lower prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is cracking down on price gouging.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is promoting competition in agriculture, making everything from fertilizer to poultry processing more affordable for farmers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President signed into law the bipartisan Ocean Shipping Reform Act, which lowers shipping prices and helps American farmers export their goods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump and his MAGA allies fought these changes all the way, siding with Big Oil and special interests over working families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump wants to give oil companies and special interests another massive tax cut.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, corporate consolidation is allowing companies to keep raking in historic profits, while continuing to raise prices for working families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"In the two decades before President Biden came to office, three-quarters of American industries grew more concentrated.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The President says that capitalism without competition isn't capitalism, it's exploitation.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American people are tired of being played for suckers, according to the President.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f5b1adfb2a93a3202642052122bc1375af3a23b07e1acd2d4dce6946f032ec9d"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 256,
+      "generation_tps": 16.433885343350358,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1404,
+      "prompt_tps": 490.8602480927333,
+      "request_sha256": "611ccc77105752c3ba93d61197663c03d8cdd156926c0a3ef27d46f4f8a22590",
+      "seconds": 18.448714833939448,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats provided funding to forgive $7 billion in medical debt for nearly 3 million Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is urging states to use remaining funds to forgive more medical debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration persuaded credit reporting agencies to exclude many medical debts from credit reports, boosting people's credit scores and prospects for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The total number of Americans with listed medical debt decreased from 46 million in 2020 to 15 million.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep pushing to exclude medical debts from credit scoring entirely.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medical debt makes it harder for millions of Americans to get a mortgage or other loan for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 263,
+      "generation_tps": 16.39101640104346,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1828,
+      "prompt_tps": 509.1228165987796,
+      "request_sha256": "1a30cf5b13b0a0afb08ac9c645493bb623b94ef11d9fe529417c9882a6a64969",
+      "seconds": 19.645333957858384,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats provided funding to forgive $7 billion in medical debt for nearly 3 million Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is urging states to use remaining funds to do more to forgive medical debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration persuaded credit reporting agencies to exclude many medical debts from credit reports, boosting people's credit scores and prospects for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The total number of Americans with listed medical debt decreased from 46 million in 2020 to 15 million.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep pushing to exclude medical debts from credit scoring entirely.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medical debt makes it harder for millions of Americans to get a mortgage or other loan for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "611ccc77105752c3ba93d61197663c03d8cdd156926c0a3ef27d46f4f8a22590"
+}

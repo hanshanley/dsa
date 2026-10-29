@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 270,
+      "generation_tps": 16.360958744073923,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1422,
+      "prompt_tps": 476.6597082885135,
+      "request_sha256": "422652d3ce45ecc2c8c57a0fde0622d72daa937adaa2a43f9f91ff62d993b5a7",
+      "seconds": 19.495987208094448,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Before Social Security, almost half of American seniors lived in poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Before Social Security, some American seniors did not have enough to put food on the table.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Before Social Security, some American seniors did not have health care they could count on.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats passed Social Security in 1935.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats signed Medicare and Medicaid into law in 1965.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security, Medicare, and Medicaid are more than government programs; they are a promise made as a country.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security, Medicare, and Medicaid have made tens of millions of lives better.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 286,
+      "generation_tps": 16.297802294944407,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1860,
+      "prompt_tps": 503.9448814551106,
+      "request_sha256": "84a282a38692142721205a5084fea5e5cb4cdda348faa7b78dbf58550937fe28",
+      "seconds": 21.248754458036274,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Before Social Security, almost half of American seniors lived in poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Before Social Security, some American seniors did not have enough to put food on the table.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Before Social Security, some American seniors did not have health care they could count on.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats passed Social Security in 1935.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats signed Medicare and Medicaid into law in 1965.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security, Medicare, and Medicaid are more than government programs; they are a promise made as a country that after a lifetime of hard work, people deserve to retire with dignity and security.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Social Security, Medicare, and Medicaid have made tens of millions of lives better.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "422652d3ce45ecc2c8c57a0fde0622d72daa937adaa2a43f9f91ff62d993b5a7"
+}

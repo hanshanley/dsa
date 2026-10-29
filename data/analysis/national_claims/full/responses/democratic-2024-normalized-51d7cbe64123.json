@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 302,
+      "generation_tps": 16.334600222606497,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1477,
+      "prompt_tps": 482.6864425276026,
+      "request_sha256": "fcb032767cb9bdfb267934914c30a7fed6cfc7f2080105ffeb54bc92f816e344",
+      "seconds": 21.558337041176856,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are dedicated to increasing the supply of an array of housing options like duplexes, triplexes, and townhomes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reducing barriers to building housing and providing federal tax incentives for the development of housing for people of all incomes can foster vibrant, inclusive communities where people from all walks of life can find affordable, diverse living options.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workforce housing must be prioritized to ensure that the nation's teachers, nurses, firefighters, and other essential workers can afford to live in the communities they serve.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation's teachers, nurses, firefighters, and other essential workers are struggling with housing costs that outpace their incomes, leaving them unable to live near their workplaces.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase funding for programs that support the creation and preservation of affordable housing options for essential workers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will collaborate with state and local governments to accelerate the development of workforce housing.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 328,
+      "generation_tps": 16.284263127810966,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1947,
+      "prompt_tps": 503.1513774277549,
+      "request_sha256": "70aa7c06e00fe2327b4d45669cf4dc97f1f7efda632cbfb95e19375696082897",
+      "seconds": 24.02157475007698,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are dedicated to increasing the supply of an array of housing options like duplexes, triplexes, and townhomes that bridge the gap between single-family homes and large apartment buildings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"By reducing barriers to building housing and providing federal tax incentives for the development of housing for people of all incomes, vibrant, inclusive communities where people from all walks of life can find affordable, diverse living options can be fostered.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workforce housing must be prioritized to ensure that the nation's teachers, nurses, firefighters, and other essential workers can afford to live in the communities they serve.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation's teachers, nurses, firefighters, and other essential workers are struggling with housing costs that outpace their incomes, leaving them unable to live near their workplaces.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase funding for programs that support the creation and preservation of affordable housing options for essential workers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will collaborate with state and local governments to accelerate the development of workforce housing, ensuring that communities remain accessible and affordable for all.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fcb032767cb9bdfb267934914c30a7fed6cfc7f2080105ffeb54bc92f816e344"
+}

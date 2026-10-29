@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 499,
+      "generation_tps": 16.269518849133803,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1565,
+      "prompt_tps": 486.8506954475405,
+      "request_sha256": "2624bb389eeeda292baa9df1c20eb5ab0ef5f6c4f71a0fdfc34b717a427359ef",
+      "seconds": 33.89548887498677,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"No Republican voted for the Inflation Reduction Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden issued an executive order last year directing agencies to further expand access to affordable care.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration capped child care costs for 100,000 low-income families at 7 percent of their income, saving each an average $2,400 a year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration increased federal child care funding by 50 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will make investments like these permanent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will guarantee affordable, quality child care to millions of working families for less than $10-a-day per child.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will restore the expanded Child Tax Credit.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will strengthen Head Start.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will improve and expand home- and community-based services for seniors and people with disabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are working toward eliminating the 700,000-person Medicaid waiting list.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will fight to get many care workers a bigger share of Medicaid home care payments.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will overhaul the quality of care and quality of life for the nation's 1.3 million nursing home residents.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will defend Administration regulations that require minimum staffing standards at nursing homes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 489,
+      "generation_tps": 16.218174758064986,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2232,
+      "prompt_tps": 539.3169648543508,
+      "request_sha256": "7864212421aff3b061c5779e45cff547d9ce86ba2c628dad82541bed191d9753",
+      "seconds": 34.29984175018035,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"No Republican voted for it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Last year, President Biden issued an executive order directing agencies to further expand access to affordable care.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration capped child care costs for 100,000 low-income families at 7 percent of their income, saving each an average $2,400 a year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration increased federal child care funding by 50 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will make investments like these permanent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will guarantee affordable, quality child care to millions of working families for less than $10-a-day per child.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will restore the expanded Child Tax Credit.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will strengthen Head Start.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will improve and expand home- and community-based services for seniors and people with disabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are working toward eliminating the 700,000-person Medicaid waiting list, so more people can live and work with dignity in their own communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will fight to get many care workers a bigger share of Medicaid home care payments.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will overhaul the quality of care and quality of life for the nation's 1.3 million nursing home residents by defending Administration regulations that require minimum staffing standards at nursing homes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2624bb389eeeda292baa9df1c20eb5ab0ef5f6c4f71a0fdfc34b717a427359ef"
+}
