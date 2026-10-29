@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 347,
+      "generation_tps": 15.808721155319343,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1458,
+      "prompt_tps": 477.7866616016535,
+      "request_sha256": "0151fbe39570450cc1523c68b73b366961b91ac446a797938e6b62ecde113c01",
+      "seconds": 25.012310875114053,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Approximately 27 million women, men, and children around the world are victims of human trafficking.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trafficking in persons is an affront to fundamental values.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trafficking in persons is a threat to national and international security as a source of funds for transnational criminals and terrorist organizations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration has used bilateral and multilateral diplomacy, targeted foreign assistance, training programs, public outreach, and law enforcement to combat trafficking in persons across the globe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has continued to provide annual assessments of the strengths and weaknesses of foreign governments' efforts to address trafficking, encouraging all countries to do more and calling out countries that have failed to do enough.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has provided technical assistance to improve law enforcement and grants to support grassroots prevention efforts around the world targeting sex and labor trafficking, child sex tourism, forced child labor, and other abuses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration is committed to taking action at home to fight trafficking, including the sex trafficking of young girls.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 326,
+      "generation_tps": 15.94897310363085,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1973,
+      "prompt_tps": 486.3243561310544,
+      "request_sha256": "eaa3393ffa8ebe0778659ecd3ce8231d00af5847e238b24ceece8243eb5b1412",
+      "seconds": 24.509183833142743,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Approximately 27 million women, men, and children around the world are victims of human trafficking.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trafficking in persons is both an affront to fundamental values and a threat to national and international security as a source of funds for transnational criminals and terrorist organizations.\",\n\"claim_types\":[\"evaluation\",\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Obama administration has used bilateral and multilateral diplomacy, targeted foreign assistance, training programs, public outreach, and law enforcement to combat trafficking in persons across the globe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has continued to provide annual assessments of the strengths and weaknesses of foreign governments' efforts to address the issue, encouraging all countries to do more and calling out countries that have failed to do enough.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has provided technical assistance to improve law enforcement and grants to support grassroots prevention efforts around the world targeting sex and labor trafficking, child sex tourism, forced child labor, and other abuses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration is committed to taking action at home to fight trafficking, including the sex trafficking of young girls.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0151fbe39570450cc1523c68b73b366961b91ac446a797938e6b62ecde113c01"
+}

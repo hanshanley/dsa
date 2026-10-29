@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 335,
+      "generation_tps": 15.985727211358332,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1476,
+      "prompt_tps": 456.10610309958093,
+      "request_sha256": "1c5aa611559642c582174a60ba2dfe90042b76d6e9fab950ffdf44ac4b06e664",
+      "seconds": 24.20276016695425,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Budget Control Act enacted by Congress last year mandates reductions in federal spending, including defense spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has worked with Congress to make decisions regarding budgetary reductions, which has been a strategy-driven process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As the wars in Iraq and Afghanistan conclude and long-term nation-building with large military footprints ends, the United States will be able to ensure its security with a more agile and more flexible force.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will continue to emphasize forward engagement in critical regions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will enhance robust security partnerships to share the burden.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will continue to get rid of outdated Cold War-era systems.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will invest in cutting-edge technologies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will maintain a versatile set of capabilities required to execute a wide range of military missions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 402,
+      "generation_tps": 15.84523946722829,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1979,
+      "prompt_tps": 494.6071770019857,
+      "request_sha256": "5afe6489b1dae35cea76563b2c8c336bcf87a645586ef8554301388d065e61e0",
+      "seconds": 29.38249883404933,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Budget Control Act enacted by Congress last year, with the support of Republicans and Democrats alike, mandates reductions in federal spending, including defense spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has worked with Congress to make budgetary decisions, which has been a strategy-driven process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As the United States looks beyond the wars in Iraq and Afghanistan \u2013 and the conclusion of long-term nation-building with large military footprints \u2013 it will be able to ensure its security with a more agile and more flexible force.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will continue to emphasize forward engagement in critical regions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will enhance robust security partnerships to share the burden.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will continue to get rid of outdated Cold War-era systems so that it can invest in cutting-edge technologies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will invest in cutting-edge technologies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will maintain a versatile set of capabilities required to execute a wide range of military missions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the current fiscal environment, tough budgetary decisions must also be made across the board, including within the defense budget.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1c5aa611559642c582174a60ba2dfe90042b76d6e9fab950ffdf44ac4b06e664"
+}

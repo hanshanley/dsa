@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 209,
+      "generation_tps": 16.049334425450414,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1385,
+      "prompt_tps": 453.11170366808125,
+      "request_sha256": "3767e61a30d2ecef5772085174c98ea98efcb858b8d17a4da58175a094f37530",
+      "seconds": 16.08918770798482,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The socialist movement is on the march.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A call is made for politicians who claim to be with the people to demonstrate support.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support is requested for working class Black people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support is requested for working class Brown people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support is requested for those whose full humanity has long been denied.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support is requested for those fighting for Black and Brown Lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 209,
+      "generation_tps": 16.07782204379377,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1762,
+      "prompt_tps": 477.1059059157706,
+      "request_sha256": "39d85135737e92c64cefb51d67b5d3de765829597e883430723e7a5fe02b3417",
+      "seconds": 16.702336041955277,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The socialist movement is on the march.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A call is made for politicians who claim to be with the people to demonstrate support.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support is requested for working class Black people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support is requested for working class Brown people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support is requested for those whose full humanity has long been denied.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support is requested for those fighting for Black and Brown Lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3767e61a30d2ecef5772085174c98ea98efcb858b8d17a4da58175a094f37530"
+}

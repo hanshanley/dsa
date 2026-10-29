@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 360,
+      "generation_tps": 15.952442607862979,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1244,
+      "prompt_tps": 438.7602664646901,
+      "request_sha256": "1d23f06dbd01896bc650b8ae148bafe6ba5c8a19dd885eca611e14f1c590fe5f",
+      "seconds": 25.41231149993837,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Walter Wallace Jr. was killed by police officers last night.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Walter Wallace Jr. was a Black working class man in Philadelphia.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America mourns with every human being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America specifically mourns with the Black community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America expresses rage, determination, and passion for the defense of life, freedom, and justice for all people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America calls for the firing of the police officers involved in the killing of Walter Wallace Jr.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Institutions are killing people and must be defunded, dismantled, and abolished.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Police officers do not keep people safe.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"People power must be built.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every rotten institution in society must be replaced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 383,
+      "generation_tps": 16.00199162848004,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1772,
+      "prompt_tps": 467.2640691929915,
+      "request_sha256": "32fb631795af45ef22263cdd6b79bb7f4ca8c066a5f9351f6f1a38c98f682543",
+      "seconds": 27.736914625158533,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Walter Wallace Jr. was murdered by police officers last night.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Walter Wallace Jr. was a Black working class man in Philadelphia, and he was killed while his community and his family pleaded for his life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America mourns with every human being.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America specifically mourns with the Black community everywhere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America is filled with rage, determination, and passion for the defense of life, freedom, and justice for all people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America calls for the firing of the police officers involved in the killing of Walter Wallace Jr.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The institutions that are killing people must be defunded, dismantled, and abolished.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Police officers do not keep people safe.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"People power must be built.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every rotten institution in society must be replaced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1d23f06dbd01896bc650b8ae148bafe6ba5c8a19dd885eca611e14f1c590fe5f"
+}

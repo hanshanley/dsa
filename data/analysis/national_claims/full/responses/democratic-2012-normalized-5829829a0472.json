@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 340,
+      "generation_tps": 16.043691280961873,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1479,
+      "prompt_tps": 461.2285290594866,
+      "request_sha256": "7dcd42c7a3cf031b3547917a1805586f697e7f315d68c0ab3dba22d193484e19",
+      "seconds": 24.40941408299841,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The President and the Democratic Party understand the critical importance of expanding protections and opportunities for women and girls around the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ensuring full equality and providing women and girls the opportunity to learn, earn a livable wage, and participate in public decision-making are essential to reduce violence, improve economies, and strengthen democracy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for urging ratification of the Convention for the Elimination of All Forms of Discrimination Against Women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama, Secretary of State Hillary Rodham Clinton, and the State Department are committed to advancing the rights of women and girls as a central focus of U.S. diplomatic, development, and defense interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to continue to promote the full engagement of women in the political and economic spheres.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to work to address underlying socio-economic problems, including women's access to health, education, and food security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to ensure that women are equal participants in reconciliation and development in areas affected by conflict.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 345,
+      "generation_tps": 16.045688260148445,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1987,
+      "prompt_tps": 485.7101423724157,
+      "request_sha256": "9e67c08ed9de65e19826ca2901fa5af35acc311d44e9cd89fa7b67412b3d7aa4",
+      "seconds": 25.602340707788244,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President and the Democratic Party understand the critical importance of expanding protections and opportunities for women and girls around the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ensuring full equality and providing women and girls the opportunity to learn, earn a livable wage, and participate in public decision-making are essential to reduce violence, improve economies, and strengthen democracy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for urging ratification of the Convention for the Elimination of All Forms of Discrimination Against Women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama, Secretary of State Hillary Rodham Clinton, and the State Department are committed to advancing the rights of women and girls as a central focus of U.S. diplomatic, development, and defense interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to continue to promote the full engagement of women in the political and economic spheres.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to work to address underlying socio-economic problems, including women's access to health, education, and food security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to ensure that women are equal participants in reconciliation and development in areas affected by conflict.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7dcd42c7a3cf031b3547917a1805586f697e7f315d68c0ab3dba22d193484e19"
+}

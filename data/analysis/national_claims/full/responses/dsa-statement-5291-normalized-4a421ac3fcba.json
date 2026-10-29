@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 318,
+      "generation_tps": 15.51931896248271,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1355,
+      "prompt_tps": 455.72915025653975,
+      "request_sha256": "e58b3a4fb69fd5d60902b1d0c9433c2ce9368f188017ddaaab7c623869158e3e",
+      "seconds": 23.47477620909922,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America stand in solidarity with Maryland Delegate Gabriel Acevero and other comrades fighting to defund the police.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America remain committed to the fight to defund the police.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Gabriel Acevero's firing is an example of the risks taken in the fight to defund the police.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Law enforcement agencies operate to promote the interests of capitalist institutions.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Law enforcement agencies operate to protect the power of the capitalist state by suppressing organized dissent.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Anyone employed as a law enforcement officer is excluded from membership in the Democratic Socialists of America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cops will always be an obstacle on the way to reclaiming power for the working class.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cops have no place in the Democratic Socialists of America or in labor unions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 339,
+      "generation_tps": 15.479489898893538,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1841,
+      "prompt_tps": 480.3408462419144,
+      "request_sha256": "17a610a4f910527099b372837632b39a0bbe74e23171c217522dcf9702cc087e",
+      "seconds": 25.744840667117387,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America stand in solidarity with Maryland Delegate Gabriel Acevero and all comrades, whether in office or in the streets, who are currently fighting to defund the police.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America remain committed to the fight to defund the police because they know they do not fight alone.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Gabriel Acevero\u2019s firing is one example of the many risks taken in the fight to defund the police.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Law enforcement agencies operate to promote the interests of capitalist institutions.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Law enforcement agencies operate to protect the power of the capitalist state by suppressing organized dissent.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Anyone employed as a law enforcement officer is excluded from membership in the Democratic Socialists of America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cops will always be an obstacle on the way to reclaiming power for the working class.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cops have no place in the Democratic Socialists of America or in labor unions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e58b3a4fb69fd5d60902b1d0c9433c2ce9368f188017ddaaab7c623869158e3e"
+}

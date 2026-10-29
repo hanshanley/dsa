@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 404,
+      "generation_tps": 15.971188740332758,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1506,
+      "prompt_tps": 451.10629433955467,
+      "request_sha256": "dbcf3abfd618beb3551f61dde2e1effb5dd3d4163bf751b669ae446c2b978504",
+      "seconds": 28.64449637499638,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe all Americans should be able to obtain an affordable health care plan, including a health savings account, which meets their needs and the needs of their families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Families and health care providers are key to real reform, not lawyers and bureaucrats.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Insurance companies should worry about losing patients' business.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Patients should not worry about losing their insurance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current tax system discriminates against individuals who do not receive health care from their employers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The current tax system gives more generous health tax benefits to upper income employees.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The current tax system fails to provide every American with the ability to purchase an affordable health care plan.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans propose to correct inequities in the current tax code that drive up the number of uninsured.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans propose to level the playing field so that individuals who choose a health insurance plan in the individual market face no tax penalty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"All Americans should receive the same tax benefit as those who are insured through work, whether through a tax credit or other means.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 15.976791230803345,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2078,
+      "prompt_tps": 506.14699857536425,
+      "request_sha256": "a2e20c0be1b45c7b0cc4a4d8f229560874242ec7481eb407afb7cdc26376f13f",
+      "seconds": 29.65273179183714,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe all Americans should be able to obtain an affordable health care plan, including a health savings account, which meets their needs and the needs of their families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Families and health care providers are key to real reform, not lawyers and bureaucrats.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Patients should not have to worry about losing their insurance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Insurance companies should have to worry about losing patients' business.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current tax system discriminates against individuals who do not receive health care from their employers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The current tax system gives more generous health tax benefits to upper income employees.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The current tax system fails to provide every American with the ability to purchase an affordable health care plan.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans propose to correct inequities in the current tax code that drive up the number of uninsured.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans propose to level the playing field so that individuals who choose a health insurance plan in the individual market face no tax penalty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"All Americans should receive the same tax benefit as those who are insured through work, whether through a tax credit or other means.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "dbcf3abfd618beb3551f61dde2e1effb5dd3d4163bf751b669ae446c2b978504"
+}

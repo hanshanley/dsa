@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 169,
+      "generation_tps": 16.14187228374454,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1404,
+      "prompt_tps": 446.11503977954976,
+      "request_sha256": "518e428aae4f76ffd31b1d74c5421e925ea59196be233367dfe08d940d036a70",
+      "seconds": 13.628108750097454,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The administration restored America's leadership at the UN by cooperating with partners when possible and respectfully disagreeing when necessary, reversing the previous administration's disdain for the UN.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's leadership at the UN enabled progress on national security priorities, including getting Russia and China to implement the toughest UN sanctions ever on Iran and North Korea.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration will continue to build three pillars of American global leadership: a prosperous and inclusive economy, unsurpassed military strength, and an enduring commitment to advancing universal values.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 180,
+      "generation_tps": 16.089374448687604,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1741,
+      "prompt_tps": 466.04021378664254,
+      "request_sha256": "4759ad4e56cc952bc8f2ea21c14a4c5dcf667896605d0077199315fe089f3c37",
+      "seconds": 14.933306874940172,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America's leadership at the UN was restored by cooperating with partners when possible and respectfully disagreeing when necessary, reversing the previous administration's disdain for the UN.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's leadership at the UN enabled progress on national security priorities, including getting Russia and China on board to implement the toughest UN sanctions ever on Iran and North Korea.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party will continue to build three key pillars of American global leadership: a prosperous and inclusive economy, unsurpassed military strength, and an enduring commitment to advancing universal values.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "518e428aae4f76ffd31b1d74c5421e925ea59196be233367dfe08d940d036a70"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 306,
+      "generation_tps": 16.044987593230122,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1440,
+      "prompt_tps": 474.0552810539688,
+      "request_sha256": "f99eda3ac7b40cf97e19ab685b676f91ec2c3dc5b9a2ef68cd491e66abdb626f",
+      "seconds": 22.119593834038824,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States' system of higher education is unique for its excellence, diversity, and accessibility.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Learning is a safeguard of liberty.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Post-secondary education increases the earnings of individuals and advances economic development.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Colleges and universities drive much of the research that keeps America competitive.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The higher education system must meet the needs of the 21st century student and economy and remain innovative and accessible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Students and their parents face formidable challenges in planning for college as costs continue to outpace inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Higher education seems immune from market controls and the law of supply and demand.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Institutions directing a greater proportion of their endowment revenues toward tuition relief are commended.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 326,
+      "generation_tps": 15.928031129822271,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1914,
+      "prompt_tps": 495.1613702921976,
+      "request_sha256": "6eadf839fdd7e5944f0593ef0932a693d0fbb9ec74d91811887c18eb2f7085a1",
+      "seconds": 24.342702666064724,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States' system of higher education\u2014public and private, secular and religious, large and small institutions\u2014is unique for its excellence, its diversity, and its accessibility.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Learning is a safeguard of liberty.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Post-secondary education not only increases the earnings of individuals but advances economic development.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Colleges and universities drive much of the research that keeps America competitive.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The higher education system must meet the needs of the 21st century student and economy and remain innovative and accessible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Students and their parents face formidable challenges in planning for college as costs continue to outpace inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Higher education seems immune from market controls and the law of supply and demand.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Institutions which are directing a greater proportion of their endowment revenues toward tuition relief are commended.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f99eda3ac7b40cf97e19ab685b676f91ec2c3dc5b9a2ef68cd491e66abdb626f"
+}

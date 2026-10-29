@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 250,
+      "generation_tps": 15.126210834224311,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1402,
+      "prompt_tps": 468.7872640731406,
+      "request_sha256": "cad59f33c7bd62059c3eda7771574779e25bd5f5470f81ac680a5621396f93f6",
+      "seconds": 19.534517791122198,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The human toll of drug addiction and abuse affects all segments of American society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Drug addiction and abuse is an international problem, with most narcotics in the country coming from beyond U.S. borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for continued collaboration between state, federal, and local law enforcement to fight producers, traffickers, and distributors of illegal substances.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for individuals struggling with addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for strengthening drug education and prevention programs to avoid addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Endorsement of state and local initiatives, such as Drug Courts, that are trying new approaches to curbing drug abuse and diverting first-time offenders to rehabilitation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 263,
+      "generation_tps": 15.563813532890915,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1820,
+      "prompt_tps": 449.3312001679216,
+      "request_sha256": "932dd899736c5591e8d3fbee3c8440fd42e2a2790e2f9249e8f5777d7c8c4073",
+      "seconds": 20.9653229159303,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The human toll of drug addiction and abuse hits all segments of American society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Drug addiction and abuse is an international problem, with most of the narcotics in this country coming from beyond U.S. borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for continuing the fight against producers, traffickers, and distributors of illegal substances through the collaboration of state, federal, and local law enforcement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for those who help individuals struggling with addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for strengthening drug education and prevention programs to avoid addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Endorsement of state and local initiatives, such as Drug Courts, that are trying new approaches to curbing drug abuse and diverting first-time offenders to rehabilitation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cad59f33c7bd62059c3eda7771574779e25bd5f5470f81ac680a5621396f93f6"
+}

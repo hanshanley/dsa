@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 392,
+      "generation_tps": 15.846128460550098,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1535,
+      "prompt_tps": 468.4245071840556,
+      "request_sha256": "59667e6de07d36457fa1ebf60010926306dcc291db9c5796fc1e6f8c34d115ec",
+      "seconds": 28.02557820896618,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President has made unprecedented progress in the global fight against HIV/AIDS and other infectious diseases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Emergency Plan for AIDS Relief (PEPFAR) has expanded its prevention, care, and treatment programming.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"PEPFAR has made significant investments in more than 30 countries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A goal was set to roughly double the number of lifesaving anti-retroviral treatments provided by the end of 2013.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President is fulfilling a historic commitment to request $4 billion over three years for the Global Fund.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President remains committed to robust funding for PEPFAR and the Global Fund in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama lifted the 25-year ban that prevented non-citizens living with HIV from entering the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has leveraged billions of dollars in commitments from donors to meet the demand for new vaccines.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Leveraging donor commitments has made it possible to immunize millions of children and prevent premature deaths.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 431,
+      "generation_tps": 15.97980138263789,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2095,
+      "prompt_tps": 493.2428476199602,
+      "request_sha256": "8346d3203faf38a732c6e5b4b0b4d5ac74dd390bcbfafbeed147e028d6bc7729",
+      "seconds": 31.229504874907434,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President has made unprecedented progress in the global fight against HIV/AIDS and other infectious diseases.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's Emergency Plan for AIDS Relief (PEPFAR) has expanded its prevention, care, and treatment programming.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"PEPFAR has made significant investments in more than 30 countries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A goal was set to roughly double the number of lifesaving anti-retroviral treatments provided by the end of 2013.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With the latest budget, the President is fulfilling a historic commitment to request $4 billion over three years for the Global Fund.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President remains committed to robust funding for PEPFAR and the Global Fund in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama lifted the 25-year ban that prevented non-citizens living with HIV from entering the United States, allowing the world's largest group of HIV/AIDS researchers, policymakers, medical professionals, and advocates to convene in Washington to continue their efforts to improve prevention and treatment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has leveraged billions of dollars in commitments from donors to meet the demand for new vaccines.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Leveraging donor commitments has made it possible to immunize millions of children and prevent premature deaths.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "59667e6de07d36457fa1ebf60010926306dcc291db9c5796fc1e6f8c34d115ec"
+}

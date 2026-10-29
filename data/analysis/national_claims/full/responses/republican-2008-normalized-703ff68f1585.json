@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 130,
+      "generation_tps": 16.058237130778053,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1362,
+      "prompt_tps": 443.67262605925447,
+      "request_sha256": "5d24ed87f509883897773226de306e23392b8ba9cc6dfc543b4b020c8312b582",
+      "seconds": 11.176429333165288,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"No health care professional \u2014 doctor, nurse, or pharmacist \u2014 or organization should be required to perform, provide for, or refer for a health care service against their conscience for any reason.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Religious organizations delivering a major portion of America's health care should not be required to perform, provide for, or refer for a health care service against their conscience for any reason.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 132,
+      "generation_tps": 16.080661900012316,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1660,
+      "prompt_tps": 460.69033663548356,
+      "request_sha256": "218f4803fd071d074c486805904cc0874eb956854341e381c30467d16963f7aa",
+      "seconds": 11.82259058393538,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"No health care professional \u2014 doctor, nurse, or pharmacist \u2014 or organization should ever be required to perform, provide for, or refer for a health care service against their conscience for any reason.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Religious organizations which deliver a major portion of America's health care should not be required to perform, provide for, or refer for a health care service against their conscience for any reason.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5d24ed87f509883897773226de306e23392b8ba9cc6dfc543b4b020c8312b582"
+}

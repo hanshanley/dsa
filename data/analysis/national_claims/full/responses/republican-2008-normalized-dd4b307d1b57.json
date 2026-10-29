@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 414,
+      "generation_tps": 15.825785874941406,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1510,
+      "prompt_tps": 453.95357479444874,
+      "request_sha256": "eec75350d3d8420f62fa174afc3527411dcf54ff43fe930f4d94af70a76dec2f",
+      "seconds": 29.49699699995108,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to continue developing alternative fuels, such as biofuels, especially cellulosic ethanol, and hasten their technological advances to next-generation production.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Policy makers must consider the burden that rising food prices and energy costs create for the poor and developing nations around the world.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Necessary investments in alternative fuels are unlikely if flexibility to use them does not become standard in vehicles.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Commitment to produce more vehicles that operate on electricity and natural gas to reduce demand for oil and cut CO2 emissions.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"97 percent of current transportation vehicles rely on oil.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]}, {\"claim_text\":\"Commitment to aggressively support technological advances to reduce petroleum dependence.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]}, {\"claim_text\":\"Lightweight composites could halve the weight and double the gas mileage of cars and trucks.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[3]}, {\"claim_text\":\"Lightweight composites, flex-fuel vehicles, and electric vehicles could usher in a renaissance in the American auto industry.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[3]}, {\"claim_text\":\"Increasing American energy supply and decreasing long-term demand for oil will position the U.S. to address climate change and continue environmental stewardship.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[5]}, {\"claim_text\":\"The U.S. has a longstanding responsibility for environmental stewardship.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 428,
+      "generation_tps": 15.9390321834652,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2092,
+      "prompt_tps": 489.36147565300774,
+      "request_sha256": "95434521a546d7c0056b73cb206a58d1c1e4551a97e92b0b05c1e43edd7eddfe",
+      "seconds": 31.13758087507449,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to continue developing alternative fuels, such as biofuels, especially cellulosic ethanol, and hasten their technological advances to next-generation production.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Policy makers must consider the burden that rising food prices and energy costs create for the poor and developing nations around the world.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Necessary investments in alternative fuels are unlikely if flexibility to use them does not become standard in vehicles.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Commitment to produce more vehicles that operate on electricity and natural gas, both to reduce demand for oil and to cut CO2 emissions.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Currently, 97 percent of transportation vehicles rely on oil.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]}, {\"claim_text\":\"Commitment to aggressively support technological advances to reduce petroleum dependence.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]}, {\"claim_text\":\"Lightweight composites could halve the weight and double the gas mileage of cars and trucks.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[3]}, {\"claim_text\":\"Lightweight composites, flex-fuel vehicles, and electric vehicles could usher in a renaissance in the American auto industry.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[3]}, {\"claim_text\":\"By increasing American energy supply and decreasing the long-term demand for oil, the U.S. will be well positioned to address climate change and continue its longstanding responsibility for environmental stewardship.\", \"claim_types\":[\"prediction\"], \"evidence_ids\":[5]}, {\"claim_text\":\"The U.S. has a longstanding responsibility for environmental stewardship.\", \"claim_types\":[\"characterization\"], \"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "eec75350d3d8420f62fa174afc3527411dcf54ff43fe930f4d94af70a76dec2f"
+}

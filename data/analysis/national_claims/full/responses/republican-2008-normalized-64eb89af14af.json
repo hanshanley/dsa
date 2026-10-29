@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 380,
+      "generation_tps": 15.964203942168492,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1500,
+      "prompt_tps": 449.9607296742542,
+      "request_sha256": "4d6706537180b11beba0cc59708234a008830a31857a1e4fd0a273a0619dea74",
+      "seconds": 27.147312249988317,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"It is not enough to offer only increased access to a health care system that costs too much and does not work for millions of Americans.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican goal is better health care for lower cost.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The first rule of public policy is the same as with medicine: Do no harm.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American people rejected Democrats' attempted government takeover of health care in 1993 and remain skeptical of politicians who would send them down that road.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans support the private practice of medicine.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans oppose socialized medicine in the form of a government-run universal health care system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans pledge to protect citizens against any and all risky restructuring efforts that would complicate or ration health care as they reform the health care system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans pledge to encourage health promotion and disease prevention as they reform the health care system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Republicans pledge to facilitate cooperation, not confrontation, among patients, providers, payers, and all stakeholders in the health care system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 394,
+      "generation_tps": 15.963913344189386,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2048,
+      "prompt_tps": 490.7936841560736,
+      "request_sha256": "9f8e766466f0fb14241a42b1318283dc8be8f37e134dce998ee37e921c942541",
+      "seconds": 28.8637316247914,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"It is not enough to offer only increased access to a system that costs too much and does not work for millions of Americans.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican goal is better health care for lower cost.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The first rule of public policy is the same as with medicine: Do no harm.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American people rejected Democrats' attempted government takeover of health care in 1993 and remain skeptical of politicians who would send them down that road.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans support the private practice of medicine.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans oppose socialized medicine in the form of a government-run universal health care system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans pledge that as they reform the health care system, they will protect citizens against any and all risky restructuring efforts that would complicate or ration health care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Republicans pledge that as they reform the health care system, they will encourage health promotion and disease prevention.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Republicans pledge that as they reform the health care system, they will facilitate cooperation, not confrontation, among patients, providers, payers, and all stakeholders in the health care system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4d6706537180b11beba0cc59708234a008830a31857a1e4fd0a273a0619dea74"
+}

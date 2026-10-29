@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 280,
+      "generation_tps": 15.827212437903743,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1415,
+      "prompt_tps": 462.5803738489177,
+      "request_sha256": "e8b407ed43055f0428e7ffa50859cc2a7ea3550bc57333e25a0167637787d8b0",
+      "seconds": 20.760621791006997,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"America's leadership extends beyond economic prosperity and military might and is rooted in a commitment to advancing universal values.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Universal values include an individual's freedom to speak their mind, assemble without fear, have access to information, worship as they please, and choose their own leaders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Universal values include dignity, tolerance, and equality among all people, and the fair and equitable administration of justice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States was founded upon a belief in these universal values.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"People of every race, region, and religion around the globe have claimed these principles as their own.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe that nations that embrace these values for their citizens are ultimately more prosperous, peaceful, and friendly to the United States than those that do not.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 288,
+      "generation_tps": 16.03654334802451,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1863,
+      "prompt_tps": 462.3593311921847,
+      "request_sha256": "9252ab347e99cefce74d43a23a04570f5329997fe7530a5554027da4a0968429",
+      "seconds": 21.99942404194735,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America's leadership extends beyond economic prosperity and military might and is rooted in a commitment to advancing a core set of universal values.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Universal values include an individual's freedom to speak their mind, assemble without fear, have access to information, worship as they please, and choose their own leaders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Universal values include dignity, tolerance, and equality among all people, and the fair and equitable administration of justice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States was founded upon a belief in these values.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"People of every race, region, and religion around the globe have claimed these principles as their own.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe that nations that embrace these values for their citizens are ultimately more prosperous, peaceful, and friendly to the United States than those that do not.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e8b407ed43055f0428e7ffa50859cc2a7ea3550bc57333e25a0167637787d8b0"
+}

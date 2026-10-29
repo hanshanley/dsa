@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 355,
+      "generation_tps": 16.024564679361774,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1434,
+      "prompt_tps": 459.1131498614605,
+      "request_sha256": "90b65c46a614fa9323f4b844438bd1fbfeef13697e3cea79b17f7b18941501ed",
+      "seconds": 25.287203666986898,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President and the Democratic Party understand a special obligation to every soldier, sailor, airman, Marine, and Coast Guardsman who puts their life on the line for the nation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe troops should only be sent into harm's way when it is absolutely necessary.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party commit to ensuring troops have the equipment and support they need to complete their missions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party commit to taking care of troops, their families, and veterans when they return home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Eleven years of continuous military operations and repeated deployments to Iraq and Afghanistan have stretched U.S. forces and strained their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"U.S. troops will face fewer deployments going forward.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Fewer deployments will allow U.S. troops more time to train.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Fewer deployments will ensure U.S. troops are ready for the full range of missions they may face.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 375,
+      "generation_tps": 15.987347967853182,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1957,
+      "prompt_tps": 481.515501720347,
+      "request_sha256": "49f8ce8ce621e63ed1d78bc2f0f40946ee51dd33b14b62f59b53a22aa3eddfa3",
+      "seconds": 27.530319542158395,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President and the Democratic Party understand that they have a special obligation to every soldier, sailor, airman, Marine, and Coast Guardsman who puts their life on the line for the nation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe troops should only be sent into harm's way when it is absolutely necessary.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"When troops are sent into harm's way, the President and the Democratic Party commit to ensuring they have the equipment and the support that they need to get the job done.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party commit to taking care of troops, their families, and veterans when they come home.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Eleven years of continuous military operations and repeated deployments to Iraq and Afghanistan have stretched U.S. forces and strained their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Going forward, U.S. troops will face fewer deployments.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Fewer deployments will allow U.S. troops more time to train.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Fewer deployments will ensure that U.S. troops are ready for the full range of missions they may have to face.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "90b65c46a614fa9323f4b844438bd1fbfeef13697e3cea79b17f7b18941501ed"
+}

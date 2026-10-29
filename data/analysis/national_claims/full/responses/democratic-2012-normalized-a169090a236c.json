@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 258,
+      "generation_tps": 15.685899032650063,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1440,
+      "prompt_tps": 463.1783219402384,
+      "request_sha256": "a601067f8641db7e0bd38c821df50a919ce523be1daf215f1eafea4a65330452",
+      "seconds": 19.570044165942818,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Party seeks peace between Israelis and Palestinians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A just and lasting Israeli-Palestinian accord producing two states for two peoples would contribute to regional stability and help sustain Israel's identity as a Jewish and democratic state.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There will be no lasting peace unless Israel's security concerns are met.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama will continue to press Arab states to reach out to Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will continue to support Israel's peace treaties with Egypt and Jordan, which have been pillars of peace and stability in the region for many years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Any Palestinian partner must recognize Israel's right to exist, reject violence, and adhere to existing agreements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 265,
+      "generation_tps": 15.417402314441981,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1866,
+      "prompt_tps": 470.4044747361028,
+      "request_sha256": "094b6f906e6da97ff41b48e6a2d2a85b12fa2824f549fa4af6ef35ef55f30196",
+      "seconds": 21.168960582930595,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party seeks peace between Israelis and Palestinians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A just and lasting Israeli-Palestinian accord, producing two states for two peoples, would contribute to regional stability and help sustain Israel's identity as a Jewish and democratic state.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There will be no lasting peace unless Israel's security concerns are met.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama will continue to press Arab states to reach out to Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party will continue to support Israel's peace treaties with Egypt and Jordan, which have been pillars of peace and stability in the region for many years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Any Palestinian partner must recognize Israel's right to exist, reject violence, and adhere to existing agreements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a601067f8641db7e0bd38c821df50a919ce523be1daf215f1eafea4a65330452"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 329,
+      "generation_tps": 16.08450862692858,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1437,
+      "prompt_tps": 449.39255777863275,
+      "request_sha256": "67b4a08332628a903148527060c71f6991cfa92f88a12fcbc3233ba0e83c4e42",
+      "seconds": 23.662459542043507,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President banned torture without exception in his first week in office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe practices to advance interests must be in line with the Constitution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe practices to advance interests must preserve people's privacy and civil liberties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe practices to advance interests must withstand checks and balances.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is reforming military commissions to bring them in line with the rule of law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is substantially reducing the population at Guant\u00e1namo Bay without adding to it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States remains committed to working with all branches of government to close the prison at Guant\u00e1namo Bay.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States believes the prison at Guant\u00e1namo Bay is inconsistent with national security interests and values.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 399,
+      "generation_tps": 15.894933428104888,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1934,
+      "prompt_tps": 479.6511740675594,
+      "request_sha256": "2b473cff21a6ab2454c47c238ea4274573d14cdcd4fa056663a53e89edc9d721",
+      "seconds": 29.144467416917905,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President banned torture without exception in his first week in office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe that practices to advance interests may involve new actions and policies, but these practices must be in line with the Constitution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe that practices to advance interests must preserve people's privacy and civil liberties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party believe that practices to advance interests must withstand the checks and balances that have served the United States well.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is reforming military commissions to bring them in line with the rule of law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is substantially reducing the population at Guant\u00e1namo Bay without adding to it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States remains committed to working with all branches of government to close the prison at Guant\u00e1namo Bay altogether.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States believes the prison at Guant\u00e1namo Bay is inconsistent with national security interests and values.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must always seek to uphold values at home, not just when it is easy, but more importantly when it is hard.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "67b4a08332628a903148527060c71f6991cfa92f88a12fcbc3233ba0e83c4e42"
+}

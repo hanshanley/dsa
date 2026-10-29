@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 318,
+      "generation_tps": 15.94503988801127,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1496,
+      "prompt_tps": 455.32471778526923,
+      "request_sha256": "3f38b2522528327b55337869c6ac505c40f6a51a73ecfbe4969329cb076ef8a6",
+      "seconds": 23.23986441618763,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for a ecosocialist Green New Deal that prioritizes good union jobs for those most impacted by climate change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for an end to the systematic torture and murder of Black and Brown people at the hands of the police and ICE.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for health justice through Medicare for All.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The organization is building a mass movement by welcoming in new members and defending and rebuilding democracy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The organization has gained over 5000 new members in the last month.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Working people in Bolivia and Chile achieved victories through collective action.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"In Bolivia and Chile, victories came through months of protests and strikes before overturning a coup government and a fascist-era constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Organization is the weapon of the working class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 327,
+      "generation_tps": 15.871695767962649,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1982,
+      "prompt_tps": 487.7386803392547,
+      "request_sha256": "417d39ada2d0ecc4c16490c27896783f5b39a97787c7ce8f658b0d705ff19ca8",
+      "seconds": 24.67782566603273,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for a ecosocialist Green New Deal that prioritizes good union jobs for those most impacted by climate change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for an end to the systematic torture and murder of Black and Brown comrades at the hands of the police and ICE.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for health justice through Medicare for All.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The organization's task now is to continue building a mass movement by welcoming in new members and defending and rebuilding democracy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The organization has gained over 5000 new members in the last month.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Working people in Bolivia and Chile achieved victories when they fought.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"In Bolivia and Chile, victories came through months of protests and strikes before they could overturn a coup government and overturn a fascist-era constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Organization is the weapon of the working class.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3f38b2522528327b55337869c6ac505c40f6a51a73ecfbe4969329cb076ef8a6"
+}

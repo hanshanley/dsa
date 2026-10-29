@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 287,
+      "generation_tps": 15.842372187407976,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1499,
+      "prompt_tps": 466.35333780324277,
+      "request_sha256": "273674db8a0b6440a03ab49bb60797389423fbec5234bf1d25a9f66b97599cfa",
+      "seconds": 21.34336716705002,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats characterize themselves as the party of inclusion.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe diversity is a promise, not a problem.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats pledge to work together to move the country forward, even when they disagree.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe today's immigrants are tomorrow's teachers, doctors, lawyers, government leaders, soldiers, entrepreneurs, activists, and PTA members.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in protecting civil liberties and guaranteeing civil rights and voting rights, women's rights and workers' rights, LGBT rights, and rights for people with disabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe America is a great, unselfish, and compassionate country, as Robert Kennedy said.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats contrast themselves with Republicans, who nominated a presidential candidate who appeals to Americans' basest differences.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 296,
+      "generation_tps": 15.838953021529226,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1954,
+      "prompt_tps": 492.3336895775176,
+      "request_sha256": "6aa4f0b0ac31d720d5455ebd1653ca8fcda2ff1fda0815f9c4fcc2c159bf0f45",
+      "seconds": 22.67245425004512,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats characterize themselves as the party of inclusion.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe diversity is not a problem, but a promise.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats pledge to work together to move the country forward, even when they disagree.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe today's immigrants are tomorrow's teachers, doctors, lawyers, government leaders, soldiers, entrepreneurs, activists, and PTA members.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe in protecting civil liberties and guaranteeing civil rights and voting rights, women's rights and workers' rights, LGBT rights, and rights for people with disabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe America is a great, unselfish, and compassionate country, as Robert Kennedy said.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats contrast themselves with Republicans, who nominated a presidential candidate who seeks to appeal to Americans' basest differences, rather than their better natures.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "273674db8a0b6440a03ab49bb60797389423fbec5234bf1d25a9f66b97599cfa"
+}

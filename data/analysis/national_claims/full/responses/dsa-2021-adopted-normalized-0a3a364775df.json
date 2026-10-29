@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 321,
+      "generation_tps": 15.314229533543179,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1415,
+      "prompt_tps": 540.4171132474405,
+      "request_sha256": "9e396c37d3c8e3bcc491fedbd0331e442b4b52a6443f87a97d49512f21512e94",
+      "seconds": 23.58888320904225,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Times have changed for the labor movement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The labor movement has been on the defensive for decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Red scare panics resulted in the purge of socialists from unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Red scare panics resulted in the expulsion of left-wing unions from labor federations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The triumph of business unionism moved class conflict out of the workplace and into the legal system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unions adopted no-strike clauses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Union leadership cut back room deals and made concessions to bosses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capital has undertaken an organized political offensive to dismantle legal rights for unions and workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Productivity has risen exponentially while real wages and the material conditions of workers have declined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 307,
+      "generation_tps": 15.668017239012185,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1904,
+      "prompt_tps": 481.23452325801554,
+      "request_sha256": "289385a385c3b22007c5dac4364eb3f352000447a201ec305ad23ce6cfebfa02",
+      "seconds": 23.566627957858145,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Times have changed for the labor movement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The labor movement has been on the defensive for decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Red scare panics resulted in the purge of socialists from unions and the expulsion of left-wing unions from labor federations, forcibly separating socialists from the labor movement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The triumph of business unionism moved class conflict out of the workplace and into the legal system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unions adopted no-strike clauses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Union leadership cut back room deals and made concessions to bosses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capital has undertaken an organized political offensive systematically dismantling legal rights for unions and workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Productivity has risen exponentially while real wages and the material conditions of workers have declined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9e396c37d3c8e3bcc491fedbd0331e442b4b52a6443f87a97d49512f21512e94"
+}

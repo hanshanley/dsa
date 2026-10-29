@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 280,
+      "generation_tps": 16.064426266777833,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1446,
+      "prompt_tps": 475.86737170857344,
+      "request_sha256": "18e559ad5261f38980a69cc380d5895b1e219c8f0a8d028ec06e829fb921f2de",
+      "seconds": 20.4794330408331,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Constitution is based on the principles of individual liberty and limited government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Law enforcement should respect the civil and constitutional rights of the people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Intelligence agencies and law enforcement officials sometimes need to pursue terrorist threats at home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"No expansion of governmental powers should occur at the expense of constitutional liberties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Strong families and caring communities are the two most effective forces in reducing crime and other social ills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Strong families and caring communities reinforce constructive conduct and ethical standards by setting examples and providing safe havens from dangerous and destructive behaviors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Governmental policies and programs should be reviewed to ensure they do not undermine the traditional family.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 272,
+      "generation_tps": 15.90733606381893,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1894,
+      "prompt_tps": 497.52626915845235,
+      "request_sha256": "fb9c05b5fdd649e26bc5aefa72095048fc62c5c608c4cd5086a0ddbbb4850f4a",
+      "seconds": 20.916413457831368,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Because the Constitution is based on the principles of individual liberty and limited government, law enforcement must always ensure that law enforcement respects the civil and constitutional rights of the people.\",\n\"claim_types\":[\"factual_assertion\",\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Intelligence agencies and law enforcement officials sometimes need to pursue terrorist threats at home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"No expansion of governmental powers should occur at the expense of constitutional liberties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The two most effective forces in reducing crime and other social ills are strong families and caring communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Strong families and caring communities reinforce constructive conduct and ethical standards by setting examples and providing safe havens from dangerous and destructive behaviors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Governmental policies and programs should undergo a thoughtful review to ensure that they do not undermine the traditional family.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "18e559ad5261f38980a69cc380d5895b1e219c8f0a8d028ec06e829fb921f2de"
+}

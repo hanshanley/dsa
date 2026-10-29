@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 351,
+      "generation_tps": 16.010163975373118,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1494,
+      "prompt_tps": 450.09318760996433,
+      "request_sha256": "f4466d9e24e227fd9b85a96cba3f6d43b5d9bd04c5240174cae4086772e64124",
+      "seconds": 25.253401624970138,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Chronic diseases drive health care costs, consuming three of every four health care dollars.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for medical care can be reduced by fostering personal responsibility within a culture of wellness and increasing access to preventive services, including improved nutrition and breakthrough medications.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A national grassroots campaign against obesity, especially among children, is called for to reduce the incidence of diabetes, cancer, heart disease, and stroke.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Continuation of efforts to decrease tobacco use, especially among the young, is called for.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All Americans should have access to affordable, quality health care, including individuals struggling with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mental health care should be treated equally with physical health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Clear information about health care empowers patients to make better decisions about where to spend their health care dollars, fostering competition and lowering costs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Patients must have information to make sound decisions about their health care providers, hospitals, and insurance companies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 364,
+      "generation_tps": 15.984978014663415,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2013,
+      "prompt_tps": 478.4236925163462,
+      "request_sha256": "9468fb4eb28426627b41c434c09460dd3be1a813694fa21100a3b96ef38bf4a1",
+      "seconds": 26.989281584043056,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Chronic diseases drive health care costs, consuming three of every four health care dollars.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for medical care can be reduced by fostering personal responsibility within a culture of wellness and increasing access to preventive services, including improved nutrition and breakthrough medications that keep people healthy and out of the hospital.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"To reduce the incidence of diabetes, cancer, heart disease, and stroke, a national grassroots campaign against obesity, especially among children, is called for.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Continuation of efforts to decrease tobacco use, especially among the young, is called for.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All Americans should have access to affordable, quality health care, including individuals struggling with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mental health care should be treated equally with physical health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Clear information about health care empowers patients, letting consumers make better decisions about where to spend their health care dollars, thereby fostering competition and lowering costs.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Patients must have information to make sound decisions about their health care providers, hospitals, and insurance companies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f4466d9e24e227fd9b85a96cba3f6d43b5d9bd04c5240174cae4086772e64124"
+}

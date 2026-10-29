@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 167,
+      "generation_tps": 16.011915102733425,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1354,
+      "prompt_tps": 445.3360301263995,
+      "request_sha256": "8f7079c6ac847c8a70a1cf37ac2fd1c6da3f39a7c843333614f78c9ff1efcd5d",
+      "seconds": 13.481261000037193,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and the Democratic Party are committed to supporting family planning around the globe to help women care for their families, support their communities, and lead their countries to be healthier and more productive.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama overturned the \u201cglobal gag rule,\u201d a ban on federal funds to foreign family planning organizations that provided information about, counseling on, or offered abortions, in his first month in office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has supported lifesaving family planning health information and services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 167,
+      "generation_tps": 16.062649655121902,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1689,
+      "prompt_tps": 480.32086799968,
+      "request_sha256": "94ff81c6fd2d95e312a5711e14e7525b8dd3c8e7a1bfe545ce99bb52d466cde2",
+      "seconds": 13.923677083104849,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and the Democratic Party are committed to supporting family planning around the globe to help women care for their families, support their communities, and lead their countries to be healthier and more productive.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama overturned the \u201cglobal gag rule,\u201d a ban on federal funds to foreign family planning organizations that provided information about, counseling on, or offered abortions, in his first month in office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has supported lifesaving family planning health information and services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8f7079c6ac847c8a70a1cf37ac2fd1c6da3f39a7c843333614f78c9ff1efcd5d"
+}

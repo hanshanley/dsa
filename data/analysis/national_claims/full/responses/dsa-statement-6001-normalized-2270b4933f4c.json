@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 364,
+      "generation_tps": 15.928075084680613,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1297,
+      "prompt_tps": 437.67403249826486,
+      "request_sha256": "abcfc6defa0d08b9b7d673a16111a71c77b4e5f286cf50489d76cb52efebde5b",
+      "seconds": 25.82642325013876,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Congress demonstrated little regard for the needs of the working class this week.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans prioritized a vote on Amy Coney Barrett while millions waited for pandemic relief.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democratic party leadership failed to use procedural tools they had promised to delay the Barrett confirmation process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"SCOTUS decisions on mail-in ballot deadlines in Wisconsin, North Carolina, and Pennsylvania will favor a Republican agenda with Amy Coney Barrett's confirmation.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Amy Coney Barrett\u2019s positions on LGBTQ rights, abortion, health care and workers\u2019 rights will benefit donors and power brokers at the expense of the working class.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mass action can force the Supreme Court to make the right decisions, as demonstrated by the summer uprisings in response to police violence that paved the way for a favorable DACA decision.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans will likely rescind the DACA program in its entirety with a 6-3 court dynamic.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Organizing and fighting is necessary because Republicans will likely rescind the DACA program in its entirety with a 6-3 court dynamic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 16.005242021252055,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1829,
+      "prompt_tps": 472.0773851295846,
+      "request_sha256": "32cd4134b75abafe7ec49e73726c92161be21a00194828ed8d5860f09f1a709b",
+      "seconds": 26.314344041980803,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Congress demonstrated little regard for the needs of the working class this week.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans prioritized a rush vote on Amy Coney Barrett while millions were waiting on relief from the pandemic, and Democratic party leadership failed to use the many procedural tools they\u2019d promised to use to delay the process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With Amy Coney Barrett\u2019s confirmation, SCOTUS decisions on extending mail-in ballot deadlines in Wisconsin, North Carolina, and Pennsylvania will favor a Republican agenda.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Amy Coney Barrett\u2019s positions on LGBTQ rights, abortion, health care and workers\u2019 rights will benefit donors and power brokers at the expense of the working class.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mass action can force the Supreme Court to make the right decisions, as the mass uprisings this summer in response to police violence showed by paving the way for a favorable DACA decision.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"With a 6-3 court dynamic, Republicans will likely rescind the DACA program in its entirety.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Organizing and fighting is necessary because Republicans will likely rescind the DACA program in its entirety with a 6-3 court dynamic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "abcfc6defa0d08b9b7d673a16111a71c77b4e5f286cf50489d76cb52efebde5b"
+}

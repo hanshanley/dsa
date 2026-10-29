@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 205,
+      "generation_tps": 16.03435168216398,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1347,
+      "prompt_tps": 454.1074855182464,
+      "request_sha256": "e377236a49cb845c4bc8ba4a67fa0595e2bda12046b15a1efac20dea290c5d1e",
+      "seconds": 15.761902832891792,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The group has continued to work with traditional centers of influence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group has reached out to emerging economies to give them a greater voice and a greater stake in the global economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The G-20 has been made the premier forum for international economic coordination.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"21st century economic discussions must include countries like China, India, Indonesia, and Brazil.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nations of the G-20 brought the world economy back from the brink of another depression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 194,
+      "generation_tps": 15.82631812399217,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1720,
+      "prompt_tps": 478.1559526479009,
+      "request_sha256": "f642b2cb786173484aa801033b92d23623703a266a947a75ef28ab33edec39fa",
+      "seconds": 15.865734750172123,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The group continues to work with traditional centers of influence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group has reached out to emerging economies to give them a greater voice and a greater stake in the global economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The G-20 has been made the premier forum for international economic coordination in recognition of the fact that 21st century economic discussions must include countries like China, India, Indonesia, and Brazil.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nations of the G-20 brought the world economy back from the brink of another depression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e377236a49cb845c4bc8ba4a67fa0595e2bda12046b15a1efac20dea290c5d1e"
+}

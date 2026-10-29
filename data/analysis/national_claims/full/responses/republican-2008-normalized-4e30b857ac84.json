@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 384,
+      "generation_tps": 16.0387578535802,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1507,
+      "prompt_tps": 454.3765571681629,
+      "request_sha256": "57521379f90e36d71c38ec52bd00e9e1d3d14488078b5597132019a09b64366b",
+      "seconds": 27.26903216703795,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to not put government between patients and their health care providers.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Commitment to not put the system on a path that empowers Washington bureaucrats at the expense of patients.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]},{\"claim_text\":\"Commitment to not raise taxes instead of reducing health care costs.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]},{\"claim_text\":\"Commitment to not replace the current system with a government monopoly characterized by inefficiency, irrationality, and uncontrollable costs.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[4]},{\"claim_text\":\"Radical restructuring of health care would be unwise.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[5]},{\"claim_text\":\"Support for all Americans to be able to choose the best health care provider, hospital, and health coverage for their needs.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[5]},{\"claim_text\":\"Belief that real health care reform is about improving access to a health care provider, control over care, and the ability to afford that care.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[5]},{\"claim_text\":\"Commitment to continue to advocate for simplification of the system and the empowerment of patients.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[6]},{\"claim_text\":\"Offer of a detailed program that will improve the quality, cost, and coverage of health care throughout the nation, with a commitment to turn that plan into reality.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 385,
+      "generation_tps": 15.967673383057027,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2059,
+      "prompt_tps": 487.0106063744634,
+      "request_sha256": "7b750e60bde657956d789525cdc21e1b26aeb54cfd689ac31c1f277b6c6beb3d",
+      "seconds": 28.349364874884486,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to not put government between patients and their health care providers.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1]},{\"claim_text\":\"Commitment to not put the system on a path that empowers Washington bureaucrats at the expense of patients.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]},{\"claim_text\":\"Commitment to not raise taxes instead of reducing health care costs.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]},{\"claim_text\":\"Commitment to not replace the current system with a government monopoly characterized by staggering inefficiency, maddening irrationality, and uncontrollable costs.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[4]},{\"claim_text\":\"Evaluation that radical restructuring of health care would be unwise.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[5]},{\"claim_text\":\"Support for all Americans to be able to choose the best health care provider, hospital, and health coverage for their needs.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[5]},{\"claim_text\":\"Belief that real reform is about improving access to a health care provider, control over care, and the ability to afford that care.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[5]},{\"claim_text\":\"Commitment to continue to advocate for simplification of the system and the empowerment of patients.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[6]},{\"claim_text\":\"Offer of a detailed program that will improve the quality, cost, and coverage of health care throughout the nation, and commitment to turn that plan into reality.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "57521379f90e36d71c38ec52bd00e9e1d3d14488078b5597132019a09b64366b"
+}

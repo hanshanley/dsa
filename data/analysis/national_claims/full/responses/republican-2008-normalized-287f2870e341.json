@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 230,
+      "generation_tps": 16.06525889759915,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1447,
+      "prompt_tps": 454.64151038553314,
+      "request_sha256": "71ec4b3d9153345dd74efe75b244fa237cb41f877c66e623692a6b1f8cf7f209",
+      "seconds": 17.509723959024996,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Individuals with pre-existing conditions must be protected; Republicans will help these individuals by building on the experiences of innovative states rather than by creating a new unmanageable federal entitlement.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans strongly urge managed care organizations to use the practice patterns and medical treatment guidelines from the state in which the patient lives when making medical coverage decisions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans fully support parental rights to consent to medical treatment for their children including mental health treatment, drug treatment, alcohol treatment, and treatment involving pregnancy, contraceptives and abortion.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans will advance a variety of targeted reforms to improve the quality of care, lower costs, and help Americans \u2014 men, women, and children \u2014 live longer and healthier lives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 230,
+      "generation_tps": 16.007741482778954,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1845,
+      "prompt_tps": 479.96070820034265,
+      "request_sha256": "f212029ee17474ad9d92078100f2c61d1fc83ace0eb5992ac13b3bd29ca2b34a",
+      "seconds": 18.222211957909167,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Individuals with pre-existing conditions must be protected; Republicans will help these individuals by building on the experiences of innovative states rather than by creating a new unmanageable federal entitlement.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans strongly urge managed care organizations to use the practice patterns and medical treatment guidelines from the state in which the patient lives when making medical coverage decisions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans fully support parental rights to consent to medical treatment for their children including mental health treatment, drug treatment, alcohol treatment, and treatment involving pregnancy, contraceptives and abortion.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans will advance a variety of targeted reforms to improve the quality of care, lower costs, and help Americans \u2014 men, women, and children \u2014 live longer and healthier lives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "71ec4b3d9153345dd74efe75b244fa237cb41f877c66e623692a6b1f8cf7f209"
+}

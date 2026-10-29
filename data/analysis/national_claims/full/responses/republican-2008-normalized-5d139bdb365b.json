@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 340,
+      "generation_tps": 15.90224881439306,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1460,
+      "prompt_tps": 451.27956694065756,
+      "request_sha256": "fd16fe4e756a35fd235295198cea08acc88a736f39e81ba0150e26211eb76bf3",
+      "seconds": 24.626966833835468,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Patients deserve access to health care providers they trust who will personalize and coordinate their care to ensure they receive the right treatment with the right health care provider at the right time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Providers should be paid for keeping people well, not for the number of tests they run or procedures they perform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current reimbursement system needs restructuring from the view of the patient, not the accountant or Washington bureaucrat.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A state-regulated national market for health insurance means more competition, more choice, and lower costs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Families, fraternal societies, churches, community groups, and small employers should be able to purchase health insurance policies across state lines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The best practices and lowest prices should be available in every state.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"State legislators should carefully consider the cost of medical mandates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republican governors are demonstrating ways to provide affordable health care options.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 345,
+      "generation_tps": 15.939943651814676,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1968,
+      "prompt_tps": 489.8796020729232,
+      "request_sha256": "a76aa3b114c8868c359c2e828a69e455d7cf527f6caf9604faf6074f1366faba",
+      "seconds": 25.67202004091814,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Patients deserve access to health care providers they trust who will personalize and coordinate their care to ensure they receive the right treatment with the right health care provider at the right time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Providers should be paid for keeping people well, not for the number of tests they run or procedures they perform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current cookie-cutter system of reimbursement needs restructuring from the view of the patient, not the accountant or Washington bureaucrat.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A state-regulated national market for health insurance means more competition, more choice, and lower costs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Families, as well as fraternal societies, churches and community groups, and small employers should be able to purchase policies across state lines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The best practices and lowest prices should be available in every state.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"State legislators should carefully consider the cost of medical mandates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republican governors are demonstrating ways to provide affordable health care options.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fd16fe4e756a35fd235295198cea08acc88a736f39e81ba0150e26211eb76bf3"
+}

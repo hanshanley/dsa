@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 487,
+      "generation_tps": 15.984358566575573,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1346,
+      "prompt_tps": 441.0161753086421,
+      "request_sha256": "836298fa1101f91451f7cf74bc87eaaddb55e396e7c30bf833e6b642d16747f3",
+      "seconds": 33.52967379218899,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Hundreds of thousands marched, rallied, and demanded justice in the almost three months since the murder of George Floyd.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The media began to look away from weeks of protests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group affirms that the police cannot be reformed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group knows that justice will only come to communities through police abolition.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Attempts at police reform only widen the scope and lengthen the reach of policing.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group recognizes the police to exist as an institution that protects property and capital.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The police will never be on the side of the working class.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Efforts like training and oversight are particularly dangerous without an actual defunding of police budgets.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group supports calls to defund, demilitarize, disarm, and disband police departments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Funds used to criminalize and police should be reallocated to the most overpoliced communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Treyford Pellerin was murdered by Lafayette police with 11 gun shots to his back.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"An attempt at public lynching was made by officers with the Kenosha Police Department on Sunday afternoon.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group condemns the acts of barbarism and cowardice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 533,
+      "generation_tps": 15.93132191456714,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2001,
+      "prompt_tps": 478.2779031971559,
+      "request_sha256": "4c3a8ebd89f6ad70289047dcac975611f99cfed828774f0960b8fbc99672944f",
+      "seconds": 37.6499782090541,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Hundreds of thousands of people marched, rallied, and demanded justice in the almost three months since the murder of George Floyd.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The media began to look away from weeks of protests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group affirms that the police cannot be reformed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group knows that the only way communities will see justice is through abolition: if police departments no longer count on bloated budgets with which to terrorize and kill with impunity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Attempts at reform only widen the scope and lengthen the reach of policing.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group recognizes the police to exist as an institution that protects property and capital.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The police will never be on the side of the working class.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Efforts like training and oversight are particularly dangerous without an actual defunding of police budgets: these are ultimately individual solutions to a collective problem.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group supports calls to not only defund, but also to demilitarize, disarm, and disband police departments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The funds that are used to criminalize and police should be reallocated to communities that are the most overpoliced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Treyford Pellerin was murdered by Lafayette police with 11 gun shots to his back.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"An attempt at public lynching was made by officers with the Kenosha Police Department on Sunday afternoon.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group condemns these acts of barbarism and cowardice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "836298fa1101f91451f7cf74bc87eaaddb55e396e7c30bf833e6b642d16747f3"
+}

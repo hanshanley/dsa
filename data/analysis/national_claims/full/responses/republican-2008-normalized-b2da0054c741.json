@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 315,
+      "generation_tps": 16.083302692542503,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1453,
+      "prompt_tps": 475.1801882562056,
+      "request_sha256": "d6f9d7dd0ebea822cc0f60fdb3b75c3291b02853401adb21eeaa260bc147db70",
+      "seconds": 22.654075250029564,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Decentralized decision-making empowers individuals and groups to tackle social problems in partnership with government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bureaucracy is not a credible approach to helping those in need.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Faith-based organizations tend to have a greater degree of success than others in dealing with problems such as substance abuse and domestic violence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Groups should be able to rely upon people who share their faith.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hiring practices of those groups must not be subjected to government regulation and mandates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America is an idea as much as a political or geographic entity.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"America represents a set of ideals that speak to the highest aspirations of humanity.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Republican Party has boldly asserted ideals and now does so again to affirm the rights of the people under the rule of law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 338,
+      "generation_tps": 16.042974858007845,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1936,
+      "prompt_tps": 497.09627590328387,
+      "request_sha256": "bfed7c8c0a82f88002f80e877bdd36d4025f629c39a6ae0a513a8c17ecb69723",
+      "seconds": 24.97374637494795,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Decentralized decision-making in place of official controls empowers individuals and groups to tackle social problems in partnership with government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bureaucracy is no longer a credible approach to helping those in need.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Faith-based organizations tend to have a greater degree of success than others in dealing with problems such as substance abuse and domestic violence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To accomplish their missions, those groups must be able to rely upon people who share their faith.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hiring practices of those groups must not be subjected to government regulation and mandates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"From its founding, America has been an idea as much as a political or geographic entity.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"America represents a set of ideals that speak to the highest aspirations of humanity.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Republican Party has boldly asserted those ideals and now does so again to affirm the rights of the people under the rule of law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d6f9d7dd0ebea822cc0f60fdb3b75c3291b02853401adb21eeaa260bc147db70"
+}

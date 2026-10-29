@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 312,
+      "generation_tps": 15.742956209226495,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1466,
+      "prompt_tps": 466.8724573200887,
+      "request_sha256": "e2e9bb154fd9fc00fa0225765febcc66d08795302a33cbd427ffaa475accd1d4",
+      "seconds": 22.969594083959237,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for promoting free and fair trade.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Expanding trade with the Asia-Pacific region is critical to creating jobs and opportunities for the American people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is working with partners in the Asia-Pacific Economic Cooperation Forum to create a seamless regional economy, promote green growth, and coordinate regulatory reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is on track to finalize the Trans-Pacific Partnership, a high-standard agreement that will address new and emerging trade issues, lower barriers to the free flow of trade and investment, increase exports, and create more American jobs, alongside Australia, Brunei Darussalam, Chile, Malaysia, New Zealand, Peru, Singapore, and Vietnam.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Exploring opportunities to shape the multilateral trading system to reflect the role and responsibility of major emerging markets in the global economy is a critical part of the President's trade agenda.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States signed a free trade agreement with South Korea.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 312,
+      "generation_tps": 15.909857399614678,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1946,
+      "prompt_tps": 481.3611885498526,
+      "request_sha256": "ed9b590e1b35dcf43b61d736d49293dcd18af1662afd3df738a7e7b1701f90c6",
+      "seconds": 23.66458116704598,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for promoting free and fair trade.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Expanding trade with the Asia-Pacific region is critical to creating jobs and opportunities for the American people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is working with partners in the Asia-Pacific Economic Cooperation Forum to create a seamless regional economy, promote green growth, and coordinate regulatory reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States is on track to finalize the Trans-Pacific Partnership, a historic high-standard agreement that will address new and emerging trade issues, lower barriers to the free flow of trade and investment, increase exports, and create more American jobs, alongside Australia, Brunei Darussalam, Chile, Malaysia, New Zealand, Peru, Singapore, and Vietnam.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Exploring opportunities to shape the multilateral trading system to reflect the role and responsibility of major emerging markets in the global economy is a critical part of the President's trade agenda.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama signed a free trade agreement with South Korea.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e2e9bb154fd9fc00fa0225765febcc66d08795302a33cbd427ffaa475accd1d4"
+}

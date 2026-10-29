@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 229,
+      "generation_tps": 16.169186078841967,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1504,
+      "prompt_tps": 484.7563232955976,
+      "request_sha256": "6786985543c24e6fea83e6f723d986ba74385fd3ceb4a7ca56b70644be7ebeae",
+      "seconds": 17.276505209039897,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe the system is not working because of a rigged economy in which ordinary Americans work longer hours for lower wages, while most new income and wealth goes to the top one percent.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe supporting workers through higher wages, workplace protections, policies to balance work and family, and other investments will help rebuild the middle class for the 21st century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republican governors, legislatures, and their corporate allies have launched attacks on workers' fundamental rights to organize and bargain collectively.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Too many Americans are living paycheck to paycheck and hallmarks of a middle class life\u2014owning a home, having access to affordable and quality childcare, retiring with dignity\u2014feel out of reach.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 231,
+      "generation_tps": 15.621803002805228,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1901,
+      "prompt_tps": 489.08427859314435,
+      "request_sha256": "ca8ef3beaa0fc5e88ea6c5a14d30498e12141c240e33279eb8296ff48e9d812e",
+      "seconds": 18.68494470906444,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe the system is not working when there is a rigged economy in which ordinary Americans work longer hours for lower wages, while most new income and wealth goes to the top one percent.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe supporting workers through higher wages, workplace protections, policies to balance work and family, and other investments will help rebuild the middle class for the 21st century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republican governors, legislatures, and their corporate allies have launched attacks on workers' fundamental rights to organize and bargain collectively.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Too many Americans are living paycheck to paycheck, and hallmarks of a middle class life\u2014owning a home, having access to affordable and quality childcare, retiring with dignity\u2014feel out of reach.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6786985543c24e6fea83e6f723d986ba74385fd3ceb4a7ca56b70644be7ebeae"
+}
