@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 272,
+      "generation_tps": 16.511325520903807,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1407,
+      "prompt_tps": 470.2964898381507,
+      "request_sha256": "e8074e9602cb0f928c73b872d031212c391a5a189408ef44085eab23fd52b3df",
+      "seconds": 19.477955375099555,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Mexico and Canada have been partners with the United States in the fight against terrorism and the war on drugs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Mexican people deserve assistance from the United States as they resist drug cartels.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rich cultural and religious heritage shared between the Mexican people and many United States citizens should foster greater understanding and cooperation between the two countries.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States intends to reverse the current Administration's blocking of the Keystone XL Pipeline to advance North America's energy independence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Keystone XL Pipeline project has become a symbol in the contest between the public's desire for economic development and the government's hostility to growth.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States stands with the people regarding the Keystone XL Pipeline project.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 286,
+      "generation_tps": 16.35956356845025,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1847,
+      "prompt_tps": 472.64869301464586,
+      "request_sha256": "a14d2d14483d9d0247cb7787ba1bdf1b6bbcf7074255f9f6359747ad594ccd73",
+      "seconds": 21.400199790950865,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Mexico and Canada have been partners with the United States in the fight against terrorism and the war on drugs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Mexican people deserve assistance from the United States as they bravely resist the drug cartels that traffic in death on both sides of the border.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The rich cultural and religious heritage shared by many millions of United States citizens and the Mexican people should foster greater understanding and cooperation between the two countries.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States intends to reverse the current Administration's blocking of the Keystone XL Pipeline to advance North America's energy independence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Keystone XL Pipeline project has become a symbol in the contest between the public's desire for economic development and the government's hostility to growth.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States stands with the people regarding the Keystone XL Pipeline project.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e8074e9602cb0f928c73b872d031212c391a5a189408ef44085eab23fd52b3df"
+}

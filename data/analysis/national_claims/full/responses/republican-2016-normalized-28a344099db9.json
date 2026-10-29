@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 366,
+      "generation_tps": 14.891571886471237,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1534,
+      "prompt_tps": 400.69620751708896,
+      "request_sha256": "325dbdf9d50967cb82bd0952a3ac49d20f358e64fdfab25570eb9a84bf48a694",
+      "seconds": 28.418973332969472,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States and its African allies will become stronger through investment, trade, and promotion of democratic and free market principles.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Congress extended the African Growth and Opportunity Act to 2025.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President George W. Bush's health initiatives\u2014AIDS relief under PEPFAR and the Global Fund to Fight AIDS, Tuberculosis, and Malaria\u2014continue to save millions of lives.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Peace Corps volunteers and U.S. Seabees teach and build in villages demonstrating the United States' idealism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States stands in solidarity with African countries under assault by Boko Haram, al-Shabaab, and similar groups.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Boko Haram, al-Shabaab, and similar groups' terror falls on both Muslims and Christians and anyone who will not submit to their ideology.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States urges African governments to recognize the threat posed by radical Islam.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States supports closer cooperation in military and economic matters with those on the front lines of civilization's battle against radical Islam.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 390,
+      "generation_tps": 14.538887983827022,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2068,
+      "prompt_tps": 461.6814661606655,
+      "request_sha256": "e4bb0187df2b0aad239607b213c02e5943cda685904442c0df783790d3b41b42",
+      "seconds": 31.32389891706407,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Both the United States and its many African allies will become stronger through investment, trade, and promotion of the democratic and free market principles that have brought prosperity around the world.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Congress extended the African Growth and Opportunity Act to 2025.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President George W. Bush's health initiatives\u2014AIDS relief under PEPFAR and the Global Fund to Fight AIDS, Tuberculosis, and Malaria\u2014continue to save millions of lives.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Peace Corps volunteers and U.S. Seabees teach and build in villages that know firsthand the United States' idealism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States stands in solidarity with those African countries now under assault by Boko Haram, al-Shabaab, and others like them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Boko Haram, al-Shabaab, and others like them's terror falls on both Muslims and Christians, on anyone who will not submit to their savage ideology.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States urges governments throughout the continent to recognize this threat to their own people.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States supports closer cooperation in both military and economic matters with those on the front lines of civilization's battle against the forces of evil.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "325dbdf9d50967cb82bd0952a3ac49d20f358e64fdfab25570eb9a84bf48a694"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 257,
+      "generation_tps": 16.42702081042075,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1427,
+      "prompt_tps": 491.96495310817596,
+      "request_sha256": "2d082a20d17923221fb805cc03d9b9f90292fd194d2dc889d2937c6f6d646e43",
+      "seconds": 18.557553166989237,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has economic, military, and cultural ties to all countries of the oceanic rim and treaty alliances with Japan, South Korea, Australia, the Philippines, and Thailand.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States looks toward the establishment of human rights for the people of North Korea.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States urges the government of China to recognize the inevitability of change in North Korea's government and to hasten positive change on the Korean peninsula for everyone's safety against nuclear disaster.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will continue to demand the complete, verifiable, and irreversible dismantlement of North Korea's nuclear weapons program with full accounting of its proliferation activities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States pledges to counter any threats from the North Korean regime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 259,
+      "generation_tps": 16.283683264569515,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1852,
+      "prompt_tps": 480.63082020497274,
+      "request_sha256": "75efc785380e499a99b59f7cf20ade8594a8d348cab0ace57f4ed32a2bf1b150",
+      "seconds": 19.770996541017666,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has economic, military, and cultural ties to all countries of the oceanic rim and treaty alliances with Japan, South Korea, Australia, the Philippines, and Thailand.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States looks toward the establishment of human rights for the people of North Korea.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States urges the government of China to recognize the inevitability of change in the Kim family's slave state and to hasten positive change on the Korean peninsula for everyone's safety against nuclear disaster.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will continue to demand the complete, verifiable, and irreversible dismantlement of North Korea's nuclear weapons program with full accounting of its proliferation activities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States pledges to counter any threats from the North Korean regime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2d082a20d17923221fb805cc03d9b9f90292fd194d2dc889d2937c6f6d646e43"
+}

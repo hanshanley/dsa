@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 246,
+      "generation_tps": 16.924418043149526,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1403,
+      "prompt_tps": 501.6172433342463,
+      "request_sha256": "5f3c9a40f2e63c43967aaa169021aad3616a8db651d2243848be506143812b03",
+      "seconds": 17.343328417045996,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The modern state of Israel is a country born from the aspiration for freedom and stands out among nations as a beacon of democracy and humanity.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel is the only country in the Middle East where freedom of speech and freedom of religion are found.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Israel is an expression of Americanism.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is the responsibility of the U.S. government to advance policies that reflect Americans' strong desire for a relationship with no daylight between America and Israel.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Jerusalem is the eternal and indivisible capital of the Jewish state.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recommendation to move the American embassy to Jerusalem in fulfillment of U.S. law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 284,
+      "generation_tps": 16.791935797662955,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1817,
+      "prompt_tps": 511.3403932674347,
+      "request_sha256": "e95f8ecff08dde088e289b54d21727596cc164ae961d29525aab271d20ac1378",
+      "seconds": 20.477081290911883,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Like the United States of America, the modern state of Israel is a country born from the aspiration for freedom and stands out among the nations as a beacon of democracy and humanity.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel is the only country in the Middle East where freedom of speech and freedom of religion are found.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Israel is an expression of Americanism.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is the responsibility of the U.S. government to advance policies that reflect Americans' strong desire for a relationship with no daylight between America and Israel.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Jerusalem is the eternal and indivisible capital of the Jewish state.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recommendation to move the American embassy to Jerusalem in fulfillment of U.S. law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel shares American essential values.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5f3c9a40f2e63c43967aaa169021aad3616a8db651d2243848be506143812b03"
+}

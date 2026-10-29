@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 510,
+      "generation_tps": 16.896240935662238,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1501,
+      "prompt_tps": 493.4175315143304,
+      "request_sha256": "2599227add920583da08e16791f3e5e0ae035e16c6d6a566ea077cbde1ce60d6",
+      "seconds": 33.23687974992208,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"America is committed to Israel's security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. will ensure Israel maintains a qualitative military edge over any and all adversaries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. supports Israel's right and obligation to defend itself against terror attacks upon its people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. supports Israel's right and obligation to defend itself against alternative forms of warfare being waged legally, economically, culturally, and otherwise.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. rejects the notion that Israel is an occupier.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Boycott, Divestment, and Sanctions Movement (BDS) is anti-Semitic in nature and seeks to destroy Israel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. calls for effective legislation to thwart actions intended to limit commercial relations with Israel, or persons or entities doing business in Israel or in Israeli-controlled territories, in a discriminatory manner.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. seeks to assist in the establishment of comprehensive and lasting peace in the Middle East, to be negotiated among those living in the region.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. opposes any measures intended to impose an agreement or to dictate borders or other terms in the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. calls for the immediate termination of all U.S. funding of any entity that attempts to impose an agreement or dictate borders or other terms in the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. stands with Israel now and always.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 495,
+      "generation_tps": 16.77087776715743,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2179,
+      "prompt_tps": 525.5107398051583,
+      "request_sha256": "457df7ee3419e91659192cc57b9ada1e1cee67b1e1625afbbe4f073a97a03a62",
+      "seconds": 33.67283504200168,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America is committed to Israel's security and will ensure that Israel maintains a qualitative military edge over any and all adversaries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. supports Israel's right and obligation to defend itself against terror attacks upon its people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. supports Israel's right and obligation to defend itself against alternative forms of warfare being waged upon it legally, economically, culturally, and otherwise.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. rejects the false notion that Israel is an occupier.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Boycott, Divestment, and Sanctions Movement (BDS) is anti-Semitic in nature and seeks to destroy Israel.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. calls for effective legislation to thwart actions that are intended to limit commercial relations with Israel, or persons or entities doing business in Israel or in Israeli-controlled territories, in a discriminatory manner.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. seeks to assist in the establishment of comprehensive and lasting peace in the Middle East, to be negotiated among those living in the region.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. opposes any measures intended to impose an agreement or to dictate borders or other terms in the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. calls for the immediate termination of all U.S. funding of any entity that attempts to impose an agreement or dictate borders or other terms in the Middle East.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. stands with Israel now and always.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2599227add920583da08e16791f3e5e0ae035e16c6d6a566ea077cbde1ce60d6"
+}

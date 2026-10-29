@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 247,
+      "generation_tps": 16.301849489908726,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1401,
+      "prompt_tps": 487.0783434894158,
+      "request_sha256": "449a71e17d3362c4b924a27f81d8b46a80b95678873286182e2b5e5fec4956ba",
+      "seconds": 18.04095120797865,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the Kurdish people continues because of their bravery and cooperation with U.S. forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many countries in the region have given, and continue to give, substantial assistance to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Countries in the region understand that the U.S. struggle against terrorism is not an ethnic or religious fight.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Countries in the region consider violent extremists to be abusers of their faith, not its champions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. government, together with its global partners, should mobilize its political, economic, and military assets to support the creation of a safe haven in northern Iraq to protect ethnic and religious minorities facing genocide at the hands of ISIS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 256,
+      "generation_tps": 16.55487812776819,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1816,
+      "prompt_tps": 515.0672230573601,
+      "request_sha256": "575966d2b2675a8f6fb0d615dd3aa15e6c6e00606d48f96b24bd69d6359bfb42",
+      "seconds": 19.000532625010237,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the Kurdish people continues because of their bravery and cooperation with U.S. forces, and their autonomy merits respect.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many countries in the region have given, and continue to give, substantial assistance to the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Countries in the region understand that the U.S. struggle against terrorism is not an ethnic or religious fight.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Countries in the region consider violent extremists to be abusers of their faith, not its champions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. government, together with its global partners, should mobilize its political, economic, and military assets to support the creation of a safe haven in northern Iraq to protect those ethnic and religious minorities continuing to face genocide at the hands of ISIS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "449a71e17d3362c4b924a27f81d8b46a80b95678873286182e2b5e5fec4956ba"
+}

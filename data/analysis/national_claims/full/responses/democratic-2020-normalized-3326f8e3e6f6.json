@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 478,
+      "generation_tps": 16.366886169575714,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1480,
+      "prompt_tps": 472.91261840021133,
+      "request_sha256": "6f6ed43af7b9329f1f72f6f0aa22658828a08c617e3ac10bdb5484ee936c3613",
+      "seconds": 32.34595674998127,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Commitment to reinvigorate commitment to robust engagement with regional multilateral institutions like the Association of Southeast Asian Nations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Engagement with the Association of Southeast Asian Nations will help promote the rule of law.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Engagement with the Association of Southeast Asian Nations will help promote sustainable, inclusive economic growth on both sides of the Pacific.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to continue to invest in the strategic partnership with India.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"India is the world's largest democracy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"India is a nation of great diversity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"India is a growing Asia-Pacific power.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Trump Administration put the transatlantic community of free and democratic societies in grave danger.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump either does not know or has forgotten who America's friends are.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump sees Europe as a foe, not a friend, of the United States.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump sees Vladimir Putin's Russia as a strategic partner, not a strategic rival.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump sees anti-European Union, far-right nationalists as political allies, not destructive antagonists.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States and Europe have strived to build a transatlantic community of free and democratic societies in the 30 years since the fall of the Berlin wall.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 432,
+      "generation_tps": 15.211820730518346,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2126,
+      "prompt_tps": 492.3314057333068,
+      "request_sha256": "2f24cfca9bafae920dc6853dae79453840cee98434eb05ee21a71617dd9615c9",
+      "seconds": 32.731337083969265,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to reinvigorate commitment to robust engagement with regional multilateral institutions like the Association of Southeast Asian Nations, which will help promote the rule of law and sustainable, inclusive economic growth on both sides of the Pacific.\", \"claim_types\":[\"policy_position\",\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to continue to invest in the strategic partnership with India.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"India is the world's largest democracy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"India is a nation of great diversity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"India is a growing Asia-Pacific power.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Trump Administration put the transatlantic community of free and democratic societies in grave danger.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump either does not know or has forgotten who America's friends are.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump sees Europe as a foe, not a friend, of the United States.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump sees Vladimir Putin's Russia as a strategic partner, not a strategic rival.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump sees anti-European Union, far-right nationalists as political allies, not destructive antagonists.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the 30 years since the fall of the Berlin wall, the United States and Europe have strived to build a transatlantic community of free and democratic societies.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6f6ed43af7b9329f1f72f6f0aa22658828a08c617e3ac10bdb5484ee936c3613"
+}

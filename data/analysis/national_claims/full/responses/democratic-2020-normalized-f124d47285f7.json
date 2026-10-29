@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 251,
+      "generation_tps": 16.51872436141401,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1387,
+      "prompt_tps": 492.0745953101577,
+      "request_sha256": "9494e0719a8d936cf673fcd9d2c190a1960afd9fafa19c103114367e0a513d4b",
+      "seconds": 18.02463054191321,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will revitalize U.S. partnerships across Africa to unleash potential for growth and innovation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Africa is home to some of the world's fastest growing economies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Africa's population will roughly double to more than two billion by the middle of this century.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nigeria is projected to have the third largest population in the world.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"American diplomacy can play a critical role in helping ensure that the region's vulnerabilities to climate change and pandemic disease do not overwhelm its opportunities.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Regional conflict, illicit financial flows, poor governance, and food, water, and health insecurity are persistent challenges in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 286,
+      "generation_tps": 16.544243642669493,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1806,
+      "prompt_tps": 512.4338810915574,
+      "request_sha256": "554e14ce4d22f3ae66111497b958ecc88adb2da2b2cd01d9efa16db9478139fb",
+      "seconds": 20.82338274992071,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will revitalize U.S. partnerships across Africa to unleash enormous potential for growth and innovation and address together challenges and stresses across the continent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Africa is home to some of the world's fastest growing economies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Africa's population will roughly double to more than two billion by the middle of this century.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Nigeria is projected to have the third largest population in the world.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"American diplomacy can play a critical role in helping ensure that the region's vulnerabilities to climate change and pandemic disease\u2014and persistent challenges of regional conflict, illicit financial flows, poor governance, and food, water, and health insecurity\u2014do not overwhelm its enormous opportunities.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Regional conflict, illicit financial flows, poor governance, and food, water, and health insecurity are persistent challenges in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9494e0719a8d936cf673fcd9d2c190a1960afd9fafa19c103114367e0a513d4b"
+}
