@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 109,
+      "generation_tps": 16.24986053904102,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1974,
+      "prompt_tps": 474.127885266311,
+      "request_sha256": "e717d47480d04a155f7a67e49fe01af6d0d1290652e0e00b07bc06dcb98ba645",
+      "seconds": 10.886931082932279,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A Republican administration will champion an open and free internet based on principles of free expression and universal values.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican administration will pursue policies to empower citizens and U.S. companies operating in authoritarian countries to circumvent internet firewalls and gain accurate news and information online.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 109,
+      "generation_tps": 16.262993895715923,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2251,
+      "prompt_tps": 511.9073658025159,
+      "request_sha256": "169867d541dde5ce730ca3db6968c4594352436d7f7da70f0af42107d5c758ed",
+      "seconds": 11.11025295802392,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A Republican administration will champion an open and free internet based on principles of free expression and universal values.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican administration will pursue policies to empower citizens and U.S. companies operating in authoritarian countries to circumvent internet firewalls and gain accurate news and information online.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e717d47480d04a155f7a67e49fe01af6d0d1290652e0e00b07bc06dcb98ba645"
+}

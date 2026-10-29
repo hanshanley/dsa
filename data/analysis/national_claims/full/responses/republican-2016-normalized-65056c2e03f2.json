@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 176,
+      "generation_tps": 14.502141831519834,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1391,
+      "prompt_tps": 435.75969585331774,
+      "request_sha256": "f3ad582275e1b0bc35abe6622f8df01854ff7c3bf9cdf4a67101dea46ed970a0",
+      "seconds": 15.348701125010848,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has participated in a number of international organizations since the end of World War II, including the United Nations and NATO.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"International organizations can serve the cause of peace and prosperity, but sometimes do not.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States must always reserve the right to go its own way while acting through international organizations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States has long supported its international broadcasting to Eastern Europe, the Middle East, and Asia.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 177,
+      "generation_tps": 14.747044600229275,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1735,
+      "prompt_tps": 436.5439311468567,
+      "request_sha256": "928d6f00eb8816f268c65f1e49b9c1ab2eb977151bbc0abbac4bb90b18ab378b",
+      "seconds": 15.995360624976456,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has participated in a number of international organizations since the end of World War II, including the United Nations and NATO.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"International organizations can serve the cause of peace and prosperity, but sometimes do not.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"While acting through international organizations, the United States must always reserve the right to go its own way.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States has long supported its international broadcasting to Eastern Europe, the Middle East, and Asia.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f3ad582275e1b0bc35abe6622f8df01854ff7c3bf9cdf4a67101dea46ed970a0"
+}

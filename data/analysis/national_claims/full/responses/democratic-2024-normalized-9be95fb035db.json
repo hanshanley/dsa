@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 370,
+      "generation_tps": 15.90847641418904,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1602,
+      "prompt_tps": 446.47525967203734,
+      "request_sha256": "a77300850c594ed5588d792209b5fada6866ffa19dab593ef5edde6c3bd0e32a",
+      "seconds": 26.857545416802168,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Wages are rising faster than prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Inflation today is down nearly two-thirds from its peak.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep fighting to prevent supply chain shocks and corporate greed that have raised prices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep investing in American workers, American jobs, and American families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American infrastructure was the envy of the world for generations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The United States fell to thirteenth in infrastructure rankings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Trump Administration declared it \\\"Infrastructure Week\\\" every week for four years and never built anything.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Under President Biden, the United States is rebuilding roads, bridges, ports, airports, water systems, electric grids, and broadband.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Rebuilding infrastructure will pave the way for a great American \\\"Infrastructure Decade\\\".\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Rebuilding infrastructure will create hundreds of thousands of good-paying union jobs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 433,
+      "generation_tps": 16.062888843726167,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2140,
+      "prompt_tps": 509.37488309426146,
+      "request_sha256": "cad455e5e5f3a3629c233cef213a4f6356ce27fb1f517522e51cd8db28032a2b",
+      "seconds": 31.169120208127424,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Wages are rising faster than prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Inflation today is down nearly two-thirds from its peak.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep fighting to prevent the kind of supply chain shocks and corporate greed that have done so much to raise prices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep investing in American workers, American jobs, and American families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"For generations, American infrastructure was the envy of the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The United States fell to thirteenth in infrastructure rankings.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Trump Administration declared it \\\"Infrastructure Week\\\" every week for four years and never built a thing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Under President Biden, the United States is rebuilding roads, bridges, ports, airports, water systems, electric grids, and broadband.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Rebuilding infrastructure will pave the way for a great American \\\"Infrastructure Decade\\\".\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Rebuilding infrastructure will create hundreds of thousands of good-paying union jobs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Too many families still feel the pain of inflation at the grocery store or around the kitchen table when they sit down to pay their bills, but progress is being made.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a77300850c594ed5588d792209b5fada6866ffa19dab593ef5edde6c3bd0e32a"
+}

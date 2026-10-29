@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 325,
+      "generation_tps": 15.913810053336757,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1532,
+      "prompt_tps": 483.3011551528073,
+      "request_sha256": "01e81a9bfbcaaf03a88af0de207ebacb9c1e0cb1380d7a52582974f4980136d1",
+      "seconds": 23.60410795803182,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Internet firewall circumvention and anti-censorship technology must become a national priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Authoritarian governments such as China, Cuba, and Iran restrict free press and isolate their people limiting political, cultural, and religious freedom.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Leaders of authoritarian governments argue that governments have the same legal right to control internet access as they do to control migrant access.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A focus on internet freedom is a cost-effective means of peacefully advancing fundamental freedoms in closed and authoritarian societies.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Censorship constitutes a trade barrier for U.S. companies operating in societies like China with advanced firewall protection policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican administration will champion an open and free internet based on principles of free expression and universal values.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican administration will pursue policies to empower citizens and U.S. companies operating in authoritarian countries to circumvent internet firewalls and gain accurate news and information online.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 315,
+      "generation_tps": 16.02982174453675,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2025,
+      "prompt_tps": 478.8940881089223,
+      "request_sha256": "6b4f2bbda7a5a69ead71ddf7383a60501c5ca4ae366107b88a075bf72573b22d",
+      "seconds": 23.893441874999553,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Internet firewall circumvention and anti-censorship technology must become a national priority in light of the way authoritarian governments such as China, Cuba, and Iran restrict free press and isolate their people limiting political, cultural, and religious freedom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Leaders of authoritarian governments such as China, Cuba, and Iran argue that governments have the same legal right to control internet access as they do to control migrant access.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A focus on internet freedom is a cost-effective means of peacefully advancing fundamental freedoms in closed and authoritarian societies.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Censorship constitutes a trade barrier for U.S. companies operating in societies like China with advanced firewall protection policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican administration will champion an open and free internet based on principles of free expression and universal values.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican administration will pursue policies to empower citizens and U.S. companies operating in authoritarian countries to circumvent internet firewalls and gain accurate news and information online.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "01e81a9bfbcaaf03a88af0de207ebacb9c1e0cb1380d7a52582974f4980136d1"
+}

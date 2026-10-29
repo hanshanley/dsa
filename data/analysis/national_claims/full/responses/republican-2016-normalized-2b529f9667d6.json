@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 311,
+      "generation_tps": 15.7240730225481,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1442,
+      "prompt_tps": 479.29173173982525,
+      "request_sha256": "a16e383c9ab2f7fbb99ddcd3e3ff960ba6e490934afb5ad909e918307bb1a5f1",
+      "seconds": 22.798588250065222,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A single nuclear weapon detonated at high altitude over the United States would collapse the electrical grid and other critical infrastructures and endanger the lives of millions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With North Korea in possession of nuclear missiles and Iran close to having them, an electromagnetic pulse is no longer a theoretical concern \u2014 it is a real threat.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"China and Russia include sabotage as part of their warfare planning.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hundreds of electrical utilities in the United States have not acted to protect themselves from an electromagnetic pulse.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electrical utilities cannot be expected to voluntarily protect themselves from an electromagnetic pulse since homeland security is a government responsibility.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President, the Congress, the Department of Homeland Security, the Department of Defense, the States, the utilities, and the private sector should work together on an urgent basis to enact Republican legislation, pending in both chambers, to protect the national grid and encourage states to take the initiative to protect their own grids expeditiously.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 306,
+      "generation_tps": 15.798329504501384,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1921,
+      "prompt_tps": 471.39303549607894,
+      "request_sha256": "d03e05a15e6acdd88701049528518723fe543bfc5ff4be2560d5664a905b6874",
+      "seconds": 23.457026541931555,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A single nuclear weapon detonated at high altitude over this country would collapse the electrical grid and other critical infrastructures and endanger the lives of millions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With North Korea in possession of nuclear missiles and Iran close to having them, an electromagnetic pulse is no longer a theoretical concern \u2014 it is a real threat.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"China and Russia include sabotage as part of their warfare planning.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Hundreds of electrical utilities in the United States have not acted to protect themselves from EMP.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electrical utilities cannot be expected to voluntarily protect themselves from EMP since homeland security is a government responsibility.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President, the Congress, the Department of Homeland Security, the Department of Defense, the States, the utilities, and the private sector should work together on an urgent basis to enact Republican legislation, pending in both chambers, to protect the national grid and encourage states to take the initiative to protect their own grids expeditiously.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a16e383c9ab2f7fbb99ddcd3e3ff960ba6e490934afb5ad909e918307bb1a5f1"
+}

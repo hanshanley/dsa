@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 241,
+      "generation_tps": 14.548289019781217,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1421,
+      "prompt_tps": 443.8594227951257,
+      "request_sha256": "d7c554516a21143f687442455919886a7a7d92047ca3993ceabad1ee6cb6e951",
+      "seconds": 19.7830618750304,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The United States needs a radical rethinking of its human rights diplomacy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican administration will adopt a \\\"whole of government\\\" approach to protect fundamental freedoms globally.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pressing human rights and rule of law issues will be integrated at every appropriate level of U.S. bilateral relationships and strategic decision-making under a Republican administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The health of the U.S. economy and environment, the safety of U.S. food and drug supplies, the security of U.S. investments and personal information in cyberspace, and the stability and security of the oceans will increasingly depend on allowing the free flow of news and information and developing an independent judiciary and civil society in countries with repressive governments such as China, Russia, and many nations in the Middle East and Africa.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 220,
+      "generation_tps": 15.688143104552358,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1830,
+      "prompt_tps": 454.5153774962178,
+      "request_sha256": "ccb5ecbd85f37d50fe17af4cbf175732495df46a30875f3336b227eaf24a14d0",
+      "seconds": 18.065729750087485,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States needs a radical rethinking of its human rights diplomacy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican administration will adopt a \\\"whole of government\\\" approach to protect fundamental freedoms globally, where pressing human rights and rule of law issues are integrated at every appropriate level of U.S. bilateral relationships and strategic decision-making.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The health of the U.S. economy and environment, the safety of U.S. food and drug supplies, the security of U.S. investments and personal information in cyberspace, and the stability and security of the oceans will increasingly depend on allowing the free flow of news and information and developing an independent judiciary and civil society in countries with repressive governments such as China, Russia, and many nations in the Middle East and Africa.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d7c554516a21143f687442455919886a7a7d92047ca3993ceabad1ee6cb6e951"
+}

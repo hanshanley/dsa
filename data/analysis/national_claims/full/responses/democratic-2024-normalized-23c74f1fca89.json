@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 424,
+      "generation_tps": 15.539088191224039,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1558,
+      "prompt_tps": 446.8026171599033,
+      "request_sha256": "014f55fbe559527057f7fdce65fd71ffbeaea56fae70f720b621adb9bc0ebb01",
+      "seconds": 30.785859333816916,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are fighting to lower costs for working families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump is rigging the economy for his friends and billionaire donors at Mar-a-Lago.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump doubled down on trickle-down policies by cutting investment in infrastructure and education.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump rewarded big corporations that ship jobs and profits overseas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump vowed to bring new factories to communities across America but left only broken promises.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are delivering on President Biden's pledge to rebuild the economy from the middle out and bottom up, not the top down.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are investing in America's infrastructure, industry, people, and future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump left office with historic budget deficits and the worst jobs record since Herbert Hoover.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since President Biden took office, the deficit has fallen by over $1 trillion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since President Biden took office, the country has the best jobs record since John F. Kennedy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The country is powering the strongest economic recovery in the world.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 437,
+      "generation_tps": 15.66847907694117,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2150,
+      "prompt_tps": 459.7145912460314,
+      "request_sha256": "eeeb8f4961950ee51e7b74d7d53cac9d281f3d447bfc1d7bbedd5c300687b737",
+      "seconds": 32.5787661250215,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are fighting to lower costs for working families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump is rigging the economy for his friends and billionaire donors at Mar-a-Lago.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"As president, Donald Trump doubled down on trickle-down policies by cutting investment in infrastructure and education.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As president, Donald Trump rewarded big corporations that ship jobs and profits overseas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump vowed to bring new factories to communities across America, but left nothing behind but a string of broken promises.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are delivering on President Biden's pledge to rebuild the economy from the middle out and bottom up, not the top down.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are investing in America \u2013 in its infrastructure, industry, people, and future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump left office with historic budget deficits and the worst jobs record since Herbert Hoover.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since President Biden took office, the deficit has fallen by over $1 trillion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since President Biden took office, the country has the best jobs record since John F. Kennedy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The country is powering the strongest economic recovery in the world.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "014f55fbe559527057f7fdce65fd71ffbeaea56fae70f720b621adb9bc0ebb01"
+}

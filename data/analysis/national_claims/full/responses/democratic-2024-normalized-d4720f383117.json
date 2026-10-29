@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 414,
+      "generation_tps": 15.369763586608114,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1344,
+      "prompt_tps": 451.8230315954534,
+      "request_sha256": "9c607deb3065e9d45cfc9f2579e86c8d0f71a125ef918ed122e75ad10607b442",
+      "seconds": 29.922592249931768,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic National Committee acknowledges that it gathers on lands stewarded for centuries by ancestors and descendants of Tribal Nations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic National Committee recognizes that the United States was built on Indigenous homelands.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic National Committee pays respects to millions of Indigenous people throughout history who protected lands, waters, and animals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic National Committee recognizes and honors the traditional homelands of the Anishinaabe, also known as the Council of the Three Fires: the Ojibwe, Odawa, and Potawatomi Nations, while meeting in Chicago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Democratic National Committee acknowledges the many other tribes who consider the Chicago area their traditional homeland, including the Myaamia, Ho-Chunk, Menominee, Sac and Fox, Peoria, Kaskaskia, Wea, Kickapoo, and Mascouten.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats continue to support tribes as they advocate for the United States to uphold treaty and trust responsibilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"In 2024, under the Biden-Harris Administration, the Prairie Band of Potawatomi Nation became the first federally recognized Tribal Nation in Illinois in 175 years, when the U.S. Department of the Interior placed 130 acres of the Shab-eh-nay reservation in nearby DeKalb County into trust.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 420,
+      "generation_tps": 15.646751560469504,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1926,
+      "prompt_tps": 474.27878431435136,
+      "request_sha256": "eaa68e425d9e12e28420a80470870f766ccb7d90be50fd69c4190900568db7b0",
+      "seconds": 30.91684029204771,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic National Committee acknowledges that it gathers on lands that have been stewarded through many centuries by the ancestors and descendants of Tribal Nations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic National Committee recognizes that the United States was built on Indigenous homelands.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic National Committee pays respects to millions of Indigenous people throughout history who have protected lands, waters, and animals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"While meeting in Chicago, the Democratic National Committee recognizes and honors the traditional homelands of the Anishinaabe, also known as the Council of the Three Fires: the Ojibwe, Odawa, and Potawatomi Nations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Democratic National Committee acknowledges the many other tribes who consider the Chicago area their traditional homeland, including the Myaamia, Ho-Chunk, Menominee, Sac and Fox, Peoria, Kaskaskia, Wea, Kickapoo, and Mascouten.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats continue to support tribes as they advocate for the United States to uphold treaty and trust responsibilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"In 2024, under the Biden-Harris Administration, the Prairie Band of Potawatomi Nation became the first federally recognized Tribal Nation in Illinois in 175 years, when the U.S. Department of the Interior placed 130 acres of the Shab-eh-nay reservation in nearby DeKalb County into trust.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9c607deb3065e9d45cfc9f2579e86c8d0f71a125ef918ed122e75ad10607b442"
+}

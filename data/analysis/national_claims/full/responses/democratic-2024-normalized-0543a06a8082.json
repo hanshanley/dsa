@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 196,
+      "generation_tps": 15.290986100959827,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1465,
+      "prompt_tps": 399.6181260166204,
+      "request_sha256": "3e00e3b84a583ca6f7c9427c0604078e2f9db951a8d86d6426613396e5e05ed7",
+      "seconds": 16.497243750141934,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States is at an inflection point regarding freedom, rights, and economic opportunity.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The election has enormously high stakes.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden and Vice President Harris took office during a global pandemic, record job loss, and record crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats proved democracy can deliver and made tremendous progress turning the country around in the past four years.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"President Biden and Vice President Harris turned a setback into a great American comeback for working families.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 198,
+      "generation_tps": 15.192633724226106,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1829,
+      "prompt_tps": 421.04814454652603,
+      "request_sha256": "b566a42890ac65495444758db31fbf4439b33aea0960e6d0882b1feb4b572e6e",
+      "seconds": 17.390187249984592,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States is at an inflection point regarding freedom, rights, and economic opportunity.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The stakes in this election are enormously high.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden and Vice President Harris took office during a global pandemic, record job loss, and record crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats proved democracy can deliver and made tremendous progress turning the country around in the past four years.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"President Biden and Vice President Harris turned a setback into a great American comeback for working families.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3e00e3b84a583ca6f7c9427c0604078e2f9db951a8d86d6426613396e5e05ed7"
+}
