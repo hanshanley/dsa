@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 428,
+      "generation_tps": 16.111356122341164,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1503,
+      "prompt_tps": 474.52768234816256,
+      "request_sha256": "8c255e10c494fbd52e639d279a8662fa9d84cb3a680daab7a25a7ed115c85ee8",
+      "seconds": 29.742961583891883,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"33,000 Americans die every year from gun violence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe sensible action must be taken to address gun violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Responsible gun ownership is part of the fabric of many communities.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand and strengthen background checks and close dangerous loopholes in current laws.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will repeal the Protection of Lawful Commerce in Arms Act (PLCAA) to revoke legal immunity protections for gun makers and sellers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep weapons of war\u2014such as assault weapons and large capacity ammunition magazines (LCAM's)\u2014off streets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight back against attempts to make it harder for the Bureau of Alcohol, Tobacco, Firearms, and Explosives to revoke federal licenses from law breaking gun dealers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure guns do not fall into the hands of terrorists, intimate partner abusers, other violent criminals, and those with severe mental health issues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is insufficient research on effective gun prevention policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Centers for Disease Control and Prevention must have the resources it needs to study gun violence as a public health issue.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 469,
+      "generation_tps": 16.05053149917647,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2099,
+      "prompt_tps": 498.07418428897506,
+      "request_sha256": "fadaafd92b3e38aef3fd6dd1c62f7b9e82a98f864146f2b0629c282ae91c5d56",
+      "seconds": 33.44738733395934,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"33,000 Americans die every year, and Democrats believe that sensible action must finally be taken to address gun violence.\",\n\"claim_types\":[\"factual_assertion\",\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Responsible gun ownership is part of the fabric of many communities, but too many families in America have suffered from gun violence.\",\n\"claim_types\":[\"characterization\",\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe it is possible to respect the rights of responsible gun owners while keeping communities safe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand and strengthen background checks and close dangerous loopholes in current laws.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will repeal the Protection of Lawful Commerce in Arms Act (PLCAA) to revoke the dangerous legal immunity protections gun makers and sellers now enjoy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will keep weapons of war\u2014such as assault weapons and large capacity ammunition magazines (LCAM's)\u2014off streets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight back against attempts to make it harder for the Bureau of Alcohol, Tobacco, Firearms, and Explosives to revoke federal licenses from law breaking gun dealers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure guns do not fall into the hands of terrorists, intimate partner abusers, other violent criminals, and those with severe mental health issues.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is insufficient research on effective gun prevention policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Centers for Disease Control and Prevention must have the resources it needs to study gun violence as a public health issue.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8c255e10c494fbd52e639d279a8662fa9d84cb3a680daab7a25a7ed115c85ee8"
+}

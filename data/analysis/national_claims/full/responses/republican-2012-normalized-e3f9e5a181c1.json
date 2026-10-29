@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 202,
+      "generation_tps": 16.10355804937096,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1427,
+      "prompt_tps": 472.2638677631147,
+      "request_sha256": "68ca496d5014e6486cdf37b4e0936ff1a5516f2487049dbbf6e5292fadecca01",
+      "seconds": 15.575620625168085,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current Administration has responded with weakness to some of the gravest threats to U.S. national security, including the proliferation of transnational terrorism, continued belligerence by a nuclear-armed North Korea, an Iran in pursuit of nuclear weapons, rising Chinese hegemony in the Asia Pacific region, Russian activism, and threats from cyber espionage and terrorism.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has reduced the defense budget by over $487 billion over the next decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama fought Republican efforts to avoid another $500 billion in automatic budget cuts through a sequestration in early 2013 that will take a meat ax to all major defense programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 202,
+      "generation_tps": 16.29533596971159,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1797,
+      "prompt_tps": 496.0724321077068,
+      "request_sha256": "f66ac82e7fbb9dd398c7fd99374a238163ca1bb606f1af4699f17d0a042b7e76",
+      "seconds": 16.028556166915223,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current Administration has responded with weakness to some of the gravest threats to U.S. national security, including the proliferation of transnational terrorism, continued belligerence by a nuclear-armed North Korea, an Iran in pursuit of nuclear weapons, rising Chinese hegemony in the Asia Pacific region, Russian activism, and threats from cyber espionage and terrorism.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has reduced the defense budget by over $487 billion over the next decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama fought Republican efforts to avoid another $500 billion in automatic budget cuts through a sequestration in early 2013 that will take a meat ax to all major defense programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "68ca496d5014e6486cdf37b4e0936ff1a5516f2487049dbbf6e5292fadecca01"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 415,
+      "generation_tps": 16.155910112368336,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1471,
+      "prompt_tps": 478.1824709898863,
+      "request_sha256": "6e1779a3bb765cfbe4cd7756ba346a7beed9376086d89a897a153059f4f1a8c3",
+      "seconds": 28.773973874980584,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Strong families and caring communities, supported by excellent law enforcement, are the most effective forces in reducing crime and other social ills.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Citizen vigilance, tough but fair prosecutors, meaningful sentences, protection of victims' rights, and limits on judicial discretion can preserve public safety by keeping criminals off the streets.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Criminals behind bars cannot harm the general public.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for gang crimes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for violent or sexual offenses against children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for repeat drug dealers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for rape.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for robbery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for murder.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a national registry for convicted child murderers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to parole for dangerous or repeat felons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Courts should have the option of imposing the death penalty in capital murder cases.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 413,
+      "generation_tps": 16.184249701473952,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2054,
+      "prompt_tps": 507.2526760380809,
+      "request_sha256": "f17a8d6283630abfac5e1b51557a6782242a7bba80f8ca2dd6dab6c68c9574c9",
+      "seconds": 29.579267957946286,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Strong families and caring communities supported by excellent law enforcement are the most effective forces in reducing crime and other social ills.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Citizen vigilance, tough but fair prosecutors, meaningful sentences, protection of victims' rights, and limits on judicial discretion can preserve public safety by keeping criminals off the streets.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Criminals behind bars cannot harm the general public.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for gang crimes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for violent or sexual offenses against children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for repeat drug dealers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for rape.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for robbery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for mandatory prison sentencing for murder.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for a national registry for convicted child murderers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Opposition to parole for dangerous or repeat felons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Courts should have the option of imposing the death penalty in capital murder cases.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6e1779a3bb765cfbe4cd7756ba346a7beed9376086d89a897a153059f4f1a8c3"
+}

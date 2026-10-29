@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 273,
+      "generation_tps": 16.172899671764412,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1430,
+      "prompt_tps": 497.28147726251717,
+      "request_sha256": "868dcd13225f19c7333aaeda353bc3f9dc437e6681e54d460b26f3726986a610",
+      "seconds": 19.765222541987896,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The current Administration has promoted the notion of abortion as healthcare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Numerous studies have shown that abortion endangers the health and wellbeing of women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We stand firmly against abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taking care of one's health is an individual responsibility.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Chronic diseases, many of them related to lifestyle, drive healthcare costs, accounting for more than 75 percent of the nation's medical spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"To reduce demand and thereby lower costs, we must foster personal responsibility while increasing preventive services to promote healthy lifestyles.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"All Americans should have improved access to affordable, coordinated, quality healthcare, including individuals struggling with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 319,
+      "generation_tps": 16.16067196776908,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1977,
+      "prompt_tps": 486.2406740205114,
+      "request_sha256": "98141d2aa502ee46cca543e600319f131d3ec8fadd14010164578b5732f4f4be",
+      "seconds": 23.817220291821286,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Through Obamacare, the current Administration has promoted the notion of abortion as healthcare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Numerous studies have shown that abortion endangers the health and wellbeing of women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group affirms the dignity of women by protecting the sanctity of human life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group stands firmly against abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taking care of one's health is an individual responsibility.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Chronic diseases, many of them related to lifestyle, drive healthcare costs, accounting for more than 75 percent of the nation's medical spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"To reduce demand and thereby lower costs, the group must foster personal responsibility while increasing preventive services to promote healthy lifestyles.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"All Americans should have improved access to affordable, coordinated, quality healthcare, including individuals struggling with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 319,
+      "generation_tps": 16.161444657972478,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1917,
+      "prompt_tps": 484.07051030981285,
+      "request_sha256": "f3ecf775664b8f02552520ef328c886c62ae36551bf223c26fc9e7acdfa667b0",
+      "seconds": 23.710102332988754,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Through Obamacare, the current Administration has promoted the notion of abortion as healthcare.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Numerous studies have shown that abortion endangers the health and wellbeing of women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group affirms the dignity of women by protecting the sanctity of human life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group stands firmly against abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taking care of one's health is an individual responsibility.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Chronic diseases, many of them related to lifestyle, drive healthcare costs, accounting for more than 75 percent of the nation's medical spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"To reduce demand and thereby lower costs, the group must foster personal responsibility while increasing preventive services to promote healthy lifestyles.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"All Americans should have improved access to affordable, coordinated, quality healthcare, including individuals struggling with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "868dcd13225f19c7333aaeda353bc3f9dc437e6681e54d460b26f3726986a610"
+}

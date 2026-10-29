@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 267,
+      "generation_tps": 16.206617129811345,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1463,
+      "prompt_tps": 485.80975327498555,
+      "request_sha256": "2b907b9184786a9179b915c7fe2235a0f79a18e815012063e2e6b1c1d6fe38c9",
+      "seconds": 19.496518791187555,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The number of criminal offenses in the U.S. Code increased from 3,000 in the early 1980s to over 4,450 by 2008.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal criminal law should focus on acts by federal employees or acts committed on federal property and leave the rest to the States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congress should withdraw from federal departments and agencies the power to criminalize behavior, a practice which, according to the Congressional Research Service, has created \\\"tens of thousands\\\" of criminal offenses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No one other than an elected representative should have the authority to define a criminal act and set criminal penalties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congress should reconsider the extent to which it has federalized offenses traditionally handled on the State or local level.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 325,
+      "generation_tps": 16.05320529409877,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1898,
+      "prompt_tps": 501.9296447182418,
+      "request_sha256": "85f2b35b0af36c0fedf2a7a9783443a51e624bc548b3e3198348a7862748625a",
+      "seconds": 24.036821166984737,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The number of criminal offenses in the U.S. Code increased from 3,000 in the early 1980s to over 4,450 by 2008.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal criminal law should focus on acts by federal employees or acts committed on federal property, and leave the rest to the States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congress should withdraw from federal departments and agencies the power to criminalize behavior, a practice which, according to the Congressional Research Service, has created \\\"tens of thousands\\\" of criminal offenses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No one other than an elected representative should have the authority to define a criminal act and set criminal penalties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congress should reconsider the extent to which it has federalized offenses traditionally handled on the State or local level.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The resources of the federal government's law enforcement and judicial systems have been strained by two unfortunate expansions: the overcriminalization of behavior and the over-federalization of offenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2b907b9184786a9179b915c7fe2235a0f79a18e815012063e2e6b1c1d6fe38c9"
+}

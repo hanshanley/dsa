@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 324,
+      "generation_tps": 16.2620730441858,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1411,
+      "prompt_tps": 466.33986423755437,
+      "request_sha256": "171e48ec2a00871131488441561ec21f602e44ed1210a104011ea4f14f164274",
+      "seconds": 22.959860833128914,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will aggressively enforce non-discrimination protections in the Americans with Disabilities Act and other civil rights laws, especially when designing emergency management systems and new facilities and services in response to the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will prohibit unjustified segregation of patients with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will prohibit rationing of health care that refuses or diverts hospitalization, treatment, or supplies based on a patient's disability.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"People with disabilities living in group homes and other care facilities are at greater risk of contracting COVID-19.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"People with disabilities may require additional resources to protect their health, well-being, and independence during the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will improve oversight and expand protections for residents and staff at nursing homes, which have seen some of the worst COVID-19 outbreaks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand support for telemedicine, so Americans do not have to go without essential health care during the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 329,
+      "generation_tps": 16.285939718377904,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1903,
+      "prompt_tps": 484.47090012277704,
+      "request_sha256": "83a87decfbd824e332f9edae0e1419cef1725d81999dd54bc71a2499b0afc698",
+      "seconds": 24.139949042117223,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will aggressively enforce non-discrimination protections in the Americans with Disabilities Act and other civil rights laws, especially when designing emergency management systems and new facilities and services in response to the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will prohibit unjustified segregation of patients with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will prohibit rationing of health care that refuses or diverts hospitalization, treatment, or supplies based on a patient's disability.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"People with disabilities living in group homes and other care facilities are at greater risk of contracting COVID-19.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"People with disabilities may require additional resources to protect their health, well-being, and independence during the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will improve oversight and expand protections for residents and staff at nursing homes, which have seen some of the worst COVID-19 outbreaks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand support for telemedicine, so Americans do not have to go without essential health care during the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "171e48ec2a00871131488441561ec21f602e44ed1210a104011ea4f14f164274"
+}

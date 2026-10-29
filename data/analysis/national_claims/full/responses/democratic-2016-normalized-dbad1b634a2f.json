@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 312,
+      "generation_tps": 16.21409268089814,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1442,
+      "prompt_tps": 463.72860574535906,
+      "request_sha256": "166d93f30eaf3f5f21fbb978f5ccc85d6dc604c26247ee14549c75d8d27a089b",
+      "seconds": 22.363440625136718,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will repudiate vile tactics that would do harm while prosecuting the fight against terrorism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats reject Donald Trump's vilification of Muslims because it violates religious freedom, feeds into ISIS' narrative, and alienates crucial allies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The vast majority of Muslims believe in a future of peace and tolerance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats reject Donald Trump's suggestion that the military should engage in war crimes, like torturing prisoners or murdering civilian family members of suspected terrorists, because these tactics run counter to American principles, undermine moral standing, cost innocent lives, and endanger Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats firmly reject Donald Trump's willingness to mire tens of thousands of combat troops in another misguided ground war in the Middle East, which would only further embolden ISIS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is nothing smart or strong about Donald Trump's approach of mire tens of thousands of combat troops in another misguided ground war in the Middle East.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 327,
+      "generation_tps": 15.97229307051321,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1922,
+      "prompt_tps": 483.87916506688435,
+      "request_sha256": "ab4a0867121e17763fd71a917460ea2ed43f82d078af055bc426a80caeb0d503",
+      "seconds": 24.455690750153735,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will repudiate vile tactics that would do harm while prosecuting the fight against terrorism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats reject Donald Trump's vilification of Muslims because it violates religious freedom that is the bedrock of the country, feeds into ISIS' nefarious narrative, and alienates people and countries who are crucial to defeating terrorism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The vast majority of Muslims believe in a future of peace and tolerance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats reject Donald Trump's suggestion that the military should engage in war crimes, like torturing prisoners or murdering civilian family members of suspected terrorists, because these tactics run counter to American principles, undermine moral standing, cost innocent lives, and endanger Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats firmly reject Donald Trump's willingness to mire tens of thousands of combat troops in another misguided ground war in the Middle East, which would only further embolden ISIS.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is nothing smart or strong about Donald Trump's approach of mire tens of thousands of combat troops in another misguided ground war in the Middle East.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "166d93f30eaf3f5f21fbb978f5ccc85d6dc604c26247ee14549c75d8d27a089b"
+}

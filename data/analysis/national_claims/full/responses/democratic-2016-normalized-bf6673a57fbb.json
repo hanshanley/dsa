@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 281,
+      "generation_tps": 16.299839590632253,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1405,
+      "prompt_tps": 469.94464303120503,
+      "request_sha256": "e95ada9a2e40ab831b93181d10398ac3d066595362b700c192f37659a10c096c",
+      "seconds": 20.23934599990025,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America has made critical investments in global health, including in maternal and child health, HIV and AIDS, tuberculosis, and malaria.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Continuing investments in global health is vital, as this work has saved millions of lives around the world and is essential to America's health security.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party refuses to fund important measures that could contain and address the Zika pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are ready to limit the reach of Zika, just as they did with Ebola.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support funding for diagnostic tests for the Zika virus, vaccine, and treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will prepare for potential pandemics, like avian influenza and H1N1, by working with first responders and health officials to reduce the risks associated with unintentional or deliberate outbreaks of infectious diseases.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 284,
+      "generation_tps": 16.2850102723748,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1854,
+      "prompt_tps": 499.4340174655711,
+      "request_sha256": "921198eed42022f8ed22f94f03af7bb1fbff9fb46e756dc420b7f66724e3fd8b",
+      "seconds": 21.16161304200068,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America has made critical investments in global health, including in the areas of maternal and child health, HIV and AIDS, tuberculosis, and malaria.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Continuing this work in global health is vital, as it has saved millions of lives around the world and is essential to America's health security.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party refuses to fund important measures that could contain and address the Zika pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are ready to limit the reach of Zika, just as they did with Ebola.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support funding for diagnostic tests for the Zika virus, vaccine, and treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will prepare for potential pandemics, like avian influenza and H1N1, by working with first responders and health officials to reduce the risks associated with unintentional or deliberate outbreaks of infectious diseases.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e95ada9a2e40ab831b93181d10398ac3d066595362b700c192f37659a10c096c"
+}

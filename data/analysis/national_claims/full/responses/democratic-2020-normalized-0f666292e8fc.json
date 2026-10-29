@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 464,
+      "generation_tps": 16.275580633313293,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1459,
+      "prompt_tps": 473.93098073512186,
+      "request_sha256": "4581b6937d161275fabb7e39fb4abb6ccf99fd7284872ea62d18f53ea92447fb",
+      "seconds": 31.597872624872252,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for leading the world in taking on the climate crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to denying the science of the climate crisis and accelerating damage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last four years have seen record-breaking storms, devastating wildfires, and historic floods in Houston, Texas; Mexico Beach, Florida; San Juan, Puerto Rico; and Davenport, Iowa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for rejoining the Paris Climate Agreement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for building a thriving, equitable, and globally competitive clean energy economy that puts workers and communities first and leaves no one behind.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for providing a world-class education in every ZIP code to every child.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Education is a critical public good.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for universal early childhood education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for affordable, high-quality child care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for shutting down the school-to-prison pipeline.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for building a school-to-opportunity pipeline.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for making college affordable again.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for providing Americans relief from crushing student debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 362,
+      "generation_tps": 16.186466815769897,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2091,
+      "prompt_tps": 516.2013194505528,
+      "request_sha256": "6996d14cb9bd58ac0bee3447cc7d2d4b68c2d5ec25207c9b36cd24715740a422",
+      "seconds": 26.425361790927127,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for leading the world in taking on the climate crisis, and opposition to denying the science and accelerating the damage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last four years have seen record-breaking storms, devastating wildfires, and historic floods in Houston, Texas; Mexico Beach, Florida; San Juan, Puerto Rico; and Davenport, Iowa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for rejoining the Paris Climate Agreement and going further.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for building a thriving, equitable, and globally competitive clean energy economy that puts workers and communities first and leaves no one behind.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for providing a world-class education in every ZIP code to every child, because education is a critical public good.\",\n\"claim_types\":[\"policy_position\",\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for universal early childhood education and affordable, high-quality child care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for shutting down the school-to-prison pipeline and building a school-to-opportunity pipeline in its place.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for making college affordable again and providing Americans relief from crushing student debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4581b6937d161275fabb7e39fb4abb6ccf99fd7284872ea62d18f53ea92447fb"
+}

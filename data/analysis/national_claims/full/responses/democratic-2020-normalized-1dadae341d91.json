@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 183,
+      "generation_tps": 16.425648510829173,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1343,
+      "prompt_tps": 478.46034802168685,
+      "request_sha256": "bb6da4e8f87a4ffb1d819d04c7df90eb20e90bb09f6300c86b66ecc12359bba8",
+      "seconds": 13.957959874998778,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Solving the public health crisis posed by the pandemic is the surest way to get the economy back on track.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Countries that have taken aggressive measures to address the COVID-19 pandemic and stop chains of infection from spreading are poised to have stronger, faster recoveries than the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Containing the pandemic will not be enough to repair the damage President Trump has done to the economy and to the American people.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Containing the pandemic will not be enough to build back better.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 158,
+      "generation_tps": 16.433986283596187,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1694,
+      "prompt_tps": 493.31443433516597,
+      "request_sha256": "ce00a328165cb0b0e7b8f78508c0be620666beef016e4d299cf48f20c97fbb3a",
+      "seconds": 13.057900042040274,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Solving the public health crisis posed by the pandemic is the surest way to get the economy back on track.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Countries that have taken aggressive measures to address the COVID-19 pandemic and stop chains of infection from spreading are poised to have stronger, faster recoveries than the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Containing the pandemic will not be enough to repair the damage President Trump has done to the economy and to the American people\u2014or to build back better.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bb6da4e8f87a4ffb1d819d04c7df90eb20e90bb09f6300c86b66ecc12359bba8"
+}

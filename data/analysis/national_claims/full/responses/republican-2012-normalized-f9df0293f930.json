@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 287,
+      "generation_tps": 16.34301172390806,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1466,
+      "prompt_tps": 476.422741190428,
+      "request_sha256": "3418ff31237ac1e61e0884c2c2f25a8183855d657b36219ab48be1e9585db90c",
+      "seconds": 20.64956829091534,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Ideological bias is deeply entrenched within the current university system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State trustees have a responsibility to the public to ensure their investment in State institutions is not abused for political indoctrination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"State officials should ensure public colleges and universities are places of learning and the exchange of ideas, not zones of intellectual intolerance favoring the Left.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"College costs are on an unsustainable trajectory, rising year by year far ahead of overall inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Nationwide, student loan debt now exceeds credit card debt, roughly $23,300 for each of the 35,000,000 debtors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Over 50 percent of recent college grads are unemployed or underemployed, working at jobs for which their expensive educations gave them no training.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 288,
+      "generation_tps": 16.21438060945021,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1921,
+      "prompt_tps": 490.23910176478694,
+      "request_sha256": "e6a85bcd85adabf5c40e966ead87aeacfe0764a9f5abf2924400b4384c341bb9",
+      "seconds": 21.691177833126858,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Ideological bias is deeply entrenched within the current university system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State trustees have a responsibility to the public to ensure their investment in State institutions is not abused for political indoctrination.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"State officials should ensure that public colleges and universities be places of learning and the exchange of ideas, not zones of intellectual intolerance favoring the Left.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"College costs are on an unsustainable trajectory, rising year by year far ahead of overall inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Nationwide, student loan debt now exceeds credit card debt, roughly $23,300 for each of the 35,000,000 debtors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Over 50 percent of recent college grads are unemployed or underemployed, working at jobs for which their expensive educations gave them no training.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3418ff31237ac1e61e0884c2c2f25a8183855d657b36219ab48be1e9585db90c"
+}

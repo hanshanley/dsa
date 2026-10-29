@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 355,
+      "generation_tps": 15.41691610673909,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1474,
+      "prompt_tps": 479.72005704046404,
+      "request_sha256": "703afbb0cd8af1739100c33f7a78d28cb18bd39f2b305987869ef5f74f30e6ef",
+      "seconds": 26.10908883297816,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Wounded warriors, whether still in service or discharged, deserve the best medical care the country can provide.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nature of the fighting in Iraq and Afghanistan has resulted in an unprecedented incidence of traumatic brain injury, loss of limbs, and post-traumatic stress disorder.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A new commitment of resources and personnel is needed for the treatment and care of traumatic brain injury, loss of limbs, and post-traumatic stress disorder to promote recovery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Military and veterans' medicine should be the gold standard for mental health care, advances in prosthetics, and treatment of trauma and eye injuries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Meaningful financial assistance should be assured to the families of those who have made the ultimate sacrifice.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's veterans face new challenges because the conditions of warfare have changed dramatically since the war on terror began.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Asymmetrical or non-traditional warfare results in a high incidence of severe conditions that must receive high priority.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Continued research into prevention and treatment of severe conditions is needed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 15.564138146796008,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1997,
+      "prompt_tps": 440.7839771202174,
+      "request_sha256": "bac0798508e902959b90c1ea9ac49cb57d94196fd2be0e4f830645fe665c866e",
+      "seconds": 27.608912666793913,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Wounded warriors, whether still in service or discharged, deserve the best medical care the country can provide.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nature of the fighting in Iraq and Afghanistan has resulted in an unprecedented incidence of traumatic brain injury, loss of limbs, and post-traumatic stress disorder.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A new commitment of resources and personnel is needed for the treatment and care of traumatic brain injury, loss of limbs, and post-traumatic stress disorder to promote recovery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Military and veterans' medicine should be the gold standard for mental health care, advances in prosthetics, and treatment of trauma and eye injuries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The families of those who have made the ultimate sacrifice must be assured of meaningful financial assistance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's veterans face new challenges because the conditions of warfare have changed dramatically since the war on terror began.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Asymmetrical or non-traditional warfare results in a high incidence of severe conditions that must receive high priority.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Continued research into prevention and treatment of severe conditions is needed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "703afbb0cd8af1739100c33f7a78d28cb18bd39f2b305987869ef5f74f30e6ef"
+}

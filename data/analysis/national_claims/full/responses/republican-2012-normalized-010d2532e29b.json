@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 370,
+      "generation_tps": 16.31902449102745,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1443,
+      "prompt_tps": 481.0015364915009,
+      "request_sha256": "040765087a6e2f8ca998412c31bf0b718bb699498b3bf7df9927103853d8312f",
+      "seconds": 25.683308332925662,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The National Guard and Reserves are a fully operational and battle-tested component of the Armed Forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many members of the National Guard and Reserves have heroically served for multiple deployments resulting in inadequate time between deployments, also known as dwell time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to maintain the manpower and equipment strength of the National Guard and Reserves.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure members of the National Guard and Reserves receive the pay, benefits, and adequate training to continue their service and maintain mission readiness through Presidential leadership and Congressional budget support.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The role of citizen-soldiers in the National Guard and Reserves is a proud tradition linking every community across America to the cause of freedom.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affirmation of service members' legal right to return to their civilian jobs, whether in government or the private sector.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urging of greater transition assistance to and from employers as service members return to the civilian world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Salute to employers who hire younger Reserve and Guard members facing high unemployment rates, recognizing it as a smart and patriotic business decision.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 381,
+      "generation_tps": 15.859328230847714,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1981,
+      "prompt_tps": 508.6290853923477,
+      "request_sha256": "50e2e0028e14f228bd4be1749d64448976d5fbd32497904df46a12c38016ce45",
+      "seconds": 27.928744124947116,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The National Guard and Reserves are a fully operational and battle-tested component of the Armed Forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many members of the National Guard and Reserves have heroically served for multiple deployments resulting in inadequate time between deployments, also known as dwell time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to maintain the manpower and equipment strength of the National Guard and Reserves.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure members of the National Guard and Reserves receive the pay, benefits, and adequate training to continue their service and maintain mission readiness through Presidential leadership and Congressional budget support.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The historic and continuing role of citizen-soldiers in the National Guard and Reserves is a proud tradition linking every community across America to the cause of freedom.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affirmation of service members' legal right to return to their civilian jobs, whether in government or the private sector.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urging of greater transition assistance to and from employers as service members return to the civilian world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Salute to employers who have wisely decided that it is a smart and patriotic business decision to hire younger Reserve and Guard members facing high unemployment rates.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "040765087a6e2f8ca998412c31bf0b718bb699498b3bf7df9927103853d8312f"
+}

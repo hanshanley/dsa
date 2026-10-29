@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 272,
+      "generation_tps": 16.260646810025918,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1452,
+      "prompt_tps": 479.09922094533476,
+      "request_sha256": "a8b91c66e1f2c648daf41e07999369178c8eaa47d784753e24ad59e64dd30106",
+      "seconds": 19.76935900002718,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats support making COVID-19 testing, treatment, and any eventual vaccines free to everyone, regardless of their wealth, insurance coverage, or immigration status.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Tens of millions of Americans have no or inadequate health insurance, which is a crisis.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Affordable Care Act is in place and prevents the current crisis from being worse.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will take immediate action to preserve and expand health insurance coverage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will provide direct, increased support to states to enroll eligible adults in Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government will cover a higher percentage of the Medicaid bill.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will add incentives for states which have not yet expanded Medicaid to do so.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 276,
+      "generation_tps": 16.199308188365677,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1892,
+      "prompt_tps": 504.98700246870993,
+      "request_sha256": "6feabf415cbeac3c9aa360f26d94a33272082395ae2c543102326b37d318c3fb",
+      "seconds": 20.795176249928772,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support making COVID-19 testing, treatment, and any eventual vaccines free to everyone, regardless of their wealth, insurance coverage, or immigration status.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Tens of millions of Americans have no or inadequate health insurance, which is a crisis.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current crisis would be even worse without the Affordable Care Act in place.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will take immediate action to preserve and expand health insurance coverage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will provide direct, increased support to states to enroll eligible adults in Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government will cover a higher percentage of the Medicaid bill.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will add incentives for states which have not yet expanded Medicaid to do so.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a8b91c66e1f2c648daf41e07999369178c8eaa47d784753e24ad59e64dd30106"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 398,
+      "generation_tps": 15.535283513759644,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1515,
+      "prompt_tps": 425.72678181523105,
+      "request_sha256": "0276546abe9798da357548e5e89fa1019bb31057ea9dde47895ae03c6737539d",
+      "seconds": 29.18988737487234,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe acting immediately with ambitious investments will support and create jobs to prevent President Trump's recession from becoming a depression.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"State and local governments are suffering severe budget shortfalls due to declines in tax revenues while being asked to shoulder the burden of COVID-related services and rising unemployment.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State and local budget cuts translate quickly into lost jobs in education, health care, and social services.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will extend significant aid to state and local governments, school districts, and public and nonprofit colleges and universities, including HBCUs and MSIs, to address budget shortfalls and secure jobs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will condition state and federal aid on maintaining and expanding public-sector employment, including provisions to protect workers' rights.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Too many parents are being forced to choose between keeping their jobs and keeping their children safe in states and cities across the country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Making child care affordable and widely available is essential to recovering from the COVID-19 pandemic, according to Democrats.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Funding will be provided to stabilize the child care sector and ensure child care and educational settings meet high public health and worker safety standards to protect the health of care workers, children, parents, and the broader community.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 408,
+      "generation_tps": 15.579240133364488,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2081,
+      "prompt_tps": 451.47116598468534,
+      "request_sha256": "b8424b990b2bc9c6ea55b43cca1eb456929dca66b6f6ef924cf7da402548707e",
+      "seconds": 30.809546874836087,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe acting immediately with ambitious investments will support and create jobs to prevent President Trump's recession from becoming a depression.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"State and local governments are suffering severe budget shortfalls due to declines in tax revenues while being asked to shoulder the burden of COVID-related services and rising unemployment.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"State and local budget cuts translate quickly into lost jobs in education, health care, and social services.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will extend significant aid to state and local governments, school districts, and public and nonprofit colleges and universities, including HBCUs and MSIs, to address these budget shortfalls and secure jobs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will condition state and federal aid on maintaining and expanding public-sector employment, including provisions to protect workers' rights.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In states and cities across the country, too many parents are being forced to choose between keeping their jobs and keeping their children safe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe making child care affordable and widely available is essential to recovering from the COVID-19 pandemic.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will provide funding to stabilize the child care sector and ensure child care and educational settings are able to meet the highest possible public health and worker safety standards to protect the health of care workers, children, parents, and the broader community.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0276546abe9798da357548e5e89fa1019bb31057ea9dde47895ae03c6737539d"
+}

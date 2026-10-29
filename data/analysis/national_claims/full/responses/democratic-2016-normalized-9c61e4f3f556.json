@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 484,
+      "generation_tps": 16.111984841629532,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1536,
+      "prompt_tps": 483.3382689477871,
+      "request_sha256": "7316c3d84361886f89dfb3972e1a0d2243670fd7a5715e6d9d83c1a23ffd31a6",
+      "seconds": 33.229403250152245,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Syrian crisis is heartbreaking and dangerous, and its impact is threatening the region, Europe, and beyond.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump would inflame the conflict in Syria by alienating allies, allowing ISIS to expand in Syria, and potentially starting a wider war.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will root out ISIS and other terrorist groups in Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will bring together the moderate Syrian opposition, international community, and regional allies to reach a negotiated political transition that ends Assad's rule.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Given the immense scale of human suffering in Syria, Democrats will lead the international community in providing greater humanitarian assistance to civilian victims of war in Syria and Iraq, especially displaced refugees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work with the NATO-led coalition of partners to bolster the democratically-elected government in Afghanistan as it assumes a primary role in tackling terrorism, forges a more secure future for the country, and safeguards advances, like securing women's rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will continue to push for an Afghan-led peace process.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will press both Afghanistan and Pakistan to deny terrorists sanctuary on either side of the border.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support President Obama's decision to maintain a limited troop presence in Afghanistan into 2017.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Maintaining a limited troop presence in Afghanistan into 2017 will ensure that Afghanistan never again serves as a haven for terrorists to plan and launch attacks on the homeland.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 492,
+      "generation_tps": 16.11462635051855,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2188,
+      "prompt_tps": 502.09311121352914,
+      "request_sha256": "4211a1db35966db3acfda94a41ffde3718b6f7d21830899774eb42bc511e89f0",
+      "seconds": 34.90025070798583,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Syrian crisis is heartbreaking and dangerous, and its impact is threatening the region, Europe, and beyond.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump would inflame the conflict in Syria by alienating allies, allowing ISIS to expand in Syria, and potentially starting a wider war; this is a reckless approach.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will root out ISIS and other terrorist groups in Syria.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will bring together the moderate Syrian opposition, the international community, and regional allies to reach a negotiated political transition that ends Assad's rule.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Given the immense scale of human suffering in Syria, Democrats will lead the international community in providing greater humanitarian assistance to civilian victims of war in Syria and Iraq, especially displaced refugees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In Afghanistan, Democrats will work with the NATO-led coalition of partners to bolster the democratically-elected government as it assumes a primary role in tackling terrorism, forges a more secure future for the country, and safeguards advances, like securing women's rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will continue to push for an Afghan-led peace process.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will press both Afghanistan and Pakistan to deny terrorists sanctuary on either side of the border.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats support President Obama's decision to maintain a limited troop presence in Afghanistan into 2017.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Maintaining a limited troop presence in Afghanistan into 2017 will ensure that Afghanistan never again serves as a haven for terrorists to plan and launch attacks on the homeland.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7316c3d84361886f89dfb3972e1a0d2243670fd7a5715e6d9d83c1a23ffd31a6"
+}

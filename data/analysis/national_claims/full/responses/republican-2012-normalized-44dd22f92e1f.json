@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 332,
+      "generation_tps": 16.34000046562217,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1440,
+      "prompt_tps": 484.7548527663903,
+      "request_sha256": "c8819e4a235f28ebbb67024aca2e185a35257e0f655ba5539a4cb438c28d6fad",
+      "seconds": 23.299220375018194,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The all-volunteer force, begun under Republican Presidents, has led to American victories in the Caribbean, Central America, the Balkans, and Southwest Asia.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the reinstatement of the draft, whether directly or through compulsory national service.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the advancement of women in the military, which has opened opportunities and enabled devoted service.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for military women's exemption from direct ground combat units and infantry battalions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affirmation of cultural values that encourage selfless service and superiority in battle.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to anything that might divide or weaken team cohesion, including intra-military special interest demonstrations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to support an objective and open-minded review of the current Administration's management of military personnel policies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to correct problems with military personnel policies with appropriate administrative, legal, or legislative action.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 314,
+      "generation_tps": 16.294144068244275,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1940,
+      "prompt_tps": 506.3752602125349,
+      "request_sha256": "028514be50821d6fc388983a37d5eda8e60eb99695b361cc006c0c0d45f4a4a0",
+      "seconds": 23.11200016597286,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The all-volunteer force, begun on the watch of Republican Presidents, has carried America to victory from the Caribbean and Central America to the Balkans and Southwest Asia.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the reinstatement of the draft whether directly or through compulsory national service.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the advancement of women in the military, which has not only opened doors of opportunity for individuals but has also made possible the devoted, and often heroic, services of additional members of every branch of the Armed Forces.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for military women's exemption from direct ground combat units and infantry battalions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affirmation of the cultural values that encourage selfless service and superiority in battle, and opposition to anything which might divide or weaken team cohesion, including intra-military special interest demonstrations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to support an objective and open-minded review of the current Administration's management of military personnel policies and to correct problems with appropriate administrative, legal, or legislative action.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c8819e4a235f28ebbb67024aca2e185a35257e0f655ba5539a4cb438c28d6fad"
+}

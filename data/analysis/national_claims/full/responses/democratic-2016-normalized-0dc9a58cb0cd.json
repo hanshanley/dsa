@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 306,
+      "generation_tps": 16.243298135262037,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1423,
+      "prompt_tps": 468.0305030442681,
+      "request_sha256": "a2e4f9e54fe88f35a4f3048a4f7ec447d50e6cd972fe40234d60fddb2e9673aa",
+      "seconds": 21.889209541957825,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will fight to end child labor.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will promote broad-based economic growth across the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will pursue a global economic agenda that promotes rising wages and invests in quality public services, workers' rights, and environmental protections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe coordination of economic actions with other countries is needed to address economic insecurity, specifically youth un- and underemployment, gender inequality, the digital transformation, and the transition towards green jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American leadership is essential to keeping the United States safe and its economy growing in the years ahead.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"It would be a dangerous mistake for the United States to abandon its responsibilities.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump suggests ceding the mantle of leadership for global peace and security to others who will not have the United States' best interests in mind.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 309,
+      "generation_tps": 16.2646807105574,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1897,
+      "prompt_tps": 502.9475867960915,
+      "request_sha256": "d7529eeb9d97003096e39803e97bb248fc69c556b255218c06681f5bd61ea134",
+      "seconds": 22.779954083031043,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will fight to end child labor.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will promote broad-based economic growth across the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will pursue a global economic agenda that promotes rising wages and invests in quality public services, workers' rights, and environmental protections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe coordination of economic actions with other countries is needed to address economic insecurity, specifically youth un- and underemployment, gender inequality, the digital transformation, and the transition towards green jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American leadership is essential to keeping the United States safe and its economy growing in the years ahead.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"It would be a dangerous mistake for the United States to abandon its responsibilities.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Donald Trump suggests the United States cede the mantle of leadership for global peace and security to others who will not have the United States' best interests in mind.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a2e4f9e54fe88f35a4f3048a4f7ec447d50e6cd972fe40234d60fddb2e9673aa"
+}

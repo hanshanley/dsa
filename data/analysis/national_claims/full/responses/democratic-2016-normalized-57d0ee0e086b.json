@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 256,
+      "generation_tps": 16.27114283268145,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1392,
+      "prompt_tps": 475.64411810347895,
+      "request_sha256": "9324cffc730f3ed1c701167e2516daa30f6a0c1ce9fdc365d8921ccb3b76f069",
+      "seconds": 18.672155125066638,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Inclusion and tolerance inspire hope around the world and make the United States safer.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The world will be more secure, stable, and peaceful when all people are able to reach their potential and live in freedom and dignity.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States strives to ensure that values including the belief that all people are created equal are reflected in everything the nation does.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will promote peacebuilding.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will protect democracy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will champion human rights defenders.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will seek to safeguard vulnerable minorities, including LGBT people and people with disabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 275,
+      "generation_tps": 16.262162658583975,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1816,
+      "prompt_tps": 478.14952978103616,
+      "request_sha256": "bc826e3553559f5027b9f19a1f9d836176c58044c9d54d4fe6a85631838be7f2",
+      "seconds": 20.719406666932628,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Inclusion and tolerance inspire hope around the world and make the United States safer at home.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The world will be more secure, stable, and peaceful when all people are able to reach their God-given potential and live in freedom and dignity.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States strives to ensure that the values upon which the country was built, including the belief that all people are created equal, are reflected in everything the nation does.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will promote peacebuilding.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will protect democracy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will champion human rights defenders.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will seek to safeguard vulnerable minorities, including LGBT people and people with disabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9324cffc730f3ed1c701167e2516daa30f6a0c1ce9fdc365d8921ccb3b76f069"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 428,
+      "generation_tps": 16.231178219473062,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1518,
+      "prompt_tps": 478.7492784582436,
+      "request_sha256": "6794eb49c7e69779b9e863b80131256c18a8e7a4fe52d15edc2eb463b3f0723f",
+      "seconds": 29.550301040988415,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The federal government's system of public assistance should be reformed to promote work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government's system of public assistance dispenses nearly $1 trillion in taxpayer funds annually across approximately 80 programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government's system of public assistance programs are neither coordinated nor effective in solving poverty and lifting up families.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"For some individuals collecting benefits from multiple categorical programs, efforts to work or earn more result in less money in their pocket due to loss of benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Implementation of Obamacare would ensnare more Americans in a poverty trap.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taking a part time job, working an extra shift, or marrying someone who works would result in a loss of benefits, thereby discouraging acts necessary to achieve the American Dream.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Adoption and foster care strengthen communities and ennoble the nation.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican legislative initiatives led to a significant increase in adoptions in recent years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The private sector should consider the needs of adoptive families on a par with others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Any restructuring of the federal tax code should recognize the financial impact of the adoption process and the commitment made by adoptive families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 417,
+      "generation_tps": 16.195053902749066,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2114,
+      "prompt_tps": 500.0818635734937,
+      "request_sha256": "280857ce20a4e2a7c7eb781bda4ce2d33bfa00ee4dddc4427cac8cc280434d0a",
+      "seconds": 29.98618116695434,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The federal government's entire system of public assistance should be reformed to ensure that it promotes work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government's system of public assistance dispenses nearly $1 trillion in taxpayer funds annually across a maze of approximately 80 programs that are neither coordinated nor effective in solving poverty and lifting up families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"For some individuals collecting benefits from multiple categorical programs, efforts to work or earn more actually result in less money in their pocket through the resulting loss of benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Obamacare were implemented, it would ensnare even more Americans in a poverty trap.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taking a part time job, working an extra shift, or even just marrying someone who works would result in a loss of benefits, thereby discouraging the very acts necessary to achieve the American Dream.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Families formed or enlarged by adoption strengthen communities and ennoble the nation.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican legislative initiatives led to a significant increase in adoptions in recent years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The private sector should consider the needs of adoptive families on a par with others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Any restructuring of the federal tax code should recognize the financial impact of the adoption process and the commitment made by adoptive families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6794eb49c7e69779b9e863b80131256c18a8e7a4fe52d15edc2eb463b3f0723f"
+}

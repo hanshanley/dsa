@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 270,
+      "generation_tps": 16.225904332395668,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1472,
+      "prompt_tps": 489.1365862720443,
+      "request_sha256": "b8425752b4c2915892ec736d63d607ffdf1a9726912fa8f1dcf5a23ad91efc2f",
+      "seconds": 19.660203166073188,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for mandatory prison time for all assaults involving serious injury to law enforcement officers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to criminals injured in the course of their crimes seeking monetary damages from their intended victims or from the public.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prisons should attempt to rehabilitate prisoners and institute proven prisoner reentry systems to reduce recidivism and future victimization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for State and local initiatives that are trying new approaches to prisoner rehabilitation and reentry.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for collaboration with faith-based institutions that have proven track records in diverting young and first-time, non-violent offenders from criminal careers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for State and local initiatives that are trying new approaches to curbing drug abuse and diverting first-time offenders to rehabilitation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 334,
+      "generation_tps": 16.184357077530027,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1910,
+      "prompt_tps": 491.1572147585772,
+      "request_sha256": "39c7b3872d162d650dcc7434780b14d6f630186bdb14f53563e0929a43f1881d",
+      "seconds": 24.536677791038528,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for mandatory prison time for all assaults involving serious injury to law enforcement officers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to criminals injured in the course of their crimes seeking monetary damages from their intended victims or from the public.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prisons should do more than punish; they should attempt to rehabilitate and institute proven prisoner reentry systems to reduce recidivism and future victimization.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for State and local initiatives that are trying new approaches, often called accountability courts, to prisoner rehabilitation and reentry.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for collaboration with faith-based institutions that have proven track records in diverting young and first-time, non-violent offenders from criminal careers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for State and local initiatives that are trying new approaches to curbing drug abuse and diverting first-time offenders to rehabilitation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Government at all levels should work with faith-based institutions that have proven track records in diverting young and first time, non-violent offenders from criminal careers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b8425752b4c2915892ec736d63d607ffdf1a9726912fa8f1dcf5a23ad91efc2f"
+}

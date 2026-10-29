@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 279,
+      "generation_tps": 16.296238395060975,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1454,
+      "prompt_tps": 461.74117250434716,
+      "request_sha256": "12c36185436e709c329f3dc08f7e784fe5e31b7f2688719041aef1bd8e325498",
+      "seconds": 20.280229541938752,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republican-led welfare reforms enacted in 1996 changed the standard for policy success from the amount of income transferred to the poor to the number of poor who moved from welfare to economic independence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Welfare should be a hand up, not a hand out, according to the belief of most Americans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Work requirements were at the heart of the success of the 1996 welfare reforms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration's decision to permit waivers for work requirements for welfare benefits is outrageous to many.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Permitting waivers for work requirements administratively repeals the most successful anti-poverty policy in memory.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Benefit programs like food stamps must ensure that benefits are better targeted to those who need help the most.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 292,
+      "generation_tps": 16.174095975039293,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1901,
+      "prompt_tps": 495.971304004337,
+      "request_sha256": "2a47f888cd85f31be5cd612cfa6541fa5a0ec174e1c17d41a942fc877ea682a5",
+      "seconds": 21.897368957987055,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republican-led welfare reforms enacted in 1996 changed the standard for policy success from the amount of income transferred to the poor to the number of poor who moved from welfare to economic independence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The belief of most Americans is that welfare should be a hand up, not a hand out.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Work requirements, though modest, were at the heart of the success of the 1996 welfare reforms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many are outraged by the current Administration's recent decision to permit waivers for work requirements for welfare benefits.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration's decision to permit waivers for work requirements for welfare benefits administratively repeals the most successful anti-poverty policy in memory.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Benefit programs like food stamps must ensure that those benefits are better targeted to those who need help the most.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "12c36185436e709c329f3dc08f7e784fe5e31b7f2688719041aef1bd8e325498"
+}

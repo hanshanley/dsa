@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 369,
+      "generation_tps": 16.117137814473615,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1482,
+      "prompt_tps": 473.692171906006,
+      "request_sha256": "c11044709d6a0ca08d831b30d61e074438b4c530197a25af866a2d76ae8687a4",
+      "seconds": 26.03470654087141,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe America must lead in the world to grow its economy, protect its interests and values, and make the country safer and more prosperous.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe America should not walk away from its position of global leadership and allow other countries to make decisions about American lives, jobs, and safety.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe all people deserve to live in dignity and have their rights respected.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe protecting rights and opportunities for women and girls is essential for security and economic growth.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe providing access to education and employment for young people is important to ensuring stability.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe safeguarding the rights of minorities is important to ensuring stability.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe the smart use of diplomacy, development, and economic statecraft can prevent crises, foster stability, and make the country safer.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe the country is stronger when working with partners and allies, rather than going it alone.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe the country's global network of alliances is a source of strategic advantage.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 379,
+      "generation_tps": 16.243656620715985,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2019,
+      "prompt_tps": 493.43399588478377,
+      "request_sha256": "a30f4150ea0ff94739a832cdb71b1f0f3b0dfb35c56954786f2ed2a62bd722d3",
+      "seconds": 27.433963457820937,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe that America must lead in the world to grow its economy, protect its interests and values, and make the country safer and more prosperous.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe that America should not walk away from its position of global leadership and allow other countries to make decisions about American lives, jobs, and safety.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe all people deserve to live in dignity and have their rights respected.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe protecting rights and opportunities for women and girls is essential for security and economic growth.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe providing access to education and employment for young people is important to ensuring stability.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe safeguarding the rights of minorities is important to ensuring stability.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe the smart use of diplomacy, development, and economic statecraft can prevent crises, foster stability, and make the country safer.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe the country is stronger when working with partners and allies, rather than trying to go it alone.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe the country's global network of alliances is not a burden, but a source of tremendous strategic advantage.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c11044709d6a0ca08d831b30d61e074438b4c530197a25af866a2d76ae8687a4"
+}

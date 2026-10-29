@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 189,
+      "generation_tps": 16.35665905752074,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1533,
+      "prompt_tps": 486.2437503779282,
+      "request_sha256": "815ae8d94d4e1b863c5979d19132c77c4c25cb613be44e4163cd3b59661366e7",
+      "seconds": 14.71814658283256,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe in the American idea, its principles, its purpose, and its promise.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Four more years of Donald Trump and the Republican Party will damage the character of the country beyond repair, according to Democrats.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump and his Administration missed multiple opportunities to protect the American people from the novel coronavirus, according to Democrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump lied to the American people about the severity, transmissibility, and threat to lives and livelihoods posed by the novel coronavirus, according to Democrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 198,
+      "generation_tps": 16.24977001777565,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1890,
+      "prompt_tps": 497.49189395150563,
+      "request_sha256": "33bc0caa2d22630ef3d7c4a4bb875660e6aed9cd497c2cafdd76d82860d9f093",
+      "seconds": 15.993786915903911,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe in the American idea\u2014its principles, its purpose, and its promise.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"According to Democrats, four more years of the crass, craven, corrupt leadership of Donald Trump and the Republican Party will damage the character of the country beyond repair.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats assert that President Trump and his Administration missed multiple opportunities to protect the American people from the novel coronavirus.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats assert that President Trump lied to the American people about the disease's severity, its transmissibility, and the threat it posed to lives and livelihoods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "815ae8d94d4e1b863c5979d19132c77c4c25cb613be44e4163cd3b59661366e7"
+}

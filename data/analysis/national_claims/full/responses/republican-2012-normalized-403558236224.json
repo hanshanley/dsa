@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 391,
+      "generation_tps": 16.22724753649431,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1500,
+      "prompt_tps": 474.7806602327009,
+      "request_sha256": "8cc666629572f6e803012e83350089a386ca045062de3c37a676502e7bf34ce1",
+      "seconds": 27.26515541691333,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Enormous amounts of money are being spent for K-12 public education with overall results that do not justify that spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans are pointing a new way forward with major reform legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the concept of block grants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the repeal of numerous federal regulations which interfere with State and local control of public schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bulk of the federal money through Title I for low-income children and through IDEA for disabled youngsters should follow the students to whatever school they choose.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Eligible pupils can bring their share of funding with them through open enrollment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican-founded D.C. Opportunity Scholarship Program should be expanded as a model for the rest of the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congressional Democrats and the current President are making efforts to kill the D.C. Opportunity Scholarship Program in order to placate the leaders of the teachers' unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for putting the needs of students before the special interests of unions when approaching elementary and secondary education reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 373,
+      "generation_tps": 16.179434409589156,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2059,
+      "prompt_tps": 513.0909364949836,
+      "request_sha256": "58651de2e3526ebc273dc909dc0cba0736433539e10a28411a5f9db9d5f6e03b",
+      "seconds": 27.077075083972886,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Enormous amounts of money are being spent for K-12 public education with overall results that do not justify that spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans are pointing a new way forward with major reform legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the concept of block grants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the repeal of numerous federal regulations which interfere with State and local control of public schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The bulk of the federal money through Title I for low-income children and through IDEA for disabled youngsters should follow the students to whatever school they choose so that eligible pupils, through open enrollment, can bring their share of the funding with them.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican-founded D.C. Opportunity Scholarship Program should be expanded as a model for the rest of the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congressional Democrats and the current President are making efforts to kill the D.C. Opportunity Scholarship Program in order to placate the leaders of the teachers' unions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for putting the needs of students before the special interests of unions when approaching elementary and secondary education reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8cc666629572f6e803012e83350089a386ca045062de3c37a676502e7bf34ce1"
+}

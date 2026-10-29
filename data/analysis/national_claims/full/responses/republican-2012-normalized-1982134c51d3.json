@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 231,
+      "generation_tps": 15.786149834229557,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1410,
+      "prompt_tps": 424.1416194868337,
+      "request_sha256": "4cc1e2047058b7596ae7d7b621c24744c1048fb58e287206c0b02622920496b6",
+      "seconds": 17.968784958822653,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America has a sacred trust with its veterans, and is committed to providing them and their families with care and dignity.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Veterans Affairs, with a staff of 300,000, is essential to meet obligations to veterans by providing health, education, disability, survivor, and home loan benefit services and arranging memorial services upon death.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"All branches of the Department of Veterans Affairs in health, education, disability, survivor, and home loan benefit services must be made more responsive, moving from an adversarial to an advocacy relationship with veterans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A fundamental change in structure will be considered to make the regional directors of the Department of Veterans Affairs presidential appointees rather than careerists.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 231,
+      "generation_tps": 15.843908420709576,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1809,
+      "prompt_tps": 456.3457602571992,
+      "request_sha256": "990f47233fdfd7d5768653514510bd4820d3d6662f1a11772b99528a2548e7f1",
+      "seconds": 18.558572750072926,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America has a sacred trust with its veterans, and is committed to providing them and their families with care and dignity.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Veterans Affairs\u2014with a staff of 300,000\u2014is essential to meet obligations to veterans by providing health, education, disability, survivor, and home loan benefit services and arranging memorial services upon death.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"All branches of the Department of Veterans Affairs in health, education, disability, survivor, and home loan benefit services must be made more responsive, moving from an adversarial to an advocacy relationship with veterans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A fundamental change in structure will be considered to make the regional directors of the Department of Veterans Affairs presidential appointees rather than careerists.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4cc1e2047058b7596ae7d7b621c24744c1048fb58e287206c0b02622920496b6"
+}

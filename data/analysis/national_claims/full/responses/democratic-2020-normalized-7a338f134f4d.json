@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 384,
+      "generation_tps": 16.261381924429312,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1416,
+      "prompt_tps": 470.7955219248245,
+      "request_sha256": "2b0e0c16567a0f7059551334a57fafc0e4983aef4591ffce7df4d71b13efd705",
+      "seconds": 26.632703457958996,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Trump's failure to respond forcefully and capably to the COVID-19 pandemic and his failure to lead makes him responsible for the deaths of tens of thousands of Americans.\",\n\"claim_types\":[\"evaluation\",\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"COVID-19 has revealed deep fault lines in the economy, society, and health care system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in health care access contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in access to paid sick leave contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in environmental quality contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in the employment market contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in housing contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 393,
+      "generation_tps": 16.203159641214135,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1968,
+      "prompt_tps": 504.67370782317977,
+      "request_sha256": "aeede7d366d21d055aa5c663e474b0d1fc86b780199132413a33b0373179a25d",
+      "seconds": 28.165279917186126,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Trump's abject failure to respond forcefully and capably to the COVID-19 pandemic\u2014his failure to lead\u2014makes him responsible for the deaths of tens of thousands of Americans.\",\n\"claim_types\":[\"evaluation\",\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"COVID-19 has laid bare deep fault lines in the economy, society, and health care system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in health care access contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in access to paid sick leave contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in environmental quality contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in the employment market contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Disparities in housing contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2b0e0c16567a0f7059551334a57fafc0e4983aef4591ffce7df4d71b13efd705"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 438,
+      "generation_tps": 15.674630248194893,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1472,
+      "prompt_tps": 430.79593410411695,
+      "request_sha256": "0752ad025b0c1ca2adc788f7ed6fa2f79d42dd43520fff503a25a837a9a63edf",
+      "seconds": 31.371610459173098,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe that during acute economic downturns, the workforce must be taken care of and workers kept whole.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will reform the current unemployment insurance system to enable more workers to remain attached to their jobs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will promote payroll support and work-sharing programs with generous rates of wage replacement.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats require employers to maintain workers' benefits when using payroll support and work-sharing programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand the unemployment insurance system to cover more workers, including independent contractors and gig, part-time, and tipped workers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will require platform companies and companies that misclassify employees as contractors to pay into the unemployment insurance system like other employers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will raise wage replacement rates in states where they are currently low.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand, not cut, nutrition assistance and food security programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will invest in upgrading and modernizing states' unemployment system technology.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure the Department of Labor conducts strong oversight of state unemployment systems.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Labor's oversight will ensure unemployed workers can quickly and efficiently access benefits they are owed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 401,
+      "generation_tps": 15.746515370772654,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2078,
+      "prompt_tps": 461.888301684997,
+      "request_sha256": "5a94bde44ca51e78b7775036ca1ff6122f3ee62daae5a3a8c4c15402746d6da3",
+      "seconds": 29.97530575003475,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe that during acute economic downturns, the workforce must be taken care of and workers kept whole.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will reform the current unemployment insurance system to enable more workers to remain attached to their jobs, including by promoting payroll support and work-sharing programs with generous rates of wage replacement and requirements that employers maintain workers' benefits.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand the unemployment insurance system to cover more workers, including independent contractors and gig, part-time, and tipped workers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will require platform companies and companies that misclassify employees as contractors to pay into the unemployment insurance system like other employers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will raise wage replacement rates, which are far too low in many states.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand, not cut, nutrition assistance and food security programs that millions of Americans are relying on in this crisis.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will invest in upgrading and modernizing states' unemployment system technology.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure the Department of Labor conducts strong oversight of state unemployment systems.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Labor's oversight will ensure unemployed workers can quickly and efficiently access the benefits they are owed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0752ad025b0c1ca2adc788f7ed6fa2f79d42dd43520fff503a25a837a9a63edf"
+}

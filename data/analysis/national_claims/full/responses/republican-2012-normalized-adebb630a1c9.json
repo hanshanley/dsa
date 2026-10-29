@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 360,
+      "generation_tps": 15.924052296909817,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1434,
+      "prompt_tps": 466.55474464094357,
+      "request_sha256": "083c8f75c319986e2fb333104839893d4ef3914ab7ff6f131006c7ff9d51d6ba",
+      "seconds": 25.69132149987854,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Republican Party honors the extraordinary sacrifices of men and women in U.S. territories who serve in the U.S. Armed Forces.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party welcomes greater participation of residents of U.S. territories in all aspects of the political process.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party affirms the right of residents of U.S. territories to seek the full extension of the Constitution, with all its rights and responsibilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"U.S. territories face serious economic challenges as they struggle to retain existing industries and develop new ones.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Development of local energy options is crucial for U.S. territories to reduce their dependence on imported fuel and promote economic stability.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Pacific territories should have flexibility to determine the minimum wage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A stronger private sector in U.S. territories can raise wages, reduce dependence on public sector employment, and lead toward local self-sufficiency.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"All unreasonable economic impediments, including unreasonable U.S. customs practices, must be removed from U.S. territories.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.242194337245188,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1962,
+      "prompt_tps": 495.0763621290701,
+      "request_sha256": "2992394150aa7acf62ecf20238c816e5da5071cb47c24b2aca272cee2e1e852a",
+      "seconds": 27.43279358302243,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party honors the extraordinary sacrifices of men and women in U.S. territories who protect freedom through their service in the U.S. Armed Forces.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party welcomes greater participation of residents of U.S. territories in all aspects of the political process.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party affirms the right of residents of U.S. territories to seek the full extension of the Constitution, with all the rights and responsibilities it entails.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"U.S. territories face serious economic challenges as they struggle to retain existing industries and develop new ones.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Development of local energy options is crucial for U.S. territories to reduce their dependence on imported fuel and promote economic stability.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Pacific territories should have flexibility to determine the minimum wage, which has seriously restricted progress in the private sector.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A stronger private sector in U.S. territories can raise wages, reduce dependence on public sector employment, and lead toward local self-sufficiency.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"All unreasonable economic impediments, including unreasonable U.S. customs practices, must be removed from U.S. territories.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "083c8f75c319986e2fb333104839893d4ef3914ab7ff6f131006c7ff9d51d6ba"
+}

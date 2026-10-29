@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 294,
+      "generation_tps": 16.21484317955985,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1293,
+      "prompt_tps": 462.9318633086421,
+      "request_sha256": "e549defb772c79e317b63386cfe713a18395c7e95831dfece5c3dca22bd91f94",
+      "seconds": 20.93529629218392,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic National Committee acknowledges that it gathers to state its values on lands stewarded for many centuries by ancestors and descendants of Tribal Nations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic National Committee recognizes that the country was built on Indigenous homelands.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic National Committee pays respects to millions of Indigenous people throughout history who have protected lands, waters, and animals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Democratic National Committee respectfully acknowledges that it presents this Platform at the 2020 Democratic National Convention on the lands of the Bad River Band of the Lake Superior Tribe of Chippewa Indians, the Forest County Potawatomi Community, the Ho-Chunk Nation, the Lac Courte Oreilles Band of Lake Superior Chippewa, the Lac du Flambeau Band of Lake Superior Chippewa, the Menominee Nation, the Oneida Nation of Wisconsin, the Red Cliff Band of Lake Superior Chippewa, the St. Croix Chippewa Indians of Wisconsin, the Sokaogon Chippewa Community, and the Stockbridge-Munsee Community, Band of Mohican Indians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 315,
+      "generation_tps": 16.284818511915457,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1755,
+      "prompt_tps": 483.1971794364833,
+      "request_sha256": "d1812a1290c7b5f646792be86f5a6cebeff65fb8dd4e44c43cf257af2dbe73e7",
+      "seconds": 22.985741583863273,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic National Committee wishes to acknowledge that it gathers together to state its values on lands that have been stewarded through many centuries by the ancestors and descendants of Tribal Nations who have been here since time immemorial.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic National Committee recognizes that the country was built on Indigenous homelands.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic National Committee pays respects to millions of Indigenous people throughout history who have protected lands, waters, and animals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Democratic National Committee respectfully acknowledges that it presents this Platform at the 2020 Democratic National Convention on the lands of the Bad River Band of the Lake Superior Tribe of Chippewa Indians, the Forest County Potawatomi Community, the Ho-Chunk Nation, the Lac Courte Oreilles Band of Lake Superior Chippewa, the Lac du Flambeau Band of Lake Superior Chippewa, the Menominee Nation, the Oneida Nation of Wisconsin, the Red Cliff Band of Lake Superior Chippewa, the St. Croix Chippewa Indians of Wisconsin, the Sokaogon Chippewa Community, and the Stockbridge-Munsee Community, Band of Mohican Indians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e549defb772c79e317b63386cfe713a18395c7e95831dfece5c3dca22bd91f94"
+}

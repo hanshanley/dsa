@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 443,
+      "generation_tps": 16.204542267460933,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1503,
+      "prompt_tps": 465.0325844168277,
+      "request_sha256": "c10fbd4364a0bda4b21b5802772c806ad239f760f2e6f885403549e3524fb90a",
+      "seconds": 30.58067904203199,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe America must continue to have the strongest military in the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump has called the U.S. military \\\"a disaster.\\\"\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats reject the view that the U.S. military is a \\\"disaster.\\\"\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support a smart, predictable defense budget that meets strategic challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats oppose arbitrary cuts to the defense budget enacted by the Republican Congress as part of sequestration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will prioritize military readiness by ensuring Active, Reserve, and National Guard components remain the best trained and equipped in the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will seek a more agile and flexible military force.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will rid the military of outdated Cold War-era systems.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will audit the Pentagon.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will launch a high-level commission to review the role of defense contractors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will take greater action against those involved in fraud within the defense budget.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will ensure the Department of Defense invests its budget wisely.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 445,
+      "generation_tps": 16.239874404149425,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2114,
+      "prompt_tps": 474.3669042986385,
+      "request_sha256": "b84a4850ea6c48718a02fb7dbb7e64964b3f88570bafa8019f4f1cb947f39369",
+      "seconds": 31.86839545913972,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe America must continue to have the strongest military in the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump has called the U.S. military \\\"a disaster.\\\"\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats reject Donald Trump's view that the U.S. military is \\\"a disaster.\\\"\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support a smart, predictable defense budget that meets the strategic challenges they face.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats oppose the arbitrary cuts to the defense budget that the Republican Congress enacted as part of sequestration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will prioritize military readiness by ensuring Active, Reserve, and National Guard components remain the best trained and equipped in the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will seek a more agile and flexible military force.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will rid the military of outdated Cold War-era systems.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will audit the Pentagon.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will launch a high-level commission to review the role of defense contractors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will take greater action against those involved in fraud.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will ensure the Department of Defense invests its budget wisely.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c10fbd4364a0bda4b21b5802772c806ad239f760f2e6f885403549e3524fb90a"
+}

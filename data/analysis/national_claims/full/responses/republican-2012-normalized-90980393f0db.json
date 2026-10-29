@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 436,
+      "generation_tps": 16.270947449034136,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1500,
+      "prompt_tps": 477.8261965895553,
+      "request_sha256": "2c1c15fa52d9e404bd6d0cc66f1439d500b5c5dbdd4a8ec6971f36dd688c73c7",
+      "seconds": 29.946289833867922,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Sequestration, which is severe, automatic, across-the-board cuts in defense spending over the next decade, would be a disaster for national security, imperiling the safety of servicemen and women, accelerating the decline of the nation's defense industrial base, and resulting in the layoff of more than 1 million skilled workers.\", \"claim_types\":[\"evaluation\", \"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to sequester is bipartisan.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Secretary of Defense has said the cuts will be \\\"devastating\\\" to America's military.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current President supported sequestration, signed it into law, and has threatened to veto Republican efforts to prevent it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the current President allows an additional half trillion dollars to be cut from the defense budget, America will be left with the smallest ground force since 1940.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the current President allows an additional half trillion dollars to be cut from the defense budget, America will be left with the smallest number of ships since 1915.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the current President allows an additional half trillion dollars to be cut from the defense budget, America will be left with the smallest Air Force in its history.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America faces a growing range of threats to its national security.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's economy can ill afford to lose 1.5 million defense-related jobs.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 436,
+      "generation_tps": 16.22295529955094,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2104,
+      "prompt_tps": 519.3573010672204,
+      "request_sha256": "b4f62fb57f9aeaf2d750c784f28a753366a743e8a3f69d041aad6fb2336091b7",
+      "seconds": 30.936864709015936,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Sequestration\u2014which is severe, automatic, across-the-board cuts in defense spending over the next decade\u2014would be a disaster for national security, imperiling the safety of servicemen and women, accelerating the decline of the nation's defense industrial base, and resulting in the layoff of more than 1 million skilled workers.\", \"claim_types\":[\"evaluation\", \"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to sequester is bipartisan.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Secretary of Defense has said the cuts will be \\\"devastating\\\" to America's military.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current President supported sequestration, signed it into law, and has threatened to veto Republican efforts to prevent it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the current President allows an additional half trillion dollars to be cut from the defense budget, America will be left with the smallest ground force since 1940.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the current President allows an additional half trillion dollars to be cut from the defense budget, America will be left with the smallest number of ships since 1915.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If the current President allows an additional half trillion dollars to be cut from the defense budget, America will be left with the smallest Air Force in its history.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America faces a growing range of threats to its national security.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's economy can ill afford to lose 1.5 million defense-related jobs.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2c1c15fa52d9e404bd6d0cc66f1439d500b5c5dbdd4a8ec6971f36dd688c73c7"
+}

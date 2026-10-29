@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 345,
+      "generation_tps": 16.267294149508007,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1395,
+      "prompt_tps": 469.716804843686,
+      "request_sha256": "5280196addffaf0561633913f83ad4c021f122f89fea606e96a07c114cf0ca7a",
+      "seconds": 24.188231207896024,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats are committed to addressing military sexual assault.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Efforts to prevent sexual assault and rape must be increased.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Allegations of sexual assault must be aggressively investigated and prosecuted.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Victims of sexual assault must receive timely, appropriate and comprehensive treatment for physical, emotional, and psychological trauma.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will strengthen homeland security.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will deal wisely and firmly with those who seek to imperil America or its partners.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will deter aggression.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will promote peace.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Diplomacy and development will be used to confront global threats.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"War will be the last resort.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 16.19060561123463,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1908,
+      "prompt_tps": 490.9545179797291,
+      "request_sha256": "217f041dd335901464c86ad9dac6bc2a71422446ceee7017419155909d0f44de",
+      "seconds": 26.069410915952176,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to addressing the scourge of military sexual assault.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Efforts to prevent sexual assault and rape must be increased.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Allegations of sexual assault and rape must be aggressively investigated and prosecuted.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Victims of sexual assault and rape must receive timely, appropriate and comprehensive treatment for physical, emotional, and psychological trauma resulting from sexual assault.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will strengthen homeland security.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will deal wisely and firmly with those who seek to imperil America or its partners.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will deter aggression.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will promote peace.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will use diplomacy and development to confront global threats.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"War will be the last resort.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5280196addffaf0561633913f83ad4c021f122f89fea606e96a07c114cf0ca7a"
+}

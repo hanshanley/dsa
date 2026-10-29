@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 474,
+      "generation_tps": 15.866292964095962,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1487,
+      "prompt_tps": 519.962711569819,
+      "request_sha256": "b330fac0a50ba0474685ee9037b710980b7f1b5e573cc186a35ead3c613c4b66",
+      "seconds": 32.74422258301638,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under the current Administration, the civil service has grown by at least 140,000 workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of federal workers making at least $150,000 has doubled under the current Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The national debt has increased to over $15.9 trillion under the current Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The growth of the civil service and the increase in the national debt under the current Administration are grossly irresponsible.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a reduction in the federal payroll of at least 10 percent through attrition.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for adjusting pay scales and benefits to reflect those of the private sector.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for bringing the 130-year old Civil Service System into the twenty-first century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a federal pay system that is sufficiently flexible to acknowledge and reward innovation, overhead reduction, process optimization, and expedited paperwork.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Delinquency in paying taxes and repaying student loans has been too common in some segments of the civil service.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican Administration will prioritize enforcement of tax and student loan obligations among its own employees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican Administration will not name to public office anyone who has failed to meet their financial obligations to the government and fellow taxpayers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 474,
+      "generation_tps": 15.841211858381886,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2129,
+      "prompt_tps": 461.8076880790753,
+      "request_sha256": "c28f4bae3c201fa5d7899bcce05dcae65af59ce2d9d862f3ea91470d508b7be3",
+      "seconds": 34.54274325002916,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Under the current Administration, the civil service has grown by at least 140,000 workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of federal workers making at least $150,000 has doubled under the current Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The national debt has increased to over $15.9 trillion under the current Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The growth of the civil service and the increase in the national debt under the current Administration are grossly irresponsible.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a reduction in the federal payroll of at least 10 percent through attrition.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for adjusting pay scales and benefits to reflect those of the private sector.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for bringing the 130-year old Civil Service System into the twenty-first century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a federal pay system that is sufficiently flexible to acknowledge and reward those who dare to innovate, reduce overhead, optimize processes, and expedite paperwork.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Delinquency in paying taxes and repaying student loans has been too common in some segments of the civil service.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican Administration will make enforcement among its own employees a priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A Republican Administration will not name to public office anyone who has failed to meet their financial obligations to the government and fellow taxpayers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b330fac0a50ba0474685ee9037b710980b7f1b5e573cc186a35ead3c613c4b66"
+}
