@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 334,
+      "generation_tps": 15.065290612501355,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1563,
+      "prompt_tps": 444.6703410250573,
+      "request_sha256": "f6b53db6582db93eed487f091e064e872507f23e2e1bd79476b967bfa47fa40f",
+      "seconds": 25.70014754193835,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will keep working to build an economy that rewards work, not wealth.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats remain committed to fighting poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats remain committed to enabling all Americans to live up to their potential.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are ending giveaways to big corporations and special interests that have benefitted at the expense of American taxpayers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Administration has given Medicare the ability to negotiate lower prescription drug prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Administration is requiring drugmakers to reimburse Medicare if they hike prices faster than inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will expand the number of drugs subject to price caps and negotiation under the Inflation Reduction Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Expanding drug price negotiation will save taxpayers nearly $160 billion over the next 10 years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Medicare will no longer have to pay Big Pharma exorbitant prices.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 386,
+      "generation_tps": 15.353327370516228,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2065,
+      "prompt_tps": 464.19126840246605,
+      "request_sha256": "0c6dced7d90fcdcf46477f1ccb865078b9f43042a52d73ed83fbc7b7377daa0a",
+      "seconds": 29.60485424986109,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will keep working to build an economy that rewards work, not wealth.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats remain committed to fighting poverty.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats remain committed to enabling all Americans to live up to their God-given potential.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are ending giveaways to big corporations and special interests that have benefitted at the expense of American taxpayers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Administration has already cracked down on one of Big Pharma's biggest scams, by giving Medicare the ability to negotiate lower prescription drug prices, as the VA and private insurers have done for years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Administration is requiring drugmakers to reimburse Medicare if they hike prices faster than inflation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will expand the number of drugs subject to price caps and negotiation under the Inflation Reduction Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Expanding the number of drugs subject to price caps and negotiation under the Inflation Reduction Act will save taxpayers nearly $160 billion over the next 10 years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Medicare will no longer have to pay Big Pharma exorbitant prices as a result of expanded price negotiation.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f6b53db6582db93eed487f091e064e872507f23e2e1bd79476b967bfa47fa40f"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 385,
+      "generation_tps": 15.43976385075709,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1543,
+      "prompt_tps": 448.6472506662511,
+      "request_sha256": "0c6777fe40e02a2812f6d4440be05bd1bd4fc3fabb0c541cb963001bb7562ecd",
+      "seconds": 28.385887917131186,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"During the pandemic, Democrats expanded the Child Tax Credit, saving nearly 40 million families with 65 million children up to $3,600 per child per year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"During the pandemic, Democrats expanded the Earned Income Tax Credit, saving over 17 million low-paid workers an average $700 a year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"During the pandemic, Democrats expanded the health insurance premium tax credit, saving millions of families who buy coverage on an Affordable Care Act exchange about $800 a year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are opposed to tax relief for families that need it.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans already blocked renewal of the Child Tax Credit and Earned Income Tax Credit expansions, pushing 3 million children back into poverty.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans keep trying to repeal the premium tax credit expansions, which will raise health care costs for millions of families.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will keep fighting to restore and protect tax relief.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has proposed a $10,000 tax credit for first-time homebuyers and people selling their first homes, to help reduce housing costs for working families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 412,
+      "generation_tps": 15.416529197584993,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2096,
+      "prompt_tps": 482.05727142480947,
+      "request_sha256": "1b1d070cb166e3d48e249d1dc396dcf1407b4e68ee870ddc99e59bfbd6d7863a",
+      "seconds": 31.08517187507823,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"During the pandemic, Democrats expanded the Child Tax Credit, saving nearly 40 million families with 65 million children up to $3,600 per child per year, and cutting child poverty nearly in half to its lowest rate on record.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"During the pandemic, Democrats expanded the Earned Income Tax Credit, saving over 17 million low-paid workers an average $700 a year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"During the pandemic, Democrats expanded the health insurance premium tax credit, saving millions of families who buy coverage on an Affordable Care Act exchange about $800 a year.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are opposed to this tax relief for families that need it.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans already blocked renewal of the Child Tax Credit and Earned Income Tax Credit expansions, pushing 3 million children back into poverty.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans keep trying to repeal the premium tax credit expansions, which will raise health care costs for millions of families.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will keep fighting to restore and protect that tax relief, giving tens of millions of families some breathing room again.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has proposed a $10,000 tax credit for first-time homebuyers and people selling their first homes, to help reduce housing costs for working families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0c6777fe40e02a2812f6d4440be05bd1bd4fc3fabb0c541cb963001bb7562ecd"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 378,
+      "generation_tps": 15.508372767441923,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1472,
+      "prompt_tps": 413.17364302469036,
+      "request_sha256": "1c205939dc6b0f0af578fd6c44a99f8e403697237d0ca32177d6ea0f8268ae5c",
+      "seconds": 27.948620416922495,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration is helping family farmers service distressed loans in order to keep their lands and ultimately pass them down to their kids.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration has worked with many farmers to boost the production of expensive fertilizer, increasing supply and easing costs for everyone else.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S.D.A. expanded farm insurance to allow for more double cropping, a practice that increases farm earnings, expands the food supply, and helps lower average food prices for American families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to get farmers the right to repair their own equipment, without having to pay big equipment makers for diagnostic tools and repairs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will look to further limit foreign ownership of U.S. farmland to protect the U.S. food supply and national security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats have stood by farm workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are working to improve workers' safety at meat processing facilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will continue to enforce and advance labor and environmental rules, for example promoting organizing rights and requiring overtime pay, and boosting protections against harmful pesticides and extreme heat.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 378,
+      "generation_tps": 15.388329142130551,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2018,
+      "prompt_tps": 449.86566594359414,
+      "request_sha256": "5315e03279cf6f764b1e5ea1522cf6fc682f19e4dc2779e19797dd7aa9625784",
+      "seconds": 29.063385708956048,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration is helping family farmers service distressed loans in order to keep their lands and ultimately pass them down to their kids.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration has worked with many farmers to boost the production of expensive fertilizer, increasing supply and easing costs for everyone else.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S.D.A. expanded farm insurance to allow for more double cropping, a practice that increases farm earnings, expands the food supply, and helps lower average food prices for American families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to get farmers the right to repair their own equipment, without having to pay big equipment makers for diagnostic tools and repairs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will look to further limit foreign ownership of U.S. farmland to protect the U.S. food supply and national security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats have stood by farm workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are working to improve workers' safety at meat processing facilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will continue to enforce and advance labor and environmental rules, for example promoting organizing rights and requiring overtime pay, and boosting protections against harmful pesticides and extreme heat.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1c205939dc6b0f0af578fd6c44a99f8e403697237d0ca32177d6ea0f8268ae5c"
+}

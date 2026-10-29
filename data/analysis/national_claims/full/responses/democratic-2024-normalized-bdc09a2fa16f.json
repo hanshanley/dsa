@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 364,
+      "generation_tps": 15.87390690026981,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1474,
+      "prompt_tps": 458.51807363201175,
+      "request_sha256": "5b53c96bd6e525750f0e3931d8e96000751788fb04331153c99b9806b7ac891b",
+      "seconds": 26.15564625011757,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden believes that a four-year college is not necessary to live a good, middle-class life.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are working to ensure that every American can access quality new jobs where many people can earn over $100,000 a year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American Rescue Plan supported more than 4,300 state- and local-government workforce development programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Investing in American agenda is expanding job-training partnerships between high schools, community colleges, unions, and employers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are one million trainees enrolled in registered apprenticeships today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Registered apprenticeships have historically provided a reliable path to the middle class, empowering workers to earn while they learn in traditional trades and new cutting-edge industries.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Extreme Republicans have proposed gutting funding for registered apprenticeships in this year's budget.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to continue making historic investments in registered apprenticeships to expand opportunity, including by partnering directly with unions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 371,
+      "generation_tps": 15.985720571993241,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2006,
+      "prompt_tps": 487.6626040976942,
+      "request_sha256": "4ee2ff4a4f8571d303744097fb75294dfeb3ba98207a8cb2311a86b7b0a52b42",
+      "seconds": 27.331626625033095,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden believes that a four-year college is not necessary to live a good, middle-class life.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are working to ensure that every American can access quality new jobs, where many people can earn over $100,000 a year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American Rescue Plan supported more than 4,300 state- and local-government workforce development programs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Investing in American agenda is expanding job-training partnerships between high schools, community colleges, unions, and employers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are one million trainees enrolled in registered apprenticeships today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Registered apprenticeships have historically provided a reliable path to the middle class, empowering workers to earn while they learn, not only in traditional trades, but also in new cutting-edge industries.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Extreme Republicans have proposed gutting funding for registered apprenticeships in this year's budget.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to continue making historic investments in registered apprenticeships to expand opportunity, including by partnering directly with unions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5b53c96bd6e525750f0e3931d8e96000751788fb04331153c99b9806b7ac891b"
+}

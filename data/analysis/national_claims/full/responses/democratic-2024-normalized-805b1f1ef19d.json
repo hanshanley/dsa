@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 201,
+      "generation_tps": 15.313395932907355,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1395,
+      "prompt_tps": 421.554558020364,
+      "request_sha256": "22d45ab17c67af81ca7a27567402652cf3304b460c8a02e632513ebe974bc302",
+      "seconds": 16.448010874912143,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration reversed a Trump-era policy that would have risked putting half-a-million children in poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"SNAP benefits were modernized for the first time since 1975, permanently increasing them and lifting more than 2 million people, including over a million children, out of poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden signed into law a permanent special summer nutrition program that will help 21 million kids.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden successfully blocked Congressional Republican proposals that would have increased poverty by slashing health care, housing, and food assistance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 203,
+      "generation_tps": 15.607759974959215,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1764,
+      "prompt_tps": 449.9024207524341,
+      "request_sha256": "e96c2c0a4c38e2b9ab6d705920558f72367d12d221c7f34a302361719b4878e0",
+      "seconds": 16.93806100008078,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration reversed a Trump-era policy that would have risked putting half-a-million children in poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"SNAP benefits were modernized for the first time since 1975, permanently increasing them and lifting more than 2 million people, including over a million children, out of poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden signed into law a permanent special summer nutrition program that will help 21 million kids.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden successfully blocked Congressional Republican proposals that would have increased poverty by slashing health care, housing, food assistance, and more.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "22d45ab17c67af81ca7a27567402652cf3304b460c8a02e632513ebe974bc302"
+}

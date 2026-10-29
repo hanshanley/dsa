@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 429,
+      "generation_tps": 3.5358742743172176,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1534,
+      "prompt_tps": 830.8081608438789,
+      "request_sha256": "7264afe602061d51e59452d6c56c91cf43aa4e873f84bd51e904ec164dbf6df8",
+      "seconds": 123.23767379182391,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Treasury Department and the IRS are making it easier and cheaper for Americans to file their taxes and collect refunds they are owed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The IRS successfully piloted a free, easy-to-use online tool, Direct File, which has saved taxpayers millions of dollars in filing fees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Direct File will be a permanent offering, saving users an average $150 in filing costs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans keep trying to defund Direct File.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's plans will cut taxes for middle-class and low-income Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Those tax cuts will be financed by making the ultra-wealthy and big corporations pay their fair share.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"There are a thousand billionaires in America, and they pay an average 8 percent in taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"A firefighter or teacher pays a higher tax rate than billionaires.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will make billionaires pay a minimum income tax rate of 25 percent, raising $500 billion in 10 years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will end preferential treatment for capital gains for millionaires, so they pay the same rate on investment income as on wages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 3.0222248952495283,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2075,
+      "prompt_tps": 100.72551781730833,
+      "request_sha256": "dbc962cd64ecd14559fa0b216ee019ca37b3d1e079ed2312a8a63e050ad888d6",
+      "seconds": 164.2199231251143,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Treasury Department and the IRS are making it easier and cheaper for Americans to file their taxes and collect the refunds they are owed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The IRS successfully piloted a free, easy-to-use online tool, Direct File, which has saved taxpayers millions of dollars in filing fees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Direct File will be a permanent offering, saving users an average $150 in filing costs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans keep trying to defund Direct File.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's plans will cut taxes for middle-class and low-income Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden's plans will finance those tax cuts by making the ultra-wealthy and big corporations pay their fair share.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"There are a thousand billionaires in America, and they pay an average 8 percent in taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"A firefighter or teacher pays a higher tax rate than billionaires.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will make billionaires pay a minimum income tax rate of 25 percent, raising $500 billion in 10 years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will end preferential treatment for capital gains for millionaires, so they pay the same rate on investment income as on wages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 2.598676920879915,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2136,
+      "prompt_tps": 148.768216488812,
+      "request_sha256": "078448c7bc8bc70294ba17d87f3e39e016b084d84dbdfbd5c1c39a00f6d1353f",
+      "seconds": 181.43607645807788,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Treasury Department and the IRS are making it easier and cheaper for Americans to file their taxes and collect the refunds they are owed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The IRS successfully piloted a free, easy-to-use online tool, Direct File, which has saved taxpayers millions of dollars in filing fees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Direct File will be a permanent offering, saving users an average $150 in filing costs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans keep trying to defund Direct File.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's plans will cut taxes for middle-class and low-income Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden's plans will finance those tax cuts by making the ultra-wealthy and big corporations pay their fair share.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"There are a thousand billionaires in America, and they pay an average 8 percent in taxes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"A firefighter or teacher pays a higher tax rate than billionaires.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will make billionaires pay a minimum income tax rate of 25 percent, raising $500 billion in 10 years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will end preferential treatment for capital gains for millionaires, so they pay the same rate on investment income as on wages.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7264afe602061d51e59452d6c56c91cf43aa4e873f84bd51e904ec164dbf6df8"
+}

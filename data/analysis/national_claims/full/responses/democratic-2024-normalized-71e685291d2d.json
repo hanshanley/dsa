@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 377,
+      "generation_tps": 15.165865084210363,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1478,
+      "prompt_tps": 416.6224219080085,
+      "request_sha256": "009aa1c461839d57d352447d34713216d869956172f3ceee42c3906a84b56a40",
+      "seconds": 28.417379083111882,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Corporate profits have doubled since the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans propose $1 trillion in new corporate tax cuts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans propose repealing the estate tax so the wealthiest 0.1 percent of Americans can pass wealth on to their heirs tax-free.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans propose giving American billionaires an average $3.5 million tax break.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The proposed tax break for American billionaires is nearly 50 times bigger than what the average family earns in a year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"House Republicans have vowed to pay for part or all of the proposed tax cuts by cutting Social Security and Medicare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economists predict Trump's billionaire giveaways and extreme tariffs will slow growth, cost jobs, and trigger a recession his first year back in office.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economists predict Trump's policies will raise taxes on middle-class families by $2,500 a year.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economists predict Trump's policies will add trillions to the deficit.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 380,
+      "generation_tps": 14.97683637649309,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2023,
+      "prompt_tps": 441.2548531017673,
+      "request_sha256": "d7637c41729ec1074d2b449cd4fc3e1fd7e9f86c0a5a3dd51e8019089c549084",
+      "seconds": 29.969751707976684,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Corporate profits have doubled since the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans propose $1 trillion in new corporate tax cuts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans propose repealing the estate tax so the wealthiest 0.1 percent of Americans can pass wealth on to their heirs tax-free.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans propose giving American billionaires an average $3.5 million tax break.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The proposed tax break for American billionaires is nearly 50 times bigger than what the average family earns in a year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"House Republicans have vowed to pay for part or all of the proposed tax cuts by cutting Social Security and Medicare for everyone else.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economists predict Trump's billionaire giveaways and extreme tariffs will slow growth, cost jobs, and trigger a recession his first year back in office.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economists predict Trump's policies will raise taxes on middle-class families by $2,500 a year.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Economists predict Trump's policies will add trillions to the deficit.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "009aa1c461839d57d352447d34713216d869956172f3ceee42c3906a84b56a40"
+}

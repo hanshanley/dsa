@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 430,
+      "generation_tps": 15.164379136560017,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1590,
+      "prompt_tps": 405.6221914512113,
+      "request_sha256": "7024bfa588c5f7fb861085b375445fc344b1fe910b9cc36ea7915d2512460fbd",
+      "seconds": 32.28791308403015,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats passed historic laws to build infrastructure, semiconductors, clean energy, and small-business supply chains here at home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is expanding access to capital, business opportunities, and training to help small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is working for a fairer tax code to level the playing field for small entrepreneurs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration invested a record $12 billion in Community Development Finance Institutions (CDFIs) to support small businesses and growth across low-income communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Small Business Administration is nearly halfway to its goal of providing $250 billion in financing to 500,000 small businesses by 2030.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Small Business Administration is on track to double small loans under $150,000 by year's end, compared to 2020.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is directing billions of dollars to community lenders and state-level small-business programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris's Economic Opportunity Coalition is mobilizing hundreds of billions more in private investment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government set a record for small business contract spending this year, awarding them 28 percent of total procurement dollars, directly supporting a million jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 445,
+      "generation_tps": 15.667605263928504,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2188,
+      "prompt_tps": 462.8853718187819,
+      "request_sha256": "482aa4254f4293ec84cf2d3724bdedbe134853b0b1d25e50937f35d575fddd5d",
+      "seconds": 33.145096875028685,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats passed historic laws to build infrastructure, semiconductors, clean energy, and the small-business supply chains that support those cutting-edge industries here at home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is expanding access to capital, business opportunities, and training to help small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is working for a fairer tax code to level the playing field for small entrepreneurs who have to compete against corporate giants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration invested a record $12 billion in Community Development Finance Institutions (CDFIs) to support small businesses and growth across low-income communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Small Business Administration is nearly halfway to its goal of providing $250 billion in financing to 500,000 small businesses by 2030.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Small Business Administration is on track to double small loans under $150,000 by year's end, compared to 2020.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is directing billions of dollars to community lenders and state-level small-business programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris's Economic Opportunity Coalition is mobilizing hundreds of billions more in private investment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government set a record for small business contract spending this year, awarding them 28 percent of total procurement dollars, directly supporting a million jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7024bfa588c5f7fb861085b375445fc344b1fe910b9cc36ea7915d2512460fbd"
+}

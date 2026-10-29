@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 293,
+      "generation_tps": 16.093316961196052,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1405,
+      "prompt_tps": 461.6753022241073,
+      "request_sha256": "78a7e7e61cea714dd69f9968ec4f6418ef9d4fd4188a984eafc4790f2a4c644c",
+      "seconds": 21.25969508406706,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats state that Wall Street did not build America, and the middle class built America, with unions building the middle class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden and Vice President Harris state they are leading the most pro-union Administration in history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden named staunch labor allies and former union leaders to positions across the government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden empowered appointees to fight for good jobs and workers' rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden was the first President to walk a picket line, joining UAW workers on strike in Detroit before they won historic wage increases last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden believes that when unions win, all workers benefit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden believes that every worker needs a voice and a fair shot as the economy is rebuilt for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 298,
+      "generation_tps": 16.08937283009077,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1866,
+      "prompt_tps": 454.82663285213164,
+      "request_sha256": "44fdc192029983bee61dfe077455d5d83f7c6a41ec5272abf015441744e7cec1",
+      "seconds": 22.634020583005622,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats state that Wall Street did not build America, and the middle class built America, with unions building the middle class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden and Vice President Harris state they are leading the most pro-union Administration in history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden named staunch labor allies and former union leaders to positions across the government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden empowered appointees to fight for good jobs and workers' rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden was the first President to walk a picket line, joining UAW workers on strike in Detroit before they won historic wage increases last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden believes that when unions win, all workers benefit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden believes that every worker needs a voice and a fair shot as the economy is rebuilt for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "78a7e7e61cea714dd69f9968ec4f6418ef9d4fd4188a984eafc4790f2a4c644c"
+}

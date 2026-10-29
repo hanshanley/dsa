@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 564,
+      "generation_tps": 15.52837314976273,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1553,
+      "prompt_tps": 448.109546814935,
+      "request_sha256": "78f15532761dbbab2eff389aa848ddabd3b9dc9f3c6afe43544af4eb94b33d32",
+      "seconds": 39.79840208380483,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump is focused on benefiting his billionaire donors.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump prioritizes himself and his wealthy friends.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2017, Donald Trump enacted a tax cut that overwhelmingly benefited the wealthy and biggest corporations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The 2017 tax cut included a massive tax break for the wealthiest 0.1 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The 2017 tax cut slashed the corporate tax rate by nearly half.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Executives used windfalls from the 2017 tax cut for stock buybacks rather than investing in workers, better products, or lowering prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump stated to donors at Mar-a-Lago that he would give them tax cuts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump's allies predicted his tax cut would push economic growth as high as 6 percent.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America's growth rate barely changed after the 2017 tax cut.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 2017 tax cut had no impact on the average American's income.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 2017 tax cut boosted wages only for those in the top 10 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump's allies claimed the 2017 tax cut would pay for itself.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 2017 tax cut exploded the federal deficit by $2 trillion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump's policies added more to the national debt than has been added in any previous presidential term.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 587,
+      "generation_tps": 15.214704048892507,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2285,
+      "prompt_tps": 488.45994672976315,
+      "request_sha256": "c530a498446e24eec3813a3d233681b6a5f99e3344e4cb0cf83b1f5a0f9f5757",
+      "seconds": 43.27106412500143,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump is focused on rigging the game for his billionaire donors instead.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump always puts himself and his rich friends first.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 2017, Donald Trump enacted a tax cut that overwhelmingly benefited the wealthy and biggest corporations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The 2017 tax cut included a massive tax break for the wealthiest 0.1 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The 2017 tax cut slashed the corporate tax rate by nearly half.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Executives used windfalls from the 2017 tax cut for stock buybacks for their own benefit, rather than investing in workers, better products, or lowering prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump told donors at Mar-a-Lago: \\\"You're rich as hell, and we're going to give you tax cuts.\\\"\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump's allies predicted that his tax cut would push economic growth as high as 6 percent.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"America's growth rate barely changed after the 2017 tax cut.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 2017 tax cut had no impact on the average American's income.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 2017 tax cut boosted wages only for those in the top 10 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump's allies claimed the 2017 tax cut would pay for itself.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 2017 tax cut exploded the federal deficit by $2 trillion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump's policies added more to the national debt than has ever been added in a presidential term.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "78f15532761dbbab2eff389aa848ddabd3b9dc9f3c6afe43544af4eb94b33d32"
+}
