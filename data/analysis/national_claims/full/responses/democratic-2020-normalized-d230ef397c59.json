@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 335,
+      "generation_tps": 15.95627327017416,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1422,
+      "prompt_tps": 463.38064155589433,
+      "request_sha256": "1d8bd40168bdd554b832aca16b6afb3b85b6eb000750c872bed4c8f5cdae477b",
+      "seconds": 24.073972791898996,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Trump Administration has completely failed in its response to the opioid epidemic, leaving millions of families desperate for help.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make medication-assisted treatment available to all who need it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will require publicly supported health clinics to offer medication-assisted treatment for opioid addiction and approved treatments for other substance use disorders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe over-prescribing must be stopped while improving access to effective and needed pain management.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support expanded access to mental health and substance use disorder care in prisons and for returning citizens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure no one is incarcerated solely for drug use.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support increased use of drug courts, harm reduction interventions, and treatment diversion programs for those struggling with substance use disorders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Incarcerated people suffer from serious mental health and substance use disorders at higher rates than the general population.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 340,
+      "generation_tps": 15.982590101447427,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1925,
+      "prompt_tps": 509.5535556902362,
+      "request_sha256": "3b43264ac3493676c4087db2ca36397c9b72e8ed36eee751fe2ef2800c277786",
+      "seconds": 25.06218250002712,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Trump Administration has completely failed in its response to the opioid epidemic, leaving millions of families desperate for help.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make medication-assisted treatment available to all who need it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will require publicly supported health clinics to offer medication-assisted treatment for opioid addiction and approved treatments for other substance use disorders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe over-prescribing must be stopped while improving access to effective and needed pain management.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support expanded access to mental health and substance use disorder care in prisons and for returning citizens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure no one is incarcerated solely for drug use.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support increased use of drug courts, harm reduction interventions, and treatment diversion programs for those struggling with substance use disorders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Incarcerated people suffer from serious mental health and substance use disorders at higher rates than the general population.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1d8bd40168bdd554b832aca16b6afb3b85b6eb000750c872bed4c8f5cdae477b"
+}

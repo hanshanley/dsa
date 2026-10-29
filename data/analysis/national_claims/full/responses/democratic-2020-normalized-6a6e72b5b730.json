@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 311,
+      "generation_tps": 16.042322535628195,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1418,
+      "prompt_tps": 470.71568085761066,
+      "request_sha256": "881fccfd96a2ffa434f82dde21e2cd9cc2daec38af523210fc62471248faf3cf",
+      "seconds": 22.409718583105132,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"One in four American households are either unbanked or underbanked, putting them at risk of losing money due to exorbitant fees or usurious interest rates.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support efforts in Congress to guarantee affordable, transparent, and trustworthy banking services that are language-accessible for low- and middle-income families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support bank accounts and real-time payment systems through the Federal Reserve.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support easily accessible service locations, like postal banking.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Consumers, workers, students, retirees, and investors who have been mistreated by businesses should never be denied their right to fight for fair treatment under the law.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will support efforts to eliminate the use of forced arbitration clauses in employment and service contracts.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Forced arbitration clauses unfairly strip consumers, workers, students, retirees, and investors of their right to their day in court.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 316,
+      "generation_tps": 15.729461524749969,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1897,
+      "prompt_tps": 447.43959211945844,
+      "request_sha256": "ffed597b3574dda10b6b08c866ed9da6cd8f02419dc9871f0f19b560fe6b645f",
+      "seconds": 24.3400708748959,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"One in four American households are either unbanked or underbanked, putting them at risk of losing money due to exorbitant fees or usurious interest rates.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support efforts in Congress to guarantee affordable, transparent, and trustworthy banking services that are language-accessible for low- and middle-income families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support bank accounts and real-time payment systems through the Federal Reserve.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support easily accessible service locations, like postal banking.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Consumers, workers, students, retirees, and investors who have been mistreated by businesses should never be denied their right to fight for fair treatment under the law.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will support efforts to eliminate the use of forced arbitration clauses in employment and service contracts.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Forced arbitration clauses unfairly strip consumers, workers, students, retirees, and investors of their right to their day in court.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "881fccfd96a2ffa434f82dde21e2cd9cc2daec38af523210fc62471248faf3cf"
+}

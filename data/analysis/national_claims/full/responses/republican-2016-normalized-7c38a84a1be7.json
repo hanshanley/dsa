@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 503,
+      "generation_tps": 16.264528906770693,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1504,
+      "prompt_tps": 523.1498746578045,
+      "request_sha256": "a627a4eb6351ec9e7cafd920d806730fd5950ab2fdafd47b1174ff0668f65617",
+      "seconds": 33.81032041599974,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Since the enactment of Dodd-Frank, the number of community banks has significantly declined.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The cost and complexity of complying with Dodd-Frank has created impediments to the remaining banks' ability to support their customers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In 1985, there were 13,000 community banks.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As of the present, only 1,900 community banks remain.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The majority of agricultural loans and small business loans are made by community banks.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dodd-Frank's excessive regulation and burdensome requirements have contributed to the slow economy under President Obama and the Democrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Community banks are essential to ensuring small businesses have easy and affordable access to the capital they need to grow and prosper.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for relieving community banks of excessive regulations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for removing roadblocks and regulations that prevent access to capital.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Consumer Financial Protection Bureau is deliberately designed to be a rogue agency.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Consumer Financial Protection Bureau answers to neither Congress nor the executive.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Consumer Financial Protection Bureau has its own guaranteed funding outside the appropriations process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Consumer Financial Protection Bureau uses its slush fund to steer settlements to politically favored groups.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 455,
+      "generation_tps": 16.186780456997052,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2175,
+      "prompt_tps": 511.7773347492482,
+      "request_sha256": "8fe58f5143331cd1bff495346badc57a8b5af0c4009ce666a1da6a924d82b23a",
+      "seconds": 32.36993375001475,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Since the enactment of Dodd-Frank, the number of community banks has significantly declined, and the cost and complexity of complying with the law has created impediments to the remaining banks' ability to support the customers they serve.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"From 13,000 community banks in 1985, only 1,900 remain.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The majority of agricultural loans and small business loans are made by community banks.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dodd-Frank's excessive regulation and burdensome requirements have helped contribute to the slow economy under President Obama and the Democrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Community banks are essential to ensuring small businesses have easy and affordable access to the capital they need to grow and prosper.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for relieving community banks of excessive regulations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for removing roadblocks and regulations that prevent access to capital.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Consumer Financial Protection Bureau is deliberately designed to be a rogue agency.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Consumer Financial Protection Bureau answers to neither Congress nor the executive.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Consumer Financial Protection Bureau has its own guaranteed funding outside the appropriations process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Consumer Financial Protection Bureau uses its slush fund to steer settlements to politically favored groups.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a627a4eb6351ec9e7cafd920d806730fd5950ab2fdafd47b1174ff0668f65617"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 441,
+      "generation_tps": 16.286856300690605,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1460,
+      "prompt_tps": 481.1284174910522,
+      "request_sha256": "af6d9210cfd2ab16c51e9e7d745dd7a9ec3d0e78cc33e990a8ed8ebb07f2e688",
+      "seconds": 30.121865750057623,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican vision for American banking calls for establishing transparent, efficient markets where consumers can obtain loans they need at reasonable rates based on market conditions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic-controlled Congress enacted the Wall Street Reform and Consumer Protection Act, otherwise known as Dodd-Frank, in response to the financial institutions crisis of 2008-2009.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Wall Street Reform and Consumer Protection Act did not let the financial crisis of 2008-2009 go to waste but used it as an excuse to establish unprecedented government control over the nation's financial markets.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The consequences of the Wall Street Reform and Consumer Protection Act have been bad for everyone except federal regulators.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Wall Street Reform and Consumer Protection Act did not address the cause of the financial crisis of 2008-2009, which was the government's own housing policies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Wall Street Reform and Consumer Protection Act extended government control over the economy by creating new unaccountable bureaucracies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Central planning of the financial sector has not created jobs, but has killed them.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Central planning of the financial sector has not limited risks, but has created more.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Central planning of the financial sector has not encouraged economic growth, but has shackled it.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 410,
+      "generation_tps": 16.224704158976845,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2069,
+      "prompt_tps": 515.6348865167942,
+      "request_sha256": "04b182d3e7cccdfd431da06c413dea6f576a678588a6986ddb18d9c9bc0a3d3c",
+      "seconds": 29.292900125030428,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican vision for American banking calls for establishing transparent, efficient markets where consumers can obtain loans they need at reasonable rates based on market conditions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In response to the financial institutions crisis of 2008-2009, the Democratic-controlled Congress enacted the Wall Street Reform and Consumer Protection Act, otherwise known as Dodd-Frank.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Wall Street Reform and Consumer Protection Act did not let the financial crisis of 2008-2009 go to waste but used it as an excuse to establish unprecedented government control over the nation's financial markets.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The consequences of the Wall Street Reform and Consumer Protection Act have been bad for everyone except federal regulators.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Rather than address the cause of the financial crisis of 2008-2009\u2014the government's own housing policies\u2014the Wall Street Reform and Consumer Protection Act extended government control over the economy by creating new unaccountable bureaucracies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Central planning of the financial sector has not created jobs, but has killed them.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Central planning of the financial sector has not limited risks, but has created more.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Central planning of the financial sector has not encouraged economic growth, but has shackled it.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "af6d9210cfd2ab16c51e9e7d745dd7a9ec3d0e78cc33e990a8ed8ebb07f2e688"
+}

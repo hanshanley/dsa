@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.157936692548756,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1434,
+      "prompt_tps": 433.204816920759,
+      "request_sha256": "3282344f1fe84221d819dcdd8b91f4507137afbaa9836c7e8a581f9194a17c11",
+      "seconds": 26.901132500031963,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The withdrawal of 30,000 \\\"surge\\\" troops from Afghanistan comes weeks before this year's presidential election and against the advice of the current President's top military commanders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Future decisions by a Republican President will not subordinate military necessity to domestic politics or an artificial timetable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Afghans, Pakistanis, and Americans have a common interest in ridding the region of the Taliban and other insurgent groups.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States cannot expect others to remain resolute unless the United States shows the same determination.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will expect the Afghan government to crackdown on corruption.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will expect the Afghan government to respect free elections.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will expect the Afghan government to assist the fight against the narcotic trade that fuels the insurgency.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must likewise expect the Pakistan government to sever any connection between its security and intelligence forces and the insurgents.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No Pakistani citizen should be punished for helping the United States against the terrorists.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 385,
+      "generation_tps": 16.118280379187844,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1983,
+      "prompt_tps": 465.9734381435266,
+      "request_sha256": "74ad40bf3bcd8eb29c44e7f4742e3fa8e55686626476ce941724a54babe77833",
+      "seconds": 28.15287237497978,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The withdrawal of 30,000 \\\"surge\\\" troops from Afghanistan comes weeks before this year's presidential election and against the advice of the current President's top military commanders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Future decisions by a Republican President will never subordinate military necessity to domestic politics or an artificial timetable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Afghans, Pakistanis, and Americans have a common interest in ridding the region of the Taliban and other insurgent groups.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States cannot expect others to remain resolute unless the United States shows the same determination.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will expect the Afghan government to crackdown on corruption.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will expect the Afghan government to respect free elections.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will expect the Afghan government to assist the United States in the fight against the narcotic trade that fuels the insurgency.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States must likewise expect the Pakistan government to sever any connection between its security and intelligence forces and the insurgents.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No Pakistani citizen should be punished for helping the United States against the terrorists.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3282344f1fe84221d819dcdd8b91f4507137afbaa9836c7e8a581f9194a17c11"
+}

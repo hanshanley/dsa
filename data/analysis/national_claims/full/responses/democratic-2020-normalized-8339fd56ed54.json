@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 426,
+      "generation_tps": 15.600798777354763,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1510,
+      "prompt_tps": 458.5928552198237,
+      "request_sha256": "d69a36b5b434005db21f637a14da3148f7a72337b26af08c6a24f12aafcd6ffe",
+      "seconds": 30.61276699998416,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The economy is not working for the American people.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Trump and his Administration's response to the COVID-19 pandemic erased all job gains made since the Obama-Biden Administration pulled the country out of the Great Recession and plunged the economy into recession.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Trump inherited the longest economic expansion in American history from the Obama-Biden Administration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump squandered the longest economic expansion in American history inherited from the Obama-Biden Administration.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Before the COVID-19 pandemic, President Trump was presiding over a recession in the manufacturing sector after years of growth in the Obama-Biden Administration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump paid for a permanent tax cut for big business by raising taxes on working families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump launched a trade war with China that cost more than 300,000 American jobs and sent farmers into bankruptcy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump left communities vulnerable and exposed to the impacts of climate change.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump let other countries outpace the United States in the clean energy revolution.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump failed to fulfill a campaign promise to invest in rebuilding and modernizing the nation's infrastructure.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 428,
+      "generation_tps": 15.465806630560511,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2104,
+      "prompt_tps": 466.2551138831847,
+      "request_sha256": "d65ccb5398f2b45c962343101aa5330b05f9c27682a665f8522afe4b83ce2d82",
+      "seconds": 32.19704533414915,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The economy is not working for the American people.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Trump and his Administration's response to the COVID-19 pandemic erased all the job gains made since the Obama-Biden Administration pulled the country out of the Great Recession, and plunged the economy into recession.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Trump inherited the longest economic expansion in American history from the Obama-Biden Administration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump squandered the longest economic expansion in American history inherited from the Obama-Biden Administration.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Before the COVID-19 pandemic, President Trump was presiding over a recession in the manufacturing sector after years of growth in the Obama-Biden Administration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump paid for a permanent tax cut for big business by raising taxes on working families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump launched a trade war with China that cost more than 300,000 American jobs and sent farmers into bankruptcy.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump left communities vulnerable and exposed to the impacts of climate change.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump let other countries outpace the United States in the clean energy revolution.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Trump failed to fulfill a campaign promise to invest in rebuilding and modernizing the nation's infrastructure.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d69a36b5b434005db21f637a14da3148f7a72337b26af08c6a24f12aafcd6ffe"
+}

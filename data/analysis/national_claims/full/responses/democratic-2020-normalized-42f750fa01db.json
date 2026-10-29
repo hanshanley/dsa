@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 208,
+      "generation_tps": 16.101409671640845,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1373,
+      "prompt_tps": 432.305279310607,
+      "request_sha256": "06918421b579a865a0be215a1465dd850e6df3818fa63dfd84d23443f7c927c7",
+      "seconds": 16.10538504109718,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will implement paid sick days and a high-quality, comprehensive, and inclusive paid family and medical leave system that protects workers from the unfair choice between attending to urgent health or caretaking needs and earning a paycheck.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to ensure workers are guaranteed at least 12 weeks of paid family and medical leave for all workers and family units, to enable new parents to recover from childbirth and bond with their newborns, foster or adopted children.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to ensure workers are guaranteed at least 12 weeks of paid family and medical leave for all workers and family units to allow all workers to take extended time off to care for themselves or ailing loved ones.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 162,
+      "generation_tps": 16.14725043208522,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1749,
+      "prompt_tps": 484.3300156330484,
+      "request_sha256": "79c47f75a958f3faea84210b755ae48580f482059f523cb066b9b09e46667849",
+      "seconds": 13.656560374889523,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will implement paid sick days and a high-quality, comprehensive, and inclusive paid family and medical leave system that protects workers from the unfair choice between attending to urgent health or caretaking needs and earning a paycheck.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to ensure workers are guaranteed at least 12 weeks of paid family and medical leave for all workers and family units, to enable new parents to recover from childbirth and bond with their newborns, foster or adopted children, and allow all workers to take extended time off to care for themselves or ailing loved ones.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "06918421b579a865a0be215a1465dd850e6df3818fa63dfd84d23443f7c927c7"
+}

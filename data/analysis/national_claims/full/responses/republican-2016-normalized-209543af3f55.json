@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 508,
+      "generation_tps": 16.315397422365397,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1546,
+      "prompt_tps": 453.5946754479836,
+      "request_sha256": "446d6504a91c8801d640b9120ea589e1c5de5d1f802a2f665ce2f5dcdd359e92",
+      "seconds": 34.55479820794426,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current Administration reversed a policy prohibiting unionization in the Transportation Security Administration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans understand that travel may encounter delays due to the threat of terrorism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unacceptably long lines at security checks can have the same impact as a collapsed bridge or washed out highway.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"TSA employees should always be seen as guardians of the public's safety, not as just another part of the federal workforce.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Amtrak is an extremely expensive railroad for American taxpayers, who must subsidize every ticket.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government should allow private ventures to provide passenger service in the northeast corridor.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government should allow private ventures to provide high-speed and intercity rail service across the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is an intention to end federal support for California's high-speed train project.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Technological change drives positions regarding STEM education, business and corporate involvement with educational certifications, workforce issues, privacy, cyber and national security, energy development, regulation, and other elements of a campaign for growth and jobs.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a proposal to simplify the tax code.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a proposal to reduce corporate rates.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a proposal to transition to a territorial tax system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a proposal to create incentives for investment and innovation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 511,
+      "generation_tps": 16.06332329737647,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2222,
+      "prompt_tps": 522.7415255155927,
+      "request_sha256": "1bd74d29646a05624a801e784b734bc4171736af58c9ca72d1cfa54a22b1aa24",
+      "seconds": 36.072483707917854,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current Administration reversed a policy prohibiting unionization in the Transportation Security Administration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Americans understand that, with the threat of terrorism, their travel may encounter delays.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unacceptably long lines at security checks can have the same impact as a collapsed bridge or washed out highway.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"TSA employees should always be seen as guardians of the public's safety, not as just another part of the federal workforce.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Amtrak is an extremely expensive railroad for American taxpayers, who must subsidize every ticket.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government should allow private ventures to provide passenger service in the northeast corridor.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government should allow private ventures to provide high-speed and intercity rail service across the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is an intention to end federal support for California's high-speed train to nowhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Technological change drives positions regarding STEM education, business and corporate involvement with educational certifications, workforce issues, privacy, cyber and national security, energy development, regulation, and other elements of a campaign for growth and jobs.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a proposal to simplify the tax code.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a proposal to reduce corporate rates.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a proposal to transition to a territorial tax system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a proposal to create incentives for investment and innovation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "446d6504a91c8801d640b9120ea589e1c5de5d1f802a2f665ce2f5dcdd359e92"
+}

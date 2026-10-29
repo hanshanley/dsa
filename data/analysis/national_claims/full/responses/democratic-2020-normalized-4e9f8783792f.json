@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 483,
+      "generation_tps": 16.35061156913532,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1423,
+      "prompt_tps": 479.83125987575636,
+      "request_sha256": "ef15c6c4d450d81698498792d6a73ea3e5eb572ec104eaa0b577a7b4d8a3d4cd",
+      "seconds": 32.51599645917304,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will supercharge investment in the Housing Trust Fund to greatly expand the number of affordable, accessible housing units on the market.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand the Low-Income Housing Tax Credit to incentivize private-sector construction of affordable housing.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure urban, suburban, and rural areas all benefit from the expansion of the Low-Income Housing Tax Credit.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make energy efficiency upgrades for millions of low-income households.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make energy efficiency upgrades for millions of affordable housing units.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make energy efficiency upgrades for millions of public housing units in metropolitan and rural areas.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy efficiency upgrades will save families money on their energy bills.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy efficiency upgrades will provide safe and healthy homes.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will leverage existing programs, including at USDA, to build more affordable, accessible housing.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will leverage existing programs, including at USDA, to retrofit existing housing in rural areas.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure all federally supported housing projects include mandatory requirements for labor standards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure all federally supported housing projects include mandatory requirements for accessibility.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure all federally supported housing projects include mandatory requirements for civil rights protections.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 271,
+      "generation_tps": 16.392496781473398,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2074,
+      "prompt_tps": 525.3871191568745,
+      "request_sha256": "0dc7969d1dd417bf6f684f6180c18697bb132bab4e8257261c304aa835b933c3",
+      "seconds": 20.48926587495953,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will supercharge investment in the Housing Trust Fund to greatly expand the number of affordable, accessible housing units on the market.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand the Low-Income Housing Tax Credit to incentivize private-sector construction of affordable housing, and ensure urban, suburban, and rural areas all benefit.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make energy efficiency upgrades for millions of low-income households, affordable housing units, and public housing units in metropolitan and rural areas to save families money on their energy bills and provide safe and healthy homes.\", \"claim_types\":[\"policy_position\",\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will leverage existing programs, including at USDA, to build more affordable, accessible housing and retrofit existing housing in rural areas.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure all federally supported housing projects, from new builds to retrofits, include mandatory requirements for labor standards, accessibility, and civil rights protections.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ef15c6c4d450d81698498792d6a73ea3e5eb572ec104eaa0b577a7b4d8a3d4cd"
+}

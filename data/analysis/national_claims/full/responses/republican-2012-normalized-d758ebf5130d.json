@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 375,
+      "generation_tps": 16.003550256271463,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1437,
+      "prompt_tps": 432.1137171719774,
+      "request_sha256": "06726f85a92e42951033f7c6af33b5b8b2f62bf3736b30f78989dd6ccf9f136b",
+      "seconds": 26.76883279182948,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The West has been a bulwark of democracy and freedom, providing hope and faith to the oppressed around the globe.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Historic ties between the U.S. and the peoples of Europe have been based on shared culture and values, common interests and goals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ensuring the continued vitality of the political alliance between the U.S. and Europe through NATO will require effort and understanding on both sides of the Atlantic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. honors its special relationship with the United Kingdom.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United Kingdom staunchly supports the U.S. fight against terrorism worldwide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Several nations of Europe contributed to a united effort in Iraq, Afghanistan, and Libya.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The sacrifice of several European nations in Iraq, Afghanistan, and Libya will not soon be forgotten.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. is heartened by the ongoing reconciliation in Northern Ireland.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. is hopeful that the success of reconciliation in Northern Ireland might be replicated in Cyprus.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 435,
+      "generation_tps": 16.16872870029907,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1980,
+      "prompt_tps": 467.07907820827404,
+      "request_sha256": "b1ce228df26a0e2d0e1ad789306a9f1f4bfd51bf3edf223e539bba1d94bcf005",
+      "seconds": 31.153307625092566,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The West has been a bulwark of democracy and freedom, providing hope and faith to the oppressed around the globe.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Historic ties between the U.S. and the peoples of Europe have been based on shared culture and values, common interests and goals.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ensuring the continued vitality of the political alliance between the U.S. and Europe through NATO will require effort and understanding on both sides of the Atlantic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. honors its special relationship with the United Kingdom.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United Kingdom staunchly supports the U.S. fight against terrorism worldwide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Several nations of Europe contributed to a united effort in Iraq, Afghanistan, and Libya.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The sacrifice of several European nations in Iraq, Afghanistan, and Libya will not soon be forgotten.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. is heartened by the ongoing reconciliation in Northern Ireland.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. is hopeful that the success of reconciliation in Northern Ireland might be replicated in Cyprus.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The endurance of the U.S.'s historic ties to the peoples of Europe cannot be taken for granted, especially in light of the continent's economic upheaval and demographic changes.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "06726f85a92e42951033f7c6af33b5b8b2f62bf3736b30f78989dd6ccf9f136b"
+}

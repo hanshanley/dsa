@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 407,
+      "generation_tps": 16.289752647601855,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1506,
+      "prompt_tps": 473.8956451173863,
+      "request_sha256": "693334acbe411e15fc0f38b60cfe8a0f0004fbcef2e8874ce1bd97fa1cc3a1e2",
+      "seconds": 28.174743874929845,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States spends more per capita on health care than any other advanced economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Average premiums for an employer-provided family plan topped $20,000 in 2019.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for making it easier for working families to afford high-quality insurance in the Affordable Care Act marketplaces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for ensuring that no one pays more than 8.5 percent of their income in premiums for Affordable Care Act marketplace insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for eliminating the cap on subsidies for Affordable Care Act marketplace insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for outlawing the predatory practice of surprise medical billing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for working to increase price transparency in the health care system across all payers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for reducing paperwork through uniform medical billing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for vigorously using antitrust laws to fight against mega-mergers in the hospital, insurance, and pharmaceutical industries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Mega-mergers in the hospital, insurance, and pharmaceutical industries would raise prices for patients by undermining market competition.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 407,
+      "generation_tps": 16.173793999588998,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2081,
+      "prompt_tps": 502.63680016741284,
+      "request_sha256": "a5d8e4646948b43a5fdc38dfe0cfdaa6b1c18f9daff36075c720e9ecc12db16c",
+      "seconds": 29.314558875048533,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States spends more per capita on health care than any other advanced economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Average premiums for an employer-provided family plan topped $20,000 in 2019.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for making it easier for working families to afford high-quality insurance in the Affordable Care Act marketplaces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for ensuring that no one pays more than 8.5 percent of their income in premiums for Affordable Care Act marketplace insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for eliminating the cap on subsidies for Affordable Care Act marketplace insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for outlawing the predatory practice of surprise medical billing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for working to increase price transparency in the health care system across all payers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for reducing paperwork through uniform medical billing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for vigorously using antitrust laws to fight against mega-mergers in the hospital, insurance, and pharmaceutical industries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Mega-mergers in the hospital, insurance, and pharmaceutical industries would raise prices for patients by undermining market competition.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "693334acbe411e15fc0f38b60cfe8a0f0004fbcef2e8874ce1bd97fa1cc3a1e2"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 379,
+      "generation_tps": 16.220544538314023,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1436,
+      "prompt_tps": 460.2503560558878,
+      "request_sha256": "c9c2c735e24f340f93cd5e71d5513be19b622f13b899ecadd2bc8dfefa27715a",
+      "seconds": 26.49619224993512,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Opposition to tax policies that deliberately divide Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to tax policies that promote class warfare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Religious organizations, charities, and fraternal benevolent societies should not be subject to taxation because of their vital role in fostering generosity and patriotism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donations to religious organizations, charities, and fraternal benevolent societies should remain deductible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Any value added tax or national sales tax must be tied to the simultaneous repeal of the Sixteenth Amendment, which established the federal income tax, to guard against hypertaxation of the American people in any restructuring of the federal tax system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Private investment is a key driver of economic growth and job creation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Private investment has recovered at a disappointing pace after falling dramatically during the recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"High corporate tax rates and increasing regulatory burdens and uncertainty contribute to the disappointing pace of private investment recovery.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Competitiveness equals jobs, governing U.S. policies regarding corporations in the global economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2,3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 381,
+      "generation_tps": 16.074659805000397,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1983,
+      "prompt_tps": 503.74897211174493,
+      "request_sha256": "ad6545c1ea2dae4f4e88b63462b6433ce1c635e403a1871099eca8ae1dd36188",
+      "seconds": 27.648738167015836,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Opposition to tax policies that deliberately divide Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to tax policies that promote class warfare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of their vital role in fostering generosity and patriotism, religious organizations, charities, and fraternal benevolent societies should not be subject to taxation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donations to religious organizations, charities, and fraternal benevolent societies should remain deductible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"To guard against hypertaxation of the American people in any restructuring of the federal tax system, any value added tax or national sales tax must be tied to the simultaneous repeal of the Sixteenth Amendment, which established the federal income tax.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Private investment is a key driver of economic growth and job creation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"After falling dramatically during the recession, private investment has recovered at a disappointing pace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"High corporate tax rates and increasing regulatory burdens and uncertainty contribute to the disappointing pace of private investment recovery.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Competitiveness equals jobs, governing policies regarding U.S. corporations in the global economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2,3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c9c2c735e24f340f93cd5e71d5513be19b622f13b899ecadd2bc8dfefa27715a"
+}

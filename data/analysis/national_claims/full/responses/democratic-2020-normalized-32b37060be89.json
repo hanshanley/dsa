@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 301,
+      "generation_tps": 16.05432053107472,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1388,
+      "prompt_tps": 429.2521583892358,
+      "request_sha256": "b9ca5a7a52d3d993257b57d48ca5d44d988af0ff665b46977fa09f0e266b5470",
+      "seconds": 21.993269957834855,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe small businesses are among the best job creators in the country.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for significantly boosting funding for state small business grant and lending initiatives that generate tens of billions of dollars of private-sector investment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increasing access to credit for small businesses in low-income and rural areas, including for unbanked or underbanked businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increasing funding for programs supporting businesses owned by women and people of color.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the Trump Administration's effort to starve the Minority Business Development Agency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for improving and expanding Small Business Administration (SBA) programs that most effectively support women- and minority-owned businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increasing opportunities for women- and minority-owned businesses to obtain or participate in federal contracts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 306,
+      "generation_tps": 15.931740130006286,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1857,
+      "prompt_tps": 485.6247638873736,
+      "request_sha256": "c7bafb8c317163f610fdbde9b673561c7c6e03fbb900643f93f2d55e4cdcf1e5",
+      "seconds": 23.04501641704701,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe small businesses are among the best job creators in the country.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for significantly boosting funding for state small business grant and lending initiatives that generate tens of billions of dollars of private-sector investment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increasing access to credit for small businesses in low-income and rural areas, including for unbanked or underbanked businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increasing funding for programs supporting businesses owned by women and people of color.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the Trump Administration's effort to starve the Minority Business Development Agency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for improving and expanding Small Business Administration (SBA) programs that most effectively support women- and minority-owned businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increasing opportunities for women- and minority-owned businesses to obtain or participate in federal contracts.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b9ca5a7a52d3d993257b57d48ca5d44d988af0ff665b46977fa09f0e266b5470"
+}

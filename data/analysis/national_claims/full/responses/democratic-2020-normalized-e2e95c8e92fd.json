@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 394,
+      "generation_tps": 16.019008925598044,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1473,
+      "prompt_tps": 432.01396522681875,
+      "request_sha256": "67421e3c9972d18d356af9c886298bf9ccded733d1b0366326661520d94629c3",
+      "seconds": 28.019751208135858,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will invest in the American heartland and rural communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make it easier for new and beginning farmers, aquaculture farmers, ranchers, and foresters, including returning veterans, to start and grow their operations by expanding U.S. Department of Agriculture (USDA) ownership and operating loan programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue the reform efforts started under the Obama-Biden Administration to ensure USDA takes a more proactive approach to supporting training and resources for farmers of color.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect family farms and promote food security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will take steps to limit foreign ownership of U.S. farmland.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will reform agricultural subsidies to better support small- and mid-sized farms.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe farmers should have the right to repair their own farming equipment, rather than being forced to rely on large corporations for even the simplest fixes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand domestic markets for family farmers and ranchers by developing and growing regional food systems to deliver fresh, American-grown produce to schools, hospitals, Department of Defense installations, and other major public institutions, so small, mid-size, and traditional farmers can stay competitive.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 370,
+      "generation_tps": 15.933876450914857,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2035,
+      "prompt_tps": 490.1007673382809,
+      "request_sha256": "a96fdbbcc75a2a93daf37af7342a660ff05ba442abd61146cd5e1b060349b341",
+      "seconds": 27.390147500205785,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will invest in the American heartland and rural communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make it easier for new and beginning farmers, aquaculture farmers, ranchers, and foresters, including returning veterans, to start and grow their operations by expanding U.S. Department of Agriculture (USDA) ownership and operating loan programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recognizing the history of racial discrimination in USDA's core farming programs, Democrats will continue the reform efforts started under the Obama-Biden Administration to ensure USDA takes a more proactive approach to supporting training and resources for farmers of color.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect family farms and promote food security, including by taking steps to limit foreign ownership of U.S. farmland and reforming agricultural subsidies to better support small- and mid-sized farms.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe farmers should have the right to repair their own farming equipment, rather than being forced to rely on large corporations for even the simplest fixes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand domestic markets for family farmers and ranchers by developing and growing regional food systems to deliver fresh, American-grown produce to schools, hospitals, Department of Defense installations, and other major public institutions, so small, mid-size, and traditional farmers can stay competitive.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "67421e3c9972d18d356af9c886298bf9ccded733d1b0366326661520d94629c3"
+}

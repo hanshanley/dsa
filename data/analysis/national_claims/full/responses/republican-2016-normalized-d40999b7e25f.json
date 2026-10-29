@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 328,
+      "generation_tps": 16.092103152386755,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1517,
+      "prompt_tps": 485.59765081355016,
+      "request_sha256": "6c2de9582edba6f6ef6361fa5f487354f471acd4fc20fe0bcf69168dcee99591",
+      "seconds": 23.517019417136908,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Federal Housing Administration should no longer support high-income individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The public should not be financially exposed by risks taken by Federal Housing Administration officials.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government mandates requiring Fannie Mae, Freddie Mac, and federally-insured banks to satisfy lending quotas to specific groups will be ended.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Discrimination should have no place in the mortgage industry.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Zoning decisions have always been, and must remain, under local control.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration is trying to seize control of the zoning process through its Affirmatively Furthering Fair Housing regulation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Affirmatively Furthering Fair Housing regulation threatens to undermine zoning laws.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Affirmatively Furthering Fair Housing regulation is not about proven or alleged discrimination, but about hostility to the self-government of citizens.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 317,
+      "generation_tps": 16.249369592166342,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2013,
+      "prompt_tps": 490.82384845873617,
+      "request_sha256": "55ddf36086288afb43f33d134671cedda603f5079f7488faacfc2714d1453159",
+      "seconds": 23.620082250097767,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Federal Housing Administration should no longer support high-income individuals, and the public should not be financially exposed by risks taken by FHA officials.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government mandates requiring Fannie Mae, Freddie Mac, and federally-insured banks to satisfy lending quotas to specific groups will be ended.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Discrimination should have no place in the mortgage industry.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Zoning decisions have always been, and must remain, under local control.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration is trying to seize control of the zoning process through its Affirmatively Furthering Fair Housing regulation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Affirmatively Furthering Fair Housing regulation threatens to undermine zoning laws in order to socially engineer every community in the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Affirmatively Furthering Fair Housing regulation is not about proven or alleged discrimination, but about hostility to the self-government of citizens.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6c2de9582edba6f6ef6361fa5f487354f471acd4fc20fe0bcf69168dcee99591"
+}

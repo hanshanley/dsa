@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 327,
+      "generation_tps": 16.29192049191301,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1477,
+      "prompt_tps": 467.38559503451324,
+      "request_sha256": "5fd4f69869e931d4048cb41e6e9637a40a07d5bc68c8b3376acfeeaf7f9edd50",
+      "seconds": 23.244605041109025,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to policies that will protect individuals' privacy and data rights while continuing to support and enable innovation and improve accessibility in the technology sector.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will update the Consumer Privacy Bill of Rights proposed by the Obama-Biden Administration, including adding strong national standards to protect consumers, employees, patients, and students from data breaches, and work with Congress to pass it into law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will take additional steps to protect student data privacy, particularly in preschool and K-12 settings where most students are under 18, and ensure that data collected in schools is used only for education, not for commercial purposes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support updating the Electronic Communications Privacy Act, which has not been significantly amended since the 1980s, to afford the same protections to digital content as physical content.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is all but impossible for consumers, students, workers, and people with disabilities to opt out of using the internet to shop, socialize, learn, work, bank, and live in the 21st century\u2014and especially in the COVID-19 pandemic.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 328,
+      "generation_tps": 16.1638756795114,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1972,
+      "prompt_tps": 496.9580482031611,
+      "request_sha256": "6360be4b080fcbbb13e52ead3de51c5d5f3d7bb01d98fa328399653acd35601e",
+      "seconds": 24.272738124942407,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to policies that will protect individuals' privacy and data rights while continuing to support and enable innovation and improve accessibility in the technology sector.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will update the Consumer Privacy Bill of Rights proposed by the Obama-Biden Administration, including adding strong national standards to protect consumers, employees, patients, and students from data breaches, and work with Congress to pass it into law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will take additional steps to protect student data privacy, particularly in preschool and K-12 settings where most students are under 18, and ensure that data collected in schools is used only for education, not for commercial purposes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support updating the Electronic Communications Privacy Act, which has not been significantly amended since the 1980s, to afford the same protections to digital content as physical content.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the 21st century\u2014and especially in the COVID-19 pandemic\u2014it is all but impossible for consumers, students, workers, and people with disabilities to opt out of using the internet to shop, socialize, learn, work, bank, and live.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5fd4f69869e931d4048cb41e6e9637a40a07d5bc68c8b3376acfeeaf7f9edd50"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 308,
+      "generation_tps": 15.381472951932345,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1418,
+      "prompt_tps": 413.0952757028777,
+      "request_sha256": "2b7dd31e4a82b48d7fb32c68ad583e9c5ea6f9d7165f454231de314d890b5bd7",
+      "seconds": 23.46695762500167,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Americans are the most generous people in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Foundations, educational institutions, faith-based groups, and individuals in the United States devote billions of dollars and volunteer hours every year to help the poor and needy around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commercial investment from the private sector dwarfs the results from official development assistance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Official development assistance is based on an outdated, statist, government-to-government model.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The government-to-government model is a proven breeding ground for corruption and mismanagement by foreign kleptocrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Limiting foreign aid spending helps keep taxes lower.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Lower taxes free more resources in the private and charitable sectors.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Giving in the private and charitable sectors tends to be more effective and efficient.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 319,
+      "generation_tps": 15.48697860622595,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1894,
+      "prompt_tps": 434.88949164609636,
+      "request_sha256": "b662279d8e7e4768541371a167be06b97707cc88931674e2736aa0af283fd6fe",
+      "seconds": 24.963674624916166,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Americans are the most generous people in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Foundations, educational institutions, faith-based groups, and committed men and women of charity in the United States devote billions of dollars and volunteer hours every year to help the poor and needy around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commercial investment from the private sector dwarfs the results from official development assistance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Official development assistance is based on an outdated, statist, government-to-government model.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The government-to-government model is a proven breeding ground for corruption and mismanagement by foreign kleptocrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Limiting foreign aid spending helps keep taxes lower.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Keeping taxes lower frees more resources in the private and charitable sectors.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Giving in the private and charitable sectors tends to be more effective and efficient.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2b7dd31e4a82b48d7fb32c68ad583e9c5ea6f9d7165f454231de314d890b5bd7"
+}

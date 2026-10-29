@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 388,
+      "generation_tps": 15.459629297293155,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1468,
+      "prompt_tps": 424.4802759158826,
+      "request_sha256": "df0cfa9f459601edbc8d1c0f8abf669919b15d80d9ea73a7e2e6442801ccd992",
+      "seconds": 28.56694095907733,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats commit to forging a new social and economic contract with the American people that invests in the people and promotes shared prosperity.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to affirming housing is a right and not a privilege.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to ensuring no one will be homeless or go hungry in the United States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to raising wages.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to restoring workers' rights to organize, join a union, and collectively bargain.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to supporting working families and the middle class by securing equal pay for women.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to supporting working families and the middle class by securing paid family leave for all.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to providing access for all to reliable and affordable banking and financial services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to grappling honestly with America's history of racism and disenfranchisement, segregation and discrimination.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to investing in building equity and mobility for people of color who have been left out and left behind for generations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 412,
+      "generation_tps": 15.375649198901217,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2024,
+      "prompt_tps": 443.90350406312996,
+      "request_sha256": "73ede56ed15c2cb2daa0dbebe1c45fbc0d0732523ab6cd40ff14a9c442ac74e2",
+      "seconds": 31.36561662494205,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats commit to forging a new social and economic contract with the American people\u2014a contract that invests in the people and promotes shared prosperity, not one that benefits only big corporations and the wealthiest few.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to affirming housing is a right and not a privilege.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to a commitment that no one will be homeless or go hungry in the richest country on earth.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to raising wages.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to restoring workers' rights to organize, join a union, and collectively bargain.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to supporting working families and the middle class by securing equal pay for women.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to supporting working families and the middle class by securing paid family leave for all.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to providing access for all to reliable and affordable banking and financial services.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to grappling honestly with America's long and ongoing history of racism and disenfranchisement, of segregation and discrimination.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to investing in building equity and mobility for the people of color who have been left out and left behind for generations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "df0cfa9f459601edbc8d1c0f8abf669919b15d80d9ea73a7e2e6442801ccd992"
+}

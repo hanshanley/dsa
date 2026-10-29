@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 465,
+      "generation_tps": 16.130406951439692,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1879,
+      "prompt_tps": 491.11835505535663,
+      "request_sha256": "431ad35f69150447cb878cc6099fddcf4cdf41bd5718c84280e56159b4f4ba26",
+      "seconds": 32.664094917010516,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Iran's pursuit of nuclear weapons capability threatens America, Israel, and the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The threat from Iran's pursuit of nuclear weapons capability has worsened during the current administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A continuation of the current administration's engagement policy with Iran will lead to a nuclear cascade.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America must lead the effort to prevent Iran from building and possessing nuclear weapons capability, in solidarity with the international community.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Iran seek peace and aspire to freedom.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current regime in Iran is unworthy of the people of Iran.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Iranian regime exports terror and provided weapons that killed U.S. troops in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Senate unanimously called for elections in Iran that are free, fair, and meet international standards.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Senate unanimously called for a representative and responsive democratic government in Iran that respects human rights, civil liberties, and the rule of law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican President should unequivocally assert support for the Iranian people as they protest their despotic regime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All options should be retained in dealing with a situation that gravely threatens U.S. security, interests, and the safety of U.S. friends.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 471,
+      "generation_tps": 16.169302206479273,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2512,
+      "prompt_tps": 541.8450410917823,
+      "request_sha256": "bdf4783b6274a827ff2bd00e0e062c912303cc8e8752b1174478a44789a4431a",
+      "seconds": 33.77557987510227,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Iran's pursuit of nuclear weapons capability threatens America, Israel, and the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The threat from Iran's pursuit of nuclear weapons capability has only become worse during the current Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A continuation of the current Administration's engagement policy with Iran will lead to a nuclear cascade.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America must lead the effort to prevent Iran from building and possessing nuclear weapons capability, in solidarity with the international community.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The people of Iran seek peace and aspire to freedom.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current regime in Iran is unworthy of the people of Iran.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Iranian regime exports terror and provided weapons that killed U.S. troops in Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Senate unanimously called for elections in Iran that are free, fair, and meet international standards.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Senate unanimously called for a representative and responsive democratic government in Iran that respects human rights, civil liberties, and the rule of law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next Republican President should unequivocally assert support for the Iranian people as they protest their despotic regime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All options should be retained in dealing with a situation that gravely threatens U.S. security, U.S. interests, and the safety of U.S. friends.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "431ad35f69150447cb878cc6099fddcf4cdf41bd5718c84280e56159b4f4ba26"
+}

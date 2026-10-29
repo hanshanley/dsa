@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 465,
+      "generation_tps": 16.28757042468715,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1496,
+      "prompt_tps": 485.2733709192978,
+      "request_sha256": "a5f1378b8e361a0510bed47b6f0521e93f06a4d87c16f59f2ccbd47dea32de44",
+      "seconds": 31.642372583039105,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Too many Americans struggle to afford prescription drugs they need to get or stay healthy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"No American should find themselves foregoing or rationing medications because they can't afford to pay, especially when taxpayer money underwrites research leading to the development of many prescription drugs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will take aggressive action to ensure that Americans do not pay more for prescription drugs than people in other advanced economies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will ensure that all necessary medications are covered.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will empower Medicare to negotiate prescription drug prices for all public and private purchasers\u2014for families and businesses, as well as older Americans\u2014no matter where they get their coverage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will prevent the price of brand-name and outlier generic drugs from rising faster than the inflation rate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will cap out-of-pocket drug costs for seniors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will ensure that effective treatments for chronic health conditions are available at little or no cost.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Prescription drug companies have gamed the system to justify their price increases by any means available.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will crack down on anti-competitive efforts to manipulate the patent system or collude on prices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will eliminate tax breaks for prescription drug advertisements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 475,
+      "generation_tps": 16.203222038841822,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2129,
+      "prompt_tps": 523.2447668614934,
+      "request_sha256": "f2ecc81a29cdccdf73c4f721c99462e59e16cdd67d21d6785c55c01374e1da98",
+      "seconds": 33.3941051249858,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Too many Americans struggle to afford the prescription drugs they need to get or stay healthy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"No American should find themselves foregoing or rationing medications because they can't afford to pay, especially when taxpayer money underwrites research leading to the development of many prescription drugs in the first place.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will take aggressive action to ensure that Americans do not pay more for prescription drugs than people in other advanced economies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will ensure that all necessary medications are covered.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will empower Medicare to at last be able to negotiate prescription drug prices for all public and private purchasers\u2014for families and businesses, as well as older Americans\u2014no matter where they get their coverage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will prevent the price of brand-name and outlier generic drugs from rising faster than the inflation rate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will cap out-of-pocket drug costs for seniors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will ensure that effective treatments for chronic health conditions are available at little or no cost.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Prescription drug companies have gamed the system to justify their price increases by any means available.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will crack down on anti-competitive efforts to manipulate the patent system or collude on prices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will eliminate tax breaks for prescription drug advertisements.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a5f1378b8e361a0510bed47b6f0521e93f06a4d87c16f59f2ccbd47dea32de44"
+}

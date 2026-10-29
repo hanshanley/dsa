@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 308,
+      "generation_tps": 15.785994230910363,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1405,
+      "prompt_tps": 462.73029934623304,
+      "request_sha256": "bb3c84584b272076340426e74b9e4a8ae0416068afbd77c885b657dd1b8d9b51",
+      "seconds": 22.56184420804493,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for ending homelessness for veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for assisting veterans' reentry into the job market as soon as possible after military service ends.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A job for a veteran is a new mission and provides a new status, and the transition can be difficult.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is a national scandal that veterans are one of the groups with the highest unemployment rates.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urge the private sector to make hiring veterans a company policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commend organizations that have specific programs to assist veterans' employment.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the federal government taking the lead by simplifying paperwork required for a tax break for hiring a veteran.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for giving veterans an assured place at the head of the training and employment line.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 318,
+      "generation_tps": 15.883506896833195,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1881,
+      "prompt_tps": 453.9194533251666,
+      "request_sha256": "bc8dc584dcb879447f28d93154e41aecc41062c30112c9e3b91c47ace908e7dd",
+      "seconds": 24.179124790942296,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for ending homelessness for veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for assisting veterans' reentry into the job market as soon as possible after military service ends.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A job for a veteran is more than a source of income; it is a new mission, with a new status, and the transition can be difficult.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is a national scandal that veterans are one of the groups with the highest unemployment rates.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urge the private sector to make hiring veterans a company policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commend organizations that have specific programs to accomplish veterans' employment.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the federal government taking the lead by simplifying the paperwork required for a tax break for hiring a veteran.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for giving veterans an assured place at the head of the training and employment line.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bb3c84584b272076340426e74b9e4a8ae0416068afbd77c885b657dd1b8d9b51"
+}

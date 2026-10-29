@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 488,
+      "generation_tps": 15.839500312575652,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1513,
+      "prompt_tps": 484.6923019821702,
+      "request_sha256": "be5b956ab2ed3b4bedc0f9dc713174e1df34fa497e16c80b4e3bc2e2e4aae84c",
+      "seconds": 33.942320707952604,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Homeownership expands personal liberty, builds communities, and helps Americans create wealth.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The American Dream is a lived reality expressing the aspirations of all people.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The American Dream means a decent place to live, a safe place to raise kids, and a welcoming place to retire.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Great Recession devastated the housing market.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"U.S. taxpayers paid billions to rescue Freddie Mac and Fannie Mae.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The rescue of Freddie Mac and Fannie Mae covered losses of the poorly-managed Federal Housing Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Freddie Mac was managed and controlled by senior officials from the Carter and Clinton Administrations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Millions lost their homes and millions more lost value in their homes during the Great Recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"More than six million households moved from homeownership to renting.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Rental costs escalated so that nearly 12 million families spend more than 50 percent of their incomes on rent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The national homeownership rate has sharply fallen.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The homeownership rate for minority households and young adults has plummeted.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Rising rents make it harder for people with jobs to save for a mortgage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 497,
+      "generation_tps": 15.971173477888703,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2169,
+      "prompt_tps": 478.71946846638696,
+      "request_sha256": "7cba4b183720c4ae003f91d774cf276637245cc26dc4d050242286afac8693c4",
+      "seconds": 35.66252570785582,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Homeownership expands personal liberty, builds communities, and helps Americans create wealth.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The American Dream is not a stale slogan, but a lived reality that expresses the aspirations of all people.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The American Dream means a decent place to live, a safe place to raise kids, and a welcoming place to retire.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Great Recession devastated the housing market.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"U.S. taxpayers paid billions to rescue Freddie Mac and Fannie Mae.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"U.S. taxpayers paid billions to cover the losses of the poorly-managed Federal Housing Administration.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Freddie Mac was managed and controlled by senior officials from the Carter and Clinton Administrations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Millions lost their homes and millions more lost value in their homes during the Great Recession.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"More than six million households moved from homeownership to renting.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Rental costs escalated so that nearly 12 million families spend more than 50 percent of their incomes just on rent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The national homeownership rate has sharply fallen.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The homeownership rate for minority households and young adults has plummeted.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Rising rents make it harder for people with jobs to save for a mortgage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "be5b956ab2ed3b4bedc0f9dc713174e1df34fa497e16c80b4e3bc2e2e4aae84c"
+}

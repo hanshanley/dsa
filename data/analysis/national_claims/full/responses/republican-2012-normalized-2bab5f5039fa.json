@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 410,
+      "generation_tps": 15.806702990580305,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1486,
+      "prompt_tps": 508.00540820347646,
+      "request_sha256": "4afe92e2dad1885d497460014b026daa4ed1611e6dcb8fcdc8160bcdc9788eea",
+      "seconds": 28.890747291967273,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel and the United States share common values of freedom and justice, and the right of every person to live in peace.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The security of Israel is in the vital national security interest of the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure Israel maintains a qualitative edge in military technology over any potential adversaries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Israel's right to exist as a Jewish state with secure, defensible borders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vision of two democratic states\u2014Israel with Jerusalem as its capital and Palestine\u2014living in peace and security.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"For peace and security to happen, the Palestinian people must support leaders who reject terror, embrace the institutions and ethos of democracy, and respect the rule of law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call on Arab governments to help advance the goal of Palestinian leaders rejecting terror, embracing democracy, and respecting the rule of law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel should not be expected to negotiate with entities pledged to her destruction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call on the new government in Egypt to fully uphold its peace treaty with Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 427,
+      "generation_tps": 15.783164115118153,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2064,
+      "prompt_tps": 493.88112734644955,
+      "request_sha256": "0f46e0ffb7c629810f604cb4f52999ce1493dc65ff79ff60fa1269cc2ce32f7a",
+      "seconds": 31.24636041605845,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel and the United States are part of the great fellowship of democracies who speak the same language of freedom and justice, and the right of every person to live in peace.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The security of Israel is in the vital national security interest of the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure that Israel maintains a qualitative edge in military technology over any potential adversaries.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Israel's right to exist as a Jewish state with secure, defensible borders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vision of two democratic states\u2014Israel with Jerusalem as its capital and Palestine\u2014living in peace and security.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"For that to happen, the Palestinian people must support leaders who reject terror, embrace the institutions and ethos of democracy, and respect the rule of law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call on Arab governments throughout the region to help advance the goal of Palestinian leaders rejecting terror, embracing the institutions and ethos of democracy, and respecting the rule of law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Israel should not be expected to negotiate with entities pledged to her destruction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call on the new government in Egypt to fully uphold its peace treaty with Israel.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4afe92e2dad1885d497460014b026daa4ed1611e6dcb8fcdc8160bcdc9788eea"
+}

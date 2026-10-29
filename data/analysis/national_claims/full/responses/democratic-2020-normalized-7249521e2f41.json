@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 326,
+      "generation_tps": 16.33920814316107,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1403,
+      "prompt_tps": 482.61691889099797,
+      "request_sha256": "3584a1ca3dd6791759ac775da3c5fae30a2136e7abea0f74d5318781844e9436",
+      "seconds": 22.869408540893346,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Every American who needs mental health care or substance use disorder treatment should be able to access it, regardless of location.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will aggressively enforce the federal mental health and substance use disorder parity law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure that health insurers adequately cover mental health and substance use treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will invest in training and hiring more mental health providers, substance use disorder counselors, and peer support counselors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand funding for health clinics, especially in rural areas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase access to mental health and substance use treatment services through Medicaid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support increased training for health care professionals, educators, social workers, and other care workers in trauma-informed care and practices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will oppose efforts to weaken HIPAA and FERPA privacy rights of people with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 285,
+      "generation_tps": 16.295563324167944,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1897,
+      "prompt_tps": 501.43676263337113,
+      "request_sha256": "71937075277a70d98256ec1d45e75bbebe91d366597c37aa74450b26cc7db75c",
+      "seconds": 21.282436582958326,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Every American who needs mental health care or substance use disorder treatment should be able to access it, no matter where they live.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will aggressively enforce the federal mental health and substance use disorder parity law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure that health insurers adequately cover mental health and substance use treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will invest in training and hiring more mental health providers, substance use disorder counselors, and peer support counselors, including by expanding funding for health clinics, especially in rural areas, and increasing access to these services through Medicaid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support increased training for health care professionals, educators, social workers, and other care workers in trauma-informed care and practices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will oppose efforts to weaken HIPAA and FERPA privacy rights of people with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3584a1ca3dd6791759ac775da3c5fae30a2136e7abea0f74d5318781844e9436"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 342,
+      "generation_tps": 16.429646135668257,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1350,
+      "prompt_tps": 479.1491942424611,
+      "request_sha256": "c9ebab744c8b429f6a95c6c8f197bfef71d78322fb11e3d324156561749dafa7",
+      "seconds": 23.643484958913177,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Republican Party dedicates this platform with admiration and gratitude.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party believes in American exceptionalism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[11]},{\"claim_text\":\"The Republican Party believes the United States of America is unlike any other nation on earth.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[12]},{\"claim_text\":\"The Republican Party believes America is exceptional because of its historic role as refuge, defender, and exemplar of liberty for the world.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[13]},{\"claim_text\":\"The Republican Party affirms that all are created equal, endowed by their Creator with inalienable rights of life, liberty, and the pursuit of happiness, as did the Declaration of Independence.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[14]},{\"claim_text\":\"The Republican Party believes in the Constitution as its founding document.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[15]},{\"claim_text\":\"The Republican Party believes the Constitution was written as an enduring covenant, not a flexible document.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[16]},{\"claim_text\":\"The Republican Party believes its constitutional system\u2014limited government, separation of powers, federalism, and the rights of the people\u2014must be preserved uncompromised for future generations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[17]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 355,
+      "generation_tps": 16.346145234798104,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1860,
+      "prompt_tps": 501.58401217175117,
+      "request_sha256": "53177edb881192bf370ccf685d5f58ebf0cd9582eef3610f2f1e58b08d10519c",
+      "seconds": 25.435428750002757,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party dedicates this platform with admiration and gratitude.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party believes in American exceptionalism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[11]},{\"claim_text\":\"The Republican Party believes the United States of America is unlike any other nation on earth.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[12]},{\"claim_text\":\"The Republican Party believes America is exceptional because of its historic role as refuge, then as defender, and now as exemplar of liberty for the world to see.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[13]},{\"claim_text\":\"The Republican Party affirms that all are created equal, endowed by their Creator with inalienable rights of life, liberty, and the pursuit of happiness, as did the Declaration of Independence.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[14]},{\"claim_text\":\"The Republican Party believes in the Constitution as its founding document.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[15]},{\"claim_text\":\"The Republican Party believes the Constitution was written not as a flexible document, but as its enduring covenant.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[16]},{\"claim_text\":\"The Republican Party believes its constitutional system\u2014limited government, separation of powers, federalism, and the rights of the people\u2014must be preserved uncompromised for future generations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[17]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c9ebab744c8b429f6a95c6c8f197bfef71d78322fb11e3d324156561749dafa7"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 409,
+      "generation_tps": 16.19267595149586,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1458,
+      "prompt_tps": 465.5730038362324,
+      "request_sha256": "6767e3a7eee0b90329fe6eb0d963e91a147c9989db1c71dfb0bd1e81c846e87f",
+      "seconds": 28.399823791813105,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican majority ended the practice of earmarks, which often diverted transportation spending to politically favored projects.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans secured the longest reauthorization of the Highway Trust Fund in a decade in the current Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are advancing a comprehensive reform of the Federal Aviation Administration to make flying easier and more secure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration subordinates civil engineering to social engineering as it pursues an exclusively urban vision of dense housing and government transit.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration's Livability Initiative is meant to coerce people out of their cars.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congress once imposed by fiat a single maximum speed limit for the entire nation, from Manhattan to Montana.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 1980 Republican Platform pledged to repeal the single maximum speed limit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"After the election of Ronald Reagan, the single maximum speed limit was repealed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The platform pledges to address current problems in transportation policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The platform proposes to remove from the Highway Trust Fund programs that should not be the business of the federal government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 409,
+      "generation_tps": 16.14015776210404,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2035,
+      "prompt_tps": 497.6772920220258,
+      "request_sha256": "f29e1d9f24f7f449b360801d7ce62f2737f694d15361ae1134d0932774e9e29d",
+      "seconds": 29.43940187501721,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican majority ended the practice of earmarks, which often diverted transportation spending to politically favored projects.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the current Congress, Republicans secured the longest reauthorization of the Highway Trust Fund in a decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are advancing a comprehensive reform of the Federal Aviation Administration to make flying easier and more secure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration subordinates civil engineering to social engineering as it pursues an exclusively urban vision of dense housing and government transit.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration's Livability Initiative is meant to coerce people out of their cars.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congress once imposed by fiat a single maximum speed limit for the entire nation, from Manhattan to Montana.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The 1980 Republican Platform pledged to repeal the single maximum speed limit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"After the election of Ronald Reagan, the single maximum speed limit was repealed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The platform pledges to address current problems in transportation policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The platform proposes to remove from the Highway Trust Fund programs that should not be the business of the federal government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6767e3a7eee0b90329fe6eb0d963e91a147c9989db1c71dfb0bd1e81c846e87f"
+}

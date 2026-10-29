@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 336,
+      "generation_tps": 16.346426575568636,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1449,
+      "prompt_tps": 491.3629149316606,
+      "request_sha256": "b88824f0afe23500d328ec81448d790d861d36abad6599bcb5ca8606b58ba59a",
+      "seconds": 23.51396866585128,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe the government should take aggressive steps to increase the supply of housing, especially affordable housing, and address long-standing economic and racial inequities in housing markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for innovative approaches to eliminating the racial wealth gap in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Rehabilitating housing and expansion of housing owned by land trusts will increase the amount of housing available for secure homeownership.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for equalizing access to affordable credit and improving access to down payment assistance to help families of color, low-income families, and rural buyers purchase homes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increasing funding for assistance to first-time purchasers and homeowners to navigate the financing and servicing of their homes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for creating a new tax credit of up to $15,000 to help first-time homebuyers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for making the tax credit refundable and advanceable, so buyers can get assistance at the time of purchase, instead of having to wait until they file their taxes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 341,
+      "generation_tps": 16.400341079135437,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1953,
+      "prompt_tps": 509.88706847001663,
+      "request_sha256": "2cc3f4c77a3e0b67b8de271934d0103f5e3ab5899f932b67f40aa9365d47e078",
+      "seconds": 24.63220312516205,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe the government should take aggressive steps to increase the supply of housing, especially affordable housing, and address long-standing economic and racial inequities in housing markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for innovative approaches to eliminating the racial wealth gap in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Rehabilitating housing and expansion of housing owned by land trusts will increase the amount of housing available for secure homeownership.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for equalizing access to affordable credit and improving access to down payment assistance to help families of color, low-income families, and rural buyers purchase homes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for increasing funding for assistance to first-time purchasers and homeowners to navigate the financing and servicing of their homes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for creating a new tax credit of up to $15,000 to help first-time homebuyers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for making the tax credit refundable and advanceable, so buyers can get assistance at the time of purchase, instead of having to wait until they file their taxes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b88824f0afe23500d328ec81448d790d861d36abad6599bcb5ca8606b58ba59a"
+}

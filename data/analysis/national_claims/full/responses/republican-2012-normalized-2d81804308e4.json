@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 452,
+      "generation_tps": 15.689050902336959,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1523,
+      "prompt_tps": 427.702353436957,
+      "request_sha256": "70f134f723057255a5524128af400dcafd00b08f5d599a7af4834597c78d32ba",
+      "seconds": 32.38468095799908,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Foreign aid should serve U.S. national interest, including the peaceful development of less advanced and vulnerable societies in critical parts of the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Foreign aid is a less costly means of keeping the peace than military engagement, in both dollars and human lives.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic success and political progress of former aid recipients, from Latin America to East Asia, has justified investment in their future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"U.S. aid should be based on the model of the Millennium Challenge Corporation, requiring foreign governments to compete for funds by demonstrating respect for the rule of law, free enterprise, and measurable results.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aid money should follow positive outcomes, not requests for more cash from corrupt officials.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration's cultural agenda has limited the effectiveness of U.S. foreign aid by attempting to impose legalized abortion and a homosexual rights agenda on foreign countries, especially in Africa.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faith-based groups have been excluded from grants because they will not conform to the current Administration's social agenda.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group will reverse the exclusion of faith-based groups from grants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group will encourage more involvement by effective aid organizations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group trusts developing peoples to build their future from the ground up.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 416,
+      "generation_tps": 15.627807485902803,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2143,
+      "prompt_tps": 469.42419492693716,
+      "request_sha256": "90ec926acc69a540e8c1e4e5bf7e029e1bc6060b72ea1b004b435315da6eb19b",
+      "seconds": 31.198165874928236,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Foreign aid should serve U.S. national interest, which includes the peaceful development of less advanced and vulnerable societies in critical parts of the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Foreign aid is a less costly means of keeping the peace than military engagement, in both dollars and human lives.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The economic success and political progress of former aid recipients, from Latin America to East Asia, has justified investment in their future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"U.S. aid should be based on the model of the Millennium Challenge Corporation, for which foreign governments must, in effect, compete for the dollars by showing respect for the rule of law, free enterprise, and measurable results.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aid money should follow positive outcomes, not pleas for more cash in the same corrupt official pockets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The effectiveness of U.S. foreign aid has been limited by the cultural agenda of the current Administration, attempting to impose on foreign countries, especially the peoples of Africa, legalized abortion and the homosexual rights agenda.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faith-based groups have been excluded from grants because they will not conform to the current Administration's social agenda.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group will reverse this course, encouraging more involvement by the most effective aid organizations, and trust developing peoples to build their future from the ground up.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "70f134f723057255a5524128af400dcafd00b08f5d599a7af4834597c78d32ba"
+}

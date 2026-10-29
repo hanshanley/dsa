@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 371,
+      "generation_tps": 15.76905011866374,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1421,
+      "prompt_tps": 498.47440138618265,
+      "request_sha256": "e36f7a48b9ce9f68015825b74e8afeafa6c89fae185ba357bf848f399ab454bb",
+      "seconds": 26.387246874859557,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The current Administration has turned its back on Latin America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration prioritized engagement with enemies in the region rather than supporting democratic allies in the region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Venezuela represents an increasing threat to U.S. security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The threat from Venezuela has grown much worse on the current President's watch.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the last three years, Venezuela has become a narcoterrorist state.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Venezuela has become an Iranian outpost in the Western hemisphere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current regime issues Venezuelan passports or visas to thousands of Middle Eastern terrorists.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Venezuela offers safe haven to Hezbollah trainers, operatives, recruiters and fundraisers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for standing with the true democracies of the region against both Marxist subversion and drug lords.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for helping democracies in the region become prosperous alternatives to the collapsing model of Venezuela and Cuba.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 339,
+      "generation_tps": 15.69331091797318,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1960,
+      "prompt_tps": 487.12662272123646,
+      "request_sha256": "9003d3f54360ba1fa0078c8946756d7b032fcc06b718b5bbd62694f60fd51b9d",
+      "seconds": 25.639777542091906,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current Administration has turned its back on Latin America, with predictable results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Rather than supporting democratic allies in the region, the current Administration has prioritized engagement with enemies in the region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Venezuela represents an increasing threat to U.S. security.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The threat from Venezuela has grown much worse on the current President's watch.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the last three years, Venezuela has become a narcoterrorist state, turning it into an Iranian outpost in the Western hemisphere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current regime issues Venezuelan passports or visas to thousands of Middle Eastern terrorists, offering safe haven to Hezbollah trainers, operatives, recruiters and fundraisers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for standing with the true democracies of the region against both Marxist subversion and drug lords.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for helping democracies in the region become prosperous alternatives to the collapsing model of Venezuela and Cuba.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e36f7a48b9ce9f68015825b74e8afeafa6c89fae185ba357bf848f399ab454bb"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 258,
+      "generation_tps": 16.125178006707365,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1447,
+      "prompt_tps": 479.9546978446817,
+      "request_sha256": "06cb1ec198cb46bdf9246df182ac82b9e741e004085cd468c1052a3b7906a884",
+      "seconds": 19.024709166958928,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats' efforts to guarantee health coverage have been met by obstruction and opposition from the Republican Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans have embraced junk plans that undermine protections for pre-existing conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican state attorneys general sued to block Medicaid expansion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican governors refused to extend Medicaid coverage to their citizens, leaving millions of low-income Americans, disproportionately people of color, unable to access health coverage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Trump Administration is fighting in court to invalidate the entirety of the Affordable Care Act and eliminate insurance for tens of millions of people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overturning the Affordable Care Act remains a central plank of the Republican Party platform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 329,
+      "generation_tps": 16.16681042764207,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1873,
+      "prompt_tps": 498.9429650797927,
+      "request_sha256": "ec2f6645a11891cb137700e83c0dd9f3a60b6094514700b06e956155ccde1198",
+      "seconds": 24.115294042043388,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats' efforts to guarantee health coverage have been met by obstruction and opposition from the Republican Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans have embraced junk plans that undermine protections for pre-existing conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican state attorneys general sued to block Medicaid expansion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republican governors refused to extend Medicaid coverage to their citizens, leaving millions of low-income Americans, disproportionately people of color, unable to access health coverage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In the midst of the worst global pandemic in generations\u2014one that has left more than 150,000 Americans dead and counting\u2014the Trump Administration is fighting in court to invalidate the entirety of the Affordable Care Act and eliminate insurance for tens of millions of people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overturning the Affordable Care Act remains a central plank of the Republican Party platform.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The difference in values between the two parties on this life-or-death issue could not be more stark.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "06cb1ec198cb46bdf9246df182ac82b9e741e004085cd468c1052a3b7906a884"
+}

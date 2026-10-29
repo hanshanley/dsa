@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 337,
+      "generation_tps": 16.184904643625497,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1476,
+      "prompt_tps": 464.9660717566109,
+      "request_sha256": "9dfefb59eef23427668eb5b395445e4a7d5377532d8ca5bcac28a9c57b97cc00",
+      "seconds": 24.006125417072326,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Everyone will be eligible to choose the public option or another Affordable Care Act marketplace plan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand funding for Affordable Care Act outreach and enrollment programs to help close the persistent racial gap in insurance rates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The lowest-income Americans, including more than four million adults eligible for Medicaid but living in states where Republican governors have refused to expand the program, will be automatically enrolled in the public option without premiums and may opt out at any time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of older workers will be enabled to choose between their employer-provided plans, the public option, or enrolling in Medicare when they turn 60, instead of having to wait until they are 65.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are categorically opposed to raising the Medicare retirement age.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will empower states to use Affordable Care Act innovation waivers to develop locally tailored approaches to health coverage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"States will be able to experiment with statewide universal health care approaches using Affordable Care Act innovation waivers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 352,
+      "generation_tps": 16.156841559734662,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1981,
+      "prompt_tps": 505.17136027668073,
+      "request_sha256": "15773f34947cebfbd9749c56742da7b80426c7c4db7a3e8d0f69f2b2b27504d9",
+      "seconds": 25.717599749797955,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Everyone will be eligible to choose the public option or another Affordable Care Act marketplace plan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand funding for Affordable Care Act outreach and enrollment programs to help close the persistent racial gap in insurance rates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The lowest-income Americans, including more than four million adults who should be eligible for Medicaid but who live in states where Republican governors have refused to expand the program, will be automatically enrolled in the public option without premiums and may opt out at any time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Millions of older workers will be enabled to choose between their employer-provided plans, the public option, or enrolling in Medicare when they turn 60, instead of having to wait until they are 65.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are categorically opposed to raising the Medicare retirement age.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will empower states, as laboratories of democracy, to use Affordable Care Act innovation waivers to develop locally tailored approaches to health coverage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"States will be able to experiment with statewide universal health care approaches using Affordable Care Act innovation waivers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9dfefb59eef23427668eb5b395445e4a7d5377532d8ca5bcac28a9c57b97cc00"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 464,
+      "generation_tps": 16.284610846665558,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1552,
+      "prompt_tps": 480.97769253365595,
+      "request_sha256": "6490f48b801576753e37dcc2896e7a550434283b08623b31ee7cf9c19a3c9e8a",
+      "seconds": 31.730259540956467,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American people rejected the idea that this is the best America can do in the 1980 election.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group asks the American people to join them in repudiating the idea of America's diminishment and retreat.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group offers a vision of an opportunity society based on the economics of inclusion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Establishing a pro-growth tax code is a moral imperative for Republicans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The way government raises revenue has the greatest impact on the economy's performance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax code powerfully influences the level of economic growth and job creation, which translates into the level of opportunity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Getting the tax system right will be the most important factor in driving the entire economy back to prosperity.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current tax code is an object of anger and mockery.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The current tax code's length is exceeded only by its complexity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Simplifying the tax code requires the attention and approval of the American people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Simplifying the tax code cannot be engineered from the top down.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Simplifying the tax code must have a common sense approach.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 472,
+      "generation_tps": 16.26215302741577,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2184,
+      "prompt_tps": 517.1738297281738,
+      "request_sha256": "f245be5278f509d1e7b9d7ceae08c17364ba0f5aa2e2f2c4e782c5f303c98830",
+      "seconds": 33.25809383299202,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American people rejected the idea that this is the best America can do in the 1980 election.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group asks the American people to join them now in repudiating the false gospel of America's diminishment and retreat.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group offers a vision of an opportunity society based on the economics of inclusion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans consider the establishment of a pro-growth tax code a moral imperative.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The way government raises revenue \u2014 how much, at what rates, under what circumstances, from whom, and for whom \u2014 has the greatest impact on the economy's performance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The tax code powerfully influences the level of economic growth and job creation, which translates into the level of opportunity for those who would otherwise be left behind.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Getting the tax system right will be the most important factor in driving the entire economy back to prosperity.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current tax code is rightly an object of both anger and mockery.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The current tax code's length is exceeded only by its complexity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Simplifying the tax code requires the attention and approval of the American people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Simplifying the tax code cannot be engineered from the top down, but must have a common sense approach.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6490f48b801576753e37dcc2896e7a550434283b08623b31ee7cf9c19a3c9e8a"
+}

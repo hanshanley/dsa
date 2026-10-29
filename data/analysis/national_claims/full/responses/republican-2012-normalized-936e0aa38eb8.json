@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 327,
+      "generation_tps": 15.61827400393719,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1415,
+      "prompt_tps": 426.7243165526973,
+      "request_sha256": "dbd0475f0fd30bb0580232f6e9cd3300fbb3db358fe1118db6aa07ad569ca5f8",
+      "seconds": 24.26546929194592,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United Nations remains in dire need of reform, starting with full transparency in the financial operations of its overpaid bureaucrats.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as the United Nations' scandal-ridden management continues, the United Nations cannot expect the full support of the American people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as some of the world's worst tyrants hold seats on the United Nations' Human Rights Council, the United Nations cannot expect the full support of the American people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as Israel is treated as a pariah state, the United Nations cannot expect the full support of the American people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations Population Fund has a shameful record of collaboration with China's program of compulsory abortion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the Mexico City Policy, which prohibits the granting of federal monies to non-governmental organizations that provide or promote abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Mexico City Policy was first announced by President Reagan in 1984.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 308,
+      "generation_tps": 15.516197635695478,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1910,
+      "prompt_tps": 458.13533060792184,
+      "request_sha256": "b7286856e6d5b1c8e7a2e57ed8f494860a3f6550e8acbb332a578e574eec317b",
+      "seconds": 24.03202583291568,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United Nations remains in dire need of reform, starting with full transparency in the financial operations of its overpaid bureaucrats.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as its scandal-ridden management continues, the United Nations cannot expect the full support of the American people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as some of the world's worst tyrants hold seats on its Human Rights Council, the United Nations cannot expect the full support of the American people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as Israel is treated as a pariah state, the United Nations cannot expect the full support of the American people.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United Nations Population Fund has a shameful record of collaboration with China's program of compulsory abortion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Affirmation of the Republican Party's long-held position known as the Mexico City Policy, first announced by President Reagan in 1984, which prohibits the granting of federal monies to non-governmental organizations that provide or promote abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "dbd0475f0fd30bb0580232f6e9cd3300fbb3db358fe1118db6aa07ad569ca5f8"
+}

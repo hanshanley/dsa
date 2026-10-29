@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 228,
+      "generation_tps": 16.317888061733488,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1348,
+      "prompt_tps": 433.424005477463,
+      "request_sha256": "f67a55cbf33f5c1b4ab02a011d60487676320505ad30d4b0cd5db83194828b26",
+      "seconds": 17.095081124920398,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats support the creation of an infrastructure bank that will leverage public and private resources to build infrastructure projects of national or regional significance, including in rail and transit, clean energy and water infrastructure, broadband, and affordable housing.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Projects receiving assistance from the infrastructure bank will be required to follow Buy America and Buy Clean provisions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Projects receiving assistance from the infrastructure bank will be required to pay Davis-Bacon prevailing wages.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Projects receiving assistance from the infrastructure bank will be required to utilize project labor agreements.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Projects receiving assistance from the infrastructure bank will be required to ensure employers remain neutral in workers' organizing efforts.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 237,
+      "generation_tps": 16.271585438937215,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1744,
+      "prompt_tps": 452.27906890241553,
+      "request_sha256": "a19006471c9f94ce534728174bd2ad783b38b2a3a5c31e89d3ea29512573231c",
+      "seconds": 18.43225120799616,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support the creation of an infrastructure bank, a public bank that will leverage public and private resources to build infrastructure projects of national or regional significance, including in rail and transit, clean energy and water infrastructure, broadband, and affordable housing.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Projects that receive assistance from the bank will be required to follow Buy America and Buy Clean provisions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Projects that receive assistance from the bank will be required to pay Davis-Bacon prevailing wages.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Projects that receive assistance from the bank will be required to utilize project labor agreements.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Projects that receive assistance from the bank will be required to ensure employers remain neutral in workers' organizing efforts.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f67a55cbf33f5c1b4ab02a011d60487676320505ad30d4b0cd5db83194828b26"
+}
