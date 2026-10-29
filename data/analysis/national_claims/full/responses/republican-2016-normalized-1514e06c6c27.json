@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 369,
+      "generation_tps": 15.347031420250774,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1415,
+      "prompt_tps": 460.41231591944495,
+      "request_sha256": "146f40cc6cf4fee2ca6419490c435102a8e0a8d4b9afb2178a189ca5e826d294",
+      "seconds": 27.133028542157263,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration's deal with Iran, lifting international sanctions and making hundreds of billions of dollars available to the Mullahs, is a personal agreement between the President and negotiating partners and is non-binding on the next president.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Without a two-thirds endorsement by the Senate, the deal with Iran does not have treaty status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deal with Iran, the regime in Tehran continues to sponsor terrorism across the region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deal with Iran, the regime in Tehran continues to develop a nuclear weapon.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deal with Iran, the regime in Tehran continues to test-fire ballistic missiles inscribed with \\\"Death to Israel\\\".\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deal with Iran, the regime in Tehran continues to abuse the basic human rights of its citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican president will not be bound by the deal with Iran.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All options must be retained in dealing with a situation that gravely threatens security, interests, and the survival of friends.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 375,
+      "generation_tps": 15.73096668663069,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1952,
+      "prompt_tps": 475.9399880202616,
+      "request_sha256": "b59442710dc0a8be3a7be9f59f6b686d6a8624f36c5f861a65a61129407f10fc",
+      "seconds": 27.961922417161986,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration's deal with Iran, to lift international sanctions and make hundreds of billions of dollars available to the Mullahs, is a personal agreement between the President and his negotiating partners and is non-binding on the next president.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Without a two-thirds endorsement by the Senate, the deal with Iran does not have treaty status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deal with Iran, the defiant and emboldened regime in Tehran continues to sponsor terrorism across the region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deal with Iran, the regime in Tehran continues to develop a nuclear weapon.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deal with Iran, the regime in Tehran continues to test-fire ballistic missiles inscribed with \\\"Death to Israel\\\".\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deal with Iran, the regime in Tehran continues to abuse the basic human rights of its citizens.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican president will not be bound by the deal with Iran.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All options must be retained in dealing with a situation that gravely threatens security, interests, and the survival of friends.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "146f40cc6cf4fee2ca6419490c435102a8e0a8d4b9afb2178a189ca5e826d294"
+}
