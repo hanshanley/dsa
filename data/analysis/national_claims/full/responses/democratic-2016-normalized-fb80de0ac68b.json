@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 331,
+      "generation_tps": 16.217859752574185,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1456,
+      "prompt_tps": 474.43186437564066,
+      "request_sha256": "24b6810363ed477b347fe5842e20ffacfc04843ce87957758ad6ddb75602ea65",
+      "seconds": 23.491242290940136,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for President Obama's decision to reject the Keystone XL pipeline.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal actions must not significantly exacerbate global warming as Democrats continue working to reduce carbon dioxide, methane, and other greenhouse gas emissions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a comprehensive approach ensuring all federal decisions contribute to solving, not significantly exacerbating, climate change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe climate challenge commitment must be reflected in infrastructure investments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support making existing infrastructure safer and cleaner and building new infrastructure necessary to power a clean energy future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support high labor standards in clean energy infrastructure to create good-paying middle class jobs that cannot be outsourced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support the right to form or join a union in renewable power or advanced vehicle manufacturing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"During the clean energy transition, landowners, communities of color, and tribal nations will be at the table.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 347,
+      "generation_tps": 16.214174226955624,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1955,
+      "prompt_tps": 490.63100778908665,
+      "request_sha256": "b119eb4e691e31a2d255226e03217442396f190d1484c9f1485765ca70ae876e",
+      "seconds": 25.396815957967192,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for President Obama's decision to reject the Keystone XL pipeline.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As Democrats continue working to reduce carbon dioxide, methane, and other greenhouse gas emissions, federal actions must not significantly exacerbate global warming.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a comprehensive approach that ensures all federal decisions going forward contribute to solving, not significantly exacerbating, climate change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that commitment to meeting the climate challenge must be reflected in infrastructure investments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support making existing infrastructure safer and cleaner and building the new infrastructure necessary to power a clean energy future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support high labor standards in clean energy infrastructure to create good-paying middle class jobs that cannot be outsourced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support the right to form or join a union, whether in renewable power or advanced vehicle manufacturing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"During the clean energy transition, landowners, communities of color, and tribal nations will be at the table.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "24b6810363ed477b347fe5842e20ffacfc04843ce87957758ad6ddb75602ea65"
+}

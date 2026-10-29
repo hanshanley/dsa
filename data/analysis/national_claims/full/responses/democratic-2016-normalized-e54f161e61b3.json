@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 289,
+      "generation_tps": 16.298289566859783,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1422,
+      "prompt_tps": 453.3505018158228,
+      "request_sha256": "674a34750e6c0d9fe72df128d402635e107891eea19dfee339d2829a3f25b83f",
+      "seconds": 20.87906579207629,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Investment in the nation's public health infrastructure is critical to ensuring preparedness for emerging threats, preventing disease, illness, and injury in communities, and promoting good health and wellbeing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Inadequate access to public health services has a disparate impact on poor, rural, and minority communities where public health services are a significant source of health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight for increased investments in public health to better address emerging threats and the needs across the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will continue to oppose Republican attempts to cut public health services and funding.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Adequate funding of public health education at the undergraduate, graduate, and medical school levels will be ensured.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Adequate funding of residency training programs in public health, preventive medicine, and its subspecialties will be ensured.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 291,
+      "generation_tps": 16.081043818977236,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1879,
+      "prompt_tps": 482.50054952173656,
+      "request_sha256": "751d6b9c01bb4208dc31da221dc8b7d59625a3392c2377ef7a5463a3588733bc",
+      "seconds": 22.00030979211442,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Investment in the nation's public health infrastructure is critical to ensuring preparedness for emerging threats, preventing disease, illness, and injury in communities, and promoting good health and wellbeing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Inadequate access to public health services has a disparate impact on poor, rural, and minority communities where public health services are a significant source of health care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight for increased investments in public health to better address emerging threats and the needs across the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will continue to oppose Republican attempts to cut public health services and funding.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will ensure adequate funding of public health education at the undergraduate, graduate, and medical school levels.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party will ensure adequate funding of residency training programs in public health, preventive medicine, and its subspecialties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "674a34750e6c0d9fe72df128d402635e107891eea19dfee339d2829a3f25b83f"
+}

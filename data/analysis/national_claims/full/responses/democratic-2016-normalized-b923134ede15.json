@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 316,
+      "generation_tps": 16.143132917933837,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1449,
+      "prompt_tps": 470.51133524146434,
+      "request_sha256": "e5b58c36ff1d942ec67e69298c33c0d54e8095d767a3fc82771dcdaa9804cd82",
+      "seconds": 22.667007125215605,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats are committed to realizing the full promise of the Americans with Disabilities Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will protect and expand the right of Americans with disabilities to get the accommodations and support they need to live in integrated community settings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will improve access to meaningful and gainful employment for people with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will provide tax relief to help the millions of families caring for aging relatives or family members with chronic illnesses or disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will continue to fight for ratification of the Convention on the Rights of Persons with Disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats know that the nation, communities, and lives are made stronger and richer by faith in many forms and the countless acts of justice, mercy, and tolerance it inspires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats believe in lifting up and valuing the good work of people of faith and religious organizations and finding ways to support that work where possible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 322,
+      "generation_tps": 16.068494936624568,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1933,
+      "prompt_tps": 482.04334006341116,
+      "request_sha256": "2bb5b85c129a6ff93ab68faeaa3127cc900d1e50f697373b10b94e1c59f2bf23",
+      "seconds": 24.060218166094273,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to realizing the full promise of the Americans with Disabilities Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will protect and expand the right of Americans with disabilities to get the accommodations and support they need to live in integrated community settings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will improve access to meaningful and gainful employment for people with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will provide tax relief to help the millions of families caring for aging relatives or family members with chronic illnesses or disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will continue to fight for ratification of the Convention on the Rights of Persons with Disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats know that the nation, communities, and lives are made vastly stronger and richer by faith in many forms and the countless acts of justice, mercy, and tolerance it inspires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats believe in lifting up and valuing the good work of people of faith and religious organizations and finding ways to support that work where possible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e5b58c36ff1d942ec67e69298c33c0d54e8095d767a3fc82771dcdaa9804cd82"
+}

@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 414,
+      "generation_tps": 16.18938179847759,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1536,
+      "prompt_tps": 490.0282168816414,
+      "request_sha256": "6104895d4c4ae2b284bf66c6e96d59494477ffeda418499bf1519223932dfa7b",
+      "seconds": 28.718406457919627,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe clean air and clean water are basic rights of all Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Low-income communities and communities of color are disproportionately home to environmental justice \\\"hot spots\\\", where air pollution, water pollution, and toxic hazards like lead increase health and economic hardship.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The impacts of climate change will disproportionately affect low-income and minority communities, tribal nations, and Alaska Native villages, all of which suffer the worst losses during extreme weather and have the fewest resources to prepare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe we must make eradicating lead poisoning a national priority, as it disproportionately impacts low-income children and children of color and can lead to lifelong health and educational challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will prioritize hiring and training workers from affected communities to clean up toxic brownfields and expand clean energy, energy efficiency, and resilient infrastructure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to ensure workers and their families in coal communities get the benefits they have earned and the respect they deserve.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will make new investments in energy-producing communities to help create jobs and build a brighter and more resilient economic future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will oppose threats to the public health of energy-producing communities from harmful and dangerous extraction practices, like mountaintop removal mining operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 411,
+      "generation_tps": 16.24355930041866,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2127,
+      "prompt_tps": 511.0286607675991,
+      "request_sha256": "1c7ae5ff9bb2bceb2d71beeaf54c53fe4903c140b29d9d8a4bba983390d6cbae",
+      "seconds": 29.47600991697982,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe clean air and clean water are basic rights of all Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Low-income communities and communities of color are disproportionately located in environmental justice \\\"hot spots\\\", where air pollution, water pollution, and toxic hazards like lead increase health and economic hardship.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The impacts of climate change will disproportionately affect low-income and minority communities, tribal nations, and Alaska Native villages, which suffer the worst losses during extreme weather and have the fewest resources to prepare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe eradicating lead poisoning must be a national priority, as it disproportionately impacts low-income children and children of color and can lead to lifelong health and educational challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will prioritize hiring and training workers from affected communities to clean up toxic brownfields and expand clean energy, energy efficiency, and resilient infrastructure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to ensure workers and their families in coal communities get the benefits they have earned and the respect they deserve.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will make new investments in energy-producing communities to help create jobs and build a brighter and more resilient economic future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will oppose threats to the public health of energy-producing communities from harmful and dangerous extraction practices, like mountaintop removal mining operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 416,
+      "generation_tps": 16.22402787719444,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2115,
+      "prompt_tps": 514.1227472015295,
+      "request_sha256": "d993540ff050c157ccfb4c4ba9dea6fa2e1b02cb08c759323f997b29a0b805f6",
+      "seconds": 29.765132084023207,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe clean air and clean water are basic rights of all Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Low-income communities and communities of color are disproportionately home to environmental justice \\\"hot spots\\\", where air pollution, water pollution, and toxic hazards like lead increase health and economic hardship.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The impacts of climate change will also disproportionately affect low-income and minority communities, tribal nations, and Alaska Native villages\u2014all of which suffer the worst losses during extreme weather and have the fewest resources to prepare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe we must make it a national priority to eradicate lead poisoning, which disproportionately impacts low-income children and children of color and can lead to lifelong health and educational challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will prioritize hiring and training workers from affected communities to clean up toxic brownfields and expand clean energy, energy efficiency, and resilient infrastructure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to make sure workers and their families in coal communities get the benefits they have earned and the respect they deserve.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will make new investments in energy-producing communities to help create jobs and build a brighter and more resilient economic future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will oppose threats to the public health of energy-producing communities from harmful and dangerous extraction practices, like mountaintop removal mining operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 414,
+      "generation_tps": 16.188323248259742,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2708,
+      "prompt_tps": 545.7092176835328,
+      "request_sha256": "a0e1492b21e0de043792eb2e717c5e21a2c5c1d3746c952a77df8f114284f79f",
+      "seconds": 30.547085583908483,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe clean air and clean water are basic rights of all Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Low-income communities and communities of color are disproportionately home to environmental justice \\\"hot spots\\\", where air pollution, water pollution, and toxic hazards like lead increase health and economic hardship.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The impacts of climate change will also disproportionately affect low-income and minority communities, tribal nations, and Alaska Native villages\u2014all of which suffer the worst losses during extreme weather and have the fewest resources to prepare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe eradicating lead poisoning must be a national priority, as it disproportionately impacts low-income children and children of color and can lead to lifelong health and educational challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will prioritize hiring and training workers from affected communities to clean up toxic brownfields and expand clean energy, energy efficiency, and resilient infrastructure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to ensure workers and their families in coal communities get the benefits they have earned and the respect they deserve.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will make new investments in energy-producing communities to help create jobs and build a brighter and more resilient economic future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will oppose threats to the public health of energy-producing communities from harmful and dangerous extraction practices, like mountaintop removal mining operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6104895d4c4ae2b284bf66c6e96d59494477ffeda418499bf1519223932dfa7b"
+}

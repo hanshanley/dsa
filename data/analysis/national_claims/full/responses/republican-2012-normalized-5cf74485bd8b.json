@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 367,
+      "generation_tps": 16.170196354686535,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1484,
+      "prompt_tps": 465.083001724735,
+      "request_sha256": "5f7f2fa281d8b2fb5a573bb51aa26b370d9c01d0604dd8f9e7023f528f44e013",
+      "seconds": 25.897627542028204,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current Administration has appointed activist judges and maintained an activist and highly partisan Department of Justice.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With a Republican Administration, the Department of Justice will stop suing States for exercising powers reserved to the States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With a Republican Administration, the Department of Justice will stop abusing its preclearance authority to block photo-ID voting laws.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With a Republican Administration, the Department of Justice will fulfill its responsibility to defend all federal laws in court, including the Defense of Marriage Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Postal Service is in dire financial circumstances.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Mail delivery from the era of the Pony Express cannot long survive in a world of rapidly advancing telecommunications.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to Congress to restructure the U.S. Postal Service to ensure the continuance of its essential function of delivering mail while preparing for downsizing due to the advance of internet communication.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to Congress to explore a greater role for private enterprise in appropriate aspects of the mail-processing system, given the Postal Service's seriously underfunded pension system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 371,
+      "generation_tps": 16.192144836129895,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2019,
+      "prompt_tps": 492.2096717369158,
+      "request_sha256": "9dac03e58d998a5911331b25225aac9735cd39f25721d6b4b073a7da56a98b4f",
+      "seconds": 27.028500540880486,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current Administration has included an activist and highly partisan Department of Justice, in addition to appointing activist judges.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With a Republican Administration, the Department of Justice will stop suing States for exercising powers reserved to the States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With a Republican Administration, the Department of Justice will stop abusing its preclearance authority to block photo-ID voting laws.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With a Republican Administration, the Department of Justice will fulfill its responsibility to defend all federal laws in court, including the Defense of Marriage Act.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Postal Service is in dire financial circumstances.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In a world of rapidly advancing telecommunications, mail delivery from the era of the Pony Express cannot long survive.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to Congress to restructure the U.S. Postal Service to ensure the continuance of its essential function of delivering mail while preparing for downsizing due to the advance of internet communication.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Recommendation to Congress to explore a greater role for private enterprise in appropriate aspects of the mail-processing system, given the Postal Service's seriously underfunded pension system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5f7f2fa281d8b2fb5a573bb51aa26b370d9c01d0604dd8f9e7023f528f44e013"
+}

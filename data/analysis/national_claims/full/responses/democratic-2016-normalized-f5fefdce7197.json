@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 412,
+      "generation_tps": 16.291027582671234,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1431,
+      "prompt_tps": 477.09624746757424,
+      "request_sha256": "cd4bfe5b2f97a270499b06e318a632914fb0820fffd3f98e2efa8cf7d50c7174",
+      "seconds": 28.299523416906595,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans have enacted various voter suppression tactics from Ohio to Florida.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Some federal courts have already found that Republican voter suppression tactics go too far.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to fight against Republican voter suppression laws to preserve the fundamental right to vote.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to defeat ill-motivated voter suppression tactics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Ohio's proposed Voters Bill of Rights amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for North Carolina's Moral Monday movement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for similar initiatives to permanently safeguard the right to vote.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe it is necessary to fight to preserve the essence of the longest standing democracy in the world: a government that represents the American people, not just a handful of powerful and wealthy special interests.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will fight for real campaign finance reform now.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Big money is drowning out the voices of everyday Americans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"It is necessary to have the necessary tools to fight back and safeguard electoral and political integrity.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 409,
+      "generation_tps": 16.25045438686506,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2011,
+      "prompt_tps": 499.9456641626495,
+      "request_sha256": "6bb0015fe8cd163189c8297cf2e47a08e33e08f4594e7e672f276f35c89a0312",
+      "seconds": 29.20118762506172,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans have enacted various voter suppression tactics from Ohio to Florida.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Some federal courts have already found that these voter suppression measures go too far.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to fight these laws to preserve the fundamental right to vote.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to defeat ill-motivated voter suppression tactics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Ohio's proposed Voters Bill of Rights amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for North Carolina's Moral Monday movement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for similar initiatives to permanently safeguard the right to vote.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe it is necessary to fight to preserve the essence of the longest standing democracy in the world: a government that represents the American people, not just a handful of powerful and wealthy special interests.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will fight for real campaign finance reform now.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Big money is drowning out the voices of everyday Americans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"It is necessary to have the necessary tools to fight back and safeguard electoral and political integrity.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cd4bfe5b2f97a270499b06e318a632914fb0820fffd3f98e2efa8cf7d50c7174"
+}

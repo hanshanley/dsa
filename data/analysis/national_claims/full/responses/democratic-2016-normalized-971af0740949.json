@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 442,
+      "generation_tps": 16.289401212150675,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1460,
+      "prompt_tps": 488.83403457711233,
+      "request_sha256": "ccca2601673a67c1a8908e18475111fbc2d49fab79027a25599934ace5d91de5",
+      "seconds": 30.131194458110258,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Party is committed to assisting the estimated 20 million people struggling with addiction in this country to find and sustain healthy lives by encouraging full recovery and integration into society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to working to remove common barriers to gainful employment, housing, and education for people struggling with addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for vastly expanding access to prevention and treatment for drug and alcohol addiction, specifically the opioid crisis and other drugs plaguing communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for supporting recovery from drug and alcohol addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for helping community organizations addressing drug and alcohol addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for promoting better practices by prescribers regarding drug and alcohol addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to continue to fight to expand access to care for addiction services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to ensure that insurance coverage for addiction services is equal to that for any other health conditions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Health and Human Services (HHS), the Department of Labor, and state regulatory agencies should fully implement the protections of the Mental Health Parity and Addictions Equity Act of 2008.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"American medical insurers, including the federal government, will need to disclose how they make their medical management decisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 419,
+      "generation_tps": 16.306779930589723,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2070,
+      "prompt_tps": 518.793563106744,
+      "request_sha256": "57b5dcc5245b8ed84a4ade5ffbb4255c17aca86f733bf3565be3435a1edb6995",
+      "seconds": 29.694896500092,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party is committed to assisting the estimated 20 million people struggling with addiction in this country to find and sustain healthy lives by encouraging full recovery and integration into society and working to remove common barriers to gainful employment, housing, and education.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to vastly expanding access to prevention and treatment for drug and alcohol addiction, specifically the opioid crisis and other drugs plaguing communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to supporting recovery from drug and alcohol addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to helping community organizations addressing drug and alcohol addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to promoting better practices by prescribers regarding drug and alcohol addiction.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to continuing to fight to expand access to care for addiction services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party is committed to ensuring that insurance coverage for addiction services is equal to that for any other health conditions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Health and Human Services (HHS), the Department of Labor, and state regulatory agencies should fully implement the protections of the Mental Health Parity and Addictions Equity Act of 2008\u2014which means that American medical insurers, including the federal government, will need to disclose how they make their medical management decisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ccca2601673a67c1a8908e18475111fbc2d49fab79027a25599934ace5d91de5"
+}

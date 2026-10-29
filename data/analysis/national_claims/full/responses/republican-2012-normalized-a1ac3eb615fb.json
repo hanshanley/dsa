@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 267,
+      "generation_tps": 16.319701485103455,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1396,
+      "prompt_tps": 483.2881388650043,
+      "request_sha256": "32bd7ea354db4f5686493c7340203bfe2dcd5f775316bf8fb6ea21c3e859c5dd",
+      "seconds": 19.259449041914195,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Medicaid is the dominant payer in the health market regarding long-term care, births, and individuals with mental illness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicaid is too big and too flawed to be managed in its current condition from Washington.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republican Governors have taken the lead in proposing regulatory changes to make Medicaid more flexible, innovative, and accountable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There should be alternatives to hospitalization for chronic health problems.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Patients could be rewarded for participating in disease prevention activities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Excessive mandates on coverage should be eliminated.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Patients with long-term care needs might fare better in a separately designed program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 273,
+      "generation_tps": 16.27320667351926,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1831,
+      "prompt_tps": 504.0113426068616,
+      "request_sha256": "a364776ddbff0afdfcc9006c6eae8affd6dbd14d4cafe9318c81dbef6c4f8a8f",
+      "seconds": 20.41876241681166,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Medicaid is the dominant payer in the health market regarding long-term care, births, and individuals with mental illness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Medicaid is too big and too flawed to be managed in its current condition from Washington.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republican Governors have taken the lead in proposing regulatory changes that could make Medicaid more flexible, innovative, and accountable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There should be alternatives to hospitalization for chronic health problems.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Patients could be rewarded for participating in disease prevention activities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Excessive mandates on coverage should be eliminated.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Patients with long-term care needs might fare better in a separately designed program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "32bd7ea354db4f5686493c7340203bfe2dcd5f775316bf8fb6ea21c3e859c5dd"
+}

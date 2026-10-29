@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 67,
+      "generation_tps": 16.939158525108674,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1333,
+      "prompt_tps": 466.04611777254496,
+      "request_sha256": "f2e0d48c0e8b18c47daec1dc2ce2f9a9a8b02dda1a9cd82ebe5174c0c33158f1",
+      "seconds": 6.82551100011915,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party is involved in a scheme, the Democratic Party is not actively opposing it, and both parties receive funding from the same billionaires and war profiteers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 67,
+      "generation_tps": 17.023956063965617,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1568,
+      "prompt_tps": 453.93170392424435,
+      "request_sha256": "c1281dc78337b7557ab68d15eb03dca7a497e7f9ee17c24b101a8382c21ab8e0",
+      "seconds": 7.3988798330537975,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republicans are in on it, the Democratic Party is asleep at the wheel, and both are funded by the same criminal class of billionaires and war profiteers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f2e0d48c0e8b18c47daec1dc2ce2f9a9a8b02dda1a9cd82ebe5174c0c33158f1"
+}

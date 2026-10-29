@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 368,
+      "generation_tps": 16.24243780451627,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1467,
+      "prompt_tps": 535.2112709644973,
+      "request_sha256": "58061b6b2f161edf739dfc5d014315e8fdfa942ac69d6fe2e8dbcdbf3224422c",
+      "seconds": 25.407097291899845,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Every child, regardless of their identity, family income, or location, should have access to a high-quality education from preschool through high school and beyond.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States lags behind other advanced economies in providing high-quality, universal preschool programs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools are more segregated today than when Brown v. Board of Education was decided.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are wide disparities in educational outcomes across racial and socioeconomic lines.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A college degree or another form of post-secondary education is increasingly required for jobs that pay a middle-class wage.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Graduation rates have stagnated for low-income students.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The high cost of college has required too many Americans to take out staggering student loans or put a degree out of reach entirely.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to making good public schools available to every child, regardless of their zip code.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to making debt-free college a reality for all Americans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 397,
+      "generation_tps": 16.179481199138408,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2003,
+      "prompt_tps": 488.83341755382133,
+      "request_sha256": "fbbfc7b7416b08f99a41be8577f4d71b6c790ab3fcc6d9525bbc1deb7a696a7a",
+      "seconds": 28.645227666944265,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe every child, no matter who they are, how much their families earn, or where they live, should have access to a high-quality education, from preschool through high school and beyond.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States still lags behind other advanced economies in providing high-quality, universal preschool programs to help all of its kids get a strong start to their educations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools are more segregated today than they were when Brown v. Board of Education was decided.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There are wide disparities in educational outcomes across racial and socioeconomic lines.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A college degree or another form of post-secondary education is increasingly required for jobs that pay a middle-class wage.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Graduation rates have stagnated for low-income students.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The high cost of college has required too many Americans to take out staggering student loans or put a degree out of reach entirely.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to making good public schools available to every child, no matter what zip code they live in.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to making debt-free college a reality for all Americans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "58061b6b2f161edf739dfc5d014315e8fdfa942ac69d6fe2e8dbcdbf3224422c"
+}

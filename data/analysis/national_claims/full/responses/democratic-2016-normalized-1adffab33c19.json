@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 327,
+      "generation_tps": 16.262335441468284,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1454,
+      "prompt_tps": 482.6924878717633,
+      "request_sha256": "3e7e1f31bbe500463f116e14c81e88a5a1f79a8341ce88e8d4159ab4d030eb0b",
+      "seconds": 23.130523334024474,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for securing statehood for Washington, D.C.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for granting American citizens residing in Washington, D.C. full and equal congressional rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for respecting the laws and budget of Washington, D.C.'s local government without Congressional interference.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats understand responsible fiscal stewardship is key to American democracy and to the country's long-term economic prosperity.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Belief that making those at the top and the largest corporations pay their fair share can pay for ambitious progressive investments that create good-paying jobs and offer security to working families without adding to the debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Donald Trump's plans could add more than $30 trillion to the debt.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Donald Trump casually suggests defaulting on America's debt, ending more than 200 years in which the full faith and credit of the United States has been sacrosanct.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 327,
+      "generation_tps": 16.235196561986083,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1949,
+      "prompt_tps": 502.18128832967034,
+      "request_sha256": "142153d14c6c69f77bfc466b98170c5b31648ad2014807668253948d3fe76e91",
+      "seconds": 24.032698458060622,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for securing statehood for Washington, D.C.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for granting American citizens residing in Washington, D.C. full and equal congressional rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for respecting the laws and budget of Washington, D.C.'s local government without Congressional interference.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats understand responsible fiscal stewardship is key to American democracy and to the country's long-term economic prosperity.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"Belief that making those at the top and the largest corporations pay their fair share can pay for ambitious progressive investments that create good-paying jobs and offer security to working families without adding to the debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Donald Trump's plans could add more than $30 trillion to the debt.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"Donald Trump casually suggests defaulting on America's debt, ending more than 200 years in which the full faith and credit of the United States has been sacrosanct.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3e7e1f31bbe500463f116e14c81e88a5a1f79a8341ce88e8d4159ab4d030eb0b"
+}

@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 132,
+      "generation_tps": 16.460701275464153,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1335,
+      "prompt_tps": 471.3323290175802,
+      "request_sha256": "b11943eae4755044af44b20b536d87bd3df0aebe00c6e7a2827aec38c8ff5a9c",
+      "seconds": 10.862295417115092,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Agricultural lands account for nearly half of the total land area in America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agricultural practices in America have a significant impact on water, land, oceans, and the climate.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To be effective in keeping air and water clean and combating climate change, farmers must be enlisted as partners in promoting conservation and stewardship.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 137,
+      "generation_tps": 16.430054641508256,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1635,
+      "prompt_tps": 489.24779479378213,
+      "request_sha256": "0bfdc66184bfbba4613c81756fb353c683a51f73a6c46c88864a09742a795046",
+      "seconds": 11.689820083091035,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Agricultural lands account for nearly half of the total land area in America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agricultural practices in America have a significant impact on water, land, oceans, and the climate.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To be effective in keeping air and water clean and combating climate change, we must enlist farmers as partners in promoting conservation and stewardship.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 139,
+      "generation_tps": 16.244021112497627,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1939,
+      "prompt_tps": 477.10184369289396,
+      "request_sha256": "36de8f2acf3c135ee01e72ec357b2b2a6b52d0d21499da5063a42565cbdb2401",
+      "seconds": 12.631232667015865,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Agricultural lands account for nearly half of the total land area in America.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agricultural practices in America have a significant impact on water, land, oceans, and the climate.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To be effective in keeping air and water clean and combating climate change, Democrats believe farmers must be enlisted as partners in promoting conservation and stewardship.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b11943eae4755044af44b20b536d87bd3df0aebe00c6e7a2827aec38c8ff5a9c"
+}

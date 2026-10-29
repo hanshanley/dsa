@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 246,
+      "generation_tps": 16.323314022977407,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1415,
+      "prompt_tps": 466.8215067811816,
+      "request_sha256": "430ba5c8afaa2652428d11b81bcfa8fb76adf94939f3bd6f8667b146bff30c7b",
+      "seconds": 18.11188124981709,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will fight for increased investments and coordination in public health to better address emerging threats and persistent needs across the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Higher income is strongly associated with longer life expectancy among Americans.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The gap in life expectancy between the richest and poorest Americans is increasing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unacceptable differences in health outcomes exist by race, ethnicity, and sexual orientation among Americans.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A link exists between social factors\u2014such as poverty, unemployment, experience of discrimination, and housing instability\u2014and poor health.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to pursue policies addressing social factors and empowering communities to respond to their most pressing health needs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 247,
+      "generation_tps": 16.304853406659205,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1829,
+      "prompt_tps": 501.45644680787393,
+      "request_sha256": "083f438a4bbb7af82ca8609f7eaf64d0870dce71e4beb68bf0984c462fef5c60",
+      "seconds": 18.80622374988161,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will fight for increased investments and coordination in public health to better address emerging threats and persistent needs across the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Higher income is strongly associated with longer life expectancy among Americans.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The gap in life expectancy between the richest and poorest Americans is increasing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unacceptable differences in health outcomes exist by race, ethnicity, and sexual orientation among Americans.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A link exists between social factors\u2014such as poverty, unemployment, experience of discrimination, and housing instability\u2014and poor health.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to pursue policies addressing these social factors and empowering communities to respond to their most pressing health needs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "430ba5c8afaa2652428d11b81bcfa8fb76adf94939f3bd6f8667b146bff30c7b"
+}

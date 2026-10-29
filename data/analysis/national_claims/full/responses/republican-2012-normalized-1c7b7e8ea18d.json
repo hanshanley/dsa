@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 151,
+      "generation_tps": 16.37179951993814,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1419,
+      "prompt_tps": 557.8299614197854,
+      "request_sha256": "899399cc3b09ac98151c548bd2c673214270d18dce07a84696d28fe8745c2c0a",
+      "seconds": 11.77669733390212,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The group identifies as the party of sustainable jobs and economic growth through American energy, agriculture, and environmental policy.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group identifies as the party of America's growers and producers, farmers, ranchers, foresters, and miners.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group identifies as the party of traditional conservation, which is the wise development of resources that considers the sacrifices of past generations and responsibility to preserve resources for future generations.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 179,
+      "generation_tps": 16.240713566413607,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1738,
+      "prompt_tps": 480.34937815700715,
+      "request_sha256": "caea3792e346cbebd556c44cc619a30f450720b59f650ca141c1dee6950df09f",
+      "seconds": 14.650480374926701,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The group is the party of sustainable jobs and economic growth through American energy, agriculture, and environmental policy.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group is the party of America's growers and producers, farmers, ranchers, foresters, miners, and those who bring from the earth the minerals and energy that are the lifeblood of the nation's historically strong economy.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group is the party of traditional conservation, which is the wise development of resources that keeps in mind both the sacrifices of past generations to secure that bounty and responsibility to preserve it for future generations.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "899399cc3b09ac98151c548bd2c673214270d18dce07a84696d28fe8745c2c0a"
+}

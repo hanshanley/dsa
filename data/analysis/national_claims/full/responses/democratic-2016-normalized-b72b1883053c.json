@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 346,
+      "generation_tps": 16.10496574343962,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1418,
+      "prompt_tps": 467.94658056878023,
+      "request_sha256": "3b6ec6b68c867fef8b4a2446a2c5d11981c3daa8902be879091ca0cc3c3e5efc",
+      "seconds": 24.524499249877408,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats are committed to ending violence against women wherever it occurs\u2014in homes, streets, schools, the military, or elsewhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to support the Violence Against Women Act to provide law enforcement with tools to combat violence against women.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support comprehensive services for survivors of violence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase prevention efforts in communities and on campuses.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to end sexual assault wherever it occurs, including on campuses.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone deserves a safe environment where they can learn and thrive, not live in fear.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will provide comprehensive support to survivors of sexual assault.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure a fair process for all on-campus disciplinary proceedings and in the criminal justice system related to sexual assault.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase sexual violence prevention education programs that cover issues like consent and bystander intervention in college and secondary school.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 339,
+      "generation_tps": 16.243460759554342,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1932,
+      "prompt_tps": 474.5896388529198,
+      "request_sha256": "34ff1747452a662a6478596e6a6cde69a128266d3be30cebb6c922b18135cfb5",
+      "seconds": 24.951023624977097,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to ending violence against women wherever it occurs\u2014in homes, streets, schools, the military, or elsewhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will continue to support the Violence Against Women Act to provide law enforcement with the tools it needs to combat this problem.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support comprehensive services for survivors of violence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase prevention efforts in communities and on campuses.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to end sexual assault wherever it occurs, including on campuses, because everyone deserves a safe environment where they can learn and thrive, not live in fear.\", \"claim_types\":[\"policy_position\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will provide comprehensive support to survivors of violence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure a fair process for all on-campus disciplinary proceedings and in the criminal justice system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase sexual violence prevention education programs that cover issues like consent and bystander intervention, not only in college, but also in secondary school.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3b6ec6b68c867fef8b4a2446a2c5d11981c3daa8902be879091ca0cc3c3e5efc"
+}

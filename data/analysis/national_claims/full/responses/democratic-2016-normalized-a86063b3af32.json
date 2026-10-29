@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 493,
+      "generation_tps": 16.32173877193028,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1497,
+      "prompt_tps": 480.7113564891009,
+      "request_sha256": "16a825e8856f3dd00df5ee1cb3a5a65536e68c92af55e02ba6e33c1d5da18291",
+      "seconds": 33.32974183303304,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe a well-supported and qualified workforce is a key ingredient to the success of community health centers.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to train and support the workforce for community health centers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will encourage providers to work with underserved populations through the National Health Service Corps.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will create a comprehensive strategy to increase the pool of primary health care professionals.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States pays, by far, the highest prices in the world for prescription drugs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Too many Americans between the ages of 18 and 64 cannot afford to fill their prescriptions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A lifesaving drug is no good if it is unaffordable to the people who need it most.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Many drug companies are spending more on advertising than on research.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The largest pharmaceutical companies are making billions of dollars per year in profits at higher margins compared to other industries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Many pharmaceutical companies stash their profits in offshore tax havens.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Pharmaceutical companies charge Americans thousands of dollars for new drugs, often at much higher costs than in other developed nations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats are committed to investing in the research, development, and innovation that creates lifesaving drugs and lowers overall health costs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The profiteering of pharmaceutical companies is unacceptable to Democrats.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 499,
+      "generation_tps": 16.288248377067987,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2158,
+      "prompt_tps": 521.938871864499,
+      "request_sha256": "fca9830067e1825ea75cda256c61200d1f8ffd43c0d1fa7262ab43fabcecec0b",
+      "seconds": 34.780300207901746,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe a well-supported and qualified workforce is a key ingredient to the success of community health centers.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to train and support the workforce in community-based settings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will encourage providers to work with underserved populations through the National Health Service Corps.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will create a comprehensive strategy to increase the pool of primary health care professionals.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States pays, by far, the highest prices in the world for prescription drugs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Too many Americans between the ages of 18 and 64 cannot afford to fill their prescriptions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A lifesaving drug is no good if it is unaffordable to the people who need it most.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Many drug companies are spending more on advertising than on research.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The largest pharmaceutical companies are making billions of dollars per year in profits at higher margins compared to other industries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Many pharmaceutical companies stash their profits in offshore tax havens.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Pharmaceutical companies charge Americans thousands of dollars for new drugs, often at much higher costs than in other developed nations.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats are committed to investing in the research, development, and innovation that creates lifesaving drugs and lowers overall health costs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The profiteering of pharmaceutical companies is unacceptable to Democrats.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "16a825e8856f3dd00df5ee1cb3a5a65536e68c92af55e02ba6e33c1d5da18291"
+}

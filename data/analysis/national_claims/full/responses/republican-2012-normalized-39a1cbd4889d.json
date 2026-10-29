@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 293,
+      "generation_tps": 16.152218877473146,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1459,
+      "prompt_tps": 481.3645348835405,
+      "request_sha256": "8498a5574eb55d42f5d7318fbca052df305c88462d3698114f270d5e25e4c435",
+      "seconds": 21.181471375050023,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Voter fraud is political poison and strikes at the heart of representative government.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for vigorous prosecution of voter fraud at the State and federal level.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Having a physical verification of the vote is the best way to ensure a fair election.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a policy that all electronic voting systems have a voter verified paper audit trail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"States or political subdivisions that use all-mail elections cannot ensure the integrity of the ballot.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Ballots can be stolen or fraudulently voted by unauthorized individuals when ballots are mailed to every registered voter because the system does not have a way to verify the identity of the voter.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for States and political subdivisions to adopt voting systems that can verify the identity of the voter.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 335,
+      "generation_tps": 16.228236436164984,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1920,
+      "prompt_tps": 484.49457536712424,
+      "request_sha256": "69dad634681e84a44958807cbfabfa2e51ff936fa948bc371e090f4f5a8caf33",
+      "seconds": 24.617417166940868,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Voter fraud is political poison and strikes at the heart of representative government.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call for vigorous prosecution of voter fraud at the State and federal level.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call on every citizen, elected official, and member of the judiciary to preserve the integrity of the vote.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Having a physical verification of the vote is the best way to ensure a fair election.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a policy that all electronic voting systems have a voter verified paper audit trail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"States or political subdivisions that use all-mail elections cannot ensure the integrity of the ballot.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"When ballots are mailed to every registered voter, ballots can be stolen or fraudulently voted by unauthorized individuals because the system does not have a way to verify the identity of the voter.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Call for States and political subdivisions to adopt voting systems that can verify the identity of the voter.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8498a5574eb55d42f5d7318fbca052df305c88462d3698114f270d5e25e4c435"
+}

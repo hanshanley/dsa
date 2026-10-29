@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 430,
+      "generation_tps": 16.268460803662602,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1539,
+      "prompt_tps": 480.4249778013047,
+      "request_sha256": "c4150326165e66dcf6423c4ad46ec23b82bcb3ed21a74060c6671e7976a3f00d",
+      "seconds": 29.645282333018258,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The first provision of the First Amendment concerns freedom of religion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thomas Jefferson's Virginia Statute for Religious Freedom declared that no one should suffer on account of his religious opinion or belief and that all men shall be free to profess and by argument to maintain their opinion in matters of religion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The assurance of religious freedom has never been more needed than today, as liberal elites try to drive religious beliefs and religious believers out of the public square.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Founders of the American Republic universally agree that democracy presupposes a moral people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"George Washington's Farewell Address states that religion and morality are indispensable supports of political prosperity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration attempts to compel faith-related institutions and believing individuals to contravene their deeply held religious, moral, or ethical beliefs regarding health services, traditional marriage, or abortion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The forcible secularization of religious and religiously affiliated organizations, including faith-based hospitals and colleges, has occurred in tandem with the current Administration's declaration of which faith-related activities are, or are not, protected by the First Amendment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration's declaration of which faith-related activities are, or are not, protected by the First Amendment is an unprecedented aggression repudiated by a unanimous Supreme Court in its HosannaTabor v. EEOC decision.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 443,
+      "generation_tps": 16.261851241230225,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2137,
+      "prompt_tps": 519.5456301911149,
+      "request_sha256": "00f176d104832a98523a6b1130d1c33a558a3e33b58411904497ece71e9fa531",
+      "seconds": 31.364868375007063,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The first provision of the First Amendment concerns freedom of religion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thomas Jefferson's Virginia Statute for Religious Freedom declared that no one should suffer on account of his religious opinion or belief, but that all men shall be free to profess, and by argument to maintain, their opinion in matters of religion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The assurance of religious freedom has never been more needed than today, as liberal elites try to drive religious beliefs\u2014and religious believers\u2014out of the public square.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Founders of the American Republic universally agree that democracy presupposes a moral people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In George Washington's Farewell Address, it was stated that religion and morality are indispensable supports of political prosperity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration attempts to compel faith-related institutions, as well as believing individuals, to contravene their deeply held religious, moral, or ethical beliefs regarding health services, traditional marriage, or abortion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The forcible secularization of religious and religiously affiliated organizations, including faith-based hospitals and colleges, has been in tandem with the current Administration's declaration of which faith-related activities are, or are not, protected by the First Amendment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The current Administration's declaration of which faith-related activities are, or are not, protected by the First Amendment is an unprecedented aggression repudiated by a unanimous Supreme Court in its HosannaTabor v. EEOC decision.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c4150326165e66dcf6423c4ad46ec23b82bcb3ed21a74060c6671e7976a3f00d"
+}

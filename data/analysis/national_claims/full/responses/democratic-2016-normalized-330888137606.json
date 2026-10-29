@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 429,
+      "generation_tps": 16.232862519298955,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1498,
+      "prompt_tps": 472.5486273705124,
+      "request_sha256": "b2daa1f575643ef6d37aab6bc7c2c481d737eadc21d0462725a705437e4f25ce",
+      "seconds": 29.610618541948497,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support a constitutional amendment to overturn the Supreme Court's decisions in Citizens United and Buckley v. Valeo.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will require significantly more disclosure and transparency from outside groups, federal contractors, and public corporations to their shareholders through executive order or legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will amplify the voices of the American people through a small donor matching public financing system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will overhaul and strengthen the Federal Election Commission to ensure real enforcement of campaign finance laws.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to eliminate super PACs and outside spending abuses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats envision a nation in which all people, regardless of their income, can participate in the political process and run for office without needing to depend on large contributions from the wealthy and the powerful.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Judges appointed by Democrats will defend the constitutional principles of liberty and equality for all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Judges appointed by Democrats will protect a woman's right to safe and legal abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Judges appointed by Democrats will curb billionaires' influence over elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Judges appointed by Democrats believe the Constitution protects not only the powerful, but also the disadvantaged and powerless.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 459,
+      "generation_tps": 16.210453310498895,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2095,
+      "prompt_tps": 518.831509718537,
+      "request_sha256": "310bc3dc10836ae64a220869e68a95e1bbc5767f255b422cf976dc348c1af90e",
+      "seconds": 32.36312683415599,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support a constitutional amendment to overturn the Supreme Court's decisions in Citizens United and Buckley v. Valeo.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will seek to end secret, unaccountable money in politics by requiring, through executive order or legislation, significantly more disclosure and transparency from outside groups, federal contractors, and public corporations to their shareholders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will seek to amplify the voices of the American people through a small donor matching public financing system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will seek to overhaul and strengthen the Federal Election Commission so that there is real enforcement of campaign finance laws.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to eliminate super PACs and outside spending abuses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats envision a nation in which all people, regardless of their income, can participate in the political process and can run for office without needing to depend on large contributions from the wealthy and the powerful.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Judges appointed by Democrats will defend the constitutional principles of liberty and equality for all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Judges appointed by Democrats will protect a woman's right to safe and legal abortion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Judges appointed by Democrats will curb billionaires' influence over elections because they understand that Citizens United has fundamentally damaged democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Judges appointed by Democrats believe the Constitution protects not only the powerful, but also the disadvantaged and powerless.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b2daa1f575643ef6d37aab6bc7c2c481d737eadc21d0462725a705437e4f25ce"
+}

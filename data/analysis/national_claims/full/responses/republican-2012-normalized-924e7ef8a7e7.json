@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 399,
+      "generation_tps": 16.266945964854933,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1495,
+      "prompt_tps": 474.39670538106986,
+      "request_sha256": "17401e95bae30243ab7be83d24fa34adc9d2081c4da53583ac7add734396ff4a",
+      "seconds": 27.69034808408469,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for moving Medicare and Medicaid away from their current defined-benefit entitlement model to a defined-contribution model.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A defined-contribution model is the only way to limit costs and restore consumer choice for patients and introduce competition.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Genuine competition is the best guarantee of better care at lower cost in healthcare, as in any other sector of the economy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Competition is the best guard against fraud and abuse that have plagued Medicare in its isolation from free market forces.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fraud and abuse in Medicare costs taxpayers billions of dollars every year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a transition to a premium-support model for Medicare, with an income-adjusted contribution toward a health plan of the enrollee's choice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The premium-support model will include private health insurance plans that provide catastrophic protection, to ensure the continuation of doctor-patient relationships.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The age eligibility for Medicare must be made more realistic in terms of today's longer life span, without disadvantaging retirees or those nearing retirement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No changes will be made for those 55 and older.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 463,
+      "generation_tps": 16.203555149298655,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2062,
+      "prompt_tps": 514.725713036843,
+      "request_sha256": "3fb060f7574500927c5f795f4975199cf6b388ea2f9379c57c1c0ba3e32afcab",
+      "seconds": 32.59031808306463,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for moving Medicare and Medicaid away from their current unsustainable defined-benefit entitlement model to a fiscally sound defined-contribution model.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A defined-contribution model is the only way to limit costs and restore consumer choice for patients and introduce competition.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Genuine competition is the best guarantee of better care at lower cost in healthcare, as in any other sector of the economy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Competition is the best guard against fraud and abuse that have plagued Medicare in its isolation from free market forces, which costs taxpayers billions of dollars every year.\",\n\"claim_types\":[\"evaluation\",\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Fraud and abuse in Medicare costs taxpayers billions of dollars every year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for a transition to a premium-support model for Medicare, with an income-adjusted contribution toward a health plan of the enrollee's choice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The premium-support model will include private health insurance plans that provide catastrophic protection, to ensure the continuation of doctor-patient relationships.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The age eligibility for Medicare must be made more realistic in terms of today's longer life span, without disadvantaging retirees or those nearing retirement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No changes will be made for those 55 and older.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"While retaining the option of traditional Medicare in competition with private plans, support for a transition to a premium-support model for Medicare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "17401e95bae30243ab7be83d24fa34adc9d2081c4da53583ac7add734396ff4a"
+}

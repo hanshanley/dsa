@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 301,
+      "generation_tps": 16.239923523238772,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1454,
+      "prompt_tps": 469.04885770475016,
+      "request_sha256": "e57ead52536183bce54b5ca080d40df837faa97fa9f73e7c4aa43ba479850314",
+      "seconds": 21.647639208007604,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"When the Constitution is evaded, transgressed, or ignored, the freedoms it guarantees are also evaded, transgressed, or ignored.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The elections of 2012 are a referendum on the future of liberty in America.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party stands for the rights of individuals, families, faith communities, institutions, and of the States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Framers viewed the States as laboratories of democracy and centers of innovation.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Republican Party views the States as laboratories of democracy and centers of innovation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Tenth Amendment is an instrument to correct any misalignment of power between the States and the federal government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 280,
+      "generation_tps": 16.137529831221453,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1923,
+      "prompt_tps": 491.1437425253381,
+      "request_sha256": "6a9e48349de491af3009fc503bc8864b3d34d6646b6c60c4e6ce989648a013c1",
+      "seconds": 21.27730383281596,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"When the Constitution is evaded, transgressed, or ignored, the freedoms it guarantees are also evaded, transgressed, or ignored.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The elections of 2012 are a referendum on the future of liberty in America.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party stands for the rights of individuals, families, faith communities, institutions, and of the States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Framers viewed the States as laboratories of democracy and centers of innovation, as does the Republican Party.\", \"claim_types\":[\"characterization\",\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Tenth Amendment is an instrument by which successive generations might correct any misalignment of power between the States and the federal government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e57ead52536183bce54b5ca080d40df837faa97fa9f73e7c4aa43ba479850314"
+}

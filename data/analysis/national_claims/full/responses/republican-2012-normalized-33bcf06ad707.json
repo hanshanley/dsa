@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 264,
+      "generation_tps": 16.29017499552295,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1445,
+      "prompt_tps": 484.5065886337343,
+      "request_sha256": "4518f2c4f563a991f0d7b8d09f1291be52156beb39652fc41c168f0612687235",
+      "seconds": 19.198857834096998,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Poor quality healthcare is the most expensive type of care because it prolongs affliction and leads to ever more complications.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Expensive prevention is preferable to more costly treatment later on.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Approximately 80 percent of healthcare costs are related to lifestyle\u2014smoking, obesity, substance abuse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Greater emphasis has to be put upon personal responsibility for health maintenance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal for both Medicare and Medicaid must be to assure that every participant receives the amount of care they need at the time they need it, whether for an expectant mother and her baby or for someone in the last moments of life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Absent reforms, Medicare and Medicaid are headed for bankruptcy that will endanger care for seniors and the poor.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 269,
+      "generation_tps": 16.148021570454738,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1877,
+      "prompt_tps": 501.89309556783616,
+      "request_sha256": "c3c37d3886e27bab7fc3dabb27c9144b9369edc4ee7fb3e9da5fa6e8bf745eef",
+      "seconds": 20.408433000091463,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Poor quality healthcare is the most expensive type of care because it prolongs affliction and leads to ever more complications.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Expensive prevention is preferable to more costly treatment later on.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Approximately 80 percent of healthcare costs are related to lifestyle\u2014smoking, obesity, substance abuse.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Greater emphasis has to be put upon personal responsibility for health maintenance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal for both Medicare and Medicaid must be to assure that every participant receives the amount of care they need at the time they need it, whether for an expectant mother and her baby or for someone in the last moments of life.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Absent reforms, Medicare and Medicaid are headed for bankruptcy that will endanger care for seniors and the poor.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4518f2c4f563a991f0d7b8d09f1291be52156beb39652fc41c168f0612687235"
+}

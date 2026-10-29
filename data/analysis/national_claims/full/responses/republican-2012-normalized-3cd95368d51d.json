@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 408,
+      "generation_tps": 16.22135410693378,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1474,
+      "prompt_tps": 462.2480141793431,
+      "request_sha256": "e51de1357ab9d26caf5b1ca4601f7c3269784d2cfb7524382ca87d8d10f775a5",
+      "seconds": 28.351553957909346,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for the cost-effective development of renewable energy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to taxpayers serving as venture capitalists for risky endeavors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for creating a pathway toward a market-based approach for renewable energy sources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for aggressively developing alternative sources for electricity generation such as wind, hydro, solar, biomass, geothermal, and tidal energy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Partnerships between traditional energy industries and emerging renewable industries can be a central component in meeting the nation's long-term needs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alternative forms of energy are part of an action agenda to power the homes and workplaces of the nation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration has used taxpayer dollars to pick winners and losers in the energy sector.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current Administration has publicly threatened to bankrupt anyone who builds a new coal-fired plant.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current President has done nothing to disavow the scare campaign against hydraulic fracturing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current Administration has wasted billions of taxpayers' dollars by subsidizing favored companies like Solyndra, which generated bankruptcies rather than kilowatts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 413,
+      "generation_tps": 16.154486857551067,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2050,
+      "prompt_tps": 527.6721066110584,
+      "request_sha256": "2c3bf71dd131a7d3dd5a8be3dcec1d53fed28eabf13144da7f7fc15604fee1f5",
+      "seconds": 29.460935166105628,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the cost-effective development of renewable energy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to taxpayers serving as venture capitalists for risky endeavors.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for creating a pathway toward a market-based approach for renewable energy sources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for aggressively developing alternative sources for electricity generation such as wind, hydro, solar, biomass, geothermal, and tidal energy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Partnerships between traditional energy industries and emerging renewable industries can be a central component in meeting the nation's long-term needs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Alternative forms of energy are part of an action agenda to power the homes and workplaces of the nation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration has used taxpayer dollars to pick winners and losers in the energy sector.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current Administration has publicly threatened to bankrupt anyone who builds a new coal-fired plant.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current President has done nothing to disavow the scare campaign against hydraulic fracturing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current Administration has wasted billions of taxpayers' dollars by subsidizing favored companies like Solyndra, which generated bankruptcies rather than kilowatts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e51de1357ab9d26caf5b1ca4601f7c3269784d2cfb7524382ca87d8d10f775a5"
+}

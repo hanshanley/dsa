@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 414,
+      "generation_tps": 16.241717451904396,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1529,
+      "prompt_tps": 466.64452394138226,
+      "request_sha256": "d3c4f38815e0612202205a9831d937f99ea0208088f60f537d2394f9f33ad446",
+      "seconds": 28.77710266597569,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American people have delivered a verdict that the Transportation Security Administration's procedures and personnel need to be changed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Transportation Security Administration is a massive bureaucracy of 65,000 employees who are not accountable for how they treat travelers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the private sector to take over airport screening wherever feasible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the development of security systems that can replace personal frisking.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrant labor helped build the country in the past.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today's legal immigrants are making vital contributions in every aspect of national life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The industry and commitment to American values of legal immigrants strengthens the economy, enriches culture, and enables better competition with the rest of the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Illegal immigration undermines the benefits of legal immigration and affects U.S. workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The presence of millions of unidentified persons in the country poses grave risks to the safety and sovereignty of the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The highest priority is to secure the rule of law at borders and ports of entry.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 445,
+      "generation_tps": 16.19235042258112,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2111,
+      "prompt_tps": 510.48348111726375,
+      "request_sha256": "528f49670bade0939a7278b2707c7ea41b18147d78d0f30052774b9f973a4b04",
+      "seconds": 31.62747558299452,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American people have delivered a verdict that the Transportation Security Administration's procedures and personnel need to be changed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Transportation Security Administration is a massive bureaucracy of 65,000 employees who seem to be accountable to no one for the way they treat travelers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the private sector to take over airport screening wherever feasible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the development of security systems that can replace the personal violation of frisking.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Immigrant labor helped build the country in the past.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Today's legal immigrants are making vital contributions in every aspect of national life.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The industry and commitment to American values of legal immigrants strengthens the economy, enriches culture, and enables the country to better understand and more effectively compete with the rest of the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Illegal immigration undermines those benefits and affects U.S. workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In an age of terrorism, drug cartels, human trafficking, and criminal gangs, the presence of millions of unidentified persons in the country poses grave risks to the safety and sovereignty of the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The highest priority is to secure the rule of law both at borders and at ports of entry.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d3c4f38815e0612202205a9831d937f99ea0208088f60f537d2394f9f33ad446"
+}

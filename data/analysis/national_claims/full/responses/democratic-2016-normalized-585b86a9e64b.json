@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 324,
+      "generation_tps": 16.21332941765533,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1536,
+      "prompt_tps": 493.61807425881653,
+      "request_sha256": "0f0bd0b2b351670b157cadb2c2d14900d113876515b137facfe38f8f37c4c274",
+      "seconds": 23.10633650003001,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe local leaders are best equipped to create a better future for their residents, but need resources and flexibility to do so.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will dramatically increase federal infrastructure funding for cities, investing in roads, bridges, public transit, drinking and wastewater systems, broadband, and schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will revitalize communities experiencing physical decay by building on programs like the Neighborhood Stabilization Program and the Hardest Hit Fund.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will provide resources to overcome blight and expand Community Development Block Grant funds.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will provide more housing support to high-poverty communities and build more affordable rental housing units.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will support entrepreneurship and small business growth in cities by providing mentoring and training to entrepreneurs and small business owners in underserved communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will expand federal funding for the New Markets Tax Credit, community development financial institutions, and the State Small Business Credit Initiative.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 334,
+      "generation_tps": 16.108758945279668,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2028,
+      "prompt_tps": 503.241462487051,
+      "request_sha256": "48fee07bc1447a9b2ee90bc1bed02a83f5f4402fbf13ae023c041aaaf3b5f9e4",
+      "seconds": 24.774940625065938,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe local leaders are best equipped to create a better future for their residents, but need the resources and flexibility to get the job done.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will dramatically increase federal infrastructure funding for cities, making significant new investments in roads and bridges, public transit, drinking and wastewater systems, broadband, and schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will revitalize communities being dragged down by physical decay by building on programs like the Neighborhood Stabilization Program and the Hardest Hit Fund.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will provide resources to help overcome blight and expand Community Development Block Grant funds.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will provide more housing support to high-poverty communities and build more affordable rental housing units.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will support entrepreneurship and small business growth in cities by providing mentoring and training to entrepreneurs and small business owners in underserved communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will expand federal funding for the New Markets Tax Credit, community development financial institutions, and the State Small Business Credit Initiative.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0f0bd0b2b351670b157cadb2c2d14900d113876515b137facfe38f8f37c4c274"
+}

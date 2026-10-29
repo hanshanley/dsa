@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 196,
+      "generation_tps": 16.15676435884602,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1400,
+      "prompt_tps": 476.68745125557217,
+      "request_sha256": "a5a20633ede3e3650bcff38874ca52ea194d79f17b1dd85a8b8ca363c87b47f5",
+      "seconds": 15.078176291892305,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The enumeration in the Constitution of certain rights shall not be construed to deny or disparage others retained by the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The government derives its power from the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"All powers not delegated to the government are retained by the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group celebrates the grassroots rediscovery of constitutional guarantees over the last four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group welcomes fellow citizens determined to reclaim rights ignored or violated by government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 208,
+      "generation_tps": 16.358290391042015,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1764,
+      "prompt_tps": 493.3559799150236,
+      "request_sha256": "66874d2920c87200dc0a4315d7a3b9e548f03da1adc3e5350d4ed1bb2bfea8db",
+      "seconds": 16.30114854220301,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The enumeration in the Constitution of certain rights shall not be construed to deny or disparage others retained by the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The government derives its power from the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"All powers not delegated to the government are retained by the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group celebrates the grassroots rediscovery of constitutional guarantees over the last four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group welcomes to its ranks fellow citizens who are determined to reclaim the rights of the people that have been ignored or violated by government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a5a20633ede3e3650bcff38874ca52ea194d79f17b1dd85a8b8ca363c87b47f5"
+}

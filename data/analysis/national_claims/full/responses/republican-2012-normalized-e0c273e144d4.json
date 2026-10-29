@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 396,
+      "generation_tps": 16.24715075458869,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1489,
+      "prompt_tps": 463.65961981723336,
+      "request_sha256": "6ba8f758dda61938000b68af7533d448f95017baaef002f6cb0d86260ea4ca58",
+      "seconds": 27.595550084020942,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The food stamp program now accounts for nearly 80 percent of the entire USDA budget.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congress should consider block-granting the food stamp program to the States, along with other domestic nutrition programs, in finding ways to fight fraud and abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The environment is getting cleaner and healthier.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The nation's air and waterways, as a whole, are much healthier than they were a few decades ago.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Efforts to reduce pollution, encourage recycling, educate the public, and avoid ecological degradation have been a success.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"A dramatic change in the attitude of officials in Washington is needed, shifting from a job-killing punitive mentality to a spirit of cooperation with producers, landowners, and the public, to ensure continued support for environmental efforts by the American people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Full transparency in the development of the data and modeling that drive regulations is important.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Legislation to restore the authority of States in environmental protection is essential.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The use of agricultural best management practices among the States should be encouraged to reduce pollution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 394,
+      "generation_tps": 16.260377339777467,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2053,
+      "prompt_tps": 526.5231100084391,
+      "request_sha256": "e543005561aaab00e4acb77339dbac5d4cc149cf0cc3c02a42997855d0dfecdf",
+      "seconds": 28.1402281250339,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The food stamp program now accounts for nearly 80 percent of the entire USDA budget.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congress should consider block-granting the food stamp program to the States, along with other domestic nutrition programs, in finding ways to fight fraud and abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The environment is getting cleaner and healthier.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"The nation's air and waterways, as a whole, are much healthier than they were a few decades ago.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Efforts to reduce pollution, encourage recycling, educate the public, and avoid ecological degradation have been a success.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"To ensure their continued support by the American people, a dramatic change in the attitude of officials in Washington is needed, shifting from a job-killing punitive mentality to a spirit of cooperation with producers, landowners, and the public.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Full transparency in the development of the data and modeling that drive regulations is important.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Legislation to restore the authority of States in environmental protection is essential.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The use of agricultural best management practices among the States should be encouraged to reduce pollution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6ba8f758dda61938000b68af7533d448f95017baaef002f6cb0d86260ea4ca58"
+}

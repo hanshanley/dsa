@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 241,
+      "generation_tps": 16.367184310716866,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1385,
+      "prompt_tps": 456.27083320878666,
+      "request_sha256": "71e33d367924175fa2902c1a599fa99c39bfba864b2a7396a4c11c6256cfcfd1",
+      "seconds": 17.769957749871537,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe the United States must prioritize supporting individuals with autism and their families, including those diagnosed in the future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will conduct a nationwide early screening outreach campaign to ensure all children can get screened for autism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will prioritize ensuring children from underserved backgrounds can get screened for autism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will expand services and support for adults and individuals transitioning into adulthood, including employment and housing assistance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will push states to require health insurance coverage for autism services in private insurance plans and state marketplaces.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats aim to ensure people with autism are not denied care through health insurance coverage.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 196,
+      "generation_tps": 16.347720121390058,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1794,
+      "prompt_tps": 480.4325230997837,
+      "request_sha256": "1b53346c591463d9629d2e7e9c33ecdba96088979f5bd7550ff48771c9a57d2c",
+      "seconds": 15.733457166934386,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe the United States must prioritize supporting individuals with autism and their families, including those diagnosed in the future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will conduct a nationwide early screening outreach campaign to ensure all children, and in particular children from underserved backgrounds, can get screened for autism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will expand services and support for adults and individuals transitioning into adulthood, including employment and housing assistance.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will push states to require health insurance coverage for autism services in private insurance plans as well as state marketplaces so that people with autism are not denied care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "71e33d367924175fa2902c1a599fa99c39bfba864b2a7396a4c11c6256cfcfd1"
+}

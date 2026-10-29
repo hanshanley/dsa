@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 408,
+      "generation_tps": 16.13094420474242,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1526,
+      "prompt_tps": 473.5034643008124,
+      "request_sha256": "f2d86c197044b4a21fbc6bd3ce9315d88a204e81ddfb7e9db51cac38ba503639",
+      "seconds": 28.526085042161867,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Protecting America is the first and most important duty of the federal government.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Constitution distributes roles in national security to both the President and Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President is empowered by the Constitution to serve as Commander in Chief.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congress has the power to declare war, regulate commerce, and authorize funds for national defense.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States of America is strongest when the President and Congress work closely together in war and in peace.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cooperation between the President and Congress will advance common interests and ideals.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"An activist judiciary poses a serious threat to the country's constitutional order.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Some judges usurp powers reserved to other branches of government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The court has ordered the redefinition of marriage in several States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Redefining marriage is an assault on the foundations of society.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Marriage has been entrusted with the rearing of children and the transmission of cultural values for thousands of years in virtually every civilization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 512,
+      "generation_tps": 16.133720921542285,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2102,
+      "prompt_tps": 501.9820220383968,
+      "request_sha256": "fcb681da9546e786654fe15d0c2173ffda5be58ed0b85dc925f6f4d4ab42476e",
+      "seconds": 35.9323276670184,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Protecting America is the first and most important duty of the federal government.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Constitution wisely distributes important roles in the area of national security to both the President and Congress.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Constitution empowers the President to serve as Commander in Chief, making the President the lead instrument of the American people in matters of national security and foreign affairs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Constitution bestows authority on Congress, including the powers to declare war, regulate commerce, and authorize the funds needed to keep and protect the Nation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States of America is strongest when the President and Congress work closely together\u2014in war and in peace\u2014to advance common interests and ideals.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"By uniting government and citizens, foreign policy will secure freedom, keep America safe, and ensure the United States remains the \\\"last best hope on Earth\\\".\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"An activist judiciary poses a serious threat to the country's constitutional order, perhaps even more dangerous than presidential malfeasance.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Some judges usurp the powers reserved to other branches of government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The court has ordered the redefinition of marriage in several States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The court-ordered redefinition of marriage is an assault on the foundations of society, challenging the institution which, for thousands of years in virtually every civilization, has been entrusted with the rearing of children and the transmission of cultural values.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"For thousands of years in virtually every civilization, marriage has been entrusted with the rearing of children and the transmission of cultural values.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f2d86c197044b4a21fbc6bd3ce9315d88a204e81ddfb7e9db51cac38ba503639"
+}

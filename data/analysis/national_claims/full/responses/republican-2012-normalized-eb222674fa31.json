@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 273,
+      "generation_tps": 16.294745120000762,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1430,
+      "prompt_tps": 466.8635056833305,
+      "request_sha256": "0742b89e09e0b0d6a6b10b0697c95d18807b40e7eeab1b4cf0ffc3659127eda7",
+      "seconds": 19.827055874979123,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Military men and women must not be disenfranchised from the freedom they defend.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Troops, wherever stationed, should be allowed to vote and those votes should be counted in the November election and in all elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Secretary of Defense, to base and unit commanders, must ensure the timely receipt and return of all ballots.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electronic delivery of ballots should be utilized where allowed by State law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The way that the decennial census is conducted should be changed so that citizens are distinguished from lawfully present aliens and illegal aliens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The apportionment of representatives among the States should be according to the number of citizens to preserve the principle of one-person, one-vote.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 281,
+      "generation_tps": 16.282264115721038,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1871,
+      "prompt_tps": 494.9039900224336,
+      "request_sha256": "90fe8cfb3608c48798bcd0ce268599a429aaf9221f5b70db0a5d2ee0449a4e0a",
+      "seconds": 21.048388125142083,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Military men and women must not be disenfranchised from the very freedom they defend.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Troops, wherever stationed, should be allowed to vote and those votes should be counted in the November election and in all elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The entire chain of command, from President and the Secretary of Defense, to base and unit commanders, must ensure the timely receipt and return of all ballots.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electronic delivery of ballots should be utilized where allowed by State law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for changing the way that the decennial census is conducted, so that citizens are distinguished from lawfully present aliens and illegal aliens.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for the apportionment of representatives among the States according to the number of citizens to preserve the principle of one-person, one-vote.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0742b89e09e0b0d6a6b10b0697c95d18807b40e7eeab1b4cf0ffc3659127eda7"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 302,
+      "generation_tps": 16.373684344623044,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1398,
+      "prompt_tps": 475.9294145482214,
+      "request_sha256": "b9196d2d70545065e5cdfe93fa4bb045d8de70a78ffdcd01b9eadded437ad113",
+      "seconds": 21.391601250041276,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The current Administration publicly threatened to bankrupt anyone who builds a coal-powered plant.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration seems determined to shut down coal production in the United States.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no cost-effective substitute for coal or for the hundreds of thousands of jobs that go with it as the nation's largest source of electricity generation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending the EPA's war on coal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for encouraging the increased safe development of the nation's coal resources in all regions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the jobs produced by coal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the affordable, reliable energy that coal provides for the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to any and all cap and trade legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 250,
+      "generation_tps": 16.374938673725428,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1868,
+      "prompt_tps": 498.47352489667287,
+      "request_sha256": "0615042746ee3ee346a2df9be50c41bc09f57741afbd23316bf5cfb292897341",
+      "seconds": 19.02427220903337,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current Administration\u2014with a President who publicly threatened to bankrupt anyone who builds a coal-powered plant\u2014seems determined to shut down coal production in the United States, even though there is no cost-effective substitute for it or for the hundreds of thousands of jobs that go with it as the nation's largest source of electricity generation.\",\n\"claim_types\":[\"characterization\",\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending the EPA's war on coal and encouraging the increased safe development of the nation's coal resources in all regions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the jobs produced by coal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the affordable, reliable energy that coal provides for the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to any and all cap and trade legislation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b9196d2d70545065e5cdfe93fa4bb045d8de70a78ffdcd01b9eadded437ad113"
+}

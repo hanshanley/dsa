@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 334,
+      "generation_tps": 16.325228065383765,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1406,
+      "prompt_tps": 469.5899195864012,
+      "request_sha256": "fd955f6123e85db113ad7ca1451a1671bc731560492a1cf38d45785d781cede3",
+      "seconds": 23.46315766707994,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats have been fighting to secure universal health care for the American people for generations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats passed Medicare, Medicaid, and the Affordable Care Act (ACA).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to make sure every American has access to quality, affordable health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will tackle problems that remain in the health care system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will crack down on runaway prescription drug prices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will address mental health with the same seriousness that they treat physical health.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight Republican efforts to roll back the clock on women's health and reproductive rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will stand up for Planned Parenthood.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will tackle the epidemics of substance abuse and gun violence, which each claim tens of thousands of lives every year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 340,
+      "generation_tps": 16.31404723254923,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1908,
+      "prompt_tps": 495.53419184856756,
+      "request_sha256": "229f73bb698dd88eb66de0828b03428419e9d68f87f237dc9f0979478b8ebc98",
+      "seconds": 24.701131665846333,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats have been fighting to secure universal health care for the American people for generations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats passed Medicare, Medicaid, and the Affordable Care Act (ACA).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to make sure every American has access to quality, affordable health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will tackle the problems that remain in the health care system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will crack down on runaway prescription drug prices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will address mental health with the same seriousness that they treat physical health.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight Republican efforts to roll back the clock on women's health and reproductive rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will stand up for Planned Parenthood.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will tackle the epidemics of substance abuse and gun violence, which each claim tens of thousands of lives every year.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fd955f6123e85db113ad7ca1451a1671bc731560492a1cf38d45785d781cede3"
+}

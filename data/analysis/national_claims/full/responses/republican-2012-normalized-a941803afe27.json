@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 369,
+      "generation_tps": 16.194694963423082,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1464,
+      "prompt_tps": 475.2571608775235,
+      "request_sha256": "28ab370bf9252c6555d263169111db4a0a54e4373d068f6c08dbc437e29c26e5",
+      "seconds": 25.876927541801706,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The current President blocked the Keystone XL Pipeline, a project that would have brought Canadian and American oil to U.S. refineries and created thousands of jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current President's actions represent a job-killing combination of extremism and ineptitude and threaten to create a permanent energy shortage.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to approve the Keystone XL Pipeline.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to streamline permitting for the development of other oil and natural gas pipelines.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nuclear energy currently generates about 20 percent of U.S. electricity through 104 power plants.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"No new nuclear generating plants have been licensed and constructed for thirty years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Call for timely processing of new reactor applications currently pending at the Nuclear Regulatory Commission.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government's failure to address the storage and disposal of spent nuclear fuel has resulted in large bills for States and taxpayers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The country needs a more proactive approach to managing spent nuclear fuel, including through developing advanced reprocessing technologies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 360,
+      "generation_tps": 16.105789446277083,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2001,
+      "prompt_tps": 499.22155679481097,
+      "request_sha256": "32fdbc03bf109d9fb91a5777b637325e2a28c8e9a7495f8efcf640383e4659f6",
+      "seconds": 26.37175125000067,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The current President personally blocked one of the most important energy and jobs projects in years, the Keystone XL Pipeline, which would have brought much needed Canadian and American oil to U.S. refineries and created thousands of jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current President's job-killing combination of extremism and ineptitude threatens to create a permanent energy shortage.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to approve the Keystone XL Pipeline and to streamline permitting for the development of other oil and natural gas pipelines.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nuclear energy currently generates about 20 percent of U.S. electricity through 104 power plants.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"No new nuclear generating plants have been licensed and constructed for thirty years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Call for timely processing of new reactor applications currently pending at the Nuclear Regulatory Commission.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government's failure to address the storage and disposal of spent nuclear fuel has left huge bills for States and taxpayers.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The country needs a more proactive approach to managing spent nuclear fuel, including through developing advanced reprocessing technologies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "28ab370bf9252c6555d263169111db4a0a54e4373d068f6c08dbc437e29c26e5"
+}

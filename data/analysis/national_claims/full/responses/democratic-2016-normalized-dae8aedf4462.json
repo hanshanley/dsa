@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 328,
+      "generation_tps": 16.222791553123333,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1405,
+      "prompt_tps": 549.0078661154304,
+      "request_sha256": "39e9614bbb8be8f7b71350cfaa74ecc6b15cc78c5c9253dfb96d0cb58b72d7f9",
+      "seconds": 22.786824874812737,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats are committed to providing parents with high-quality public school options and expanding these options for low-income youth.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support democratically governed, great neighborhood public schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support high-quality public charter schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will help public schools and public charter schools disseminate best practices to other school leaders and educators.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats oppose for-profit charter schools focused on making a profit off of public resources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that high-quality public charter schools should provide options for parents, but should not replace or destabilize traditional public schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe charter schools must reflect their communities and accept and retain proportionate numbers of students of color, students with disabilities and English Language Learners in relation to their neighborhood public schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support increased transparency and accountability for all charter schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 310,
+      "generation_tps": 16.277317320681725,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1901,
+      "prompt_tps": 489.1459799999453,
+      "request_sha256": "4e3e2a53a6457392042f8f20f422014c6ffc70ebab201f74e410c4706bae92a5",
+      "seconds": 22.941332000074908,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to providing parents with high-quality public school options and expanding these options for low-income youth.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support democratically governed, great neighborhood public schools and high-quality public charter schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will help public schools and public charter schools disseminate best practices to other school leaders and educators.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats oppose for-profit charter schools focused on making a profit off of public resources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that high-quality public charter schools should provide options for parents, but should not replace or destabilize traditional public schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe charter schools must reflect their communities and accept and retain proportionate numbers of students of color, students with disabilities and English Language Learners in relation to their neighborhood public schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support increased transparency and accountability for all charter schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "39e9614bbb8be8f7b71350cfaa74ecc6b15cc78c5c9253dfb96d0cb58b72d7f9"
+}

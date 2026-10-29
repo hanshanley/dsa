@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 385,
+      "generation_tps": 16.32468062552555,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1465,
+      "prompt_tps": 482.6375531724934,
+      "request_sha256": "d74c8a25aa70f91418b1b3b470246e7101d386ab4e5d586b829beb50a7d4de9a",
+      "seconds": 26.629533249884844,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The group identifies as the party of government reform.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government is bloated, antiquated, and unresponsive to taxpayers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group intends to improve government management and provide better services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group intends to rethink and restructure government to bring it into the twenty-first century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Government by its nature tends to expand in both size and scope.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group's goal is not just less spending in Washington but protecting the constitutional rights of citizens, sustainable prosperity, and strengthening the American family.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Merely downsizing government is insufficient; a smaller version of the same failed systems is not the goal.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group must do things in a dramatically different way by reversing the undermining of federalism and the centralizing of power in Washington.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republican Governors and legislators across the nation set an example for reforming and reengineering government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"States serve as the laboratories of democracy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 390,
+      "generation_tps": 16.267770137909196,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2018,
+      "prompt_tps": 507.1759287842349,
+      "request_sha256": "00536a511d6feb7187e88cecdbd9893ea63c69aa081443ad5123a24f0fcd84c3",
+      "seconds": 27.962631499860436,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The group identifies as the party of government reform.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government has become bloated, antiquated, and unresponsive to taxpayers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group intends to improve government management and provide better services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group intends to rethink and restructure government to bring it into the twenty-first century.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Government by its nature tends to expand in both size and scope.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group's goal is not just less spending in Washington but protecting the constitutional rights of citizens, sustainable prosperity, and strengthening the American family.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Merely downsizing government is insufficient; a smaller version of the same failed systems is not the goal.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group must do things in a dramatically different way by reversing the undermining of federalism and the centralizing of power in Washington.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republican Governors and legislators across the nation set an example for reforming and reengineering government closest to the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"States serve as the laboratories of democracy.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d74c8a25aa70f91418b1b3b470246e7101d386ab4e5d586b829beb50a7d4de9a"
+}

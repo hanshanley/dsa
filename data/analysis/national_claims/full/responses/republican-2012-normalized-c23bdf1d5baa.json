@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 312,
+      "generation_tps": 16.363557728933863,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1441,
+      "prompt_tps": 476.5185901310922,
+      "request_sha256": "8b0b32ba8242cf5c4fdc08993b6e00967ea56eeaac2a12ab985ba0f7bde08122",
+      "seconds": 22.1006827079691,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Comprehensive reform of Social Security should address societal medical advances in longevity and allow younger workers the option of creating their own personal investment accounts as supplements to the system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Younger Americans have lost faith in the Social Security system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Social Security system is facing future funding issues, according to nonpartisan actuarial reports.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Social Security system was born in an old industrial era.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Social Security system is long overdue for major change.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are committed to setting Social Security on a sound fiscal basis that will give workers control over, and a sound return on, their investments.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Acting sooner will reassure those close to retirement of their benefits.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Acting sooner will allow younger workers to take responsibility for planning their own retirement decades from now.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 377,
+      "generation_tps": 16.316291822165987,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1921,
+      "prompt_tps": 496.0582179802232,
+      "request_sha256": "01c7d9dd03758736bdbbe5ff8d2cdb420c4d481b8be6192ec9aab48c0c05fd8f",
+      "seconds": 26.987810584018007,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"While no changes should adversely affect any current or near-retiree, comprehensive reform should address societal medical advances in longevity and allow younger workers the option of creating their own personal investment accounts as supplements to the system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Younger Americans have lost faith in the Social Security system, which is understandable when they read the nonpartisan actuary's reports about its future funding status.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Social Security system is facing future funding issues, according to nonpartisan actuarial reports.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Social Security system was born in an old industrial era beyond the memory of most Americans.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Social Security system is long overdue for major change, not just another legislative stopgap that postpones a day of reckoning.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are committed to setting the Social Security system on a sound fiscal basis that will give workers control over, and a sound return on, their investments.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The sooner action is taken, the sooner those close to retirement can be reassured of their benefits.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The sooner action is taken, the sooner younger workers can take responsibility for planning their own retirement decades from now.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8b0b32ba8242cf5c4fdc08993b6e00967ea56eeaac2a12ab985ba0f7bde08122"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 400,
+      "generation_tps": 16.14932546456764,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1551,
+      "prompt_tps": 468.13051609581674,
+      "request_sha256": "05acf9b0000d5379e11da3367c55cd72e2786d84b2ca323b697e7905a7b60cbc",
+      "seconds": 28.094573833979666,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party condemns the current Administration's actions regarding voter ID laws, immigration, healthcare programs, and land use decisions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party views States as laboratories of democracy and centers of innovation.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party pledges to restore a proper balance between the federal government and State governments.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Scores of federal programs violate constitutional mandates of federalism by taking money from States, reducing it through federal agencies, and returning it as grants with mandates.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party proposes to leave resources where they originate, in the homes and neighborhoods of taxpayers, wherever feasible.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party calls on the federal government to systematically analyze laws and regulations to eliminate costly bureaucratic mandates on States and people.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A few States and their political subdivisions are currently in dire fiscal situations due to spending, debt, and failure to control public employee unions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"If those conditions worsen, the federal government must not assume financial responsibility for State governments or their political subdivisions, nor require taxpayers to pay for the misrule of a few States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"States should not assume the federal government's financial responsibility.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 463,
+      "generation_tps": 16.14778206002221,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2119,
+      "prompt_tps": 515.032297625598,
+      "request_sha256": "0b9a69ea9e19cec0602625fec28259f7963860e75134bf2bacf9ee103ccfc097",
+      "seconds": 32.797470999881625,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party condemns the current Administration's continued assaults on State governments in matters ranging from voter ID laws to immigration, from healthcare programs to land use decisions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party views States as laboratories of democracy from which the people propel the nation forward, solving local and State problems through local and State innovations.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party pledges to restore the proper balance between the federal government and the governments closest to, and most reflective of, the American people.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Scores of entrenched federal programs violate the constitutional mandates of federalism by taking money from the States, laundering it through various federal agencies, only to return to the States as shrunken grants with mandates attached.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party proposes, wherever feasible, to leave resources where they originate: in the homes and neighborhoods of the taxpayers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party calls on the federal government to do a systematic analysis of laws and regulations to eliminate costly bureaucratic mandates on the States and the people.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A few States and their political subdivisions are currently in dire fiscal situations, largely because of their spending, debt, and failure to rein in public employee unions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In the event those conditions worsen, the federal government must not assume the State governments' or their political subdivisions' financial responsibility or require the nation's taxpayers to pay for the misrule of a few State governments.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The States should not assume the federal government's financial responsibility.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "05acf9b0000d5379e11da3367c55cd72e2786d84b2ca323b697e7905a7b60cbc"
+}
