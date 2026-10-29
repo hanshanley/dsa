@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 357,
+      "generation_tps": 15.718085438680095,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1475,
+      "prompt_tps": 456.98697259195825,
+      "request_sha256": "53bcecb8e3fcc131803a257b1ad7f51e831fe4e214f7df6a0a26a3dc60d3fdf7",
+      "seconds": 25.954017583979294,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Children raised in a two-parent household tend to be physically and emotionally healthier.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children raised in a two-parent household are more likely to do well in school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children raised in a two-parent household are less likely to use drugs and alcohol.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children raised in a two-parent household are less likely to engage in crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children raised in a two-parent household are less likely to become pregnant outside of marriage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to policies and laws that create a financial incentive for or encourage cohabitation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Marriage is the greatest antidote to child poverty.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children born outside of marriage are five times more likely to live in poverty than youngsters born and raised by a mother and father in the home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nearly three-quarters of the $450 billion government annually spends on welfare goes to single-parent households.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 485,
+      "generation_tps": 15.69445400513087,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2000,
+      "prompt_tps": 490.14072736374425,
+      "request_sha256": "fd6833562da51cc5f40313882daab1f59e8e51019071ec04fd53a64b5f706ad6",
+      "seconds": 34.994573917007074,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Children raised in a two-parent household tend to be physically and emotionally healthier.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children raised in a two-parent household tend to be more likely to do well in school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children raised in a two-parent household tend to be less likely to use drugs and alcohol.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children raised in a two-parent household tend to be less likely to engage in crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children raised in a two-parent household tend to be less likely to become pregnant outside of marriage.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to policies and laws that create a financial incentive for or encourage cohabitation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Marriage is the greatest antidote to child poverty.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Children born outside of marriage are five times more likely to live in poverty than youngsters born and raised by a mother and father in the home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Nearly three-quarters of the $450 billion government annually spends on welfare goes to single-parent households.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone should be concerned about the state of the American family today, not because of ideology or doctrine, but because of the overwhelming evidence of experience, social science, and common sense.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The 40 percent of children who now are born outside of marriage are five times more likely to live in poverty than youngsters born and raised by a mother and father in the home.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "53bcecb8e3fcc131803a257b1ad7f51e831fe4e214f7df6a0a26a3dc60d3fdf7"
+}

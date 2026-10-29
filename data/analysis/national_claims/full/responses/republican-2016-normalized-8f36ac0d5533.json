@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 416,
+      "generation_tps": 15.490335900541996,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1563,
+      "prompt_tps": 441.75827763553525,
+      "request_sha256": "3fa87719bb40bd2ab7a70f54d9a0f53e78e43659ea18ab6dc29ec5e7a6fbed3c",
+      "seconds": 30.405907625099644,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Medicare's long-term debt is in the trillions and is funded by a shrinking workforce relative to the size of future beneficiaries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Obamacare imposed hundreds of billions of dollars in cuts to Medicare providers to pay for its new spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Obamacare worsened the situation and imperiled seniors.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for no changes to Medicare for persons 55 or older.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for giving others the option of traditional Medicare or transitioning to a premium-support model designed to strengthen patient choice, promote cost-saving competition among providers, and better guard against fraud and abuse.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for guaranteeing every enrollee an income-adjusted contribution toward a plan of their choice, with catastrophic protection.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for setting a more realistic age for Medicare eligibility in light of today's longer life span, without disadvantaging present retirees or those nearing retirement.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democrats' approach to healthcare involves rationing.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reduced access to doctors who opt out of participating in Medicare and Medicaid causes de facto rationing of healthcare.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Opposition to rationing healthcare or lowering its quality for America's elderly.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 15.381824146271867,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2147,
+      "prompt_tps": 486.0720427835257,
+      "request_sha256": "4b9c517f12958e466fea68ab327ba5cdcf6a7b777d42e1319d8fb16fd9fab99c",
+      "seconds": 32.64541112491861,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Medicare's long-term debt is in the trillions, and it is funded by a workforce that is shrinking relative to the size of future beneficiaries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Obamacare imposed hundreds of billions of dollars in cuts to Medicare providers to pay for its new spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Obamacare worsened the situation and imperiled seniors.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for no changes for persons 55 or older.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for giving others the option of traditional Medicare or transitioning to a premium-support model designed to strengthen patient choice, promote cost-saving competition among providers, and better guard against the fraud and abuse that now diverts billions of dollars every year away from patient care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for guaranteeing every enrollee an income-adjusted contribution toward a plan of their choice, with catastrophic protection.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for setting a more realistic age for eligibility in Medicare in light of today's longer life span, without disadvantaging present retirees or those nearing retirement.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democrats' approach to healthcare involves rationing.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Reduced access to doctors who increasingly opt out of participating in Medicare and Medicaid causes de facto rationing of healthcare.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Opposition to rationing healthcare or lowering its quality for America's elderly.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3fa87719bb40bd2ab7a70f54d9a0f53e78e43659ea18ab6dc29ec5e7a6fbed3c"
+}

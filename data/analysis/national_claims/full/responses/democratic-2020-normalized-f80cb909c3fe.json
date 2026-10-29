@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 509,
+      "generation_tps": 15.369477250910695,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1562,
+      "prompt_tps": 457.5252300524814,
+      "request_sha256": "bbe74dd37ef5a7c2736c946688cb609441356fc8e8e6a00b2306f7472c66c330",
+      "seconds": 36.54411512496881,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe America can do better.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The immigration system was broken before President Trump came into office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrants are essential to society and the economy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrants enrich culture.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrants grow food, care for loved ones, serve in the armed forces, and provide critical health care services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrants make America stronger.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Families, communities, congregations, schools, and businesses have been built and sustained through the inclusion of immigrants.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats commit to building a 21st century immigration system that reflects values, repairs past harms, heals communities, rebuilds the economy, and renews global leadership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will right the wrongs of the Trump Administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will rescind President Trump's fabricated \\\"National Emergency\\\" which siphons funding away from the military to construct a wall on the southern border.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will immediately terminate the Trump Administration's discriminatory travel and immigration bans that disproportionately impact Muslim, Arab, and African people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will invite those whose visas have been denied under the Trump Administration's travel and immigration bans to re-apply to come to the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will support legislation to ensure that no president can enact discriminatory bans ever again.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 514,
+      "generation_tps": 15.544655624752325,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2239,
+      "prompt_tps": 502.23885384034793,
+      "request_sha256": "0c5bb725163a919b465ec65e7c1fe63a4f47713e813ababdbe16a5ac5e06ab7e",
+      "seconds": 37.53992862487212,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe America can do better.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The immigration system was broken before President Trump came into office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrants are essential to society and the economy.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrants enrich culture.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrants grow food, care for loved ones, serve in the armed forces, and provide critical health care services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Immigrants make America stronger.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Families, communities, congregations, schools, and businesses have been built and sustained through the inclusion of immigrants.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats commit to building a 21st century immigration system that reflects values, repairs past harms, heals communities, rebuilds the economy, and renews global leadership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will right the wrongs of the Trump Administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will rescind President Trump's fabricated \\\"National Emergency,\\\" which siphons funding away from the military to construct a wall on the southern border.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will immediately terminate the Trump Administration's discriminatory travel and immigration bans that disproportionately impact Muslim, Arab, and African people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will invite those whose visas have been denied under the Trump Administration's travel and immigration bans to re-apply to come to the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will support legislation to ensure that no president can enact discriminatory bans ever again.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bbe74dd37ef5a7c2736c946688cb609441356fc8e8e6a00b2306f7472c66c330"
+}

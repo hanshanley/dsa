@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 437,
+      "generation_tps": 14.932820737751879,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1548,
+      "prompt_tps": 474.2850912736734,
+      "request_sha256": "f560e81c82d1056e9135402a11b925c3cef81ec29d053a159cd1351a52c689ee",
+      "seconds": 32.540874667000026,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has led life sciences and medical innovation for decades, bringing millions of high-paying jobs to the country and helping Americans and people around the world live longer, healthier lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increasing governmental regulation and red tape is taking a toll on innovative companies and slowing and diminishing the pipeline of new life-saving devices and drugs to the nation's patients.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FDA has slowly but relentlessly changed into an agency that more and more puts the public health at risk by delaying, chilling, and killing the development of new devices, drugs and biologics that can promote lives and health.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FDA needs leadership that can reform the agency for the current century and fix the lack of predictability, consistency, transparency and efficiency at the agency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FDA needs to return to its traditional emphasis on hard science and approving new breakthrough medicines, rather than divert its attention and consume its resources trying to overregulate electronic health records or vaping.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring the FDA to its position as the premier scientific health agency, focused on both promoting and protecting the public health in equal measure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ensuring that Americans live longer, healthier lives and that the United States remains the world leader in life sciences and medical innovation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for keeping millions of high-paying, cutting-edge device and drug jobs in the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 437,
+      "generation_tps": 15.186750792810189,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2153,
+      "prompt_tps": 484.72791401380647,
+      "request_sha256": "8035d01b02c38b5102a0be25bc9e0211e1952996778bb282cde8f8d5438cd66b",
+      "seconds": 33.23265366605483,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has led life sciences and medical innovation for decades, bringing millions of high-paying jobs to the country and helping Americans and people around the world live longer, healthier lives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increasing governmental regulation and red tape is taking a toll on innovative companies, slowing and diminishing their pipeline of new life-saving devices and drugs to the nation's patients.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FDA has slowly but relentlessly changed into an agency that more and more puts the public health at risk by delaying, chilling, and killing the development of new devices, drugs and biologics that can promote lives and health.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FDA needs leadership that can reform the agency for the current century and fix the lack of predictability, consistency, transparency and efficiency at the agency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The FDA needs to return to its traditional emphasis on hard science and approving new breakthrough medicines, rather than divert its attention and consume its resources trying to overregulate electronic health records or vaping.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring the FDA to its position as the premier scientific health agency, focused on both promoting and protecting the public health in equal measure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ensuring that Americans live longer, healthier lives and that the United States remains the world leader in life sciences and medical innovation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for keeping millions of high-paying, cutting-edge device and drug jobs in the United States.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f560e81c82d1056e9135402a11b925c3cef81ec29d053a159cd1351a52c689ee"
+}

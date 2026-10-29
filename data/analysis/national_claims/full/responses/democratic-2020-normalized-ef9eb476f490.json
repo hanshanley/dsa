@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 375,
+      "generation_tps": 15.440544997713848,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1483,
+      "prompt_tps": 506.79036001476067,
+      "request_sha256": "8f97ec5af43d29d7a970e3ce1b3ca7116ee068bac4656d368ddebe337e93355b",
+      "seconds": 27.25024316692725,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for modernizing and improving the Public Service Loan Forgiveness program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for making the Public Service Loan Forgiveness program enrollment process automatic for people who work in schools, government agencies, and non-profit organizations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for forgiving up to $10,000 in student debt per year for up to five years through the Public Service Loan Forgiveness program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for applying the Public Service Loan Forgiveness program action to people who have already dedicated 5 years or less of service to working in schools, government agencies, and non-profit organizations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to Republican proposals that would make students pay billions of dollars more on their student loans, in the name of simplification.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Student debt forgiveness is key to helping address the racial wealth gap, as students of color are more likely to have to borrow to finance higher education.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for empowering the CFPB to take action against exploitative lenders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for working with Congress to allow student debt to be discharged during bankruptcy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 376,
+      "generation_tps": 11.470424153327846,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2026,
+      "prompt_tps": 460.6838053916881,
+      "request_sha256": "91c02c541e410ce77c472c7f7ebb5689c1524fb4b66ed7cd8eca3e378cd8cc21",
+      "seconds": 37.19139275001362,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for modernizing and improving the Public Service Loan Forgiveness program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for making the Public Service Loan Forgiveness program enrollment process automatic for people who work in schools, government agencies, and non-profit organizations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for forgiving up to $10,000 in student debt per year for up to five years through the Public Service Loan Forgiveness program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for applying the Public Service Loan Forgiveness program action to people who have already dedicated 5 years or less of service to working in schools, government agencies, and non-profit organizations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to Republican proposals that, in the name of simplification, would make students pay billions of dollars more on their student loans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Student debt forgiveness is key to helping address the racial wealth gap, as students of color are more likely to have to borrow to finance higher education.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for empowering the CFPB to take action against exploitative lenders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for working with Congress to allow student debt to be discharged during bankruptcy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8f97ec5af43d29d7a970e3ce1b3ca7116ee068bac4656d368ddebe337e93355b"
+}

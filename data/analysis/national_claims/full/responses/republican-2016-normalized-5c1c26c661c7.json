@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 340,
+      "generation_tps": 14.61006818353224,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1440,
+      "prompt_tps": 536.7366328412693,
+      "request_sha256": "a1c1de0e9d30ecbe8b9d8eeb987b1b5815daa537bfa232fef1b62cb2c7cb375b",
+      "seconds": 25.96363141713664,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Party treats Social Security as the \\\"Third Rail\\\" of American politics.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone knows that the current course of Social Security will lead to a financial and social disaster.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Younger Americans have lost faith in Social Security and expect little return for what they are paying into it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group accepts the responsibility to preserve and modernize a system of retirement security forged in an old industrial era.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Current retirees and those close to retirement can be assured of their benefits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All options should be considered to preserve Social Security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group opposes tax increases.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group believes in the power of markets to create wealth and to help secure the future of the Social Security system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Saving Social Security is a moral obligation to those who trusted in the government's word.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 383,
+      "generation_tps": 15.50223628012899,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1948,
+      "prompt_tps": 457.14342037110146,
+      "request_sha256": "50431f4dc6f815d6828a217ff201df5b4ece18f9aeebf90be5942b7d991ad5b0",
+      "seconds": 28.97759116697125,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The group rejects the idea that Social Security is the \\\"Third Rail\\\" of American politics, deadly for anyone who would change it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party still treats Social Security as the \\\"Third Rail\\\" of American politics.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Everyone knows that the current course of Social Security will lead to a financial and social disaster.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Younger Americans have lost faith in Social Security and expect little return for what they are paying into it.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group accepts the responsibility to preserve and modernize a system of retirement security forged in an old industrial era beyond the memory of most Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Current retirees and those close to retirement can be assured of their benefits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"All options should be considered to preserve Social Security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group opposes tax increases and believes in the power of markets to create wealth and to help secure the future of the Social Security system.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Saving Social Security is more than a challenge; it is a moral obligation to those who trusted in the government's word.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a1c1de0e9d30ecbe8b9d8eeb987b1b5815daa537bfa232fef1b62cb2c7cb375b"
+}

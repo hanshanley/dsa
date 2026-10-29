@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 214,
+      "generation_tps": 15.915666797583917,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1395,
+      "prompt_tps": 464.87662686506843,
+      "request_sha256": "e44e96a434e8361ae1208a5824357d05159b9253e2ea8d4ad85c7fab633dcdc0",
+      "seconds": 16.45738449995406,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will continue to work with the people of Guam to properly memorialize residents who suffered harm as a result of their U.S. nationality during the Imperial Japanese occupation of Guam during World War II.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats recognize the increasing demands placed on state and territorial governments by migration under the Compacts of Free Association.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will explore mechanisms for increasing reimbursement of costs absorbed by Guam, the Commonwealth of the Northern Mariana Islands, and Hawaii.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will restore Medicaid eligibility for migrants under the Compacts of Free Association who are legally residing, working, and studying in the United States, but who were inadvertently left out of health care legislation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 222,
+      "generation_tps": 15.961177192203229,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1777,
+      "prompt_tps": 486.3837691643938,
+      "request_sha256": "02543f68d0f71414ead0a78ded208491737781d01edbd9fadf3d77e3bf43f2ca",
+      "seconds": 17.572719082934782,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will continue to work with the people of Guam to properly memorialize residents who suffered unspeakable harm as a result of their U.S. nationality during the Imperial Japanese occupation of Guam during World War II.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats recognize the increasing demands placed on state and territorial governments by migration under the Compacts of Free Association.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will explore mechanisms for increasing reimbursement of costs absorbed by Guam, the Commonwealth of the Northern Mariana Islands, and Hawaii.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will restore Medicaid eligibility for migrants under the Compacts of Free Association who are legally residing, working, and studying in the United States, but who were inadvertently left out of health care legislation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e44e96a434e8361ae1208a5824357d05159b9253e2ea8d4ad85c7fab633dcdc0"
+}

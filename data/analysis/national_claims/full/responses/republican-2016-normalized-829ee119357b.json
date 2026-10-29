@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 16.064125549176257,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1471,
+      "prompt_tps": 455.229546039135,
+      "request_sha256": "15f0a9f5f8b0a4a7fb24d6c52aee9821c3b2bada25acc2c962cb009aed4a7e04",
+      "seconds": 27.830883458955213,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the original, authentic meaning of Title IX of the Education Amendments of 1972.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Title IX affirmed that no person in the United States shall, on the basis of sex, be excluded from participation in, be denied the benefits of, or be subjected to discrimination under any education program or activity receiving Federal financial assistance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"That language opened up for girls and women a world of opportunities that had too often been denied to them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current President of the United States is wrongly redefining sex discrimination to include sexual orientation or other categories, according to the source.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The agenda of redefining sex discrimination has nothing to do with individual rights and everything to do with power, according to the source.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source believes an effort is underway to reshape schools and society to fit an ideology alien to America's history and traditions.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source characterizes the edict to the states concerning restrooms, locker rooms, and other facilities as illegal, dangerous, and ignoring privacy issues.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source salutes the several states which have filed suit against the edict concerning restrooms, locker rooms, and other facilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 404,
+      "generation_tps": 16.05030358512843,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2034,
+      "prompt_tps": 477.82930182452395,
+      "request_sha256": "4d60b50d616ca44005ca3d2a93072566bd5b1b52ddfee1e745a022acb2029184",
+      "seconds": 29.43775612488389,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the original, authentic meaning of Title IX of the Education Amendments of 1972.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Title IX of the Education Amendments of 1972 affirmed that no person in the United States shall, on the basis of sex, be excluded from participation in, be denied the benefits of, or be subjected to discrimination under any education program or activity receiving Federal financial assistance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"That language opened up for girls and women a world of opportunities that had too often been denied to them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bureaucrats and the current President of the United States are wrongly redefining sex discrimination to include sexual orientation or other categories.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The agenda of redefining sex discrimination has nothing to do with individual rights and everything to do with power.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bureaucrats and the current President of the United States are determined to reshape schools and society to fit an ideology alien to America's history and traditions.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The edict to the states concerning restrooms, locker rooms, and other facilities is at once illegal, dangerous, and ignores privacy issues.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for the states which have filed suit against the edict to the states concerning restrooms, locker rooms, and other facilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "15f0a9f5f8b0a4a7fb24d6c52aee9821c3b2bada25acc2c962cb009aed4a7e04"
+}

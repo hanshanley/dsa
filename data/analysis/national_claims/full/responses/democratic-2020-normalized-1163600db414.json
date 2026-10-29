@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 204,
+      "generation_tps": 15.878646921688137,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1321,
+      "prompt_tps": 458.5430523315626,
+      "request_sha256": "85b6e793aaed972bc23f0262ee4d044e43fa04e42c8df7a681bf423e44f88b3e",
+      "seconds": 15.739112166920677,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party has packed federal courts with unqualified, partisan judges who consistently rule for corporations, the wealthy, and Republican interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party undermined the legitimacy of courts through an anti-democratic campaign.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party blocked a Democratic president from appointing a justice to the Supreme Court.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party obstructed dozens of diverse lower-court nominees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party recognizes the need for structural court reforms to increase transparency and accountability.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 164,
+      "generation_tps": 15.903391936585233,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1693,
+      "prompt_tps": 479.13855818638706,
+      "request_sha256": "3288332b753b13ae1c406c9082d983c65107ea9e140c1f7f60cb4485df3bec0b",
+      "seconds": 13.855800707824528,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party has packed federal courts with unqualified, partisan judges who consistently rule for corporations, the wealthy, and Republican interests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party undermined the legitimacy of courts through an anti-democratic, win-at-all costs campaign that includes blocking a Democratic president from appointing a justice to the Supreme Court and obstructing dozens of diverse lower-court nominees.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Party recognizes the need for structural court reforms to increase transparency and accountability.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "85b6e793aaed972bc23f0262ee4d044e43fa04e42c8df7a681bf423e44f88b3e"
+}

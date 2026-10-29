@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 322,
+      "generation_tps": 16.125493296213673,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1423,
+      "prompt_tps": 459.3004364916272,
+      "request_sha256": "bab3267bb7efb7a3114ec8b8e928adecd5135155daaa47b0ce4d6390398cb2a2",
+      "seconds": 23.076890708878636,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for protecting America's teachers against frivolous lawsuits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for allowing teachers to take reasonable actions to maintain discipline and order in the classroom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for administrators having flexibility to innovate and hold accountable those responsible for student performance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for offering the Bible as an elective in America's high schools' literature curriculum.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for school districts making use of teaching talent in the business community, STEM fields, and the military, especially among returning veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for replacing rigid tenure systems with a merit-based approach to attract the best talent to the classroom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for background checks and high standards of personal conduct for all personnel who interact with school children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A good understanding of the Bible being indispensable for the development of an educated citizenry.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 335,
+      "generation_tps": 16.098799662629705,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1913,
+      "prompt_tps": 477.9411454589809,
+      "request_sha256": "098858f6c3e783217193353ed2d63946e05b0bc6514d2999193378a4669fc577",
+      "seconds": 24.821616916917264,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for protecting America's teachers against frivolous lawsuits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for allowing America's teachers to take reasonable actions to maintain discipline and order in the classroom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for administrators having flexibility to innovate and to hold accountable those responsible for student performance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for state legislatures offering the Bible as an elective in America's high schools' literature curriculum.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for school districts making use of teaching talent in the business community, STEM fields, and the military, especially among returning veterans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for replacing rigid tenure systems with a merit-based approach in order to attract the best talent to the classroom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for background checks and high standards of personal conduct for all personnel who interact with school children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A good understanding of the Bible being indispensable for the development of an educated citizenry.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bab3267bb7efb7a3114ec8b8e928adecd5135155daaa47b0ce4d6390398cb2a2"
+}

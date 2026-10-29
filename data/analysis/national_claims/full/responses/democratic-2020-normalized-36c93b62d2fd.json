@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 294,
+      "generation_tps": 16.042257889778572,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1448,
+      "prompt_tps": 452.7007444734319,
+      "request_sha256": "4a9f6f9043482b699cc83bbe63680feb620e9c5428d0cb413d9ddff8521713cb",
+      "seconds": 21.535878624999896,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The nation's public schools and higher education system have been underinvested in for too long.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite research showing early childhood education can improve student outcomes for decades, universal, high-quality pre-K does not yet exist.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite the increasing number of women entering the labor force as breadwinners, securing safe and affordable child care services remains difficult for families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Public schools are bedrock community institutions, but educators are underpaid, classrooms are overstuffed, and school buildings have been neglected, especially in low-income neighborhoods and communities of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Roughly six in 10 jobs require at least some education beyond high school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ever-rising cost of college tuition and fees leaves higher education out of reach for some and saddles students with a lifetime of debt.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 312,
+      "generation_tps": 16.120095295084937,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1910,
+      "prompt_tps": 483.0116000678779,
+      "request_sha256": "b6aa7b82fde1969c35dc4ceea79b2a9f229a06be25e8379352b4c31f864c25f0",
+      "seconds": 23.319065959192812,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The nation's public schools and higher education system have been underinvested in for too long.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite ample research showing that early childhood education can improve outcomes for students for decades to come, universal, high-quality pre-K does not yet exist.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite the decades-long trend that has seen more and more women entering the labor force as breadwinners, it is still far too difficult for families to secure safe and affordable child care services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Public schools are bedrock community institutions, and yet educators are underpaid, classrooms are overstuffed, and school buildings have been neglected, especially in low-income neighborhoods and communities of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Roughly six in 10 jobs require at least some education beyond high school.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ever-rising cost of college tuition and fees leaves higher education out of reach for some and saddles students with a lifetime of debt.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4a9f6f9043482b699cc83bbe63680feb620e9c5428d0cb413d9ddff8521713cb"
+}

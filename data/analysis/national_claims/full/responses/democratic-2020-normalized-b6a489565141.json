@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 391,
+      "generation_tps": 15.592613760458534,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1392,
+      "prompt_tps": 432.53773943642426,
+      "request_sha256": "283850ee0f2c15257797b03714a517066cb37d42b5f647995264c25b8884bbc4",
+      "seconds": 28.30444737500511,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will empower workers and communities who have put their health and lives on the line and who have been impacted by the changing energy market.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to protect retirees' health and pension benefits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will shore up the Black Lung Disability Trust Fund.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand the Radiation Exposure Compensation Act to include those harmed by the nation's nuclear weapons efforts including uranium miners exposed to radiation on the job.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase funding for the Appalachian Regional Commission to support locally-driven economic development priorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will hold fossil fuel companies accountable for cleaning up abandoned mine lands, oil and gas wells, and industrial sites.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cleaning up abandoned mine lands, oil and gas wells, and industrial sites will prevent these facilities from polluting local environments.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cleaning up abandoned mine lands, oil and gas wells, and industrial sites will allow these facilities to be safely repurposed to support new economic activity.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Repurposing abandoned mine lands, oil and gas wells, and industrial sites can support new economic activity, including in coal country.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 402,
+      "generation_tps": 15.626460299028494,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1951,
+      "prompt_tps": 464.2528249266336,
+      "request_sha256": "970fd83b1168f039ea6220d908cdaaf5abb0d1faac59a187a3c2d7f91ee5a605",
+      "seconds": 29.93890166701749,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will empower and stand with workers and communities who have put their health and lives on the line and who have been impacted by the changing energy market.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to protect retirees' health and pension benefits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will shore up the Black Lung Disability Trust Fund.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand the Radiation Exposure Compensation Act to include those harmed by the nation's nuclear weapons efforts including uranium miners exposed to radiation on the job.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase funding for the Appalachian Regional Commission to support locally-driven economic development priorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will hold fossil fuel companies accountable for cleaning up abandoned mine lands, oil and gas wells, and industrial sites.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cleaning up abandoned mine lands, oil and gas wells, and industrial sites will prevent these facilities from polluting local environments.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Cleaning up abandoned mine lands, oil and gas wells, and industrial sites will allow these facilities to be safely repurposed to support new economic activity.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Repurposing abandoned mine lands, oil and gas wells, and industrial sites can support new economic activity, including in the heart of coal country.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "283850ee0f2c15257797b03714a517066cb37d42b5f647995264c25b8884bbc4"
+}

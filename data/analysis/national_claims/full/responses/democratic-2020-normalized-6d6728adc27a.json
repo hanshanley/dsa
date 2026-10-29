@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 402,
+      "generation_tps": 15.751229059216012,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1447,
+      "prompt_tps": 471.3153038608201,
+      "request_sha256": "7057939ee791bf7d38f2b8f0ae05b8be9c7fe725d56717dbe84c1b5cd1f9fab1",
+      "seconds": 28.602921542013064,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe the interests and voices of the American people should determine elections.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe money is not speech and corporations are not people.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to pass a Constitutional amendment to eliminate all private financing from federal elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work with Congress on legislation to strengthen the public funding system by matching small-dollar donations for all federal candidates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will work with Congress on legislation to crack down on foreign nationals who try to influence elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will work with Congress on legislation to ensure super PACs are wholly independent of campaigns and political parties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will bring an end to \\\"dark money\\\" by requiring full disclosure of contributors to any group that advocates for or against candidates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will bar 501(c)(4) organizations from spending money on elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will ban corporate PACs from donating to candidates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will bar lobbyists from donating, fundraising, or bundling for anyone they lobby.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 421,
+      "generation_tps": 15.889958602025244,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2017,
+      "prompt_tps": 491.7598878562969,
+      "request_sha256": "9af2d492cc809cf00088f52ebb101fa69ebc0f7012fbca0321ba5f71fec83761",
+      "seconds": 30.607225500047207,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe that the interests and the voices of the American people should determine elections.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe money is not speech and corporations are not people.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fight to pass a Constitutional amendment that will go beyond merely overturning Citizens United and related decisions like Buckley v. Valeo by eliminating all private financing from federal elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work with Congress on legislation to strengthen the public funding system by matching small-dollar donations for all federal candidates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will work with Congress on legislation to crack down on foreign nationals who try to influence elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will work with Congress on legislation to ensure super PACs are wholly independent of campaigns and political parties.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will bring an end to \\\"dark money\\\" by requiring full disclosure of contributors to any group that advocates for or against candidates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will bar 501(c)(4) organizations from spending money on elections.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will ban corporate PACs from donating to candidates.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will bar lobbyists from donating, fundraising, or bundling for anyone they lobby.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7057939ee791bf7d38f2b8f0ae05b8be9c7fe725d56717dbe84c1b5cd1f9fab1"
+}

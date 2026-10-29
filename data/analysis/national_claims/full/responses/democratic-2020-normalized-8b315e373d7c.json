@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 400,
+      "generation_tps": 15.71356483843903,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1384,
+      "prompt_tps": 430.40371533762004,
+      "request_sha256": "350c7d221ae42fc1ded13529f166d49ac4a244a46f48238d020eae1ad1d9e68a",
+      "seconds": 28.6831055409275,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will lower families' energy bills by making energy-saving upgrades to up to two million low-income households and affordable and public housing units within five years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Making energy-saving upgrades to up to two million low-income households and affordable and public housing units within five years will create hundreds of thousands of jobs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Making energy-saving upgrades to up to two million low-income households and affordable and public housing units within five years will promote safe, healthy, and efficient homes.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investments in affordable housing and public housing will support both energy efficiency retrofits and construction of new units.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investments in affordable housing and public housing will greatly increase the number of energy-efficient homes available to low-income families.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will address barriers and increase funding for programs that enable energy efficiency improvements for low-income families in urban and rural areas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will incentivize landlords to make energy efficiency and clean energy upgrades that will reduce their tenants' energy costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Weatherization Assistance Program will receive increased funding.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Rural Utilities Service will receive increased funding.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 407,
+      "generation_tps": 15.59905053927808,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1952,
+      "prompt_tps": 459.08091053669517,
+      "request_sha256": "a19e454bd350bc1ae672adc5da83ed1e986aeafbb2cf0a4e614a74b3b3cb6e9e",
+      "seconds": 30.354374542133883,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will lower families' energy bills by making energy-saving upgrades to up to two million low-income households and affordable and public housing units within five years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Making energy-saving upgrades to up to two million low-income households and affordable and public housing units within five years will create hundreds of thousands of jobs.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Making energy-saving upgrades to up to two million low-income households and affordable and public housing units within five years will promote safe, healthy, and efficient homes.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investments in affordable housing and public housing will support both energy efficiency retrofits and construction of new units.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investments in affordable housing and public housing will greatly increase the number of energy-efficient homes available to low-income families.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will address barriers and increase funding for programs that enable energy efficiency improvements for low-income families in urban and rural areas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will incentivize landlords to make energy efficiency and clean energy upgrades that will reduce their tenants' energy costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase funding for the Weatherization Assistance Program.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will increase funding for the Rural Utilities Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "350c7d221ae42fc1ded13529f166d49ac4a244a46f48238d020eae1ad1d9e68a"
+}

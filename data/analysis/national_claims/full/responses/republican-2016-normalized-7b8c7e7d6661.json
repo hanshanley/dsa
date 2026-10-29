@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 257,
+      "generation_tps": 15.722452223644378,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1379,
+      "prompt_tps": 438.6079012856835,
+      "request_sha256": "296b065bfb533deb5e838d122ca548d45b1fa011b3ec1173f27d89974bfde186",
+      "seconds": 19.504238249966875,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Medical malpractice lawsuits have increased the cost of healthcare for everyone by prompting physicians to practice defensive medicine through tests and treatments that might otherwise be optional.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Rural America is especially affected by increased healthcare costs because obstetricians, surgeons, and other providers move to urban settings or retire in the face of escalating insurance premiums.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many Republican Governors have advanced legal reforms to reverse the trend of providers leaving rural areas.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for state and federal legislation to cap non-economic damages in medical malpractice lawsuits.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Capping non-economic damages in medical malpractice lawsuits would relieve conscientious providers of burdens.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Capping non-economic damages in medical malpractice lawsuits would address a serious cause of higher medical bills.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 265,
+      "generation_tps": 15.728351895221524,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1804,
+      "prompt_tps": 475.8135947438747,
+      "request_sha256": "311577b7e47a5bd8894fc450ace43e8d3b943f2d4ec483e247ef90f29f0aef3c",
+      "seconds": 20.650694041047245,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Medical malpractice lawsuits have ballooned the cost of healthcare for everyone by forcing physicians to practice defensive medicine through tests and treatments which otherwise might be optional.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Rural America is especially affected as obstetricians, surgeons, and other providers move to urban settings or retire in the face of escalating insurance premiums.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many Republican Governors have advanced legal reforms necessary to reverse the trend of providers leaving rural areas.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for state and federal legislation to cap non-economic damages in medical malpractice lawsuits.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Capping non-economic damages in medical malpractice lawsuits would relieve conscientious providers of burdens that are not rightly theirs.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Capping non-economic damages in medical malpractice lawsuits would address a serious cause of higher medical bills.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "296b065bfb533deb5e838d122ca548d45b1fa011b3ec1173f27d89974bfde186"
+}

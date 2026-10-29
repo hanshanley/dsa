@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 328,
+      "generation_tps": 15.764509406318751,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1484,
+      "prompt_tps": 429.55579797987673,
+      "request_sha256": "779abc4e30b6f35b1aa7250d7527004853cfe6ca3c380c75b5b472737ff13b11",
+      "seconds": 24.27251037512906,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Commitment to transition the entire fleet of 500,000 school buses to American-made, zero-emission alternatives within five years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to transition three million vehicles in the federal, state, and local fleets to zero-emission vehicles.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for partnering with state and local governments to install at least 500,000 public charging stations from coast to coast.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States currently lags behind many other developed countries in the quality and availability of efficient and accessible public transportation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aim to provide all Americans in municipalities with 100,000 or more residents with quality public transportation options by making flexible federal investments to upgrade and expand light rail, bus lines, existing transit systems, and pedestrian and bicycle infrastructure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to invest in modernizing freight infrastructure, including ports, rail, and maritime freight, in order to reduce air and water pollution, improve public health, create jobs, and improve economic competitiveness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 333,
+      "generation_tps": 15.508405135128578,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1980,
+      "prompt_tps": 456.99611277520125,
+      "request_sha256": "5621d3429853eb850352ac867331c3375dc72587acdd69d998691ad2b2b47532",
+      "seconds": 25.816854417091236,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to transition the entire fleet of 500,000 school buses to American-made, zero-emission alternatives within five years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to transition three million vehicles in the federal, state, and local fleets to zero-emission vehicles.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for partnering with state and local governments to install at least 500,000 public charging stations from coast to coast.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States currently lags behind many other developed countries in the quality and availability of efficient and accessible public transportation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Aim to provide all Americans in municipalities with 100,000 or more residents with quality public transportation options by making flexible federal investments to upgrade and expand light rail, bus lines, existing transit systems, and pedestrian and bicycle infrastructure.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to invest in modernizing freight infrastructure, including ports, rail, and maritime freight, in order to reduce air and water pollution, improve public health, create jobs, and improve economic competitiveness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "779abc4e30b6f35b1aa7250d7527004853cfe6ca3c380c75b5b472737ff13b11"
+}

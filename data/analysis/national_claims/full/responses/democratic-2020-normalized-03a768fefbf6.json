@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 524,
+      "generation_tps": 15.629316983700456,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1380,
+      "prompt_tps": 449.49850986199885,
+      "request_sha256": "5084824e4983ef3cb7e29cbdbd947e96a95d17ddfd0f99924100f8a973d0a4cd",
+      "seconds": 36.60744925006293,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats will work with affected frontline communities to develop a screening and mapping tool to ensure racial and socioeconomic equity in federal climate, energy, and infrastructure programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will identify areas of high cumulative pollution that threatens residents' health and safety.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will help reduce heat stress in urban neighborhoods by planting millions of trees.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support locally-driven economic development.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities will help create local jobs.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities will reduce energy poverty.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities will install clean energy technologies including community solar.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities will build resilience to climate change impacts.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities will prepare for disasters.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities will expand access to green space and outdoor recreation opportunities.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities will improve public health.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities will restore ecosystems.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 207,
+      "generation_tps": 15.533972666075185,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2072,
+      "prompt_tps": 482.8722931212331,
+      "request_sha256": "95b669028e9dc812f76c8d6a5f9c1012d0311e8f9f139b6e653b51e7d724d838",
+      "seconds": 17.62716629100032,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will work with affected frontline communities to develop a screening and mapping tool to ensure racial and socioeconomic equity in federal climate, energy, and infrastructure programs and identify areas of high cumulative pollution that threatens residents' health and safety.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will help reduce heat stress in urban neighborhoods by planting millions of trees.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support locally-driven economic development and commit to directing a significant portion of clean energy and sustainable infrastructure investments to historically marginalized communities to help create local jobs and reduce energy poverty, install clean energy technologies including community solar, build resilience to climate change impacts, prepare for disasters, expand access to green space and outdoor recreation opportunities, improve public health, and restore ecosystems.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5084824e4983ef3cb7e29cbdbd947e96a95d17ddfd0f99924100f8a973d0a4cd"
+}

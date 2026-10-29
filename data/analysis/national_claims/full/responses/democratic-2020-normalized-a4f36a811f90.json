@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 405,
+      "generation_tps": 15.807054692916775,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1440,
+      "prompt_tps": 457.0821728849103,
+      "request_sha256": "7e3c9a54c3ff958e4c2628ab4718c274948291d4990c0f7a2c8ce9aef482c6f6",
+      "seconds": 28.783470707945526,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"America's public schools are more racially segregated today than they were in the late 1960s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools and programs within schools continue to be segregated by race and class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Students are being unnecessarily and unlawfully segregated by disability and language status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Students are being unnecessarily and unlawfully segregated through the use of exclusionary discipline and school-based arrests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools must no longer engage in segregation and segregative practices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support appointing judges who will enforce the Civil Rights Act in schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fund federal programs to promote integration and school diversity, including magnet schools and school transportation initiatives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will reinvigorate and increase funding for the Department of Education's Office of Civil Rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand the civil rights data collection to inform civil rights enforcement and the public on the status of equal educational opportunity for all children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will build on the Strength in Diversity Act to increase federal funding for community-driven strategies to desegregate schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 386,
+      "generation_tps": 15.403983202580825,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2013,
+      "prompt_tps": 446.41874948407497,
+      "request_sha256": "8296bcd69ba6bf0d3fa5eababc0c5845ef201f23f4343ee031c6b61bfc00d1be",
+      "seconds": 29.57836112496443,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"America's public schools are more racially segregated today than they were in the late 1960s.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools\u2014and classrooms and programs within schools\u2014continue to be segregated by race and class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Students are being unnecessarily and unlawfully segregated by disability, language status, through the use of exclusionary discipline and school-based arrests.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Schools must no longer engage in segregation and segregative practices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support appointing judges who will enforce the Civil Rights Act in schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fund federal programs to promote integration and school diversity, including magnet schools and school transportation initiatives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will reinvigorate and increase funding for the Department of Education's Office of Civil Rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand the civil rights data collection to inform civil rights enforcement and the public on the status of equal educational opportunity for all children.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will build on the Strength in Diversity Act to increase federal funding for community-driven strategies to desegregate schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7e3c9a54c3ff958e4c2628ab4718c274948291d4990c0f7a2c8ce9aef482c6f6"
+}

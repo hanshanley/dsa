@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 440,
+      "generation_tps": 15.717342176014878,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1491,
+      "prompt_tps": 453.73544891539524,
+      "request_sha256": "706491e06e485747daa90072d586edc1de167f0517903fb031deb5e6e8a12cd6",
+      "seconds": 31.291878041811287,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for repeal of the Affordable Care Act of 2010.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Four dissenting judges of the Supreme Court believe the entire Affordable Care Act is invalid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican president will use legitimate waiver authority on the first day in office to halt the advance of the Affordable Care Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With unanimous support of Congressional Republicans, a Republican president will sign the repeal of the Affordable Care Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Supreme Court upheld the Affordable Care Act based on Congress' power to tax.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for repealing the Affordable Care Act and giving America a tax cut.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for combining what worked best in the past with changes needed for the future in healthcare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for recovering the traditional patient-physician relationship based on mutual trust, informed consent, and confidentiality.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for reducing mandates to simplify the healthcare system for both patients and providers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for enabling insurers and providers of care to increase healthcare options and contain costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Goal to ensure all Americans have improved access to affordable, high-quality healthcare, including those struggling with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 455,
+      "generation_tps": 15.661568085650375,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2099,
+      "prompt_tps": 493.95932832264276,
+      "request_sha256": "51a3ba5d1914c1c7d382397ab6626f0747668764dcc974b59e933254ee4f0d8b",
+      "seconds": 33.312666416866705,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for repeal of the Affordable Care Act of 2010.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agreement with the four dissenting judges of the Supreme Court that the entire Affordable Care Act is invalid in its entirety.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A Republican president will use legitimate waiver authority under the law on the first day in office to halt the advance of the Affordable Care Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"With the unanimous support of Congressional Republicans, a Republican president will sign the repeal of the Affordable Care Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Supreme Court upheld the Affordable Care Act based on Congress' power to tax.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for repealing the Affordable Care Act and giving America a tax cut.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for combining what worked best in the past with changes needed for the future in healthcare.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for recovering the traditional patient-physician relationship based on mutual trust, informed consent, and confidentiality.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for reducing mandates to simplify the healthcare system for both patients and providers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for enabling insurers and providers of care to increase healthcare options and contain costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Goal to ensure all Americans have improved access to affordable, high-quality healthcare, including those struggling with mental illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "706491e06e485747daa90072d586edc1de167f0517903fb031deb5e6e8a12cd6"
+}

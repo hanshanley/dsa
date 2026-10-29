@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 276,
+      "generation_tps": 15.38715728892189,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1389,
+      "prompt_tps": 423.35034708925025,
+      "request_sha256": "6e57576227bb96d3497a8c2e2933e52cf313dbfa9263a9936b0082ef8a745741",
+      "seconds": 21.229517499916255,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The impacts of climate change are being felt in communities across the country, and the American people are paying the price.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to reducing climate risks and building back better after disasters and climate-fueled catastrophes in a resilient, green, and just manner.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to empowering local communities to become more resilient to the impacts of the climate crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to prioritizing disaster preparedness for disproportionately exposed, frontline, and vulnerable communities and those who struggle most to cope, including seniors, low-income families, and people with disabilities, so that they can become more economically resilient to extreme weather events, heat stress, and increases in disease that scientists have connected to climate change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to rectifying the inequities and inefficiencies of disaster response, including transparent and timely reporting and oversight and protections and enforcement of disability rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 281,
+      "generation_tps": 15.289065214470929,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1833,
+      "prompt_tps": 443.82975844879905,
+      "request_sha256": "9d3bd2996e36bc9b7f5f99af318bcc75609a4dea12e5bb9869485a788be2c549",
+      "seconds": 22.52105858293362,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The impacts of climate change are being felt in communities across the country, and the American people are paying the price.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to reducing climate risks and building back better after disasters and climate-fueled catastrophes in a resilient, green, and just manner.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to empowering local communities to become more resilient to the impacts of the climate crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to prioritizing disaster preparedness for disproportionately exposed, frontline, and vulnerable communities and those who struggle most to cope, including seniors, low-income families, and people with disabilities, so that they can become more economically resilient to extreme weather events, heat stress, and increases in disease that scientists have connected to climate change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats commit to rectifying the inequities and inefficiencies of disaster response, including transparent and timely reporting and oversight and protections and enforcement of disability rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6e57576227bb96d3497a8c2e2933e52cf313dbfa9263a9936b0082ef8a745741"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 259,
+      "generation_tps": 15.92878627111123,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1424,
+      "prompt_tps": 460.31530768453825,
+      "request_sha256": "393543393fcffb73beac7440f4c2fab31736c0228310bad35a02df854d6f1373",
+      "seconds": 19.36385216610506,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The American family is the foundation of civil society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Natural marriage, the union of one man and one woman, is the cornerstone of the family.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Daily lessons of cooperation, patience, mutual respect, responsibility, and self-reliance are fundamental to the order and progress of the Republic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Strong families lessen the need for government in daily life by depending upon God and one another.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The loss of faith and family life leads to greater dependence upon government, as learned over the last five decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans formulate public policy, from taxation to education, from healthcare to welfare, with attention to the needs and strengths of the family.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 266,
+      "generation_tps": 15.916134219167715,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1851,
+      "prompt_tps": 490.01770388520504,
+      "request_sha256": "3ab88bc15d4c03079bd4ccba49755c957aeb6cbf19d25ce904aad4a2f1262a9e",
+      "seconds": 20.500256499974057,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The American family is the foundation of civil society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Natural marriage, the union of one man and one woman, is the cornerstone of the family.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Daily lessons\u2014cooperation, patience, mutual respect, responsibility, self-reliance\u2014are fundamental to the order and progress of the Republic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Strong families lessen the need for government in their daily lives by depending upon God and one another.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The loss of faith and family life leads to greater dependence upon government, as learned over the last five decades.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Republicans formulate public policy, from taxation to education, from healthcare to welfare, with attention to the needs and strengths of the family.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "393543393fcffb73beac7440f4c2fab31736c0228310bad35a02df854d6f1373"
+}

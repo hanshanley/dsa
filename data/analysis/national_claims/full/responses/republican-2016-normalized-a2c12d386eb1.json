@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 413,
+      "generation_tps": 15.519759517769474,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1526,
+      "prompt_tps": 441.19294611272454,
+      "request_sha256": "2bb2e7ac9fee504e337b459af85d5d8796655443cb4c69b57b93ca019c94cb8a",
+      "seconds": 30.08298687497154,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Medicaid is the dominant force in the health market with regard to long-term care, births, and persons with mental illness.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicaid is too big and too flawed to be administered from Washington.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The expansion of health insurance coverage under Obamacare has been an unprecedented expansion of the Medicaid rolls in many states.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Republican governors and state legislators who have undertaken the hard work of modernizing Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to give states a free hand to modernize Medicaid by block-granting the program without strings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"State initiatives such as premium supports for purchasing insurance, refundable tax credits, alternatives to hospitalization for chronic patients, disease prevention activities, and other innovations are the best strategy for preserving Medicaid for those who need it the most.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Block granting Medicaid is particularly needed to address mental health care.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mental illness affects people from all walks of life, but there has been little success in developing effective system-wide medical models for addressing mental health.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government is often the first frontier for people experiencing mental health problems, from first responders who deal with crises to publicly funded mental health facilities and prisons where large numbers of inmates suffer from mental illnesses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 414,
+      "generation_tps": 15.479965322238,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2107,
+      "prompt_tps": 452.2257860070868,
+      "request_sha256": "ebf709b90ae38fda1e297e1d32ee1cdcc4c7a7608bd85ffe090280dc293b9784",
+      "seconds": 31.414665000047535,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Medicaid is the dominant force in the health market with regard to long-term care, births, and persons with mental illness.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Medicaid is too big and too flawed to be administered from Washington.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The expansion of health insurance coverage under Obamacare has been an unprecedented expansion of the Medicaid rolls in many states.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Republican governors and state legislators who have undertaken the hard work of modernizing Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to give states a free hand to modernize Medicaid by block-granting the program without strings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"State initiatives\u2014whether premium supports for purchasing insurance, refundable tax credits, alternatives to hospitalization for chronic patients, disease prevention activities, and other innovations\u2014are the best strategy for preserving Medicaid for those who need it the most.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Block granting Medicaid is particularly needed to address mental health care.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mental illness affects people from all walks of life, but there has been little success in developing effective system-wide medical models for addressing mental health.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Government is often the first frontier for people experiencing mental health problems\u2014from first responders who deal with crises to publicly funded mental health facilities and prisons where large numbers of inmates suffer from mental illnesses.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2bb2e7ac9fee504e337b459af85d5d8796655443cb4c69b57b93ca019c94cb8a"
+}

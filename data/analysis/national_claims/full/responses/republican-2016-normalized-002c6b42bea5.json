@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 336,
+      "generation_tps": 16.08962848821975,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1427,
+      "prompt_tps": 455.6714127338357,
+      "request_sha256": "fc47408900d58ea3e958579e583df427b89849d835dedca0c4313996c40e6f24",
+      "seconds": 24.025141291785985,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Sexual assault is a terrible crime.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Law enforcement, educational institutions, and their partners are making good-faith efforts to address sexual assault responsibly.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Whenever reported, sexual assault must be promptly investigated by civil authorities and prosecuted in a courtroom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Questions of guilt or innocence in sexual assault cases must be decided by a judge and jury, with guilt determined beyond a reasonable doubt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Those convicted of sexual assault should be punished to the full extent of the law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX to micromanage how colleges and universities deal with allegations of abuse contravenes the country's legal traditions.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX muddles the issue of sexual assault and prevents proper authorities from investigating and prosecuting it effectively with due process.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX should be halted.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 362,
+      "generation_tps": 15.789010435350786,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1870,
+      "prompt_tps": 463.7032221438348,
+      "request_sha256": "8983376caea8b58e55e751d5c96e79815d083ac4f83b85b1080247c60245d3af",
+      "seconds": 26.970996209187433,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Sexual assault is a terrible crime.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Law enforcement, educational institutions, and their partners are making good-faith efforts to address sexual assault responsibly.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Whenever sexual assault is reported, it must be promptly investigated by civil authorities and prosecuted in a courtroom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Questions of guilt or innocence in sexual assault cases must be decided by a judge and jury, with guilt determined beyond a reasonable doubt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals convicted of sexual assault should be punished to the full extent of the law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX to micromanage the way colleges and universities deal with allegations of abuse contravenes the country's legal traditions.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX muddles this complex issue and prevents the proper authorities from investigating and prosecuting sexual assault effectively with due process.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX should be halted before it further muddles this complex issue and prevents the proper authorities from investigating and prosecuting sexual assault effectively with due process.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 367,
+      "generation_tps": 15.675879422928029,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1957,
+      "prompt_tps": 484.52674738238625,
+      "request_sha256": "a8d34a5355d7df18106d7f2a67f227463280633f560ac7a2f5b99a3f8046f73e",
+      "seconds": 27.463832000037655,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Sexual assault is a terrible crime.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Law enforcement, educational institutions, and their partners are making good-faith efforts to address sexual assault responsibly.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Whenever sexual assault is reported, it must be promptly investigated by civil authorities and prosecuted in a courtroom, not a faculty lounge.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Questions of guilt or innocence in sexual assault cases must be decided by a judge and jury, with guilt determined beyond a reasonable doubt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals convicted of sexual assault should be punished to the full extent of the law.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX to micromanage the way colleges and universities deal with allegations of abuse contravenes the country's legal traditions.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX muddles this complex issue and prevents the proper authorities from investigating and prosecuting sexual assault effectively with due process.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's distortion of Title IX should be halted before it further muddles this complex issue and prevents the proper authorities from investigating and prosecuting sexual assault effectively with due process.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fc47408900d58ea3e958579e583df427b89849d835dedca0c4313996c40e6f24"
+}

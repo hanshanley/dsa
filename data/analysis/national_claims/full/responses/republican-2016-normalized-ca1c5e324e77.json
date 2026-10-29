@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 379,
+      "generation_tps": 16.08516288830981,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1475,
+      "prompt_tps": 463.1414381343932,
+      "request_sha256": "ff9dbad0f9dd9dedbf38be81251925d7d20451558862d3efa13ff411cf8ae464",
+      "seconds": 26.75721379206516,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Enormous amounts of money are being spent for K-12 public education with overall results that do not justify that spending level.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans in Congress and in the states are bridging the gap between the amount of money spent on K-12 public education and the results achieved.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans are leading the way forward with major reform legislation advancing the concept of block grants.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans are leading the way forward with major reform legislation repealing numerous federal regulations which have interfered with state and local control of public schools.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Workplace Innovation and Opportunity Act \u2014 modernizing workforce programs, repealing mandates, and advancing employment for persons with disabilities \u2014 is now law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Legislation to require transparency in unfunded mandates imposed upon schools is advancing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The D.C. Opportunity Scholarship Program should be expanded as a model for the rest of the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Democrats and the then-U.S. administration are making efforts to eliminate the D.C. Opportunity Scholarship Program in order to placate the leaders of the teachers' unions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 374,
+      "generation_tps": 16.071326121149546,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2022,
+      "prompt_tps": 474.4171981650546,
+      "request_sha256": "7ee67c3e5ab11588a3a11d5d7d09e2bcbe8fb3893cfcbcb7e6692808e9590e80",
+      "seconds": 27.54340949980542,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Enormous amounts of money are being spent for K-12 public education with overall results that do not justify that spending level.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans in Congress and in the states are bridging the gap between the amount of money spent on K-12 public education and the results achieved.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans are leading the way forward with major reform legislation advancing the concept of block grants.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans are leading the way forward with major reform legislation repealing numerous federal regulations which have interfered with state and local control of public schools.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Workplace Innovation and Opportunity Act \u2014 modernizing workforce programs, repealing mandates, and advancing employment for persons with disabilities \u2014 is now law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Legislation to require transparency in unfunded mandates imposed upon schools is advancing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The D.C. Opportunity Scholarship Program should be expanded as a model for the rest of the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Democrats and the current President are making efforts to eliminate the D.C. Opportunity Scholarship Program in order to placate the leaders of the teachers' unions.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ff9dbad0f9dd9dedbf38be81251925d7d20451558862d3efa13ff411cf8ae464"
+}

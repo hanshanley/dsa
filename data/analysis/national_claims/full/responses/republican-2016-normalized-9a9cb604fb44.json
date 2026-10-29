@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 379,
+      "generation_tps": 15.367246398305632,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1433,
+      "prompt_tps": 408.56864625858225,
+      "request_sha256": "358d11d4368be870f629028394efeff1017a0aa8f4421e1d6ca055f147e97198",
+      "seconds": 28.181408250005916,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Consumer choice is the most powerful factor in healthcare reform.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's highly mobile workforce needs portability of insurance coverage that can go with them from job to job.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The need to maintain coverage should not dictate where families have to live and work.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending tax discrimination against the individual purchase of insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for allowing consumers to buy insurance across state lines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for repealing the 1945 McCarran-Ferguson Act which protects insurance companies from anti-trust litigation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Look to the growth of Health Savings Accounts and Health Reimbursement Accounts that empower patients and advance choice in healthcare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Our aging population must have access to safe and affordable care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Because most seniors desire to age at home, we will make homecare a priority in public policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for implementing programs to protect against elder abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 378,
+      "generation_tps": 15.698823824151347,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2090,
+      "prompt_tps": 494.588325174357,
+      "request_sha256": "5b2a1feb8e9c5f4098ae14cccf2d5a187d8e54b3e96141bdb034716b323a3320",
+      "seconds": 28.315670917043462,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Consumer choice is the most powerful factor in healthcare reform.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's highly mobile workforce needs portability of insurance coverage that can go with them from job to job.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The need to maintain coverage should not dictate where families have to live and work.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending tax discrimination against the individual purchase of insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for allowing consumers to buy insurance across state lines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for repealing the 1945 McCarran-Ferguson Act which protects insurance companies from anti-trust litigation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Expect the growth of Health Savings Accounts and Health Reimbursement Accounts that empower patients and advance choice in healthcare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The aging population must have access to safe and affordable care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Because most seniors desire to age at home, homecare will be made a priority in public policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for implementing programs to protect against elder abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 378,
+      "generation_tps": 15.720347195195645,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1979,
+      "prompt_tps": 469.3308643717035,
+      "request_sha256": "869dff518dc4503231d9d962ac952965614ec11a6d74685ad325d15e7ee024eb",
+      "seconds": 28.272926749894395,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Consumer choice is the most powerful factor in healthcare reform.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today's highly mobile workforce needs portability of insurance coverage that can go with them from job to job.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The need to maintain coverage should not dictate where families have to live and work.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for ending tax discrimination against the individual purchase of insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for allowing consumers to buy insurance across state lines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for repealing the 1945 McCarran-Ferguson Act which protects insurance companies from anti-trust litigation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Expect the growth of Health Savings Accounts and Health Reimbursement Accounts that empower patients and advance choice in healthcare.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The aging population must have access to safe and affordable care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Because most seniors desire to age at home, homecare will be made a priority in public policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for implementing programs to protect against elder abuse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "358d11d4368be870f629028394efeff1017a0aa8f4421e1d6ca055f147e97198"
+}

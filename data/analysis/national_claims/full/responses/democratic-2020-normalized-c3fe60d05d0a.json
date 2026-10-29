@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 465,
+      "generation_tps": 15.82648991367543,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1484,
+      "prompt_tps": 468.38407496240137,
+      "request_sha256": "eeeb156728e4598cbe564803c39dbda07df90818d00ca6d2e563eb02c1eaae28",
+      "seconds": 32.56018254091032,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. Postal Service is the world's most efficient mail carrier.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are wholly committed to supporting a public U.S. Postal Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight all efforts to privatize the U.S. Postal Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to ensure the U.S. Postal Service is financially sustainable, including by repealing the mandate that the agency \\\"pre-fund\\\" retiree health costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect the Postal Service's universal service obligation as a core American value.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will maintain six-day and doorstep mail delivery.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Six-day and doorstep mail delivery is a lifeline for rural Americans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to restore service to appropriate levels, including overnight delivery of first-class mail and periodicals within the same metropolitan area.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will appoint members to the Board of Governors and the Postal Regulatory Commission who champion a strong public Postal Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support new revenue streams for the U.S. Postal Service, including allowing secure shipping of alcoholic beverages by mail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will explore options to enable unbanked and underbanked Americans to access financial services through the Postal Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 453,
+      "generation_tps": 15.830274713623856,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2117,
+      "prompt_tps": 497.9251989600034,
+      "request_sha256": "51e38af9bbf724838c04eab249bac227b64918a7243c29185eadbc9f2d9f3c69",
+      "seconds": 32.87816954217851,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. Postal Service is the world's most efficient mail carrier.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are wholly committed to supporting a public U.S. Postal Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight all efforts to privatize the U.S. Postal Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to ensure the U.S. Postal Service is financially sustainable, including by repealing the mandate that the agency \\\"pre-fund\\\" retiree health costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect the Postal Service's universal service obligation as a core American value.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will maintain six-day and doorstep mail delivery.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Six-day and doorstep mail delivery is a lifeline for rural Americans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to restore service to appropriate levels, including overnight delivery of first-class mail and periodicals within the same metropolitan area, maintaining six-day and door-to door delivery.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will appoint members to the Board of Governors and the Postal Regulatory Commission who champion a strong public Postal Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will support new revenue streams for the U.S. Postal Service, including allowing secure shipping of alcoholic beverages by mail and exploring options to enable unbanked and underbanked Americans to access financial services through the Postal Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "eeeb156728e4598cbe564803c39dbda07df90818d00ca6d2e563eb02c1eaae28"
+}

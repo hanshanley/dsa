@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 483,
+      "generation_tps": 15.554279444841358,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1530,
+      "prompt_tps": 466.38116405257153,
+      "request_sha256": "0cbf4f5c7a870d31df2501d6d4d3462524a9005c2ff185916a5eae406c49f3f7",
+      "seconds": 34.34418379096314,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Sanctuary cities violate federal law and endanger their own citizens, and therefore should not be eligible for federal funding.\", \"claim_types\":[\"policy_position\", \"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Using state licenses to reward people in the country illegally is an affront to the rule of law and must be halted.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Guest worker programs should be reformed to eliminate fraud, improve efficiency and ensure they serve the national interest.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Continuing to offer lawful permanent residence to more than one million foreign nationals every year is indefensible in light of alarming levels of unemployment and underemployment in this country.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Supreme Court has correctly recognized that states have the constitutional authority to take steps to reduce illegal immigration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Obama Administration's lawsuits against states seeking to reinforce federal law are condemned.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"States should have the right to enact laws deterring illegal aliens from residing within their states.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The country has been and should continue to be a haven of refuge and asylum, but with major changes.\", \"claim_types\":[\"policy_position\", \"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Asylum should be limited to cases of political, ethnic or religious persecution.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"It is not possible to vet fully all potential refugees, as noted by the Director of the FBI.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Refugees who cannot be carefully vetted, especially those whose homelands have been breeding grounds for terrorism, cannot be admitted to the country to ensure national security.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 487,
+      "generation_tps": 15.575613715758463,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2181,
+      "prompt_tps": 461.77817400579124,
+      "request_sha256": "deda793ec9fdfab6001b619f6663a90c405bcc8a0b76e82806d98e8c83d52e27",
+      "seconds": 36.00190420798026,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Because sanctuary cities violate federal law and endanger their own citizens, they should not be eligible for federal funding.\", \"claim_types\":[\"policy_position\", \"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Using state licenses to reward people in the country illegally is an affront to the rule of law and must be halted.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Guest worker programs should be reformed to eliminate fraud, improve efficiency and ensure they serve the national interest.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In light of alarming levels of unemployment and underemployment in this country, it is indefensible to continue offering lawful permanent residence to more than one million foreign nationals every year.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Supreme Court has correctly recognized that states have the constitutional authority to take steps to reduce illegal immigration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Obama Administration's lawsuits against states that are seeking to reinforce federal law are condemned.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"States should have the right to enact laws deterring illegal aliens from residing within their states.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"From its beginning, the country has been a haven of refuge and asylum, and that should continue\u2014but with major changes.\", \"claim_types\":[\"policy_position\", \"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Asylum should be limited to cases of political, ethnic or religious persecution.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Director of the FBI has noted that it is not possible to vet fully all potential refugees.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"To ensure national security, refugees who cannot be carefully vetted, especially those whose homelands have been breeding grounds for terrorism, cannot be admitted to the country.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0cbf4f5c7a870d31df2501d6d4d3462524a9005c2ff185916a5eae406c49f3f7"
+}

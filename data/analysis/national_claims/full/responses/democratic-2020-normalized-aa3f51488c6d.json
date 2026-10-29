@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 352,
+      "generation_tps": 15.871503168315531,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1460,
+      "prompt_tps": 464.5594995510846,
+      "request_sha256": "9564df780c4ac215018cb4d27b946cd91e97de3d1fc43b51f1b091d645bbf19a",
+      "seconds": 25.332207458093762,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Federal agencies need experts on staff who know how to use science, evidence, data, and facts to guide decision-making on behalf of the American people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The COVID-19 pandemic demonstrates the country needs the best experts working within government to protect and improve the lives of all Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support the recruitment of people with expertise in science, social science, technology, and innovation to jobs in public service to help solve the nation's most pressing challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"To ensure federal funds are invested as effectively and efficiently as possible, the federal government should be using the best available evidence when making budget and spending decisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure federal data collection and analysis is adequately funded and designed to allow for disaggregation by race, gender, LGBTQ+ status, geography, disability status, and other important variables, so that disparities can be better understood and addressed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support the widespread use of strategies to promote evidence-based policymaking, including more robust evaluations of tax expenditures and allocating funds for program evaluation, to help ensure the American people are receiving the most productive, efficient services from the federal government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 15.804887620216213,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1980,
+      "prompt_tps": 491.5153253001419,
+      "request_sha256": "432dc7b75b5ca9fd49aaebb98914f5c10376ccb8b574ae6e44b8204ecb61ca68",
+      "seconds": 26.75372966611758,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Federal agencies need experts on staff who know how to use science, evidence, data, and facts to guide decision-making on behalf of the American people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As the COVID-19 pandemic demonstrates, the country needs the best experts working within government to protect and improve the lives of all Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support the recruitment of people with expertise in science, social science, technology, and innovation to jobs in public service to help solve the nation's most pressing challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"To ensure federal funds are invested as effectively and efficiently as possible, the federal government should be using the best available evidence when making budget and spending decisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure federal data collection and analysis is adequately funded and designed to allow for disaggregation by race, gender, LGBTQ+ status, geography, disability status, and other important variables, so that disparities can be better understood and addressed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support the widespread use of strategies to promote evidence-based policymaking, including more robust evaluations of tax expenditures and allocating funds for program evaluation, to help ensure the American people are receiving the most productive, efficient services from the federal government.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9564df780c4ac215018cb4d27b946cd91e97de3d1fc43b51f1b091d645bbf19a"
+}

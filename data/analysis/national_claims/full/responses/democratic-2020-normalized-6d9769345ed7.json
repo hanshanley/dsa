@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 258,
+      "generation_tps": 16.082538288316574,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1437,
+      "prompt_tps": 452.25978235308355,
+      "request_sha256": "8db9933d108a671cbdefb0a1e766368353dcd705219e138b8ea41a904a71c7fa",
+      "seconds": 19.229715999914333,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The COVID-19 pandemic has demonstrated to parents, students, and educators across the country that there is no sustainable, long-term substitute for high-quality, in-classroom learning.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Significant gaps in access to technology, including lack of access to high-speed broadband and connected devices, have deepened inequities in the educational system for students of color, students with disabilities, English language learners, and students in rural areas and under-resourced neighborhoods during the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for significantly increasing federal investments in rural, urban, and Tribal broadband infrastructure to close the digital divide and ensure students can access educational resources from their homes and schools now and in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increased investments in public education will be needed to help students get back on track when public health experts determine it is safe to return to schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 264,
+      "generation_tps": 15.960723520736048,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1863,
+      "prompt_tps": 471.6033889296237,
+      "request_sha256": "4205d3e28965031281a6013e059d305cca217b6810aab34dcc9b5b53582bd96f",
+      "seconds": 20.501579416915774,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The emergency conditions created by the COVID-19 pandemic have vividly demonstrated to parents, students, and educators across the country that there is no sustainable, long-term substitute for high-quality, in-classroom learning.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Significant gaps in access to technology, including lack of access to high-speed broadband and connected devices, have deepened inequities in the educational system for students of color, students with disabilities, English language learners, and students in rural areas and under-resourced neighborhoods during this pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for significantly increasing federal investments in rural, urban, and Tribal broadband infrastructure to close the digital divide and ensure students can access educational resources from their homes and schools now and in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Increased investments in public education will be needed to help students get back on track when public health experts determine it is safe to return to schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8db9933d108a671cbdefb0a1e766368353dcd705219e138b8ea41a904a71c7fa"
+}

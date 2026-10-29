@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 224,
+      "generation_tps": 15.384789555117155,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1358,
+      "prompt_tps": 446.71979620670635,
+      "request_sha256": "492f022c1b50cde8ab52866b39c0b6bf081b852575bb308cf42db8b9d088d996",
+      "seconds": 17.610452375141904,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe public schools are pillars of neighborhoods and society.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe no student should be shamed over school lunch debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding universal free school meal programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for wraparound health care and nutrition services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for before- and after-school programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for adult education classes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for significantly expanding the community school model.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 234,
+      "generation_tps": 15.248328312346317,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1750,
+      "prompt_tps": 451.8092410877676,
+      "request_sha256": "58056a7338e2cc0543c09c5731e8d6c5b4f5050b9377aa1e5ad3d29cc4bd4799",
+      "seconds": 19.230233166832477,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe public schools are more than places where children learn\u2014they are pillars of neighborhoods and society.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe no student should ever be shamed over school lunch debt.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expanding universal free school meal programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for wraparound health care and nutrition services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for before- and after-school programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for adult education classes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for significantly expanding the community school model.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "492f022c1b50cde8ab52866b39c0b6bf081b852575bb308cf42db8b9d088d996"
+}

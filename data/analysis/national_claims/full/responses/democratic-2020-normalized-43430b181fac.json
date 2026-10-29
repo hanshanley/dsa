@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 376,
+      "generation_tps": 15.781920304562242,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1487,
+      "prompt_tps": 458.8103132311848,
+      "request_sha256": "00f1b55a1aa8afb77275ddd2c5d943517135a342e53ed419abb3548c93a71e67",
+      "seconds": 27.07913341699168,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support raising early childhood standards and providing ongoing professional development for early childhood educators to ensure that children's academic, social development, behavioral, and cognitive needs are being met.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that early childhood educators should be paid a family-supporting wage, have access to benefits and paid leave, and be able to organize, join a union, and collectively bargain for better wages, benefits, and working conditions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States spends $23 billion more each year on schools in predominantly white districts than in non-white districts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Using property taxes to fund public K-12 schools results in inequitable treatment for students in low-income school districts, compared to those in wealthier areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are committed to closing the school funding gap by tripling Title I funding, which benefits schools that serve low-income students.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are committed to incentivizing states to adopt progressive funding formulas that direct resources to the schools that need it most.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will ensure sustainable, reliable funding for rural schools, schools in impoverished urban areas impacted by gentrification, and Bureau of Indian Education schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 385,
+      "generation_tps": 15.791873687411249,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2031,
+      "prompt_tps": 483.983107141441,
+      "request_sha256": "bbf83f8788df52762d2421e31bddd54c5f6805a7169875f46c195b4ecfe9f16c",
+      "seconds": 28.58749383292161,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support raising early childhood standards and providing ongoing professional development for early childhood educators to ensure that children's academic, social development, behavioral, and cognitive needs are being met.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that early childhood educators, like all educators and all workers, should be paid a family-supporting wage, have access to benefits and paid leave, and be able to organize, join a union, and collectively bargain for better wages, benefits, and working conditions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Each year, the United States spends $23 billion more on schools in predominantly white districts than in non-white districts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Using property taxes to fund public K-12 schools results in inequitable treatment for students in low-income school districts, compared to those in wealthier areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are committed to closing the school funding gap by tripling Title I funding, which benefits schools that serve low-income students.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats are committed to incentivizing states to adopt progressive funding formulas that direct resources to the schools that need it most.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will ensure sustainable, reliable funding for rural schools, schools in impoverished urban areas impacted by gentrification, and Bureau of Indian Education schools.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "00f1b55a1aa8afb77275ddd2c5d943517135a342e53ed419abb3548c93a71e67"
+}
