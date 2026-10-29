@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 403,
+      "generation_tps": 15.448804419831415,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1479,
+      "prompt_tps": 440.95823745339413,
+      "request_sha256": "ecb4e33b405c728cdef316f8ed3c59071322f3c4f4d196f77a2c741a047b7abb",
+      "seconds": 29.45104516693391,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama removed U.S. combat brigades and ended the U.S. combat mission in Iraq on a 19-month timetable after taking office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. completed the drawdown of all U.S. troops in Iraq last December after an interim period of advising Iraqis and conducting counterterrorism operations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The decision to complete the drawdown of U.S. troops in Iraq was reached after extensive discussions and with the full agreement of the Iraqi government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The decision to complete the drawdown of U.S. troops in Iraq was determined to be in the best interest of both the U.S. and Iraq.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mitt Romney and many Republicans would have preferred to leave tens of thousands of U.S. troops in Iraq in an open-ended commitment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The preferred commitment of Mitt Romney and many Republicans was against the will of the Iraqi government and people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party are committed to building a robust, long-term strategic partnership with a sovereign, united, and democratic Iraq in diplomatic, economic, and security fields.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The partnership with Iraq is based on mutual interests and mutual respect.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 383,
+      "generation_tps": 15.440783210590991,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2050,
+      "prompt_tps": 502.4254281011691,
+      "request_sha256": "e9b204ca719fa25c6da6ecc65329dd889a3801100dde4a8fc757b6f7bebab42c",
+      "seconds": 28.895596333080903,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama removed U.S. combat brigades and ended the U.S. combat mission in Iraq on a 19-month timetable after taking office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After an interim period in which the U.S. continued to advise Iraqis and conduct counterterrorism operations, the U.S. completed the drawdown of all U.S. troops in Iraq last December.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The decision to complete the drawdown of U.S. troops in Iraq was reached after extensive discussions and with the full agreement of the Iraqi government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The decision to complete the drawdown of U.S. troops in Iraq was determined to be in the best interest of both the U.S. and Iraq.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many Republicans, including Mitt Romney, would have preferred to leave tens of thousands of U.S. troops in Iraq in an open-ended commitment, against the will of the Iraqi government and people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party are committed to building a robust, long-term strategic partnership with a sovereign, united, and democratic Iraq in diplomatic, economic, and security fields.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The partnership with Iraq is based on mutual interests and mutual respect.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ecb4e33b405c728cdef316f8ed3c59071322f3c4f4d196f77a2c741a047b7abb"
+}

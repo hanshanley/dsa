@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 305,
+      "generation_tps": 15.006767744417889,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1438,
+      "prompt_tps": 444.36163452459823,
+      "request_sha256": "b23a59cb70e75713d834db72c55e316916a584787125bc7e835156d76ab333ac",
+      "seconds": 23.573130707954988,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Recognition that safety is dependent on the well-being of those most impacted by current systems during a pandemic.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for a nationwide end to cash bail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for a moratorium on deportations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has the largest detention system in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for the release of individuals from prisons, jails, detention centers, and camps.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for proper staffing of medical teams at facilities to ensure the well-being of those who cannot be temporarily released.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for a moratorium on deportations to ensure the safety of immigrant communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for a moratorium on deportations to prevent discouragement from seeking treatment within immigrant communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 309,
+      "generation_tps": 15.282254493226674,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1911,
+      "prompt_tps": 469.8110064101852,
+      "request_sha256": "77fa74e8cd7652575a3796638a34fab44c5c61a9205a75ac1878dbb819fa6b58",
+      "seconds": 24.299019583966583,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Recognition that safety is dependent on the well-being of those most impacted by current systems during a pandemic.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for a nationwide end to cash bail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for a moratorium on deportations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has the largest detention system in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for individuals in prisons, jails, detention centers, and camps to be let go.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for facilities to be properly staffed with medical teams to ensure the well-being of those who cannot be temporarily released.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for a moratorium on deportations to ensure that immigrant communities are kept safe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Demand for a moratorium on deportations to ensure that immigrant communities are not discouraged from seeking treatment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b23a59cb70e75713d834db72c55e316916a584787125bc7e835156d76ab333ac"
+}

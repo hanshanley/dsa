@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 337,
+      "generation_tps": 15.003006834130373,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1486,
+      "prompt_tps": 444.00723762638,
+      "request_sha256": "609ac6da0578d37e1a55530daf1f3b501010a24354723fefc7294a78042add7a",
+      "seconds": 25.819628458004445,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to ending violence against women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for reauthorizing the bipartisan Violence Against Women Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to proposals by Republicans in the House of Representatives that would undermine the Violence Against Women Act and deprive law enforcement of tools to combat violence against women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama called on all Americans to participate in the nation's renewal by serving in communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party believes everybody can be great because everybody can serve, as Dr. Martin Luther King, Jr. did.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats enacted the Edward M. Kennedy Serve America Act, increasing the size of AmeriCorps and creating more opportunities for Americans of all ages to serve their communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama and the Democrats in Congress sought to increase the budget for the Peace Corps.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"VISTA is larger, stronger, and more vital than it has ever been.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 341,
+      "generation_tps": 14.984629796100009,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1991,
+      "prompt_tps": 455.3661157318558,
+      "request_sha256": "72a5c29f1e79aed70e148b4951ac10893626e501bf588852d98e0683504af63b",
+      "seconds": 27.140653416048735,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to ending violence against women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for reauthorizing the bipartisan Violence Against Women Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to proposals by Republicans in the House of Representatives that would undermine the Violence Against Women Act and deprive law enforcement of the tools it needs to combat violence against women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama called on all Americans to participate in the nation's renewal by serving in their communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Party believes everybody can be great because everybody can serve, as Dr. Martin Luther King, Jr. did.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats enacted the Edward M. Kennedy Serve America Act, increasing the size of AmeriCorps and creating more opportunities for Americans of all ages to serve their communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama and the Democrats in Congress sought to increase the budget for the Peace Corps.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"VISTA is larger, stronger, and more vital than it has ever been.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "609ac6da0578d37e1a55530daf1f3b501010a24354723fefc7294a78042add7a"
+}

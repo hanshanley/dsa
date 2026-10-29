@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 428,
+      "generation_tps": 14.65404872441153,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1513,
+      "prompt_tps": 448.0438429241837,
+      "request_sha256": "2508bf21bd9c0920cd6b6801d7273c20069525a028a49fc02e58cf0d08152b97",
+      "seconds": 32.59531362494454,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Rates of serious crimes, like murder, rape, and robbery, have reached 50-year lows in the last four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and Democrats are fighting for new funding to help keep cops on the street and support police, firefighters, and emergency medical technicians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans and Mitt Romney have opposed and even ridiculed proposals for funding to support police, firefighters, and emergency medical technicians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for equipping courageous police officers and first responders with the best technology, equipment, and innovative strategies to prevent and fight crimes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to continuing to invest in proven community-based law enforcement programs such as the Community Oriented Policing Services program to end the dangerous cycle of violence, especially youth violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to reducing recidivism in neighborhoods.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Federal Interagency Reentry Council was created in 2011, but there's more to be done.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for local prison-to-work programs and other initiatives to reduce recidivism, making citizens safer and saving taxpayers money.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Understanding of the disproportionate effects of crime, violence, and incarceration on communities of color and commitment to working with those communities to find solutions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 441,
+      "generation_tps": 14.647590899249183,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2109,
+      "prompt_tps": 484.65508331575927,
+      "request_sha256": "194fbda10aded61501d7e9ca1ee80200b28ae009725418b3cdd2aff811d684fc",
+      "seconds": 34.471537082921714,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Rates of serious crimes, like murder, rape, and robbery, have reached 50-year lows in the last four years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and Democrats are fighting for new funding that will help keep cops on the street and support police, firefighters, and emergency medical technicians.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans and Mitt Romney have opposed and even ridiculed proposals for new funding that will help keep cops on the street and support police, firefighters, and emergency medical technicians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for efforts to ensure courageous police officers and first responders are equipped with the best technology, equipment, and innovative strategies to prevent and fight crimes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to continuing to invest in proven community-based law enforcement programs such as the Community Oriented Policing Services program to end the dangerous cycle of violence, especially youth violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Commitment to reducing recidivism in neighborhoods.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Federal Interagency Reentry Council was created in 2011, but there is more to be done.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for local prison-to-work programs and other initiatives to reduce recidivism, making citizens safer and saving taxpayers money.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Understanding of the disproportionate effects of crime, violence, and incarceration on communities of color and commitment to working with those communities to find solutions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2508bf21bd9c0920cd6b6801d7273c20069525a028a49fc02e58cf0d08152b97"
+}

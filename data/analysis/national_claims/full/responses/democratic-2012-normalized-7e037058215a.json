@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 387,
+      "generation_tps": 15.239318183615113,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1561,
+      "prompt_tps": 458.0884582353333,
+      "request_sha256": "9d9b88cd7b419935a1fbe61894b5f0bfb11faf5799b4d895015c0860c15621fb",
+      "seconds": 28.813329083146527,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"A broader strategic rebalancing of American foreign policy has been enabled.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After more than a decade at war, resources and attention can be focused on nation-building in the United States and on areas of greatest priority abroad.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Crucial problems, including nuclear proliferation, cyber attacks, biological weapons, climate change, and transnational crime, will receive more energy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A long-overdue focus will be placed on the world's most dynamic regions and rising centers of influence.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Relationships around the world have been rebuilt.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Alliances and partnerships in Europe, Asia, the Middle East, Africa, and the Americas have been strengthened.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Steps have been taken to reinvigorate international institutions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Sustained American leadership has been built by growing the economy, preserving military strength, and advancing values.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is leading once again.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"America is safer, stronger, and more secure than it was four years ago.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 414,
+      "generation_tps": 15.253076821229469,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2116,
+      "prompt_tps": 488.1373604991449,
+      "request_sha256": "b406be33e0b1438ccbb0a22471fc5cae799ac43d1b50799cad4e88252e540dbf",
+      "seconds": 31.487796999979764,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"A broader strategic rebalancing of American foreign policy has been enabled by these actions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After more than a decade at war, the United States can focus on nation-building here at home and concentrate resources and attention abroad on the areas that are the greatest priority moving forward.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Directing more energy toward crucial problems, including longstanding threats like nuclear proliferation and emerging dangers such as cyber attacks, biological weapons, climate change, and transnational crime, is planned.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"A long-overdue focus will be placed on the world's most dynamic regions and rising centers of influence.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Relationships around the world have been rebuilt.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Alliances and partnerships in Europe, Asia, the Middle East, Africa, and the Americas have been strengthened.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Steps have been taken to reinvigorate international institutions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The foundation for sustained American leadership has been built by growing the economy, preserving unrivaled military strength, and advancing values.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is leading once again.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"America is safer, stronger, and more secure than it was four years ago.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9d9b88cd7b419935a1fbe61894b5f0bfb11faf5799b4d895015c0860c15621fb"
+}

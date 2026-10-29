@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 409,
+      "generation_tps": 14.69341783967714,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1500,
+      "prompt_tps": 435.02716962568013,
+      "request_sha256": "95249f51d5ba8aa2397379cb863dc4dac67d247df4121494392233f0a69e8346",
+      "seconds": 31.29644462489523,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Bernie Sanders states that healthcare is a right for everyone regardless of status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bernie Sanders\u2019 immigration plan calls for a moratorium on deportations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The immigration plan is a commitment to equal treatment of immigrants who come into contact with the criminal justice system, regardless of immigration status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The plan represents a complete rejection of policies from Donald Trump and Stephen Miller.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The plan has earned Bernie Sanders support from Mijente, Make the Road Action and Center for Popular Democracy Action.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Faiz Shakir stated that the deportation moratorium would affect 99% of the people living in the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faiz Shakir stated that the deportation moratorium would not apply to \u201cviolent criminals\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faiz Shakir stated that some incarcerated people\u2019s deportations would be decided \u201con a case by case basis\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faiz Shakir\u2019s comments contradict Bernie Sanders\u2019 position.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faiz Shakir\u2019s comments undermine the ability to implement a full moratorium on deportations.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 412,
+      "generation_tps": 14.791032131791912,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2077,
+      "prompt_tps": 482.8263402719231,
+      "request_sha256": "7457a66504e3b7645bb9f3579f8fe0e28f5b9df00e7292ed74d1e62e5c6ec75b",
+      "seconds": 32.168295790906996,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Bernie Sanders states that healthcare is a right for everyone regardless of status.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bernie Sanders\u2019 immigration plan calls for a moratorium on deportations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bernie Sanders\u2019 immigration plan is a commitment to equal treatment of immigrants who come into contact with the criminal justice system, regardless of immigration status.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The plan represents a complete rejection of policies from Donald Trump and Stephen Miller.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The plan has earned Bernie Sanders support from Mijente, Make the Road Action and Center for Popular Democracy Action.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Faiz Shakir stated that the deportation moratorium would affect 99% of the people living in the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faiz Shakir stated that the deportation moratorium would not apply to \u201cviolent criminals\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faiz Shakir stated that some incarcerated people\u2019s deportations would be decided \u201con a case by case basis\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faiz Shakir\u2019s comments contradict Bernie Sanders\u2019 position.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Faiz Shakir\u2019s comments undermine the ability to implement a full moratorium on deportations.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "95249f51d5ba8aa2397379cb863dc4dac67d247df4121494392233f0a69e8346"
+}

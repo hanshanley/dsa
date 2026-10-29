@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 178,
+      "generation_tps": 15.421359460510297,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1378,
+      "prompt_tps": 539.3356229101055,
+      "request_sha256": "a478c8484d2a2987cde788def5c6e425f009a3e91d3f095f108416dc798b3154",
+      "seconds": 14.117208499927074,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for the right of the United States citizens of Puerto Rico to be admitted to the Union as a fully sovereign state after they freely so determine.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recognition that Congress has the final authority to define the constitutionally valid options for Puerto Rico to achieve a permanent non-territorial status with government by consent and full enfranchisement.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as Puerto Rico is not a state, the will of its people regarding their political status should be ascertained by means of a general right of referendum or specific referenda sponsored by the U.S. government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 183,
+      "generation_tps": 15.402337081626774,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1724,
+      "prompt_tps": 432.5545696546966,
+      "request_sha256": "ea20de3c5230309df6e1275c108099cdf200551df2e3bd45bd00f57558aba9a6",
+      "seconds": 15.878017917042598,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the right of the United States citizens of Puerto Rico to be admitted to the Union as a fully sovereign state after they freely so determine.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Recognition that Congress has the final authority to define the constitutionally valid options for Puerto Rico to achieve a permanent non-territorial status with government by consent and full enfranchisement.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As long as Puerto Rico is not a state, the will of its people regarding their political status should be ascertained by means of a general right of referendum or specific referenda sponsored by the U.S. government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a478c8484d2a2987cde788def5c6e425f009a3e91d3f095f108416dc798b3154"
+}

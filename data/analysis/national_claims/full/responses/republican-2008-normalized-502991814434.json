@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 295,
+      "generation_tps": 15.068038450680932,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1536,
+      "prompt_tps": 441.4694436841507,
+      "request_sha256": "4586a7e2d2596bd5b3771a344cef53203f40a731aae35ea3987410a4628ba690",
+      "seconds": 23.06912637501955,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Congress has a fundamental duty to conduct meaningful oversight on the effectiveness of government programs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every congressional committee should reserve at least one week every month to conduct oversight of the nearly 1,700 separate grant and loan programs of the federal government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Truth in Testimony mandate should require all committee witnesses to detail the amount of federal funding they and their employer currently receive and, in the case of associations, how much federal money their members would receive from the proposed legislation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"A national audit of all federally-owned properties should be conducted as a first step toward returning unnecessary properties to the American people or to state and local government for public use.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The expected retirement over the next ten years of more than 40 percent of the federal workforce and 60 percent of its managers presents a rare opportunity to gradually shrink the size of government while using technology to increase its effectiveness and reshape the way agencies do business.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 307,
+      "generation_tps": 14.794451160425734,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1999,
+      "prompt_tps": 467.634403589866,
+      "request_sha256": "40cd1e9f6b42cce5f2458c2d4f79a60a242e4e201c0fa22e516d97f20b29d859",
+      "seconds": 25.03659575013444,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Congress has a fundamental duty to conduct meaningful oversight on the effectiveness of government programs, not use every hearing as an opportunity for political grandstanding.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every congressional committee should reserve at least one week every month to conduct oversight of the nearly 1,700 separate grant and loan programs of the federal government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"A Truth in Testimony mandate should require all committee witnesses to detail the amount of federal funding they and their employer currently receive and, in the case of associations, how much federal money their members would receive from the proposed legislation.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"A national audit of all federally-owned properties should be conducted as a first step toward returning unnecessary properties to the American people or to state and local government for public use.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The expected retirement over the next ten years of more than 40 percent of the federal workforce and 60 percent of its managers presents a rare opportunity to gradually shrink the size of government while using technology to increase its effectiveness and reshape the way agencies do business.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4586a7e2d2596bd5b3771a344cef53203f40a731aae35ea3987410a4628ba690"
+}

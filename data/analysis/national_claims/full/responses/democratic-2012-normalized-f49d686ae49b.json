@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 333,
+      "generation_tps": 14.505321229957339,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1473,
+      "prompt_tps": 438.79770025741465,
+      "request_sha256": "54868d2de0dda47160a7685f6d6795701423a473dc166dd502ca3f73fc55ef15",
+      "seconds": 26.32492541708052,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Then-Senator Obama committed to bringing Osama bin Laden to justice, even if that meant crossing the border into Pakistan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Osama bin Laden can no longer threaten the United States as a consequence of the President's decisions and the brave work of military and intelligence professionals.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al-Qaeda's senior leadership has been devastated, rendering the group far less capable than it was four years ago.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The al-Qaeda core in Afghanistan and Pakistan has never been weaker.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Blows have been struck against al-Qaeda's leadership in Yemen and Somalia with the full support and close cooperation of those governments.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The al-Qaeda core may be on the path to defeat, but the organization and its affiliates remain active in Afghanistan, Pakistan, Yemen, Somalia, and elsewhere.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to an unrelenting pursuit of those who would kill Americans or threaten the homeland, allies, partners, and interests around the world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 333,
+      "generation_tps": 15.374570831286203,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1974,
+      "prompt_tps": 477.8352755074227,
+      "request_sha256": "65c9697d1930f756c1e568d19e45fff8da2f604e3b7f42f4c280dcb2b7e0da58",
+      "seconds": 25.80122200003825,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Then-Senator Obama committed to bringing Osama bin Laden to justice, even if that meant crossing the border into Pakistan.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As a consequence of the President's decisions and the brave work of military and intelligence professionals, Osama bin Laden can no longer threaten the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Al-Qaeda's senior leadership has been devastated, rendering the group far less capable than it was four years ago.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The al-Qaeda core in Afghanistan and Pakistan has never been weaker.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Blows have been struck against al-Qaeda's leadership in Yemen and Somalia with the full support and close cooperation of those governments.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The al-Qaeda core may be on the path to defeat, but the organization and its affiliates remain active in Afghanistan, Pakistan, Yemen, Somalia, and elsewhere.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is a commitment to an unrelenting pursuit of those who would kill Americans or threaten the homeland, allies, partners, and interests around the world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "54868d2de0dda47160a7685f6d6795701423a473dc166dd502ca3f73fc55ef15"
+}

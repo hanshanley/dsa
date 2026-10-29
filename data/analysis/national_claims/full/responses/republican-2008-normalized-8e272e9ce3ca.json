@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 512,
+      "generation_tps": 14.872330915397574,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1576,
+      "prompt_tps": 446.57806902464023,
+      "request_sha256": "d50e690300b1410e1810a02a4f87d03580087db7b1e6fe8c94a067ad21d1c421",
+      "seconds": 37.9668300000485,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Each agency must be able to pass a financial audit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Each agency must set annual targets for improving efficiency with fewer resources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Civil service managers should be given incentives for more effective leadership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Civil service managers should have protection against grievance procedures used by disgruntled employees to thwart reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Due process cannot excuse bad behavior.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Internet transparency in all federal contracting is necessary to combat cost overruns.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The expertise of successful managers and entrepreneurs in the private sector should be drawn on to build competence and accountability into government procurement and operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government's system for responding to a natural calamity needs a radical overhaul.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"A natural disaster insurance policy is needed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"State and local cooperation is crucial in disaster response.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Private relief efforts are crucial in disaster response.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Washington must take the lead in forging a partnership with America's best run businesses to ensure that FEMA's Emergency Operations Centers run as well as any Fortune 500 Company.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"It is critical to support those impacted by natural disasters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The rebuilding of devastated areas, including the Gulf Coast, should be completed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 512,
+      "generation_tps": 14.741185504349621,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2256,
+      "prompt_tps": 493.6561798061497,
+      "request_sha256": "67f8a2450d3e4a6c69443656714493d362dc20a20d4bb5656379e6cb94d5981e",
+      "seconds": 39.31428816705011,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Each agency must be able to pass a financial audit and set annual targets for improving efficiency with fewer resources.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Civil service managers should be given incentives for more effective leadership, including protection against the current guilty-until-proven-innocent grievance procedures which disgruntled employees use against them to thwart reform.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Due process cannot excuse bad behavior.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Internet transparency in all federal contracting is necessary as a step in combating cost overruns.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The expertise of today's successful managers and entrepreneurs in the private sector, like the \\\"dollar-a-year\\\" businesspeople who answered their country's call during the Second World War, should be drawn on to build real-world competence and accountability into government procurement and operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal government's system for responding to a natural calamity needs a radical overhaul.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"There is a need for a natural disaster insurance policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"State and local cooperation is crucial in disaster response.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Private relief efforts are crucial in disaster response.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Washington must take the lead in forging a partnership with America's best run businesses to ensure that FEMA's Emergency Operations Centers run as well as any Fortune 500 Company.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"It is critical to support those impacted by natural disasters.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The rebuilding of devastated areas, including the Gulf Coast, should be completed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d50e690300b1410e1810a02a4f87d03580087db7b1e6fe8c94a067ad21d1c421"
+}

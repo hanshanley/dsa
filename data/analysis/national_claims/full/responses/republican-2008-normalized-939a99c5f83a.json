@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 404,
+      "generation_tps": 14.808156280914536,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1524,
+      "prompt_tps": 456.90355535440875,
+      "request_sha256": "343e6e35944d8a9e1097b2b782ba8d2a7146c859347a65c61ae448cd38a0b7b4",
+      "seconds": 30.62990929116495,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The budget process assumes every spending project will be on the books forever, even if the law says the spending will expire.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process assumes tax relief will be temporary.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Treating well-deserved tax cuts as a kind of spending considers letting Americans keep more of their earnings the same as more spending on pork projects.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The budget process fails to recognize the positive impact that lowering tax rates has on economic growth.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the budget process, an increase in a program's funding is actually a decrease if it is less than the rate of inflation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The budget law limits the time Congress can consider a budget before voting.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Of the $3 trillion spent annually, only one third is reviewed each year during the budget and appropriations process.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"$2 trillion annually automatically goes to interest on the national debt or entitlements.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The budget process assumes an automatic increase in spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The debate on the remaining one-third of spending is only over how much more spending to approve.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 407,
+      "generation_tps": 15.017438401017348,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2096,
+      "prompt_tps": 487.18256785969237,
+      "request_sha256": "fbfa3f4a447e40bcab6de75b54c3b2008ece5877b7863d3f8c843157448a8608",
+      "seconds": 31.41554541606456,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The budget process assumes every spending project will be on the books forever, even if the law says the spending will expire.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process assumes tax relief will be temporary.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The budget process treats well-deserved tax cuts as a kind of spending, considering letting Americans keep more of their earnings the same as more spending on pork projects.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The budget process fails to recognize the positive impact that lowering tax rates has on economic growth.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"In the budget process, an increase in a program's funding is actually a decrease if it is less than the rate of inflation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The budget law limits the time Congress can consider a budget before voting.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Of the $3 trillion spent annually, only one third is reviewed each year during the budget and appropriations process.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"$2 trillion annually automatically goes to interest on the national debt or entitlements.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The budget process assumes an automatic increase in spending.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"The debate on the remaining one-third of spending is only over how much more spending to approve.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "343e6e35944d8a9e1097b2b782ba8d2a7146c859347a65c61ae448cd38a0b7b4"
+}

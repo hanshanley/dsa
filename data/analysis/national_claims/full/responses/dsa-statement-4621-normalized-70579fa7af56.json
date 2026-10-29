@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 84,
+      "generation_tps": 15.56192465596434,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1318,
+      "prompt_tps": 437.8746572444487,
+      "request_sha256": "35d06e3a546939aa254c3394016d3d4edccf2f5eb8586b4719ed54bb643c4c07",
+      "seconds": 8.418345957994461,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA urges Bernie Sanders to unequivocally support a full moratorium on deportations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA's movement for democratic socialism stands for all working class people.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 84,
+      "generation_tps": 15.55082155414114,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1570,
+      "prompt_tps": 449.8800815298104,
+      "request_sha256": "6c8fa0ceb171372ad2284b122aea2a545ccb0302725bf57f86031f01d0346cb4",
+      "seconds": 8.901598374824971,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA urges Bernie Sanders to unequivocally support a full moratorium on deportations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA's movement for democratic socialism stands for all working class people.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "35d06e3a546939aa254c3394016d3d4edccf2f5eb8586b4719ed54bb643c4c07"
+}

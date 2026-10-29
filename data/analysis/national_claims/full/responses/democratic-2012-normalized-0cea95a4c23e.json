@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 413,
+      "generation_tps": 15.037798078938167,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1491,
+      "prompt_tps": 447.0812375603873,
+      "request_sha256": "3947f71448a4e34b99f48f2257ba0818c97dc89a49a3d68f1208a96f440d48a7",
+      "seconds": 30.810386084020138,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Fifteen percent of U.S. citizens live in poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"One in five U.S. families struggles with food insecurity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many families work but are unable to pay their bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Merely restoring the country to its pre-economic crisis state is not enough.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ending poverty should be a national priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"When President Obama took office, the U.S. was losing hundreds of thousands of jobs per month.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Expanding the Earned Income Tax Credit and the Child Tax Credit, and supporting unemployment insurance benefits and food stamps, kept seven million people out of poverty in 2010.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Expanding the Earned Income Tax Credit and the Child Tax Credit, and supporting unemployment insurance benefits and food stamps, reduced poverty for 32 million more people in 2010.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Obama administration invested in Promise Neighborhoods across the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Obama administration provided grants to financial institutions in urban and rural communities to increase lending for low-income Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 419,
+      "generation_tps": 14.943643716645147,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2072,
+      "prompt_tps": 476.3069385476673,
+      "request_sha256": "0d3a04a949d3158e6f2e330f9cd2380e137ac6a9ca019f6950e56e4dd53c3470",
+      "seconds": 32.39938766718842,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Fifteen percent of U.S. citizens live in poverty.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"One in five U.S. families struggles with food insecurity.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many families work but are unable to pay their bills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Merely restoring the country to where it was before the economic crisis is not enough.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Ending poverty should be a national priority.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"When President Obama took office, the U.S. was losing hundreds of thousands of jobs per month.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Expanding the Earned Income Tax Credit and the Child Tax Credit, and supporting unemployment insurance benefits and food stamps, kept seven million people out of poverty in 2010.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Expanding the Earned Income Tax Credit and the Child Tax Credit, and supporting unemployment insurance benefits and food stamps, reduced poverty for 32 million more people in 2010.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Obama administration invested in Promise Neighborhoods in communities across the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Obama administration provided grants to financial institutions in urban and rural communities for the purpose of increasing lending for low-income Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3947f71448a4e34b99f48f2257ba0818c97dc89a49a3d68f1208a96f440d48a7"
+}

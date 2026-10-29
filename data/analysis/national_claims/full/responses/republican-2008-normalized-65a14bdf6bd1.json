@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 369,
+      "generation_tps": 15.106236140912968,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1564,
+      "prompt_tps": 446.14083723927354,
+      "request_sha256": "ce275cb61fb5bb4aeceb91bff4bc1ece518dcc1a0fdbe39d5fff6b0c939b8efe",
+      "seconds": 27.94478454091586,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Government requires corporations to budget for future pension and health care costs, but the U.S. government ignores those requirements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans will attack wasteful Washington spending immediately.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans favor adoption of the Balanced Budget Amendment to require a balanced federal budget except in time of war.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans will impose an immediate moratorium on the earmarking system and reform the appropriations process through full transparency to eliminate wasteful projects and pay-offs to special interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Tax dollars must be distributed on the basis of clear national priorities, not a politician's seniority or party position.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Republicans call for a one-year pause in nondefense, non-veterans discretionary spending to force a critical, cost-benefit review of all current programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Republicans call for a constitutionally sound presidential line-item veto.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"Republicans will insist that every item in a spending bill be presented in advance to taxpayers on the Internet before either the House or Senate considers it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[8]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 369,
+      "generation_tps": 14.910910040010549,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2101,
+      "prompt_tps": 481.55957921917775,
+      "request_sha256": "fcc04d22d061c0fc50513be002eeae26f6be1cb53a451dcffe6f7cb138de7f1d",
+      "seconds": 29.120606875047088,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Government requires corporations to budget for future pension and health care costs, but the U.S. government ignores those requirements.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans will attack wasteful Washington spending immediately.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans favor adoption of the Balanced Budget Amendment to require a balanced federal budget except in time of war.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"To eliminate wasteful projects and pay-offs to special interests, Republicans will impose an immediate moratorium on the earmarking system and reform the appropriations process through full transparency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Tax dollars must be distributed on the basis of clear national priorities, not a politician's seniority or party position.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Republicans call for a one-year pause in nondefense, non-veterans discretionary spending to force a critical, cost-benefit review of all current programs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[6]},{\"claim_text\":\"Republicans call for a constitutionally sound presidential line-item veto.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"Republicans will insist that every item in a spending bill be presented in advance to taxpayers on the Internet before either the House or Senate considers it.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[8]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ce275cb61fb5bb4aeceb91bff4bc1ece518dcc1a0fdbe39d5fff6b0c939b8efe"
+}

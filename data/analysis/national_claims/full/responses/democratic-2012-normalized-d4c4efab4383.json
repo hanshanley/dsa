@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 458,
+      "generation_tps": 15.052251030586172,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1451,
+      "prompt_tps": 449.6279279125553,
+      "request_sha256": "ead88bf30058b8a6cd9e6a4744e20647b36ea70e7df06137e2570c517dd4629f",
+      "seconds": 33.669411916984245,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"In January 2009, the U.S. armed forces were engaged in two wars.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al-Qaeda was entrenched in safe havens in January 2009.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many U.S. alliances were strained in January 2009.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. standing in the world had diminished in January 2009.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Some people questioned whether the United States was headed toward inevitable decline in January 2009.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under the leadership of President Obama and the Democratic Party, the tide of war is now receding.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The war in Iraq has been responsibly ended under the leadership of President Obama and the Democratic Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Major blows have been struck against al-Qaeda under the leadership of President Obama and the Democratic Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Osama bin Laden and other senior al-Qaeda leaders have been brought to justice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Al-Qaeda is on the path to defeat.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The momentum of the Taliban has been reversed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Conditions have been established to draw down U.S. forces in Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 469,
+      "generation_tps": 15.020524092888607,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2077,
+      "prompt_tps": 481.4483645510577,
+      "request_sha256": "86d5da57d9a5bffc76a3fc1d089731b96ec627294c141ed13d7017c806131804",
+      "seconds": 35.549909458030015,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In January 2009, the U.S. armed forces were engaged in two wars.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Al-Qaeda was entrenched in safe havens in January 2009.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many U.S. alliances were strained in January 2009.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. standing in the world had diminished in January 2009.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Around the world and at home, some questioned whether the United States was headed toward inevitable decline in January 2009.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Under the leadership of President Obama and the Democratic Party, the tide of war is now receding.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The war in Iraq has been responsibly ended under the leadership of President Obama and the Democratic Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Major blows have been struck against al-Qaeda under the leadership of President Obama and the Democratic Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Osama bin Laden and other senior al-Qaeda leaders have been brought to justice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Al-Qaeda is on the path to defeat.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The momentum of the Taliban has been reversed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Conditions have been established to draw down U.S. forces in Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ead88bf30058b8a6cd9e6a4744e20647b36ea70e7df06137e2570c517dd4629f"
+}

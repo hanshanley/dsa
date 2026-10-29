@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 376,
+      "generation_tps": 15.486681609394854,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1560,
+      "prompt_tps": 461.7281047501591,
+      "request_sha256": "73cd7c6efe255ee9b670f144c04a46a97a0cf1e9d46adff6d65d53b770d2ff2c",
+      "seconds": 27.668799750041217,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama has proven willing to use military force when necessary.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama knows how important it is for force to be used as a last resort.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama kept promises to end wars overseas.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama signed tax credits into law for businesses that hire veterans and wounded warriors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama supported the Post-9/11 GI Bill, which helps 800,000 veterans and their families pursue their education.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The war in Iraq distracted the United States from confronting national security challenges, including the danger posed by international terrorist organizations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Osama bin Laden and al-Qaeda established safe havens across the border from Afghanistan, in Pakistan, while the Bush administration shifted its focus to Iraq.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Obama's decision to end the Iraq war freed up military and intelligence resources to refocus on counterterrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Ending the Iraq war enabled a shift to a more effective approach to counterterrorism.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 382,
+      "generation_tps": 15.481869097536837,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2104,
+      "prompt_tps": 489.1392838569849,
+      "request_sha256": "a49d83d859eb344ad5d5d8451eccf93abe5309dd459c66c679f9b943052fe131",
+      "seconds": 28.986842459067702,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama has proven willing to use military force when necessary, though he also knows how important it is for force to be used as a last resort.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama kept promises to end wars overseas while maintaining America's commitment to those who served.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama signed tax credits into law for businesses that hire veterans and wounded warriors.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama supported the Post-9/11 GI Bill, which helps 800,000 veterans and their families pursue their education.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The war in Iraq distracted the United States from confronting many of the most fundamental national security challenges facing the United States, including the danger posed by international terrorist organizations that threaten the American homeland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"While the Bush administration shifted its focus to Iraq, Osama bin Laden and al-Qaeda established safe havens across the border from Afghanistan, in Pakistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Obama's decision to end the Iraq war freed up military and intelligence resources to refocus on the fight against terrorism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Ending the Iraq war enabled a shift to a more effective approach to counterterrorism.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "73cd7c6efe255ee9b670f144c04a46a97a0cf1e9d46adff6d65d53b770d2ff2c"
+}

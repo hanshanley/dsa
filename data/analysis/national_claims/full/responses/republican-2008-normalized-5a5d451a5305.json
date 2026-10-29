@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 313,
+      "generation_tps": 15.08661591250291,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1513,
+      "prompt_tps": 455.0164739800283,
+      "request_sha256": "1a0b72897e44d4c64ca44362237f1ad502a8f2a1781d5fef5fcc20f86a528b66",
+      "seconds": 24.083691832842305,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for a supermajority requirement in both the House and Senate to guard against tax hikes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"New authorizations should be offset by reducing another program.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"No appropriation should be permitted without a current authorization.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congressional ethics rules governing special interests should apply across the board, without the special exemptions now granted to favored institutions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for the Government Shutdown Protection Act to ensure the continuance of essential federal functions when advocates of pork threaten to shut down the government unless their wasteful spending is accepted.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The budget should reasonably plan for the long-term costs of pension and health care programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Urge the conversion of pension and health care programs to defined contribution programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Congress must respect the limits imposed upon it by the Tenth Amendment.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 342,
+      "generation_tps": 15.041993083117882,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1994,
+      "prompt_tps": 471.2087013714517,
+      "request_sha256": "d93c59c9f5988fca34e2ab3547e1ed96040a78849a7f0da9ed061038ef513b2c",
+      "seconds": 26.978874791879207,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for a supermajority requirement in both the House and Senate to guard against tax hikes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"New authorizations should be offset by reducing another program.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"No appropriation should be permitted without a current authorization.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Congressional ethics rules governing special interests should apply across the board, without the special exemptions now granted to favored institutions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Support for the Government Shutdown Protection Act to ensure the continuance of essential federal functions when advocates of pork threaten to shut down the government unless their wasteful spending is accepted.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The budget should reasonably plan for the long-term costs of pension and health care programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Urge the conversion of pension and health care programs to defined contribution programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Congress must respect the limits imposed upon it by the Tenth Amendment, which states that powers not delegated to the United States, nor prohibited to the States, are reserved to the States respectively, or to the people.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1a0b72897e44d4c64ca44362237f1ad502a8f2a1781d5fef5fcc20f86a528b66"
+}
