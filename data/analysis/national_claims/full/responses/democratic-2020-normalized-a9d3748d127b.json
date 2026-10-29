@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 386,
+      "generation_tps": 15.40068042056491,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1495,
+      "prompt_tps": 454.39675781576256,
+      "request_sha256": "cebb0728c970f6a6e56fc78f863ccd586e1eb9896efd14fbf086df7883f134ce",
+      "seconds": 28.364961333107203,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will hold regular press briefings to explain the legal and policy justifications for military operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe transparency and open debate with Congress and the American public are necessary for democratic accountability.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will not use active duty soldiers as political props.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will not send military forces to suppress Americans exercising their constitutional rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Trump Administration was warned about the clear and present danger of a global pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Trump Administration dismantled America's early warning and response mechanisms for pandemics.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Trump Administration failed to act when the pandemic began.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will take overdue steps to ensure the government is not caught off guard by public health threats, at home or abroad.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will revitalize and expand the Obama-Biden Administration's Global Health Security Agenda.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will immediately restore the White House National Security Council Directorate for Global Health Security and Biodefense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 342,
+      "generation_tps": 15.411536784681862,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2049,
+      "prompt_tps": 506.3660528139858,
+      "request_sha256": "a36375bb64fe4cc511c735b6fa1dd835781fc2cf3241a1dd1c8cc05fbb8282b0",
+      "seconds": 26.247756666969508,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will hold regular press briefings to explain the legal and policy justifications for military operations, because transparency and open debate with Congress and the American public are necessary for democratic accountability.\",\n\"claim_types\":[\"policy_position\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will never use active duty soldiers as political props.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will never send military forces to suppress Americans exercising their constitutional rights.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Trump Administration was warned about the clear and present danger of a global pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Trump Administration dismantled America's early warning and response mechanisms and failed to act when the pandemic began.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Democrats will take overdue steps to ensure the government is not caught off guard by public health threats, at home or abroad.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will revitalize and expand the Obama-Biden Administration's Global Health Security Agenda.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Democrats will immediately restore the White House National Security Council Directorate for Global Health Security and Biodefense.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cebb0728c970f6a6e56fc78f863ccd586e1eb9896efd14fbf086df7883f134ce"
+}

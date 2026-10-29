@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 189,
+      "generation_tps": 16.195525986381867,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1367,
+      "prompt_tps": 464.15452506179065,
+      "request_sha256": "07961f97d842579c6361772f7e371e041b5d6e7d29ff855aa4fdb96ad6f3a4a7",
+      "seconds": 14.624835791066289,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The nation honors the sacrifice of fallen service members at national, state, and veterans' cemeteries around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation clarifies that the ultimate sacrifice and service of fallen service members to the country will never be forgotten.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The party seeks to honor the sacrifice of fallen service members and comfort their families by ensuring all veterans' cemeteries are adequately equipped.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The party seeks to establish a standard of care for all veterans' cemeteries, using Arlington Cemetery as a guide, befitting their service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 202,
+      "generation_tps": 16.174516952426874,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1724,
+      "prompt_tps": 486.41995337340677,
+      "request_sha256": "74d4b2ebbf23c968c4c08282d91e2259d4ac07a364e80317f6694d51c775ff3c",
+      "seconds": 16.04268837510608,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The nation honors the sacrifice of fallen service members at national, state, and veterans' cemeteries around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The nation clarifies that the ultimate sacrifice and service of fallen service members to the country will never be forgotten.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As a party, the group seeks to honor the sacrifice of fallen service members and comfort their families by ensuring all veterans' cemeteries are adequately equipped.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"As a party, the group seeks to establish a standard of care for all veterans' cemeteries, using Arlington Cemetery as a guide, befitting their service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "07961f97d842579c6361772f7e371e041b5d6e7d29ff855aa4fdb96ad6f3a4a7"
+}

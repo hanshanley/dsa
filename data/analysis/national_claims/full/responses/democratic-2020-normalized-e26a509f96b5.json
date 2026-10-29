@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 365,
+      "generation_tps": 15.725721191062984,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1439,
+      "prompt_tps": 465.7729883297389,
+      "request_sha256": "7c3ebaa28c900b34816998cc38bb9ec84ed5f4a64facaaf6e3400cef1ec596b3",
+      "seconds": 26.310170500073582,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats recognize the United States does not stand alone in the fight against climate change and global environmental degradation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fully integrate climate change into U.S. foreign policy and national security strategies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will restore U.S. global climate leadership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will immediately rejoin the Paris Climate Agreement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will commit the United States to doing its fair share to keep global warming to 1.5 degrees Celsius.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will convene a world summit aimed at new and more ambitious global targets to reduce greenhouse gas pollution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will revive and expand climate-related foreign assistance including by recommitting to the Green Climate Fund.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will protect oceans through fisheries management programs and additional designations of marine protected areas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will seek collaborative, science-based approaches to be good stewards of the rapidly changing Arctic region, while protecting U.S. strategic interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 378,
+      "generation_tps": 15.8052971092106,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1972,
+      "prompt_tps": 492.86464190027453,
+      "request_sha256": "644aa93e32aa1d80ae8b4bf2e04117934965a153b2a66b4c194565aeb0d5f2f4",
+      "seconds": 27.92744066612795,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats recognize that the United States does not stand alone in the fight against climate change and global environmental degradation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fully integrate climate change into U.S. foreign policy and national security strategies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will restore U.S. global climate leadership.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will immediately rejoin the Paris Climate Agreement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will commit the United States to doing its fair share and lead the world in the effort to keep global warming to 1.5 degrees Celsius.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will convene a world summit aimed at new and more ambitious global targets to reduce greenhouse gas pollution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will revive and expand climate-related foreign assistance including by recommitting to the Green Climate Fund.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will protect oceans through fisheries management programs and additional designations of marine protected areas.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will seek collaborative, science-based approaches to be good stewards of the rapidly changing Arctic region, while protecting U.S. strategic interests.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7c3ebaa28c900b34816998cc38bb9ec84ed5f4a64facaaf6e3400cef1ec596b3"
+}

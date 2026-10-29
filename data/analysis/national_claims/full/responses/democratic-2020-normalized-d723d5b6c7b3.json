@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 323,
+      "generation_tps": 15.087221657212307,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1498,
+      "prompt_tps": 440.4150647625656,
+      "request_sha256": "8ae59fb85484088bc292b2a50a0033a42a57aa21fa826f20cb467d2e907f7b3a",
+      "seconds": 24.825298957992345,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Trump Administration repealed important protections, allowing for-profit colleges and universities to prey upon students with impunity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will issue requirements for for-profit higher education programs to demonstrate their value and effectiveness before becoming eligible for federal student loans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will call upon the Secretary of Education to forgive debt carried by students who were defrauded by predatory schools or who received misrepresented program offerings or program outcomes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will call upon the Secretary of Education to forgive debt held by people who are permanently disabled.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect veterans and servicemembers from being steered into low-performing for-profit higher education and professional programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe a healthy democracy, just society, and inclusive economy are essential prerequisites for effective American leadership abroad.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe the ultimate measure of foreign policy is whether it protects and advances America's security, prosperity and values and delivers results for all Americans.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 335,
+      "generation_tps": 15.104116166960408,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1989,
+      "prompt_tps": 462.89540274825805,
+      "request_sha256": "4be9ba895615ead98cdd334f58fd8598479c46f05d57f116a76b660f40267749",
+      "seconds": 26.49440583307296,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Trump Administration repealed important protections, allowing for-profit colleges and universities to prey upon students with impunity.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will issue requirements that for-profit higher education programs demonstrate their value and effectiveness before becoming eligible for federal student loans.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will call upon the Secretary of Education to forgive debt carried by students who were ripped off by predatory schools, including by programs that defrauded students or that misrepresented program offerings or program outcomes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will call upon the Secretary of Education to forgive debt held by people who are permanently disabled.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect veterans and servicemembers from being steered into low-performing for-profit higher education and professional programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe that a healthy democracy, just society, and inclusive economy are essential prerequisites for effective American leadership abroad.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats believe the ultimate measure\u2014and purpose\u2014of foreign policy is whether it protects and advances America's security, prosperity and values\u2014and delivers results for all Americans.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8ae59fb85484088bc292b2a50a0033a42a57aa21fa826f20cb467d2e907f7b3a"
+}

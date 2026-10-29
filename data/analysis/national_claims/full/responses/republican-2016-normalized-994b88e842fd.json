@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 295,
+      "generation_tps": 15.900157574491484,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1471,
+      "prompt_tps": 473.3730476492036,
+      "request_sha256": "4673c2de2bbc976af687af2147f46f69816a05d5488cc42d9324690536ff0512",
+      "seconds": 21.671119207981974,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The nation's veterans have been a national strength and remain a national resource.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Veterans' service to the country continues long after they leave the military, including roles as community leaders, volunteers, mentors, educators, problem solvers, and public officials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The obligation to the one percent who defend the other ninety-nine percent does not end when they take off the uniform.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"America has a sacred trust with its veterans and is committed to ensuring their and their families' care and dignity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Department of Veterans Affairs' work is essential to meet commitments to veterans by providing health, education, disability, survivor, and home loan benefits, and arranging memorial services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a commitment to care for the families of those who have made the ultimate sacrifice and to assure them of meaningful financial assistance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 337,
+      "generation_tps": 15.90896562587835,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1934,
+      "prompt_tps": 489.9357500819337,
+      "request_sha256": "72dfdb4d3a91447b994721f6775772b464173319297f0253267a7d450e8c53eb",
+      "seconds": 25.140283999964595,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The nation's veterans have been a national strength and remain a national resource.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Veterans' service to the country continues long after they leave the military, including roles as community leaders, volunteers, mentors, educators, problem solvers, and public officials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The obligation to the one percent who defend the other ninety-nine percent does not end when they take off the uniform.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"America has a sacred trust with its veterans and is committed to ensuring their and their families' care and dignity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The work of the Department of Veterans Affairs is essential to meet commitments to veterans by providing health, education, disability, survivor, and home loan benefits, and arranging memorial services upon death.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a commitment to care for the families of those who have made the ultimate sacrifice and to assure them of meaningful financial assistance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The source adheres to Abraham Lincoln's command to care for those who bore the battle.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4673c2de2bbc976af687af2147f46f69816a05d5488cc42d9324690536ff0512"
+}

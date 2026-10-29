@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 326,
+      "generation_tps": 15.28312734772222,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1509,
+      "prompt_tps": 448.0022760428501,
+      "request_sha256": "1d722686b42a9e80e6ed8b19d6d33fb368f19ca8b60bbc385e7a5f1c4461cb09",
+      "seconds": 24.710291374940425,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The next president must restore the public's trust in law enforcement and civil order by adhering to the rule of law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next president must not sow seeds of division and distrust between the police and the people they have sworn to serve and protect.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party must make clear in words and action that every human life matters.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of criminal offenses in the U.S. Code has increased from 3,000 in the early 1980s to more than 4,500 today.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are an estimated 300,000 regulations containing criminal penalties.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"No one, including the Department of Justice, can come up with accurate numbers regarding the total number of criminal offenses and penalties.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The power of career civil servants and political appointees to criminalize behavior is a violation of constitutional order perpetrated by the administrative state.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 331,
+      "generation_tps": 15.477017639961534,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2003,
+      "prompt_tps": 468.6800500308489,
+      "request_sha256": "71151523db95f9ce3b6cf6382ee7c186f2b629a9f88a95cc2fcb582f0c8c1843",
+      "seconds": 25.67098820907995,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The next president must restore the public's trust in law enforcement and civil order by first adhering to the rule of law himself.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next president must not sow seeds of division and distrust between the police and the people they have sworn to serve and protect.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party must make clear in words and action that every human life matters.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of criminal offenses in the U.S. Code has increased from 3,000 in the early 1980s to more than 4,500 today.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There are an estimated 300,000 regulations containing criminal penalties.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"No one, including the Department of Justice, can come up with accurate numbers regarding the total number of criminal offenses and penalties.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The power of career civil servants and political appointees to criminalize behavior is one of the worst violations of constitutional order perpetrated by the administrative state.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1d722686b42a9e80e6ed8b19d6d33fb368f19ca8b60bbc385e7a5f1c4461cb09"
+}

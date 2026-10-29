@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 372,
+      "generation_tps": 13.572279949834032,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1485,
+      "prompt_tps": 411.8870986088718,
+      "request_sha256": "b0987288379ca7e9a80254c421518360865320eb4452bc6ed3604372db04f64e",
+      "seconds": 31.03353508305736,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"After nearly eight years of a Democratic Commander-in-Chief who has frequently placed strategic and ideological limitations and shackles on the military, enemies have been emboldened and national security is at great risk.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The country faces a national security crisis, and electing a Republican to the White House will restore law and order to the land and safety to citizens.\", \"claim_types\":[\"policy_position\",\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party believes in peace through strength.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"American exceptionalism requires the United States to retake its natural position as leader of the free world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Tyranny and injustice thrive when America is weakened.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The oppressed have no greater ally than a confident and determined United States, backed by the strongest military on the planet.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Republican Party is committed to rebuilding the U.S. military into the strongest on earth, with vast superiority over any other nation or group of nations in the world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The world is dangerous.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"America should be resurgent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 402,
+      "generation_tps": 14.22329838110343,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2025,
+      "prompt_tps": 429.9250783925928,
+      "request_sha256": "4e3302c47dafe612debcd419f0c6c1c637909d237bd7c791efc50527cf06c168",
+      "seconds": 32.994047292042524,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"After nearly eight years of a Democratic Commander-in-Chief who has frequently placed strategic and ideological limitations and shackles on the military, enemies have been emboldened and national security is at great risk.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The country faces a national security crisis, and only by electing a Republican to the White House will law and order be restored to the land and safety be provided to citizens.\", \"claim_types\":[\"policy_position\",\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party believes in peace through strength.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"American exceptionalism \u2014 the notion that American ideas and principles as a nation give the United States a unique place of moral leadership in the world \u2014 requires the United States to retake its natural position as leader of the free world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Tyranny and injustice thrive when America is weakened.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The oppressed have no greater ally than a confident and determined United States, backed by the strongest military on the planet.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Republican Party is committed to rebuilding the U.S. military into the strongest on earth, with vast superiority over any other nation or group of nations in the world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The world is dangerous.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"America should be resurgent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b0987288379ca7e9a80254c421518360865320eb4452bc6ed3604372db04f64e"
+}

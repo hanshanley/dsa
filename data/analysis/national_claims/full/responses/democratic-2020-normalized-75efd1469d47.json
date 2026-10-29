@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 456,
+      "generation_tps": 13.735291140096189,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1497,
+      "prompt_tps": 383.21870691106176,
+      "request_sha256": "f21ef016037046a3c0c3be0007156f3efac4653db5b5d51a8b0283a217bccabb",
+      "seconds": 37.116838624933735,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Trump has undermined alliances by sowing doubts about commitments to diplomatic agreements, mutual defense, democratic values, and strategic purpose.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The alliance system faces its biggest test since the end of the Cold War.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump pushed to bring Russia back into the G7 while lambasting NATO partners.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump ignored intelligence about Russian bounties for killing American troops and other coalition forces in Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump undermined confidence in America's commitment to NATO's Article 5 mutual defense provision.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump threatened to pull troops out of Germany without consultation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump tried to extort South Korean allies to dramatically increase their share of alliance costs during a nuclear crisis on the Korean Peninsula.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will repair alliances.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will reinvent alliances to advance mutual priorities and deal with new challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Alliances are strongest when rooted in shared democratic values, according to Democrats.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats have profound concerns about democratic backsliding in a number of ally states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work with allied democracies to end democracy's global recession.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 469,
+      "generation_tps": 13.72593803640821,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2121,
+      "prompt_tps": 410.82400186839396,
+      "request_sha256": "5d400a0902acf2cc948a927ddcf0fa397c750763ea56f09d13b41bda467be0f6",
+      "seconds": 39.34371345792897,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Trump has undermined alliances by sowing doubts about commitments to diplomatic agreements, mutual defense, democratic values, and strategic purpose.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As a result of President Trump's actions, the alliance system faces its biggest test since the end of the Cold War.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump pushed to bring Russia back into the G7 while lambasting NATO partners.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump ignored intelligence about Russian bounties for killing American troops and other coalition forces in Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump undermined confidence in America's commitment to NATO's Article 5 mutual defense provision.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump threatened to pull troops out of Germany without consultation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"During a nuclear crisis on the Korean Peninsula, President Trump tried to extort South Korean allies to dramatically increase their share of alliance costs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will repair alliances.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will reinvent alliances to advance mutual priorities and deal with new challenges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe alliances are strongest when rooted in shared democratic values.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats have profound concerns about democratic backsliding in a number of ally states.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work with allied democracies to end democracy's global recession.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f21ef016037046a3c0c3be0007156f3efac4653db5b5d51a8b0283a217bccabb"
+}
