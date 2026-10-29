@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 390,
+      "generation_tps": 15.603810476771963,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1454,
+      "prompt_tps": 504.10801226009147,
+      "request_sha256": "46f523ca5b536e94d8911ad534c994d2b0512503a717d56c5bd6fb8f78c69da7",
+      "seconds": 27.88744687498547,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Racist police violence is necessary to maintain the operation of the capitalist system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Police will threaten protests and break up picket lines as part of the fight for a better world.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Police selectively wield their monopoly on violence against Black people and working-class people to protect those with power and privilege.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The pandemic continues to decimate Black and brown communities due to the willful inaction of politicians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Disproportionate deaths from COVID-19 reveal how deep racism runs in society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system is racist, and Black people bear the brunt of the crisis.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Strong and well-resourced communities do not require repression or repressive institutions to keep peace when there is justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for Minneapolis Mayor Frey to stop all state-sanctioned violence and call off the SWAT, the state patrol, and the National Guard.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"People are making themselves heard on the streets after years of being suffocated by policing and poverty and after years of being looted by corporations, landlords, and billionaires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 398,
+      "generation_tps": 15.637739633439423,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2012,
+      "prompt_tps": 465.99457024342087,
+      "request_sha256": "4b1a209a5e6eedeb7d3eb9702a20f4e588e9d9eb3620b9dbc56d1e4df5cf278e",
+      "seconds": 29.779738625045866,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Racist police violence is not incidental to, but necessary to maintain the operation of, the capitalist system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As part of the fight for a better world, police will threaten protests and break up picket lines.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Police selectively wield their monopoly on violence against Black people and working-class people to protect those with power and privilege.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The pandemic continues to decimate Black and brown communities due to the willful inaction of politicians.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Disproportionate deaths from COVID-19 are revealing how deep racism runs in society.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system is racist, and Black people bear the brunt of the crisis.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Strong and well-resourced communities do not require repression or repressive institutions to keep peace when there is justice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for Minneapolis Mayor Frey to stop all state-sanctioned violence and call off the SWAT, the state patrol, and the National Guard.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"People are making themselves heard on the streets after years of being suffocated by policing and poverty and after years of being looted by corporations, landlords, and billionaires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "46f523ca5b536e94d8911ad534c994d2b0512503a717d56c5bd6fb8f78c69da7"
+}

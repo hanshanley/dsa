@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 339,
+      "generation_tps": 15.94757931882631,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1440,
+      "prompt_tps": 450.36048187821757,
+      "request_sha256": "cbeaa077ad3d5608d11a383a76104e76e15e8fbb4c142197f63deb412beefc60",
+      "seconds": 24.465420624939725,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Obama and the Democratic Party maintain an unshakable commitment to Israel's security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A strong and secure Israel is vital to the United States because the United States and Israel share strategic interests and common values.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite budgetary constraints, President Obama has worked with Congress to increase security assistance to Israel every single year since taking office, providing nearly $10 billion in the past three years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has worked to ensure Israel's qualitative military edge in the region.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has deepened defense cooperation with Israel, including funding the Iron Dome system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Iron Dome system helps Israel address threats from rockets and missiles emanating from the Gaza Strip, Lebanon, Syria, and Iran.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama consistently supports Israel's right to defend itself.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama steadfastly opposes any attempt to delegitimize Israel on the world stage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 358,
+      "generation_tps": 15.931249981174028,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1947,
+      "prompt_tps": 470.33232040130184,
+      "request_sha256": "62b23b9f084ed59cddbedde6bc11b1d057369536ca75657310f48609f4114fc0",
+      "seconds": 26.621434249915183,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and the Democratic Party maintain an unshakable commitment to Israel's security.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A strong and secure Israel is vital to the United States not simply because the United States and Israel share strategic interests, but also because they share common values.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Despite budgetary constraints, President Obama has worked with Congress to increase security assistance to Israel every single year since taking office, providing nearly $10 billion in the past three years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has worked to ensure Israel's qualitative military edge in the region.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has deepened defense cooperation, including funding the Iron Dome system, to help Israel address its most pressing threats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Iron Dome system helps Israel address threats from rockets and missiles emanating from the Gaza Strip, Lebanon, Syria, and Iran.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama consistently supports Israel's right to defend itself.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama steadfastly opposes any attempt to delegitimize Israel on the world stage.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cbeaa077ad3d5608d11a383a76104e76e15e8fbb4c142197f63deb412beefc60"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 407,
+      "generation_tps": 15.671337576322609,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1482,
+      "prompt_tps": 498.83074624990513,
+      "request_sha256": "0f7096b08b9ad1d034bbd5b4af71e2d4438133d114e7d57d7a16610205ead86e",
+      "seconds": 28.9511750000529,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the uprisings and protests is ongoing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The police play a role in the deportation system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Black immigrants are disproportionately oppressed by the carceral state.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Black immigrants are frequently erased due to prevailing anti-Blackness.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A favorable ruling was likely influenced by the fear instilled in the ruling class by the constant and powerful presence of people in the streets shouting Black Lives Matter.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA stands by the idea that migration is a human right.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA asserts that no human is illegal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The SCOTUS DACA decision today is celebrated as an unmistakable victory for the generations of immigrants who led the fight and built the movement.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is much more left to win regarding immigration rights.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA will continue to fight to make the SCOTUS DACA decision another step toward a world where people can move freely.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA seeks a world without borders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 345,
+      "generation_tps": 15.646180095219922,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2057,
+      "prompt_tps": 482.5974016234502,
+      "request_sha256": "411232414c8a8267d4916221999dba9a61df10b6ced408990170b23008e0ef20",
+      "seconds": 26.322648542001843,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for the uprisings and protests is ongoing, with acknowledgement of the role the police play in the deportation system and how Black immigrants are disproportionately oppressed by the carceral state and frequently erased due to prevailing anti-Blackness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A favorable ruling was likely influenced by the fear instilled in the ruling class by the constant and powerful presence of people in the streets shouting Black Lives Matter.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA stands by the idea that migration is a human right.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA asserts that no human is illegal.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The SCOTUS DACA decision today is celebrated as an unmistakable victory for the generations of immigrants who led the fight and built the movement.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is much more left to win regarding immigration rights.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA will continue to fight to make the SCOTUS DACA decision another step toward a world where people can move freely.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA seeks a world without borders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "0f7096b08b9ad1d034bbd5b4af71e2d4438133d114e7d57d7a16610205ead86e"
+}

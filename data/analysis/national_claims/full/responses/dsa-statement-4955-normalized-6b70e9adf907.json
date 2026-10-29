@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 385,
+      "generation_tps": 15.46876691881931,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1474,
+      "prompt_tps": 456.46049935301534,
+      "request_sha256": "08fa78049aeee91c7c4669c571b4ae55c3daf95f78c75d51ec1362e57b2b9363",
+      "seconds": 28.129483583848923,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In many transit systems, service has been cut back, leading to overcrowding on buses and at bus stops.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overcrowding on buses and at bus stops is a dangerous situation during the pandemic.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit systems must be able to run at whatever frequency is needed to allow all workers and passengers to maintain the medically recommended safe distance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lack of funding should not be an excuse to endanger public health.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government must step in to provide the entirety of the additional funding transit agencies need to maintain free service at the required frequency to avoid overcrowding and allow all system operators and users to maintain social distancing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Free transit operations are immensely beneficial to communities dealing with high levels of unemployment because of the coronavirus-induced recession.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Households are struggling to pay rent, mortgages, utilities, and other needed expenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"It helps household budgets if transportation is free.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Transit provides an emergency backup means to access employment or search for work if a family automobile is lost or broken.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 522,
+      "generation_tps": 15.381762754430659,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2027,
+      "prompt_tps": 483.4085333849295,
+      "request_sha256": "c1edee7967549aa3f0f1cca6f20e3d15ddc8b1e14f12cc6576f8cb4252043c74",
+      "seconds": 38.14082191698253,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In many transit systems, service has been cut back, leading to overcrowding on buses and at bus stops.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Overcrowding on buses and at bus stops is a dangerous situation during the pandemic.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit systems must be able to run at whatever frequency is needed to allow all workers and passengers to maintain the medically recommended safe distance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Lack of funding should not be an excuse to endanger public health.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The federal government must step in to provide the entirety of the additional funding transit agencies need to maintain free service at the required frequency to avoid overcrowding and allow all system operators and users to maintain social distancing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Free transit operations are immensely beneficial to communities dealing with high levels of unemployment because of the coronavirus-induced recession.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Households are struggling to pay rent, mortgages, utilities, and other needed expenses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"It helps household budgets if transportation is free.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Transit provides an emergency backup means to access employment or search for work if a family automobile is lost or broken.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As of 2018, transit farebox revenue from passengers nationwide was about $20 billion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Conservatively, even if only half of this revenue is foregone, transit agencies nationwide will be in the hole by $10 billion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A sanitized and monitored bus is safer than a possibly contaminated cab or on-demand vehicle which may have served dozens of other passengers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "08fa78049aeee91c7c4669c571b4ae55c3daf95f78c75d51ec1362e57b2b9363"
+}

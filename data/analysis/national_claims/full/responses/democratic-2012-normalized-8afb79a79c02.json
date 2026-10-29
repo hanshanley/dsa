@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 411,
+      "generation_tps": 15.38811831995848,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1527,
+      "prompt_tps": 463.17133825260555,
+      "request_sha256": "f3d8b3b38e24b16602f65509fe3736d637a992d605bb6037140bd156ba84a31d",
+      "seconds": 30.01702416711487,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Obama negotiated and signed the New Strategic Arms Reduction Treaty with Russia, producing cuts in each side's deployed nuclear stockpiles and launchers and allowing the United States to monitor and verify Russia's arsenal.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mitt Romney strongly objected to the New Strategic Arms Reduction Treaty.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President will work with Russia to achieve additional reductions in stockpiles and nuclear delivery vehicles, including tactical and non-deployed nuclear weapons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President will work to ratify the Comprehensive Test Ban Treaty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President will seek a new Fissile Material Cut-off Treaty that prohibits the production of fissile materials intended for use in nuclear weapons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party are committed to strengthening the Nuclear Non-Proliferation Treaty as the bedrock of international efforts to prevent the spread of nuclear weapons to additional countries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will uphold obligations under the Nuclear Non-Proliferation Treaty by reducing stockpiles and recognizing the rights of all rule-abiding states to peaceful nuclear energy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Countries without nuclear weapons must comply with obligations not to develop them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Violators of the Nuclear Non-Proliferation Treaty will face real consequences.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 468,
+      "generation_tps": 15.39475251999876,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2106,
+      "prompt_tps": 493.62712762960496,
+      "request_sha256": "33eb6e4432de7e7169fa803f36e5b0f0496425f5ecb80725f45b11ccff8df0b8",
+      "seconds": 34.67783020902425,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama negotiated and signed the New Strategic Arms Reduction Treaty with Russia, producing cuts in each side's deployed nuclear stockpiles and launchers and allowing the United States to monitor and verify Russia's arsenal.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mitt Romney strongly objected to the New Strategic Arms Reduction Treaty.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President will work with Russia to achieve additional reductions in stockpiles and nuclear delivery vehicles, including tactical and non-deployed nuclear weapons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President will work to ratify the Comprehensive Test Ban Treaty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President will seek a new Fissile Material Cut-off Treaty that prohibits the production of fissile materials intended for use in nuclear weapons.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and the Democratic Party are committed to strengthening the Nuclear Non-Proliferation Treaty as the bedrock of international efforts to prevent the spread of nuclear weapons to additional countries.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will uphold obligations under the Nuclear Non-Proliferation Treaty by reducing stockpiles and recognizing the rights of all rule-abiding states to peaceful nuclear energy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Countries without nuclear weapons must comply with obligations not to develop them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Violators of the Nuclear Non-Proliferation Treaty will face real consequences.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"As long as nuclear weapons exist, the United States will maintain a safe, secure, and effective arsenal to deter any adversary and guarantee the defense of its allies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f3d8b3b38e24b16602f65509fe3736d637a992d605bb6037140bd156ba84a31d"
+}

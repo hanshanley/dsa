@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 281,
+      "generation_tps": 15.816569705724918,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1367,
+      "prompt_tps": 441.51054467993947,
+      "request_sha256": "2a493589ac60626702fb83821ccaafadc1811ccf2eaabee333f5141dbbe7cf2c",
+      "seconds": 20.87252674996853,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President led a global effort to secure all loose nuclear materials around the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President hosted a nuclear security summit in Washington.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Concrete progress has been made in locking down loose nuclear materials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The prospect that al-Qaeda or another terrorist organization might acquire a nuclear device represents an immediate and extreme threat to global security.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will continue to work with international partners to break up black markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will continue to work with international partners to detect and intercept nuclear materials in transit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will continue to work with international partners to use financial tools to disrupt the dangerous trade of nuclear materials.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 169,
+      "generation_tps": 15.782701095112694,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1816,
+      "prompt_tps": 468.4946636343393,
+      "request_sha256": "af68b5cbe51f44aaa8fc1b3e0aee9b25e12d15d82956d3fe12897dde5f99fd69",
+      "seconds": 14.59417699999176,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President led a global effort to secure all loose nuclear materials around the world, hosting a nuclear security summit in Washington, and making concrete progress in locking these materials down.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The prospect that al-Qaeda or another terrorist organization might acquire a nuclear device represents an immediate and extreme threat to global security.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States will continue to work with international partners to break up black markets, detect and intercept nuclear materials in transit, and use financial tools to disrupt this dangerous trade.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2a493589ac60626702fb83821ccaafadc1811ccf2eaabee333f5141dbbe7cf2c"
+}

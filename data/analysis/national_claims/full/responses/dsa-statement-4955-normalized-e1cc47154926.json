@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 334,
+      "generation_tps": 15.551806226501519,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1470,
+      "prompt_tps": 454.87136482035527,
+      "request_sha256": "2d8caaf441ca1c5e432d82a7545ca0c3ee70ff0db402ebc91278cf2461f22ef2",
+      "seconds": 24.72239924990572,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Transit systems nationwide are under severe financial stress because of the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit systems are incurring additional expenditures for frequent sanitization of handrails, benches, seats, and other surfaces that employees and passengers touch frequently.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"On many transit systems, buses are operating free with rear-door entry to protect operators and passengers from being in close proximity, since the farebox is typically located right next to the driver.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As of 2018, transit farebox revenue from passengers nationwide was about $20 billion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"If only half of the $20 billion in transit farebox revenue is foregone, transit agencies nationwide will be in the hole by $10 billion.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"A sanitized and monitored bus is safer than a possibly contaminated cab or on-demand vehicle which may have served dozens of other passengers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Frequent, reliable, free service is essential both for reasons of public health and needed economic relief.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 333,
+      "generation_tps": 15.446609280883164,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1972,
+      "prompt_tps": 482.26834380732134,
+      "request_sha256": "6b5c7bb0004f5fcb73ec03d4531b6930c840099bd3f55962920f2e2d8b2c23f1",
+      "seconds": 25.657875000033528,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Transit systems nationwide are under severe financial stress because of the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit systems are incurring additional expenditures for frequent sanitization of handrails, benches, seats, and other surfaces that employees and passengers touch frequently.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"On many transit systems, buses are operating free with rear-door entry to protect operators and passengers from being in close proximity, since the farebox is typically located right next to the driver.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As of 2018, transit farebox revenue from passengers nationwide was about $20 billion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"If half of the $20 billion in transit farebox revenue is foregone, transit agencies nationwide will be in the hole by $10 billion.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"A sanitized and monitored bus is safer than a possibly contaminated cab or on-demand vehicle which may have served dozens of other passengers.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]},{\"claim_text\":\"Frequent, reliable, free service is essential both for reasons of public health and needed economic relief.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2d8caaf441ca1c5e432d82a7545ca0c3ee70ff0db402ebc91278cf2461f22ef2"
+}

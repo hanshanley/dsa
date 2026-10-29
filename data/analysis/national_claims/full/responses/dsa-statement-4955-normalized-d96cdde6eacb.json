@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 394,
+      "generation_tps": 15.499725356927534,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1510,
+      "prompt_tps": 465.9325580397207,
+      "request_sha256": "686f2589eb655dc6a2e98ef20c217a5a8dedbcb21a8320b0f334ff902b783b6f",
+      "seconds": 28.67201737500727,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Transit agencies must continue to provide paratransit services for seniors, dialysis patients, and people with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Discontinuation of paratransit service because of fiscal challenges during the pandemic would cut vulnerable people off from basic mobility.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Paratransit services cost about 10 times as much per passenger mile as fixed-route transit.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Paratransit services comprise about 9 percent of transit agencies\u2019 budget.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit agencies need additional federal funding to be able to continue vitally needed paratransit service as they face added financial strain because of the coronavirus crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit workers must be considered essential workers, on par with utility, sanitation, and grocery workers, since transit operations need to continue during the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"As essential workers, transit workers must have access to personal protective equipment (PPE) for the duration of the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Providing appropriate PPE to approximately 375,000 transit vehicle operators and vehicle and facility maintenance workers nationwide for a duration of 6 months is essential, which may be a conservative estimate of the duration of the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 398,
+      "generation_tps": 15.669130354849127,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2072,
+      "prompt_tps": 485.3821855873937,
+      "request_sha256": "7f3294c51cdaff84b536cd96d34392928599a7e6668dcd716908ab5a0f5be0b7",
+      "seconds": 29.68046641582623,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Transit agencies must continue to provide paratransit services for seniors, dialysis patients, and people with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Discontinuation of paratransit service because of fiscal challenges during the pandemic would cut vulnerable people off from basic mobility.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Paratransit services cost about 10 times as much per passenger mile as fixed-route transit, by some estimates.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Paratransit services comprise about 9 percent of transit agencies\u2019 budget.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Transit agencies need additional federal funding to be able to continue vitally needed paratransit service as they face added financial strain because of the coronavirus crisis.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since transit operations need to continue during the pandemic, transit workers must be considered essential workers, on par with utility, sanitation, and grocery workers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"As essential workers, transit workers must have access to personal protective equipment (PPE) for the duration of the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Providing appropriate PPE to approximately 375,000 transit vehicle operators and vehicle and facility maintenance workers nationwide for a duration of 6 months is essential, which may be a conservative estimate of the duration of the pandemic.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "686f2589eb655dc6a2e98ef20c217a5a8dedbcb21a8320b0f334ff902b783b6f"
+}

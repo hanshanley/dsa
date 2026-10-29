@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 160,
+      "generation_tps": 15.338757661307453,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1397,
+      "prompt_tps": 439.5418612893728,
+      "request_sha256": "35fcd80050fccbb20367a298ca77fdd875223224bb3b5035d30f548ad3e73546",
+      "seconds": 13.62153216614388,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"A national shutdown must be demanded through continued organizing in workplaces and communities to protect the lives of countless people across the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ruling class is prepared to kill millions in order to protect their profits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will let the ruling class know that we will not die for Wall Street.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We are fighting for socialism in the face of barbarism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 160,
+      "generation_tps": 15.529463845530401,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1833,
+      "prompt_tps": 464.4966132685681,
+      "request_sha256": "6a73a17d190cb11ff60eb04b957552383ae4d517f3b0151f8be44b83d8d6d7aa",
+      "seconds": 14.260424042120576,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Continued organizing in workplaces and communities is necessary to demand a national shutdown in order to protect the lives of countless people across the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ruling class is prepared to kill millions in order to protect their profits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There will be a demonstration that people will not die for Wall Street.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The fight is for socialism in the face of barbarism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 173,
+      "generation_tps": 15.528953287784626,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1725,
+      "prompt_tps": 456.69056648643584,
+      "request_sha256": "910ed4b422231c0b50952cf9f63f24c8733cdaba46f888a92b773633162e4fe6",
+      "seconds": 14.928619999904186,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Continued organizing in workplaces and communities is necessary to demand a national shutdown in order to protect the lives of countless people across the country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ruling class has made it clear that they are prepared to kill millions in order to protect their profits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"People will let the ruling class know that they will not die for Wall Street.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The fight is for socialism in the face of barbarism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "35fcd80050fccbb20367a298ca77fdd875223224bb3b5035d30f548ad3e73546"
+}

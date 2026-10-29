@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 15.698379917241962,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1425,
+      "prompt_tps": 458.2251474710662,
+      "request_sha256": "14e7602129e3d4beb25f3f75ccc869aa55b6b9be97a27baf0e7f04515fb7411f",
+      "seconds": 30.830777042079717,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The President and the Democratic Party recognize America's enduring interest in supporting peace and prosperity in Europe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party recognize the importance of bolstering the strength and vitality of NATO.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"NATO is critical to the security of the continent and beyond.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A decade of military operations in Afghanistan has strengthened NATO's fighting skills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A decade of military operations in Afghanistan has enhanced NATO's ability to cooperate at the political level.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"NATO's response in Libya was timely, unified, and effective.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Improving the ability of NATO countries to operate collectively is needed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Modernizing NATO will be challenging given fiscal constraints on both sides of the Atlantic.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"As large-scale military involvement in Afghanistan winds down, NATO has an opportunity to focus on further developing the capabilities required to address 21st century challenges.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party will continue to urge NATO allies to pool, share, and specialize their capabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party will continue to urge NATO allies to improve their capacity for effective coalition operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 412,
+      "generation_tps": 15.600658263045384,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2028,
+      "prompt_tps": 489.6893439517163,
+      "request_sha256": "8b01c2dc27e11af56c5d6315b93a0c7064a20e6743064f77d6e919031e6782ce",
+      "seconds": 30.560924540972337,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President and the Democratic Party recognize America's enduring interest in supporting peace and prosperity in Europe, as well as bolstering the strength and vitality of NATO.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"NATO is critical to the security of the continent and beyond.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A decade of military operations in Afghanistan has strengthened NATO's fighting skills.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A decade of military operations in Afghanistan has enhanced NATO's ability to cooperate at the political level.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"NATO's response in Libya was timely, unified, and effective.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Improving the ability of NATO countries to operate collectively is needed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Modernizing NATO will be challenging given fiscal constraints on both sides of the Atlantic.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"As large-scale military involvement in Afghanistan winds down, NATO has an opportunity to focus on further developing the capabilities required to address 21st century challenges.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party will continue to urge NATO allies to pool, share, and specialize their capabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President and the Democratic Party will continue to urge NATO allies to improve their capacity for effective coalition operations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "14e7602129e3d4beb25f3f75ccc869aa55b6b9be97a27baf0e7f04515fb7411f"
+}

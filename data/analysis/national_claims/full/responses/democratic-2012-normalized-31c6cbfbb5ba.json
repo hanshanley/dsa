@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 463,
+      "generation_tps": 15.53344446297033,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1475,
+      "prompt_tps": 448.9234720519693,
+      "request_sha256": "22053fb4a013db7ecaa5fa55295d36077c330b76818d9aaaa444103b0a9d85e8",
+      "seconds": 33.10452975006774,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Iran has yet to build a nuclear weapon.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iran has continually failed to meet its obligations under the NPT and several United Nations Security Council resolutions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Iran cannot demonstrate with any credibility that its program is peaceful.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to use all instruments of national power to prevent Iran from acquiring nuclear weapons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"When President Obama took office, Iran was ascendant in the region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"When President Obama took office, the international community was divided over how to address Iran's nuclear violations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama offered engagement with Iran, which was quickly rebuffed by the regime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States exposed Iranian intransigence and rallied the international community.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The administration gained unprecedented agreement for the toughest ever UN sanctions against Iran.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States and other nations imposed additional national financial and energy sanctions against Iran.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Iran is now increasingly isolated.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The regime in Iran faces crippling economic pressure.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Economic pressure on Iran will only build over time.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 347,
+      "generation_tps": 15.352597283929017,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2106,
+      "prompt_tps": 496.27516738790433,
+      "request_sha256": "6554d11895481400ec3ecf116662a229bbb805c8af611e26e1f74c659d4d8a0c",
+      "seconds": 26.856933041941375,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Iran has yet to build a nuclear weapon, but has continually failed to meet its obligations under the NPT and several United Nations Security Council resolutions, and it cannot demonstrate with any credibility that its program is peaceful.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to use all instruments of national power to prevent Iran from acquiring nuclear weapons.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"When President Obama took office, Iran was ascendant in the region, and the international community was divided over how to address Iran's nuclear violations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama offered engagement with Iran, which was quickly rebuffed by the regime, allowing the United States to expose Iranian intransigence and rally the international community as never before.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Working with European allies, Russia, and China, the administration gained unprecedented agreement for the toughest ever UN sanctions against Iran.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States and other nations imposed additional national financial and energy sanctions against Iran.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Iran is now increasingly isolated, and the regime faces crippling economic pressure that will only build over time.\",\n\"claim_types\":[\"factual_assertion\",\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "22053fb4a013db7ecaa5fa55295d36077c330b76818d9aaaa444103b0a9d85e8"
+}

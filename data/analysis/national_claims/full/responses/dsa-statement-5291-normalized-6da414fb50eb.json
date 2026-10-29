@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 492,
+      "generation_tps": 15.79931686292433,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1286,
+      "prompt_tps": 436.8918349600508,
+      "request_sha256": "40f3e9bcc88a548e1293bc6a1f99d1d331973f690f0f2355d14863e63b6fc5f6",
+      "seconds": 34.09420558298007,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Organized labor must embrace the reality that a robust labor movement requires the struggle for Black liberation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The struggle for Black liberation requires solidarity against policing.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The struggle for Black liberation requires solidarity against state-sanctioned violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The struggle for Black liberation requires solidarity against all forms of oppression.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"After pressure from the Montgomery County Fraternal Order of Police, UFCW Local 1994 President Gino Renne fired Maryland House Delegate Gabriel Acevero.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Gabriel Acevero refused to back off from his support of stronger police accountability and transparency policies in Maryland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Gabriel Acevero is the lead sponsor of Anton\u2019s Law, which would enact stronger police accountability and transparency policies throughout Maryland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Gabriel Acevero is a top proponent of repealing Maryland\u2019s Law Enforcement Officers\u2019 Bill of Rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America calls on UFCW Local 1994 to not capitulate to the pressure of the Montgomery County Fraternal Order of Police.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America calls on UFCW Local 1994 to support the demands laid out by its Metro DC chapter.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Cops break up strikes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"An injury to one is an injury to all.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 411,
+      "generation_tps": 15.821430506818153,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1946,
+      "prompt_tps": 471.61247630225074,
+      "request_sha256": "4005ae7e1fd0b72a82561065d1a92dbf34f825128db14ae13782e7c9b018202b",
+      "seconds": 30.113852499984205,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Organized labor must embrace the reality that there is no robust labor movement without the struggle for Black liberation, which requires solidarity against policing, state-sanctioned violence, and all forms of oppression.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"After pressure from the Montgomery County Fraternal Order of Police, UFCW Local 1994 President Gino Renne fired Maryland House Delegate Gabriel Acevero only after Acevero refused to back off from his support of stronger police accountability and transparency policies in Maryland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Gabriel Acevero is the lead sponsor of Anton\u2019s Law, which would enact stronger police accountability and transparency policies throughout the state of Maryland.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Gabriel Acevero is a top proponent of repealing Maryland\u2019s Law Enforcement Officers\u2019 Bill of Rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America calls on UFCW Local 1994 to not capitulate to the pressure of the Montgomery County Fraternal Order of Police.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Democratic Socialists of America calls on UFCW Local 1994 to support the demands laid out by its Metro DC chapter.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"UFCW Local 1994 members should remember that cops break up strikes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"An injury to one is an injury to all.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "40f3e9bcc88a548e1293bc6a1f99d1d331973f690f0f2355d14863e63b6fc5f6"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 251,
+      "generation_tps": 15.962722696108317,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1387,
+      "prompt_tps": 438.1407815009502,
+      "request_sha256": "591b68a16bbaeabc4b142e72eb466d57bc9099c44a0039ad1daaa74e36adc3ec",
+      "seconds": 18.90020833304152,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America will work with its members to enact strategic support for Black organizers and communities across the country in the coming days.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America calls on all of its chapters to support #8toAbolition and how it is best reflected locally.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America has endorsed the weekend of action called for by SixNineteen.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America encourages chapters to join or host actions starting on Juneteenth, 6/19/2020.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America will convene calls to provide instruction.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abolition cannot wait.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 258,
+      "generation_tps": 15.780284172018213,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1806,
+      "prompt_tps": 469.3671194584399,
+      "request_sha256": "1c713866c9789faf0dc81beced2a743b8294e7e214f608b80507b8efdaa84f0c",
+      "seconds": 20.20748404203914,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America will work with its members to enact strategic support for Black organizers and communities across the country in the coming days.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America calls on all of its chapters to support #8toAbolition and how it is best reflected where they are.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America has endorsed the weekend of action called for by SixNineteen.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America encourages chapters to join or host actions starting on Juneteenth, 6/19/2020.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America will convene calls to provide instruction.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abolition cannot wait.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "591b68a16bbaeabc4b142e72eb466d57bc9099c44a0039ad1daaa74e36adc3ec"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 407,
+      "generation_tps": 15.619422948489628,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1391,
+      "prompt_tps": 452.52161247852706,
+      "request_sha256": "915098ec49679b9fd5e9bb4d960d696fac88071b720a24713a03f237a8a35c3c",
+      "seconds": 29.14374295808375,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Many people point to the high percentage of Dreamers who graduate high school and college, who work as teachers and nurses, particularly during the ongoing COVID pandemic, as reasons why they deserve to stay.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America disagree with the idea that Dreamers deserve to stay based on their contributions to society.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The idea of citizenship is rooted in white supremacy and racism, according to the Democratic Socialists of America.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The capitalist class uses citizenship to erode solidarity and sow divisions within the working class, according to the Democratic Socialists of America.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Citizenship status has been used to hinder the political power of Black people, Indigenous people, and immigrants for centuries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The contemporary concept of borders was created by the capitalist class to limit the free movement of people, while capital moves freely.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America challenge the narrative that Dreamers come to the US through no fault of their own.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many immigrate to the US due to capitalist crises and unrest due to U.S. imperialist intervention.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The capitalist system relies on the often low-waged labor and detention and incarceration of immigrants to profit.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 422,
+      "generation_tps": 15.539807313004747,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1966,
+      "prompt_tps": 483.24078577871876,
+      "request_sha256": "edcbd6cfd29825feae2a3def256ba025744e9ea007d31914f9762edc71a672a7",
+      "seconds": 31.235240667127073,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Many point to the high percentage of Dreamers who graduate high school and college, who work as teachers and nurses, particularly during the ongoing COVID pandemic, as reasons why they deserve to stay.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"As socialists, the Democratic Socialists of America disagree that Dreamers deserve to stay based on their contributions to society.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The idea of citizenship is rooted in white supremacy and racism, according to the Democratic Socialists of America.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The capitalist class uses citizenship to erode solidarity and sow divisions within the working class, according to the Democratic Socialists of America.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Citizenship status has been used to hinder the political power of Black people, Indigenous people, and immigrants for centuries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The contemporary concept of borders was created by the capitalist class to limit the free movement of people, while capital moves freely.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America challenge the narrative that Dreamers come to the US through no fault of their own.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Many immigrate to the US due to capitalist crises and unrest due to U.S. imperialist intervention, and end up finding themselves vulnerable to a capitalist system.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The capitalist system relies on the often low-waged labor and detention and incarceration of immigrants to profit.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "915098ec49679b9fd5e9bb4d960d696fac88071b720a24713a03f237a8a35c3c"
+}

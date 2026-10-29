@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 356,
+      "generation_tps": 15.87318192639818,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1487,
+      "prompt_tps": 449.2684828104218,
+      "request_sha256": "8fc885af8e3c63b66f5beb42e844eca20feea0a219909327fffcaaa8edb054ca",
+      "seconds": 25.74830924998969,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican approach to eliminate frivolous lawsuits has advanced in Congress through efforts like the Class Action Fairness Act and in many states through the adoption of medical liability reforms, and Republicans will continue to pursue these efforts on the federal and state level.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trial lawyers are attempting to undermine federal health and safety regulations by allowing state-level trial lawyers to preempt the reasoned judgments of independent experts.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trial lawyers seek to weaken lower-cost dispute resolution alternatives such as mediation and arbitration in order to put more cases into court.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional allies of trial lawyers insert new private causes of action into bills, designed to drag more Americans into court.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"High-profile criminal convictions and prison terms have been obtained for some of the nation's leading class action and personal injury trial lawyers, vindicating Republican warnings about corruption within the trial bar.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All plaintiffs, especially those who must hire personal injury lawyers on a contingency basis, should be protected against abuse by their attorneys.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The attorney-client privilege should be defended as a bulwark in the defense of liberty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 372,
+      "generation_tps": 15.813597614619578,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2011,
+      "prompt_tps": 468.3835204331158,
+      "request_sha256": "5d11e7a5076ca2cbe34a4a442e9924d9305a7d33a0e1f91e9ad235b91d5f5795",
+      "seconds": 27.82778099994175,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican approach to eliminate frivolous lawsuits has advanced in Congress through efforts like the Class Action Fairness Act and in many states through the adoption of medical liability reforms, which Republicans will continue to pursue on the federal and state level.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because their Democratic donees currently control Congress, trial lawyers are attempting to undermine federal health and safety regulations by allowing state-level trial lawyers to preempt the reasoned judgments of independent experts.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trial lawyers seek to weaken lower-cost dispute resolution alternatives such as mediation and arbitration in order to put more cases into court.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In bill after bill, congressional allies of trial lawyers insert new private causes of action\u2014trial lawyer ear-marks\u2014designed to drag more Americans into court.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"High-profile criminal convictions and prison terms have been obtained for some of the nation's leading class action and personal injury trial lawyers, vindicating Republican warnings about corruption within the trial bar.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All plaintiffs, especially those who must hire personal injury lawyers on a contingency basis, should be protected against abuse by their attorneys.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The attorney-client privilege should be defended as a bulwark in the defense of liberty.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8fc885af8e3c63b66f5beb42e844eca20feea0a219909327fffcaaa8edb054ca"
+}

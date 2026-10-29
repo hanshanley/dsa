@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 146,
+      "generation_tps": 16.057950062303195,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1196,
+      "prompt_tps": 428.65596168214944,
+      "request_sha256": "22061cba60954362d444fc0c3245ecce40182c3771a4d70e22c165b5812f42c6",
+      "seconds": 11.891962792025879,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Supreme Court declared the Trump administration\u2019s rescission of DACA arbitrary and capricious for failing to provide necessary reasoned judgment.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Supreme Court\u2019s ruling provides respite for over 650,000 Dreamers and their families.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Attempts to win DAPA and a clean DREAM Act were unsuccessful after more than two years of attempts to dismantle DACA.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 169,
+      "generation_tps": 15.430011244888895,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1510,
+      "prompt_tps": 451.4719874990452,
+      "request_sha256": "7eab851515ce31dabecdc1996f0526ff907bed20e8f0b6f229d32510b88bf8bf",
+      "seconds": 14.306960832793266,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Supreme Court declared the Trump administration\u2019s rescission of DACA (Deferred Action for Childhood Arrivals) arbitrary and capricious for failing to provide necessary \u201creasoned judgment\u201d for its decision.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Supreme Court\u2019s ruling provides a much needed respite for over 650,000 Dreamers and their families.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Attempts to win DAPA, deferral for undocumented parents, and a clean DREAM Act were unsuccessful after more than two years of attempts to dismantle DACA.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "22061cba60954362d444fc0c3245ecce40182c3771a4d70e22c165b5812f42c6"
+}

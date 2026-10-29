@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 417,
+      "generation_tps": 15.72957283303622,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1475,
+      "prompt_tps": 443.02104822203864,
+      "request_sha256": "a4e910403939717de47521af0cdaa502d82c4117a7081411c0ddc649a01fd300",
+      "seconds": 29.85059691593051,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama believes a diplomatic outcome remains the best and most enduring solution regarding Iran.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has made clear the window for diplomacy with Iran will not remain open indefinitely.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"All options, including military force, remain on the table regarding Iran.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has an obligation to use the time and space that exists now to put increasing pressure on the Iranian regime to live up to its obligations and rejoin the community of nations, or face the consequences.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama will continue to confront North Korea, another regime that ignores its international obligations by developing nuclear weapons and missile technology.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"North Korea faces a choice to take verifiable steps toward denuclearization or face increasing isolation and costs from the United States and the international community.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The administration worked with international partners to impose the harshest multilateral sanctions on North Korea in history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The transfer of nuclear weapons or material by North Korea to states or non-state entities would be considered a grave threat to the United States and its allies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States would hold North Korea accountable for the consequences of transferring nuclear weapons or material to states or non-state entities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 423,
+      "generation_tps": 15.579247254853758,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2060,
+      "prompt_tps": 483.90071426429955,
+      "request_sha256": "b4dbfa67c5cae88fa621fc8e81dff2d8443dfa7f2e86ee0ab85818d897e7f461",
+      "seconds": 31.41885408316739,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama believes that a diplomatic outcome remains the best and most enduring solution regarding Iran.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama has made clear that the window for diplomacy with Iran will not remain open indefinitely.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"All options, including military force, remain on the table regarding Iran.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has an obligation to use the time and space that exists now to put increasing pressure on the Iranian regime to live up to its obligations and rejoin the community of nations, or face the consequences.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama will continue to confront North Korea, another regime that ignores its international obligations by developing nuclear weapons and missile technology, with a choice.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"North Korea faces a choice to take verifiable steps toward denuclearization or face increasing isolation and costs from the United States and the international community.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The administration worked with international partners to impose the harshest multilateral sanctions on North Korea in history.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The transfer of nuclear weapons or material by North Korea to states or non-state entities would be considered a grave threat to the United States and its allies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States would hold North Korea accountable for the consequences of transferring nuclear weapons or material to states or non-state entities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a4e910403939717de47521af0cdaa502d82c4117a7081411c0ddc649a01fd300"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 308,
+      "generation_tps": 15.761367673745635,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1194,
+      "prompt_tps": 431.53710381751654,
+      "request_sha256": "967de997f4bfe50f9cc8df53cd59a49f0be63a8f3439d84021418f6f5a34aeb7",
+      "seconds": 22.318608250003308,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America National Political Committee condemns the public execution of George Floyd at the hands of the Minneapolis police.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"George Floyd's murder falls into a deeply entrenched pattern of violence, anti-Blackness, and oppression upheld by policing in the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no justification for George Floyd's murder.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"George Floyd was forced to gasp Eric Garner\u2019s words, \u201cI can\u2019t breathe,\u201d six years after Eric Garner said them.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The event is characterized as white supremacy.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America refuses to euphemize white supremacy by calling it \u201chate\u201d or \u201cfear\u201d.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America will aim to give justice to those who\u2019ve been brutalized by police by naming white supremacy so it can be eradicated.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 309,
+      "generation_tps": 15.76397999119487,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1670,
+      "prompt_tps": 459.5574588426851,
+      "request_sha256": "20a3f5cbb7ee97df78a61345d2a25262e1f8cf5044f26ff18c4cf21f5ed03a0a",
+      "seconds": 23.245710083981976,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The National Political Committee of the Democratic Socialists of America condemns the public execution of George Floyd at the hands of the Minneapolis police.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"George Floyd's murder falls into a deeply entrenched pattern of violence, anti-Blackness, and oppression upheld by policing in this country.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is no justification for George Floyd's murder.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"George Floyd was forced to gasp Eric Garner\u2019s words, \u201cI can\u2019t breathe,\u201d six years after Eric Garner said them.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The event is characterized as white supremacy.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America refuses to euphemize white supremacy by calling it \u201chate\u201d or \u201cfear\u201d.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America will aim to give justice to those who\u2019ve been brutalized by police by naming white supremacy so it can be eradicated.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "967de997f4bfe50f9cc8df53cd59a49f0be63a8f3439d84021418f6f5a34aeb7"
+}

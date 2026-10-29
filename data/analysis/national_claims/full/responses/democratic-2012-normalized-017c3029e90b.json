@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 398,
+      "generation_tps": 15.342333107759131,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1463,
+      "prompt_tps": 452.68028966233214,
+      "request_sha256": "89bbb42bd2626041d0886d532af914a7ff7010cc2f917e5164fb6607b4179a95",
+      "seconds": 29.183912792010233,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States went into Afghanistan after 9/11 to bring justice to those who had attacked the United States and to take away al-Qaeda's safe haven.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"By the time President Obama took office, the United States had lost sight of the goals of bringing justice to those who had attacked the United States and taking away al-Qaeda's safe haven.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama refocused efforts in Afghanistan in 2009, setting the goal of defeating al-Qaeda and denying it an ability to reestablish a safe haven in Afghanistan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deteriorating security situation in Afghanistan, President Obama sent additional resources to reverse the Taliban's momentum and to give the Afghans the time and space to build the capacity of their security forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has accomplished the goal of reversing the Taliban's momentum and giving the Afghans the time and space to build the capacity of their security forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has begun the process of bringing troops home from Afghanistan, including removing 33,000 by September 2012.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With the support of allies, President Obama has outlined a plan to end the war in Afghanistan in 2014.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 429,
+      "generation_tps": 15.222934869300408,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2029,
+      "prompt_tps": 476.63262927271575,
+      "request_sha256": "758e6fd9f5a3e50c497ce5ab858035870d920a485649c4bc82093912a8f09bef",
+      "seconds": 32.449178375070915,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States went into Afghanistan after 9/11 to bring justice to those who had attacked the United States and to take away al-Qaeda's safe haven.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"By the time President Obama took office, the United States had lost sight of the goals of bringing justice to those who had attacked the United States and taking away al-Qaeda's safe haven.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama refocused efforts in Afghanistan in 2009, setting the clear goal of defeating al-Qaeda and denying it an ability to reestablish a safe haven in Afghanistan.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Because of the deteriorating security situation, President Obama sent additional resources to reverse the Taliban's momentum and to give the Afghans the time and space to build the capacity of their security forces.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has accomplished reversing the Taliban's momentum and giving the Afghans the time and space to build the capacity of their security forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States has begun the process of bringing troops home from Afghanistan, including removing 33,000 by September 2012.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"With the support of allies, President Obama has outlined a plan to end the war in Afghanistan in 2014.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The al-Qaeda core in Afghanistan and Pakistan has never been weaker.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "89bbb42bd2626041d0886d532af914a7ff7010cc2f917e5164fb6607b4179a95"
+}
