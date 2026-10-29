@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 345,
+      "generation_tps": 14.485161970116987,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1378,
+      "prompt_tps": 392.8406174955977,
+      "request_sha256": "37d2ee0d63280c95c9fbd03eb7c065c73b3c62b785775dd88e031abdc335c8b3",
+      "seconds": 27.338599791983142,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Climate change is a global emergency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last four years have seen record-breaking storms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last four years have seen devastating wildfires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last four years have seen historic floods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urban and rural communities have suffered tens of billions of dollars in economic losses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dams have failed catastrophically in Michigan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Farmers' crops have been drowned in their fields across the Midwest.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Coastal communities from Florida to New Jersey are facing an existential crisis as a result of sea level rise and stronger storms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thousands of Americans have died.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump callously and willfully denies the science that explains why so many are suffering.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 347,
+      "generation_tps": 14.427698070180247,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1891,
+      "prompt_tps": 392.7404323176253,
+      "request_sha256": "ddca8e359f4969550c2a900623bc0e0d1ccc3aa40da5c0e323b6f4d70f0abde4",
+      "seconds": 28.879095875192434,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Climate change is a global emergency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last four years have seen record-breaking storms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last four years have seen devastating wildfires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last four years have seen historic floods.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Urban and rural communities alike have suffered tens of billions of dollars in economic losses.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Dams have failed catastrophically in Michigan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Farmers' crops have been drowned in their fields across the Midwest.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Coastal communities from Florida to New Jersey are facing an existential crisis as a result of sea level rise and stronger storms.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thousands of Americans have died.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Trump still callously and willfully denies the science that explains why so many are suffering.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "37d2ee0d63280c95c9fbd03eb7c065c73b3c62b785775dd88e031abdc335c8b3"
+}

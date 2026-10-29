@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 14.506508948313197,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1423,
+      "prompt_tps": 390.5974350155949,
+      "request_sha256": "b1798ef2a86610e78650f84e911db0808efa1968b736ab019615048cccef77c7",
+      "seconds": 30.88517937506549,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Gun violence is a public health crisis in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over 100,000 people are shot and nearly 40,000 people die annually from guns in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will support evidence-based programs that prevent gun deaths.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will make mental health care more accessible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will support suicide reduction initiatives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fund interventions to reduce homicides and gun violence in neighborhoods.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will strengthen protections against domestic violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will ensure the Centers for Disease Control and Prevention have sufficient resources to study gun violence as a public health issue.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Centers for Disease Control and Prevention's study of gun violence as a public health issue will include the ongoing health care, mental health, economic, and social costs that can affect survivors and their families for years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats can and will make gun violence a thing of the past.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 401,
+      "generation_tps": 14.601292877682228,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1986,
+      "prompt_tps": 404.9998378496949,
+      "request_sha256": "b07b7f6a8c66a08de32de87360ce6b6fea1d06c16ea37702d046816b206df469",
+      "seconds": 32.37896850006655,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Gun violence is a public health crisis in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Over 100,000 people are shot and nearly 40,000 people die annually from guns in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will support evidence-based programs that prevent gun deaths from occurring in the first place.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will make mental health care more accessible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will support suicide reduction initiatives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will fund interventions to reduce homicides and gun violence in neighborhoods.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will strengthen protections against domestic violence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will ensure the Centers for Disease Control and Prevention have sufficient resources to study gun violence as a public health issue.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Centers for Disease Control and Prevention's study of gun violence as a public health issue will include the ongoing health care, mental health, economic, and social costs that can affect survivors and their families for years.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats can and will make gun violence a thing of the past.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "b1798ef2a86610e78650f84e911db0808efa1968b736ab019615048cccef77c7"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 424,
+      "generation_tps": 15.882480605953653,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1466,
+      "prompt_tps": 450.35590329455533,
+      "request_sha256": "da380646f5959cd5381029da30ffccaf46a83e0ac4e1963933a32b448e27abb6",
+      "seconds": 29.963109917007387,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The right to organize and collectively bargain benefits all workers, but especially workers of color.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unions close pay gaps between white workers and people of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The union wage premium is high for all workers, but remains especially substantial for people of color, including Latinos and Black workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Black workers represent a higher share of the labor movement than the workforce as a whole.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support making racial equity part of the mandate of the Federal Reserve.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work with Congress to direct the Chair of the Federal Reserve to report on the extent of racial employment and wage gaps, and how the central bank is countering them, in addition to monitoring, reporting on, and responding to macroeconomic conditions in general.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will invest in low-income communities, urban and rural areas, and communities of color by strengthening the Community Reinvestment Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will improve federal support and access to credit for women- and minority-owned small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will expand and make permanent the New Markets Tax Credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will double funding for CDFIs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 425,
+      "generation_tps": 15.606950566270685,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2058,
+      "prompt_tps": 501.4422097946747,
+      "request_sha256": "5e4f3e90cc1b252a9b4375dfacfcde4bf4907c8b4089aef19222ce1419e74080",
+      "seconds": 31.346284333150834,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The right to organize and collectively bargain benefits all workers, but especially for workers of color.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unions close pay gaps between white workers and people of color.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The union wage premium is high for all workers, but remains especially substantial for people of color, including Latinos and Black workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Black workers represent a higher share of the labor movement than the workforce as a whole.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support making racial equity part of the mandate of the Federal Reserve.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work with Congress to direct the Chair of the Federal Reserve to report on the extent of racial employment and wage gaps, and how the central bank is countering them, in addition to monitoring, reporting on, and responding to macroeconomic conditions in general.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will invest in low-income communities, urban and rural areas, and communities of color by strengthening the Community Reinvestment Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will improve federal support and access to credit for women- and minority-owned small businesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will expand and make permanent the New Markets Tax Credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will double funding for CDFIs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "da380646f5959cd5381029da30ffccaf46a83e0ac4e1963933a32b448e27abb6"
+}

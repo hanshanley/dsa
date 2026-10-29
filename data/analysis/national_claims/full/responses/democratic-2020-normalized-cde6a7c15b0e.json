@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 289,
+      "generation_tps": 16.016590120991346,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1501,
+      "prompt_tps": 411.1596753050695,
+      "request_sha256": "3d8554dca3e92ce62d31bf66bed58905cdab486cf266d2ba6c4efe194a339d48",
+      "seconds": 21.70677425013855,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe they can end the era of mass incarceration and dramatically reduce the number of Americans held in jails and prisons while continuing to reduce crime rates, which have fallen steadily from their peak nearly three decades ago.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Crime rates have fallen steadily from their peak nearly three decades ago.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe they must break the school-to-prison pipeline that too often relies on arrests and law enforcement to address misbehavior that ought to be handled and deescalated within the school.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support re-issuing federal guidance from the Department of Education and the Department of Justice to prevent the disparate disciplinary treatment of children of color and children with disabilities in school and educational settings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe every school should have sufficient funding to employ guidance counselors, social workers, nurses, or school psychologists to help guarantee age-appropriate and racially equitable student disciplinary practices, rather than turning to police to resolve these issues.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 289,
+      "generation_tps": 15.755193728208965,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1958,
+      "prompt_tps": 472.56646191920885,
+      "request_sha256": "db917816707d6d165108659966cd16cf3a4deb5dbfe4cba17591aa1651462451",
+      "seconds": 22.497570000123233,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe they can end the era of mass incarceration and dramatically reduce the number of Americans held in jails and prisons while continuing to reduce crime rates, which have fallen steadily from their peak nearly three decades ago.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Crime rates have fallen steadily from their peak nearly three decades ago.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe they must break the school-to-prison pipeline that too often relies on arrests and law enforcement to address misbehavior that ought to be handled and deescalated within the school.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats support re-issuing federal guidance from the Department of Education and the Department of Justice to prevent the disparate disciplinary treatment of children of color and children with disabilities in school and educational settings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats believe every school should have sufficient funding to employ guidance counselors, social workers, nurses, or school psychologists to help guarantee age-appropriate and racially equitable student disciplinary practices, rather than turning to police to resolve these issues.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3d8554dca3e92ce62d31bf66bed58905cdab486cf266d2ba6c4efe194a339d48"
+}

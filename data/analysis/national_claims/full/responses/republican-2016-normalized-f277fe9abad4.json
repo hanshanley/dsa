@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 444,
+      "generation_tps": 14.399732067564363,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1530,
+      "prompt_tps": 414.2990908777887,
+      "request_sha256": "1e1b7c9832ab4b0fd2ffd8cf3976ebb6c0c60eddc9bb2062a01fe57272b4a370",
+      "seconds": 34.543913749977946,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The federal government owns or controls over 640 million acres of land in the United States, most of which is in the West.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"These lands are public lands, and the public should have access to them for appropriate activities like hunting, fishing, and recreational shooting.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal ownership or management of land places an economic burden on counties and local communities in terms of lost revenue to pay for things such as schools, police, and emergency services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congress shall immediately pass universal legislation providing for a timely and orderly mechanism requiring the federal government to convey certain federally controlled public lands to states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A call is made upon all national and state leaders and representatives to exert their utmost power and influence to urge the transfer of those lands, identified in the review process, to all willing states for the benefit of the states and the nation as a whole.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Residents of state and local communities know best how to protect the land where they work and live.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Residents practice boots-on-the-ground conservation in their states every day.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for amending the Antiquities Act of 1906 to establish Congress' right to approve the designation of national monuments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for requiring the approval of the state where a national monument is designated or a national park is proposed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 437,
+      "generation_tps": 15.009700447910937,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2091,
+      "prompt_tps": 441.6131594417537,
+      "request_sha256": "501df0808561663e538cdbf95466ef36655607fd8da249147ff7ccb8125eba85",
+      "seconds": 33.864691000198945,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The federal government owns or controls over 640 million acres of land in the United States, most of which is in the West.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The public should have access to federally owned lands for appropriate activities like hunting, fishing, and recreational shooting.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal ownership or management of land places an economic burden on counties and local communities in terms of lost revenue for things such as schools, police, and emergency services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Congress to immediately pass universal legislation providing for a timely and orderly mechanism requiring the federal government to convey certain federally controlled public lands to states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A call for all national and state leaders and representatives to exert their utmost power and influence to urge the transfer of those lands, identified in the review process, to all willing states for the benefit of the states and the nation as a whole.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Residents of state and local communities know best how to protect the land where they work and live.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Residents practice boots-on-the-ground conservation in their states every day.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for amending the Antiquities Act of 1906 to establish Congress' right to approve the designation of national monuments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for requiring the approval of the state where a national monument is designated or a national park is proposed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 484,
+      "generation_tps": 15.33566146858089,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2135,
+      "prompt_tps": 460.23359035622025,
+      "request_sha256": "51ca284317b561d26ece0ec2158334f03235c864db38ede356b311d926498a72",
+      "seconds": 36.21114641614258,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The federal government owns or controls over 640 million acres of land in the United States, most of which is in the West.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The public should have access to federally owned lands for appropriate activities like hunting, fishing, and recreational shooting.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Federal ownership or management of land places an economic burden on counties and local communities in terms of lost revenue to pay for things such as schools, police, and emergency services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Congress to immediately pass universal legislation providing for a timely and orderly mechanism requiring the federal government to convey certain federally controlled public lands to states.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A call upon all national and state leaders and representatives to exert their utmost power and influence to urge the transfer of those lands, identified in the review process, to all willing states for the benefit of the states and the nation as a whole.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Residents of state and local communities know best how to protect the land where they work and live.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Residents practice boots-on-the-ground conservation in their states every day.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for amending the Antiquities Act of 1906 to establish Congress' right to approve the designation of national monuments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for requiring the approval of the state where a national monument is designated or a national park is proposed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It is absurd to think that all that acreage must remain under the absentee ownership or management of official Washington.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1e1b7c9832ab4b0fd2ffd8cf3976ebb6c0c60eddc9bb2062a01fe57272b4a370"
+}

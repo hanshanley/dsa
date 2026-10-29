@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 300,
+      "generation_tps": 15.927345748989724,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1460,
+      "prompt_tps": 459.23770000287624,
+      "request_sha256": "892d1bb785a9d48f92ed9853cf1e0debf3c1835e901411d05702c722b5e49e2e",
+      "seconds": 22.025727750035003,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe the criminal justice system needs to be overhauled from top to bottom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Police brutality is a stain on the soul of the nation, according to Democrats.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of people in the country have good reason to fear losing their lives in a routine traffic stop, while standing on a street corner, or while playing with a toy in a public park.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Black parents must have \\\"the talk\\\" with their children to try to protect them from police officers who are supposed to protect and serve them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than 1,000 people, a quarter of them Black, have been killed by police every year since 2015.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Systematic cuts to public services have left police officers responding to social challenges for which they have not been trained, including homelessness, mental health crises, and the opioid epidemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 312,
+      "generation_tps": 15.922994526905967,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1928,
+      "prompt_tps": 489.8370302660031,
+      "request_sha256": "da600786af46a40d61363577315da6d78e7592b7db30288f7e48f786b96269f5",
+      "seconds": 23.54079420818016,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats believe the criminal justice system needs to be overhauled from top to bottom.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Police brutality is a stain on the soul of the nation, according to Democrats.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of people in the country have good reason to fear they may lose their lives in a routine traffic stop, or while standing on a street corner, or while playing with a toy in a public park.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Black parents must have \\\"the talk\\\" with their children to try to protect them from the very police officers who are supposed to be sworn to protect and serve them.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than 1,000 people, a quarter of them Black, have been killed by police every year since 2015.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Systematic cuts to public services have left police officers on the front lines of responding to social challenges for which they have not been trained, from homelessness to mental health crises to the opioid epidemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "892d1bb785a9d48f92ed9853cf1e0debf3c1835e901411d05702c722b5e49e2e"
+}

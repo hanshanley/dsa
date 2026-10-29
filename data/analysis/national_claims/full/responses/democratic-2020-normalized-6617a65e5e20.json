@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 273,
+      "generation_tps": 15.329843374680326,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1360,
+      "prompt_tps": 449.5647753805374,
+      "request_sha256": "8d917870f7a4f726b5152c424f8c24e737d8734fccc2a8d5001e01f90c424b2c",
+      "seconds": 20.844508374808356,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats are committed to supporting Americans on the autism spectrum and their families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand early childhood screening, particularly in underserved communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will promote equitable treatment of students on the autism spectrum in schools and educational settings.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats are committed to providing equal educational opportunities for students with disabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will eliminate state waiting lists for home and community-based care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will end the institutional bias in Medicaid.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand support for informal caregivers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will enable more individuals with autism to receive support in their homes and communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 229,
+      "generation_tps": 15.358029451335076,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1801,
+      "prompt_tps": 433.29571631487033,
+      "request_sha256": "1d5bef2267c3344921d8e00ad7e670b47c5e728f7d0649281a4371da1c814f5e",
+      "seconds": 19.078512541018426,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to supporting the millions of Americans on the autism spectrum and their families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand early childhood screening, particularly in underserved communities, and promote equitable treatment of students on the autism spectrum in schools and educational settings, in keeping with their commitment to providing equal educational opportunities for students with disabilities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will eliminate state waiting lists for home and community-based care, end the institutional bias in Medicaid, and expand support for informal caregivers.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"By eliminating state waiting lists for home and community-based care, ending the institutional bias in Medicaid, and expanding support for informal caregivers, Democrats will enable more individuals with autism to receive the support they need in their homes and communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8d917870f7a4f726b5152c424f8c24e737d8734fccc2a8d5001e01f90c424b2c"
+}

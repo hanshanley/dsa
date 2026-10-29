@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 316,
+      "generation_tps": 16.051286195953438,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1495,
+      "prompt_tps": 469.3266763140797,
+      "request_sha256": "39267e6b4069cf75d1a38cfd4326be25a6104d9b587370e4b2c113b52aca6183",
+      "seconds": 22.88325445796363,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will launch a sustained, government-wide effort with leadership at the highest levels to eliminate racial, ethnic, gender, and geographic gaps in insurance rates, access to quality care, and health outcomes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will tackle social, economic, and environmental inequities\u2014including poor housing, hunger, inadequate transportation, mass incarceration, air and water pollution, and gun violence\u2014that contribute to worse health outcomes for low-income Americans and people of color.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats can and must fix inequities by expanding coverage, making health care more affordable, and tackling implicit bias in the health care system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will ensure that people with disabilities are never denied coverage based on the use of quality-adjusted life year (QALY) indexes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will ensure federal data collection and analysis is adequately funded and designed to allow for disaggregation by race, gender, sexual orientation, gender identity, geography, disability status, national origin, and other important variables, so that disparities in health coverage, access, and outcomes can be better understood and addressed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 319,
+      "generation_tps": 16.153074159447815,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1979,
+      "prompt_tps": 497.0776228685824,
+      "request_sha256": "84a196342e9cd40f962fc2d9f00d979a66a34e148211b4f8fe8f48f6adbed974",
+      "seconds": 23.740110750077292,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will launch a sustained, government-wide effort, with leadership at the highest levels, to eliminate racial, ethnic, gender, and geographic gaps in insurance rates, access to quality care, and health outcomes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will tackle social, economic, and environmental inequities\u2014including poor housing, hunger, inadequate transportation, mass incarceration, air and water pollution, and gun violence\u2014that contribute to worse health outcomes for low-income Americans and people of color.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats can and must fix these inequities by expanding coverage, making health care more affordable, and tackling implicit bias in the health care system.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will ensure that people with disabilities are never denied coverage based on the use of quality-adjusted life year (QALY) indexes.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will ensure federal data collection and analysis is adequately funded and designed to allow for disaggregation by race, gender, sexual orientation, gender identity, geography, disability status, national origin, and other important variables, so that disparities in health coverage, access, and outcomes can be better understood and addressed.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "39267e6b4069cf75d1a38cfd4326be25a6104d9b587370e4b2c113b52aca6183"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 346,
+      "generation_tps": 16.084651164098744,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1473,
+      "prompt_tps": 459.63471246227084,
+      "request_sha256": "201697a0f2bc275ca5730cdc8c12e4f663b6d98f9db43957416a90aa7d0611bf",
+      "seconds": 24.727615792071447,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Traditional marriage and family, based on marriage between one man and one woman, is the foundation for a free society and has for millennia been entrusted with rearing children and instilling cultural values.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party condemns the Supreme Court's ruling in United States v. Windsor, which wrongly removed the ability of Congress to define marriage policy in federal law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party condemns the Supreme Court's ruling in Obergefell v. Hodges, which Justice Antonin Scalia characterized as a \u201cjudicial Putsch\u201d full of \u201csilly extravagances\u201d that reduced \u201cthe disciplined legal reasoning of John Marshall and Joseph Storey to the mystical aphorisms of a fortune cookie\u201d.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In Obergefell v. Hodges, five unelected lawyers robbed 320 million Americans of their legitimate constitutional authority to define marriage as the union of one man and one woman.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Court twisted the meaning of the Fourteenth Amendment beyond recognition.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports the appointment of justices and judges who respect the constitutional limits on their power and respect the authority of the states to decide fundamental social questions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 349,
+      "generation_tps": 15.936997472130786,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1987,
+      "prompt_tps": 477.0969264871713,
+      "request_sha256": "1e0069c0401524b514224a705d8b9cd1730909cc0ad6a81a82793dbfd48f0837",
+      "seconds": 26.074262333102524,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Traditional marriage and family, based on marriage between one man and one woman, is the foundation for a free society and has for millennia been entrusted with rearing children and instilling cultural values.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party condemns the Supreme Court's ruling in United States v. Windsor, which wrongly removed the ability of Congress to define marriage policy in federal law.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party condemns the Supreme Court's ruling in Obergefell v. Hodges, which Justice Antonin Scalia characterized as a \u201cjudicial Putsch\u201d \u2014 full of \u201csilly extravagances\u201d \u2014 that reduced \u201cthe disciplined legal reasoning of John Marshall and Joseph Storey to the mystical aphorisms of a fortune cookie\u201d.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"In Obergefell v. Hodges, five unelected lawyers robbed 320 million Americans of their legitimate constitutional authority to define marriage as the union of one man and one woman.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Court twisted the meaning of the Fourteenth Amendment beyond recognition.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party supports the appointment of justices and judges who respect the constitutional limits on their power and respect the authority of the states to decide such fundamental social questions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "201697a0f2bc275ca5730cdc8c12e4f663b6d98f9db43957416a90aa7d0611bf"
+}

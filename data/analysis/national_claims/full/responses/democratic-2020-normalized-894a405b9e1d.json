@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 268,
+      "generation_tps": 15.955807374621354,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1435,
+      "prompt_tps": 436.9689317991917,
+      "request_sha256": "e804cf2b424134600fd44b97299121ac5cca484c202ecefbf20e7af2a17d813c",
+      "seconds": 20.091494166990742,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. criminal justice system is failing to keep communities safe and deliver justice.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. has a higher per capita incarceration rate than any other country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Investments in education, jobs, health care, and housing are proven to keep communities safe and prevent crime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. system has criminalized poverty, overpoliced and underserved Black and Latino communities, and cut public services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"U.S. prisons are overcrowded and continue to rely on inhumane methods of punishment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Many U.S. laws continue to punish the formerly incarcerated, erecting barriers to housing, employment, and voting rights for millions of Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 278,
+      "generation_tps": 15.816796661545789,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1871,
+      "prompt_tps": 480.24632451270065,
+      "request_sha256": "a8c8efabb77951dbfd332f2db836f7bbe09aa23d08017cc3734c561bc45f37ad",
+      "seconds": 21.482980500208214,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The U.S. criminal justice system is failing to keep communities safe and failing to deliver justice.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. has more people behind bars per capita than any other country in the world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Evidence-based investments in education, jobs, health care, and housing are proven to keep communities safe and prevent crime from occurring.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. system has criminalized poverty, overpoliced and underserved Black and Latino communities, and cut public services.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"U.S. prisons are overcrowded and continue to rely on inhumane methods of punishment.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Too many U.S. laws continue to punish the formerly incarcerated, erecting barriers to housing, employment, and voting rights for millions of Americans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e804cf2b424134600fd44b97299121ac5cca484c202ecefbf20e7af2a17d813c"
+}

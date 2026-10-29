@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 209,
+      "generation_tps": 15.737759480783561,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1384,
+      "prompt_tps": 417.17715908298106,
+      "request_sha256": "e191c424d3ecbc961c30399a49de56896ef1b772a1f7f806767b564cc0b78820",
+      "seconds": 16.61077050003223,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Demand for health care services far outstrips supply, especially in primary care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will invest in community health worker care-forces around the nation proven to prevent, manage, and better treat chronic illnesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will empower first-time mothers with home visiting.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will close provider gaps and increase diversity in the health care profession by creating a robust pipeline of talent with career ladders for advancement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will increase opportunities for community health workers to come from the communities they serve.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 219,
+      "generation_tps": 15.43882992643085,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2127,
+      "prompt_tps": 474.34633145932145,
+      "request_sha256": "43013b94da5a58634f5fb33e44b331a85c9e6da14b87d7b80fb3e9c6acf10a7b",
+      "seconds": 18.682805958902463,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Demand for health care services far outstrips supply, especially in primary care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in community health worker care-forces around the nation will occur, with the intention of preventing, managing, and better treating chronic illnesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"First-time mothers will be empowered with home visiting.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Provider gaps will be closed and diversity in the health care profession will be increased by creating a robust pipeline of talent with career ladders for advancement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opportunities for community health workers to come from the communities they serve will be increased.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 215,
+      "generation_tps": 15.406941117359155,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1771,
+      "prompt_tps": 438.7419958950424,
+      "request_sha256": "498a6e55fdbd9dc8137909bd938eb631718b04f35d5baab067303c1b1d8520df",
+      "seconds": 18.002172084059566,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Demand for health care services far outstrips supply, especially in primary care.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in community health worker care-forces around the nation will occur to prevent, manage, and better treat chronic illnesses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"First-time mothers will be empowered with home visiting.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Provider gaps will be closed and diversity in the health care profession will be increased by creating a robust pipeline of talent with career ladders for advancement.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opportunities for community health workers to come from the communities they serve will be increased.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e191c424d3ecbc961c30399a49de56896ef1b772a1f7f806767b564cc0b78820"
+}

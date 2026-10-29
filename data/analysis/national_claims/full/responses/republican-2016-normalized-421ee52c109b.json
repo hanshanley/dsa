@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 384,
+      "generation_tps": 16.173256175321185,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1462,
+      "prompt_tps": 478.04585839204293,
+      "request_sha256": "8504e6953dc228d52f1a57ad8023a42498891cc9c45c79c7ff594e4576a23978",
+      "seconds": 26.813030333956704,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"An annual audit of the Federal Reserve's activities is the first step to transparency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The implementation of an annual audit of the Federal Reserve's activities needs to be carefully implemented so that the Federal Reserve remains insulated from political pressures.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Federal Reserve's decisions should be based on sound economic principles and sound money rather than political pressures for easy money and loose credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Reagan established a commission shortly after his inauguration to consider the feasibility of a metallic basis for U.S. currency, determined to crush the double-digit inflation that was part of the Carter Administration's economic legacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A commission was proposed in 2012 to investigate ways to set a fixed value for the dollar, facing the task of cleaning up the wreckage of the current Administration's policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The House of Representatives has passed legislation to set up a commission with Republican leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Enactment of legislation to set up a commission is recommended to the full Congress.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The commission should carefully consider ways to secure the integrity of the currency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 15.986646236610326,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2014,
+      "prompt_tps": 488.9675482802418,
+      "request_sha256": "e131b562faca6709fe17740a84896c3b0b4d0ed7da4eb16c8581b24f2eac54cd",
+      "seconds": 26.585359249962494,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The first step is through an annual audit of the Federal Reserve's activities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Such an annual audit of the Federal Reserve's activities needs to be carefully implemented so that the Federal Reserve remains insulated from political pressures and its decisions are based on sound economic principles and sound money rather than political pressures for easy money and loose credit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Reagan, shortly after his inauguration, established a commission to consider the feasibility of a metallic basis for U.S. currency, determined to crush the double-digit inflation that was part of the Carter Administration's economic legacy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In 2012, facing the task of cleaning up the wreckage of the current Administration's policies, a commission was proposed to investigate ways to set a fixed value for the dollar.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"With Republican leadership, the House of Representatives has passed legislation to set up a commission.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Enactment of legislation to set up a commission is recommended to the full Congress.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The commission should carefully consider ways to secure the integrity of the currency.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8504e6953dc228d52f1a57ad8023a42498891cc9c45c79c7ff594e4576a23978"
+}

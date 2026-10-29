@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 425,
+      "generation_tps": 14.511517047898725,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1426,
+      "prompt_tps": 380.1843863375673,
+      "request_sha256": "83b18bfe1572a63310cb1e3fc909d875a1fc8f30cc99a5c9c0a5f4c0b73f573c",
+      "seconds": 33.05047570820898,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"American energy producers should be free to export their product to foreign markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"International demand exists for liquefied natural gas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Expediting energy export terminals currently blocked by the Administration is supported.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy exports will create high paying jobs throughout the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy exports will reduce the United States' trade deficit.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy exports will grow the United States' economy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy exports will boost the energy security of the United States' allies and trading partners.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to aggressively expand trade opportunities and open new markets for American energy through multilateral and bilateral agreements, whether current, pending, or negotiated in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy is both an economic and national security issue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for enacting policies to increase domestic energy production, including production on public lands.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Increasing domestic energy production will counter market manipulation by OPEC and other nationally-owned oil companies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Increasing domestic energy production will reduce America's vulnerability to energy price volatility.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 442,
+      "generation_tps": 14.429116318272742,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2019,
+      "prompt_tps": 394.865075283864,
+      "request_sha256": "1f765ed0046e157e7d5b200a573b1543bf40688cb6cfe67283388fdb31a64115",
+      "seconds": 35.75837841699831,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for allowing American energy producers to be free to export their product to foreign markets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"There is international demand for liquefied natural gas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for expediting energy export terminals currently blocked by the Administration.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy exports will create high paying jobs throughout the United States.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy exports will reduce the United States' trade deficit.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy exports will grow the United States' economy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy exports will boost the energy security of the United States' allies and trading partners.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to aggressively expanding trade opportunities and opening new markets for American energy through multilateral and bilateral agreements, whether current, pending, or negotiated in the future.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Energy is both an economic and national security issue.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for enacting policies to increase domestic energy production, including production on public lands.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Enacting policies to increase domestic energy production will counter market manipulation by OPEC and other nationally-owned oil companies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Enacting policies to increase domestic energy production will reduce America's vulnerability to energy price volatility.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "83b18bfe1572a63310cb1e3fc909d875a1fc8f30cc99a5c9c0a5f4c0b73f573c"
+}

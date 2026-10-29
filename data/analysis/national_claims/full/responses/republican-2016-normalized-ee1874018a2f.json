@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 345,
+      "generation_tps": 14.389539930459197,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1349,
+      "prompt_tps": 369.07073685674607,
+      "request_sha256": "bea72983c3dcf768f2a08d6920c5278d854289b1268a74193e6b7e890889c3a0",
+      "seconds": 27.64322141604498,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Support for enforcing the original intent of the Clean Water Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the distortion of the Clean Water Act by EPA regulations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the EPA regulating carbon dioxide, as it was not envisioned when Congress passed the Clean Air Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring to Congress the authority to set the National Ambient Air Quality Standards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for modernizing the permitting process under the National Environmental Policy Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prediction that modernizing the permitting process under the National Environmental Policy Act will prevent frivolous lawsuits.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prediction that modernizing the permitting process under the National Environmental Policy Act will prevent thwarting of sorely needed projects.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prediction that modernizing the permitting process under the National Environmental Policy Act will prevent job losses.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Prediction that modernizing the permitting process under the National Environmental Policy Act will prevent strangling of growth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 305,
+      "generation_tps": 14.483474741953888,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1862,
+      "prompt_tps": 393.9706238062704,
+      "request_sha256": "10d3ec1dc0dfd4baf1fe118e8d5159ed0fc3a346a1bc0acaf1305ce4b90c96a9",
+      "seconds": 25.79714695806615,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for enforcing the original intent of the Clean Water Act, not its distortion by EPA regulations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the EPA regulating carbon dioxide, as it was not envisioned when Congress passed the Clean Air Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for restoring to Congress the authority to set the National Ambient Air Quality Standards.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for modernizing the permitting process under the National Environmental Policy Act so it can no longer invite frivolous lawsuits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for modernizing the permitting process under the National Environmental Policy Act so it can no longer thwart sorely needed projects.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for modernizing the permitting process under the National Environmental Policy Act so it can no longer kill jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for modernizing the permitting process under the National Environmental Policy Act so it can no longer strangle growth.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "bea72983c3dcf768f2a08d6920c5278d854289b1268a74193e6b7e890889c3a0"
+}

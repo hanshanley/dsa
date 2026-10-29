@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 230,
+      "generation_tps": 14.423785260518347,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1421,
+      "prompt_tps": 441.6499927161184,
+      "request_sha256": "3a7a1d4a974954e45f40ab515e5324bfcd8c1bec1cbcebfe68501a281f6c9ed5",
+      "seconds": 19.173520791111514,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Communities of color, low-income families, and Indigenous communities have long suffered disproportionate and cumulative harm from air pollution, water pollution, and toxic sites.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of Americans in Flint, Michigan, on the Navajo Nation, and in Lowndes County, Alabama, have been denied access to clean, safe drinking water and even the most basic wastewater infrastructure.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pacific Islanders in Hawaii, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands are losing their traditional way of life as sea level rise submerges their homelands.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The youngest generations of Americans will suffer from the impacts of runaway carbon pollution for decades to come, despite having contributed the least to this calamity.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 279,
+      "generation_tps": 14.074839131120322,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1819,
+      "prompt_tps": 376.5109208753066,
+      "request_sha256": "08e122ad367065e898cbc61daef95ec5032811815c9ecb953aef94dc3187c767",
+      "seconds": 24.66691841604188,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Communities of color, low-income families, and Indigenous communities have long suffered disproportionate and cumulative harm from air pollution, water pollution, and toxic sites.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Millions of Americans have been denied access to clean, safe drinking water and even the most basic wastewater infrastructure in Flint, Michigan, on the Navajo Nation, and in Lowndes County, Alabama.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Pacific Islanders in Hawaii, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands are losing their traditional way of life as sea level rise submerges their homelands.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The youngest generations of Americans stand to lose the most as they suffer from the impacts of runaway carbon pollution for decades to come, despite having contributed the least to this calamity.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The impacts of climate change are not evenly distributed in U.S. society or the U.S. economy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3a7a1d4a974954e45f40ab515e5324bfcd8c1bec1cbcebfe68501a281f6c9ed5"
+}

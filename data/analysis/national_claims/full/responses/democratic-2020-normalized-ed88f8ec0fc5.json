@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 490,
+      "generation_tps": 16.116345432709515,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1436,
+      "prompt_tps": 459.6385070318877,
+      "request_sha256": "348979c0f3a6fb6b8910cac3b9bba4bdb2dff8fdea46710d962244dcea4cd85f",
+      "seconds": 33.53904625005089,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Poverty is not a crime and should not be treated as one.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support eliminating the use of cash bail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe no one should be imprisoned merely for failing to pay fines or fees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe no one should have their driver's licenses revoked for unpaid tickets or simple violations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Equal justice under the law should not be contingent on the ability to pay for quality legal representation.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support increasing funding for public defenders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support increasing funding for the Legal Services Corporation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 1990, the United States has grown by one-third.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The number of cases in federal district courts has increased by 38 percent since 1990.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Federal circuit court filings have risen by 40 percent since 1990.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Federal cases involving a felony defendant are up 60 percent since 1990.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal judiciary has not been expanded to reflect growth in caseloads in nearly 30 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will commit to creating new federal district and circuit judgeships consistent with recommendations from the Judicial Conference.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 495,
+      "generation_tps": 15.996255411370274,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2094,
+      "prompt_tps": 500.0666725791258,
+      "request_sha256": "8fbb8b43a734d6517450b12cacec36a7a38b9a451e6138ee87f218c60d0e4a3b",
+      "seconds": 35.14249149989337,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Poverty is not a crime, and it should not be treated as one.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support eliminating the use of cash bail.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe no one should be imprisoned merely for failing to pay fines or fees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats believe no one should have their driver's licenses revoked for unpaid tickets or simple violations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Equal justice under the law should not be contingent on the ability to pay for quality legal representation.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support increasing funding for public defenders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support increasing funding for the Legal Services Corporation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 1990, the United States has grown by one-third.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The number of cases in federal district courts has increased by 38 percent since 1990.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Federal circuit court filings have risen by 40 percent since 1990.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Federal cases involving a felony defendant are up 60 percent since 1990.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal judiciary has not been expanded to reflect this reality in nearly 30 years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will commit to creating new federal district and circuit judgeships consistent with recommendations from the Judicial Conference.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "348979c0f3a6fb6b8910cac3b9bba4bdb2dff8fdea46710d962244dcea4cd85f"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 278,
+      "generation_tps": 15.675329824271047,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1379,
+      "prompt_tps": 441.4238924499033,
+      "request_sha256": "a904efdff695cd5b83c07fdaa75fb5071e20c65da667ed48a8f7393f329f0746",
+      "seconds": 20.869461708003655,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Democrats believe every woman should be able to access high-quality reproductive health care services, including safe and legal abortion, like the majority of Americans.\", \"claim_types\":[\"factual_assertion\",\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats oppose and will fight to overturn federal and state laws that create barriers to women's reproductive health and rights.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to repeal the Hyde Amendment.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to protect and codify the right to reproductive freedom.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will take action to protect the rights of pregnant women in the workplace.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will require employers to make reasonable accommodations for pregnant and breastfeeding workers and those who have recently given birth.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will enact paid sick days and universal paid family and medical leave.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 283,
+      "generation_tps": 15.579175280432443,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1825,
+      "prompt_tps": 477.6026232035221,
+      "request_sha256": "0482ba2d6b5e504492e4977166de2b5eb9d423e4c22d48f6a2098809054cf382",
+      "seconds": 21.99888408300467,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Like the majority of Americans, Democrats believe every woman should be able to access high-quality reproductive health care services, including safe and legal abortion.\", \"claim_types\":[\"factual_assertion\",\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats oppose and will fight to overturn federal and state laws that create barriers to women's reproductive health and rights.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to repeal the Hyde Amendment.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fight to protect and codify the right to reproductive freedom.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will take action to protect the rights of pregnant women in the workplace.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will require employers to make reasonable accommodations for pregnant and breastfeeding workers and those who have recently given birth.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will enact paid sick days and universal paid family and medical leave.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a904efdff695cd5b83c07fdaa75fb5071e20c65da667ed48a8f7393f329f0746"
+}

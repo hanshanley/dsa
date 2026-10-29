@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 484,
+      "generation_tps": 15.967150579021085,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1538,
+      "prompt_tps": 452.2444081151338,
+      "request_sha256": "2ca9537a77e7ea4ea29be1ef3d905aa4a3d800f42a436ba094a4e796538258b5",
+      "seconds": 33.723923958837986,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Republicans believe the employer-employee relationship of the future will be built upon employee empowerment and workplace flexibility.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans endorse employee stock ownership plans that enable workers to become capitalists, expand the realm of private property, and energize a free enterprise economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Minimum wage is an issue that should be handled at the state and local level.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal workforce is larger and more highly paid than ever.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Taxpayers spend an average of $35,000 a year per federal employee on non-cash benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The average non-cash compensation of the average worker in the private sector is triple the average non-cash compensation of the average federal employee.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Federal employees receive extraordinary pension benefits and vacation time wildly out of line with those of the private sector.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans urge Congress to bring federal compensation and benefits in line with the standards of most American employees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"A Republican administration should streamline personnel procedures to expedite the firing of bad workers, tax cheats, and scammers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The unionization of the federal workforce should be reviewed by the appropriate congressional committees to examine its effects on the cost, quality, and performance of the civil service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Union representatives in the federal workforce should not be paid to conduct union business on the public's time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 509,
+      "generation_tps": 15.95482604692826,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2190,
+      "prompt_tps": 489.6128986638623,
+      "request_sha256": "d15d8e8144dc7a14153021e32c51614eb68f89ef1b50e4bcfe6b8bf86db76d04",
+      "seconds": 36.3864147500135,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Republicans believe that the employer-employee relationship of the future will be built upon employee empowerment and workplace flexibility.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans endorse employee stock ownership plans that enable workers to become capitalists, expand the realm of private property, and energize a free enterprise economy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Minimum wage is an issue that should be handled at the state and local level.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The federal workforce is larger and more highly paid than ever.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Taxpayers spend an average of $35,000 a year per federal employee on non-cash benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The average non-cash compensation of the average worker in the private sector is less than one-third the average non-cash compensation of the average federal employee.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Federal employees receive extraordinary pension benefits and vacation time wildly out of line with those of the private sector.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Republicans urge Congress to bring federal compensation and benefits in line with the standards of most American employees.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"A Republican administration should streamline personnel procedures to expedite the firing of bad workers, tax cheats, and scammers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"The unionization of the federal workforce, first permitted by Democrat presidents in the 1960s, should be reviewed by the appropriate congressional committees to examine its effects on the cost, quality, and performance of the civil service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"Union representatives in the federal workforce should not be paid to conduct union business on the public's time.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2ca9537a77e7ea4ea29be1ef3d905aa4a3d800f42a436ba094a4e796538258b5"
+}

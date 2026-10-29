@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 257,
+      "generation_tps": 16.071107669191758,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1444,
+      "prompt_tps": 473.0450583651958,
+      "request_sha256": "8c6722db5d8a3b1056c9d107b1b9e34bbee934c39a2bfc74ac750f4bffb38de5",
+      "seconds": 19.05553491716273,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"For more than a century, Congress has delegated increasing amounts of legislative authority to executive departments, agencies, and commissions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unelected bureaucrats in the executive branch now write countless rules with the force of law and arbitrarily punish individuals who disobey those rules.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Constitution makes clear that legislative powers were granted to Congress by the people and must therefore remain solely with the people's elected representatives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Congress to begin reclaiming its constitutional powers from the bureaucratic state by requiring that major new federal regulations be approved by Congress before they can take effect, such as through the Regulation Freedom Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for courts to interpret laws as written by Congress rather than allowing executive agencies to rewrite those laws to suit administration priorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 259,
+      "generation_tps": 15.862772968261986,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1869,
+      "prompt_tps": 475.9203920610102,
+      "request_sha256": "8edd5dd81efc9f92ab092220b57c7bc73e10397844fc0e43df136f833ec59f7e",
+      "seconds": 20.26508783386089,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"For more than a century, Congress has delegated increasing amounts of legislative authority to executive departments, agencies, and commissions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unelected bureaucrats in the executive branch now write countless rules with the force of law and arbitrarily punish individuals who disobey those rules.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Constitution makes clear that legislative powers were granted to Congress by the people and must therefore remain solely with the people's elected representatives.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Call on Congress to begin reclaiming its constitutional powers from the bureaucratic state by requiring that major new federal regulations be approved by Congress before they can take effect, such as through the Regulation Freedom Amendment.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affirmation that courts should interpret laws as written by Congress rather than allowing executive agencies to rewrite those laws to suit administration priorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8c6722db5d8a3b1056c9d107b1b9e34bbee934c39a2bfc74ac750f4bffb38de5"
+}

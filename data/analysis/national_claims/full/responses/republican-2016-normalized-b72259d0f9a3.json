@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 410,
+      "generation_tps": 15.702440138093394,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1484,
+      "prompt_tps": 435.1957367180034,
+      "request_sha256": "4f7b6096eaff48d3b308bf3728efbbd810a2a0f4407f525491dd180ee10f0b4c",
+      "seconds": 29.532079209107906,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Government inaction and delay add to the uncertainty farmers and ranchers face.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last Farm Bill took far too long to enact due to a lack of leadership from the current Administration and congressional Democrats, creating instability about farm policy for nearly two years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are dedicated to leading the country forward, which includes getting things done on time, including the next Farm Bill.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats play politics with farm security.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Much of the Democrats' delay concerning the Farm Bill had to do with their efforts to expand welfare through the Supplemental Nutrition Assistance Program (SNAP).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Supplemental Nutrition Assistance Program (SNAP) comprises more than 70 percent of all farm bill spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"During the last eight years of a Democratic Administration, nearly all the work requirements for able-bodied adults, instituted by a 1996 welfare reform, have been removed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for restoring work requirements for able-bodied adults.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for separating the administration of SNAP from the Department of Agriculture to correct a mistake made when the Food Stamp program was first created in 1964.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 412,
+      "generation_tps": 15.730439898467235,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2062,
+      "prompt_tps": 500.5353030825346,
+      "request_sha256": "5d84ec82fd7b42b41b54d22a92daaff9df4bb49a405152f9341c25a89d43f81d",
+      "seconds": 30.32230024994351,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Government inaction and delay add to the uncertainty farmers and ranchers face.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The last Farm Bill took far too long to enact, creating instability about farm policy for nearly two years, due to a lack of leadership from the current Administration and congressional Democrats.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Republicans are dedicated to leading this country forward, which includes getting things done on time, including the next Farm Bill.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats play politics with farm security.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Much of the Democrats' delay concerning the Farm Bill had to do with their efforts to expand welfare through the Supplemental Nutrition Assistance Program (SNAP).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Supplemental Nutrition Assistance Program (SNAP) comprises more than 70 percent of all farm bill spending.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"During the last eight years of a Democratic Administration, nearly all the work requirements for able-bodied adults, instituted by a 1996 welfare reform, have been removed.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for restoring the work requirements for able-bodied adults.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for separating the administration of SNAP from the Department of Agriculture to correct a mistake made when the Food Stamp program was first created in 1964.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4f7b6096eaff48d3b308bf3728efbbd810a2a0f4407f525491dd180ee10f0b4c"
+}

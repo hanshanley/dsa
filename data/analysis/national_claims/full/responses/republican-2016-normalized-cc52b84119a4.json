@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 145,
+      "generation_tps": 15.66000452640655,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1366,
+      "prompt_tps": 424.1292325476563,
+      "request_sha256": "a8b158fd6ad3b4d91be8f3869abc670c5e1f74dfe5740069877b57f7e8816b82",
+      "seconds": 12.492406208068132,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Agriculture is directly impacted by the constant advance in technology.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agriculture now faces a revolution in the generation of \\\"Big Data\\\" \u2014 information produced not only through public oversight of regulations and programs, but also from private business records of farming and ranching operations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for policies to protect the security, privacy, and private ownership of individual farmers' and ranchers' data.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 155,
+      "generation_tps": 15.497597356532037,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1679,
+      "prompt_tps": 416.04999365634905,
+      "request_sha256": "ed5009ea64b51e4566fff64621e7042f69d0502a8911791a4150306ebeac4d4c",
+      "seconds": 14.047991167055443,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Agriculture is directly impacted by the constant advance in technology.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Agriculture now faces a revolution in the generation of \\\"Big Data\\\" \u2014 information produced not only through public oversight of regulations and programs, but also from private business records of farming and ranching operations.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for policies to protect the security, privacy, and most of all, the private ownership of individual farmers' and ranchers' data.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a8b158fd6ad3b4d91be8f3869abc670c5e1f74dfe5740069877b57f7e8816b82"
+}

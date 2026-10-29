@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 15.612043097712977,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1489,
+      "prompt_tps": 436.4523924119358,
+      "request_sha256": "c77f8fac0b6aa2b9d7098dfd38832b72190b368a7bee695001d7fd0ff40a3fd9",
+      "seconds": 31.286015041870996,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"There is a need to protect certain species threatened worldwide with extinction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Endangered Species Act (ESA) should not include species such as gray wolves and other species if these species exist elsewhere in healthy numbers in another state or country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Upsetting the economic viability of an area with an unneeded designation costs jobs and hurts local communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ESA should ensure that the listing of endangered species and the designation of critical habitats are based upon sound science and balance the protection of endangered species with the costs of compliance and the rights of property owners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the last few decades, the ESA has stunted economic development, halted the construction of projects, burdened landowners, and has been used to pursue policy goals inconsistent with the ESA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ESA has had little to no success in the actual recovery of species.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the listing of the lesser prairie chicken.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the potential listing of the sage grouse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Neither the lesser prairie chicken nor the sage grouse has been shown to be in actual danger.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Listings of the lesser prairie chicken and the sage grouse threaten to devastate farmers, ranchers, and oil and gas production.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 440,
+      "generation_tps": 15.467179658474508,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2092,
+      "prompt_tps": 475.20774339522796,
+      "request_sha256": "a37fe2565b35b38790e7629e4473a080d20a1c49fa7cfcefd13b8b79df8f9d69",
+      "seconds": 32.860401917016134,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"There is a need to protect certain species threatened worldwide with extinction.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Endangered Species Act (ESA) should not include species such as gray wolves and other species if these species exist elsewhere in healthy numbers in another state or country.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Upsetting the economic viability of an area with an unneeded designation costs jobs and hurts local communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ESA should ensure that the listing of endangered species and the designation of critical habitats are based upon sound science and balance the protection of endangered species with the costs of compliance and the rights of property owners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Over the last few decades, the ESA has stunted economic development, halted the construction of projects, burdened landowners, and has been used to pursue policy goals inconsistent with the ESA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ESA has had little to no success in the actual recovery of species.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the listing of the lesser prairie chicken.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Opposition to the potential listing of the sage grouse.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Neither the lesser prairie chicken nor the sage grouse has been shown to be in actual danger.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Listings of the lesser prairie chicken and the sage grouse threaten to devastate farmers, ranchers, and oil and gas production.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c77f8fac0b6aa2b9d7098dfd38832b72190b368a7bee695001d7fd0ff40a3fd9"
+}

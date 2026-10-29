@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 203,
+      "generation_tps": 15.873536240670566,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1388,
+      "prompt_tps": 460.40144035098547,
+      "request_sha256": "d3ceebe20c6faa02bc2289e7eeb8e2c24f4f5b678433394a3d67b9dd09753164",
+      "seconds": 15.814231000142172,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Ninth Amendment declares that enumerating certain rights in the Constitution does not deny or disparage others retained by the people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The national government derives its power from the governed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All powers not delegated to the government are retained by the people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Recommendation to legislators to give full force to the principle that powers not delegated to the government are retained by the people.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Welcome citizens determined to reclaim rights ignored or usurped by the federal and intrusive state governments.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 213,
+      "generation_tps": 15.42390167865072,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1759,
+      "prompt_tps": 471.9882424326783,
+      "request_sha256": "84aadbaeb03f004581558e0fd798a3420b2a0516dacc654cc38350d884fe52f3",
+      "seconds": 17.54777070810087,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Ninth Amendment declares that enumerating certain rights in the Constitution does not deny or disparage others retained by the people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The national government derives its power from the governed.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"All powers not delegated to the government are retained by the people.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Recommendation to legislators to give full force to the principle that all powers not delegated to the government are retained by the people.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Welcome citizens who are determined to reclaim the rights of the people that have been ignored or usurped by the federal and intrusive state governments.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d3ceebe20c6faa02bc2289e7eeb8e2c24f4f5b678433394a3d67b9dd09753164"
+}

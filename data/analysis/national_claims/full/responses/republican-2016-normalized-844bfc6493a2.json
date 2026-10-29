@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 331,
+      "generation_tps": 15.76060285507679,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1488,
+      "prompt_tps": 534.5075656051645,
+      "request_sha256": "09867355e50e27ca97f1d7fa84e42b510722751b6446848c16267c3b8a79c1de",
+      "seconds": 23.79506062506698,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Federalism is a cornerstone of the constitutional system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every violation of state sovereignty by federal officials is not merely a transgression of one unit of government against another, but an assault on the liberties of individual Americans.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Constitution gives the federal government very few powers, and they are specifically enumerated.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The states and the people retain authority over all unenumerated powers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source condemns the current Administration's unconstitutional expansion into areas beyond those specifically enumerated, including bullying of state and local governments in matters ranging from voter identification laws to immigration, from healthcare programs to land use decisions, and from forced education curricula to school restroom policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source pledges to restore the proper balance and vertical separation of powers between the federal government and state governments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source encourages states to reinvigorate their traditional role as the laboratories of democracy, propelling the nation forward through local and state innovation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 345,
+      "generation_tps": 15.80973565119695,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1987,
+      "prompt_tps": 477.5586011957457,
+      "request_sha256": "5c6f0533d361695b9630c3dd786dcedfec9c3239d78c09da21e87c54b3176b68",
+      "seconds": 25.993352791992947,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Federalism is a cornerstone of the constitutional system.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every violation of state sovereignty by federal officials is not merely a transgression of one unit of government against another, but an assault on the liberties of individual Americans.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Constitution gives the federal government very few powers, and they are specifically enumerated.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The states and the people retain authority over all unenumerated powers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source condemns the current Administration's unconstitutional expansion into areas beyond those specifically enumerated, including bullying of state and local governments in matters ranging from voter identification laws to immigration, from healthcare programs to land use decisions, and from forced education curricula to school restroom policies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source pledges to restore the proper balance and vertical separation of powers between the federal government and state governments \u2014 the governments closest to, and most reflective of, the American people.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The source encourages states to reinvigorate their traditional role as the laboratories of democracy, propelling the nation forward through local and state innovation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "09867355e50e27ca97f1d7fa84e42b510722751b6446848c16267c3b8a79c1de"
+}

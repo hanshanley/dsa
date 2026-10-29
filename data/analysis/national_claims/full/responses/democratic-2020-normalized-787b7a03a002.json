@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 406,
+      "generation_tps": 14.490051717431795,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1442,
+      "prompt_tps": 383.87092567286834,
+      "request_sha256": "f1c2bef335b3718c433241d9ba4f333da7a08fe4d1779ce8afd57a1db719cc6a",
+      "seconds": 31.788473832886666,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Religious freedom is a core American value and a core value of the Democratic Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect the rights of each American for the free exercise of his or her own religion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It will be the policy of the Democratic Administration to advocate for religious freedom throughout the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats celebrate America's history of religious pluralism and tolerance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats recognize the countless acts of service of faith communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats recognize the paramount importance of maintaining the separation between church and state enshrined in the Constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"During the Trump Administration, many religious communities were victimized by acts of intolerance, bigotry, and violence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will reject the Trump Administration's use of broad religious exemptions to allow businesses, medical providers, social service agencies, and others to discriminate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will increase funding and support for security investments and protection at houses of worship, because everyone should be able to pray without fear.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will confront white nationalist terrorism and combat hate crimes perpetrated against religious minorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 412,
+      "generation_tps": 14.48474123481901,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2016,
+      "prompt_tps": 397.1744303422604,
+      "request_sha256": "02266c9a649bbcebcb3356e30865bcf1cb88b8fdaf3cb63dbfb37861b36b0d71",
+      "seconds": 33.537569207837805,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Religious freedom is a core American value and a core value of the Democratic Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect the rights of each American for the free exercise of his or her own religion.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"It will be the policy of the Democratic Administration to advocate for religious freedom throughout the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats celebrate America's history of religious pluralism and tolerance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats recognize the countless acts of service of faith communities.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats recognize the paramount importance of maintaining the separation between church and state enshrined in the Constitution.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"During the Trump Administration, too many religious communities were victimized by acts of intolerance, bigotry, and violence.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will reject the Trump Administration's use of broad religious exemptions to allow businesses, medical providers, social service agencies, and others to discriminate.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will increase funding and support for security investments and protection at houses of worship, because everyone should be able to pray without fear.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will confront white nationalist terrorism and combat hate crimes perpetrated against religious minorities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f1c2bef335b3718c433241d9ba4f333da7a08fe4d1779ce8afd57a1db719cc6a"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 310,
+      "generation_tps": 15.827159925153397,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1391,
+      "prompt_tps": 458.1516785119142,
+      "request_sha256": "980d8a699053b0e545cca32d1885afa8faeac7d1bfad26bcd669a6f07cc0c8c7",
+      "seconds": 22.633640916086733,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"American Indians, Alaska Natives, and Native Hawaiians are uninsured at higher rates and suffer from disparities in health outcomes, including in the COVID-19 pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make mandatory and work toward full funding for the Indian Health Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work toward full funding for the Native Hawaiian Health Care Improvement Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will help expand access to health care for Native people, including mental health, dental care, and substance use disorder treatments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fully fund contract support costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand insurance coverage for Native Americans (including American Indians, Alaska Natives, and Native Hawaiians) no matter where they live by creating a high-quality, affordable public option on the Affordable Care Act exchanges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make the public option available without premiums to low-income families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 315,
+      "generation_tps": 15.399150785522783,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1869,
+      "prompt_tps": 481.5479253860272,
+      "request_sha256": "80cc4c8280e01a155aa81b0ffef194fe511cff0825eaf2518b2f49573d23b85f",
+      "seconds": 24.3475587090943,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"American Indians, Alaska Natives, and Native Hawaiians are uninsured at higher rates and suffer from disparities in health outcomes, including in the COVID-19 pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make mandatory and work toward full funding for the Indian Health Service.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work toward full funding for the Native Hawaiian Health Care Improvement Act.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will help expand access to health care for Native people, including mental health, dental care, and substance use disorder treatments.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will fully fund contract support costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will expand insurance coverage for Native Americans (including American Indians, Alaska Natives, and Native Hawaiians) no matter where they live by creating a high-quality, affordable public option on the Affordable Care Act exchanges.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will make the public option available without premiums to low-income families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "980d8a699053b0e545cca32d1885afa8faeac7d1bfad26bcd669a6f07cc0c8c7"
+}

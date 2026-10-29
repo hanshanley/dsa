@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 190,
+      "generation_tps": 14.499155296810992,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1402,
+      "prompt_tps": 386.4271284873041,
+      "request_sha256": "86910c32ad6257473a35a327841fc126e62716e3b3781ee904642e3e30814b28",
+      "seconds": 16.744425249984488,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Government should not play favorites among energy producers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taxpayers will not soon forget the current Administration's subsidies to companies that went bankrupt without producing a kilowatt of energy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Department of Defense is required by the current Administration to use its scarce resources to generate 25 percent of its electricity from renewables by 2025, despite operating with slashed budgets during a time of expanding conflict.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Climate change is far from this nation's most pressing national security issue.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 188,
+      "generation_tps": 14.577883427827828,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1760,
+      "prompt_tps": 395.8990482186343,
+      "request_sha256": "84a7b408e8bfe38dbd52179d3bff3db38693ac727c528ee91465e98f8b8f27b0",
+      "seconds": 17.35398670914583,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Government should not play favorites among energy producers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Taxpayers will not soon forget the current Administration's subsidies to companies that went bankrupt without producing a kilowatt of energy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The current Administration requires the Department of Defense, operating with slashed budgets during a time of expanding conflict, to use its scarce resources to generate 25 percent of its electricity from renewables by 2025.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Climate change is far from this nation's most pressing national security issue.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "86910c32ad6257473a35a327841fc126e62716e3b3781ee904642e3e30814b28"
+}

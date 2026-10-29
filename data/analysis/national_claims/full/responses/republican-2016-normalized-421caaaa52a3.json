@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 377,
+      "generation_tps": 14.693675451854585,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1474,
+      "prompt_tps": 392.77909560144815,
+      "request_sha256": "714bd3b94a4b5f92d0fbf25b2628400d29e5ea17309073bfe3b040ff71dc71b4",
+      "seconds": 29.42292245896533,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for congressional Republicans' legislation to modernize pipelines and the electric grid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation to protect the grid from disruption.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation to expedite energy exports.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation to lower energy costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to build on existing policies to find new ways to store electricity.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The world's estimated reserves of oil were 645 billion barrels thirty years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The world's estimated reserves of oil are 1.65 trillion barrels today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for opening public lands and the outer continental shelf to exploration and responsible production, even if these resources will not be immediately developed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for giving authority to state regulators to manage energy resources on federally controlled public lands within their respective borders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that states can best promote economic growth while protecting the environment.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 391,
+      "generation_tps": 14.635460917562416,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 2019,
+      "prompt_tps": 403.1556631522842,
+      "request_sha256": "88b3efe80d27346bd9fc1eb79d6ab7f9abf3ba60fde474cd982d68b4c8258681",
+      "seconds": 31.739604458911344,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for congressional Republicans' legislation that will modernize pipelines and the electric grid.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation that will protect the grid from disruption.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation that will expedite energy exports.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for legislation that will lower energy costs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Commitment to build on those policies to find new ways to store electricity, a breakthrough of extraordinary import.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Thirty years ago, the world's estimated reserves of oil were 645 billion barrels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Today, the world's estimated reserves of oil are 1.65 trillion barrels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for opening public lands and the outer continental shelf to exploration and responsible production, even if these resources will not be immediately developed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Support for Congress to give authority to state regulators to manage energy resources on federally controlled public lands within their respective borders.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Belief that states can best promote economic growth while protecting the environment.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "714bd3b94a4b5f92d0fbf25b2628400d29e5ea17309073bfe3b040ff71dc71b4"
+}

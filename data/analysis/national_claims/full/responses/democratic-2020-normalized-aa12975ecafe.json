@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 274,
+      "generation_tps": 15.855932495394548,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1427,
+      "prompt_tps": 457.92155758009324,
+      "request_sha256": "754f6111f929377e313897b8865eebbc0ade756dc7841e1359e480382f52ce0b",
+      "seconds": 20.40765233291313,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Quality, affordable comprehensive health care, medically accurate, LGBTQ+ inclusive, age-appropriate sex education, and the full range of family planning services are all essential to ensuring that people can decide if, when, and how to start a family.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Affordable Care Act prohibits discrimination in health care on the basis of sex.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Affordable Care Act requires insurers to cover prescription contraceptives at no cost.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Affordable Care Act has significantly reduced teen and unintended pregnancies by making it easier to decide whether, when, and how to have a child.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect the rights of all people to make personal health care decisions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will reject the Trump Administration's use of broad exemptions to allow medical providers, employers, and others to discriminate.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 279,
+      "generation_tps": 15.782767422824302,
+      "peak_memory": 33.818021642,
+      "prompt_tokens": 1869,
+      "prompt_tps": 477.759382668981,
+      "request_sha256": "18ae986331efce22d685e2c37ac07648b06ddbad6368f50ba49833676e8ed3a1",
+      "seconds": 21.59943270799704,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Quality, affordable comprehensive health care, medically accurate, LGBTQ+ inclusive, age-appropriate sex education, and the full range of family planning services are all essential to ensuring that people can decide if, when, and how to start a family.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Affordable Care Act prohibits discrimination in health care on the basis of sex.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Affordable Care Act requires insurers to cover prescription contraceptives at no cost.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Affordable Care Act has significantly reduced teen and unintended pregnancies by making it easier to decide whether, when, and how to have a child.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will protect the rights of all people to make personal health care decisions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will reject the Trump Administration's use of broad exemptions to allow medical providers, employers, and others to discriminate.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "754f6111f929377e313897b8865eebbc0ade756dc7841e1359e480382f52ce0b"
+}
