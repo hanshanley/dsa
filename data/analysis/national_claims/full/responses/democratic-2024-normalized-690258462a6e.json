@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 324,
+      "generation_tps": 16.270290740678206,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1491,
+      "prompt_tps": 479.1169659384053,
+      "request_sha256": "a100bf9d3b30db46cb0195af036d24464bb1dfccb76bd66740f8d93406d5fad3",
+      "seconds": 23.035646540811285,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"In 2018, when Iranian-backed militias attacked the U.S. consulate in Basra, Iraq, the then-U.S. administration responded by closing the U.S. diplomatic facility.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In June 2019, when Iran shot down a U.S. surveillance aircraft operating in international airspace above the Straits of Hormuz, the then-U.S. administration responded by tweet and then called off any actual retaliation.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In September 2019, when Iranian-backed groups threatened global energy markets by attacking Saudi oil infrastructure, the then-U.S. administration failed to respond against Iran or its proxies.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In January 2020, when Iran directly launched ballistic missiles against U.S. troops in western Iraq, the then-U.S. administration mocked the resulting Traumatic Brain Injuries suffered by American servicemembers as mere \\\"headaches\\\" and took no action.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The then-U.S. administration's response to Iranian aggression during its presidency was characterized as feckless and weak.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 355,
+      "generation_tps": 16.233199591357614,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1983,
+      "prompt_tps": 508.48026955959466,
+      "request_sha256": "766209f76786f08d46a11a006e5c9fcbe10c54ad74985feec6afc68e8942a15e",
+      "seconds": 25.778300624806434,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"In 2018, when Iranian-backed militias repeatedly attacked the U.S. consulate in Basra, Iraq, the then-U.S. administration responded by closing the U.S. diplomatic facility.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In June 2019, when Iran shot down a U.S. surveillance aircraft operating in international airspace above the Straits of Hormuz, the then-U.S. administration responded by tweet and then abruptly called off any actual retaliation, causing confusion and concern among its own national security team.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In September 2019, when Iranian-backed groups threatened global energy markets by attacking Saudi oil infrastructure, the then-U.S. administration failed to respond against Iran or its proxies.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In January 2020, when Iran, for the first and only time in its history, directly launched ballistic missiles against U.S. troops in western Iraq, the then-U.S. administration mocked the resulting Traumatic Brain Injuries suffered by dozens of American servicemembers as mere \\\"headaches\\\" and took no action.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The then-U.S. administration's response to Iranian aggression during its presidency was characterized as feckless and weak.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "a100bf9d3b30db46cb0195af036d24464bb1dfccb76bd66740f8d93406d5fad3"
+}

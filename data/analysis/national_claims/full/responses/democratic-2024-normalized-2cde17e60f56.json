@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 350,
+      "generation_tps": 16.14942279624001,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1507,
+      "prompt_tps": 487.2507700057919,
+      "request_sha256": "fdaab0b16f9c9fca0d63f23f37a5768f738bbc23cd623e10db3740dcedd0e26b",
+      "seconds": 24.776171792065725,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden became the first President to recognize the Armenian genocide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Russia is enlisting North Korea, Iran and China in its efforts to attack freedom across the world through military equipment sales and economic partnerships.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is countering Russia's disruptive actions no matter where they occur by strengthening alliances in Europe and the Indo-Pacific and strengthening connections among allies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States invited Indo-Pacific allies to participate in the NATO Summits in Madrid, Vilnius, and Washington, DC.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump repeatedly threatened to withdraw America from the world's most powerful military alliance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trump invited Vladimir Putin to \\\"do whatever the hell he wants\\\" to any NATO country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trump attempted to help his own political prospects by extorting President Zelenskyy, including by withholding much needed security assistance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trump is supporting a policy of pushing Ukraine to surrender sovereign territory to Putin.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 351,
+      "generation_tps": 16.117150130891083,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2025,
+      "prompt_tps": 491.92662377959516,
+      "request_sha256": "6e9ab267f91bb68a802d99c91660fede6e072e4de4d9e8f7e5ac49341222ca7b",
+      "seconds": 25.905513084027916,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden became the first President to recognize the Armenian genocide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Russia is enlisting North Korea, Iran and China in its efforts to attack freedom across the world through military equipment sales and economic partnerships.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"By strengthening alliances in Europe and the Indo-Pacific and strengthening connections among allies, the United States is countering Russia's disruptive actions no matter where they occur.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States invited Indo-Pacific allies to participate in the NATO Summits in Madrid, Vilnius, and Washington, DC.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump repeatedly threatened to withdraw America from the world's most powerful military alliance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trump invited Vladimir Putin to \\\"do whatever the hell he wants\\\" to any NATO country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trump attempted to help his own political prospects by extorting President Zelenskyy, including by withholding much needed security assistance.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Trump is supporting a policy of pushing Ukraine to surrender sovereign territory to Putin.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fdaab0b16f9c9fca0d63f23f37a5768f738bbc23cd623e10db3740dcedd0e26b"
+}

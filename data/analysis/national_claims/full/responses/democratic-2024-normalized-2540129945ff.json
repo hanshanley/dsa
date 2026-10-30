@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 214,
+      "generation_tps": 16.19343200788544,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1386,
+      "prompt_tps": 462.8292035718363,
+      "request_sha256": "5c6f046a6686f0eef52a4683e921a04a892f5df114afb381684defd0dbdcb535",
+      "seconds": 16.22016541706398,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Biden, Vice President Harris, and Democrats have made historic investments in Washington, D.C., Puerto Rico, the U.S. Virgin Islands, Guam, the Commonwealth of the Northern Mariana Islands, and American Samoa, delivering billions for infrastructure, semiconductor, clean energy, and transportation projects, and creating thousands of good jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats reject the unequal treatment of residents of D.C., Puerto Rico, and the U.S. territories.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats unequivocally support statehood for D.C., which its residents overwhelmingly support.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Republicans blocked statehood for D.C. from even getting a vote in the Senate.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 198,
+      "generation_tps": 16.278729671354707,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1768,
+      "prompt_tps": 499.5767926122702,
+      "request_sha256": "baa9cb02d963dc8eb06bb47c93edbc07dc603a28aab4170ba92224f605ab9a6c",
+      "seconds": 15.712218124885112,
+      "stage": "source_fidelity_revision",
+      "text": "{\"claims\":[{\"claim_text\":\"President Biden, Vice President Harris, and Democrats have made historic investments in Washington, D.C., Puerto Rico, the U.S. Virgin Islands, Guam, the Commonwealth of the Northern Mariana Islands, and American Samoa, delivering billions for infrastructure, semiconductor, clean energy, and transportation projects, and creating thousands of good jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats reject the unequal treatment of residents of D.C., Puerto Rico, and the U.S. territories.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats unequivocally support statehood for D.C., which its residents overwhelmingly support, but Republicans blocked statehood for D.C. from even getting a vote in the Senate.\", \"claim_types\":[\"policy_position\",\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "5c6f046a6686f0eef52a4683e921a04a892f5df114afb381684defd0dbdcb535"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 408,
+      "generation_tps": 16.228956419823717,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1468,
+      "prompt_tps": 483.3300650735052,
+      "request_sha256": "1cfd984e71268511efcea472cac2724ff9c57ebfccc42d5b3da29821c5ad599a",
+      "seconds": 28.1875275420025,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden has taken steps to preserve and expand Temporary Protected Status (TPS) for individuals from countries experiencing armed conflicts, natural disasters, or other crises.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals with Temporary Protected Status (TPS) are given authorization to live and work in the United States without fear of deportation for a temporary period.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 2021, the Department of Homeland Security (DHS) has added Afghanistan, Cameroon, Ethiopia, Myanmar, Ukraine and Venezuela to the list of TPS-eligible countries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DHS has also extended TPS for immigrants from most countries that were already covered by TPS.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DHS has extended TPS for countries that Trump attempted to terminate.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Congress to pass legislation to provide a pathway to citizenship for Dreamers, farmworkers, careworkers, and other long-term undocumented individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Dreamers, farmworkers, careworkers, and other long-term undocumented individuals contribute to the country by paying taxes and contributing to their local economies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In his second term, President Biden will continue pressing Congress to pass legislation to provide a pathway to citizenship for Dreamers, farmworkers, careworkers, and other long-term undocumented individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 422,
+      "generation_tps": 16.189510755098365,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2044,
+      "prompt_tps": 509.17812365385225,
+      "request_sha256": "310c7a522fe33b4ea8c336e08003ade607681f9ccdf76309c8801cd26426909b",
+      "seconds": 30.09046133304946,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden has taken steps to preserve and expand Temporary Protected Status (TPS) for individuals from countries experiencing armed conflicts, natural disasters, or other crises.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals from countries experiencing armed conflicts, natural disasters, or other crises are given authorization to live and work in the United States without fear of deportation for a temporary period through Temporary Protected Status (TPS).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since 2021, the Department of Homeland Security (DHS) has added Afghanistan, Cameroon, Ethiopia, Myanmar, Ukraine and Venezuela to the list of TPS-eligible countries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DHS has also extended TPS for immigrants from most countries that were already covered by TPS.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DHS has extended TPS for countries that the Trump administration attempted to terminate.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for Congress to pass legislation to provide a pathway to citizenship for Dreamers, farmworkers, careworkers, and other long-term undocumented individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Dreamers, farmworkers, careworkers, and other long-term undocumented individuals contribute to the country by paying taxes and contributing to their local economies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"In his second term, President Biden will continue pressing Congress to pass legislation to provide a pathway to citizenship for Dreamers, farmworkers, careworkers, and other long-term undocumented individuals.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1cfd984e71268511efcea472cac2724ff9c57ebfccc42d5b3da29821c5ad599a"
+}

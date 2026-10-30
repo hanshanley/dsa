@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 323,
+      "generation_tps": 15.626213648442448,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1455,
+      "prompt_tps": 467.77171437792066,
+      "request_sha256": "7b894c851d5883ef0cb10817fab10e29ce926c52e98e554fe13d6d5259f2e9b4",
+      "seconds": 23.79297683411278,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to ending generations of environmental injustices that have left communities of color bearing the brunt of toxic pollution and climate change, decaying infrastructure, and inadequate services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is delivering on its Justice40 Initiative to deliver 40 percent of the overall benefits of investments in infrastructure, clean energy and manufacturing investments to disadvantaged communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the country is replacing every toxic lead pipe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Superfund cleanups are being accelerated.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The country is cracking down on polluters that have poisoned neighborhoods' air, water, and soil.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every community will benefit from home energy tax credits, low-cost solar panels, and other programs that can save families money while reducing emissions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The country is investing in climate-resilient infrastructure that will protect every part of the country from extreme weather and other consequences of climate change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 323,
+      "generation_tps": 16.100763095303364,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1946,
+      "prompt_tps": 505.48510982843106,
+      "request_sha256": "c67f110de6d3bc2eaa3c779000c7f247e7aa3c7bb4056bf64796f1c594474242",
+      "seconds": 23.92245562491007,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats are committed to ending generations of environmental injustices that have left communities of color bearing the brunt of toxic pollution and climate change, decaying infrastructure, and inadequate services.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is delivering on its Justice40 Initiative to deliver 40 percent of the overall benefits of investments in infrastructure, clean energy and manufacturing investments to disadvantaged communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today, the country is replacing every toxic lead pipe.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Superfund cleanups are being accelerated.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The country is cracking down on polluters that have poisoned neighborhoods' air, water, and soil.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Every community will benefit from home energy tax credits, low-cost solar panels, and other programs that can save families money while reducing emissions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The country is investing in climate-resilient infrastructure that will protect every part of the country from extreme weather and other consequences of climate change.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "7b894c851d5883ef0cb10817fab10e29ce926c52e98e554fe13d6d5259f2e9b4"
+}

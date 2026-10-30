@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 367,
+      "generation_tps": 16.213261764703695,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1421,
+      "prompt_tps": 468.60642671550175,
+      "request_sha256": "2c9075d99e59fb3efa63e13acdfc7b2d5295e1c22bb244a0259b4c7e52b618b3",
+      "seconds": 25.678227999946102,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Congress failed to act on border security and immigration reform because Republicans, led by Donald Trump, preferred political maneuvering to problem-solving.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump's plans for a second term will devastate the economy and separate families.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has stated that, if elected, he will immediately deport millions of undocumented immigrants, including those who have lived in and contributed to the country for years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump and his allies have promised to end birthright citizenship for the children of undocumented individuals.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump and his allies have promised to ignore the Constitution and Supreme Court precedent regarding immigration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump and his allies have promised to bar undocumented children from public schools.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump and his allies have promised to again separate children from their families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump's plans are out of line with American values.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans are currently blocking President Biden's bipartisan border security proposals because they lack the courage to stand up to Donald Trump.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 371,
+      "generation_tps": 16.180927895826784,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1956,
+      "prompt_tps": 502.00176735089974,
+      "request_sha256": "5228d044fa394b558e2d6d4c689a8f9e364696253acc58bc0d74db54aec0d183",
+      "seconds": 26.83428612491116,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Congress failed to act because Republicans, led by Donald Trump, would rather play politics than solve problems.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump's plans for a second term will devastate the economy and tear families apart.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has said that if he's elected, he'll move to immediately deport millions of undocumented immigrants, including those who have lived in and contributed to this country for years.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump and his allies have promised to end birthright citizenship for the children of undocumented individuals.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump and his allies have promised to ignore the Constitution and Supreme Court precedent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump and his allies have promised to bar undocumented children from public schools.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump and his allies have promised to once again separate children from their families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump's plans are out of line with American values.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Congressional Republicans are currently blocking President Biden's bipartisan border security proposals because they lack the courage to stand up to Donald Trump.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2c9075d99e59fb3efa63e13acdfc7b2d5295e1c22bb244a0259b4c7e52b618b3"
+}

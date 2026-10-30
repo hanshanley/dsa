@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 359,
+      "generation_tps": 16.09535338694846,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1442,
+      "prompt_tps": 480.642728089169,
+      "request_sha256": "10a3ad6d64d42e7847fa51efe799f7c34f8bd521b08d128a3a4a36bb12a4c419",
+      "seconds": 25.315100125037134,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"American strength at home and leadership in the world depends on America remaining at the forefront of technological innovation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will work with governments, experts, and members of the private sector to ensure that artificial intelligence and other innovative technologies lead to progress without creating new national security risks and societal divisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will promote innovation and shared rules for global technologies, building on joint technology initiatives with the European Union, India, Singapore, South Korea, and other partners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump was the first President of the United States to leave office having fewer jobs in his Administration than when he became President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Biden's targeted tariffs on China will promote U.S. growth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump's plan to increase taxes on imports from allies, like European cancer drugs and foods from Mexico and Latin America, will fall hard on American families.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump has consistently failed to help American workers because he has always put himself first.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has and always will put American workers first.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 364,
+      "generation_tps": 16.193535857965877,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1969,
+      "prompt_tps": 497.9290414285454,
+      "request_sha256": "bf03a1b766bc8f6972e839b96d7411236c52822bfa2e8e22a252ca57ad39a175",
+      "seconds": 26.444604374933988,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"American strength at home and leadership in the world depends on America remaining at the forefront of technological innovation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will work with governments, experts, and members of the private sector to ensure that artificial intelligence and other innovative technologies lead to progress without creating new national security risks and societal divisions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will promote innovation and shared rules for global technologies, building on joint technology initiatives with the European Union, India, Singapore, South Korea, and other partners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump was the first President of the United States to leave office having fewer jobs in his Administration than when he became President.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Biden's targeted tariffs on China will promote U.S. growth.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump's plan to increase taxes on imports from allies, like European cancer drugs and foods from Mexico and Latin America, will fall hard on American families.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump has consistently failed to help American workers because he has always put himself first.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has and always will put American workers first.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "10a3ad6d64d42e7847fa51efe799f7c34f8bd521b08d128a3a4a36bb12a4c419"
+}

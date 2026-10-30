@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 395,
+      "generation_tps": 16.257869009629008,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1405,
+      "prompt_tps": 483.0036917279845,
+      "request_sha256": "d6c25de0aa0cc9f8c05792a98b689196258ca59870c5ad1d296aa4785e9895eb",
+      "seconds": 27.214727000100538,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Biden has never turned his back on the military.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In his second term, President Biden will continue to invest in upgrading to next-generation weapon systems.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In his second term, President Biden will continue to invest in cutting-edge training opportunities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In his second term, President Biden will continue to invest in deterrence capabilities such as the submarine force and the nuclear triad.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to address cyber threats by bolstering the capacity of intelligence communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will lead the development of rules of the road for technologies like artificial intelligence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will secure additional pay raises for service members.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will secure accessible and affordable childcare for military families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will secure good-paying job opportunities for military spouses.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will secure effective suicide and sexual assault prevention programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will secure benefits for veterans and their families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 415,
+      "generation_tps": 16.222386428340176,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1968,
+      "prompt_tps": 507.3201052912851,
+      "request_sha256": "aafae140c35da66ec3110c6a9640b62fb7366716217d23e24bda75666c37abdc",
+      "seconds": 29.470959999831393,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden has never and will never turn his back on the military.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"In his second term, President Biden will continue to invest in upgrading to next-generation weapon systems.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In his second term, President Biden will continue to invest in cutting-edge training opportunities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In his second term, President Biden will continue to invest in deterrence capabilities such as the submarine force and the nuclear triad.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to address cyber threats by bolstering the capacity of intelligence communities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to lead the development of rules of the road for technologies like artificial intelligence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to secure additional pay raises for service members.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to secure accessible and affordable childcare for military families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to secure good-paying job opportunities for military spouses.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to secure effective suicide and sexual assault prevention programs.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to secure benefits for veterans and their families.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d6c25de0aa0cc9f8c05792a98b689196258ca59870c5ad1d296aa4785e9895eb"
+}

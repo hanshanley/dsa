@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 367,
+      "generation_tps": 16.156156338674972,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1437,
+      "prompt_tps": 538.2350468616426,
+      "request_sha256": "ed5f90cfedfb54f4b91a037712ebca5128b0e8a2e9ce41421947c330fcd325eb",
+      "seconds": 25.394811999984086,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Biden is committed to safeguarding freedom of the press.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has called for the immediate and unconditional release of journalists who have been locked up abroad for doing their jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden is taking action to combat crimes against journalists.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden is taking action to strengthen security for independent media outlets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden is taking action to provide legal support for investigative journalists around the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden's Administration brought together a coalition to counter proliferation and misuse of commercial spyware.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats reject Trump's denigration of the free press and recognize its importance to society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will strengthen media ownership rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will direct federal antitrust agencies to investigate media mergers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will appoint an independent media professional to head the U.S. Agency for Global Media.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 372,
+      "generation_tps": 16.13354921254765,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1972,
+      "prompt_tps": 502.70561155511797,
+      "request_sha256": "712b093fd1b82e2b834ced798560c7af7e1519a3261bafb4f8e2d8e328e4b11e",
+      "seconds": 26.990385791985318,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden is committed to safeguarding freedom of the press.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has called for the immediate and unconditional release of journalists who have been locked up abroad for doing their jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden is taking action to combat crimes against journalists.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden is taking action to strengthen security for independent media outlets.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden is taking action to provide legal support for investigative journalists around the world.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden's Administration brought together a coalition to counter proliferation and misuse of commercial spyware.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats reject Trump's denigration of the free press and recognize its importance to society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will strengthen media ownership rules.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will direct federal antitrust agencies to investigate media mergers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will appoint an independent media professional to head the U.S. Agency for Global Media.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ed5f90cfedfb54f4b91a037712ebca5128b0e8a2e9ce41421947c330fcd325eb"
+}

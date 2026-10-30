@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 281,
+      "generation_tps": 16.29332429159819,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1392,
+      "prompt_tps": 479.987110690109,
+      "request_sha256": "1196e790763441f157f95a2e6a2ac13ba59e60b04b34a6f7c75e9bbf2e02a014",
+      "seconds": 20.156353125115857,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By the end of the century, an estimated 40 percent of the world's population will live in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has strengthened partnerships in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"African nations play a critical role in global stability and economic development.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration successfully advocated for the African Union to become a permanent member of the G20.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden hosted Kenyan President Ruto for a state visit, the first by an African Head of State since 2008.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S.-Kenya partnership is grounded in mutual respect.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden's administration is pursuing a strategy of strengthening bilateral ties across the continent.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 286,
+      "generation_tps": 16.279344327493856,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1841,
+      "prompt_tps": 503.94169219975515,
+      "request_sha256": "b7ff346698e0c534f9f095307fd39bef0848850e5e66cb6466b747abe346be7c",
+      "seconds": 21.231102416990325,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By the end of the century, an estimated 40 percent of the world's population will live in Africa.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has strengthened partnerships in the region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"African nations play a critical role in global stability and economic development.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration successfully advocated for the African Union to become a permanent member of the G20.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden hosted Kenyan President Ruto for a state visit, the first by an African Head of State since 2008.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S.-Kenya partnership is grounded in mutual respect.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden's administration is pursuing a strategy of strengthening bilateral ties across the continent grounded in mutual respect.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1196e790763441f157f95a2e6a2ac13ba59e60b04b34a6f7c75e9bbf2e02a014"
+}

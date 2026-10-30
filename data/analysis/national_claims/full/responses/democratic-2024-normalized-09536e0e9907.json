@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 364,
+      "generation_tps": 16.1781879847484,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1556,
+      "prompt_tps": 478.63988137467857,
+      "request_sha256": "1d9e2e3d3b6573f9a7d666d7dbd44a5c947c84387a8d06c967cf1a358292c4ea",
+      "seconds": 25.76047662482597,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden established New Family Reunification Parole Processes to allow eligible individuals from El Salvador, Guatemala, Honduras, Colombia, Cuba and Haiti to be reunited with family in the United States while they wait to complete the process for securing lawful permanent residence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Refugee Admissions Program is on track to admit more than 100,000 refugees this fiscal year.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. Refugee Admissions Program was rebuilt by President Biden after it was decimated by the previous administration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration established Safe Mobility Offices in countries throughout the Western hemisphere, where migrants can be processed for refugee admission or referred to resettlement programs elsewhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration expanded opportunities for communities and individual Americans to sponsor and welcome refugees to the United States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has worked closely with partners throughout the region, including the government of Mexico, to undertake coordinated actions to stop the flow of migrants before they reach the border.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden has supported regional partners through the LA Declaration process, working together on coordinated enforcement, development of lawful pathways, and efforts to address the root causes of migration.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 360,
+      "generation_tps": 16.162645268199434,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2088,
+      "prompt_tps": 515.5748312994205,
+      "request_sha256": "9dea646e00a73670115297da100adafd110a54700df3661cde78e437b5ef616e",
+      "seconds": 26.333457292057574,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden established New Family Reunification Parole Processes to allow eligible individuals from El Salvador, Guatemala, Honduras, Colombia, Cuba and Haiti to be reunited with family in the United States while they wait to complete the process for securing lawful permanent residence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The U.S. Refugee Admissions Program is on track to admit more than 100,000 refugees this fiscal year.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden rebuilt the U.S. Refugee Admissions Program after the previous administration decimated it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration established Safe Mobility Offices in countries throughout the Western hemisphere, where migrants can be processed for refugee admission or referred to resettlement programs elsewhere.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration expanded opportunities for communities and individual Americans to sponsor and welcome refugees to the United States.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has worked closely with partners throughout the region, including the government of Mexico, to undertake coordinated actions to stop the flow of migrants before they reach the border.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden has supported regional partners through the LA Declaration process, working together on coordinated enforcement, development of lawful pathways, and efforts to address the root causes of migration.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1d9e2e3d3b6573f9a7d666d7dbd44a5c947c84387a8d06c967cf1a358292c4ea"
+}

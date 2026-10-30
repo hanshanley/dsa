@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 462,
+      "generation_tps": 16.19973916021956,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1493,
+      "prompt_tps": 479.6428540646574,
+      "request_sha256": "c0ec050c039801fad8c5dd4abe165f6e49507907ea2dfeca40594d621b792d24",
+      "seconds": 31.641866707941517,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Biden announced executive action that significantly curtailed asylum eligibility at the border when crossings reach a certain threshold.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden\u2019s executive action strengthened the ability to impose timely consequences for crossing the border illegally.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since President Biden took executive action, unlawful entries between ports of entry declined by more than half.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden is changing the asylum process to more quickly screen and identify individuals who pose a threat to national security or public safety.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals identified as posing a threat to national security or public safety will be swiftly removed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President should have emergency authority to expel migrants who are crossing unlawfully when the system is overwhelmed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President should stop processing asylum claims, except for those using a safe and orderly process at Ports of Entry, when the system is overwhelmed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Emergency authority to expel migrants should be accompanied by humanitarian exceptions for vulnerable populations including unaccompanied children and victims of trafficking.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Congress should dedicate resources to detain and remove individuals quickly.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Congress should rapidly process those who cannot be detained in a non-custodial setting under government supervision.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Individuals who pose a threat to public safety or national security must be identified and removed as quickly as possible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 443,
+      "generation_tps": 16.183632893948253,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2123,
+      "prompt_tps": 515.6198497647679,
+      "request_sha256": "486ba17033ddf776d21891761f4d5471d9452b7a26edc8c1bb1642cec8b8cded",
+      "seconds": 31.500728958984837,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden announced executive action that significantly curtailed asylum eligibility at the border when crossings reach a certain threshold.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden\u2019s executive action strengthened the ability to impose timely consequences for crossing the border illegally.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since President Biden took this action, unlawful entries between ports of entry declined by more than half.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden is changing the asylum process to more quickly screen and identify individuals who pose a threat to national security or public safety so that they can be swiftly removed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals who pose a threat to national security or public safety will be swiftly removed.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"When the system is overwhelmed, the President should have emergency authority to expel migrants who are crossing unlawfully and stop processing asylum claims except for those using a safe and orderly process at Ports of Entry.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Emergency authority to expel migrants should be accompanied by humanitarian exceptions for vulnerable populations including unaccompanied children and victims of trafficking.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Congress should dedicate resources to detain and remove individuals quickly.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Congress should rapidly process those who cannot be detained in a non-custodial setting under government supervision.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Individuals who pose a threat to public safety or national security must be identified and removed as quickly as possible.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c0ec050c039801fad8c5dd4abe165f6e49507907ea2dfeca40594d621b792d24"
+}

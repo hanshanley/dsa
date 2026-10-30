@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 309,
+      "generation_tps": 16.23145302573957,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1458,
+      "prompt_tps": 477.2717860990272,
+      "request_sha256": "88d429b8ab3ed1ca91764f6a69b116131b83aaaf087f14cc5fd1569a0247c17f",
+      "seconds": 22.102317333919927,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Party is committed to continuing work to build a nation where all people are not only created equal, but treated equally throughout their lives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support Congress executing a study of reparations and the continuing impacts of slavery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"During his presidency, unemployment rates soared for people of color under Donald Trump.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump attempted to cut health care, affordable housing, and Social Security during his presidency.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump shortchanged Black-owned businesses when distributing COVID relief funds.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump's tax law benefitted wealthy white Americans over others.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump was sued for race-based housing discrimination and systemic violations of the Fair Housing Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump engaged in long standing racial segregation and discrimination in properties he owned and operated.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 315,
+      "generation_tps": 16.194396334423242,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1935,
+      "prompt_tps": 500.0066431171281,
+      "request_sha256": "1469aac91f047b50482da436ad9f912f80ba4dcfae5e7dbb53c30c600aa0a777",
+      "seconds": 23.330847332952544,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Party is committed to continuing work to build a nation where all people are not only created equal, but treated equally throughout their lives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support Congress executing a study of reparations and the continuing impacts of slavery.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Unemployment rates soared for people of color during Donald Trump's presidency.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump attempted to cut health care, affordable housing, and Social Security during his presidency.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump shortchanged Black-owned businesses when distributing COVID relief funds.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump's tax law benefitted wealthy white Americans over everyone else.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump was sued for race-based housing discrimination and systemic violations of the Fair Housing Act.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump engaged in long standing racial segregation and discrimination in properties he owned and operated.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "88d429b8ab3ed1ca91764f6a69b116131b83aaaf087f14cc5fd1569a0247c17f"
+}

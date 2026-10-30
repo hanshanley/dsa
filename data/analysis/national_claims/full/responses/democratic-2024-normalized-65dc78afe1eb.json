@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 387,
+      "generation_tps": 16.247381113408387,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1512,
+      "prompt_tps": 486.00382512493945,
+      "request_sha256": "30a6f674582b1b1f3b37721fa5e44c6c5fcbe6058bf0ea0580cc6a0ab36f91b4",
+      "seconds": 26.94042795780115,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to reduce the nation's cancer death rate by at least half and improve the experience of people who are touched by cancer.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]},{\"claim_text\":\"The Cancer Moonshot has announced more than 95 new programs, policies, and resources.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Seven leading insurance companies have committed to reimburse for navigation services.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Forty comprehensive cancer centers and community oncology practices have taken actions to bring effective navigation support to underserved communities.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Insurance codes have been established so practices, including Medicare providers, have a way to bill for patient navigation services.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"The Administration launched the Advanced Research Projects Agency for Health (ARPA-H) to improve American health outcomes and deliver breakthroughs on cancer.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[4]},{\"claim_text\":\"President Biden is calling on the private sector to develop and test new treatments.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[4]},{\"claim_text\":\"President Biden is calling on the private sector to make drugs more affordable.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[4]},{\"claim_text\":\"President Biden is calling on the private sector to share more data and knowledge that can inform the public and benefit every company's research.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 388,
+      "generation_tps": 16.1994083709495,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2067,
+      "prompt_tps": 517.3242837717492,
+      "request_sha256": "ae8238c8d7a76a2359311d97b9239ef7c9e92fc77209ec60d6175fecb7d7827b",
+      "seconds": 27.957037249812856,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Commitment to reduce the nation's cancer death rate by at least half and improve the experience of people who are touched by cancer.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]},{\"claim_text\":\"The Cancer Moonshot has already announced more than 95 new programs, policies, and resources.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Seven leading insurance companies have committed to reimburse for navigation services.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Forty comprehensive cancer centers and community oncology practices have taken actions to bring effective navigation support to underserved communities.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"Insurance codes have been established so practices, including Medicare providers, have a way to bill for patient navigation services.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[3]},{\"claim_text\":\"The Administration launched the Advanced Research Projects Agency for Health (ARPA-H) to improve American health outcomes and deliver breakthroughs on cancer.\", \"claim_types\":[\"factual_assertion\"], \"evidence_ids\":[4]},{\"claim_text\":\"President Biden is calling on the private sector to develop and test new treatments.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[4]},{\"claim_text\":\"President Biden is calling on the private sector to make drugs more affordable.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[4]},{\"claim_text\":\"President Biden is calling on the private sector to share more data and knowledge that can inform the public and benefit every company's research.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "30a6f674582b1b1f3b37721fa5e44c6c5fcbe6058bf0ea0580cc6a0ab36f91b4"
+}

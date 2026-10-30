@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 235,
+      "generation_tps": 16.270047900996765,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1425,
+      "prompt_tps": 464.1378653909501,
+      "request_sha256": "3b5bf56d269231699142799b364908bd6a9a0550fe393ab87e1b237b248f3df9",
+      "seconds": 17.523896250175312,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Biden has secured pay raises for military personnel in recognition of their invaluable service.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration has allocated over $10 billion to enhance health care services for veterans and active-duty personnel, including expanded mental health resources and programs to support those suffering from PTSD and other service-related conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's consistent efforts to address military housing issues resulted in a $1.4 billion investment in military housing improvements, leading to better living conditions and increased oversight of housing contracts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's policies have supported military spouses, with over $200 million in funds dedicated to bolstering education and employment opportunities, underscoring the critical role that families play in the strength and resilience of the armed forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 240,
+      "generation_tps": 16.227151544705528,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1828,
+      "prompt_tps": 460.98450518029654,
+      "request_sha256": "1cb7f09dddf628019fb615b85b0c0901db6fce9f9fd777d0a25bbe5e212d2f02",
+      "seconds": 18.76520995912142,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden has secured pay raises for military personnel in recognition of their invaluable service.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration has allocated over $10 billion to enhance health care services for veterans and active-duty personnel, including expanded mental health resources and programs to support those suffering from PTSD and other service-related conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's consistent efforts to address military housing issues resulted in a $1.4 billion investment in military housing improvements, leading to better living conditions and increased oversight of housing contracts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration's policies have supported military spouses, with over $200 million in funds dedicated to bolstering education and employment opportunities, underscoring the critical role that families play in the strength and resilience of the armed forces.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "3b5bf56d269231699142799b364908bd6a9a0550fe393ab87e1b237b248f3df9"
+}

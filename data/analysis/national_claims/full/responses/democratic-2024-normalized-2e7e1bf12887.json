@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 497,
+      "generation_tps": 16.12179600613725,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1412,
+      "prompt_tps": 474.146586516797,
+      "request_sha256": "fc9a47a0be8c09fb81827cd4d9674ee31ec394b4142bcf4fb0476c1b5911e17e",
+      "seconds": 33.816092332825065,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Donald Trump has a record of discrimination against people with disabilities, including publicly mocking them.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump's business faced lawsuits for failing to comply with the Americans with Disabilities Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Discrimination complaints from federal workers with disabilities employed at Cabinet-level agencies increased 20 percent while Donald Trump was president.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of people with disabilities fired by the government increased 24 percent in Donald Trump's first year in office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers with disabilities were fired at almost two times the rate of workers without disabilities during Donald Trump's presidency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump repeatedly proposed billions in cuts to Social Security Disability Insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump called for restrictions on eligibility for Social Security Disability Insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump called for benefit cutbacks for Social Security Disability Insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump called to cut funding for special education grants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump called to eliminate federal funding for the Special Olympics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump promised to close the Department of Education, threatening enforcement of IDEA protections for students with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump rescinded guidance protecting students with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump rescinded guidance aimed at ensuring students with disabilities were not unfairly disciplined.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 506,
+      "generation_tps": 15.976746067108923,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2077,
+      "prompt_tps": 508.0053440066981,
+      "request_sha256": "92f91ca174e4acdc1ab9bccfe8967bb14e13d4f09d79f6963affd74be288ae5b",
+      "seconds": 35.76957487501204,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump has a long record of discrimination against people with disabilities, including publicly mocking them.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump's business faced a series of lawsuits for failing to comply with the Americans with Disabilities Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Discrimination complaints from federal workers with disabilities employed at Cabinet-level agencies increased 20 percent while Donald Trump was president.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The number of people with disabilities fired by the government increased 24 percent in Donald Trump's first year in office.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers with disabilities were fired at almost two times the rate of workers without disabilities during Donald Trump's presidency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump repeatedly proposed billions in cuts to Social Security Disability Insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump called for restrictions on eligibility for Social Security Disability Insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump called for benefit cutbacks for Social Security Disability Insurance.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump called to cut funding for special education grants.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump called to eliminate federal funding for the Special Olympics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump promised to close the Department of Education, threatening enforcement of IDEA protections for students with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump rescinded guidance protecting students with disabilities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump rescinded guidance aimed at ensuring students with disabilities were not unfairly disciplined.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "fc9a47a0be8c09fb81827cd4d9674ee31ec394b4142bcf4fb0476c1b5911e17e"
+}

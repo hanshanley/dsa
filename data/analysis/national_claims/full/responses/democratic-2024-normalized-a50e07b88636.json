@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 488,
+      "generation_tps": 16.23948879953188,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1449,
+      "prompt_tps": 475.8821840267639,
+      "request_sha256": "1bf6d82c8761361b7024374f28a060bbd07da801c86c06d75ba2c78631417532",
+      "seconds": 33.10513579193503,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The VA helped more than 145,000 veterans and their families stay in their homes last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The VA permanently housed more than 46,000 veterans last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration awarded more than $1 billion in grant funding to help homeless veterans and house their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched first-of-its-kind funding for legal services for veterans experiencing or at risk of homelessness to support accessing government benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched first-of-its-kind funding for legal services for veterans experiencing or at risk of homelessness to support navigating family law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched first-of-its-kind funding for legal services for veterans experiencing or at risk of homelessness to ensure access to safe housing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched first-of-its-kind funding for legal services for veterans experiencing or at risk of homelessness to assist with debt.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Veteran Scam and Fraud Evasion (VSAFE) Task Force has cracked down on scams targeting veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The National Veterans Financial Resource Center has promoted financial stability, literacy, and debt management for veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The VA is making it easier and faster for veterans to get their VA medical debt forgiven.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a high risk of homelessness for veterans, with a focus on women veterans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 492,
+      "generation_tps": 16.183809413281605,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2105,
+      "prompt_tps": 522.4576000522427,
+      "request_sha256": "77068fd2ec937889dc50d54d6cce8296f4ca10c198707b87605a2b72870ff19b",
+      "seconds": 34.43970545800403,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The VA helped more than 145,000 veterans and their families stay in their homes last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The VA permanently housed more than 46,000 veterans last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration awarded more than $1 billion in grant funding to help homeless veterans and house their families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched first-of-its-kind funding for legal services for veterans experiencing or at risk of homelessness to support accessing government benefits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched first-of-its-kind funding for legal services for veterans experiencing or at risk of homelessness to support navigating family law.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched first-of-its-kind funding for legal services for veterans experiencing or at risk of homelessness to ensure access to safe housing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched first-of-its-kind funding for legal services for veterans experiencing or at risk of homelessness to assist with debt.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Veteran Scam and Fraud Evasion (VSAFE) Task Force has cracked down on scams targeting veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The National Veterans Financial Resource Center has promoted financial stability, literacy, and debt management for veterans.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The VA is making it easier and faster for veterans to get their VA medical debt forgiven.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Veterans face a high risk of homelessness, with a focus on women veterans.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1bf6d82c8761361b7024374f28a060bbd07da801c86c06d75ba2c78631417532"
+}

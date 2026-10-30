@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 415,
+      "generation_tps": 16.202752578219556,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1436,
+      "prompt_tps": 478.6828089695302,
+      "request_sha256": "d155f0c1e509d0940b2a53c9874878f0fc570881c628bc2801f952fb2c2587b9",
+      "seconds": 28.623452625004575,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Biden ended America's longest war by bringing troops home from Afghanistan.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden facilitated the resettlement of over 120,000 Afghan partners and their families in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The resettlement of over 120,000 Afghan partners and their families in the United States was the largest resettlement effort since the Vietnam War.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States rallied the world to address a global food crisis in the wake of Russia's invasion of Ukraine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States provided $2 billion in global humanitarian assistance in the wake of Russia's invasion of Ukraine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Between May 2021 and February 2024 the United States donated more than 693 million vaccine doses to 117 countries and economies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration led the largest-ever replenishment of the Global Fund to fight HIV/AIDS, TB, and Malaria, with donors pledging $15.7 billion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden's leadership was clear in his response to the COVID-19 pandemic among other global health challenges.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden demonstrated leadership in addressing global health challenges.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 367,
+      "generation_tps": 16.070371412027633,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2019,
+      "prompt_tps": 490.48119191092053,
+      "request_sha256": "c78a715e294b052f2bc1c42f9dd13bc4b06ca6809ea8c6df1cc1b137f889b46b",
+      "seconds": 26.965770999900997,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden ended America's longest war by bringing troops home from Afghanistan and facilitating the resettlement of over 120,000 Afghan partners and their families in the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The resettlement of over 120,000 Afghan partners and their families in the United States was the largest resettlement effort since the Vietnam War.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States rallied the world to address a global food crisis in the wake of Russia's invasion of Ukraine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The United States provided $2 billion in global humanitarian assistance in the wake of Russia's invasion of Ukraine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Between May 2021 and February 2024 the United States donated more than 693 million vaccine doses to 117 countries and economies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration led the largest-ever replenishment of the Global Fund to fight HIV/AIDS, TB, and Malaria, with donors pledging $15.7 billion.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden's leadership was clear in his response to the COVID-19 pandemic among other global health challenges.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d155f0c1e509d0940b2a53c9874878f0fc570881c628bc2801f952fb2c2587b9"
+}

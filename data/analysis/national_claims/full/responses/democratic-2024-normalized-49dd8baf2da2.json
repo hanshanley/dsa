@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 215,
+      "generation_tps": 16.0824154729943,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1367,
+      "prompt_tps": 450.6277100484751,
+      "request_sha256": "f2e8441ed6ecc1d1f3ea9be86d3a3aaf57104345e31b86e87e5e16f3c2af6780",
+      "seconds": 16.412696625106037,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Western Hemisphere impacts the United States more directly than any other region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States and partners in Latin America and the Caribbean have $1.9 trillion in annual trade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Partners in Latin America and the Caribbean are key contributors to U.S. prosperity and resiliency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President is building coalitions across the region to make America safer and more prosperous.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President believes the United States must work in lockstep with its neighbors to ensure democracies deliver on issues that matter to all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 218,
+      "generation_tps": 16.273612376168696,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1750,
+      "prompt_tps": 490.43037226877436,
+      "request_sha256": "1192ca064b88b0373c365f9256a83be9c05f7419327ab3d5b60225a4bdcb3966",
+      "seconds": 16.974942666944116,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"No region impacts the United States more directly than the Western Hemisphere.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States and partners in Latin America and the Caribbean have $1.9 trillion in annual trade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Partners in Latin America and the Caribbean are key contributors to U.S. prosperity and resiliency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President is building coalitions across the region that make America safer and more prosperous.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President believes the United States must work in lockstep with its neighbors to ensure democracies deliver on the issues that matter most to all of us.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 217,
+      "generation_tps": 16.192704928742018,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2138,
+      "prompt_tps": 517.5791617823099,
+      "request_sha256": "ffd6091f99fecadfc5a0bd193a1af953c8bb4496592a1962438c726087ea4b04",
+      "seconds": 17.54200779204257,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Western Hemisphere impacts the United States more directly than any other region.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States and partners in Latin America and the Caribbean have $1.9 trillion in annual trade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Partners in Latin America and the Caribbean are key contributors to U.S. prosperity and resiliency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President is building coalitions across the region that make America safer and more prosperous.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The President believes the United States must work in lockstep with its neighbors to ensure democracies deliver on the issues that matter most to all.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f2e8441ed6ecc1d1f3ea9be86d3a3aaf57104345e31b86e87e5e16f3c2af6780"
+}

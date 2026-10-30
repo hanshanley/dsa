@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 289,
+      "generation_tps": 16.19268563842899,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1466,
+      "prompt_tps": 475.05080667601175,
+      "request_sha256": "784361ab8569191993979c6defa63fa062270e2c7be67e3722c4f052cef851c1",
+      "seconds": 20.943035417003557,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has the finest fighting force in the history of the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden understands that maintaining U.S. military advantages in the future means making strategic investments now.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration has invested in cutting-edge capabilities across all services and domains.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration has maintained a commitment to modernize and recapitalize the nuclear triad as the bedrock of deterrence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has made historic investments in America's military industrial base, putting billions of dollars to work in America to increase production capacity of critical munitions and other capabilities to support U.S. and allied forces in combat zones such as Ukraine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. military has maintained its ability to address terrorist threats, evidenced by successful strikes against leaders of al-Qa'ida and ISIS.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 359,
+      "generation_tps": 16.16779040977112,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1923,
+      "prompt_tps": 491.5573073166618,
+      "request_sha256": "be9c791d598b7f6b5576070a6d4ebdfc93fc1512cb33568a1f5853d2be45ab24",
+      "seconds": 26.126510666916147,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The United States has the finest fighting force in the history of the world.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden understands that maintaining U.S. military advantages in the future means making strategic investments now.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration has invested in cutting-edge capabilities across all services and domains.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration has maintained a commitment to modernize and recapitalize the nuclear triad as the bedrock of deterrence.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has made historic investments in America's military industrial base, putting billions of dollars to work in America to increase production capacity of critical munitions and other capabilities to support U.S. and allied forces in combat zones such as Ukraine.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The U.S. military has maintained its ability to address terrorist threats, evidenced by successful strikes against leaders of al-Qa'ida and ISIS.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As the Administration plans against dramatic changes in geopolitics, technology, economics, and the environment, the U.S. military has maintained its ability to address terrorist threats, evidenced by successful strikes against leaders of al-Qa'ida and ISIS.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "784361ab8569191993979c6defa63fa062270e2c7be67e3722c4f052cef851c1"
+}

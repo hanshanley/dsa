@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 360,
+      "generation_tps": 16.145620521072733,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1510,
+      "prompt_tps": 483.10831887226055,
+      "request_sha256": "ead65bc94de53daf9a17807a114b89958364ae03eaf90550649a2a2aabe34e49",
+      "seconds": 25.432892499957234,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will consider the unique circumstances and challenges of U.S. citizens living abroad when shaping policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to protect the voting rights of U.S. citizens living abroad.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure U.S. citizens living abroad are able to participate in the democratic process.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden led with the conviction that the U.S. must secure its border and fix a broken immigration system.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden sent legislation to Congress on his first day in office to secure the border, fix the immigration system, and provide a pathway to citizenship for Dreamers and others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The President negotiated a bipartisan deal that included reforms to secure the border.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The bipartisan deal would have made the country safer and the border more secure.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The bipartisan deal would have treated people fairly and humanely.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The bipartisan deal would have expanded legal immigration.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 382,
+      "generation_tps": 16.177573945004188,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2038,
+      "prompt_tps": 510.71808930863864,
+      "request_sha256": "3c940c46a4693f6bae6a72e641ceb64a11bab229c080b2d3a208a2494815e46d",
+      "seconds": 27.614409500034526,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats will consider the unique circumstances and challenges of U.S. citizens living abroad when shaping policy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will work to protect the voting rights of U.S. citizens living abroad.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats will ensure U.S. citizens living abroad are able to participate in the democratic process.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden led with the conviction that the U.S. must secure its border and fix a broken immigration system.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden sent legislation to Congress on his first day in office to secure the border, fix the immigration system, and provide a pathway to citizenship for Dreamers and others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"President Biden worked across the aisle and negotiated a bipartisan deal that included the toughest and fairest set of reforms to secure the border in decades.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The bipartisan deal would have made the country safer and the border more secure.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The bipartisan deal would have treated people fairly and humanely.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"The bipartisan deal would have expanded legal immigration, consistent with U.S. values.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ead65bc94de53daf9a17807a114b89958364ae03eaf90550649a2a2aabe34e49"
+}

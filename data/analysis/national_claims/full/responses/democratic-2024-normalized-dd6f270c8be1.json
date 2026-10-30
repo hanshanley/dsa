@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 389,
+      "generation_tps": 16.229809146390192,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1485,
+      "prompt_tps": 476.8142322087161,
+      "request_sha256": "8fdc97933a27b90aab504d6fb9bd9bc23482b5aa73fa43aa32c6474af04734d3",
+      "seconds": 27.092679374851286,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden led a hemispheric response to irregular migration by launching and leading the Los Angeles Declaration for Migration and Protection with 20 countries to increase enforcement, expand legal pathways to citizenship, and stabilize and integrate migrants in neighboring countries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden took decisive action to secure the border through executive actions that significantly restricted eligibility for asylum at the border and created innovative legal pathways to the U.S.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"When coupled with strong enforcement, President Biden's executive actions and innovative legal pathways have decreased illegal border crossings.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since President Biden announced new border restrictions in June 2024, the number of unlawful crossings has fallen by 40 percent.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden's policies have stopped record amounts of fentanyl from crossing the border.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has ensured people are treated humanely and with dignity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden established the Interagency Task Force on the Reunification of Families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As of March 2024, the Interagency Task Force on the Reunification of Families has reunited nearly 800 children with their parents in the United States that were separated during Trump's presidency.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 407,
+      "generation_tps": 16.198991731590898,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2042,
+      "prompt_tps": 506.76164568013075,
+      "request_sha256": "ccbd7c709c1c5c30e5d6d35f87c4488c27ffad452039b93428f6ce3239bd88b8",
+      "seconds": 29.16465104208328,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden led a hemispheric response to the challenge of irregular migration by launching and leading the Los Angeles Declaration for Migration and Protection with 20 countries to increase enforcement, expand legal pathways to citizenship, and stabilize and integrate migrants in neighboring countries.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden took decisive action to secure the border through executive actions that significantly restricted eligibility for asylum at the border and created innovative legal pathways to the U.S.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"When coupled with strong enforcement, President Biden's executive actions and innovative legal pathways have decreased illegal border crossings.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since President Biden announced new border restrictions in June 2024, the number of unlawful crossings has fallen by 40 percent, demonstrating that the policy works.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has implemented policies that have stopped record amounts of fentanyl from crossing the border.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has ensured that people are treated humanely and with dignity.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"As one of his first actions, President Biden established the Interagency Task Force on the Reunification of Families.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"As of March 2024, the Interagency Task Force on the Reunification of Families has reunited nearly 800 children with their parents in the United States that were separated in Trump's presidency.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8fdc97933a27b90aab504d6fb9bd9bc23482b5aa73fa43aa32c6474af04734d3"
+}

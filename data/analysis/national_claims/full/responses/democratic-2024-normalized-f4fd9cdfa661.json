@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 344,
+      "generation_tps": 16.160458096540758,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1424,
+      "prompt_tps": 471.7205946261075,
+      "request_sha256": "f3340cc2a5db868528732f3974e23a12dc037cf6406a75a2e04528f29e03c24f",
+      "seconds": 24.315605124924332,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The Administration released a rule barring providers from denying medical treatments related to organ donations or lifesaving care for disabled Americans based on their disability alone.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched long COVID clinical trials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration created the Office of Long COVID Research and Practice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The National Institutes of Health designated people with disabilities a \\\"health disparity population\\\", unlocking new resources for research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden signed an executive order increasing access to quality care and supporting caregivers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden signed historic legislation that expands home- and community-based services under Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats have invested in accessible infrastructure, including rail station accessibility.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats have taken actions to make airports and airplanes more accessible.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats passed and President Biden signed the Bipartisan Infrastructure Law, which expanded access to affordable broadband.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 349,
+      "generation_tps": 16.115970771678807,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1936,
+      "prompt_tps": 497.01470276790576,
+      "request_sha256": "5fde8579d14b65a7098072053db7aa2fbf0ae409dc6aaf89609dcbf45d684991",
+      "seconds": 25.561125500127673,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration released a rule barring providers from denying medical treatments related to organ donations or lifesaving care for disabled Americans based on their disability alone.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched long COVID clinical trials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration created the Office of Long COVID Research and Practice.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The National Institutes of Health designated people with disabilities a \\\"health disparity population,\\\" unlocking new resources for research.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden signed an executive order increasing access to quality care and supporting caregivers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden signed historic legislation that expands home- and community-based services under Medicaid.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats have invested in accessible infrastructure, including rail station accessibility.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats have taken actions to make airports and airplanes more accessible.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats passed and President Biden signed the Bipartisan Infrastructure Law, which expanded access to affordable broadband.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f3340cc2a5db868528732f3974e23a12dc037cf6406a75a2e04528f29e03c24f"
+}
