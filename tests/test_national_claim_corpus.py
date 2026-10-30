@@ -11,9 +11,11 @@ from dsa_analysis.national_claim_corpus import (
     bounded_units,
     build_blocks,
     extract_corpus,
+    load_source_repairs,
     make_prompt,
     prepare,
     repair_request,
+    source_repair_basis,
     validate_response,
 )
 from dsa_analysis.national_platforms import digest, read_rows, write_rows
@@ -37,6 +39,168 @@ def response(**updates):
 
 
 class ClaimCorpusTests(unittest.TestCase):
+    def write_source_repair(self, output, block, manifest, claims):
+        record = {
+            "block_id": block["block_id"],
+            "basis_sha256": source_repair_basis(
+                block,
+                (output / "responses" / f"{block['block_id']}.json").read_bytes(),
+                manifest["fingerprint"],
+            ),
+            "reviewer": "assistant_source_fidelity",
+            "notes": "Correct the candidate against the complete target and preceding context.",
+            "claims": claims,
+            "unresolved_references": [],
+        }
+        directory = output / "source_repairs"
+        directory.mkdir(exist_ok=True)
+        path = directory / f"{block['block_id']}.json"
+        path.write_text(json.dumps(record))
+        return path, record
+
+    def test_source_repairs_preserve_originals_and_cannot_leave_superseded_duplicate_anchors(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            corpus, output = Path(temporary) / "baseline", Path(temporary) / "claims"
+            corpus.mkdir()
+            rows = sources()[:1]
+            text = "\n\n".join(["We support universal care."] * 100)
+            rows[0].update(
+                scoped_text=text,
+                complete_text=text,
+                text_sha256=digest(text),
+                complete_text_sha256=digest(text),
+            )
+            write_rows(corpus / "complete_sources.csv", rows)
+            write_rows(corpus / "coverage.csv", coverage(rows))
+
+            def extractor(*_):
+                return {
+                    "text": response(claim_text="Support for universal care."),
+                    "seconds": 0.1,
+                    "generation_tokens": 25,
+                    "peak_memory": 1,
+                }
+
+            extract_corpus(output=output, corpus=corpus, extractor=extractor)
+            blocks, manifest = prepare(output, corpus)
+            self.assertGreater(len(blocks), 2)
+            raw = {p.name: p.read_bytes() for p in (output / "responses").glob("*.json")}
+            original = read_rows(output / "claims.csv")[0]
+            self.write_source_repair(
+                output,
+                blocks[0],
+                manifest,
+                [claim(claim_text="Support for care for all residents.")],
+            )
+            summary = extract_corpus(output=output, corpus=corpus, prepare_only=True)
+            exported = read_rows(output / "claims.csv")
+            historical = next(r for r in exported if r["claim_id"] == original["claim_id"])
+            repaired = next(
+                r for r in exported if r["normalization_origin"] == "assistant_source_repair"
+            )
+            self.assertEqual(historical["model_claim_text"], original["model_claim_text"])
+            self.assertEqual(historical["claim_text"], original["claim_text"])
+            self.assertEqual(historical["analysis_eligible"], "False")
+            self.assertEqual(historical["superseded_by_repair"], repaired["repair_id"])
+            self.assertEqual(repaired["model_claim_text"], "")
+            self.assertEqual(repaired["analysis_eligible"], "True")
+            self.assertEqual(summary["analysis_claims"], 2)
+            self.assertEqual(summary["assistant_source_repaired_blocks"], 1)
+            self.assertEqual(summary["model_blocks_by_status"], {"normalized": len(blocks)})
+            self.assertTrue(all(r["duplicate_of"] != original["claim_id"] for r in exported))
+            self.assertEqual(
+                raw, {p.name: p.read_bytes() for p in (output / "responses").glob("*.json")}
+            )
+            replay = (output / "claims.csv").read_bytes()
+            extract_corpus(output=output, corpus=corpus, prepare_only=True)
+            self.assertEqual(replay, (output / "claims.csv").read_bytes())
+
+    def test_failed_model_source_repair_is_separate_and_rejects_stale_or_invalid_corrections(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            corpus, output = Path(temporary) / "baseline", Path(temporary) / "claims"
+            corpus.mkdir()
+            rows = sources()
+            write_rows(corpus / "complete_sources.csv", rows)
+            write_rows(corpus / "coverage.csv", coverage(rows))
+
+            def extractor(*_):
+                return {
+                    "text": "invalid",
+                    "seconds": 0.1,
+                    "generation_tokens": 25,
+                    "peak_memory": 1,
+                }
+
+            extract_corpus(output=output, corpus=corpus, extractor=extractor)
+            blocks, manifest = prepare(output, corpus)
+            raw = {p.name: p.read_bytes() for p in (output / "responses").glob("*.json")}
+            path, record = self.write_source_repair(
+                output, blocks[0], manifest, [claim(claim_text="Support for universal care.")]
+            )
+            with patch(
+                "dsa_analysis.national_claim_corpus.LocalGemma",
+                side_effect=AssertionError("source corrections must not regenerate model replies"),
+            ):
+                summary = extract_corpus(output=output, corpus=corpus)
+            status = read_rows(output / "block_status.csv")[0]
+            self.assertEqual(status["status"], "source_repaired")
+            self.assertEqual(status["model_status"], "validation_failed")
+            self.assertIn("invalid_json", status["errors"])
+            self.assertEqual(summary["model_blocks_by_status"], {"validation_failed": len(blocks)})
+            self.assertEqual(summary["analysis_claims"], 1)
+            with zipfile.ZipFile(output / "claim_documents.zip") as archive:
+                self.assertEqual(archive.read(f"source_repairs/{path.name}"), path.read_bytes())
+                self.assertEqual(
+                    archive.read(f"responses/{blocks[0]['block_id']}.json"),
+                    raw[f"{blocks[0]['block_id']}.json"],
+                )
+            changed = [{**blocks[0], "context_before": "Changed source context."}, *blocks[1:]]
+            with self.assertRaisesRegex(ValueError, "Stale source repair"):
+                load_source_repairs(changed, output, manifest)
+            response_path = output / "responses" / f"{blocks[0]['block_id']}.json"
+            response_path.write_bytes(response_path.read_bytes() + b"\n")
+            with self.assertRaisesRegex(ValueError, "Stale source repair"):
+                load_source_repairs(blocks, output, manifest)
+            response_path.write_bytes(raw[response_path.name])
+            path.write_text(json.dumps({**record, "claims": [claim(evidence_ids=[99])]}))
+            with self.assertRaisesRegex(ValueError, "Invalid source repair claims"):
+                load_source_repairs(blocks, output, manifest)
+            path.write_text(json.dumps({**record, "block_id": "unknown"}))
+            with self.assertRaisesRegex(ValueError, "Invalid source repair"):
+                load_source_repairs(blocks, output, manifest)
+
+    def test_source_repair_can_discard_nonassertive_material_without_inventing_policy(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            corpus, output = Path(temporary) / "baseline", Path(temporary) / "claims"
+            corpus.mkdir()
+            rows = sources()[:1]
+            text = "Acknowledgements.\n\nStaff and contributors."
+            rows[0].update(
+                scoped_text=text,
+                complete_text=text,
+                text_sha256=digest(text),
+                complete_text_sha256=digest(text),
+            )
+            write_rows(corpus / "complete_sources.csv", rows)
+            write_rows(corpus / "coverage.csv", coverage(rows))
+
+            def extractor(*_):
+                return {
+                    "text": response(),
+                    "seconds": 0.1,
+                    "generation_tokens": 25,
+                    "peak_memory": 1,
+                }
+
+            extract_corpus(output=output, corpus=corpus, extractor=extractor)
+            blocks, manifest = prepare(output, corpus)
+            self.write_source_repair(output, blocks[0], manifest, [])
+            summary = extract_corpus(output=output, corpus=corpus, prepare_only=True)
+            self.assertEqual(summary["analysis_claims"], 0)
+            self.assertEqual(summary["assistant_source_repaired_claims"], 0)
+            self.assertEqual(summary["superseded_model_claims"], 1)
+            self.assertEqual(read_rows(output / "claims.csv")[0]["analysis_eligible"], "False")
+
     def test_complete_source_is_chunked_with_hard_limit_and_exact_offsets(self):
         rows = sources()
         text = (

@@ -112,6 +112,9 @@ FIELDS = [
     "quality_status",
     "analysis_eligible",
     "duplicate_of",
+    "normalization_origin",
+    "repair_id",
+    "superseded_by_repair",
 ]
 
 
@@ -392,6 +395,9 @@ def validate_response(text: str, block: dict) -> tuple[list[dict], list[str], li
             quality_status="local_model_revision_and_structural_checks_not_human_certification",
             analysis_eligible=True,
             duplicate_of="",
+            normalization_origin="local_gemma",
+            repair_id="",
+            superseded_by_repair="",
         )
         accepted.append(row)
     return accepted, errors, payload["unresolved_references"]
@@ -459,8 +465,72 @@ def prepare(output: Path = FULL_OUTPUT, corpus: Path = OUTPUT) -> tuple[list[dic
     return blocks, {"fingerprint": fingerprint, **config}
 
 
+def source_repair_basis(block: dict, response: bytes, fingerprint: str) -> str:
+    return digest(
+        canonical(
+            {
+                "block": block,
+                "response_sha256": digest(response),
+                "fingerprint": fingerprint,
+            }
+        )
+    )
+
+
+def load_source_repairs(blocks: list[dict], output: Path, manifest: dict) -> dict:
+    by_id = {block["block_id"]: block for block in blocks}
+    repairs = {}
+    required = {"block_id", "basis_sha256", "reviewer", "notes", "claims", "unresolved_references"}
+    for path in sorted((output / "source_repairs").glob("*.json")):
+        raw = path.read_bytes()
+        record = json.loads(raw)
+        if (
+            not isinstance(record, dict)
+            or set(record) != required
+            or record["block_id"] != path.stem
+            or path.stem not in by_id
+            or record["reviewer"] != "assistant_source_fidelity"
+            or not isinstance(record["notes"], str)
+            or not record["notes"].strip()
+        ):
+            raise ValueError(f"Invalid source repair: {path.name}")
+        block = by_id[path.stem]
+        response = output / "responses" / f"{path.stem}.json"
+        if not response.exists() or record["basis_sha256"] != source_repair_basis(
+            block, response.read_bytes(), manifest["fingerprint"]
+        ):
+            raise ValueError(f"Stale source repair: {path.name}")
+        accepted, errors, unresolved = validate_response(
+            canonical(
+                {
+                    "claims": record["claims"],
+                    "unresolved_references": record["unresolved_references"],
+                }
+            ),
+            block,
+        )
+        if errors:
+            raise ValueError(f"Invalid source repair claims: {path.name}: {errors}")
+        identifier = digest(raw)
+        for number, claim in enumerate(accepted, 1):
+            claim.update(
+                claim_id=f"{block['block_id']}-repair-{identifier[:12]}-{number:03d}",
+                model_claim_text="",
+                normalization_origin="assistant_source_repair",
+                repair_id=identifier,
+                quality_status="assistant_source_repaired_not_independent_human_gold",
+            )
+        repairs[path.stem] = {
+            "claims": accepted,
+            "repair_id": identifier,
+            "unresolved_references": unresolved,
+        }
+    return repairs
+
+
 def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
     claims, statuses, metrics, seen = [], [], [], {}
+    repairs = load_source_repairs(blocks, output, manifest)
     review_path = output / "semantic_review.csv"
     reviews = (
         {row["block_id"]: row for row in read_rows(review_path)} if review_path.exists() else {}
@@ -484,6 +554,7 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
             errors.append("output_token_limit_reached")
         if final.get("stage") != "source_fidelity_revision":
             errors.append("source_fidelity_revision_missing")
+        repair = repairs.get(block["block_id"])
         if not errors:
             review = reviews.get(block["block_id"])
             flagged = set()
@@ -508,16 +579,37 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
                         if number in flagged
                         else "assistant_reviewed_no_individual_issue_observed_not_human_gold"
                     )
+                if repair:
+                    claim["analysis_eligible"] = False
+                    claim["superseded_by_repair"] = repair["repair_id"]
+                    if number not in flagged:
+                        claim["quality_status"] = "superseded_by_assistant_source_repair"
                 if claim["analysis_eligible"]:
                     seen[key] = claim["claim_id"]
             claims.extend(accepted)
+        if repair:
+            for claim in repair["claims"]:
+                key = (claim["document_id"], claim["claim_text"].casefold())
+                claim["duplicate_of"] = seen.get(key, "")
+                claim["analysis_eligible"] = not claim["duplicate_of"]
+                if claim["analysis_eligible"]:
+                    seen[key] = claim["claim_id"]
+            claims.extend(repair["claims"])
         statuses.append(
             {
                 **status,
-                "status": "validation_failed" if errors else "normalized",
-                "claims": 0 if errors else len(accepted),
+                "status": "source_repaired"
+                if repair
+                else ("validation_failed" if errors else "normalized"),
+                "model_status": "validation_failed" if errors else "normalized",
+                "repair_id": repair["repair_id"] if repair else "",
+                "claims": len(repair["claims"]) if repair else (0 if errors else len(accepted)),
+                "model_claims": 0 if errors else len(accepted),
                 "errors": " | ".join(errors),
-                "unresolved_references": canonical(unresolved),
+                "unresolved_references": canonical(
+                    repair["unresolved_references"] if repair else unresolved
+                ),
+                "model_unresolved_references": canonical(unresolved),
                 "attempts": len(record["attempts"]),
             }
         )
@@ -538,12 +630,15 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
                 "document_id": identifier,
                 "group": rows[0]["group"],
                 "blocks": len(rows),
-                "normalized_blocks": sum(r["status"] == "normalized" for r in rows),
+                "normalized_blocks": sum(
+                    r["status"] in {"normalized", "source_repaired"} for r in rows
+                ),
+                "source_repaired_blocks": sum(r["status"] == "source_repaired" for r in rows),
                 "failed_blocks": sum(r["status"] == "validation_failed" for r in rows),
                 "not_run_blocks": sum(r["status"] == "not_run" for r in rows),
                 "source_words": sum(r["words"] for r in rows),
                 "normalized_source_words": sum(
-                    r["words"] for r in rows if r["status"] == "normalized"
+                    r["words"] for r in rows if r["status"] in {"normalized", "source_repaired"}
                 ),
                 "claims": sum(r["claims"] for r in rows),
             }
@@ -556,6 +651,14 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
         "fingerprint": manifest["fingerprint"],
         "blocks": len(blocks),
         "blocks_by_status": dict(counts),
+        "model_blocks_by_status": dict(
+            Counter(row.get("model_status", row["status"]) for row in statuses)
+        ),
+        "assistant_source_repaired_blocks": len(repairs),
+        "assistant_source_repaired_claims": sum(
+            len(repair["claims"]) for repair in repairs.values()
+        ),
+        "superseded_model_claims": sum(bool(row["superseded_by_repair"]) for row in claims),
         "claims": len(claims),
         "analysis_claims": sum(row["analysis_eligible"] for row in claims),
         "exact_within_document_duplicates": sum(bool(row["duplicate_of"]) for row in claims),
@@ -567,7 +670,9 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
             "original_field": "model_claim_text",
             "scope": "Recognized source-organization prefixes in policy-position-only claims",
             "standardized_claims": sum(
-                row["claim_text"] != row["model_claim_text"] for row in claims
+                row["normalization_origin"] == "local_gemma"
+                and row["claim_text"] != row["model_claim_text"]
+                for row in claims
             ),
         },
         "blocks_with_unresolved_references": sum(
