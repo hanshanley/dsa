@@ -5,7 +5,14 @@ import unittest
 import zipfile
 from pathlib import Path
 
-from scripts.build_platform_publication import DATA, digest, export, validate
+from scripts.build_platform_publication import (
+    DATA,
+    WEBSITE_FIGURES,
+    digest,
+    evolution_data,
+    export,
+    validate,
+)
 
 
 class PlatformPublicationTest(unittest.TestCase):
@@ -139,6 +146,27 @@ class PlatformPublicationTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "absent or empty"):
             export(self.source, output)
         self.assertEqual((output / "keep.txt").read_text(), "Keep existing work.")
+
+    def test_partial_period_labels_are_not_published(self):
+        (self.data / "topics/evolution").mkdir()
+        self.write_json(
+            "topics/evolution/summary.json",
+            dict(status="complete", topics=2, labels_available=1, reviewed_labels=0),
+        )
+        self.write_json(
+            "topics/evolution/topic_labels.json",
+            [dict(topic_id="period-2000-topic-001", review_status="unreviewed")],
+        )
+        self.write_json("topics/evolution/period_fits.json", [])
+        with self.assertRaisesRegex(ValueError, "complete with accurate review status"):
+            evolution_data(self.source)
+
+    def test_unarchived_website_variants_are_rejected(self):
+        path = self.source / WEBSITE_FIGURES / "expanded/topic_distribution.png"
+        path.parent.mkdir(parents=True)
+        path.write_bytes(b"Changed website variant")
+        with self.assertRaisesRegex(ValueError, "stale website figure"):
+            validate(self.source)
 
 
 if __name__ == "__main__":

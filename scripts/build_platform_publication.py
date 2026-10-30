@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = Path("data/analysis/national_claims/full")
 FIGURES = Path("figures/national_claims/full/topics")
+WEBSITE_FIGURES = Path("figures/national_claims/full/themarginoferror/topics")
 GROUPS = ("democratic", "republican", "dsa")
 
 
@@ -87,6 +88,7 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
     with zipfile.ZipFile(data / "claim_documents.zip") as archive:
         if archive.testzip() is not None:
             raise ValueError("Complete download failed ZIP integrity verification")
+        members = set(archive.namelist())
         for name in [
             "analysis_claims.csv",
             "complete_sources.csv",
@@ -94,7 +96,7 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
             "topics/shares.csv",
             "topics/representatives.csv",
         ]:
-            if archive.read(name) != (data / name).read_bytes():
+            if name not in members or archive.read(name) != (data / name).read_bytes():
                 raise ValueError(f"Complete download contains stale content: {name}")
         for figure in (source / FIGURES).rglob("*"):
             if figure.suffix not in {".png", ".svg"}:
@@ -103,9 +105,17 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
             member = f"figures/topics/{figure.relative_to(source / FIGURES).as_posix()}"
             if (
                 relative not in audit["substantive_artifacts_sha256"]
+                or member not in members
                 or archive.read(member) != figure.read_bytes()
             ):
                 raise ValueError(f"Complete download contains stale figure: {relative}")
+        for figure in (source / WEBSITE_FIGURES).rglob("*"):
+            if figure.suffix not in {".png", ".svg"}:
+                continue
+            relative = figure.relative_to(source / WEBSITE_FIGURES).as_posix()
+            member = f"figures/themarginoferror/topics/{relative}"
+            if member not in members or archive.read(member) != figure.read_bytes():
+                raise ValueError(f"Complete download contains stale website figure: {member}")
     return summary, topics, labels, representatives, list(rows(data / "topics/shares.csv"))
 
 
@@ -119,10 +129,11 @@ def evolution_data(source: Path) -> dict | None:
     if (
         summary["status"] != "complete"
         or summary["topics"] != len(labels)
-        or summary["reviewed_labels"] != len(labels)
-        or any(label["review_status"] != "evidence_reviewed" for label in labels)
+        or summary["labels_available"] != len(labels)
+        or summary["reviewed_labels"]
+        != sum(label["review_status"] == "evidence_reviewed" for label in labels)
     ):
-        raise ValueError("Period-specific topics must be complete and evidence-reviewed")
+        raise ValueError("Period-specific topics must be complete with accurate review status")
     representatives = list(rows(directory / "representatives.csv"))
     shares = list(rows(directory / "shares.csv"))
     for label in labels:
@@ -197,6 +208,21 @@ def export(source: Path, output: Path) -> dict:
         expected = 26 + (2 * len(evolution["periods"]) if evolution else 0)
         if len(figures) != expected or len(files) != 2 * expected:
             raise ValueError("Expected the complete expanded and strict PNG/SVG figure set")
+        if (source / WEBSITE_FIGURES).exists():
+            for figure in figures:
+                relative = f"{figure['view']}/{figure['name']}"
+                for suffix in (".png", ".svg"):
+                    copy(
+                        source / WEBSITE_FIGURES / f"{relative}{suffix}",
+                        f"website-figures/{relative}{suffix}",
+                    )
+                figure["display_path"] = f"website-figures/{relative}.png"
+                website = source / WEBSITE_FIGURES / f"{relative}.png"
+                if struct.unpack(">II", website.read_bytes()[16:24]) != (
+                    figure["width"],
+                    figure["height"],
+                ):
+                    raise ValueError(f"Website figure dimensions changed: {relative}")
         for name in [
             "analysis_claims.csv",
             "claims.csv",
