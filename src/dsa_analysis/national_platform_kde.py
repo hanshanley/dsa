@@ -186,7 +186,7 @@ def analyze_view(
             (directory / filename).unlink(missing_ok=True)
         summary = {
             "status": "insufficient_evidence",
-            "groups": list(groups),
+            **({"groups": list(groups)} if groups != GROUPS else {}),
             "reason": str(error),
             "group_passages": dict(Counter(row["group"] for row in rows)),
             "group_documents": {
@@ -257,7 +257,7 @@ def analyze_view(
     diagnostics = density_diagnostics(rows, scores, groups=groups)
     summary = {
         "status": "complete",
-        "groups": list(groups),
+        **({"groups": list(groups)} if groups != GROUPS else {}),
         "dimensions": selected,
         "bandwidth": bandwidth,
         "seed": SEED,

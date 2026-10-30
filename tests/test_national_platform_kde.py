@@ -120,6 +120,14 @@ class NationalKDETests(unittest.TestCase):
             )
             self.assertEqual(result["status"], "insufficient_evidence")
             self.assertIn("ten eligible passages", result["reason"])
+            self.assertNotIn("groups", result)
+            expanded = analyze_view(
+                corpus,
+                np.ones((len(corpus), 3)),
+                Path(temporary),
+                groups=SUPPORTED_GROUPS,
+            )
+            self.assertEqual(expanded["groups"], list(SUPPORTED_GROUPS))
 
     def test_embedding_key_changes_with_text_order_or_tokenization(self):
         corpus = rows()
