@@ -1,37 +1,26 @@
 {
   "attempts": [
     {
-      "generation_tokens": 337,
-      "generation_tps": 15.65365212387818,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 1471,
-      "prompt_tps": 469.51490547577754,
-      "request_sha256": "7085ac392ed6a5ae47f0f572af42b474f76e36eb65b4a23855e693e4da5353f9",
-      "seconds": 24.672480624867603,
-      "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for restoring the treaty system specified by the Constitution, where the president negotiates agreements and the Senate ratifies them with a two-thirds vote.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Characterization of the current chief executive as presuming to bind the country to bilateral and multilateral agreements of their devising.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Evaluation that the current chief executive's media admirers portray their personal commitments as done deals, which is inaccurate.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Policy position to work with Congress to reestablish constitutional order in America's foreign relations with a new Republican executive.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Policy position to deem all international executive agreements and political arrangements entered into by the current Administration as null and void as mere expressions of the current president's preferences.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Policy position to abrogate or renegotiate as treaties those agreements in the national interest that would traditionally have been made by treaty, and transmit them to the Senate for advice and consent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Policy position to withdraw the United States from all agreements and arrangements failing to meet the specified standards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
-    },
-    {
-      "generation_tokens": 343,
-      "generation_tps": 15.652917828898888,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 1976,
-      "prompt_tps": 488.7151666189336,
-      "request_sha256": "676b41c3b072c8d29fc2145335b65cb50eaad0b23789e5fbb9a602e8c049f21d",
-      "seconds": 25.966799333924428,
-      "stage": "source_fidelity_revision",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for restoring the treaty system specified by the Constitution, where the president negotiates agreements and the Senate ratifies them with a two-thirds vote of senators present and voting.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Characterization of the current chief executive as presuming to bind the country to bilateral and multilateral agreements of their devising.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Evaluation that the current chief executive's media admirers portray their personal commitments\u2014whether on climate change, Iranian weapons, or other matters\u2014as done deals.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new Republican executive will work with Congress to reestablish constitutional order in America's foreign relations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All international executive agreements and political arrangements entered into by the current Administration must be deemed null and void as mere expressions of the current president's preferences.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Those agreements in the national interest that would traditionally have been made by treaty must be abrogated, renegotiated as treaties, and transmitted to the Senate for its advice and consent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will withdraw from all agreements and arrangements failing to meet the specified standards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
-    },
-    {
       "generation_tokens": 347,
-      "generation_tps": 15.708366969387423,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 2445,
-      "prompt_tps": 509.11797053678634,
-      "request_sha256": "da3f1e7beceec8bcebafa47b9b2e42aca54fa3d93a0f99bdc951e06de258d86d",
-      "seconds": 26.904587832977995,
+      "generation_tps": 15.477160812119793,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1944,
+      "prompt_tps": 440.8142149332327,
+      "request_sha256": "f216c3814d25882f47cd8518fa6c236e60394e52086789955ad04cdc0331f783",
+      "seconds": 26.84195537515916,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for restoring the treaty system specified by the Constitution, where the president negotiates agreements and the Senate ratifies them with a two-thirds vote of senators present and voting.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Characterization of the current chief executive as presuming to bind the country to bilateral and multilateral agreements of their devising.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The media admirers of the current chief executive portray their personal commitments\u2014whether on climate change, Iranian weapons, or other matters\u2014as done deals.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new Republican executive will work with Congress to reestablish constitutional order in America's foreign relations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All international executive agreements and political arrangements entered into by the current Administration must be deemed null and void as mere expressions of the current president's preferences.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"International executive agreements and political arrangements in the national interest that would traditionally have been made by treaty must be abrogated, renegotiated as treaties, and transmitted to the Senate for its advice and consent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will withdraw from all agreements and arrangements failing to meet the specified standards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 346,
+      "generation_tps": 15.500666950310292,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1986,
+      "prompt_tps": 439.8312200754361,
+      "request_sha256": "f24c518de9e6caa87e5b24af1be9508a0c67a1200f66e54da61780dad87efdd3",
+      "seconds": 26.848454165970907,
       "stage": "source_fidelity_revision",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for restoring the treaty system specified by the Constitution, where the president negotiates agreements and the Senate ratifies them with a two-thirds vote of senators present and voting.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Characterization of the current chief executive as presuming to bind the country to bilateral and multilateral agreements of their devising.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Evaluation that the current chief executive's media admirers portray their personal commitments\u2014whether on climate change, Iranian weapons, or other matters\u2014as done deals, which is inaccurate.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new Republican executive will work with Congress to reestablish constitutional order in America's foreign relations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All international executive agreements and political arrangements entered into by the current Administration must be deemed null and void as mere expressions of the current president's preferences.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Those agreements in the national interest that would traditionally have been made by treaty must be abrogated, renegotiated as treaties, and transmitted to the Senate for its advice and consent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will withdraw from all agreements and arrangements failing to meet the specified standards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for restoring the treaty system specified by the Constitution, where the president negotiates agreements and the Senate ratifies them with a two-thirds vote of senators present and voting.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Characterization of the current chief executive as presuming to bind the country to bilateral and multilateral agreements of their devising.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The media admirers of the current chief executive portray their personal commitments\u2014whether on climate change, Iranian weapons, or other matters\u2014as done deals.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new Republican executive will work with Congress to reestablish constitutional order in America's foreign relations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"All international executive agreements and political arrangements entered into by the current Administration must be deemed null and void as mere expressions of the current president's preferences.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"International executive agreements and political arrangements in the national interest that would traditionally have been made by treaty must be abrogated, renegotiated as treaties, and transmitted to the Senate for its advice and consent.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States will withdraw from all agreements and arrangements failing to meet those standards.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
