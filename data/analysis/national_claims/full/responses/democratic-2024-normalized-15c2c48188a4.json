@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 421,
+      "generation_tps": 15.73666675471302,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1582,
+      "prompt_tps": 454.14206915230164,
+      "request_sha256": "48afe5f7869d56918333186cfcae44b573f459ec76405809268e1cbd1759a321",
+      "seconds": 30.248260792111978,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration has strengthened dozens of environmental and safety standards to reduce smog, soot, carbon, methane, mercury, and other toxic pollutants in communities.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After 30 years of inadequate protections, a ban on all cancer-causing asbestos, including from homes, cars, and water filtration sites, was implemented.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of chlorpyrifos, a pesticide that can sicken farmworkers and children, was prohibited.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's first national drinking water standard was set to protect local water supplies from pollution with PFAS, toxic \\\"forever chemicals\\\" linked to cancer.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Wastewater systems are being upgraded through the Bipartisan Infrastructure Law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every toxic lead pipe in America is being replaced.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Bipartisan Infrastructure Law includes work to speed the cleanup of toxic Superfund and brownfield sites that have leached poisonous waste into nearby neighborhoods for decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"A \\\"polluter pays\\\" tax was restored through the Bipartisan Infrastructure Law, collecting revenue on chemicals sold in the United States and directing it to the Superfund Trust Fund to pay for cleanup.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The \\\"polluter pays\\\" tax had lapsed 26 years before its restoration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 426,
+      "generation_tps": 15.778532006194785,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2171,
+      "prompt_tps": 506.8554623629941,
+      "request_sha256": "1f35b96b2cbb9b61c0f68a5cbb8f38e2f8ce6322fd4826eac8e41614c50ec0c0",
+      "seconds": 31.295048624975607,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Administration has strengthened dozens of environmental and safety standards to reduce smog, soot, carbon, methane, mercury, and other toxic pollutants in communities.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"After 30 years of inadequate protections, all cancer-causing asbestos was finally banned, including from homes, cars, and water filtration sites.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The use of chlorpyrifos, a pesticide that can sicken farmworkers and children, was prohibited.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's first national drinking water standard was set to protect local water supplies from pollution with PFAS, toxic \\\"forever chemicals\\\" linked to cancer.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Wastewater systems are being upgraded through the Bipartisan Infrastructure Law.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Every toxic lead pipe in America is being replaced.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Bipartisan Infrastructure Law includes work to speed the cleanup of toxic Superfund and brownfield sites that have leached poisonous waste into nearby neighborhoods for decades.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The Bipartisan Infrastructure Law restored a \\\"polluter pays\\\" tax that had lapsed 26 years before, collecting revenue on any chemical sold in the United States, and directing it to the Superfund Trust Fund to pay for cleanup.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The \\\"polluter pays\\\" tax had lapsed 26 years before its restoration.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "48afe5f7869d56918333186cfcae44b573f459ec76405809268e1cbd1759a321"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 314,
+      "generation_tps": 15.833258841938088,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1400,
+      "prompt_tps": 468.70571874460893,
+      "request_sha256": "23c01294e54289e9828ba09a3b3defc1c35825dcba0c934dbca9a35b3254c451",
+      "seconds": 22.831054667010903,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Trump reversed restrictions limiting the transfer of surplus military equipment to local police departments.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump effectively abandoned pattern-or-practice investigations into police misconduct.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump tweeted, \\\"when the looting starts, the shooting starts\\\" following protests after George Floyd's murder.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump referred to protesters as \\\"THUGS\\\" following George Floyd's murder.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump tear-gassed nonviolent protesters outside the White House.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Trump gets another term, he will resume stop-and-frisk practices.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Trump gets another term, he will withhold federal funding from local police departments that do not adopt stop-and-frisk.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump is promising to sign legislation to broaden qualified immunity to prevent legal accountability for police misconduct.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 319,
+      "generation_tps": 16.01790430131757,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1882,
+      "prompt_tps": 483.78366635290627,
+      "request_sha256": "79324dde2df2c0af5910ae5c8b4d72713aa99b2104a28a2b9b718f4954286ebc",
+      "seconds": 23.821141791064292,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Trump reversed restrictions that limited the transfer of surplus military equipment to local police departments.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump effectively abandoned pattern-or-practice investigations into police misconduct.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Following protests after George Floyd's murder, Trump tweeted, \\\"when the looting starts, the shooting starts\\\".\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Following George Floyd's murder, Trump referred to protesters as \\\"THUGS\\\".\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump tear-gassed nonviolent protesters outside the White House.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Trump gets another term, he will resume stop-and-frisk practices.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Trump gets another term, he will withhold federal funding from local police departments that do not adopt this discriminatory policy.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump is promising to sign legislation to broaden qualified immunity to prevent legal accountability for police misconduct.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "23c01294e54289e9828ba09a3b3defc1c35825dcba0c934dbca9a35b3254c451"
+}

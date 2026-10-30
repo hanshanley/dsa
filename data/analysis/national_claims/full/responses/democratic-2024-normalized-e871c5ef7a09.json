@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 418,
+      "generation_tps": 16.130396141640112,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1455,
+      "prompt_tps": 481.1765112947402,
+      "request_sha256": "ab8fe45eec1eceaeebcf463626a0baec976fc7f41409df15bc7393242ab1ee7a",
+      "seconds": 28.948760125087574,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Judicial appointments are crucial at every level of the federal bench, but particularly on the Supreme Court.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next president could appoint one, two, or more new Supreme Court justices.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Supreme Court justices will determine what freedoms Americans have \u2013 or lose \u2013 for the next 30, 40, or even 50 years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden appointed Justice Ketanji Brown Jackson, the first Black woman ever named to the Supreme Court.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Justice Ketanji Brown Jackson has stood up for Americans' rights and freedoms throughout her career on the bench.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump handpicked three justices who have pushed a far-right agenda.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court's attack on long-established American legal principles has had devastating consequences.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court overturned Roe and eliminated the right to choose.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court weakened voting rights and civil rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court granted immunity for presidential crimes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court's actions undermine the rule of law.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 434,
+      "generation_tps": 16.072839937791912,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2041,
+      "prompt_tps": 501.5731039370437,
+      "request_sha256": "10876668ef7fa0b0f4e0b95b761d93e0f729f85f46e720c4615b6e7e4d573cc7",
+      "seconds": 31.08334904187359,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Judicial appointments are crucial at every level of the federal bench, but nowhere more so than on the Supreme Court.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next president could appoint one, two, or more new Supreme Court justices.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Those justices will determine what freedoms Americans have \u2013 or lose \u2013 for the next 30, 40, or even 50 years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden appointed Justice Ketanji Brown Jackson, the first Black woman ever named to the Supreme Court.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Justice Ketanji Brown Jackson has stood up for Americans' rights and freedoms throughout her career on the bench.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump handpicked three justices who have pushed a far-right agenda with devastating consequences.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court's attack on a wide range of long-established American legal principles has had devastating consequences.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court overturned Roe and eliminated the right to choose.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court weakened voting rights and civil rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court granted immunity for presidential crimes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court's attack on long-established American legal principles undermines the rule of law.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 432,
+      "generation_tps": 15.934028229641807,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2596,
+      "prompt_tps": 541.3837589941917,
+      "request_sha256": "898a193325bd71401ffa2c94c4b5111c7207377ac5013bcd3d88b2d80be1ce90",
+      "seconds": 31.91773070790805,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Judicial appointments are crucial at every level of the federal bench, but nowhere more so than on the Supreme Court.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The next president could appoint one, two, or more new Supreme Court justices.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Supreme Court justices will determine what freedoms Americans have \u2013 or lose \u2013 for the next 30, 40, or even 50 years.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden appointed Justice Ketanji Brown Jackson, the first Black woman ever named to the Supreme Court.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Justice Ketanji Brown Jackson has stood up for Americans' rights and freedoms throughout her career on the bench.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump handpicked three justices who have pushed a far-right agenda.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court's attack on a wide range of long-established American legal principles has had devastating consequences.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court overturned Roe and eliminated the right to choose.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court weakened voting rights and civil rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court granted immunity for presidential crimes.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Court's attack on long-established American legal principles undermines the rule of law.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "ab8fe45eec1eceaeebcf463626a0baec976fc7f41409df15bc7393242ab1ee7a"
+}

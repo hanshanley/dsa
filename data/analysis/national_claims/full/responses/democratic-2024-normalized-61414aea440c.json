@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 322,
+      "generation_tps": 16.132832027335475,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1531,
+      "prompt_tps": 485.17107442629265,
+      "request_sha256": "2e05da6de1e9615606d16bf10dfdf9a6bbe47d9be1607a309167e424697442f0",
+      "seconds": 23.12590808304958,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The right to vote and to have one's vote counted is the threshold of American democracy and liberty.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The right to vote remains under assault decades after civil rights leaders secured it.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden and Vice President Harris have taken action to protect the right to vote in free, fair, and secure elections, especially for communities of color who have been historically disenfranchised.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden signed an executive order directing an all-of-government effort to promote access to voting within the first 100 days of his presidency.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Agencies have taken historic action to help veterans, college students, Native Americans, and other underserved communities register to vote.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Department of Justice has more than doubled its staff dedicated to enforcing voting rights laws.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"President Biden signed the Electoral Count Reform Act to preserve the will of the people and to protect against attempts to overturn elections.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 353,
+      "generation_tps": 16.124626860731787,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2021,
+      "prompt_tps": 503.3364354233224,
+      "request_sha256": "5c187bffe484836dac8c56dc115852852504eace42d705d267c13763f4b5e9f6",
+      "seconds": 25.917404000181705,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The right to vote and to have one's vote counted is the threshold of American democracy and liberty.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The right to vote remains under assault decades after a generation of civil rights leaders faced fire hoses and batons, were brutally beaten and even died to secure this fundamental right.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden and Vice President Harris have taken action to protect the right to vote in free, fair, and secure elections, especially for communities of color who have been historically disenfranchised.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Within the first 100 days of his presidency, President Biden signed an executive order directing an all-of-government effort to promote access to voting.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Agencies have taken historic action to help veterans, college students, Native Americans, and other underserved communities register to vote.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The Department of Justice has more than doubled its staff dedicated to enforcing voting rights laws.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]},{\"claim_text\":\"President Biden signed the Electoral Count Reform Act to preserve the will of the people and to protect against the type of attempts to overturn elections that led to the January 6 insurrection.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "2e05da6de1e9615606d16bf10dfdf9a6bbe47d9be1607a309167e424697442f0"
+}

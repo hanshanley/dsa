@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 459,
+      "generation_tps": 16.052410338761362,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1521,
+      "prompt_tps": 479.28338774015236,
+      "request_sha256": "9836bf191bdef0283397897bd563c25d0324f256b0db69ceb8a6975c1daa50e6",
+      "seconds": 31.77902725012973,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Black wealth has climbed 60 percent since before the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Latino homeownership is higher than before the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Median Latino household wealth is up 19 percent in the last three years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched a first-of-its-kind task force to end bias in the home appraisal process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The likelihood that a home in a Black community is undervalued compared to a home in a white community has been cut by more than 40 percent since the task force was launched.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are working to bring down housing costs across the board.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Rescue Plan kept 8 million families in their homes throughout the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President has introduced the most ambitious housing agenda in 50 years, with plans to boost supply, lower rent, and make homeownership more affordable.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's housing agenda includes down payment assistance for first-generation homeowners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's housing agenda includes a mortgage relief tax credit for first-time homebuyers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's housing agenda's down payment assistance and mortgage relief tax credit will disproportionately benefit communities of color.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 461,
+      "generation_tps": 16.020634298915756,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2148,
+      "prompt_tps": 515.9918486734764,
+      "request_sha256": "c9bb9c50f4638cdc7890f8b153fcbc2b6286a6135ed928c5a0d7e9e6526a33a4",
+      "seconds": 32.948977708118036,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Black wealth has climbed 60 percent since before the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Latino homeownership is higher than before the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Median Latino household wealth is up 19 percent in the last three years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration launched a first-of-its-kind task force to end pernicious bias in the home appraisal process.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Since the task force was launched, the likelihood that a home in a Black community is undervalued compared to a home in a white community has been cut by more than 40 percent.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats are working to bring down housing costs across the board.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The American Rescue Plan kept 8 million families in their homes throughout the pandemic.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President has introduced the most ambitious housing agenda in 50 years, with plans to boost supply, lower rent, and make homeownership more affordable.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's housing agenda includes down payment assistance for first-generation homeowners.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's housing agenda includes a mortgage relief tax credit for first-time homebuyers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The President's housing agenda's down payment assistance and mortgage relief tax credit will disproportionately benefit communities of color.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "9836bf191bdef0283397897bd563c25d0324f256b0db69ceb8a6975c1daa50e6"
+}

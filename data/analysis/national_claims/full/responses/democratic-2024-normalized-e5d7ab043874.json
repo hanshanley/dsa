@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 435,
+      "generation_tps": 15.927343243362968,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1535,
+      "prompt_tps": 476.7436884754799,
+      "request_sha256": "8e2f13792fd19cc0db3eb14567b284768282c6488ef1931682230e21e45f9c5d",
+      "seconds": 30.545162082882598,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President's infrastructure and climate laws are improving climate resilience by boosting readiness and response.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's infrastructure and climate laws are recruiting and retaining more wildland firefighters.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's infrastructure and climate laws are increasing budgets at FEMA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's infrastructure and climate laws are preparing the country to better mitigate the impact of each extreme weather event.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"New roads, bridges, and ports are being built that are less vulnerable to flooding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Power lines are being put underground to prevent winds from bringing them down and causing fires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electric grids are being made more reliable and energy efficient to prevent power loss during critical moments.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Wetlands are being restored to protect communities from sea-level rise and storm surge.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Colorado River System was stabilized after the worst drought in over a thousand years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in public safety measures, like resiliency and cooling centers, will continue.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden introduced the first national heat standards to protect workers from dangerous heat last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 406,
+      "generation_tps": 15.95858608058553,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2138,
+      "prompt_tps": 490.458642796864,
+      "request_sha256": "97794fa50210e9ff6a4fada9fe14c5e3505e8a0bf577a3be6a1fd5ef41f082fd",
+      "seconds": 29.81397712486796,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President's infrastructure and climate laws are improving climate resilience by boosting readiness and response, including by recruiting and retaining more wildland firefighters, and increasing budgets at FEMA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The President's infrastructure and climate laws are preparing the country to better mitigate the impact of each extreme weather event.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"New roads, bridges, and ports are being built that are less vulnerable to flooding.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Power lines are being put underground, so winds can't bring them down where they catch fire.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electric grids are being made more reliable and more energy efficient, so families and businesses don't lose power in critical moments.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Wetlands are being restored to help protect communities from sea-level rise and storm surge.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Colorado River System was stabilized after the worst drought in over a thousand years.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in public safety measures, like resiliency and cooling centers, will continue, so everyone, including the most vulnerable residents, can find refuge during extreme weather events.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden introduced the first national heat standards to protect workers from dangerous heat last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "8e2f13792fd19cc0db3eb14567b284768282c6488ef1931682230e21e45f9c5d"
+}

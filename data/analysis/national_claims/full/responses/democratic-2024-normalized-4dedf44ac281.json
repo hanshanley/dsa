@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 370,
+      "generation_tps": 16.043240348384796,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1466,
+      "prompt_tps": 479.48403465285844,
+      "request_sha256": "6d1987e4ba79101187c0e4e7d3d72a2ba845552e2408999f26e392222db782ce",
+      "seconds": 26.13058654218912,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump has a history of supporting rollbacks to voting rights.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has spent years undermining the electoral process and confidence in elections.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump continues to spread lies about the election he lost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump's allies in state legislatures have enacted laws that make it harder to vote and undermine the will of the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump supported Georgia's voter suppression law, which makes it illegal to hand out water to voters waiting in line.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Donald Trump returns to the White House, he will seek to eliminate early voting and mail ballots to make it harder for Americans to exercise their right to vote.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has spoken out against extreme gerrymandering and harmful court decisions that perpetuate it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has consistently advocated for legislation that would end gerrymandering and create fair congressional maps.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump opposes efforts to draw fairer maps.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 389,
+      "generation_tps": 16.112277167987255,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2004,
+      "prompt_tps": 499.78120542114146,
+      "request_sha256": "9d2259abcb54ddd5674a9eb6559e49c4450f29fbee6d99b63360580163683fa0",
+      "seconds": 28.16427083313465,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump has a dark and different view, with a long history of supporting rollbacks to voting rights.\",\n\"claim_types\":[\"characterization\",\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has spent years undermining the electoral process and confidence in elections.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump continues to spread blatant lies about the election he lost.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump's allies in state legislatures across the country have enacted and continue to introduce laws that make it harder to vote and undermine the will of the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump supported Georgia's voter suppression law, which makes it illegal to hand out water to voters waiting in line.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Donald Trump returns to the White House, he will seek to eliminate early voting and mail ballots to make it harder for Americans to exercise their right to vote.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has spoken out against extreme gerrymandering and harmful court decisions that perpetuate it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden has consistently advocated for legislation that would end gerrymandering and create fair congressional maps.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump opposes efforts to draw fairer maps.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "6d1987e4ba79101187c0e4e7d3d72a2ba845552e2408999f26e392222db782ce"
+}

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 497,
+      "generation_tps": 15.991064952254677,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1568,
+      "prompt_tps": 487.0369760228816,
+      "request_sha256": "1ba8c0f5b5021c8e68403802b27603b0f7d64926b80345d1dfae734bb77eb6ca",
+      "seconds": 34.31006125011481,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Donald Trump refuses to defend the Constitution, the rule of law, and the system of checks and balances.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump does not accept the court-upheld truth that he lost the 2020 election and describes himself as a \u201cvery proud election denier\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has not agreed to accept the results of this year's election.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump warned of a \u201cbloodbath\u201d if he loses the election.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump lionizes convicted criminals who perpetrated the January 6 attack on the Capitol.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump calls those who attacked the Capitol on January 6 \u201cpatriots\u201d and \u201chostages\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump promised to pardon those who attacked the Capitol on January 6.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has promised to be a dictator on \u201cDay One\u201d if he gets another term.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump fawns over other dictators.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump vowed to weaponize the government to go after his enemies and benefit his allies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump has plans to fire dedicated, nonpolitical civil servants and replace them with loyalists.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump has promised to exert presidential authority over independent agencies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump suggested the \u201ctermination\u201d of the Constitution.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 504,
+      "generation_tps": 16.07926982170875,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2233,
+      "prompt_tps": 515.4952234750268,
+      "request_sha256": "8ed97aee77b41e8210ab332daea17dcdac39e6113239172a452bb740dfc6f8b4",
+      "seconds": 35.69048491702415,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump refuses to defend the Constitution, the rule of law, and the system of checks and balances.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump does not accept the truth, upheld by scores of courts, that he lost in 2020, and describes himself as a \u201cvery proud election denier\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has not agreed to accept this year's election results.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump warned of a \u201cbloodbath\u201d if he loses the election.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump lionizes the convicted criminals who perpetrated the January 6 attack on the Capitol.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump calls those who attacked the Capitol on January 6 \u201cpatriots\u201d and \u201chostages\u201d.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump promised to pardon those who attacked the Capitol on January 6.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has promised to be a dictator on \u201cDay One\u201d if he gets another term.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump fawns over other dictators.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump vowed to weaponize the government to go after his enemies and benefit his allies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump has plans to fire dedicated, nonpolitical civil servants and replace them with loyalists.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump has promised to exert presidential authority over independent agencies.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump suggested the \u201ctermination\u201d of the Constitution.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "1ba8c0f5b5021c8e68403802b27603b0f7d64926b80345d1dfae734bb77eb6ca"
+}

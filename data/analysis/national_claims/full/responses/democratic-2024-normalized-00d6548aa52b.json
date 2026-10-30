@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 281,
+      "generation_tps": 16.179696429878227,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1469,
+      "prompt_tps": 475.4674135495362,
+      "request_sha256": "301f3a118f8f517d13ddd22d32df1d2561fa0788054b91c17050ddc1be13211d",
+      "seconds": 20.467536041978747,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"President Biden, Vice President Harris, and all Democrats will continue to work to ensure that American democracy endures.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has put protecting American democracy at the heart of his presidency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"When President Biden took office, the nation was reeling from the events of January 6, which included a violent mob storming the Capitol, smashing windows, kicking in doors, attacking police officers, and searching for elected officials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump's lies, repeated over months, were used to incite a frenzy to overturn the will of the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden spent his first term working to restore trust in institutions, protect freedoms, and preserve democracy.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden, Vice President Harris, and Democrats have consistently stated that political violence has no place in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 302,
+      "generation_tps": 16.160510867089428,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1918,
+      "prompt_tps": 502.8170623250154,
+      "request_sha256": "cdd882ae0ae8db2342128d8d494c1eb46134920fddd91acc99497303b914f718",
+      "seconds": 22.51194570818916,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden, Vice President Harris, and all Democrats will continue to work every day to ensure that American democracy endures.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has put protecting American democracy at the heart of his presidency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"When President Biden took office, the nation was reeling from what it had just witnessed on January 6: a violent mob storming the Capitol, smashing windows, kicking in doors, attacking scores of police officers, and roaming the corridors hunting for elected officials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Trump's lies, repeated over and over for months, were used to incite a frenzy to overturn the will of the people.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden spent his first term working to restore trust in institutions, protect freedoms, and preserve democracy for the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"President Biden, Vice President Harris, and Democrats have consistently made it clear that political violence has no place in America.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "301f3a118f8f517d13ddd22d32df1d2561fa0788054b91c17050ddc1be13211d"
+}

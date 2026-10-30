@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 414,
+      "generation_tps": 15.813666070461544,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1531,
+      "prompt_tps": 474.8989891884943,
+      "request_sha256": "d4f03e7d7aa9644c392bbbfc5f2810aaeec5e39d95345f84017336cf92f23316",
+      "seconds": 29.415562666021287,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President signed into law new protections to support survivors and address sexual assault and sexual harassment in the workplace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump weakened protections for women in the workplace.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump moved to block an Obama-era rule requiring companies to report pay by race and gender.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump limited the salary threshold increase under which salaried workers were eligible for overtime.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work to pass the Paycheck Fairness Act and end pay inequity throughout the economy, with penalties for companies that discriminate against women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will guarantee affordable, high-quality child care from birth until kindergarten, with most families paying $10 a day, and make it free for low-income families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will protect the health and dignity of older adults and people with disabilities by improving long-term care and supporting family caregivers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will invest in care infrastructure by raising wages and the quality of care worker jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will establish a national, comprehensive paid family and medical leave program to ensure all workers can take time to bond with a new child, care for a loved one, or recover from an illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 445,
+      "generation_tps": 16.00282050001238,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2113,
+      "prompt_tps": 491.3795836711904,
+      "request_sha256": "96b4e7582040e117409424a89030d7ecbd3457eda906299fc64b96e4409bc472",
+      "seconds": 32.12210499984212,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The President signed into law new protections to support survivors and address sexual assault and sexual harassment in the workplace.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump weakened protections for women in the workplace.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump moved to block an Obama-era rule that required companies to report pay by race and gender.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Donald Trump limited the salary threshold increase under which salaried workers were eligible for overtime, leaving behind millions of workers who would have benefited under the original rule.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Democrats will work to pass the Paycheck Fairness Act and end pay inequity not just in the federal workforce, but throughout the economy with penalties for companies that discriminate against women.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will guarantee affordable, high-quality child care from birth until kindergarten, with most families paying just $10 a day, and make it free for low-income families.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will protect the health and dignity of older adults and people with disabilities by improving long-term care and supporting family caregivers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will invest in care infrastructure by raising wages and the quality of care worker jobs.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democrats will establish a national, comprehensive paid family and medical leave program to ensure that all workers, including women, can take the time they need to bond with a new child, care for a loved one, or recover from an illness.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "d4f03e7d7aa9644c392bbbfc5f2810aaeec5e39d95345f84017336cf92f23316"
+}

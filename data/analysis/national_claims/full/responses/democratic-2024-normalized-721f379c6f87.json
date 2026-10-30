@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 387,
+      "generation_tps": 15.98858701313856,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1473,
+      "prompt_tps": 473.977048434044,
+      "request_sha256": "f08bb6a2ae36e1a92f30b4a9b987c3dad5e53dda5b721214f1c207fd0221740e",
+      "seconds": 27.326906374888495,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"If elected again, Trump will appoint more justices in the same ideological mold as past appointees.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump's past Supreme Court short lists have always been stocked with far-right ideologues.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump made clear in his first term that his goal was to appoint as many far-right judges as he could, regardless of their qualifications.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American Bar Association deemed a series of candidates appointed by Trump to lifetime seats as \u201cnot qualified\u201d.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three-quarters of Trump's judicial appointees were men.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"84 percent of Trump's judicial appointees were white.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Trump continues appointing extreme conservatives to the Court, the far right will have final say over laws for decades.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The consequences for the country will be devastating if Trump continues appointing extreme conservatives to the Court.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to appoint justices and judges across the federal bench who are committed to defending American rights and freedoms, like Justice Jackson.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Justice Jackson is a brilliant jurist.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 400,
+      "generation_tps": 16.085680161067305,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2028,
+      "prompt_tps": 497.4408349084468,
+      "request_sha256": "2c795d688412955847de1855526507054e33e51cb026f56827bf1b7dace42fb0",
+      "seconds": 28.955896666971967,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"If he's elected again, Trump will appoint more justices in the same mold as past appointees.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump's past Supreme Court short lists have always been stocked with far-right ideologues.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Trump made clear in his first term that his goal was to appoint as many far-right judges as he could, regardless of their qualifications.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American Bar Association deemed a series of candidates appointed by Trump to lifetime seats as \u201cnot qualified\u201d.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Three-quarters of Trump's judicial appointees were men.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"84 percent of Trump's judicial appointees were white.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Trump keeps stacking the Court with extreme conservatives, the far right will have final say over laws for decades to come.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"If Trump keeps stacking the Court with extreme conservatives, the consequences for the country will be devastating.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden will continue to appoint justices and judges across the federal bench who are like Justice Jackson: brilliant jurists committed to defending American rights and freedoms.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Justice Jackson is a brilliant jurist.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "f08bb6a2ae36e1a92f30b4a9b987c3dad5e53dda5b721214f1c207fd0221740e"
+}

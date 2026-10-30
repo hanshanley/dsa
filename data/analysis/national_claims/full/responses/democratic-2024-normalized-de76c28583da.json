@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 405,
+      "generation_tps": 15.880953652224163,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1471,
+      "prompt_tps": 457.8446573643346,
+      "request_sha256": "cd2b4e17b5fa0821d97cacb0332663f494b70b9c12326ce259221c7b1b1d9f13",
+      "seconds": 28.725622625090182,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump will reverse progress made by the current administration.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump will repeal the Affordable Care Act, putting coverage of prenatal, pregnancy, and postpartum care at risk.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has attacked Medicaid, which covers 65 percent of births to Black mothers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has attacked Medicaid, which covers 58 percent of births to Latino mothers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The administration has championed an ambitious equity and racial justice agenda to ensure the full and fair participation of all communities in the economy and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The administration aims to ensure the promise of America for everyone, including Black, Latino, and Asian American, Native Hawaiian, and Pacific Islander (AANHPI) Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Black and Latino unemployment has hit record lows under President Biden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The AANHPI employment rate is at its highest since 2008 under President Biden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Wages are rising faster than prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The greatest wage gains have gone to low-paid workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 409,
+      "generation_tps": 15.950380770512503,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2044,
+      "prompt_tps": 494.5320119469564,
+      "request_sha256": "2e13a8ec003bd38944b2c68c1cd50a1db205ca9f798c6c68fff00a46dd50b78a",
+      "seconds": 29.787587540922686,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Donald Trump will reverse progress made by the current administration.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump will repeal the Affordable Care Act, putting coverage of prenatal, pregnancy, and postpartum care at risk.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has attacked Medicaid, which covers 65 percent of births to Black mothers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Donald Trump has attacked Medicaid, which covers 58 percent of births to Latino mothers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since Day One, the administration has championed an ambitious equity and racial justice agenda to ensure the full and fair participation of all communities in the economy and democracy.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The administration aims to ensure the promise of America for everyone, including Black, Latino, and Asian American, Native Hawaiian, and Pacific Islander (AANHPI) Americans.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Black and Latino unemployment has hit record lows under President Biden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The AANHPI employment rate is at its highest since 2008 under President Biden.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Wages are rising faster than prices.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The greatest wage gains have gone to low-paid workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "cd2b4e17b5fa0821d97cacb0332663f494b70b9c12326ce259221c7b1b1d9f13"
+}

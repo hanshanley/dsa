@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 303,
+      "generation_tps": 16.059455283404137,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1454,
+      "prompt_tps": 473.22359439463173,
+      "request_sha256": "20a97a5b735e7703d0b5f8d7783c04bf62fd50467acbaec5af434c7f97e2f1ba",
+      "seconds": 21.953202083008364,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Programs like Solar for All are helping to lower energy costs by installing nearly a million solar rooftops in low-income areas by 2029.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bonus tax credits are being provided to draw clean energy and clean manufacturing to former fossil fuel and legacy power plant communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Former fossil fuel and legacy power plant communities powered the nation for generations and deserve a just transition away from fossil fuels.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Former fossil fuel and legacy power plant communities are seeing rapid growth today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than 2,300 Americans died after extreme heat exposure last year, making it the top weather-related killer.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States had to build back from 28 separate billion-dollar weather and climate disasters last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current situation of weather and climate disasters is not sustainable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 308,
+      "generation_tps": 16.055497216485566,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1925,
+      "prompt_tps": 479.9367032455469,
+      "request_sha256": "7573940c90ec80605d6b02ea85fe14488ff447ebe1ac77a78be641890641b745",
+      "seconds": 23.205385874956846,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Programs like Solar for All are helping to lower energy costs by installing nearly a million solar rooftops in low-income areas by 2029.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Bonus tax credits are being provided to draw clean energy and clean manufacturing to former fossil fuel and legacy power plant communities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Former fossil fuel and legacy power plant communities powered the nation for generations and deserve a just transition away from fossil fuels.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Former fossil fuel and legacy power plant communities are seeing rapid growth today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"More than 2,300 Americans died after extreme heat exposure last year, making it the top weather-related killer.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The United States had to build back from 28 separate billion-dollar weather and climate disasters last year.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The current situation of weather and climate disasters is not sustainable.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "20a97a5b735e7703d0b5f8d7783c04bf62fd50467acbaec5af434c7f97e2f1ba"
+}

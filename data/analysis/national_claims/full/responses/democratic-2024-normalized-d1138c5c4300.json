@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 269,
+      "generation_tps": 15.847652880511408,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1371,
+      "prompt_tps": 442.5763862987039,
+      "request_sha256": "c3823b12042c802e497dd88b768bf5bb63b2ec48c1131e01ca44b27d830f4d3a",
+      "seconds": 20.083247375208884,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Highways and rail lines have disproportionately torn through Black, Latino, and low-income areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Highways and rail lines displaced and segregated residents and businesses in Black, Latino, and low-income areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Highways and rail lines stifled economic growth and investment in Black, Latino, and low-income areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Highways and rail lines cut people off from groceries, jobs, and health care in Black, Latino, and low-income areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bipartisan Infrastructure Law invests in new roads, bridges, railways, and public transit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Bipartisan Infrastructure Law aims to right historic wrongs related to highways and rail lines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 279,
+      "generation_tps": 15.87949444373487,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1808,
+      "prompt_tps": 488.68026429302097,
+      "request_sha256": "2b5d1f9b81af3bbb5c74d233014bca33fbe0a4a5e83ebc03eade8661489f5961",
+      "seconds": 21.280543375061825,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Highways and rail lines have disproportionately torn through Black, Latino, and low-income areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Highways and rail lines displaced and segregated residents and businesses in Black, Latino, and low-income areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Highways and rail lines stifled economic growth and investment in Black, Latino, and low-income areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Highways and rail lines cut people off from groceries, jobs, and health care in Black, Latino, and low-income areas.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Through the Bipartisan Infrastructure Law, investments are being made in new roads, bridges, railways, and public transit.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Through the Bipartisan Infrastructure Law, efforts are being made to right historic wrongs related to highways and rail lines.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "c3823b12042c802e497dd88b768bf5bb63b2ec48c1131e01ca44b27d830f4d3a"
+}

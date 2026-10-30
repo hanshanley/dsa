@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 426,
+      "generation_tps": 16.038411871088194,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1488,
+      "prompt_tps": 462.2343101303972,
+      "request_sha256": "4d99889b0fbbdfae6c6a52c88d088834653127de854bf74f3ab66f0ec7f7cbfd",
+      "seconds": 29.792249582940713,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden restored America's global climate leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States rejoined the Paris Climate Agreement on day one of President Biden's presidency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden set a goal to reach net-zero emissions by 2050, in line with climate science.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden persuaded 155 countries to agree to slash methane emissions by at least 30 percent by the end of this decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is increasing the resilience, diversity, and security of its clean energy supply chains.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is ensuring its clean energy supply chains reflect its values, including by creating good-paying, safe jobs for workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration rallied the world to commit to transitioning away from fossil fuels for the first time.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a goal to triple renewable energy worldwide by 2030.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a goal to double energy efficiency by 2030.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new global clean-energy supply chain partnership was launched to triple renewable energy worldwide and double energy efficiency by 2030.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 428,
+      "generation_tps": 15.988173184879793,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2082,
+      "prompt_tps": 505.6713867011314,
+      "request_sha256": "28e41c0c807a58bfd44bc9b97df01a18d1d14c26ff91c716564ef518e593e530",
+      "seconds": 30.898117125034332,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Biden restored America's global climate leadership.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States rejoined the Paris Climate Agreement on day one of President Biden's presidency.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden set an ambitious goal to reach net-zero emissions by 2050, in line with climate science.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Biden persuaded 155 countries to agree to slash methane emissions by at least 30 percent by the end of this decade.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is increasing the resilience, diversity, and security of its clean energy supply chains.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The United States is ensuring its clean energy supply chains reflect its values, including by creating good-paying, safe jobs for workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Administration rallied the world to commit for the first time to transitioning away from fossil fuels.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a goal to triple renewable energy worldwide by 2030.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"There is a goal to double energy efficiency by 2030.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"A new global clean-energy supply chain partnership was launched to triple renewable energy worldwide and to double energy efficiency by 2030.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "4d99889b0fbbdfae6c6a52c88d088834653127de854bf74f3ab66f0ec7f7cbfd"
+}

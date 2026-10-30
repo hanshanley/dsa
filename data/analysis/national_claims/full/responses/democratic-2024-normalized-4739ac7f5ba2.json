@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 219,
+      "generation_tps": 15.749042012274986,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1468,
+      "prompt_tps": 446.909652457518,
+      "request_sha256": "e3aac8a296c8e9466a7577b5964d74ab8605c9989a174bbeaa75e92e32a565bf",
+      "seconds": 17.20273583289236,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats launched the American Climate Corps, a workforce training and service initiative that will put more than 20,000 young Americans to work on clean energy, conservation, and climate resilience projects nationwide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has set a goal to triple the size of the American Climate Corps by the end of this decade.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Registered apprenticeships train more than a million Americans a year across industries, and 90 percent of those trained stay on in those jobs as full hires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment is being boosted in STEM education and workforce training programs for women and at Historically Black Colleges and Universities and other Minority Serving Institutions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 248,
+      "generation_tps": 15.83978445431695,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1855,
+      "prompt_tps": 472.244938638066,
+      "request_sha256": "a4221746febc15870396995e2235809f2e2787b7a2071ca8047cb7b5253bcd2b",
+      "seconds": 19.599247167119756,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats launched the American Climate Corps, a new workforce training and service initiative that will put more than 20,000 young Americans to work on clean energy, conservation, and climate resilience projects nationwide.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Biden has set a goal to triple the size of the American Climate Corps by the end of this decade.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Registered apprenticeships train more than a million Americans a year across industries, and 90 percent of those trained stay on in those jobs as full hires.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment is being boosted in STEM education and workforce training programs for women and at Historically Black Colleges and Universities and other Minority Serving Institutions, to make sure the clean energy and manufacturing jobs of tomorrow are open and accessible to communities that have been too often left out in the past.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+  "implementation_version": 3,
+  "prompt_sha256": "e3aac8a296c8e9466a7577b5964d74ab8605c9989a174bbeaa75e92e32a565bf"
+}
