@@ -21,6 +21,7 @@ LEDGER = ROOT / "data/manual/national_platform_sources.csv"
 OUTPUT = ROOT / "data/analysis/national_platforms"
 RAW = ROOT / "data/raw/national_platforms"
 GROUPS = ("democratic", "republican", "dsa")
+SUPPORTED_GROUPS = (*GROUPS, "libertarian")
 STRICT_TYPES = {"platform", "program"}
 FALLBACK_TYPES = {"resolution", "statement"}
 DEFAULT_CUTOFF = "2026-10-26"
@@ -106,9 +107,9 @@ def export_document_archive(output: Path = OUTPUT, raw: Path = RAW) -> Path:
                     if meta_path.exists()
                     else captures.get(capture_id, row)
                 )
-                document_format = row.get("document_format") or captures.get(
-                    capture_id, {}
-                ).get("document_format")
+                document_format = row.get("document_format") or captures.get(capture_id, {}).get(
+                    "document_format"
+                )
                 if (
                     "application/pdf" in capture_meta.get("content_type", "")
                     or document_format == "pdf"
@@ -189,7 +190,7 @@ def load_ledger(path: Path = LEDGER) -> list[dict]:
         if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", identifier) or identifier in seen:
             raise ValueError(f"Invalid or repeated document ID: {identifier}")
         seen.add(identifier)
-        if row["group"] not in GROUPS or row["organization_level"] != "national":
+        if row["group"] not in SUPPORTED_GROUPS or row["organization_level"] != "national":
             raise ValueError(f"Not a national organization document: {identifier}")
         if row["document_type"] not in STRICT_TYPES | FALLBACK_TYPES | {"gap"}:
             raise ValueError(f"Unsupported document type: {identifier}")
@@ -584,8 +585,9 @@ def prepare_corpus(
         for source in sources:
             handle.write(json.dumps(source, ensure_ascii=False) + "\n")
     years = []
+    groups = tuple(group for group in SUPPORTED_GROUPS if any(r["group"] == group for r in rows))
     for year in range(2000, date.fromisoformat(cutoff).year + 1):
-        for group in GROUPS:
+        for group in groups:
             observed = [
                 r
                 for r in coverage

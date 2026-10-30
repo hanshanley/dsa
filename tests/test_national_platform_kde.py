@@ -16,7 +16,7 @@ from dsa_analysis.national_platform_kde import (
     region_summaries,
     write_report,
 )
-from dsa_analysis.national_platforms import GROUPS, write_json, write_rows
+from dsa_analysis.national_platforms import GROUPS, SUPPORTED_GROUPS, write_json, write_rows
 
 
 def rows():
@@ -39,6 +39,25 @@ def rows():
 
 
 class NationalKDETests(unittest.TestCase):
+    def test_four_party_balancing_and_all_six_named_contrasts(self):
+        corpus = rows()
+        corpus += [
+            {**row, "group": "libertarian", "bundle_id": f"libertarian-{index % 2}"}
+            for index, row in enumerate(rows()[:12])
+        ]
+        selected = fit_indices(corpus, groups=SUPPORTED_GROUPS)
+        self.assertEqual(set(selected), set(SUPPORTED_GROUPS))
+        self.assertEqual({len(values) for values in selected.values()}, {10})
+        scores = pairwise_scores(
+            {group: np.array([-float(i)]) for i, group in enumerate(SUPPORTED_GROUPS)},
+            groups=SUPPORTED_GROUPS,
+        )
+        self.assertEqual(len(scores), 6)
+        self.assertEqual(scores["democratic_vs_libertarian"][0], 3)
+        self.assertEqual(scores["dsa_vs_libertarian"][0], 1)
+        with self.assertRaisesRegex(ValueError, "covering all rows"):
+            fit_indices(corpus)
+
     def test_early_cutoff_report_omits_unavailable_policy_examples(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

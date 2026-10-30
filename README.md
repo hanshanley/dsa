@@ -19,6 +19,11 @@ Democratic Socialists of America documents**, covering January 1, 2000 through
 October 26, 2026. Candidate campaigns, state parties, and local DSA chapters are
 outside this comparison.
 
+**Libertarian expansion in progress:** 11 adopted national editions have been
+recovered, with 2020/2024 reuse recorded separately. New inference is isolated;
+the completed three-party results below are unchanged. See the
+[four-party scope and reproduction notes](docs/national_four_party_analysis.md).
+
 The current work turns source text into discrete, self-contained claims using
 **local Gemma plus separately identified, source-bound assistant corrections**,
 then applies topic classification, embeddings, UMAP, and

@@ -11,7 +11,15 @@ from collections import Counter, defaultdict, deque
 from pathlib import Path
 
 from .national_claims import MODEL, REVISION, TYPES, LocalGemma, canonical
-from .national_platforms import GROUPS, OUTPUT, ROOT, digest, read_rows, write_json, write_rows
+from .national_platforms import (
+    OUTPUT,
+    ROOT,
+    SUPPORTED_GROUPS,
+    digest,
+    read_rows,
+    write_json,
+    write_rows,
+)
 
 CLAIMS_ROOT = ROOT / "data/analysis/national_claims"
 FULL_OUTPUT = CLAIMS_ROOT / "full"
@@ -158,7 +166,7 @@ def build_blocks(
     missing = set(eligible) - {row["document_id"] for row in sources}
     if missing:
         raise ValueError(f"Eligible complete sources missing: {sorted(missing)}")
-    queues = {group: deque() for group in GROUPS}
+    queues = {group: deque() for group in SUPPORTED_GROUPS}
     for source in sorted(sources, key=lambda row: (row["publication_date"], row["document_id"])):
         identifier = source["document_id"]
         if identifier not in eligible or source.get("duplicate_of"):
@@ -216,7 +224,7 @@ def build_blocks(
             queues[source["group"]].append(block)
     result = []
     while any(queues.values()):
-        for group in GROUPS:
+        for group in SUPPORTED_GROUPS:
             if queues[group]:
                 result.append(queues[group].popleft())
     return result
@@ -271,6 +279,7 @@ def standardize_stance(text: str, group: str, claim_types: list[str]) -> str:
         "democratic": r"Democratic Party|Democrats",
         "republican": r"Republican Party|Republicans",
         "dsa": r"Democratic Socialists of America|DSA",
+        "libertarian": r"Libertarian Party|Libertarians",
     }
     match = re.fullmatch(
         rf"(?:The\s+)?(?:{labels[group]})\s+"

@@ -16,6 +16,7 @@ from dsa_analysis.national_claim_corpus import (
     prepare,
     repair_request,
     source_repair_basis,
+    standardize_stance,
     validate_response,
 )
 from dsa_analysis.national_platforms import digest, read_rows, write_rows
@@ -39,6 +40,37 @@ def response(**updates):
 
 
 class ClaimCorpusTests(unittest.TestCase):
+    def test_libertarian_blocks_and_stance_do_not_require_other_parties(self):
+        original = sources()[:1]
+        libertarian = [
+            {
+                **original[0],
+                "document_id": "libertarian-2022",
+                "group": "libertarian",
+            }
+        ]
+        blocks = build_blocks(libertarian, coverage(libertarian))
+        self.assertTrue(blocks)
+        self.assertEqual({block["group"] for block in blocks}, {"libertarian"})
+        self.assertEqual(
+            standardize_stance(
+                "The Libertarian Party supports voluntary association.",
+                "libertarian",
+                ["policy_position"],
+            ),
+            "Support for voluntary association.",
+        )
+        baseline = sources()
+        combined = [*baseline, *libertarian]
+        self.assertEqual(
+            [
+                block
+                for block in build_blocks(combined, coverage(combined))
+                if block["group"] != "libertarian"
+            ],
+            build_blocks(baseline, coverage(baseline)),
+        )
+
     def write_source_repair(self, output, block, manifest, claims):
         record = {
             "block_id": block["block_id"],

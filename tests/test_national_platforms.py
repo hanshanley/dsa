@@ -73,6 +73,36 @@ def capture(raw, row, content):
 
 
 class NationalCorpusTests(unittest.TestCase):
+    def test_isolated_libertarian_coverage_and_dsa_only_fallback_rule(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            row = entry("libertarian-2022", group="libertarian", document_type="platform")
+            ledger = root / "ledger.csv"
+            write_rows(ledger, [row])
+            self.assertEqual(load_ledger(ledger), [row])
+            capture(
+                root,
+                row,
+                '<article class="content">'
+                + "".join(
+                    f"<p>National policy evidence passage {i} supporting individual rights.</p>"
+                    for i in range(10)
+                )
+                + "</article>",
+            )
+            passages, coverage = prepare_corpus(
+                [row], Tokenizer(), raw=root, output=root / "output"
+            )
+            self.assertEqual(coverage[0]["status"], "eligible")
+            self.assertTrue(all(passage["strict"] for passage in passages))
+            self.assertEqual(
+                {row["group"] for row in read_rows(root / "output/year_coverage.csv")},
+                {"libertarian"},
+            )
+            write_rows(ledger, [{**row, "document_type": "statement"}])
+            with self.assertRaisesRegex(ValueError, "restricted to national DSA"):
+                load_ledger(ledger)
+
     def test_national_groups_and_reuse_validation(self):
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "ledger.csv"
@@ -312,10 +342,12 @@ class NationalCorpusTests(unittest.TestCase):
             export_document_archive(output, root / "absent")
             with zipfile.ZipFile(path) as archive:
                 manifest = json.loads(archive.read("manifest.json"))
-                self.assertTrue(all(
-                    row["pdf_status"] == "capture_unavailable_complete_text_included"
-                    for row in manifest
-                ))
+                self.assertTrue(
+                    all(
+                        row["pdf_status"] == "capture_unavailable_complete_text_included"
+                        for row in manifest
+                    )
+                )
                 self.assertTrue(all(row["text_path"] in archive.namelist() for row in manifest))
 
     def test_offline_snapshot_reproduces_corpus_without_raw_files(self):

@@ -22,6 +22,7 @@ from .national_platforms import (
     OUTPUT,
     RAW,
     ROOT,
+    SUPPORTED_GROUPS,
     date_bounds,
     digest,
     fetch_sources,
@@ -41,8 +42,18 @@ from .provisional_kde import (
 
 FIGURES = ROOT / "figures/national_platforms"
 REPORT = ROOT / "report/national_platform_analysis.md"
-LABELS = {"democratic": "Democratic", "republican": "Republican", "dsa": "DSA"}
-COLORS = {"democratic": "#47758a", "republican": "#a4584b", "dsa": "#8b7453"}
+LABELS = {
+    "democratic": "Democratic",
+    "republican": "Republican",
+    "dsa": "DSA",
+    "libertarian": "Libertarian",
+}
+COLORS = {
+    "democratic": "#47758a",
+    "republican": "#a4584b",
+    "dsa": "#8b7453",
+    "libertarian": "#786494",
+}
 PAIRS = tuple(combinations(GROUPS, 2))
 
 
@@ -51,13 +62,22 @@ def balance_weights(rows: list[dict], indices: list[int]) -> np.ndarray:
     return np.array([1.0 / counts[rows[index]["bundle_id"]] for index in indices])
 
 
-def fit_indices(rows: list[dict]) -> dict[str, list[int]]:
+def fit_indices(rows: list[dict], *, groups: tuple[str, ...] = GROUPS) -> dict[str, list[int]]:
     counts = Counter(row["group"] for row in rows)
-    if any(counts[group] < 10 for group in GROUPS):
+    if (
+        len(groups) < 2
+        or len(set(groups)) != len(groups)
+        or set(groups) - set(SUPPORTED_GROUPS)
+        or set(counts) - set(groups)
+    ):
+        raise ValueError(
+            "Analysis groups must be distinct supported organizations covering all rows"
+        )
+    if any(counts[group] < 10 for group in groups):
         raise ValueError("At least ten eligible passages per organization are required")
     limit = min(counts.values())
     selected = {}
-    for group in GROUPS:
+    for group in groups:
         units = {row["bundle_id"] for row in rows if row["group"] == group}
         if limit < len(units):
             raise ValueError("Balanced sample cannot represent every document/bundle")
@@ -70,10 +90,12 @@ def fit_indices(rows: list[dict]) -> dict[str, list[int]]:
     return selected
 
 
-def pairwise_scores(log_densities: dict[str, np.ndarray]) -> dict[str, np.ndarray]:
+def pairwise_scores(
+    log_densities: dict[str, np.ndarray], *, groups: tuple[str, ...] = GROUPS
+) -> dict[str, np.ndarray]:
     return {
         f"{first}_vs_{second}": log_densities[first] - log_densities[second]
-        for first, second in PAIRS
+        for first, second in combinations(groups, 2)
     }
 
 
@@ -139,12 +161,18 @@ def encode(
     return array, False
 
 
-def analyze_view(rows: list[dict], embeddings: np.ndarray, directory: Path) -> dict:
+def analyze_view(
+    rows: list[dict],
+    embeddings: np.ndarray,
+    directory: Path,
+    *,
+    groups: tuple[str, ...] = GROUPS,
+) -> dict:
     import umap
 
     directory.mkdir(parents=True, exist_ok=True)
     try:
-        samples = fit_indices(rows)
+        samples = fit_indices(rows, groups=groups)
     except ValueError as error:
         for filename in (
             "scored_passages.csv",
@@ -158,11 +186,12 @@ def analyze_view(rows: list[dict], embeddings: np.ndarray, directory: Path) -> d
             (directory / filename).unlink(missing_ok=True)
         summary = {
             "status": "insufficient_evidence",
+            "groups": list(groups),
             "reason": str(error),
             "group_passages": dict(Counter(row["group"] for row in rows)),
             "group_documents": {
                 group: len({row["document_id"] for row in rows if row["group"] == group})
-                for group in GROUPS
+                for group in groups
             },
         }
         write_json(directory / "summary.json", summary)
@@ -202,14 +231,14 @@ def analyze_view(rows: list[dict], embeddings: np.ndarray, directory: Path) -> d
     standardized = StandardScaler().fit(coordinates[indices]).transform(coordinates)
     visual = reducers[2].transform(embeddings)
     densities = {}
-    bandwidth = len(samples[GROUPS[0]]) ** (-1.0 / (selected + 4))
-    for group in GROUPS:
+    bandwidth = len(samples[groups[0]]) ** (-1.0 / (selected + 4))
+    for group in groups:
         estimator = KernelDensity(kernel="gaussian", bandwidth=bandwidth).fit(
             standardized[samples[group]],
             sample_weight=balance_weights(rows, samples[group]),
         )
         densities[group] = estimator.score_samples(standardized)
-    scores = pairwise_scores(densities)
+    scores = pairwise_scores(densities, groups=groups)
     sampled = set(indices)
     scored = []
     for index, row in enumerate(rows):
@@ -219,27 +248,27 @@ def analyze_view(rows: list[dict], embeddings: np.ndarray, directory: Path) -> d
                 "umap_x": float(visual[index, 0]),
                 "umap_y": float(visual[index, 1]),
                 "sampled": index in sampled,
-                **{f"{group}_log_density": float(densities[group][index]) for group in GROUPS},
+                **{f"{group}_log_density": float(densities[group][index]) for group in groups},
                 **{pair: float(values[index]) for pair, values in scores.items()},
             }
         )
-    regions, cluster_audit = region_summaries(rows, standardized, densities, scores)
+    regions, cluster_audit = region_summaries(rows, standardized, densities, scores, groups=groups)
     documents = document_chronology(rows, embeddings)
-    diagnostics = density_diagnostics(rows, scores)
+    diagnostics = density_diagnostics(rows, scores, groups=groups)
     summary = {
         "status": "complete",
-        "groups": list(GROUPS),
+        "groups": list(groups),
         "dimensions": selected,
         "bandwidth": bandwidth,
         "seed": SEED,
         "group_passages": dict(Counter(row["group"] for row in rows)),
         "group_documents": {
             group: len({row["document_id"] for row in rows if row["group"] == group})
-            for group in GROUPS
+            for group in groups
         },
         "group_bundles": {
             group: len({row["bundle_id"] for row in rows if row["group"] == group})
-            for group in GROUPS
+            for group in groups
         },
         "group_sample_sizes": {group: len(values) for group, values in samples.items()},
         "region_count": len(regions),
@@ -253,7 +282,7 @@ def analyze_view(rows: list[dict], embeddings: np.ndarray, directory: Path) -> d
                     }.values()
                 )
             )
-            for group in GROUPS
+            for group in groups
         },
         "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass",
         "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
@@ -291,7 +320,7 @@ def analyze_view(rows: list[dict], embeddings: np.ndarray, directory: Path) -> d
                 "bundle_id": rows[index]["bundle_id"],
                 "weight": float(weight),
             }
-            for group in GROUPS
+            for group in groups
             for index, weight in zip(
                 samples[group], balance_weights(rows, samples[group]), strict=True
             )
@@ -307,9 +336,11 @@ def analyze_view(rows: list[dict], embeddings: np.ndarray, directory: Path) -> d
     }
 
 
-def density_diagnostics(rows: list[dict], scores: dict) -> list[dict]:
+def density_diagnostics(
+    rows: list[dict], scores: dict, *, groups: tuple[str, ...] = GROUPS
+) -> list[dict]:
     result = []
-    for first, second in PAIRS:
+    for first, second in combinations(groups, 2):
         pair = f"{first}_vs_{second}"
         for group in (first, second):
             indices = [index for index, row in enumerate(rows) if row["group"] == group]
@@ -339,9 +370,11 @@ def density_diagnostics(rows: list[dict], scores: dict) -> list[dict]:
     return result
 
 
-def region_summaries(rows, coordinates, densities, scores) -> tuple[list[dict], list[dict]]:
+def region_summaries(
+    rows, coordinates, densities, scores, *, groups: tuple[str, ...] = GROUPS
+) -> tuple[list[dict], list[dict]]:
     regions, audit = [], []
-    for first, second in PAIRS:
+    for first, second in combinations(groups, 2):
         pair = f"{first}_vs_{second}"
         eligible = np.array([row["group"] in {first, second} for row in rows])
         values = scores[pair]
@@ -507,6 +540,8 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
         days = (start.replace(year=start.year + 1) - start).days
         return lower.year + ((lower - start).days + (upper - lower).days / 2) / days
 
+    groups = tuple(result.get("groups", GROUPS))
+    pairs = tuple(combinations(groups, 2))
     figures.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update(
         {
@@ -519,8 +554,14 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
     )
     if result["status"] == "complete":
         rows = result["_scored"]
-        fig, axes = plt.subplots(1, 3, figsize=(13, 4.2), sharex=True, sharey=True)
-        fig.subplots_adjust(bottom=0.25, right=0.92, wspace=0.08)
+        panel_rows = (len(pairs) + 2) // 3
+        fig, axes = plt.subplots(
+            panel_rows, 3, figsize=(13, 4.2 * panel_rows), sharex=True, sharey=True, squeeze=False
+        )
+        axes = axes.ravel()
+        fig.subplots_adjust(bottom=0.25 if panel_rows == 1 else 0.14, right=0.92, wspace=0.08)
+        for axis in axes[len(pairs) :]:
+            axis.set_visible(False)
         for coordinate, set_limits in (
             ("umap_x", axes[0].set_xlim),
             ("umap_y", axes[0].set_ylim),
@@ -529,11 +570,11 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
             padding = max(float(np.ptp(values)) * 0.05, 1e-6)
             set_limits(min(values) - padding, max(values) + padding)
         all_values = [
-            abs(row[f"{a}_vs_{b}"]) for a, b in PAIRS for row in rows if row["group"] in {a, b}
+            abs(row[f"{a}_vs_{b}"]) for a, b in pairs for row in rows if row["group"] in {a, b}
         ]
         bound = max(float(np.quantile(all_values, 0.95)), 1e-6)
         norm = TwoSlopeNorm(vmin=-bound, vcenter=0, vmax=bound)
-        for axis, (first, second) in zip(axes, PAIRS, strict=True):
+        for axis, (first, second) in zip(axes[: len(pairs)], pairs, strict=True):
             selected = [r for r in rows if r["group"] in {first, second}]
             image = axis.scatter(
                 [r["umap_x"] for r in selected],
@@ -578,11 +619,16 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                     label.remove()
                 else:
                     label_bounds.append(bounds)
-        bar = fig.colorbar(image, cax=fig.add_axes((0.94, 0.29, 0.012, 0.53)))
+        bar = fig.colorbar(
+            image,
+            cax=fig.add_axes(
+                (0.94, 0.29, 0.012, 0.53) if panel_rows == 1 else (0.94, 0.22, 0.012, 0.65)
+            ),
+        )
         bar.set_label("Log density ratio: + first / − second", fontsize=9)
         fig.text(
             0.08,
-            0.07,
+            0.07 if panel_rows == 1 else 0.045,
             "Densities estimated in the higher-dimensional shared space. "
             "Color indicates relative language density, not policy agreement.",
             fontsize=9,
@@ -592,7 +638,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
         fig.savefig(figures / "pairwise_density.svg")
         plt.close(fig)
         fig, axis = plt.subplots(figsize=(9, 3.8))
-        for group in GROUPS:
+        for group in groups:
             docs = [r for r in result["_documents"] if r["group"] == group]
             for fallback in (False, True):
                 selected = [
@@ -615,15 +661,15 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
         axis.set_xlim(1999.5, 2027)
         axis.set_ylabel("Change from preceding document\n(cosine distance)")
         axis.set_xlabel("Document year (gaps are not interpolated)")
-        axis.legend(frameon=False, fontsize=8, ncol=3)
+        axis.legend(frameon=False, fontsize=8, ncol=len(groups))
         fig.tight_layout()
         fig.savefig(figures / "document_change.png", dpi=180)
         plt.close(fig)
     else:
         for filename in ("pairwise_density.png", "pairwise_density.svg", "document_change.png"):
             (figures / filename).unlink(missing_ok=True)
-    fig, axis = plt.subplots(figsize=(11, 2.7))
-    for index, group in enumerate(GROUPS):
+    fig, axis = plt.subplots(figsize=(11, 2.7 + max(0, len(groups) - 3) * 0.3))
+    for index, group in enumerate(groups):
         for status, marker in [
             ("eligible", "o"),
             ("reused_document", "s"),
@@ -655,7 +701,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                 if index == 0
                 else None,
             )
-    axis.set_yticks(range(3), [LABELS[g] for g in GROUPS])
+    axis.set_yticks(range(len(groups)), [LABELS[g] for g in groups])
     axis.set_xlim(1999.5, 2027)
     axis.set_xticks(range(2000, 2027, 2))
     axis.set_xlabel("Publication year (known date precision); empty years do not imply no position")

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 327,
+      "generation_tps": 16.534104149620816,
+      "peak_memory": 32.815265434,
+      "prompt_tokens": 1266,
+      "prompt_tps": 745.7267054908237,
+      "request_sha256": "59f34ef76f74a0d7b6f53e51ac827a050b4f85e235b1726838f5300a2ba15363",
+      "seconds": 21.703379082959145,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Libertarians seek a world of liberty in which all individuals are sovereign over their own lives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Libertarians believe respect for individual rights is the essential precondition for a free and prosperous world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Libertarians believe force and fraud must be banished from human relationships.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Libertarians believe only through freedom can peace and prosperity be realized.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Libertarians defend each person's right to engage in any activity that is peaceful and honest.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Libertarians welcome the diversity that freedom brings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Libertarians seek to build a world where individuals are free to follow their own dreams in their own ways, without interference from government or any authoritarian power.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The specific policies enumerated are not the goal, but a means to achieve a world set free in their lifetime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 349,
+      "generation_tps": 16.366358864416775,
+      "peak_memory": 33.433046794,
+      "prompt_tokens": 1761,
+      "prompt_tps": 788.3173252910711,
+      "request_sha256": "60ed91782eaa47bc93561ad34a2ea2193babf097d5f672cdbe14d6e7628a4f6b",
+      "seconds": 23.567458083853126,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Libertarians seek a world of liberty in which all individuals are sovereign over their own lives, and no one is forced to sacrifice his or her values for the benefit of others.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Libertarians believe respect for individual rights is the essential precondition for a free and prosperous world.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Libertarians believe force and fraud must be banished from human relationships.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Libertarians believe only through freedom can peace and prosperity be realized.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Libertarians defend each person's right to engage in any activity that is peaceful and honest.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Libertarians welcome the diversity that freedom brings.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Libertarians seek to build a world where individuals are free to follow their own dreams in their own ways, without interference from government or any authoritarian power.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The specific policies enumerated are not the goal, but a means to achieve a world set free in their lifetime.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "965a307e3a48027e113ff8c90a9b960a37436133deea74082a3dec125591c0f2",
+  "implementation_version": 7,
+  "prompt_sha256": "59f34ef76f74a0d7b6f53e51ac827a050b4f85e235b1726838f5300a2ba15363"
+}

@@ -199,11 +199,17 @@ def topic_predictions(rows: list[dict], similarities: np.ndarray, config: dict) 
     return predictions
 
 
-def topic_shares(predictions: list[dict], config: dict, view: str) -> list[dict]:
+def topic_shares(
+    predictions: list[dict],
+    config: dict,
+    view: str,
+    *,
+    groups: tuple[str, ...] = GROUPS,
+) -> list[dict]:
     counts = Counter((row["group"], row["bundle_id"]) for row in predictions)
     bundles = {
         group: len({row["bundle_id"] for row in predictions if row["group"] == group})
-        for group in GROUPS
+        for group in groups
     }
     totals, claims = Counter(), Counter()
     for row in predictions:
@@ -221,7 +227,7 @@ def topic_shares(predictions: list[dict], config: dict, view: str) -> list[dict]
             "claims": claims[(group, code)],
             "group_bundles": bundles[group],
         }
-        for group in GROUPS
+        for group in groups
         for code, name in [*topics, ("", "Unclassified")]
     ]
 
@@ -300,7 +306,7 @@ def classify_topics(
     return predictions, {**key, "cache_reused": reused}
 
 
-def plot_topics(shares: list[dict], figures: Path) -> None:
+def plot_topics(shares: list[dict], figures: Path, *, groups: tuple[str, ...] = GROUPS) -> None:
     import matplotlib
 
     matplotlib.use("Agg")
@@ -310,11 +316,11 @@ def plot_topics(shares: list[dict], figures: Path) -> None:
     names = list(dict.fromkeys(row["topic_name"] for row in shares))
     names.sort(key=lambda name: max(row["share"] for row in shares if row["topic_name"] == name))
     fig, axis = plt.subplots(figsize=(9, 8))
-    for index, group in enumerate(GROUPS):
+    for index, group in enumerate(groups):
         values = {row["topic_name"]: row["share"] for row in shares if row["group"] == group}
         axis.scatter(
             [values[name] for name in names],
-            np.arange(len(names)) + (index - 1) * 0.18,
+            np.arange(len(names)) + (index - (len(groups) - 1) / 2) * 0.18,
             color=COLORS[group],
             s=23,
             label=LABELS[group],
@@ -334,9 +340,17 @@ def plot_topics(shares: list[dict], figures: Path) -> None:
     plt.close(fig)
 
 
-def write_report(output: Path, summary: dict, shares: list[dict], figures: Path) -> Path:
+def write_report(
+    output: Path,
+    summary: dict,
+    shares: list[dict],
+    figures: Path,
+    *,
+    groups: tuple[str, ...] = GROUPS,
+    report: Path | None = None,
+) -> Path:
     sample = summary["corpus"]["status"] == "reviewed_sample_not_full_corpus"
-    destination = (
+    destination = report or (
         ROOT
         / "report"
         / ("national_claim_analysis_sample.md" if sample else "national_claim_analysis.md")
@@ -365,7 +379,7 @@ def write_report(output: Path, summary: dict, shares: list[dict], figures: Path)
         "| Organization | Claims analyzed | Documents | Document / fallback bundles |",
         "|---|---:|---:|---:|",
     ]
-    for group in GROUPS:
+    for group in groups:
         lines.append(
             f"| {LABELS[group]} | {summary['claims_by_group'].get(group, 0)} "
             f"| {summary['documents_by_group'][group]} | {summary['bundles_by_group'][group]} |"
@@ -408,7 +422,7 @@ def write_report(output: Path, summary: dict, shares: list[dict], figures: Path)
         "| Organization | Largest weighted topic shares in this input |",
         "|---|---|",
     ]
-    for group in GROUPS:
+    for group in groups:
         ranked = sorted(
             [row for row in shares if row["group"] == group and row["view"] == "expanded"],
             key=lambda row: -row["share"],
@@ -508,9 +522,27 @@ def write_report(output: Path, summary: dict, shares: list[dict], figures: Path)
                 f"still lacking a superseding correction: "
                 f"**{corpus['unrepaired_flagged_model_claims']:,}**. Historical flags are "
                 "not a count of unresolved errors in replacement claims.",
-                f"[Source-bound correction records]({data_path}/source_repairs/)",
+                (
+                    f"[Component manifests, original responses and source corrections]"
+                    f"({data_path}/components/)"
+                    if corpus.get("components")
+                    else f"[Source-bound correction records]({data_path}/source_repairs/)"
+                ),
                 "",
             ]
+    if summary["corpus"].get("components"):
+        lines += [
+            "The four-party input reuses the separately published three-party claims without "
+            "regenerating or rewording them. Only Libertarian source chunks receive new inference. "
+            "Each claim records its normalization component; constituent manifests, original "
+            "responses, retry histories and corrections remain under `components/`. There is "
+            "no fabricated shared normalization fingerprint. New four-party maps are fitted "
+            "jointly and do not replace the preserved three-party results.",
+            "",
+            f"[Component provenance and file hashes]({data_path}/normalization_components.json)",
+            "",
+        ]
+    destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text("\n".join(lines), encoding="utf-8")
     return destination
 
@@ -520,9 +552,30 @@ def run_analysis(
     *,
     reviewed_sample: bool = False,
     download_model: bool = False,
+    groups: tuple[str, ...] = GROUPS,
+    coverage_path: Path = OUTPUT / "coverage.csv",
+    report: Path | None = None,
 ) -> dict:
     if output.resolve() == OUTPUT.resolve() or OUTPUT.resolve() in output.resolve().parents:
         raise ValueError("Do not overwrite the passage baseline")
+    if groups != GROUPS:
+        protected = (FULL_OUTPUT.resolve(), SAMPLE_OUTPUT.resolve(), PILOT_OUTPUT.resolve())
+        protected_reports = {
+            ROOT / "report" / name
+            for name in (
+                "national_claim_analysis.md",
+                "national_claim_analysis_sample.md",
+                "national_claim_pilot.md",
+            )
+        }
+        if (
+            any(output.resolve() == path or path in output.resolve().parents for path in protected)
+            or report is None
+            or report.resolve() in protected_reports
+        ):
+            raise ValueError(
+                "Additional organizations require separate outputs and an explicit separate report"
+            )
     if reviewed_sample:
         prepare_reviewed_sample(output)
     corpus = json.loads((output / "extraction_summary.json").read_text())
@@ -533,22 +586,22 @@ def run_analysis(
     )
     if not rows:
         raise ValueError("No eligible normalized claims")
+    if set(row["group"] for row in rows) - set(groups):
+        raise ValueError("Selected analysis groups do not cover all claims")
     write_rows(output / "analysis_claims.csv", rows)
     tokenization = audit_claim_lengths(rows, output, download_model=download_model)
     embeddings, reused = encode(rows, output, download_model=download_model)
     predictions, topic_manifest = classify_topics(rows, output, download_model=download_model)
     config = json.loads(TOPIC_CONFIG.read_text())
     selected_ids = {row["document_id"] for row in rows}
-    coverage = [
-        row for row in read_rows(OUTPUT / "coverage.csv") if row["document_id"] in selected_ids
-    ]
+    coverage = [row for row in read_rows(coverage_path) if row["document_id"] in selected_ids]
     figures = ROOT / "figures/national_claims" / output.name
     figures.mkdir(parents=True, exist_ok=True)
     views, shares = {}, []
     for view in ("expanded", "strict"):
         indices = [index for index, row in enumerate(rows) if view == "expanded" or row["strict"]]
         selected = [rows[index] for index in indices]
-        result = analyze_view(selected, embeddings[indices], output / view)
+        result = analyze_view(selected, embeddings[indices], output / view, groups=groups)
         views[view] = {key: value for key, value in result.items() if not key.startswith("_")}
         view_ids = {row["document_id"] for row in selected}
         plot_outputs(
@@ -556,9 +609,11 @@ def run_analysis(
             [row for row in coverage if row["document_id"] in view_ids],
             figures=figures / view,
         )
-        shares.extend(topic_shares([predictions[index] for index in indices], config, view))
+        shares.extend(
+            topic_shares([predictions[index] for index in indices], config, view, groups=groups)
+        )
     write_rows(output / "topic_emphasis.csv", shares)
-    plot_topics([row for row in shares if row["view"] == "expanded"], figures)
+    plot_topics([row for row in shares if row["view"] == "expanded"], figures, groups=groups)
     summary = {
         "corpus": corpus,
         "analytical_unit": "Normalized claim text; original source evidence is audit-only",
@@ -566,11 +621,11 @@ def run_analysis(
         "claims_by_group": dict(Counter(row["group"] for row in rows)),
         "documents_by_group": {
             group: len({row["document_id"] for row in rows if row["group"] == group})
-            for group in GROUPS
+            for group in groups
         },
         "bundles_by_group": {
             group: len({row["bundle_id"] for row in rows if row["group"] == group})
-            for group in GROUPS
+            for group in groups
         },
         "views": views,
         "embedding_cache_reused": reused,
@@ -582,7 +637,7 @@ def run_analysis(
         "website_deployed": False,
     }
     write_json(output / "analysis_summary.json", summary)
-    report = write_report(output, summary, shares, figures)
+    report = write_report(output, summary, shares, figures, groups=groups, report=report)
     bundle(output)
     print(f"Claim analysis: {len(rows)} claims; report {report.relative_to(ROOT)}", flush=True)
     return summary
