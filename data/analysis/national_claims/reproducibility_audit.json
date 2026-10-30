@@ -1,53 +1,91 @@
 {
-  "scope": "Full eligible-claim national platform comparison",
-  "extraction_checkpoint": "b1d78d908942dd17ed9e122abcbaa5228e50c14a",
-  "claims": 25464,
-  "documents": 135,
-  "claims_by_group": {
-    "democratic": 11496,
-    "republican": 9074,
-    "dsa": 4894
-  },
-  "normalized_chunks": 2596,
-  "excluded_failed_chunks": 27,
-  "assistant_reviewed_blocks": 142,
   "assistant_flagged_candidates": 1054,
-  "corpus_wide_semantic_certification": false,
-  "independent_human_gold": false,
-  "offline_substantive_reproduction_verified": true,
-  "identical_substantive_files": 2879,
-  "embedding_cache_reused_on_second_run": true,
-  "offline_environment": {
-    "HF_HUB_OFFLINE": "1",
-    "TRANSFORMERS_OFFLINE": "1"
+  "assistant_replacement_claims": 1041,
+  "assistant_reviewed_blocks": 142,
+  "assistant_source_repaired_blocks": 161,
+  "base_model_extraction_checkpoint": "b1d78d908942dd17ed9e122abcbaa5228e50c14a",
+  "blocks_with_unresolved_reference_notes": 2,
+  "claims": 26483,
+  "claims_by_group": {
+    "democratic": 11870,
+    "dsa": 5153,
+    "republican": 9460
   },
-  "substantive_comparison_exclusion": "analysis_summary.json contains intentionally changing cache-use metadata; its inputs and accounting were validated independently on both runs.",
-  "zip_members_verified_against_current_files": 2879,
-  "zip_and_svg_metadata_not_required_byte_identical_between_runs": true,
-  "extraction_snapshot_offline_identical_files": 2858,
+  "complete_candidate_export_rows": 27720,
+  "corpus_wide_semantic_certification": false,
+  "corrected_export_replayed_byte_identically": true,
+  "documents": 135,
+  "effective_chunk_dispositions": {
+    "normalized": 2462,
+    "source_repaired": 161
+  },
+  "eligible_claims_by_origin": {
+    "assistant_source_repair": 1041,
+    "local_gemma": 25442
+  },
+  "embedding_cache_reused_on_second_run": true,
+  "equal_samples_per_organization": {
+    "expanded": 5153,
+    "strict": 842
+  },
+  "exact_source_offsets_and_word_partition_verified": true,
+  "focused_tests_passed": 52,
+  "identical_substantive_files": 3040,
+  "independent_human_gold": false,
   "kde_dimensions": {
     "expanded": 10,
-    "strict": 10
-  },
-  "equal_samples_per_organization": {
-    "expanded": 4894,
-    "strict": 743
+    "strict": 5
   },
   "maximum_claim_tokens": {
     "gte": 159,
     "topics": 145
   },
-  "truncated_claims": 0,
-  "passage_baseline_and_selected_sample_unchanged": true,
-  "focused_tests_passed": 21,
-  "ruff_check_and_format_passed": true,
-  "verified_sha256": {
-    "data/analysis/national_claims/full/claims.csv": "bb6f76c4c0578011541d0547cf18100cf190a6ae357614aed8d5558fb848b9a0",
-    "data/analysis/national_claims/full/complete_sources.csv": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
-    "data/analysis/national_claims/full/semantic_review.csv": "1e1607774292251eb44ed567e96ed2d08f1ba083728b1595cbc11bbd91f5b9ca",
-    "data/analysis/national_claims/full/topic_emphasis.csv": "6de372c7f8c5c47e49e170af1c7d6b3f5aab2663e7dee3befdb2e8784566973c",
-    "report/national_claim_analysis.md": "075a3f84b0ae5175f08effffad8097c1ac5caab1ba6d06e1d2cb45290f75a88b",
-    "src/dsa_analysis/national_claim_analysis.py": "142da899f8117c93d60486e3e93b04e569744f887876002d44d42fb21c4dde7f"
+  "numeric_array_sha256": {
+    "embeddings.npy": "d70b5cdf57126a0449cea105abbd4e1831e254efc9cee727d6d72b8be5350671",
+    "topic_similarities.npy": "249d74b2abd217105564b0d01cc830438f275c4a754994e7a619d7405373b1f8"
   },
-  "website_deployed": false
+  "numeric_arrays_reproduced_byte_identically": true,
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "offline_substantive_reproduction_verified": true,
+  "original_model_candidates_preserved": 26679,
+  "original_model_chunk_outcomes": {
+    "normalized": 2596,
+    "validation_failed": 27
+  },
+  "original_raw_history_files_unchanged": 2845,
+  "passage_baseline_and_selected_sample_unchanged": true,
+  "ruff_check_and_format_passed": true,
+  "scope": "Full eligible-claim national platform comparison after targeted source repairs",
+  "source_repair_basis_and_original_diagnostics_verified": true,
+  "source_repair_checkpoint": "be7a4bc524e0ccf297d3fb3cf856638b5147aeba",
+  "substantive_comparison_exclusion": "analysis_summary.json contains intentionally changing cache-use metadata; its inputs and accounting were validated independently on both runs.",
+  "superseded_model_candidates": 1078,
+  "truncated_claims": 0,
+  "unrepaired_flagged_model_candidates": 0,
+  "verified_sha256": {
+    "config/cap_topics.json": "e65ce77bbf67162cc6a12412b01ad79496399ea2072300ceab8b65e99217355c",
+    "data/analysis/national_claims/full/analysis_summary.json": "1005a69ac101a6b15f0163377836baeedf73d66b39f3bfce5cfa4a7386ed12b8",
+    "data/analysis/national_claims/full/block_status.csv": "16b96959b2cf59a0291b5836adde8ddd632c25d37a0d6bb53b86ed1916f2c6c1",
+    "data/analysis/national_claims/full/blocks.csv": "f26ca74adcebd4d7d0aa7221892c7603311da12818aff8631be5c16850a921a8",
+    "data/analysis/national_claims/full/claims.csv": "4e2b6ef6472b51aad8f980737749c87cedffded9291b6224d7ba65fac31c1078",
+    "data/analysis/national_claims/full/claims.jsonl": "2f1f31a07f8850623b6d66e7f03faeef6f5343914bb3c46cadfa616ba27b526f",
+    "data/analysis/national_claims/full/complete_sources.csv": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
+    "data/analysis/national_claims/full/embedding_manifest.json": "96862f6f36e4ade238648d72355c34b7d007808012c6224115bfa4bd6add6092",
+    "data/analysis/national_claims/full/extraction_summary.json": "290022135cb7b04c9c989f8ffc43445370ffa23ed38e617512e44ea65b76ad17",
+    "data/analysis/national_claims/full/normalization_manifest.json": "b4131b6d025754bc3e53336d7e8cffbd1eedac54b1691f0d5a27f44031182553",
+    "data/analysis/national_claims/full/semantic_review.csv": "1e1607774292251eb44ed567e96ed2d08f1ba083728b1595cbc11bbd91f5b9ca",
+    "data/analysis/national_claims/full/source_coverage.csv": "e3a037157b0a57960e29a800079e05b64d4ef24e7d803a8bbde987f6798df914",
+    "data/analysis/national_claims/full/topic_emphasis.csv": "c3c0d5277a80ca6bcfeebecc127de6757a1b2fb4e348d1b3324bec06661361e8",
+    "data/analysis/national_claims/full/topic_manifest.json": "9a1bce070b5861e8a3f1a3626ddfba988d1f798ad15d09ea76cd0da799cbc73d",
+    "report/national_claim_analysis.md": "03e7584d2a455733bbed1df5d715cb729ea0ff05da8a6072c71c2f76d1b40dcf",
+    "src/dsa_analysis/national_claim_analysis.py": "fd53dc5dc8b6662b4f832f8c15d59b6469c9cfad46bc6aafe3b8ff211d2b1b2c",
+    "src/dsa_analysis/national_claim_corpus.py": "79110a9ef62147b8ac959a80ce4cca5fbc2dbf164ca081748e019fd1cc71c65d"
+  },
+  "website_deployed": false,
+  "zero_claim_corrections": 13,
+  "zip_and_svg_metadata_not_required_byte_identical_between_runs": true,
+  "zip_members_verified_against_current_files": 3040
 }

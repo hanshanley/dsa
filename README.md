@@ -20,28 +20,30 @@ October 26, 2026. Candidate campaigns, state parties, and local DSA chapters are
 outside this comparison.
 
 The current work turns source text into discrete, self-contained claims using
-**local Gemma**, then applies topic classification, embeddings, UMAP, and
+**local Gemma plus separately identified, source-bound assistant corrections**,
+then applies topic classification, embeddings, UMAP, and
 kernel-density analysis to those claims rather than the original passages.
 
-**Status:** the exploratory full-source comparison analyzes **25,464 eligible
-machine-normalized claims from 135 documents**. All 2,623 chunks were attempted;
-27 failed chunks remain explicitly excluded. Targeted assistant review covered
-142 blocks and flagged 1,054 candidates, not a representative sample or a
-corpus-wide semantic certification. The selected sample and passage-based
-baseline remain separate.
+**Status:** the exploratory full-source comparison analyzes **26,483 eligible
+claims from 135 documents**. All 2,623 chunks have effective dispositions:
+161 source-bound corrections address reviewed errors and all 27 failed model
+chunks, while preserving original model outcomes. No historically flagged
+candidate lacks a superseding correction. The 142-block targeted review is not
+a representative sample or corpus-wide semantic certification. The selected
+sample and passage-based baseline remain separate.
 
 <p align="center">
-  <img src="figures/national_claims/full/expanded/pairwise_density.png" width="1200" alt="Exploratory pairwise semantic-density comparisons of 25,464 eligible Democratic, Republican, and DSA claims">
+  <img src="figures/national_claims/full/expanded/pairwise_density.png" width="1200" alt="Exploratory pairwise semantic-density comparisons of 26,483 eligible Democratic, Republican, and DSA claims">
 </p>
 
-*Full eligible-claim analysis with explicit exclusions. Density differences describe
+*Full eligible-claim analysis after targeted source corrections. Density differences describe
 language in this input, not ideological distance or policy agreement.*
 
 ## Results and downloads
 
 | Analysis | Status | Read | Complete download |
 |---|---|---|---|
-| Full claim-based comparison | Completed with exclusions; 25,464 claims from 135 documents | [Report](report/national_claim_analysis.md) | [Claims, complete sources, raw replies, history and results](data/analysis/national_claims/full/claim_documents.zip) |
+| Full claim-based comparison | Completed after targeted repairs; 26,483 claims from 135 documents | [Report](report/national_claim_analysis.md) | [Claims, complete sources, raw replies, history, corrections and results](data/analysis/national_claims/full/claim_documents.zip) |
 | Claim-based selected sample | Completed; 199 claims from 25 documents; not representative | [Report](report/national_claim_analysis_sample.md) | [Claims and source texts](data/analysis/national_claims/reviewed_sample/claim_documents.zip) |
 | Passage-based baseline | Completed; separate analytical input | [Report](report/national_platform_analysis.md) | [Source archive](data/analysis/national_platforms/source_documents.zip) |
 
@@ -50,10 +52,10 @@ using equal document/fallback-bundle weights:
 
 | Topic | Democratic | Republican | DSA |
 |---|---:|---:|---:|
-| Social welfare | 7.9% | 6.6% | 10.8% |
-| Labor and employment | 2.9% | 1.3% | 7.6% |
-| Defense and veterans | 6.9% | 7.9% | 4.0% |
-| International affairs | 9.2% | 7.7% | 7.2% |
+| Social welfare | 7.9% | 6.4% | 11.3% |
+| Labor and employment | 3.0% | 1.3% | 7.5% |
+| Defense and veterans | 6.9% | 8.4% | 4.1% |
+| International affairs | 9.1% | 7.9% | 6.9% |
 
 These are exploratory machine-classified language shares, not agreement measures
 or manually validated policy codes. Unclassified claims remain in the denominator;
@@ -66,7 +68,10 @@ The full claim job covers **135 eligible documents in 2,623 chunks**, with a har
 maximum of **240 source words per chunk**. The [extraction summary](data/analysis/national_claims/full/extraction_summary.json),
 [chunk dispositions](data/analysis/national_claims/full/block_status.csv), and
 [targeted review log](data/analysis/national_claims/full/semantic_review.csv)
-retain failed chunks and identified exclusions.
+retain original model failures and identified exclusions.
+The [source-bound corrections](data/analysis/national_claims/full/source_repairs/)
+preserve their exact basis and replacement selections; all superseded candidates
+remain in the download.
 The [reproducibility audit](data/analysis/national_claims/reproducibility_audit.json)
 records the successful second offline run, archive checks, and input/output hashes.
 
@@ -111,7 +116,12 @@ conditions, and reported-speaker attribution. Raw replies, original model wordin
 source hashes, and exact evidence offsets remain downloadable. Same-model revision,
 structural checks, and targeted assistant review are **not semantic certification or fact-checking**;
 identified fidelity problems and within-document duplicates are excluded explicitly.
-Unidentified semantic errors may remain in the analytical input.
+Targeted source repairs supply 1,041 replacement claims and supersede 1,078 original
+candidates without changing raw replies. The eligible input contains 25,442
+model-origin and 1,041 assistant-origin claims, with explicit provenance rather
+than treating corrections as Gemma output. Thirteen zero-claim corrections
+dispose of non-policy or context-only inventions. Unidentified semantic errors
+may remain in the analytical input.
 
 Claim text feeds the pinned GTE encoder and MiniLM/CAP topic classifier. Both
 tokenizers enforce their limits without silent truncation. UMAP/KDE sampling

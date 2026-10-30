@@ -126,16 +126,28 @@ denominator. Topic shares assign equal aggregate weight to each document/bundle,
 so splitting more claims does not create another independent document.
 
 The [full eligible-claim comparison](../report/national_claim_analysis.md) analyzes
-**25,464 claims**: 11,496 Democratic, 9,074 Republican, and 4,894 DSA. All 2,623
-chunks were attempted; 2,596 normalized and 27 failed chunks remain explicitly
-excluded. Targeted assistant review covered 142 blocks and flagged 1,054
-candidates. Flags and duplicates can overlap; these counts are not additive
-exclusion categories. All source text, failed attempts, and original wording
-remain preserved. Unidentified semantic errors may remain; this is exploratory
-analysis, not full-corpus semantic certification.
+**26,483 claims**: 11,870 Democratic, 9,460 Republican, and 5,153 DSA. The original
+model outcomes remain 2,596 normalized and 27 failed chunks. Effective dispositions
+are 2,462 model-normalized and 161 source-repaired chunks, including all 27 model
+failures and all 134 blocks with identified review issues.
 
-Both strict and expanded KDEs completed with 10 dimensions. Expanded sampling
-uses 4,894 claims per organization; strict sampling uses 743 per organization.
+The repairs supply 1,041 replacement claims and supersede 1,078 original
+candidates. Eligible claims comprise 25,442 model-origin and 1,041 assistant-origin
+rows. All 26,679 original candidates remain downloadable alongside the replacements;
+the complete candidate export therefore has 27,720 rows, not 26,483 analytical
+observations. Thirteen corrections supply no replacement claims for non-policy
+or context-only inventions. One source's unspecified "right to choose" is left
+unresolved rather than assigned a substantive meaning.
+
+Targeted assistant review covered 142 blocks and flagged 1,054 original candidates;
+none remain without a superseding correction. Historical flags, supersession and
+duplicates overlap, so their counts are not additive exclusion categories.
+All source text, failed attempts and original wording remain preserved.
+Unidentified semantic errors may remain; this is exploratory analysis, not
+full-corpus semantic certification.
+
+The expanded KDE completed with 10 dimensions; the strict KDE selected 5.
+Expanded sampling uses 5,153 claims per organization; strict sampling uses 842.
 The strict DSA input comprises three adopted documents, versus 122 documents
 in the expanded input. Source-type and period sensitivity is not a measured
 change in positions over time. The
@@ -143,8 +155,10 @@ change in positions over time. The
 and [strict chronology](../data/analysis/national_claims/full/strict/document_chronology.csv)
 summarize the independently fitted pooled spaces, not annual ideological trajectories.
 
-A second offline run reproduced all 2,879 substantive files exactly and reused
-the GTE cache. All 2,879 ZIP members matched current files; both tokenizers stayed
+A second offline run reproduced all 3,040 substantive files exactly and reused
+the GTE cache. The embedding and topic-score arrays also matched byte-for-byte.
+Replaying preserved model responses and correction records reproduced the
+candidate exports exactly. All 3,040 ZIP members matched current files; both tokenizers stayed
 below 256 tokens with no truncation. ZIP/SVG metadata and the analysis summary's
 cache-use indicator are not required to match byte-for-byte across runs.
 The [reproducibility audit](../data/analysis/national_claims/reproducibility_audit.json)
@@ -208,7 +222,8 @@ extraction as a completed comparison. `source_coverage.csv`, `block_status.csv`,
 and `extraction_summary.json` distinguish unprocessed and failed chunks.
 Each `claim_documents.zip` includes actual claims, complete source texts, provenance,
 and available audit/results tables—not metadata-only downloads. Full extraction
-also includes its raw model responses and manifests.
+also includes its raw model responses, retry history, source-bound correction
+records and manifests.
 
 ```bash
 uv run python -m unittest tests.test_national_claim_corpus \

@@ -6,45 +6,53 @@
     "dsa": 9,
     "republican": 6
   },
-  "claims": 25464,
+  "claims": 26483,
   "claims_by_group": {
-    "democratic": 11496,
-    "dsa": 4894,
-    "republican": 9074
+    "democratic": 11870,
+    "dsa": 5153,
+    "republican": 9460
   },
-  "claims_sha256": "bb6f76c4c0578011541d0547cf18100cf190a6ae357614aed8d5558fb848b9a0",
+  "claims_sha256": "4e2b6ef6472b51aad8f980737749c87cedffded9291b6224d7ba65fac31c1078",
   "complete_sources_sha256": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
   "corpus": {
-    "analysis_claims": 25464,
+    "analysis_claims": 26483,
     "assistant_flagged_claims": 1054,
+    "assistant_source_repaired_blocks": 161,
+    "assistant_source_repaired_claims": 1041,
     "baseline_modified": false,
     "blocks": 2623,
     "blocks_by_status": {
-      "normalized": 2596,
-      "validation_failed": 27
+      "normalized": 2462,
+      "source_repaired": 161
     },
-    "blocks_with_unresolved_references": 1,
+    "blocks_with_unresolved_references": 2,
     "claim_text_standardization": {
       "original_field": "model_claim_text",
       "scope": "Recognized source-organization prefixes in policy-position-only claims",
       "standardized_claims": 2501,
       "version": 1
     },
-    "claims": 26679,
+    "claims": 27720,
     "claims_by_group": {
-      "democratic": 11856,
-      "dsa": 5105,
-      "republican": 9718
+      "democratic": 12236,
+      "dsa": 5370,
+      "republican": 10114
     },
     "documents": 135,
-    "exact_within_document_duplicates": 213,
+    "exact_within_document_duplicates": 212,
     "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
     "generation_tokens": 2489652,
     "inference_seconds": 189095.64521399536,
     "maximum_reported_peak_memory_gb": 34.8264026,
-    "quality": "Automated screening; not independent human gold or fact-checking",
+    "model_blocks_by_status": {
+      "normalized": 2596,
+      "validation_failed": 27
+    },
+    "quality": "Automated screening with targeted assistant source repairs; not independent human gold or fact-checking",
     "source_words": 478335,
-    "status": "complete_with_exclusions"
+    "status": "complete",
+    "superseded_model_claims": 1078,
+    "unrepaired_flagged_model_claims": 0
   },
   "documents_by_group": {
     "democratic": 7,
@@ -62,18 +70,18 @@
   },
   "topic_model": {
     "cache_reused": true,
-    "claims": 25464,
+    "claims": 26483,
     "config_sha256": "e65ce77bbf67162cc6a12412b01ad79496399ea2072300ceab8b65e99217355c",
     "max_length": 256,
     "model": "sentence-transformers/all-MiniLM-L6-v2",
     "normalization": "l2",
-    "ordered_text_hash": "5ed7e0b3a304b0c7f1c9ffc7f56007f778428eb8a2c7db463a29eb5f070f57f5",
+    "ordered_text_hash": "15cd2fcd5d78b3993e908aa16b2c7cc97d7d2a25ab9c6e84546d3ce86c68ea7b",
     "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
     "topics": 21
   },
   "views": {
     "expanded": {
-      "bandwidth": 0.5450703693548533,
+      "bandwidth": 0.543066291870718,
       "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
       "dimensions": 10,
       "document_types": {
@@ -101,14 +109,14 @@
         "republican": 6
       },
       "group_passages": {
-        "democratic": 11496,
-        "dsa": 4894,
-        "republican": 9074
+        "democratic": 11870,
+        "dsa": 5153,
+        "republican": 9460
       },
       "group_sample_sizes": {
-        "democratic": 4894,
-        "dsa": 4894,
-        "republican": 4894
+        "democratic": 5153,
+        "dsa": 5153,
+        "republican": 5153
       },
       "groups": [
         "democratic",
@@ -121,9 +129,9 @@
       "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass"
     },
     "strict": {
-      "bandwidth": 0.6236334053855486,
+      "bandwidth": 0.47311348106423323,
       "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
-      "dimensions": 10,
+      "dimensions": 5,
       "document_types": {
         "democratic": {
           "platform": 7
@@ -147,14 +155,14 @@
         "republican": 6
       },
       "group_passages": {
-        "democratic": 11496,
-        "dsa": 743,
-        "republican": 9074
+        "democratic": 11870,
+        "dsa": 842,
+        "republican": 9460
       },
       "group_sample_sizes": {
-        "democratic": 743,
-        "dsa": 743,
-        "republican": 743
+        "democratic": 842,
+        "dsa": 842,
+        "republican": 842
       },
       "groups": [
         "democratic",

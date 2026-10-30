@@ -1,32 +1,40 @@
 {
-  "analysis_claims": 25464,
+  "analysis_claims": 26483,
   "assistant_flagged_claims": 1054,
+  "assistant_source_repaired_blocks": 161,
+  "assistant_source_repaired_claims": 1041,
   "baseline_modified": false,
   "blocks": 2623,
   "blocks_by_status": {
-    "normalized": 2596,
-    "validation_failed": 27
+    "normalized": 2462,
+    "source_repaired": 161
   },
-  "blocks_with_unresolved_references": 1,
+  "blocks_with_unresolved_references": 2,
   "claim_text_standardization": {
     "original_field": "model_claim_text",
     "scope": "Recognized source-organization prefixes in policy-position-only claims",
     "standardized_claims": 2501,
     "version": 1
   },
-  "claims": 26679,
+  "claims": 27720,
   "claims_by_group": {
-    "democratic": 11856,
-    "dsa": 5105,
-    "republican": 9718
+    "democratic": 12236,
+    "dsa": 5370,
+    "republican": 10114
   },
   "documents": 135,
-  "exact_within_document_duplicates": 213,
+  "exact_within_document_duplicates": 212,
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
   "generation_tokens": 2489652,
   "inference_seconds": 189095.64521399536,
   "maximum_reported_peak_memory_gb": 34.8264026,
-  "quality": "Automated screening; not independent human gold or fact-checking",
+  "model_blocks_by_status": {
+    "normalized": 2596,
+    "validation_failed": 27
+  },
+  "quality": "Automated screening with targeted assistant source repairs; not independent human gold or fact-checking",
   "source_words": 478335,
-  "status": "complete_with_exclusions"
+  "status": "complete",
+  "superseded_model_claims": 1078,
+  "unrepaired_flagged_model_claims": 0
 }
