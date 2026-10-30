@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "seed": 1729,
+  "pca_components": 50,
+  "min_cluster_sizes": [50, 100, 200],
+  "min_samples": [5, 10],
+  "minimum_density_coverage": 0.5,
+  "kmeans_clusters": [12, 18, 24, 30],
+  "silhouette_sample": 2000,
+  "balanced_refits": 2,
+  "epsilon": 0.0001,
+  "representatives": 12,
+  "max_claims_per_bundle": 2,
+  "max_prompt_tokens": 4096,
+  "max_output_tokens": 900,
+  "label_attempts": 2,
+  "keywords": 10,
+  "topics_per_page": 24
+}

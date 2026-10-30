@@ -174,6 +174,158 @@ distinct from the full extraction's revised normalization procedure.
 
 ## Run locally
 
+### Learned topics and relative emphasis
+
+`national_claim_topics` is a separate, resumable stage on the completed eligible
+claim corpus and its cached GTE vectors. It does not rerun claim extraction,
+encode new claim embeddings, reclassify CAP topics, or refit the KDE maps.
+
+```bash
+# CPU analysis, using preserved claims and validated cached embeddings.
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+  uv run python -m dsa_analysis.national_claim_topics prepare
+
+# Local Gemma summaries, in the same isolated MLX environment as extraction.
+# Do not overlap this with another local extraction/model job.
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+  uv run scripts/national_claim_topics.py label
+
+# Render both views, update the claim report, rebuild the complete source ZIP.
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+  uv run python -m dsa_analysis.national_claim_topics render
+
+# Replay numerical/label caches and charts; verify complete ZIP member bytes.
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+  uv run python -m dsa_analysis.national_claim_topics audit
+```
+
+The existing isolated Gemma interpreter can also run the labeling script
+directly with `PYTHONPATH=src`. The main project's Torch stack is not imported
+by the labeling path. Model downloads require explicit `--download-model`.
+All stages accept `--input`; `prepare --groups democratic republican dsa libertarian`
+supports a completed, separately merged four-party input. No incomplete
+Libertarian extraction is substituted into the completed three-party analysis.
+
+**Discovery.** Seeded, unwhitened PCA retains up to 50 dimensions. The initial
+HDBSCAN candidate is evaluated for assignment coverage. On the full corpus it
+left roughly 88% of claims unclustered, so discovery evaluates a fallback grid
+of weighted K-means fits (12/18/24/30 clusters). K-means gives each organization
+equal aggregate weight and each within-organization document/fallback bundle
+equal weight. HDBSCAN has no sample-weight input and is explicitly unweighted.
+Model selection uses original-embedding cosine silhouette, coverage, and topic
+concentration, not the strength of party contrasts. This run selects 24 topics.
+The low silhouette and moderate balanced-refit agreement mean these are useful
+exploratory partitions, not cleanly separated or independently validated
+categories. K-means assigns every claim even when boundaries are fuzzy.
+
+All eligible expanded claims share one versioned taxonomy. The strict view
+reuses the same assignments and recomputes weights on its eligible bundles; it
+does not independently refit or relabel topics. Noise remains an explicit
+denominator category if the selected method produces it. Tiny/degenerate inputs
+retain explicit no-fit/all-noise dispositions, rather than fabricated topics.
+Fit IDs are only stable within the same input/model/configuration fingerprint.
+A later four-party refit has a separate taxonomy and output directory.
+
+**Keywords and summaries.** A corpus-wide TF-IDF vocabulary includes unigrams
+and bigrams, excluding common boilerplate for keywords only. Weighted cluster
+means receive a distinctive-term lift against the corpus mean. Actual claim
+wording is never rewritten. Representative evidence combines central claims
+with observed-group coverage and at most two examples from one group/bundle.
+Local Gemma receives a bounded, tokenizer-audited packet, returns structured
+titles/summaries/caveats and supporting claim IDs, and retains exact prompts,
+raw replies, revisions, runtime details, and validation failures. Topic labels
+cannot cite claims outside their packets. Political-actor and organizational
+narrative clusters must be described as such, not relabeled as coherent policy
+subjects. Valid JSON and supporting IDs do not by themselves establish
+entailment; summaries need review against the actual packet.
+`label_review.json` records that bounded evidence review for every topic, binding
+each decision to the exact fit, evidence packet, and original model-record hashes.
+Source-bound assistant revisions are explicitly distinguished from unchanged
+Gemma wording. In the current run, 13 labels were revised to identify actor or
+narrative clusters, retain opposing examples, or correct one invalid claim ID.
+The original raw responses and failures are never rewritten. Stale review records
+do not confer reviewed status on changed evidence or regenerated responses.
+
+**Shares and contrasts.** Within each group/view, each claim's weight is
+`1 / (claims in its bundle * represented bundles in its group)`. Summed topic
+shares include unclustered mass and total one for available groups. Missing
+groups are unavailable, never evidence of a zero share. The one-versus-rest
+baseline is the arithmetic mean of other available organizations' shares,
+not the share of their pooled claims.
+
+Relative emphasis is `log2((share + 0.0001) / (baseline_share + 0.0001))`.
+Pairwise contrasts use the same formula. The smoothing term is 0.01 percentage
+points. Tables always retain actual unsmoothed shares, percentage-point
+differences, and claim/document/bundle support. They also flag zero shares,
+fewer than two supporting bundles on either comparison side, smoothing
+sensitivity (changing the floor tenfold shifts a ratio by more than 0.5),
+and leave-one-bundle-out sign or rank sensitivity (rank range at least three).
+**All support levels remain ranked**, as requested. Warnings are not grounds
+for silent removal. Large finite ratios against tiny baselines are not proof
+of important, representative, or statistically significant differences.
+
+Leave-one-bundle-out calculations keep the taxonomy fixed and renormalize
+shares; they do not measure clustering uncertainty. Separate balanced
+organization/bundle refits compare shared claim IDs in the fixed PCA space,
+including noise, with adjusted Rand scores. Nearby candidate fits record
+agreement with the selected fit. None of these diagnostics certifies topics
+or removes the corpus's unequal period and source-type composition.
+
+**Outputs.** CSV/JSON evidence under `topics/` includes every claim assignment,
+keywords, full representative claims and exact original evidence, strict and
+expanded shares, all ranked contrasts and warnings, candidate diagnostics,
+balanced-refit sensitivity, local label packets/responses, and input/output
+hashes. Both PNG and SVG charts show the overall distributions, group-versus-
+rest heatmaps, and pairwise contrasts. All topics remain accessible, with
+pagination rather than hidden tail topics; heatmap colors saturate at +/-3
+while annotations/downloads retain the full ratios.
+
+The `render` stage verifies the current source, embedding, numerical-code and
+output hashes before using labels. Stale or failed labels remain explicitly
+provisional. Cached labels can replay without generating new responses.
+Reports lead with these concrete distributions and source-linked examples,
+while keeping the earlier CAP and KDE results unchanged. The full claim/source
+ZIP contains actual complete texts, claims, provenance, topic-stage CSV/JSON
+evidence, all full-corpus PNG/SVG figures, and `report.md` with figure/data links
+rewritten for the extracted archive. This is one combined deliverable, not separate
+metadata-only and figure downloads. SVG identifiers and metadata are deterministic;
+the topic replay audit checks exact PNG/SVG bytes and every archive member.
+It does not retroactively extend the earlier KDE reproducibility certification:
+existing CAP/KDE figures are included, not recomputed by the topic-stage replay.
+
+**Over time.** Rendering also exports `temporal_shares.csv`,
+`temporal_contrasts.csv`, `temporal_changes.csv`, `temporal_coverage.csv`,
+`temporal_document_dates.csv`, and explicit `temporal_exclusions.csv`. Four-year
+bins begin in 2000; the last bin ends at the study's October 26, 2026 cutoff and
+is partial. Known adoption dates take precedence over publication dates; year-
+and month-only precision is preserved rather than assigning a fictitious day.
+Missing/invalid or out-of-scope dates are excluded from temporal analysis with
+their reasons, not from the pooled corpus.
+
+The topic taxonomy is fixed, not refitted per period. Weights are recomputed
+within each group/period/view, including when a fallback bundle spans periods.
+Share heatmaps and paginated topic-trend plots show every topic. Missing
+documents are gray heatmap cells and gaps in lines, never zero topic shares.
+Coverage axes count documents and bundles. There is no forward filling:
+Republican reuse of the 2016 platform in 2020 is not a new text observation.
+Strict DSA gaps remain visible rather than being filled with fallback statements.
+
+Group-versus-rest temporal contrasts require all configured other organizations
+in the same view/period, ensuring that the reference groups do not silently
+change. Pairwise contrasts require both organizations. Adjacent-period
+percentage-point changes are only computed when both neighboring periods are
+observed for that group; no differences bridge an evidence gap. All periods'
+raw shares, support, low-support/smoothing warnings and comparison group IDs
+are downloadable. These are document-composition trajectories, not annual
+position estimates, causal shifts, or sentiment/ideology trends.
+
+The main analysis accepts `--topics` to prepare numerical topics and render
+available cached labels; it never silently loads Gemma. When existing topic
+artifacts are present, the normal report rebuild also restores their report
+section after checking freshness.
+
+### Claim extraction and full analysis
+
 Keep Gemma inference in its isolated MLX environment; the main project retains
 its existing Torch/analysis dependencies:
 

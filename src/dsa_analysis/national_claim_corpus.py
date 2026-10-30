@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import time
 import zipfile
@@ -740,19 +741,45 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
     return summary
 
 
-def bundle(output: Path) -> None:
-    names = {
-        path.relative_to(output).as_posix()
+def bundle_members(
+    output: Path, *, figures: Path | None = None, report: Path | None = None
+) -> dict[str, Path | bytes]:
+    members = {
+        path.relative_to(output).as_posix(): path
         for path in output.rglob("*")
         if path.is_file() and path.suffix in {".csv", ".json", ".jsonl"}
     }
+    if figures is not None:
+        members.update(
+            {
+                f"figures/{path.relative_to(figures).as_posix()}": path
+                for path in figures.rglob("*")
+                if path.is_file() and path.suffix in {".png", ".svg"}
+            }
+        )
+    if report is not None:
+        text = report.read_text()
+        prefix = Path(os.path.relpath(output.resolve(), report.parent.resolve())).as_posix() + "/"
+        text = text.replace(prefix, "")
+        text = re.sub(r"\[([^\]]+)\]\(claim_documents\.zip\)", r"\1 (this extracted bundle)", text)
+        if figures is not None:
+            prefix = (
+                Path(os.path.relpath(figures.resolve(), report.parent.resolve())).as_posix() + "/"
+            )
+            text = text.replace(prefix, "figures/")
+        members["report.md"] = text.encode("utf-8")
+    return members
+
+
+def bundle(output: Path, *, figures: Path | None = None, report: Path | None = None) -> None:
+    members = bundle_members(output, figures=figures, report=report)
     with zipfile.ZipFile(output / "claim_documents.zip", "w") as archive:
-        for name in sorted(names):
+        for name, value in sorted(members.items()):
             info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.create_system = 3
             info.external_attr = 0o100644 << 16
-            archive.writestr(info, (output / name).read_bytes())
+            archive.writestr(info, value if isinstance(value, bytes) else value.read_bytes())
 
 
 def extract_corpus(

@@ -1,0 +1,104 @@
+{
+  "basis": {
+    "claims_sha256": "4e2b6ef6472b51aad8f980737749c87cedffded9291b6224d7ba65fac31c1078",
+    "config": {
+      "balanced_refits": 2,
+      "epsilon": 0.0001,
+      "keywords": 10,
+      "kmeans_clusters": [
+        12,
+        18,
+        24,
+        30
+      ],
+      "label_attempts": 2,
+      "max_claims_per_bundle": 2,
+      "max_output_tokens": 900,
+      "max_prompt_tokens": 4096,
+      "min_cluster_sizes": [
+        50,
+        100,
+        200
+      ],
+      "min_samples": [
+        5,
+        10
+      ],
+      "minimum_density_coverage": 0.5,
+      "pca_components": 50,
+      "representatives": 12,
+      "schema_version": 1,
+      "seed": 1729,
+      "silhouette_sample": 2000,
+      "topics_per_page": 24
+    },
+    "embedding_manifest": {
+      "embedding_dimensions": 768,
+      "max_length": 256,
+      "model_name": "Alibaba-NLP/gte-multilingual-base",
+      "model_revision": "9bbca17d9273fd0d03d5725c7a4b0f6b45142062",
+      "normalization": "l2",
+      "ordered_text_hash": "15cd2fcd5d78b3993e908aa16b2c7cc97d7d2a25ab9c6e84546d3ce86c68ea7b",
+      "segment_count": 26483
+    },
+    "embedding_sha256": "d70b5cdf57126a0449cea105abbd4e1831e254efc9cee727d6d72b8be5350671",
+    "groups": [
+      "democratic",
+      "republican",
+      "dsa"
+    ],
+    "implementation_sha256": "92b61d380f14dd6d06baa1ec6e5dcd74f0da077a3d4a10b90ef06d86ce4c5f2a",
+    "ordered_claim_ids_sha256": "46d68ca31e95751d90d0285e1d61c5b2152768525f3b6b3c0b461b2af4d66e71",
+    "sources_sha256": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
+    "versions": {
+      "numpy": "2.5.2",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0"
+    }
+  },
+  "outputs": {
+    "assignments.csv": "ea1901502268c70ed91a974e977a9117b0d55b3576823f190f0d6e5d871edc52",
+    "balanced_refits.csv": "1a4bda7e31f888ca8d103566ec1d10b2e3ca7136eb82b0abfd33e41330bec905",
+    "candidate_fits.csv": "1e641b076d5a7bea2c48b878dab2b22f1d37014b85f3e42dc97abb39c992e5d7",
+    "contrasts.csv": "ed06980a25b1374a0f09808a3dc83cfa40a8ca630a588fbebc946668ec4e58df",
+    "keywords.csv": "a2b7b521de89d7789791dde5155e4d433fe0b997ed33d6c3f2088a15d7f9b453",
+    "pca_coordinates.npy": "2b1b416c69d0dc4adf89d1b3876fc6b9fe16d5f20effacda01745f6b3ccce5c3",
+    "representatives.csv": "a67e45279428a17675ad5a11f092b3bfea86543dc5b72e8e0175b0f93918457b",
+    "shares.csv": "81d248da128ddc695e70b04c9e79649a122d1024382f70fc03fcb0b62e9c0df8"
+  },
+  "summary": {
+    "claims": 26483,
+    "epsilon": 0.0001,
+    "fit": {
+      "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
+      "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
+      "pca_dimensions": 50,
+      "pca_variance_retained": 0.599114716053009,
+      "selected_parameters": {
+        "adjusted_rand_vs_selected": 1.0,
+        "clusters": 24,
+        "cosine_silhouette": 0.057901255786418915,
+        "coverage": 1.0,
+        "largest_topic_share": 0.07578446550617378,
+        "method": "weighted_kmeans",
+        "min_cluster_size": "",
+        "min_samples": "",
+        "selected": true,
+        "selection_score": 0.0535132400645089
+      },
+      "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
+      "status": "complete"
+    },
+    "groups": [
+      "democratic",
+      "republican",
+      "dsa"
+    ],
+    "labeling_status": "not_yet_labeled",
+    "limitations": "Exploratory language subjects, not agreement or ideology. Pooled periods and genres differ; strict/expanded contrasts are source-composition sensitivity.",
+    "schema_version": 1,
+    "taxonomy": "Expanded-corpus shared assignments; strict shares use the same taxonomy",
+    "topics": 24,
+    "unclustered_claims": 0
+  }
+}

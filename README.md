@@ -19,40 +19,108 @@ Democratic Socialists of America documents**, covering January 1, 2000 through
 October 26, 2026. Candidate campaigns, state parties, and local DSA chapters are
 outside this comparison.
 
-**Libertarian expansion in progress:** 11 adopted national editions have been
-recovered, with 2020/2024 reuse recorded separately. New inference is isolated;
-the completed three-party results below are unchanged. See the
-[four-party scope and reproduction notes](docs/national_four_party_analysis.md).
-
 The current work turns source text into discrete, self-contained claims using
 **local Gemma plus separately identified, source-bound assistant corrections**,
-then applies topic classification, embeddings, UMAP, and
-kernel-density analysis to those claims rather than the original passages.
+then uses cached embeddings to discover **24 shared topics**, extract distinctive
+keywords, compare overall topic shares and relative emphasis, and track those
+topics over time. CAP classification and semantic-density maps remain supporting
+analyses rather than the main result.
 
 **Status:** the exploratory full-source comparison analyzes **26,483 eligible
-claims from 135 documents**. All 2,623 chunks have effective dispositions:
+claims from 135 documents**, with strict and expanded topic distributions and
+four-year observed-document trends covering **2000–2026**. The figures use named
+topics reviewed against their representative claims. All 24 labels are reviewed;
+13 have explicitly attributed source-bound assistant revisions, with original
+Gemma replies preserved. This is not independent human certification.
+
+All 2,623 extraction chunks have effective dispositions:
 161 source-bound corrections address reviewed errors and all 27 failed model
 chunks, while preserving original model outcomes. No historically flagged
 candidate lacks a superseding correction. The 142-block targeted review is not
-a representative sample or corpus-wide semantic certification. The selected
-sample and passage-based baseline remain separate.
+a representative sample or corpus-wide semantic certification. Earlier pilot
+and passage-based results are retained below as historical references.
 
 <p align="center">
-  <img src="figures/national_claims/full/expanded/pairwise_density.png" width="1200" alt="Exploratory pairwise semantic-density comparisons of 26,483 eligible Democratic, Republican, and DSA claims">
+  <img src="figures/national_claims/full/topics/expanded/topic_distribution.png" width="1200" alt="Shared learned-topic distributions of 26,483 eligible Democratic, Republican, and DSA claims">
 </p>
 
-*Full eligible-claim analysis after targeted source corrections. Density differences describe
-language in this input, not ideological distance or policy agreement.*
+*Full eligible-claim analysis after targeted source corrections. Topic shares use equal
+document/fallback-bundle weights and describe language emphasis, not policy agreement.*
 
 ## Results and downloads
 
-| Analysis | Status | Read | Complete download |
-|---|---|---|---|
-| Full claim-based comparison | Completed after targeted repairs; 26,483 claims from 135 documents | [Report](report/national_claim_analysis.md) | [Claims, complete sources, raw replies, history, corrections and results](data/analysis/national_claims/full/claim_documents.zip) |
-| Claim-based selected sample | Completed; 199 claims from 25 documents; not representative | [Report](report/national_claim_analysis_sample.md) | [Claims and source texts](data/analysis/national_claims/reviewed_sample/claim_documents.zip) |
-| Passage-based baseline | Completed; separate analytical input | [Report](report/national_platform_analysis.md) | [Source archive](data/analysis/national_platforms/source_documents.zip) |
+| Current result | Scope | Outputs |
+|---|---|---|
+| Full claim-based comparison | 26,483 eligible claims from 135 documents; Democratic, Republican, and DSA | [Actual analyzed claims (CSV)](data/analysis/national_claims/full/analysis_claims.csv) · [Full report](report/national_claim_analysis.md) |
+| Overall learned-topic distributions | 24 shared topics; strict and expanded views; equal document/fallback-bundle weights | [Topic distributions and evidence](report/national_claim_analysis.md#learned-topic-distributions-and-relative-emphasis) · [All shares](data/analysis/national_claims/full/topics/shares.csv) |
+| Relative topic emphasis | Each group versus equally weighted other groups, plus pairwise comparisons; all support warnings retained | [Ranked contrasts](data/analysis/national_claims/full/topics/contrasts.csv) |
+| Topics over time | Seven four-year periods from 2000 through the partial 2024–2026 period; fixed taxonomy and explicit evidence gaps | [Time charts](report/national_claim_analysis.md#topics-over-time) · [Period shares](data/analysis/national_claims/full/topics/temporal_shares.csv) · [Coverage](data/analysis/national_claims/full/topics/temporal_coverage.csv) |
 
-Selected [expanded-view topic shares](data/analysis/national_claims/full/topic_emphasis.csv),
+**One complete download:** [Report, all figures, result tables, claims, complete
+sources, raw replies, history and corrections](data/analysis/national_claims/full/claim_documents.zip).
+Unzip it and open `report.md`: its figure and result-table links point to the
+included files. PNG and SVG figures include both the new topic/time analyses and
+the supporting CAP/KDE results.
+
+### Inspect the actual claims
+
+**Start here: [all 26,483 claims used in the analysis (CSV)](data/analysis/national_claims/full/analysis_claims.csv).**
+The `claim_text` and `text` columns contain the actual claim wording. Each row also
+includes the organization, document title and dates, source URL, quoted evidence,
+source offsets, quality flags, and model/correction provenance.
+
+For the complete extraction record, including excluded, superseded, or duplicate
+candidates, open [all 27,720 preserved claim records (CSV)](data/analysis/national_claims/full/claims.csv)
+or [the same records as JSONL](data/analysis/national_claims/full/claims.jsonl).
+The `analysis_eligible`, `duplicate_of`, and repair fields distinguish records
+used in the results from retained history. These are large files; download them
+and open them in a spreadsheet or editor if the repository preview is unavailable.
+
+[Complete source texts](data/analysis/national_claims/full/complete_sources.csv)
+and [representative claims for each learned topic](data/analysis/national_claims/full/topics/representatives.csv)
+provide the original context and a smaller starting point for reading.
+
+### Overall learned-topic distributions
+
+The claim embeddings now support a shared, corpus-wide topic taxonomy, not just
+selected regions of a density map. The expanded and adopted-platforms-only views
+use the **same topic assignments** and equal document/fallback-bundle weights.
+Distinctive keywords, representative claims, and
+[reviewed labels with exact provenance](data/analysis/national_claims/full/topics/label_review.json)
+are downloadable. Original local-Gemma responses remain unchanged; source-bound
+assistant revisions correct misleading labels and are identified explicitly.
+
+![Relative topic emphasis against equally weighted other organizations](figures/national_claims/full/topics/expanded/vs_rest_emphasis.png)
+
+Positive log2 ratios mean a larger share than the equally weighted other
+organizations; +1 is approximately twice the share away from the disclosed
+smoothing floor. These are **relative language emphases**, not agreement or
+ideological distance. All contrasts remain ranked, including rare or
+single-bundle topics, with explicit support and sensitivity warnings.
+Some learned clusters concern political narratives or organizing, not a single
+policy subject; their representative claims retain that distinction.
+The selected 24-topic partition has low separation (cosine silhouette 0.058)
+and moderate balanced-refit agreement (adjusted Rand 0.606–0.628); it is an
+exploratory organizational aid, not a definitive policy taxonomy.
+
+See the [full report, both views and source-linked topic evidence](report/national_claim_analysis.md#learned-topic-distributions-and-relative-emphasis),
+[all weighted shares](data/analysis/national_claims/full/topics/shares.csv),
+[ranked contrasts and warnings](data/analysis/national_claims/full/topics/contrasts.csv),
+and [representative claims with exact source evidence](data/analysis/national_claims/full/topics/representatives.csv).
+The complete claim/source ZIP includes these topic artifacts and every figure.
+The [methods](docs/national_claim_analysis.md#learned-topics-and-relative-emphasis)
+explain discovery, local labeling, and reproducibility.
+
+**Over time:** the report also tracks the same topics in four-year
+adoption/publication periods, with strict and expanded views, document/bundle
+support, and missing periods left as gaps. Relative time charts use fixed
+comparison groups, not a silently changing baseline.
+
+![Topic shares over observed document periods](figures/national_claims/full/topics/expanded/time_trends_1.png)
+
+### Broad CAP reference topics
+
+Selected [expanded-view CAP topic shares](data/analysis/national_claims/full/topic_emphasis.csv),
 using equal document/fallback-bundle weights:
 
 | Topic | Democratic | Republican | DSA |
@@ -79,10 +147,27 @@ preserve their exact basis and replacement selections; all superseded candidates
 remain in the download.
 The [reproducibility audit](data/analysis/national_claims/reproducibility_audit.json)
 records the successful second offline run, archive checks, and input/output hashes.
+The separate [topic-stage replay audit](data/analysis/national_claims/full/topics/replay_audit.json)
+verifies the current topic/time tables, named PNG/SVG figures, and every combined
+archive member without new model inference.
 
-For individual tables, see the [claim corpus](data/analysis/national_claims/full/),
-[selected-sample topics and results](data/analysis/national_claims/reviewed_sample/),
-and [baseline passages and chronology](data/analysis/national_platforms/).
+For individual tables, see the [full claim corpus](data/analysis/national_claims/full/)
+and [current topic and temporal results](data/analysis/national_claims/full/topics/).
+
+### Earlier analyses (historical references)
+
+These are not the current full-source results:
+
+- **Archived 199-claim pilot:** 25 documents, not representative and not the current dataset.
+  [Pilot report](report/national_claim_analysis_sample.md) ·
+  [Pilot claims and complete source texts](data/analysis/national_claims/reviewed_sample/claim_documents.zip).
+- **Passage-based baseline:** separate analytical input, before the claim-based comparison.
+  [Baseline report](report/national_platform_analysis.md) ·
+  [Complete source archive](data/analysis/national_platforms/source_documents.zip).
+
+**Libertarian expansion is deferred and low priority.** Its partial extraction is
+preserved for later resumption; it is not included in the results above. See the
+[four-party scope notes](docs/national_four_party_analysis.md).
 
 ## Sources and coverage
 
@@ -131,8 +216,9 @@ may remain in the analytical input.
 Claim text feeds the pinned GTE encoder and MiniLM/CAP topic classifier. Both
 tokenizers enforce their limits without silent truncation. UMAP/KDE sampling
 balances organizations, and each document or predefined DSA fallback-period bundle
-receives equal aggregate weight. Expanded and strict views fit separately;
-their coordinates are not directly comparable. Pooled results mix periods and genres.
+receives equal aggregate weight. Expanded and strict KDE views fit separately;
+their KDE coordinates are not directly comparable. Learned-topic shares instead
+use one shared expanded-corpus taxonomy. Pooled results mix periods and genres.
 
 See [claim extraction and local analysis](docs/national_claim_analysis.md) for
 model revisions, chunking, cache/retry behavior, review limitations, and commands.

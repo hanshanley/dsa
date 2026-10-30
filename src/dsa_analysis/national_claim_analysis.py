@@ -555,6 +555,7 @@ def run_analysis(
     groups: tuple[str, ...] = GROUPS,
     coverage_path: Path = OUTPUT / "coverage.csv",
     report: Path | None = None,
+    topics: bool = False,
 ) -> dict:
     if output.resolve() == OUTPUT.resolve() or OUTPUT.resolve() in output.resolve().parents:
         raise ValueError("Do not overwrite the passage baseline")
@@ -638,7 +639,15 @@ def run_analysis(
     }
     write_json(output / "analysis_summary.json", summary)
     report = write_report(output, summary, shares, figures, groups=groups, report=report)
-    bundle(output)
+    if topics or (output / "topics/fit_manifest.json").exists():
+        from .national_claim_topics import prepare as prepare_topics
+        from .national_claim_topics import render as render_topics
+
+        if topics:
+            prepare_topics(output, groups=groups)
+        summary["learned_topics"] = render_topics(output, report=report)
+        write_json(output / "analysis_summary.json", summary)
+    bundle(output, figures=figures, report=report)
     print(f"Claim analysis: {len(rows)} claims; report {report.relative_to(ROOT)}", flush=True)
     return summary
 
@@ -648,9 +657,19 @@ def main() -> None:
     parser.add_argument("--input", type=Path, default=FULL_OUTPUT)
     parser.add_argument("--reviewed-sample", action="store_true")
     parser.add_argument("--download-model", action="store_true")
+    parser.add_argument(
+        "--topics",
+        action="store_true",
+        help="Prepare shared learned topics and render cached labels; no new Gemma inference",
+    )
     args = parser.parse_args()
     output = SAMPLE_OUTPUT if args.reviewed_sample and args.input == FULL_OUTPUT else args.input
-    run_analysis(output, reviewed_sample=args.reviewed_sample, download_model=args.download_model)
+    run_analysis(
+        output,
+        reviewed_sample=args.reviewed_sample,
+        download_model=args.download_model,
+        topics=args.topics,
+    )
 
 
 if __name__ == "__main__":

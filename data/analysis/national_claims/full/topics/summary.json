@@ -1,0 +1,51 @@
+{
+  "assistant_revised_labels": 13,
+  "claims": 26483,
+  "epsilon": 0.0001,
+  "fit": {
+    "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
+    "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
+    "pca_dimensions": 50,
+    "pca_variance_retained": 0.599114716053009,
+    "selected_parameters": {
+      "adjusted_rand_vs_selected": 1.0,
+      "clusters": 24,
+      "cosine_silhouette": 0.057901255786418915,
+      "coverage": 1.0,
+      "largest_topic_share": 0.07578446550617378,
+      "method": "weighted_kmeans",
+      "min_cluster_size": "",
+      "min_samples": "",
+      "selected": true,
+      "selection_score": 0.0535132400645089
+    },
+    "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
+    "status": "complete"
+  },
+  "fit_manifest_sha256": "4d08e3bc67c0b56e5678f89aa48f0674dc22609bdb160868192e9b9f4bf719e5",
+  "groups": [
+    "democratic",
+    "republican",
+    "dsa"
+  ],
+  "labeling_status": "complete",
+  "labels_available": 24,
+  "limitations": "Exploratory language subjects, not agreement or ideology. Pooled periods and genres differ; strict/expanded contrasts are source-composition sensitivity.",
+  "reviewed_labels": 24,
+  "schema_version": 1,
+  "taxonomy": "Expanded-corpus shared assignments; strict shares use the same taxonomy",
+  "temporal": {
+    "carry_forward": false,
+    "cutoff": "2026-10-26",
+    "date_rule": "Adoption date when recorded, otherwise publication date; preserve precision",
+    "exclusions": 0,
+    "implementation_sha256": "7c52e655b3bcdcd9055ab5ae2c60f06eed0db932e47e54c4e49339ab36eda611",
+    "period_years": 4,
+    "relative_baseline": "All other configured groups required; no changing vs-rest baselines",
+    "start_year": 2000,
+    "taxonomy": "Fixed expanded-corpus topics; no per-period refits",
+    "weighting": "Equal within-period document/fallback-bundle mass per organization"
+  },
+  "topics": 24,
+  "unclustered_claims": 0
+}

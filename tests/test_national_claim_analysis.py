@@ -176,6 +176,7 @@ class ClaimAnalysisTests(unittest.TestCase):
             write_rows(output / "complete_sources.csv", source_rows)
             write_json(output / "extraction_summary.json", {"status": "complete"})
             write_rows(baseline / "coverage.csv", coverage(source_rows))
+            (root / "report.md").write_text("# Fixture report\n")
             observed = {}
 
             def encoder(rows, *args, **kwargs):
@@ -205,13 +206,23 @@ class ClaimAnalysisTests(unittest.TestCase):
                 patch(f"{module}.plot_outputs"),
                 patch(f"{module}.plot_topics"),
                 patch(f"{module}.write_report", return_value=root / "report.md"),
+                patch("dsa_analysis.national_claim_topics.prepare") as learned_prepare,
+                patch(
+                    "dsa_analysis.national_claim_topics.render",
+                    return_value={"labeling_status": "incomplete"},
+                ) as learned_render,
             ):
-                summary = run_analysis(output)
+                summary = run_analysis(output, topics=True)
             self.assertEqual(observed["embedding_texts"], [row["claim_text"] for row in claims])
             self.assertEqual(observed["topic_texts"], observed["embedding_texts"])
             self.assertEqual(kde.call_count, 2)
             self.assertEqual(summary["claims"], len(claims))
             self.assertFalse(summary["baseline_modified"])
+            learned_prepare.assert_called_once_with(
+                output, groups=("democratic", "republican", "dsa")
+            )
+            learned_render.assert_called_once_with(output, report=root / "report.md")
+            self.assertEqual(summary["learned_topics"]["labeling_status"], "incomplete")
 
     def test_completed_report_explains_dsa_source_mix_sensitivity(self):
         with tempfile.TemporaryDirectory() as temporary:
