@@ -201,6 +201,71 @@ class ClaimCorpusTests(unittest.TestCase):
             self.assertEqual(summary["superseded_model_claims"], 1)
             self.assertEqual(read_rows(output / "claims.csv")[0]["analysis_eligible"], "False")
 
+    def test_partial_source_repair_keeps_unaffected_model_claims_and_original_review_numbers(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            corpus, output = Path(temporary) / "baseline", Path(temporary) / "claims"
+            corpus.mkdir()
+            rows = sources()[:1]
+            write_rows(corpus / "complete_sources.csv", rows)
+            write_rows(corpus / "coverage.csv", coverage(rows))
+
+            def extractor(*_):
+                return {
+                    "text": json.dumps(
+                        {
+                            "claims": [
+                                claim(claim_text="Support for universal care."),
+                                claim(claim_text="Support for services."),
+                            ],
+                            "unresolved_references": [],
+                        }
+                    ),
+                    "seconds": 0.1,
+                    "generation_tokens": 25,
+                    "peak_memory": 1,
+                }
+
+            extract_corpus(output=output, corpus=corpus, extractor=extractor)
+            blocks, manifest = prepare(output, corpus)
+            original = read_rows(output / "claims.csv")
+            write_rows(
+                output / "semantic_review.csv",
+                [
+                    {
+                        "block_id": blocks[0]["block_id"],
+                        "review_status": "issues_found",
+                        "flagged_claim_numbers": "2",
+                    }
+                ],
+            )
+            path, record = self.write_source_repair(
+                output,
+                blocks[0],
+                manifest,
+                [claim(claim_text="Support for care for all residents.")],
+            )
+            path.write_text(json.dumps({**record, "replaces_claim_numbers": [2]}))
+            summary = extract_corpus(output=output, corpus=corpus, prepare_only=True)
+            exported = read_rows(output / "claims.csv")
+            self.assertEqual(exported[0]["claim_id"], original[0]["claim_id"])
+            self.assertEqual(exported[0]["claim_text"], original[0]["claim_text"])
+            self.assertEqual(exported[0]["model_claim_text"], original[0]["model_claim_text"])
+            self.assertEqual(exported[0]["analysis_eligible"], "True")
+            self.assertEqual(exported[0]["superseded_by_repair"], "")
+            self.assertEqual(
+                exported[1]["quality_status"], "assistant_flagged_source_fidelity_issue"
+            )
+            self.assertEqual(exported[1]["analysis_eligible"], "False")
+            self.assertEqual(summary["assistant_flagged_claims"], 1)
+            self.assertEqual(summary["unrepaired_flagged_model_claims"], 0)
+            self.assertEqual(summary["superseded_model_claims"], 1)
+            self.assertEqual(summary["analysis_claims"], 2)
+            self.assertEqual(read_rows(output / "block_status.csv")[0]["claims"], "2")
+            for invalid in ([], [0], [3], [2, 2], [True]):
+                path.write_text(json.dumps({**record, "replaces_claim_numbers": invalid}))
+                with self.assertRaisesRegex(ValueError, "Invalid partial source repair"):
+                    load_source_repairs(blocks, output, manifest)
+
     def test_complete_source_is_chunked_with_hard_limit_and_exact_offsets(self):
         rows = sources()
         text = (

@@ -486,7 +486,7 @@ def load_source_repairs(blocks: list[dict], output: Path, manifest: dict) -> dic
         record = json.loads(raw)
         if (
             not isinstance(record, dict)
-            or set(record) != required
+            or set(record) not in (required, required | {"replaces_claim_numbers"})
             or record["block_id"] != path.stem
             or path.stem not in by_id
             or record["reviewer"] != "assistant_source_fidelity"
@@ -500,6 +500,23 @@ def load_source_repairs(blocks: list[dict], output: Path, manifest: dict) -> dic
             block, response.read_bytes(), manifest["fingerprint"]
         ):
             raise ValueError(f"Stale source repair: {path.name}")
+        replaced = record.get("replaces_claim_numbers")
+        if "replaces_claim_numbers" in record:
+            final = json.loads(response.read_bytes())["attempts"][-1]
+            original, original_errors, _ = validate_response(final["text"], block)
+            if (
+                original_errors
+                or final.get("stage") != "source_fidelity_revision"
+                or final.get("generation_tokens", 0) >= manifest["generation"]["max_tokens"]
+                or not isinstance(replaced, list)
+                or not replaced
+                or any(
+                    type(number) is not int or not 1 <= number <= len(original)
+                    for number in replaced
+                )
+                or len(set(replaced)) != len(replaced)
+            ):
+                raise ValueError(f"Invalid partial source repair: {path.name}")
         accepted, errors, unresolved = validate_response(
             canonical(
                 {
@@ -524,6 +541,7 @@ def load_source_repairs(blocks: list[dict], output: Path, manifest: dict) -> dic
             "claims": accepted,
             "repair_id": identifier,
             "unresolved_references": unresolved,
+            "replaces_claim_numbers": None if replaced is None else set(replaced),
         }
     return repairs
 
@@ -579,7 +597,10 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
                         if number in flagged
                         else "assistant_reviewed_no_individual_issue_observed_not_human_gold"
                     )
-                if repair:
+                if repair and (
+                    repair["replaces_claim_numbers"] is None
+                    or number in repair["replaces_claim_numbers"]
+                ):
                     claim["analysis_eligible"] = False
                     claim["superseded_by_repair"] = repair["repair_id"]
                     if number not in flagged:
@@ -603,7 +624,16 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
                 else ("validation_failed" if errors else "normalized"),
                 "model_status": "validation_failed" if errors else "normalized",
                 "repair_id": repair["repair_id"] if repair else "",
-                "claims": len(repair["claims"]) if repair else (0 if errors else len(accepted)),
+                "claims": (
+                    len(repair["claims"])
+                    + (
+                        sum(not row["superseded_by_repair"] for row in accepted)
+                        if not errors
+                        else 0
+                    )
+                    if repair
+                    else (0 if errors else len(accepted))
+                ),
                 "model_claims": 0 if errors else len(accepted),
                 "errors": " | ".join(errors),
                 "unresolved_references": canonical(
@@ -665,6 +695,11 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
         "assistant_flagged_claims": sum(
             row["quality_status"] == "assistant_flagged_source_fidelity_issue" for row in claims
         ),
+        "unrepaired_flagged_model_claims": sum(
+            row["quality_status"] == "assistant_flagged_source_fidelity_issue"
+            and not row["superseded_by_repair"]
+            for row in claims
+        ),
         "claim_text_standardization": {
             "version": 1,
             "original_field": "model_claim_text",
@@ -684,7 +719,12 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
         "inference_seconds": sum(row["seconds"] for row in metrics),
         "generation_tokens": sum(row["generation_tokens"] for row in metrics),
         "maximum_reported_peak_memory_gb": max((row["peak_memory"] for row in metrics), default=0),
-        "quality": "Automated screening; not independent human gold or fact-checking",
+        "quality": (
+            "Automated screening with targeted assistant source repairs; "
+            "not independent human gold or fact-checking"
+            if repairs
+            else "Automated screening; not independent human gold or fact-checking"
+        ),
         "baseline_modified": False,
     }
     write_json(output / "extraction_summary.json", summary)
