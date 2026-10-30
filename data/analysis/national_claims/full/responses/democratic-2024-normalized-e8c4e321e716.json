@@ -1,51 +1,40 @@
 {
   "attempts": [
     {
-      "generation_tokens": 351,
-      "generation_tps": 15.58669352402208,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 1952,
-      "prompt_tps": 443.0848027098735,
-      "request_sha256": "98a26887d29aeeb2dde95237a4f18097e3dfde1ecaa2ce95399145bd091b853b",
-      "seconds": 26.93676762492396,
+      "generation_tokens": 268,
+      "generation_tps": 15.23016937990165,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1806,
+      "prompt_tps": 434.73829371791675,
+      "request_sha256": "f2c5ad67e5a7f312eaa683a86a470b422e89a4cb59e21c5af98e6d50582f7181",
+      "seconds": 21.763467540964484,
       "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support the Administration's work to close fundamental gaps in women's health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support protecting access to reproductive health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration, led by Vice President Harris, is working to reduce maternal mortality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris called for states to provide a full year of postpartum coverage for Medicaid beneficiaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"46 states, the District of Columbia, and the U.S. Virgin Islands now provide a full year of postpartum coverage for Medicaid beneficiaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making investments in women's health research to find better ways to prevent, diagnose, and treat health conditions in women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making investments in women's health research to make care more accessible and affordable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is leading work to end cancer as we know it, including through the creation of the Advanced Research Projects Agency for Health (ARPA-H).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support the Administration's work to close fundamental gaps in women's health care, including by protecting access to reproductive health care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is working to reduce maternal mortality, led by Vice President Harris.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris called for states to provide a full year of postpartum coverage for Medicaid beneficiaries, and 46 states, the District of Columbia, and the U.S. Virgin Islands have taken that step.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making transformative investments in women's health research to find better ways to prevent, diagnose, and treat health conditions in women, and to make care more accessible and affordable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is leading work to end cancer as it is known, including through the creation of the Advanced Research Projects Agency for Health (ARPA-H).\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     },
     {
-      "generation_tokens": 352,
-      "generation_tps": 15.464611149002996,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 2476,
-      "prompt_tps": 477.7537315819369,
-      "request_sha256": "2b2fe16f11919ada0638a57633cd43210091e5e98a802d0d57366974134df6eb",
-      "seconds": 27.955932166893035,
-      "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support the Administration's work to close fundamental gaps in women's health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support protecting access to reproductive health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration, led by Vice President Harris, is working to reduce maternal mortality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris called for states to provide a full year of postpartum coverage for Medicaid beneficiaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"46 states, the District of Columbia, and the U.S. Virgin Islands now provide a full year of postpartum coverage for Medicaid beneficiaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making investments in women's health research to find better ways to prevent, diagnose, and treat health conditions in women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making investments in women's health research to make care more accessible and affordable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is leading work to end cancer as it is known today, including through the creation of the Advanced Research Projects Agency for Health (ARPA-H).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
-    },
-    {
-      "generation_tokens": 357,
-      "generation_tps": 15.496130511425125,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 1948,
-      "prompt_tps": 438.5484212670508,
-      "request_sha256": "01b6bcf4b1a0b13fb675fc9780866e091df20e630be8686cb32ef3d794827bdb",
-      "seconds": 27.49114583292976,
+      "generation_tokens": 269,
+      "generation_tps": 15.41318240618032,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1864,
+      "prompt_tps": 430.44798702132755,
+      "request_sha256": "05c220749fb3d043fdc9aac75737a9a83f1fed515457a45f47ccb153166032d6",
+      "seconds": 21.79421366704628,
       "stage": "source_fidelity_revision",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support the Administration's historic work to close fundamental gaps in women's health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support protecting access to reproductive health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration, led by Vice President Harris, is working to reduce maternal mortality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris called for states to provide a full year of postpartum coverage for Medicaid beneficiaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"46 states, the District of Columbia, and the U.S. Virgin Islands now provide a full year of postpartum coverage for Medicaid beneficiaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making transformative investments in women's health research to find better ways to prevent, diagnose, and treat health conditions in women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making transformative investments in women's health research to make care more accessible and affordable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is leading game-changing work to end cancer as we know it, including through the creation of the Advanced Research Projects Agency for Health (ARPA-H).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support the Administration's historic work to close fundamental gaps in women's health care, including by protecting access to reproductive health care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is working to reduce maternal mortality, led by Vice President Harris.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris called for states to provide a full year of postpartum coverage for Medicaid beneficiaries, and 46 states, the District of Columbia, and the U.S. Virgin Islands have taken that step.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making transformative investments in women's health research to find better ways to prevent, diagnose, and treat health conditions in women, and to make care more accessible and affordable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is leading work to end cancer as we know it, including through the creation of the Advanced Research Projects Agency for Health (ARPA-H).\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     },
     {
-      "generation_tokens": 351,
-      "generation_tps": 15.442204151132238,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 2481,
-      "prompt_tps": 476.6332021205988,
-      "request_sha256": "01b5f725f3c35c65cd4261a869570169c405e43d48615acb0d60e75b109c6799",
-      "seconds": 27.9468527501449,
+      "generation_tokens": 268,
+      "generation_tps": 15.085750742667278,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 2238,
+      "prompt_tps": 462.8869534702814,
+      "request_sha256": "ee87683dd240cdab9765e331bc00dcfbfc4a96dd76826562696b4bb185b1f17e",
+      "seconds": 22.611648416845128,
       "stage": "source_fidelity_revision",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support the Administration's work to close fundamental gaps in women's health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Democrats support protecting access to reproductive health care.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration, led by Vice President Harris, is working to reduce maternal mortality.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris called for states to provide a full year of postpartum coverage for Medicaid beneficiaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"46 states, the District of Columbia, and the U.S. Virgin Islands now provide a full year of postpartum coverage for Medicaid beneficiaries.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making investments in women's health research to find better ways to prevent, diagnose, and treat health conditions in women.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making investments in women's health research to make care more accessible and affordable.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is leading work to end cancer as we know it, including through the creation of the Advanced Research Projects Agency for Health (ARPA-H).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats support the Administration's work to close fundamental gaps in women's health care, including by protecting access to reproductive health care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is working to reduce maternal mortality, led by Vice President Harris.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Vice President Harris called for states to provide a full year of postpartum coverage for Medicaid beneficiaries, and 46 states, the District of Columbia, and the U.S. Virgin Islands have taken that step.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is making transformative investments in women's health research to find better ways to prevent, diagnose, and treat health conditions in women, and to make care more accessible and affordable.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Administration is leading work to end cancer as we know it, including through the creation of the Advanced Research Projects Agency for Health (ARPA-H).\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
-  "implementation_version": 5,
+  "implementation_version": 6,
   "prompt_sha256": "996b10457897c42066538d9dd60f52397bc3b059b73e891e394dad6ecf3d9499"
 }

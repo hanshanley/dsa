@@ -1,29 +1,51 @@
 {
   "attempts": [
     {
-      "generation_tokens": 194,
-      "generation_tps": 15.4990847598456,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 1849,
-      "prompt_tps": 448.15423739046156,
-      "request_sha256": "f97887924a1d6e6922f923ed61bfc0e76466b7579d938fdc469c80fde743c02e",
-      "seconds": 16.6587543329224,
+      "generation_tokens": 103,
+      "generation_tps": 15.583480888167816,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1859,
+      "prompt_tps": 427.0360897174805,
+      "request_sha256": "ecf42d49f573f37a86f7a8d4b1f461489080cdeb3e2c313aaebf7c44a325ea6c",
+      "seconds": 10.97788399993442,
       "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party respectfully submits this platform to the American people as both a vision of where the party is headed and an invitation to join that journey.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"This platform concerns the great dreams and opportunities that have always been America and must remain the essence of America for generations to come.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Governor Bob McDonnell is Chairman.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Senator John Hoeven is Co-Chair.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Congressman Marsha Blackburn is Co-Chair.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"This platform is submitted to the American people as both a vision for the future and an invitation to join that journey.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The platform concerns the great dreams and opportunities that have always been America and must remain the essence of America for generations to come.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     },
     {
-      "generation_tokens": 194,
-      "generation_tps": 15.452967550959917,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 2159,
-      "prompt_tps": 455.105521399653,
-      "request_sha256": "deeb45b334765d5c1b67d1e9cb20d693c0173b90faf960266e6c9b998e7d557a",
-      "seconds": 17.309602749999613,
+      "generation_tokens": 110,
+      "generation_tps": 15.25484739464842,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 2177,
+      "prompt_tps": 452.86530912804534,
+      "request_sha256": "4e5858958dee3b0a6c0c73a794a034201532a4af919c0f360e47cf48e171f5ac",
+      "seconds": 12.029401374980807,
       "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party respectfully submits this platform to the American people as both a vision of where the party is headed and an invitation to join that journey.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"This platform concerns the great dreams and opportunities that have always been America and must remain the essence of America for generations to come.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Governor Bob McDonnell is Chairman.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Senator John Hoeven is Co-Chair.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Congressman Marsha Blackburn is Co-Chair.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party respectfully submits this platform to the American people as both a vision for the future and an invitation to join that journey.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Republican Party believes this platform concerns the great dreams and opportunities that have always been America and must remain the essence of America for generations to come.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 142,
+      "generation_tps": 15.189361058549078,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1817,
+      "prompt_tps": 422.56510448862366,
+      "request_sha256": "93782c50f21da94f1915f8f2a6b6cdd507b1e7e610698d88d2d59ea895191f95",
+      "seconds": 13.6622324581258,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party respectfully submits this platform to the American people as both a vision of where the party is headed and an invitation to join that journey.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"This platform concerns the great dreams and opportunities that have always been America and must remain the essence of America for generations to come.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"May God continue to shed grace on the United States of America.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 116,
+      "generation_tps": 15.396438975817734,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 2139,
+      "prompt_tps": 465.8923103750777,
+      "request_sha256": "ee26feffdda3e17775ea8fa459c2e8c9136cf2ea8704f1a66f8ac5be54995280",
+      "seconds": 12.142714833142236,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Republican Party respectfully submits this platform to the American people as both a vision of where the Republican Party is headed and an invitation to join that journey.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"This platform concerns the great dreams and opportunities that have always been America and must remain the essence of America for generations to come, according to the Republican Party.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
-  "implementation_version": 5,
+  "implementation_version": 6,
   "prompt_sha256": "b88440f43bcacee827b8a2d9d03e8141eed2e466f0138af92d65baa5780d41d3"
 }

@@ -1,29 +1,29 @@
 {
   "attempts": [
     {
-      "generation_tokens": 106,
-      "generation_tps": 15.791723160968688,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 1598,
-      "prompt_tps": 434.1252068928432,
-      "request_sha256": "6d7932f06de91ccee0389a8464794b0b52b250d3316d7c387820ec846f57137b",
-      "seconds": 10.404336625011638,
+      "generation_tokens": 103,
+      "generation_tps": 15.330468908263873,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1698,
+      "prompt_tps": 449.9886160670749,
+      "request_sha256": "095338972f71f2d0b3f2c324440b18d3bc862f26984f61ebc32bb7b6c5959b2f",
+      "seconds": 10.50591287505813,
       "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"It has been said that it is easier to imagine the end of the world than it is to imagine the end of capitalism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers deserve more.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers deserve more.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"It is easier to imagine the end of the world than it is to imagine the end of capitalism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers deserve more.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers deserve more.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
     },
     {
-      "generation_tokens": 106,
-      "generation_tps": 15.799030960863597,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 1748,
-      "prompt_tps": 429.74655850857647,
-      "request_sha256": "84661a645724f6e158788c007f375ae9dca4682db2222b81f6f882055c828698",
-      "seconds": 10.787055667024106,
+      "generation_tokens": 103,
+      "generation_tps": 15.106610688937797,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1946,
+      "prompt_tps": 446.34738855813737,
+      "request_sha256": "2fa68575bc8be4eb4f2def228ea5ff1667410b9ad1f2c0fc0a1a858aff98929b",
+      "seconds": 11.190899207955226,
       "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"It has been said that it is easier to imagine the end of the world than it is to imagine the end of capitalism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers deserve more.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers deserve more.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"It is easier to imagine the end of the world than it is to imagine the end of capitalism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers deserve more.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Workers deserve more.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
-  "implementation_version": 5,
+  "implementation_version": 6,
   "prompt_sha256": "ddaffff45f522c6748b7d0128cac0e99ff5bab5526e3c050dc2aa4b3eecb1bbd"
 }
