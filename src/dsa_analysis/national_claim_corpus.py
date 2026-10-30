@@ -231,12 +231,21 @@ def make_prompt(block: dict) -> str:
 
 def repair_request(base: str, previous: str, errors: list[str]) -> str:
     return (
-        base
-        + "\nPREVIOUS FAILED RESPONSE (proposals, not source evidence):\n"
-        + previous
-        + "\nYour previous response failed these checks: "
+        "FAILED CHECKS FROM A PREVIOUS RESPONSE:\n"
         + canonical(errors)
-        + "\nReturn a fresh complete response obeying the schema and source only."
+        + "\nPrevious response SHA-256 (audit reference only): "
+        + digest(previous)
+        + "\nRebuild the complete response from the authoritative request below, "
+        "not by copying the failed answer. Failed claims in diagnostic messages "
+        "are not source evidence.\n\n" + base + "\nFINAL REPAIR REQUIREMENTS:\n"
+        "Correct every failed check. evidence_ids must use the bracketed SOURCE UNIT IDs, "
+        "never list numbers within a unit. If the only SOURCE UNIT is [1], EVERY claim "
+        "must have evidence_ids [1]. Resolve demonstratives and narrator pronouns from "
+        "SOURCE/CONTEXT without discarding qualifications or changing actors. "
+        "If a forbidden token belongs to an exact source-attested name of an organization, "
+        "project, law or event, preserve that full name in quotation marks; do not rename "
+        "it or quote a whole unresolved sentence to evade the check. Remove duplicate "
+        "claims without losing distinct positions. Return the full corrected JSON only."
     )
 
 
@@ -649,7 +658,7 @@ def extract_corpus(
         record = {
             "fingerprint": manifest["fingerprint"],
             "prompt_sha256": digest(prompt),
-            "implementation_version": 5,
+            "implementation_version": 6,
             "attempts": attempts,
         }
         if path.exists():

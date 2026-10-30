@@ -12,6 +12,7 @@ from dsa_analysis.national_claim_corpus import (
     build_blocks,
     extract_corpus,
     prepare,
+    repair_request,
     validate_response,
 )
 from dsa_analysis.national_platforms import digest, read_rows, write_rows
@@ -209,6 +210,26 @@ class ClaimCorpusTests(unittest.TestCase):
                 self.assertEqual(errors, [])
                 self.assertEqual(accepted[0]["claim_text"], text)
 
+    def test_repair_uses_source_request_without_copying_failed_answer(self):
+        block = build_blocks(sources(), coverage(sources()))[0]
+        previous = response(evidence_ids=[6])
+        errors = validate_response(previous, block)[1]
+        base = "AUTHORITATIVE SOURCE [1]: " + block["text"]
+        request = repair_request(base, previous, errors)
+        self.assertIn(base, request)
+        self.assertIn(digest(previous), request)
+        self.assertNotIn(previous, request)
+        self.assertIn("received_evidence_ids=[6]", request)
+        self.assertLess(request.index(digest(previous)), request.index(base))
+        accepted, errors, _ = validate_response(
+            response(claim_text='Support for the "Protect Our Workers" Act.'), block
+        )
+        self.assertEqual(errors, [])
+        self.assertEqual(accepted[0]["claim_text"], 'Support for the "Protect Our Workers" Act.')
+        self.assertTrue(
+            validate_response(response(claim_text="Support for our workers."), block)[1]
+        )
+
     def test_resume_retries_complete_download_and_baseline_isolation(self):
         with tempfile.TemporaryDirectory() as temporary:
             corpus = Path(temporary) / "baseline"
@@ -232,8 +253,8 @@ class ClaimCorpusTests(unittest.TestCase):
             summary = extract_corpus(output=output, corpus=corpus, extractor=extractor)
             self.assertEqual(summary["status"], "complete")
             self.assertEqual(len(calls), 2 * summary["blocks"] + 1)
-            self.assertIn("PREVIOUS FAILED RESPONSE", calls[1])
-            self.assertIn("\ninvalid\nYour previous response failed", calls[1])
+            self.assertIn("FAILED CHECKS", calls[1])
+            self.assertIn(digest("invalid"), calls[1])
             self.assertEqual(baseline, {path.name: path.read_bytes() for path in corpus.iterdir()})
             with zipfile.ZipFile(output / "claim_documents.zip") as archive:
                 self.assertIn("complete_sources.csv", archive.namelist())

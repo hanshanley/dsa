@@ -42,6 +42,13 @@ the same local model, **not an independent evaluator or human certification**.
 Schema validity and exact evidence offsets do not establish semantic entailment
 or factual truth. Known unresolved references and failures remain explicit.
 Failed blocks do not silently become analysis input.
+Repair requests retain a hash of the failed reply and its diagnostics, but do
+not include the complete failed answer as a response-shaped example to copy.
+They reiterate bracketed source-unit IDs and ask for exact source-attested names
+containing pronoun-like words to remain quoted, not renamed. Raw attempts and
+replaced records remain preserved. Each attempt records its actual request hash,
+and response records identify the inference implementation version; these retry
+instructions do not change the original source prompt or its cache fingerprint.
 
 After extraction, a deterministic step replaces recognized source-organization
 stance prefixes in **policy-position-only** claims: for example, "Democrats will
