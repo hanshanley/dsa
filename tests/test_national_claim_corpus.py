@@ -11,6 +11,7 @@ from dsa_analysis.national_claim_corpus import (
     bounded_units,
     build_blocks,
     extract_corpus,
+    make_prompt,
     prepare,
     repair_request,
     validate_response,
@@ -229,6 +230,83 @@ class ClaimCorpusTests(unittest.TestCase):
         self.assertTrue(
             validate_response(response(claim_text="Support for our workers."), block)[1]
         )
+
+    def test_repair_separates_unit_ids_from_internal_list_numbers_without_changing_text(self):
+        units = [{"id": 1, "text": '6. Support bargaining for "Our Union".\n7. Workplace rights.'}]
+        block = {
+            "title": "Collective bargaining fixture",
+            "group": "dsa",
+            "publication_date": "2011-01-01",
+            "context_before": "Reference-only context.",
+            "units": units,
+        }
+        draft = "\nPROPOSED CLAIMS:\n" + response()
+        previous = response(claim_text="Failed candidate.", evidence_ids=[6])
+        errors = ["claim_1: invalid_schema_or_evidence_ids; received_evidence_ids=[6]"]
+        first = repair_request(make_prompt(block) + draft, previous, errors, units=units)
+        nested = repair_request(first, previous, errors, units=units)
+        for request in (first, nested):
+            with self.subTest(nested=request == nested):
+                encoded = request.split("\nSOURCE UNITS:\n", 1)[1].splitlines()[0]
+                self.assertEqual(json.loads(encoded), {"[1]": units[0]["text"]})
+                self.assertEqual(request.count("\nSOURCE UNITS:\n"), 1)
+                self.assertIn(block["context_before"], request)
+                self.assertIn(draft, request)
+                self.assertIn(digest(previous), request)
+                self.assertNotIn(previous, request)
+
+    def test_targeted_retry_does_not_regenerate_other_or_successful_blocks(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            corpus = Path(temporary) / "baseline"
+            corpus.mkdir()
+            output = Path(temporary) / "claims"
+            rows = sources()
+            write_rows(corpus / "complete_sources.csv", rows)
+            write_rows(corpus / "coverage.csv", coverage(rows))
+
+            def result(text):
+                return {"text": text, "seconds": 0.1, "generation_tokens": 25, "peak_memory": 1}
+
+            extract_corpus(output=output, corpus=corpus, extractor=lambda *_: result("invalid"))
+            original = {path.name: path.read_bytes() for path in (output / "responses").glob("*")}
+            target = build_blocks(rows, coverage(rows))[-1]["block_id"]
+            calls = []
+
+            def extractor(prompt, max_tokens):
+                calls.append(prompt)
+                return result(response())
+
+            summary = extract_corpus(
+                output=output,
+                corpus=corpus,
+                retry_failed=True,
+                block_ids={target},
+                max_new_blocks=1,
+                extractor=extractor,
+            )
+            self.assertEqual(summary["blocks_by_status"]["normalized"], 1)
+            self.assertEqual(len(calls), 2)
+            self.assertIn('"[1]"', calls[0])
+            for name, contents in original.items():
+                if name != f"{target}.json":
+                    self.assertEqual((output / "responses" / name).read_bytes(), contents)
+            self.assertTrue(
+                (
+                    output
+                    / "response_history"
+                    / f"{target}-{digest(original[f'{target}.json'])[:12]}.json"
+                ).exists()
+            )
+            with patch(
+                "dsa_analysis.national_claim_corpus.LocalGemma",
+                side_effect=AssertionError("selection must not initialize a model"),
+            ):
+                for selection in (set(), {target}):
+                    extract_corpus(
+                        output=output, corpus=corpus, retry_failed=True, block_ids=selection
+                    )
+                with self.assertRaisesRegex(ValueError, "Unknown claim block IDs"):
+                    extract_corpus(output=output, corpus=corpus, block_ids={"unknown"})
 
     def test_resume_retries_complete_download_and_baseline_isolation(self):
         with tempfile.TemporaryDirectory() as temporary:

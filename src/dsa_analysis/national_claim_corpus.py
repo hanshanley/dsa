@@ -229,7 +229,17 @@ def make_prompt(block: dict) -> str:
     )
 
 
-def repair_request(base: str, previous: str, errors: list[str]) -> str:
+def repair_request(
+    base: str, previous: str, errors: list[str], *, units: list[dict] | None = None
+) -> str:
+    if units is not None:
+        original = "\n\n".join(f"[{unit['id']}] {unit['text']}" for unit in units)
+        structured = canonical({f"[{unit['id']}]": unit["text"] for unit in units})
+        base = base.replace(
+            f"\nSOURCE UNITS:\n{original}\n{OUTPUT_SCHEMA}",
+            f"\nSOURCE UNITS:\n{structured}\n{OUTPUT_SCHEMA}",
+            1,
+        )
     return (
         "FAILED CHECKS FROM A PREVIOUS RESPONSE:\n"
         + canonical(errors)
@@ -239,7 +249,9 @@ def repair_request(base: str, previous: str, errors: list[str]) -> str:
         "not by copying the failed answer. Failed claims in diagnostic messages "
         "are not source evidence.\n\n" + base + "\nFINAL REPAIR REQUIREMENTS:\n"
         "Correct every failed check. evidence_ids must use the bracketed SOURCE UNIT IDs, "
-        "never list numbers within a unit. If the only SOURCE UNIT is [1], EVERY claim "
+        "never list numbers within a unit. For JSON-encoded source units, the bracketed "
+        "object keys identify units; numbers inside text values do not. "
+        "If the only SOURCE UNIT is [1], EVERY claim "
         "must have evidence_ids [1]. Resolve demonstratives and narrator pronouns from "
         "SOURCE/CONTEXT without discarding qualifications or changing actors. "
         "If a forbidden token belongs to an exact source-attested name of an organization, "
@@ -596,11 +608,16 @@ def extract_corpus(
     prepare_only: bool = False,
     max_new_blocks: int | None = None,
     retry_failed: bool = False,
+    block_ids: set[str] | None = None,
     extractor=None,
 ) -> dict:
     if max_new_blocks is not None and max_new_blocks < 1:
         raise ValueError("max_new_blocks must be positive")
     blocks, manifest = prepare(output, corpus)
+    if block_ids is not None:
+        unknown = block_ids - {block["block_id"] for block in blocks}
+        if unknown:
+            raise ValueError(f"Unknown claim block IDs: {sorted(unknown)}")
     summary = export_results(blocks, output, manifest)
     if prepare_only:
         return summary
@@ -614,7 +631,8 @@ def extract_corpus(
     missing = [
         block
         for block in blocks
-        if block["block_id"] in failed or not (directory / f"{block['block_id']}.json").exists()
+        if (block_ids is None or block["block_id"] in block_ids)
+        and (block["block_id"] in failed or not (directory / f"{block['block_id']}.json").exists())
     ]
     if max_new_blocks is not None:
         missing = missing[:max_new_blocks]
@@ -635,11 +653,13 @@ def extract_corpus(
                 previous_errors = validate_response(previous["text"], block)[1]
                 if previous.get("generation_tokens", 0) >= manifest["generation"]["max_tokens"]:
                     previous_errors.append("output_token_limit_reached")
-                base = repair_request(base, previous["text"], previous_errors)
+                base = repair_request(base, previous["text"], previous_errors, units=block["units"])
             for attempt in range(manifest["generation"]["max_attempts"]):
                 request = base
                 if attempt:
-                    request = repair_request(base, attempts[-1]["text"], errors)
+                    request = repair_request(
+                        base, attempts[-1]["text"], errors, units=block["units"]
+                    )
                 result = extractor(request, manifest["generation"]["max_tokens"])
                 attempts.append(
                     {
@@ -658,7 +678,7 @@ def extract_corpus(
         record = {
             "fingerprint": manifest["fingerprint"],
             "prompt_sha256": digest(prompt),
-            "implementation_version": 6,
+            "implementation_version": 7,
             "attempts": attempts,
         }
         if path.exists():
@@ -690,6 +710,9 @@ def main() -> None:
     parser.add_argument("--prepare-only", action="store_true")
     parser.add_argument("--max-new-blocks", type=int)
     parser.add_argument(
+        "--block-id", action="append", help="Limit new inference to these exact block IDs"
+    )
+    parser.add_argument(
         "--retry-failed",
         action="store_true",
         help="Retry failed blocks, preserving prior responses",
@@ -703,6 +726,7 @@ def main() -> None:
             prepare_only=args.prepare_only,
             max_new_blocks=args.max_new_blocks,
             retry_failed=args.retry_failed,
+            block_ids=set(args.block_id) if args.block_id is not None else None,
         ),
         flush=True,
     )

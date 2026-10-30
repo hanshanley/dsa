@@ -49,6 +49,13 @@ containing pronoun-like words to remain quoted, not renamed. Raw attempts and
 replaced records remain preserved. Each attempt records its actual request hash,
 and response records identify the inference implementation version; these retry
 instructions do not change the original source prompt or its cache fingerprint.
+Retry requests encode the same source-unit text as JSON values keyed by bracketed
+unit IDs, separating the evidence labels from numbered clauses inside the text.
+JSON decoding recovers the original unit text unchanged; reference-only context
+and revision drafts remain distinct. This presentation change does not certify
+correct citations or source fidelity. `--retry-failed --block-id BLOCK_ID` can
+target an individual failed block without regenerating successful or other
+unselected blocks; unknown IDs are rejected before model initialization.
 
 After extraction, a deterministic step replaces recognized source-organization
 stance prefixes in **policy-position-only** claims: for example, "Democrats will
