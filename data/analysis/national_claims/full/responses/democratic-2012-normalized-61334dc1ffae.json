@@ -1,29 +1,40 @@
 {
   "attempts": [
     {
-      "generation_tokens": 361,
-      "generation_tps": 15.433236794402344,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 1961,
-      "prompt_tps": 442.3833683545861,
-      "request_sha256": "1c9fc71090b0434ec0325fd2f1fa536a7794513063af471efec579f9096d6677",
-      "seconds": 27.836094832979143,
+      "generation_tokens": 227,
+      "generation_tps": 15.448622641464555,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1807,
+      "prompt_tps": 433.3603447845426,
+      "request_sha256": "6f15bbb5d86a7410b8c376a8b022c845f2d2daf525b66b9f82a6ace687d5feed",
+      "seconds": 18.875445290934294,
       "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and Democrats in Congress have enacted infrastructure investments that will sustain the Highway Trust Fund.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"These infrastructure investments will provide states, U.S. territories, and communities with two years of funding to build needed roads, bridges, and transit systems.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for continued partnership with local communities to support their sustainable developments such as passenger rail, bicycle and pedestrian paths, and other projects to support livable cities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's metro areas are home to 86 percent of the nation's jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mayors call for a renewed investment in metro economies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama and the Democratic Party worked toward investment in metro economies, including over $100 billion of infrastructure investment as part of the Recovery Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Investment in infrastructure, education, workforce training, and public safety will support job creation, foster innovation, and provide companies with a globally competitive workforce.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Previous generations built the nation by investing in the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and Democrats in Congress have enacted infrastructure investments to sustain the Highway Trust Fund and provide states, U.S. territories, and communities with two years of funding to build roads, bridges, and transit systems.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and Democrats in Congress will continue to partner with local communities to support their sustainable developments such as passenger rail, bicycle and pedestrian paths, and other projects to support livable cities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in infrastructure, education, workforce training, and public safety will support job creation, foster innovation, and provide companies with a globally competitive workforce.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's metro areas, including cities and suburbs, are home to 86 percent of the nation's jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     },
     {
-      "generation_tokens": 361,
-      "generation_tps": 15.339859853260908,
-      "peak_memory": 33.80789633,
-      "prompt_tokens": 2444,
-      "prompt_tps": 482.60139921539616,
-      "request_sha256": "7b3b4d52ad184df66561cfa870d467762608e9eb036b776d19b6680b43fbae27",
-      "seconds": 28.61025174986571,
-      "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and Democrats in Congress have enacted infrastructure investments that will sustain the Highway Trust Fund.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"These infrastructure investments will provide states, U.S. territories, and communities with two years of funding to build needed roads, bridges, and transit systems.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for continued partnership with local communities to support their sustainable developments such as passenger rail, bicycle and pedestrian paths, and other projects to support livable cities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's metro areas are home to 86 percent of the nation's jobs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mayors call for a renewed investment in metro economies.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"President Obama and the Democratic Party worked toward investment in metro economies, including over $100 billion of infrastructure investment as part of the Recovery Act.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Investment in infrastructure, education, workforce training, and public safety will support job creation, foster innovation, and provide companies with a globally competitive workforce.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Previous generations built the nation by investing in the future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+      "generation_tokens": 328,
+      "generation_tps": 15.494197619010803,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1873,
+      "prompt_tps": 433.4984646509869,
+      "request_sha256": "c79035f095b8ea6bb2124f744b42c17cc367a2cf233184748f1d0fa0f03c6b4f",
+      "seconds": 25.501042125048116,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and Democrats in Congress have enacted infrastructure investments that will sustain the Highway Trust Fund and provide states, U.S. territories, and communities with two years of funding to build needed roads, bridges, and transit systems.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and Democrats in Congress will continue to partner with local communities to support their sustainable developments such as passenger rail, bicycle and pedestrian paths, and other projects to support livable cities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in infrastructure, education, workforce training, and public safety will support job creation, foster innovation, and provide companies with a globally competitive workforce.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's metro areas \u2013 cities and suburbs working in partnership \u2013 are home to 86 percent of the nation's jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mayor Kevin Johnson says investment in infrastructure, education, workforce training, and public safety will support job creation, foster innovation, and provide companies with a globally competitive workforce.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Mayor Kevin Johnson says the generations who came before built the nation by investing in the future and we must do the same.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 301,
+      "generation_tps": 15.289334592617031,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 2245,
+      "prompt_tps": 454.33999426302626,
+      "request_sha256": "3dd48a1ddabd46f1b8bc3779bb08dfcc3795def9300a79d974e6f7d6b4e4d406",
+      "seconds": 24.639590417034924,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"President Obama and Democrats in Congress have enacted infrastructure investments that will sustain the Highway Trust Fund and provide states, U.S. territories, and communities with two years of funding to build needed roads, bridges, and transit systems.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"President Obama and Democrats in Congress will continue to partner with local communities to support their sustainable developments such as passenger rail, bicycle and pedestrian paths, and other projects to support livable cities.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Investment in infrastructure, education, workforce training, and public safety will support job creation, foster innovation, and provide companies with a globally competitive workforce.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"America's metro areas \u2013 cities and suburbs working in partnership \u2013 are home to 86 percent of the nation's jobs.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Mayors call for a renewed investment in metro economies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The generations who came before built the nation by investing in the future, and the same must be done.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
-  "implementation_version": 5,
+  "implementation_version": 6,
   "prompt_sha256": "975b1f4004e3207d0b2c6ac693a36859b9e59670d166298cd341364e9bb4c599"
 }

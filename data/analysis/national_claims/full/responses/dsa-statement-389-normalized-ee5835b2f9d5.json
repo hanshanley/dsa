@@ -1,29 +1,40 @@
 {
   "attempts": [
     {
-      "generation_tokens": 243,
-      "generation_tps": 15.377885146043102,
-      "peak_memory": 33.769787146,
-      "prompt_tokens": 1770,
-      "prompt_tps": 440.912206260069,
-      "request_sha256": "fe2a1f3f4c7c3a2cf122fbcba287a3c645290e1ce95daef0a8c1352132faa91f",
-      "seconds": 19.828640749910846,
+      "generation_tokens": 258,
+      "generation_tps": 15.481773321051259,
+      "peak_memory": 33.801146122,
+      "prompt_tokens": 1728,
+      "prompt_tps": 446.56918466069635,
+      "request_sha256": "f415c3345cd14ab6dd84aef016617c6995068823f687c6ac9c19af77eb623250",
+      "seconds": 20.548005082877353,
       "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"This kind of behavior is characterized as dishonest and cynical and an embarrassment to good people in the United States.\", \"claim_types\":[\"evaluation\", \"characterization\"], \"evidence_ids\":[1]}, {\"claim_text\":\"For the Democratic Socialists of America, this behavior is especially repulsive.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]}, {\"claim_text\":\"The Democratic Socialists of America states its solidarity with the people of Venezuela.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Socialists of America calls on the U.S. government to stop its illegal and unjust interference with Venezuela.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Socialists of America calls for the repeal of these laws.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Socialists of America calls for reversing the dishonest executive order.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"This kind of behavior is characterized as dishonest and cynical and an embarrassment to good people in the United States.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"For the Democratic Socialists of America, a group of activists committed to fighting for socialism and democracy in the U.S. and around the world, this behavior is especially repulsive.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America state their solidarity with the people of Venezuela.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America call on the U.S. government to stop its illegal, unjust interference with Venezuela.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America recommend the repeal of laws targeting Venezuela.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America recommend reversing the dishonest executive order regarding Venezuela.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
     },
     {
-      "generation_tokens": 243,
-      "generation_tps": 15.46309126697729,
-      "peak_memory": 33.769787146,
-      "prompt_tokens": 2125,
-      "prompt_tps": 461.50583450324024,
-      "request_sha256": "8ccf02e17e6c40d18c1a8494b473a580d1383b100bdeffb6c88950443d4c6f9a",
-      "seconds": 20.332310374826193,
+      "generation_tokens": 114,
+      "generation_tps": 15.51783649906975,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 2044,
+      "prompt_tps": 454.37345287033787,
+      "request_sha256": "d9ce9ab2679c4a69b281f32efd5b717e3e0787a4826f8246b9099330100d2fda",
+      "seconds": 11.856587582966313,
       "stage": "extraction",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"This kind of behavior is characterized as dishonest and cynical and an embarrassment to good people in the United States.\", \"claim_types\":[\"evaluation\", \"characterization\"], \"evidence_ids\":[1]}, {\"claim_text\":\"For the Democratic Socialists of America, this behavior is especially repulsive.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[1]}, {\"claim_text\":\"The Democratic Socialists of America states its solidarity with the people of Venezuela.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Socialists of America calls on the U.S. government to stop its illegal and unjust interference with Venezuela.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Socialists of America calls for the repeal of these laws.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Socialists of America calls for reversing the dishonest executive order.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America (DSA) characterizes dishonest and cynical behavior as an embarrassment to good people in the United States.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America (DSA) finds this kind of behavior especially repulsive, as a group committed to fighting for socialism and democracy in the U.S. and around the world.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 248,
+      "generation_tps": 15.674259601917683,
+      "peak_memory": 33.813090058,
+      "prompt_tokens": 1697,
+      "prompt_tps": 449.8549718055481,
+      "request_sha256": "fbfccba94771c772676e3ade36c29ae478b3e89993f545bf70b9cd11bcfbe5cc",
+      "seconds": 19.60599945904687,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America (DSA) characterizes dishonest and cynical behavior as an embarrassment to good people in the United States.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"For the Democratic Socialists of America (DSA), a group committed to fighting for socialism and democracy in the U.S. and around the world, this kind of behavior is especially repulsive.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America (DSA) calls on the U.S. government to stop its illegal and unjust interference with Venezuela.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America (DSA) recommends that the U.S. government repeal the laws targeting Venezuela.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America (DSA) recommends that the U.S. government reverse the executive order targeting Venezuela.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
-  "implementation_version": 5,
+  "implementation_version": 6,
   "prompt_sha256": "86a2e6e852ce35dd9048d3274d0fa82f5dcb41fee06ed0ba1e66e7bfa2523e6e"
 }
