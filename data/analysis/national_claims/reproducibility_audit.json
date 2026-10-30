@@ -1,0 +1,53 @@
+{
+  "scope": "Full eligible-claim national platform comparison",
+  "extraction_checkpoint": "b1d78d908942dd17ed9e122abcbaa5228e50c14a",
+  "claims": 25464,
+  "documents": 135,
+  "claims_by_group": {
+    "democratic": 11496,
+    "republican": 9074,
+    "dsa": 4894
+  },
+  "normalized_chunks": 2596,
+  "excluded_failed_chunks": 27,
+  "assistant_reviewed_blocks": 142,
+  "assistant_flagged_candidates": 1054,
+  "corpus_wide_semantic_certification": false,
+  "independent_human_gold": false,
+  "offline_substantive_reproduction_verified": true,
+  "identical_substantive_files": 2879,
+  "embedding_cache_reused_on_second_run": true,
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "substantive_comparison_exclusion": "analysis_summary.json contains intentionally changing cache-use metadata; its inputs and accounting were validated independently on both runs.",
+  "zip_members_verified_against_current_files": 2879,
+  "zip_and_svg_metadata_not_required_byte_identical_between_runs": true,
+  "extraction_snapshot_offline_identical_files": 2858,
+  "kde_dimensions": {
+    "expanded": 10,
+    "strict": 10
+  },
+  "equal_samples_per_organization": {
+    "expanded": 4894,
+    "strict": 743
+  },
+  "maximum_claim_tokens": {
+    "gte": 159,
+    "topics": 145
+  },
+  "truncated_claims": 0,
+  "passage_baseline_and_selected_sample_unchanged": true,
+  "focused_tests_passed": 21,
+  "ruff_check_and_format_passed": true,
+  "verified_sha256": {
+    "data/analysis/national_claims/full/claims.csv": "bb6f76c4c0578011541d0547cf18100cf190a6ae357614aed8d5558fb848b9a0",
+    "data/analysis/national_claims/full/complete_sources.csv": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
+    "data/analysis/national_claims/full/semantic_review.csv": "1e1607774292251eb44ed567e96ed2d08f1ba083728b1595cbc11bbd91f5b9ca",
+    "data/analysis/national_claims/full/topic_emphasis.csv": "6de372c7f8c5c47e49e170af1c7d6b3f5aab2663e7dee3befdb2e8784566973c",
+    "report/national_claim_analysis.md": "075a3f84b0ae5175f08effffad8097c1ac5caab1ba6d06e1d2cb45290f75a88b",
+    "src/dsa_analysis/national_claim_analysis.py": "142da899f8117c93d60486e3e93b04e569744f887876002d44d42fb21c4dde7f"
+  },
+  "website_deployed": false
+}

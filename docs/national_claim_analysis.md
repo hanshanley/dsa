@@ -97,7 +97,33 @@ minimum cosine threshold is unchanged; unclassified claims remain in the
 denominator. Topic shares assign equal aggregate weight to each document/bundle,
 so splitting more claims does not create another independent document.
 
-The [first completed claim analysis](../report/national_claim_analysis_sample.md)
+The [full eligible-claim comparison](../report/national_claim_analysis.md) analyzes
+**25,464 claims**: 11,496 Democratic, 9,074 Republican, and 4,894 DSA. All 2,623
+chunks were attempted; 2,596 normalized and 27 failed chunks remain explicitly
+excluded. Targeted assistant review covered 142 blocks and flagged 1,054
+candidates. Flags and duplicates can overlap; these counts are not additive
+exclusion categories. All source text, failed attempts, and original wording
+remain preserved. Unidentified semantic errors may remain; this is exploratory
+analysis, not full-corpus semantic certification.
+
+Both strict and expanded KDEs completed with 10 dimensions. Expanded sampling
+uses 4,894 claims per organization; strict sampling uses 743 per organization.
+The strict DSA input comprises three adopted documents, versus 122 documents
+in the expanded input. Source-type and period sensitivity is not a measured
+change in positions over time. The
+[expanded document chronology](../data/analysis/national_claims/full/expanded/document_chronology.csv)
+and [strict chronology](../data/analysis/national_claims/full/strict/document_chronology.csv)
+summarize the independently fitted pooled spaces, not annual ideological trajectories.
+
+A second offline run reproduced all 2,879 substantive files exactly and reused
+the GTE cache. All 2,879 ZIP members matched current files; both tokenizers stayed
+below 256 tokens with no truncation. ZIP/SVG metadata and the analysis summary's
+cache-use indicator are not required to match byte-for-byte across runs.
+The [reproducibility audit](../data/analysis/national_claims/reproducibility_audit.json)
+records measured counts and selected input/output hashes. The passage baseline
+and selected sample remain unchanged.
+
+The [earlier selected claim analysis](../report/national_claim_analysis_sample.md)
 uses **199 individually unflagged pilot candidates**: 59 Democratic, 82 Republican,
 and 58 DSA, representing 25 documents. Both KDE views and topic classification have
 actually run. This is a selected, assistant-reviewed sample, **not full-document
@@ -140,7 +166,8 @@ same script directly without resolving another environment:
 Replace the interpreter path with that environment's actual Python path.
 Successful cached chunks are revalidated and reused. Failed chunks are not
 retried implicitly; `--retry-failed` preserves their old records in
-`response_history/`. Repair attempts include the failed response and its errors.
+`response_history/`. Repair attempts include the failed-response hash and error
+diagnostics, not the complete failed answer.
 Citation errors list the allowed bracketed source-unit IDs explicitly; numbered
 list items, headings, and page numbers inside source text are not evidence IDs.
 New responses record the implementation version. An already-running worker keeps

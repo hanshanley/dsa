@@ -23,32 +23,52 @@ The current work turns source text into discrete, self-contained claims using
 **local Gemma**, then applies topic classification, embeddings, UMAP, and
 kernel-density analysis to those claims rather than the original passages.
 
-**Status:** full-corpus claim extraction is in progress. A completed **199-claim
-selected sample** demonstrates the pipeline; it is not a full-corpus result or an
-estimate of platform-wide emphasis. The completed passage-based analysis remains
-available as a separate baseline.
+**Status:** the exploratory full-source comparison analyzes **25,464 eligible
+machine-normalized claims from 135 documents**. All 2,623 chunks were attempted;
+27 failed chunks remain explicitly excluded. Targeted assistant review covered
+142 blocks and flagged 1,054 candidates, not a representative sample or a
+corpus-wide semantic certification. The selected sample and passage-based
+baseline remain separate.
 
 <p align="center">
-  <img src="figures/national_claims/reviewed_sample/expanded/pairwise_density.png" width="1200" alt="Exploratory pairwise semantic-density comparisons of 199 selected Democratic, Republican, and DSA claims">
+  <img src="figures/national_claims/full/expanded/pairwise_density.png" width="1200" alt="Exploratory pairwise semantic-density comparisons of 25,464 eligible Democratic, Republican, and DSA claims">
 </p>
 
-*Selected-sample claim analysis, not the full corpus. Density differences describe
+*Full eligible-claim analysis with explicit exclusions. Density differences describe
 language in this input, not ideological distance or policy agreement.*
 
 ## Results and downloads
 
 | Analysis | Status | Read | Complete download |
 |---|---|---|---|
-| Claim-based selected sample | Completed; 199 claims from 25 documents | [Report](report/national_claim_analysis_sample.md) | [Claims and source texts](data/analysis/national_claims/reviewed_sample/claim_documents.zip) |
-| Full claim corpus | Extraction in progress; not final results | [Published checkpoint status](data/analysis/national_claims/full/extraction_summary.json) | [Claims, complete inputs, raw replies and history](data/analysis/national_claims/full/claim_documents.zip) |
+| Full claim-based comparison | Completed with exclusions; 25,464 claims from 135 documents | [Report](report/national_claim_analysis.md) | [Claims, complete sources, raw replies, history and results](data/analysis/national_claims/full/claim_documents.zip) |
+| Claim-based selected sample | Completed; 199 claims from 25 documents; not representative | [Report](report/national_claim_analysis_sample.md) | [Claims and source texts](data/analysis/national_claims/reviewed_sample/claim_documents.zip) |
 | Passage-based baseline | Completed; separate analytical input | [Report](report/national_platform_analysis.md) | [Source archive](data/analysis/national_platforms/source_documents.zip) |
+
+Selected [expanded-view topic shares](data/analysis/national_claims/full/topic_emphasis.csv),
+using equal document/fallback-bundle weights:
+
+| Topic | Democratic | Republican | DSA |
+|---|---:|---:|---:|
+| Social welfare | 7.9% | 6.6% | 10.8% |
+| Labor and employment | 2.9% | 1.3% | 7.6% |
+| Defense and veterans | 6.9% | 7.9% | 4.0% |
+| International affairs | 9.2% | 7.7% | 7.2% |
+
+These are exploratory machine-classified language shares, not agreement measures
+or manually validated policy codes. Unclassified claims remain in the denominator;
+period and source-type composition differ between organizations.
 
 Downloads contain actual text, not metadata alone. The source archive preserves
 **478 complete-text records and 85 deduplicated original PDFs**, including
 supplementary and excluded evidence; these are not 478 independent modeled documents.
 The full claim job covers **135 eligible documents in 2,623 chunks**, with a hard
-maximum of **240 source words per chunk**. Checkpoint counts describe saved
-publication snapshots, not a live progress feed.
+maximum of **240 source words per chunk**. The [extraction summary](data/analysis/national_claims/full/extraction_summary.json),
+[chunk dispositions](data/analysis/national_claims/full/block_status.csv), and
+[targeted review log](data/analysis/national_claims/full/semantic_review.csv)
+retain failed chunks and identified exclusions.
+The [reproducibility audit](data/analysis/national_claims/reproducibility_audit.json)
+records the successful second offline run, archive checks, and input/output hashes.
 
 For individual tables, see the [claim corpus](data/analysis/national_claims/full/),
 [selected-sample topics and results](data/analysis/national_claims/reviewed_sample/),
@@ -88,9 +108,10 @@ dates, provenance, adoption qualifications, and exclusions.
 Gemma receives bounded source chunks and limited reference-only context, never an
 entire long document. Claims should preserve actors, mechanisms, modality, time,
 conditions, and reported-speaker attribution. Raw replies, original model wording,
-source hashes, and exact evidence offsets remain downloadable. Same-model revision
-and structural checks are **not semantic certification or fact-checking**;
+source hashes, and exact evidence offsets remain downloadable. Same-model revision,
+structural checks, and targeted assistant review are **not semantic certification or fact-checking**;
 identified fidelity problems and within-document duplicates are excluded explicitly.
+Unidentified semantic errors may remain in the analytical input.
 
 Claim text feeds the pinned GTE encoder and MiniLM/CAP topic classifier. Both
 tokenizers enforce their limits without silent truncation. UMAP/KDE sampling
@@ -111,8 +132,11 @@ Use Python 3.12 or later and `uv`, from the repository root:
 ```bash
 uv sync --frozen
 
-# Reproduce the completed selected-sample claim analysis.
+# Reproduce the full eligible-claim comparison.
 # Explicitly allow downloading its pinned models on the first run.
+uv run python -m dsa_analysis.national_claim_analysis --download-model
+
+# Reproduce the completed selected-sample claim analysis.
 uv run python -m dsa_analysis.national_claim_analysis --reviewed-sample --download-model
 
 # Reproduce the separate passage-based baseline.

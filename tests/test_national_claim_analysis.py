@@ -213,6 +213,55 @@ class ClaimAnalysisTests(unittest.TestCase):
             self.assertEqual(summary["claims"], len(claims))
             self.assertFalse(summary["baseline_modified"])
 
+    def test_completed_report_explains_dsa_source_mix_sensitivity(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "report").mkdir()
+            groups = {"democratic": 7, "republican": 6, "dsa": 122}
+            summary = {
+                "corpus": {
+                    "status": "complete_with_exclusions",
+                    "blocks_by_status": {"normalized": 2596, "validation_failed": 27},
+                },
+                "claims_by_group": groups,
+                "documents_by_group": groups,
+                "bundles_by_group": groups,
+                "views": {
+                    view: {
+                        "status": "complete",
+                        "dimensions": 10,
+                        "group_documents": {**groups, "dsa": count},
+                        "group_passages": {**groups, "dsa": count * 10},
+                    }
+                    for view, count in (("expanded", 122), ("strict", 3))
+                },
+            }
+            shares = [
+                {
+                    "group": group,
+                    "view": view,
+                    "topic_code": code,
+                    "topic_name": name,
+                    "share": share,
+                }
+                for group in groups
+                for view, code, name, share in (
+                    ("expanded", "3", "Health", 0.3),
+                    ("strict", "5", "Labor", 0.6),
+                    ("expanded", "", "Unclassified", 0.7),
+                    ("strict", "", "Unclassified", 0.4),
+                )
+            ]
+            with patch("dsa_analysis.national_claim_analysis.ROOT", root):
+                report = write_report(root / "data/full", summary, shares, root / "figures")
+            text = report.read_text()
+            self.assertIn("3 documents and 30 claims", text)
+            self.assertIn("122 documents and 1,220 claims", text)
+            self.assertIn("Health (30.0%)", text)
+            self.assertIn("Labor (60.0%)", text)
+            self.assertIn("not a measured change in positions over time", text)
+            self.assertIn('"validation_failed": 27', text)
+
 
 if __name__ == "__main__":
     unittest.main()

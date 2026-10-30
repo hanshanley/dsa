@@ -1,0 +1,171 @@
+{
+  "analytical_unit": "Normalized claim text; original source evidence is audit-only",
+  "baseline_modified": false,
+  "bundles_by_group": {
+    "democratic": 7,
+    "dsa": 9,
+    "republican": 6
+  },
+  "claims": 25464,
+  "claims_by_group": {
+    "democratic": 11496,
+    "dsa": 4894,
+    "republican": 9074
+  },
+  "claims_sha256": "bb6f76c4c0578011541d0547cf18100cf190a6ae357614aed8d5558fb848b9a0",
+  "complete_sources_sha256": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
+  "corpus": {
+    "analysis_claims": 25464,
+    "assistant_flagged_claims": 1054,
+    "baseline_modified": false,
+    "blocks": 2623,
+    "blocks_by_status": {
+      "normalized": 2596,
+      "validation_failed": 27
+    },
+    "blocks_with_unresolved_references": 1,
+    "claim_text_standardization": {
+      "original_field": "model_claim_text",
+      "scope": "Recognized source-organization prefixes in policy-position-only claims",
+      "standardized_claims": 2501,
+      "version": 1
+    },
+    "claims": 26679,
+    "claims_by_group": {
+      "democratic": 11856,
+      "dsa": 5105,
+      "republican": 9718
+    },
+    "documents": 135,
+    "exact_within_document_duplicates": 213,
+    "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
+    "generation_tokens": 2489652,
+    "inference_seconds": 189095.64521399536,
+    "maximum_reported_peak_memory_gb": 34.8264026,
+    "quality": "Automated screening; not independent human gold or fact-checking",
+    "source_words": 478335,
+    "status": "complete_with_exclusions"
+  },
+  "documents_by_group": {
+    "democratic": 7,
+    "dsa": 122,
+    "republican": 6
+  },
+  "embedding_cache_reused": true,
+  "tokenization": {
+    "limit": 256,
+    "maximum_tokens": {
+      "gte": 159,
+      "topics": 145
+    },
+    "truncated_claims": 0
+  },
+  "topic_model": {
+    "cache_reused": true,
+    "claims": 25464,
+    "config_sha256": "e65ce77bbf67162cc6a12412b01ad79496399ea2072300ceab8b65e99217355c",
+    "max_length": 256,
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "normalization": "l2",
+    "ordered_text_hash": "5ed7e0b3a304b0c7f1c9ffc7f56007f778428eb8a2c7db463a29eb5f070f57f5",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "topics": 21
+  },
+  "views": {
+    "expanded": {
+      "bandwidth": 0.5450703693548533,
+      "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
+      "dimensions": 10,
+      "document_types": {
+        "democratic": {
+          "platform": 7
+        },
+        "dsa": {
+          "platform": 1,
+          "program": 2,
+          "resolution": 18,
+          "statement": 101
+        },
+        "republican": {
+          "platform": 6
+        }
+      },
+      "group_bundles": {
+        "democratic": 7,
+        "dsa": 9,
+        "republican": 6
+      },
+      "group_documents": {
+        "democratic": 7,
+        "dsa": 122,
+        "republican": 6
+      },
+      "group_passages": {
+        "democratic": 11496,
+        "dsa": 4894,
+        "republican": 9074
+      },
+      "group_sample_sizes": {
+        "democratic": 4894,
+        "dsa": 4894,
+        "republican": 4894
+      },
+      "groups": [
+        "democratic",
+        "republican",
+        "dsa"
+      ],
+      "region_count": 18,
+      "seed": 1729,
+      "status": "complete",
+      "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass"
+    },
+    "strict": {
+      "bandwidth": 0.6236334053855486,
+      "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
+      "dimensions": 10,
+      "document_types": {
+        "democratic": {
+          "platform": 7
+        },
+        "dsa": {
+          "platform": 1,
+          "program": 2
+        },
+        "republican": {
+          "platform": 6
+        }
+      },
+      "group_bundles": {
+        "democratic": 7,
+        "dsa": 3,
+        "republican": 6
+      },
+      "group_documents": {
+        "democratic": 7,
+        "dsa": 3,
+        "republican": 6
+      },
+      "group_passages": {
+        "democratic": 11496,
+        "dsa": 743,
+        "republican": 9074
+      },
+      "group_sample_sizes": {
+        "democratic": 743,
+        "dsa": 743,
+        "republican": 743
+      },
+      "groups": [
+        "democratic",
+        "republican",
+        "dsa"
+      ],
+      "region_count": 18,
+      "seed": 1729,
+      "status": "complete",
+      "weighting": "Equal organization samples; equal document/fallback-period-bundle KDE mass"
+    }
+  },
+  "website_deployed": false
+}

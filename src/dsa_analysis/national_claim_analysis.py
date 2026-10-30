@@ -418,6 +418,36 @@ def write_report(output: Path, summary: dict, shares: list[dict], figures: Path)
             + "; ".join(f"{row['topic_name']} {row['share']:.1%}" for row in ranked)
             + " |"
         )
+    if strict["status"] == "complete" and expanded["status"] == "complete":
+        lines += [
+            "",
+            "DSA's adopted-only input contains "
+            f"{strict['group_documents']['dsa']} documents and "
+            f"{strict['group_passages']['dsa']:,} claims, compared with "
+            f"{expanded['group_documents']['dsa']} documents and "
+            f"{expanded['group_passages']['dsa']:,} claims in the expanded input.",
+        ]
+        leading = {
+            view: max(
+                (
+                    row
+                    for row in shares
+                    if row["view"] == view and row["group"] == "dsa" and row["topic_code"]
+                ),
+                key=lambda row: row["share"],
+                default=None,
+            )
+            for view in ("expanded", "strict")
+        }
+        if all(row and row["share"] > 0 for row in leading.values()):
+            first, second = leading["expanded"], leading["strict"]
+            lines += [
+                f"The largest classified DSA topic is {first['topic_name']} "
+                f"({first['share']:.1%}) in the expanded input and "
+                f"{second['topic_name']} ({second['share']:.1%}) in the strict input. "
+                "This sensitivity reflects source-type and period composition, "
+                "not a measured change in positions over time.",
+            ]
     lines += [
         "",
         "## Provenance and reproduction",
