@@ -1,6 +1,8 @@
 # Claim-normalized national platform analysis
 
-The new path analyzes **Gemma-normalized claims instead of source passages**.
+The new path analyzes **normalized claims instead of source passages**:
+base local-Gemma extraction plus separately identified, source-bound assistant
+corrections.
 It preserves the passage-based study as a separate baseline and does not deploy
 anything to The Margin of Error.
 
@@ -80,6 +82,32 @@ to copy policy claims from reference-only context; those candidates are excluded
 This demonstrates that same-model revision and valid evidence offsets do not
 guarantee that a claim is supported by its cited target unit. The reviews are
 targeted checks, not a representative error estimate or corpus-wide certification.
+
+### Targeted source-bound corrections
+
+`full/source_repairs/` contains auditable corrections for failed extractions and
+reviewed source-fidelity errors. Each record binds the entire bounded target,
+reference-only context, exact raw-response bytes and normalization fingerprint.
+A stale binding stops export. Corrections use the unchanged claim schema and
+evidence validator; they do not rewrite raw replies or relax citation checks.
+Only the target supplies claims; context can resolve references but cannot
+contribute independent assertions.
+
+An optional `replaces_claim_numbers` selects original candidates to supersede,
+preserving valid neighbors' IDs and wording. Whole-block corrections also permit
+an empty claim list for contents pages, credits and other non-policy material.
+Superseded originals remain downloadable with `superseded_by_repair` and cannot
+enter fitting or anchor duplicates. Replacement rows have
+`normalization_origin=assistant_source_repair`, a correction hash in `repair_id`
+and blank `model_claim_text`; they are not represented as Gemma output.
+
+`model_status` and original diagnostics preserve failed model outcomes even when
+effective `status=source_repaired` recovers the source content. Historical review
+flags remain attached to original candidates; `unrepaired_flagged_model_claims`
+separately counts flagged originals without a superseding correction. Repairs
+preserve actors, reported speakers, conditions, timing and modality, and remove
+context-only imports and non-policy inventions. These remain targeted assistant
+judgments, not independent human gold or a representative accuracy estimate.
 
 ## Downstream analysis
 

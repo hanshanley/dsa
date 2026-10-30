@@ -353,7 +353,7 @@ def write_report(output: Path, summary: dict, shares: list[dict], figures: Path)
             "review introduces additional bias. These shares do not estimate "
             "platform-wide emphasis."
             if sample
-            else "**Full eligible-source normalization with automated screening, "
+            else "**Full eligible-source claim analysis with automated screening, "
             "not human-certified "
             "claims or fact-checking.** All source chunks and any failed/unresolved extractions "
             "remain auditable in the coverage tables and raw responses."
@@ -474,14 +474,43 @@ def write_report(output: Path, summary: dict, shares: list[dict], figures: Path)
         "",
     ]
     if not sample:
+        corpus = summary["corpus"]
         lines += [
-            f"Extraction status: **{summary['corpus']['status']}**; "
-            "chunk dispositions: "
-            f"`{json.dumps(summary['corpus']['blocks_by_status'], sort_keys=True)}`.",
+            f"Extraction status: **{corpus['status']}**; effective chunk dispositions: "
+            f"`{json.dumps(corpus['blocks_by_status'], sort_keys=True)}`.",
             f"[Source coverage]({data_path}/source_coverage.csv) / "
             f"[Chunk dispositions]({data_path}/block_status.csv)",
             "",
         ]
+        if corpus.get("assistant_source_repaired_blocks"):
+            lines += [
+                "Original Gemma chunk outcomes remain "
+                f"`{json.dumps(corpus['model_blocks_by_status'], sort_keys=True)}`. "
+                f"Targeted assistant source corrections cover "
+                f"**{corpus['assistant_source_repaired_blocks']:,} chunks** and supply "
+                f"**{corpus['assistant_source_repaired_claims']:,} replacement claims**; "
+                f"**{corpus['superseded_model_claims']:,} original candidates** are "
+                "superseded, not erased. Zero-claim corrections explicitly dispose of "
+                "non-policy material rather than inventing assertions.",
+                "",
+                "Each correction is bound to the exact target, reference-only context, "
+                "raw-response bytes and normalization fingerprint. Unaffected model claims "
+                "retain their original IDs and wording; superseded originals remain in the "
+                "download but cannot enter fitting or anchor duplicates. Corrected rows have "
+                "`normalization_origin=assistant_source_repair` and a blank "
+                "`model_claim_text`, never a falsely attributed Gemma reply. Original model "
+                "failures and diagnostics remain failures in `model_status`, even when a "
+                "source correction recovers their content. This is targeted assistant "
+                "source-entailment work, not independent human gold or factual verification.",
+                "",
+                f"Archived original-candidate review flags: "
+                f"**{corpus['assistant_flagged_claims']:,}**; flagged model candidates "
+                f"still lacking a superseding correction: "
+                f"**{corpus['unrepaired_flagged_model_claims']:,}**. Historical flags are "
+                "not a count of unresolved errors in replacement claims.",
+                f"[Source-bound correction records]({data_path}/source_repairs/)",
+                "",
+            ]
     destination.write_text("\n".join(lines), encoding="utf-8")
     return destination
 

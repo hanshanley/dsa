@@ -154,6 +154,10 @@ class ClaimCorpusTests(unittest.TestCase):
                     archive.read(f"responses/{blocks[0]['block_id']}.json"),
                     raw[f"{blocks[0]['block_id']}.json"],
                 )
+            path.write_text(json.dumps({**record, "replaces_claim_numbers": [1]}))
+            with self.assertRaisesRegex(ValueError, "Invalid partial source repair"):
+                load_source_repairs(blocks, output, manifest)
+            path.write_text(json.dumps(record))
             changed = [{**blocks[0], "context_before": "Changed source context."}, *blocks[1:]]
             with self.assertRaisesRegex(ValueError, "Stale source repair"):
                 load_source_repairs(changed, output, manifest)

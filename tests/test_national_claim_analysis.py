@@ -220,8 +220,14 @@ class ClaimAnalysisTests(unittest.TestCase):
             groups = {"democratic": 7, "republican": 6, "dsa": 122}
             summary = {
                 "corpus": {
-                    "status": "complete_with_exclusions",
-                    "blocks_by_status": {"normalized": 2596, "validation_failed": 27},
+                    "status": "complete",
+                    "blocks_by_status": {"normalized": 2462, "source_repaired": 161},
+                    "model_blocks_by_status": {"normalized": 2596, "validation_failed": 27},
+                    "assistant_source_repaired_blocks": 161,
+                    "assistant_source_repaired_claims": 1200,
+                    "superseded_model_claims": 1100,
+                    "assistant_flagged_claims": 1054,
+                    "unrepaired_flagged_model_claims": 0,
                 },
                 "claims_by_group": groups,
                 "documents_by_group": groups,
@@ -261,6 +267,12 @@ class ClaimAnalysisTests(unittest.TestCase):
             self.assertIn("Labor (60.0%)", text)
             self.assertIn("not a measured change in positions over time", text)
             self.assertIn('"validation_failed": 27', text)
+            self.assertIn("Original Gemma chunk outcomes", text)
+            self.assertIn("**161 chunks**", text)
+            self.assertIn("**1,200 replacement claims**", text)
+            self.assertIn("normalization_origin=assistant_source_repair", text)
+            self.assertIn("not independent human gold", text)
+            self.assertIn("still lacking a superseding correction: **0**", text)
 
 
 if __name__ == "__main__":
