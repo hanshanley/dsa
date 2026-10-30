@@ -1,26 +1,48 @@
 {
   "attempts": [
     {
-      "generation_tokens": 343,
-      "generation_tps": 16.10256145445575,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 1287,
-      "prompt_tps": 427.9761858121345,
-      "request_sha256": "d7cfcb8f27bd99696b4bcaaa78447b818de430c338e6df48c980520f4fe28763",
-      "seconds": 24.317904791096225,
-      "stage": "extraction",
-      "text": "{\"claims\":[{\"claim_text\":\"Four years ago, Democrats, independents, and many Republicans came together as Americans to move the country forward.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The country was in the midst of the greatest economic crisis since the Great Depression four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The previous administration had put two wars on the nation's credit card.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Dream had slipped out of reach for too many four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"Today, the economy is growing again.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Al-Qaeda is weaker than at any point since 9/11 today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The manufacturing sector is growing for the first time in more than a decade today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"There is more to do.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"This election is not simply a choice between two candidates or two political parties, but between two fundamentally different paths for the country and families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}"
-    },
-    {
       "generation_tokens": 329,
-      "generation_tps": 16.011834579117988,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 1748,
-      "prompt_tps": 454.6275682869834,
-      "request_sha256": "5e24e0def640ade74f2e83cefbce65e4df49ba20111f9eb615cfd95725fb6c8b",
-      "seconds": 24.40170995797962,
+      "generation_tps": 15.452943655703361,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1723,
+      "prompt_tps": 478.08348728658245,
+      "request_sha256": "aef4645f075adb6e51aeef44e44d2ce3e960caed5e09837b05796349f709e1ad",
+      "seconds": 24.904124499997124,
       "stage": "extraction",
       "text": "{\"claims\":[{\"claim_text\":\"Democrats, independents, and many Republicans came together as Americans to move the country forward four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The country was in the midst of the greatest economic crisis since the Great Depression four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The previous administration put two wars on the nation's credit card.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Dream had slipped out of reach for too many four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The economy is growing again today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Al-Qaeda is weaker than at any point since 9/11 today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The manufacturing sector is growing for the first time in more than a decade today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"More needs to be done.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"This election is a choice between two fundamentally different paths for the country and families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 334,
+      "generation_tps": 15.490084564992573,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2159,
+      "prompt_tps": 461.5764013955993,
+      "request_sha256": "f296742a2a3a0b8b06bdaf3c62aa67319b94e5489a42dff2233861d204318603",
+      "seconds": 26.250647332984954,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats, independents, and many Republicans came together as Americans to move the country forward four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The country was in the midst of the greatest economic crisis since the Great Depression four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The previous administration put two wars on the nation's credit card.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Dream had slipped out of reach for too many four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The economy is growing again today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Al-Qaeda is weaker than at any point since 9/11 today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The manufacturing sector is growing for the first time in more than a decade today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"More needs to be done.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The election is a choice between two fundamentally different paths for the country and families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 345,
+      "generation_tps": 15.48984169002596,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1789,
+      "prompt_tps": 437.6393442757033,
+      "request_sha256": "f13bb6bad07e38b70d2d98d9045f8528ecddaa4ad583965f0895d9eb132b9db4",
+      "seconds": 26.371133500011638,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats, independents, and many Republicans came together as Americans to move the country forward four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The country was in the midst of the greatest economic crisis since the Great Depression four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The previous administration put two wars on the nation's credit card.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Dream had slipped out of reach for too many four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The economy is growing again today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Al-Qaeda is weaker than at any point since 9/11 today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The manufacturing sector is growing for the first time in more than a decade today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"More needs to be done.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"This election is not simply a choice between two candidates or two political parties, but between two fundamentally different paths for the country and families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 334,
+      "generation_tps": 15.455925299160382,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2252,
+      "prompt_tps": 466.1972169786346,
+      "request_sha256": "015adeaa6785f9aeca92d84a22276bff93f852c82de5201835fccb44a21fc5bf",
+      "seconds": 26.451684792060405,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Democrats, independents, and many Republicans came together as Americans to move the country forward four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The country was in the midst of the greatest economic crisis since the Great Depression four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The previous administration put two wars on the nation's credit card.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The American Dream had slipped out of reach for too many four years ago.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The economy is growing again today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Al-Qaeda is weaker than at any point since 9/11 today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The manufacturing sector is growing for the first time in more than a decade today.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"More needs to be done.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"The election is a choice between two fundamentally different paths for the country and families.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",

@@ -1,26 +1,37 @@
 {
   "attempts": [
     {
-      "generation_tokens": 39,
-      "generation_tps": 16.957427972885572,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 1301,
-      "prompt_tps": 541.071370226678,
-      "request_sha256": "cc807665c50a52e96e3fa7d24372862003d17406c8772d71dbff2a63de8d2208",
-      "seconds": 4.713218000018969,
+      "generation_tokens": 45,
+      "generation_tps": 16.42362364882771,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1503,
+      "prompt_tps": 417.0108954537657,
+      "request_sha256": "6c4aea5e72f098163dad6885bf6d0f249701199306647394879e3e33ed28ccab",
+      "seconds": 6.355523249832913,
       "stage": "extraction",
-      "text": "{\"claims\":[{\"claim_text\":\"We will fight fascism and build a better world.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+      "text": "{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America will fight fascism and build a better world.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
     },
     {
-      "generation_tokens": 45,
-      "generation_tps": 16.535951757145725,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 1491,
-      "prompt_tps": 585.182509611939,
-      "request_sha256": "e55c61f2cfc2b750eef9b87d45329e7e4d9e99760eb861ffe58bd00b43cd29b9",
-      "seconds": 5.2783889579586685,
-      "stage": "extraction",
-      "text": "{\"claims\":[{\"claim_text\":\"Together, we will fight fascism and build the better world we know is possible.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+      "generation_tokens": 51,
+      "generation_tps": 16.41633521141248,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1514,
+      "prompt_tps": 427.4988091716244,
+      "request_sha256": "f3bb191a9547843df4e856366def56a57b6d4cc3a6d40d41a03d25addea327c2",
+      "seconds": 6.657364958897233,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Together, we will fight fascism and build the better world we know is possible.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 54,
+      "generation_tps": 16.419424672433934,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1722,
+      "prompt_tps": 439.3345089936355,
+      "request_sha256": "de9fb33be9342e05968062b6647c89aadd2081359de3cb3f4add21a8bcf9d62b",
+      "seconds": 7.217808000044897,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America will fight fascism and build the better world it knows is possible.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",

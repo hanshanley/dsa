@@ -1,26 +1,48 @@
 {
   "attempts": [
     {
-      "generation_tokens": 224,
-      "generation_tps": 16.53255736587388,
-      "peak_memory": 33.817333514,
-      "prompt_tokens": 1406,
-      "prompt_tps": 472.6836703878833,
-      "request_sha256": "8dfc40b175e4ef4a3c27a4d374f977fc78e1446248c5ba4cd1260d3c360d1a04",
-      "seconds": 16.53378158295527,
-      "stage": "extraction",
-      "text": "{\"claims\":[{\"claim_text\":\"Support for reforming international institutions such as the World Trade Organization, the International Monetary Fund, and the World Bank so that core labor standards, human rights, and protections of the environment are integral to their policies and practices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"These institutions must improve their transparency, accountability, and level of consultation with civil society so that citizens around the world can both understand the basis for their decisions and contribute to them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to provide emergency assistance for stabilizing economies and to create social safety nets, including unemployment insurance and health care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to give people the skills, education, and training they need to compete in the New Economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
-    },
-    {
       "generation_tokens": 252,
-      "generation_tps": 16.501062984018446,
-      "peak_memory": 33.817333514,
-      "prompt_tokens": 1756,
-      "prompt_tps": 478.5710401969823,
-      "request_sha256": "05581f8dc3773f6e0c7f9b4f8136c1c3a7f1c8f75255dad606545487c2e27fb5",
-      "seconds": 18.95133841689676,
+      "generation_tps": 15.96260733888043,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1784,
+      "prompt_tps": 484.2689502743962,
+      "request_sha256": "4d83d568cda0225786cf7c1bbee24bdfaac56f1fbb669b7dcc5c8f8685cf0db1",
+      "seconds": 19.48337116604671,
       "stage": "extraction",
       "text": "{\"claims\":[{\"claim_text\":\"Support for reforming international institutions such as the World Trade Organization, the International Monetary Fund, and the World Bank so that core labor standards, human rights, and protections of the environment are integral to their policies and practices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"These institutions must improve their transparency, accountability, and level of consultation with civil society so that citizens around the world can both understand the basis for their decisions and contribute to them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to provide emergency assistance for stabilizing economies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to create social safety nets, including unemployment insurance and health care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to give people the skills, education, and training they need to compete in the New Economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 269,
+      "generation_tps": 15.966068049054194,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2162,
+      "prompt_tps": 504.178056863357,
+      "request_sha256": "0ef3934db7ae6005124142e531b479f01152f5766c4082897fa8b6cc4f557a8f",
+      "seconds": 21.148245833115652,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for reforming international institutions such as the World Trade Organization, the International Monetary Fund, and the World Bank so that core labor standards, human rights, and protections of the environment are integral to their policies and practices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The World Trade Organization, the International Monetary Fund, and the World Bank must improve their transparency, accountability, and level of consultation with civil society so that citizens around the world can both understand the basis for their decisions and contribute to them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to provide emergency assistance for stabilizing economies.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to create social safety nets, including unemployment insurance and health care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to give people the skills, education, and training they need to compete in the New Economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 232,
+      "generation_tps": 16.137652271886296,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1843,
+      "prompt_tps": 495.3217725294899,
+      "request_sha256": "49be0db6366ec582b499be9386e7cf1e89a31359a165b5aaced2e629079a2e17",
+      "seconds": 18.10803116695024,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for reforming international institutions such as the World Trade Organization, the International Monetary Fund, and the World Bank so that core labor standards, human rights, and protections of the environment are integral to their policies and practices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"These institutions must improve their transparency, accountability, and level of consultation with civil society so that citizens around the world can both understand the basis for their decisions and contribute to them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to not only provide emergency assistance for stabilizing economies but also to create social safety nets, including unemployment insurance and health care.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to give people the skills, education, and training they need to compete in the New Economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 221,
+      "generation_tps": 16.01079151559289,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 2201,
+      "prompt_tps": 508.2790823449676,
+      "request_sha256": "ff878661596c581ebad14a9aba9ec9b9afd12352098ca0400cf00c16ce182c60",
+      "seconds": 18.143600250128657,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for reforming international institutions such as the World Trade Organization, the International Monetary Fund, and the World Bank so that core labor standards, human rights, and protections of the environment are integral to their policies and practices.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"International institutions such as the World Trade Organization, the International Monetary Fund, and the World Bank must improve their transparency, accountability, and level of consultation with civil society so that citizens around the world can both understand the basis for their decisions and contribute to them.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for using influence in multilateral development institutions to not only provide emergency assistance for stabilizing economies and to create social safety nets, including unemployment insurance and health care, but also to give people the skills, education, and training they need to compete in the New Economy.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",

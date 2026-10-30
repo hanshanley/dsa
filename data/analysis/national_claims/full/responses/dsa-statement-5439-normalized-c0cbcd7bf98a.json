@@ -1,37 +1,26 @@
 {
   "attempts": [
     {
-      "generation_tokens": 320,
-      "generation_tps": 15.775176036345014,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 1257,
-      "prompt_tps": 427.82485622666496,
-      "request_sha256": "476733d123909b500c936ed02b73702ccbdc85aba2fed6f8a248a6f184df7d7d",
-      "seconds": 23.234324083896354,
+      "generation_tokens": 373,
+      "generation_tps": 15.392375905586388,
+      "peak_memory": 33.969978152,
+      "prompt_tokens": 1740,
+      "prompt_tps": 442.8645266680206,
+      "request_sha256": "38b89d56a92cd01278560e674730f9d122c994d9088a8ff425262fcfca4fa2d0",
+      "seconds": 28.176048709079623,
       "stage": "extraction",
-      "text": "{\"claims\":[{\"claim_text\":\"The ruling class has used the pandemic crises since March to further the grip of capitalism on workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class has bailed out corporations while giving working-class people crumbs since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class met national uprisings for Black lives with violence and ongoing dissent with vicious suppression since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class upheld sanctions that have decimated international relief efforts since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class further disenfranchised voters through unsafe and inaccessible elections since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class is forcing a premature return to in-person learning in schools just as COVID-19 rates spike across the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The push to reopen schools by both major parties is an act of political violence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Demand no reopening of schools until schools are safe for students and all staff.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}"
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"This is a rapid response alert and updates and organizing actions will be added to this statement as the situation unfolds.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since March, the ruling class has used the pandemic crises to further the grip of capitalism on workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since March, the ruling class has bailed out corporations while giving working-class people crumbs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since March, the ruling class met national uprisings for Black lives with violence and ongoing dissent with vicious suppression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since March, the ruling class upheld sanctions that have decimated international relief efforts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since March, the ruling class further disenfranchised voters through unsafe and inaccessible elections.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class is forcing a premature return to in-person learning in schools just as COVID-19 rates spike across the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The push to reopen schools by both major parties is an act of political violence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Demand no reopening of schools until schools are safe for students and all staff.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
     },
     {
-      "generation_tokens": 368,
-      "generation_tps": 15.794749264608809,
-      "peak_memory": 33.818021642,
-      "prompt_tokens": 1745,
-      "prompt_tps": 458.32085122716387,
-      "request_sha256": "56122a2174169f947725bb1ca3fb7df618e4de7390cc09a63ba7b9eaffedd667",
-      "seconds": 27.116121458821,
-      "stage": "source_fidelity_revision",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"The ruling class has used the pandemic crises since March to further the grip of capitalism on workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class has bailed out corporations while giving working-class people crumbs since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class met national uprisings for Black lives with violence and ongoing dissent with vicious suppression since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class upheld sanctions that have decimated international relief efforts since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class further disenfranchised voters through unsafe and inaccessible elections since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class is forcing a premature return to in-person learning in schools just as COVID-19 rates spike across the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The push to reopen schools by both major parties is an act of political violence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Demand no reopening of schools until schools are safe for students and all staff.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"This is a rapid response alert and updates and organizing actions will be added to this statement as the situation unfolds.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
-    },
-    {
-      "generation_tokens": 369,
-      "generation_tps": 15.73733618237604,
-      "peak_memory": 33.818021642,
+      "generation_tokens": 374,
+      "generation_tps": 15.320572796295755,
+      "peak_memory": 33.969978152,
       "prompt_tokens": 2226,
-      "prompt_tps": 498.68924183649176,
-      "request_sha256": "5b57c262ec4f0bedd93b361d03fc7adc4c6c452b894d777ef17919702857632d",
-      "seconds": 27.92165062506683,
-      "stage": "source_fidelity_revision",
-      "text": "```json\n{\"claims\":[{\"claim_text\":\"The ruling class has used the pandemic crises since March to further the grip of capitalism on workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class has bailed out corporations while giving working-class people crumbs since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class met national uprisings for Black lives with violence and ongoing dissent with vicious suppression since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class upheld sanctions that have decimated international relief efforts since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class further disenfranchised voters through unsafe and inaccessible elections since March.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class is forcing a premature return to in-person learning in schools just as COVID-19 rates spike across the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The push to reopen schools by both major parties is an act of political violence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Demand no reopening of schools until schools are safe for students and all staff.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"This statement is a rapid response alert and updates and organizing actions will be added to this statement as the situation unfolds.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+      "prompt_tps": 480.37419984461485,
+      "request_sha256": "951434028ba647ccba927d224e58f00a2d389b59fe7e5104720687a52f05852b",
+      "seconds": 29.060492375167087,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"This statement is a rapid response alert and updates and organizing actions will be added to this statement as the situation unfolds.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Since March, the ruling class has used the pandemic crises to further the grip of capitalism on workers.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since March, the ruling class has bailed out corporations while giving working-class people crumbs.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since March, the ruling class met national uprisings for Black lives with violence and ongoing dissent with vicious suppression.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since March, the ruling class upheld sanctions that have decimated international relief efforts.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Since March, the ruling class further disenfranchised voters through unsafe and inaccessible elections.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The ruling class is forcing a premature return to in-person learning in schools just as COVID-19 rates spike across the country.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The push to reopen schools by both major parties is an act of political violence.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Demand no reopening of schools until schools are safe for students and all staff.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
     }
   ],
   "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
