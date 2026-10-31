@@ -34,6 +34,7 @@ from dsa_analysis.national_claim_topics import (
     label_topics,
     load_inputs,
     plot_piece,
+    plot_substack_overview,
     plot_topics,
     prepare,
     render,
@@ -418,6 +419,59 @@ class ClaimTopicsTests(unittest.TestCase):
                 self.assertEqual(len(overall), 4)
                 for axis in overall.values():
                     np.testing.assert_allclose([bar.get_width() for bar in axis.patches], [0.5] * 3)
+
+    def test_substack_overview_keeps_exact_shares_common_scale_and_identity_denominators(self):
+        labels = {
+            "health": {"title": "Healthcare Coverage and Public Insurance"},
+            "labor": {"title": "Labor Rights and Unionization"},
+            "identity": {"title": "DSA Identity and Socialist Organizing"},
+        }
+        shares = [
+            {"view": view, "group": group, "topic_id": topic, "share": value}
+            for view in ("expanded", "strict")
+            for group in GROUPS
+            for topic, value in (("health", "0.05"), ("labor", "0.12"), ("identity", "0.83"))
+        ]
+        shares.append({"view": "expanded", "group": "dsa", "topic_id": NOISE, "share": "0.9"})
+        next(
+            row
+            for row in shares
+            if row["view"] == "expanded" and row["group"] == "dsa" and row["topic_id"] == "health"
+        )["share"] = ""
+        captured = []
+
+        def capture(fig, stem):
+            captured.append(stem.name)
+            axes = fig.axes[1:]
+            self.assertEqual(len(axes), 3)
+            self.assertEqual(
+                [text.get_text() for text in fig.axes[0].texts],
+                [
+                    "Labor Rights and Unionization",
+                    "Healthcare Coverage and Public\nInsurance",
+                ],
+            )
+            np.testing.assert_allclose([bar.get_width() for bar in axes[0].patches], [0.12, 0.05])
+            np.testing.assert_allclose([bar.get_width() for bar in axes[2].patches], [0.12])
+            self.assertEqual([text.get_text() for text in axes[2].texts], ["12.0%", "No data"])
+            self.assertTrue(all(axis.get_xlim() == (0, 0.15) for axis in axes))
+            fig.canvas.draw()
+            bounds = fig.bbox
+            for axis in fig.axes:
+                for text in axis.texts:
+                    box = text.get_window_extent(fig.canvas.get_renderer())
+                    self.assertGreaterEqual(box.x0, bounds.x0)
+                    self.assertLessEqual(box.x1, bounds.x1)
+                    self.assertGreaterEqual(box.y0, bounds.y0)
+                    self.assertLessEqual(box.y1, bounds.y1)
+
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            write_rows(directory / "shares.csv", shares)
+            write_json(directory / "fit_manifest.json", {"summary": {"groups": list(GROUPS)}})
+            with patch("dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture):
+                plot_substack_overview(directory, directory, labels)
+        self.assertEqual(captured, ["substack_overview"])
 
     def test_four_group_contrasts_paginate_all_six_pairs_without_narrow_columns(self):
         labels = {"health": {"title": "Health"}}

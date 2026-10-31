@@ -887,6 +887,106 @@ def current_labels(directory: Path) -> dict[str, dict]:
     return result
 
 
+def plot_substack_overview(directory: Path, figures: Path, labels: dict) -> None:
+    from textwrap import fill
+
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.ticker import FixedLocator, PercentFormatter
+
+    from .national_claim_plot_style import COLORS, save_figure
+    from .national_platform_kde import LABELS
+
+    groups = tuple(json.loads((directory / "fit_manifest.json").read_text())["summary"]["groups"])
+    shares = [row for row in read_rows(directory / "shares.csv") if row["view"] == "expanded"]
+    selected = {(row["group"], row["topic_id"]): row for row in shares}
+    topics = sorted(
+        displayed_topics(labels) - {NOISE},
+        key=lambda topic: (
+            -sum(float(selected[group, topic]["share"] or 0) for group in groups),
+            topic,
+        ),
+    )
+    if not topics:
+        return
+    names = [fill(labels[topic]["title"], 36, break_long_words=False) for topic in topics]
+    values = [float(selected[group, topic]["share"] or 0) for group in groups for topic in topics]
+    if not all(np.isfinite(value) and 0 <= value <= 1 for value in values):
+        raise ValueError("Overview shares must be finite proportions")
+    upper = max(0.05, math.ceil(max(values) * 20) / 20)
+    row_height = max(0.55, 0.21 * max(name.count("\n") + 1 for name in names) + 0.13)
+    width, height = 5.1 + 1.8 * len(groups), 2.9 + row_height * len(topics)
+    plt.rcParams.update(PLOT_STYLE)
+    fig = plt.figure(figsize=(width, height))
+    fig.set_gid("issue-card")
+    left = 0.55 / width
+    fig.text(left, 1 - 0.38 / height, "THE MARGIN OF ERROR", fontsize=9, color="#6B6B6B")
+    fig.text(left, 1 - 0.79 / height, "Where the platforms focus", fontsize=22, weight="bold")
+    fig.text(
+        left,
+        1 - 1.17 / height,
+        "National documents, 2000-2026 | Expanded sources | Weighted share of claims",
+        fontsize=10.5,
+        color="#6B6B6B",
+    )
+    label_axis = fig.add_axes(
+        (left, 1.05 / height, 3.95 / width, row_height * len(topics) / height)
+    )
+    label_axis.set_ylim(len(topics) - 0.5, -0.5)
+    label_axis.set_axis_off()
+    for index, name in enumerate(names):
+        label_axis.text(0, index, name, va="center", fontsize=13, linespacing=1.15)
+    for column, group in enumerate(groups):
+        axis = fig.add_axes(
+            (
+                (5.0 + 1.8 * column) / width,
+                1.05 / height,
+                1.05 / width,
+                row_height * len(topics) / height,
+            )
+        )
+        axis.set_title(LABELS[group], loc="left", fontsize=13, color=COLORS[group], pad=16)
+        for index, topic in enumerate(topics):
+            share = selected[group, topic]["share"]
+            if share == "":
+                detail = "No data"
+            else:
+                value = float(share)
+                axis.barh(index, value, height=0.27, color=COLORS[group], zorder=3)
+                detail = f"{value:.1%}"
+            axis.text(
+                1.08,
+                index,
+                detail,
+                va="center",
+                fontsize=10,
+                transform=axis.get_yaxis_transform(),
+            )
+        axis.set_ylim(len(topics) - 0.5, -0.5)
+        axis.set_xlim(0, upper)
+        axis.set_yticks([])
+        axis.xaxis.set_major_locator(FixedLocator([0, upper / 2, upper]))
+        axis.xaxis.set_major_formatter(PercentFormatter(1, decimals=1 if upper < 0.1 else 0))
+        axis.tick_params(axis="x", labelsize=9, pad=8)
+        axis.grid(axis="x")
+        axis.set_axisbelow(True)
+        axis.spines["left"].set_visible(False)
+    note = fig.text(
+        left,
+        0.35 / height,
+        "Document/source-collection weights; identity clusters remain in denominators.\n"
+        "Historical emphasis, not agreement or current opinion; final period incomplete.",
+        fontsize=9.5,
+        color="#6B6B6B",
+        linespacing=1.45,
+    )
+    note.set_gid("source-note")
+    save_figure(fig, figures / "expanded/substack_overview")
+    plt.close(fig)
+
+
 def plot_topics(directory: Path, figures: Path, labels: dict, settings: dict) -> None:
     import matplotlib
 
@@ -1696,6 +1796,7 @@ def render(corpus: Path, *, update_report: bool = True, report: Path | None = No
         labels,
     )
     plot_topics(directory, figures, labels, fit["basis"]["config"])
+    plot_substack_overview(directory, figures, labels)
     plot_piece(directory, figures, labels, groups)
     from .national_claim_topic_positions import generate as generate_positions
 
