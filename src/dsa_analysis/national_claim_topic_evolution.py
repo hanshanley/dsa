@@ -462,7 +462,7 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
                     f"`{example['claim_id']}`.",
                     "",
                 ]
-    return "\n".join(lines)
+    return "\n".join(line.rstrip() for line in lines)
 
 
 def generate(corpus: Path, figures: Path, *, prepare_if_missing: bool = True) -> dict:

@@ -205,7 +205,7 @@ Adjacent-period centroid cosine similarities suggest possible thematic continuit
 
 3,379 claims from 10 documents; 12 independently discovered topics. Fit status: complete. Cosine silhouette: 0.070.
 
-Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation. 
+Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation.
 
 **Expanded reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -500,7 +500,7 @@ DSA — [NPC statement on Israeli-Palestinian conflict](https://dlarchive.dsausa
 
 4,382 claims from 30 documents; 12 independently discovered topics. Fit status: complete. Cosine silhouette: 0.056.
 
-Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation. 
+Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation.
 
 **Expanded reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -699,7 +699,7 @@ DSA — [To Properly Mourn the Murder Victims at the Emanuel AME Church We Must 
 
 5,183 claims from 54 documents; 12 independently discovered topics. Fit status: complete. Cosine silhouette: 0.053.
 
-Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation. 
+Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation.
 
 **Expanded reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -734,7 +734,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 
 Period-specific label summaries and inspectable source examples:
 
-**Democratic Party Positions on Political Campaigns and Issues** (`period-2016-topic-001`): Claims focus on the Democratic Party's stated positions on job creation and foreign policy, as well as accusations regarding healthcare and abortion. The Democratic Socialists of America (DSA) state a strategy of supporting Democratic candidates, particularly progressive and socialist ones. 
+**Democratic Party Positions on Political Campaigns and Issues** (`period-2016-topic-001`): Claims focus on the Democratic Party's stated positions on job creation and foreign policy, as well as accusations regarding healthcare and abortion. The Democratic Socialists of America (DSA) state a strategy of supporting Democratic candidates, particularly progressive and socialist ones.
 
 Caveat: Mixed subtopics: campaign strategy, healthcare, foreign policy, and social issues are all represented.
 
@@ -898,7 +898,7 @@ DSA — [DSA Statement on Georgia Abortion Law](https://www.dsausa.org/wp-json/w
 
 3,669 claims from 23 documents; 12 independently discovered topics. Fit status: complete. Cosine silhouette: 0.088.
 
-Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation. 
+Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation.
 
 **Expanded reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -1089,7 +1089,7 @@ DSA — [For a moratorium on deportations, with no exceptions/Para una moratoria
 
 3,172 claims from 4 documents; 12 independently discovered topics. Fit status: complete. Cosine silhouette: 0.107.
 
-Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation. 
+Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separation and mixed narrative clusters limit policy interpretation.
 
 **Expanded reading:** topic shares below are within this period, not measurements of a permanent political position.
 
