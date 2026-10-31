@@ -1876,9 +1876,13 @@ def render(corpus: Path, *, update_report: bool = True, report: Path | None = No
             "reviewed_labels": result["reviewed_labels"],
             "assistant_revised_labels": result["assistant_revised_labels"],
             "raw_model_schema_valid_labels": sum(
-                json.loads((directory / "labels" / f"{topic}.json").read_text())["status"]
+                json.loads(
+                    (
+                        directory / "labels" / f"{label.get('source_topic_id', topic)}.json"
+                    ).read_text()
+                )["status"]
                 == "complete"
-                for topic in labels
+                for topic, label in labels.items()
             ),
             "qualification": (
                 "Reviewed labels include explicitly attributed source-bound assistant revisions. "

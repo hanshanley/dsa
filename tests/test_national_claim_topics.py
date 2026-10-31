@@ -905,6 +905,64 @@ class ClaimTopicsTests(unittest.TestCase):
                 section,
             )
 
+    def test_render_uses_preserved_remapped_model_record(self):
+        from contextlib import ExitStack
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            corpus = root / "data/full"
+            directory = corpus / "topics"
+            (directory / "labels").mkdir(parents=True)
+            basis = {"config": {"epsilon": 0.01}}
+            write_json(
+                directory / "fit_manifest.json",
+                {"basis": basis, "outputs": {}, "summary": {"topics": 1, "groups": list(GROUPS)}},
+            )
+            write_rows(directory / "assignments.csv", [])
+            source = directory / "labels/archive.json"
+            write_json(source, {"status": "complete"})
+            original = source.read_bytes()
+            labels = {
+                "care": {
+                    "topic_id": "care",
+                    "source_topic_id": "archive",
+                    "title": "Healthcare",
+                    "label_origin": "assistant_source_bound_revision",
+                    "review_status": "evidence_reviewed",
+                }
+            }
+            with ExitStack() as stack:
+                stack.enter_context(patch("dsa_analysis.national_claim_topics.ROOT", root))
+                stack.enter_context(
+                    patch(
+                        "dsa_analysis.national_claim_topics.load_inputs",
+                        return_value=([], None, basis),
+                    )
+                )
+                stack.enter_context(
+                    patch("dsa_analysis.national_claim_topics.current_labels", return_value=labels)
+                )
+                for name in (
+                    "national_claim_topics.plot_topics",
+                    "national_claim_topics.plot_substack_overview",
+                    "national_claim_topics.plot_piece",
+                    "national_claim_topic_time.generate",
+                    "national_claim_topic_positions.generate",
+                    "national_claim_topic_evolution.generate",
+                    "national_claim_plot_style.render_supporting",
+                    "national_claim_plot_style.export_page_versions",
+                    "national_claim_corpus.bundle",
+                ):
+                    stack.enter_context(patch(f"dsa_analysis.{name}", return_value={}))
+                stack.enter_context(
+                    patch("dsa_analysis.national_claim_topics.report_section", return_value="")
+                )
+                self.assertEqual(render(corpus, update_report=False)["labeling_status"], "complete")
+            summary = json.loads((directory / "label_summary.json").read_text())
+            self.assertEqual(summary["raw_model_schema_valid_labels"], 1)
+            self.assertFalse((directory / "labels/care.json").exists())
+            self.assertEqual(source.read_bytes(), original)
+
     def test_prepare_cache_provenance_render_and_complete_archive(self):
         from dsa_analysis.national_claim_analysis import analysis_rows
         from dsa_analysis.national_claim_corpus import build_blocks, validate_response
