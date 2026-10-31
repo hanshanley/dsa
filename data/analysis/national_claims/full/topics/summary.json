@@ -2,6 +2,24 @@
   "assistant_revised_labels": 13,
   "claims": 26483,
   "epsilon": 0.0001,
+  "evolution": {
+    "assistant_revised_labels": 34,
+    "cache_reused": true,
+    "claims_assigned": 26483,
+    "claims_not_fitted": 0,
+    "groups": [
+      "democratic",
+      "republican",
+      "dsa"
+    ],
+    "labels_available": 64,
+    "periods": 7,
+    "qualification": "Uses only each period's claims and embeddings for its PCA, clustering and keywords. Centroid matches are descriptive similarities, not proof of emergence, disappearance, splits, merges, stance change, or causal change.",
+    "reviewed_labels": 64,
+    "status": "complete",
+    "taxonomy": "Independent discovery in each period; numeric IDs do not match across fits",
+    "topics": 64
+  },
   "fit": {
     "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
     "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
@@ -31,6 +49,12 @@
   "labeling_status": "complete",
   "labels_available": 24,
   "limitations": "Exploratory language subjects, not agreement or ideology. Pooled periods and genres differ; strict/expanded contrasts are source-composition sensitivity.",
+  "publication": {
+    "original_assets": 258,
+    "page_assets": 258,
+    "substack_background": "#F7F5F0",
+    "themarginoferror_background": "#F5F5F5"
+  },
   "reviewed_labels": 24,
   "schema_version": 1,
   "taxonomy": "Expanded-corpus shared assignments; strict shares use the same taxonomy",
@@ -39,7 +63,7 @@
     "cutoff": "2026-10-26",
     "date_rule": "Adoption date when recorded, otherwise publication date; preserve precision",
     "exclusions": 0,
-    "implementation_sha256": "7c52e655b3bcdcd9055ab5ae2c60f06eed0db932e47e54c4e49339ab36eda611",
+    "implementation_sha256": "7f2d55cb15ebb9a041a2bceff67e0b15d5e7df18fbba671a7fe12286491303c2",
     "period_years": 4,
     "relative_baseline": "All other configured groups required; no changing vs-rest baselines",
     "start_year": 2000,

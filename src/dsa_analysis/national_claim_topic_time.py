@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import math
 from collections import Counter
 from pathlib import Path
 
@@ -189,156 +188,108 @@ def plot_temporal(
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    from matplotlib.colors import Normalize, TwoSlopeNorm
-    from matplotlib.ticker import PercentFormatter
+    from matplotlib.ticker import MaxNLocator, PercentFormatter
 
-    from .national_platform_kde import COLORS, LABELS
+    from .national_claim_plot_style import COLORS, issue_figure, save_figure
+    from .national_platform_kde import LABELS
 
     plt.rcParams.update(PLOT_STYLE)
-    shares, ratios = tables["temporal_shares.csv"], tables["temporal_contrasts.csv"]
+    shares = tables["temporal_shares.csv"]
     for view in ("expanded", "strict"):
         destination = figures / view
         for stem in ("time_trends_", *(f"time_{group}_" for group in groups)):
             for path in destination.glob(f"{stem}*"):
                 if path.suffix in {".png", ".svg"}:
                     path.unlink()
-    coverage = {
-        (row["view"], row["group"], row["period"]): row for row in tables["temporal_coverage.csv"]
-    }
-    topics = sorted(
-        {row["topic_id"] for row in shares} - {NOISE},
-        key=lambda topic: (
-            -sum(
-                float(row["share"] or 0)
-                for row in shares
-                if row["view"] == "expanded" and row["topic_id"] == topic
-            )
-        ),
-    )
+    topics = sorted({row["topic_id"] for row in shares} - {NOISE})
     if not topics:
         return
     periods = list(dict.fromkeys(row["period"] for row in shares))
-    maximum = max(float(row["share"] or 0) for row in shares)
+    partial = {row["period"] for row in shares if row["partial_period"] in (True, "True")}
+    period_labels = [
+        f"{period[:4]}-{period[-2:]}{'*' if period in partial else ''}" for period in periods
+    ]
     title = lambda topic: labels.get(topic, {}).get("title", topic)  # noqa: E731
     for view in ("expanded", "strict"):
-        destination = figures / view
+        destination = figures / view / "issues"
         destination.mkdir(parents=True, exist_ok=True)
+        for path in destination.glob("*_time.*"):
+            if path.suffix in {".png", ".svg"}:
+                path.unlink()
         lookup = {
             (row["group"], row["topic_id"], row["period"]): row["share"]
             for row in shares
             if row["view"] == view
         }
-        relative = {
-            (row["group"], row["topic_id"], row["period"]): row["log2_ratio"]
-            for row in ratios
-            if row["view"] == view and row["comparison"] == "vs_rest"
-        }
-        for group in groups:
-            for metric, source, norm, cmap_name in (
-                ("share", lookup, Normalize(0, maximum), "Blues"),
-                ("relative", relative, TwoSlopeNorm(vmin=-3, vcenter=0, vmax=3), "RdBu_r"),
-            ):
-                data = np.array(
-                    [
-                        [
-                            float(source.get((group, topic, period), np.nan))
-                            if source.get((group, topic, period), "") != ""
-                            else np.nan
-                            for period in periods
-                        ]
-                        for topic in topics
-                    ]
-                )
-                fig, axis = plt.subplots(
-                    figsize=(12, max(5, len(topics) * 0.35 + 2)), layout="constrained"
-                )
-                cmap = plt.get_cmap(cmap_name).copy()
-                cmap.set_bad("#e6e6e6")
-                image = axis.imshow(data, aspect="auto", cmap=cmap, norm=norm)
-                axis.set_yticks(range(len(topics)), [title(topic) for topic in topics])
-                period_labels = [
-                    f"{period}\n"
-                    f"{coverage[view, group, period]['documents']}d / "
-                    f"{coverage[view, group, period]['bundles']}b"
-                    for period in periods
-                ]
-                axis.set_xticks(range(len(periods)), period_labels, rotation=30, ha="right")
-                metric_name = "shares" if metric == "share" else "relative emphasis"
-                axis.set_title(
-                    f"{LABELS[group]}: topic {metric_name} over time | {view}",
-                    loc="left",
-                    pad=15,
-                )
-                axis.set_xlabel(
-                    "Observed adoption/publication period; d = documents, b = bundles; "
-                    "gray = unavailable.\n"
-                    "Final period is partial. No carry-forward or annual-position estimates."
-                    + (
-                        "\nRelative emphasis requires every comparison group; "
-                        "colors saturate at +/-3."
-                        if metric == "relative"
-                        else ""
-                    )
-                )
-                bar = fig.colorbar(image, ax=axis, shrink=0.65)
-                if metric == "share":
-                    bar.ax.yaxis.set_major_formatter(PercentFormatter(1))
-                    bar.set_label("Weighted topic share")
-                else:
-                    bar.set_label("log2 share ratio vs fixed other groups")
-                for extension in ("png", "svg"):
-                    fig.savefig(
-                        destination / f"time_{group}_{metric}.{extension}",
-                        dpi=180,
-                        metadata={"Date": None} if extension == "svg" else None,
-                    )
-                plt.close(fig)
-        for page, start in enumerate(range(0, len(topics), 6), 1):
-            chunk = topics[start : start + 6]
-            fig, axes = plt.subplots(
-                math.ceil(len(chunk) / 2),
-                2,
-                figsize=(14, 3 * math.ceil(len(chunk) / 2) + 1),
-                squeeze=False,
-                layout="constrained",
+        for topic in topics:
+            maximum = max(float(row["share"] or 0) for row in shares if row["topic_id"] == topic)
+            upper = max(0.01, np.ceil(maximum * 1.15 * 100) / 100)
+            fig = issue_figure(
+                title(topic),
+                f"Within-period share of claims | {view.capitalize()} sources | "
+                f"Latest period: {periods[-1]}{'*' if periods[-1] in partial else ''}",
             )
-            for axis, topic in zip(axes.ravel(), chunk, strict=False):
-                for group in groups:
-                    values = [
+            axis = fig.add_axes((0.08, 0.21, 0.86, 0.42))
+            for index, (group, x) in enumerate(zip(groups, np.linspace(0.08, 0.75, len(groups)))):
+                values = np.array(
+                    [
                         float(lookup[group, topic, period])
                         if lookup[group, topic, period] != ""
                         else np.nan
                         for period in periods
                     ]
-                    axis.plot(
-                        range(len(periods)),
-                        values,
-                        marker="o",
-                        markersize=4,
-                        linewidth=1.5,
-                        color=COLORS[group],
-                        label=LABELS[group],
-                    )
-                axis.set_title(title(topic), fontsize=10, loc="left")
-                axis.set_xticks(range(len(periods)), periods, rotation=30, ha="right", fontsize=8)
-                axis.yaxis.set_major_formatter(PercentFormatter(1))
-                axis.set_ylim(0, maximum * 1.08)
-                axis.grid(axis="y", color="#e5e5e5", linewidth=0.6)
-                axis.set_axisbelow(True)
-            for axis in axes.ravel()[len(chunk) :]:
-                axis.set_visible(False)
-            axes.ravel()[0].legend(frameon=False, fontsize=8)
-            fig.suptitle(
-                f"Topic shares over time | {view} | page {page}\n"
-                "Observed documents only; gaps are missing evidence, not zero positions.",
-                fontsize=12,
-            )
-            for extension in ("png", "svg"):
-                fig.savefig(
-                    destination / f"time_trends_{page}.{extension}",
-                    dpi=180,
-                    metadata={"Date": None} if extension == "svg" else None,
                 )
+                fig.text(x, 0.755, LABELS[group], color=COLORS[group], fontsize=10, weight="bold")
+                fig.text(
+                    x,
+                    0.69,
+                    f"{values[-1]:.1%}" if np.isfinite(values[-1]) else "No data",
+                    fontsize=20,
+                    color=COLORS[group],
+                    weight="bold",
+                )
+                axis.plot(
+                    range(len(periods)),
+                    values,
+                    marker=("o", "s", "D", "^")[index],
+                    markersize=3.5,
+                    linewidth=2,
+                    color=COLORS[group],
+                )
+                if np.isfinite(values[-1]):
+                    axis.scatter(
+                        len(periods) - 1,
+                        values[-1],
+                        s=40,
+                        color=COLORS[group],
+                        edgecolors="white",
+                        linewidths=1,
+                        zorder=4,
+                    )
+            axis.set_xticks(range(len(periods)), period_labels, fontsize=9)
+            axis.set_xlim(-0.15, len(periods) - 0.7)
+            axis.yaxis.set_major_formatter(PercentFormatter(1, decimals=1 if upper < 0.04 else 0))
+            axis.yaxis.set_major_locator(MaxNLocator(nbins=4, min_n_ticks=3, steps=[1, 2, 5, 10]))
+            axis.set_ylim(0, upper)
+            axis.grid(axis="y")
+            axis.set_axisbelow(True)
+            axis.spines["left"].set_visible(False)
+            fig.text(
+                0.08,
+                0.115,
+                "Observed four-year periods; missing documents leave gaps, not zero shares.",
+                fontsize=8.5,
+                color="#6B6B6B",
+            )
+            fig.text(
+                0.08,
+                0.075,
+                f"*Final period ends {DEFAULT_CUTOFF}. Equal document/bundle weights; "
+                "source composition varies.",
+                fontsize=8,
+                color="#6B6B6B",
+            )
+            save_figure(fig, destination / f"{topic}_time")
             plt.close(fig)
 
 

@@ -190,6 +190,14 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
   uv run scripts/national_claim_topics.py label
 
+# Independent numerical discovery within each observed four-year period.
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+  uv run python -m dsa_analysis.national_claim_topics evolution-prepare
+
+# Label all period-qualified topics in one isolated local-model invocation.
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+  uv run scripts/national_claim_topics.py evolution-label
+
 # Render both views, update the claim report, rebuild the complete source ZIP.
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
   uv run python -m dsa_analysis.national_claim_topics render
@@ -284,14 +292,15 @@ The `render` stage verifies the current source, embedding, numerical-code and
 output hashes before using labels. Stale or failed labels remain explicitly
 provisional. Cached labels can replay without generating new responses.
 Reports lead with these concrete distributions and source-linked examples,
-while keeping the earlier CAP and KDE results unchanged. The full claim/source
+while keeping the earlier CAP and KDE numerical results unchanged. The full claim/source
 ZIP contains actual complete texts, claims, provenance, topic-stage CSV/JSON
 evidence, all full-corpus PNG/SVG figures, and `report.md` with figure/data links
 rewritten for the extracted archive. This is one combined deliverable, not separate
 metadata-only and figure downloads. SVG identifiers and metadata are deterministic;
 the topic replay audit checks exact PNG/SVG bytes and every archive member.
 It does not retroactively extend the earlier KDE reproducibility certification:
-existing CAP/KDE figures are included, not recomputed by the topic-stage replay.
+existing CAP/KDE figures are restyled from their saved numerical tables without
+refitting their models.
 
 **Over time.** Rendering also exports `temporal_shares.csv`,
 `temporal_contrasts.csv`, `temporal_changes.csv`, `temporal_coverage.csv`,
@@ -304,9 +313,13 @@ their reasons, not from the pooled corpus.
 
 The topic taxonomy is fixed, not refitted per period. Weights are recomputed
 within each group/period/view, including when a fallback bundle spans periods.
-Share heatmaps and paginated topic-trend plots show every topic. Missing
-documents are gray heatmap cells and gaps in lines, never zero topic shares.
-Coverage axes count documents and bundles. There is no forward filling:
+Each topic has a standalone comparison bar chart and a standalone multi-group
+timeline in `<view>/issues/`, in PNG and SVG. These replace the large per-group
+time heatmaps and crowded multi-topic trend pages. Missing documents leave
+gaps in lines, never zero topic shares. Topic titles wrap without truncation;
+each topic's timeline uses the same zero-based scale across organizations and
+both views, while different topics can have different vertical scales.
+`temporal_coverage.csv` records per-period document and bundle support. There is no forward filling:
 Republican reuse of the 2016 platform in 2020 is not a new text observation.
 Strict DSA gaps remain visible rather than being filled with fallback statements.
 
@@ -323,6 +336,56 @@ The main analysis accepts `--topics` to prepare numerical topics and render
 available cached labels; it never silently loads Gemma. When existing topic
 artifacts are present, the normal report rebuild also restores their report
 section after checking freshness.
+
+**Independent period discovery.** This is an additional analysis, not a
+replacement for pooled topics or fixed-topic trends. Every four-year period
+gets its own PCA, clustering, vocabulary/keywords and representative evidence,
+using only that period's claims and cached embeddings. Fewer than 50 claims
+means no substantive fit. Candidate density parameters are minimum cluster
+size 30 and minimum samples 5; density coverage below 50% triggers a weighted
+K-means grid of 4/6/8/12 clusters, using the existing geometry/concentration
+selection rule. Parameters are fixed across periods, not tuned for striking
+group contrasts. Strict shares reuse each period's expanded fit.
+
+The current corpus yields 64 topics across seven independent fits, not 64
+globally distinct policy categories. In 2004–2007 and 2008–2011, the selected
+density fits yield two clusters each with roughly 44% unclustered mass.
+Plots retain unclustered shares and the report qualifies broad/mixed clusters;
+small positive silhouettes do not make them validated policy taxonomies.
+Within-period contrasts retain low-support and smoothing warnings. Versus-rest
+comparisons require every configured group; missing observations are not zeros.
+
+`topics/evolution/` contains assignments, shares, contrasts, local keywords,
+full source-linked representatives, candidate diagnostics, balanced refits,
+date/coverage dispositions, labels and review records. Period-qualified IDs
+are not persistent topic identities. Original-space centroids use equal-group
+and within-group bundle weights and are saved in `centroids.json`. For each
+later topic, `adjacent_matches.csv` records the closest preceding-period
+centroid. Only mutual nearest matches with cosine similarity at least 0.80
+are candidate thematic continuities; all other matches remain uncertain.
+No matching bridges a missing period. No result establishes issue birth,
+death, splitting, merging, agreement or causal ideological change.
+
+`evolution-prepare` is explicit. Routine rendering validates its prepared
+inputs, numerical implementation and output hashes and refuses stale fits;
+it never silently refits independent period topics or invokes a model.
+Every published period-topic label receives the same hash-bound bounded
+evidence review as pooled labels, retaining raw replies and identifying any
+assistant revisions separately. The current 64 period-qualified labels are all
+reviewed; 34 have explicit source-bound assistant revisions. This is bounded
+representative-packet review, not independent human certification of each cluster.
+
+**Publication styling.** All current full-corpus figures use the restrained
+warm-paper palette from `hanshanley/uk_decline`, reference revision
+`2c9dbb0715dfd737b36484fc395578d7e8a669af`. Democratic blue, Republican
+terracotta and DSA gold remain consistent across charts. Default PNG/SVG
+figures have the Substack background `#F7F5F0`; corresponding website versions
+live under `figures/national_claims/full/themarginoferror/` with `#F5F5F5`.
+PNG background conversion changes only exactly matching opaque pixels;
+SVG copies replace the corresponding background fill. Data colors,
+dimensions, text and values are unchanged. PNG originals use 200 DPI;
+SVG identifiers and metadata are deterministic. Both versions, all temporal
+evidence, actual claims and complete source texts enter the combined archive.
 
 ### Claim extraction and full analysis
 

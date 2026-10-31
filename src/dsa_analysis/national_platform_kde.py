@@ -534,6 +534,8 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
     import matplotlib.pyplot as plt
     from matplotlib.colors import TwoSlopeNorm
 
+    from .national_claim_plot_style import BG, COLORS, house_style, save_figure
+
     def publication_year(value):
         lower, upper = date_bounds(value)
         start = lower.replace(month=1, day=1)
@@ -543,15 +545,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
     groups = tuple(result.get("groups", GROUPS))
     pairs = tuple(combinations(groups, 2))
     figures.mkdir(parents=True, exist_ok=True)
-    plt.rcParams.update(
-        {
-            "font.family": "DejaVu Sans",
-            "font.size": 10,
-            "axes.spines.top": False,
-            "axes.spines.right": False,
-            "savefig.facecolor": "white",
-        }
-    )
+    house_style()
     if result["status"] == "complete":
         rows = result["_scored"]
         panel_rows = (len(pairs) + 2) // 3
@@ -611,7 +605,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                     fontsize=8,
                     color="#333333",
                     ha=align,
-                    bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.85, "pad": 2},
+                    bbox={"facecolor": BG, "edgecolor": "none", "alpha": 0.85, "pad": 2},
                 )
                 fig.canvas.draw()
                 bounds = label.get_window_extent(fig.canvas.get_renderer()).expanded(1.06, 1.3)
@@ -634,8 +628,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
             fontsize=9,
             color="#555555",
         )
-        fig.savefig(figures / "pairwise_density.png", dpi=190)
-        fig.savefig(figures / "pairwise_density.svg")
+        save_figure(fig, figures / "pairwise_density")
         plt.close(fig)
         fig, axis = plt.subplots(figsize=(9, 3.8))
         for group in groups:
@@ -663,10 +656,15 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
         axis.set_xlabel("Document year (gaps are not interpolated)")
         axis.legend(frameon=False, fontsize=8, ncol=len(groups))
         fig.tight_layout()
-        fig.savefig(figures / "document_change.png", dpi=180)
+        save_figure(fig, figures / "document_change")
         plt.close(fig)
     else:
-        for filename in ("pairwise_density.png", "pairwise_density.svg", "document_change.png"):
+        for filename in (
+            "pairwise_density.png",
+            "pairwise_density.svg",
+            "document_change.png",
+            "document_change.svg",
+        ):
             (figures / filename).unlink(missing_ok=True)
     fig, axis = plt.subplots(figsize=(11, 2.7 + max(0, len(groups) - 3) * 0.3))
     for index, group in enumerate(groups):
@@ -707,7 +705,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
     axis.set_xlabel("Publication year (known date precision); empty years do not imply no position")
     axis.legend(frameon=False, ncol=3, fontsize=8, loc="upper center", bbox_to_anchor=(0.5, 1.24))
     fig.tight_layout()
-    fig.savefig(figures / "coverage.png", dpi=180)
+    save_figure(fig, figures / "coverage")
     plt.close(fig)
 
 

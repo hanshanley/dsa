@@ -7,7 +7,16 @@ from unittest.mock import patch
 
 import numpy as np
 
-from dsa_analysis.national_claim_topic_time import temporal_tables
+from dsa_analysis.national_claim_topic_evolution import (
+    adjacent_matches,
+)
+from dsa_analysis.national_claim_topic_evolution import (
+    generate as generate_evolution,
+)
+from dsa_analysis.national_claim_topic_evolution import (
+    prepare as prepare_evolution,
+)
+from dsa_analysis.national_claim_topic_time import plot_temporal, temporal_tables
 from dsa_analysis.national_claim_topics import (
     NOISE,
     audit,
@@ -22,6 +31,7 @@ from dsa_analysis.national_claim_topics import (
     fit_topics,
     label_topics,
     load_inputs,
+    plot_topics,
     prepare,
     render,
     stable_topics,
@@ -29,7 +39,14 @@ from dsa_analysis.national_claim_topics import (
     validate_label,
 )
 from dsa_analysis.national_platform_kde import embedding_key
-from dsa_analysis.national_platforms import GROUPS, SUPPORTED_GROUPS, digest, write_json, write_rows
+from dsa_analysis.national_platforms import (
+    GROUPS,
+    SUPPORTED_GROUPS,
+    digest,
+    read_rows,
+    write_json,
+    write_rows,
+)
 from tests.test_national_claim_corpus import response
 from tests.test_national_claims import coverage, sources
 
@@ -46,6 +63,133 @@ def row(identifier, group="dsa", bundle="one", strict=True):
 
 
 class ClaimTopicsTests(unittest.TestCase):
+    def test_independent_period_fits_exclude_future_evidence_and_reject_stale_cache(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            corpus = Path(temporary)
+            dated = [
+                {
+                    "document_id": f"doc-{year}",
+                    "publication_date": str(year),
+                    "adoption_date": "",
+                    "document_type": "platform",
+                }
+                for year in (2000, 2004, 2012)
+            ]
+            write_rows(corpus / "complete_sources.csv", dated)
+            rows = [
+                {
+                    **row(f"{year}-{i}", group, f"doc-{year}"),
+                    "text": "public health hospitals"
+                    if year == 2000
+                    else "defense military forces",
+                    "text_sha256": digest(f"{year}-{i}"),
+                }
+                for year, count in ((2000, 50), (2004, 50), (2012, 2))
+                for i in range(count)
+                for group in [GROUPS[i % 3]]
+            ]
+            vectors = np.random.default_rng(1).normal(size=(len(rows), 8))
+            vectors /= np.linalg.norm(vectors, axis=1, keepdims=True)
+            observed = []
+
+            def fit(selected, selected_vectors, settings):
+                observed.append([r["claim_id"] for r in selected])
+                expected = [i for i, r in enumerate(rows) if r in selected]
+                np.testing.assert_array_equal(selected_vectors, vectors[expected])
+                return ["topic-001"] * len(selected), None, {"status": "complete"}, [], []
+
+            (corpus / "topics").mkdir()
+            write_json(corpus / "topics/fit_manifest.json", {"summary": {"groups": list(GROUPS)}})
+            with (
+                patch(
+                    "dsa_analysis.national_claim_topic_evolution.load_inputs",
+                    return_value=(rows, vectors, {"input": "fixture"}),
+                ),
+                patch("dsa_analysis.national_claim_topic_evolution.fit_topics", side_effect=fit),
+            ):
+                summary = prepare_evolution(corpus)
+                self.assertEqual(len(observed), 2)
+                self.assertTrue(all(i.startswith("2000-") for i in observed[0]))
+                self.assertTrue(all(i.startswith("2004-") for i in observed[1]))
+                self.assertEqual(summary["claims_not_fitted"], 2)
+                directory = corpus / "topics/evolution"
+                terms = read_rows(directory / "keywords.csv")
+                earlier = [r for r in terms if r["period"] == "2000-2003"]
+                self.assertTrue(earlier)
+                self.assertFalse(any("military" in r["term"] for r in earlier))
+                self.assertEqual(
+                    {r["topic_id"] for r in terms},
+                    {"period-2000-topic-001", "period-2004-topic-001"},
+                )
+                self.assertTrue(prepare_evolution(corpus)["cache_reused"])
+                self.assertEqual(len(observed), 2)
+                from dsa_analysis.national_claim_topic_evolution import report_section
+
+                with patch("dsa_analysis.national_claim_topic_evolution.ROOT", corpus):
+                    report = report_section(directory, corpus / "figures", {})
+                self.assertIn("Independently discovered topics within each period", report)
+                self.assertIn("unclustered share 0.0%", report)
+                self.assertIn("Insufficient evidence", report)
+                with patch("dsa_analysis.national_claim_topic_evolution.plot"):
+                    self.assertTrue(
+                        generate_evolution(
+                            corpus,
+                            corpus / "figures",
+                            prepare_if_missing=False,
+                        )["cache_reused"]
+                    )
+                with (directory / "assignments.csv").open("a") as output:
+                    output.write("corrupt\n")
+                with self.assertRaisesRegex(ValueError, "evolution-prepare"):
+                    generate_evolution(corpus, corpus / "figures", prepare_if_missing=False)
+                self.assertEqual(len(observed), 2, "Rendering must never refit stale period models")
+
+    def test_adjacent_topic_matches_are_mutual_candidates_not_births_and_never_bridge_gaps(self):
+        centroids = {
+            "2000-2003": {"a": np.array([1.0, 0.0]), "b": np.array([0.0, 1.0])},
+            "2004-2007": {"c": np.array([1.0, 0.0]), "d": np.array([0.6, 0.8])},
+            "2012-2015": {"e": np.array([1.0, 0.0])},
+        }
+        matches = adjacent_matches(centroids)
+        self.assertEqual(len(matches), 2)
+        self.assertEqual(matches[0]["interpretation"], "candidate_thematic_continuity")
+        centroids["2004-2007"]["d"] = np.array([0.8, 0.6])
+        uncertain = adjacent_matches(centroids)[1]
+        self.assertFalse(uncertain["mutual_nearest"])
+        self.assertEqual(uncertain["interpretation"], "uncertain_match_not_proof_of_new_topic")
+        centroids["2004-2007"] = {}
+        self.assertEqual(adjacent_matches(centroids), [])
+
+    def test_publication_versions_change_only_opaque_background_pixels_and_remove_stale(self):
+        from PIL import Image, ImageColor
+
+        from dsa_analysis.national_claim_plot_style import BG, PAGE_BG, export_page_versions
+
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            before = np.array(
+                [
+                    [(*ImageColor.getrgb(BG), 255), (61, 111, 140, 255)],
+                    [(200, 90, 61, 255), (*ImageColor.getrgb(BG), 0)],
+                ],
+                dtype=np.uint8,
+            )
+            Image.fromarray(before).save(directory / "chart.png")
+            (directory / "chart.svg").write_text(f'<svg fill="{BG.lower()}"></svg>')
+            stale = directory / "themarginoferror/stale.png"
+            stale.parent.mkdir()
+            stale.write_text("obsolete")
+            self.assertEqual(export_page_versions(directory)["page_assets"], 2)
+            after = np.array(Image.open(directory / "themarginoferror/chart.png"))
+            np.testing.assert_array_equal(after[0, 0], (*ImageColor.getrgb(PAGE_BG), 255))
+            np.testing.assert_array_equal(after[0, 1:], before[0, 1:])
+            np.testing.assert_array_equal(after[1], before[1])
+            self.assertEqual(
+                (directory / "themarginoferror/chart.svg").read_text(),
+                f'<svg fill="{PAGE_BG.lower()}"></svg>',
+            )
+            self.assertFalse(stale.exists())
+
     def test_temporal_dates_gaps_weights_and_fixed_comparison_baselines(self):
         definitions = [
             ("d00", "democratic", "2000", "", True, "health"),
@@ -125,6 +269,65 @@ class ClaimTopicsTests(unittest.TestCase):
             [(r["view"], r["group"], r["topic_id"], r["share"]) for r in shares],
             [(r["view"], r["group"], r["topic_id"], r["share"]) for r in other],
         )
+
+    def test_individual_issue_charts_preserve_values_gaps_and_common_view_scales(self):
+        labels = {topic: {"title": topic.capitalize()} for topic in ("health", "labor")}
+        periods = ("2000-2003", "2004-2007", "2008-2011")
+        timeline = [
+            {
+                "view": view,
+                "group": group,
+                "topic_id": topic,
+                "period": period,
+                "partial_period": False,
+                "share": ""
+                if (group == "republican" and period == periods[1])
+                or (group == "dsa" and view == "strict" and period == periods[0])
+                else (0.08 if group == "dsa" else 0.02),
+            }
+            for view in ("expanded", "strict")
+            for group in GROUPS
+            for topic in labels
+            for period in periods
+        ]
+        captured = {}
+
+        def capture(fig, stem):
+            captured[stem.relative_to(directory).as_posix()] = fig.axes[0]
+
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            with patch("dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture):
+                plot_temporal({"temporal_shares.csv": timeline}, directory, labels, GROUPS)
+                self.assertEqual(len(captured), 4)
+                expanded = captured["expanded/issues/health_time"]
+                strict = captured["strict/issues/health_time"]
+                self.assertEqual(len(expanded.lines), 3)
+                np.testing.assert_allclose(expanded.lines[0].get_ydata(), [0.02] * 3)
+                np.testing.assert_allclose(
+                    expanded.lines[1].get_ydata(), [0.02, np.nan, 0.02], equal_nan=True
+                )
+                np.testing.assert_allclose(expanded.lines[2].get_ydata(), [0.08] * 3)
+                self.assertTrue(np.isnan(strict.lines[2].get_ydata()[0]))
+                self.assertEqual(expanded.get_ylim(), strict.get_ylim())
+                self.assertEqual(expanded.get_ylim()[0], 0)
+                formatter = expanded.yaxis.get_major_formatter()
+                for tick in expanded.get_yticks():
+                    self.assertAlmostEqual(float(formatter(tick).rstrip("%")), tick * 100)
+
+                rows = [
+                    row(f"{group}-{topic}", group, topic) for group in GROUPS for topic in labels
+                ]
+                shares = distributions(rows, list(labels) * 3, GROUPS)
+                write_rows(directory / "shares.csv", shares)
+                write_rows(directory / "contrasts.csv", contrasts(shares, GROUPS, 0.0001))
+                write_rows(directory / "keywords.csv", [])
+                write_json(directory / "fit_manifest.json", {"summary": {"groups": list(GROUPS)}})
+                plot_topics(directory, directory, labels, config())
+                overall = {key: axis for key, axis in captured.items() if key.endswith("_overall")}
+                self.assertEqual(len(overall), 4)
+                for axis in overall.values():
+                    np.testing.assert_allclose([bar.get_width() for bar in axis.patches], [0.5] * 3)
 
     def test_ratios_use_equal_groups_not_pooled_counts_and_keep_fragile_rankings(self):
         rows = [row("a", "democratic")] * 100

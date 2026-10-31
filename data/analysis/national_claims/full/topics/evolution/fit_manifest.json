@@ -1,0 +1,152 @@
+{
+  "basis": {
+    "config": {
+      "balanced_refits": 2,
+      "epsilon": 0.0001,
+      "keywords": 10,
+      "kmeans_clusters": [
+        4,
+        6,
+        8,
+        12
+      ],
+      "label_attempts": 2,
+      "max_claims_per_bundle": 2,
+      "max_output_tokens": 900,
+      "max_prompt_tokens": 4096,
+      "min_cluster_sizes": [
+        30
+      ],
+      "min_samples": [
+        5
+      ],
+      "minimum_density_coverage": 0.5,
+      "pca_components": 50,
+      "representatives": 6,
+      "schema_version": 1,
+      "seed": 1729,
+      "silhouette_sample": 2000,
+      "topics_per_page": 24
+    }
+  },
+  "evolution_basis": {
+    "date_rule": "Adoption then publication; same four-year periods as fixed-topic trends",
+    "implementation_sha256": "ccd1e18e6dd0780d6e25d43c8f149b2fe03632f03429600af7facbe6e1d94f30",
+    "inputs": {
+      "claims_sha256": "4e2b6ef6472b51aad8f980737749c87cedffded9291b6224d7ba65fac31c1078",
+      "config": {
+        "balanced_refits": 2,
+        "epsilon": 0.0001,
+        "keywords": 10,
+        "kmeans_clusters": [
+          12,
+          18,
+          24,
+          30
+        ],
+        "label_attempts": 2,
+        "max_claims_per_bundle": 2,
+        "max_output_tokens": 900,
+        "max_prompt_tokens": 4096,
+        "min_cluster_sizes": [
+          50,
+          100,
+          200
+        ],
+        "min_samples": [
+          5,
+          10
+        ],
+        "minimum_density_coverage": 0.5,
+        "pca_components": 50,
+        "representatives": 12,
+        "schema_version": 1,
+        "seed": 1729,
+        "silhouette_sample": 2000,
+        "topics_per_page": 24
+      },
+      "embedding_manifest": {
+        "embedding_dimensions": 768,
+        "max_length": 256,
+        "model_name": "Alibaba-NLP/gte-multilingual-base",
+        "model_revision": "9bbca17d9273fd0d03d5725c7a4b0f6b45142062",
+        "normalization": "l2",
+        "ordered_text_hash": "15cd2fcd5d78b3993e908aa16b2c7cc97d7d2a25ab9c6e84546d3ce86c68ea7b",
+        "segment_count": 26483
+      },
+      "embedding_sha256": "d70b5cdf57126a0449cea105abbd4e1831e254efc9cee727d6d72b8be5350671",
+      "groups": [
+        "democratic",
+        "republican",
+        "dsa"
+      ],
+      "implementation_sha256": "92b61d380f14dd6d06baa1ec6e5dcd74f0da077a3d4a10b90ef06d86ce4c5f2a",
+      "ordered_claim_ids_sha256": "46d68ca31e95751d90d0285e1d61c5b2152768525f3b6b3c0b461b2af4d66e71",
+      "sources_sha256": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
+      "versions": {
+        "numpy": "2.5.2",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0"
+      }
+    },
+    "matching_threshold": 0.8,
+    "minimum_claims": 50,
+    "settings": {
+      "balanced_refits": 2,
+      "epsilon": 0.0001,
+      "keywords": 10,
+      "kmeans_clusters": [
+        4,
+        6,
+        8,
+        12
+      ],
+      "label_attempts": 2,
+      "max_claims_per_bundle": 2,
+      "max_output_tokens": 900,
+      "max_prompt_tokens": 4096,
+      "min_cluster_sizes": [
+        30
+      ],
+      "min_samples": [
+        5
+      ],
+      "minimum_density_coverage": 0.5,
+      "pca_components": 50,
+      "representatives": 6,
+      "schema_version": 1,
+      "seed": 1729,
+      "silhouette_sample": 2000,
+      "topics_per_page": 24
+    }
+  },
+  "outputs": {
+    "adjacent_matches.csv": "525848b874da99450f7d1fc7cee9bb3a4c92e85e2cc18a40761eead89def489f",
+    "assignments.csv": "189deea56d11f607606996f20e80bef7cf82f9df62f0f6aaa05729acf4cc8505",
+    "balanced_refits.csv": "ccca5a4bc1afd6eed272aad1e2ab1afa1bfc3f39bebb3e5c20952011b572f347",
+    "candidate_fits.csv": "0cbdf4d313bb46259d872d59f11308cc1d8c722a134b4a86ab5173f231bf3245",
+    "centroids.json": "7c7b549c707e46aae6c66e59535fa5cf136eac72f3495a539dd2af082456dfcb",
+    "contrasts.csv": "8c15725fa5f3c8494d3e237c0b267affb8a4cb49b91cc36958fadca08d4fc40b",
+    "coverage.csv": "dca8ddff71e7314cf8e93eecdb635855036bec705d56e627bab5450e649617e4",
+    "date_exclusions.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "document_dates.csv": "81cc4be9690e3ef46de164f8cb10b69cd567e81a7deeda4792a66661666ccdfa",
+    "keywords.csv": "3795d675268a175e3f5c853f22167704621609f35cc31a84fd50f08c404ed177",
+    "period_fits.json": "edb4b0fab0275ab8f6fc7acb8cec47cfda9fc1c5ff5385a6b36e320b2d9b5408",
+    "representatives.csv": "0e278f523220d1f3665d9bd31d8da529b12226c3a06796f96a30012c0e90a004",
+    "shares.csv": "8147ab2e110e8f0b293fd3d9bb1fa1771d00b51ce642f02c1ad215efa56e85df"
+  },
+  "summary": {
+    "claims_assigned": 26483,
+    "claims_not_fitted": 0,
+    "groups": [
+      "democratic",
+      "republican",
+      "dsa"
+    ],
+    "periods": 7,
+    "qualification": "Uses only each period's claims and embeddings for its PCA, clustering and keywords. Centroid matches are descriptive similarities, not proof of emergence, disappearance, splits, merges, stance change, or causal change.",
+    "status": "complete",
+    "taxonomy": "Independent discovery in each period; numeric IDs do not match across fits",
+    "topics": 64
+  }
+}

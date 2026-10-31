@@ -12,7 +12,7 @@ import numpy as np
 from .model_topics import Topic
 from .national_claim_corpus import CLAIMS_ROOT, FULL_OUTPUT, bundle
 from .national_claims import PILOT_OUTPUT
-from .national_platform_kde import COLORS, LABELS, analyze_view, encode, plot_outputs
+from .national_platform_kde import LABELS, analyze_view, encode, plot_outputs
 from .national_platforms import (
     GROUPS,
     MAX_LENGTH,
@@ -313,6 +313,10 @@ def plot_topics(shares: list[dict], figures: Path, *, groups: tuple[str, ...] = 
     import matplotlib.pyplot as plt
     from matplotlib.ticker import PercentFormatter
 
+    from .national_claim_plot_style import COLORS, house_style, save_figure
+
+    house_style()
+
     names = list(dict.fromkeys(row["topic_name"] for row in shares))
     names.sort(key=lambda name: max(row["share"] for row in shares if row["topic_name"] == name))
     fig, axis = plt.subplots(figsize=(9, 8))
@@ -329,14 +333,13 @@ def plot_topics(shares: list[dict], figures: Path, *, groups: tuple[str, ...] = 
     axis.xaxis.set_major_formatter(PercentFormatter(1))
     axis.set_xlim(left=0)
     axis.set_xlabel("Share of claims, equal document / fallback-period-bundle weight")
-    axis.grid(axis="x", color="#e5e5e5", linewidth=0.6)
+    axis.grid(axis="x")
     axis.set_axisbelow(True)
     axis.legend(frameon=False, loc="lower right")
     axis.spines[["top", "right", "left"]].set_visible(False)
     axis.tick_params(axis="y", length=0)
     fig.tight_layout()
-    fig.savefig(figures / "topic_emphasis.png", dpi=180)
-    fig.savefig(figures / "topic_emphasis.svg")
+    save_figure(fig, figures / "topic_emphasis")
     plt.close(fig)
 
 

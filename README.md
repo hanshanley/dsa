@@ -26,12 +26,19 @@ keywords, compare overall topic shares and relative emphasis, and track those
 topics over time. CAP classification and semantic-density maps remain supporting
 analyses rather than the main result.
 
+The temporal analysis also discovers **64 period-specific topics independently
+within seven periods**. It separates changing shares of the 24 pooled topics
+from changes in the themes discovered within each period, without treating
+cluster matching as proof of issue emergence or disappearance.
+
 **Status:** the exploratory full-source comparison analyzes **26,483 eligible
 claims from 135 documents**, with strict and expanded topic distributions and
 four-year observed-document trends covering **2000–2026**. The figures use named
 topics reviewed against their representative claims. All 24 labels are reviewed;
 13 have explicitly attributed source-bound assistant revisions, with original
-Gemma replies preserved. This is not independent human certification.
+Gemma replies preserved. All 64 period-specific labels are also reviewed, with
+34 attributed assistant revisions and unchanged original replies. This bounded
+evidence review is not independent human certification.
 
 All 2,623 extraction chunks have effective dispositions:
 161 source-bound corrections address reviewed errors and all 27 failed model
@@ -41,11 +48,12 @@ a representative sample or corpus-wide semantic certification. Earlier pilot
 and passage-based results are retained below as historical references.
 
 <p align="center">
-  <img src="figures/national_claims/full/topics/expanded/topic_distribution.png" width="1200" alt="Shared learned-topic distributions of 26,483 eligible Democratic, Republican, and DSA claims">
+  <img src="figures/national_claims/full/topics/expanded/issues/topic-003_overall.png" width="900" alt="Individual issue comparison: labor rights and unionization shares for Democratic, Republican and DSA claims">
 </p>
 
-*Full eligible-claim analysis after targeted source corrections. Topic shares use equal
-document/fallback-bundle weights and describe language emphasis, not policy agreement.*
+*Example issue: labor rights and unionization. Each topic has its own overall
+comparison and time-series chart. Shares use equal document/fallback-bundle
+weights and describe language emphasis, not policy agreement.*
 
 ## Results and downloads
 
@@ -55,12 +63,17 @@ document/fallback-bundle weights and describe language emphasis, not policy agre
 | Overall learned-topic distributions | 24 shared topics; strict and expanded views; equal document/fallback-bundle weights | [Topic distributions and evidence](report/national_claim_analysis.md#learned-topic-distributions-and-relative-emphasis) · [All shares](data/analysis/national_claims/full/topics/shares.csv) |
 | Relative topic emphasis | Each group versus equally weighted other groups, plus pairwise comparisons; all support warnings retained | [Ranked contrasts](data/analysis/national_claims/full/topics/contrasts.csv) |
 | Topics over time | Seven four-year periods from 2000 through the partial 2024–2026 period; fixed taxonomy and explicit evidence gaps | [Time charts](report/national_claim_analysis.md#topics-over-time) · [Period shares](data/analysis/national_claims/full/topics/temporal_shares.csv) · [Coverage](data/analysis/national_claims/full/topics/temporal_coverage.csv) |
+| Independently discovered period themes | 64 period-qualified topics; each fit uses only its own period's evidence | [Period-by-period analysis](report/national_claim_analysis.md#independently-discovered-topics-within-each-period) · [Period shares](data/analysis/national_claims/full/topics/evolution/shares.csv) · [Fit diagnostics](data/analysis/national_claims/full/topics/evolution/period_fits.json) · [Source examples](data/analysis/national_claims/full/topics/evolution/representatives.csv) |
+| Individual issue comparisons | One overall chart and one timeline per topic, comparing all three groups; strict and expanded views | [Expanded issue charts](figures/national_claims/full/topics/expanded/issues/) · [Strict issue charts](figures/national_claims/full/topics/strict/issues/) |
+| Publication-ready figures | Restrained house style and individual cards; PNG and SVG | [Substack versions](figures/national_claims/full/) · [The Margin of Error versions](figures/national_claims/full/themarginoferror/) |
 
 **One complete download:** [Report, all figures, result tables, claims, complete
 sources, raw replies, history and corrections](data/analysis/national_claims/full/claim_documents.zip).
 Unzip it and open `report.md`: its figure and result-table links point to the
 included files. PNG and SVG figures include both the new topic/time analyses and
-the supporting CAP/KDE results.
+the supporting CAP/KDE results. Default figures use Substack's warm-paper
+background; `figures/themarginoferror/` contains the matching website versions.
+Both versions are included in the same complete download.
 
 ### Inspect the actual claims
 
@@ -90,9 +103,18 @@ Distinctive keywords, representative claims, and
 are downloadable. Original local-Gemma responses remain unchanged; source-bound
 assistant revisions correct misleading labels and are identified explicitly.
 
-![Relative topic emphasis against equally weighted other organizations](figures/national_claims/full/topics/expanded/vs_rest_emphasis.png)
+For a concrete expanded-view comparison, the learned **labor rights and
+unionization** topic accounts for **6.50% of DSA**, **3.44% of Democratic** and
+**1.60% of Republican** weighted claims. The **Israeli-Palestinian conflict**
+topic accounts for **5.78%, 1.08% and 1.16%**, respectively; **public education**
+accounts for **2.41%, 5.37% and 4.97%**. These are pooled 2000–2026 language
+shares, not annual estimates or support for the same policies. The linked shares
+and representative evidence show the denominators and underlying wording.
 
-Positive log2 ratios mean a larger share than the equally weighted other
+![Healthcare: individual overall comparison](figures/national_claims/full/topics/expanded/issues/topic-018_overall.png)
+
+Individual issue charts show **absolute weighted shares**. Separately, positive
+log2 ratios in the contrast tables mean a larger share than the equally weighted other
 organizations; +1 is approximately twice the share away from the disclosed
 smoothing floor. These are **relative language emphases**, not agreement or
 ideological distance. All contrasts remain ranked, including rare or
@@ -113,10 +135,28 @@ explain discovery, local labeling, and reproducibility.
 
 **Over time:** the report also tracks the same topics in four-year
 adoption/publication periods, with strict and expanded views, document/bundle
-support, and missing periods left as gaps. Relative time charts use fixed
-comparison groups, not a silently changing baseline.
+support, and missing periods left as gaps. Temporal relative-emphasis tables use
+fixed comparison groups, not a silently changing baseline.
 
-![Topic shares over observed document periods](figures/national_claims/full/topics/expanded/time_trends_1.png)
+For example, on the **fixed pooled taxonomy**, DSA's labor-and-union share is
+**5.26% in 2016–2019, 7.47% in 2020–2023 and 7.86% in 2024–2026**; Democratic
+shares are **3.26%, 4.02% and 1.76%**. Each Democratic period has one document;
+DSA has one, two and two weighting bundles, respectively. These are observed
+language-share changes with changing source composition, not annual population
+estimates. The last period is partial and Republican 2020–2023 remains missing.
+
+**Period-specific discovery:** separate PCA/clustering and keyword extraction
+within each period allow themes and cluster counts to differ, rather than
+assuming the pooled taxonomy captures every period equally well. The report
+analyzes each period's observed shares, source support and representative
+claims. Adjacent-period embedding similarities are only candidate thematic
+links—not evidence of topics being born, dying, splitting or merging.
+The 2004–2007 and 2008–2011 density fits each retain only two substantive
+clusters and leave about 44% of claims unclustered; those limitations and
+unclustered shares remain visible. Missing Republican documents in 2020–2023
+are not replaced with the reused 2016 platform.
+
+![Labor rights and unionization: comparison over time](figures/national_claims/full/topics/expanded/issues/topic-003_time.png)
 
 ### Broad CAP reference topics
 
