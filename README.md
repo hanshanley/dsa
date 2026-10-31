@@ -3,6 +3,7 @@
   <p>National policy documents, structured claims, and political language, 2000–2026.</p>
   <p>
     <a href="#overview">Overview</a> ·
+    <a href="figures/README.md">Chart guide</a> ·
     <a href="#results-and-downloads">Results &amp; data</a> ·
     <a href="#sources-and-coverage">Sources</a> ·
     <a href="#methods">Methods</a> ·
@@ -84,6 +85,11 @@ claims. These describe observed documents across years, not an exhaustive or cur
 consensus. Pair-map colors show topic-share gaps, not ideological distance.
 
 ## Results and downloads
+
+**Browse charts by name:** the [chart guide](figures/README.md) separates the six
+article graphics, all 21 individual issues, position atlases and supporting
+outputs. Each issue has direct overall and over-time PNG links; alternate
+backgrounds and historical figures are listed separately.
 
 | Current result | Scope | Outputs |
 |---|---|---|
