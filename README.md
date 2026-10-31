@@ -97,7 +97,7 @@ consensus. Pair-map colors show topic-share gaps, not ideological distance.
 | Publication-ready figures | Restrained house style and individual cards; PNG-only, without internal workflow annotations or text metadata | [Substack versions](figures/national_claims/full/) · [The Margin of Error versions](figures/national_claims/full/themarginoferror/) |
 
 **One complete download:** [Report, all figures, result tables, claims, complete
-sources, raw replies, history and corrections](https://github.com/hanshanley/dsa/releases/download/claim-public-pngs-2026-10-31/claim_documents.zip).
+sources, raw replies, history and corrections](https://github.com/hanshanley/dsa/releases/download/claim-bar-end-labels-2026-10-31/claim_documents.zip).
 Unzip it and open `report.md`: its figure and result-table links point to the
 included files. PNG figures include both the new topic/time analyses and
 the supporting CAP/KDE results. Default figures use Substack's warm-paper

@@ -97,6 +97,42 @@ class ClaimAnalysisTests(unittest.TestCase):
         finally:
             plt.close(fig)
 
+    def test_comparison_values_stay_next_to_each_bar_end(self):
+        import matplotlib.pyplot as plt
+
+        from dsa_analysis.national_claim_plot_style import comparison_page
+
+        for differences in (False, True):
+            with self.subTest(differences=differences):
+                values = [0.005, 0.08, 0.1, 0, None]
+                if differences:
+                    values = [-0.005, 0.08, -0.1, 0.1, 0, None]
+                fig = comparison_page(
+                    "Attention",
+                    "Direct values",
+                    [f"Policy {index}" for index in range(len(values))],
+                    [("Democratic", "blue", "red")],
+                    [[(value, True) for value in values]],
+                    0.1,
+                    differences=differences,
+                )
+                try:
+                    fig.canvas.draw()
+                    renderer = fig.canvas.get_renderer()
+                    axis = fig.axes[1]
+                    for y, (value, text) in enumerate(zip(values, axis.texts)):
+                        endpoint = axis.transData.transform((value or 0, y))
+                        bounds = text.get_window_extent(renderer)
+                        gap = (
+                            endpoint[0] - bounds.x1
+                            if value is not None and value < 0
+                            else bounds.x0 - endpoint[0]
+                        )
+                        self.assertAlmostEqual(gap, renderer.points_to_pixels(4))
+                        self.assertAlmostEqual((bounds.y0 + bounds.y1) / 2, endpoint[1])
+                finally:
+                    plt.close(fig)
+
     def test_adapter_embeds_claims_not_evidence_and_checks_exact_provenance(self):
         source_rows = sources()
         block = build_blocks(source_rows, coverage(source_rows))[0]

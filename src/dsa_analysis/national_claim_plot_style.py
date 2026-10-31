@@ -117,14 +117,17 @@ def comparison_page(title, subtitle, names, columns, values, upper, *, differenc
                 axis.barh(y, value, height=0.25, color=color, zorder=3)
                 detail = f"{value * 100:+.1f}" if differences else f"{value:.1%}"
                 detail += "*" if warning else ""
-            axis.text(
-                1.025,
-                y,
+            left = differences and value is not None and value < 0
+            axis.annotate(
                 detail,
-                transform=axis.get_yaxis_transform(),
+                (value if value is not None else 0, y),
+                xytext=(-4 if left else 4, 0),
+                textcoords="offset points",
+                ha="right" if left else "left",
                 fontsize=8,
                 va="center",
                 color=color,
+                annotation_clip=False,
             )
         axis.set_ylim(len(names) - 0.5, -0.5)
         axis.set_xlim(-upper if differences else 0, upper)
