@@ -4,20 +4,21 @@ from __future__ import annotations
 
 import json
 from collections import defaultdict
-from itertools import combinations
+from itertools import combinations, zip_longest
 from pathlib import Path
 from textwrap import fill
 
 import numpy as np
 
 from .national_platform_kde import LABELS
-from .national_platforms import GROUPS, read_rows, write_json, write_rows
+from .national_platforms import GROUPS, date_bounds, read_rows, write_json, write_rows
 
 MAX_EXAMPLES = 48
 SUMMARY_WORDS = 36
 DIFFERENCE_WORDS = 30
 QUALIFICATION = (
-    "Source-bound assistant synthesis of bundle-diverse examples, not independent human "
+    "Source-bound assistant synthesis of period- and document-diverse central examples, "
+    "not independent human "
     "certification or an exhaustive stance classification. Statements describe the "
     "observed documents across years, not every member's beliefs or a current consensus."
 )
@@ -25,31 +26,66 @@ NO_POSITION = "No sampled claims; no group position inferred."
 NO_DIFFERENCE = "Insufficient sampled evidence to compare group positions."
 
 
+def example_period(row):
+    from .national_claim_topic_time import PERIOD_YEARS, START_YEAR
+
+    try:
+        lower, upper = date_bounds(row.get("adoption_date") or row.get("publication_date", ""))
+        first = START_YEAR + ((lower.year - START_YEAR) // PERIOD_YEARS) * PERIOD_YEARS
+        if lower.year < START_YEAR or upper.year >= first + PERIOD_YEARS:
+            return "undated"
+        return str(first)
+    except ValueError:
+        return "undated"
+
+
+def _interleave(sequences):
+    return [index for tier in zip_longest(*sequences) for index in tier if index is not None]
+
+
 def select_examples(indices, rows, embeddings, centroid, limit=MAX_EXAMPLES):
-    by_bundle = defaultdict(list)
+    by_period = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     for index in indices:
-        by_bundle[rows[index]["bundle_id"]].append(index)
-    ranked = {}
-    for bundle, members in sorted(by_bundle.items()):
-        ordered = sorted(
-            members,
-            key=lambda index: (-float(embeddings[index] @ centroid), rows[index]["claim_id"]),
-        )
-        sequence = []
-        while ordered:
-            sequence.extend(ordered[:2])
-            del ordered[:2]
-            if ordered:
-                sequence.append(ordered.pop())
-        ranked[bundle] = sequence
-    selected = []
-    for offset in range(max((len(value) for value in ranked.values()), default=0)):
-        for members in ranked.values():
-            if offset < len(members):
-                selected.append(members[offset])
-                if len(selected) == limit:
-                    return selected
-    return selected
+        row = rows[index]
+        bundle = row["bundle_id"]
+        by_period[example_period(row)][bundle][row.get("document_id") or bundle].append(index)
+    ranked_periods = []
+    for period in sorted(by_period):
+        bundles = by_period[period]
+        ranked_bundles = []
+        for documents in (bundles[bundle] for bundle in sorted(bundles)):
+            ranked_bundles.append(
+                _interleave(
+                    [
+                        sorted(
+                            documents[document],
+                            key=lambda index: (
+                                -float(embeddings[index] @ centroid),
+                                rows[index]["claim_id"],
+                            ),
+                        )
+                        for document in sorted(documents)
+                    ]
+                )
+            )
+        ranked_periods.append(_interleave(ranked_bundles))
+    return _interleave(ranked_periods)[:limit]
+
+
+def example_coverage(indices, selected, rows):
+    return [
+        {
+            "period_start": period,
+            "claims": len(members),
+            "document_ids": sorted({rows[index]["document_id"] for index in members}),
+            "sampled_document_ids": sorted(
+                {rows[index]["document_id"] for index in selected if index in members}
+            ),
+            "sampled_claims": sum(index in members for index in selected),
+        }
+        for period in sorted({example_period(rows[index]) for index in indices})
+        for members in ({index for index in indices if example_period(rows[index]) == period},)
+    ]
 
 
 def prepare(corpus: Path) -> dict:
@@ -135,6 +171,7 @@ def prepare(corpus: Path) -> dict:
                 "claims": len(indices),
                 "bundles": len({rows[index]["bundle_id"] for index in indices}),
                 "documents": len({rows[index]["document_id"] for index in indices}),
+                "coverage": example_coverage(indices, selected, rows),
                 "examples": examples,
             }
         path = packets / f"{topic}.json"
@@ -151,9 +188,12 @@ def prepare(corpus: Path) -> dict:
         "selection": {
             "max_examples_per_group_topic": MAX_EXAMPLES,
             "method": (
-                "Round-robin across bundles, alternating two claims nearest the frozen "
-                "weighted topic centroid with one peripheral claim. No stance-based selection."
+                "Round-robin across observed four-year periods, bundles and documents; "
+                "within each document, rank claims nearest the frozen weighted topic "
+                "centroid first. No peripheral or stance-based selection."
             ),
+            "require_complete_example_review": True,
+            "require_temporal_support": True,
         },
         "packet_sha256": packet_hashes,
         "evidence_sha256": digest((target / "evidence.csv").read_bytes()),
@@ -219,6 +259,19 @@ def reviewed_positions(corpus: Path) -> tuple[dict, list[dict]]:
                 and len({lookup[claim]["bundle_id"] for claim in supporting}) < 2
             ):
                 raise ValueError(f"Position needs multiple supporting bundles: {topic}/{group}")
+            selection = manifest.get("selection", {})
+            if selection.get("require_complete_example_review") and (
+                set(statement.get("reviewed_claim_ids", [])) != set(lookup)
+                or len(statement.get("reviewed_claim_ids", [])) != len(lookup)
+            ):
+                raise ValueError(f"Position needs every sampled claim reviewed: {topic}/{group}")
+            if selection.get("require_temporal_support"):
+                periods = {example_period(example) for example in examples} - {"undated"}
+                supported = {example_period(lookup[claim]) for claim in supporting}
+                if not periods <= supported:
+                    raise ValueError(
+                        f"Position needs support across sampled periods: {topic}/{group}"
+                    )
         pairs = {f"{first}_vs_{second}" for first, second in combinations(groups, 2)}
         if set(review["pairs"]) != pairs:
             raise ValueError(f"Missing pairwise position differences: {topic}")

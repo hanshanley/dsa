@@ -129,7 +129,7 @@ class PositionAtlasTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Unsupported group position"):
                 reviewed_positions(root)
 
-    def test_selection_spans_bundles_and_includes_peripheral_claims(self):
+    def test_selection_spans_bundles_and_keeps_central_claims(self):
         rows = [
             {"claim_id": f"{bundle}-{index}", "bundle_id": bundle}
             for bundle in ("many", "few")
@@ -139,8 +139,77 @@ class PositionAtlasTests(unittest.TestCase):
         selected = select_examples(list(range(12)), rows, embeddings, np.array([1, 0]), limit=6)
         self.assertEqual(len(selected), 6)
         self.assertEqual({rows[index]["bundle_id"] for index in selected}, {"many", "few"})
-        self.assertIn(5, selected)
-        self.assertIn(11, selected)
+        self.assertEqual(selected, [6, 0, 7, 1, 8, 2])
+        self.assertNotIn(5, selected)
+        self.assertNotIn(11, selected)
+
+    def test_selection_balances_periods_and_documents_without_peripheral_sampling(self):
+        rows = [
+            {
+                "claim_id": f"{year}-{document}-{rank}",
+                "bundle_id": "shared",
+                "document_id": f"{year}-{document}",
+                "publication_date": str(year),
+                "adoption_date": "",
+            }
+            for year, documents in ((2000, 20), (2016, 2), (2024, 1))
+            for document in range(documents)
+            for rank in range(4)
+        ]
+        embeddings = np.array([[1 - int(row["claim_id"].split("-")[-1]) / 10, 0] for row in rows])
+        selected = select_examples(list(range(len(rows))), rows, embeddings, np.array([1, 0]), 6)
+        self.assertEqual(
+            {rows[index]["publication_date"] for index in selected}, {"2000", "2016", "2024"}
+        )
+        self.assertEqual(len({rows[index]["document_id"] for index in selected}), 5)
+        for index in selected:
+            earlier = [
+                item
+                for item in selected[: selected.index(index)]
+                if rows[item]["document_id"] == rows[index]["document_id"]
+            ]
+            self.assertEqual(int(rows[index]["claim_id"].split("-")[-1]), len(earlier))
+        self.assertEqual(select_examples([], rows, embeddings, np.array([1, 0])), [])
+
+    def test_review_requires_all_examples_and_support_across_sampled_periods(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            directory, review = self.fixture(root)
+            packet_path = directory / "packets/topic-001.json"
+            packet = json.loads(packet_path.read_text())
+            for group, data in packet["groups"].items():
+                for example, year in zip(data["examples"], (2000, 2024)):
+                    example["publication_date"] = str(year)
+                review["groups"][group]["reviewed_claim_ids"] = [
+                    example["claim_id"] for example in data["examples"]
+                ]
+            write_json(packet_path, packet)
+            manifest_path = directory / "selection_manifest.json"
+            manifest = json.loads(manifest_path.read_text())
+            manifest["selection"] = {
+                "require_complete_example_review": True,
+                "require_temporal_support": True,
+            }
+            manifest["packet_sha256"]["topic-001"] = digest(packet_path.read_bytes())
+            write_json(manifest_path, manifest)
+            review["packet_sha256"] = manifest["packet_sha256"]["topic-001"]
+            write_json(directory / "reviews/topic-001.json", review)
+            self.assertEqual(len(reviewed_positions(root)[1]), 1)
+            review["groups"]["democratic"]["reviewed_claim_ids"] = ["democratic1"]
+            write_json(directory / "reviews/topic-001.json", review)
+            with self.assertRaisesRegex(ValueError, "every sampled claim reviewed"):
+                reviewed_positions(root)
+            review["groups"]["democratic"]["reviewed_claim_ids"] = ["democratic1", "democratic2"]
+            for example in packet["groups"]["democratic"]["examples"]:
+                example["bundle_id"] = "shared"
+            write_json(packet_path, packet)
+            manifest["packet_sha256"]["topic-001"] = digest(packet_path.read_bytes())
+            write_json(manifest_path, manifest)
+            review["packet_sha256"] = manifest["packet_sha256"]["topic-001"]
+            review["groups"]["democratic"]["supporting_claim_ids"] = ["democratic1"]
+            write_json(directory / "reviews/topic-001.json", review)
+            with self.assertRaisesRegex(ValueError, "support across sampled periods"):
+                reviewed_positions(root)
 
     def test_joint_and_all_pair_atlases_show_positions_and_exact_share_gaps(self):
         import matplotlib.pyplot as plt
