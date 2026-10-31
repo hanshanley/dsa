@@ -40,9 +40,14 @@ class ClaimAnalysisTests(unittest.TestCase):
         ]
 
         def capture(fig, stem):
+            from matplotlib.colors import to_rgba
+
             self.assertEqual(tuple(fig.get_size_inches()), (12, 6.5))
             fig.canvas.draw()
             renderer = fig.canvas.get_renderer()
+            for axis in fig.axes[1:]:
+                for bar, text in zip(axis.patches, axis.texts):
+                    self.assertEqual(to_rgba(text.get_color()), bar.get_facecolor())
             for axis, next_axis in zip(fig.axes[1:], fig.axes[2:]):
                 for text in axis.texts:
                     self.assertLess(
@@ -86,6 +91,7 @@ class ClaimAnalysisTests(unittest.TestCase):
             axis = fig.axes[1]
             np.testing.assert_allclose([bar.get_width() for bar in axis.patches], [0.05, -0.015])
             self.assertEqual([text.get_text() for text in axis.texts], ["+5.0", "-1.5*", "No data"])
+            self.assertEqual([text.get_color() for text in axis.texts], ["blue", "red", "#6B6B6B"])
             self.assertEqual(axis.xaxis.get_major_formatter()(0.05), "5")
             self.assertEqual(axis.get_xlim(), (-0.1, 0.1))
         finally:

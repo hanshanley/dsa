@@ -108,6 +108,7 @@ def comparison_page(title, subtitle, names, columns, values, upper, *, differenc
         axis = fig.add_axes((0.39 + index * 0.58 / len(columns), 0.21, width, 0.57))
         axis.set_title(heading, loc="left", fontsize=10, weight="normal", pad=14)
         for y, (value, warning) in enumerate(values[index]):
+            color = "#6B6B6B"
             if value is None:
                 detail = "No data"
             else:
@@ -118,7 +119,13 @@ def comparison_page(title, subtitle, names, columns, values, upper, *, differenc
                 detail = f"{value * 100:+.1f}" if differences else f"{value:.1%}"
                 detail += "*" if warning else ""
             axis.text(
-                1.025, y, detail, transform=axis.get_yaxis_transform(), fontsize=8, va="center"
+                1.025,
+                y,
+                detail,
+                transform=axis.get_yaxis_transform(),
+                fontsize=8,
+                va="center",
+                color=color,
             )
         axis.set_ylim(len(names) - 0.5, -0.5)
         axis.set_xlim(-upper if differences else 0, upper)
