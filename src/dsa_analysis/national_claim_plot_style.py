@@ -52,14 +52,16 @@ def house_style() -> None:
 def issue_figure(title: str, subtitle: str):
     import matplotlib.pyplot as plt
 
-    fig = plt.figure(figsize=(9, 5.8))
-    fig.text(0.08, 0.96, fill(title, 58), va="top", fontsize=18, weight="bold")
-    fig.text(0.08, 0.835, subtitle, fontsize=10, color="#6B6B6B")
+    fig = plt.figure(figsize=(9, 5.5))
+    fig.set_gid("issue-card")
+    fig.text(0.08, 0.955, "THE MARGIN OF ERROR", fontsize=8, color="#6B6B6B")
+    fig.text(0.08, 0.905, fill(title, 48), va="top", fontsize=16, weight="bold", linespacing=1.2)
+    fig.text(0.08, 0.755, subtitle, fontsize=9, color="#6B6B6B")
     note = fig.text(
         0.08,
-        0.025,
-        "Sources: national political documents. Analysis: The Margin of Error.",
-        fontsize=8,
+        0.035,
+        "Source: national political documents. Equal document / fallback-bundle weights.",
+        fontsize=7.5,
         color="#6B6B6B",
     )
     note.set_gid("source-note")
@@ -82,8 +84,8 @@ def save_figure(fig, stem: Path) -> None:
         fig.savefig(
             stem.with_suffix(f".{extension}"),
             dpi=200,
-            bbox_inches="tight",
-            pad_inches=0.18,
+            bbox_inches=None if fig.get_gid() == "issue-card" else "tight",
+            pad_inches=0 if fig.get_gid() == "issue-card" else 0.18,
             metadata={"Date": None} if extension == "svg" else None,
         )
 

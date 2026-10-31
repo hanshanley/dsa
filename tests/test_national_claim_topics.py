@@ -31,6 +31,7 @@ from dsa_analysis.national_claim_topics import (
     fit_topics,
     label_topics,
     load_inputs,
+    plot_piece,
     plot_topics,
     prepare,
     render,
@@ -272,6 +273,9 @@ class ClaimTopicsTests(unittest.TestCase):
 
     def test_individual_issue_charts_preserve_values_gaps_and_common_view_scales(self):
         labels = {topic: {"title": topic.capitalize()} for topic in ("health", "labor")}
+        labels["health"]["title"] = (
+            "Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance"
+        )
         periods = ("2000-2003", "2004-2007", "2008-2011")
         timeline = [
             {
@@ -283,6 +287,8 @@ class ClaimTopicsTests(unittest.TestCase):
                 "share": ""
                 if (group == "republican" and period == periods[1])
                 or (group == "dsa" and view == "strict" and period == periods[0])
+                or (topic == "labor" and group == "republican" and period == periods[-1])
+                or (topic == "labor" and group == "dsa" and view == "strict")
                 else (0.08 if group == "dsa" else 0.02),
             }
             for view in ("expanded", "strict")
@@ -291,9 +297,36 @@ class ClaimTopicsTests(unittest.TestCase):
             for period in periods
         ]
         captured = {}
+        label_boxes = {}
 
         def capture(fig, stem):
-            captured[stem.relative_to(directory).as_posix()] = fig.axes[0]
+            key = stem.relative_to(directory).as_posix()
+            captured[key] = fig.axes[0]
+            if fig.get_gid() == "issue-card":
+                np.testing.assert_allclose(fig.get_size_inches(), [9, 5.5])
+                fig.canvas.draw()
+                renderer = fig.canvas.get_renderer()
+                width, height = fig.canvas.get_width_height()
+                texts = [*fig.texts, *fig.axes[0].texts]
+                for text in texts:
+                    if not text.get_text():
+                        continue
+                    bounds = text.get_window_extent(renderer)
+                    self.assertGreaterEqual(bounds.x0, 0, text.get_text())
+                    self.assertGreaterEqual(bounds.y0, 0, text.get_text())
+                    self.assertLessEqual(bounds.x1, width, text.get_text())
+                    self.assertLessEqual(bounds.y1, height, text.get_text())
+                header = fig.texts[1].get_window_extent(renderer)
+                subtitle = fig.texts[2].get_window_extent(renderer)
+                self.assertGreater(header.y0, subtitle.y1)
+                label_boxes[key] = sorted(
+                    (
+                        text.get_window_extent(renderer)
+                        for text in fig.axes[0].texts
+                        if text.get_text().startswith(("Democratic", "Republican", "DSA"))
+                    ),
+                    key=lambda box: box.y0,
+                )
 
         with tempfile.TemporaryDirectory() as temporary:
             directory = Path(temporary)
@@ -309,6 +342,26 @@ class ClaimTopicsTests(unittest.TestCase):
                 )
                 np.testing.assert_allclose(expanded.lines[2].get_ydata(), [0.08] * 3)
                 self.assertTrue(np.isnan(strict.lines[2].get_ydata()[0]))
+                end_labels = [
+                    text
+                    for text in expanded.texts
+                    if text.get_text().startswith(("Democratic", "Republican", "DSA"))
+                ]
+                self.assertEqual(len(end_labels), 3)
+                boxes = label_boxes["expanded/issues/health_time"]
+                self.assertTrue(all(a.y1 < b.y0 for a, b in zip(boxes, boxes[1:])))
+                self.assertTrue(
+                    any(
+                        text.get_text() == "Republican\n2.0% (2000-03)"
+                        for text in captured["expanded/issues/labor_time"].texts
+                    )
+                )
+                self.assertTrue(
+                    any(
+                        text.get_text() == "DSA\nNo observations"
+                        for text in captured["strict/issues/labor_time"].texts
+                    )
+                )
                 self.assertEqual(expanded.get_ylim(), strict.get_ylim())
                 self.assertEqual(expanded.get_ylim()[0], 0)
                 formatter = expanded.yaxis.get_major_formatter()
@@ -328,6 +381,73 @@ class ClaimTopicsTests(unittest.TestCase):
                 self.assertEqual(len(overall), 4)
                 for axis in overall.values():
                     np.testing.assert_allclose([bar.get_width() for bar in axis.patches], [0.5] * 3)
+
+    def test_piece_charts_bind_headlines_to_shares_and_preserve_panel_scales_and_gaps(self):
+        from PIL import Image
+
+        from dsa_analysis.national_claim_plot_style import save_figure
+
+        labels = {"labor": {"title": "Labor Rights and Unionization"}}
+        shares = [
+            {
+                "view": view,
+                "group": group,
+                "topic_id": "labor",
+                "share": 0.08 if group == "dsa" else 0.02,
+                "bundles": 1 if view == "strict" and group == "dsa" else 2,
+            }
+            for view in ("expanded", "strict")
+            for group in GROUPS
+        ]
+        periods = ("2000-2003", "2004-2007", "2008-2011")
+        temporal = [
+            {
+                **row,
+                "period": period,
+                "partial_period": False,
+                "share": ""
+                if row["group"] == "republican" and period == periods[-1]
+                else row["share"],
+            }
+            for row in shares
+            for period in periods
+        ]
+        captured = {}
+
+        def capture(fig, stem):
+            fig.canvas.draw()
+            renderer = fig.canvas.get_renderer()
+            width, height = fig.canvas.get_width_height()
+            for text in [*fig.texts, *(text for axis in fig.axes for text in axis.texts)]:
+                if text.get_text():
+                    box = text.get_window_extent(renderer)
+                    self.assertGreaterEqual(box.x0, 0, text.get_text())
+                    self.assertGreaterEqual(box.y0, 0, text.get_text())
+                    self.assertLessEqual(box.x1, width, text.get_text())
+                    self.assertLessEqual(box.y1, height, text.get_text())
+            captured[stem.parent.parent.name] = (fig.texts[1].get_text(), fig.axes)
+            save_figure(fig, stem)
+            with Image.open(stem.with_suffix(".png")) as image:
+                self.assertEqual(image.size, (2100, 1200))
+
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            write_rows(directory / "shares.csv", shares)
+            write_rows(directory / "temporal_shares.csv", temporal)
+            with patch("dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture):
+                plot_piece(directory, directory, labels, GROUPS)
+        headline, (overall, timeline) = captured["expanded"]
+        self.assertEqual(headline, "The DSA share is 4.0 times the Democratic share")
+        self.assertEqual(captured["strict"][0], "Overall claim shares range from 2.0% to 8.0%")
+        np.testing.assert_allclose([bar.get_width() for bar in overall.patches], [0.02, 0.02, 0.08])
+        np.testing.assert_allclose(
+            timeline.lines[1].get_ydata(), [0.02, 0.02, np.nan], equal_nan=True
+        )
+        self.assertEqual(overall.get_xlim(), timeline.get_ylim())
+        self.assertEqual(timeline.get_ylim(), captured["strict"][1][1].get_ylim())
+        self.assertTrue(
+            any(text.get_text() == "Republican\n2.0% (2004-07)" for text in timeline.texts)
+        )
 
     def test_ratios_use_equal_groups_not_pooled_counts_and_keep_fragile_rankings(self):
         rows = [row("a", "democratic")] * 100

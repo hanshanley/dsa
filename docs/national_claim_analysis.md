@@ -387,6 +387,24 @@ dimensions, text and values are unchanged. PNG originals use 200 DPI;
 SVG identifiers and metadata are deterministic. Both versions, all temporal
 evidence, actual claims and complete source texts enter the combined archive.
 
+Standalone issue cards use a fixed 1800 × 1100-pixel canvas (9 × 5.5 inches),
+wrapped titles and compact method notes. Overall comparisons use slim,
+zero-based bars with an aligned value column. Timelines label each group's last
+observed value beside the plot, rather than using headline-number blocks.
+Close labels are separated with thin leader lines to their unchanged data
+points. When the latest period is missing, the label names the earlier observed
+period; groups without observations are identified explicitly. Neither
+displaced labels nor missing periods alter the plotted values.
+
+For the piece, six selected policy subjects also have paired overall/time
+graphics on 2100 × 1200-pixel canvases (10.5 × 6 inches). These are editorial
+illustrations, not a ranking of the largest contrasts. Both panels and both
+views of an issue use the same zero-based percentage scale. Headlines use
+unsmoothed observed shares; a largest/smallest ratio is shown only when it is
+at least 1.5 and each side contributes at least two bundles. Otherwise the
+headline reports the observed share range. Display names shorten the reviewed
+labels without changing cluster membership, original labels or evidence.
+
 ### Claim extraction and full analysis
 
 Keep Gemma inference in its isolated MLX environment; the main project retains

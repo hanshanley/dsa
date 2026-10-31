@@ -178,6 +178,77 @@ def temporal_tables(
     }
 
 
+def draw_issue_timeline(
+    axis, series: dict[str, np.ndarray], period_labels: list[str], upper: float
+):
+    from matplotlib.ticker import MaxNLocator, PercentFormatter
+
+    from .national_claim_plot_style import COLORS
+    from .national_platform_kde import LABELS
+
+    endpoints = []
+    for index, (group, values) in enumerate(series.items()):
+        axis.plot(
+            range(len(period_labels)),
+            values,
+            marker=("o", "s", "D", "^")[index],
+            markersize=3,
+            linewidth=1.7,
+            color=COLORS[group],
+        )
+        observed = np.flatnonzero(np.isfinite(values))
+        if len(observed):
+            last = observed[-1]
+            detail = f"{values[last]:.1%}"
+            if last != len(period_labels) - 1:
+                detail += f" ({period_labels[last]})"
+            endpoints.append((values[last] / upper, group, detail, last == len(period_labels) - 1))
+        else:
+            endpoints.append((0.0, group, "No observations", False))
+    # Keep close-valued series labels readable without moving their data points.
+    endpoints.sort(key=lambda item: item[0])
+    positions = np.clip([item[0] for item in endpoints], 0.05, 0.95)
+    axis_height = axis.get_position().height * axis.figure.get_size_inches()[1]
+    heights = np.array([9 / 72 * (1 if item[3] else 2.5) / axis_height for item in endpoints])
+    for index in range(1, len(positions)):
+        gap = (heights[index - 1] + heights[index]) / 2 + 0.035
+        positions[index] = max(positions[index], positions[index - 1] + gap)
+    if positions[-1] + heights[-1] / 2 > 0.97:
+        positions -= positions[-1] + heights[-1] / 2 - 0.97
+    for position, (value_position, group, detail, current) in zip(positions, endpoints):
+        if current and abs(position - value_position) > 0.02:
+            axis.annotate(
+                "",
+                xy=(len(period_labels) - 1, value_position * upper),
+                xycoords="data",
+                xytext=(1.025, position),
+                textcoords="axes fraction",
+                arrowprops={"arrowstyle": "-", "color": "#AAA69E", "linewidth": 0.6},
+                annotation_clip=False,
+            )
+        separator = " " if current else "\n"
+        axis.text(
+            1.035,
+            position,
+            f"{LABELS[group]}{separator}{detail}",
+            transform=axis.transAxes,
+            va="center",
+            fontsize=9,
+            color=COLORS[group],
+            linespacing=1.5,
+        )
+    axis.set_xticks(range(len(period_labels)), period_labels, fontsize=8)
+    axis.tick_params(axis="y", labelsize=9, pad=8)
+    axis.tick_params(axis="x", pad=8)
+    axis.set_xlim(-0.15, len(period_labels) - 0.7)
+    axis.yaxis.set_major_formatter(PercentFormatter(1, decimals=1 if upper < 0.04 else 0))
+    axis.yaxis.set_major_locator(MaxNLocator(nbins=4, min_n_ticks=3, steps=[1, 2, 5, 10]))
+    axis.set_ylim(0, upper)
+    axis.grid(axis="y")
+    axis.set_axisbelow(True)
+    axis.spines["left"].set_visible(False)
+
+
 def plot_temporal(
     tables: dict[str, list[dict]],
     figures: Path,
@@ -188,10 +259,8 @@ def plot_temporal(
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    from matplotlib.ticker import MaxNLocator, PercentFormatter
 
-    from .national_claim_plot_style import COLORS, issue_figure, save_figure
-    from .national_platform_kde import LABELS
+    from .national_claim_plot_style import issue_figure, save_figure
 
     plt.rcParams.update(PLOT_STYLE)
     shares = tables["temporal_shares.csv"]
@@ -226,12 +295,11 @@ def plot_temporal(
             upper = max(0.01, np.ceil(maximum * 1.15 * 100) / 100)
             fig = issue_figure(
                 title(topic),
-                f"Within-period share of claims | {view.capitalize()} sources | "
-                f"Latest period: {periods[-1]}{'*' if periods[-1] in partial else ''}",
+                f"Share of claims over time | {view.capitalize()} sources",
             )
-            axis = fig.add_axes((0.08, 0.21, 0.86, 0.42))
-            for index, (group, x) in enumerate(zip(groups, np.linspace(0.08, 0.75, len(groups)))):
-                values = np.array(
+            axis = fig.add_axes((0.08, 0.27, 0.68, 0.42))
+            series = {
+                group: np.array(
                     [
                         float(lookup[group, topic, period])
                         if lookup[group, topic, period] != ""
@@ -239,54 +307,23 @@ def plot_temporal(
                         for period in periods
                     ]
                 )
-                fig.text(x, 0.755, LABELS[group], color=COLORS[group], fontsize=10, weight="bold")
-                fig.text(
-                    x,
-                    0.69,
-                    f"{values[-1]:.1%}" if np.isfinite(values[-1]) else "No data",
-                    fontsize=20,
-                    color=COLORS[group],
-                    weight="bold",
-                )
-                axis.plot(
-                    range(len(periods)),
-                    values,
-                    marker=("o", "s", "D", "^")[index],
-                    markersize=3.5,
-                    linewidth=2,
-                    color=COLORS[group],
-                )
-                if np.isfinite(values[-1]):
-                    axis.scatter(
-                        len(periods) - 1,
-                        values[-1],
-                        s=40,
-                        color=COLORS[group],
-                        edgecolors="white",
-                        linewidths=1,
-                        zorder=4,
-                    )
-            axis.set_xticks(range(len(periods)), period_labels, fontsize=9)
-            axis.set_xlim(-0.15, len(periods) - 0.7)
-            axis.yaxis.set_major_formatter(PercentFormatter(1, decimals=1 if upper < 0.04 else 0))
-            axis.yaxis.set_major_locator(MaxNLocator(nbins=4, min_n_ticks=3, steps=[1, 2, 5, 10]))
-            axis.set_ylim(0, upper)
-            axis.grid(axis="y")
-            axis.set_axisbelow(True)
-            axis.spines["left"].set_visible(False)
+                for group in groups
+            }
+            draw_issue_timeline(axis, series, period_labels, upper)
             fig.text(
                 0.08,
-                0.115,
-                "Observed four-year periods; missing documents leave gaps, not zero shares.",
-                fontsize=8.5,
+                0.13,
+                "Four-year periods. Gaps mean no observed documents; "
+                "labels show the last observation.",
+                fontsize=7.5,
                 color="#6B6B6B",
             )
             fig.text(
                 0.08,
-                0.075,
-                f"*Final period ends {DEFAULT_CUTOFF}. Equal document/bundle weights; "
-                "source composition varies.",
-                fontsize=8,
+                0.085,
+                f"*2024-26 ends {DEFAULT_CUTOFF}. "
+                "Source composition varies; not a measure of agreement.",
+                fontsize=7.5,
                 color="#6B6B6B",
             )
             save_figure(fig, destination / f"{topic}_time")

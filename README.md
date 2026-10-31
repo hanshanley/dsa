@@ -48,12 +48,19 @@ a representative sample or corpus-wide semantic certification. Earlier pilot
 and passage-based results are retained below as historical references.
 
 <p align="center">
-  <img src="figures/national_claims/full/topics/expanded/issues/topic-003_overall.png" width="900" alt="Individual issue comparison: labor rights and unionization shares for Democratic, Republican and DSA claims">
+  <img src="figures/national_claims/full/topics/expanded/piece/topic-003.png" width="1000" alt="Labor and unions: overall group comparison alongside the observed-period timeline">
 </p>
 
-*Example issue: labor rights and unionization. Each topic has its own overall
-comparison and time-series chart. Shares use equal document/fallback-bundle
-weights and describe language emphasis, not policy agreement.*
+*For the piece: labor and unions, with the overall comparison and timeline
+together. Shares use equal document/fallback-bundle weights and describe
+language emphasis, not policy agreement.*
+
+The article figure set covers **labor, taxes, public education, reproductive
+rights and gender-affirming care, healthcare, and Israel-Palestine**. These are
+selected illustrations, not a ranking of the strongest contrasts. Each graphic
+has a data-derived headline, paired overall/time panels on the same percentage
+scale, compact titles, and direct group labels. Missing periods stay gaps.
+The complete 24-topic supporting chart set remains available separately.
 
 ## Results and downloads
 
@@ -64,6 +71,7 @@ weights and describe language emphasis, not policy agreement.*
 | Relative topic emphasis | Each group versus equally weighted other groups, plus pairwise comparisons; all support warnings retained | [Ranked contrasts](data/analysis/national_claims/full/topics/contrasts.csv) |
 | Topics over time | Seven four-year periods from 2000 through the partial 2024–2026 period; fixed taxonomy and explicit evidence gaps | [Time charts](report/national_claim_analysis.md#topics-over-time) · [Period shares](data/analysis/national_claims/full/topics/temporal_shares.csv) · [Coverage](data/analysis/national_claims/full/topics/temporal_coverage.csv) |
 | Independently discovered period themes | 64 period-qualified topics; each fit uses only its own period's evidence | [Period-by-period analysis](report/national_claim_analysis.md#independently-discovered-topics-within-each-period) · [Period shares](data/analysis/national_claims/full/topics/evolution/shares.csv) · [Fit diagnostics](data/analysis/national_claims/full/topics/evolution/period_fits.json) · [Source examples](data/analysis/national_claims/full/topics/evolution/representatives.csv) |
+| Figures for the piece | Six selected policy subjects; overall and time comparison in one graphic; strict and expanded | [Expanded article figures](figures/national_claims/full/topics/expanded/piece/) · [Strict article figures](figures/national_claims/full/topics/strict/piece/) · [Website versions](figures/national_claims/full/themarginoferror/topics/expanded/piece/) |
 | Individual issue comparisons | One overall chart and one timeline per topic, comparing all three groups; strict and expanded views | [Expanded issue charts](figures/national_claims/full/topics/expanded/issues/) · [Strict issue charts](figures/national_claims/full/topics/strict/issues/) |
 | Publication-ready figures | Restrained house style and individual cards; PNG and SVG | [Substack versions](figures/national_claims/full/) · [The Margin of Error versions](figures/national_claims/full/themarginoferror/) |
 
@@ -111,7 +119,7 @@ accounts for **2.41%, 5.37% and 4.97%**. These are pooled 2000–2026 language
 shares, not annual estimates or support for the same policies. The linked shares
 and representative evidence show the denominators and underlying wording.
 
-![Healthcare: individual overall comparison](figures/national_claims/full/topics/expanded/issues/topic-018_overall.png)
+![Healthcare: overall comparison and timeline](figures/national_claims/full/topics/expanded/piece/topic-018.png)
 
 Individual issue charts show **absolute weighted shares**. Separately, positive
 log2 ratios in the contrast tables mean a larger share than the equally weighted other

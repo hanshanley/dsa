@@ -113,6 +113,18 @@ Largest adjacent observed-period changes on the **fixed pooled taxonomy**. These
 
 - **DSA:** U.S. Military Involvement and the War on Terror: -21.7 percentage points (2000-2003 → 2004-2007; 1 → 1 bundles); Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance: -13.3 percentage points (2008-2011 → 2012-2015; 1 → 1 bundles).
 
+#### Figures for the piece
+
+These six selected policy subjects pair the overall comparison with its timeline. Headlines are calculated from observed, unsmoothed shares; ratios require at least two contributing bundles on both sides. All groups remain visible, and both panels share a zero-based percentage scale. Short chart names are display labels, not new clusters or stance labels.
+
+| Issue | Combined overall and timeline |
+|---|---|
+| Labor and unions | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-003.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-003.svg) |
+| Taxes on income, wealth and corporations | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-011.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-011.svg) |
+| Public education | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-012.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-012.svg) |
+| Reproductive rights and gender-affirming care | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-013.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-013.svg) |
+| Healthcare | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-018.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-018.svg) |
+| Israel-Palestine | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-022.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-022.svg) |
 #### Individual issue comparisons
 
 Each standalone chart compares all organizations on one topic. Overall bars and observed-period lines are separate figures, suitable for individual embedding. Axes are shared across organizations and both views of the same topic; different issues can have different vertical scales. Missing evidence remains a gap. Actor and narrative topics retain their qualifications rather than being presented as coherent policy issues.
@@ -156,6 +168,18 @@ Largest adjacent observed-period changes on the **fixed pooled taxonomy**. These
 
 - **DSA:** Community and Economic Support for Vulnerable Populations: -7.0 percentage points (2020-2023 → 2024-2026; 1 → 2 bundles); DSA Identity and Socialist Organizing: +4.9 percentage points (2020-2023 → 2024-2026; 1 → 2 bundles).
 
+#### Figures for the piece
+
+These six selected policy subjects pair the overall comparison with its timeline. Headlines are calculated from observed, unsmoothed shares; ratios require at least two contributing bundles on both sides. All groups remain visible, and both panels share a zero-based percentage scale. Short chart names are display labels, not new clusters or stance labels.
+
+| Issue | Combined overall and timeline |
+|---|---|
+| Labor and unions | [PNG](../figures/national_claims/full/topics/strict/piece/topic-003.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-003.svg) |
+| Taxes on income, wealth and corporations | [PNG](../figures/national_claims/full/topics/strict/piece/topic-011.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-011.svg) |
+| Public education | [PNG](../figures/national_claims/full/topics/strict/piece/topic-012.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-012.svg) |
+| Reproductive rights and gender-affirming care | [PNG](../figures/national_claims/full/topics/strict/piece/topic-013.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-013.svg) |
+| Healthcare | [PNG](../figures/national_claims/full/topics/strict/piece/topic-018.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-018.svg) |
+| Israel-Palestine | [PNG](../figures/national_claims/full/topics/strict/piece/topic-022.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-022.svg) |
 #### Individual issue comparisons
 
 Each standalone chart compares all organizations on one topic. Overall bars and observed-period lines are separate figures, suitable for individual embedding. Axes are shared across organizations and both views of the same topic; different issues can have different vertical scales. Missing evidence remains a gap. Actor and narrative topics retain their qualifications rather than being presented as coherent policy issues.
