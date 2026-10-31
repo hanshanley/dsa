@@ -1,0 +1,141 @@
+{
+  "additional_context_only_exclusions": 15,
+  "additional_removed_previously_eligible_claims": 14,
+  "baseline_claims": 26483,
+  "baseline_files": [
+    {
+      "path": "analysis_claims.csv",
+      "sha256": "d8e12d1bf1e1b1b04e32dbc2dd8a3056a3cfc7641d904500f2c7138226094944"
+    },
+    {
+      "path": "embeddings.npy",
+      "sha256": "d70b5cdf57126a0449cea105abbd4e1831e254efc9cee727d6d72b8be5350671"
+    },
+    {
+      "path": "embedding_manifest.json",
+      "sha256": "96862f6f36e4ade238648d72355c34b7d007808012c6224115bfa4bd6add6092"
+    },
+    {
+      "path": "topic_similarities.npy",
+      "sha256": "249d74b2abd217105564b0d01cc830438f275c4a754994e7a619d7405373b1f8"
+    },
+    {
+      "path": "topic_manifest.json",
+      "sha256": "9a1bce070b5861e8a3f1a3626ddfba988d1f798ad15d09ea76cd0da799cbc73d"
+    },
+    {
+      "path": "claim_token_lengths.csv",
+      "sha256": "b7b9a696344c60f38349c57b82c1ab285002ca2ed6a3f3928b6679c8f19f33bc"
+    },
+    {
+      "path": "claim_tokenization_manifest.json",
+      "sha256": "13cc02085204b6b5be94fc223ce481ddd0bb0a9ba9403bb74bd530729fcd94d1"
+    }
+  ],
+  "baseline_revision": "e50513155d2b007e4f1d0aa109216ddc72d519a9",
+  "cap_cache_reused": true,
+  "citation_only_replacements": [
+    {
+      "claim_id": "republican-2012-normalized-064968664904-repair-4e50dae99d4f-001",
+      "original_claim_id": "republican-2012-normalized-064968664904-008"
+    },
+    {
+      "claim_id": "republican-2012-normalized-064968664904-repair-4e50dae99d4f-002",
+      "original_claim_id": "republican-2012-normalized-064968664904-009"
+    },
+    {
+      "claim_id": "republican-2012-normalized-064968664904-repair-4e50dae99d4f-003",
+      "original_claim_id": "republican-2012-normalized-064968664904-010"
+    },
+    {
+      "claim_id": "republican-2012-normalized-064968664904-repair-4e50dae99d4f-004",
+      "original_claim_id": "republican-2012-normalized-064968664904-011"
+    },
+    {
+      "claim_id": "republican-2012-normalized-064968664904-repair-4e50dae99d4f-005",
+      "original_claim_id": "republican-2012-normalized-064968664904-012"
+    },
+    {
+      "claim_id": "republican-2012-normalized-064968664904-repair-4e50dae99d4f-006",
+      "original_claim_id": "republican-2012-normalized-064968664904-013"
+    }
+  ],
+  "claims_by_group": {
+    "democratic": 11846,
+    "dsa": 5153,
+    "republican": 9242
+  },
+  "cleaned_claims": 26241,
+  "encoder_cache_reused": true,
+  "method": "Exact claim-ID/text-verified cache subset; six citation-only replacements reuse identical text from the same source block, document, group and bundle. Seven restored original occurrences reuse identical text from their excluded duplicate anchors within the same document, group and bundle. Original claims, evidence, model replies and history are unchanged.",
+  "restored_supported_duplicate_occurrences": [
+    {
+      "claim_id": "republican-2024-normalized-3cf23a1200a0-002",
+      "previous_duplicate_anchor": "republican-2024-normalized-007a594371a0-003"
+    },
+    {
+      "claim_id": "republican-2024-normalized-3cf23a1200a0-003",
+      "previous_duplicate_anchor": "republican-2024-normalized-007a594371a0-004"
+    },
+    {
+      "claim_id": "republican-2024-normalized-3cf23a1200a0-004",
+      "previous_duplicate_anchor": "republican-2024-normalized-007a594371a0-005"
+    },
+    {
+      "claim_id": "republican-2024-normalized-3cf23a1200a0-006",
+      "previous_duplicate_anchor": "republican-2024-normalized-007a594371a0-007"
+    },
+    {
+      "claim_id": "republican-2024-normalized-3cf23a1200a0-007",
+      "previous_duplicate_anchor": "republican-2024-normalized-007a594371a0-008"
+    },
+    {
+      "claim_id": "republican-2024-normalized-3cf23a1200a0-008",
+      "previous_duplicate_anchor": "republican-2024-normalized-007a594371a0-009"
+    },
+    {
+      "claim_id": "republican-2024-normalized-3cf23a1200a0-011",
+      "previous_duplicate_anchor": "republican-2024-normalized-007a594371a0-002"
+    }
+  ],
+  "schema_version": 1,
+  "subset_files": [
+    {
+      "path": "analysis_claims.csv",
+      "sha256": "2093e56ff24f875585028da276d65a8e9f528ab7051c094ba9ce57f9aa70a755"
+    },
+    {
+      "path": "embeddings.npy",
+      "sha256": "d03c009c0b52cae9e4800fb80a991050aec7642547e197dace5042467bd849a4"
+    },
+    {
+      "path": "embedding_manifest.json",
+      "sha256": "f005148682d4a68a0a75cd29062b9b626af5f862992ff6a49a3f47228ddce828"
+    },
+    {
+      "path": "topic_similarities.npy",
+      "sha256": "4f4dbddf7d896b8ef1008e4732be5a450a79b91ad17ce27342cdfe42414f55b3"
+    },
+    {
+      "path": "topic_manifest.json",
+      "sha256": "2022b8b74e149d0c89e7052d8fda513fe3c2fad2f59758de92cf3ff9a038b786"
+    },
+    {
+      "path": "claim_token_lengths.csv",
+      "sha256": "fa6517a705b4e514b7ad700e29256d3ba04ff312d33433418aee1806e5b94477"
+    },
+    {
+      "path": "claim_tokenization_manifest.json",
+      "sha256": "b7ed95d4445e24598331023cc228c187218824e3dd450dd5cd233254b2944ccb"
+    }
+  ],
+  "targeted_chunk_exclusions": 235,
+  "tokenization": {
+    "limit": 256,
+    "maximum_tokens": {
+      "gte": 159,
+      "topics": 145
+    },
+    "truncated_claims": 0
+  }
+}

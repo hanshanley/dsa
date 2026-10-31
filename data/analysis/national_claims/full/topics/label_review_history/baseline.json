@@ -1,0 +1,766 @@
+{
+  "fit_manifest_sha256": "4d08e3bc67c0b56e5678f89aa48f0674dc22609bdb160868192e9b9f4bf719e5",
+  "qualification": "Every bounded representative packet was read, not all 26,483 claims. Original local-Gemma responses are preserved. Revisions identify misleading scope, omitted opposing examples, actor clusters, and one invalid claim ID. This is not independent human gold, whole-cluster validation, or fact-checking.",
+  "reviewer": "assistant_source_bound_evidence_review",
+  "topics": [
+    {
+      "evidence_packet_sha256": "2c2c25d79625d5be7c29197d1bcf03bbcb1375580ea8a7f35d62f4ffadef5383",
+      "label": {
+        "caveat": "A broad investment-and-development cluster, not exclusively an energy topic. Shared subject matter does not imply a shared policy stance.",
+        "summary": "Claims concern investment, energy production, infrastructure, and economic development. Democratic examples emphasize clean energy and public investment; Republican examples include reducing fossil-fuel restrictions and technological approaches to petroleum dependence. A DSA example calls for democratic economic restructuring. Other examples address rural investment and affordable housing.",
+        "supporting_claim_ids": [
+          "democratic-2024-normalized-92fa6cad93aa-003",
+          "republican-2024-normalized-007a594371a0-012",
+          "dsa-2009-priorities-normalized-69ef366c0cec-004"
+        ],
+        "title": "Energy, Infrastructure, and Economic Development"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "The original energy-only title omitted infrastructure and general development.",
+      "reviewed_claim_ids": [
+        "democratic-2024-normalized-92fa6cad93aa-003",
+        "dsa-2009-priorities-normalized-69ef366c0cec-004",
+        "republican-2024-normalized-007a594371a0-012",
+        "democratic-2020-normalized-e2e95c8e92fd-001",
+        "democratic-2024-normalized-acb049933b3f-012",
+        "democratic-2020-normalized-aab0c6ab7f9f-008",
+        "democratic-2016-normalized-355accb7d3ef-006",
+        "democratic-2016-normalized-755f6fab8c61-006",
+        "republican-2024-normalized-048e2be2d61f-011",
+        "democratic-2008-normalized-3b4380265be8-006",
+        "republican-2008-normalized-dd4b307d1b57-006",
+        "democratic-2008-normalized-aece53525f28-repair-6b93c1abe4b1-009"
+      ],
+      "source_record_sha256": "51547941a0136f6c57fd0c57e61d38223278a73a9020ed009a5c88877cc3de38",
+      "topic_id": "topic-001"
+    },
+    {
+      "evidence_packet_sha256": "3950d4a0d1d4cacf38e1c2915a91d71fba7258bebde3cfc1d0ad5306894bcd25",
+      "label": {
+        "caveat": "",
+        "summary": "Multiple groups express commitment to supporting communities and vulnerable populations through increased resources and programs. This includes investment in low-income communities, rural areas, and communities of color, as well as support for foster care and adoptive families. Claims also address the need to preserve programs benefiting the working poor and improve infrastructure.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-5e55d1004289-004",
+          "dsa-2012-fiscal-normalized-2b868cee0576-005"
+        ],
+        "title": "Community and Economic Support for Vulnerable Populations"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2024-normalized-51d7cbe64123-005",
+        "dsa-2021-adopted-normalized-e66dc1af24d6-005",
+        "republican-2008-normalized-fd4bbde75007-008",
+        "republican-2004-normalized-8eb776d9223a-009",
+        "republican-2000-normalized-76e7e2418f31-008",
+        "democratic-2016-normalized-a86063b3af32-002",
+        "democratic-2016-normalized-a9bcc4d230c7-011",
+        "dsa-2012-fiscal-normalized-2b868cee0576-005",
+        "democratic-2020-normalized-5e55d1004289-004",
+        "republican-2008-normalized-8aa7aa1bad1e-012",
+        "democratic-2020-normalized-562fcd433911-007",
+        "democratic-2008-normalized-9fc71187ff8d-007"
+      ],
+      "source_record_sha256": "f0494f1719c81941d802aba12b5a2ccc2b8bbd96379823f20c3f3bb4596420af",
+      "topic_id": "topic-002"
+    },
+    {
+      "evidence_packet_sha256": "40143d888029763f6baf6a3c63e379a37ad73610d7fb98bdca6c0b5e06b50fb5",
+      "label": {
+        "caveat": "",
+        "summary": "These claims concern policies related to labor rights, specifically the ability of workers to organize and collectively bargain. Positions vary, with some advocating for expanded rights for all workers, including those currently unprotected, and others supporting 'right-to-work' laws. Multiple groups express support for strengthening unions and protecting workers' rights to strike.",
+        "supporting_claim_ids": [
+          "democratic-2012-normalized-18cc338046ac-010",
+          "republican-2012-normalized-9b00c73c5686-008"
+        ],
+        "title": "Labor Rights and Unionization"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2012-normalized-18cc338046ac-010",
+        "dsa-2021-adopted-normalized-6b522fa83bc9-008",
+        "republican-2012-normalized-9b00c73c5686-008",
+        "democratic-2020-normalized-4521936cc397-001",
+        "democratic-2012-normalized-c23a3db91fb4-003",
+        "democratic-2020-normalized-c00aaa88c694-007",
+        "democratic-2008-normalized-aece53525f28-008",
+        "democratic-2016-normalized-7ba2e6e4e2f2-002",
+        "dsa-2024-program-normalized-f23d4047d972-002",
+        "democratic-2024-normalized-8af3eb44deaa-005",
+        "dsa-2021-adopted-normalized-8861a9fa1bd2-009",
+        "democratic-2004-normalized-7fe56cf462ee-010"
+      ],
+      "source_record_sha256": "951b356ad472d9bdb9c0b430391162040684edd104c680843bc935160f1481da",
+      "topic_id": "topic-003"
+    },
+    {
+      "evidence_packet_sha256": "9dc2d1310ed968fec3287f8850a0a37b0e87e1c00674c229e38383b50c55f6df",
+      "label": {
+        "caveat": "Includes retrospective records and asserted economic relationships, not only policy proposals. The extracted causal assertions are not fact-checked here.",
+        "summary": "Multiple claims address economic growth as a central goal, with some linking it to infrastructure investment and job creation. Both Democratic and Republican claims emphasize economic growth as a means to improve living standards and reduce poverty, though they differ on the methods to achieve it. Democrats specifically highlight infrastructure and clean energy as drivers of growth, while Republicans focus on deregulation and economic freedom.",
+        "supporting_claim_ids": [
+          "democratic-2024-normalized-484cf745805e-012",
+          "republican-2004-normalized-d0360dc943ed-012"
+        ],
+        "title": "Economic Growth and Development Narratives"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "Distinguish economic narratives from the adjacent investment-policy cluster.",
+      "reviewed_claim_ids": [
+        "democratic-2024-normalized-484cf745805e-012",
+        "dsa-2009-priorities-normalized-e439cbeb16b4-003",
+        "republican-2000-normalized-79e5ffd6ad69-015",
+        "democratic-2012-normalized-952aa542eb75-007",
+        "republican-2008-normalized-62e53c9c4a9e-005",
+        "democratic-2012-normalized-952aa542eb75-006",
+        "democratic-2016-normalized-0db34fffef9d-003",
+        "democratic-2024-normalized-3f92cb29beb8-004",
+        "republican-2004-normalized-d0360dc943ed-012",
+        "democratic-2008-normalized-0db7badf177c-009",
+        "democratic-2000-normalized-40f95e67a678-005",
+        "republican-2008-normalized-d1ed35d0f511-005"
+      ],
+      "source_record_sha256": "37021811300e31285f514a25f64908259b88f8730835ac1a41c885931a31fbb9",
+      "topic_id": "topic-004"
+    },
+    {
+      "evidence_packet_sha256": "7356b453daadce7dd2df49285bd3e032be39660e1e7daca578d4c09ebdb3d16a",
+      "label": {
+        "caveat": "A broad principles-and-rights cluster. The Republican account of pre-existing rights is not a constitutional philosophy established for every group.",
+        "summary": "Claims invoke dignity, rights, freedom, self-determination, and legitimate government. Examples range from Democratic commitments to civil and cultural rights and DSA support for oppressed peoples' self-determination to Republican statements about inherent rights and consent of the governed.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-33dbf90bb2e3-001",
+          "dsa-2021-adopted-normalized-3a5ba8ba26bb-001",
+          "republican-2008-normalized-92a9f5c7906a-006"
+        ],
+        "title": "Rights, Freedoms, and Governmental Legitimacy"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "The original summary overgeneralized one group's philosophy to other groups.",
+      "reviewed_claim_ids": [
+        "democratic-2012-normalized-48ae95fce867-011",
+        "dsa-2021-adopted-normalized-3a5ba8ba26bb-001",
+        "republican-2004-normalized-81ee1b93e20b-013",
+        "democratic-2020-normalized-33dbf90bb2e3-001",
+        "democratic-2008-normalized-e9dff83589f8-014",
+        "democratic-2020-normalized-77dee5aebf82-002",
+        "democratic-2008-normalized-c45994410b23-006",
+        "democratic-2024-normalized-1e0b4a5c659c-009",
+        "democratic-2000-normalized-93fadee8da59-006",
+        "republican-2004-normalized-8d20cde354c0-002",
+        "republican-2012-normalized-a59fcef5e8a6-008",
+        "republican-2008-normalized-92a9f5c7906a-006"
+      ],
+      "source_record_sha256": "6e1ff17f6998a29f011a2bb143561bdf2ee1873721266e4e52143149ce72c465",
+      "topic_id": "topic-005"
+    },
+    {
+      "evidence_packet_sha256": "e69259a895ca0d281bd5057a00de3a8cc0d4ddb87f6567b8a64c4568edb5d2c7",
+      "label": {
+        "caveat": "Political narrative and national identity overlap with foreign-policy language.",
+        "summary": "Claims describe America's international role, national strength, ideals, competitiveness, and relations with allies. Democratic and Republican examples often portray U.S. leadership positively; a DSA example criticizes the scale of military spending. These are claims about national identity and power, not a single agreed foreign-policy program.",
+        "supporting_claim_ids": [
+          "democratic-2024-normalized-306753327989-006",
+          "republican-2012-normalized-7815bee1d725-005",
+          "dsa-2007-economic-justice-normalized-53bb7ce424c7-006"
+        ],
+        "title": "American Leadership and National-Power Narratives"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "Identify narrative language and retain the dissenting military-spending example.",
+      "reviewed_claim_ids": [
+        "democratic-2024-normalized-306753327989-006",
+        "dsa-2007-economic-justice-normalized-53bb7ce424c7-006",
+        "republican-2012-normalized-7815bee1d725-005",
+        "democratic-2016-normalized-37111ca02619-017",
+        "democratic-2012-normalized-db94890967e2-008",
+        "democratic-2008-normalized-9444e34d73ce-004",
+        "republican-2004-normalized-a269dca8c6eb-001",
+        "republican-2008-normalized-b2da0054c741-007",
+        "republican-2004-normalized-76b5fb08ee36-004",
+        "republican-2012-normalized-22c5dd831d0a-004",
+        "republican-2016-normalized-28a344099db9-008",
+        "democratic-2016-normalized-667eb0d7cebb-014"
+      ],
+      "source_record_sha256": "889a19e345a06b8c34909f50b93cc7e93196df908753fe87285b2a773160964f",
+      "topic_id": "topic-006"
+    },
+    {
+      "evidence_packet_sha256": "ee09fdfca58b0ff0125f6b5207773ef5eb6aa5b79f4dc5b7dd1a51cd78cc21a8",
+      "label": {
+        "caveat": "An actor-centered cluster spanning policy subjects; its share is not the prevalence of one coherent economic policy or evidence of agreement.",
+        "summary": "Claims explicitly describe the Democratic Party or Democrats across employment, prosperity, education, social insurance, and national purpose. Most are Democratic self-descriptions, alongside DSA commentary about impeachment and a Republican criticism of Democratic taxation.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-7ba2e6e4e2f2-001",
+          "dsa-statement-4192-normalized-0081d76339ad-002",
+          "republican-2004-normalized-80e19a4fcd7c-001"
+        ],
+        "title": "Democratic Party Identity and Partisan Descriptions"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "The original prosperity title obscured party-identity and external descriptions.",
+      "reviewed_claim_ids": [
+        "democratic-2016-normalized-9b1d0772b2c6-002",
+        "dsa-statement-4192-normalized-0081d76339ad-002",
+        "republican-2004-normalized-80e19a4fcd7c-001",
+        "democratic-2016-normalized-7ba2e6e4e2f2-001",
+        "democratic-2004-normalized-17d0cec3e717-004",
+        "democratic-2024-normalized-31862ca12465-001",
+        "democratic-2012-normalized-c23a3db91fb4-008",
+        "democratic-2020-normalized-8849500b0dff-001",
+        "democratic-2004-normalized-17d0cec3e717-019",
+        "democratic-2012-normalized-da1d6566f5d3-002",
+        "democratic-2020-normalized-b9adf71c22c7-002",
+        "democratic-2000-normalized-0c700669dee2-004"
+      ],
+      "source_record_sha256": "259eca402c9caf0bd6ae69e58c2c4fc25daa70b638f0ede71ce0088b8816d2b2",
+      "topic_id": "topic-007"
+    },
+    {
+      "evidence_packet_sha256": "8e16abd08c96aec9baf91deed98f8de7991dfa37a6a8edc94a64ea360b45ba13",
+      "label": {
+        "caveat": "mixed-subtopic/stance",
+        "summary": "These claims concern U.S. immigration policy, with positions ranging from comprehensive reform and paths to citizenship to enforcing existing laws and screening immigrants. A key point of divergence is the issue of immigration detention, with some groups advocating for its complete end while others do not explicitly address it. Positions also vary on the process of immigration itself, with some advocating for faster and more efficient processes.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-a06765db4456-008",
+          "republican-2016-normalized-fbf2085e7ad8-009",
+          "dsa-2021-adopted-normalized-989abebd4619-007"
+        ],
+        "title": "Immigration Policy: Reform, Enforcement, and Detention"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2016-normalized-a06765db4456-008",
+        "dsa-2021-adopted-normalized-989abebd4619-007",
+        "republican-2016-normalized-fbf2085e7ad8-009",
+        "republican-2016-normalized-fbf2085e7ad8-010",
+        "republican-2004-normalized-4c0905a0028b-003",
+        "republican-2004-normalized-a736627d9796-003",
+        "dsa-statement-384-normalized-4db8b1a5732c-005",
+        "democratic-2020-normalized-0b9b0d310f69-006",
+        "dsa-2024-program-normalized-9d88be1f8868-015",
+        "democratic-2020-normalized-c822277bd644-004",
+        "dsa-2021-adopted-normalized-bf23fd771fc3-002",
+        "dsa-statement-366-normalized-bd9e79bce6b7-012"
+      ],
+      "source_record_sha256": "27a353c8952de94477e3bcc7aae17c80b572d6ffc032af0ecbc9dd292a7628e1",
+      "topic_id": "topic-008"
+    },
+    {
+      "evidence_packet_sha256": "5db99fbbb81bb22f5bec9ecfa1cb4562dace526a07f82af8db897b7e92127c42",
+      "label": {
+        "caveat": "Includes opposing approaches to election rules and an adjacent civil-rights claim about profiling; not every example advocates expanding access.",
+        "summary": "Claims address access to voting, representation, and election rules. Democratic and DSA examples support restoring voting protections and opposing suppression; DSA examples also address incarcerated people and criminal convictions. A Republican example supports state photo-identification requirements.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-4292f2af0201-001",
+          "dsa-2026-program-normalized-d326f1020c4f-002",
+          "republican-2008-normalized-42539f6998d6-010"
+        ],
+        "title": "Voting Rights, Election Rules, and Representation"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "Retain the voter-identification stance omitted from the original summary.",
+      "reviewed_claim_ids": [
+        "democratic-2016-normalized-4292f2af0201-001",
+        "dsa-2026-program-normalized-d326f1020c4f-005",
+        "republican-2008-normalized-42539f6998d6-010",
+        "dsa-2026-program-normalized-d326f1020c4f-002",
+        "democratic-2016-normalized-f5fefdce7197-004",
+        "dsa-statement-384-normalized-4db8b1a5732c-006",
+        "dsa-2003-electoral-normalized-6d2b6566d517-011",
+        "dsa-2021-adopted-normalized-e91b86120260-018",
+        "dsa-2003-electoral-normalized-6d2b6566d517-012",
+        "dsa-2021-adopted-normalized-5746209c69bc-002",
+        "democratic-2020-normalized-fcd461184fac-008",
+        "democratic-2020-normalized-11c6d091feaf-010"
+      ],
+      "source_record_sha256": "709c77e26a19b1421a15761364595d443ad0ba3043b0eec861ac07b967c79498",
+      "topic_id": "topic-009"
+    },
+    {
+      "evidence_packet_sha256": "2830a37b384e53784684be17685b6cf88bebc949e1aa555fab6ea167400ae8d9",
+      "label": {
+        "caveat": "A presidential-actor cluster spanning domestic and foreign policy, not a coherent international-alliances topic or a shared administration position.",
+        "summary": "Claims name presidents or administrations when describing records, campaign promises, or criticism. Examples span Biden's infrastructure and gun legislation, Obama's alliances and student work-study, Bush's military policy, and Gore's education promises. Other examples criticize Biden's drilling, military spending, or border policy.",
+        "supporting_claim_ids": [
+          "democratic-2024-normalized-9be95fb035db-008",
+          "dsa-2024-program-normalized-43f2e9413efb-003",
+          "republican-2004-normalized-a2113b2e5302-001"
+        ],
+        "title": "Presidential Records, Promises, and Critiques"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "The original foreign-policy summary omitted domestic claims and actor structure.",
+      "reviewed_claim_ids": [
+        "democratic-2024-normalized-9be95fb035db-008",
+        "dsa-2024-program-normalized-43f2e9413efb-003",
+        "republican-2004-normalized-a2113b2e5302-001",
+        "democratic-2024-normalized-a7600837d3e2-007",
+        "democratic-2008-normalized-2f22bd733321-010",
+        "democratic-2012-normalized-ec12f322f1a7-007",
+        "democratic-2012-normalized-1567641ad953-006",
+        "republican-2004-normalized-bb8654a75b0d-001",
+        "democratic-2008-normalized-2f22bd733321-011",
+        "republican-2024-normalized-51f7b85d22c5-013",
+        "democratic-2000-normalized-fadbed899274-006",
+        "republican-2000-normalized-f7d97bfd0c6d-010"
+      ],
+      "source_record_sha256": "e0234f75381752eeabd873159dbe8d04c8c45253e1ccb11e466f269023eadd15",
+      "topic_id": "topic-010"
+    },
+    {
+      "evidence_packet_sha256": "c4ce822bf6ff00909c2aec29f2c8539eadf991094463869ddaa0a454162dc2fa",
+      "label": {
+        "caveat": "",
+        "summary": "These claims concern policies regarding taxation, with a focus on income, wealth, and corporations. Positions vary from lowering taxes to incentivize saving and investment, to raising taxes on corporations and the wealthy, and expanding tax benefits for working families. There is also support for making the tax code fairer for the middle class.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-d9a1dc68d808-007",
+          "republican-2016-normalized-98c6d92cf7ef-001",
+          "dsa-2021-adopted-normalized-7ace82695f5d-019"
+        ],
+        "title": "Taxation of Income, Wealth, and Corporations"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2016-normalized-1300e37ca20b-001",
+        "dsa-2021-adopted-normalized-7ace82695f5d-019",
+        "republican-2012-normalized-cf8e70a905aa-003",
+        "republican-2012-normalized-f95e92c5e588-006",
+        "republican-2008-normalized-903fa1c9b13d-010",
+        "dsa-2021-adopted-normalized-918420373a3a-004",
+        "republican-2016-normalized-98c6d92cf7ef-001",
+        "democratic-2024-normalized-a56d1bbc115f-010",
+        "democratic-2020-normalized-d9a1dc68d808-007",
+        "dsa-2024-program-normalized-f23d4047d972-006",
+        "democratic-2020-normalized-5e55d1004289-008",
+        "democratic-2024-normalized-a56d1bbc115f-003"
+      ],
+      "source_record_sha256": "d6b5deb4f5096f46984dc185dfcb4e332b63e57cd516e6c19ebf74610a1670fa",
+      "topic_id": "topic-011"
+    },
+    {
+      "evidence_packet_sha256": "e3cfd2f00b899ad025084b2fab2fd6f9ffacd4082ee3ac7b36ca27824d61efd1",
+      "label": {
+        "caveat": "Mixed stances on school choice and accountability approaches are present.",
+        "summary": "These claims concern policies related to public education, including access to quality schools and funding for all students. There is support for various school options, from traditional public schools to charter and magnet schools, alongside commitments to raising achievement levels and closing achievement gaps. Claims also address accountability measures and approaches to school discipline.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-3e1d1d365c73-005",
+          "democratic-2016-normalized-45d35ed14449-011",
+          "dsa-2026-program-normalized-3ba469ba4e69-005"
+        ],
+        "title": "Public Education: Access, Standards, and Accountability"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2000-normalized-f946cf8e17d5-007",
+        "dsa-2026-program-normalized-3ba469ba4e69-005",
+        "republican-2008-normalized-88e1cfdc81cd-012",
+        "democratic-2016-normalized-45d35ed14449-012",
+        "democratic-2000-normalized-68dc8fee2e45-002",
+        "democratic-2008-normalized-4794e91f1cfe-008",
+        "dsa-2007-economic-justice-normalized-500c699fb1db-014",
+        "republican-2024-normalized-631b8e76912c-001",
+        "democratic-2024-normalized-0bc5902e5d0e-005",
+        "democratic-2020-normalized-3e1d1d365c73-005",
+        "democratic-2016-normalized-45d35ed14449-011",
+        "dsa-2021-adopted-normalized-6c02b493f903-009"
+      ],
+      "source_record_sha256": "3284c22c06ded18bd4f400f970df1cb7bf572518967eac3f099939970a66b8e9",
+      "topic_id": "topic-012"
+    },
+    {
+      "evidence_packet_sha256": "a260d84c7a27be64ef0b096328e6ca879f1432ed9aa537b75ef9a6408e103969",
+      "label": {
+        "caveat": "Shared health-and-rights subject matter includes opposing abortion positions and related claims about pregnancy discrimination and violence against women.",
+        "summary": "Claims concern reproductive rights, abortion access or restrictions, gender-affirming care, and related discrimination. Democratic and DSA examples support access and oppose restrictions, while a Republican example supports a ban on sex-selective abortions.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-c3e3058c15da-004",
+          "dsa-2021-adopted-normalized-0a25e1af4692-005",
+          "republican-2012-normalized-19a1514122c4-004"
+        ],
+        "title": "Reproductive Rights and Gender-Affirming Care"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "Describe the specific restriction accurately, not as an abortion procedure.",
+      "reviewed_claim_ids": [
+        "democratic-2020-normalized-c3e3058c15da-004",
+        "dsa-2021-adopted-normalized-0a25e1af4692-001",
+        "republican-2012-normalized-19a1514122c4-004",
+        "democratic-2020-normalized-c28dad59ba3f-009",
+        "democratic-2024-normalized-30cecb1c1c2f-011",
+        "dsa-2024-program-normalized-b789b4710c28-repair-1a7d74b0c436-002",
+        "democratic-2012-normalized-3760905b0bc6-007",
+        "democratic-2024-normalized-9fb427e7c407-003",
+        "democratic-2008-normalized-2d53ea9068c0-005",
+        "democratic-2008-normalized-01b3baa97bcb-018",
+        "dsa-2021-adopted-normalized-0a25e1af4692-005",
+        "dsa-2024-program-normalized-b789b4710c28-repair-1a7d74b0c436-003"
+      ],
+      "source_record_sha256": "4d7870225fc32e2536124fad55dd28f3e23961da89fb8a037c693564667e0c64",
+      "topic_id": "topic-013"
+    },
+    {
+      "evidence_packet_sha256": "fc9e4fe3063d86d30c774d7aafa487a3cd2f143733c988b223efe315f43657a2",
+      "label": {
+        "caveat": "",
+        "summary": "Multiple groups express commitment to addressing global threats through international cooperation and multilateral efforts. This includes strengthening alliances, responding to humanitarian crises, and working through organizations like the United Nations. There is also stated support for demilitarization and reducing reliance on nuclear weapons.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-cba8bb3f1bb4-010",
+          "dsa-2021-adopted-normalized-bf23fd771fc3-001"
+        ],
+        "title": "International Security and Cooperation Strategies"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2016-normalized-cba8bb3f1bb4-010",
+        "dsa-2021-adopted-normalized-bf23fd771fc3-001",
+        "republican-2000-normalized-92ef81be6519-006",
+        "democratic-2012-normalized-4811ef89e242-012",
+        "democratic-2008-normalized-793b790195aa-002",
+        "democratic-2008-normalized-315e0437eb1c-001",
+        "democratic-2016-normalized-238f5c974856-010",
+        "democratic-2012-normalized-b76da717e9d1-001",
+        "democratic-2020-normalized-8ee0debcb266-004",
+        "democratic-2020-normalized-5aac5456948b-008",
+        "dsa-statement-377-normalized-9e74d19c9f2d-007",
+        "dsa-2021-adopted-normalized-7a4fcef26ad9-008"
+      ],
+      "source_record_sha256": "bd0318f102c0aff305604a8e1dc89063a49ce876f854fff2d6caaf803b2d11d8",
+      "topic_id": "topic-014"
+    },
+    {
+      "evidence_packet_sha256": "1a176369416439c27c3099285a35dc46637559b3bbe6b1f9cfd08a38bde55c3a",
+      "label": {
+        "caveat": "Mixed stances on the war's justification and consequences are present.",
+        "summary": "Claims address ongoing U.S. military operations and the perceived threats of terrorism and weapons proliferation. Multiple claims reference the war in Iraq and its impact on U.S. forces, including overextension and casualties, while others acknowledge the broader 'War on Terror' and evolving threats. The claims also note the human cost of these conflicts.",
+        "supporting_claim_ids": [
+          "democratic-2012-normalized-0012a775903a-005",
+          "republican-2004-normalized-001ec5f5792c-002"
+        ],
+        "title": "U.S. Military Involvement and the War on Terror"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2012-normalized-0012a775903a-005",
+        "dsa-2001-convention-priorities-normalized-ef8a3eb37787-006",
+        "republican-2004-normalized-001ec5f5792c-002",
+        "republican-2004-normalized-bb8654a75b0d-008",
+        "democratic-2012-normalized-13e519c73835-005",
+        "dsa-2003-iraq-normalized-aeabf36dcf1a-005",
+        "democratic-2004-normalized-eb1979bf3bc4-006",
+        "republican-2000-normalized-7247b1f63c2c-009",
+        "democratic-2004-normalized-f735ec2b6129-001",
+        "democratic-2008-normalized-1ebff02cce7f-009",
+        "republican-2000-normalized-f21f2ecaf855-001",
+        "dsa-statement-4386-normalized-89aab4241a6d-008"
+      ],
+      "source_record_sha256": "97678e1c380616901722eb128dea753b8c5e4e4c869970924249e7e9d0399bf2",
+      "topic_id": "topic-015"
+    },
+    {
+      "evidence_packet_sha256": "d6dab85ab95c426e145e5c94b703d8e7612ea86d73a69eb353221cc54ceb4709",
+      "label": {
+        "caveat": "A mixed opposition-and-authority cluster, not one sovereignty policy. Domestic rights and social-program disputes coexist with international issues.",
+        "summary": "Claims reject or criticize policies, administrations, or governing authority across several subjects. Examples oppose disenfranchisement, asserted presidential powers, international emissions agreements, U.N. Agenda 21, police training exchanges, or proposed Medicaid and SNAP changes.",
+        "supporting_claim_ids": [
+          "democratic-2012-normalized-fef136903755-006",
+          "dsa-2021-adopted-normalized-989abebd4619-012",
+          "republican-2016-normalized-689538531846-007"
+        ],
+        "title": "Opposition to Policies and Governing Authorities"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "The original sovereignty title misrepresented a broad opposition-language cluster.",
+      "reviewed_claim_ids": [
+        "democratic-2012-normalized-fef136903755-006",
+        "dsa-2021-adopted-normalized-989abebd4619-012",
+        "republican-2008-normalized-44c3a0e30932-007",
+        "democratic-2008-normalized-636e039420f7-001",
+        "democratic-2008-normalized-fa1cd1900e67-010",
+        "democratic-2012-normalized-61aa77f5ee6e-012",
+        "republican-2004-normalized-53cdfe529adc-010",
+        "republican-2000-normalized-c753d8516acd-012",
+        "republican-2008-normalized-44c3a0e30932-repair-6c5b9bf17f07-001",
+        "republican-2016-normalized-689538531846-007",
+        "democratic-2016-normalized-f4e2c14968d7-011",
+        "republican-2016-normalized-fbf2085e7ad8-004"
+      ],
+      "source_record_sha256": "79c44162ce8df573e7a752c6b983dc8c62d1e77e06082a8638b07fe9342f8895",
+      "topic_id": "topic-016"
+    },
+    {
+      "evidence_packet_sha256": "73a2f5950ee3d9d423875dea8de4840f0d6fb88c7cb64ac6c7c18db3618f5dc6",
+      "label": {
+        "caveat": "An actor-centered cluster, not one policy stance. External criticism is present; the original model also mistyped a supporting claim's group prefix.",
+        "summary": "Claims explicitly describe Republicans or the Republican Party across exceptionalism, military strength, economic policy, rights, and families. Most are Republican self-descriptions; Democratic and DSA examples criticize Republican tax preferences and social-spending cuts.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-cfd387fe27b7-002",
+          "democratic-2012-normalized-d899cab3d67c-001",
+          "dsa-2007-economic-justice-normalized-2f0b6e9da929-007"
+        ],
+        "title": "Republican Party Identity and Partisan Descriptions"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "failed",
+      "review_note": "Correct unsupported ID and false exclusion of external viewpoints; preserve raw failure.",
+      "reviewed_claim_ids": [
+        "democratic-2012-normalized-d899cab3d67c-001",
+        "dsa-2007-economic-justice-normalized-2f0b6e9da929-007",
+        "republican-2016-normalized-cfd387fe27b7-002",
+        "republican-2004-normalized-81ee1b93e20b-008",
+        "republican-2004-normalized-621418140cf5-001",
+        "republican-2016-normalized-1929f10ead2d-003",
+        "republican-2012-normalized-137eeef0fc3c-008",
+        "republican-2000-normalized-6ebdc3abd700-006",
+        "republican-2012-normalized-a7a1503a8a02-003",
+        "republican-2024-normalized-616d2a3c149d-007",
+        "republican-2024-normalized-938b203dacac-005",
+        "republican-2000-normalized-6ebdc3abd700-004"
+      ],
+      "source_record_sha256": "c719d16f3eaa97e45ddb34a7c12920cf5284c281293bda04fc5079c192b0aa53",
+      "topic_id": "topic-017"
+    },
+    {
+      "evidence_packet_sha256": "1cadf1a91247f97055e8c80aeedd9bda44b1432f5bb9aeeb111bc0b2f3b1fb11",
+      "label": {
+        "caveat": "Claims represent positions from multiple groups with differing approaches.",
+        "summary": "Claims address goals for the healthcare system, including access, affordability, and universal coverage. Approaches vary from strengthening existing plans and increasing choice to advocating for a national system like Medicare for All. Multiple claims emphasize improving access to healthcare, while others focus on cost control.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-4d9ec60a89b1-004",
+          "dsa-statement-5581-normalized-20cd15748fbe-003"
+        ],
+        "title": "Healthcare System Goals and Approaches"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2008-normalized-4d9ec60a89b1-004",
+        "dsa-statement-5581-normalized-20cd15748fbe-003",
+        "republican-2012-normalized-1205d70085c8-002",
+        "democratic-2024-normalized-aa0b71876216-002",
+        "democratic-2020-normalized-3542c1bfdbb3-010",
+        "democratic-2020-normalized-9a7a1ac81e6e-014",
+        "democratic-2016-normalized-ecd47e7958b3-013",
+        "democratic-2024-normalized-11fdd9f0c413-005",
+        "republican-2012-normalized-167d656433b4-015",
+        "republican-2016-normalized-591801711d53-008",
+        "democratic-2008-normalized-fa59aac8d141-010",
+        "dsa-statement-6001-normalized-15ebe59edbf0-003"
+      ],
+      "source_record_sha256": "d78a18712a64ccccaaa69df17a76e5c94c34f456e03cb741da24cd45786e53b5",
+      "topic_id": "topic-018"
+    },
+    {
+      "evidence_packet_sha256": "6064eb9dbe85451e461622bcefd216944a28bfc732072f830e45be1409d6f0d2",
+      "label": {
+        "caveat": "",
+        "summary": "Multiple sources acknowledge widespread economic struggles among Americans, including difficulties affording basic necessities like rent, food, and housing. These hardships disproportionately affect marginalized groups, including African Americans and Latinos, and are exacerbated by financial crises and economic downturns. The struggles extend to essential workers and impact the middle class both domestically and internationally.",
+        "supporting_claim_ids": [
+          "dsa-statement-4955-normalized-6b70e9adf907-007",
+          "democratic-2004-normalized-eb1979bf3bc4-011"
+        ],
+        "title": "Economic hardship and financial insecurity"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2008-normalized-408264aea1cd-006",
+        "dsa-2024-program-normalized-c0035893561c-002",
+        "republican-2012-normalized-cde29fc831f3-010",
+        "dsa-statement-4955-normalized-6b70e9adf907-007",
+        "dsa-statement-4626-normalized-6ac57c252fad-003",
+        "democratic-2008-normalized-3a4c640c1fa0-015",
+        "dsa-2021-adopted-normalized-1870bd662c8e-005",
+        "democratic-2024-normalized-51d7cbe64123-004",
+        "democratic-2004-normalized-eb1979bf3bc4-011",
+        "dsa-2021-adopted-normalized-6b522fa83bc9-003",
+        "democratic-2016-normalized-fcee54a1c348-003",
+        "dsa-2007-economic-justice-normalized-53bb7ce424c7-004"
+      ],
+      "source_record_sha256": "2de26513ba5e5ca554c6e02609e32434da1ca4493816edf35b3fa05860b902a9",
+      "topic_id": "topic-019"
+    },
+    {
+      "evidence_packet_sha256": "7f3943e0f4c7608bbeb6b499357a653892ab559e427556fd1e4e39328ad22990",
+      "label": {
+        "caveat": "",
+        "summary": "These claims primarily concern critiques of capitalism, focusing on its exploitative nature and the pursuit of alternatives. Several claims advocate for shifting power and resources away from corporate elites and towards ordinary people, and envision a future without for-profit systems for essential services. The claims also address the need for worker self-organization and democratic control of wealth.",
+        "supporting_claim_ids": [
+          "dsa-2010-social-economic-rights-normalized-3b733e07abe8-010",
+          "dsa-2026-program-normalized-977a2c8a9837-010"
+        ],
+        "title": "Critiques and Alternatives to Capitalism"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2024-normalized-da9ab87f7a1b-010",
+        "dsa-2021-adopted-normalized-49ef8772becb-005",
+        "republican-2016-normalized-c44984055aab-013",
+        "dsa-statement-1896-normalized-ead9022fbed2-001",
+        "dsa-2021-adopted-normalized-989abebd4619-013",
+        "dsa-2026-program-normalized-07742d0be50e-repair-bdbc17da534a-004",
+        "dsa-2026-program-normalized-977a2c8a9837-010",
+        "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-004",
+        "dsa-statement-4192-normalized-6765e8eb100b-009",
+        "dsa-2013-priorities-normalized-d4dec7ab5bbe-002",
+        "dsa-2003-mission-normalized-20f699d8e4de-002",
+        "dsa-2010-social-economic-rights-normalized-3b733e07abe8-010"
+      ],
+      "source_record_sha256": "ec8285d1a973741cecc0160a23b0f297156496cfb45af1f7d54e95ed5ad3ac1c",
+      "topic_id": "topic-020"
+    },
+    {
+      "evidence_packet_sha256": "1c8a7d6b895970b89509df497769d0414a54514cf0c2fce1033b60a3790c4df0",
+      "label": {
+        "caveat": "Mixed stances on the extent and nature of criminal justice reform are present.",
+        "summary": "These claims address criminal justice, with a focus on punishment for violent offenders and accountability for abuses. Positions vary from supporting 'tough punishment' and locking up offenders to demands for release from detention and addressing wrongful harm. The claims also touch on the broader societal impacts of criminalization and violence.",
+        "supporting_claim_ids": [
+          "republican-2024-normalized-b90fbe592293-017",
+          "dsa-statement-4626-normalized-b8f72e138725-005"
+        ],
+        "title": "Criminal Justice: Punishment, Accountability, and Prison Reform"
+      },
+      "label_origin": "local_gemma",
+      "raw_model_validation_status": "complete",
+      "review_note": "Summary checked against every claim in its evidence packet.",
+      "reviewed_claim_ids": [
+        "democratic-2020-normalized-11616ff575d6-015",
+        "dsa-2021-adopted-normalized-13ca43c6c588-006",
+        "republican-2024-normalized-b90fbe592293-017",
+        "dsa-2021-adopted-normalized-13ca43c6c588-004",
+        "dsa-statement-4621-normalized-9d208ba95cab-006",
+        "democratic-2004-normalized-821dd4b5fe65-002",
+        "dsa-statement-4267-normalized-a87200f2da12-007",
+        "republican-2024-normalized-b90fbe592293-016",
+        "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-008",
+        "democratic-2020-normalized-11616ff575d6-016",
+        "democratic-2000-normalized-987b8bb7d15c-001",
+        "dsa-statement-4626-normalized-b8f72e138725-005"
+      ],
+      "source_record_sha256": "f7fb4e9c52ad0aa53b2127c4452fdacb3f4c359873c2eafff529109d3e32778b",
+      "topic_id": "topic-021"
+    },
+    {
+      "evidence_packet_sha256": "3753c278c9963c6b9f7e5048d8fa3abbda58fb118e4b8c03e7491d7bd456710d",
+      "label": {
+        "caveat": "These are opposing positions on shared subject matter, not agreement. A topic share does not measure which side a group supports.",
+        "summary": "Claims concern Israeli security and Palestinian sovereignty, assistance, occupation, return, and military aid. Republican examples support Israel and its security; Democratic examples include two-state peace and Palestinian assistance; DSA examples emphasize Palestinian rights and ending arms sales.",
+        "supporting_claim_ids": [
+          "republican-2012-normalized-2bab5f5039fa-001",
+          "democratic-2004-normalized-ed1dec9e1db7-003",
+          "dsa-2024-program-normalized-9d88be1f8868-006"
+        ],
+        "title": "Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "Include the pro-Israel Republican examples omitted by the original summary.",
+      "reviewed_claim_ids": [
+        "democratic-2004-normalized-0ad85f479ed5-007",
+        "dsa-2024-program-normalized-9d88be1f8868-006",
+        "republican-2012-normalized-2bab5f5039fa-001",
+        "dsa-2026-program-normalized-40060dd6f6dd-008",
+        "dsa-statement-4489-normalized-5fbb11361e70-001",
+        "republican-2012-normalized-2bab5f5039fa-005",
+        "democratic-2020-normalized-3c29dbc1688d-012",
+        "dsa-statement-4489-normalized-5fbb11361e70-011",
+        "dsa-2026-program-normalized-40060dd6f6dd-007",
+        "democratic-2004-normalized-ed1dec9e1db7-003",
+        "dsa-statement-398-normalized-299214ac7782-007",
+        "dsa-2024-program-normalized-9d88be1f8868-003"
+      ],
+      "source_record_sha256": "9010a7d71025cc71fd1da0396b7f2f835916ba1e94f8ff98aa2f53abc45ae3d9",
+      "topic_id": "topic-022"
+    },
+    {
+      "evidence_packet_sha256": "ba6a4e7862e8240cf3dedc6a25dbed2a9d79b8d60e9f9c155ae590d8657ce0f3",
+      "label": {
+        "caveat": "An actor-centered, mixed-policy cluster with opposing evaluations, not exclusively a foreign-and-trade-policy topic.",
+        "summary": "Claims explicitly discuss Donald Trump across foreign relations, trade, immigration, manufacturing, labor, civil rights, and national identity. Democratic and DSA examples predominantly criticize him; Republican examples praise his trade policy and national leadership.",
+        "supporting_claim_ids": [
+          "democratic-2024-normalized-306753327989-009",
+          "dsa-statement-1083-normalized-e634a3021adc-004",
+          "republican-2024-normalized-007a594371a0-009"
+        ],
+        "title": "Trump Administration Records and Partisan Critiques"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "The original title omitted immigration, labor, civil rights, and actor structure.",
+      "reviewed_claim_ids": [
+        "democratic-2024-normalized-306753327989-009",
+        "dsa-statement-1083-normalized-e634a3021adc-004",
+        "republican-2024-normalized-007a594371a0-009",
+        "democratic-2024-normalized-acb049933b3f-001",
+        "democratic-2016-normalized-b4f43c23e8c1-006",
+        "democratic-2020-normalized-f4a47a1af77b-010",
+        "democratic-2020-normalized-f4a47a1af77b-009",
+        "democratic-2016-normalized-7ba2e6e4e2f2-009",
+        "dsa-statement-409-normalized-335a09bbcb79-006",
+        "dsa-statement-352-normalized-ac77172a6b86-005",
+        "republican-2024-normalized-51f7b85d22c5-008",
+        "dsa-statement-4386-normalized-89aab4241a6d-003"
+      ],
+      "source_record_sha256": "00778a98a3abb89dd14d42c0679b4347ee5bd45047e77d08f18ca320aaa28522",
+      "topic_id": "topic-023"
+    },
+    {
+      "evidence_packet_sha256": "6a92672c6de3bd41af1456cad8a71714eef0ff9dd1350aa46e6bfe0ddfd255fc",
+      "label": {
+        "caveat": "Dominated by DSA organizational language. One Republican example concerns Marxist subversion generally and does not name DSA.",
+        "summary": "DSA examples describe the organization's mission, socialist and feminist identity, solidarity, worker mobilization, and efforts to establish democratic socialism as a political force. These are organizational self-descriptions and movement-building claims, not a single detailed policy program.",
+        "supporting_claim_ids": [
+          "dsa-2003-mission-normalized-20f699d8e4de-003",
+          "dsa-2024-program-normalized-d601340193eb-001",
+          "dsa-2021-adopted-normalized-42d8ec99ba34-001"
+        ],
+        "title": "DSA Identity and Socialist Organizing"
+      },
+      "label_origin": "assistant_source_bound_revision",
+      "raw_model_validation_status": "complete",
+      "review_note": "Label organizational identity and organizing rather than a defined political system.",
+      "reviewed_claim_ids": [
+        "dsa-statement-2185-normalized-4656dc715a5f-017",
+        "republican-2012-normalized-cbd6e2113a61-007",
+        "dsa-2026-program-normalized-27f09020d87d-repair-ab2c467b9abc-007",
+        "dsa-2003-mission-normalized-20f699d8e4de-004",
+        "dsa-statement-4621-normalized-70579fa7af56-002",
+        "dsa-statement-354-normalized-53b23e55f1dc-011",
+        "dsa-2003-mission-normalized-20f699d8e4de-003",
+        "dsa-statement-5097-normalized-4069773bccad-repair-015c346da9d6-003",
+        "dsa-2024-program-normalized-d601340193eb-repair-ede159c9a402-009",
+        "dsa-statement-361-normalized-d6239bf500fe-007",
+        "dsa-2021-adopted-normalized-42d8ec99ba34-001",
+        "dsa-2024-program-normalized-d601340193eb-001"
+      ],
+      "source_record_sha256": "2ed4c122f4fb7a0d0a698212fa010c87a66f4db6ce2fe28581bd7000c0cf90f9",
+      "topic_id": "topic-024"
+    }
+  ]
+}

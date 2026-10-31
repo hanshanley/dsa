@@ -1,0 +1,58 @@
+{
+  "additional_sample_source_exclusions": 110,
+  "additional_sample_source_review_dispositions": 122,
+  "already_ineligible_source_defect_observations": 12,
+  "baseline_claims": 26483,
+  "baseline_revision": "e50513155d2b007e4f1d0aa109216ddc72d519a9",
+  "cap_cache_reused": true,
+  "claims_by_group": {
+    "democratic": 11822,
+    "dsa": 5112,
+    "republican": 9156
+  },
+  "cleaned_claims": 26090,
+  "encoder_cache_reused": true,
+  "method": "Exact-ID/text-verified subset of the previously validated 26,200-claim cache. Newly restored duplicates reuse only unique identical text within the same document, group and bundle. All original candidate wording/evidence, replies, repairs and history are unchanged.",
+  "previous_cleaned_claims": 26200,
+  "previous_provenance_sha256": "76b1f02258d88b66f9d85f5cee8144177cf720521234614082be882bf79df846",
+  "restored_supported_duplicate_occurrences": [],
+  "schema_version": 1,
+  "subset_files": [
+    {
+      "path": "analysis_claims.csv",
+      "sha256": "e50000f92addef7e3a2241e36aa149998da072a7ccf01c0e474f7ada996bee5d"
+    },
+    {
+      "path": "embeddings.npy",
+      "sha256": "2b13e255b08068d38dc9bf5a4601302e078b0b65f8514dba0f327a82512bbc0e"
+    },
+    {
+      "path": "embedding_manifest.json",
+      "sha256": "42beb268bb35d7b160d4ef41bf39547625dbcec57d1815df5cca228e315b2975"
+    },
+    {
+      "path": "topic_similarities.npy",
+      "sha256": "f6b3386e65d8fa8739054eaec4bed893490958daf3b814c05af9af30536c735e"
+    },
+    {
+      "path": "topic_manifest.json",
+      "sha256": "74c4bcc952be0a4aaca4905a27db4cb321338a2a348488e8709adddf0c6c7829"
+    },
+    {
+      "path": "claim_token_lengths.csv",
+      "sha256": "d56fbba24e40af3bdb1f7c20ef13ad3a8a45991ba157d2ee576e616c6f268702"
+    },
+    {
+      "path": "claim_tokenization_manifest.json",
+      "sha256": "23057a9a6d17f1a56e12a0604ca8684dc66894ccd807acffec7ff6081ff61274"
+    }
+  ],
+  "tokenization": {
+    "limit": 256,
+    "maximum_tokens": {
+      "gte": 159,
+      "topics": 145
+    },
+    "truncated_claims": 0
+  }
+}

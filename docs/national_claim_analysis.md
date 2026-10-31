@@ -3,8 +3,9 @@
 The new path analyzes **normalized claims instead of source passages**:
 base local-Gemma extraction plus separately identified, source-bound assistant
 corrections.
-It preserves the passage-based study as a separate baseline and does not deploy
-anything to The Margin of Error.
+It preserves the passage-based study as a separate baseline. Publication to
+The Margin of Error is a separate, pinned-source step; the website presents
+the expanded analysis only.
 
 ## Input chunks, not whole documents
 
@@ -126,28 +127,31 @@ denominator. Topic shares assign equal aggregate weight to each document/bundle,
 so splitting more claims does not create another independent document.
 
 The [full eligible-claim comparison](../report/national_claim_analysis.md) analyzes
-**26,483 claims**: 11,870 Democratic, 9,460 Republican, and 5,153 DSA. The original
+**26,069 claims**: 11,811 Democratic, 9,150 Republican, and 5,108 DSA. The original
 model outcomes remain 2,596 normalized and 27 failed chunks. Effective dispositions
-are 2,462 model-normalized and 161 source-repaired chunks, including all 27 model
-failures and all 134 blocks with identified review issues.
+are 2,461 model-normalized and 162 source-repaired chunks, including all 27 model
+failures. Other demonstrated source defects receive explicit exclusions, without
+inventing replacement claims.
 
-The repairs supply 1,041 replacement claims and supersede 1,078 original
-candidates. Eligible claims comprise 25,442 model-origin and 1,041 assistant-origin
+The repairs supply 1,047 replacement claims and supersede 1,084 original
+candidates. Eligible claims comprise 25,022 model-origin and 1,047 assistant-origin
 rows. All 26,679 original candidates remain downloadable alongside the replacements;
-the complete candidate export therefore has 27,720 rows, not 26,483 analytical
+the complete candidate export therefore has 27,726 rows, not 26,069 analytical
 observations. Thirteen corrections supply no replacement claims for non-policy
 or context-only inventions. One source's unspecified "right to choose" is left
 unresolved rather than assigned a substantive meaning.
 
-Targeted assistant review covered 142 blocks and flagged 1,054 original candidates;
-none remain without a superseding correction. Historical flags, supersession and
+The targeted review log contains 191 records and flags 1,493 original candidates;
+439 flagged originals have no superseding correction and remain explicitly
+excluded. Historical flags, supersession and
 duplicates overlap, so their counts are not additive exclusion categories.
 All source text, failed attempts and original wording remain preserved.
 Unidentified semantic errors may remain; this is exploratory analysis, not
 full-corpus semantic certification.
 
-The expanded KDE completed with 10 dimensions; the strict KDE selected 5.
-Expanded sampling uses 5,153 claims per organization; strict sampling uses 842.
+The completed expanded and strict KDE diagnostics record their selected dimensions
+and balanced sample sizes in their respective `summary.json` and `sampling.csv`
+files. These fits use the current cleaned input, not relabeled historical densities.
 The strict DSA input comprises three adopted documents, versus 122 documents
 in the expanded input. Source-type and period sensitivity is not a measured
 change in positions over time. The
@@ -155,15 +159,18 @@ change in positions over time. The
 and [strict chronology](../data/analysis/national_claims/full/strict/document_chronology.csv)
 summarize the independently fitted pooled spaces, not annual ideological trajectories.
 
-A second offline run reproduced all 3,040 substantive files exactly and reused
-the GTE cache. The embedding and topic-score arrays also matched byte-for-byte.
-Replaying preserved model responses and correction records reproduced the
-candidate exports exactly. All 3,040 ZIP members matched current files; both tokenizers stayed
-below 256 tokens with no truncation. ZIP metadata and the analysis summary's
-cache-use indicator are not required to match byte-for-byte across runs.
-The [reproducibility audit](../data/analysis/national_claims/reproducibility_audit.json)
-records measured counts and selected input/output hashes. The passage baseline
-and selected sample remain unchanged.
+The [cache-subset provenance](../data/analysis/national_claims/full/cache_subset_provenance.json)
+records exact claim-ID/text-verified GTE, CAP and token-length subsets without
+encoder or tokenizer inference. Both tokenizers stay below 256 tokens without
+truncation. The [source-preservation verification](../data/analysis/national_claims/full/publication_source_validation.json)
+checks all original candidates and raw files against the frozen baseline,
+including unchanged archived model labels and exact cached-vector subsets.
+The current [topic replay audit](../data/analysis/national_claims/full/topics/replay_audit.json)
+checks numerical-cache reuse, reviewed labels, exact figure bytes and every
+combined-archive member. The earlier
+[reproducibility audit](../data/analysis/national_claims/reproducibility_audit.json)
+is historical, not a certification of the current cleaned input's hashes.
+The passage baseline and selected sample remain unchanged.
 
 The [earlier selected claim analysis](../report/national_claim_analysis_sample.md)
 uses **199 individually unflagged pilot candidates**: 59 Democratic, 82 Republican,
@@ -248,10 +255,12 @@ subjects. Valid JSON and supporting IDs do not by themselves establish
 entailment; summaries need review against the actual packet.
 `label_review.json` records that bounded evidence review for every topic, binding
 each decision to the exact fit, evidence packet, and original model-record hashes.
-Source-bound assistant revisions are explicitly distinguished from unchanged
-Gemma wording. In the current run, 13 labels were revised to identify actor or
-narrative clusters, retain opposing examples, or correct one invalid claim ID.
-The original raw responses and failures are never rewritten. Stale review records
+Source-bound assistant revisions are explicitly distinguished from archived
+Gemma wording. All 24 current labels are bound to the current fit and evidence.
+The original raw responses and failures are never rewritten. Additional current
+period topics may reference an archived same-period model record through
+`source_topic_id`; that preserved record is not fabricated new inference.
+Stale review records
 do not confer reviewed status on changed evidence or regenerated responses.
 
 **Shares and contrasts.** Within each group/view, each claim's weight is
@@ -289,8 +298,8 @@ figures show **unsmoothed percentage-point differences**, not heatmap colors
 or smoothed log ratios. The complete smoothed log2 ratios, shares and support
 warnings remain in the contrast downloads.
 
-The pooled fit and all 24 reviewed labels are unchanged. Three party-identity
-clusters (`topic-007`, `topic-017`, `topic-024`) are excluded from substantive
+The current pooled fit has 24 reviewed labels. Three party-identity
+clusters (`topic-008`, `topic-017`, `topic-023`) are excluded from substantive
 charts, rankings and summaries: 21 subjects are displayed. Their claims remain
 in overall and temporal denominators; the remaining shares are **not
 renormalized**. Full assignments, source evidence and original review records
@@ -317,15 +326,15 @@ The `render` stage verifies the current source, embedding, numerical-code and
 output hashes before using labels. Stale or failed labels remain explicitly
 provisional. Cached labels can replay without generating new responses.
 Reports lead with these concrete distributions and source-linked examples,
-while keeping the earlier CAP and KDE numerical results unchanged. The full claim/source
+while using coherently refitted current KDEs and exact cached CAP predictions. The full claim/source
 ZIP contains actual complete texts, claims, provenance, topic-stage CSV/JSON
 evidence, all full-corpus PNG figures, and `report.md` with figure/data links
 rewritten for the extracted archive. This is one combined deliverable, not separate
 metadata-only and figure downloads. PNGs omit software and text metadata;
 the topic replay audit checks exact PNG bytes and every archive member.
 It does not retroactively extend the earlier KDE reproducibility certification:
-existing CAP/KDE figures are restyled from their saved numerical tables without
-refitting their models.
+topic rendering uses the current CAP/KDE tables, while the primary numerical
+refit and publication exporter have their own provenance and replay checks.
 
 **Over time.** Rendering also exports `temporal_shares.csv`,
 `temporal_contrasts.csv`, `temporal_changes.csv`, `temporal_coverage.csv`,
@@ -372,9 +381,9 @@ K-means grid of 4/6/8/12 clusters, using the existing geometry/concentration
 selection rule. Parameters are fixed across periods, not tuned for striking
 group contrasts. Strict shares reuse each period's expanded fit.
 
-The current corpus yields 64 topics across seven independent fits, not 64
-globally distinct policy categories. In 2004–2007 and 2008–2011, the selected
-density fits yield two clusters each with roughly 44% unclustered mass.
+The current corpus yields 74 topics across seven independent fits, not 74
+globally distinct policy categories. In 2008–2011, the selected
+density fit yields two clusters with roughly 48% unclustered mass.
 Plots retain unclustered shares and the report qualifies broad/mixed clusters;
 small positive silhouettes do not make them validated policy taxonomies.
 Within-period contrasts retain low-support and smoothing warnings. Versus-rest
@@ -396,8 +405,8 @@ inputs, numerical implementation and output hashes and refuses stale fits;
 it never silently refits independent period topics or invokes a model.
 Every published period-topic label receives the same hash-bound bounded
 evidence review as pooled labels, retaining raw replies and identifying any
-assistant revisions separately. The current 64 period-qualified labels are all
-reviewed; 34 have explicit source-bound assistant revisions. This is bounded
+assistant revisions separately. The current 74 period-qualified labels all
+have source-bound assistant reviews. This is bounded
 representative-packet review, not independent human certification of each cluster.
 
 **Publication styling.** All current full-corpus figures use the restrained
@@ -504,12 +513,15 @@ uv run python -m dsa_analysis.national_claim_topic_positions render
 uv run python -m dsa_analysis.national_claim_topics audit
 ```
 
-Evidence selection alternates two central claims with one peripheral claim,
-round-robin across bundles, up to 48 examples per group/topic. The 2,952 selected
+Evidence selection interleaves observed four-year periods, bundles and documents,
+ranking claims nearest the frozen weighted topic centroid within each document.
+There is no peripheral or stance-based sampling. Up to 48 examples per
+group/topic yield 2,971 selected
 claims retain complete wording, source excerpts, offsets, dates and provenance.
 All 63 group summaries and 63 pairwise distinctions were assistant-reviewed
 against those actual packets, with ambiguous attribution checked in source
-evidence. Hash-bound reviews require supported IDs, both observed comparison
+evidence. Hash-bound reviews require every sampled example to be reviewed,
+summary support spanning every sampled dated period, both observed comparison
 sides and multiple supporting bundles when available. Missing evidence never
 becomes an inferred stance. Sampled synthesis is neither exhaustive stance
 classification nor independent human certification.

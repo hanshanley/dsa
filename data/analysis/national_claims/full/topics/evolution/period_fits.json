@@ -1,23 +1,23 @@
 [
   {
-    "claims": 3379,
+    "claims": 3364,
     "documents": 10,
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
       "pca_dimensions": 50,
-      "pca_variance_retained": 0.6243561506271362,
+      "pca_variance_retained": 0.6243094801902771,
       "selected_parameters": {
         "adjusted_rand_vs_selected": 1.0,
         "clusters": 12,
-        "cosine_silhouette": 0.07034343481063843,
+        "cosine_silhouette": 0.06564318388700485,
         "coverage": 1.0,
-        "largest_topic_share": 0.17046463450725066,
+        "largest_topic_share": 0.187871581450654,
         "method": "weighted_kmeans",
         "min_cluster_size": "",
         "min_samples": "",
         "selected": true,
-        "selection_score": 0.058352366905658336
+        "selection_score": 0.05331069511869716
       },
       "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
       "status": "complete"
@@ -33,24 +33,24 @@
     "topics": 12
   },
   {
-    "claims": 3669,
+    "claims": 3627,
     "documents": 6,
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
       "pca_dimensions": 50,
-      "pca_variance_retained": 0.6264921426773071,
+      "pca_variance_retained": 0.626254141330719,
       "selected_parameters": {
         "adjusted_rand_vs_selected": 1.0,
-        "clusters": 2,
-        "cosine_silhouette": 0.09330817312002182,
-        "coverage": 0.5614608885254838,
-        "largest_topic_share": 0.5524666121559008,
-        "method": "hdbscan",
-        "min_cluster_size": 30,
-        "min_samples": 5,
+        "clusters": 12,
+        "cosine_silhouette": 0.07511506229639053,
+        "coverage": 1.0,
+        "largest_topic_share": 0.13785497656465398,
+        "method": "weighted_kmeans",
+        "min_cluster_size": "",
+        "min_samples": "",
         "selected": true,
-        "selection_score": 0.004689155466322759
+        "selection_score": 0.0647600771438691
       },
       "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
       "status": "complete"
@@ -63,27 +63,27 @@
     "period": "2004-2007",
     "period_start": 2004,
     "status": "complete",
-    "topics": 2
+    "topics": 12
   },
   {
-    "claims": 3029,
+    "claims": 2973,
     "documents": 8,
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
       "pca_dimensions": 50,
-      "pca_variance_retained": 0.6237062215805054,
+      "pca_variance_retained": 0.6238332986831665,
       "selected_parameters": {
         "adjusted_rand_vs_selected": 1.0,
         "clusters": 2,
-        "cosine_silhouette": 0.10931427031755447,
-        "coverage": 0.5586001980851766,
-        "largest_topic_share": 0.5411026741498844,
+        "cosine_silhouette": 0.11408467590808868,
+        "coverage": 0.5220316178943828,
+        "largest_topic_share": 0.5045408678102926,
         "method": "hdbscan",
         "min_cluster_size": 30,
         "min_samples": 5,
         "selected": true,
-        "selection_score": 0.0056043270084887575
+        "selection_score": 0.005901493783886302
       },
       "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
       "status": "complete"
@@ -99,24 +99,24 @@
     "topics": 2
   },
   {
-    "claims": 4382,
+    "claims": 4128,
     "documents": 30,
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
       "pca_dimensions": 50,
-      "pca_variance_retained": 0.5953273773193359,
+      "pca_variance_retained": 0.6115689873695374,
       "selected_parameters": {
         "adjusted_rand_vs_selected": 1.0,
         "clusters": 12,
-        "cosine_silhouette": 0.0558062419295311,
+        "cosine_silhouette": 0.05933298543095589,
         "coverage": 1.0,
-        "largest_topic_share": 0.12254678229119123,
+        "largest_topic_share": 0.1385658914728682,
         "method": "weighted_kmeans",
         "min_cluster_size": "",
         "min_samples": "",
         "selected": true,
-        "selection_score": 0.0489673665493033
+        "selection_score": 0.05111145741096878
       },
       "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
       "status": "complete"
@@ -132,24 +132,24 @@
     "topics": 12
   },
   {
-    "claims": 5183,
+    "claims": 5165,
     "documents": 54,
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
       "pca_dimensions": 50,
-      "pca_variance_retained": 0.6083582043647766,
+      "pca_variance_retained": 0.60847008228302,
       "selected_parameters": {
         "adjusted_rand_vs_selected": 1.0,
         "clusters": 12,
-        "cosine_silhouette": 0.05336862802505493,
+        "cosine_silhouette": 0.04866057634353638,
         "coverage": 1.0,
-        "largest_topic_share": 0.12753231719081612,
+        "largest_topic_share": 0.10880929332042594,
         "method": "weighted_kmeans",
         "min_cluster_size": "",
         "min_samples": "",
         "selected": true,
-        "selection_score": 0.046562403227724945
+        "selection_score": 0.04336585341903155
       },
       "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
       "status": "complete"
@@ -165,24 +165,24 @@
     "topics": 12
   },
   {
-    "claims": 3669,
+    "claims": 3660,
     "documents": 23,
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
       "pca_dimensions": 50,
-      "pca_variance_retained": 0.6492593288421631,
+      "pca_variance_retained": 0.6492400169372559,
       "selected_parameters": {
         "adjusted_rand_vs_selected": 1.0,
         "clusters": 12,
-        "cosine_silhouette": 0.08776374906301498,
+        "cosine_silhouette": 0.08988627046346664,
         "coverage": 1.0,
-        "largest_topic_share": 0.14772417552466613,
+        "largest_topic_share": 0.14590163934426228,
         "method": "weighted_kmeans",
         "min_cluster_size": "",
         "min_samples": "",
         "selected": true,
-        "selection_score": 0.07479892159172741
+        "selection_score": 0.07677171624830512
       },
       "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
       "status": "complete"
@@ -197,24 +197,24 @@
     "topics": 12
   },
   {
-    "claims": 3172,
+    "claims": 3152,
     "documents": 4,
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
       "pca_dimensions": 50,
-      "pca_variance_retained": 0.6632165312767029,
+      "pca_variance_retained": 0.663495659828186,
       "selected_parameters": {
         "adjusted_rand_vs_selected": 1.0,
         "clusters": 12,
-        "cosine_silhouette": 0.10742796212434769,
+        "cosine_silhouette": 0.11123821139335632,
         "coverage": 1.0,
-        "largest_topic_share": 0.20460277427490542,
+        "largest_topic_share": 0.20843908629441624,
         "method": "weighted_kmeans",
         "min_cluster_size": "",
         "min_samples": "",
         "selected": true,
-        "selection_score": 0.08544790303900668
+        "selection_score": 0.0880518202495
       },
       "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
       "status": "complete"

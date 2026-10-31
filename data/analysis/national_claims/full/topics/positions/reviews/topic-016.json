@@ -1,68 +1,202 @@
 {
-  "topic_id": "topic-016",
-  "packet_sha256": "3ee7f4de833f68353c1d5845dbdfb2089db67d2775c65458cdce29283c08e1bf",
-  "review_status": "evidence_reviewed",
-  "review_origin": "assistant_source_bound_review",
-  "review_model": "gpt-5.6-sol",
   "groups": {
     "democratic": {
-      "summary": "Across years, documents oppose Republican or administration actions involving arms, surveillance, social-program cuts, privatization, and foreign policy, while also recording criticisms of governing performance.",
-      "caveat": "The packet combines policy opposition with factual and evaluative attacks across unrelated domestic and foreign issues.",
+      "caveat": "Claims span prospective promises and retrospective assessments across multiple administrations and policy fields.",
+      "reviewed_claim_ids": [
+        "democratic-2000-normalized-fadbed899274-006",
+        "democratic-2004-normalized-1830228f721e-001",
+        "democratic-2008-normalized-2f22bd733321-010",
+        "democratic-2012-normalized-ec12f322f1a7-007",
+        "democratic-2016-normalized-bd681f711028-003",
+        "democratic-2020-normalized-e9a6e36dc389-010",
+        "democratic-2024-normalized-9be95fb035db-008",
+        "democratic-2000-normalized-5b71516710df-015",
+        "democratic-2004-normalized-a53f8275154c-008",
+        "democratic-2008-normalized-2f22bd733321-011",
+        "democratic-2012-normalized-1567641ad953-006",
+        "democratic-2016-normalized-bd681f711028-005",
+        "democratic-2020-normalized-682f05792314-007",
+        "democratic-2024-normalized-a7600837d3e2-007",
+        "democratic-2000-normalized-63067ae8d1fa-013",
+        "democratic-2004-normalized-92a8088c5dda-011",
+        "democratic-2008-normalized-1ebff02cce7f-002",
+        "democratic-2012-normalized-5c03ae5613a9-009",
+        "democratic-2016-normalized-97e18d1df2ec-001",
+        "democratic-2020-normalized-aa3f51488c6d-002",
+        "democratic-2024-normalized-f7d312021487-001",
+        "democratic-2000-normalized-d072502f1908-007",
+        "democratic-2004-normalized-3473e48c58d7-008",
+        "democratic-2008-normalized-793b790195aa-014",
+        "democratic-2012-normalized-80489cc995eb-001",
+        "democratic-2016-normalized-667eb0d7cebb-007",
+        "democratic-2024-normalized-657f848d8145-001",
+        "democratic-2000-normalized-fadbed899274-004",
+        "democratic-2004-normalized-011bcd13597a-001",
+        "democratic-2008-normalized-793b790195aa-013",
+        "democratic-2012-normalized-26af669a271e-005",
+        "democratic-2016-normalized-bd681f711028-002",
+        "democratic-2024-normalized-eef452c1e331-008",
+        "democratic-2000-normalized-d072502f1908-006",
+        "democratic-2004-normalized-94090ec19c04-001",
+        "democratic-2008-normalized-793b790195aa-015",
+        "democratic-2012-normalized-61aa77f5ee6e-011",
+        "democratic-2016-normalized-667eb0d7cebb-004",
+        "democratic-2024-normalized-a820ba0cd58d-001",
+        "democratic-2000-normalized-fadbed899274-002",
+        "democratic-2004-normalized-c073ae0833f9-010",
+        "democratic-2008-normalized-bb8c48e645a7-006",
+        "democratic-2012-normalized-61aa77f5ee6e-007",
+        "democratic-2016-normalized-f5ac11819c02-006",
+        "democratic-2024-normalized-05342cc6000a-001",
+        "democratic-2000-normalized-63067ae8d1fa-014",
+        "democratic-2004-normalized-c0df74c52483-005",
+        "democratic-2008-normalized-1ebff02cce7f-003"
+      ],
+      "summary": "Samples praise Democratic presidential achievements and commitments while criticizing Republican administrations across economics, rights, war, health, environment, infrastructure, governance, and alliances.",
       "supporting_claim_ids": [
-        "democratic-2000-normalized-35991a3208e1-001",
-        "democratic-2008-normalized-fa1cd1900e67-007",
-        "democratic-2016-normalized-f4e2c14968d7-011",
-        "democratic-2024-normalized-e4e0fee5728c-011"
-      ]
-    },
-    "republican": {
-      "summary": "Documents reject regulation, bailouts, international constraints, and administration actions, often invoking economic costs, constitutional limits, national sovereignty, or private-sector autonomy.",
-      "caveat": "Examples range from specific policy commitments to broad retrospective accusations and claims about foreign governments.",
-      "supporting_claim_ids": [
-        "republican-2004-normalized-53cdfe529adc-010",
-        "republican-2008-normalized-12c182215fbf-005",
-        "republican-2012-normalized-f832db2b0dc6-008",
-        "republican-2024-normalized-3cf23a1200a0-001"
+        "democratic-2000-normalized-fadbed899274-006",
+        "democratic-2004-normalized-1830228f721e-001",
+        "democratic-2008-normalized-2f22bd733321-010",
+        "democratic-2012-normalized-ec12f322f1a7-007",
+        "democratic-2016-normalized-bd681f711028-003",
+        "democratic-2020-normalized-e9a6e36dc389-010",
+        "democratic-2024-normalized-9be95fb035db-008"
       ]
     },
     "dsa": {
-      "summary": "Documents oppose militarism, sanctions, privatization, austerity, corporate influence, and undemocratic institutions, criticizing Republican, Democratic, bipartisan, governmental, and labor leadership across years.",
-      "caveat": "Targets and claim types vary substantially; this is opposition language, not one unified policy program.",
+      "caveat": "Several samples concern foreign leaders or movements, illustrating the cluster's broad actor-centered attribution.",
+      "reviewed_claim_ids": [
+        "dsa-2007-economic-justice-normalized-128b407c9166-010",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-010",
+        "dsa-statement-366-normalized-7c33b68483e4-001",
+        "dsa-2016-strategy-normalized-00a77283dbcd-008",
+        "dsa-statement-4617-normalized-9576675179ab-009",
+        "dsa-2024-program-normalized-43f2e9413efb-003",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-011",
+        "dsa-statement-373-normalized-1ec2288816c3-003",
+        "dsa-statement-1146-normalized-98bee761ff4e-012",
+        "dsa-statement-4621-normalized-9d208ba95cab-005",
+        "dsa-2011-ows-resolution-normalized-a2a5070f4c0b-008",
+        "dsa-statement-366-normalized-1a43e58a0ee4-007",
+        "dsa-statement-1492-normalized-b183e4acff75-003",
+        "dsa-statement-6026-normalized-f0e5710c3608-006",
+        "dsa-2011-ows-resolution-normalized-a2a5070f4c0b-011",
+        "dsa-statement-373-normalized-45ed973bceb0-001",
+        "dsa-statement-389-normalized-b1ad7aa86dcc-003",
+        "dsa-statement-4617-normalized-9576675179ab-012",
+        "dsa-statement-404-normalized-fa561aa93994-008",
+        "dsa-statement-4093-normalized-3612a5292649-005",
+        "dsa-statement-4192-normalized-2016e1efb944-005",
+        "dsa-statement-4261-normalized-ffdf97ddf421-006",
+        "dsa-statement-4267-normalized-6c53d8ccb111-004",
+        "dsa-statement-4301-normalized-53f89afc781c-001",
+        "dsa-2016-strategy-normalized-18ed67083ccf-001",
+        "dsa-statement-1146-normalized-6bc2e9cc4279-007",
+        "dsa-statement-1492-normalized-b183e4acff75-004",
+        "dsa-statement-389-normalized-b1ad7aa86dcc-004",
+        "dsa-statement-4267-normalized-6c53d8ccb111-005",
+        "dsa-statement-1492-normalized-373728069d3c-005",
+        "dsa-statement-389-normalized-b1ad7aa86dcc-005",
+        "dsa-statement-1492-normalized-756496016a79-003"
+      ],
+      "summary": "Samples assess presidential and governmental records through socialist critiques of war, austerity, immigration, policing, intervention, corporate power, and Democratic Party limitations.",
       "supporting_claim_ids": [
-        "dsa-2003-iraq-normalized-db1b9f74155d-003",
-        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-012",
-        "dsa-2021-adopted-normalized-bf23fd771fc3-005",
-        "dsa-2024-program-normalized-c668d0328bc5-009"
+        "dsa-2007-economic-justice-normalized-128b407c9166-010",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-010",
+        "dsa-statement-366-normalized-7c33b68483e4-001",
+        "dsa-2016-strategy-normalized-00a77283dbcd-008",
+        "dsa-statement-4617-normalized-9576675179ab-009",
+        "dsa-2024-program-normalized-43f2e9413efb-003"
+      ]
+    },
+    "republican": {
+      "caveat": "The record combines campaign promises, institutional claims, and retrospective assessments from several presidencies.",
+      "reviewed_claim_ids": [
+        "republican-2000-normalized-f7d97bfd0c6d-010",
+        "republican-2004-normalized-a2113b2e5302-001",
+        "republican-2008-normalized-5fc82a4e1aed-004",
+        "republican-2012-normalized-e3f9e5a181c1-002",
+        "republican-2016-normalized-28a344099db9-003",
+        "republican-2024-normalized-51f7b85d22c5-013",
+        "republican-2000-normalized-966a1ffdd590-repair-524f5a53cf4c-003",
+        "republican-2004-normalized-bb8654a75b0d-001",
+        "republican-2008-normalized-b07e889550b0-003",
+        "republican-2012-normalized-7047662cd378-007",
+        "republican-2016-normalized-3a05c0c1370e-008",
+        "republican-2024-normalized-51f7b85d22c5-016",
+        "republican-2000-normalized-8748a210af9d-009",
+        "republican-2004-normalized-06fdd0c07dba-009",
+        "republican-2012-normalized-b23a6dd55356-003",
+        "republican-2016-normalized-829ee119357b-006",
+        "republican-2024-normalized-51f7b85d22c5-014",
+        "republican-2000-normalized-864d88a1e5b8-repair-b0da1f0c1f10-013",
+        "republican-2004-normalized-057f51b29119-001",
+        "republican-2012-normalized-7815bee1d725-008",
+        "republican-2016-normalized-5e0dbc4e7430-repair-634aed80d7ed-005",
+        "republican-2024-normalized-51f7b85d22c5-012",
+        "republican-2000-normalized-7fc9dcdb3c42-005",
+        "republican-2004-normalized-1696c916d07c-003",
+        "republican-2012-normalized-2bd68a93b3b0-006",
+        "republican-2016-normalized-c41609634a5d-006",
+        "republican-2024-normalized-51f7b85d22c5-015",
+        "republican-2000-normalized-22242f9644c3-010",
+        "republican-2004-normalized-ef0ca93e7375-009",
+        "republican-2012-normalized-373068b9d9bd-003",
+        "republican-2016-normalized-c9a8ddf744a5-008",
+        "republican-2024-normalized-5da053a3a7da-017",
+        "republican-2000-normalized-7fc9dcdb3c42-007",
+        "republican-2004-normalized-2d3ed2b75e91-004",
+        "republican-2012-normalized-90980393f0db-004",
+        "republican-2016-normalized-83d8ef8b2a2e-003",
+        "republican-2024-normalized-7b06eed8bd9c-011",
+        "republican-2000-normalized-f7d97bfd0c6d-001",
+        "republican-2004-normalized-500cd597e0f4-006",
+        "republican-2012-normalized-57131206a6bf-004",
+        "republican-2016-normalized-5f689b13c4e2-003",
+        "republican-2000-normalized-f7eb78de9ab8-005",
+        "republican-2004-normalized-3ea0081447f3-006",
+        "republican-2012-normalized-6af44604502f-009",
+        "republican-2016-normalized-995e46633b74-012",
+        "republican-2000-normalized-f7d97bfd0c6d-009",
+        "republican-2004-normalized-844af1567b93-011",
+        "republican-2012-normalized-907e3addcd02-009"
+      ],
+      "summary": "Samples praise Republican presidential leadership and commitments while criticizing Democratic administrations on defense, borders, economics, executive authority, regulation, crime, and global instability.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-f7d97bfd0c6d-010",
+        "republican-2004-normalized-a2113b2e5302-001",
+        "republican-2008-normalized-5fc82a4e1aed-004",
+        "republican-2012-normalized-e3f9e5a181c1-002",
+        "republican-2016-normalized-28a344099db9-003",
+        "republican-2024-normalized-51f7b85d22c5-013"
       ]
     }
   },
+  "packet_sha256": "eef98080f69806a0bb0e262bab610a5021a77d33058aa91c421ba43a8d1c3f53",
   "pairs": {
-    "democratic_vs_republican": {
-      "summary": "Democratic examples defend social programs and civil liberties against cuts or surveillance; Republican examples resist regulation, bailouts, and international authority.",
+    "democratic_vs_dsa": {
+      "summary": "Democratic samples defend Democratic presidential records; DSA samples more often criticize those administrations from antiwar, labor, immigrant-rights, or anti-capitalist perspectives.",
       "supporting_claim_ids": [
-        "democratic-2016-normalized-f4e2c14968d7-011",
-        "democratic-2008-normalized-fa1cd1900e67-007",
-        "republican-2008-normalized-12c182215fbf-005",
-        "republican-2012-normalized-f832db2b0dc6-008"
+        "democratic-2000-normalized-fadbed899274-006",
+        "dsa-2007-economic-justice-normalized-128b407c9166-010"
       ]
     },
-    "democratic_vs_dsa": {
-      "summary": "Democratic examples primarily contest Republican or named-administration measures; DSA examples also indict Democratic administrations, bipartisan elites, corporate influence, and governing institutions.",
+    "democratic_vs_republican": {
+      "summary": "Each party credits its presidents and faults the other's administrations across many policy domains, producing contrasting leadership records rather than one substantive disagreement.",
       "supporting_claim_ids": [
-        "democratic-2020-normalized-703017acd51e-020",
-        "democratic-2024-normalized-11fdd9f0c413-013",
-        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-012",
-        "dsa-2024-program-normalized-c668d0328bc5-009"
+        "democratic-2000-normalized-fadbed899274-006",
+        "republican-2000-normalized-f7d97bfd0c6d-010"
       ]
     },
     "republican_vs_dsa": {
-      "summary": "Republican examples resist governmental and international constraints while favoring autonomy; DSA examples attack sanctions, militarism, austerity, privatization, and corporate control.",
+      "summary": "Republican samples praise conservative presidential leadership; DSA samples criticize U.S. administrations, including Trump, through antiwar, socialist, and international-solidarity frames.",
       "supporting_claim_ids": [
-        "republican-2012-normalized-f832db2b0dc6-008",
-        "republican-2024-normalized-3cf23a1200a0-001",
-        "dsa-2021-adopted-normalized-bf23fd771fc3-005",
-        "dsa-2021-adopted-normalized-da1246750ba5-003"
+        "republican-2000-normalized-f7d97bfd0c6d-010",
+        "dsa-2007-economic-justice-normalized-128b407c9166-010"
       ]
     }
-  }
+  },
+  "review_origin": "assistant_source_bound_review",
+  "review_status": "evidence_reviewed",
+  "topic_id": "topic-016"
 }

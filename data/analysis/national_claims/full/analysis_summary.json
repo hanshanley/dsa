@@ -6,24 +6,24 @@
     "dsa": 9,
     "republican": 6
   },
-  "claims": 26483,
+  "claims": 26069,
   "claims_by_group": {
-    "democratic": 11870,
-    "dsa": 5153,
-    "republican": 9460
+    "democratic": 11811,
+    "dsa": 5108,
+    "republican": 9150
   },
-  "claims_sha256": "4e2b6ef6472b51aad8f980737749c87cedffded9291b6224d7ba65fac31c1078",
+  "claims_sha256": "c0f1f1d76e6d1395feb0e6adef3fe78e146ac6bfad7a3e0bd570d5f200f7d12c",
   "complete_sources_sha256": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
   "corpus": {
-    "analysis_claims": 26483,
-    "assistant_flagged_claims": 1054,
-    "assistant_source_repaired_blocks": 161,
-    "assistant_source_repaired_claims": 1041,
+    "analysis_claims": 26069,
+    "assistant_flagged_claims": 1493,
+    "assistant_source_repaired_blocks": 162,
+    "assistant_source_repaired_claims": 1047,
     "baseline_modified": false,
     "blocks": 2623,
     "blocks_by_status": {
-      "normalized": 2462,
-      "source_repaired": 161
+      "normalized": 2461,
+      "source_repaired": 162
     },
     "blocks_with_unresolved_references": 2,
     "claim_text_standardization": {
@@ -32,14 +32,14 @@
       "standardized_claims": 2501,
       "version": 1
     },
-    "claims": 27720,
+    "claims": 27726,
     "claims_by_group": {
       "democratic": 12236,
       "dsa": 5370,
-      "republican": 10114
+      "republican": 10120
     },
     "documents": 135,
-    "exact_within_document_duplicates": 212,
+    "exact_within_document_duplicates": 201,
     "fingerprint": "f877463169209ccfe3ec30a129bd243ba518415caeb2b211e98b1f13e77526d9",
     "generation_tokens": 2489652,
     "inference_seconds": 189095.64521399536,
@@ -49,10 +49,12 @@
       "validation_failed": 27
     },
     "quality": "Automated screening with targeted assistant source repairs; not independent human gold or fact-checking",
+    "reviewed_within_chunk_duplicates": 0,
     "source_words": 478335,
     "status": "complete",
-    "superseded_model_claims": 1078,
-    "unrepaired_flagged_model_claims": 0
+    "superseded_model_claims": 1084,
+    "unrepaired_flagged_model_claims": 439,
+    "within_chunk_duplicate_review_sha256": "6f217c34d69b2ef93c2124ae6e08a565626e33da0d258b782934b99fb56efcf8"
   },
   "documents_by_group": {
     "democratic": 7,
@@ -61,54 +63,54 @@
   },
   "embedding_cache_reused": true,
   "learned_topics": {
-    "assistant_revised_labels": 13,
-    "claims": 26483,
+    "assistant_revised_labels": 24,
+    "claims": 26069,
     "displayed_topics": 21,
     "epsilon": 0.0001,
     "evolution": {
-      "assistant_revised_labels": 34,
+      "assistant_revised_labels": 74,
       "cache_reused": true,
-      "claims_assigned": 26483,
+      "claims_assigned": 26069,
       "claims_not_fitted": 0,
       "groups": [
         "democratic",
         "republican",
         "dsa"
       ],
-      "labels_available": 64,
+      "labels_available": 74,
       "periods": 7,
       "qualification": "Uses only each period's claims and embeddings for its PCA, clustering and keywords. Centroid matches are descriptive similarities, not proof of emergence, disappearance, splits, merges, stance change, or causal change.",
-      "reviewed_labels": 64,
+      "reviewed_labels": 74,
       "status": "complete",
       "taxonomy": "Independent discovery in each period; numeric IDs do not match across fits",
-      "topics": 64
+      "topics": 74
     },
     "excluded_identity_topics": [
-      "topic-007",
+      "topic-008",
       "topic-017",
-      "topic-024"
+      "topic-023"
     ],
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
       "pca_dimensions": 50,
-      "pca_variance_retained": 0.599114716053009,
+      "pca_variance_retained": 0.6021729707717896,
       "selected_parameters": {
         "adjusted_rand_vs_selected": 1.0,
         "clusters": 24,
-        "cosine_silhouette": 0.057901255786418915,
+        "cosine_silhouette": 0.060338109731674194,
         "coverage": 1.0,
-        "largest_topic_share": 0.07578446550617378,
+        "largest_topic_share": 0.06862557060109709,
         "method": "weighted_kmeans",
         "min_cluster_size": "",
         "min_samples": "",
         "selected": true,
-        "selection_score": 0.0535132400645089
+        "selection_score": 0.056197372522346446
       },
       "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
       "status": "complete"
     },
-    "fit_manifest_sha256": "4d08e3bc67c0b56e5678f89aa48f0674dc22609bdb160868192e9b9f4bf719e5",
+    "fit_manifest_sha256": "572acf37d6d04dcc5c75014b692613564c1c2ec56f4ff1de3f0cda02d2be607f",
     "groups": [
       "democratic",
       "republican",
@@ -118,7 +120,7 @@
     "labels_available": 24,
     "limitations": "Exploratory language subjects, not agreement or ideology. Pooled periods and genres differ; strict/expanded contrasts are source-composition sensitivity.",
     "positions": {
-      "coordinates_sha256": "0122a41f0ce1f3645079161c20028674e06b5365191ab0b06a843a0ea2155338",
+      "coordinates_sha256": "0a5cb66b68d69ad1cc89894f4a934fb155e486904d2b748cec013749ee368462",
       "figures": [
         "all_groups",
         "democratic_vs_republican",
@@ -127,15 +129,15 @@
       ],
       "group_positions": 63,
       "pairwise_differences": 63,
-      "qualification": "Source-bound assistant synthesis of bundle-diverse examples, not independent human certification or an exhaustive stance classification. Statements describe the observed documents across years, not every member's beliefs or a current consensus.",
-      "selection_manifest_sha256": "74a1e6ef5701e95e492d31675b11aeb80250fa6aa3737905f2c1d1373b0497b6",
+      "qualification": "Source-bound assistant synthesis of period- and document-diverse central examples, not independent human certification or an exhaustive stance classification. Statements describe the observed documents across years, not every member's beliefs or a current consensus.",
+      "selection_manifest_sha256": "ddfc2630fe62dd5a2936fc4e45cffbc813ce269ee954d0ffee9fa55bd16bbd4e",
       "status": "complete",
       "topics": 21,
       "view": "expanded"
     },
     "publication": {
-      "original_assets": 152,
-      "page_assets": 152,
+      "original_assets": 153,
+      "page_assets": 153,
       "substack_background": "#F7F5F0",
       "themarginoferror_background": "#F5F5F5"
     },
@@ -167,18 +169,18 @@
   },
   "topic_model": {
     "cache_reused": true,
-    "claims": 26483,
+    "claims": 26069,
     "config_sha256": "e65ce77bbf67162cc6a12412b01ad79496399ea2072300ceab8b65e99217355c",
     "max_length": 256,
     "model": "sentence-transformers/all-MiniLM-L6-v2",
     "normalization": "l2",
-    "ordered_text_hash": "15cd2fcd5d78b3993e908aa16b2c7cc97d7d2a25ab9c6e84546d3ce86c68ea7b",
+    "ordered_text_hash": "3573e12e8e4b47c2780cf9c593a952b200482319d8045ac0e89500387d67015a",
     "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
     "topics": 21
   },
   "views": {
     "expanded": {
-      "bandwidth": 0.543066291870718,
+      "bandwidth": 0.5434066345937629,
       "density_space": "Standardized selected-dimensional shared UMAP; 2D is display only",
       "dimensions": 10,
       "document_types": {
@@ -206,20 +208,15 @@
         "republican": 6
       },
       "group_passages": {
-        "democratic": 11870,
-        "dsa": 5153,
-        "republican": 9460
+        "democratic": 11811,
+        "dsa": 5108,
+        "republican": 9150
       },
       "group_sample_sizes": {
-        "democratic": 5153,
-        "dsa": 5153,
-        "republican": 5153
+        "democratic": 5108,
+        "dsa": 5108,
+        "republican": 5108
       },
-      "groups": [
-        "democratic",
-        "republican",
-        "dsa"
-      ],
       "region_count": 18,
       "seed": 1729,
       "status": "complete",
@@ -252,20 +249,15 @@
         "republican": 6
       },
       "group_passages": {
-        "democratic": 11870,
+        "democratic": 11811,
         "dsa": 842,
-        "republican": 9460
+        "republican": 9150
       },
       "group_sample_sizes": {
         "democratic": 842,
         "dsa": 842,
         "republican": 842
       },
-      "groups": [
-        "democratic",
-        "republican",
-        "dsa"
-      ],
       "region_count": 18,
       "seed": 1729,
       "status": "complete",

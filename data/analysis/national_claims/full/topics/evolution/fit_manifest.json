@@ -33,7 +33,7 @@
     "date_rule": "Adoption then publication; same four-year periods as fixed-topic trends",
     "implementation_sha256": "ccd1e18e6dd0780d6e25d43c8f149b2fe03632f03429600af7facbe6e1d94f30",
     "inputs": {
-      "claims_sha256": "4e2b6ef6472b51aad8f980737749c87cedffded9291b6224d7ba65fac31c1078",
+      "claims_sha256": "c0f1f1d76e6d1395feb0e6adef3fe78e146ac6bfad7a3e0bd570d5f200f7d12c",
       "config": {
         "balanced_refits": 2,
         "epsilon": 0.0001,
@@ -71,17 +71,17 @@
         "model_name": "Alibaba-NLP/gte-multilingual-base",
         "model_revision": "9bbca17d9273fd0d03d5725c7a4b0f6b45142062",
         "normalization": "l2",
-        "ordered_text_hash": "15cd2fcd5d78b3993e908aa16b2c7cc97d7d2a25ab9c6e84546d3ce86c68ea7b",
-        "segment_count": 26483
+        "ordered_text_hash": "3573e12e8e4b47c2780cf9c593a952b200482319d8045ac0e89500387d67015a",
+        "segment_count": 26069
       },
-      "embedding_sha256": "d70b5cdf57126a0449cea105abbd4e1831e254efc9cee727d6d72b8be5350671",
+      "embedding_sha256": "eac676f9a05cd432be3009f24c7dbbd165f4142eead5ca1c3eae96996e250269",
       "groups": [
         "democratic",
         "republican",
         "dsa"
       ],
       "implementation_sha256": "92b61d380f14dd6d06baa1ec6e5dcd74f0da077a3d4a10b90ef06d86ce4c5f2a",
-      "ordered_claim_ids_sha256": "46d68ca31e95751d90d0285e1d61c5b2152768525f3b6b3c0b461b2af4d66e71",
+      "ordered_claim_ids_sha256": "55a94798ec8c47a509353096b5a510ba2277c1f0bde8faf1a8d3d67e37294b37",
       "sources_sha256": "d5bf27dd85e60b19db8a75f88655742d44ffb96bc901e9847041becae7fec293",
       "versions": {
         "numpy": "2.5.2",
@@ -121,22 +121,22 @@
     }
   },
   "outputs": {
-    "adjacent_matches.csv": "525848b874da99450f7d1fc7cee9bb3a4c92e85e2cc18a40761eead89def489f",
-    "assignments.csv": "189deea56d11f607606996f20e80bef7cf82f9df62f0f6aaa05729acf4cc8505",
-    "balanced_refits.csv": "ccca5a4bc1afd6eed272aad1e2ab1afa1bfc3f39bebb3e5c20952011b572f347",
-    "candidate_fits.csv": "0cbdf4d313bb46259d872d59f11308cc1d8c722a134b4a86ab5173f231bf3245",
-    "centroids.json": "7c7b549c707e46aae6c66e59535fa5cf136eac72f3495a539dd2af082456dfcb",
-    "contrasts.csv": "8c15725fa5f3c8494d3e237c0b267affb8a4cb49b91cc36958fadca08d4fc40b",
-    "coverage.csv": "dca8ddff71e7314cf8e93eecdb635855036bec705d56e627bab5450e649617e4",
+    "adjacent_matches.csv": "621ebfbfd5c9d218ed256a8a8080b918be938fa090712737926bbd8b73bfee1f",
+    "assignments.csv": "1e71e373c10e96543bdcb408d9a46241e1885ee893d0ffbf7ac4cab8dfa26185",
+    "balanced_refits.csv": "884f185cd1d783caf2ae9cc22c625e314a1fc9e06b9da0090ed747c9641e3196",
+    "candidate_fits.csv": "14a0bf23a86bb978779112db939daf73bba8d623cde6a48dff7e5557f79e136d",
+    "centroids.json": "c42ba68fe058f013206e3d69ce7e792eb35a6617c2cdae57c5c0371715af47c1",
+    "contrasts.csv": "844e433bfd9eae5149454b866476ffeb67a50f577b21816b9f201ea8634d7907",
+    "coverage.csv": "19f2a7a30c76ab7488c9510f0fd771aca05bd6053d2cdf67e14d70ab6ee39ffe",
     "date_exclusions.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
     "document_dates.csv": "81cc4be9690e3ef46de164f8cb10b69cd567e81a7deeda4792a66661666ccdfa",
-    "keywords.csv": "3795d675268a175e3f5c853f22167704621609f35cc31a84fd50f08c404ed177",
-    "period_fits.json": "edb4b0fab0275ab8f6fc7acb8cec47cfda9fc1c5ff5385a6b36e320b2d9b5408",
-    "representatives.csv": "0e278f523220d1f3665d9bd31d8da529b12226c3a06796f96a30012c0e90a004",
-    "shares.csv": "8147ab2e110e8f0b293fd3d9bb1fa1771d00b51ce642f02c1ad215efa56e85df"
+    "keywords.csv": "0b0319906dbe18afe1fc341953246dcc8f56586d12cb90c26e83575a5c6f3365",
+    "period_fits.json": "bda913e2c90f6acc4fac416a56e0a1c56bc69a27d1afd957bd19a994da73e07a",
+    "representatives.csv": "03dc95bd2b92604b76e42788b0194750f062f452da6df9a8e9dbe619cedd5616",
+    "shares.csv": "b8ebd0bff3d7596c32f6a039a422a61d56820052a3670a9ddbf18a69f9eb41e0"
   },
   "summary": {
-    "claims_assigned": 26483,
+    "claims_assigned": 26069,
     "claims_not_fitted": 0,
     "groups": [
       "democratic",
@@ -147,6 +147,6 @@
     "qualification": "Uses only each period's claims and embeddings for its PCA, clustering and keywords. Centroid matches are descriptive similarities, not proof of emergence, disappearance, splits, merges, stance change, or causal change.",
     "status": "complete",
     "taxonomy": "Independent discovery in each period; numeric IDs do not match across fits",
-    "topics": 64
+    "topics": 74
   }
 }

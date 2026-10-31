@@ -1,0 +1,73 @@
+{
+  "additional_sample_source_exclusions": 45,
+  "baseline_claims": 26483,
+  "baseline_revision": "e50513155d2b007e4f1d0aa109216ddc72d519a9",
+  "cap_cache_reused": true,
+  "claims_by_group": {
+    "democratic": 11840,
+    "dsa": 5141,
+    "republican": 9219
+  },
+  "cleaned_claims": 26200,
+  "encoder_cache_reused": true,
+  "method": "Exact-ID/text-verified subset of the previously validated 26,241-claim cache. Newly restored duplicates reuse only unique identical text within the same document, group and bundle. All original candidate wording/evidence, replies, repairs and history are unchanged.",
+  "previous_cleaned_claims": 26241,
+  "previous_provenance_sha256": "b5c1ba6b3c0761c75bfa81db122c3d3d0a6b9daf90df759c12d03bd7930afa60",
+  "restored_supported_duplicate_occurrences": [
+    {
+      "cached_identical_claim_id": "dsa-2001-convention-priorities-normalized-cf1eef463e22-001",
+      "claim_id": "dsa-2001-convention-priorities-normalized-fabd62226cf6-003"
+    },
+    {
+      "cached_identical_claim_id": "republican-2000-normalized-5bbdd676d52d-001",
+      "claim_id": "republican-2000-normalized-7dc35a7f7907-001"
+    },
+    {
+      "cached_identical_claim_id": "republican-2000-normalized-5bbdd676d52d-002",
+      "claim_id": "republican-2000-normalized-7dc35a7f7907-002"
+    },
+    {
+      "cached_identical_claim_id": "republican-2000-normalized-5bbdd676d52d-005",
+      "claim_id": "republican-2000-normalized-7dc35a7f7907-006"
+    }
+  ],
+  "schema_version": 1,
+  "subset_files": [
+    {
+      "path": "analysis_claims.csv",
+      "sha256": "b542c0a58d018b81929be5bd45653607ac230f57b7d00ff557c3517d8d0a3a56"
+    },
+    {
+      "path": "embeddings.npy",
+      "sha256": "26743eeee14880713aeac6b5affed9302eca96372dc853d549f1ee76d6b24d29"
+    },
+    {
+      "path": "embedding_manifest.json",
+      "sha256": "6c3172085eaa0eb4655103af61ef7f7f7faed49b5d84adaf353459ae15a8e00f"
+    },
+    {
+      "path": "topic_similarities.npy",
+      "sha256": "07a9d9d0ac50912570123c2fec73bd7947b2f240a24be7f882329b7834e9d0ed"
+    },
+    {
+      "path": "topic_manifest.json",
+      "sha256": "0327ecffc36427ac33b90d4bc0a40fddf047b4adc97f6e9e34e21d81976f5dc9"
+    },
+    {
+      "path": "claim_token_lengths.csv",
+      "sha256": "cd5fe8281165582e9083f29b37e385c2d30ab58675cc8fd64d88447f41d635e9"
+    },
+    {
+      "path": "claim_tokenization_manifest.json",
+      "sha256": "8c859d9a79632701c06e069c67b40c0dff68c23a795b070d77bf523b6581663f"
+    }
+  ],
+  "tokenization": {
+    "limit": 256,
+    "maximum_tokens": {
+      "gte": 159,
+      "topics": 145
+    },
+    "truncated_claims": 0
+  }
+}

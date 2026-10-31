@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "baseline_eligible_claims": 26483,
+  "current_eligible_claims": 26069,
+  "original_candidates_preserved": 27720,
+  "current_candidates": 27726,
+  "eligible_claims_by_group": {
+    "democratic": 11811,
+    "republican": 9150,
+    "dsa": 5108
+  },
+  "eligible_claims_by_origin": {
+    "local_gemma": 25022,
+    "assistant_source_repair": 1047
+  },
+  "preserved_file_counts": {
+    "responses": 2623,
+    "response_history": 222,
+    "topics/labels": 24,
+    "topics/evolution/labels": 64
+  },
+  "preserved_files_manifest_sha256": "e67c93433501a6e12076ad736a17c1ac8435c92f2be421c302d5371c5a64d8fd",
+  "exact_original_claim_fields_preserved_except_dispositions": true,
+  "exact_cached_gte_cap_and_token_subsets": true,
+  "qualification": "Structural and provenance verification, not corpus-wide semantic certification. Original candidates, source text, raw replies/history and archived model labels are preserved. New candidate IDs reuse cached vectors only for identical text within the same group, document and bundle."
+}

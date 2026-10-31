@@ -1,52 +1,52 @@
 {
-  "assistant_revised_labels": 13,
-  "claims": 26483,
+  "assistant_revised_labels": 24,
+  "claims": 26069,
   "displayed_topics": 21,
   "epsilon": 0.0001,
   "evolution": {
-    "assistant_revised_labels": 34,
+    "assistant_revised_labels": 74,
     "cache_reused": true,
-    "claims_assigned": 26483,
+    "claims_assigned": 26069,
     "claims_not_fitted": 0,
     "groups": [
       "democratic",
       "republican",
       "dsa"
     ],
-    "labels_available": 64,
+    "labels_available": 74,
     "periods": 7,
     "qualification": "Uses only each period's claims and embeddings for its PCA, clustering and keywords. Centroid matches are descriptive similarities, not proof of emergence, disappearance, splits, merges, stance change, or causal change.",
-    "reviewed_labels": 64,
+    "reviewed_labels": 74,
     "status": "complete",
     "taxonomy": "Independent discovery in each period; numeric IDs do not match across fits",
-    "topics": 64
+    "topics": 74
   },
   "excluded_identity_topics": [
-    "topic-007",
+    "topic-008",
     "topic-017",
-    "topic-024"
+    "topic-023"
   ],
   "fit": {
     "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
     "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
     "pca_dimensions": 50,
-    "pca_variance_retained": 0.599114716053009,
+    "pca_variance_retained": 0.6021729707717896,
     "selected_parameters": {
       "adjusted_rand_vs_selected": 1.0,
       "clusters": 24,
-      "cosine_silhouette": 0.057901255786418915,
+      "cosine_silhouette": 0.060338109731674194,
       "coverage": 1.0,
-      "largest_topic_share": 0.07578446550617378,
+      "largest_topic_share": 0.06862557060109709,
       "method": "weighted_kmeans",
       "min_cluster_size": "",
       "min_samples": "",
       "selected": true,
-      "selection_score": 0.0535132400645089
+      "selection_score": 0.056197372522346446
     },
     "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
     "status": "complete"
   },
-  "fit_manifest_sha256": "4d08e3bc67c0b56e5678f89aa48f0674dc22609bdb160868192e9b9f4bf719e5",
+  "fit_manifest_sha256": "572acf37d6d04dcc5c75014b692613564c1c2ec56f4ff1de3f0cda02d2be607f",
   "groups": [
     "democratic",
     "republican",
@@ -56,7 +56,7 @@
   "labels_available": 24,
   "limitations": "Exploratory language subjects, not agreement or ideology. Pooled periods and genres differ; strict/expanded contrasts are source-composition sensitivity.",
   "positions": {
-    "coordinates_sha256": "0122a41f0ce1f3645079161c20028674e06b5365191ab0b06a843a0ea2155338",
+    "coordinates_sha256": "0a5cb66b68d69ad1cc89894f4a934fb155e486904d2b748cec013749ee368462",
     "figures": [
       "all_groups",
       "democratic_vs_republican",
@@ -65,15 +65,15 @@
     ],
     "group_positions": 63,
     "pairwise_differences": 63,
-    "qualification": "Source-bound assistant synthesis of bundle-diverse examples, not independent human certification or an exhaustive stance classification. Statements describe the observed documents across years, not every member's beliefs or a current consensus.",
-    "selection_manifest_sha256": "74a1e6ef5701e95e492d31675b11aeb80250fa6aa3737905f2c1d1373b0497b6",
+    "qualification": "Source-bound assistant synthesis of period- and document-diverse central examples, not independent human certification or an exhaustive stance classification. Statements describe the observed documents across years, not every member's beliefs or a current consensus.",
+    "selection_manifest_sha256": "ddfc2630fe62dd5a2936fc4e45cffbc813ce269ee954d0ffee9fa55bd16bbd4e",
     "status": "complete",
     "topics": 21,
     "view": "expanded"
   },
   "publication": {
-    "original_assets": 152,
-    "page_assets": 152,
+    "original_assets": 153,
+    "page_assets": 153,
     "substack_background": "#F7F5F0",
     "themarginoferror_background": "#F5F5F5"
   },
