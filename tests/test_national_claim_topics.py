@@ -26,6 +26,7 @@ from dsa_analysis.national_claim_topics import (
     config,
     contrasts,
     current_labels,
+    displayed_topics,
     distributions,
     evidence_packets,
     fit_topics,
@@ -302,7 +303,7 @@ class ClaimTopicsTests(unittest.TestCase):
         def capture(fig, stem):
             key = stem.relative_to(directory).as_posix()
             captured[key] = fig.axes[0]
-            if fig.get_gid() == "issue-card":
+            if fig.get_gid() == "issue-card" and "/issues/" in key:
                 np.testing.assert_allclose(fig.get_size_inches(), [9, 5.5])
                 fig.canvas.draw()
                 renderer = fig.canvas.get_renderer()
@@ -381,6 +382,76 @@ class ClaimTopicsTests(unittest.TestCase):
                 self.assertEqual(len(overall), 4)
                 for axis in overall.values():
                     np.testing.assert_allclose([bar.get_width() for bar in axis.patches], [0.5] * 3)
+
+    def test_four_group_contrasts_paginate_all_six_pairs_without_narrow_columns(self):
+        labels = {"health": {"title": "Health"}}
+        claims = [row(group, group) for group in SUPPORTED_GROUPS]
+        shares = distributions(claims, ["health"] * 4, SUPPORTED_GROUPS)
+        captured = []
+
+        def capture(fig, stem):
+            if stem.name.startswith("pairwise_emphasis"):
+                captured.append([axis.get_title(loc="left") for axis in fig.axes[1:]])
+
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            write_rows(directory / "shares.csv", shares)
+            write_rows(directory / "contrasts.csv", contrasts(shares, SUPPORTED_GROUPS, 0.0001))
+            write_rows(directory / "keywords.csv", [])
+            write_json(
+                directory / "fit_manifest.json", {"summary": {"groups": list(SUPPORTED_GROUPS)}}
+            )
+            with patch("dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture):
+                plot_topics(directory, directory, labels, config())
+        self.assertEqual(len(captured), 4)
+        self.assertTrue(all(len(columns) == 3 for columns in captured))
+        self.assertEqual(len(set(captured[0] + captured[1])), 6)
+
+    def test_identity_topics_leave_denominators_intact_and_remove_stale_figures(self):
+        from dsa_analysis.national_claim_plot_style import export_page_versions
+
+        labels = {
+            "policy": {"title": "Healthcare Access, Costs, and Provision"},
+            "topic-007": {"title": "Democratic Party Identity and Partisan Descriptions"},
+            "topic-017": {"title": "Republican Party Identity and Partisan Descriptions"},
+            "topic-024": {"title": "DSA Identity and Socialist Organizing"},
+        }
+        self.assertEqual(displayed_topics(labels), {"policy"})
+        claims = [row(f"{group}-{topic}", group) for group in GROUPS for topic in labels]
+        shares = distributions(claims, list(labels) * 3, GROUPS)
+        temporal = [{**share, "period": "2024-2027", "partial_period": True} for share in shares]
+        captured = {}
+
+        def capture(fig, stem):
+            captured[stem.relative_to(directory).as_posix()] = [
+                bar.get_width() for bar in fig.axes[0].patches
+            ]
+
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            write_rows(directory / "shares.csv", shares)
+            write_rows(directory / "contrasts.csv", contrasts(shares, GROUPS, 0.0001))
+            write_rows(directory / "keywords.csv", [])
+            write_json(directory / "fit_manifest.json", {"summary": {"groups": list(GROUPS)}})
+            original_shares = (directory / "shares.csv").read_bytes()
+            for view in ("expanded", "strict"):
+                for topic in set(labels) - {"policy"}:
+                    for kind in ("overall", "time"):
+                        for extension in ("png", "svg"):
+                            for root in (directory, directory / "themarginoferror"):
+                                path = root / view / "issues" / f"{topic}_{kind}.{extension}"
+                                path.parent.mkdir(parents=True, exist_ok=True)
+                                path.write_bytes(b"obsolete")
+            with patch("dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture):
+                plot_topics(directory, directory, labels, config())
+                plot_temporal({"temporal_shares.csv": temporal}, directory, labels, GROUPS)
+            export_page_versions(directory)
+            self.assertEqual((directory / "shares.csv").read_bytes(), original_shares)
+            self.assertFalse(any(directory.rglob("topic-0*.*")))
+            self.assertTrue(all("topic-0" not in name for name in captured))
+            for name, widths in captured.items():
+                if name.endswith("policy_overall"):
+                    np.testing.assert_allclose(widths, [0.25] * 3)
 
     def test_piece_charts_bind_headlines_to_shares_and_preserve_panel_scales_and_gaps(self):
         from PIL import Image

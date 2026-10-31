@@ -60,14 +60,23 @@ rights and gender-affirming care, healthcare, and Israel-Palestine**. These are
 selected illustrations, not a ranking of the strongest contrasts. Each graphic
 has a data-derived headline, paired overall/time panels on the same percentage
 scale, compact titles, and direct group labels. Missing periods stay gaps.
-The complete 24-topic supporting chart set remains available separately.
+The supporting charts show 21 subjects from the 24 fitted clusters. The Democratic,
+Republican and DSA party-identity clusters are omitted from charts and substantive
+rankings, but their claims remain in all denominators and the full assignments and
+review records remain downloadable. Remaining shares are not renormalized.
+
+Overall comparisons now use aligned organization columns with printed shares;
+relative-emphasis figures show unsmoothed percentage-point gaps rather than heatmaps.
+The [detailed density comparisons](report/national_claim_analysis.md#detailed-density-comparisons)
+pair larger individual maps with numbered, source-linked claim examples and exact
+representative density contrasts—not vague floating keyword labels.
 
 ## Results and downloads
 
 | Current result | Scope | Outputs |
 |---|---|---|
 | Full claim-based comparison | 26,483 eligible claims from 135 documents; Democratic, Republican, and DSA | [Actual analyzed claims (CSV)](data/analysis/national_claims/full/analysis_claims.csv) · [Full report](report/national_claim_analysis.md) |
-| Overall learned-topic distributions | 24 shared topics; strict and expanded views; equal document/fallback-bundle weights | [Topic distributions and evidence](report/national_claim_analysis.md#learned-topic-distributions-and-relative-emphasis) · [All shares](data/analysis/national_claims/full/topics/shares.csv) |
+| Overall learned-topic distributions | 24 fitted clusters, 21 displayed subjects; strict and expanded views; unchanged equal document/fallback-bundle denominators | [Topic distributions and evidence](report/national_claim_analysis.md#learned-topic-distributions-and-relative-emphasis) · [All shares](data/analysis/national_claims/full/topics/shares.csv) |
 | Relative topic emphasis | Each group versus equally weighted other groups, plus pairwise comparisons; all support warnings retained | [Ranked contrasts](data/analysis/national_claims/full/topics/contrasts.csv) |
 | Topics over time | Seven four-year periods from 2000 through the partial 2024–2026 period; fixed taxonomy and explicit evidence gaps | [Time charts](report/national_claim_analysis.md#topics-over-time) · [Period shares](data/analysis/national_claims/full/topics/temporal_shares.csv) · [Coverage](data/analysis/national_claims/full/topics/temporal_coverage.csv) |
 | Independently discovered period themes | 64 period-qualified topics; each fit uses only its own period's evidence | [Period-by-period analysis](report/national_claim_analysis.md#independently-discovered-topics-within-each-period) · [Period shares](data/analysis/national_claims/full/topics/evolution/shares.csv) · [Fit diagnostics](data/analysis/national_claims/full/topics/evolution/period_fits.json) · [Source examples](data/analysis/national_claims/full/topics/evolution/representatives.csv) |

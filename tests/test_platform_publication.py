@@ -108,10 +108,10 @@ class PlatformPublicationTest(unittest.TestCase):
                 "topics/representatives.csv",
             ]:
                 archive.write(self.data / name, name)
-            for figure in (self.source / FIGURES).rglob("*"):
+            for figure in (self.source / FIGURES.parent).rglob("*"):
                 if figure.is_file():
                     archive.write(
-                        figure, f"figures/topics/{figure.relative_to(self.source / FIGURES)}"
+                        figure, f"figures/{figure.relative_to(self.source / FIGURES.parent)}"
                     )
 
     def prepare_export(self, omitted=()):
@@ -170,6 +170,69 @@ class PlatformPublicationTest(unittest.TestCase):
             self.assertEqual((output / path).read_bytes(), original.read_bytes())
             self.assertEqual(manifest["files"][path], digest(original))
             self.assertTrue((output / path.replace(".png", ".svg")).is_file())
+
+    def test_excluded_labels_stay_in_downloads_but_not_publication_topics(self):
+        self.prepare_export()
+        labels = json.loads((self.data / "topics/topic_labels.json").read_text())
+        labels.append({**labels[0], "topic_id": "identity", "displayed": False})
+        self.write_json("topics/topic_labels.json", labels)
+        with (self.data / "topics/representatives.csv").open() as stream:
+            representatives = list(csv.DictReader(stream))
+        representatives.append({**representatives[0], "topic_id": "identity"})
+        self.write_csv("topics/representatives.csv", representatives)
+        summary = json.loads((self.data / "topics/summary.json").read_text())
+        summary.update(topics=2, reviewed_labels=2)
+        self.write_json("topics/summary.json", summary)
+        audit = json.loads((self.data / "topics/replay_audit.json").read_text())
+        audit["reviewed_labels"] = 2
+        for relative in audit["substantive_artifacts_sha256"]:
+            audit["substantive_artifacts_sha256"][relative] = digest(self.source / relative)
+        self.write_json("topics/replay_audit.json", audit)
+        self.archive()
+        output = Path(self.tmp.name) / "publication"
+        with patch(
+            "scripts.build_platform_publication.subprocess.check_output", side_effect=["", "a" * 40]
+        ):
+            export(self.source, output)
+        self.assertEqual(len(json.loads((output / "analysis.json").read_text())["topics"]), 1)
+        archived_labels = json.loads((output / "downloads/topics/topic_labels.json").read_text())
+        self.assertEqual(len(archived_labels), 2)
+
+    def test_detailed_density_figures_and_evidence_are_exported(self):
+        self.prepare_export()
+        audit = json.loads((self.data / "topics/replay_audit.json").read_text())
+        for suffix in (".png", ".svg"):
+            source = self.source / FIGURES / f"expanded/topic_distribution{suffix}"
+            figure = (
+                self.source
+                / FIGURES.parent
+                / "expanded/density_details"
+                / f"democratic_vs_republican_1{suffix}"
+            )
+            figure.parent.mkdir(parents=True, exist_ok=True)
+            figure.write_bytes(source.read_bytes())
+            audit["substantive_artifacts_sha256"][figure.relative_to(self.source).as_posix()] = (
+                digest(figure)
+            )
+        self.write_json("topics/replay_audit.json", audit)
+        (self.data / "expanded").mkdir()
+        self.write_csv(
+            "expanded/density_region_evidence.csv",
+            [{"example_text": "A complete claim.", "example_log_density_ratio": 1.25}],
+        )
+        self.archive()
+        output = Path(self.tmp.name) / "publication"
+        with patch(
+            "scripts.build_platform_publication.subprocess.check_output", side_effect=["", "a" * 40]
+        ):
+            export(self.source, output)
+        self.assertTrue(
+            (output / "figures/expanded/density_details/democratic_vs_republican_1.png").is_file()
+        )
+        self.assertEqual(
+            (output / "downloads/expanded/density_region_evidence.csv").read_bytes(),
+            (self.data / "expanded/density_region_evidence.csv").read_bytes(),
+        )
 
     def test_missing_issue_scope_is_rejected_without_partial_output(self):
         self.prepare_export(

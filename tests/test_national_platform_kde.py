@@ -13,6 +13,7 @@ from dsa_analysis.national_platform_kde import (
     encode,
     fit_indices,
     pairwise_scores,
+    plot_density_details,
     region_summaries,
     write_report,
 )
@@ -39,6 +40,70 @@ def rows():
 
 
 class NationalKDETests(unittest.TestCase):
+    def test_density_details_keep_full_sources_and_distinguish_example_scores(self):
+        corpus = [
+            {**row, "umap_x": 0.1, "umap_y": 0.2, "democratic_vs_republican": 1.25}
+            for row in rows()[:2]
+        ]
+        regions = [
+            {
+                "pair": "democratic_vs_republican",
+                "zone": zone,
+                "cluster": index,
+                "passages": 30,
+                "documents": 3,
+                "bundles": 3,
+                "terms": "drug, medicare, seniors, prescription",
+                "group_support": '{"democratic": 20, "republican": 10}',
+                "segment_id": corpus[0]["segment_id"],
+                "document_id": corpus[0]["document_id"],
+                "source_url": corpus[0]["source_url"],
+                "locator": corpus[0]["locator"],
+                "excerpt": "A brief example.",
+            }
+            for index in range(2)
+            for zone in ("democratic_relative", "shared_language", "republican_relative")
+        ]
+        captures = []
+
+        def capture(fig, stem, **kwargs):
+            self.assertEqual(kwargs["svg_dpi"], 125)
+            fig.canvas.draw()
+            renderer = fig.canvas.get_renderer()
+            width, height = fig.canvas.get_width_height()
+            for text in fig.texts:
+                box = text.get_window_extent(renderer)
+                self.assertGreaterEqual(box.x0, 0)
+                self.assertGreaterEqual(box.y0, 0)
+                self.assertLessEqual(box.x1, width, text.get_text())
+                self.assertLessEqual(box.y1, height, text.get_text())
+            boxes = [
+                text.get_bbox_patch().get_window_extent(renderer) for text in fig.axes[0].texts
+            ]
+            self.assertEqual(len(boxes), 3)
+            self.assertTrue(
+                all(not a.overlaps(b) for i, a in enumerate(boxes) for b in boxes[i + 1 :])
+            )
+            captures.append(fig.axes[0].collections[0].norm)
+
+        result = {
+            "view": "strict",
+            "groups": ["democratic", "republican"],
+            "_scored": corpus,
+            "_regions": regions,
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            with patch("dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture):
+                evidence = plot_density_details(result, Path(temporary), 2)
+        self.assertEqual(len(captures), 2)
+        self.assertTrue(all((norm.vmin, norm.vmax) == (-2, 2) for norm in captures))
+        self.assertEqual(len(evidence), 6)
+        for example in evidence:
+            self.assertEqual(example["example_log_density_ratio"], 1.25)
+            self.assertEqual(example["example_text"], corpus[0]["text"])
+            self.assertEqual(example["source_url"], corpus[0]["source_url"])
+            self.assertNotIn("region_mean", example)
+
     def test_four_party_balancing_and_all_six_named_contrasts(self):
         corpus = rows()
         corpus += [

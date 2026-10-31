@@ -63,6 +63,7 @@
   "learned_topics": {
     "assistant_revised_labels": 13,
     "claims": 26483,
+    "displayed_topics": 21,
     "epsilon": 0.0001,
     "evolution": {
       "assistant_revised_labels": 34,
@@ -82,6 +83,11 @@
       "taxonomy": "Independent discovery in each period; numeric IDs do not match across fits",
       "topics": 64
     },
+    "excluded_identity_topics": [
+      "topic-007",
+      "topic-017",
+      "topic-024"
+    ],
     "fit": {
       "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
       "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
@@ -112,8 +118,8 @@
     "labels_available": 24,
     "limitations": "Exploratory language subjects, not agreement or ideology. Pooled periods and genres differ; strict/expanded contrasts are source-composition sensitivity.",
     "publication": {
-      "original_assets": 282,
-      "page_assets": 282,
+      "original_assets": 296,
+      "page_assets": 296,
       "substack_background": "#F7F5F0",
       "themarginoferror_background": "#F5F5F5"
     },
@@ -125,7 +131,7 @@
       "cutoff": "2026-10-26",
       "date_rule": "Adoption date when recorded, otherwise publication date; preserve precision",
       "exclusions": 0,
-      "implementation_sha256": "0ed7c4a07bb73f4d6c0640ce7b86cbe8de2a98b66b6b36c25b946087437f59c4",
+      "implementation_sha256": "c09cf6a605686f280700ba65fcd7d6842adfea7ceaef54e752fda9c799935c21",
       "period_years": 4,
       "relative_baseline": "All other configured groups required; no changing vs-rest baselines",
       "start_year": 2000,

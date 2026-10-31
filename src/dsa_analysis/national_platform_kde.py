@@ -527,6 +527,186 @@ def document_chronology(rows: list[dict], embeddings: np.ndarray) -> list[dict]:
     return documents
 
 
+def plot_density_details(result: dict, figures: Path, bound: float) -> list[dict]:
+    from textwrap import fill
+
+    import matplotlib.pyplot as plt
+    from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
+
+    from .national_claim_plot_style import BG, COLORS, save_figure
+
+    rows = result["_scored"]
+    lookup = {row["segment_id"]: row for row in rows}
+    destination = figures / "density_details"
+    destination.mkdir(parents=True, exist_ok=True)
+    for old in destination.glob("*"):
+        if old.suffix in {".png", ".svg"}:
+            old.unlink()
+    records = []
+    for first, second in combinations(tuple(result.get("groups", GROUPS)), 2):
+        pair = f"{first}_vs_{second}"
+        selected = [row for row in rows if row["group"] in {first, second}]
+        zones = (f"{first}_relative", "shared_language", f"{second}_relative")
+        regional = {
+            zone: [row for row in result["_regions"] if row["pair"] == pair and row["zone"] == zone]
+            for zone in zones
+        }
+        cmap = LinearSegmentedColormap.from_list(pair, [COLORS[second], BG, COLORS[first]])
+        pages = max((len(value) for value in regional.values()), default=0) or 1
+        for page in range(pages):
+            examples = [regional[zone][page] for zone in zones if len(regional[zone]) > page]
+            fig = plt.figure(figsize=(12, 7))
+            fig.set_gid("issue-card")
+            fig.text(
+                0.055,
+                0.94,
+                f"{LABELS[first]} and {LABELS[second]}: language density",
+                fontsize=17,
+                weight="bold",
+            )
+            fig.text(
+                0.055,
+                0.88,
+                f"{result.get('view', figures.name).capitalize()} sources | "
+                f"Supported regions and representative claims | {page + 1} / {pages}",
+                fontsize=9,
+                color="#6B6B6B",
+            )
+            axis = fig.add_axes((0.055, 0.26, 0.47, 0.54))
+            image = axis.scatter(
+                [float(row["umap_x"]) for row in selected],
+                [float(row["umap_y"]) for row in selected],
+                c=[float(row[pair]) for row in selected],
+                cmap=cmap,
+                norm=TwoSlopeNorm(vmin=-bound, vcenter=0, vmax=bound),
+                s=5,
+                alpha=0.65,
+                linewidths=0,
+                rasterized=True,
+            )
+            for coordinate, setter in (("umap_x", axis.set_xlim), ("umap_y", axis.set_ylim)):
+                values = np.array([float(row[coordinate]) for row in rows])
+                pad = max(float(np.ptp(values)) * 0.05, 1e-6)
+                setter(float(values.min()) - pad, float(values.max()) + pad)
+            axis.set_axis_off()
+            occupied = []
+            for index, region in enumerate(examples, 1):
+                if region["segment_id"] not in lookup:
+                    raise ValueError(f"Missing region representative: {region['segment_id']}")
+                example = lookup[region["segment_id"]]
+                point = (float(example["umap_x"]), float(example["umap_y"]))
+                for offset in ((0, 10), (0, -15), (18, 10), (-18, 10), (22, -18), (-22, -18)):
+                    label = axis.annotate(
+                        str(index),
+                        xy=point,
+                        xytext=offset,
+                        textcoords="offset points",
+                        ha="center",
+                        va="center",
+                        fontsize=9,
+                        weight="bold",
+                        bbox={
+                            "boxstyle": "circle,pad=0.25",
+                            "facecolor": BG,
+                            "edgecolor": "#77736D",
+                        },
+                        arrowprops={"arrowstyle": "-", "linewidth": 0.6, "color": "#77736D"},
+                    )
+                    fig.canvas.draw()
+                    box = label.get_bbox_patch().get_window_extent(fig.canvas.get_renderer())
+                    if not any(box.overlaps(other) for other in occupied):
+                        occupied.append(box)
+                        break
+                    label.remove()
+                y = 0.765 - (index - 1) * 0.205
+                zone = (
+                    "Comparable density"
+                    if region["zone"] == "shared_language"
+                    else "Denser "
+                    f"{LABELS[first if region['zone'] == zones[0] else second]} language"
+                )
+                fig.text(0.58, y, f"{index}. {zone}", fontsize=10, weight="bold")
+                fig.text(
+                    0.58,
+                    y - 0.032,
+                    "Keywords: " + region["terms"],
+                    fontsize=8.5,
+                    color="#6B6B6B",
+                )
+                score = float(example[pair])
+                fig.text(
+                    0.58,
+                    y - 0.065,
+                    f"{region['passages']} claims | {region['bundles']} bundles | "
+                    f"Example ln density ratio {score:+.2f}",
+                    fontsize=8,
+                    color="#6B6B6B",
+                )
+                fig.text(
+                    0.58,
+                    y - 0.095,
+                    fill(
+                        region["excerpt"] + (" ..." if len(example["text"].split()) > 25 else ""),
+                        65,
+                    ),
+                    fontsize=9,
+                    va="top",
+                    linespacing=1.3,
+                )
+                records.append(
+                    {
+                        **region,
+                        "view": result.get("view", figures.name),
+                        "figure": f"density_details/{pair}_{page + 1}.png",
+                        "marker": index,
+                        "example_log_density_ratio": score,
+                        "example_text": example["text"],
+                        "example_title": example.get("title", ""),
+                        "example_publication_date": example.get("publication_date", ""),
+                        "example_adoption_date": example.get("adoption_date", ""),
+                        "color_bound": bound,
+                        "contrast_unit": "natural_log_density_ratio",
+                    }
+                )
+            if not examples:
+                fig.text(0.58, 0.70, "No regions meet the saved support criteria.", fontsize=10)
+            bar = fig.colorbar(
+                image,
+                cax=fig.add_axes((0.08, 0.205, 0.42, 0.018)),
+                orientation="horizontal",
+                extend="both",
+            )
+            bar.ax.tick_params(labelsize=8)
+            fig.text(
+                0.055,
+                0.14,
+                f"Negative: denser {LABELS[second]} language | "
+                f"Positive: denser {LABELS[first]} language",
+                fontsize=8,
+                color="#6B6B6B",
+            )
+            fig.text(
+                0.055,
+                0.095,
+                "Density is fitted in the higher-dimensional space; 2D positions are display only. "
+                "Markers locate examples, not region boundaries.",
+                fontsize=8,
+                color="#6B6B6B",
+            )
+            note = fig.text(
+                0.055,
+                0.045,
+                "THE MARGIN OF ERROR | Exploratory language density, not agreement. "
+                "Natural-log ratios; color clips at the common 95th-percentile bound.",
+                fontsize=7.5,
+                color="#6B6B6B",
+            )
+            note.set_gid("source-note")
+            save_figure(fig, destination / f"{pair}_{page + 1}", svg_dpi=125)
+            plt.close(fig)
+    return records
+
+
 def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) -> None:
     import matplotlib
 
@@ -534,7 +714,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
     import matplotlib.pyplot as plt
     from matplotlib.colors import TwoSlopeNorm
 
-    from .national_claim_plot_style import BG, COLORS, house_style, save_figure
+    from .national_claim_plot_style import COLORS, house_style, save_figure
 
     def publication_year(value):
         lower, upper = date_bounds(value)
@@ -567,6 +747,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
             abs(row[f"{a}_vs_{b}"]) for a, b in pairs for row in rows if row["group"] in {a, b}
         ]
         bound = max(float(np.quantile(all_values, 0.95)), 1e-6)
+        result["_density_evidence"] = plot_density_details(result, figures, bound)
         norm = TwoSlopeNorm(vmin=-bound, vcenter=0, vmax=bound)
         for axis, (first, second) in zip(axes[: len(pairs)], pairs, strict=True):
             selected = [r for r in rows if r["group"] in {first, second}]
@@ -585,41 +766,13 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
             axis.set_xticks([])
             axis.set_yticks([])
             axis.set_xlabel("Shared 2D semantic display")
-            label_bounds = []
-            for zone in (f"{first}_relative", f"{second}_relative", "shared_language"):
-                regions = [
-                    r
-                    for r in result["_regions"]
-                    if r["pair"] == f"{first}_vs_{second}" and r["zone"] == zone
-                ]
-                if not regions:
-                    continue
-                evidence = next(r for r in selected if r["segment_id"] == regions[0]["segment_id"])
-                position = np.array([evidence["umap_x"], evidence["umap_y"]])
-                x_min, x_max = axis.get_xlim()
-                fraction = (position[0] - x_min) / (x_max - x_min)
-                align = "left" if fraction < 0.2 else "right" if fraction > 0.8 else "center"
-                label = axis.text(
-                    *position,
-                    " / ".join(regions[0]["terms"].split(", ")[:2]),
-                    fontsize=8,
-                    color="#333333",
-                    ha=align,
-                    bbox={"facecolor": BG, "edgecolor": "none", "alpha": 0.85, "pad": 2},
-                )
-                fig.canvas.draw()
-                bounds = label.get_window_extent(fig.canvas.get_renderer()).expanded(1.06, 1.3)
-                if any(bounds.overlaps(other) for other in label_bounds):
-                    label.remove()
-                else:
-                    label_bounds.append(bounds)
         bar = fig.colorbar(
             image,
             cax=fig.add_axes(
                 (0.94, 0.29, 0.012, 0.53) if panel_rows == 1 else (0.94, 0.22, 0.012, 0.65)
             ),
         )
-        bar.set_label("Log density ratio: + first / − second", fontsize=9)
+        bar.set_label("ln density ratio: + first / − second", fontsize=9)
         fig.text(
             0.08,
             0.07 if panel_rows == 1 else 0.045,

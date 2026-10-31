@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from collections import Counter
 from pathlib import Path
 
@@ -311,36 +312,61 @@ def plot_topics(shares: list[dict], figures: Path, *, groups: tuple[str, ...] = 
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    from matplotlib.ticker import PercentFormatter
 
-    from .national_claim_plot_style import COLORS, house_style, save_figure
+    from .national_claim_plot_style import COLORS, comparison_page, house_style, save_figure
 
     house_style()
 
-    names = list(dict.fromkeys(row["topic_name"] for row in shares))
-    names.sort(key=lambda name: max(row["share"] for row in shares if row["topic_name"] == name))
-    fig, axis = plt.subplots(figsize=(9, 8))
-    for index, group in enumerate(groups):
-        values = {row["topic_name"]: row["share"] for row in shares if row["group"] == group}
-        axis.scatter(
-            [values[name] for name in names],
-            np.arange(len(names)) + (index - (len(groups) - 1) / 2) * 0.18,
-            color=COLORS[group],
-            s=23,
-            label=LABELS[group],
+    selected = [row for row in shares if row.get("view", "expanded") == "expanded"]
+    names = sorted(
+        {row["topic_name"] for row in selected},
+        key=lambda name: (
+            -max(float(row["share"]) for row in selected if row["topic_name"] == name),
+            name,
+        ),
+    )
+    if not names:
+        return
+    upper = max(0.05, np.ceil(max(float(row["share"]) for row in selected) * 20) / 20)
+    page_size = 11
+    pages = math.ceil(len(names) / page_size)
+    expected = {f"topic_emphasis{'' if page == 0 else f'_{page + 1}'}" for page in range(pages)}
+    for old in figures.glob("topic_emphasis*"):
+        if old.suffix in {".png", ".svg"} and old.stem not in expected:
+            old.unlink()
+    for page, start in enumerate(range(0, len(names), page_size)):
+        chunk = names[start : start + page_size]
+        fig = comparison_page(
+            "Where the documents put their emphasis",
+            f"CAP policy categories | Overall weighted share of claims | "
+            f"Expanded sources | {page + 1} / {pages}",
+            chunk,
+            [(LABELS[group], COLORS[group], COLORS[group]) for group in groups],
+            [
+                [
+                    (
+                        next(
+                            (
+                                float(row["share"])
+                                for row in selected
+                                if row["group"] == group and row["topic_name"] == name
+                            ),
+                            None,
+                        ),
+                        False,
+                    )
+                    for name in chunk
+                ]
+                for group in groups
+            ],
+            upper,
         )
-    axis.set_yticks(range(len(names)), names)
-    axis.xaxis.set_major_formatter(PercentFormatter(1))
-    axis.set_xlim(left=0)
-    axis.set_xlabel("Share of claims, equal document / fallback-period-bundle weight")
-    axis.grid(axis="x")
-    axis.set_axisbelow(True)
-    axis.legend(frameon=False, loc="lower right")
-    axis.spines[["top", "right", "left"]].set_visible(False)
-    axis.tick_params(axis="y", length=0)
-    fig.tight_layout()
-    save_figure(fig, figures / "topic_emphasis")
-    plt.close(fig)
+        fig.texts[-2].set_text(
+            "Same scale on every page. Unclassified claims remain in the denominator. "
+            "Equal document / fallback-bundle weights."
+        )
+        save_figure(fig, figures / f"topic_emphasis{'' if page == 0 else f'_{page + 1}'}")
+        plt.close(fig)
 
 
 def write_report(
@@ -352,6 +378,7 @@ def write_report(
     groups: tuple[str, ...] = GROUPS,
     report: Path | None = None,
 ) -> Path:
+    shares = [{**row, "share": float(row["share"])} for row in shares]
     sample = summary["corpus"]["status"] == "reviewed_sample_not_full_corpus"
     destination = report or (
         ROOT
@@ -391,7 +418,9 @@ def write_report(
     expanded = summary["views"]["expanded"]
     if expanded["status"] == "complete":
         lines += [
-            f"![Pairwise density of claim language]({figure_path}/expanded/pairwise_density.png)",
+            f"[Compact density overview]({figure_path}/expanded/pairwise_density.png). "
+            "For detailed maps and source-linked representative claims, see the "
+            "learned-topic section's detailed density comparisons.",
             "",
             f"The shared representation uses {expanded['dimensions']} dimensions for KDE; "
             "the two-dimensional display is not the density-estimation space. Sampling balances "
@@ -415,6 +444,10 @@ def write_report(
         "## Topics",
         "",
         f"![Document-weighted CAP topic emphasis]({figure_path}/topic_emphasis.png)",
+        *[
+            f"![Document-weighted CAP topic emphasis, continued]({figure_path}/{path.name})"
+            for path in sorted(figures.glob("topic_emphasis_*.png"))
+        ],
         "",
         "The existing pinned MiniLM classifier compares normalized claim text with CAP topic "
         "descriptions (minimum cosine similarity 0.2). Each claim receives at most one topic; "

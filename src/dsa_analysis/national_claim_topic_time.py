@@ -261,6 +261,7 @@ def plot_temporal(
     import matplotlib.pyplot as plt
 
     from .national_claim_plot_style import issue_figure, save_figure
+    from .national_claim_topics import displayed_topics
 
     plt.rcParams.update(PLOT_STYLE)
     shares = tables["temporal_shares.csv"]
@@ -270,7 +271,9 @@ def plot_temporal(
             for path in destination.glob(f"{stem}*"):
                 if path.suffix in {".png", ".svg"}:
                     path.unlink()
-    topics = sorted({row["topic_id"] for row in shares} - {NOISE})
+    topics = sorted(
+        ({row["topic_id"] for row in shares} - {NOISE}) - (set(labels) - displayed_topics(labels))
+    )
     if not topics:
         return
     periods = list(dict.fromkeys(row["period"] for row in shares))

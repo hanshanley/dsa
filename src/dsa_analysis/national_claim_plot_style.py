@@ -68,7 +68,7 @@ def issue_figure(title: str, subtitle: str):
     return fig
 
 
-def save_figure(fig, stem: Path) -> None:
+def save_figure(fig, stem: Path, *, svg_dpi: int = 200) -> None:
     if not any(text.get_gid() == "source-note" for text in fig.texts):
         note = fig.text(
             0.01,
@@ -83,11 +83,78 @@ def save_figure(fig, stem: Path) -> None:
     for extension in ("png", "svg"):
         fig.savefig(
             stem.with_suffix(f".{extension}"),
-            dpi=200,
+            dpi=svg_dpi if extension == "svg" else 200,
             bbox_inches=None if fig.get_gid() == "issue-card" else "tight",
             pad_inches=0 if fig.get_gid() == "issue-card" else 0.18,
             metadata={"Date": None} if extension == "svg" else None,
         )
+
+
+def comparison_page(title, subtitle, names, columns, values, upper, *, differences=False):
+    import matplotlib.pyplot as plt
+    from matplotlib.ticker import FuncFormatter, MaxNLocator, PercentFormatter
+
+    fig = plt.figure(figsize=(12, 6.5))
+    fig.set_gid("issue-card")
+    fig.text(0.055, 0.95, title, fontsize=17, weight="bold")
+    fig.text(0.055, 0.895, subtitle, fontsize=9, color="#6B6B6B")
+    labels = fig.add_axes((0.055, 0.21, 0.32, 0.57))
+    labels.set_ylim(len(names) - 0.5, -0.5)
+    labels.set_axis_off()
+    for index, name in enumerate(names):
+        labels.text(0, index, fill(name, 38), va="center", fontsize=9)
+    for index, (heading, positive, negative) in enumerate(columns):
+        width = 0.43 / len(columns)
+        axis = fig.add_axes((0.39 + index * 0.58 / len(columns), 0.21, width, 0.57))
+        axis.set_title(heading, loc="left", fontsize=10, weight="normal", pad=14)
+        for y, (value, warning) in enumerate(values[index]):
+            if value is None:
+                detail = "No data"
+            else:
+                color = negative if differences and value < 0 else positive
+                if names[y] == "Unclassified":
+                    color = "#AAA69E"
+                axis.barh(y, value, height=0.25, color=color, zorder=3)
+                detail = f"{value * 100:+.1f}" if differences else f"{value:.1%}"
+                detail += "*" if warning else ""
+            axis.text(
+                1.025, y, detail, transform=axis.get_yaxis_transform(), fontsize=8, va="center"
+            )
+        axis.set_ylim(len(names) - 0.5, -0.5)
+        axis.set_xlim(-upper if differences else 0, upper)
+        axis.set_yticks([])
+        axis.xaxis.set_major_locator(MaxNLocator(nbins=3, steps=[1, 2, 5, 10]))
+        axis.xaxis.set_major_formatter(
+            FuncFormatter(lambda value, _: f"{value * 100:g}")
+            if differences
+            else PercentFormatter(1, decimals=0)
+        )
+        axis.tick_params(axis="x", labelsize=8, pad=8)
+        axis.spines["left"].set_visible(False)
+        axis.grid(axis="x", alpha=0.35)
+        axis.set_axisbelow(True)
+        if differences:
+            axis.axvline(0, color="#AAA69E", linewidth=0.7)
+    fig.text(
+        0.055,
+        0.12,
+        "Percentage-point gap: positive = first group has a larger share. "
+        "* Support/sensitivity warning."
+        if differences
+        else "Weighted share of claims. Same scale in every column and on every page.",
+        fontsize=8,
+        color="#6B6B6B",
+    )
+    note = fig.text(
+        0.055,
+        0.05,
+        "THE MARGIN OF ERROR | National political documents. "
+        "Language emphasis, not policy agreement.",
+        fontsize=7.5,
+        color="#6B6B6B",
+    )
+    note.set_gid("source-note")
+    return fig
 
 
 def export_page_versions(figures: Path) -> dict:
@@ -159,3 +226,6 @@ def render_supporting(corpus: Path, figures: Path) -> None:
             if row["cosine_distance_from_previous"]:
                 row["cosine_distance_from_previous"] = float(row["cosine_distance_from_previous"])
         plot_outputs(result, read_rows(coverage), figures / view)
+        from .national_platforms import write_rows
+
+        write_rows(directory / "density_region_evidence.csv", result.get("_density_evidence", []))

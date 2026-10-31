@@ -10,6 +10,7 @@ from dsa_analysis.national_claim_analysis import (
     analysis_rows,
     audit_claim_lengths,
     classify_topics,
+    plot_topics,
     run_analysis,
     topic_predictions,
     topic_shares,
@@ -27,6 +28,69 @@ CONFIG = {
 
 
 class ClaimAnalysisTests(unittest.TestCase):
+    def test_cap_comparisons_paginate_with_values_and_shared_scales(self):
+        captured = []
+        shares = [
+            {"view": "expanded", "group": group, "topic_name": name, "share": value}
+            for group in ("democratic", "republican", "dsa")
+            for name, value in [
+                *[(f"Policy {index}", 0.02) for index in range(21)],
+                ("Unclassified", 0.58),
+            ]
+        ]
+
+        def capture(fig, stem):
+            self.assertEqual(tuple(fig.get_size_inches()), (12, 6.5))
+            fig.canvas.draw()
+            renderer = fig.canvas.get_renderer()
+            for axis, next_axis in zip(fig.axes[1:], fig.axes[2:]):
+                for text in axis.texts:
+                    self.assertLess(
+                        text.get_window_extent(renderer).x1,
+                        next_axis.get_window_extent(renderer).x0,
+                    )
+            captured.append(
+                {
+                    "names": [text.get_text() for text in fig.axes[0].texts],
+                    "widths": [bar.get_width() for axis in fig.axes[1:] for bar in axis.patches],
+                    "limits": [axis.get_xlim() for axis in fig.axes[1:]],
+                    "values": [text.get_text() for axis in fig.axes[1:] for text in axis.texts],
+                }
+            )
+
+        with tempfile.TemporaryDirectory() as temporary:
+            with patch("dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture):
+                plot_topics(shares, Path(temporary))
+        self.assertEqual(len(captured), 2)
+        self.assertEqual(sum(len(page["names"]) for page in captured), 22)
+        self.assertIn("Unclassified", captured[0]["names"])
+        self.assertIn("58.0%", captured[0]["values"])
+        self.assertEqual(captured[0]["widths"].count(0.58), 3)
+        self.assertTrue(all(limits == (0, 0.6) for page in captured for limits in page["limits"]))
+
+    def test_difference_columns_show_unscaled_signed_gaps_and_missing_values(self):
+        import matplotlib.pyplot as plt
+
+        from dsa_analysis.national_claim_plot_style import comparison_page
+
+        fig = comparison_page(
+            "Share gaps",
+            "Unsmoothed differences",
+            ["Health", "Labor", "Education"],
+            [("Democratic minus Republican", "blue", "red")],
+            [[(0.05, False), (-0.015, True), (None, False)]],
+            0.1,
+            differences=True,
+        )
+        try:
+            axis = fig.axes[1]
+            np.testing.assert_allclose([bar.get_width() for bar in axis.patches], [0.05, -0.015])
+            self.assertEqual([text.get_text() for text in axis.texts], ["+5.0", "-1.5*", "No data"])
+            self.assertEqual(axis.xaxis.get_major_formatter()(0.05), "5")
+            self.assertEqual(axis.get_xlim(), (-0.1, 0.1))
+        finally:
+            plt.close(fig)
+
     def test_adapter_embeds_claims_not_evidence_and_checks_exact_provenance(self):
         source_rows = sources()
         block = build_blocks(source_rows, coverage(source_rows))[0]
@@ -153,7 +217,7 @@ class ClaimAnalysisTests(unittest.TestCase):
                 },
             }
             shares = [
-                {"group": group, "view": view, "topic_name": "Health", "share": 1}
+                {"group": group, "view": view, "topic_name": "Health", "share": "1"}
                 for group in groups
                 for view in ("expanded", "strict")
             ]

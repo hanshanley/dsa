@@ -283,10 +283,36 @@ or removes the corpus's unequal period and source-type composition.
 keywords, full representative claims and exact original evidence, strict and
 expanded shares, all ranked contrasts and warnings, candidate diagnostics,
 balanced-refit sensitivity, local label packets/responses, and input/output
-hashes. Both PNG and SVG charts show the overall distributions, group-versus-
-rest heatmaps, and pairwise contrasts. All topics remain accessible, with
-pagination rather than hidden tail topics; heatmap colors saturate at +/-3
-while annotations/downloads retain the full ratios.
+hashes. Both PNG and SVG charts show overall shares in aligned organization
+columns with direct values and common scales. Group-versus-rest and pairwise
+figures show **unsmoothed percentage-point differences**, not heatmap colors
+or smoothed log ratios. The complete smoothed log2 ratios, shares and support
+warnings remain in the contrast downloads.
+
+The pooled fit and all 24 reviewed labels are unchanged. Three party-identity
+clusters (`topic-007`, `topic-017`, `topic-024`) are excluded from substantive
+charts, rankings and summaries: 21 subjects are displayed. Their claims remain
+in overall and temporal denominators; the remaining shares are **not
+renormalized**. Full assignments, source evidence and original review records
+are retained. `topic_labels.json` marks presentation eligibility with
+`displayed`; publication exports omit excluded topics from their presentation
+index but retain the complete label download. The separately fitted period
+taxonomies are not rewritten or treated as persistent pooled-topic identities.
+
+Large, individual pairwise KDE maps now show at most three numbered supported
+region representatives per page, retaining both saved regions in each zone
+across two pages where present. Their colors use the common 95th-percentile
+absolute **natural-log density contrast**, not the topic-share log2 ratio.
+Density is estimated in higher-dimensional space; the UMAP coordinates only
+display claims. Markers identify representative claims, not region boundaries.
+The full claim, source title/date/locator, raw regional group support, and exact
+representative contrast are exported in `expanded/density_region_evidence.csv`
+and its strict equivalent. Regional memberships were not saved; a representative
+score must not be presented as a regional mean. TF-IDF keywords are retrieval
+aids, not reviewed subjects or evidence of policy agreement. Density PNGs
+remain 200 DPI. Only the embedded point-cloud raster in density SVGs uses
+125 DPI; headings, labels and scales remain vector-based. This keeps the
+complete combined archive publishable without dropping claims or evidence.
 
 The `render` stage verifies the current source, embedding, numerical-code and
 output hashes before using labels. Stale or failed labels remain explicitly

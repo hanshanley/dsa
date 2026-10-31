@@ -98,22 +98,24 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
         ]:
             if name not in members or archive.read(name) != (data / name).read_bytes():
                 raise ValueError(f"Complete download contains stale content: {name}")
-        for figure in (source / FIGURES).rglob("*"):
-            if figure.suffix not in {".png", ".svg"}:
+        for figure in (source / FIGURES.parent).rglob("*"):
+            if figure.suffix not in {".png", ".svg"} or figure.is_relative_to(
+                source / WEBSITE_FIGURES.parent
+            ):
                 continue
             relative = figure.relative_to(source).as_posix()
-            member = f"figures/topics/{figure.relative_to(source / FIGURES).as_posix()}"
+            member = f"figures/{figure.relative_to(source / FIGURES.parent).as_posix()}"
             if (
                 relative not in audit["substantive_artifacts_sha256"]
                 or member not in members
                 or archive.read(member) != figure.read_bytes()
             ):
                 raise ValueError(f"Complete download contains stale figure: {relative}")
-        for figure in (source / WEBSITE_FIGURES).rglob("*"):
+        for figure in (source / WEBSITE_FIGURES.parent).rglob("*"):
             if figure.suffix not in {".png", ".svg"}:
                 continue
-            relative = figure.relative_to(source / WEBSITE_FIGURES).as_posix()
-            member = f"figures/themarginoferror/topics/{relative}"
+            relative = figure.relative_to(source / WEBSITE_FIGURES.parent).as_posix()
+            member = f"figures/themarginoferror/{relative}"
             if member not in members or archive.read(member) != figure.read_bytes():
                 raise ValueError(f"Complete download contains stale website figure: {member}")
     return summary, topics, labels, representatives, list(rows(data / "topics/shares.csv"))
@@ -178,6 +180,7 @@ def export(source: Path, output: Path) -> dict:
     ).strip()
     files = {}
     figures = []
+    website_originals = {}
     downloads = []
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix=".platform-publication-", dir=output.parent) as tmp:
@@ -189,12 +192,29 @@ def export(source: Path, output: Path) -> dict:
             shutil.copyfile(original, target)
             files[relative] = digest(target)
 
-        for original in sorted((source / FIGURES).rglob("*")):
+        figure_sources = [
+            (original, source / FIGURES, source / WEBSITE_FIGURES)
+            for original in sorted((source / FIGURES).rglob("*"))
+        ]
+        for view in ("expanded", "strict"):
+            figure_sources += [
+                (original, source / FIGURES.parent, source / WEBSITE_FIGURES.parent)
+                for original in sorted(
+                    (source / FIGURES.parent / view / "density_details").glob("*")
+                )
+            ]
+        figure_sources += [
+            (original, source / FIGURES.parent, source / WEBSITE_FIGURES.parent)
+            for original in sorted((source / FIGURES.parent).glob("topic_emphasis*"))
+        ]
+        for original, figure_root, website_root in figure_sources:
             if original.suffix not in {".png", ".svg"}:
                 continue
-            view = original.parent.relative_to(source / FIGURES).as_posix()
+            parent = original.parent.relative_to(figure_root)
+            view = parent.as_posix() if parent != Path(".") else "reference"
             relative = f"figures/{view}/{original.name}"
             copy(original, relative)
+            website_originals[relative] = website_root / parent / original.name
             if original.suffix == ".png":
                 width, height = struct.unpack(">II", original.read_bytes()[16:24])
                 figures.append(
@@ -210,6 +230,7 @@ def export(source: Path, output: Path) -> dict:
         required = {
             f"figures/{view}/issues/{label['topic_id']}_{kind}.png"
             for label in labels
+            if label.get("displayed", True)
             for view in ("expanded", "strict")
             for kind in ("overall", "time")
         }
@@ -233,11 +254,11 @@ def export(source: Path, output: Path) -> dict:
                 relative = f"{figure['view']}/{figure['name']}"
                 for suffix in (".png", ".svg"):
                     copy(
-                        source / WEBSITE_FIGURES / f"{relative}{suffix}",
+                        website_originals[figure["path"]].with_suffix(suffix),
                         f"website-figures/{relative}{suffix}",
                     )
                 figure["display_path"] = f"website-figures/{relative}.png"
-                website = source / WEBSITE_FIGURES / f"{relative}.png"
+                website = website_originals[figure["path"]]
                 if struct.unpack(">II", website.read_bytes()[16:24]) != (
                     figure["width"],
                     figure["height"],
@@ -270,6 +291,10 @@ def export(source: Path, output: Path) -> dict:
             for original in sorted((source / DATA / "topics/evolution").glob("*")):
                 if original.suffix in {".csv", ".json"}:
                     copy(original, f"downloads/topics/evolution/{original.name}")
+        for original in sorted((source / DATA).glob("*/density_region_evidence.csv")):
+            relative = f"downloads/{original.relative_to(source / DATA).as_posix()}"
+            copy(original, relative)
+            downloads.append(dict(path=relative, bytes=original.stat().st_size))
         copy(source / "report/national_claim_analysis.md", "downloads/methods-and-results.md")
         for label in labels:
             label["representatives"] = [
@@ -282,7 +307,7 @@ def export(source: Path, output: Path) -> dict:
             source_revision=revision,
             summary=summary,
             topic_summary=topics,
-            topics=labels,
+            topics=[label for label in labels if label.get("displayed", True)],
             figures=figures,
             downloads=downloads,
             evolution=evolution,

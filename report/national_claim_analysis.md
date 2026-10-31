@@ -5,6 +5,10 @@
 
 **24 learned topics; 0 unclustered claims. 24/24 named labels available.**
 
+**21 topics shown.** The three party-identity clusters are omitted from substantive charts, rankings and topic summaries. Their claims remain in all denominators; the remaining topics are not renormalized. Original assignments and all reviewed labels remain in the reproducibility downloads.
+
+**Where these names came from:** cached claim embeddings were reduced with PCA and clustered together across the expanded corpus. Weighted K-means selected the pooled clusters after the density-fit coverage check. Local Gemma proposed names using distinctive keywords and bounded representative-claim packets; source-bound assistant review revised misleading names. They are not CAP's predefined policy categories and do not establish shared policy positions.
+
 One shared expanded-corpus taxonomy is used for both views. Shares give each document/fallback bundle equal weight within its organization, including unclustered claims in the denominator. The reference for each group is the equally weighted mean of the other groups, not the larger pooled claim corpus.
 
 Log2 ratios use a 0.0001 share floor: +1 is approximately twice the topic share away from the floor. All contrasts remain ranked, including fragile ones. Zero shares, low bundle support, smoothing sensitivity and leave-one-bundle-out instability are warnings, not grounds for silent exclusion. These are exploratory language-emphasis differences, not agreement, significance, or ideological distance.
@@ -19,13 +23,137 @@ Discovery uses PCA with **weighted_kmeans**. Low density-cluster coverage trigge
 
 **Measured fit limitations:** PCA retains 59.9% of embedding variance; original-space cosine silhouette is 0.058. Balanced-refit adjusted Rand indices are 0.628, 0.606 (1 would mean identical partitions). These are exploratory topic partitions; separation and refit diagnostics do not certify a definitive policy taxonomy.
 
+### Detailed density comparisons
+
+Each large map is paired with numbered representative claims and the saved region's claim/bundle support. Keywords are retrieval aids, not reviewed topic labels. Markers locate the selected examples, not region boundaries. Natural-log density contrasts are evaluated in the higher-dimensional KDE space, not the two-dimensional display. A positive value means denser first-group language; it is not a topic-share ratio, policy agreement or a regional average.
+
+![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_republican_1.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | americans, pandemic, covid, 19 | 42 / 5 / 5 | {"democratic": 42} | +1.30 | The COVID-19 pandemic has made a difference in values painfully and brutally clear. ([2020 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform); 2020; scoped characters 74949:75582) |
+| 2 | drug, medicare, seniors, prescription | 38 / 9 / 9 | {"republican": 10, "democratic": 28} | +0.03 | The current Medicare drug program allows drug companies to change the price of prescriptions more frequently than seniors can change their plans. ([2004 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2004-democratic-party-platform); 2004; scoped characters 83427:83892) |
+| 3 | religious, right, freedom, rights | 57 / 6 / 6 | {"republican": 57} | -1.46 | Assertion of every citizen's right to apply religious values to public policy. ([2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform); 2012; scoped characters 51296:52670) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+
+![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_republican_2.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | democrats, believe, united, democratic | 40 / 5 / 5 | {"democratic": 40} | +3.31 | The Democratic Party believes the United States has the responsibility to shape globalization so that it reflects the needs and values of the American people. ([2000 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2000-democratic-party-platform); 2000; scoped characters 115472:115724) |
+| 2 | russia, nuclear, states, united | 36 / 11 / 11 | {"democratic": 15, "republican": 21} | -0.08 | There are today more positive, practical ways to reassure Russia that missile defenses are a search for common security, not for unilateral advantage. ([2000 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2000-republican-party-platform); 2000; scoped characters 171646:172834) |
+| 3 | washington, district, columbia, federal | 33 / 6 / 6 | {"republican": 33} | -1.07 | Washington is identified. ([2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform); 2012; scoped characters 203495:203505) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+
+![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_dsa_1.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | africa, commitment, african, administration | 81 / 7 / 7 | {"democratic": 81} | +2.76 | Commitment to continue partnering with African nations to combat al-Qaeda affiliates in places like Somalia. ([2012 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2012-democratic-party-platform); 2012; scoped characters 141623:142380) |
+| 2 | vote, support, voting, commitment | 69 / 13 / 10 | {"dsa": 12, "democratic": 57} | -0.45 | Commitment to fight to end long lines at voting booths. ([2008 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2008-democratic-party-platform); 2008; scoped characters 158596:160012) |
+| 3 | commitment, socialism, capitalism, socialist | 29 / 12 / 7 | {"dsa": 29} | -6.40 | Commitment to talk socialism and endeavor to educate the public as to the role the undemocratic nature of capitalism has played in causing the current economic crisis. ([2011 adopted convention priorities - full ten-page resolution](https://web.archive.org/web/20130108175613id_/http://www.dsausa.org/convention2011/report/Priorities%20Resolution.pdf); 2011; scoped characters 10717:12079) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+
+![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_dsa_2.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | obama, president, administration, barack | 75 / 3 / 3 | {"democratic": 75} | +1.87 | President Obama's administration has enhanced opportunities for English-language learning and immigrant integration. ([2012 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2012-democratic-party-platform); 2012; scoped characters 66775:67885) |
+| 2 | transit, public, transportation, rail | 44 / 9 / 9 | {"democratic": 37, "dsa": 7} | +0.25 | Support for investment in public transportation including rail, because businesses can only function when workers can get to their place of employment. ([2008 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2008-democratic-party-platform); 2008; scoped characters 133738:135336) |
+| 3 | democratic, socialists, america, reject | 28 / 16 / 4 | {"dsa": 28} | -10.28 | The Democratic Socialists of America reject xenophobia. ([Now is the Time for Solidarity: DSA National Statement on COVID-2019/Es la hora de solidaridad: Comunicación nacional de DSA acerca de COVID-19](https://www.dsausa.org/wp-json/wp/v2/statement/4626); 2020-03-12; scoped characters 1977:2224) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+
+![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/republican_vs_dsa_1.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | farmers, agriculture, agricultural, farm | 59 / 5 / 5 | {"republican": 59} | +2.32 | The success of America's farmers and ranchers is essential to the success of the American economy. ([2004 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2004-republican-party-platform); 2004; scoped characters 220985:221644) |
+| 2 | support, banks, choice, financial | 43 / 13 / 11 | {"republican": 24, "dsa": 19} | +0.44 | Support for the regulation of international and domestic financial transactions. ([2001 convention resolution on war and terrorism](https://www.dsausa.org/files/2019/07/DL-2001-Convention-Coverage.pdf); 2002; scoped characters 0:1258) |
+| 3 | democratic, socialists, america, reject | 28 / 16 / 4 | {"dsa": 28} | -8.80 | The Democratic Socialists of America reject xenophobia. ([Now is the Time for Solidarity: DSA National Statement on COVID-2019/Es la hora de solidaridad: Comunicación nacional de DSA acerca de COVID-19](https://www.dsausa.org/wp-json/wp/v2/statement/4626); 2020-03-12; scoped characters 1977:2224) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+
+![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/republican_vs_dsa_2.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | russia, states, united, nuclear | 56 / 5 / 5 | {"republican": 56} | +3.34 | The United States condemns the Russian Federation's attempts to intimidate states formerly under Soviet domination in order to prevent their deploying missile defenses. ([2008 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2008-republican-party-platform); 2008; scoped characters 36984:38163) |
+| 2 | support, public, criminals, opposition | 43 / 10 / 9 | {"republican": 28, "dsa": 15} | +0.11 | Courts should not tie the hands of prison officials in dealing with problems in correctional institutions. ([2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform); 2016; scoped characters 170396:171105) |
+| 3 | commitment, socialism, socialist, capitalism | 26 / 11 / 6 | {"dsa": 26} | -3.88 | Commitment to talk socialism and endeavor to educate the public as to the role the undemocratic nature of capitalism has played in causing the current economic crisis. ([2011 adopted convention priorities - full ten-page resolution](https://web.archive.org/web/20130108175613id_/http://www.dsausa.org/convention2011/report/Priorities%20Resolution.pdf); 2011; scoped characters 10717:12079) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+
+![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/democratic_vs_republican_1.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | gore, al, clinton, president | 98 / 2 / 2 | {"democratic": 98} | +2.07 | Al Gore will stand firm in support of the Davis-Bacon act and the Service Contract act. ([2000 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2000-democratic-party-platform); 2000; scoped characters 59642:60497) |
+| 2 | iran, iranian, nuclear, people | 64 / 12 / 12 | {"democratic": 33, "republican": 31} | +0.06 | Iran is a growing threat in the region. ([2008 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2008-democratic-party-platform); 2008; scoped characters 105183:106121) |
+| 3 | veterans, military, service, freedom | 32 / 5 / 5 | {"republican": 32} | -0.72 | The sacrifices of the men and women of the territories who protect freedom through service in the U.S. Armed Forces are honored. ([2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform); 2016; scoped characters 124581:125546) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+
+![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/democratic_vs_republican_2.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | commitment, workers, support, labor | 81 / 7 / 7 | {"democratic": 81} | +0.72 | Support for prioritizing and strongly enforcing provisions on decent work and worker's rights in all American diplomatic, trade, and programmatic efforts. ([2016 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2016-democratic-party-platform); 2016; scoped characters 160604:161072) |
+| 2 | president, bush, george, america | 35 / 3 / 3 | {"republican": 32, "democratic": 3} | -0.09 | Under President Bush's leadership, the Administration has nearly doubled the amount of spectrum available for innovative wireless broadband applications such as Wi-Fi and Wi-Max. ([2004 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2004-republican-party-platform); 2004; scoped characters 194292:194901) |
+| 3 | constitution, states, government, law | 29 / 6 / 6 | {"republican": 29} | -0.95 | No expansion of governmental powers should occur at the expense of constitutional liberties. ([2008 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2008-republican-party-platform); 2008; scoped characters 139226:139700) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+
+![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/democratic_vs_dsa_1.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | gore, al, clinton, president | 98 / 2 / 2 | {"democratic": 98} | +3.23 | Al Gore will stand firm in support of the Davis-Bacon act and the Service Contract act. ([2000 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2000-democratic-party-platform); 2000; scoped characters 59642:60497) |
+| 2 | commitment, support, public, lands | 66 / 8 / 8 | {"democratic": 60, "dsa": 6} | +0.43 | Commitment to remediate Superfund and other contaminated sites to protect children's health. ([2020 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform); 2020; scoped characters 161561:162330) |
+| 3 | dsa, fights, capitalist, state | 21 / 3 / 3 | {"dsa": 21} | -11.68 | DSA strongly opposes rainbow capitalism, in which banks, police, and corporations wrap themselves in Pride flags during June in order to make profit, all while exploiting queer workers. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 34344:34951) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+
+![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/democratic_vs_dsa_2.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | america, people, americans, american | 29 / 7 / 7 | {"democratic": 29} | +4.06 | Americans believe that their fates and fortunes are bound to rise and fall together. ([2020 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform); 2020; scoped characters 1155:1610) |
+| 2 | tax, support, taxes, commitment | 57 / 10 / 10 | {"dsa": 6, "democratic": 51} | -0.16 | Easier and more equitable access to tax provisions will help working families build wealth. ([2020 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform); 2020; scoped characters 60906:61517) |
+| 3 | capitalism, future, people, work | 17 / 2 / 2 | {"dsa": 17} | -4.31 | In a future without capitalism, work may not be solely a means to pay bills. ([Workers Deserve More 2026 print version](https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf); 2026-09; scoped characters 0:1295) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+
+![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/republican_vs_dsa_1.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | small, businesses, business, new | 34 / 5 / 5 | {"republican": 34} | +3.39 | Small businesses create most of the country's new jobs. ([2008 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2008-republican-party-platform); 2008; scoped characters 74579:74921) |
+| 2 | transportation, infrastructure, support, railroad | 55 / 7 / 7 | {"republican": 52, "dsa": 3} | -0.14 | The 1998 Transportation Equity Act for the Twenty-First Century and this year's Aviation Investment and Reform Act unlock transportation trust funds to invest dollars motorists and the traveling public have already paid. ([2000 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2000-republican-party-platform); 2000; scoped characters 127148:127938) |
+| 3 | dsa, fights, capitalist, state | 21 / 3 / 3 | {"dsa": 21} | -10.19 | DSA strongly opposes rainbow capitalism, in which banks, police, and corporations wrap themselves in Pride flags during June in order to make profit, all while exploiting queer workers. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 34344:34951) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+
+![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/republican_vs_dsa_2.png)
+
+| Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
+|---|---|---:|---|---:|---|
+| 1 | space, innovation, sustain, preeminence | 23 / 5 / 5 | {"republican": 23} | +3.52 | NASA's work has produced spectacular results, including building the world's most powerful rockets, landing men on the Moon, sending robotic spacecraft throughout the solar system and beyond, building the International Space Station, and launching space-based telescopes that allow scientists to better understand the universe. ([2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform); 2012; scoped characters 113240:114249) |
+| 2 | judges, court, congress, amendment | 38 / 8 / 8 | {"dsa": 2, "republican": 36} | -0.05 | Appointments of constitutionally-minded Supreme Court justices will enable courts to begin to reverse the long line of activist decisions — including Roe, Obergefell, and the Obamacare cases — that have usurped Congress's and states' lawmaking authority. ([2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform); 2016; scoped characters 42621:44015) |
+| 3 | capitalism, future, people, work | 17 / 2 / 2 | {"dsa": 17} | -3.18 | In a future without capitalism, work may not be solely a means to pay bills. ([Workers Deserve More 2026 print version](https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf); 2026-09; scoped characters 0:1295) |
+
+[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+
 ### Expanded distribution
 
 Largest absolute shares across all observed periods (not necessarily the most distinctive topics):
 
-- **Democratic:** Democratic Party Identity and Partisan Descriptions (10.3%); Community and Economic Support for Vulnerable Populations (8.9%); International Security and Cooperation Strategies (7.3%).
-- **Republican:** Republican Party Identity and Partisan Descriptions (10.6%); Opposition to Policies and Governing Authorities (7.6%); American Leadership and National-Power Narratives (7.3%).
-- **DSA:** DSA Identity and Socialist Organizing (13.2%); Critiques and Alternatives to Capitalism (8.3%); Voting Rights, Election Rules, and Representation (7.6%).
+- **Democratic:** Community and Economic Support for Vulnerable Populations (8.9%); International Security and Cooperation Strategies (7.3%); Energy, Infrastructure, and Economic Development (6.7%).
+- **Republican:** Opposition to Policies and Governing Authorities (7.6%); American Leadership and National-Power Narratives (7.3%); Community and Economic Support for Vulnerable Populations (6.4%).
+- **DSA:** Critiques and Alternatives to Capitalism (8.3%); Voting Rights, Election Rules, and Representation (7.6%); Economic hardship and financial insecurity (6.5%).
 
 Identity and narrative clusters describe rhetoric, not substantive policy priorities. Pooled shares mix periods and document genres; read the period analyses below before interpreting them as enduring differences.
 
@@ -33,23 +161,27 @@ Identity and narrative clusters describe rhetoric, not substantive policy priori
 
 ![Topic shares, expanded](../figures/national_claims/full/topics/expanded/topic_distribution_2.png)
 
+![Topic shares, expanded](../figures/national_claims/full/topics/expanded/topic_distribution_3.png)
+
 ![Relative emphasis, expanded](../figures/national_claims/full/topics/expanded/vs_rest_emphasis.png)
 
 ![Relative emphasis, expanded](../figures/national_claims/full/topics/expanded/vs_rest_emphasis_2.png)
+
+![Relative emphasis, expanded](../figures/national_claims/full/topics/expanded/vs_rest_emphasis_3.png)
 
 Largest relative-emphasis ratios (all support levels remain eligible):
 
 | Group | Topic | Share | Other-group mean | Difference (pp) | log2 ratio | Warnings |
 |---|---|---:|---:|---:|---:|---|
-| Democratic | Democratic Party Identity and Partisan Descriptions | 10.3% | 0.9% | +9.39 | +3.48 | none |
 | Democratic | Presidential Records, Promises, and Critiques | 6.7% | 1.7% | +5.02 | +1.97 | none |
 | Democratic | Trump Administration Records and Partisan Critiques | 3.3% | 0.9% | +2.36 | +1.82 | bundle_sensitive_rank |
-| Republican | Republican Party Identity and Partisan Descriptions | 10.6% | 0.9% | +9.67 | +3.58 | none |
+| Democratic | Energy, Infrastructure, and Economic Development | 6.7% | 3.5% | +3.28 | +0.96 | none |
 | Republican | Rights, Freedoms, and Governmental Legitimacy | 6.3% | 3.2% | +3.10 | +0.98 | none |
 | Republican | American Leadership and National-Power Narratives | 7.3% | 3.8% | +3.49 | +0.94 | none |
-| DSA | DSA Identity and Socialist Organizing | 13.2% | 0.0% | +13.23 | +9.83 | low_bundle_support;smoothing_sensitive |
+| Republican | Opposition to Policies and Governing Authorities | 7.6% | 4.5% | +3.05 | +0.74 | none |
 | DSA | Critiques and Alternatives to Capitalism | 8.3% | 0.4% | +7.94 | +4.37 | none |
 | DSA | Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance | 5.8% | 1.1% | +4.66 | +2.36 | none |
+| DSA | Labor Rights and Unionization | 6.5% | 2.5% | +3.98 | +1.36 | none |
 
 Pairwise contrast panels:
 
@@ -57,13 +189,15 @@ Pairwise contrast panels:
 
 ![Pairwise emphasis, expanded](../figures/national_claims/full/topics/expanded/pairwise_emphasis_2.png)
 
+![Pairwise emphasis, expanded](../figures/national_claims/full/topics/expanded/pairwise_emphasis_3.png)
+
 ### Strict distribution
 
 Largest absolute shares across all observed periods (not necessarily the most distinctive topics):
 
-- **Democratic:** Democratic Party Identity and Partisan Descriptions (10.3%); Community and Economic Support for Vulnerable Populations (8.9%); International Security and Cooperation Strategies (7.3%).
-- **Republican:** Republican Party Identity and Partisan Descriptions (10.6%); Opposition to Policies and Governing Authorities (7.6%); American Leadership and National-Power Narratives (7.3%).
-- **DSA:** Voting Rights, Election Rules, and Representation (14.6%); Critiques and Alternatives to Capitalism (12.3%); DSA Identity and Socialist Organizing (10.6%).
+- **Democratic:** Community and Economic Support for Vulnerable Populations (8.9%); International Security and Cooperation Strategies (7.3%); Energy, Infrastructure, and Economic Development (6.7%).
+- **Republican:** Opposition to Policies and Governing Authorities (7.6%); American Leadership and National-Power Narratives (7.3%); Community and Economic Support for Vulnerable Populations (6.4%).
+- **DSA:** Voting Rights, Election Rules, and Representation (14.6%); Critiques and Alternatives to Capitalism (12.3%); Labor Rights and Unionization (8.1%).
 
 Identity and narrative clusters describe rhetoric, not substantive policy priorities. Pooled shares mix periods and document genres; read the period analyses below before interpreting them as enduring differences.
 
@@ -71,29 +205,35 @@ Identity and narrative clusters describe rhetoric, not substantive policy priori
 
 ![Topic shares, strict](../figures/national_claims/full/topics/strict/topic_distribution_2.png)
 
+![Topic shares, strict](../figures/national_claims/full/topics/strict/topic_distribution_3.png)
+
 ![Relative emphasis, strict](../figures/national_claims/full/topics/strict/vs_rest_emphasis.png)
 
 ![Relative emphasis, strict](../figures/national_claims/full/topics/strict/vs_rest_emphasis_2.png)
+
+![Relative emphasis, strict](../figures/national_claims/full/topics/strict/vs_rest_emphasis_3.png)
 
 Largest relative-emphasis ratios (all support levels remain eligible):
 
 | Group | Topic | Share | Other-group mean | Difference (pp) | log2 ratio | Warnings |
 |---|---|---:|---:|---:|---:|---|
-| Democratic | Democratic Party Identity and Partisan Descriptions | 10.3% | 0.9% | +9.37 | +3.45 | none |
 | Democratic | Presidential Records, Promises, and Critiques | 6.7% | 1.5% | +5.21 | +2.15 | none |
 | Democratic | Trump Administration Records and Partisan Critiques | 3.3% | 0.9% | +2.35 | +1.80 | none |
-| Republican | Republican Party Identity and Partisan Descriptions | 10.6% | 0.8% | +9.72 | +3.66 | none |
+| Democratic | American Leadership and National-Power Narratives | 6.6% | 4.0% | +2.64 | +0.73 | bundle_sensitive_rank |
 | Republican | Rights, Freedoms, and Governmental Legitimacy | 6.3% | 2.5% | +3.78 | +1.33 | none |
 | Republican | Opposition to Policies and Governing Authorities | 7.6% | 3.8% | +3.82 | +1.01 | bundle_sensitive_rank |
-| DSA | DSA Identity and Socialist Organizing | 10.6% | 0.0% | +10.59 | +9.51 | low_bundle_support;smoothing_sensitive |
+| Republican | American Leadership and National-Power Narratives | 7.3% | 3.7% | +3.63 | +0.99 | none |
 | DSA | Critiques and Alternatives to Capitalism | 12.3% | 0.4% | +11.89 | +4.93 | none |
 | DSA | Labor Rights and Unionization | 8.1% | 2.5% | +5.61 | +1.69 | none |
+| DSA | Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance | 3.3% | 1.1% | +2.16 | +1.54 | bundle_sensitive_rank |
 
 Pairwise contrast panels:
 
 ![Pairwise emphasis, strict](../figures/national_claims/full/topics/strict/pairwise_emphasis.png)
 
 ![Pairwise emphasis, strict](../figures/national_claims/full/topics/strict/pairwise_emphasis_2.png)
+
+![Pairwise emphasis, strict](../figures/national_claims/full/topics/strict/pairwise_emphasis_3.png)
 
 ### Topics over time
 
@@ -137,7 +277,6 @@ Each standalone chart compares all organizations on one topic. Overall bars and 
 | Economic Growth and Development Narratives | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-004_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-004_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-004_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-004_time.svg) |
 | Rights, Freedoms, and Governmental Legitimacy | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-005_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-005_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-005_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-005_time.svg) |
 | American Leadership and National-Power Narratives | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-006_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-006_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-006_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-006_time.svg) |
-| Democratic Party Identity and Partisan Descriptions | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-007_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-007_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-007_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-007_time.svg) |
 | Immigration Policy: Reform, Enforcement, and Detention | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-008_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-008_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-008_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-008_time.svg) |
 | Voting Rights, Election Rules, and Representation | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-009_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-009_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-009_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-009_time.svg) |
 | Presidential Records, Promises, and Critiques | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-010_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-010_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-010_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-010_time.svg) |
@@ -147,14 +286,12 @@ Each standalone chart compares all organizations on one topic. Overall bars and 
 | International Security and Cooperation Strategies | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-014_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-014_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-014_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-014_time.svg) |
 | U.S. Military Involvement and the War on Terror | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-015_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-015_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-015_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-015_time.svg) |
 | Opposition to Policies and Governing Authorities | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-016_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-016_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-016_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-016_time.svg) |
-| Republican Party Identity and Partisan Descriptions | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-017_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-017_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-017_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-017_time.svg) |
 | Healthcare System Goals and Approaches | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-018_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-018_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-018_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-018_time.svg) |
 | Economic hardship and financial insecurity | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-019_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-019_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-019_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-019_time.svg) |
 | Critiques and Alternatives to Capitalism | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-020_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-020_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-020_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-020_time.svg) |
 | Criminal Justice: Punishment, Accountability, and Prison Reform | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-021_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-021_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-021_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-021_time.svg) |
 | Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-022_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-022_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-022_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-022_time.svg) |
 | Trump Administration Records and Partisan Critiques | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-023_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-023_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-023_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-023_time.svg) |
-| DSA Identity and Socialist Organizing | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-024_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-024_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-024_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-024_time.svg) |
 
 ![One-topic comparison over time](../figures/national_claims/full/topics/expanded/issues/topic-003_time.png)
 
@@ -166,7 +303,7 @@ Largest adjacent observed-period changes on the **fixed pooled taxonomy**. These
 
 - **Republican:** Presidential Records, Promises, and Critiques: -10.1 percentage points (2004-2007 → 2008-2011; 1 → 1 bundles); Presidential Records, Promises, and Critiques: +8.3 percentage points (2000-2003 → 2004-2007; 1 → 1 bundles).
 
-- **DSA:** Community and Economic Support for Vulnerable Populations: -7.0 percentage points (2020-2023 → 2024-2026; 1 → 2 bundles); DSA Identity and Socialist Organizing: +4.9 percentage points (2020-2023 → 2024-2026; 1 → 2 bundles).
+- **DSA:** Community and Economic Support for Vulnerable Populations: -7.0 percentage points (2020-2023 → 2024-2026; 1 → 2 bundles); Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance: +3.9 percentage points (2020-2023 → 2024-2026; 1 → 2 bundles).
 
 #### Figures for the piece
 
@@ -192,7 +329,6 @@ Each standalone chart compares all organizations on one topic. Overall bars and 
 | Economic Growth and Development Narratives | [PNG](../figures/national_claims/full/topics/strict/issues/topic-004_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-004_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-004_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-004_time.svg) |
 | Rights, Freedoms, and Governmental Legitimacy | [PNG](../figures/national_claims/full/topics/strict/issues/topic-005_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-005_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-005_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-005_time.svg) |
 | American Leadership and National-Power Narratives | [PNG](../figures/national_claims/full/topics/strict/issues/topic-006_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-006_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-006_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-006_time.svg) |
-| Democratic Party Identity and Partisan Descriptions | [PNG](../figures/national_claims/full/topics/strict/issues/topic-007_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-007_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-007_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-007_time.svg) |
 | Immigration Policy: Reform, Enforcement, and Detention | [PNG](../figures/national_claims/full/topics/strict/issues/topic-008_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-008_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-008_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-008_time.svg) |
 | Voting Rights, Election Rules, and Representation | [PNG](../figures/national_claims/full/topics/strict/issues/topic-009_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-009_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-009_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-009_time.svg) |
 | Presidential Records, Promises, and Critiques | [PNG](../figures/national_claims/full/topics/strict/issues/topic-010_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-010_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-010_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-010_time.svg) |
@@ -202,14 +338,12 @@ Each standalone chart compares all organizations on one topic. Overall bars and 
 | International Security and Cooperation Strategies | [PNG](../figures/national_claims/full/topics/strict/issues/topic-014_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-014_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-014_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-014_time.svg) |
 | U.S. Military Involvement and the War on Terror | [PNG](../figures/national_claims/full/topics/strict/issues/topic-015_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-015_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-015_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-015_time.svg) |
 | Opposition to Policies and Governing Authorities | [PNG](../figures/national_claims/full/topics/strict/issues/topic-016_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-016_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-016_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-016_time.svg) |
-| Republican Party Identity and Partisan Descriptions | [PNG](../figures/national_claims/full/topics/strict/issues/topic-017_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-017_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-017_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-017_time.svg) |
 | Healthcare System Goals and Approaches | [PNG](../figures/national_claims/full/topics/strict/issues/topic-018_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-018_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-018_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-018_time.svg) |
 | Economic hardship and financial insecurity | [PNG](../figures/national_claims/full/topics/strict/issues/topic-019_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-019_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-019_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-019_time.svg) |
 | Critiques and Alternatives to Capitalism | [PNG](../figures/national_claims/full/topics/strict/issues/topic-020_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-020_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-020_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-020_time.svg) |
 | Criminal Justice: Punishment, Accountability, and Prison Reform | [PNG](../figures/national_claims/full/topics/strict/issues/topic-021_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-021_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-021_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-021_time.svg) |
 | Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance | [PNG](../figures/national_claims/full/topics/strict/issues/topic-022_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-022_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-022_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-022_time.svg) |
 | Trump Administration Records and Partisan Critiques | [PNG](../figures/national_claims/full/topics/strict/issues/topic-023_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-023_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-023_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-023_time.svg) |
-| DSA Identity and Socialist Organizing | [PNG](../figures/national_claims/full/topics/strict/issues/topic-024_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-024_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-024_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-024_time.svg) |
 
 ![One-topic comparison over time](../figures/national_claims/full/topics/strict/issues/topic-003_time.png)
 
@@ -1505,40 +1639,6 @@ Claims describe America's international role, national strength, ideals, competi
 | Republican | The United States supports closer cooperation in both military and economic matters with those on the front lines of civilization's battle against the forces of evil. (`republican-2016-normalized-28a344099db9-008`) | [2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform) scoped characters 216797:217293 |
 | Democratic | America is stronger abroad and safer at home because of this principled leadership. (`democratic-2016-normalized-667eb0d7cebb-014`) | [2016 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2016-democratic-party-platform) scoped characters 131984:132768 |
 
-#### topic-007: Democratic Party Identity and Partisan Descriptions
-
-Claims explicitly describe the Democratic Party or Democrats across employment, prosperity, education, social insurance, and national purpose. Most are Democratic self-descriptions, alongside DSA commentary about impeachment and a Republican criticism of Democratic taxation.
-
-**Caveat:** An actor-centered cluster spanning policy subjects; its share is not the prevalence of one coherent economic policy or evidence of agreement.
-
-**Label provenance:** source-bound assistant revision of the preserved Gemma response; see the label-review record.
-
-**Distinctive phrases:** democrats, democratic party, democrats believe, believe, party, democratic, democrats committed, committed, john, party believes
-
-| View | Group | Share | Claims | Documents | Bundles |
-|---|---|---:|---:|---:|---:|
-| expanded | Democratic | 10.3% | 1213 | 7 | 7 |
-| expanded | Republican | 1.0% | 76 | 6 | 6 |
-| expanded | DSA | 0.9% | 40 | 20 | 8 |
-| strict | Democratic | 10.3% | 1213 | 7 | 7 |
-| strict | Republican | 1.0% | 76 | 6 | 6 |
-| strict | DSA | 0.9% | 4 | 3 | 3 |
-
-| Group | Full representative claim | Source and locator |
-|---|---|---|
-| Democratic | Democrats are focused on creating good jobs in communities across America. (`democratic-2016-normalized-9b1d0772b2c6-002`) | [2016 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2016-democratic-party-platform) scoped characters 26081:26709 |
-| DSA | Currently, the Democratic Party is inching towards alignment around the impeachment of President Donald Trump. (`dsa-statement-4192-normalized-0081d76339ad-002`) | [DSA National Political Committee (NPC) Statement on Impeachment](https://www.dsausa.org/wp-json/wp/v2/statement/4192) scoped characters 221:1041 |
-| Republican | Many Democrats believe the federal government has a right to claim money earned by working Americans. (`republican-2004-normalized-80e19a4fcd7c-001`) | [2004 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2004-republican-party-platform) scoped characters 123666:124817 |
-| Democratic | The Democratic Party believes that when workers are strong, America is strong. (`democratic-2016-normalized-7ba2e6e4e2f2-001`) | [2016 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2016-democratic-party-platform) scoped characters 9736:10261 |
-| Democratic | The Democratic Party has a plan to build a strong, respected America. (`democratic-2004-normalized-17d0cec3e717-004`) | [2004 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2004-democratic-party-platform) scoped characters 1347:1509 |
-| Democratic | Democrats believe in an America where people look out for one another and leave no one behind. (`democratic-2024-normalized-31862ca12465-001`) | [2024 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2024-democratic-party-platform) scoped characters 29795:30773 |
-| Democratic | Democrats encourage initiatives to remove barriers to equal opportunity in employment, education, and business opportunities. (`democratic-2012-normalized-c23a3db91fb4-008`) | [2012 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2012-democratic-party-platform) scoped characters 100171:101045 |
-| Democratic | Democrats believe they can and must do better for children, educators, and the country. (`democratic-2020-normalized-8849500b0dff-001`) | [2020 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform) scoped characters 203459:204472 |
-| Democratic | The Democratic Party's commitment includes deepening commitment to the country. (`democratic-2004-normalized-17d0cec3e717-019`) | [2004 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2004-democratic-party-platform) scoped characters 1800:1975 |
-| Democratic | Democrats believe America prospers when everyone is in it together. (`democratic-2012-normalized-da1d6566f5d3-002`) | [2012 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2012-democratic-party-platform) scoped characters 4026:4285 |
-| Democratic | Democrats are committed to improving economic mobility for people of color. (`democratic-2020-normalized-b9adf71c22c7-002`) | [2020 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform) scoped characters 118961:119383 |
-| Democratic | Democrats believe in using prosperity to save Social Security. (`democratic-2000-normalized-0c700669dee2-004`) | [2000 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2000-democratic-party-platform) scoped characters 12838:13659 |
-
 #### topic-008: Immigration Policy: Reform, Enforcement, and Detention
 
 These claims concern U.S. immigration policy, with positions ranging from comprehensive reform and paths to citizenship to enforcing existing laws and screening immigrants. A key point of divergence is the issue of immigration detention, with some groups advocating for its complete end while others do not explicitly address it. Positions also vary on the process of immigration itself, with some advocating for faster and more efficient processes.
@@ -1831,40 +1931,6 @@ Claims reject or criticize policies, administrations, or governing authority acr
 | Democratic | Commitment to oppose Republican plans to slash funding and block grant Medicaid and SNAP, which would harm millions of Americans. (`democratic-2016-normalized-f4e2c14968d7-011`) | [2016 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2016-democratic-party-platform) scoped characters 115903:116156 |
 | Republican | Opposition to the policy of Mutually Assured Destruction. (`republican-2016-normalized-fbf2085e7ad8-004`) | [2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform) scoped characters 178614:179078 |
 
-#### topic-017: Republican Party Identity and Partisan Descriptions
-
-Claims explicitly describe Republicans or the Republican Party across exceptionalism, military strength, economic policy, rights, and families. Most are Republican self-descriptions; Democratic and DSA examples criticize Republican tax preferences and social-spending cuts.
-
-**Caveat:** An actor-centered cluster, not one policy stance. External criticism is present; the original model also mistyped a supporting claim's group prefix.
-
-**Label provenance:** source-bound assistant revision of the preserved Gemma response; see the label-review record.
-
-**Distinctive phrases:** republicans, republican, republican party, party, republicans commit, republican leadership, republican president, congressional republicans, commit, republicans believe
-
-| View | Group | Share | Claims | Documents | Bundles |
-|---|---|---:|---:|---:|---:|
-| expanded | Democratic | 1.0% | 107 | 7 | 7 |
-| expanded | Republican | 10.6% | 946 | 6 | 6 |
-| expanded | DSA | 0.7% | 39 | 19 | 7 |
-| strict | Democratic | 1.0% | 107 | 7 | 7 |
-| strict | Republican | 10.6% | 946 | 6 | 6 |
-| strict | DSA | 0.6% | 3 | 3 | 3 |
-
-| Group | Full representative claim | Source and locator |
-|---|---|---|
-| Democratic | The Republican Party supports slashing taxes for corporations and the wealthiest Americans. (`democratic-2012-normalized-d899cab3d67c-001`) | [2012 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2012-democratic-party-platform) scoped characters 32490:33169 |
-| DSA | The Republican Party favors cuts in social spending. (`dsa-2007-economic-justice-normalized-2f0b6e9da929-007`) | [An Economic Justice Agenda - adopted November 2007](https://www.dsausa.org/wp-json/wp/v2/strategy/612) scoped characters 488:1041 |
-| Republican | The Republican Party believes in American exceptionalism. (`republican-2016-normalized-cfd387fe27b7-002`) | [2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform) scoped characters 432:470 |
-| Republican | The Republican Party has helped America overcome extraordinary challenges. (`republican-2004-normalized-81ee1b93e20b-008`) | [2004 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2004-republican-party-platform) scoped characters 3132:3353 |
-| Republican | Republican policies are working. (`republican-2004-normalized-621418140cf5-001`) | [2004 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2004-republican-party-platform) scoped characters 194903:194935 |
-| Republican | The Republican Party believes in peace through strength. (`republican-2016-normalized-1929f10ead2d-003`) | [2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform) scoped characters 174031:174314 |
-| Republican | The Republican Party includes Americans from every faith and tradition. (`republican-2012-normalized-137eeef0fc3c-008`) | [2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform) scoped characters 38369:38767 |
-| Republican | Republicans promote the development of new ideas and private sectors. (`republican-2000-normalized-6ebdc3abd700-006`) | [2000 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2000-republican-party-platform) scoped characters 180198:180483 |
-| Republican | The Republican Party pledges to restore the proper balance between the federal government and the governments closest to, and most reflective of, the American people. (`republican-2012-normalized-a7a1503a8a02-003`) | [2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform) scoped characters 45064:46103 |
-| Republican | Republicans commit to safeguarding the future for Seniors and all American families. (`republican-2024-normalized-616d2a3c149d-007`) | [2024 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2024-republican-party-platform) scoped characters 20758:21300 |
-| Republican | Republicans commit to defending the Rights of all Americans to Life, Liberty, and the Pursuit of Happiness. (`republican-2024-normalized-938b203dacac-005`) | [2024 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2024-republican-party-platform) scoped characters 28780:29539 |
-| Republican | Republicans promote open markets and open societies. (`republican-2000-normalized-6ebdc3abd700-004`) | [2000 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2000-republican-party-platform) scoped characters 180198:180483 |
-
 #### topic-018: Healthcare System Goals and Approaches
 
 Claims address goals for the healthcare system, including access, affordability, and universal coverage. Approaches vary from strengthening existing plans and increasing choice to advocating for a national system like Medicare for All. Multiple claims emphasize improving access to healthcare, while others focus on cost control.
@@ -2057,40 +2123,6 @@ Claims explicitly discuss Donald Trump across foreign relations, trade, immigrat
 | Republican | President Donald J. Trump reignited the American Spirit and called for renewed National Pride. (`republican-2024-normalized-51f7b85d22c5-008`) | [2024 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2024-republican-party-platform) scoped characters 1737:2208 |
 | DSA | Donald Trump unilaterally pulled out of the Iran Nuclear Agreement, in spite of Iran’s compliance with it. (`dsa-statement-4386-normalized-89aab4241a6d-003`) | [Urgent Call For Action Against A U.S. War On Iran](https://www.dsausa.org/wp-json/wp/v2/statement/4386) scoped characters 985:1776 |
 
-#### topic-024: DSA Identity and Socialist Organizing
-
-DSA examples describe the organization's mission, socialist and feminist identity, solidarity, worker mobilization, and efforts to establish democratic socialism as a political force. These are organizational self-descriptions and movement-building claims, not a single detailed policy program.
-
-**Caveat:** Dominated by DSA organizational language. One Republican example concerns Marxist subversion generally and does not name DSA.
-
-**Label provenance:** source-bound assistant revision of the preserved Gemma response; see the label-review record.
-
-**Distinctive phrases:** dsa, socialists, democratic socialists, socialists america, democratic, socialist, america, dsa hopes, hopes, conditions dsa
-
-| View | Group | Share | Claims | Documents | Bundles |
-|---|---|---:|---:|---:|---:|
-| expanded | Democratic | 0.0% | 0 | 0 | 0 |
-| expanded | Republican | 0.0% | 1 | 1 | 1 |
-| expanded | DSA | 13.2% | 691 | 113 | 9 |
-| strict | Democratic | 0.0% | 0 | 0 | 0 |
-| strict | Republican | 0.0% | 1 | 1 | 1 |
-| strict | DSA | 10.6% | 73 | 3 | 3 |
-
-| Group | Full representative claim | Source and locator |
-|---|---|---|
-| DSA | DSA fights capitalism with solidarity. (`dsa-statement-2185-normalized-4656dc715a5f-017`) | [DSA Statement on Georgia Abortion Law](https://www.dsausa.org/wp-json/wp/v2/statement/2185) scoped characters 3415:3751 |
-| Republican | Support for standing with the true democracies of the region against both Marxist subversion and drug lords. (`republican-2012-normalized-cbd6e2113a61-007`) | [2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform) scoped characters 185014:185228 |
-| DSA | DSA workers are fighting to create a U.S. democratic socialist republic. (`dsa-2026-program-normalized-27f09020d87d-repair-ab2c467b9abc-007`) | [Workers Deserve More 2026 print version](https://program.dsausa.org/wp-content/uploads/2026/09/WDM-Program.pdf) scoped characters 3195:4582 |
-| DSA | DSA aims to establish democratic socialism by training and mobilizing socialist activists. (`dsa-2003-mission-normalized-20f699d8e4de-004`) | [2003 adopted working mission statement](https://web.archive.org/web/20040227005032id_/http://www.dsausa.org/convention2003/report/r-mission.html) scoped characters 0:814 |
-| DSA | DSA's movement for democratic socialism stands for all working class people. (`dsa-statement-4621-normalized-70579fa7af56-002`) | [For a moratorium on deportations, with no exceptions/Para una moratoria de las deportaciones, sin excepciones](https://www.dsausa.org/wp-json/wp/v2/statement/4621) scoped characters 4177:4355 |
-| DSA | Democratic Socialists of America is committed to nonviolent political action to achieve social justice. (`dsa-statement-354-normalized-53b23e55f1dc-011`) | [NPC Statement on the Killings of Alton Sterling and Philando Castile and the Dallas Police Officers](https://www.dsausa.org/wp-json/wp/v2/statement/354) scoped characters 1107:1475 |
-| DSA | The mission of the Democratic Socialists of America (DSA) is to participate in establishing democratic socialism as a political force in the United States and the world. (`dsa-2003-mission-normalized-20f699d8e4de-003`) | [2003 adopted working mission statement](https://web.archive.org/web/20040227005032id_/http://www.dsausa.org/convention2003/report/r-mission.html) scoped characters 0:814 |
-| DSA | Commitment for DSA to pursue a just society free from oppression. (`dsa-statement-5097-normalized-4069773bccad-repair-015c346da9d6-003`) | [DSA condemns the public execution of George Floyd at the hands of the Minneapolis police](https://www.dsausa.org/wp-json/wp/v2/statement/5097) scoped characters 1989:2177 |
-| DSA | Through grassroots struggles, DSA commits to building a movement capable of challenging the capitalist class and building an equal, democratic and liberated world. (`dsa-2024-program-normalized-d601340193eb-repair-ede159c9a402-009`) | [Workers Deserve More 2024](https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf) scoped characters 5257:6465 |
-| DSA | The Democratic Socialists of America stands in solidarity with those fighting for social and racial justice in the United States and around the globe. (`dsa-statement-361-normalized-d6239bf500fe-007`) | [In Solidarity With Those Arrested In Ferguson](https://www.dsausa.org/wp-json/wp/v2/statement/361) scoped characters 0:736 |
-| DSA | DSA is a socialist feminist organization. (`dsa-2021-adopted-normalized-42d8ec99ba34-001`) | [2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/) scoped characters 32704:33181 |
-| DSA | DSA’s mission is to unite workers into a powerful political movement to win the battle for democracy and change the world. (`dsa-2024-program-normalized-d601340193eb-001`) | [Workers Deserve More 2024](https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf) scoped characters 5257:6465 |
-
 <!-- learned-topics:end -->
 
 **Full eligible-source claim analysis with automated screening, not human-certified claims or fact-checking.** All source chunks and any failed/unresolved extractions remain auditable in the coverage tables and raw responses.
@@ -2105,7 +2137,7 @@ The analytical text is the **claim**, not its original evidence passage. The sep
 
 ## Semantic density
 
-![Pairwise density of claim language](../figures/national_claims/full/expanded/pairwise_density.png)
+[Compact density overview](../figures/national_claims/full/expanded/pairwise_density.png). For detailed maps and source-linked representative claims, see the learned-topic section's detailed density comparisons.
 
 The shared representation uses 10 dimensions for KDE; the two-dimensional display is not the density-estimation space. Sampling balances organizations and gives each document/fallback-period bundle equal aggregate density weight. Positive contrasts mean greater first-organization language density, not agreement, ideological direction, or causal differences.
 
@@ -2114,6 +2146,7 @@ Platforms/programs-only sensitivity: **complete**. Its independently fitted spac
 ## Topics
 
 ![Document-weighted CAP topic emphasis](../figures/national_claims/full/topic_emphasis.png)
+![Document-weighted CAP topic emphasis, continued](../figures/national_claims/full/topic_emphasis_2.png)
 
 The existing pinned MiniLM classifier compares normalized claim text with CAP topic descriptions (minimum cosine similarity 0.2). Each claim receives at most one topic; unclassified claims remain in the denominator. This is exploratory classification, not validated topic gold. Topic shares use equal aggregate document/fallback-bundle weights, not raw claim counts.
 
