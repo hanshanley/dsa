@@ -1,0 +1,71 @@
+{
+  "topic_id": "topic-013",
+  "packet_sha256": "e2cbc1199363e0852f7f6aa451f9a7f1fb9d3c629ce3fe915550f09aa1f48ffa",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support legal abortion and reproductive freedom, contraception and family planning, repealing funding restrictions, IVF access, pregnancy protections, and opposition to bans on gender-affirming care.",
+      "caveat": "The packet also covers violence, marriage equality, and broader sex-discrimination protections; terminology and policy scope change across years.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-58e656571334-009",
+        "democratic-2020-normalized-c3e3058c15da-004",
+        "democratic-2020-normalized-c28dad59ba3f-012",
+        "democratic-2024-normalized-49ca2c582b14-004",
+        "democratic-2024-normalized-9fb427e7c407-003"
+      ]
+    },
+    "republican": {
+      "summary": "Documents oppose abortion, support constitutional or statutory fetal-life protections and funding bans, and endorse informed-consent or waiting-period rules; 2024 examples also support birth control, prenatal care, and IVF.",
+      "caveat": "The packet records temporal variation and adjacent gender-policy claims; one example rejects punitive action against women obtaining abortions.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-9eed2dd44520-005",
+        "republican-2012-normalized-358189a39e4a-006",
+        "republican-2012-normalized-66d078ccdda4-001",
+        "republican-2024-normalized-8da9a39b9f7f-012",
+        "republican-2024-normalized-8da9a39b9f7f-013"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support abortion access without legal restrictions, Hyde repeal, universal reproductive and gender-affirming care, bodily autonomy, and rights for pregnant people, LGBTQ parents, and gender-diverse people.",
+      "caveat": "Examples combine policy demands with historical court narratives and opponent descriptions; quoted legal and political claims were not independently verified.",
+      "supporting_claim_ids": [
+        "dsa-2021-adopted-normalized-0a25e1af4692-005",
+        "dsa-2021-adopted-normalized-0a25e1af4692-004",
+        "dsa-2024-program-normalized-b789b4710c28-repair-1a7d74b0c436-003",
+        "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-006",
+        "dsa-statement-388-normalized-472e2eb2aeff-009"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic documents protect legal abortion and repeal funding limits; Republican documents oppose abortion and support fetal-life amendments, funding bans, consent rules, and waiting periods.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-58e656571334-009",
+        "democratic-2020-normalized-c28dad59ba3f-012",
+        "republican-2000-normalized-9eed2dd44520-005",
+        "republican-2012-normalized-358189a39e4a-006"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both protect abortion and gender-affirming care; DSA documents explicitly demand free abortion, removal of all access restrictions, and broader bodily-autonomy guarantees.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-c3e3058c15da-004",
+        "democratic-2024-normalized-9fb427e7c407-003",
+        "dsa-2021-adopted-normalized-0a25e1af4692-004",
+        "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-006"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents restrict abortion and its public funding; DSA documents seek unrestricted, free abortion and universal reproductive and gender-affirming care.",
+      "supporting_claim_ids": [
+        "republican-2012-normalized-358189a39e4a-006",
+        "republican-2012-normalized-66d078ccdda4-001",
+        "dsa-2021-adopted-normalized-0a25e1af4692-005",
+        "dsa-2021-adopted-normalized-0a25e1af4692-004"
+      ]
+    }
+  }
+}

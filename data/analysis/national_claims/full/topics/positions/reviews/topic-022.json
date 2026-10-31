@@ -1,0 +1,69 @@
+{
+  "topic_id": "topic-022",
+  "packet_sha256": "29595f4603784c6389cae71f4ee26cc9d22329fe5454ecafb9ca9de3f98bc213",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support Israel's security and self-defense alongside negotiated two-state peace, Palestinian freedom and statehood, restored assistance and diplomacy, and, in 2024, a ceasefire-linked reconstruction path.",
+      "caveat": "Emphasis shifts by year, and the packet includes broader Middle East and Iran claims.",
+      "supporting_claim_ids": [
+        "democratic-2004-normalized-ed1dec9e1db7-003",
+        "democratic-2016-normalized-8c63c7382aed-014",
+        "democratic-2020-normalized-3c29dbc1688d-006",
+        "democratic-2024-normalized-9d1d7d44ab30-012"
+      ]
+    },
+    "republican": {
+      "summary": "Documents prioritize Israel's security, Jewish-state status, defensible borders, self-defense, Jerusalem, and bilateral negotiation; earlier platforms conditionally support a Palestinian state, while 2016 rejects occupation language.",
+      "caveat": "The 2024 packet contribution is sparse and not a full Israeli-Palestinian policy statement.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-f14ff84db296-006",
+        "republican-2008-normalized-ec14bb449444-005",
+        "republican-2012-normalized-2bab5f5039fa-005",
+        "republican-2016-normalized-6c739454c2b4-004"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support Palestinian self-determination, rights, return, and ending occupation and aid to Israel; earlier examples also condemn attacks on civilians and support negotiated two-state peace.",
+      "caveat": "Later documents add BDS, ceasefire, free-Palestine, and genocide-accountability language, showing substantial cross-year evolution.",
+      "supporting_claim_ids": [
+        "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002",
+        "dsa-2009-middle-east-lead-normalized-6447902d562f-009",
+        "dsa-2021-adopted-normalized-a26aa576943f-002",
+        "dsa-2024-program-normalized-9d88be1f8868-002",
+        "dsa-2026-program-normalized-40060dd6f6dd-007"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Both include Israel's security and negotiated statehood, but Democratic examples explicitly pair these with Palestinian freedom and assistance; Republican examples stress defensible borders and conditions.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-3c29dbc1688d-006",
+        "democratic-2020-normalized-3c29dbc1688d-012",
+        "republican-2004-normalized-f14ff84db296-009",
+        "republican-2012-normalized-2bab5f5039fa-005"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic examples combine Israeli security with negotiated Palestinian statehood; DSA examples center ending occupation and aid, Palestinian return, BDS, and later ceasefire and accountability.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-8c63c7382aed-014",
+        "democratic-2020-normalized-3c29dbc1688d-006",
+        "dsa-2021-adopted-normalized-a26aa576943f-002",
+        "dsa-2024-program-normalized-9d88be1f8868-001"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican examples reject occupation framing and emphasize Israel's self-defense; DSA examples characterize occupation as central, demand ending aid, and assert Palestinian return and resistance rights.",
+      "supporting_claim_ids": [
+        "republican-2016-normalized-6c739454c2b4-002",
+        "republican-2016-normalized-6c739454c2b4-004",
+        "dsa-2024-program-normalized-9d88be1f8868-002",
+        "dsa-2026-program-normalized-40060dd6f6dd-008"
+      ]
+    }
+  }
+}

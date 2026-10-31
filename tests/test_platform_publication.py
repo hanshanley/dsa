@@ -171,6 +171,25 @@ class PlatformPublicationTest(unittest.TestCase):
             self.assertEqual(manifest["files"][path], digest(original))
             self.assertTrue((output / path.replace(".png", ".svg")).is_file())
 
+    def test_complete_archive_rebuilds_offline_and_checks_published_checksum(self):
+        from dsa_analysis.national_claim_corpus import bundle
+
+        self.prepare_export()
+        bundle(
+            self.data,
+            figures=self.source / FIGURES.parent,
+            report=self.source / "report/national_claim_analysis.md",
+        )
+        original = (self.data / "claim_documents.zip").read_bytes()
+        (self.data / "claim_documents.zip").unlink()
+        validate(self.source)
+        self.assertEqual((self.data / "claim_documents.zip").read_bytes(), original)
+        metadata = json.loads((self.data / "claim_documents.download.json").read_text())
+        metadata["sha256"] = "wrong"
+        self.write_json("claim_documents.download.json", metadata)
+        with self.assertRaisesRegex(ValueError, "archive checksum"):
+            validate(self.source)
+
     def test_excluded_labels_stay_in_downloads_but_not_publication_topics(self):
         self.prepare_export()
         labels = json.loads((self.data / "topics/topic_labels.json").read_text())

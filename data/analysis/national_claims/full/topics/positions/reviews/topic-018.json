@@ -1,0 +1,69 @@
+{
+  "topic_id": "topic-018",
+  "packet_sha256": "4dc9a6b58a67292a2ebb0ec1321493ca12369d8f1c0c765a008bc9862e9844e1",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents repeatedly seek universal or broadly accessible affordable coverage, strengthening Medicare and Medicaid, widening eligibility, reducing prescription and out-of-pocket costs, and supporting preventive care.",
+      "caveat": "Specific mechanisms and populations vary by year; several examples describe records or system problems rather than proposals.",
+      "supporting_claim_ids": [
+        "democratic-2000-normalized-07a86d3aa6c5-010",
+        "democratic-2016-normalized-a06765db4456-004",
+        "democratic-2020-normalized-3542c1bfdbb3-010",
+        "democratic-2024-normalized-aa0b71876216-002"
+      ]
+    },
+    "republican": {
+      "summary": "Documents support affordable access through consumer choice, competition, insurers and providers, targeted coverage, primary care, and protection or restructuring of Medicare and Medicaid.",
+      "caveat": "Approaches vary from program protection to defined contributions; some examples concern adjacent health or Social Security issues.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-83e6d37c1b34-002",
+        "republican-2008-normalized-4e30b857ac84-001",
+        "republican-2012-normalized-924e7ef8a7e7-002",
+        "republican-2024-normalized-639254060a0e-008"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents advocate universal single-payer or Medicare for All coverage without premiums or cost sharing, regardless of status, alongside public facilities, expanded services, and cost controls.",
+      "caveat": "Earlier documents sometimes support interim public options or state routes; a few examples are pandemic guidance or descriptive claims.",
+      "supporting_claim_ids": [
+        "dsa-2007-economic-justice-normalized-969c50089fd8-010",
+        "dsa-2012-fiscal-normalized-2b868cee0576-003",
+        "dsa-2021-adopted-normalized-c37abde20ad2-001",
+        "dsa-2024-program-normalized-b789b4710c28-repair-1a7d74b0c436-001",
+        "dsa-2026-program-normalized-3ba469ba4e69-008"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic examples emphasize universal coverage and public-program expansion; Republican examples emphasize consumer choice, provider competition, targeted access, and limiting government intermediation.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-3542c1bfdbb3-010",
+        "democratic-2012-normalized-5c03ae5613a9-004",
+        "republican-2008-normalized-4e30b857ac84-001",
+        "republican-2012-normalized-924e7ef8a7e7-002"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both seek broad access, but Democratic examples retain multiple plans and strengthen existing programs, while DSA examples specify one public single-payer program without premiums or copays.",
+      "supporting_claim_ids": [
+        "democratic-2024-normalized-aa0b71876216-002",
+        "democratic-2020-normalized-3542c1bfdbb3-010",
+        "dsa-2021-adopted-normalized-c37abde20ad2-006",
+        "dsa-2024-program-normalized-b789b4710c28-repair-1a7d74b0c436-001"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican examples rely on choice, competition, insurers, and purchasing pools; DSA examples replace fragmented insurance with federally administered universal single-payer coverage.",
+      "supporting_claim_ids": [
+        "republican-2016-normalized-a5df5ec0a620-010",
+        "republican-2016-normalized-da0bf29e6761-011",
+        "dsa-2021-adopted-normalized-c37abde20ad2-006",
+        "dsa-statement-4192-normalized-653612bac21f-003"
+      ]
+    }
+  }
+}

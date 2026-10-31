@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-021",
+  "packet_sha256": "bbe06a1c52aaf97e7fe53858d0ff8e5670ce0715eea25e8208ac8c0329d15951",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents move between tough punishment and accountability for violence, and opposition to torture, secret detention, sentencing disparities, marijuana imprisonment, and inhumane prison treatment.",
+      "caveat": "The cluster includes international crime, hate crimes, human rights, and peripheral accountability claims beyond prison reform.",
+      "supporting_claim_ids": [
+        "democratic-2004-normalized-821dd4b5fe65-002",
+        "democratic-2008-normalized-4dbc67c6b105-006",
+        "democratic-2020-normalized-9e6e8f488e4b-001",
+        "democratic-2024-normalized-ad4155f8a786-002"
+      ]
+    },
+    "republican": {
+      "summary": "Documents call for prosecution, incarceration, mandatory sentences, denied parole, deportation, and tough penalties targeting violent or repeat offenders, gangs, trafficking, fraud, and unauthorized immigration.",
+      "caveat": "Examples also include foreign repression, discrimination, terrorism, cargo security, and several weakly related claims.",
+      "supporting_claim_ids": [
+        "republican-2008-normalized-e1dee5e96afa-003",
+        "republican-2012-normalized-5b6d6308ba2e-010",
+        "republican-2016-normalized-3d9e76db88bb-008",
+        "republican-2024-normalized-b90fbe592293-017"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents portray policing and prisons as racially and economically coercive, demand releases and accountability for state violence, and later advocate demilitarization and abolition of police and prisons.",
+      "caveat": "Earlier and peripheral examples also demand prosecution or justice for terrorism, corporate lawbreaking, and official misconduct.",
+      "supporting_claim_ids": [
+        "dsa-statement-400-normalized-e1fda3d8ccab-003",
+        "dsa-2021-adopted-normalized-5746209c69bc-008",
+        "dsa-statement-4626-normalized-b8f72e138725-005",
+        "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-001"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic examples combine punishment with due process, sentencing reform, and prison safeguards; Republican examples more directly emphasize incarceration, mandatory penalties, deportation, and denied parole.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-9e6e8f488e4b-001",
+        "democratic-2024-normalized-ad4155f8a786-002",
+        "republican-2008-normalized-ed3f8fbc1bb7-002",
+        "republican-2012-normalized-81cd9f648eda-011"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic examples reform sentencing and treatment while retaining criminal-justice institutions; DSA examples describe those institutions as structurally coercive and advocate releases, demilitarization, and abolition.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-9e6e8f488e4b-001",
+        "democratic-2020-normalized-f41908e5d30b-010",
+        "dsa-statement-4626-normalized-b8f72e138725-005",
+        "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-001"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican examples expand punitive enforcement against offenders and gangs; DSA examples attribute violence to policing and prisons and seek to reduce or abolish their power.",
+      "supporting_claim_ids": [
+        "republican-2008-normalized-e1dee5e96afa-003",
+        "republican-2024-normalized-b90fbe592293-016",
+        "dsa-2021-adopted-normalized-13ca43c6c588-006",
+        "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-002"
+      ]
+    }
+  }
+}

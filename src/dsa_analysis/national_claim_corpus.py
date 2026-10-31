@@ -741,13 +741,22 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
     return summary
 
 
+def publication_download_url(output: Path) -> str | None:
+    configuration = ROOT / "config/national_claim_publication_download.json"
+    if output.name == "full" and configuration.exists():
+        return json.loads(configuration.read_text())["full_archive_url"]
+    return None
+
+
 def bundle_members(
     output: Path, *, figures: Path | None = None, report: Path | None = None
 ) -> dict[str, Path | bytes]:
     members = {
         path.relative_to(output).as_posix(): path
         for path in output.rglob("*")
-        if path.is_file() and path.suffix in {".csv", ".json", ".jsonl"}
+        if path.is_file()
+        and path.suffix in {".csv", ".json", ".jsonl"}
+        and path.name != "claim_documents.download.json"
     }
     if figures is not None:
         members.update(
@@ -761,7 +770,11 @@ def bundle_members(
         text = report.read_text()
         prefix = Path(os.path.relpath(output.resolve(), report.parent.resolve())).as_posix() + "/"
         text = text.replace(prefix, "")
-        text = re.sub(r"\[([^\]]+)\]\(claim_documents\.zip\)", r"\1 (this extracted bundle)", text)
+        text = re.sub(
+            r"\[([^\]]+)\]\((?:[^)\s]*/)?claim_documents\.zip\)",
+            r"\1 (this extracted bundle)",
+            text,
+        )
         if figures is not None:
             prefix = (
                 Path(os.path.relpath(figures.resolve(), report.parent.resolve())).as_posix() + "/"
@@ -780,6 +793,18 @@ def bundle(output: Path, *, figures: Path | None = None, report: Path | None = N
             info.create_system = 3
             info.external_attr = 0o100644 << 16
             archive.writestr(info, value if isinstance(value, bytes) else value.read_bytes())
+    if figures is not None and report is not None:
+        path = output / "claim_documents.zip"
+        write_json(
+            output / "claim_documents.download.json",
+            {
+                "schema_version": 1,
+                "filename": path.name,
+                "bytes": path.stat().st_size,
+                "sha256": digest(path.read_bytes()),
+                "members": len(members),
+            },
+        )
 
 
 def extract_corpus(

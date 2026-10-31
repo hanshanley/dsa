@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-005",
+  "packet_sha256": "0d96439aefee469fdb44fc1c0cdad44624e4bd68cee52058c1fc00de38a42f75",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support human and civil rights, rule-governed and impartial institutions, equal treatment, political self-determination, Tribal sovereignty and treaty obligations, and balancing religious freedom with other civil rights.",
+      "caveat": "This broad principles bucket includes unrelated policy, institutional, and factual statements.",
+      "supporting_claim_ids": [
+        "democratic-2000-normalized-93fadee8da59-006",
+        "democratic-2012-normalized-a10b8a8482df-005",
+        "democratic-2020-normalized-33dbf90bb2e3-001",
+        "democratic-2024-normalized-1e0b4a5c659c-009"
+      ]
+    },
+    "republican": {
+      "summary": "Documents describe rights as inherent or God-given and government as their protector, while supporting religious liberty, state and local authority, due process, Tribal relations, and individual responsibility.",
+      "caveat": "The packet does not establish one comprehensive constitutional theory and includes unrelated factual and programmatic claims.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-bf4d1857ffda-006",
+        "republican-2008-normalized-92a9f5c7906a-006",
+        "republican-2016-normalized-b45c1b90580b-004",
+        "republican-2024-normalized-8da9a39b9f7f-003"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support self-determination and decolonization, Indigenous sovereignty and treaties, social and economic rights to housing and care, equal civic participation, and community-controlled justice.",
+      "caveat": "Fallback examples mix principles, predictions, foreign conflicts, organizing strategy, and descriptive claims.",
+      "supporting_claim_ids": [
+        "dsa-2010-social-economic-rights-normalized-b43e2bacee7b-005",
+        "dsa-statement-399-normalized-c97e71412451-004",
+        "dsa-2021-adopted-normalized-3a5ba8ba26bb-001",
+        "dsa-2026-program-normalized-3ba469ba4e69-repair-75f4dcce5dbb-003"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic documents stress equal treatment, civil rights, and institutional impartiality; Republican documents stress pre-existing individual rights, religious exercise, limited governmental intrusion, and state authority.",
+      "supporting_claim_ids": [
+        "democratic-2004-normalized-1cc1340fa574-001",
+        "democratic-2024-normalized-1e0b4a5c659c-009",
+        "republican-2008-normalized-92a9f5c7906a-006",
+        "republican-2016-normalized-d07fada01979-005"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both support civil equality and Indigenous sovereignty; DSA documents additionally frame housing, care, and social provision as rights and emphasize decolonization and community-controlled justice.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-33dbf90bb2e3-001",
+        "democratic-2024-normalized-ecf3480da059-010",
+        "dsa-2026-program-normalized-3ba469ba4e69-repair-75f4dcce5dbb-001",
+        "dsa-statement-399-normalized-c97e71412451-004"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents foreground inherent individual and religious rights protected by government; DSA documents foreground social-economic rights, collective self-determination, Indigenous sovereignty, and decolonization.",
+      "supporting_claim_ids": [
+        "republican-2012-normalized-a59fcef5e8a6-007",
+        "republican-2024-normalized-8da9a39b9f7f-003",
+        "dsa-2010-social-economic-rights-normalized-b43e2bacee7b-005",
+        "dsa-2021-adopted-normalized-eed2cefe53f1-010"
+      ]
+    }
+  }
+}

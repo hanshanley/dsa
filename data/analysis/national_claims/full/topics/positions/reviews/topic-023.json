@@ -1,0 +1,70 @@
+{
+  "topic_id": "topic-023",
+  "packet_sha256": "dd767632520c6cc69a52bcc79cfc6063481dc8662029a4ef34671d0460830874",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "From 2016 through 2024, documents criticize Trump on alliances and diplomacy, war and rights, labor, pandemic management, jobs, health programs, political violence, and democratic norms.",
+      "caveat": "These are partisan evaluations and asserted records across many domains, not one policy position.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-b4f43c23e8c1-006",
+        "democratic-2020-normalized-bb1bcc2747c2-001",
+        "democratic-2020-normalized-8a45b4bf8105-007",
+        "democratic-2024-normalized-306753327989-009",
+        "democratic-2024-normalized-63be03f4582c-004"
+      ]
+    },
+    "republican": {
+      "summary": "The 2024 examples praise Trump's trade, energy, growth, manufacturing, border, and national-pride record and promise continuation; one 2016 example attacks Obama's executive immigration actions.",
+      "caveat": "Only 15 examples appear, from two bundles; the evidence is overwhelmingly the 2024 platform.",
+      "supporting_claim_ids": [
+        "republican-2016-normalized-6168430fdff6-003",
+        "republican-2024-normalized-007a594371a0-009",
+        "republican-2024-normalized-7eea32ad5c94-008",
+        "republican-2024-normalized-51f7b85d22c5-009"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents criticize Trump-era immigration, labor, LGBTQ, Iran, Yemen, sanctions, and crisis policies, depict nationalist scapegoating, and later fault Democrats for adopting Trump-like immigration positions.",
+      "caveat": "The packet is concentrated in 2016–2023 statements and includes predictions, campaign analysis, and organizational observations.",
+      "supporting_claim_ids": [
+        "dsa-2016-strategy-normalized-92f137c832c0-006",
+        "dsa-statement-409-normalized-335a09bbcb79-006",
+        "dsa-statement-4386-normalized-89aab4241a6d-004",
+        "dsa-statement-4626-normalized-d7c9a92b264d-005",
+        "dsa-2024-program-normalized-43f2e9413efb-repair-d5f43d07d995-002"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic examples portray Trump's record as harmful across diplomacy, health, jobs, and democracy; Republican 2024 examples portray it as economic, energy, trade, and border success.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-f4a47a1af77b-009",
+        "democratic-2024-normalized-306753327989-009",
+        "republican-2024-normalized-007a594371a0-009",
+        "republican-2024-normalized-51f7b85d22c5-009"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both criticize Trump, but Democratic examples defend alliances, public programs, and administration competence; DSA examples emphasize class, labor, anti-imperial, immigration, and bipartisan continuity critiques.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-b4f43c23e8c1-006",
+        "democratic-2024-normalized-63be03f4582c-004",
+        "dsa-statement-386-normalized-1f9ccfca2bc9-006",
+        "dsa-2024-program-normalized-43f2e9413efb-repair-d5f43d07d995-002"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican 2024 examples praise Trump's economic, energy, and border record; DSA examples condemn his anti-labor, anti-immigrant, sanctions, and militarized foreign policies.",
+      "supporting_claim_ids": [
+        "republican-2024-normalized-7eea32ad5c94-008",
+        "republican-2024-normalized-51f7b85d22c5-009",
+        "dsa-statement-386-normalized-1f9ccfca2bc9-006",
+        "dsa-statement-4386-normalized-89aab4241a6d-004"
+      ]
+    }
+  }
+}

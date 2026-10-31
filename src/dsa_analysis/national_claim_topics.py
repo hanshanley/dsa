@@ -1339,6 +1339,9 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
             "do not certify a definitive policy taxonomy.",
             "",
         ]
+    from .national_claim_topic_positions import report_section as position_report
+
+    lines += position_report(directory.parent, figures).splitlines()
     lines += [
         "### Detailed density comparisons",
         "",
@@ -1666,6 +1669,9 @@ def render(corpus: Path, *, update_report: bool = True, report: Path | None = No
     )
     plot_topics(directory, figures, labels, fit["basis"]["config"])
     plot_piece(directory, figures, labels, groups)
+    from .national_claim_topic_positions import generate as generate_positions
+
+    positions = generate_positions(corpus, figures)
     from .national_claim_plot_style import export_page_versions, render_supporting
     from .national_claim_topic_evolution import generate as generate_evolution
 
@@ -1712,6 +1718,7 @@ def render(corpus: Path, *, update_report: bool = True, report: Path | None = No
         "excluded_identity_topics": sorted(set(labels) - displayed_topics(labels)),
         "temporal": temporal,
         "evolution": evolution,
+        "positions": positions,
         "publication": publication,
     }
     write_json(directory / "summary.json", result)
@@ -1802,6 +1809,7 @@ def audit(corpus: Path) -> dict:
         "reviewed_labels": rendered["reviewed_labels"],
         "assistant_revised_labels": rendered["assistant_revised_labels"],
         "evolution": evolution,
+        "positions": rendered["positions"],
         "publication": rendered["publication"],
         "substantive_artifacts_sha256": first,
         "qualification": (

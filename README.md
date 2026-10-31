@@ -71,6 +71,18 @@ The [detailed density comparisons](report/national_claim_analysis.md#detailed-de
 pair larger individual maps with numbered, source-linked claim examples and exact
 representative density contrasts—not vague floating keyword labels.
 
+**Wider clustering and positions:** four large, source-linked atlases cover all
+21 substantive subjects: [all three groups](figures/national_claims/full/topics/positions/all_groups.png),
+[Democratic–Republican](figures/national_claims/full/topics/positions/democratic_vs_republican.png),
+[Democratic–DSA](figures/national_claims/full/topics/positions/democratic_vs_dsa.png), and
+[Republican–DSA](figures/national_claims/full/topics/positions/republican_vs_dsa.png).
+Each combines a numbered semantic map with individualized summaries and weighted
+topic shares; pairwise versions also state the documented policy distinctions.
+The [full evidence review](report/national_claim_analysis.md#group-positions-on-the-shared-clustering)
+binds 63 group summaries and 63 pairwise distinctions to 2,952 bundle-diverse sampled
+claims. These describe observed documents across years, not an exhaustive or current
+consensus. Pair-map colors show topic-share gaps, not ideological distance.
+
 ## Results and downloads
 
 | Current result | Scope | Outputs |
@@ -85,12 +97,17 @@ representative density contrasts—not vague floating keyword labels.
 | Publication-ready figures | Restrained house style and individual cards; PNG and SVG | [Substack versions](figures/national_claims/full/) · [The Margin of Error versions](figures/national_claims/full/themarginoferror/) |
 
 **One complete download:** [Report, all figures, result tables, claims, complete
-sources, raw replies, history and corrections](data/analysis/national_claims/full/claim_documents.zip).
+sources, raw replies, history and corrections](https://github.com/hanshanley/dsa/releases/download/claim-position-atlas-2026-10-31/claim_documents.zip).
 Unzip it and open `report.md`: its figure and result-table links point to the
 included files. PNG and SVG figures include both the new topic/time analyses and
 the supporting CAP/KDE results. Default figures use Substack's warm-paper
 background; `figures/themarginoferror/` contains the matching website versions.
 Both versions are included in the same complete download.
+The enlarged ZIP is hosted as a GitHub release asset because it exceeds the
+repository's per-file limit; no claims, sources or figures have been removed.
+Its [checksum and size](data/analysis/national_claims/full/claim_documents.download.json)
+are tracked. The publication exporter rebuilds the identical ZIP offline from
+the committed evidence, figures and report when the local archive is absent.
 
 ### Inspect the actual claims
 

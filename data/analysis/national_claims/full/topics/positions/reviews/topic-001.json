@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-001",
+  "packet_sha256": "0552f1fbec89169c0d114338ca3bc044c615518d3ad96f6f40a6513a44e03948",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support clean-energy investment, resilient infrastructure, climate regulation, renewable incentives, and ending oil-and-gas subsidies, alongside broader rural, housing, manufacturing, trade, and worker-investment proposals.",
+      "caveat": "This broad bucket also contains unrelated economic proposals and retrospective administration claims.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-3b4380265be8-006",
+        "democratic-2016-normalized-68c57aa9b811-011",
+        "democratic-2020-normalized-9ec56284fa6b-008",
+        "democratic-2024-normalized-92fa6cad93aa-003"
+      ]
+    },
+    "republican": {
+      "summary": "Documents support domestic energy supply and independence through markets, fossil fuels, nuclear power, and pipelines, while earlier texts also endorse renewables, efficiency, and climate-risk responses.",
+      "caveat": "Energy sources and climate framing vary across years; the bucket also includes trade and general growth claims.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-53cdfe529adc-008",
+        "republican-2008-normalized-d092c115d3e5-006",
+        "republican-2012-normalized-a941803afe27-003",
+        "republican-2024-normalized-007a594371a0-012"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support Green New Deal programs, rapid fossil-fuel phaseout, massive public investment, and public or social ownership of energy, transit, infrastructure, and major industry.",
+      "caveat": "Fallback documents also include broad economic restructuring, organizational, and unrelated movement claims.",
+      "supporting_claim_ids": [
+        "dsa-2021-adopted-normalized-067c1b4d0c0e-011",
+        "dsa-2024-program-normalized-f23d4047d972-013",
+        "dsa-2026-program-normalized-cc87289e0395-029",
+        "dsa-2009-priorities-normalized-69ef366c0cec-004"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic documents emphasize clean public investment and renewable incentives; Republican documents emphasize market-led supply, pipelines, and fossil-energy expansion, despite earlier climate and renewable provisions.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-a5093f954c73-002",
+        "democratic-2024-normalized-92fa6cad93aa-003",
+        "republican-2012-normalized-a941803afe27-003",
+        "republican-2024-normalized-007a594371a0-014"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both support clean-energy transition; Democratic documents use regulation, incentives, and investment, while DSA documents call for fossil-fuel phaseout and public or social ownership.",
+      "supporting_claim_ids": [
+        "democratic-2012-normalized-64bd3b86fba0-012",
+        "democratic-2016-normalized-68c57aa9b811-011",
+        "dsa-2024-program-normalized-f23d4047d972-013",
+        "dsa-2026-program-normalized-cc87289e0395-029"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents favor market-led domestic production including fossil fuels and pipelines; DSA documents favor public ownership, massive public investment, and phasing out fossil fuels.",
+      "supporting_claim_ids": [
+        "republican-2012-normalized-acc59629116d-006",
+        "republican-2024-normalized-007a594371a0-012",
+        "dsa-2024-program-normalized-f23d4047d972-010",
+        "dsa-2026-program-normalized-cc87289e0395-029"
+      ]
+    }
+  }
+}

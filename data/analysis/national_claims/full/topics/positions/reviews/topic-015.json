@@ -1,0 +1,71 @@
+{
+  "topic_id": "topic-015",
+  "packet_sha256": "66d25b93196a53287a98b90bc55b5ba5d84cf2b9fe6596330489abd8cedf29ee",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents describe terrorism and proliferation threats, support defeating al-Qaeda and securing weapons materials, criticize Iraq's costs and distraction, favor ending that war, and note burdens on troops.",
+      "caveat": "The packet mixes policy positions with threat assessments, war records, veteran impacts, and unverified claims about adversaries and military outcomes.",
+      "supporting_claim_ids": [
+        "democratic-2004-normalized-8f1afc3f94bb-007",
+        "democratic-2008-normalized-a660afb3bf0d-007",
+        "democratic-2008-normalized-8ea5d753fbc6-001",
+        "democratic-2012-normalized-13e519c73835-005",
+        "democratic-2012-normalized-0012a775903a-005"
+      ]
+    },
+    "republican": {
+      "summary": "Documents portray terrorism, hostile states, proliferation, and military readiness as major threats; they support destroying ISIS, success in Iraq, stronger forces, missile defense, and faster intelligence support.",
+      "caveat": "Many examples are threat predictions or evaluations rather than policy; asserted consequences, readiness gaps, and adversary intentions were not fact-checked.",
+      "supporting_claim_ids": [
+        "republican-2016-normalized-edb41c383f7b-repair-b3d1abffc553-004",
+        "republican-2008-normalized-43bc9fa261d5-006",
+        "republican-2024-normalized-908167445e74-001",
+        "republican-2004-normalized-a840632cc70d-005",
+        "republican-2008-normalized-2f1b40a7ccb9-014"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents oppose U.S. occupations, overseas bases, Iraq and Syria intervention, and expansive military spending; they support bringing troops home while acknowledging targeted intelligence and security measures against terrorism.",
+      "caveat": "Examples include historical narratives and causal claims that U.S. wars intensified terrorism or instability; those assertions were not independently verified.",
+      "supporting_claim_ids": [
+        "dsa-2024-program-normalized-9d88be1f8868-repair-e0ecacd53027-001",
+        "dsa-2024-program-normalized-9d88be1f8868-repair-e0ecacd53027-002",
+        "dsa-2021-adopted-normalized-a26aa576943f-008",
+        "dsa-statement-364-normalized-50865307df58-001",
+        "dsa-2001-september-11-normalized-2872d1c0c23f-005"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Both identify terrorism and proliferation threats; Democratic documents criticize Iraq's diversion and support ending it, while Republican documents argue Iraqi success denies terrorist safe haven.",
+      "supporting_claim_ids": [
+        "democratic-2012-normalized-13e519c73835-005",
+        "democratic-2008-normalized-8ea5d753fbc6-001",
+        "republican-2008-normalized-43bc9fa261d5-006",
+        "republican-2008-normalized-43bc9fa261d5-009"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic documents retain targeted military action against al-Qaeda while ending Iraq; DSA documents seek troop withdrawal, base closures, deep military cuts, and opposition to intervention.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-a660afb3bf0d-007",
+        "democratic-2008-normalized-8ea5d753fbc6-001",
+        "dsa-2024-program-normalized-9d88be1f8868-repair-e0ecacd53027-001",
+        "dsa-2021-adopted-normalized-a26aa576943f-008"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents call for destroying ISIS and stronger military capacity; DSA documents oppose intervention, close overseas bases, return troops, and reduce spending to territorial defense.",
+      "supporting_claim_ids": [
+        "republican-2016-normalized-edb41c383f7b-repair-b3d1abffc553-004",
+        "republican-2024-normalized-908167445e74-001",
+        "dsa-2024-program-normalized-9d88be1f8868-repair-e0ecacd53027-001",
+        "dsa-2021-adopted-normalized-a26aa576943f-008"
+      ]
+    }
+  }
+}

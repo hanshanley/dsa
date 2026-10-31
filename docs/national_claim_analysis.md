@@ -484,6 +484,47 @@ and available audit/results tables—not metadata-only downloads. Full extractio
 also includes its raw model responses, retry history, source-bound correction
 records and manifests.
 
+### Group-position clustering atlases
+
+The expanded corpus now has one combined atlas and all three pairwise atlases.
+Each covers the 21 substantive pooled clusters, with a numbered map, individual
+group summaries, weighted shares and support counts. Pairwise versions add
+reviewed distinctions and unsmoothed percentage-point gaps. The frozen
+higher-dimensional fit, assignments, excluded identity topics and denominators
+are unchanged; reused two-dimensional coordinates are display-only.
+
+```bash
+uv run python -m dsa_analysis.national_claim_topic_positions prepare
+# Read the actual packets and write source-bound reviews; schema checks are not semantic review.
+uv run python -m dsa_analysis.national_claim_topic_positions render
+uv run python -m dsa_analysis.national_claim_topics audit
+```
+
+Evidence selection alternates two central claims with one peripheral claim,
+round-robin across bundles, up to 48 examples per group/topic. The 2,952 selected
+claims retain complete wording, source excerpts, offsets, dates and provenance.
+All 63 group summaries and 63 pairwise distinctions were assistant-reviewed
+against those actual packets, with ambiguous attribution checked in source
+evidence. Hash-bound reviews require supported IDs, both observed comparison
+sides and multiple supporting bundles when available. Missing evidence never
+becomes an inferred stance. Sampled synthesis is neither exhaustive stance
+classification nor independent human certification.
+
+Dots represent raw claims, not equal group mass. Pair-map colors are each
+claim's frozen topic-share gap, not KDE density or ideological distance. Markers
+locate weighted projected topic centres, not boundaries. Statements cover the
+observed documents across years, not a current consensus. Cell-specific caveats
+and all supporting claims appear in the report and complete downloads.
+
+The full ZIP now exceeds GitHub's repository-file limit and is therefore a
+single release asset, configured in `config/national_claim_publication_download.json`.
+No evidence or figures are removed. `claim_documents.download.json` records its
+size, SHA-256 and member count, and is excluded from the ZIP to avoid a circular
+checksum. The archive itself is generated locally and ignored by Git. The
+publication exporter reconstructs it from committed sources when absent and
+requires its bytes to match the published checksum before exporting the complete
+download. Smaller pilot archives retain their existing repository links.
+
 ```bash
 uv run python -m unittest tests.test_national_claim_corpus \
   tests.test_national_claim_analysis tests.test_national_claims \

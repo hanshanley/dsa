@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-006",
+  "packet_sha256": "1651b6dc650c70fb9e558f8490b5a67e07df1257b14ac4b0e62b21d6bca5d1fb",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents portray U.S. leadership as drawing on alliances, international institutions, diplomacy, democracy, innovation, economic strength, and military capability, with American security and prosperity reinforced by strong partners.",
+      "caveat": "This narrative bucket includes retrospective achievements, patriotic language, and unrelated domestic facts.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-9444e34d73ce-004",
+        "democratic-2016-normalized-c9e0fc219fb0-016",
+        "democratic-2020-normalized-41964e67e6c4-006",
+        "democratic-2024-normalized-306753327989-006"
+      ]
+    },
+    "republican": {
+      "summary": "Documents portray America as exceptionally strong and freedom-leading, linking global influence to military and economic power, alliances, diplomacy, domestic manufacturing, energy resources, innovation, and national unity.",
+      "caveat": "The packet mixes policy, aspiration, patriotic characterization, historical claims, and stray geographic or editorial records.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-76b5fb08ee36-004",
+        "republican-2008-normalized-e390325d5783-014",
+        "republican-2012-normalized-7815bee1d725-005",
+        "republican-2024-normalized-a2d535d470e7-001"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents criticize U.S. military dominance, territorial control, intervention, and corporate-state power while supporting territorial and Indigenous sovereignty, noninterference, reduced imperial spending, and redirected domestic investment.",
+      "caveat": "Many examples are fallback factual accusations or historical narratives rather than direct policy positions.",
+      "supporting_claim_ids": [
+        "dsa-2007-economic-justice-normalized-53bb7ce424c7-006",
+        "dsa-statement-1492-normalized-373728069d3c-004",
+        "dsa-2021-adopted-normalized-5589a830d2a3-003",
+        "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-005"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Both portray U.S. leadership through strength and alliances; Democratic documents emphasize rules and institutions, while Republican documents more explicitly foreground supremacy, patriotism, manufacturing, and energy.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-41964e67e6c4-006",
+        "democratic-2024-normalized-306753327989-006",
+        "republican-2012-normalized-7815bee1d725-005",
+        "republican-2024-normalized-a2d535d470e7-001"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic documents endorse alliance- and institution-based U.S. leadership; DSA documents challenge U.S. territorial control and intervention and call for sovereignty and noninterference.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-9444e34d73ce-001",
+        "democratic-2016-normalized-c9e0fc219fb0-016",
+        "dsa-2021-adopted-normalized-5589a830d2a3-003",
+        "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-005"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents celebrate American power and freedom-leading influence; DSA documents describe imperial dominance and military overreach and support territorial independence and reduced U.S. interference.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-a269dca8c6eb-001",
+        "republican-2016-normalized-1ba2e24c3f47-005",
+        "dsa-statement-1492-normalized-373728069d3c-004",
+        "dsa-2021-adopted-normalized-5589a830d2a3-004"
+      ]
+    }
+  }
+}

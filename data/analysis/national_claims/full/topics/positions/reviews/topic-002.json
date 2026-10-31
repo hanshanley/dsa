@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-002",
+  "packet_sha256": "e0bd787f7d968e79966d68eb61a908c27ecc2b2d9c2668a273c54ec443fcf599",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support targeted federal investment, Medicaid and community-based services, affordable housing, mental-health and substance-use treatment, and assistance for veterans, disabled people, low-income communities, and returning citizens.",
+      "caveat": "The broad packet includes unrelated security, technology, trade, and environmental claims.",
+      "supporting_claim_ids": [
+        "democratic-2004-normalized-cbac9887f90d-002",
+        "democratic-2012-normalized-c23a3db91fb4-005",
+        "democratic-2020-normalized-7c42c0046338-005",
+        "democratic-2024-normalized-e7f0490f5d0f-006"
+      ]
+    },
+    "republican": {
+      "summary": "Documents support safety-net delivery through public-private or local partnerships, training and self-sufficiency services, homeownership, and targeted aid for veterans, Native communities, foster families, low-income families, and seniors.",
+      "caveat": "The packet mixes social support with policing, regulatory relief, administration, and stray factual records.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-76e7e2418f31-008",
+        "republican-2004-normalized-8eb776d9223a-009",
+        "republican-2008-normalized-f944b52cd2a1-007",
+        "republican-2024-normalized-639254060a0e-009"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support social housing and rent control, expanded public resources and Social Security, emergency shelter and cash aid, community public safety, and investment in neglected communities.",
+      "caveat": "Many fallback examples concern organizational capacity or unrelated factual material rather than social provision.",
+      "supporting_claim_ids": [
+        "dsa-2007-economic-justice-normalized-500c699fb1db-001",
+        "dsa-statement-4626-normalized-5e02e4c93b6d-008",
+        "dsa-2024-program-normalized-b789b4710c28-009",
+        "dsa-2026-program-normalized-3ba469ba4e69-019"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic documents emphasize federal funding and service expansion; Republican documents pair targeted benefits with public-private partnerships, self-sufficiency services, homeownership, and locally administered poverty responses.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-5e55d1004289-004",
+        "democratic-2024-normalized-e7f0490f5d0f-006",
+        "republican-2000-normalized-76e7e2418f31-008",
+        "republican-2004-normalized-8eb776d9223a-009"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic documents expand targeted programs and community services; DSA documents add universal rent control, public social housing, direct emergency aid, and preservation of working-poor programs.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-7c42c0046338-005",
+        "democratic-2024-normalized-51d7cbe64123-005",
+        "dsa-2024-program-normalized-b789b4710c28-009",
+        "dsa-statement-5439-normalized-0bb70c6b7dac-007"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents emphasize targeted assistance, partnerships, and self-sufficiency; DSA documents emphasize public social housing, rent control, direct aid, and expanded collective provision.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-8eb776d9223a-009",
+        "republican-2016-normalized-bfaeff3ad252-004",
+        "dsa-2024-program-normalized-b789b4710c28-011",
+        "dsa-2024-program-normalized-b789b4710c28-009"
+      ]
+    }
+  }
+}

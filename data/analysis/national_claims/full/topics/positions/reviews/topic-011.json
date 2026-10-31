@@ -1,0 +1,71 @@
+{
+  "topic_id": "topic-011",
+  "packet_sha256": "57ea0616b0f923475a05744d23d780b05f9e98d8ae4aeb9c747213135bf378b4",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support middle-class and family tax relief, targeted child and earned-income credits, higher contributions from wealthy taxpayers, estate-tax restoration, and selected corporate-rate or incentive reforms.",
+      "caveat": "Positions vary by year and include both tax increases or loophole closures and targeted corporate or family tax reductions.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-fe2cabd6d37b-005",
+        "democratic-2020-normalized-d9a1dc68d808-007",
+        "democratic-2016-normalized-9957d3b08ad7-004",
+        "democratic-2020-normalized-d4d1663f3068-001",
+        "democratic-2012-normalized-f75fff4be951-010"
+      ]
+    },
+    "republican": {
+      "summary": "Documents support lower family, worker, investment, and corporate taxes; permanent Trump tax provisions; expanded child credits; and tax structures intended to encourage saving and business growth.",
+      "caveat": "Examples span broad rate cuts, targeted credits, tariff-linked predictions, and reforms whose stated economic effects were not verified.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-72d4d20b0778-002",
+        "republican-2012-normalized-cf8e70a905aa-013",
+        "republican-2024-normalized-007a594371a0-003",
+        "republican-2008-normalized-903fa1c9b13d-008",
+        "republican-2024-normalized-007a594371a0-004"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support progressive income and corporate taxation, taxes on wealth, inheritances, capital gains, and financial transactions, closing corporate loopholes, and reducing regressive sales and excise taxes.",
+      "caveat": "Revenue estimates and claims that particular taxes fund public programs are document assertions, not independently validated causal or fiscal findings.",
+      "supporting_claim_ids": [
+        "dsa-2021-adopted-normalized-7ace82695f5d-019",
+        "dsa-2024-program-normalized-f23d4047d972-009",
+        "dsa-2012-fiscal-normalized-675dfbae09ee-011",
+        "dsa-2011-ows-resolution-normalized-654ff8ab0cb5-007",
+        "dsa-2021-adopted-normalized-7ace82695f5d-015"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Both offer family tax relief; Democratic documents pair it with progressive taxation, while Republican documents emphasize broader rate reductions, permanence, saving, investment, and corporate competitiveness.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-d4d1663f3068-001",
+        "democratic-2020-normalized-d9a1dc68d808-007",
+        "republican-2000-normalized-72d4d20b0778-002",
+        "republican-2012-normalized-cf8e70a905aa-013"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both support more progressive taxation; DSA documents specify wealth, transaction, inheritance, and broad corporate taxes, while Democratic documents combine higher-end taxation with targeted relief.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-d9a1dc68d808-007",
+        "democratic-2020-normalized-d4d1663f3068-001",
+        "dsa-2021-adopted-normalized-7ace82695f5d-019",
+        "dsa-2024-program-normalized-f23d4047d972-009"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents seek lower investment and corporate rates; DSA documents seek higher corporate, wealth, capital-gains, inheritance, and financial-transaction taxes while reducing regressive consumption taxes.",
+      "supporting_claim_ids": [
+        "republican-2012-normalized-cf8e70a905aa-013",
+        "republican-2016-normalized-98c6d92cf7ef-001",
+        "dsa-2021-adopted-normalized-7ace82695f5d-019",
+        "dsa-2021-adopted-normalized-7ace82695f5d-015"
+      ]
+    }
+  }
+}

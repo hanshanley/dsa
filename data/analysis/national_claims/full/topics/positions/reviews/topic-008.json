@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-008",
+  "packet_sha256": "fedacd1c5dd0283ca091768c5dace087abda54599a941b4e1fb179cd8918a9ed",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents combine border security and targeted enforcement with comprehensive reform, pathways to citizenship, protected asylum and family unity, expanded legal immigration, due process, and more humane detention and naturalization processes.",
+      "caveat": "Enforcement, legalization, detention, and administrative emphases vary across years in this mixed bucket.",
+      "supporting_claim_ids": [
+        "democratic-2004-normalized-03b3f8c96731-005",
+        "democratic-2012-normalized-8c2f2e66c5fc-005",
+        "democratic-2020-normalized-d3bd0e54948d-005",
+        "democratic-2024-normalized-213ea50d0c93-002"
+      ]
+    },
+    "republican": {
+      "summary": "Documents welcome legal immigration and sometimes citizenship while prioritizing border security, enforcement, removal, detention, penalties, screening, limits on family migration, and merit-based admission.",
+      "caveat": "Proposals shift across years, with later packets containing stronger deportation and enforcement language; several examples are unrelated.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-c4dde1b37f8c-001",
+        "republican-2012-normalized-40fe6a061706-003",
+        "republican-2016-normalized-3d9e76db88bb-001",
+        "republican-2024-normalized-048e2be2d61f-009"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support ending detention and deportations, abolishing ICE, demilitarizing the border, protecting asylum, immediate amnesty or citizenship pathways, broader legal migration, and immigrant access to jobs and services.",
+      "caveat": "Fallback documents include bill commentary and migration-system critiques, but selected policy direction is consistent across periods.",
+      "supporting_claim_ids": [
+        "dsa-2007-economic-justice-normalized-3a71f1b7e983-006",
+        "dsa-2021-adopted-normalized-7a7bd5c278de-002",
+        "dsa-2024-program-normalized-9d88be1f8868-017",
+        "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-007"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Both include legal immigration and border management; Democratic documents pair enforcement with legalization and humane process, while Republican documents emphasize removal, detention, penalties, and admission limits.",
+      "supporting_claim_ids": [
+        "democratic-2024-normalized-213ea50d0c93-002",
+        "democratic-2020-normalized-d3bd0e54948d-005",
+        "republican-2012-normalized-1ec9bd15c5d3-001",
+        "republican-2024-normalized-da1836ccdad0-009"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic documents retain border enforcement and prioritized deportation within legalization reforms; DSA documents call for ending deportations and detention, abolishing ICE, and demilitarizing borders.",
+      "supporting_claim_ids": [
+        "democratic-2012-normalized-8c2f2e66c5fc-005",
+        "democratic-2024-normalized-213ea50d0c93-002",
+        "dsa-2021-adopted-normalized-7a7bd5c278de-002",
+        "dsa-2024-program-normalized-9d88be1f8868-016"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents prioritize border enforcement, detention, deportation, and merit-based admission; DSA documents seek abolition of ICE detention and deportations, amnesty, asylum protection, and freer migration.",
+      "supporting_claim_ids": [
+        "republican-2016-normalized-3d9e76db88bb-001",
+        "republican-2024-normalized-048e2be2d61f-009",
+        "dsa-2021-adopted-normalized-7a7bd5c278de-002",
+        "dsa-2024-program-normalized-9d88be1f8868-017"
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "topic_id": "topic-012",
+  "packet_sha256": "5dc30d4b3b0a5fdb26bc46ba45c5b806e454bef8b5eee78fd4183543431b24ff",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support increased public-school investment, equitable access and funding, achievement standards and accountability, community schools, and public options including magnet, charter, teacher-led, and career schools.",
+      "caveat": "Approaches vary over time, including standardized accountability, later opposition to punitive test-based treatment, and support for selected public-school choice.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-3e1d1d365c73-005",
+        "democratic-2016-normalized-d699b43d99c3-006",
+        "democratic-2016-normalized-45d35ed14449-011",
+        "democratic-2024-normalized-0bc5902e5d0e-005",
+        "democratic-2012-normalized-1c0d70ee0925-009"
+      ]
+    },
+    "republican": {
+      "summary": "Documents support parental choice through charter, private, parochial, home, virtual, and technical schooling, vouchers and tax credits, alongside local control, discipline, merit pay, and academic expectations.",
+      "caveat": "The packet also includes public-school disability funding and broad access language; choice mechanisms and accountability policies vary across years.",
+      "supporting_claim_ids": [
+        "republican-2008-normalized-224fe729171f-002",
+        "republican-2016-normalized-e6566783314d-repair-e4af6ec3f523-002",
+        "republican-2024-normalized-63d28569ddf1-009",
+        "republican-2024-normalized-631b8e76912c-010",
+        "republican-2012-normalized-064968664904-003"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support free, publicly funded education from pre-K through college, student-debt cancellation, desegregation, inclusive and bias-free schools, reduced testing, and funding detached from local property taxes.",
+      "caveat": "Examples also include pandemic reopening demands, sex education, LGBTQ student rights, and historical narratives rather than one unified school-governance proposal.",
+      "supporting_claim_ids": [
+        "dsa-2026-program-normalized-3ba469ba4e69-005",
+        "dsa-2024-program-normalized-b789b4710c28-008",
+        "dsa-2021-adopted-normalized-6c07162ee087-002",
+        "dsa-2021-adopted-normalized-6c02b493f903-009",
+        "dsa-2021-adopted-normalized-29ef349cf189-001"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic documents emphasize public-school investment and equity with some public options; Republican documents extend choice to private, religious, home, voucher, and tax-credit pathways.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-3e1d1d365c73-005",
+        "democratic-2012-normalized-1c0d70ee0925-009",
+        "republican-2008-normalized-224fe729171f-002",
+        "republican-2016-normalized-e6566783314d-repair-e4af6ec3f523-002"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both support public education access and equitable funding; DSA documents additionally demand tuition-free higher education, debt cancellation, desegregation, reduced testing, and property-tax funding separation.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-d699b43d99c3-006",
+        "democratic-2020-normalized-3e1d1d365c73-005",
+        "dsa-2024-program-normalized-b789b4710c28-008",
+        "dsa-2021-adopted-normalized-29ef349cf189-001"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents prioritize parental choice across public and private providers; DSA documents frame education as a free public right and seek debt cancellation and public-system funding.",
+      "supporting_claim_ids": [
+        "republican-2008-normalized-224fe729171f-002",
+        "republican-2024-normalized-63d28569ddf1-009",
+        "dsa-2026-program-normalized-3ba469ba4e69-005",
+        "dsa-2024-program-normalized-b789b4710c28-008"
+      ]
+    }
+  }
+}

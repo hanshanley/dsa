@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-003",
+  "packet_sha256": "3b407727a69aca858aa4b633cca73fd4b770c4753e7356c54eabb392c8f4bc19",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support easier union organizing and collective bargaining, stronger labor-law enforcement, strike protections, expanded rights for excluded workers, higher minimum wages, overtime protections, and labor standards in trade.",
+      "caveat": "Several examples are retrospective achievements or worker-related facts rather than new policy commitments.",
+      "supporting_claim_ids": [
+        "democratic-2004-normalized-f23414e33192-006",
+        "democratic-2008-normalized-dd4bcb4c56df-011",
+        "democratic-2020-normalized-fc967cb6cbce-003",
+        "democratic-2024-normalized-8af3eb44deaa-005"
+      ]
+    },
+    "republican": {
+      "summary": "Documents affirm voluntary union participation while supporting state or national right-to-work laws, union financial disclosure, repeal of Davis-Bacon, employer flexibility, workforce training, and selected worker protections.",
+      "caveat": "The packet combines labor policy with retirement, welfare, immigration verification, and civil-service claims.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-5bbdd676d52d-001",
+        "republican-2008-normalized-5b0f314c5424-001",
+        "republican-2012-normalized-9b00c73c5686-008",
+        "republican-2016-normalized-1a84c35198a9-008"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support broad rights to organize, bargain, and strike; labor-law reform and enforcement; union democratization; living wages; worker ownership; job guarantees; and protections regardless of industry or immigration status.",
+      "caveat": "Fallback material includes factual descriptions and adjacent employment, pension, and unemployment policies.",
+      "supporting_claim_ids": [
+        "dsa-2007-economic-justice-normalized-43ac027d547d-001",
+        "dsa-2009-priorities-normalized-7fbe4754d605-004",
+        "dsa-2024-program-normalized-f23d4047d972-002",
+        "dsa-2026-program-normalized-f85f1b0f20e0-005"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic documents seek easier organizing and stronger bargaining and strike protections; Republican documents preserve voluntary unionism while advancing right-to-work, union disclosure, and Davis-Bacon repeal.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-7ba2e6e4e2f2-002",
+        "democratic-2020-normalized-fc967cb6cbce-003",
+        "republican-2012-normalized-9b00c73c5686-008",
+        "republican-2016-normalized-1a84c35198a9-008"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both support organizing and bargaining rights; DSA documents additionally emphasize universal strike rights, union democratization, worker ownership, and a federal jobs guarantee.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-dd4bcb4c56df-005",
+        "democratic-2024-normalized-8af3eb44deaa-005",
+        "dsa-2026-program-normalized-f85f1b0f20e0-005",
+        "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-003"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents emphasize voluntary unionism and right-to-work restrictions; DSA documents seek expansive organizing and strike rights, stronger enforcement, and democratic unions.",
+      "supporting_claim_ids": [
+        "republican-2008-normalized-5b0f314c5424-001",
+        "republican-2012-normalized-9b00c73c5686-008",
+        "dsa-2009-priorities-normalized-7fbe4754d605-004",
+        "dsa-2024-program-normalized-f23d4047d972-002"
+      ]
+    }
+  }
+}

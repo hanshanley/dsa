@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-004",
+  "packet_sha256": "7ec45a25c5ab918e704922d5205a3a47a8b2f192e61c111000e77b6fc57db0e3",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents assert that clean-energy, infrastructure, education, housing, small-business, and middle-class investments generate jobs and prosperity, while minimum-wage and equal-pay policies reduce poverty.",
+      "caveat": "This narrative bucket mixes predictions, causal assertions, retrospective achievements, and unrelated records; outcomes were not fact-checked.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-225b92127bb1-006",
+        "democratic-2016-normalized-e54a859b456a-002",
+        "democratic-2020-normalized-11c6d091feaf-027",
+        "democratic-2020-normalized-5956fd15c018-010"
+      ]
+    },
+    "republican": {
+      "summary": "Documents attribute growth and jobs to tax cuts, deregulation, free trade, technology, private-sector expansion, abundant domestic energy, and energy exports, often presenting prosperity as enabling other goals.",
+      "caveat": "These are document assertions and predictions, not verified effects; the packet includes stray facts and credits.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-79e5ffd6ad69-015",
+        "republican-2004-normalized-d0360dc943ed-011",
+        "republican-2012-normalized-5a227161d13d-005",
+        "republican-2016-normalized-cffadfbf3490-006"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents portray growth as unequally distributed and link sustainable prosperity to public infrastructure, decarbonization, public banking, social programs, green union jobs, and reduced military spending.",
+      "caveat": "The packet is heavily narrative, mixing policy, criticism, history, predictions, and unverified causal assertions.",
+      "supporting_claim_ids": [
+        "dsa-2001-convention-priorities-normalized-f35a6ece882e-007",
+        "dsa-2009-priorities-normalized-e439cbeb16b4-003",
+        "dsa-statement-404-normalized-d6649fb869e5-008",
+        "dsa-2021-adopted-normalized-29ef349cf189-003"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic documents link public and clean-energy investment and wage gains to prosperity; Republican documents stress tax cuts, deregulation, trade, private enterprise, and domestic energy.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-11c6d091feaf-027",
+        "democratic-2020-normalized-5956fd15c018-010",
+        "republican-2000-normalized-79e5ffd6ad69-015",
+        "republican-2012-normalized-5a227161d13d-005"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both connect green investment with jobs; Democratic documents emphasize broad investment-led growth, while DSA documents foreground unequal gains, public ownership, decarbonization, and unionized green employment.",
+      "supporting_claim_ids": [
+        "democratic-2000-normalized-0023ddaabb92-007",
+        "democratic-2024-normalized-484cf745805e-012",
+        "dsa-2001-convention-priorities-normalized-f35a6ece882e-007",
+        "dsa-statement-4683-normalized-25cd3b1eb4b1-repair-e254dee4a0db-011"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents credit market liberalization and energy production for growth; DSA documents criticize unequal and trickle-down growth and prescribe public investment, decarbonization, and social provision.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-d0360dc943ed-011",
+        "republican-2016-normalized-cffadfbf3490-006",
+        "dsa-statement-404-normalized-d6649fb869e5-008",
+        "dsa-2021-adopted-normalized-a6c98b5d0a47-002"
+      ]
+    }
+  }
+}

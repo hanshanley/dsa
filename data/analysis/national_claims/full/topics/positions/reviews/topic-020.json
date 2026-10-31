@@ -1,0 +1,69 @@
+{
+  "topic_id": "topic-020",
+  "packet_sha256": "762fd42bfb1342e6fecf9e42d63c9cb5a42a6d1cfa59afd27bd0c0a21d07dcbc",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "A small, mixed set criticizes concentrated corporate and special-interest power, unequal rules, exploitation, and attacks on workers, while generally seeking fairer markets rather than capitalism's abolition.",
+      "caveat": "Only 22 claims appear, and several concern unrelated foreign affairs, child labor, or broad economic description.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-32fbc1d828df-006",
+        "democratic-2012-normalized-8faac26492b5-004",
+        "democratic-2016-normalized-7359200e1c62-009",
+        "democratic-2024-normalized-da9ab87f7a1b-010"
+      ]
+    },
+    "republican": {
+      "summary": "Documents praise free enterprise, private-sector innovation, property ownership, and linked economic and political freedom, while condemning Marxism, bureaucracy, government redistribution, and crony capitalism.",
+      "caveat": "The packet includes foreign-policy ideology and historical description alongside domestic economic positions.",
+      "supporting_claim_ids": [
+        "republican-2000-normalized-40552b3c6fa4-014",
+        "republican-2008-normalized-12c182215fbf-007",
+        "republican-2012-normalized-14dd71bc18fa-010",
+        "republican-2016-normalized-c44984055aab-013"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents describe capitalism as exploitative and undemocratic, advocate its abolition or transformation, and propose working-class control, public banking, cooperatives, solidarity economies, and decommodified essentials.",
+      "caveat": "Some examples describe interim reforms or organizational strategy rather than a complete post-capitalist design.",
+      "supporting_claim_ids": [
+        "dsa-2003-mission-normalized-20f699d8e4de-002",
+        "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-004",
+        "dsa-2013-priorities-normalized-29c443fef256-008",
+        "dsa-2021-adopted-normalized-e66dc1af24d6-008",
+        "dsa-2024-program-normalized-c0035893561c-005"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic examples criticize concentrated power and unfair market rules; Republican examples defend free enterprise and private-sector primacy while separately opposing crony capitalism.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-7359200e1c62-009",
+        "democratic-2024-normalized-da9ab87f7a1b-010",
+        "republican-2008-normalized-12c182215fbf-007",
+        "republican-2016-normalized-c44984055aab-013"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic examples seek competition, fair rules, and corporate accountability within markets; DSA examples identify capitalism itself as exploitative and advocate democratic economic replacement.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-32fbc1d828df-006",
+        "democratic-2024-normalized-da9ab87f7a1b-010",
+        "dsa-2010-social-economic-rights-normalized-3b733e07abe8-010",
+        "dsa-2021-adopted-normalized-e66dc1af24d6-008"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican examples treat private enterprise and ownership as foundations of freedom; DSA examples seek working-class democratic control and abolition of capitalist ownership relations.",
+      "supporting_claim_ids": [
+        "republican-2012-normalized-e2658e2345c2-001",
+        "republican-2016-normalized-6541bd2b9dac-001",
+        "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-004",
+        "dsa-2021-adopted-normalized-e66dc1af24d6-008"
+      ]
+    }
+  }
+}

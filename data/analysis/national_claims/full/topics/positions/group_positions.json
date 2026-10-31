@@ -1,0 +1,1455 @@
+[
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "This broad bucket also contains unrelated economic proposals and retrospective administration claims.",
+        "summary": "Documents support clean-energy investment, resilient infrastructure, climate regulation, renewable incentives, and ending oil-and-gas subsidies, alongside broader rural, housing, manufacturing, trade, and worker-investment proposals.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-3b4380265be8-006",
+          "democratic-2016-normalized-68c57aa9b811-011",
+          "democratic-2020-normalized-9ec56284fa6b-008",
+          "democratic-2024-normalized-92fa6cad93aa-003"
+        ]
+      },
+      "dsa": {
+        "caveat": "Fallback documents also include broad economic restructuring, organizational, and unrelated movement claims.",
+        "summary": "Documents support Green New Deal programs, rapid fossil-fuel phaseout, massive public investment, and public or social ownership of energy, transit, infrastructure, and major industry.",
+        "supporting_claim_ids": [
+          "dsa-2021-adopted-normalized-067c1b4d0c0e-011",
+          "dsa-2024-program-normalized-f23d4047d972-013",
+          "dsa-2026-program-normalized-cc87289e0395-029",
+          "dsa-2009-priorities-normalized-69ef366c0cec-004"
+        ]
+      },
+      "republican": {
+        "caveat": "Energy sources and climate framing vary across years; the bucket also includes trade and general growth claims.",
+        "summary": "Documents support domestic energy supply and independence through markets, fossil fuels, nuclear power, and pipelines, while earlier texts also endorse renewables, efficiency, and climate-risk responses.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-53cdfe529adc-008",
+          "republican-2008-normalized-d092c115d3e5-006",
+          "republican-2012-normalized-a941803afe27-003",
+          "republican-2024-normalized-007a594371a0-012"
+        ]
+      }
+    },
+    "packet_sha256": "0552f1fbec89169c0d114338ca3bc044c615518d3ad96f6f40a6513a44e03948",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both support clean-energy transition; Democratic documents use regulation, incentives, and investment, while DSA documents call for fossil-fuel phaseout and public or social ownership.",
+        "supporting_claim_ids": [
+          "democratic-2012-normalized-64bd3b86fba0-012",
+          "democratic-2016-normalized-68c57aa9b811-011",
+          "dsa-2024-program-normalized-f23d4047d972-013",
+          "dsa-2026-program-normalized-cc87289e0395-029"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic documents emphasize clean public investment and renewable incentives; Republican documents emphasize market-led supply, pipelines, and fossil-energy expansion, despite earlier climate and renewable provisions.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-a5093f954c73-002",
+          "democratic-2024-normalized-92fa6cad93aa-003",
+          "republican-2012-normalized-a941803afe27-003",
+          "republican-2024-normalized-007a594371a0-014"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents favor market-led domestic production including fossil fuels and pipelines; DSA documents favor public ownership, massive public investment, and phasing out fossil fuels.",
+        "supporting_claim_ids": [
+          "republican-2012-normalized-acc59629116d-006",
+          "republican-2024-normalized-007a594371a0-012",
+          "dsa-2024-program-normalized-f23d4047d972-010",
+          "dsa-2026-program-normalized-cc87289e0395-029"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-001"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The broad packet includes unrelated security, technology, trade, and environmental claims.",
+        "summary": "Documents support targeted federal investment, Medicaid and community-based services, affordable housing, mental-health and substance-use treatment, and assistance for veterans, disabled people, low-income communities, and returning citizens.",
+        "supporting_claim_ids": [
+          "democratic-2004-normalized-cbac9887f90d-002",
+          "democratic-2012-normalized-c23a3db91fb4-005",
+          "democratic-2020-normalized-7c42c0046338-005",
+          "democratic-2024-normalized-e7f0490f5d0f-006"
+        ]
+      },
+      "dsa": {
+        "caveat": "Many fallback examples concern organizational capacity or unrelated factual material rather than social provision.",
+        "summary": "Documents support social housing and rent control, expanded public resources and Social Security, emergency shelter and cash aid, community public safety, and investment in neglected communities.",
+        "supporting_claim_ids": [
+          "dsa-2007-economic-justice-normalized-500c699fb1db-001",
+          "dsa-statement-4626-normalized-5e02e4c93b6d-008",
+          "dsa-2024-program-normalized-b789b4710c28-009",
+          "dsa-2026-program-normalized-3ba469ba4e69-019"
+        ]
+      },
+      "republican": {
+        "caveat": "The packet mixes social support with policing, regulatory relief, administration, and stray factual records.",
+        "summary": "Documents support safety-net delivery through public-private or local partnerships, training and self-sufficiency services, homeownership, and targeted aid for veterans, Native communities, foster families, low-income families, and seniors.",
+        "supporting_claim_ids": [
+          "republican-2000-normalized-76e7e2418f31-008",
+          "republican-2004-normalized-8eb776d9223a-009",
+          "republican-2008-normalized-f944b52cd2a1-007",
+          "republican-2024-normalized-639254060a0e-009"
+        ]
+      }
+    },
+    "packet_sha256": "e0bd787f7d968e79966d68eb61a908c27ecc2b2d9c2668a273c54ec443fcf599",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic documents expand targeted programs and community services; DSA documents add universal rent control, public social housing, direct emergency aid, and preservation of working-poor programs.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-7c42c0046338-005",
+          "democratic-2024-normalized-51d7cbe64123-005",
+          "dsa-2024-program-normalized-b789b4710c28-009",
+          "dsa-statement-5439-normalized-0bb70c6b7dac-007"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic documents emphasize federal funding and service expansion; Republican documents pair targeted benefits with public-private partnerships, self-sufficiency services, homeownership, and locally administered poverty responses.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-5e55d1004289-004",
+          "democratic-2024-normalized-e7f0490f5d0f-006",
+          "republican-2000-normalized-76e7e2418f31-008",
+          "republican-2004-normalized-8eb776d9223a-009"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents emphasize targeted assistance, partnerships, and self-sufficiency; DSA documents emphasize public social housing, rent control, direct aid, and expanded collective provision.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-8eb776d9223a-009",
+          "republican-2016-normalized-bfaeff3ad252-004",
+          "dsa-2024-program-normalized-b789b4710c28-011",
+          "dsa-2024-program-normalized-b789b4710c28-009"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-002"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "Several examples are retrospective achievements or worker-related facts rather than new policy commitments.",
+        "summary": "Documents support easier union organizing and collective bargaining, stronger labor-law enforcement, strike protections, expanded rights for excluded workers, higher minimum wages, overtime protections, and labor standards in trade.",
+        "supporting_claim_ids": [
+          "democratic-2004-normalized-f23414e33192-006",
+          "democratic-2008-normalized-dd4bcb4c56df-011",
+          "democratic-2020-normalized-fc967cb6cbce-003",
+          "democratic-2024-normalized-8af3eb44deaa-005"
+        ]
+      },
+      "dsa": {
+        "caveat": "Fallback material includes factual descriptions and adjacent employment, pension, and unemployment policies.",
+        "summary": "Documents support broad rights to organize, bargain, and strike; labor-law reform and enforcement; union democratization; living wages; worker ownership; job guarantees; and protections regardless of industry or immigration status.",
+        "supporting_claim_ids": [
+          "dsa-2007-economic-justice-normalized-43ac027d547d-001",
+          "dsa-2009-priorities-normalized-7fbe4754d605-004",
+          "dsa-2024-program-normalized-f23d4047d972-002",
+          "dsa-2026-program-normalized-f85f1b0f20e0-005"
+        ]
+      },
+      "republican": {
+        "caveat": "The packet combines labor policy with retirement, welfare, immigration verification, and civil-service claims.",
+        "summary": "Documents affirm voluntary union participation while supporting state or national right-to-work laws, union financial disclosure, repeal of Davis-Bacon, employer flexibility, workforce training, and selected worker protections.",
+        "supporting_claim_ids": [
+          "republican-2000-normalized-5bbdd676d52d-001",
+          "republican-2008-normalized-5b0f314c5424-001",
+          "republican-2012-normalized-9b00c73c5686-008",
+          "republican-2016-normalized-1a84c35198a9-008"
+        ]
+      }
+    },
+    "packet_sha256": "3b407727a69aca858aa4b633cca73fd4b770c4753e7356c54eabb392c8f4bc19",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both support organizing and bargaining rights; DSA documents additionally emphasize universal strike rights, union democratization, worker ownership, and a federal jobs guarantee.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-dd4bcb4c56df-005",
+          "democratic-2024-normalized-8af3eb44deaa-005",
+          "dsa-2026-program-normalized-f85f1b0f20e0-005",
+          "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-003"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic documents seek easier organizing and stronger bargaining and strike protections; Republican documents preserve voluntary unionism while advancing right-to-work, union disclosure, and Davis-Bacon repeal.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-7ba2e6e4e2f2-002",
+          "democratic-2020-normalized-fc967cb6cbce-003",
+          "republican-2012-normalized-9b00c73c5686-008",
+          "republican-2016-normalized-1a84c35198a9-008"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents emphasize voluntary unionism and right-to-work restrictions; DSA documents seek expansive organizing and strike rights, stronger enforcement, and democratic unions.",
+        "supporting_claim_ids": [
+          "republican-2008-normalized-5b0f314c5424-001",
+          "republican-2012-normalized-9b00c73c5686-008",
+          "dsa-2009-priorities-normalized-7fbe4754d605-004",
+          "dsa-2024-program-normalized-f23d4047d972-002"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-003"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "This narrative bucket mixes predictions, causal assertions, retrospective achievements, and unrelated records; outcomes were not fact-checked.",
+        "summary": "Documents assert that clean-energy, infrastructure, education, housing, small-business, and middle-class investments generate jobs and prosperity, while minimum-wage and equal-pay policies reduce poverty.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-225b92127bb1-006",
+          "democratic-2016-normalized-e54a859b456a-002",
+          "democratic-2020-normalized-11c6d091feaf-027",
+          "democratic-2020-normalized-5956fd15c018-010"
+        ]
+      },
+      "dsa": {
+        "caveat": "The packet is heavily narrative, mixing policy, criticism, history, predictions, and unverified causal assertions.",
+        "summary": "Documents portray growth as unequally distributed and link sustainable prosperity to public infrastructure, decarbonization, public banking, social programs, green union jobs, and reduced military spending.",
+        "supporting_claim_ids": [
+          "dsa-2001-convention-priorities-normalized-f35a6ece882e-007",
+          "dsa-2009-priorities-normalized-e439cbeb16b4-003",
+          "dsa-statement-404-normalized-d6649fb869e5-008",
+          "dsa-2021-adopted-normalized-29ef349cf189-003"
+        ]
+      },
+      "republican": {
+        "caveat": "These are document assertions and predictions, not verified effects; the packet includes stray facts and credits.",
+        "summary": "Documents attribute growth and jobs to tax cuts, deregulation, free trade, technology, private-sector expansion, abundant domestic energy, and energy exports, often presenting prosperity as enabling other goals.",
+        "supporting_claim_ids": [
+          "republican-2000-normalized-79e5ffd6ad69-015",
+          "republican-2004-normalized-d0360dc943ed-011",
+          "republican-2012-normalized-5a227161d13d-005",
+          "republican-2016-normalized-cffadfbf3490-006"
+        ]
+      }
+    },
+    "packet_sha256": "7ec45a25c5ab918e704922d5205a3a47a8b2f192e61c111000e77b6fc57db0e3",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both connect green investment with jobs; Democratic documents emphasize broad investment-led growth, while DSA documents foreground unequal gains, public ownership, decarbonization, and unionized green employment.",
+        "supporting_claim_ids": [
+          "democratic-2000-normalized-0023ddaabb92-007",
+          "democratic-2024-normalized-484cf745805e-012",
+          "dsa-2001-convention-priorities-normalized-f35a6ece882e-007",
+          "dsa-statement-4683-normalized-25cd3b1eb4b1-repair-e254dee4a0db-011"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic documents link public and clean-energy investment and wage gains to prosperity; Republican documents stress tax cuts, deregulation, trade, private enterprise, and domestic energy.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-11c6d091feaf-027",
+          "democratic-2020-normalized-5956fd15c018-010",
+          "republican-2000-normalized-79e5ffd6ad69-015",
+          "republican-2012-normalized-5a227161d13d-005"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents credit market liberalization and energy production for growth; DSA documents criticize unequal and trickle-down growth and prescribe public investment, decarbonization, and social provision.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-d0360dc943ed-011",
+          "republican-2016-normalized-cffadfbf3490-006",
+          "dsa-statement-404-normalized-d6649fb869e5-008",
+          "dsa-2021-adopted-normalized-a6c98b5d0a47-002"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-004"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "This broad principles bucket includes unrelated policy, institutional, and factual statements.",
+        "summary": "Documents support human and civil rights, rule-governed and impartial institutions, equal treatment, political self-determination, Tribal sovereignty and treaty obligations, and balancing religious freedom with other civil rights.",
+        "supporting_claim_ids": [
+          "democratic-2000-normalized-93fadee8da59-006",
+          "democratic-2012-normalized-a10b8a8482df-005",
+          "democratic-2020-normalized-33dbf90bb2e3-001",
+          "democratic-2024-normalized-1e0b4a5c659c-009"
+        ]
+      },
+      "dsa": {
+        "caveat": "Fallback examples mix principles, predictions, foreign conflicts, organizing strategy, and descriptive claims.",
+        "summary": "Documents support self-determination and decolonization, Indigenous sovereignty and treaties, social and economic rights to housing and care, equal civic participation, and community-controlled justice.",
+        "supporting_claim_ids": [
+          "dsa-2010-social-economic-rights-normalized-b43e2bacee7b-005",
+          "dsa-statement-399-normalized-c97e71412451-004",
+          "dsa-2021-adopted-normalized-3a5ba8ba26bb-001",
+          "dsa-2026-program-normalized-3ba469ba4e69-repair-75f4dcce5dbb-003"
+        ]
+      },
+      "republican": {
+        "caveat": "The packet does not establish one comprehensive constitutional theory and includes unrelated factual and programmatic claims.",
+        "summary": "Documents describe rights as inherent or God-given and government as their protector, while supporting religious liberty, state and local authority, due process, Tribal relations, and individual responsibility.",
+        "supporting_claim_ids": [
+          "republican-2000-normalized-bf4d1857ffda-006",
+          "republican-2008-normalized-92a9f5c7906a-006",
+          "republican-2016-normalized-b45c1b90580b-004",
+          "republican-2024-normalized-8da9a39b9f7f-003"
+        ]
+      }
+    },
+    "packet_sha256": "0d96439aefee469fdb44fc1c0cdad44624e4bd68cee52058c1fc00de38a42f75",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both support civil equality and Indigenous sovereignty; DSA documents additionally frame housing, care, and social provision as rights and emphasize decolonization and community-controlled justice.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-33dbf90bb2e3-001",
+          "democratic-2024-normalized-ecf3480da059-010",
+          "dsa-2026-program-normalized-3ba469ba4e69-repair-75f4dcce5dbb-001",
+          "dsa-statement-399-normalized-c97e71412451-004"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic documents stress equal treatment, civil rights, and institutional impartiality; Republican documents stress pre-existing individual rights, religious exercise, limited governmental intrusion, and state authority.",
+        "supporting_claim_ids": [
+          "democratic-2004-normalized-1cc1340fa574-001",
+          "democratic-2024-normalized-1e0b4a5c659c-009",
+          "republican-2008-normalized-92a9f5c7906a-006",
+          "republican-2016-normalized-d07fada01979-005"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents foreground inherent individual and religious rights protected by government; DSA documents foreground social-economic rights, collective self-determination, Indigenous sovereignty, and decolonization.",
+        "supporting_claim_ids": [
+          "republican-2012-normalized-a59fcef5e8a6-007",
+          "republican-2024-normalized-8da9a39b9f7f-003",
+          "dsa-2010-social-economic-rights-normalized-b43e2bacee7b-005",
+          "dsa-2021-adopted-normalized-eed2cefe53f1-010"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-005"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "This narrative bucket includes retrospective achievements, patriotic language, and unrelated domestic facts.",
+        "summary": "Documents portray U.S. leadership as drawing on alliances, international institutions, diplomacy, democracy, innovation, economic strength, and military capability, with American security and prosperity reinforced by strong partners.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-9444e34d73ce-004",
+          "democratic-2016-normalized-c9e0fc219fb0-016",
+          "democratic-2020-normalized-41964e67e6c4-006",
+          "democratic-2024-normalized-306753327989-006"
+        ]
+      },
+      "dsa": {
+        "caveat": "Many examples are fallback factual accusations or historical narratives rather than direct policy positions.",
+        "summary": "Documents criticize U.S. military dominance, territorial control, intervention, and corporate-state power while supporting territorial and Indigenous sovereignty, noninterference, reduced imperial spending, and redirected domestic investment.",
+        "supporting_claim_ids": [
+          "dsa-2007-economic-justice-normalized-53bb7ce424c7-006",
+          "dsa-statement-1492-normalized-373728069d3c-004",
+          "dsa-2021-adopted-normalized-5589a830d2a3-003",
+          "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-005"
+        ]
+      },
+      "republican": {
+        "caveat": "The packet mixes policy, aspiration, patriotic characterization, historical claims, and stray geographic or editorial records.",
+        "summary": "Documents portray America as exceptionally strong and freedom-leading, linking global influence to military and economic power, alliances, diplomacy, domestic manufacturing, energy resources, innovation, and national unity.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-76b5fb08ee36-004",
+          "republican-2008-normalized-e390325d5783-014",
+          "republican-2012-normalized-7815bee1d725-005",
+          "republican-2024-normalized-a2d535d470e7-001"
+        ]
+      }
+    },
+    "packet_sha256": "1651b6dc650c70fb9e558f8490b5a67e07df1257b14ac4b0e62b21d6bca5d1fb",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic documents endorse alliance- and institution-based U.S. leadership; DSA documents challenge U.S. territorial control and intervention and call for sovereignty and noninterference.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-9444e34d73ce-001",
+          "democratic-2016-normalized-c9e0fc219fb0-016",
+          "dsa-2021-adopted-normalized-5589a830d2a3-003",
+          "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-005"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Both portray U.S. leadership through strength and alliances; Democratic documents emphasize rules and institutions, while Republican documents more explicitly foreground supremacy, patriotism, manufacturing, and energy.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-41964e67e6c4-006",
+          "democratic-2024-normalized-306753327989-006",
+          "republican-2012-normalized-7815bee1d725-005",
+          "republican-2024-normalized-a2d535d470e7-001"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents celebrate American power and freedom-leading influence; DSA documents describe imperial dominance and military overreach and support territorial independence and reduced U.S. interference.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-a269dca8c6eb-001",
+          "republican-2016-normalized-1ba2e24c3f47-005",
+          "dsa-statement-1492-normalized-373728069d3c-004",
+          "dsa-2021-adopted-normalized-5589a830d2a3-004"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-006"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "Enforcement, legalization, detention, and administrative emphases vary across years in this mixed bucket.",
+        "summary": "Documents combine border security and targeted enforcement with comprehensive reform, pathways to citizenship, protected asylum and family unity, expanded legal immigration, due process, and more humane detention and naturalization processes.",
+        "supporting_claim_ids": [
+          "democratic-2004-normalized-03b3f8c96731-005",
+          "democratic-2012-normalized-8c2f2e66c5fc-005",
+          "democratic-2020-normalized-d3bd0e54948d-005",
+          "democratic-2024-normalized-213ea50d0c93-002"
+        ]
+      },
+      "dsa": {
+        "caveat": "Fallback documents include bill commentary and migration-system critiques, but selected policy direction is consistent across periods.",
+        "summary": "Documents support ending detention and deportations, abolishing ICE, demilitarizing the border, protecting asylum, immediate amnesty or citizenship pathways, broader legal migration, and immigrant access to jobs and services.",
+        "supporting_claim_ids": [
+          "dsa-2007-economic-justice-normalized-3a71f1b7e983-006",
+          "dsa-2021-adopted-normalized-7a7bd5c278de-002",
+          "dsa-2024-program-normalized-9d88be1f8868-017",
+          "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-007"
+        ]
+      },
+      "republican": {
+        "caveat": "Proposals shift across years, with later packets containing stronger deportation and enforcement language; several examples are unrelated.",
+        "summary": "Documents welcome legal immigration and sometimes citizenship while prioritizing border security, enforcement, removal, detention, penalties, screening, limits on family migration, and merit-based admission.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-c4dde1b37f8c-001",
+          "republican-2012-normalized-40fe6a061706-003",
+          "republican-2016-normalized-3d9e76db88bb-001",
+          "republican-2024-normalized-048e2be2d61f-009"
+        ]
+      }
+    },
+    "packet_sha256": "fedacd1c5dd0283ca091768c5dace087abda54599a941b4e1fb179cd8918a9ed",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic documents retain border enforcement and prioritized deportation within legalization reforms; DSA documents call for ending deportations and detention, abolishing ICE, and demilitarizing borders.",
+        "supporting_claim_ids": [
+          "democratic-2012-normalized-8c2f2e66c5fc-005",
+          "democratic-2024-normalized-213ea50d0c93-002",
+          "dsa-2021-adopted-normalized-7a7bd5c278de-002",
+          "dsa-2024-program-normalized-9d88be1f8868-016"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Both include legal immigration and border management; Democratic documents pair enforcement with legalization and humane process, while Republican documents emphasize removal, detention, penalties, and admission limits.",
+        "supporting_claim_ids": [
+          "democratic-2024-normalized-213ea50d0c93-002",
+          "democratic-2020-normalized-d3bd0e54948d-005",
+          "republican-2012-normalized-1ec9bd15c5d3-001",
+          "republican-2024-normalized-da1836ccdad0-009"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents prioritize border enforcement, detention, deportation, and merit-based admission; DSA documents seek abolition of ICE detention and deportations, amnesty, asylum protection, and freer migration.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-3d9e76db88bb-001",
+          "republican-2024-normalized-048e2be2d61f-009",
+          "dsa-2021-adopted-normalized-7a7bd5c278de-002",
+          "dsa-2024-program-normalized-9d88be1f8868-017"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-008"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The packet also contains gun, policing, constitutional, and other civil-rights claims outside election policy.",
+        "summary": "Documents support restoring and enforcing the Voting Rights Act, opposing voter suppression and partisan or racial gerrymandering, and protecting voting access for returning citizens.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-4292f2af0201-001",
+          "democratic-2020-normalized-fcd461184fac-009",
+          "democratic-2024-normalized-e7f0490f5d0f-009",
+          "democratic-2016-normalized-4292f2af0201-005"
+        ]
+      },
+      "dsa": {
+        "caveat": "Peripheral examples address workplace democracy, policing, courts, housing, and other rights rather than elections.",
+        "summary": "Documents support broad voting access, including rights for noncitizens and people with convictions, abolition of the Electoral College, same-day registration, and public campaign financing.",
+        "supporting_claim_ids": [
+          "dsa-2024-program-normalized-0037e0c6a9c8-001",
+          "dsa-2026-program-normalized-d326f1020c4f-002",
+          "dsa-2003-electoral-normalized-6d2b6566d517-007",
+          "dsa-2007-economic-justice-normalized-08f0c8f5ef33-006",
+          "dsa-2003-electoral-normalized-6d2b6566d517-006"
+        ]
+      },
+      "republican": {
+        "caveat": "Examples mix election rules with unrelated constitutional, criminal-justice, firearms, and speech positions.",
+        "summary": "Documents support citizen voting rights while endorsing voter identification, proof of citizenship, same-day voting, paper ballots, and citizen-based apportionment.",
+        "supporting_claim_ids": [
+          "republican-2008-normalized-42539f6998d6-010",
+          "republican-2016-normalized-89c33cf0a59f-002",
+          "republican-2024-normalized-a213c71f3943-005",
+          "republican-2012-normalized-eb222674fa31-006"
+        ]
+      }
+    },
+    "packet_sha256": "42fd233dcc88435e0db7ca250f28772642f7ccdabb57672441ada65fbfb763fa",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both support expanded voting protection; DSA documents explicitly extend voting to noncitizens and incarcerated people and abolish the Electoral College.",
+        "supporting_claim_ids": [
+          "democratic-2024-normalized-e7f0490f5d0f-009",
+          "dsa-2024-program-normalized-0037e0c6a9c8-001",
+          "dsa-2026-program-normalized-d326f1020c4f-002",
+          "dsa-2003-electoral-normalized-6d2b6566d517-007"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic documents emphasize restoring federal voting protections and opposing suppression; Republican documents combine voting-rights language with identification, citizenship-proof, and citizen-apportionment rules.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-4292f2af0201-001",
+          "democratic-2020-normalized-fcd461184fac-009",
+          "republican-2024-normalized-a213c71f3943-005",
+          "republican-2012-normalized-eb222674fa31-006"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents require voter identification and citizenship proof; DSA documents extend voting to noncitizens and people with convictions and favor Electoral College abolition.",
+        "supporting_claim_ids": [
+          "republican-2024-normalized-a213c71f3943-005",
+          "dsa-2024-program-normalized-0037e0c6a9c8-001",
+          "dsa-2026-program-normalized-d326f1020c4f-002",
+          "dsa-2003-electoral-normalized-6d2b6566d517-007"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-009"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The packet mixes proposed future administrations, retrospective claims, campaign criticism, and achievements whose causality was not independently checked.",
+        "summary": "Documents praise Clinton, Obama, and Biden records on budgets, coverage, infrastructure, and alliances, while criticizing Bush-era deficits, Iraq claims, special-interest governance, and environmental policy.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-70b894483988-003",
+          "democratic-2016-normalized-bd681f711028-003",
+          "democratic-2024-normalized-9be95fb035db-008",
+          "democratic-2004-normalized-92a8088c5dda-011",
+          "democratic-2004-normalized-94090ec19c04-001"
+        ]
+      },
+      "dsa": {
+        "caveat": "Examples include foreign presidents and historical narratives; asserted records, motives, and causal links were not independently verified.",
+        "summary": "Documents criticize Biden military and drilling priorities, Bush bank bailouts, Clinton financial deregulation and NAFTA, and Obama deportations and Venezuela policy, while welcoming Obama-era Cuba normalization.",
+        "supporting_claim_ids": [
+          "dsa-2024-program-normalized-43f2e9413efb-003",
+          "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-010",
+          "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-004",
+          "dsa-statement-4621-normalized-9d208ba95cab-005",
+          "dsa-statement-373-normalized-45ed973bceb0-001"
+        ]
+      },
+      "republican": {
+        "caveat": "Most examples are retrospective assertions or opponent critiques; claimed effects and causal responsibility were not fact-checked.",
+        "summary": "Documents praise Bush-era defense, AIDS, and bioterrorism actions, criticize Obama-era defense and executive policies, and portray Biden-era borders, inflation, crime, and conflict negatively.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-a2113b2e5302-001",
+          "republican-2016-normalized-28a344099db9-003",
+          "republican-2012-normalized-e3f9e5a181c1-002",
+          "republican-2016-normalized-c41609634a5d-006",
+          "republican-2024-normalized-51f7b85d22c5-013"
+        ]
+      }
+    },
+    "packet_sha256": "8d3e55d38871efcc90f1011c3f0ecfa24a6eb0ef77578b3b4096d71734f58da1",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic documents credit Obama-Biden achievements; DSA documents criticize several Democratic administrations on deportation, deregulation, trade, military spending, and sanctions, while approving Cuba normalization.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-bd681f711028-003",
+          "dsa-statement-4621-normalized-9d208ba95cab-005",
+          "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-004",
+          "dsa-statement-373-normalized-45ed973bceb0-001"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Each side praises aligned administrations and criticizes opponents: Democratic documents highlight Obama-Biden domestic gains; Republican documents emphasize Bush security actions and Biden-era disorder.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-bd681f711028-003",
+          "democratic-2024-normalized-9be95fb035db-008",
+          "republican-2004-normalized-a2113b2e5302-001",
+          "republican-2024-normalized-51f7b85d22c5-016"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents praise Bush security and health initiatives; DSA documents fault Bush-era bank bailouts and criticize interventionist policies across administrations.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-a2113b2e5302-001",
+          "republican-2016-normalized-28a344099db9-003",
+          "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-010",
+          "dsa-statement-1146-normalized-98bee761ff4e-012"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-010"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "Positions vary by year and include both tax increases or loophole closures and targeted corporate or family tax reductions.",
+        "summary": "Documents support middle-class and family tax relief, targeted child and earned-income credits, higher contributions from wealthy taxpayers, estate-tax restoration, and selected corporate-rate or incentive reforms.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-fe2cabd6d37b-005",
+          "democratic-2020-normalized-d9a1dc68d808-007",
+          "democratic-2016-normalized-9957d3b08ad7-004",
+          "democratic-2020-normalized-d4d1663f3068-001",
+          "democratic-2012-normalized-f75fff4be951-010"
+        ]
+      },
+      "dsa": {
+        "caveat": "Revenue estimates and claims that particular taxes fund public programs are document assertions, not independently validated causal or fiscal findings.",
+        "summary": "Documents support progressive income and corporate taxation, taxes on wealth, inheritances, capital gains, and financial transactions, closing corporate loopholes, and reducing regressive sales and excise taxes.",
+        "supporting_claim_ids": [
+          "dsa-2021-adopted-normalized-7ace82695f5d-019",
+          "dsa-2024-program-normalized-f23d4047d972-009",
+          "dsa-2012-fiscal-normalized-675dfbae09ee-011",
+          "dsa-2011-ows-resolution-normalized-654ff8ab0cb5-007",
+          "dsa-2021-adopted-normalized-7ace82695f5d-015"
+        ]
+      },
+      "republican": {
+        "caveat": "Examples span broad rate cuts, targeted credits, tariff-linked predictions, and reforms whose stated economic effects were not verified.",
+        "summary": "Documents support lower family, worker, investment, and corporate taxes; permanent Trump tax provisions; expanded child credits; and tax structures intended to encourage saving and business growth.",
+        "supporting_claim_ids": [
+          "republican-2000-normalized-72d4d20b0778-002",
+          "republican-2012-normalized-cf8e70a905aa-013",
+          "republican-2024-normalized-007a594371a0-003",
+          "republican-2008-normalized-903fa1c9b13d-008",
+          "republican-2024-normalized-007a594371a0-004"
+        ]
+      }
+    },
+    "packet_sha256": "57ea0616b0f923475a05744d23d780b05f9e98d8ae4aeb9c747213135bf378b4",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both support more progressive taxation; DSA documents specify wealth, transaction, inheritance, and broad corporate taxes, while Democratic documents combine higher-end taxation with targeted relief.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-d9a1dc68d808-007",
+          "democratic-2020-normalized-d4d1663f3068-001",
+          "dsa-2021-adopted-normalized-7ace82695f5d-019",
+          "dsa-2024-program-normalized-f23d4047d972-009"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Both offer family tax relief; Democratic documents pair it with progressive taxation, while Republican documents emphasize broader rate reductions, permanence, saving, investment, and corporate competitiveness.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-d4d1663f3068-001",
+          "democratic-2020-normalized-d9a1dc68d808-007",
+          "republican-2000-normalized-72d4d20b0778-002",
+          "republican-2012-normalized-cf8e70a905aa-013"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents seek lower investment and corporate rates; DSA documents seek higher corporate, wealth, capital-gains, inheritance, and financial-transaction taxes while reducing regressive consumption taxes.",
+        "supporting_claim_ids": [
+          "republican-2012-normalized-cf8e70a905aa-013",
+          "republican-2016-normalized-98c6d92cf7ef-001",
+          "dsa-2021-adopted-normalized-7ace82695f5d-019",
+          "dsa-2021-adopted-normalized-7ace82695f5d-015"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-011"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "Approaches vary over time, including standardized accountability, later opposition to punitive test-based treatment, and support for selected public-school choice.",
+        "summary": "Documents support increased public-school investment, equitable access and funding, achievement standards and accountability, community schools, and public options including magnet, charter, teacher-led, and career schools.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-3e1d1d365c73-005",
+          "democratic-2016-normalized-d699b43d99c3-006",
+          "democratic-2016-normalized-45d35ed14449-011",
+          "democratic-2024-normalized-0bc5902e5d0e-005",
+          "democratic-2012-normalized-1c0d70ee0925-009"
+        ]
+      },
+      "dsa": {
+        "caveat": "Examples also include pandemic reopening demands, sex education, LGBTQ student rights, and historical narratives rather than one unified school-governance proposal.",
+        "summary": "Documents support free, publicly funded education from pre-K through college, student-debt cancellation, desegregation, inclusive and bias-free schools, reduced testing, and funding detached from local property taxes.",
+        "supporting_claim_ids": [
+          "dsa-2026-program-normalized-3ba469ba4e69-005",
+          "dsa-2024-program-normalized-b789b4710c28-008",
+          "dsa-2021-adopted-normalized-6c07162ee087-002",
+          "dsa-2021-adopted-normalized-6c02b493f903-009",
+          "dsa-2021-adopted-normalized-29ef349cf189-001"
+        ]
+      },
+      "republican": {
+        "caveat": "The packet also includes public-school disability funding and broad access language; choice mechanisms and accountability policies vary across years.",
+        "summary": "Documents support parental choice through charter, private, parochial, home, virtual, and technical schooling, vouchers and tax credits, alongside local control, discipline, merit pay, and academic expectations.",
+        "supporting_claim_ids": [
+          "republican-2008-normalized-224fe729171f-002",
+          "republican-2016-normalized-e6566783314d-repair-e4af6ec3f523-002",
+          "republican-2024-normalized-63d28569ddf1-009",
+          "republican-2024-normalized-631b8e76912c-010",
+          "republican-2012-normalized-064968664904-003"
+        ]
+      }
+    },
+    "packet_sha256": "5dc30d4b3b0a5fdb26bc46ba45c5b806e454bef8b5eee78fd4183543431b24ff",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both support public education access and equitable funding; DSA documents additionally demand tuition-free higher education, debt cancellation, desegregation, reduced testing, and property-tax funding separation.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-d699b43d99c3-006",
+          "democratic-2020-normalized-3e1d1d365c73-005",
+          "dsa-2024-program-normalized-b789b4710c28-008",
+          "dsa-2021-adopted-normalized-29ef349cf189-001"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic documents emphasize public-school investment and equity with some public options; Republican documents extend choice to private, religious, home, voucher, and tax-credit pathways.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-3e1d1d365c73-005",
+          "democratic-2012-normalized-1c0d70ee0925-009",
+          "republican-2008-normalized-224fe729171f-002",
+          "republican-2016-normalized-e6566783314d-repair-e4af6ec3f523-002"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents prioritize parental choice across public and private providers; DSA documents frame education as a free public right and seek debt cancellation and public-system funding.",
+        "supporting_claim_ids": [
+          "republican-2008-normalized-224fe729171f-002",
+          "republican-2024-normalized-63d28569ddf1-009",
+          "dsa-2026-program-normalized-3ba469ba4e69-005",
+          "dsa-2024-program-normalized-b789b4710c28-008"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-012"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The packet also covers violence, marriage equality, and broader sex-discrimination protections; terminology and policy scope change across years.",
+        "summary": "Documents support legal abortion and reproductive freedom, contraception and family planning, repealing funding restrictions, IVF access, pregnancy protections, and opposition to bans on gender-affirming care.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-58e656571334-009",
+          "democratic-2020-normalized-c3e3058c15da-004",
+          "democratic-2020-normalized-c28dad59ba3f-012",
+          "democratic-2024-normalized-49ca2c582b14-004",
+          "democratic-2024-normalized-9fb427e7c407-003"
+        ]
+      },
+      "dsa": {
+        "caveat": "Examples combine policy demands with historical court narratives and opponent descriptions; quoted legal and political claims were not independently verified.",
+        "summary": "Documents support abortion access without legal restrictions, Hyde repeal, universal reproductive and gender-affirming care, bodily autonomy, and rights for pregnant people, LGBTQ parents, and gender-diverse people.",
+        "supporting_claim_ids": [
+          "dsa-2021-adopted-normalized-0a25e1af4692-005",
+          "dsa-2021-adopted-normalized-0a25e1af4692-004",
+          "dsa-2024-program-normalized-b789b4710c28-repair-1a7d74b0c436-003",
+          "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-006",
+          "dsa-statement-388-normalized-472e2eb2aeff-009"
+        ]
+      },
+      "republican": {
+        "caveat": "The packet records temporal variation and adjacent gender-policy claims; one example rejects punitive action against women obtaining abortions.",
+        "summary": "Documents oppose abortion, support constitutional or statutory fetal-life protections and funding bans, and endorse informed-consent or waiting-period rules; 2024 examples also support birth control, prenatal care, and IVF.",
+        "supporting_claim_ids": [
+          "republican-2000-normalized-9eed2dd44520-005",
+          "republican-2012-normalized-358189a39e4a-006",
+          "republican-2012-normalized-66d078ccdda4-001",
+          "republican-2024-normalized-8da9a39b9f7f-012",
+          "republican-2024-normalized-8da9a39b9f7f-013"
+        ]
+      }
+    },
+    "packet_sha256": "e2cbc1199363e0852f7f6aa451f9a7f1fb9d3c629ce3fe915550f09aa1f48ffa",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both protect abortion and gender-affirming care; DSA documents explicitly demand free abortion, removal of all access restrictions, and broader bodily-autonomy guarantees.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-c3e3058c15da-004",
+          "democratic-2024-normalized-9fb427e7c407-003",
+          "dsa-2021-adopted-normalized-0a25e1af4692-004",
+          "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-006"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic documents protect legal abortion and repeal funding limits; Republican documents oppose abortion and support fetal-life amendments, funding bans, consent rules, and waiting periods.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-58e656571334-009",
+          "democratic-2020-normalized-c28dad59ba3f-012",
+          "republican-2000-normalized-9eed2dd44520-005",
+          "republican-2012-normalized-358189a39e4a-006"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents restrict abortion and its public funding; DSA documents seek unrestricted, free abortion and universal reproductive and gender-affirming care.",
+        "supporting_claim_ids": [
+          "republican-2012-normalized-358189a39e4a-006",
+          "republican-2012-normalized-66d078ccdda4-001",
+          "dsa-2021-adopted-normalized-0a25e1af4692-005",
+          "dsa-2021-adopted-normalized-0a25e1af4692-004"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-013"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The packet combines cooperative diplomacy with military deterrence and intervention-related positions; specific regional approaches and emphases vary over time.",
+        "summary": "Documents support alliances, multilateral institutions, diplomacy, arms control, collective defense, democracy support, counterterrorism, and cooperation against nuclear, cyber, humanitarian, and regional security threats.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-2f22bd733321-001",
+          "democratic-2016-normalized-cba8bb3f1bb4-010",
+          "democratic-2020-normalized-c64d298fbba5-025",
+          "democratic-2020-normalized-c64d298fbba5-021",
+          "democratic-2024-normalized-94ca68ceacfc-011"
+        ]
+      },
+      "dsa": {
+        "caveat": "Some documents permit limited multilateral force or peacekeeping, so the packet is not uniformly pacifist; regional prescriptions vary historically.",
+        "summary": "Documents support multilateral diplomacy and international courts while opposing U.S. wars, sanctions, militarism, and authoritarian alliances; they favor military cuts, nuclear abolition, sovereignty, and humanitarian cooperation.",
+        "supporting_claim_ids": [
+          "dsa-2021-adopted-normalized-bf23fd771fc3-001",
+          "dsa-2024-program-normalized-9d88be1f8868-004",
+          "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-002",
+          "dsa-2021-adopted-normalized-d37f0cebbfee-006",
+          "dsa-2024-program-normalized-9d88be1f8868-007"
+        ]
+      },
+      "republican": {
+        "caveat": "Examples mix diplomacy, trade, military buildup, deterrence, blockade, and regional assistance; predicted security effects were not independently tested.",
+        "summary": "Documents support alliances and selected multilateral cooperation alongside larger or modernized forces, missile and nuclear defenses, counterterrorism, pressure on hostile states, and peace through strength.",
+        "supporting_claim_ids": [
+          "republican-2008-normalized-47f1bf186f86-005",
+          "republican-2016-normalized-fbf2085e7ad8-002",
+          "republican-2016-normalized-fbf2085e7ad8-003",
+          "republican-2024-normalized-e8e86f62671d-011",
+          "republican-2024-normalized-8d8835191786-007"
+        ]
+      }
+    },
+    "packet_sha256": "a4c85a43ab8b2a126bd9ca15c80d4832d68f29e39269b6c1db2cd4f38344923d",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both support multilateral cooperation; Democratic documents retain collective defense and deterrence, while DSA documents seek major military cuts, nuclear abolition, sanctions removal, and ending foreign wars.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-c64d298fbba5-021",
+          "democratic-2020-normalized-5aac5456948b-008",
+          "dsa-2021-adopted-normalized-d37f0cebbfee-006",
+          "dsa-2024-program-normalized-9d88be1f8868-007"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Both support alliances and deterrence; Democratic documents stress diplomacy, arms control, and institutions, while Republican documents emphasize force expansion, missile defense, nuclear modernization, and strength.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-cba8bb3f1bb4-010",
+          "democratic-2020-normalized-c64d298fbba5-025",
+          "republican-2016-normalized-fbf2085e7ad8-002",
+          "republican-2016-normalized-fbf2085e7ad8-003"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents favor missile defenses, nuclear modernization, and peace through strength; DSA documents favor nuclear abolition, military-budget reductions, sanctions removal, and ending U.S. wars.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-fbf2085e7ad8-002",
+          "republican-2016-normalized-fbf2085e7ad8-003",
+          "dsa-2021-adopted-normalized-d37f0cebbfee-006",
+          "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-002"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-014"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The packet mixes policy positions with threat assessments, war records, veteran impacts, and unverified claims about adversaries and military outcomes.",
+        "summary": "Documents describe terrorism and proliferation threats, support defeating al-Qaeda and securing weapons materials, criticize Iraq's costs and distraction, favor ending that war, and note burdens on troops.",
+        "supporting_claim_ids": [
+          "democratic-2004-normalized-8f1afc3f94bb-007",
+          "democratic-2008-normalized-a660afb3bf0d-007",
+          "democratic-2008-normalized-8ea5d753fbc6-001",
+          "democratic-2012-normalized-13e519c73835-005",
+          "democratic-2012-normalized-0012a775903a-005"
+        ]
+      },
+      "dsa": {
+        "caveat": "Examples include historical narratives and causal claims that U.S. wars intensified terrorism or instability; those assertions were not independently verified.",
+        "summary": "Documents oppose U.S. occupations, overseas bases, Iraq and Syria intervention, and expansive military spending; they support bringing troops home while acknowledging targeted intelligence and security measures against terrorism.",
+        "supporting_claim_ids": [
+          "dsa-2024-program-normalized-9d88be1f8868-repair-e0ecacd53027-001",
+          "dsa-2024-program-normalized-9d88be1f8868-repair-e0ecacd53027-002",
+          "dsa-2021-adopted-normalized-a26aa576943f-008",
+          "dsa-statement-364-normalized-50865307df58-001",
+          "dsa-2001-september-11-normalized-2872d1c0c23f-005"
+        ]
+      },
+      "republican": {
+        "caveat": "Many examples are threat predictions or evaluations rather than policy; asserted consequences, readiness gaps, and adversary intentions were not fact-checked.",
+        "summary": "Documents portray terrorism, hostile states, proliferation, and military readiness as major threats; they support destroying ISIS, success in Iraq, stronger forces, missile defense, and faster intelligence support.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-edb41c383f7b-repair-b3d1abffc553-004",
+          "republican-2008-normalized-43bc9fa261d5-006",
+          "republican-2024-normalized-908167445e74-001",
+          "republican-2004-normalized-a840632cc70d-005",
+          "republican-2008-normalized-2f1b40a7ccb9-014"
+        ]
+      }
+    },
+    "packet_sha256": "66d25b93196a53287a98b90bc55b5ba5d84cf2b9fe6596330489abd8cedf29ee",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic documents retain targeted military action against al-Qaeda while ending Iraq; DSA documents seek troop withdrawal, base closures, deep military cuts, and opposition to intervention.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-a660afb3bf0d-007",
+          "democratic-2008-normalized-8ea5d753fbc6-001",
+          "dsa-2024-program-normalized-9d88be1f8868-repair-e0ecacd53027-001",
+          "dsa-2021-adopted-normalized-a26aa576943f-008"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Both identify terrorism and proliferation threats; Democratic documents criticize Iraq's diversion and support ending it, while Republican documents argue Iraqi success denies terrorist safe haven.",
+        "supporting_claim_ids": [
+          "democratic-2012-normalized-13e519c73835-005",
+          "democratic-2008-normalized-8ea5d753fbc6-001",
+          "republican-2008-normalized-43bc9fa261d5-006",
+          "republican-2008-normalized-43bc9fa261d5-009"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican documents call for destroying ISIS and stronger military capacity; DSA documents oppose intervention, close overseas bases, return troops, and reduce spending to territorial defense.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-edb41c383f7b-repair-b3d1abffc553-004",
+          "republican-2024-normalized-908167445e74-001",
+          "dsa-2024-program-normalized-9d88be1f8868-repair-e0ecacd53027-001",
+          "dsa-2021-adopted-normalized-a26aa576943f-008"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-015"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The packet combines policy opposition with factual and evaluative attacks across unrelated domestic and foreign issues.",
+        "summary": "Across years, documents oppose Republican or administration actions involving arms, surveillance, social-program cuts, privatization, and foreign policy, while also recording criticisms of governing performance.",
+        "supporting_claim_ids": [
+          "democratic-2000-normalized-35991a3208e1-001",
+          "democratic-2008-normalized-fa1cd1900e67-007",
+          "democratic-2016-normalized-f4e2c14968d7-011",
+          "democratic-2024-normalized-e4e0fee5728c-011"
+        ]
+      },
+      "dsa": {
+        "caveat": "Targets and claim types vary substantially; this is opposition language, not one unified policy program.",
+        "summary": "Documents oppose militarism, sanctions, privatization, austerity, corporate influence, and undemocratic institutions, criticizing Republican, Democratic, bipartisan, governmental, and labor leadership across years.",
+        "supporting_claim_ids": [
+          "dsa-2003-iraq-normalized-db1b9f74155d-003",
+          "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-012",
+          "dsa-2021-adopted-normalized-bf23fd771fc3-005",
+          "dsa-2024-program-normalized-c668d0328bc5-009"
+        ]
+      },
+      "republican": {
+        "caveat": "Examples range from specific policy commitments to broad retrospective accusations and claims about foreign governments.",
+        "summary": "Documents reject regulation, bailouts, international constraints, and administration actions, often invoking economic costs, constitutional limits, national sovereignty, or private-sector autonomy.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-53cdfe529adc-010",
+          "republican-2008-normalized-12c182215fbf-005",
+          "republican-2012-normalized-f832db2b0dc6-008",
+          "republican-2024-normalized-3cf23a1200a0-001"
+        ]
+      }
+    },
+    "packet_sha256": "3ee7f4de833f68353c1d5845dbdfb2089db67d2775c65458cdce29283c08e1bf",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic examples primarily contest Republican or named-administration measures; DSA examples also indict Democratic administrations, bipartisan elites, corporate influence, and governing institutions.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-703017acd51e-020",
+          "democratic-2024-normalized-11fdd9f0c413-013",
+          "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-012",
+          "dsa-2024-program-normalized-c668d0328bc5-009"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic examples defend social programs and civil liberties against cuts or surveillance; Republican examples resist regulation, bailouts, and international authority.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-f4e2c14968d7-011",
+          "democratic-2008-normalized-fa1cd1900e67-007",
+          "republican-2008-normalized-12c182215fbf-005",
+          "republican-2012-normalized-f832db2b0dc6-008"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican examples resist governmental and international constraints while favoring autonomy; DSA examples attack sanctions, militarism, austerity, privatization, and corporate control.",
+        "supporting_claim_ids": [
+          "republican-2012-normalized-f832db2b0dc6-008",
+          "republican-2024-normalized-3cf23a1200a0-001",
+          "dsa-2021-adopted-normalized-bf23fd771fc3-005",
+          "dsa-2021-adopted-normalized-da1246750ba5-003"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-016"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "Specific mechanisms and populations vary by year; several examples describe records or system problems rather than proposals.",
+        "summary": "Documents repeatedly seek universal or broadly accessible affordable coverage, strengthening Medicare and Medicaid, widening eligibility, reducing prescription and out-of-pocket costs, and supporting preventive care.",
+        "supporting_claim_ids": [
+          "democratic-2000-normalized-07a86d3aa6c5-010",
+          "democratic-2016-normalized-a06765db4456-004",
+          "democratic-2020-normalized-3542c1bfdbb3-010",
+          "democratic-2024-normalized-aa0b71876216-002"
+        ]
+      },
+      "dsa": {
+        "caveat": "Earlier documents sometimes support interim public options or state routes; a few examples are pandemic guidance or descriptive claims.",
+        "summary": "Documents advocate universal single-payer or Medicare for All coverage without premiums or cost sharing, regardless of status, alongside public facilities, expanded services, and cost controls.",
+        "supporting_claim_ids": [
+          "dsa-2007-economic-justice-normalized-969c50089fd8-010",
+          "dsa-2012-fiscal-normalized-2b868cee0576-003",
+          "dsa-2021-adopted-normalized-c37abde20ad2-001",
+          "dsa-2024-program-normalized-b789b4710c28-repair-1a7d74b0c436-001",
+          "dsa-2026-program-normalized-3ba469ba4e69-008"
+        ]
+      },
+      "republican": {
+        "caveat": "Approaches vary from program protection to defined contributions; some examples concern adjacent health or Social Security issues.",
+        "summary": "Documents support affordable access through consumer choice, competition, insurers and providers, targeted coverage, primary care, and protection or restructuring of Medicare and Medicaid.",
+        "supporting_claim_ids": [
+          "republican-2000-normalized-83e6d37c1b34-002",
+          "republican-2008-normalized-4e30b857ac84-001",
+          "republican-2012-normalized-924e7ef8a7e7-002",
+          "republican-2024-normalized-639254060a0e-008"
+        ]
+      }
+    },
+    "packet_sha256": "4dc9a6b58a67292a2ebb0ec1321493ca12369d8f1c0c765a008bc9862e9844e1",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both seek broad access, but Democratic examples retain multiple plans and strengthen existing programs, while DSA examples specify one public single-payer program without premiums or copays.",
+        "supporting_claim_ids": [
+          "democratic-2024-normalized-aa0b71876216-002",
+          "democratic-2020-normalized-3542c1bfdbb3-010",
+          "dsa-2021-adopted-normalized-c37abde20ad2-006",
+          "dsa-2024-program-normalized-b789b4710c28-repair-1a7d74b0c436-001"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic examples emphasize universal coverage and public-program expansion; Republican examples emphasize consumer choice, provider competition, targeted access, and limiting government intermediation.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-3542c1bfdbb3-010",
+          "democratic-2012-normalized-5c03ae5613a9-004",
+          "republican-2008-normalized-4e30b857ac84-001",
+          "republican-2012-normalized-924e7ef8a7e7-002"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican examples rely on choice, competition, insurers, and purchasing pools; DSA examples replace fragmented insurance with federally administered universal single-payer coverage.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-a5df5ec0a620-010",
+          "republican-2016-normalized-da0bf29e6761-011",
+          "dsa-2021-adopted-normalized-c37abde20ad2-006",
+          "dsa-statement-4192-normalized-653612bac21f-003"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-018"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The narrative cluster also contains environmental, trade, and isolated biographical claims not directly about household insecurity.",
+        "summary": "Documents describe poverty, job loss, unaffordable housing and health care, food insecurity, and racial wealth disparities, often locating hardship in recession, discrimination, or weak protections.",
+        "supporting_claim_ids": [
+          "democratic-2004-normalized-eb1979bf3bc4-011",
+          "democratic-2012-normalized-0cea95a4c23e-002",
+          "democratic-2020-normalized-7f5f6135a575-002",
+          "democratic-2024-normalized-51d7cbe64123-004"
+        ]
+      },
+      "dsa": {
+        "caveat": "Examples span predictions, structural diagnoses, specific crises, climate harms, and several peripheral factual claims.",
+        "summary": "Documents connect low wages, rent burdens, austerity, indebtedness, unemployment, and eroding services to elite or capitalist power, emphasizing disproportionate harms to workers and marginalized communities.",
+        "supporting_claim_ids": [
+          "dsa-2001-convention-priorities-normalized-ef8a3eb37787-002",
+          "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-002",
+          "dsa-2021-adopted-normalized-1870bd662c8e-005",
+          "dsa-2024-program-normalized-c0035893561c-002",
+          "dsa-2026-program-normalized-7484933df369-005"
+        ]
+      },
+      "republican": {
+        "caveat": "Examples mix household hardship with business, government-budget, climate, and foreign-development claims.",
+        "summary": "Documents describe hardship through lost jobs and homes, rising health, food, and energy costs, inflation, trade deficits, and poverty, sometimes assigning responsibility to Democratic administrations.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-5fb0b69ca72f-004",
+          "republican-2012-normalized-cde29fc831f3-010",
+          "republican-2016-normalized-c9a8ddf744a5-003",
+          "republican-2024-normalized-7eea32ad5c94-003"
+        ]
+      }
+    },
+    "packet_sha256": "aec8eff56784ab07214ef2eed90d8943b4218cfee36eeccf95c9b9d7ae2bbbc8",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic examples document hardship and discriminatory barriers; DSA examples more explicitly attribute insecurity to austerity, capitalist elites, weakened services, and worker disempowerment.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-7f5f6135a575-002",
+          "democratic-2016-normalized-fcee54a1c348-002",
+          "dsa-2016-strategy-normalized-5be673d255df-009",
+          "dsa-2024-program-normalized-c0035893561c-001"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic examples foreground poverty, housing, food insecurity, and racial disparities; Republican examples foreground inflation, trade, lost jobs and homes, and cost pressures.",
+        "supporting_claim_ids": [
+          "democratic-2012-normalized-0cea95a4c23e-002",
+          "democratic-2020-normalized-b9adf71c22c7-001",
+          "republican-2012-normalized-cde29fc831f3-010",
+          "republican-2024-normalized-7eea32ad5c94-003"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican examples stress prices, trade, downturns, and administration performance; DSA examples stress class power, austerity, low wages, and unequal crisis burdens.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-c9a8ddf744a5-003",
+          "republican-2024-normalized-7eea32ad5c94-003",
+          "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-002",
+          "dsa-statement-4626-normalized-6ac57c252fad-003"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-019"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "Only 22 claims appear, and several concern unrelated foreign affairs, child labor, or broad economic description.",
+        "summary": "A small, mixed set criticizes concentrated corporate and special-interest power, unequal rules, exploitation, and attacks on workers, while generally seeking fairer markets rather than capitalism's abolition.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-32fbc1d828df-006",
+          "democratic-2012-normalized-8faac26492b5-004",
+          "democratic-2016-normalized-7359200e1c62-009",
+          "democratic-2024-normalized-da9ab87f7a1b-010"
+        ]
+      },
+      "dsa": {
+        "caveat": "Some examples describe interim reforms or organizational strategy rather than a complete post-capitalist design.",
+        "summary": "Documents describe capitalism as exploitative and undemocratic, advocate its abolition or transformation, and propose working-class control, public banking, cooperatives, solidarity economies, and decommodified essentials.",
+        "supporting_claim_ids": [
+          "dsa-2003-mission-normalized-20f699d8e4de-002",
+          "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-004",
+          "dsa-2013-priorities-normalized-29c443fef256-008",
+          "dsa-2021-adopted-normalized-e66dc1af24d6-008",
+          "dsa-2024-program-normalized-c0035893561c-005"
+        ]
+      },
+      "republican": {
+        "caveat": "The packet includes foreign-policy ideology and historical description alongside domestic economic positions.",
+        "summary": "Documents praise free enterprise, private-sector innovation, property ownership, and linked economic and political freedom, while condemning Marxism, bureaucracy, government redistribution, and crony capitalism.",
+        "supporting_claim_ids": [
+          "republican-2000-normalized-40552b3c6fa4-014",
+          "republican-2008-normalized-12c182215fbf-007",
+          "republican-2012-normalized-14dd71bc18fa-010",
+          "republican-2016-normalized-c44984055aab-013"
+        ]
+      }
+    },
+    "packet_sha256": "762fd42bfb1342e6fecf9e42d63c9cb5a42a6d1cfa59afd27bd0c0a21d07dcbc",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic examples seek competition, fair rules, and corporate accountability within markets; DSA examples identify capitalism itself as exploitative and advocate democratic economic replacement.",
+        "supporting_claim_ids": [
+          "democratic-2008-normalized-32fbc1d828df-006",
+          "democratic-2024-normalized-da9ab87f7a1b-010",
+          "dsa-2010-social-economic-rights-normalized-3b733e07abe8-010",
+          "dsa-2021-adopted-normalized-e66dc1af24d6-008"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic examples criticize concentrated power and unfair market rules; Republican examples defend free enterprise and private-sector primacy while separately opposing crony capitalism.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-7359200e1c62-009",
+          "democratic-2024-normalized-da9ab87f7a1b-010",
+          "republican-2008-normalized-12c182215fbf-007",
+          "republican-2016-normalized-c44984055aab-013"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican examples treat private enterprise and ownership as foundations of freedom; DSA examples seek working-class democratic control and abolition of capitalist ownership relations.",
+        "supporting_claim_ids": [
+          "republican-2012-normalized-e2658e2345c2-001",
+          "republican-2016-normalized-6541bd2b9dac-001",
+          "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-004",
+          "dsa-2021-adopted-normalized-e66dc1af24d6-008"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-020"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "The cluster includes international crime, hate crimes, human rights, and peripheral accountability claims beyond prison reform.",
+        "summary": "Documents move between tough punishment and accountability for violence, and opposition to torture, secret detention, sentencing disparities, marijuana imprisonment, and inhumane prison treatment.",
+        "supporting_claim_ids": [
+          "democratic-2004-normalized-821dd4b5fe65-002",
+          "democratic-2008-normalized-4dbc67c6b105-006",
+          "democratic-2020-normalized-9e6e8f488e4b-001",
+          "democratic-2024-normalized-ad4155f8a786-002"
+        ]
+      },
+      "dsa": {
+        "caveat": "Earlier and peripheral examples also demand prosecution or justice for terrorism, corporate lawbreaking, and official misconduct.",
+        "summary": "Documents portray policing and prisons as racially and economically coercive, demand releases and accountability for state violence, and later advocate demilitarization and abolition of police and prisons.",
+        "supporting_claim_ids": [
+          "dsa-statement-400-normalized-e1fda3d8ccab-003",
+          "dsa-2021-adopted-normalized-5746209c69bc-008",
+          "dsa-statement-4626-normalized-b8f72e138725-005",
+          "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-001"
+        ]
+      },
+      "republican": {
+        "caveat": "Examples also include foreign repression, discrimination, terrorism, cargo security, and several weakly related claims.",
+        "summary": "Documents call for prosecution, incarceration, mandatory sentences, denied parole, deportation, and tough penalties targeting violent or repeat offenders, gangs, trafficking, fraud, and unauthorized immigration.",
+        "supporting_claim_ids": [
+          "republican-2008-normalized-e1dee5e96afa-003",
+          "republican-2012-normalized-5b6d6308ba2e-010",
+          "republican-2016-normalized-3d9e76db88bb-008",
+          "republican-2024-normalized-b90fbe592293-017"
+        ]
+      }
+    },
+    "packet_sha256": "bbe06a1c52aaf97e7fe53858d0ff8e5670ce0715eea25e8208ac8c0329d15951",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic examples reform sentencing and treatment while retaining criminal-justice institutions; DSA examples describe those institutions as structurally coercive and advocate releases, demilitarization, and abolition.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-9e6e8f488e4b-001",
+          "democratic-2020-normalized-f41908e5d30b-010",
+          "dsa-statement-4626-normalized-b8f72e138725-005",
+          "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-001"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic examples combine punishment with due process, sentencing reform, and prison safeguards; Republican examples more directly emphasize incarceration, mandatory penalties, deportation, and denied parole.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-9e6e8f488e4b-001",
+          "democratic-2024-normalized-ad4155f8a786-002",
+          "republican-2008-normalized-ed3f8fbc1bb7-002",
+          "republican-2012-normalized-81cd9f648eda-011"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican examples expand punitive enforcement against offenders and gangs; DSA examples attribute violence to policing and prisons and seek to reduce or abolish their power.",
+        "supporting_claim_ids": [
+          "republican-2008-normalized-e1dee5e96afa-003",
+          "republican-2024-normalized-b90fbe592293-016",
+          "dsa-2021-adopted-normalized-13ca43c6c588-006",
+          "dsa-2026-program-normalized-cc87289e0395-repair-d00a2e493932-002"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-021"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "Emphasis shifts by year, and the packet includes broader Middle East and Iran claims.",
+        "summary": "Documents support Israel's security and self-defense alongside negotiated two-state peace, Palestinian freedom and statehood, restored assistance and diplomacy, and, in 2024, a ceasefire-linked reconstruction path.",
+        "supporting_claim_ids": [
+          "democratic-2004-normalized-ed1dec9e1db7-003",
+          "democratic-2016-normalized-8c63c7382aed-014",
+          "democratic-2020-normalized-3c29dbc1688d-006",
+          "democratic-2024-normalized-9d1d7d44ab30-012"
+        ]
+      },
+      "dsa": {
+        "caveat": "Later documents add BDS, ceasefire, free-Palestine, and genocide-accountability language, showing substantial cross-year evolution.",
+        "summary": "Documents support Palestinian self-determination, rights, return, and ending occupation and aid to Israel; earlier examples also condemn attacks on civilians and support negotiated two-state peace.",
+        "supporting_claim_ids": [
+          "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002",
+          "dsa-2009-middle-east-lead-normalized-6447902d562f-009",
+          "dsa-2021-adopted-normalized-a26aa576943f-002",
+          "dsa-2024-program-normalized-9d88be1f8868-002",
+          "dsa-2026-program-normalized-40060dd6f6dd-007"
+        ]
+      },
+      "republican": {
+        "caveat": "The 2024 packet contribution is sparse and not a full Israeli-Palestinian policy statement.",
+        "summary": "Documents prioritize Israel's security, Jewish-state status, defensible borders, self-defense, Jerusalem, and bilateral negotiation; earlier platforms conditionally support a Palestinian state, while 2016 rejects occupation language.",
+        "supporting_claim_ids": [
+          "republican-2004-normalized-f14ff84db296-006",
+          "republican-2008-normalized-ec14bb449444-005",
+          "republican-2012-normalized-2bab5f5039fa-005",
+          "republican-2016-normalized-6c739454c2b4-004"
+        ]
+      }
+    },
+    "packet_sha256": "29595f4603784c6389cae71f4ee26cc9d22329fe5454ecafb9ca9de3f98bc213",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Democratic examples combine Israeli security with negotiated Palestinian statehood; DSA examples center ending occupation and aid, Palestinian return, BDS, and later ceasefire and accountability.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-8c63c7382aed-014",
+          "democratic-2020-normalized-3c29dbc1688d-006",
+          "dsa-2021-adopted-normalized-a26aa576943f-002",
+          "dsa-2024-program-normalized-9d88be1f8868-001"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Both include Israel's security and negotiated statehood, but Democratic examples explicitly pair these with Palestinian freedom and assistance; Republican examples stress defensible borders and conditions.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-3c29dbc1688d-006",
+          "democratic-2020-normalized-3c29dbc1688d-012",
+          "republican-2004-normalized-f14ff84db296-009",
+          "republican-2012-normalized-2bab5f5039fa-005"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican examples reject occupation framing and emphasize Israel's self-defense; DSA examples characterize occupation as central, demand ending aid, and assert Palestinian return and resistance rights.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-6c739454c2b4-002",
+          "republican-2016-normalized-6c739454c2b4-004",
+          "dsa-2024-program-normalized-9d88be1f8868-002",
+          "dsa-2026-program-normalized-40060dd6f6dd-008"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-022"
+  },
+  {
+    "groups": {
+      "democratic": {
+        "caveat": "These are partisan evaluations and asserted records across many domains, not one policy position.",
+        "summary": "From 2016 through 2024, documents criticize Trump on alliances and diplomacy, war and rights, labor, pandemic management, jobs, health programs, political violence, and democratic norms.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-b4f43c23e8c1-006",
+          "democratic-2020-normalized-bb1bcc2747c2-001",
+          "democratic-2020-normalized-8a45b4bf8105-007",
+          "democratic-2024-normalized-306753327989-009",
+          "democratic-2024-normalized-63be03f4582c-004"
+        ]
+      },
+      "dsa": {
+        "caveat": "The packet is concentrated in 2016\u20132023 statements and includes predictions, campaign analysis, and organizational observations.",
+        "summary": "Documents criticize Trump-era immigration, labor, LGBTQ, Iran, Yemen, sanctions, and crisis policies, depict nationalist scapegoating, and later fault Democrats for adopting Trump-like immigration positions.",
+        "supporting_claim_ids": [
+          "dsa-2016-strategy-normalized-92f137c832c0-006",
+          "dsa-statement-409-normalized-335a09bbcb79-006",
+          "dsa-statement-4386-normalized-89aab4241a6d-004",
+          "dsa-statement-4626-normalized-d7c9a92b264d-005",
+          "dsa-2024-program-normalized-43f2e9413efb-repair-d5f43d07d995-002"
+        ]
+      },
+      "republican": {
+        "caveat": "Only 15 examples appear, from two bundles; the evidence is overwhelmingly the 2024 platform.",
+        "summary": "The 2024 examples praise Trump's trade, energy, growth, manufacturing, border, and national-pride record and promise continuation; one 2016 example attacks Obama's executive immigration actions.",
+        "supporting_claim_ids": [
+          "republican-2016-normalized-6168430fdff6-003",
+          "republican-2024-normalized-007a594371a0-009",
+          "republican-2024-normalized-7eea32ad5c94-008",
+          "republican-2024-normalized-51f7b85d22c5-009"
+        ]
+      }
+    },
+    "packet_sha256": "dd767632520c6cc69a52bcc79cfc6063481dc8662029a4ef34671d0460830874",
+    "pairs": {
+      "democratic_vs_dsa": {
+        "summary": "Both criticize Trump, but Democratic examples defend alliances, public programs, and administration competence; DSA examples emphasize class, labor, anti-imperial, immigration, and bipartisan continuity critiques.",
+        "supporting_claim_ids": [
+          "democratic-2016-normalized-b4f43c23e8c1-006",
+          "democratic-2024-normalized-63be03f4582c-004",
+          "dsa-statement-386-normalized-1f9ccfca2bc9-006",
+          "dsa-2024-program-normalized-43f2e9413efb-repair-d5f43d07d995-002"
+        ]
+      },
+      "democratic_vs_republican": {
+        "summary": "Democratic examples portray Trump's record as harmful across diplomacy, health, jobs, and democracy; Republican 2024 examples portray it as economic, energy, trade, and border success.",
+        "supporting_claim_ids": [
+          "democratic-2020-normalized-f4a47a1af77b-009",
+          "democratic-2024-normalized-306753327989-009",
+          "republican-2024-normalized-007a594371a0-009",
+          "republican-2024-normalized-51f7b85d22c5-009"
+        ]
+      },
+      "republican_vs_dsa": {
+        "summary": "Republican 2024 examples praise Trump's economic, energy, and border record; DSA examples condemn his anti-labor, anti-immigrant, sanctions, and militarized foreign policies.",
+        "supporting_claim_ids": [
+          "republican-2024-normalized-7eea32ad5c94-008",
+          "republican-2024-normalized-51f7b85d22c5-009",
+          "dsa-statement-386-normalized-1f9ccfca2bc9-006",
+          "dsa-statement-4386-normalized-89aab4241a6d-004"
+        ]
+      }
+    },
+    "review_model": "gpt-5.6-sol",
+    "review_origin": "assistant_source_bound_review",
+    "review_status": "evidence_reviewed",
+    "topic_id": "topic-023"
+  }
+]

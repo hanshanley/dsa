@@ -1,0 +1,69 @@
+{
+  "topic_id": "topic-019",
+  "packet_sha256": "aec8eff56784ab07214ef2eed90d8943b4218cfee36eeccf95c9b9d7ae2bbbc8",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents describe poverty, job loss, unaffordable housing and health care, food insecurity, and racial wealth disparities, often locating hardship in recession, discrimination, or weak protections.",
+      "caveat": "The narrative cluster also contains environmental, trade, and isolated biographical claims not directly about household insecurity.",
+      "supporting_claim_ids": [
+        "democratic-2004-normalized-eb1979bf3bc4-011",
+        "democratic-2012-normalized-0cea95a4c23e-002",
+        "democratic-2020-normalized-7f5f6135a575-002",
+        "democratic-2024-normalized-51d7cbe64123-004"
+      ]
+    },
+    "republican": {
+      "summary": "Documents describe hardship through lost jobs and homes, rising health, food, and energy costs, inflation, trade deficits, and poverty, sometimes assigning responsibility to Democratic administrations.",
+      "caveat": "Examples mix household hardship with business, government-budget, climate, and foreign-development claims.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-5fb0b69ca72f-004",
+        "republican-2012-normalized-cde29fc831f3-010",
+        "republican-2016-normalized-c9a8ddf744a5-003",
+        "republican-2024-normalized-7eea32ad5c94-003"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents connect low wages, rent burdens, austerity, indebtedness, unemployment, and eroding services to elite or capitalist power, emphasizing disproportionate harms to workers and marginalized communities.",
+      "caveat": "Examples span predictions, structural diagnoses, specific crises, climate harms, and several peripheral factual claims.",
+      "supporting_claim_ids": [
+        "dsa-2001-convention-priorities-normalized-ef8a3eb37787-002",
+        "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-002",
+        "dsa-2021-adopted-normalized-1870bd662c8e-005",
+        "dsa-2024-program-normalized-c0035893561c-002",
+        "dsa-2026-program-normalized-7484933df369-005"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic examples foreground poverty, housing, food insecurity, and racial disparities; Republican examples foreground inflation, trade, lost jobs and homes, and cost pressures.",
+      "supporting_claim_ids": [
+        "democratic-2012-normalized-0cea95a4c23e-002",
+        "democratic-2020-normalized-b9adf71c22c7-001",
+        "republican-2012-normalized-cde29fc831f3-010",
+        "republican-2024-normalized-7eea32ad5c94-003"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic examples document hardship and discriminatory barriers; DSA examples more explicitly attribute insecurity to austerity, capitalist elites, weakened services, and worker disempowerment.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-7f5f6135a575-002",
+        "democratic-2016-normalized-fcee54a1c348-002",
+        "dsa-2016-strategy-normalized-5be673d255df-009",
+        "dsa-2024-program-normalized-c0035893561c-001"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican examples stress prices, trade, downturns, and administration performance; DSA examples stress class power, austerity, low wages, and unequal crisis burdens.",
+      "supporting_claim_ids": [
+        "republican-2016-normalized-c9a8ddf744a5-003",
+        "republican-2024-normalized-7eea32ad5c94-003",
+        "dsa-2011-priorities-full-normalized-ed8e3a0bf92d-002",
+        "dsa-statement-4626-normalized-6ac57c252fad-003"
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "topic_id": "topic-010",
+  "packet_sha256": "8d3e55d38871efcc90f1011c3f0ecfa24a6eb0ef77578b3b4096d71734f58da1",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents praise Clinton, Obama, and Biden records on budgets, coverage, infrastructure, and alliances, while criticizing Bush-era deficits, Iraq claims, special-interest governance, and environmental policy.",
+      "caveat": "The packet mixes proposed future administrations, retrospective claims, campaign criticism, and achievements whose causality was not independently checked.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-70b894483988-003",
+        "democratic-2016-normalized-bd681f711028-003",
+        "democratic-2024-normalized-9be95fb035db-008",
+        "democratic-2004-normalized-92a8088c5dda-011",
+        "democratic-2004-normalized-94090ec19c04-001"
+      ]
+    },
+    "republican": {
+      "summary": "Documents praise Bush-era defense, AIDS, and bioterrorism actions, criticize Obama-era defense and executive policies, and portray Biden-era borders, inflation, crime, and conflict negatively.",
+      "caveat": "Most examples are retrospective assertions or opponent critiques; claimed effects and causal responsibility were not fact-checked.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-a2113b2e5302-001",
+        "republican-2016-normalized-28a344099db9-003",
+        "republican-2012-normalized-e3f9e5a181c1-002",
+        "republican-2016-normalized-c41609634a5d-006",
+        "republican-2024-normalized-51f7b85d22c5-013"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents criticize Biden military and drilling priorities, Bush bank bailouts, Clinton financial deregulation and NAFTA, and Obama deportations and Venezuela policy, while welcoming Obama-era Cuba normalization.",
+      "caveat": "Examples include foreign presidents and historical narratives; asserted records, motives, and causal links were not independently verified.",
+      "supporting_claim_ids": [
+        "dsa-2024-program-normalized-43f2e9413efb-003",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-010",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-004",
+        "dsa-statement-4621-normalized-9d208ba95cab-005",
+        "dsa-statement-373-normalized-45ed973bceb0-001"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Each side praises aligned administrations and criticizes opponents: Democratic documents highlight Obama-Biden domestic gains; Republican documents emphasize Bush security actions and Biden-era disorder.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-bd681f711028-003",
+        "democratic-2024-normalized-9be95fb035db-008",
+        "republican-2004-normalized-a2113b2e5302-001",
+        "republican-2024-normalized-51f7b85d22c5-016"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic documents credit Obama-Biden achievements; DSA documents criticize several Democratic administrations on deportation, deregulation, trade, military spending, and sanctions, while approving Cuba normalization.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-bd681f711028-003",
+        "dsa-statement-4621-normalized-9d208ba95cab-005",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-004",
+        "dsa-statement-373-normalized-45ed973bceb0-001"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents praise Bush security and health initiatives; DSA documents fault Bush-era bank bailouts and criticize interventionist policies across administrations.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-a2113b2e5302-001",
+        "republican-2016-normalized-28a344099db9-003",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-010",
+        "dsa-statement-1146-normalized-98bee761ff4e-012"
+      ]
+    }
+  }
+}

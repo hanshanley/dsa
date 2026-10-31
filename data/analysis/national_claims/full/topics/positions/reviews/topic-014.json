@@ -1,0 +1,71 @@
+{
+  "topic_id": "topic-014",
+  "packet_sha256": "a4c85a43ab8b2a126bd9ca15c80d4832d68f29e39269b6c1db2cd4f38344923d",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Documents support alliances, multilateral institutions, diplomacy, arms control, collective defense, democracy support, counterterrorism, and cooperation against nuclear, cyber, humanitarian, and regional security threats.",
+      "caveat": "The packet combines cooperative diplomacy with military deterrence and intervention-related positions; specific regional approaches and emphases vary over time.",
+      "supporting_claim_ids": [
+        "democratic-2008-normalized-2f22bd733321-001",
+        "democratic-2016-normalized-cba8bb3f1bb4-010",
+        "democratic-2020-normalized-c64d298fbba5-025",
+        "democratic-2020-normalized-c64d298fbba5-021",
+        "democratic-2024-normalized-94ca68ceacfc-011"
+      ]
+    },
+    "republican": {
+      "summary": "Documents support alliances and selected multilateral cooperation alongside larger or modernized forces, missile and nuclear defenses, counterterrorism, pressure on hostile states, and peace through strength.",
+      "caveat": "Examples mix diplomacy, trade, military buildup, deterrence, blockade, and regional assistance; predicted security effects were not independently tested.",
+      "supporting_claim_ids": [
+        "republican-2008-normalized-47f1bf186f86-005",
+        "republican-2016-normalized-fbf2085e7ad8-002",
+        "republican-2016-normalized-fbf2085e7ad8-003",
+        "republican-2024-normalized-e8e86f62671d-011",
+        "republican-2024-normalized-8d8835191786-007"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents support multilateral diplomacy and international courts while opposing U.S. wars, sanctions, militarism, and authoritarian alliances; they favor military cuts, nuclear abolition, sovereignty, and humanitarian cooperation.",
+      "caveat": "Some documents permit limited multilateral force or peacekeeping, so the packet is not uniformly pacifist; regional prescriptions vary historically.",
+      "supporting_claim_ids": [
+        "dsa-2021-adopted-normalized-bf23fd771fc3-001",
+        "dsa-2024-program-normalized-9d88be1f8868-004",
+        "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-002",
+        "dsa-2021-adopted-normalized-d37f0cebbfee-006",
+        "dsa-2024-program-normalized-9d88be1f8868-007"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Both support alliances and deterrence; Democratic documents stress diplomacy, arms control, and institutions, while Republican documents emphasize force expansion, missile defense, nuclear modernization, and strength.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-cba8bb3f1bb4-010",
+        "democratic-2020-normalized-c64d298fbba5-025",
+        "republican-2016-normalized-fbf2085e7ad8-002",
+        "republican-2016-normalized-fbf2085e7ad8-003"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Both support multilateral cooperation; Democratic documents retain collective defense and deterrence, while DSA documents seek major military cuts, nuclear abolition, sanctions removal, and ending foreign wars.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-c64d298fbba5-021",
+        "democratic-2020-normalized-5aac5456948b-008",
+        "dsa-2021-adopted-normalized-d37f0cebbfee-006",
+        "dsa-2024-program-normalized-9d88be1f8868-007"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican documents favor missile defenses, nuclear modernization, and peace through strength; DSA documents favor nuclear abolition, military-budget reductions, sanctions removal, and ending U.S. wars.",
+      "supporting_claim_ids": [
+        "republican-2016-normalized-fbf2085e7ad8-002",
+        "republican-2016-normalized-fbf2085e7ad8-003",
+        "dsa-2021-adopted-normalized-d37f0cebbfee-006",
+        "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-002"
+      ]
+    }
+  }
+}

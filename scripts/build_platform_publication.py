@@ -85,10 +85,63 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
         ids = {row["claim_id"] for row in representatives if row["topic_id"] == label["topic_id"]}
         if not set(label["supporting_claim_ids"]) <= ids <= claim_ids:
             raise ValueError(f"Missing source-linked label evidence: {label['topic_id']}")
-    with zipfile.ZipFile(data / "claim_documents.zip") as archive:
+    if (data / "topics/positions/selection_manifest.json").exists():
+        from dsa_analysis.national_claim_topic_positions import reviewed_positions
+
+        position_manifest, positions = reviewed_positions(data)
+        position_summary = read_json(data / "topics/positions/summary.json")
+        stems = {
+            "all_groups",
+            "democratic_vs_republican",
+            "democratic_vs_dsa",
+            "republican_vs_dsa",
+        }
+        if (
+            topics.get("positions") != position_summary
+            or position_summary["status"] != "complete"
+            or set(position_summary["figures"]) != stems
+            or set(position_manifest["topics"])
+            != {label["topic_id"] for label in labels if label.get("displayed", True)}
+            or position_summary["group_positions"] != len(positions) * 3
+            or position_summary["pairwise_differences"] != len(positions) * 3
+            or read_json(data / "topics/positions/group_positions.json") != positions
+            or any(
+                not (source / root / "positions" / f"{stem}{suffix}").is_file()
+                for root in (FIGURES, WEBSITE_FIGURES)
+                for stem in stems
+                for suffix in (".png", ".svg")
+            )
+        ):
+            raise ValueError(
+                "Publication requires all reviewed positions and four complete atlases"
+            )
+    archive_path = data / "claim_documents.zip"
+    metadata_path = data / "claim_documents.download.json"
+    expected_archive = read_json(metadata_path) if metadata_path.exists() else None
+    if not archive_path.exists():
+        if expected_archive is None:
+            raise ValueError("Missing complete download and its reproducible archive manifest")
+        from dsa_analysis.national_claim_corpus import bundle
+
+        bundle(
+            data,
+            figures=source / FIGURES.parent,
+            report=source / "report/national_claim_analysis.md",
+        )
+    if expected_archive and (
+        archive_path.stat().st_size != expected_archive["bytes"]
+        or digest(archive_path) != expected_archive["sha256"]
+    ):
+        raise ValueError("Complete download does not match its published archive checksum")
+    with zipfile.ZipFile(archive_path) as archive:
         if archive.testzip() is not None:
             raise ValueError("Complete download failed ZIP integrity verification")
         members = set(archive.namelist())
+        for path in (data / "topics/positions").rglob("*"):
+            if path.suffix in {".csv", ".json"}:
+                relative = path.relative_to(data).as_posix()
+                if relative not in members or archive.read(relative) != path.read_bytes():
+                    raise ValueError(f"Complete download omits position evidence: {relative}")
         for name in [
             "analysis_claims.csv",
             "complete_sources.csv",
@@ -245,6 +298,11 @@ def export(source: Path, output: Path) -> dict:
                 for period in evolution["periods"]
                 for view in ("expanded", "strict")
             )
+        position_summary = source / DATA / "topics/positions/summary.json"
+        if position_summary.exists():
+            required.update(
+                f"figures/positions/{stem}.png" for stem in read_json(position_summary)["figures"]
+            )
         if not required <= pngs:
             raise ValueError("Missing complete expanded/strict issue-level comparison charts")
         if any(path.replace(".png", ".svg") not in files for path in pngs):
@@ -287,10 +345,20 @@ def export(source: Path, output: Path) -> dict:
             relative = f"downloads/{name}"
             copy(source / DATA / name, relative)
             downloads.append(dict(path=relative, bytes=(staging / relative).stat().st_size))
+        download_metadata = source / DATA / "claim_documents.download.json"
+        if download_metadata.exists():
+            relative = f"downloads/{download_metadata.name}"
+            copy(download_metadata, relative)
+            downloads.append(dict(path=relative, bytes=download_metadata.stat().st_size))
         if evolution:
             for original in sorted((source / DATA / "topics/evolution").glob("*")):
                 if original.suffix in {".csv", ".json"}:
                     copy(original, f"downloads/topics/evolution/{original.name}")
+        for original in sorted((source / DATA / "topics/positions").rglob("*")):
+            if original.suffix in {".csv", ".json"}:
+                relative = f"downloads/{original.relative_to(source / DATA).as_posix()}"
+                copy(original, relative)
+                downloads.append(dict(path=relative, bytes=original.stat().st_size))
         for original in sorted((source / DATA).glob("*/density_region_evidence.csv")):
             relative = f"downloads/{original.relative_to(source / DATA).as_posix()}"
             copy(original, relative)
@@ -311,6 +379,11 @@ def export(source: Path, output: Path) -> dict:
             figures=figures,
             downloads=downloads,
             evolution=evolution,
+            positions=(
+                read_json(source / DATA / "topics/positions/group_positions.json")
+                if position_summary.exists()
+                else []
+            ),
         )
         (staging / "analysis.json").write_text(
             json.dumps(publication, ensure_ascii=True, indent=2) + "\n", encoding="utf-8"

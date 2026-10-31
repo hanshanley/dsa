@@ -1,0 +1,63 @@
+{
+  "claims_sha256": "4e2b6ef6472b51aad8f980737749c87cedffded9291b6224d7ba65fac31c1078",
+  "evidence_sha256": "25486a7437b3f17426d77f9c7b232e658e8e9e50c0f22f1dd6cc11326fb60722",
+  "fit_manifest_sha256": "4d08e3bc67c0b56e5678f89aa48f0674dc22609bdb160868192e9b9f4bf719e5",
+  "groups": [
+    "democratic",
+    "republican",
+    "dsa"
+  ],
+  "packet_sha256": {
+    "topic-001": "0552f1fbec89169c0d114338ca3bc044c615518d3ad96f6f40a6513a44e03948",
+    "topic-002": "e0bd787f7d968e79966d68eb61a908c27ecc2b2d9c2668a273c54ec443fcf599",
+    "topic-003": "3b407727a69aca858aa4b633cca73fd4b770c4753e7356c54eabb392c8f4bc19",
+    "topic-004": "7ec45a25c5ab918e704922d5205a3a47a8b2f192e61c111000e77b6fc57db0e3",
+    "topic-005": "0d96439aefee469fdb44fc1c0cdad44624e4bd68cee52058c1fc00de38a42f75",
+    "topic-006": "1651b6dc650c70fb9e558f8490b5a67e07df1257b14ac4b0e62b21d6bca5d1fb",
+    "topic-008": "fedacd1c5dd0283ca091768c5dace087abda54599a941b4e1fb179cd8918a9ed",
+    "topic-009": "42fd233dcc88435e0db7ca250f28772642f7ccdabb57672441ada65fbfb763fa",
+    "topic-010": "8d3e55d38871efcc90f1011c3f0ecfa24a6eb0ef77578b3b4096d71734f58da1",
+    "topic-011": "57ea0616b0f923475a05744d23d780b05f9e98d8ae4aeb9c747213135bf378b4",
+    "topic-012": "5dc30d4b3b0a5fdb26bc46ba45c5b806e454bef8b5eee78fd4183543431b24ff",
+    "topic-013": "e2cbc1199363e0852f7f6aa451f9a7f1fb9d3c629ce3fe915550f09aa1f48ffa",
+    "topic-014": "a4c85a43ab8b2a126bd9ca15c80d4832d68f29e39269b6c1db2cd4f38344923d",
+    "topic-015": "66d25b93196a53287a98b90bc55b5ba5d84cf2b9fe6596330489abd8cedf29ee",
+    "topic-016": "3ee7f4de833f68353c1d5845dbdfb2089db67d2775c65458cdce29283c08e1bf",
+    "topic-018": "4dc9a6b58a67292a2ebb0ec1321493ca12369d8f1c0c765a008bc9862e9844e1",
+    "topic-019": "aec8eff56784ab07214ef2eed90d8943b4218cfee36eeccf95c9b9d7ae2bbbc8",
+    "topic-020": "762fd42bfb1342e6fecf9e42d63c9cb5a42a6d1cfa59afd27bd0c0a21d07dcbc",
+    "topic-021": "bbe06a1c52aaf97e7fe53858d0ff8e5670ce0715eea25e8208ac8c0329d15951",
+    "topic-022": "29595f4603784c6389cae71f4ee26cc9d22329fe5454ecafb9ca9de3f98bc213",
+    "topic-023": "dd767632520c6cc69a52bcc79cfc6063481dc8662029a4ef34671d0460830874"
+  },
+  "qualification": "Source-bound assistant synthesis of bundle-diverse examples, not independent human certification or an exhaustive stance classification. Statements describe the observed documents across years, not every member's beliefs or a current consensus.",
+  "schema_version": 1,
+  "selection": {
+    "max_examples_per_group_topic": 48,
+    "method": "Round-robin across bundles, alternating two claims nearest the frozen weighted topic centroid with one peripheral claim. No stance-based selection."
+  },
+  "topics": [
+    "topic-001",
+    "topic-002",
+    "topic-003",
+    "topic-004",
+    "topic-005",
+    "topic-006",
+    "topic-008",
+    "topic-009",
+    "topic-010",
+    "topic-011",
+    "topic-012",
+    "topic-013",
+    "topic-014",
+    "topic-015",
+    "topic-016",
+    "topic-018",
+    "topic-019",
+    "topic-020",
+    "topic-021",
+    "topic-022",
+    "topic-023"
+  ],
+  "view": "expanded"
+}

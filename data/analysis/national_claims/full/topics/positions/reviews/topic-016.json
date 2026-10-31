@@ -1,0 +1,68 @@
+{
+  "topic_id": "topic-016",
+  "packet_sha256": "3ee7f4de833f68353c1d5845dbdfb2089db67d2775c65458cdce29283c08e1bf",
+  "review_status": "evidence_reviewed",
+  "review_origin": "assistant_source_bound_review",
+  "review_model": "gpt-5.6-sol",
+  "groups": {
+    "democratic": {
+      "summary": "Across years, documents oppose Republican or administration actions involving arms, surveillance, social-program cuts, privatization, and foreign policy, while also recording criticisms of governing performance.",
+      "caveat": "The packet combines policy opposition with factual and evaluative attacks across unrelated domestic and foreign issues.",
+      "supporting_claim_ids": [
+        "democratic-2000-normalized-35991a3208e1-001",
+        "democratic-2008-normalized-fa1cd1900e67-007",
+        "democratic-2016-normalized-f4e2c14968d7-011",
+        "democratic-2024-normalized-e4e0fee5728c-011"
+      ]
+    },
+    "republican": {
+      "summary": "Documents reject regulation, bailouts, international constraints, and administration actions, often invoking economic costs, constitutional limits, national sovereignty, or private-sector autonomy.",
+      "caveat": "Examples range from specific policy commitments to broad retrospective accusations and claims about foreign governments.",
+      "supporting_claim_ids": [
+        "republican-2004-normalized-53cdfe529adc-010",
+        "republican-2008-normalized-12c182215fbf-005",
+        "republican-2012-normalized-f832db2b0dc6-008",
+        "republican-2024-normalized-3cf23a1200a0-001"
+      ]
+    },
+    "dsa": {
+      "summary": "Documents oppose militarism, sanctions, privatization, austerity, corporate influence, and undemocratic institutions, criticizing Republican, Democratic, bipartisan, governmental, and labor leadership across years.",
+      "caveat": "Targets and claim types vary substantially; this is opposition language, not one unified policy program.",
+      "supporting_claim_ids": [
+        "dsa-2003-iraq-normalized-db1b9f74155d-003",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-012",
+        "dsa-2021-adopted-normalized-bf23fd771fc3-005",
+        "dsa-2024-program-normalized-c668d0328bc5-009"
+      ]
+    }
+  },
+  "pairs": {
+    "democratic_vs_republican": {
+      "summary": "Democratic examples defend social programs and civil liberties against cuts or surveillance; Republican examples resist regulation, bailouts, and international authority.",
+      "supporting_claim_ids": [
+        "democratic-2016-normalized-f4e2c14968d7-011",
+        "democratic-2008-normalized-fa1cd1900e67-007",
+        "republican-2008-normalized-12c182215fbf-005",
+        "republican-2012-normalized-f832db2b0dc6-008"
+      ]
+    },
+    "democratic_vs_dsa": {
+      "summary": "Democratic examples primarily contest Republican or named-administration measures; DSA examples also indict Democratic administrations, bipartisan elites, corporate influence, and governing institutions.",
+      "supporting_claim_ids": [
+        "democratic-2020-normalized-703017acd51e-020",
+        "democratic-2024-normalized-11fdd9f0c413-013",
+        "dsa-2011-ows-resolution-normalized-e3136ce5f7d1-012",
+        "dsa-2024-program-normalized-c668d0328bc5-009"
+      ]
+    },
+    "republican_vs_dsa": {
+      "summary": "Republican examples resist governmental and international constraints while favoring autonomy; DSA examples attack sanctions, militarism, austerity, privatization, and corporate control.",
+      "supporting_claim_ids": [
+        "republican-2012-normalized-f832db2b0dc6-008",
+        "republican-2024-normalized-3cf23a1200a0-001",
+        "dsa-2021-adopted-normalized-bf23fd771fc3-005",
+        "dsa-2021-adopted-normalized-da1246750ba5-003"
+      ]
+    }
+  }
+}

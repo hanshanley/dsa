@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 
 from .model_topics import Topic
-from .national_claim_corpus import CLAIMS_ROOT, FULL_OUTPUT, bundle
+from .national_claim_corpus import CLAIMS_ROOT, FULL_OUTPUT, bundle, publication_download_url
 from .national_claims import PILOT_OUTPUT
 from .national_platform_kde import LABELS, analyze_view, encode, plot_outputs
 from .national_platforms import (
@@ -510,7 +510,8 @@ def write_report(
         "Exact within-document claim duplicates are retained in downloads but excluded "
         "from fitting.",
         "",
-        f"- [Complete claim/source download, not metadata only]({data_path}/claim_documents.zip)",
+        "- [Complete claim/source download, not metadata only]"
+        f"({publication_download_url(output) or f'{data_path}/claim_documents.zip'})",
         f"- [Claims and exact supporting source offsets]({data_path}/claims.csv)",
         f"- [Complete source texts]({data_path}/complete_sources.csv)",
         f"- [Topic assignments]({data_path}/topic_assignments.csv)",
