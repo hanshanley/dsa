@@ -862,7 +862,14 @@ def current_labels(directory: Path) -> dict[str, dict]:
             topic = item["topic_id"]
             if topic not in packets:
                 raise ValueError("Reviewed topic is not in the current taxonomy")
-            source = directory / "labels" / f"{topic}.json"
+            source_topic = item.get("source_topic_id", topic)
+            if not isinstance(source_topic, str) or not re.fullmatch(
+                r"[a-z0-9]+(?:-[a-z0-9]+)*", source_topic
+            ):
+                raise ValueError("Invalid reviewed-label source topic ID")
+            if source_topic != topic and item["label_origin"] != "assistant_source_bound_revision":
+                raise ValueError("A remapped label cannot be attributed to local Gemma")
+            source = directory / "labels" / f"{source_topic}.json"
             if (
                 not source.exists()
                 or digest(source.read_bytes()) != item["source_record_sha256"]
@@ -883,6 +890,7 @@ def current_labels(directory: Path) -> dict[str, dict]:
                 **validated,
                 "label_origin": origin,
                 "review_status": "evidence_reviewed",
+                **({"source_topic_id": source_topic} if source_topic != topic else {}),
             }
     return result
 
@@ -1398,9 +1406,11 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
         "",
         "**Where these names came from:** cached claim embeddings were reduced with PCA "
         "and clustered together across the expanded corpus. Weighted K-means selected "
-        "the pooled clusters after the density-fit coverage check. Local Gemma proposed "
-        "names using distinctive keywords and bounded representative-claim packets; "
-        "source-bound assistant review revised misleading names. They are not CAP's "
+        "the pooled clusters after the density-fit coverage check. Cached local-Gemma "
+        "drafts supply naming context; separately identified assistant reviews bind current "
+        "names to the exact fit and representative claims. Archived prompts and replies "
+        "retain their original fit and are not regenerated or relabeled as new inference. "
+        "These names are not CAP's "
         "predefined policy categories and do not establish shared policy positions.",
         "",
         "One shared expanded-corpus taxonomy is used for both views. Shares give each "
@@ -1442,6 +1452,12 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
         "remain unchanged. This is assistant review, not independent human certification.",
         "",
     ]
+    if (figures / "expanded/substack_overview.png").exists():
+        lines += [
+            f"[Standalone three-party overview for Substack]"
+            f"({relative_figures}/expanded/substack_overview.png)",
+            "",
+        ]
     if (directory / "label_review.json").exists():
         lines += [
             f"[Label review and exact provenance]({relative_data}/label_review.json)",

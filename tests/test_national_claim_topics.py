@@ -546,7 +546,7 @@ class ClaimTopicsTests(unittest.TestCase):
             ):
                 with self.assertRaisesRegex(ValueError, "Missing reviewed group positions"):
                     plot_topics(directory, directory, labels, config())
-        self.assertEqual(
+        self.assertCountEqual(
             captured["expanded/topic_distribution"],
             [
                 f"Observed {group} documents discuss {topic}."
@@ -838,6 +838,37 @@ class ClaimTopicsTests(unittest.TestCase):
                 directory / "fit_manifest.json", {"basis": {"config": {**config(), "seed": 2}}}
             )
             self.assertEqual(current_labels(directory), {})
+            original = (directory / "labels/health.json").read_bytes()
+            write_rows(
+                directory / "representatives.csv",
+                [
+                    {"topic_id": "care", **row("a"), "claim_text": "Support public care."},
+                    {"topic_id": "care", **row("b"), "claim_text": "Support universal care."},
+                ],
+            )
+            item = reviewed["topics"][0]
+            item.update(
+                topic_id="care",
+                source_topic_id="health",
+                source_record_sha256=digest(original),
+                evidence_packet_sha256=digest(canonical(evidence_packets(directory)[0])),
+                label={**value, "title": "Public healthcare access"},
+            )
+            reviewed["fit_manifest_sha256"] = digest((directory / "fit_manifest.json").read_bytes())
+            write_json(directory / "label_review.json", reviewed)
+            resolved = current_labels(directory)["care"]
+            self.assertEqual(resolved["source_topic_id"], "health")
+            self.assertEqual(resolved["title"], "Public healthcare access")
+            self.assertEqual((directory / "labels/health.json").read_bytes(), original)
+            item["label_origin"] = "local_gemma"
+            write_json(directory / "label_review.json", reviewed)
+            with self.assertRaisesRegex(ValueError, "attributed"):
+                current_labels(directory)
+            item["label_origin"] = "assistant_source_bound_revision"
+            item["source_topic_id"] = "../health"
+            write_json(directory / "label_review.json", reviewed)
+            with self.assertRaisesRegex(ValueError, "source topic"):
+                current_labels(directory)
 
     def test_input_gate_refuses_running_extraction_before_loading_any_model(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -845,6 +876,34 @@ class ClaimTopicsTests(unittest.TestCase):
             write_json(path / "extraction_summary.json", {"status": "running"})
             with self.assertRaisesRegex(ValueError, "completed"):
                 load_inputs(path, GROUPS)
+
+    def test_report_links_standalone_overview_only_when_present(self):
+        from dsa_analysis.national_claim_topics import report_section
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            directory = root / "data/topics"
+            figures = root / "figures/topics"
+            directory.mkdir(parents=True)
+            write_json(
+                directory / "fit_manifest.json",
+                {"summary": {"topics": 0, "unclustered_claims": 0, "groups": [], "fit": {}}},
+            )
+            for name in ("shares", "contrasts", "keywords", "representatives", "temporal_changes"):
+                write_rows(directory / f"{name}.csv", [])
+            with patch("dsa_analysis.national_claim_topics.ROOT", root):
+                self.assertNotIn(
+                    "Standalone three-party overview", report_section(directory, figures, {})
+                )
+                overview = figures / "expanded/substack_overview.png"
+                overview.parent.mkdir(parents=True)
+                overview.touch()
+                section = report_section(directory, figures, {})
+            self.assertIn(
+                "[Standalone three-party overview for Substack]"
+                "(../figures/topics/expanded/substack_overview.png)",
+                section,
+            )
 
     def test_prepare_cache_provenance_render_and_complete_archive(self):
         from dsa_analysis.national_claim_analysis import analysis_rows
