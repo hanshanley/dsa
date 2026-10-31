@@ -6,6 +6,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 import shutil
 import struct
 import subprocess
@@ -216,6 +217,108 @@ def evolution_data(source: Path) -> dict | None:
     return dict(summary=summary, periods=periods, topics=labels)
 
 
+def density_map_data(source: Path, labels: list, representatives: list) -> dict:
+    data = source / DATA
+    claims = {row["claim_id"]: row for row in rows(data / "analysis_claims.csv")}
+    assignments = list(rows(data / "topics/assignments.csv"))
+    assigned = {row["claim_id"]: row for row in assignments}
+    scored = list(rows(data / "expanded/scored_passages.csv"))
+    if (
+        len(assigned) != len(assignments)
+        or set(assigned) != set(claims)
+        or len(scored) != len(claims)
+        or {row["claim_id"] for row in scored} != set(claims)
+    ):
+        raise ValueError("Interactive map requires every unique eligible claim and assignment")
+    topic_ids = [label["topic_id"] for label in labels]
+    points = []
+    for row in scored:
+        claim, assignment = claims[row["claim_id"]], assigned[row["claim_id"]]
+        if row["group"] != claim["group"] or assignment["group"] != claim["group"]:
+            raise ValueError(f"Interactive map group mismatch: {row['claim_id']}")
+        if any(
+            record.get("text_sha256") and record["text_sha256"] != claim.get("text_sha256")
+            for record in (row, assignment)
+        ):
+            raise ValueError(f"Interactive map claim text mismatch: {row['claim_id']}")
+        if assignment["topic_id"] not in topic_ids:
+            raise ValueError(f"Unknown interactive issue: {assignment['topic_id']}")
+        values = [
+            float(row[name])
+            for name in ("umap_x", "umap_y", *(f"{group}_log_density" for group in GROUPS))
+        ]
+        if not all(math.isfinite(value) for value in values):
+            raise ValueError(f"Non-finite interactive map values: {row['claim_id']}")
+        points.append(
+            [
+                row["claim_id"],
+                *values[:2],
+                topic_ids.index(assignment["topic_id"]),
+                GROUPS.index(row["group"]),
+                *values[2:],
+            ]
+        )
+    topics = []
+    fields = (
+        "claim_id",
+        "group",
+        "claim_text",
+        "evidence",
+        "title",
+        "publication_date",
+        "source_url",
+    )
+    for label in labels:
+        examples = []
+        for group in GROUPS:
+            selected = [
+                row
+                for row in representatives
+                if row["topic_id"] == label["topic_id"]
+                and claims[row["claim_id"]]["group"] == group
+            ][:2]
+            if not selected:
+                candidates = [
+                    claim
+                    for claim in claims.values()
+                    if claim["group"] == group
+                    and assigned[claim["claim_id"]]["topic_id"] == label["topic_id"]
+                ]
+                selected = candidates[:1]
+            for example in selected:
+                claim = claims[example["claim_id"]]
+                if assigned[claim["claim_id"]]["topic_id"] != label["topic_id"]:
+                    raise ValueError(f"Interactive evidence issue mismatch: {claim['claim_id']}")
+                examples.append({field: claim.get(field, "") for field in fields})
+        topics.append(
+            {
+                **{key: label.get(key, "") for key in ("topic_id", "title", "summary", "caveat")},
+                "displayed": label.get("displayed", True),
+                "examples": examples,
+            }
+        )
+    regions = list(rows(data / "expanded/density_region_evidence.csv"))
+    bounds = {float(row["color_bound"]) for row in regions if "color_bound" in row}
+    if len(bounds) > 1 or any(not math.isfinite(value) or value <= 0 for value in bounds):
+        raise ValueError("Interactive map must preserve the original common density color bound")
+    limits = []
+    for column in (1, 2):
+        values = [point[column] for point in points]
+        low, high = min(values), max(values)
+        pad = max((high - low) * 0.05, 1e-6)
+        limits.append([low - pad, high + pad])
+    return dict(
+        schema_version=1,
+        view="expanded",
+        groups=list(GROUPS),
+        columns=["claim_id", "x", "y", "topic", "group", *(f"{g}_log_density" for g in GROUPS)],
+        points=points,
+        topics=topics,
+        limits=limits,
+        color_bound=next(iter(bounds), 1.0),
+    )
+
+
 def export(source: Path, output: Path) -> dict:
     source, output = source.resolve(), output.resolve()
     if output.is_relative_to(source) or source.is_relative_to(output):
@@ -223,6 +326,7 @@ def export(source: Path, output: Path) -> dict:
     if output.exists() and (not output.is_dir() or any(output.iterdir())):
         raise ValueError("Publication output must be absent or empty")
     summary, topics, labels, representatives, shares = validate(source)
+    density_map = density_map_data(source, labels, representatives)
     evolution = evolution_data(source)
     if subprocess.check_output(
         [
@@ -404,6 +508,11 @@ def export(source: Path, output: Path) -> dict:
             json.dumps(publication, ensure_ascii=True, indent=2) + "\n", encoding="utf-8"
         )
         files["analysis.json"] = digest(staging / "analysis.json")
+        (staging / "density-map.json").write_text(
+            json.dumps(density_map, ensure_ascii=True, separators=(",", ":")) + "\n",
+            encoding="utf-8",
+        )
+        files["density-map.json"] = digest(staging / "density-map.json")
         manifest = dict(
             schema_version=1,
             source_repository="hanshanley/dsa",
