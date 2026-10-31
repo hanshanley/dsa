@@ -94,17 +94,17 @@ consensus. Pair-map colors show topic-share gaps, not ideological distance.
 | Independently discovered period themes | 64 period-qualified topics; each fit uses only its own period's evidence | [Period-by-period analysis](report/national_claim_analysis.md#independently-discovered-topics-within-each-period) · [Period shares](data/analysis/national_claims/full/topics/evolution/shares.csv) · [Fit diagnostics](data/analysis/national_claims/full/topics/evolution/period_fits.json) · [Source examples](data/analysis/national_claims/full/topics/evolution/representatives.csv) |
 | Figures for the piece | Six selected policy subjects; overall and time comparison in one graphic; strict and expanded | [Expanded article figures](figures/national_claims/full/topics/expanded/piece/) · [Strict article figures](figures/national_claims/full/topics/strict/piece/) · [Website versions](figures/national_claims/full/themarginoferror/topics/expanded/piece/) |
 | Individual issue comparisons | One overall chart and one timeline per topic, comparing all three groups; strict and expanded views | [Expanded issue charts](figures/national_claims/full/topics/expanded/issues/) · [Strict issue charts](figures/national_claims/full/topics/strict/issues/) |
-| Publication-ready figures | Restrained house style and individual cards; PNG and SVG | [Substack versions](figures/national_claims/full/) · [The Margin of Error versions](figures/national_claims/full/themarginoferror/) |
+| Publication-ready figures | Restrained house style and individual cards; PNG-only, without internal workflow annotations or text metadata | [Substack versions](figures/national_claims/full/) · [The Margin of Error versions](figures/national_claims/full/themarginoferror/) |
 
 **One complete download:** [Report, all figures, result tables, claims, complete
-sources, raw replies, history and corrections](https://github.com/hanshanley/dsa/releases/download/claim-position-atlas-2026-10-31/claim_documents.zip).
+sources, raw replies, history and corrections](https://github.com/hanshanley/dsa/releases/download/claim-public-pngs-2026-10-31/claim_documents.zip).
 Unzip it and open `report.md`: its figure and result-table links point to the
-included files. PNG and SVG figures include both the new topic/time analyses and
+included files. PNG figures include both the new topic/time analyses and
 the supporting CAP/KDE results. Default figures use Substack's warm-paper
 background; `figures/themarginoferror/` contains the matching website versions.
 Both versions are included in the same complete download.
-The enlarged ZIP is hosted as a GitHub release asset because it exceeds the
-repository's per-file limit; no claims, sources or figures have been removed.
+The complete ZIP is hosted as a GitHub release asset; no claims or source evidence
+have been removed. Superseded SVG copies are excluded from the PNG-only publication.
 Its [checksum and size](data/analysis/national_claims/full/claim_documents.download.json)
 are tracked. The publication exporter rebuilds the identical ZIP offline from
 the committed evidence, figures and report when the local archive is absent.
@@ -222,7 +222,7 @@ remain in the download.
 The [reproducibility audit](data/analysis/national_claims/reproducibility_audit.json)
 records the successful second offline run, archive checks, and input/output hashes.
 The separate [topic-stage replay audit](data/analysis/national_claims/full/topics/replay_audit.json)
-verifies the current topic/time tables, named PNG/SVG figures, and every combined
+verifies the current topic/time tables, named PNG figures, and every combined
 archive member without new model inference.
 
 For individual tables, see the [full claim corpus](data/analysis/national_claims/full/)

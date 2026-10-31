@@ -39,7 +39,6 @@ PLOT_STYLE = {
     "xtick.major.size": 0,
     "ytick.major.size": 0,
     "text.parse_math": False,
-    "svg.hashsalt": "national-claim-topics-v2",
 }
 
 
@@ -60,7 +59,7 @@ def issue_figure(title: str, subtitle: str):
     note = fig.text(
         0.08,
         0.035,
-        "Source: national political documents. Equal document / fallback-bundle weights.",
+        "Source: national political documents. Equal weight per document or source collection.",
         fontsize=7.5,
         color="#6B6B6B",
     )
@@ -68,7 +67,7 @@ def issue_figure(title: str, subtitle: str):
     return fig
 
 
-def save_figure(fig, stem: Path, *, svg_dpi: int = 200) -> None:
+def save_figure(fig, stem: Path) -> None:
     if not any(text.get_gid() == "source-note" for text in fig.texts):
         note = fig.text(
             0.01,
@@ -80,14 +79,14 @@ def save_figure(fig, stem: Path, *, svg_dpi: int = 200) -> None:
         )
         note.set_gid("source-note")
     stem.parent.mkdir(parents=True, exist_ok=True)
-    for extension in ("png", "svg"):
-        fig.savefig(
-            stem.with_suffix(f".{extension}"),
-            dpi=svg_dpi if extension == "svg" else 200,
-            bbox_inches=None if fig.get_gid() == "issue-card" else "tight",
-            pad_inches=0 if fig.get_gid() == "issue-card" else 0.18,
-            metadata={"Date": None} if extension == "svg" else None,
-        )
+    stem.with_suffix(".svg").unlink(missing_ok=True)
+    fig.savefig(
+        stem.with_suffix(".png"),
+        dpi=200,
+        bbox_inches=None if fig.get_gid() == "issue-card" else "tight",
+        pad_inches=0 if fig.get_gid() == "issue-card" else 0.18,
+        metadata={"Software": None},
+    )
 
 
 def comparison_page(title, subtitle, names, columns, values, upper, *, differences=False):
@@ -168,10 +167,10 @@ def export_page_versions(figures: Path) -> dict:
     from PIL import Image, ImageColor
 
     destination = figures / "themarginoferror"
+    for old in figures.rglob("*.svg"):
+        old.unlink()
     sources = [
-        p
-        for p in figures.rglob("*")
-        if p.suffix in {".png", ".svg"} and not p.is_relative_to(destination)
+        p for p in figures.rglob("*") if p.suffix == ".png" and not p.is_relative_to(destination)
     ]
     expected = set()
     before = np.array((*ImageColor.getrgb(BG), 255), dtype=np.uint8)
@@ -180,16 +179,13 @@ def export_page_versions(figures: Path) -> dict:
         target = destination / source.relative_to(figures)
         expected.add(target)
         target.parent.mkdir(parents=True, exist_ok=True)
-        if source.suffix == ".png":
-            with Image.open(source) as image:
-                pixels = np.array(image.convert("RGBA"))
-            mask = np.all(pixels == before, axis=2)
-            if not mask.any():
-                raise ValueError(f"Missing publication background in {source}")
-            pixels[mask] = after
-            Image.fromarray(pixels).save(target, dpi=(200, 200))
-        else:
-            target.write_text(source.read_text().replace(BG.lower(), PAGE_BG.lower()))
+        with Image.open(source) as image:
+            pixels = np.array(image.convert("RGBA"))
+        mask = np.all(pixels == before, axis=2)
+        if not mask.any():
+            raise ValueError(f"Missing publication background in {source}")
+        pixels[mask] = after
+        Image.fromarray(pixels).save(target, dpi=(200, 200))
     for old in destination.rglob("*"):
         if old.is_file() and old.suffix in {".png", ".svg"} and old not in expected:
             old.unlink()

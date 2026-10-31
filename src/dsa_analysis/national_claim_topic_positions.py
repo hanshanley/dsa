@@ -355,7 +355,7 @@ def plot_atlases(rows, labels, reviews, shares, figures: Path, groups=GROUPS) ->
             0.055,
             1 - 0.97 / height,
             f"Expanded national documents | {len(topics)} substantive pooled clusters | "
-            "Group-specific, source-bound synthesis across observed years",
+            "Summaries of each group's documented positions across observed years",
             fontsize=11,
             color="#6B6B6B",
         )
@@ -472,7 +472,7 @@ def plot_atlases(rows, labels, reviews, shares, figures: Path, groups=GROUPS) ->
                     caution = "*" if lookup[topic]["groups"][column].get("caveat") else ""
                     detail = (
                         f"{float(support['share']):.1%} | {support['claims']} claims | "
-                        f"{support['bundles']} bundles{caution}"
+                        f"{support['bundles']} source collections{caution}"
                     )
                     color = COLORS[column]
                 fig.text(x, y / height, detail, fontsize=8.5, color=color, va="top")
@@ -497,32 +497,31 @@ def plot_atlases(rows, labels, reviews, shares, figures: Path, groups=GROUPS) ->
         fig.text(
             0.055,
             0.72 / height,
-            "Numbers locate weighted topic centres in a reused 2D display, not cluster boundaries. "
-            "Clusters were fitted in higher-dimensional embeddings.",
+            "Numbers locate weighted topic centres, not cluster boundaries. "
+            "Topics group claims by their text, not by proximity on this two-dimensional map.",
             fontsize=9,
             color="#6B6B6B",
         )
         fig.text(
             0.055,
             0.48 / height,
-            "Dots are claims; shares use equal document / fallback-bundle weights. "
+            "Dots are claims; shares give equal weight to documents or source collections. "
             "Identity clusters are omitted without renormalizing. "
-            "* Cell-specific cautions are in the source-linked review.",
+            "* Topic-specific cautions appear in the accompanying report.",
             fontsize=9,
             color="#6B6B6B",
         )
         note = fig.text(
             0.055,
             0.24 / height,
-            "THE MARGIN OF ERROR | Sampled source-bound assistant synthesis, "
-            "not exhaustive beliefs "
-            "or a current consensus. Map emphasis is not policy agreement.",
+            "THE MARGIN OF ERROR | Summaries describe sampled documents, not exhaustive beliefs "
+            "or current consensus. Map emphasis is not policy agreement.",
             fontsize=9,
             color="#6B6B6B",
         )
         note.set_gid("source-note")
         stem = "all_groups" if pair is None else f"{pair[0]}_vs_{pair[1]}"
-        save_figure(fig, destination / stem, svg_dpi=100)
+        save_figure(fig, destination / stem)
         plt.close(fig)
     return expected
 
@@ -617,7 +616,7 @@ def report_section(corpus: Path, figures: Path) -> str:
             "",
             f"![{heading}: clusters and stated positions]({relative}.png)",
             "",
-            f"[Full-resolution PNG]({relative}.png) / [Vector SVG]({relative}.svg)",
+            f"[Full-resolution PNG]({relative}.png)",
             "",
         ]
     relative_data = f"../data/analysis/national_claims/{corpus.name}/topics/positions"

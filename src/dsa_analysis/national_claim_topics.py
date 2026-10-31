@@ -980,7 +980,7 @@ def plot_topics(directory: Path, figures: Path, labels: dict, settings: dict) ->
             fig.text(
                 0.08,
                 0.13,
-                "Topic support (documents / bundles): "
+                "Topic support (documents / source collections): "
                 + " | ".join(
                     f"{LABELS[group]} {selected[group, topic]['documents']} / "
                     f"{selected[group, topic]['bundles']}"
@@ -1005,8 +1005,7 @@ def plot_topics(directory: Path, figures: Path, labels: dict, settings: dict) ->
             fig = comparison_page(
                 "How the groups divide their attention",
                 f"Learned claim clusters | {view.capitalize()} sources | "
-                f"Page {page} / {math.ceil(len(topics) / page_size)} | "
-                "Labels: representative-evidence review",
+                f"Page {page} / {math.ceil(len(topics) / page_size)}",
                 [title(topic) for topic in chunk],
                 [(LABELS[group], COLORS[group], COLORS[group]) for group in groups],
                 [
@@ -1209,7 +1208,7 @@ def plot_piece(directory: Path, figures: Path, labels: dict, groups: tuple[str, 
             fig.text(
                 0.07,
                 0.17,
-                "Overall support (bundles): "
+                "Overall support (source collections): "
                 + " | ".join(f"{LABELS[group]} {overall[group]['bundles']}" for group in groups),
                 fontsize=7.5,
                 color="#6B6B6B",
@@ -1224,7 +1223,7 @@ def plot_piece(directory: Path, figures: Path, labels: dict, groups: tuple[str, 
             fig.text(
                 0.07,
                 0.095,
-                "Equal document / fallback-bundle weights. Language emphasis, not agreement; "
+                "Equal weight per document or source collection. Language emphasis, not agreement; "
                 "source composition varies.",
                 fontsize=7.5,
                 color="#6B6B6B",
@@ -1530,9 +1529,7 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
                 and (figures / view / "piece" / f"{topic}.png").exists()
             ):
                 stem = f"{relative_figures}/{view}/piece/{topic}"
-                lines.append(
-                    f"| {PIECE_TITLES[label['title']]} | [PNG]({stem}.png) / [SVG]({stem}.svg) |"
-                )
+                lines.append(f"| {PIECE_TITLES[label['title']]} | [PNG]({stem}.png) |")
         lines += [
             "#### Individual issue comparisons",
             "",
@@ -1551,8 +1548,7 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
             stem = f"{relative_figures}/{view}/issues/{topic}"
             lines.append(
                 f"| {escape(labels.get(topic, {}).get('title', topic))} | "
-                f"[PNG]({stem}_overall.png) / [SVG]({stem}_overall.svg) | "
-                f"[PNG]({stem}_time.png) / [SVG]({stem}_time.svg) |"
+                f"[PNG]({stem}_overall.png) | [PNG]({stem}_time.png) |"
             )
         example = figures / view / "issues/topic-003_time.png"
         if example.exists():
@@ -1573,7 +1569,7 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
     lines += [
         "### Publication figure versions",
         "",
-        "Default PNG/SVG figures use the warm #F7F5F0 Substack house style. "
+        "Publication figures are PNG-only and use the warm #F7F5F0 Substack house style. "
         "Matching #F5F5F5 versions for The Margin of Error are included under "
         "`figures/themarginoferror/` in the complete archive. Only background colors "
         "change between versions; plotted values, labels and dimensions are identical.",
@@ -1771,7 +1767,7 @@ def audit(corpus: Path) -> dict:
         paths += [
             path
             for path in (ROOT / "figures/national_claims" / corpus.name).rglob("*")
-            if path.suffix in {".png", ".svg"}
+            if path.suffix == ".png"
         ]
         paths += list(corpus.glob("*/density_region_evidence.csv"))
         return {
@@ -1813,7 +1809,7 @@ def audit(corpus: Path) -> dict:
         "publication": rendered["publication"],
         "substantive_artifacts_sha256": first,
         "qualification": (
-            "Exact offline replay of topic tables, preserved model evidence, and PNG/SVG "
+            "Exact offline replay of topic tables, preserved model evidence, and PNG "
             "figures and publication variants, with every combined-archive member verified. "
             "Existing CAP/KDE numerical results are reused for restyling. "
             "This does not certify semantic correctness."

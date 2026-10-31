@@ -159,7 +159,7 @@ A second offline run reproduced all 3,040 substantive files exactly and reused
 the GTE cache. The embedding and topic-score arrays also matched byte-for-byte.
 Replaying preserved model responses and correction records reproduced the
 candidate exports exactly. All 3,040 ZIP members matched current files; both tokenizers stayed
-below 256 tokens with no truncation. ZIP/SVG metadata and the analysis summary's
+below 256 tokens with no truncation. ZIP metadata and the analysis summary's
 cache-use indicator are not required to match byte-for-byte across runs.
 The [reproducibility audit](../data/analysis/national_claims/reproducibility_audit.json)
 records measured counts and selected input/output hashes. The passage baseline
@@ -283,7 +283,7 @@ or removes the corpus's unequal period and source-type composition.
 keywords, full representative claims and exact original evidence, strict and
 expanded shares, all ranked contrasts and warnings, candidate diagnostics,
 balanced-refit sensitivity, local label packets/responses, and input/output
-hashes. Both PNG and SVG charts show overall shares in aligned organization
+hashes. PNG charts show overall shares in aligned organization
 columns with direct values and common scales. Group-versus-rest and pairwise
 figures show **unsmoothed percentage-point differences**, not heatmap colors
 or smoothed log ratios. The complete smoothed log2 ratios, shares and support
@@ -310,9 +310,8 @@ representative contrast are exported in `expanded/density_region_evidence.csv`
 and its strict equivalent. Regional memberships were not saved; a representative
 score must not be presented as a regional mean. TF-IDF keywords are retrieval
 aids, not reviewed subjects or evidence of policy agreement. Density PNGs
-remain 200 DPI. Only the embedded point-cloud raster in density SVGs uses
-125 DPI; headings, labels and scales remain vector-based. This keeps the
-complete combined archive publishable without dropping claims or evidence.
+remain 200 DPI. All publication images are PNG-only, without dropping claims
+or source evidence from the complete combined archive.
 
 The `render` stage verifies the current source, embedding, numerical-code and
 output hashes before using labels. Stale or failed labels remain explicitly
@@ -320,10 +319,10 @@ provisional. Cached labels can replay without generating new responses.
 Reports lead with these concrete distributions and source-linked examples,
 while keeping the earlier CAP and KDE numerical results unchanged. The full claim/source
 ZIP contains actual complete texts, claims, provenance, topic-stage CSV/JSON
-evidence, all full-corpus PNG/SVG figures, and `report.md` with figure/data links
+evidence, all full-corpus PNG figures, and `report.md` with figure/data links
 rewritten for the extracted archive. This is one combined deliverable, not separate
-metadata-only and figure downloads. SVG identifiers and metadata are deterministic;
-the topic replay audit checks exact PNG/SVG bytes and every archive member.
+metadata-only and figure downloads. PNGs omit software and text metadata;
+the topic replay audit checks exact PNG bytes and every archive member.
 It does not retroactively extend the earlier KDE reproducibility certification:
 existing CAP/KDE figures are restyled from their saved numerical tables without
 refitting their models.
@@ -340,7 +339,7 @@ their reasons, not from the pooled corpus.
 The topic taxonomy is fixed, not refitted per period. Weights are recomputed
 within each group/period/view, including when a fallback bundle spans periods.
 Each topic has a standalone comparison bar chart and a standalone multi-group
-timeline in `<view>/issues/`, in PNG and SVG. These replace the large per-group
+timeline in `<view>/issues/`, in PNG. These replace the large per-group
 time heatmaps and crowded multi-topic trend pages. Missing documents leave
 gaps in lines, never zero topic shares. Topic titles wrap without truncation;
 each topic's timeline uses the same zero-based scale across organizations and
@@ -404,14 +403,19 @@ representative-packet review, not independent human certification of each cluste
 **Publication styling.** All current full-corpus figures use the restrained
 warm-paper palette from `hanshanley/uk_decline`, reference revision
 `2c9dbb0715dfd737b36484fc395578d7e8a669af`. Democratic blue, Republican
-terracotta and DSA gold remain consistent across charts. Default PNG/SVG
+terracotta and DSA gold remain consistent across charts. Default PNG
 figures have the Substack background `#F7F5F0`; corresponding website versions
 live under `figures/national_claims/full/themarginoferror/` with `#F5F5F5`.
-PNG background conversion changes only exactly matching opaque pixels;
-SVG copies replace the corresponding background fill. Data colors,
-dimensions, text and values are unchanged. PNG originals use 200 DPI;
-SVG identifiers and metadata are deterministic. Both versions, all temporal
+PNG background conversion changes only exactly matching opaque pixels.
+Data colors, dimensions, text and values are unchanged. PNG originals use
+200 DPI and omit software, author, comment and other text metadata. Both versions, all temporal
 evidence, actual claims and complete source texts enter the combined archive.
+
+Images use reader-facing titles, source notes and methodological caveats rather
+than internal review status, assistant-workflow language, local paths or file
+references. Full model and review provenance remains explicit in the report and
+evidence downloads. The publication exporter rejects non-PNG figure files,
+nonpublication PNG metadata and archives containing other figure formats.
 
 Standalone issue cards use a fixed 1800 × 1100-pixel canvas (9 × 5.5 inches),
 wrapped titles and compact method notes. Overall comparisons use slim,
@@ -516,9 +520,9 @@ locate weighted projected topic centres, not boundaries. Statements cover the
 observed documents across years, not a current consensus. Cell-specific caveats
 and all supporting claims appear in the report and complete downloads.
 
-The full ZIP now exceeds GitHub's repository-file limit and is therefore a
-single release asset, configured in `config/national_claim_publication_download.json`.
-No evidence or figures are removed. `claim_documents.download.json` records its
+The full PNG-only ZIP is a single release asset, configured in
+`config/national_claim_publication_download.json`. No source evidence is removed;
+superseded SVG copies are excluded. `claim_documents.download.json` records its
 size, SHA-256 and member count, and is excluded from the ZIP to avoid a circular
 checksum. The archive itself is generated locally and ignored by Git. The
 publication exporter reconstructs it from committed sources when absent and

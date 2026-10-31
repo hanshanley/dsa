@@ -637,7 +637,7 @@ def plot_density_details(result: dict, figures: Path, bound: float) -> list[dict
                 fig.text(
                     0.58,
                     y - 0.065,
-                    f"{region['passages']} claims | {region['bundles']} bundles | "
+                    f"{region['passages']} claims | {region['bundles']} source collections | "
                     f"Example ln density ratio {score:+.2f}",
                     fontsize=8,
                     color="#6B6B6B",
@@ -669,7 +669,7 @@ def plot_density_details(result: dict, figures: Path, bound: float) -> list[dict
                     }
                 )
             if not examples:
-                fig.text(0.58, 0.70, "No regions meet the saved support criteria.", fontsize=10)
+                fig.text(0.58, 0.70, "No regions meet the minimum evidence threshold.", fontsize=10)
             bar = fig.colorbar(
                 image,
                 cax=fig.add_axes((0.08, 0.205, 0.42, 0.018)),
@@ -702,7 +702,7 @@ def plot_density_details(result: dict, figures: Path, bound: float) -> list[dict
                 color="#6B6B6B",
             )
             note.set_gid("source-note")
-            save_figure(fig, destination / f"{pair}_{page + 1}", svg_dpi=125)
+            save_figure(fig, destination / f"{pair}_{page + 1}")
             plt.close(fig)
     return records
 
@@ -802,7 +802,7 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                     marker="x" if fallback else "o",
                     s=25 if fallback else 38,
                     alpha=0.65 if fallback else 1,
-                    label=f"{LABELS[group]}{' fallback' if fallback else ''}",
+                    label=f"{LABELS[group]}{' supplementary sources' if fallback else ''}",
                 )
         axis.set_xlim(1999.5, 2027)
         axis.set_ylabel("Change from preceding document\n(cosine distance)")
@@ -845,9 +845,9 @@ def plot_outputs(result: dict, coverage: list[dict], figures: Path = FIGURES) ->
                 s=32,
                 alpha=0.65,
                 label={
-                    "eligible": "Eligible source",
-                    "reused_document": "Reused text",
-                    "other": "Excluded / unresolved",
+                    "eligible": "Included source",
+                    "reused_document": "Repeated document",
+                    "other": "Not included",
                 }[status]
                 if index == 0
                 else None,

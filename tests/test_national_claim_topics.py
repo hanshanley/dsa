@@ -181,16 +181,33 @@ class ClaimTopicsTests(unittest.TestCase):
             stale = directory / "themarginoferror/stale.png"
             stale.parent.mkdir()
             stale.write_text("obsolete")
-            self.assertEqual(export_page_versions(directory)["page_assets"], 2)
+            (stale.parent / "stale.svg").write_text("<svg/>")
+            self.assertEqual(export_page_versions(directory)["page_assets"], 1)
             after = np.array(Image.open(directory / "themarginoferror/chart.png"))
             np.testing.assert_array_equal(after[0, 0], (*ImageColor.getrgb(PAGE_BG), 255))
             np.testing.assert_array_equal(after[0, 1:], before[0, 1:])
             np.testing.assert_array_equal(after[1], before[1])
-            self.assertEqual(
-                (directory / "themarginoferror/chart.svg").read_text(),
-                f'<svg fill="{PAGE_BG.lower()}"></svg>',
-            )
+            self.assertFalse(list(directory.rglob("*.svg")))
             self.assertFalse(stale.exists())
+
+    def test_public_figure_save_is_png_only_without_workflow_metadata(self):
+        import matplotlib.pyplot as plt
+        from PIL import Image
+
+        from dsa_analysis.national_claim_plot_style import save_figure
+
+        with tempfile.TemporaryDirectory() as temporary:
+            stem = Path(temporary) / "chart"
+            stem.with_suffix(".svg").write_text("<svg/>")
+            fig, axis = plt.subplots()
+            self.addCleanup(plt.close, fig)
+            axis.plot([0, 1], [0, 1])
+            save_figure(fig, stem)
+            self.assertFalse(stem.with_suffix(".svg").exists())
+            with Image.open(stem.with_suffix(".png")) as image:
+                self.assertEqual(image.format, "PNG")
+                self.assertFalse(set(image.info) - {"dpi"})
+                image.verify()
 
     def test_temporal_dates_gaps_weights_and_fixed_comparison_baselines(self):
         definitions = [

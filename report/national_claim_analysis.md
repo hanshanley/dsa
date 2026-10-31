@@ -35,25 +35,25 @@ The combined map colors claims by organization. Pairwise map colors show the uns
 
 ![All three groups: clusters and stated positions](../figures/national_claims/full/topics/positions/all_groups.png)
 
-[Full-resolution PNG](../figures/national_claims/full/topics/positions/all_groups.png) / [Vector SVG](../figures/national_claims/full/topics/positions/all_groups.svg)
+[Full-resolution PNG](../figures/national_claims/full/topics/positions/all_groups.png)
 
 **Democratic and Republican**
 
 ![Democratic and Republican: clusters and stated positions](../figures/national_claims/full/topics/positions/democratic_vs_republican.png)
 
-[Full-resolution PNG](../figures/national_claims/full/topics/positions/democratic_vs_republican.png) / [Vector SVG](../figures/national_claims/full/topics/positions/democratic_vs_republican.svg)
+[Full-resolution PNG](../figures/national_claims/full/topics/positions/democratic_vs_republican.png)
 
 **Democratic and DSA**
 
 ![Democratic and DSA: clusters and stated positions](../figures/national_claims/full/topics/positions/democratic_vs_dsa.png)
 
-[Full-resolution PNG](../figures/national_claims/full/topics/positions/democratic_vs_dsa.png) / [Vector SVG](../figures/national_claims/full/topics/positions/democratic_vs_dsa.svg)
+[Full-resolution PNG](../figures/national_claims/full/topics/positions/democratic_vs_dsa.png)
 
 **Republican and DSA**
 
 ![Republican and DSA: clusters and stated positions](../figures/national_claims/full/topics/positions/republican_vs_dsa.png)
 
-[Full-resolution PNG](../figures/national_claims/full/topics/positions/republican_vs_dsa.png) / [Vector SVG](../figures/national_claims/full/topics/positions/republican_vs_dsa.svg)
+[Full-resolution PNG](../figures/national_claims/full/topics/positions/republican_vs_dsa.png)
 
 [Full position review](../data/analysis/national_claims/full/topics/positions/group_positions.json) / [All sampled claims and source evidence](../data/analysis/national_claims/full/topics/positions/evidence.csv)
 
@@ -905,39 +905,39 @@ These six selected policy subjects pair the overall comparison with its timeline
 
 | Issue | Combined overall and timeline |
 |---|---|
-| Labor and unions | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-003.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-003.svg) |
-| Taxes on income, wealth and corporations | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-011.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-011.svg) |
-| Public education | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-012.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-012.svg) |
-| Reproductive rights and gender-affirming care | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-013.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-013.svg) |
-| Healthcare | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-018.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-018.svg) |
-| Israel-Palestine | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-022.png) / [SVG](../figures/national_claims/full/topics/expanded/piece/topic-022.svg) |
+| Labor and unions | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-003.png) |
+| Taxes on income, wealth and corporations | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-011.png) |
+| Public education | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-012.png) |
+| Reproductive rights and gender-affirming care | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-013.png) |
+| Healthcare | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-018.png) |
+| Israel-Palestine | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-022.png) |
 #### Individual issue comparisons
 
 Each standalone chart compares all organizations on one topic. Overall bars and observed-period lines are separate figures, suitable for individual embedding. Axes are shared across organizations and both views of the same topic; different issues can have different vertical scales. Missing evidence remains a gap. Actor and narrative topics retain their qualifications rather than being presented as coherent policy issues.
 
 | Topic | Overall comparison | Over time |
 |---|---|---|
-| Energy, Infrastructure, and Economic Development | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-001_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-001_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-001_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-001_time.svg) |
-| Community and Economic Support for Vulnerable Populations | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-002_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-002_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-002_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-002_time.svg) |
-| Labor Rights and Unionization | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-003_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-003_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-003_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-003_time.svg) |
-| Economic Growth and Development Narratives | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-004_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-004_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-004_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-004_time.svg) |
-| Rights, Freedoms, and Governmental Legitimacy | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-005_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-005_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-005_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-005_time.svg) |
-| American Leadership and National-Power Narratives | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-006_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-006_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-006_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-006_time.svg) |
-| Immigration Policy: Reform, Enforcement, and Detention | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-008_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-008_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-008_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-008_time.svg) |
-| Voting Rights, Election Rules, and Representation | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-009_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-009_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-009_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-009_time.svg) |
-| Presidential Records, Promises, and Critiques | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-010_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-010_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-010_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-010_time.svg) |
-| Taxation of Income, Wealth, and Corporations | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-011_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-011_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-011_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-011_time.svg) |
-| Public Education: Access, Standards, and Accountability | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-012_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-012_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-012_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-012_time.svg) |
-| Reproductive Rights and Gender-Affirming Care | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-013_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-013_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-013_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-013_time.svg) |
-| International Security and Cooperation Strategies | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-014_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-014_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-014_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-014_time.svg) |
-| U.S. Military Involvement and the War on Terror | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-015_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-015_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-015_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-015_time.svg) |
-| Opposition to Policies and Governing Authorities | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-016_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-016_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-016_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-016_time.svg) |
-| Healthcare System Goals and Approaches | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-018_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-018_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-018_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-018_time.svg) |
-| Economic hardship and financial insecurity | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-019_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-019_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-019_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-019_time.svg) |
-| Critiques and Alternatives to Capitalism | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-020_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-020_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-020_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-020_time.svg) |
-| Criminal Justice: Punishment, Accountability, and Prison Reform | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-021_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-021_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-021_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-021_time.svg) |
-| Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-022_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-022_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-022_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-022_time.svg) |
-| Trump Administration Records and Partisan Critiques | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-023_overall.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-023_overall.svg) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-023_time.png) / [SVG](../figures/national_claims/full/topics/expanded/issues/topic-023_time.svg) |
+| Energy, Infrastructure, and Economic Development | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-001_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-001_time.png) |
+| Community and Economic Support for Vulnerable Populations | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-002_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-002_time.png) |
+| Labor Rights and Unionization | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-003_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-003_time.png) |
+| Economic Growth and Development Narratives | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-004_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-004_time.png) |
+| Rights, Freedoms, and Governmental Legitimacy | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-005_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-005_time.png) |
+| American Leadership and National-Power Narratives | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-006_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-006_time.png) |
+| Immigration Policy: Reform, Enforcement, and Detention | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-008_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-008_time.png) |
+| Voting Rights, Election Rules, and Representation | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-009_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-009_time.png) |
+| Presidential Records, Promises, and Critiques | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-010_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-010_time.png) |
+| Taxation of Income, Wealth, and Corporations | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-011_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-011_time.png) |
+| Public Education: Access, Standards, and Accountability | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-012_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-012_time.png) |
+| Reproductive Rights and Gender-Affirming Care | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-013_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-013_time.png) |
+| International Security and Cooperation Strategies | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-014_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-014_time.png) |
+| U.S. Military Involvement and the War on Terror | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-015_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-015_time.png) |
+| Opposition to Policies and Governing Authorities | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-016_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-016_time.png) |
+| Healthcare System Goals and Approaches | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-018_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-018_time.png) |
+| Economic hardship and financial insecurity | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-019_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-019_time.png) |
+| Critiques and Alternatives to Capitalism | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-020_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-020_time.png) |
+| Criminal Justice: Punishment, Accountability, and Prison Reform | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-021_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-021_time.png) |
+| Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-022_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-022_time.png) |
+| Trump Administration Records and Partisan Critiques | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-023_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-023_time.png) |
 
 ![One-topic comparison over time](../figures/national_claims/full/topics/expanded/issues/topic-003_time.png)
 
@@ -957,39 +957,39 @@ These six selected policy subjects pair the overall comparison with its timeline
 
 | Issue | Combined overall and timeline |
 |---|---|
-| Labor and unions | [PNG](../figures/national_claims/full/topics/strict/piece/topic-003.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-003.svg) |
-| Taxes on income, wealth and corporations | [PNG](../figures/national_claims/full/topics/strict/piece/topic-011.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-011.svg) |
-| Public education | [PNG](../figures/national_claims/full/topics/strict/piece/topic-012.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-012.svg) |
-| Reproductive rights and gender-affirming care | [PNG](../figures/national_claims/full/topics/strict/piece/topic-013.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-013.svg) |
-| Healthcare | [PNG](../figures/national_claims/full/topics/strict/piece/topic-018.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-018.svg) |
-| Israel-Palestine | [PNG](../figures/national_claims/full/topics/strict/piece/topic-022.png) / [SVG](../figures/national_claims/full/topics/strict/piece/topic-022.svg) |
+| Labor and unions | [PNG](../figures/national_claims/full/topics/strict/piece/topic-003.png) |
+| Taxes on income, wealth and corporations | [PNG](../figures/national_claims/full/topics/strict/piece/topic-011.png) |
+| Public education | [PNG](../figures/national_claims/full/topics/strict/piece/topic-012.png) |
+| Reproductive rights and gender-affirming care | [PNG](../figures/national_claims/full/topics/strict/piece/topic-013.png) |
+| Healthcare | [PNG](../figures/national_claims/full/topics/strict/piece/topic-018.png) |
+| Israel-Palestine | [PNG](../figures/national_claims/full/topics/strict/piece/topic-022.png) |
 #### Individual issue comparisons
 
 Each standalone chart compares all organizations on one topic. Overall bars and observed-period lines are separate figures, suitable for individual embedding. Axes are shared across organizations and both views of the same topic; different issues can have different vertical scales. Missing evidence remains a gap. Actor and narrative topics retain their qualifications rather than being presented as coherent policy issues.
 
 | Topic | Overall comparison | Over time |
 |---|---|---|
-| Energy, Infrastructure, and Economic Development | [PNG](../figures/national_claims/full/topics/strict/issues/topic-001_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-001_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-001_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-001_time.svg) |
-| Community and Economic Support for Vulnerable Populations | [PNG](../figures/national_claims/full/topics/strict/issues/topic-002_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-002_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-002_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-002_time.svg) |
-| Labor Rights and Unionization | [PNG](../figures/national_claims/full/topics/strict/issues/topic-003_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-003_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-003_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-003_time.svg) |
-| Economic Growth and Development Narratives | [PNG](../figures/national_claims/full/topics/strict/issues/topic-004_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-004_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-004_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-004_time.svg) |
-| Rights, Freedoms, and Governmental Legitimacy | [PNG](../figures/national_claims/full/topics/strict/issues/topic-005_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-005_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-005_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-005_time.svg) |
-| American Leadership and National-Power Narratives | [PNG](../figures/national_claims/full/topics/strict/issues/topic-006_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-006_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-006_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-006_time.svg) |
-| Immigration Policy: Reform, Enforcement, and Detention | [PNG](../figures/national_claims/full/topics/strict/issues/topic-008_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-008_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-008_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-008_time.svg) |
-| Voting Rights, Election Rules, and Representation | [PNG](../figures/national_claims/full/topics/strict/issues/topic-009_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-009_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-009_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-009_time.svg) |
-| Presidential Records, Promises, and Critiques | [PNG](../figures/national_claims/full/topics/strict/issues/topic-010_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-010_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-010_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-010_time.svg) |
-| Taxation of Income, Wealth, and Corporations | [PNG](../figures/national_claims/full/topics/strict/issues/topic-011_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-011_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-011_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-011_time.svg) |
-| Public Education: Access, Standards, and Accountability | [PNG](../figures/national_claims/full/topics/strict/issues/topic-012_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-012_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-012_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-012_time.svg) |
-| Reproductive Rights and Gender-Affirming Care | [PNG](../figures/national_claims/full/topics/strict/issues/topic-013_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-013_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-013_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-013_time.svg) |
-| International Security and Cooperation Strategies | [PNG](../figures/national_claims/full/topics/strict/issues/topic-014_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-014_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-014_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-014_time.svg) |
-| U.S. Military Involvement and the War on Terror | [PNG](../figures/national_claims/full/topics/strict/issues/topic-015_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-015_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-015_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-015_time.svg) |
-| Opposition to Policies and Governing Authorities | [PNG](../figures/national_claims/full/topics/strict/issues/topic-016_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-016_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-016_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-016_time.svg) |
-| Healthcare System Goals and Approaches | [PNG](../figures/national_claims/full/topics/strict/issues/topic-018_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-018_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-018_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-018_time.svg) |
-| Economic hardship and financial insecurity | [PNG](../figures/national_claims/full/topics/strict/issues/topic-019_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-019_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-019_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-019_time.svg) |
-| Critiques and Alternatives to Capitalism | [PNG](../figures/national_claims/full/topics/strict/issues/topic-020_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-020_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-020_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-020_time.svg) |
-| Criminal Justice: Punishment, Accountability, and Prison Reform | [PNG](../figures/national_claims/full/topics/strict/issues/topic-021_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-021_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-021_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-021_time.svg) |
-| Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance | [PNG](../figures/national_claims/full/topics/strict/issues/topic-022_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-022_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-022_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-022_time.svg) |
-| Trump Administration Records and Partisan Critiques | [PNG](../figures/national_claims/full/topics/strict/issues/topic-023_overall.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-023_overall.svg) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-023_time.png) / [SVG](../figures/national_claims/full/topics/strict/issues/topic-023_time.svg) |
+| Energy, Infrastructure, and Economic Development | [PNG](../figures/national_claims/full/topics/strict/issues/topic-001_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-001_time.png) |
+| Community and Economic Support for Vulnerable Populations | [PNG](../figures/national_claims/full/topics/strict/issues/topic-002_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-002_time.png) |
+| Labor Rights and Unionization | [PNG](../figures/national_claims/full/topics/strict/issues/topic-003_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-003_time.png) |
+| Economic Growth and Development Narratives | [PNG](../figures/national_claims/full/topics/strict/issues/topic-004_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-004_time.png) |
+| Rights, Freedoms, and Governmental Legitimacy | [PNG](../figures/national_claims/full/topics/strict/issues/topic-005_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-005_time.png) |
+| American Leadership and National-Power Narratives | [PNG](../figures/national_claims/full/topics/strict/issues/topic-006_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-006_time.png) |
+| Immigration Policy: Reform, Enforcement, and Detention | [PNG](../figures/national_claims/full/topics/strict/issues/topic-008_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-008_time.png) |
+| Voting Rights, Election Rules, and Representation | [PNG](../figures/national_claims/full/topics/strict/issues/topic-009_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-009_time.png) |
+| Presidential Records, Promises, and Critiques | [PNG](../figures/national_claims/full/topics/strict/issues/topic-010_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-010_time.png) |
+| Taxation of Income, Wealth, and Corporations | [PNG](../figures/national_claims/full/topics/strict/issues/topic-011_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-011_time.png) |
+| Public Education: Access, Standards, and Accountability | [PNG](../figures/national_claims/full/topics/strict/issues/topic-012_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-012_time.png) |
+| Reproductive Rights and Gender-Affirming Care | [PNG](../figures/national_claims/full/topics/strict/issues/topic-013_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-013_time.png) |
+| International Security and Cooperation Strategies | [PNG](../figures/national_claims/full/topics/strict/issues/topic-014_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-014_time.png) |
+| U.S. Military Involvement and the War on Terror | [PNG](../figures/national_claims/full/topics/strict/issues/topic-015_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-015_time.png) |
+| Opposition to Policies and Governing Authorities | [PNG](../figures/national_claims/full/topics/strict/issues/topic-016_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-016_time.png) |
+| Healthcare System Goals and Approaches | [PNG](../figures/national_claims/full/topics/strict/issues/topic-018_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-018_time.png) |
+| Economic hardship and financial insecurity | [PNG](../figures/national_claims/full/topics/strict/issues/topic-019_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-019_time.png) |
+| Critiques and Alternatives to Capitalism | [PNG](../figures/national_claims/full/topics/strict/issues/topic-020_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-020_time.png) |
+| Criminal Justice: Punishment, Accountability, and Prison Reform | [PNG](../figures/national_claims/full/topics/strict/issues/topic-021_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-021_time.png) |
+| Israeli-Palestinian Conflict: Sovereignty, Rights, and Assistance | [PNG](../figures/national_claims/full/topics/strict/issues/topic-022_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-022_time.png) |
+| Trump Administration Records and Partisan Critiques | [PNG](../figures/national_claims/full/topics/strict/issues/topic-023_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-023_time.png) |
 
 ![One-topic comparison over time](../figures/national_claims/full/topics/strict/issues/topic-003_time.png)
 
@@ -2085,7 +2085,7 @@ DSA — [Workers Deserve More 2024](https://program.dsausa.org/wp-content/upload
 
 ### Publication figure versions
 
-Default PNG/SVG figures use the warm #F7F5F0 Substack house style. Matching #F5F5F5 versions for The Margin of Error are included under `figures/themarginoferror/` in the complete archive. Only background colors change between versions; plotted values, labels and dimensions are identical.
+Publication figures are PNG-only and use the warm #F7F5F0 Substack house style. Matching #F5F5F5 versions for The Margin of Error are included under `figures/themarginoferror/` in the complete archive. Only background colors change between versions; plotted values, labels and dimensions are identical.
 
 ### Topic summaries and evidence
 
@@ -2809,7 +2809,7 @@ The largest classified DSA topic is Social welfare (11.3%) in the expanded input
 
 Full extraction uses source chunks of at most 240 words, sentence-aware splitting of long paragraphs, and at most 1,200 preceding-context characters. The prompt requires preservation of actors, stance/modality, conditions, temporal scope and reported-speaker attribution; automated revision does not certify that every requirement was met. Source organization remains metadata rather than a mechanically repeated embedding prefix. Exact within-document claim duplicates are retained in downloads but excluded from fitting.
 
-- [Complete claim/source download, not metadata only](https://github.com/hanshanley/dsa/releases/download/claim-position-atlas-2026-10-31/claim_documents.zip)
+- [Complete claim/source download, not metadata only](https://github.com/hanshanley/dsa/releases/download/claim-public-pngs-2026-10-31/claim_documents.zip)
 - [Claims and exact supporting source offsets](../data/analysis/national_claims/full/claims.csv)
 - [Complete source texts](../data/analysis/national_claims/full/complete_sources.csv)
 - [Topic assignments](../data/analysis/national_claims/full/topic_assignments.csv)

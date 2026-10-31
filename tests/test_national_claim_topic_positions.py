@@ -182,6 +182,9 @@ class PositionAtlasTests(unittest.TestCase):
                     self.assertGreaterEqual(box.y0, 0)
                     self.assertLessEqual(box.y1, height)
                 captured[stem.name] = [text.get_text() for text in fig.texts]
+                for text in captured[stem.name]:
+                    for internal in ("assistant", "source-bound", "reused", "source-linked review"):
+                        self.assertNotIn(internal, text.lower())
 
             with patch("dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture):
                 stems = plot_atlases(
@@ -196,4 +199,7 @@ class PositionAtlasTests(unittest.TestCase):
             self.assertIn("-10.0 percentage points", captured["democratic_vs_republican"])
             self.assertIn("+10.0 percentage points", captured["democratic_vs_dsa"])
             self.assertIn("+20.0 percentage points", captured["republican_vs_dsa"])
+            self.assertTrue(
+                any("not exhaustive beliefs" in text for text in captured["all_groups"])
+            )
             self.assertFalse(plt.get_fignums())

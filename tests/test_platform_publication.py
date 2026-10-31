@@ -1,5 +1,5 @@
-import base64
 import csv
+import io
 import json
 import tempfile
 import unittest
@@ -115,9 +115,11 @@ class PlatformPublicationTest(unittest.TestCase):
                     )
 
     def prepare_export(self, omitted=()):
-        png = base64.b64decode(
-            "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII="
-        )
+        from PIL import Image
+
+        image = io.BytesIO()
+        Image.new("RGB", (1, 1)).save(image, format="PNG")
+        png = image.getvalue()
         audit = json.loads((self.data / "topics/replay_audit.json").read_text())
         for view in ("expanded", "strict"):
             for name in (
@@ -127,13 +129,13 @@ class PlatformPublicationTest(unittest.TestCase):
                 "issues/topic-001_overall",
                 "issues/topic-001_time",
             ):
-                for suffix in (".png", ".svg"):
+                for suffix in (".png",):
                     relative = f"{view}/{name}{suffix}"
                     if relative in omitted:
                         continue
                     figure = self.source / FIGURES / relative
                     figure.parent.mkdir(parents=True, exist_ok=True)
-                    figure.write_bytes(png if suffix == ".png" else b'<svg width="1" height="1"/>')
+                    figure.write_bytes(png)
                     audit["substantive_artifacts_sha256"][
                         figure.relative_to(self.source).as_posix()
                     ] = digest(figure)
@@ -170,7 +172,8 @@ class PlatformPublicationTest(unittest.TestCase):
             original = self.source / FIGURES / Path(path).relative_to("figures")
             self.assertEqual((output / path).read_bytes(), original.read_bytes())
             self.assertEqual(manifest["files"][path], digest(original))
-            self.assertTrue((output / path.replace(".png", ".svg")).is_file())
+            self.assertFalse((output / path.replace(".png", ".svg")).exists())
+        self.assertFalse(list(output.rglob("*.svg")))
 
     def test_complete_archive_rebuilds_offline_and_checks_published_checksum(self):
         from dsa_analysis.national_claim_corpus import bundle
@@ -221,7 +224,7 @@ class PlatformPublicationTest(unittest.TestCase):
     def test_detailed_density_figures_and_evidence_are_exported(self):
         self.prepare_export()
         audit = json.loads((self.data / "topics/replay_audit.json").read_text())
-        for suffix in (".png", ".svg"):
+        for suffix in (".png",):
             source = self.source / FIGURES / f"expanded/topic_distribution{suffix}"
             figure = (
                 self.source
@@ -259,9 +262,7 @@ class PlatformPublicationTest(unittest.TestCase):
         )
 
     def test_missing_issue_scope_is_rejected_without_partial_output(self):
-        self.prepare_export(
-            omitted=("strict/issues/topic-001_time.png", "strict/issues/topic-001_time.svg")
-        )
+        self.prepare_export(omitted=("strict/issues/topic-001_time.png",))
         output = Path(self.tmp.name) / "publication"
         with patch(
             "scripts.build_platform_publication.subprocess.check_output", side_effect=["", "a" * 40]
@@ -271,12 +272,37 @@ class PlatformPublicationTest(unittest.TestCase):
         self.assertFalse(output.exists())
         self.assertEqual(list(output.parent.glob(".platform-publication-*")), [])
 
-    def test_missing_original_svg_is_rejected(self):
-        self.prepare_export(omitted=("strict/issues/topic-001_time.svg",))
+    def test_stale_svg_source_or_archive_is_rejected(self):
+        self.prepare_export()
+        stale = self.source / FIGURES / "obsolete.svg"
+        stale.write_text("<svg/>")
+        with self.assertRaisesRegex(ValueError, "PNG-only"):
+            validate(self.source)
+        stale.unlink()
+        with zipfile.ZipFile(self.data / "claim_documents.zip", "a") as archive:
+            archive.writestr("figures/obsolete.svg", "<svg/>")
+        with self.assertRaisesRegex(ValueError, "PNG-only"):
+            validate(self.source)
+
+    def test_nonpublication_png_metadata_is_rejected(self):
+        from PIL import Image
+        from PIL.PngImagePlugin import PngInfo
+
+        self.prepare_export()
+        figure = self.source / FIGURES / "strict/issues/topic-001_time.png"
+        metadata = PngInfo()
+        metadata.add_text("Comment", "Internal render notes")
+        Image.new("RGB", (1, 1)).save(figure, pnginfo=metadata)
+        audit = json.loads((self.data / "topics/replay_audit.json").read_text())
+        audit["substantive_artifacts_sha256"][figure.relative_to(self.source).as_posix()] = digest(
+            figure
+        )
+        self.write_json("topics/replay_audit.json", audit)
+        self.archive()
         with patch(
             "scripts.build_platform_publication.subprocess.check_output", side_effect=["", "a" * 40]
         ):
-            with self.assertRaisesRegex(ValueError, "original SVG"):
+            with self.assertRaisesRegex(ValueError, "nonpublication metadata"):
                 export(self.source, Path(self.tmp.name) / "publication")
 
     def test_completed_corpus_contains_claim_wording_and_source_evidence(self):
@@ -335,9 +361,11 @@ class PlatformPublicationTest(unittest.TestCase):
             evolution_data(self.source)
 
     def test_unarchived_website_variants_are_rejected(self):
+        from PIL import Image
+
         path = self.source / WEBSITE_FIGURES / "expanded/topic_distribution.png"
         path.parent.mkdir(parents=True)
-        path.write_bytes(b"Changed website variant")
+        Image.new("RGB", (1, 1)).save(path)
         with self.assertRaisesRegex(ValueError, "stale website figure"):
             validate(self.source)
 

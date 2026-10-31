@@ -363,7 +363,7 @@ def plot_topics(shares: list[dict], figures: Path, *, groups: tuple[str, ...] = 
         )
         fig.texts[-2].set_text(
             "Same scale on every page. Unclassified claims remain in the denominator. "
-            "Equal document / fallback-bundle weights."
+            "Equal weight per document or source collection."
         )
         save_figure(fig, figures / f"topic_emphasis{'' if page == 0 else f'_{page + 1}'}")
         plt.close(fig)

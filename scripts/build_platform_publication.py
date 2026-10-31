@@ -109,7 +109,7 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
                 not (source / root / "positions" / f"{stem}{suffix}").is_file()
                 for root in (FIGURES, WEBSITE_FIGURES)
                 for stem in stems
-                for suffix in (".png", ".svg")
+                for suffix in (".png",)
             )
         ):
             raise ValueError(
@@ -133,10 +133,25 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
         or digest(archive_path) != expected_archive["sha256"]
     ):
         raise ValueError("Complete download does not match its published archive checksum")
+    from PIL import Image
+
+    for figure in (source / FIGURES.parent).rglob("*"):
+        if not figure.is_file():
+            continue
+        if figure.suffix != ".png":
+            raise ValueError("Publication figures must be PNG-only")
+        with Image.open(figure) as image:
+            if image.format != "PNG" or set(image.info) - {"dpi"}:
+                raise ValueError("Public PNG contains nonpublication metadata")
+            image.verify()
     with zipfile.ZipFile(archive_path) as archive:
         if archive.testzip() is not None:
             raise ValueError("Complete download failed ZIP integrity verification")
         members = set(archive.namelist())
+        if any(
+            name.startswith("figures/") and not name.endswith((".png", "/")) for name in members
+        ):
+            raise ValueError("Complete download figures must be PNG-only")
         for path in (data / "topics/positions").rglob("*"):
             if path.suffix in {".csv", ".json"}:
                 relative = path.relative_to(data).as_posix()
@@ -152,9 +167,7 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
             if name not in members or archive.read(name) != (data / name).read_bytes():
                 raise ValueError(f"Complete download contains stale content: {name}")
         for figure in (source / FIGURES.parent).rglob("*"):
-            if figure.suffix not in {".png", ".svg"} or figure.is_relative_to(
-                source / WEBSITE_FIGURES.parent
-            ):
+            if figure.suffix != ".png" or figure.is_relative_to(source / WEBSITE_FIGURES.parent):
                 continue
             relative = figure.relative_to(source).as_posix()
             member = f"figures/{figure.relative_to(source / FIGURES.parent).as_posix()}"
@@ -165,7 +178,7 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
             ):
                 raise ValueError(f"Complete download contains stale figure: {relative}")
         for figure in (source / WEBSITE_FIGURES.parent).rglob("*"):
-            if figure.suffix not in {".png", ".svg"}:
+            if figure.suffix != ".png":
                 continue
             relative = figure.relative_to(source / WEBSITE_FIGURES.parent).as_posix()
             member = f"figures/themarginoferror/{relative}"
@@ -261,7 +274,7 @@ def export(source: Path, output: Path) -> dict:
             for original in sorted((source / FIGURES.parent).glob("topic_emphasis*"))
         ]
         for original, figure_root, website_root in figure_sources:
-            if original.suffix not in {".png", ".svg"}:
+            if original.suffix != ".png":
                 continue
             parent = original.parent.relative_to(figure_root)
             view = parent.as_posix() if parent != Path(".") else "reference"
@@ -305,16 +318,13 @@ def export(source: Path, output: Path) -> dict:
             )
         if not required <= pngs:
             raise ValueError("Missing complete expanded/strict issue-level comparison charts")
-        if any(path.replace(".png", ".svg") not in files for path in pngs):
-            raise ValueError("Each comparison chart must have its original SVG download")
         if (source / WEBSITE_FIGURES).exists():
             for figure in figures:
                 relative = f"{figure['view']}/{figure['name']}"
-                for suffix in (".png", ".svg"):
-                    copy(
-                        website_originals[figure["path"]].with_suffix(suffix),
-                        f"website-figures/{relative}{suffix}",
-                    )
+                copy(
+                    website_originals[figure["path"]],
+                    f"website-figures/{relative}.png",
+                )
                 figure["display_path"] = f"website-figures/{relative}.png"
                 website = website_originals[figure["path"]]
                 if struct.unpack(">II", website.read_bytes()[16:24]) != (

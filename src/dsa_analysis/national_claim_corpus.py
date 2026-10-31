@@ -763,7 +763,7 @@ def bundle_members(
             {
                 f"figures/{path.relative_to(figures).as_posix()}": path
                 for path in figures.rglob("*")
-                if path.is_file() and path.suffix in {".png", ".svg"}
+                if path.is_file() and path.suffix == ".png"
             }
         )
     if report is not None:
