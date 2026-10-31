@@ -377,6 +377,11 @@ def export(source: Path, output: Path) -> dict:
             topic_summary=topics,
             topics=[label for label in labels if label.get("displayed", True)],
             figures=figures,
+            density_regions=[
+                row
+                for original in sorted((source / DATA).glob("*/density_region_evidence.csv"))
+                for row in rows(original)
+            ],
             downloads=downloads,
             evolution=evolution,
             positions=(

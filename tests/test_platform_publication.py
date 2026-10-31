@@ -162,6 +162,7 @@ class PlatformPublicationTest(unittest.TestCase):
         ):
             manifest = export(self.source, output)
         publication = json.loads((output / "analysis.json").read_text())
+        self.assertEqual(publication["density_regions"], [])
         issue_figures = [figure for figure in publication["figures"] if "/issues" in figure["view"]]
         self.assertEqual(len(issue_figures), 4)
         for figure in issue_figures:
@@ -251,6 +252,10 @@ class PlatformPublicationTest(unittest.TestCase):
         self.assertEqual(
             (output / "downloads/expanded/density_region_evidence.csv").read_bytes(),
             (self.data / "expanded/density_region_evidence.csv").read_bytes(),
+        )
+        self.assertEqual(
+            json.loads((output / "analysis.json").read_text())["density_regions"],
+            [{"example_text": "A complete claim.", "example_log_density_ratio": "1.25"}],
         )
 
     def test_missing_issue_scope_is_rejected_without_partial_output(self):
