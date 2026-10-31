@@ -89,22 +89,61 @@ def save_figure(fig, stem: Path) -> None:
     )
 
 
-def comparison_page(title, subtitle, names, columns, values, upper, *, differences=False):
+def comparison_page(
+    title, subtitle, names, columns, values, upper, *, differences=False, summaries=None
+):
     import matplotlib.pyplot as plt
     from matplotlib.ticker import FuncFormatter, MaxNLocator, PercentFormatter
 
-    fig = plt.figure(figsize=(12, 6.5))
+    wrapped = None
+    width, height = 12, 6.5
+    if summaries is not None:
+        if (
+            differences
+            or len(summaries) != len(columns)
+            or any(len(column) != len(names) for column in summaries)
+        ):
+            raise ValueError("Position summaries must match overall-share columns and rows")
+        wrapped = [
+            [fill(text, 42, break_long_words=False, break_on_hyphens=False) for text in column]
+            for column in summaries
+        ]
+        lines = max(len(text.splitlines()) for column in wrapped for text in column)
+        width = 5 + 5 * len(columns)
+        height = 3.2 + len(names) * max(0.65, 0.15 * lines + 0.1)
+    left = 0.7 / width if wrapped is not None else 0.055
+    bottom = 1.5 / height if wrapped is not None else 0.21
+    content_height = (height - 3.2) / height if wrapped is not None else 0.57
+    fig = plt.figure(figsize=(width, height))
     fig.set_gid("issue-card")
-    fig.text(0.055, 0.95, title, fontsize=17, weight="bold")
-    fig.text(0.055, 0.895, subtitle, fontsize=9, color="#6B6B6B")
-    labels = fig.add_axes((0.055, 0.21, 0.32, 0.57))
+    fig.text(
+        left, 1 - 0.45 / height if wrapped is not None else 0.95, title, fontsize=17, weight="bold"
+    )
+    fig.text(
+        left,
+        1 - 0.96 / height if wrapped is not None else 0.895,
+        subtitle,
+        fontsize=9,
+        color="#6B6B6B",
+    )
+    labels = fig.add_axes(
+        (left, bottom, 3.5 / width if wrapped is not None else 0.32, content_height)
+    )
     labels.set_ylim(len(names) - 0.5, -0.5)
     labels.set_axis_off()
     for index, name in enumerate(names):
         labels.text(0, index, fill(name, 38), va="center", fontsize=9)
     for index, (heading, positive, negative) in enumerate(columns):
-        width = 0.43 / len(columns)
-        axis = fig.add_axes((0.39 + index * 0.58 / len(columns), 0.21, width, 0.57))
+        axis = fig.add_axes(
+            (
+                (4.8 + index * 5) / width
+                if wrapped is not None
+                else 0.39 + index * 0.58 / len(columns),
+                bottom,
+                1.5 / width if wrapped is not None else 0.43 / len(columns),
+                content_height,
+            )
+        )
         axis.set_title(heading, loc="left", fontsize=10, weight="normal", pad=14)
         for y, (value, warning) in enumerate(values[index]):
             color = "#6B6B6B"
@@ -114,21 +153,42 @@ def comparison_page(title, subtitle, names, columns, values, upper, *, differenc
                 color = negative if differences and value < 0 else positive
                 if names[y] == "Unclassified":
                     color = "#AAA69E"
-                axis.barh(y, value, height=0.25, color=color, zorder=3)
+                axis.barh(
+                    y,
+                    value,
+                    height=0.12 * len(names) / (content_height * height)
+                    if wrapped is not None
+                    else 0.25,
+                    color=color,
+                    zorder=3,
+                )
                 detail = f"{value * 100:+.1f}" if differences else f"{value:.1%}"
                 detail += "*" if warning else ""
-            left = differences and value is not None and value < 0
+            leftward = differences and value is not None and value < 0
             axis.annotate(
                 detail,
                 (value if value is not None else 0, y),
-                xytext=(-4 if left else 4, 0),
+                xytext=(-4 if leftward else 4, 0),
                 textcoords="offset points",
-                ha="right" if left else "left",
+                ha="right" if leftward else "left",
                 fontsize=8,
                 va="center",
                 color=color,
                 annotation_clip=False,
+                gid="bar-value",
             )
+            if wrapped is not None:
+                axis.text(
+                    2 / 1.5,
+                    y,
+                    wrapped[index][y],
+                    transform=axis.get_yaxis_transform(),
+                    fontsize=9,
+                    va="center",
+                    color="#333333",
+                    linespacing=1.2,
+                    gid="group-position-summary",
+                )
         axis.set_ylim(len(names) - 0.5, -0.5)
         axis.set_xlim(-upper if differences else 0, upper)
         axis.set_yticks([])
@@ -145,8 +205,8 @@ def comparison_page(title, subtitle, names, columns, values, upper, *, differenc
         if differences:
             axis.axvline(0, color="#AAA69E", linewidth=0.7)
     fig.text(
-        0.055,
-        0.12,
+        left,
+        0.65 / height if wrapped is not None else 0.12,
         "Percentage-point gap: positive = first group has a larger share. "
         "* Support/sensitivity warning."
         if differences
@@ -155,8 +215,8 @@ def comparison_page(title, subtitle, names, columns, values, upper, *, differenc
         color="#6B6B6B",
     )
     note = fig.text(
-        0.055,
-        0.05,
+        left,
+        0.23 / height if wrapped is not None else 0.05,
         "THE MARGIN OF ERROR | National political documents. "
         "Language emphasis, not policy agreement.",
         fontsize=7.5,

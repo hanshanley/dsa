@@ -803,6 +803,8 @@ Largest absolute shares across all observed periods (not necessarily the most di
 
 Identity and narrative clusters describe rhetoric, not substantive policy priorities. Pooled shares mix periods and document genres; read the period analyses below before interpreting them as enduring differences.
 
+The overall pages place each group's evidence-reviewed summary beside its bars. These describe sampled documents across years, not a current consensus; the group-position section retains topic caveats and source-linked claims.
+
 ![Topic shares, expanded](../figures/national_claims/full/topics/expanded/topic_distribution.png)
 
 ![Topic shares, expanded](../figures/national_claims/full/topics/expanded/topic_distribution_2.png)
@@ -2809,7 +2811,7 @@ The largest classified DSA topic is Social welfare (11.3%) in the expanded input
 
 Full extraction uses source chunks of at most 240 words, sentence-aware splitting of long paragraphs, and at most 1,200 preceding-context characters. The prompt requires preservation of actors, stance/modality, conditions, temporal scope and reported-speaker attribution; automated revision does not certify that every requirement was met. Source organization remains metadata rather than a mechanically repeated embedding prefix. Exact within-document claim duplicates are retained in downloads but excluded from fitting.
 
-- [Complete claim/source download, not metadata only](https://github.com/hanshanley/dsa/releases/download/claim-public-pngs-2026-10-31/claim_documents.zip)
+- [Complete claim/source download, not metadata only](https://github.com/hanshanley/dsa/releases/download/claim-beside-bar-summaries-2026-10-31/claim_documents.zip)
 - [Claims and exact supporting source offsets](../data/analysis/national_claims/full/claims.csv)
 - [Complete source texts](../data/analysis/national_claims/full/complete_sources.csv)
 - [Topic assignments](../data/analysis/national_claims/full/topic_assignments.csv)

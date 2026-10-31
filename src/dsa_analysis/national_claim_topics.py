@@ -901,6 +901,12 @@ def plot_topics(directory: Path, figures: Path, labels: dict, settings: dict) ->
     ratios = read_rows(directory / "contrasts.csv")
     groups = tuple(json.loads((directory / "fit_manifest.json").read_text())["summary"]["groups"])
     keywords = read_rows(directory / "keywords.csv")
+    positions = {}
+    if (directory / "positions/selection_manifest.json").exists():
+        from .national_claim_topic_positions import reviewed_positions
+
+        _, reviews = reviewed_positions(directory.parent)
+        positions = {review["topic_id"]: review["groups"] for review in reviews}
 
     def title(topic):
         if topic == NOISE:
@@ -925,6 +931,8 @@ def plot_topics(directory: Path, figures: Path, labels: dict, settings: dict) ->
         row["topic_id"] == NOISE and float(row["share"] or 0) > 0 for row in shares
     ):
         topics.append(NOISE)
+    if positions and (set(topics) - {NOISE}) - set(positions):
+        raise ValueError("Missing reviewed group positions for displayed topics")
     plt.rcParams.update(PLOT_STYLE)
     page_size = min(settings["topics_per_page"], 8)
     for view in ("expanded", "strict"):
@@ -1021,10 +1029,27 @@ def plot_topics(directory: Path, figures: Path, labels: dict, settings: dict) ->
                     for group in groups
                 ],
                 max(0.05, np.ceil(maximum * 20) / 20),
+                summaries=[
+                    [
+                        positions[topic][group]["summary"]
+                        if topic in positions
+                        else "Unclustered language; no group position inferred."
+                        for topic in chunk
+                    ]
+                    for group in groups
+                ]
+                if positions and view == "expanded"
+                else None,
             )
             fig.texts[-2].set_text(
                 "Weighted shares; identity claims remain in denominators. "
                 "Same scale across columns, views and pages."
+                + (
+                    "\nSummaries describe sampled documents across years, not every member's "
+                    "views or a current consensus. Sources and topic caveats are in the download."
+                    if positions and view == "expanded"
+                    else ""
+                )
             )
             save_figure(fig, destination / f"topic_distribution{suffix}")
             plt.close(fig)
@@ -1420,6 +1445,13 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
             "analyses below before interpreting them as enduring differences.",
             "",
         ]
+        if view == "expanded" and (directory / "positions/selection_manifest.json").exists():
+            lines += [
+                "The overall pages place each group's evidence-reviewed summary beside its "
+                "bars. These describe sampled documents across years, not a current consensus; "
+                "the group-position section retains topic caveats and source-linked claims.",
+                "",
+            ]
         for path in sorted((figures / view).glob("topic_distribution*.png")):
             lines += [f"![Topic shares, {view}]({relative_figures}/{view}/{path.name})", ""]
         for path in sorted((figures / view).glob("vs_rest_emphasis*.png")):

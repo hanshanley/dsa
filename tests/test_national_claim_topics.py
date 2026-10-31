@@ -424,6 +424,71 @@ class ClaimTopicsTests(unittest.TestCase):
         self.assertTrue(all(len(columns) == 3 for columns in captured))
         self.assertEqual(len(set(captured[0] + captured[1])), 6)
 
+    def test_overviews_use_reviewed_group_summaries_only_for_expanded_sources(self):
+        labels = {"health": {"title": "Health"}, "labor": {"title": "Labor"}}
+        claims = [row(f"{group}-{topic}", group) for group in GROUPS for topic in labels]
+        shares = distributions(claims, list(labels) * 3, GROUPS)
+        reviews = [
+            {
+                "topic_id": topic,
+                "groups": {
+                    group: {"summary": f"Observed {group} documents discuss {topic}."}
+                    for group in GROUPS
+                },
+            }
+            for topic in labels
+        ]
+        captured = {}
+
+        def capture(fig, stem):
+            captured[stem.relative_to(directory).as_posix()] = [
+                text.get_text().replace("\n", " ")
+                for axis in fig.axes
+                for text in axis.texts
+                if text.get_gid() == "group-position-summary"
+            ]
+
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            write_rows(directory / "shares.csv", shares)
+            write_rows(directory / "contrasts.csv", contrasts(shares, GROUPS, 0.0001))
+            write_rows(directory / "keywords.csv", [])
+            write_json(directory / "fit_manifest.json", {"summary": {"groups": list(GROUPS)}})
+            (directory / "positions").mkdir()
+            write_json(directory / "positions/selection_manifest.json", {})
+            before = (directory / "shares.csv").read_bytes()
+            with patch(
+                "dsa_analysis.national_claim_topic_positions.reviewed_positions",
+                return_value=({}, reviews),
+            ) as reviewed:
+                with patch(
+                    "dsa_analysis.national_claim_plot_style.save_figure", side_effect=capture
+                ):
+                    plot_topics(directory, directory, labels, config())
+            reviewed.assert_called_once_with(directory.parent)
+            self.assertEqual((directory / "shares.csv").read_bytes(), before)
+            with patch(
+                "dsa_analysis.national_claim_topic_positions.reviewed_positions",
+                return_value=({}, reviews[:1]),
+            ):
+                with self.assertRaisesRegex(ValueError, "Missing reviewed group positions"):
+                    plot_topics(directory, directory, labels, config())
+        self.assertEqual(
+            captured["expanded/topic_distribution"],
+            [
+                f"Observed {group} documents discuss {topic}."
+                for group in GROUPS
+                for topic in labels
+            ],
+        )
+        self.assertTrue(
+            all(
+                not summaries
+                for name, summaries in captured.items()
+                if name != "expanded/topic_distribution"
+            )
+        )
+
     def test_identity_topics_leave_denominators_intact_and_remove_stale_figures(self):
         from dsa_analysis.national_claim_plot_style import export_page_versions
 

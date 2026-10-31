@@ -133,6 +133,64 @@ class ClaimAnalysisTests(unittest.TestCase):
                 finally:
                     plt.close(fig)
 
+    def test_position_summaries_follow_their_own_bars_without_collisions(self):
+        import matplotlib.pyplot as plt
+
+        from dsa_analysis.national_claim_plot_style import comparison_page
+
+        summaries = [
+            [
+                "Documents support expanded public services and affordable housing, "
+                "with targeted assistance for families and vulnerable communities.",
+                "Documents support voting access and stronger representation.",
+            ]
+            for _ in range(3)
+        ]
+        fig = comparison_page(
+            "Attention and positions",
+            "Observed documents",
+            ["Community support", "Voting rights"],
+            [("Democratic", "blue", "blue"), ("Republican", "red", "red"), ("DSA", "gold", "gold")],
+            [[(0.15, False), (0.005, False)] for _ in range(3)],
+            0.15,
+            summaries=summaries,
+        )
+        try:
+            fig.canvas.draw()
+            renderer = fig.canvas.get_renderer()
+            for index, axis in enumerate(fig.axes[1:]):
+                numbers = [text for text in axis.texts if text.get_gid() == "bar-value"]
+                statements = [
+                    text for text in axis.texts if text.get_gid() == "group-position-summary"
+                ]
+                for y, (number, statement) in enumerate(zip(numbers, statements)):
+                    self.assertEqual(statement.get_text().replace("\n", " "), summaries[index][y])
+                    bounds = statement.get_window_extent(renderer)
+                    self.assertGreater(bounds.x0, number.get_window_extent(renderer).x1)
+                    self.assertAlmostEqual(
+                        (bounds.y0 + bounds.y1) / 2, axis.transData.transform((0, y))[1]
+                    )
+                    right = (
+                        fig.axes[index + 2].get_window_extent(renderer).x0
+                        if index + 2 < len(fig.axes)
+                        else fig.bbox.width
+                    )
+                    self.assertLess(bounds.x1, right)
+                first, second = [text.get_window_extent(renderer) for text in statements]
+                self.assertLess(second.y1, first.y0)
+        finally:
+            plt.close(fig)
+        with self.assertRaisesRegex(ValueError, "columns and rows"):
+            comparison_page(
+                "Attention",
+                "",
+                ["Health"],
+                [("Democratic", "blue", "blue")],
+                [[(0.1, False)]],
+                0.15,
+                summaries=[[]],
+            )
+
     def test_adapter_embeds_claims_not_evidence_and_checks_exact_provenance(self):
         source_rows = sources()
         block = build_blocks(source_rows, coverage(source_rows))[0]

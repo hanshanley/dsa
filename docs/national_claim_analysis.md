@@ -520,6 +520,13 @@ locate weighted projected topic centres, not boundaries. Statements cover the
 observed documents across years, not a current consensus. Cell-specific caveats
 and all supporting claims appear in the report and complete downloads.
 
+The three expanded-corpus topic-distribution pages also place these same 63
+validated group summaries to the right of each group's bars, with values still
+immediately beside the bar tips. Wider canvases and row spacing accommodate the
+complete summaries without shortening away their qualifications. The strict
+view, CAP charts and share-gap charts do not reuse expanded-corpus positions.
+No new stance inference or evidence selection is performed for these annotations.
+
 The full PNG-only ZIP is a single release asset, configured in
 `config/national_claim_publication_download.json`. No source evidence is removed;
 superseded SVG copies are excluded. `claim_documents.download.json` records its
