@@ -11,6 +11,7 @@ from scripts.build_platform_publication import (
     DATA,
     FIGURES,
     WEBSITE_FIGURES,
+    density_map_data,
     digest,
     evolution_data,
     export,
@@ -31,6 +32,30 @@ class PlatformPublicationTest(unittest.TestCase):
         ]
         self.write_csv("analysis_claims.csv", claims)
         self.write_csv("claims.csv", claims)
+        (self.data / "expanded").mkdir()
+        self.write_csv(
+            "topics/assignments.csv",
+            [
+                dict(claim_id=row["claim_id"], topic_id="topic-001", group=row["group"])
+                for row in claims
+            ],
+        )
+        self.write_csv(
+            "expanded/scored_passages.csv",
+            [
+                dict(
+                    claim_id=row["claim_id"],
+                    group=row["group"],
+                    umap_x=index + 0.25,
+                    umap_y=index + 0.5,
+                    democratic_log_density=-1,
+                    republican_log_density=-2,
+                    dsa_log_density=-3,
+                )
+                for index, row in enumerate(claims)
+            ],
+        )
+        (self.data / "expanded/density_region_evidence.csv").write_text("color_bound\n")
         self.write_csv(
             "complete_sources.csv",
             [dict(group=row["group"], complete_text="Complete policy document.") for row in claims],
@@ -91,6 +116,38 @@ class PlatformPublicationTest(unittest.TestCase):
 
     def write_json(self, name, value):
         (self.data / name).write_text(json.dumps(value), encoding="utf-8")
+
+    def test_density_positions_preserve_reviewed_summaries_and_support(self):
+        (self.data / "topics/positions").mkdir()
+        groups = {
+            group: dict(
+                summary=f"{group} source position.",
+                caveat="Selected evidence.",
+                supporting_claim_ids=[group],
+            )
+            for group in ("democratic", "republican", "dsa")
+        }
+        pairs = {
+            "democratic_vs_republican": dict(
+                summary="Reviewed contrast.", supporting_claim_ids=["democratic", "republican"]
+            )
+        }
+        self.write_json(
+            "topics/positions/group_positions.json",
+            [dict(topic_id="topic-001", groups=groups, pairs=pairs)],
+        )
+        labels = json.loads((self.data / "topics/topic_labels.json").read_text())
+        topic = density_map_data(self.source, labels, [])["topics"][0]
+        self.assertEqual(topic["positions"], groups)
+        self.assertEqual(topic["differences"], pairs)
+        self.assertEqual({example["claim_id"] for example in topic["examples"]}, set(groups))
+        groups["democratic"]["supporting_claim_ids"] = ["dsa"]
+        self.write_json(
+            "topics/positions/group_positions.json",
+            [dict(topic_id="topic-001", groups=groups, pairs=pairs)],
+        )
+        with self.assertRaisesRegex(ValueError, "evidence issue/group mismatch"):
+            density_map_data(self.source, labels, [])
 
     def write_csv(self, name, records):
         with (self.data / name).open("w", newline="", encoding="utf-8") as stream:
@@ -197,11 +254,12 @@ class PlatformPublicationTest(unittest.TestCase):
     def test_excluded_labels_stay_in_downloads_but_not_publication_topics(self):
         self.prepare_export()
         labels = json.loads((self.data / "topics/topic_labels.json").read_text())
-        labels.append({**labels[0], "topic_id": "identity", "displayed": False})
+        labels.append(
+            {**labels[0], "topic_id": "identity", "displayed": False, "supporting_claim_ids": []}
+        )
         self.write_json("topics/topic_labels.json", labels)
         with (self.data / "topics/representatives.csv").open() as stream:
             representatives = list(csv.DictReader(stream))
-        representatives.append({**representatives[0], "topic_id": "identity"})
         self.write_csv("topics/representatives.csv", representatives)
         summary = json.loads((self.data / "topics/summary.json").read_text())
         summary.update(topics=2, reviewed_labels=2)
@@ -238,7 +296,6 @@ class PlatformPublicationTest(unittest.TestCase):
                 digest(figure)
             )
         self.write_json("topics/replay_audit.json", audit)
-        (self.data / "expanded").mkdir()
         self.write_csv(
             "expanded/density_region_evidence.csv",
             [{"example_text": "A complete claim.", "example_log_density_ratio": 1.25}],
@@ -260,6 +317,44 @@ class PlatformPublicationTest(unittest.TestCase):
             json.loads((output / "analysis.json").read_text())["density_regions"],
             [{"example_text": "A complete claim.", "example_log_density_ratio": "1.25"}],
         )
+
+    def test_density_map_preserves_coordinates_topics_and_paired_source_claims(self):
+        self.write_csv("expanded/density_region_evidence.csv", [dict(color_bound=4.0)])
+        labels = json.loads((self.data / "topics/topic_labels.json").read_text())
+        with (self.data / "topics/representatives.csv").open() as stream:
+            representatives = list(csv.DictReader(stream))
+        result = density_map_data(self.source, labels, representatives)
+        self.assertEqual(result["points"][0], ["democratic", 0.25, 0.5, 0, 0, -1.0, -2.0, -3.0])
+        self.assertEqual(result["color_bound"], 4.0)
+        self.assertEqual(
+            {row["group"] for row in result["topics"][0]["examples"]},
+            {"democratic", "republican", "dsa"},
+        )
+        self.assertTrue(
+            all(row["evidence"] == "Source text." for row in result["topics"][0]["examples"])
+        )
+
+    def test_density_map_rejects_missing_assignments_and_nonfinite_coordinates(self):
+        labels = json.loads((self.data / "topics/topic_labels.json").read_text())
+        self.write_csv(
+            "topics/assignments.csv",
+            [dict(claim_id="democratic", topic_id="topic-001", group="democratic")],
+        )
+        with self.assertRaisesRegex(ValueError, "every unique eligible claim"):
+            density_map_data(self.source, labels, [])
+        self.write_csv(
+            "topics/assignments.csv",
+            [
+                dict(claim_id=group, topic_id="topic-001", group=group)
+                for group in ("democratic", "republican", "dsa")
+            ],
+        )
+        with (self.data / "expanded/scored_passages.csv").open() as stream:
+            scored = list(csv.DictReader(stream))
+        scored[0]["umap_x"] = "nan"
+        self.write_csv("expanded/scored_passages.csv", scored)
+        with self.assertRaisesRegex(ValueError, "Non-finite"):
+            density_map_data(self.source, labels, [])
 
     def test_missing_issue_scope_is_rejected_without_partial_output(self):
         self.prepare_export(omitted=("strict/issues/topic-001_time.png",))
