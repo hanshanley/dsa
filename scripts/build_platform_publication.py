@@ -167,6 +167,7 @@ def export(source: Path, output: Path) -> dict:
             "--",
             str(DATA),
             str(FIGURES),
+            str(WEBSITE_FIGURES),
             "report/national_claim_analysis.md",
         ],
         text=True,
@@ -205,9 +206,28 @@ def export(source: Path, output: Path) -> dict:
                         height=height,
                     )
                 )
-        expected = 26 + (2 * len(evolution["periods"]) if evolution else 0)
-        if len(figures) != expected or len(files) != 2 * expected:
-            raise ValueError("Expected the complete expanded and strict PNG/SVG figure set")
+        pngs = {figure["path"] for figure in figures}
+        required = {
+            f"figures/{view}/issues/{label['topic_id']}_{kind}.png"
+            for label in labels
+            for view in ("expanded", "strict")
+            for kind in ("overall", "time")
+        }
+        required.update(
+            f"figures/{view}/{name}.png"
+            for view in ("expanded", "strict")
+            for name in ("topic_distribution", "vs_rest_emphasis", "pairwise_emphasis")
+        )
+        if evolution:
+            required.update(
+                f"figures/evolution/{view}/period_{period['period']}.png"
+                for period in evolution["periods"]
+                for view in ("expanded", "strict")
+            )
+        if not required <= pngs:
+            raise ValueError("Missing complete expanded/strict issue-level comparison charts")
+        if any(path.replace(".png", ".svg") not in files for path in pngs):
+            raise ValueError("Each comparison chart must have its original SVG download")
         if (source / WEBSITE_FIGURES).exists():
             for figure in figures:
                 relative = f"{figure['view']}/{figure['name']}"

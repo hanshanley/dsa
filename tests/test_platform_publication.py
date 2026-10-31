@@ -1,12 +1,15 @@
+import base64
 import csv
 import json
 import tempfile
 import unittest
 import zipfile
 from pathlib import Path
+from unittest.mock import patch
 
 from scripts.build_platform_publication import (
     DATA,
+    FIGURES,
     WEBSITE_FIGURES,
     digest,
     evolution_data,
@@ -105,6 +108,89 @@ class PlatformPublicationTest(unittest.TestCase):
                 "topics/representatives.csv",
             ]:
                 archive.write(self.data / name, name)
+            for figure in (self.source / FIGURES).rglob("*"):
+                if figure.is_file():
+                    archive.write(
+                        figure, f"figures/topics/{figure.relative_to(self.source / FIGURES)}"
+                    )
+
+    def prepare_export(self, omitted=()):
+        png = base64.b64decode(
+            "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII="
+        )
+        audit = json.loads((self.data / "topics/replay_audit.json").read_text())
+        for view in ("expanded", "strict"):
+            for name in (
+                "topic_distribution",
+                "vs_rest_emphasis",
+                "pairwise_emphasis",
+                "issues/topic-001_overall",
+                "issues/topic-001_time",
+            ):
+                for suffix in (".png", ".svg"):
+                    relative = f"{view}/{name}{suffix}"
+                    if relative in omitted:
+                        continue
+                    figure = self.source / FIGURES / relative
+                    figure.parent.mkdir(parents=True, exist_ok=True)
+                    figure.write_bytes(png if suffix == ".png" else b'<svg width="1" height="1"/>')
+                    audit["substantive_artifacts_sha256"][
+                        figure.relative_to(self.source).as_posix()
+                    ] = digest(figure)
+        self.write_json("topics/replay_audit.json", audit)
+        for name in (
+            "claims.jsonl",
+            "source_coverage.csv",
+            "topics/contrasts.csv",
+            "topics/temporal_shares.csv",
+            "topics/temporal_contrasts.csv",
+            "topics/temporal_coverage.csv",
+            "topics/label_review.json",
+            "topics/candidate_fits.csv",
+            "topics/balanced_refits.csv",
+        ):
+            (self.data / name).write_text("{}\n" if name.endswith(".json") else "")
+        (self.source / "report").mkdir()
+        (self.source / "report/national_claim_analysis.md").write_text("Fixture methods.")
+        self.archive()
+
+    def test_issue_figures_export_with_originals_and_hashes(self):
+        self.prepare_export()
+        output = Path(self.tmp.name) / "publication"
+        with patch(
+            "scripts.build_platform_publication.subprocess.check_output", side_effect=["", "a" * 40]
+        ):
+            manifest = export(self.source, output)
+        publication = json.loads((output / "analysis.json").read_text())
+        issue_figures = [figure for figure in publication["figures"] if "/issues" in figure["view"]]
+        self.assertEqual(len(issue_figures), 4)
+        for figure in issue_figures:
+            path = figure["path"]
+            original = self.source / FIGURES / Path(path).relative_to("figures")
+            self.assertEqual((output / path).read_bytes(), original.read_bytes())
+            self.assertEqual(manifest["files"][path], digest(original))
+            self.assertTrue((output / path.replace(".png", ".svg")).is_file())
+
+    def test_missing_issue_scope_is_rejected_without_partial_output(self):
+        self.prepare_export(
+            omitted=("strict/issues/topic-001_time.png", "strict/issues/topic-001_time.svg")
+        )
+        output = Path(self.tmp.name) / "publication"
+        with patch(
+            "scripts.build_platform_publication.subprocess.check_output", side_effect=["", "a" * 40]
+        ):
+            with self.assertRaisesRegex(ValueError, "issue-level comparison charts"):
+                export(self.source, output)
+        self.assertFalse(output.exists())
+        self.assertEqual(list(output.parent.glob(".platform-publication-*")), [])
+
+    def test_missing_original_svg_is_rejected(self):
+        self.prepare_export(omitted=("strict/issues/topic-001_time.svg",))
+        with patch(
+            "scripts.build_platform_publication.subprocess.check_output", side_effect=["", "a" * 40]
+        ):
+            with self.assertRaisesRegex(ValueError, "original SVG"):
+                export(self.source, Path(self.tmp.name) / "publication")
 
     def test_completed_corpus_contains_claim_wording_and_source_evidence(self):
         summary, _, labels, representatives, _ = validate(self.source)
