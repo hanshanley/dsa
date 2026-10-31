@@ -3,13 +3,17 @@ import re
 import tempfile
 import unittest
 import zipfile
+from copy import deepcopy
 from pathlib import Path
 from unittest.mock import patch
 
 from dsa_analysis.national_claim_corpus import (
     MAX_CHUNK_WORDS,
+    apply_within_chunk_duplicates,
     bounded_units,
     build_blocks,
+    bundle,
+    export_results,
     extract_corpus,
     load_source_repairs,
     make_prompt,
@@ -18,6 +22,7 @@ from dsa_analysis.national_claim_corpus import (
     source_repair_basis,
     standardize_stance,
     validate_response,
+    within_chunk_duplicate_basis,
 )
 from dsa_analysis.national_platforms import digest, read_rows, write_rows
 from tests.test_national_claims import coverage, sources
@@ -40,6 +45,179 @@ def response(**updates):
 
 
 class ClaimCorpusTests(unittest.TestCase):
+    def duplicate_rows(self):
+        return [
+            {
+                "claim_id": f"block-{number:03d}",
+                "block_id": "block",
+                "document_id": "document",
+                "group": "dsa",
+                "source_sha256": "source",
+                "scoped_text_sha256": "text",
+                "claim_text": text,
+                "evidence": "Universal care, housing, and conditional clinic funding.",
+                "source_start": 0,
+                "source_end": 65,
+                "analysis_eligible": True,
+                "duplicate_of": "",
+            }
+            for number, text in enumerate(
+                (
+                    "Support for universal health care.",
+                    "Support for universal medical care.",
+                    "Support for public housing.",
+                    "Support for funding two clinics if Congress approves.",
+                    "Opposition to funding two clinics.",
+                    "Support for funding three clinics.",
+                ),
+                1,
+            )
+        ]
+
+    def duplicate_review(self, rows):
+        return {
+            "schema_version": 1,
+            "records": [
+                {
+                    "block_id": "block",
+                    "basis_sha256": within_chunk_duplicate_basis(rows),
+                    "reviewer": "source_bound_assistant_review",
+                    "duplicates": [
+                        {
+                            "claim_id": "block-002",
+                            "duplicate_of": "block-001",
+                            "notes": "Same universal-care commitment; distinct policies retained.",
+                        }
+                    ],
+                }
+            ],
+        }
+
+    def test_reviewed_chunk_duplicates_preserve_distinct_claims_and_originals(self):
+        rows = self.duplicate_rows()
+        original = deepcopy(rows)
+        review = self.duplicate_review(rows)
+        self.assertEqual(apply_within_chunk_duplicates(rows, review), 1)
+        self.assertEqual(rows[1]["duplicate_of"], rows[0]["claim_id"])
+        self.assertFalse(rows[1]["analysis_eligible"])
+        self.assertEqual(rows[2:], original[2:])
+        self.assertEqual([row["claim_text"] for row in rows], [r["claim_text"] for r in original])
+        empty = self.duplicate_review(original)
+        empty["records"][0]["duplicates"] = []
+        self.assertEqual(apply_within_chunk_duplicates(original, empty), 0)
+        self.assertEqual(original, self.duplicate_rows())
+
+    def test_chunk_duplicate_reviews_reject_stale_scope_exclusions_and_chains(self):
+        rows = self.duplicate_rows()
+        review = self.duplicate_review(rows)
+        changed = deepcopy(rows)
+        changed[1]["claim_text"] += " if Congress approves."
+        with self.assertRaisesRegex(ValueError, "Stale"):
+            apply_within_chunk_duplicates(changed, review)
+        for key, value in (
+            ("group", "republican"),
+            ("source_sha256", "another version"),
+            ("analysis_eligible", False),
+            ("superseded_by_repair", "repair"),
+        ):
+            with self.subTest(key=key):
+                changed = deepcopy(rows)
+                changed[0][key] = value
+                with self.assertRaisesRegex(ValueError, "eligible"):
+                    apply_within_chunk_duplicates(changed, self.duplicate_review(changed))
+                self.assertTrue(changed[1]["analysis_eligible"])
+        review["records"][0]["duplicates"].append(
+            {"claim_id": "block-003", "duplicate_of": "block-002", "notes": "Invalid chain."}
+        )
+        with self.assertRaisesRegex(ValueError, "chain"):
+            apply_within_chunk_duplicates(rows, review)
+        self.assertTrue(all(row["analysis_eligible"] for row in rows))
+
+    def test_duplicate_export_preserves_replay_archive_and_exact_duplicate_anchors(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            corpus, output = Path(temporary) / "baseline", Path(temporary) / "claims"
+            corpus.mkdir()
+            rows = sources()[:1]
+            text = "\n\n".join(["We support universal health care."] * 100)
+            rows[0].update(
+                scoped_text=text,
+                complete_text=text,
+                text_sha256=digest(text),
+                complete_text_sha256=digest(text),
+            )
+            write_rows(corpus / "complete_sources.csv", rows)
+            write_rows(corpus / "coverage.csv", coverage(rows))
+
+            def extractor(*_):
+                return {
+                    "text": json.dumps(
+                        {
+                            "claims": [
+                                claim(claim_text="Support for universal health care."),
+                                claim(claim_text="Support for universal medical care."),
+                            ],
+                            "unresolved_references": [],
+                        }
+                    ),
+                    "seconds": 0.1,
+                    "generation_tokens": 25,
+                    "peak_memory": 1,
+                }
+
+            extract_corpus(output=output, corpus=corpus, extractor=extractor)
+            blocks, manifest = prepare(output, corpus)
+            original = read_rows(output / "claims.csv")
+            before = {path.name: path.read_bytes() for path in output.iterdir() if path.is_file()}
+            export_results(blocks, output, manifest)
+            bundle(output)
+            self.assertEqual(
+                before,
+                {path.name: path.read_bytes() for path in output.iterdir() if path.is_file()},
+            )
+            eligible = [row for row in original if row["analysis_eligible"] == "True"]
+            self.assertEqual(len(eligible), 2)
+            representative, member = sorted(eligible, key=lambda row: row["claim_id"])
+            block_rows = [row for row in original if row["block_id"] == member["block_id"]]
+            review = {
+                "schema_version": 1,
+                "records": [
+                    {
+                        "block_id": member["block_id"],
+                        "basis_sha256": within_chunk_duplicate_basis(block_rows),
+                        "reviewer": "source_bound_test_review",
+                        "duplicates": [
+                            {
+                                "claim_id": member["claim_id"],
+                                "duplicate_of": representative["claim_id"],
+                                "notes": "Both express the same universal-care commitment.",
+                            }
+                        ],
+                    }
+                ],
+            }
+            review_path = output / "within_chunk_duplicates.json"
+            review_path.write_text(json.dumps(review))
+            summary = export_results(blocks, output, manifest)
+            bundle(output)
+            exported = read_rows(output / "claims.csv")
+            self.assertEqual(summary["analysis_claims"], 1)
+            self.assertEqual(summary["reviewed_within_chunk_duplicates"], 1)
+            self.assertEqual(len(exported), len(original))
+            self.assertEqual(
+                [(row["claim_text"], row["evidence"]) for row in exported],
+                [(row["claim_text"], row["evidence"]) for row in original],
+            )
+            self.assertTrue(
+                all(
+                    row["duplicate_of"] == representative["claim_id"]
+                    for row in exported
+                    if row["claim_id"] != representative["claim_id"]
+                )
+            )
+            with zipfile.ZipFile(output / "claim_documents.zip") as archive:
+                self.assertEqual(archive.read(review_path.name), review_path.read_bytes())
+                self.assertEqual(archive.read("claims.csv"), (output / "claims.csv").read_bytes())
+
     def test_libertarian_blocks_and_stance_do_not_require_other_parties(self):
         original = sources()[:1]
         libertarian = [

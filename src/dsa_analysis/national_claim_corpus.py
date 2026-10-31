@@ -556,6 +556,76 @@ def load_source_repairs(blocks: list[dict], output: Path, manifest: dict) -> dic
     return repairs
 
 
+def within_chunk_duplicate_basis(claims: list[dict]) -> str:
+    return digest(
+        canonical(
+            [
+                {key: str(row.get(key, "")) for key in FIELDS if key != "analysis_eligible"}
+                | {"analysis_eligible": str(row.get("analysis_eligible", "")).lower() == "true"}
+                for row in sorted(claims, key=lambda row: row["claim_id"])
+            ]
+        )
+    )
+
+
+def apply_within_chunk_duplicates(claims: list[dict], reviews: dict) -> int:
+    if reviews.get("schema_version") != 1 or not isinstance(reviews.get("records"), list):
+        raise ValueError("Invalid within-chunk duplicate review schema")
+    blocks = defaultdict(list)
+    by_id = {}
+    for row in claims:
+        if row["claim_id"] in by_id:
+            raise ValueError("Duplicate claim ID in duplicate review input")
+        blocks[row["block_id"]].append(row)
+        by_id[row["claim_id"]] = row
+    decisions, reviewed = {}, set()
+    for record in reviews["records"]:
+        block = record.get("block_id")
+        if block not in blocks or block in reviewed:
+            raise ValueError("Unknown or repeated duplicate-review block")
+        reviewed.add(block)
+        if record.get("basis_sha256") != within_chunk_duplicate_basis(blocks[block]):
+            raise ValueError(f"Stale within-chunk duplicate review: {block}")
+        if not isinstance(record.get("reviewer"), str) or not record["reviewer"].strip():
+            raise ValueError("Duplicate review requires a reviewer")
+        if not isinstance(record.get("duplicates"), list):
+            raise ValueError("Duplicate review requires explicit decisions")
+        for decision in record["duplicates"]:
+            member, representative = decision.get("claim_id"), decision.get("duplicate_of")
+            if (
+                member not in by_id
+                or representative not in by_id
+                or member in decisions
+                or member <= representative
+                or not isinstance(decision.get("notes"), str)
+                or not decision["notes"].strip()
+            ):
+                raise ValueError("Invalid or noncanonical duplicate decision")
+            left, right = by_id[member], by_id[representative]
+            scope = ("block_id", "document_id", "group", "source_sha256", "scoped_text_sha256")
+            if (
+                any(not left.get(key) or left[key] != right.get(key) for key in scope)
+                or left["block_id"] != block
+                or any(
+                    str(row.get("analysis_eligible", "")).lower() != "true"
+                    or row.get("duplicate_of")
+                    or row.get("superseded_by_repair")
+                    for row in (left, right)
+                )
+            ):
+                raise ValueError("Duplicate members must be eligible and share the source block")
+            decisions[member] = representative
+    if set(decisions.values()) & set(decisions):
+        raise ValueError("Duplicate groups must match a retained representative, not a chain")
+    for member, representative in decisions.items():
+        by_id[member]["duplicate_of"] = representative
+        by_id[member]["analysis_eligible"] = False
+    for row in claims:
+        if row.get("duplicate_of") in decisions:
+            row["duplicate_of"] = decisions[row["duplicate_of"]]
+    return len(decisions)
+
+
 def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
     claims, statuses, metrics, seen = [], [], [], {}
     repairs = load_source_repairs(blocks, output, manifest)
@@ -654,6 +724,13 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
             }
         )
         metrics.extend(record["attempts"])
+    exact_duplicates = sum(bool(row["duplicate_of"]) for row in claims)
+    duplicate_reviews = output / "within_chunk_duplicates.json"
+    semantic_duplicates = (
+        apply_within_chunk_duplicates(claims, json.loads(duplicate_reviews.read_text()))
+        if duplicate_reviews.exists()
+        else 0
+    )
     write_rows(output / "claims.csv", claims, FIELDS)
     write_rows(output / "block_status.csv", statuses)
     with (output / "claims.jsonl").open("w", encoding="utf-8") as handle:
@@ -701,7 +778,7 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
         "superseded_model_claims": sum(bool(row["superseded_by_repair"]) for row in claims),
         "claims": len(claims),
         "analysis_claims": sum(row["analysis_eligible"] for row in claims),
-        "exact_within_document_duplicates": sum(bool(row["duplicate_of"]) for row in claims),
+        "exact_within_document_duplicates": exact_duplicates,
         "assistant_flagged_claims": sum(
             row["quality_status"] == "assistant_flagged_source_fidelity_issue" for row in claims
         ),
@@ -737,6 +814,9 @@ def export_results(blocks: list[dict], output: Path, manifest: dict) -> dict:
         ),
         "baseline_modified": False,
     }
+    if duplicate_reviews.exists():
+        summary["reviewed_within_chunk_duplicates"] = semantic_duplicates
+        summary["within_chunk_duplicate_review_sha256"] = digest(duplicate_reviews.read_bytes())
     write_json(output / "extraction_summary.json", summary)
     return summary
 

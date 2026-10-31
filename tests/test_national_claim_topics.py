@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 import numpy as np
 
+from dsa_analysis.national_claim_chunk_sensitivity import chunk_weights
 from dsa_analysis.national_claim_topic_evolution import (
     adjacent_matches,
 )
@@ -65,6 +66,24 @@ def row(identifier, group="dsa", bundle="one", strict=True):
 
 
 class ClaimTopicsTests(unittest.TestCase):
+    def test_chunk_weights_preserve_group_bundle_and_chunk_mass(self):
+        rows = [
+            {**row("a", bundle="one"), "block_id": "small"},
+            {**row("b", bundle="one"), "block_id": "large"},
+            {**row("c", bundle="one"), "block_id": "large"},
+            {**row("d", bundle="two"), "block_id": "other"},
+            {**row("e", group="democratic", bundle="platform"), "block_id": "dem"},
+        ]
+        weights = chunk_weights(rows)
+        np.testing.assert_allclose(weights, [0.25, 0.125, 0.125, 0.5, 1])
+        expanded = [*rows, {**row("f", bundle="one"), "block_id": "large"}]
+        new = chunk_weights(expanded)
+        self.assertAlmostEqual(new[1] + new[2] + new[5], weights[1] + weights[2])
+        np.testing.assert_allclose(new[[0, 3, 4]], weights[[0, 3, 4]])
+        self.assertEqual(chunk_weights([]).size, 0)
+        with self.assertRaisesRegex(ValueError, "block IDs"):
+            chunk_weights([row("missing")])
+
     def test_independent_period_fits_exclude_future_evidence_and_reject_stale_cache(self):
         with tempfile.TemporaryDirectory() as temporary:
             corpus = Path(temporary)
