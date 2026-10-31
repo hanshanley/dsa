@@ -95,7 +95,7 @@ def prepare_cleaned(corpus: Path, output: Path, review: dict) -> dict:
             "reviewer": review["reviewer"],
         }
     output.mkdir()
-    for filename in ("complete_sources.csv", "normalization_manifest.json"):
+    for filename in ("complete_sources.csv", "normalization_manifest.json", "blocks.csv"):
         shutil.copy2(corpus / filename, output / filename)
     for directory in ("responses", "response_history", "source_repairs"):
         if (corpus / directory).exists():
@@ -365,7 +365,7 @@ def run(corpus: Path, output: Path, review_path: Path) -> dict:
         ),
         "density": density,
         "baseline_basis": basis,
-        "baseline_hashes": hashes,
+        "baseline_files": [{"path": name, "sha256": value} for name, value in hashes.items()],
         "review_sha256": digest(review_path.read_bytes()),
         "implementation_sha256": digest(Path(__file__).read_bytes()),
         "baseline_unchanged": True,
@@ -374,13 +374,31 @@ def run(corpus: Path, output: Path, review_path: Path) -> dict:
         "candidate_review": review["candidate_review"],
     }
     write_json(output / "summary.json", summary)
+    write_archive(corpus, output)
+    return summary
+
+
+def write_archive(corpus: Path, output: Path) -> None:
     with zipfile.ZipFile(output / "complete_sensitivity.zip", "w", zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(output.rglob("*")):
-            if path.is_file() and path.name != "complete_sensitivity.zip":
+            if path.is_file() and path not in (
+                output / "complete_sensitivity.zip",
+                output / "validation.json",
+            ):
                 archive.write(path, path.relative_to(output))
-        for name in ("claims.csv", "claims.jsonl", "complete_sources.csv", "blocks.csv"):
+        for name in (
+            "claims.csv",
+            "claims.jsonl",
+            "complete_sources.csv",
+            "blocks.csv",
+            "semantic_review.csv",
+            "normalization_manifest.json",
+            "topics/assignments.csv",
+            "topics/topic_labels.json",
+            "expanded/summary.json",
+            "expanded/scored_passages.csv",
+        ):
             archive.write(corpus / name, Path("baseline") / name)
-    return summary
 
 
 def main() -> None:
@@ -392,7 +410,7 @@ def main() -> None:
     result = run(args.corpus, args.output, args.reviews)
     print(
         json.dumps(
-            {k: v for k, v in result.items() if k not in {"baseline_hashes", "baseline_basis"}},
+            {k: v for k, v in result.items() if k not in {"baseline_files", "baseline_basis"}},
             indent=2,
         )
     )

@@ -294,6 +294,46 @@ receives equal aggregate weight. Expanded and strict KDE views fit separately;
 their KDE coordinates are not directly comparable. Learned-topic shares instead
 use one shared expanded-corpus taxonomy. Pooled results mix periods and genres.
 
+### Within-chunk deduplication sensitivity
+
+The [isolated experiment](data/analysis/national_claims/chunk_sensitivity/summary.json)
+compares the frozen published corpus (A), source-cleaned claims with existing
+bundle/claim weights (B), and the same cleaned claims with equal mass per nonempty
+chunk within each bundle (C). Shared passages and similar wording are not enough
+to merge policies: actors, beneficiaries, scope, conditions, quantities and
+attribution must also match. Explicit duplicate decisions are source-bound and
+preserve originals; no review file leaves production exports unchanged.
+
+Targeted review excluded **235 claims** (22 Democratic, 213 Republican), including
+committee/staff credits and incorrect evidence or policy scope. None of the
+**50 strongest within-chunk similarity pairs** justified a semantic merge.
+This is not an exhaustive quality review. Chunk weighting changed displayed
+subject shares by at most **0.81 percentage points**, and changed the sign of
+pairwise language-density contrasts at **3.1-4.5%** of the fixed baseline query
+claims. These are density changes, not changes in policy positions.
+
+**Keep chunk weighting as a sensitivity analysis, not an automatic replacement.**
+It changes the estimand and depends on extraction boundaries. A/B/C reuse the
+replay-verified 10D representation, bandwidth and issue assignments; their KDEs
+are refitted on all eligible claims, unlike the original balanced subsamples.
+The [complete archive](data/analysis/national_claims/chunk_sensitivity/complete_sensitivity.zip)
+includes original and cleaned claims, complete sources, raw replies/history,
+reviews, assignments, frozen coordinates, weights and density scores. The live
+website and primary analytical results are unchanged.
+The [validation manifest](data/analysis/national_claims/chunk_sensitivity/validation.json)
+records 52 passing focused tests and exact density replay. Two pre-existing
+plotting-test failures also reproduce in the untouched baseline.
+
+With the frozen corpus and its compatible cached embeddings available, reproduce
+offline into a new, separate directory:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m dsa_analysis.national_claim_chunk_sensitivity \
+  --corpus /path/to/frozen/data/analysis/national_claims/full \
+  --output /path/to/new/chunk-sensitivity \
+  --reviews data/manual/national_claim_chunk_review.json
+```
+
 See [claim extraction and local analysis](docs/national_claim_analysis.md) for
 model revisions, chunking, cache/retry behavior, review limitations, and commands.
 The [baseline report](report/national_platform_analysis.md#methods-and-reproduction)

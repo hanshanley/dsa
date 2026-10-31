@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "source_revision": "bcfc6df",
+  "reviewer": "assistant_source_bound_review_not_independent_human_gold",
+  "scope": "Five highest-yield blocks and strongest within-chunk similarity candidates; not an exhaustive semantic duplicate or source-fidelity certification.",
+  "exclusions": [
+    {
+      "block_id": "republican-2012-normalized-84f844d41f96",
+      "basis_sha256": "8622142950cd1977a2f2b30210a4384b696b635daf0f976493d77e24bedd12dc",
+      "claim_numbers": "1-106",
+      "notes": "Whole target is committee credits, not substantive platform assertions. Candidates 1-41 additionally cite only IDAHO although their asserted names/roles are elsewhere in the preceding source. Retain raw claims but exclude the entire roster from policy analysis."
+    },
+    {
+      "block_id": "republican-2012-normalized-9f56e619755e",
+      "basis_sha256": "4c491a198e38ba367f9b68e02fbb4ee62becf7a6768d26c67ea5bea0db9847dd",
+      "claim_numbers": "1-61",
+      "notes": "Whole target is state/person headings, committee and staff credits, administrative roles and acknowledgements. No independent platform-policy assertions; exclude all candidates without deleting source text or extraction replies."
+    },
+    {
+      "block_id": "republican-2012-normalized-b8b5ff15f447",
+      "basis_sha256": "66c308450d3dd9cac93a4785e99148a4dba9ff2e946598d1e483c7c641d90d99",
+      "claim_numbers": "1-44",
+      "notes": "Whole target consists of staff/adviser credits and special thanks. These are non-policy acknowledgements, not duplicate policies."
+    },
+    {
+      "block_id": "democratic-2008-normalized-2f5b2eedfaff",
+      "basis_sha256": "23a7b93049da570d405eee96feb847b1d60b47d169d75fa4f6a3f77c12e199f3",
+      "claim_numbers": "1-9 | 25-36",
+      "notes": "Candidates 1-9 import preceding-context military staffing/recruitment claims and falsely cite target unit 1. Candidates 25-36 discuss the civilian-capacity target unit but also cite only the preceding military target unit 1. Preserve previously flagged claims and valid individually cited military subclaims; do not repair evidence IDs by rewriting raw responses."
+    },
+    {
+      "block_id": "democratic-2020-normalized-4521936cc397",
+      "basis_sha256": "73169b771826ad62c17731c52726a4796cea83f4997713dd39ec59497bbb206e",
+      "claim_numbers": "4 | 10-11",
+      "notes": "Candidate 4 resolves the source's future-infection reference as future COVID-19 specifically without support. Candidates 10-11 reverse the source relation: right-to-work laws, not their repeal, lead to lower wages and less worker protection. Do not merge this pair merely because its similarity is high; retain distinct wage and job-standard assertions."
+    },
+    {
+      "block_id": "republican-2012-normalized-fc7607d78f86",
+      "basis_sha256": "9d55013d91554116f97184324d0397a3fed2ed7b5fe7919d4df817292ed8e01c",
+      "claim_numbers": "14-15",
+      "notes": "Both candidates omit the governing traditional-marriage/one-man-and-one-woman national-standard scope from the source's legal encouragement/promotion goal. Neither is a valid representative for a semantic merge. The correctly scoped candidate 13 remains eligible."
+    }
+  ],
+  "duplicates": {
+    "schema_version": 1,
+    "records": []
+  },
+  "candidate_review": {
+    "selection": "All within-chunk pairs with cached normalized GTE cosine >= 0.985; threshold ranks review candidates only and never determines equivalence.",
+    "accepted_semantic_merges": 0,
+    "decision": "Retain distinct or uncertain propositions, except explicit source-quality exclusions above.",
+    "observations": [
+      "Protected-group lists enumerate different beneficiaries; race, national origin, citizenship, immigration status, sex, gender identity, income and other named categories are not interchangeable.",
+      "Operational, logistical and intelligence support in Yemen are different mechanisms, not synonyms.",
+      "Reducing weapon counts and reducing delivery systems are distinct commitments even with the same deterrence condition.",
+      "Having the means and having the responsibility to shape globalization distinguish capability from obligation.",
+      "Responsive, open and effective governments name different qualities.",
+      "Maintaining current Venezuelan oil output and returning to pre-2015 output name different quantities/time baselines.",
+      "Worker versus company export opportunities name different beneficiaries.",
+      "Accessible versus beneficial technologies distinguish access from benefit.",
+      "Preventing, detecting and ending cancer are different objectives.",
+      "Survivor services versus support, broader statements versus qualified examples, and overlapping rhetorical wording do not establish safe bidirectional equivalence; uncertain pairs remain separate."
+    ]
+  }
+}
