@@ -117,6 +117,38 @@ class PlatformPublicationTest(unittest.TestCase):
     def write_json(self, name, value):
         (self.data / name).write_text(json.dumps(value), encoding="utf-8")
 
+    def test_density_positions_preserve_reviewed_summaries_and_support(self):
+        (self.data / "topics/positions").mkdir()
+        groups = {
+            group: dict(
+                summary=f"{group} source position.",
+                caveat="Selected evidence.",
+                supporting_claim_ids=[group],
+            )
+            for group in ("democratic", "republican", "dsa")
+        }
+        pairs = {
+            "democratic_vs_republican": dict(
+                summary="Reviewed contrast.", supporting_claim_ids=["democratic", "republican"]
+            )
+        }
+        self.write_json(
+            "topics/positions/group_positions.json",
+            [dict(topic_id="topic-001", groups=groups, pairs=pairs)],
+        )
+        labels = json.loads((self.data / "topics/topic_labels.json").read_text())
+        topic = density_map_data(self.source, labels, [])["topics"][0]
+        self.assertEqual(topic["positions"], groups)
+        self.assertEqual(topic["differences"], pairs)
+        self.assertEqual({example["claim_id"] for example in topic["examples"]}, set(groups))
+        groups["democratic"]["supporting_claim_ids"] = ["dsa"]
+        self.write_json(
+            "topics/positions/group_positions.json",
+            [dict(topic_id="topic-001", groups=groups, pairs=pairs)],
+        )
+        with self.assertRaisesRegex(ValueError, "evidence issue/group mismatch"):
+            density_map_data(self.source, labels, [])
+
     def write_csv(self, name, records):
         with (self.data / name).open("w", newline="", encoding="utf-8") as stream:
             writer = csv.DictWriter(stream, fieldnames=list(records[0]))

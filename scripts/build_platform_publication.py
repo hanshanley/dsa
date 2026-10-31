@@ -259,6 +259,12 @@ def density_map_data(source: Path, labels: list, representatives: list) -> dict:
             ]
         )
     topics = []
+    positions_path = data / "topics/positions/group_positions.json"
+    positions = (
+        {review["topic_id"]: review for review in read_json(positions_path)}
+        if positions_path.exists()
+        else {}
+    )
     fields = (
         "claim_id",
         "group",
@@ -270,6 +276,7 @@ def density_map_data(source: Path, labels: list, representatives: list) -> dict:
     )
     for label in labels:
         examples = []
+        position = positions.get(label["topic_id"], {})
         for group in GROUPS:
             selected = [
                 row
@@ -277,6 +284,15 @@ def density_map_data(source: Path, labels: list, representatives: list) -> dict:
                 if row["topic_id"] == label["topic_id"]
                 and claims[row["claim_id"]]["group"] == group
             ][:2]
+            if position:
+                supporting = list(position["groups"][group]["supporting_claim_ids"])
+                for difference in position["pairs"].values():
+                    supporting.extend(
+                        claim_id
+                        for claim_id in difference["supporting_claim_ids"]
+                        if claims[claim_id]["group"] == group
+                    )
+                selected = [{"claim_id": claim_id} for claim_id in dict.fromkeys(supporting)]
             if not selected:
                 candidates = [
                     claim
@@ -287,14 +303,21 @@ def density_map_data(source: Path, labels: list, representatives: list) -> dict:
                 selected = candidates[:1]
             for example in selected:
                 claim = claims[example["claim_id"]]
-                if assigned[claim["claim_id"]]["topic_id"] != label["topic_id"]:
-                    raise ValueError(f"Interactive evidence issue mismatch: {claim['claim_id']}")
+                if (
+                    assigned[claim["claim_id"]]["topic_id"] != label["topic_id"]
+                    or claim["group"] != group
+                ):
+                    raise ValueError(
+                        f"Interactive evidence issue/group mismatch: {claim['claim_id']}"
+                    )
                 examples.append({field: claim.get(field, "") for field in fields})
         topics.append(
             {
                 **{key: label.get(key, "") for key in ("topic_id", "title", "summary", "caveat")},
                 "displayed": label.get("displayed", True),
                 "examples": examples,
+                "positions": position.get("groups", {}),
+                "differences": position.get("pairs", {}),
             }
         )
     regions = list(rows(data / "expanded/density_region_evidence.csv"))
