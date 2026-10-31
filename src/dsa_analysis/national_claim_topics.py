@@ -33,6 +33,14 @@ NOISE = "unclustered"
 MARKER_START = "<!-- learned-topics:start -->"
 MARKER_END = "<!-- learned-topics:end -->"
 PIECE_TITLES = {
+    "Labor Rights, Unionization, and Worker Protections": "Labor and worker protections",
+    "Tax Relief, Progressive Revenue, and Corporate Taxation": "Tax relief and revenue",
+    "Public Education Access, Funding, and School Choice": "Education and school choice",
+    "Reproductive Rights, Gender Equality, and Family Policy": (
+        "Reproductive rights, gender equality and families"
+    ),
+    "Healthcare Coverage, Affordability, and System Design": "Healthcare",
+    "Israel-Palestine Peace, Security, and Palestinian Rights": "Israel-Palestine",
     "Labor Rights and Unionization": "Labor and unions",
     "Taxation of Income, Wealth, and Corporations": "Taxes on income, wealth and corporations",
     "Public Education: Access, Standards, and Accountability": "Public education",
