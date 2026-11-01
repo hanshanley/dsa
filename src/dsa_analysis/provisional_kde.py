@@ -26,7 +26,7 @@ DEFAULT_REGISTRY = ROOT / "data" / "processed" / "race_registry.csv"
 DEFAULT_CORPUS = ROOT / "data" / "analysis" / "candidate_text_corpus.csv"
 DEFAULT_OUTPUT = ROOT / "data" / "analysis" / "provisional_gte_kde"
 DEFAULT_FIGURE = ROOT / "figures" / "provisional_gte_kde.png"
-DEFAULT_REPORT = ROOT / "report" / "provisional_kde_analysis.md"
+DEFAULT_REPORT = ROOT / "docs/reports" / "provisional_kde_analysis.md"
 MODEL_NAME = "Alibaba-NLP/gte-multilingual-base"
 MODEL_REVISION = "9bbca17d9273fd0d03d5725c7a4b0f6b45142062"
 SEED = 1729
@@ -1634,7 +1634,7 @@ within each candidate and election year:
 **{summary["selected_dimensions"]} dimensions**; the two-dimensional map is used only for
 visualization.
 
-![Labeled KDE regions](../figures/provisional_gte_kde.png)
+![Labeled KDE regions](../../figures/provisional_gte_kde.png)
 
 ## Interpreting the labeled regions
 

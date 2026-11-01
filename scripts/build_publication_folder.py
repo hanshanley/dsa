@@ -213,6 +213,9 @@ def publication_guide(files: dict[str, Path], issues: list[dict]) -> str:
             "They are research inputs, not additional places to find publishing images.",
             "Earlier [reviewed-sample](national_claims/reviewed_sample/) and",
             "[passage-based](national_platforms/) figures remain historical.",
+            "Earlier candidate-study lexical and model-topic charts are in",
+            "[`text_analysis/`](text_analysis/); their tables are in",
+            "[`data/analysis/text_analysis/`](../data/analysis/text_analysis/).",
             "",
         ]
     )

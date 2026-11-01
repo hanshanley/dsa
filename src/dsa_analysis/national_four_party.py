@@ -29,7 +29,7 @@ RAW = ROOT / "data/raw/libertarian_platforms"
 CORPUS = ROOT / "data/analysis/libertarian_platforms"
 LIBERTARIAN_CLAIMS = CLAIMS_ROOT / "libertarian"
 OUTPUT = CLAIMS_ROOT / "four_party"
-REPORT = ROOT / "report/national_claim_analysis_four_party.md"
+REPORT = ROOT / "docs/reports/national_claim_analysis_four_party.md"
 COMPONENT_FILES = (
     "normalization_manifest.json",
     "runtime.json",

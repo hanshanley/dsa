@@ -899,10 +899,16 @@ class ClaimTopicsTests(unittest.TestCase):
                 overview.parent.mkdir(parents=True)
                 overview.touch()
                 section = report_section(directory, figures, {})
+                custom_section = report_section(
+                    directory, figures, {}, report=root / "article/analysis.md"
+                )
             self.assertIn(
                 "[Standalone three-party overview for Substack]"
-                "(../figures/topics/expanded/substack_overview.png)",
+                "(../../figures/topics/expanded/substack_overview.png)",
                 section,
+            )
+            self.assertIn(
+                "(../figures/topics/expanded/substack_overview.png)", custom_section
             )
 
     def test_render_uses_preserved_remapped_model_record(self):
@@ -1000,10 +1006,10 @@ class ClaimTopicsTests(unittest.TestCase):
             ]
             for path in stale_figures:
                 path.write_text("stale previous taxonomy")
-            report = root / "report/national_claim_analysis.md"
-            report.parent.mkdir()
+            report = root / "docs/reports/national_claim_analysis.md"
+            report.parent.mkdir(parents=True)
             report.write_text(
-                "# Analysis\n\n[Complete download](../data/full/claim_documents.zip)\n"
+                "# Analysis\n\n[Complete download](../../data/full/claim_documents.zip)\n"
             )
             write_json(corpus / "topics/topic_labels.json", [{"topic_id": "obsolete"}])
             with patch("dsa_analysis.national_claim_topics.ROOT", root):

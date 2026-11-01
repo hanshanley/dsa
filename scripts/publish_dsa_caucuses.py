@@ -308,10 +308,10 @@ def publish() -> dict:
         "Guides are discovery-only; "
         "local drafts and regional coalitions remain separate supplements.",
         "",
-        "![Caucus attention shares](../figures/substack/caucuses/caucus-attention-shares.png)",
+        "![Caucus attention shares](../../figures/substack/caucuses/caucus-attention-shares.png)",
         "",
         "![Shared language-density map]"
-        "(../figures/substack/caucuses/major-caucus-language-density.png)",
+        "(../../figures/substack/caucuses/major-caucus-language-density.png)",
         "",
         "## Source-backed subjects",
         "",
@@ -340,9 +340,9 @@ def publish() -> dict:
             "",
             "</details>",
             "",
-            f"![Attention](../figures/substack/caucuses/{topic}-attention.png)",
+            f"![Attention](../../figures/substack/caucuses/{topic}-attention.png)",
             "",
-            f"[All caucus-pair ratios](../figures/substack/caucuses/{topic}-all-ratios.png)",
+            f"[All caucus-pair ratios](../../figures/substack/caucuses/{topic}-all-ratios.png)",
             "",
         ]
     lines += [
@@ -375,15 +375,15 @@ def publish() -> dict:
         "Original responses, failed dispositions, evidence and retry history are retained. "
         "Source-fidelity revision and targeted assistant review are not independent human gold.",
         "",
-        "[Methods](../docs/dsa_caucus_analysis.md) · "
+        "[Methods](../../docs/dsa_caucus_analysis.md) · "
         "[Complete claims and evidence]"
-        "(../data/analysis/dsa_caucuses/comparison/analysis_claims.csv) · "
+        "(../../data/analysis/dsa_caucuses/comparison/analysis_claims.csv) · "
         "[All directed attention ratios]"
-        "(../data/analysis/dsa_caucuses/comparison/attention_share_ratios.csv) · "
-        "[Complete analysis download](../data/analysis/dsa_caucuses/dsa_caucus_analysis.zip)",
+        "(../../data/analysis/dsa_caucuses/comparison/attention_share_ratios.csv) · "
+        "[Complete analysis download](../../data/analysis/dsa_caucuses/dsa_caucus_analysis.zip)",
         "",
     ]
-    report = ROOT / "report/dsa_caucus_analysis.md"
+    report = ROOT / "docs/reports/dsa_caucus_analysis.md"
     report.write_text("\n".join(lines))
     members = []
     for directory in (

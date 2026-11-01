@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from collections import defaultdict
 from itertools import combinations, zip_longest
 from pathlib import Path
@@ -11,7 +12,7 @@ from textwrap import fill
 import numpy as np
 
 from .national_platform_kde import LABELS
-from .national_platforms import GROUPS, date_bounds, read_rows, write_json, write_rows
+from .national_platforms import GROUPS, ROOT, date_bounds, read_rows, write_json, write_rows
 
 MAX_EXAMPLES = 48
 SUMMARY_WORDS = 36
@@ -627,8 +628,9 @@ def generate(corpus: Path, figures: Path) -> dict:
     return result
 
 
-def report_section(corpus: Path, figures: Path) -> str:
+def report_section(corpus: Path, figures: Path, *, report: Path | None = None) -> str:
     directory = corpus / "topics/positions"
+    report_directory = report.parent if report else ROOT / "docs/reports"
     if not (directory / "summary.json").exists():
         return ""
     manifest, reviews = reviewed_positions(corpus)
@@ -666,7 +668,9 @@ def report_section(corpus: Path, figures: Path) -> str:
             for a, b in combinations(manifest["groups"], 2)
         ],
     ]:
-        relative = f"../figures/national_claims/{corpus.name}/topics/positions/{stem}"
+        relative = Path(
+            os.path.relpath((figures / "positions" / stem).resolve(), report_directory.resolve())
+        ).as_posix()
         lines += [
             f"**{heading}**",
             "",
@@ -675,7 +679,9 @@ def report_section(corpus: Path, figures: Path) -> str:
             f"[Full-resolution PNG]({relative}.png)",
             "",
         ]
-    relative_data = f"../data/analysis/national_claims/{corpus.name}/topics/positions"
+    relative_data = Path(
+        os.path.relpath(directory.resolve(), report_directory.resolve())
+    ).as_posix()
     lines += [
         f"[Full position review]({relative_data}/group_positions.json) / "
         f"[All sampled claims and source evidence]({relative_data}/evidence.csv)",

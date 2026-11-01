@@ -6,14 +6,14 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 
 from .io import read_csv, read_json, write_csv
-from .paths import ANALYSIS_DATA_DIR, CONFIG_DIR, OUTPUT_DIR, REPORT_DIR
+from .paths import ANALYSIS_DATA_DIR, CONFIG_DIR, FIGURES_DIR, REPORT_DIR
 from .text_analysis import _diverging_svg
 
 MODEL_OUTPUT = ANALYSIS_DATA_DIR / "model_topic_classifications.csv"
 MODEL_SUMMARY = ANALYSIS_DATA_DIR / "model_topic_validation.json"
-MODEL_EMPHASIS = OUTPUT_DIR / "tables" / "text_analysis" / "model_topic_emphasis.csv"
+MODEL_EMPHASIS = ANALYSIS_DATA_DIR / "text_analysis" / "model_topic_emphasis.csv"
 MODEL_FIGURE = (
-    OUTPUT_DIR / "figures" / "text_analysis" / "model_topic_emphasis_difference.svg"
+    FIGURES_DIR / "text_analysis" / "model_topic_emphasis_difference.svg"
 )
 
 
@@ -386,7 +386,7 @@ independent validation. Every classification remains inspectable at row level.
 
 {largest_lines}
 
-![Model-classified policy emphasis](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
+![Model-classified policy emphasis](../../figures/text_analysis/model_topic_emphasis_difference.svg)
 
 Positive differences indicate a larger share of classified DSA-endorsed segments. Negative
 differences indicate a larger share of classified other-Democrat segments.

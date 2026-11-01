@@ -85,7 +85,7 @@ source texts, not metadata alone.
 
 Four-party outputs live under `data/analysis/national_claims/four_party/`,
 `figures/national_claims/four_party/` and
-`report/national_claim_analysis_four_party.md`. The shared fitting uses all
+`docs/reports/national_claim_analysis_four_party.md`. The shared fitting uses all
 four organizations, equal-organization sampling and equal aggregate
 document/fallback-bundle weights, producing six pairwise contrasts. Strict
 and expanded maps are fitted separately; neither replaces or shares

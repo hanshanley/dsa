@@ -176,13 +176,13 @@ thead th{position:sticky;top:0;background:#eaf0f5;z-index:2}tbody th{position:st
 small{color:#56616d}.caveat{color:#79560b}a{color:#185f91}</style><h1>2025 NYC mayoral platforms: the same questions, side by side</h1>
 <p>Complete publisher-coded responses from <a href="https://projects.thecity.nyc/meet-your-mayor-2025-election-quiz-candidates/">THE CITY and Gothamist's Meet Your Mayor</a>, pinned to the June3 pre-primary source version.
 These are the publisher's option assignments, not literal candidate quotations or new independent stance judgments. Conditions, disputed option fit, and uncoded answers are preserved. Missing a code does not mean having no position.</p>
-<p><a href="../data/analysis/policy_evidence/mayor_survey_2025/complete_candidate_responses.csv" download>Download all complete responses</a> ·
-<a href="../data/analysis/policy_evidence/mayor_survey_2025/same_question_comparisons.csv" download>Download same-question pairs</a> ·
+<p><a href="../../data/analysis/policy_evidence/mayor_survey_2025/complete_candidate_responses.csv" download>Download all complete responses</a> ·
+<a href="../../data/analysis/policy_evidence/mayor_survey_2025/same_question_comparisons.csv" download>Download same-question pairs</a> ·
 <a href="platform_comparison.html">Source-reviewed race browser</a></p>
 <div class="table"><table><thead><tr><th>Question</th>__HEADERS__</tr></thead><tbody>__ROWS__</tbody></table></div>
 <p>Data and option wording: THE CITY and Gothamist. <a href="https://github.com/thecityny/2025-meet-your-mayor">Original source and license</a>.
 No voter preferences are collected, inferred, or scored here.</p></html>"""
-    (ROOT / "report" / "mayor_same_question_comparison.html").write_text(
+    (ROOT / "docs/reports" / "mayor_same_question_comparison.html").write_text(
         page.replace("__HEADERS__", headers).replace("__ROWS__", "".join(table_rows)), encoding="utf-8",
     )
     return summary

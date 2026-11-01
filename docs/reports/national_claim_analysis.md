@@ -15,13 +15,13 @@ Log2 ratios use a 0.0001 share floor: +1 is approximately twice the topic share 
 
 Discovery uses PCA with **weighted_kmeans**. Low density-cluster coverage triggers a weighted K-means fallback; K-means gives each group equal mass and each within-group bundle equal mass. HDBSCAN itself is unweighted. Parameter and balanced-refit diagnostics are downloaded. K-means partitions claims even at fuzzy topic boundaries; topics can mix subtopics and opposing positions. Period/genre composition differs. Model summaries are evidence-bound interpretations, not independently certified classifications or fact-checks.
 
-[All shares](../data/analysis/national_claims/full/topics/shares.csv) · [All ranked contrasts and warnings](../data/analysis/national_claims/full/topics/contrasts.csv) · [Topic assignments](../data/analysis/national_claims/full/topics/assignments.csv) · [Representative claims and exact source evidence](../data/analysis/national_claims/full/topics/representatives.csv) · [Fit diagnostics](../data/analysis/national_claims/full/topics/candidate_fits.csv) · [Balanced refits](../data/analysis/national_claims/full/topics/balanced_refits.csv)
+[All shares](../../data/analysis/national_claims/full/topics/shares.csv) · [All ranked contrasts and warnings](../../data/analysis/national_claims/full/topics/contrasts.csv) · [Topic assignments](../../data/analysis/national_claims/full/topics/assignments.csv) · [Representative claims and exact source evidence](../../data/analysis/national_claims/full/topics/representatives.csv) · [Fit diagnostics](../../data/analysis/national_claims/full/topics/candidate_fits.csv) · [Balanced refits](../../data/analysis/national_claims/full/topics/balanced_refits.csv)
 
 **Label evidence review:** 24/24 topics reviewed against their actual representative claims; 24 labels have explicitly identified source-bound assistant revisions. Original Gemma replies and validation failures remain unchanged. This is assistant review, not independent human certification.
 
-[Standalone three-party overview for Substack](../figures/national_claims/full/topics/expanded/substack_overview.png)
+[Standalone three-party overview for Substack](../../figures/national_claims/full/topics/expanded/substack_overview.png)
 
-[Label review and exact provenance](../data/analysis/national_claims/full/topics/label_review.json)
+[Label review and exact provenance](../../data/analysis/national_claims/full/topics/label_review.json)
 
 **Measured fit limitations:** PCA retains 60.2% of embedding variance; original-space cosine silhouette is 0.060. Balanced-refit adjusted Rand indices are 0.649, 0.693 (1 would mean identical partitions). These are exploratory topic partitions; separation and refit diagnostics do not certify a definitive policy taxonomy.
 
@@ -35,29 +35,29 @@ The combined map colors claims by organization. Pairwise map colors show the uns
 
 **All three groups**
 
-![All three groups: clusters and stated positions](../figures/national_claims/full/topics/positions/all_groups.png)
+![All three groups: clusters and stated positions](../../figures/national_claims/full/topics/positions/all_groups.png)
 
-[Full-resolution PNG](../figures/national_claims/full/topics/positions/all_groups.png)
+[Full-resolution PNG](../../figures/national_claims/full/topics/positions/all_groups.png)
 
 **Democratic and Republican**
 
-![Democratic and Republican: clusters and stated positions](../figures/national_claims/full/topics/positions/democratic_vs_republican.png)
+![Democratic and Republican: clusters and stated positions](../../figures/national_claims/full/topics/positions/democratic_vs_republican.png)
 
-[Full-resolution PNG](../figures/national_claims/full/topics/positions/democratic_vs_republican.png)
+[Full-resolution PNG](../../figures/national_claims/full/topics/positions/democratic_vs_republican.png)
 
 **Democratic and DSA**
 
-![Democratic and DSA: clusters and stated positions](../figures/national_claims/full/topics/positions/democratic_vs_dsa.png)
+![Democratic and DSA: clusters and stated positions](../../figures/national_claims/full/topics/positions/democratic_vs_dsa.png)
 
-[Full-resolution PNG](../figures/national_claims/full/topics/positions/democratic_vs_dsa.png)
+[Full-resolution PNG](../../figures/national_claims/full/topics/positions/democratic_vs_dsa.png)
 
 **Republican and DSA**
 
-![Republican and DSA: clusters and stated positions](../figures/national_claims/full/topics/positions/republican_vs_dsa.png)
+![Republican and DSA: clusters and stated positions](../../figures/national_claims/full/topics/positions/republican_vs_dsa.png)
 
-[Full-resolution PNG](../figures/national_claims/full/topics/positions/republican_vs_dsa.png)
+[Full-resolution PNG](../../figures/national_claims/full/topics/positions/republican_vs_dsa.png)
 
-[Full position review](../data/analysis/national_claims/full/topics/positions/group_positions.json) / [All sampled claims and source evidence](../data/analysis/national_claims/full/topics/positions/evidence.csv)
+[Full position review](../../data/analysis/national_claims/full/topics/positions/group_positions.json) / [All sampled claims and source evidence](../../data/analysis/national_claims/full/topics/positions/evidence.csv)
 
 #### Position cluster 1: Energy Production, Transition, and Investment
 
@@ -799,7 +799,7 @@ Scope caution: Samples mix policy criticism, attributed rhetoric, protest appeal
 
 Each large map is paired with numbered representative claims and the saved region's claim/bundle support. Keywords are retrieval aids, not reviewed topic labels. Markers locate the selected examples, not region boundaries. Natural-log density contrasts are evaluated in the higher-dimensional KDE space, not the two-dimensional display. A positive value means denser first-group language; it is not a topic-share ratio, policy agreement or a regional average.
 
-![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_republican_1.png)
+![Detailed density map, expanded](../../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_republican_1.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -807,9 +807,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | veterans, commitment, va, support | 70 / 12 / 12 | {"democratic": 33, "republican": 37} | -0.06 | Support for expanding the post-9/11 veteran's caregiver program to include all veterans. ([2016 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2016-democratic-party-platform); 2016; scoped characters 136043:136981) |
 | 3 | administration, current, senate, allies | 44 / 3 / 3 | {"republican": 44} | -1.45 | The current Administration and its Senate allies evaded the legal requirement for congressional consultation regarding troop commitments overseas. ([2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform); 2012; scoped characters 38836:40176) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
 
-![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_republican_2.png)
+![Detailed density map, expanded](../../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_republican_2.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -817,9 +817,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | care, health, affordable, commitment | 57 / 13 / 13 | {"democratic": 38, "republican": 19} | +0.04 | Commitment to always fight to make it easier and more affordable for Americans to go to the doctor, get prescription medicines, and access preventive testing and treatments. ([2020 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform); 2020; scoped characters 76411:76598) |
 | 3 | religious, right, public, faith | 38 / 6 / 6 | {"republican": 38} | -1.60 | The Constitution guards against the establishment of state-sponsored religion, but also honors the free exercise of religion. ([2000 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2000-republican-party-platform); 2000; scoped characters 57021:58434) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
 
-![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_dsa_1.png)
+![Detailed density map, expanded](../../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_dsa_1.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -827,9 +827,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | housing, affordable, commitment, support | 53 / 9 / 9 | {"dsa": 8, "democratic": 45} | -0.38 | Commitment to provide more housing support to high-poverty communities and build more affordable rental housing units. ([2016 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2016-democratic-party-platform); 2016; scoped characters 67776:68445) |
 | 3 | sanders, bernie, plan, power | 26 / 5 / 3 | {"dsa": 26} | -8.65 | Bernie Sanders’ plan includes extensive provisions for a just transition that builds power for disabled folks. ([National DSA Ecosocialists support Bernie Sanders’ Green New Deal](https://www.dsausa.org/wp-json/wp/v2/statement/4013); 2019-08-27; scoped characters 887:1479) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
 
-![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_dsa_2.png)
+![Detailed density map, expanded](../../figures/national_claims/full/topics/../expanded/density_details/democratic_vs_dsa_2.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -837,9 +837,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | health, care, commitment, affordable | 53 / 9 / 9 | {"democratic": 47, "dsa": 6} | +0.48 | Commitment to end unaffordable, unavailable health care. ([2008 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2008-democratic-party-platform); 2008; scoped characters 4336:5162) |
 | 3 | dsa, laws, discrimination, calls | 25 / 4 / 4 | {"dsa": 25} | -7.22 | DSA fights for the end of state recognition of the gender binary. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 33183:33774) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
 
-![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/republican_vs_dsa_1.png)
+![Detailed density map, expanded](../../figures/national_claims/full/topics/../expanded/density_details/republican_vs_dsa_1.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -847,9 +847,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | support, inmates, prison, public | 41 / 8 / 7 | {"republican": 29, "dsa": 12} | +0.10 | Opposition to “alternatives to incarceration” that are carceral in nature, including coercive restorative justice programs. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 12768:12936) |
 | 3 | sanders, bernie, plan, power | 26 / 5 / 3 | {"dsa": 26} | -8.21 | Bernie Sanders’ plan includes extensive provisions for a just transition that builds power for disabled folks. ([National DSA Ecosocialists support Bernie Sanders’ Green New Deal](https://www.dsausa.org/wp-json/wp/v2/statement/4013); 2019-08-27; scoped characters 887:1479) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
 
-![Detailed density map, expanded](../figures/national_claims/full/topics/../expanded/density_details/republican_vs_dsa_2.png)
+![Detailed density map, expanded](../../figures/national_claims/full/topics/../expanded/density_details/republican_vs_dsa_2.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -857,9 +857,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | abortion, unborn, life, right | 26 / 6 / 6 | {"republican": 25, "dsa": 1} | +0.15 | Support for state and federal efforts against dismemberment abortion procedures, in which unborn babies are literally torn apart limb from limb. ([2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform); 2016; scoped characters 60031:61054) |
 | 3 | dsa, laws, discrimination, calls | 25 / 4 / 4 | {"dsa": 25} | -9.22 | DSA fights for the end of state recognition of the gender binary. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 33183:33774) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../expanded/density_region_evidence.csv)
 
-![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/democratic_vs_republican_1.png)
+![Detailed density map, strict](../../figures/national_claims/full/topics/../strict/density_details/democratic_vs_republican_1.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -867,9 +867,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | abortion, opposition, support, funding | 59 / 11 / 11 | {"republican": 36, "democratic": 23} | -0.10 | Calling on Congress to ban the practice of misleading women on so-called fetal harvesting consent forms, a fact revealed by a 2015 investigation. ([2016 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2016-republican-party-platform); 2016; scoped characters 57781:58451) |
 | 3 | illegal, commitment, border, aliens | 96 / 6 / 6 | {"republican": 96} | -0.69 | A Republican Administration and Congress will enforce the law against those who overstay their visas. ([2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform); 2012; scoped characters 103627:104183) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
 
-![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/democratic_vs_republican_2.png)
+![Detailed density map, strict](../../figures/national_claims/full/topics/../strict/density_details/democratic_vs_republican_2.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -877,9 +877,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | medicare, drug, prescription, seniors | 34 / 10 / 10 | {"republican": 14, "democratic": 20} | -0.07 | Support for capping prescription drug costs at $2,000 a year for seniors. ([2024 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2024-democratic-party-platform); 2024; scoped characters 164059:165173) |
 | 3 | gun, law, support, right | 46 / 5 / 5 | {"republican": 46} | -0.56 | Acknowledgment, support, and defense of the lawabiding citizen's God-given right of self-defense. ([2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform); 2012; scoped characters 53822:55372) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
 
-![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/democratic_vs_dsa_1.png)
+![Detailed density map, strict](../../figures/national_claims/full/topics/../strict/density_details/democratic_vs_dsa_1.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -887,9 +887,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | americans, 19, covid, pandemic | 64 / 8 / 8 | {"dsa": 6, "democratic": 58} | -0.43 | Disparities in housing contribute to disproportionate rates of infection and death among Black Americans, Native Americans, Latinos, and certain Asian American and Pacific Islander communities. ([2020 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform); 2020; scoped characters 9983:10388) |
 | 3 | support, ending, abolishing, immunity | 22 / 3 / 3 | {"dsa": 22} | -2.11 | Support for abolishing the Senate. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 6804:6848) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
 
-![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/democratic_vs_dsa_2.png)
+![Detailed density map, strict](../../figures/national_claims/full/topics/../strict/density_details/democratic_vs_dsa_2.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -897,9 +897,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | commitment, transportation, public, transit | 42 / 9 / 9 | {"democratic": 40, "dsa": 2} | +0.20 | Commitment to fight for immediate investments for highways, transit, rail, and aviation. ([2012 Democratic Party Platform](https://www.presidency.ucsb.edu/documents/2012-democratic-party-platform); 2012; scoped characters 40432:40996) |
 | 3 | people, capitalism, class, development | 21 / 3 / 3 | {"dsa": 21} | -2.41 | The historical development of U.S. capitalism was heavily reliant on the theft of people’s lives and land through the genocide of Indigenous people. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 905:1529) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
 
-![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/republican_vs_dsa_1.png)
+![Detailed density map, strict](../../figures/national_claims/full/topics/../strict/density_details/republican_vs_dsa_1.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -907,9 +907,9 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | commitment, illegal, law, federal | 64 / 7 / 7 | {"republican": 62, "dsa": 2} | -0.42 | A Republican Administration and Congress will enforce the law against those who overstay their visas. ([2012 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2012-republican-party-platform); 2012; scoped characters 103627:104183) |
 | 3 | people, class, capitalism, working | 38 / 3 / 3 | {"dsa": 38} | -2.45 | The fundamental divides of racial capitalism have deepened. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 24811:25556) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
 
-![Detailed density map, strict](../figures/national_claims/full/topics/../strict/density_details/republican_vs_dsa_2.png)
+![Detailed density map, strict](../../figures/national_claims/full/topics/../strict/density_details/republican_vs_dsa_2.png)
 
 | Marker | Keywords | Claims / documents / bundles | Raw group counts | Example ln ratio | Source-linked claim |
 |---|---|---:|---|---:|---|
@@ -917,7 +917,7 @@ Each large map is paired with numbered representative claims and the saved regio
 | 2 | health, care, healthcare, support | 26 / 7 / 7 | {"dsa": 10, "republican": 16} | +0.42 | Individuals should be free to manage their own health care needs through Flexible Savings Accounts (FSAs) and Medical Savings Accounts (MSAs). ([2000 Republican Party Platform](https://www.presidency.ucsb.edu/documents/2000-republican-party-platform); 2000; scoped characters 91403:92274) |
 | 3 | class, working, workers, labor | 26 / 3 / 3 | {"dsa": 26} | -2.59 | Through class conflict in the workplace and in society more broadly, the American working class exercised enough power to win many of the rights that exist today. ([2021 adopted DSA Political Platform - immutable December 2021 snapshot](https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/); 2021-11-09; scoped characters 21071:21659) |
 
-[Complete region evidence](../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
+[Complete region evidence](../../data/analysis/national_claims/full/topics/../strict/density_region_evidence.csv)
 
 ### Expanded distribution
 
@@ -931,17 +931,17 @@ Identity and narrative clusters describe rhetoric, not substantive policy priori
 
 The overall pages place each group's evidence-reviewed summary beside its bars. These describe sampled documents across years, not a current consensus; the group-position section retains topic caveats and source-linked claims.
 
-![Topic shares, expanded](../figures/national_claims/full/topics/expanded/topic_distribution.png)
+![Topic shares, expanded](../../figures/national_claims/full/topics/expanded/topic_distribution.png)
 
-![Topic shares, expanded](../figures/national_claims/full/topics/expanded/topic_distribution_2.png)
+![Topic shares, expanded](../../figures/national_claims/full/topics/expanded/topic_distribution_2.png)
 
-![Topic shares, expanded](../figures/national_claims/full/topics/expanded/topic_distribution_3.png)
+![Topic shares, expanded](../../figures/national_claims/full/topics/expanded/topic_distribution_3.png)
 
-![Relative emphasis, expanded](../figures/national_claims/full/topics/expanded/vs_rest_emphasis.png)
+![Relative emphasis, expanded](../../figures/national_claims/full/topics/expanded/vs_rest_emphasis.png)
 
-![Relative emphasis, expanded](../figures/national_claims/full/topics/expanded/vs_rest_emphasis_2.png)
+![Relative emphasis, expanded](../../figures/national_claims/full/topics/expanded/vs_rest_emphasis_2.png)
 
-![Relative emphasis, expanded](../figures/national_claims/full/topics/expanded/vs_rest_emphasis_3.png)
+![Relative emphasis, expanded](../../figures/national_claims/full/topics/expanded/vs_rest_emphasis_3.png)
 
 Largest relative-emphasis ratios (all support levels remain eligible):
 
@@ -959,11 +959,11 @@ Largest relative-emphasis ratios (all support levels remain eligible):
 
 Pairwise contrast panels:
 
-![Pairwise emphasis, expanded](../figures/national_claims/full/topics/expanded/pairwise_emphasis.png)
+![Pairwise emphasis, expanded](../../figures/national_claims/full/topics/expanded/pairwise_emphasis.png)
 
-![Pairwise emphasis, expanded](../figures/national_claims/full/topics/expanded/pairwise_emphasis_2.png)
+![Pairwise emphasis, expanded](../../figures/national_claims/full/topics/expanded/pairwise_emphasis_2.png)
 
-![Pairwise emphasis, expanded](../figures/national_claims/full/topics/expanded/pairwise_emphasis_3.png)
+![Pairwise emphasis, expanded](../../figures/national_claims/full/topics/expanded/pairwise_emphasis_3.png)
 
 ### Strict distribution
 
@@ -975,17 +975,17 @@ Largest absolute shares across all observed periods (not necessarily the most di
 
 Identity and narrative clusters describe rhetoric, not substantive policy priorities. Pooled shares mix periods and document genres; read the period analyses below before interpreting them as enduring differences.
 
-![Topic shares, strict](../figures/national_claims/full/topics/strict/topic_distribution.png)
+![Topic shares, strict](../../figures/national_claims/full/topics/strict/topic_distribution.png)
 
-![Topic shares, strict](../figures/national_claims/full/topics/strict/topic_distribution_2.png)
+![Topic shares, strict](../../figures/national_claims/full/topics/strict/topic_distribution_2.png)
 
-![Topic shares, strict](../figures/national_claims/full/topics/strict/topic_distribution_3.png)
+![Topic shares, strict](../../figures/national_claims/full/topics/strict/topic_distribution_3.png)
 
-![Relative emphasis, strict](../figures/national_claims/full/topics/strict/vs_rest_emphasis.png)
+![Relative emphasis, strict](../../figures/national_claims/full/topics/strict/vs_rest_emphasis.png)
 
-![Relative emphasis, strict](../figures/national_claims/full/topics/strict/vs_rest_emphasis_2.png)
+![Relative emphasis, strict](../../figures/national_claims/full/topics/strict/vs_rest_emphasis_2.png)
 
-![Relative emphasis, strict](../figures/national_claims/full/topics/strict/vs_rest_emphasis_3.png)
+![Relative emphasis, strict](../../figures/national_claims/full/topics/strict/vs_rest_emphasis_3.png)
 
 Largest relative-emphasis ratios (all support levels remain eligible):
 
@@ -1003,11 +1003,11 @@ Largest relative-emphasis ratios (all support levels remain eligible):
 
 Pairwise contrast panels:
 
-![Pairwise emphasis, strict](../figures/national_claims/full/topics/strict/pairwise_emphasis.png)
+![Pairwise emphasis, strict](../../figures/national_claims/full/topics/strict/pairwise_emphasis.png)
 
-![Pairwise emphasis, strict](../figures/national_claims/full/topics/strict/pairwise_emphasis_2.png)
+![Pairwise emphasis, strict](../../figures/national_claims/full/topics/strict/pairwise_emphasis_2.png)
 
-![Pairwise emphasis, strict](../figures/national_claims/full/topics/strict/pairwise_emphasis_3.png)
+![Pairwise emphasis, strict](../../figures/national_claims/full/topics/strict/pairwise_emphasis_3.png)
 
 ### Topics over time
 
@@ -1015,7 +1015,7 @@ Pairwise contrast panels:
 
 Relative time-series contrasts require all configured comparison groups for group-versus-rest baselines; pairwise contrasts require both organizations. These charts describe the changing composition of observed documents, not annual party positions or causal changes. One-document periods are visibly counted and flagged in the downloadable tables.
 
-[Period coverage and support](../data/analysis/national_claims/full/topics/temporal_coverage.csv) · [All period shares](../data/analysis/national_claims/full/topics/temporal_shares.csv) · [Time-specific relative emphasis](../data/analysis/national_claims/full/topics/temporal_contrasts.csv) · [Adjacent observed-period changes](../data/analysis/national_claims/full/topics/temporal_changes.csv) · [Exact date choices](../data/analysis/national_claims/full/topics/temporal_document_dates.csv) · [Date exclusions](../data/analysis/national_claims/full/topics/temporal_exclusions.csv)
+[Period coverage and support](../../data/analysis/national_claims/full/topics/temporal_coverage.csv) · [All period shares](../../data/analysis/national_claims/full/topics/temporal_shares.csv) · [Time-specific relative emphasis](../../data/analysis/national_claims/full/topics/temporal_contrasts.csv) · [Adjacent observed-period changes](../../data/analysis/national_claims/full/topics/temporal_changes.csv) · [Exact date choices](../../data/analysis/national_claims/full/topics/temporal_document_dates.csv) · [Date exclusions](../../data/analysis/national_claims/full/topics/temporal_exclusions.csv)
 
 #### Expanded time views
 
@@ -1033,41 +1033,41 @@ These six selected policy subjects pair the overall comparison with its timeline
 
 | Issue | Combined overall and timeline |
 |---|---|
-| Labor and worker protections | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-003.png) |
-| Tax relief and revenue | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-011.png) |
-| Education and school choice | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-012.png) |
-| Reproductive rights, gender equality and families | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-013.png) |
-| Healthcare | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-018.png) |
-| Israel-Palestine | [PNG](../figures/national_claims/full/topics/expanded/piece/topic-022.png) |
+| Labor and worker protections | [PNG](../../figures/national_claims/full/topics/expanded/piece/topic-003.png) |
+| Tax relief and revenue | [PNG](../../figures/national_claims/full/topics/expanded/piece/topic-011.png) |
+| Education and school choice | [PNG](../../figures/national_claims/full/topics/expanded/piece/topic-012.png) |
+| Reproductive rights, gender equality and families | [PNG](../../figures/national_claims/full/topics/expanded/piece/topic-013.png) |
+| Healthcare | [PNG](../../figures/national_claims/full/topics/expanded/piece/topic-018.png) |
+| Israel-Palestine | [PNG](../../figures/national_claims/full/topics/expanded/piece/topic-022.png) |
 #### Individual issue comparisons
 
 Each standalone chart compares all organizations on one topic. Overall bars and observed-period lines are separate figures, suitable for individual embedding. Axes are shared across organizations and both views of the same topic; different issues can have different vertical scales. Missing evidence remains a gap. Actor and narrative topics retain their qualifications rather than being presented as coherent policy issues.
 
 | Topic | Overall comparison | Over time |
 |---|---|---|
-| Energy Production, Transition, and Investment | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-001_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-001_time.png) |
-| Community Investment, Housing, and Social Support | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-002_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-002_time.png) |
-| Labor Rights, Unionization, and Worker Protections | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-003_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-003_time.png) |
-| Economic Prosperity Narratives and Development Models | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-004_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-004_time.png) |
-| Voting Rights, Election Rules, and Representation | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-005_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-005_time.png) |
-| American Power, Leadership, and National Purpose | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-006_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-006_time.png) |
-| Public Protections and National Commitments | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-007_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-007_time.png) |
-| Diplomacy, Alliances, Trade, and International Cooperation | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-009_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-009_time.png) |
-| Criminal Justice, Policing, and Incarceration | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-010_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-010_time.png) |
-| Tax Relief, Progressive Revenue, and Corporate Taxation | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-011_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-011_time.png) |
-| Public Education Access, Funding, and School Choice | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-012_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-012_time.png) |
-| Reproductive Rights, Gender Equality, and Family Policy | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-013_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-013_time.png) |
-| Counterterrorism, Military Readiness, and War Strategy | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-014_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-014_time.png) |
-| Cross-Policy Opposition and Institutional Critiques | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-015_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-015_time.png) |
-| Presidential Leadership, Records, and Policy Commitments | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-016_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-016_time.png) |
-| Healthcare Coverage, Affordability, and System Design | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-018_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-018_time.png) |
-| Economic Hardship, Poverty, and Housing Insecurity | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-019_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-019_time.png) |
-| Institutional Power, Oppression, and Social Conflict | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-020_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-020_time.png) |
-| Immigration Reform, Enforcement, and Migrant Rights | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-021_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-021_time.png) |
-| Israel-Palestine Peace, Security, and Palestinian Rights | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-022_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-022_time.png) |
-| Trump Administration Records and Partisan Critiques | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-024_overall.png) | [PNG](../figures/national_claims/full/topics/expanded/issues/topic-024_time.png) |
+| Energy Production, Transition, and Investment | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-001_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-001_time.png) |
+| Community Investment, Housing, and Social Support | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-002_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-002_time.png) |
+| Labor Rights, Unionization, and Worker Protections | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-003_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-003_time.png) |
+| Economic Prosperity Narratives and Development Models | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-004_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-004_time.png) |
+| Voting Rights, Election Rules, and Representation | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-005_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-005_time.png) |
+| American Power, Leadership, and National Purpose | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-006_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-006_time.png) |
+| Public Protections and National Commitments | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-007_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-007_time.png) |
+| Diplomacy, Alliances, Trade, and International Cooperation | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-009_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-009_time.png) |
+| Criminal Justice, Policing, and Incarceration | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-010_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-010_time.png) |
+| Tax Relief, Progressive Revenue, and Corporate Taxation | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-011_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-011_time.png) |
+| Public Education Access, Funding, and School Choice | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-012_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-012_time.png) |
+| Reproductive Rights, Gender Equality, and Family Policy | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-013_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-013_time.png) |
+| Counterterrorism, Military Readiness, and War Strategy | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-014_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-014_time.png) |
+| Cross-Policy Opposition and Institutional Critiques | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-015_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-015_time.png) |
+| Presidential Leadership, Records, and Policy Commitments | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-016_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-016_time.png) |
+| Healthcare Coverage, Affordability, and System Design | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-018_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-018_time.png) |
+| Economic Hardship, Poverty, and Housing Insecurity | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-019_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-019_time.png) |
+| Institutional Power, Oppression, and Social Conflict | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-020_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-020_time.png) |
+| Immigration Reform, Enforcement, and Migrant Rights | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-021_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-021_time.png) |
+| Israel-Palestine Peace, Security, and Palestinian Rights | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-022_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-022_time.png) |
+| Trump Administration Records and Partisan Critiques | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-024_overall.png) | [PNG](../../figures/national_claims/full/topics/expanded/issues/topic-024_time.png) |
 
-![One-topic comparison over time](../figures/national_claims/full/topics/expanded/issues/topic-003_time.png)
+![One-topic comparison over time](../../figures/national_claims/full/topics/expanded/issues/topic-003_time.png)
 
 #### Strict time views
 
@@ -1085,41 +1085,41 @@ These six selected policy subjects pair the overall comparison with its timeline
 
 | Issue | Combined overall and timeline |
 |---|---|
-| Labor and worker protections | [PNG](../figures/national_claims/full/topics/strict/piece/topic-003.png) |
-| Tax relief and revenue | [PNG](../figures/national_claims/full/topics/strict/piece/topic-011.png) |
-| Education and school choice | [PNG](../figures/national_claims/full/topics/strict/piece/topic-012.png) |
-| Reproductive rights, gender equality and families | [PNG](../figures/national_claims/full/topics/strict/piece/topic-013.png) |
-| Healthcare | [PNG](../figures/national_claims/full/topics/strict/piece/topic-018.png) |
-| Israel-Palestine | [PNG](../figures/national_claims/full/topics/strict/piece/topic-022.png) |
+| Labor and worker protections | [PNG](../../figures/national_claims/full/topics/strict/piece/topic-003.png) |
+| Tax relief and revenue | [PNG](../../figures/national_claims/full/topics/strict/piece/topic-011.png) |
+| Education and school choice | [PNG](../../figures/national_claims/full/topics/strict/piece/topic-012.png) |
+| Reproductive rights, gender equality and families | [PNG](../../figures/national_claims/full/topics/strict/piece/topic-013.png) |
+| Healthcare | [PNG](../../figures/national_claims/full/topics/strict/piece/topic-018.png) |
+| Israel-Palestine | [PNG](../../figures/national_claims/full/topics/strict/piece/topic-022.png) |
 #### Individual issue comparisons
 
 Each standalone chart compares all organizations on one topic. Overall bars and observed-period lines are separate figures, suitable for individual embedding. Axes are shared across organizations and both views of the same topic; different issues can have different vertical scales. Missing evidence remains a gap. Actor and narrative topics retain their qualifications rather than being presented as coherent policy issues.
 
 | Topic | Overall comparison | Over time |
 |---|---|---|
-| Energy Production, Transition, and Investment | [PNG](../figures/national_claims/full/topics/strict/issues/topic-001_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-001_time.png) |
-| Community Investment, Housing, and Social Support | [PNG](../figures/national_claims/full/topics/strict/issues/topic-002_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-002_time.png) |
-| Labor Rights, Unionization, and Worker Protections | [PNG](../figures/national_claims/full/topics/strict/issues/topic-003_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-003_time.png) |
-| Economic Prosperity Narratives and Development Models | [PNG](../figures/national_claims/full/topics/strict/issues/topic-004_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-004_time.png) |
-| Voting Rights, Election Rules, and Representation | [PNG](../figures/national_claims/full/topics/strict/issues/topic-005_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-005_time.png) |
-| American Power, Leadership, and National Purpose | [PNG](../figures/national_claims/full/topics/strict/issues/topic-006_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-006_time.png) |
-| Public Protections and National Commitments | [PNG](../figures/national_claims/full/topics/strict/issues/topic-007_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-007_time.png) |
-| Diplomacy, Alliances, Trade, and International Cooperation | [PNG](../figures/national_claims/full/topics/strict/issues/topic-009_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-009_time.png) |
-| Criminal Justice, Policing, and Incarceration | [PNG](../figures/national_claims/full/topics/strict/issues/topic-010_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-010_time.png) |
-| Tax Relief, Progressive Revenue, and Corporate Taxation | [PNG](../figures/national_claims/full/topics/strict/issues/topic-011_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-011_time.png) |
-| Public Education Access, Funding, and School Choice | [PNG](../figures/national_claims/full/topics/strict/issues/topic-012_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-012_time.png) |
-| Reproductive Rights, Gender Equality, and Family Policy | [PNG](../figures/national_claims/full/topics/strict/issues/topic-013_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-013_time.png) |
-| Counterterrorism, Military Readiness, and War Strategy | [PNG](../figures/national_claims/full/topics/strict/issues/topic-014_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-014_time.png) |
-| Cross-Policy Opposition and Institutional Critiques | [PNG](../figures/national_claims/full/topics/strict/issues/topic-015_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-015_time.png) |
-| Presidential Leadership, Records, and Policy Commitments | [PNG](../figures/national_claims/full/topics/strict/issues/topic-016_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-016_time.png) |
-| Healthcare Coverage, Affordability, and System Design | [PNG](../figures/national_claims/full/topics/strict/issues/topic-018_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-018_time.png) |
-| Economic Hardship, Poverty, and Housing Insecurity | [PNG](../figures/national_claims/full/topics/strict/issues/topic-019_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-019_time.png) |
-| Institutional Power, Oppression, and Social Conflict | [PNG](../figures/national_claims/full/topics/strict/issues/topic-020_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-020_time.png) |
-| Immigration Reform, Enforcement, and Migrant Rights | [PNG](../figures/national_claims/full/topics/strict/issues/topic-021_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-021_time.png) |
-| Israel-Palestine Peace, Security, and Palestinian Rights | [PNG](../figures/national_claims/full/topics/strict/issues/topic-022_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-022_time.png) |
-| Trump Administration Records and Partisan Critiques | [PNG](../figures/national_claims/full/topics/strict/issues/topic-024_overall.png) | [PNG](../figures/national_claims/full/topics/strict/issues/topic-024_time.png) |
+| Energy Production, Transition, and Investment | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-001_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-001_time.png) |
+| Community Investment, Housing, and Social Support | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-002_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-002_time.png) |
+| Labor Rights, Unionization, and Worker Protections | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-003_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-003_time.png) |
+| Economic Prosperity Narratives and Development Models | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-004_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-004_time.png) |
+| Voting Rights, Election Rules, and Representation | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-005_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-005_time.png) |
+| American Power, Leadership, and National Purpose | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-006_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-006_time.png) |
+| Public Protections and National Commitments | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-007_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-007_time.png) |
+| Diplomacy, Alliances, Trade, and International Cooperation | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-009_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-009_time.png) |
+| Criminal Justice, Policing, and Incarceration | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-010_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-010_time.png) |
+| Tax Relief, Progressive Revenue, and Corporate Taxation | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-011_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-011_time.png) |
+| Public Education Access, Funding, and School Choice | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-012_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-012_time.png) |
+| Reproductive Rights, Gender Equality, and Family Policy | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-013_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-013_time.png) |
+| Counterterrorism, Military Readiness, and War Strategy | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-014_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-014_time.png) |
+| Cross-Policy Opposition and Institutional Critiques | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-015_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-015_time.png) |
+| Presidential Leadership, Records, and Policy Commitments | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-016_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-016_time.png) |
+| Healthcare Coverage, Affordability, and System Design | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-018_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-018_time.png) |
+| Economic Hardship, Poverty, and Housing Insecurity | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-019_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-019_time.png) |
+| Institutional Power, Oppression, and Social Conflict | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-020_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-020_time.png) |
+| Immigration Reform, Enforcement, and Migrant Rights | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-021_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-021_time.png) |
+| Israel-Palestine Peace, Security, and Palestinian Rights | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-022_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-022_time.png) |
+| Trump Administration Records and Partisan Critiques | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-024_overall.png) | [PNG](../../figures/national_claims/full/topics/strict/issues/topic-024_time.png) |
 
-![One-topic comparison over time](../figures/national_claims/full/topics/strict/issues/topic-003_time.png)
+![One-topic comparison over time](../../figures/national_claims/full/topics/strict/issues/topic-003_time.png)
 
 ### Independently discovered topics within each period
 
@@ -1131,7 +1131,7 @@ Names summarize bounded local-Gemma evidence packets, not a pre-existing policy 
 
 Adjacent-period centroid cosine similarities suggest possible thematic continuity. Only mutual nearest matches above 0.80 are called candidates. Neither a low similarity nor an unmatched topic proves that an issue first appeared or disappeared. Source coverage, rhetorical framing and cluster boundaries can all change.
 
-[Period fits and diagnostics](../data/analysis/national_claims/full/topics/evolution/period_fits.json) · [Within-period shares](../data/analysis/national_claims/full/topics/evolution/shares.csv) · [Within-period contrasts and warnings](../data/analysis/national_claims/full/topics/evolution/contrasts.csv) · [Adjacent-period similarities](../data/analysis/national_claims/full/topics/evolution/adjacent_matches.csv) · [Representative source evidence](../data/analysis/national_claims/full/topics/evolution/representatives.csv) · [Label review and provenance](../data/analysis/national_claims/full/topics/evolution/label_review.json) · [Period coverage](../data/analysis/national_claims/full/topics/evolution/coverage.csv)
+[Period fits and diagnostics](../../data/analysis/national_claims/full/topics/evolution/period_fits.json) · [Within-period shares](../../data/analysis/national_claims/full/topics/evolution/shares.csv) · [Within-period contrasts and warnings](../../data/analysis/national_claims/full/topics/evolution/contrasts.csv) · [Adjacent-period similarities](../../data/analysis/national_claims/full/topics/evolution/adjacent_matches.csv) · [Representative source evidence](../../data/analysis/national_claims/full/topics/evolution/representatives.csv) · [Label review and provenance](../../data/analysis/national_claims/full/topics/evolution/label_review.json) · [Period coverage](../../data/analysis/national_claims/full/topics/evolution/coverage.csv)
 
 #### 2000-2003: observed themes
 
@@ -1145,7 +1145,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Social Insurance, School Choice, and Public-Service Improvements (19.2%); Republican party narratives and competing policy descriptions (15.1%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: Civil Society, Community Coalitions, and Public-Land Partnerships (23.3%); U.S. Policy Regarding Iraq and Saddam Hussein (18.8%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 
-![Period-specific topics, expanded](../figures/national_claims/full/topics/evolution/expanded/period_2000-2003.png)
+![Period-specific topics, expanded](../../figures/national_claims/full/topics/evolution/expanded/period_2000-2003.png)
 
 **Strict reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -1153,7 +1153,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Social Insurance, School Choice, and Public-Service Improvements (19.2%); Republican party narratives and competing policy descriptions (15.1%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: no observed documents in this view.
 
-![Period-specific topics, strict](../figures/national_claims/full/topics/evolution/strict/period_2000-2003.png)
+![Period-specific topics, strict](../../figures/national_claims/full/topics/evolution/strict/period_2000-2003.png)
 
 | Period topic | Closest preceding theme | Cosine | Interpretation |
 |---|---|---:|---|
@@ -1340,7 +1340,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Republican Records, Social Spending, and Environmental Criticism (15.1%); Counterterrorism, Armed Peacekeeping, and Military Spending (14.1%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: Employment Loss, Living Costs, and Social Stability (32.3%); Democratic Prosperity, Market Policy, and Progressive Economic Coalitions (25.6%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 
-![Period-specific topics, expanded](../figures/national_claims/full/topics/evolution/expanded/period_2004-2007.png)
+![Period-specific topics, expanded](../../figures/national_claims/full/topics/evolution/expanded/period_2004-2007.png)
 
 **Strict reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -1348,7 +1348,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Republican Records, Social Spending, and Environmental Criticism (15.1%); Counterterrorism, Armed Peacekeeping, and Military Spending (14.1%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: no observed documents in this view.
 
-![Period-specific topics, strict](../figures/national_claims/full/topics/evolution/strict/period_2004-2007.png)
+![Period-specific topics, strict](../../figures/national_claims/full/topics/evolution/strict/period_2004-2007.png)
 
 | Period topic | Closest preceding theme | Cosine | Interpretation |
 |---|---|---:|---|
@@ -1547,7 +1547,7 @@ Method: `hdbscan`; unweighted assignment coverage: 52.2%. Low separation and mix
 - Republican: Government Economic Role and Public Spending (41.1%); Israeli-Palestinian security, rights and two-state diplomacy (1.0%). Based on 1 bundle(s); unclustered share 57.9%. Source composition limits interpretation.
 - DSA: Government Economic Role and Public Spending (35.0%); Israeli-Palestinian security, rights and two-state diplomacy (12.4%). Based on 1 bundle(s); unclustered share 52.6%. Source composition limits interpretation.
 
-![Period-specific topics, expanded](../figures/national_claims/full/topics/evolution/expanded/period_2008-2011.png)
+![Period-specific topics, expanded](../../figures/national_claims/full/topics/evolution/expanded/period_2008-2011.png)
 
 **Strict reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -1555,7 +1555,7 @@ Method: `hdbscan`; unweighted assignment coverage: 52.2%. Low separation and mix
 - Republican: Government Economic Role and Public Spending (41.1%); Israeli-Palestinian security, rights and two-state diplomacy (1.0%). Based on 1 bundle(s); unclustered share 57.9%. Source composition limits interpretation.
 - DSA: no observed documents in this view.
 
-![Period-specific topics, strict](../figures/national_claims/full/topics/evolution/strict/period_2008-2011.png)
+![Period-specific topics, strict](../../figures/national_claims/full/topics/evolution/strict/period_2008-2011.png)
 
 | Period topic | Closest preceding theme | Cosine | Interpretation |
 |---|---|---:|---|
@@ -1604,7 +1604,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Public Investment, Workforce Retraining, and Indigenous Community Support (13.7%); Universal Rights, Voting, Self-Defense, and Religious Freedom (13.0%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: Economic Crisis, Household Bills, and Sequestration Cuts (14.4%); Good Jobs, Workers' Rights, Income Security, and Enterprise (12.4%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 
-![Period-specific topics, expanded](../figures/national_claims/full/topics/evolution/expanded/period_2012-2015.png)
+![Period-specific topics, expanded](../../figures/national_claims/full/topics/evolution/expanded/period_2012-2015.png)
 
 **Strict reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -1612,7 +1612,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Public Investment, Workforce Retraining, and Indigenous Community Support (13.7%); Universal Rights, Voting, Self-Defense, and Religious Freedom (13.0%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: no observed documents in this view.
 
-![Period-specific topics, strict](../figures/national_claims/full/topics/evolution/strict/period_2012-2015.png)
+![Period-specific topics, strict](../../figures/national_claims/full/topics/evolution/strict/period_2012-2015.png)
 
 | Period topic | Closest preceding theme | Cosine | Interpretation |
 |---|---|---:|---|
@@ -1811,7 +1811,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Voting, Congressional Representation, Immigration Enforcement, and Labor Rights (17.6%); Reproductive funding, immigration, discipline and gun-rights disputes (15.0%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: Socialist organizing and mixed economic or humanitarian commitments (23.2%); Political Repression, Foreign Intervention, and Humanitarian Crises (18.4%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 
-![Period-specific topics, expanded](../figures/national_claims/full/topics/evolution/expanded/period_2016-2019.png)
+![Period-specific topics, expanded](../../figures/national_claims/full/topics/evolution/expanded/period_2016-2019.png)
 
 **Strict reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -1819,7 +1819,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Voting, Congressional Representation, Immigration Enforcement, and Labor Rights (17.6%); Reproductive funding, immigration, discipline and gun-rights disputes (15.0%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: no observed documents in this view.
 
-![Period-specific topics, strict](../figures/national_claims/full/topics/evolution/strict/period_2016-2019.png)
+![Period-specific topics, strict](../../figures/national_claims/full/topics/evolution/strict/period_2016-2019.png)
 
 | Period topic | Closest preceding theme | Cosine | Interpretation |
 |---|---|---:|---|
@@ -2018,7 +2018,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: no observed documents in this view.
 - DSA: Structural Racism, Policing, Borders, and Housing Exclusion (18.4%); Private Prisons, Deportation, Police Discipline, and Abortion Restrictions (16.6%). Based on 2 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 
-![Period-specific topics, expanded](../figures/national_claims/full/topics/evolution/expanded/period_2020-2023.png)
+![Period-specific topics, expanded](../../figures/national_claims/full/topics/evolution/expanded/period_2020-2023.png)
 
 **Strict reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -2026,7 +2026,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: no observed documents in this view.
 - DSA: Private Prisons, Deportation, Police Discipline, and Abortion Restrictions (24.8%); Collective Bargaining, Wages, Strike Rights, and Working-Class Guarantees (16.2%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 
-![Period-specific topics, strict](../figures/national_claims/full/topics/evolution/strict/period_2020-2023.png)
+![Period-specific topics, strict](../../figures/national_claims/full/topics/evolution/strict/period_2020-2023.png)
 
 | Period topic | Closest preceding theme | Cosine | Interpretation |
 |---|---|---:|---|
@@ -2225,7 +2225,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Social Insurance, Affordability, Community Investment, and Public Energy (28.5%); Republican Tax, Healthcare, Border, and Rights Claims and Critiques (16.5%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: Labor Rights, Minimum Wages, School Choice, and Suffrage (25.8%); DSA Socialist Organizing, Competition, and Democratic Futures (23.7%). Based on 2 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 
-![Period-specific topics, expanded](../figures/national_claims/full/topics/evolution/expanded/period_2024-2026.png)
+![Period-specific topics, expanded](../../figures/national_claims/full/topics/evolution/expanded/period_2024-2026.png)
 
 **Strict reading:** topic shares below are within this period, not measurements of a permanent political position.
 
@@ -2233,7 +2233,7 @@ Method: `weighted_kmeans`; unweighted assignment coverage: 100.0%. Low separatio
 - Republican: Social Insurance, Affordability, Community Investment, and Public Energy (28.5%); Republican Tax, Healthcare, Border, and Rights Claims and Critiques (16.5%). Based on 1 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 - DSA: Labor Rights, Minimum Wages, School Choice, and Suffrage (25.8%); DSA Socialist Organizing, Competition, and Democratic Futures (23.7%). Based on 2 bundle(s); unclustered share 0.0%. Source composition limits interpretation.
 
-![Period-specific topics, strict](../figures/national_claims/full/topics/evolution/strict/period_2024-2026.png)
+![Period-specific topics, strict](../../figures/national_claims/full/topics/evolution/strict/period_2024-2026.png)
 
 | Period topic | Closest preceding theme | Cosine | Interpretation |
 |---|---|---:|---|
@@ -3155,7 +3155,7 @@ The analytical text is the **claim**, not its original evidence passage. The sep
 
 ## Semantic density
 
-[Compact density overview](../figures/national_claims/full/expanded/pairwise_density.png). For detailed maps and source-linked representative claims, see the learned-topic section's detailed density comparisons.
+[Compact density overview](../../figures/national_claims/full/expanded/pairwise_density.png). For detailed maps and source-linked representative claims, see the learned-topic section's detailed density comparisons.
 
 The shared representation uses 10 dimensions for KDE; the two-dimensional display is not the density-estimation space. Sampling balances organizations and gives each document/fallback-period bundle equal aggregate density weight. Positive contrasts mean greater first-organization language density, not agreement, ideological direction, or causal differences.
 
@@ -3163,8 +3163,8 @@ Platforms/programs-only sensitivity: **complete**. Its independently fitted spac
 
 ## Topics
 
-![Document-weighted CAP topic emphasis](../figures/national_claims/full/topic_emphasis.png)
-![Document-weighted CAP topic emphasis, continued](../figures/national_claims/full/topic_emphasis_2.png)
+![Document-weighted CAP topic emphasis](../../figures/national_claims/full/topic_emphasis.png)
+![Document-weighted CAP topic emphasis, continued](../../figures/national_claims/full/topic_emphasis_2.png)
 
 The existing pinned MiniLM classifier compares normalized claim text with CAP topic descriptions (minimum cosine similarity 0.2). Each claim receives at most one topic; unclassified claims remain in the denominator. This is exploratory classification, not validated topic gold. Topic shares use equal aggregate document/fallback-bundle weights, not raw claim counts.
 
@@ -3182,20 +3182,20 @@ The largest classified DSA topic is Social welfare (11.1%) in the expanded input
 Full extraction uses source chunks of at most 240 words, sentence-aware splitting of long paragraphs, and at most 1,200 preceding-context characters. The prompt requires preservation of actors, stance/modality, conditions, temporal scope and reported-speaker attribution; automated revision does not certify that every requirement was met. Source organization remains metadata rather than a mechanically repeated embedding prefix. Exact within-document claim duplicates are retained in downloads but excluded from fitting.
 
 - [Complete claim/source download, not metadata only](https://github.com/hanshanley/dsa/releases/download/claim-source-cleaned-platforms-2026-10-31/claim_documents.zip)
-- [Claims and exact supporting source offsets](../data/analysis/national_claims/full/claims.csv)
-- [Complete source texts](../data/analysis/national_claims/full/complete_sources.csv)
-- [Topic assignments](../data/analysis/national_claims/full/topic_assignments.csv)
-- [Weighted topic shares, both views](../data/analysis/national_claims/full/topic_emphasis.csv)
-- [Machine-readable analysis summary](../data/analysis/national_claims/full/analysis_summary.json)
+- [Claims and exact supporting source offsets](../../data/analysis/national_claims/full/claims.csv)
+- [Complete source texts](../../data/analysis/national_claims/full/complete_sources.csv)
+- [Topic assignments](../../data/analysis/national_claims/full/topic_assignments.csv)
+- [Weighted topic shares, both views](../../data/analysis/national_claims/full/topic_emphasis.csv)
+- [Machine-readable analysis summary](../../data/analysis/national_claims/full/analysis_summary.json)
 
 Source documents retain their original attribution. Claims describe what sources assert; they do not independently establish truth. Pooling mixes periods and genres. Missing historical sources, including the final 2015 DSA strategy, remain missing rather than being inferred from later documents. No website deployment is performed.
 
 Extraction status: **complete**; effective chunk dispositions: `{"normalized": 2461, "source_repaired": 162}`.
-[Source coverage](../data/analysis/national_claims/full/source_coverage.csv) / [Chunk dispositions](../data/analysis/national_claims/full/block_status.csv)
+[Source coverage](../../data/analysis/national_claims/full/source_coverage.csv) / [Chunk dispositions](../../data/analysis/national_claims/full/block_status.csv)
 
 Original Gemma chunk outcomes remain `{"normalized": 2596, "validation_failed": 27}`. Targeted assistant source corrections cover **162 chunks** and supply **1,047 replacement claims**; **1,084 original candidates** are superseded, not erased. Zero-claim corrections explicitly dispose of non-policy material rather than inventing assertions.
 
 Each correction is bound to the exact target, reference-only context, raw-response bytes and normalization fingerprint. Unaffected model claims retain their original IDs and wording; superseded originals remain in the download but cannot enter fitting or anchor duplicates. Corrected rows have `normalization_origin=assistant_source_repair` and a blank `model_claim_text`, never a falsely attributed Gemma reply. Original model failures and diagnostics remain failures in `model_status`, even when a source correction recovers their content. This is targeted assistant source-entailment work, not independent human gold or factual verification.
 
 Archived original-candidate review flags: **1,493**; flagged model candidates still lacking a superseding correction: **439**. Historical flags are not a count of unresolved errors in replacement claims.
-[Source-bound correction records](../data/analysis/national_claims/full/source_repairs/)
+[Source-bound correction records](../../data/analysis/national_claims/full/source_repairs/)

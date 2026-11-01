@@ -127,7 +127,7 @@ def validate(source: Path) -> tuple[dict, dict, list, list, list]:
         bundle(
             data,
             figures=source / FIGURES.parent,
-            report=source / "report/national_claim_analysis.md",
+            report=source / "docs/reports/national_claim_analysis.md",
         )
     if expected_archive and (
         archive_path.stat().st_size != expected_archive["bytes"]
@@ -363,7 +363,7 @@ def export(source: Path, output: Path) -> dict:
             str(DATA),
             str(FIGURES),
             str(WEBSITE_FIGURES),
-            "report/national_claim_analysis.md",
+            "docs/reports/national_claim_analysis.md",
         ],
         text=True,
     ).strip():
@@ -500,7 +500,7 @@ def export(source: Path, output: Path) -> dict:
             relative = f"downloads/{original.relative_to(source / DATA).as_posix()}"
             copy(original, relative)
             downloads.append(dict(path=relative, bytes=original.stat().st_size))
-        copy(source / "report/national_claim_analysis.md", "downloads/methods-and-results.md")
+        copy(source / "docs/reports/national_claim_analysis.md", "downloads/methods-and-results.md")
         for label in labels:
             label["representatives"] = [
                 row for row in representatives if row["topic_id"] == label["topic_id"]

@@ -231,13 +231,13 @@ class FourPartyTests(unittest.TestCase):
             self.assertAlmostEqual(sum(row["share"] for row in shares if row["group"] == group), 1)
 
     def test_four_party_analysis_rejects_baseline_output_and_report_before_loading_models(self):
-        separate_report = ROOT / "report/national_claim_analysis_four_party.md"
+        separate_report = ROOT / "docs/reports/national_claim_analysis_four_party.md"
         separate_output = FULL_OUTPUT.parent / "four_party"
         for output, report in (
             (FULL_OUTPUT, separate_report),
             (FULL_OUTPUT / "four_party", separate_report),
             (separate_output, None),
-            (separate_output, ROOT / "report/national_claim_analysis.md"),
+            (separate_output, ROOT / "docs/reports/national_claim_analysis.md"),
         ):
             with self.subTest(output=output, report=report):
                 with self.assertRaisesRegex(ValueError, "separate"):

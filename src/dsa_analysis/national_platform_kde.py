@@ -41,7 +41,7 @@ from .provisional_kde import (
 )
 
 FIGURES = ROOT / "figures/national_platforms"
-REPORT = ROOT / "report/national_platform_analysis.md"
+REPORT = ROOT / "docs/reports/national_platform_analysis.md"
 LABELS = {
     "democratic": "Democratic",
     "republican": "Republican",
@@ -876,7 +876,7 @@ def write_report(
         "Candidate and state/local texts are excluded. This is a pooled comparison of "
         "recoverable language, not a continuous history of organizational positions.",
         "",
-        "![Source chronology](../figures/national_platforms/coverage.png)",
+        "![Source chronology](../../figures/national_platforms/coverage.png)",
         "",
         "## Corpus and sensitivity",
         "",
@@ -933,7 +933,7 @@ def write_report(
             "",
             "## Pooled semantic comparison",
             "",
-            "![Pairwise density](../figures/national_platforms/pairwise_density.png)",
+            "![Pairwise density](../../figures/national_platforms/pairwise_density.png)",
             "",
             "All three densities share one representation within each view. Positive log ratios "
             "favor the first organization in a panel; negative ratios favor the second. "
@@ -966,7 +966,7 @@ def write_report(
             "",
             "## Document chronology",
             "",
-            "![Document language change](../figures/national_platforms/document_change.png)",
+            "![Document language change](../../figures/national_platforms/document_change.png)",
             "",
             "Distances compare adjacent recovered document centroids within an organization "
             "in the original normalized GTE space, not on a left–right scale. Fallback "

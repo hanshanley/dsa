@@ -2,7 +2,7 @@
 
 National organizational documents, January 1, 2000 through 2026-10-26. Candidate and state/local texts are excluded. This is a pooled comparison of recoverable language, not a continuous history of organizational positions.
 
-![Source chronology](../figures/national_platforms/coverage.png)
+![Source chronology](../../figures/national_platforms/coverage.png)
 
 ## Corpus and sensitivity
 
@@ -55,7 +55,7 @@ The reviewed findings ledger records the source document identifier and an exact
 
 ## Pooled semantic comparison
 
-![Pairwise density](../figures/national_platforms/pairwise_density.png)
+![Pairwise density](../../figures/national_platforms/pairwise_density.png)
 
 All three densities share one representation within each view. Positive log ratios favor the first organization in a panel; negative ratios favor the second. Shared language does not establish shared policy or agreement. Different decades and genres are pooled; historical composition can drive apparent distinctions.
 
@@ -86,7 +86,7 @@ Terms are descriptive TF-IDF labels, not independently reviewed policy categorie
 
 ## Document chronology
 
-![Document language change](../figures/national_platforms/document_change.png)
+![Document language change](../../figures/national_platforms/document_change.png)
 
 Distances compare adjacent recovered document centroids within an organization in the original normalized GTE space, not on a left–right scale. Fallback statements and full platforms are different genres. Dates retain source precision; no annual interpolation is performed. First documents have no preceding observation. See each view's `document_chronology.csv`.
 

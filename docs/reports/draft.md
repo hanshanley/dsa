@@ -903,17 +903,17 @@ TF-IDF, MPIF, document prevalence, source mix, cycle volume, explicit-conflict, 
 topic outputs are generated from the full eligible segment snapshots, not from the legacy manual
 excerpt table.
 
-![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
+![Difference in policy language](../../figures/text_analysis/policy_language_difference.svg)
 
-![Shared policy emphasis](../outputs/figures/text_analysis/policy_language_overlap.svg)
+![Shared policy emphasis](../../figures/text_analysis/policy_language_overlap.svg)
 
-![Shared affirmative policy mechanisms](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
+![Shared affirmative policy mechanisms](../../figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
 
-![Official contrast](../outputs/figures/text_analysis/official_policy_contrasts.svg)
+![Official contrast](../../figures/text_analysis/official_policy_contrasts.svg)
 
-![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
+![Official-platform document prevalence](../../figures/text_analysis/official_platform_document_prevalence.svg)
 
-![Modeled topics](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
+![Modeled topics](../../figures/text_analysis/model_topic_emphasis_difference.svg)
 
 ## 6. Provisional KDE
 
@@ -931,7 +931,7 @@ regions are derived from the underlying segments in each locally overrepresented
 high-density area; each label reports distinctive terms, an extractive representative passage,
 and candidate support.
 
-![Provisional GTE KDE](../figures/provisional_gte_kde.png)
+![Provisional GTE KDE](../../figures/provisional_gte_kde.png)
 
 ## 7. Official-platform KDE
 
@@ -959,7 +959,7 @@ HDBSCAN regions report distinctive terms and exact representative passages, but 
 parameter sensitivity makes them exploratory evidence summaries rather than a stable topic
 taxonomy.
 
-![Official-platform GTE KDE](../figures/official_platform_gte_kde.png)
+![Official-platform GTE KDE](../../figures/official_platform_gte_kde.png)
 
 ## 8. Small reviewed qualitative examples
 

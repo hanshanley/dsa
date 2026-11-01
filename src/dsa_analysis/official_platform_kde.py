@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = ROOT / "data" / "analysis" / "organizational_context_text_corpus.csv"
 DEFAULT_OUTPUT = ROOT / "data" / "analysis" / "official_platform_gte_kde"
 DEFAULT_FIGURE = ROOT / "figures" / "official_platform_gte_kde.png"
-DEFAULT_REPORT = ROOT / "report" / "official_platform_kde_analysis.md"
+DEFAULT_REPORT = ROOT / "docs/reports" / "official_platform_kde_analysis.md"
 MIN_PLATFORM_PASSAGES = 10
 
 

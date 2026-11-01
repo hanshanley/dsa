@@ -36,10 +36,10 @@ jobs:
           git config user.email "hwahhanley@gmail.com"
           git add \
             data/analysis \
-            outputs/figures/text_analysis \
-            outputs/tables/text_analysis \
-            report/model_topic_analysis.md \
-            report/text_analysis.md \
+            figures/text_analysis \
+            data/analysis/text_analysis \
+            docs/reports/model_topic_analysis.md \
+            docs/reports/text_analysis.md \
             uv.lock
           if git diff --cached --quiet; then
             echo "No generated changes"

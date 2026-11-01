@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 from collections import Counter
 from pathlib import Path
 
@@ -382,11 +383,11 @@ def write_report(
     sample = summary["corpus"]["status"] == "reviewed_sample_not_full_corpus"
     destination = report or (
         ROOT
-        / "report"
+        / "docs/reports"
         / ("national_claim_analysis_sample.md" if sample else "national_claim_analysis.md")
     )
-    figure_path = f"../{figures.relative_to(ROOT).as_posix()}"
-    data_path = f"../{output.relative_to(ROOT).as_posix()}"
+    figure_path = Path(os.path.relpath(figures.resolve(), destination.parent.resolve())).as_posix()
+    data_path = Path(os.path.relpath(output.resolve(), destination.parent.resolve())).as_posix()
     lines = [
         "# National platforms: claim-based analysis",
         "",
@@ -599,7 +600,7 @@ def run_analysis(
     if groups != GROUPS:
         protected = (FULL_OUTPUT.resolve(), SAMPLE_OUTPUT.resolve(), PILOT_OUTPUT.resolve())
         protected_reports = {
-            ROOT / "report" / name
+            ROOT / "docs/reports" / name
             for name in (
                 "national_claim_analysis.md",
                 "national_claim_analysis_sample.md",

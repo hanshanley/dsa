@@ -232,9 +232,9 @@ The reviewed record includes agreement on completing a transit project, raising 
 - `platform_comparison.html`: searchable, source-reviewed claims and pairs with dates and provenance.
 - `mayor_same_question_comparison.html`: all 18 questions and nine covered Democratic candidates from THE CITY/Gothamist's pre-primary survey, with original qualifications and uncoded answers preserved.
 - `complete_questionnaire_comparison.html`: complete candidate-authored answers from the reviewed multi-state questionnaires, with original prompts, answer boundaries, timing limits and full-answer downloads.
-- `../data/analysis/policy_evidence/race_policy_comparison_matrix.csv`: every registry case, including gaps.
-- `../data/analysis/policy_evidence/documented_campaign_positions.csv`: actual candidate claims and quotation anchors.
+- `../../data/analysis/policy_evidence/race_policy_comparison_matrix.csv`: every registry case, including gaps.
+- `../../data/analysis/policy_evidence/documented_campaign_positions.csv`: actual candidate claims and quotation anchors.
 
-- `../data/analysis/policy_evidence/excluded_candidate_statements.csv`: preserved historical statements excluded from active-endorsement comparisons, including a documented pre-primary revocation.
+- `../../data/analysis/policy_evidence/excluded_candidate_statements.csv`: preserved historical statements excluded from active-endorsement comparisons, including a documented pre-primary revocation.
 
 Missing source material remains an explicit research gap. The dated and timing-qualified exports must not be silently pooled into a claim of complete pre-primary coverage.

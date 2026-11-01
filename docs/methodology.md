@@ -173,7 +173,7 @@ date stays unchanged and the exact edition date used for eligibility is exported
 The source-date correction ledger now repairs 339 metadata associations against retained bytes.
 Many are copies of the same national source, not 339 independent sources.
 
-`analyze` writes `data/analysis/execution_audit.json` and `report/analysis_execution.md`.
+`analyze` writes `data/analysis/execution_audit.json` and `docs/reports/analysis_execution.md`.
 The receipt distinguishes audit observation time from actual recorded model completion times,
 checks source-preparation dependencies as well as output-corpus hashes, and matches topic
 prediction text and IDs to the actual input rows. A completed model with stale upstream

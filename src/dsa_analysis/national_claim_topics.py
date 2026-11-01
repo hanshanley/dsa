@@ -7,6 +7,7 @@ import importlib.metadata
 import inspect
 import json
 import math
+import os
 import re
 import subprocess
 import zipfile
@@ -1381,7 +1382,9 @@ def plot_piece(directory: Path, figures: Path, labels: dict, groups: tuple[str, 
             plt.close(fig)
 
 
-def report_section(directory: Path, figures: Path, labels: dict) -> str:
+def report_section(
+    directory: Path, figures: Path, labels: dict, *, report: Path | None = None
+) -> str:
     from .national_platform_kde import LABELS
 
     fit = json.loads((directory / "fit_manifest.json").read_text())
@@ -1391,8 +1394,13 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
     ratios = read_rows(directory / "contrasts.csv")
     keywords = read_rows(directory / "keywords.csv")
     examples = read_rows(directory / "representatives.csv")
-    relative_data = f"../{directory.resolve().relative_to(ROOT.resolve()).as_posix()}"
-    relative_figures = f"../{figures.resolve().relative_to(ROOT.resolve()).as_posix()}"
+    report_directory = report.parent if report else ROOT / "docs/reports"
+    relative_data = Path(
+        os.path.relpath(directory.resolve(), report_directory.resolve())
+    ).as_posix()
+    relative_figures = Path(
+        os.path.relpath(figures.resolve(), report_directory.resolve())
+    ).as_posix()
 
     def escape(value):
         return str(value).replace("|", "\\|").replace("\n", " ")
@@ -1489,7 +1497,9 @@ def report_section(directory: Path, figures: Path, labels: dict) -> str:
         ]
     from .national_claim_topic_positions import report_section as position_report
 
-    lines += position_report(directory.parent, figures).splitlines()
+    lines += position_report(
+        directory.parent, figures, report=report_directory / "report.md"
+    ).splitlines()
     lines += [
         "### Detailed density comparisons",
         "",
@@ -1783,7 +1793,7 @@ def default_report(corpus: Path) -> Path:
         "reviewed_sample": "national_claim_analysis_sample.md",
         "four_party": "national_claim_analysis_four_party.md",
     }.get(corpus.name, f"national_claim_analysis_{corpus.name}.md")
-    return ROOT / "report" / name
+    return ROOT / "docs/reports" / name
 
 
 def render(corpus: Path, *, update_report: bool = True, report: Path | None = None) -> dict:
@@ -1831,8 +1841,8 @@ def render(corpus: Path, *, update_report: bool = True, report: Path | None = No
     evolution = generate_evolution(corpus, figures, prepare_if_missing=False)
     render_supporting(corpus, figures.parent)
     publication = export_page_versions(figures.parent)
-    section = report_section(directory, figures, labels)
     path = report or default_report(corpus)
+    section = report_section(directory, figures, labels, report=path)
     if update_report:
         if (corpus / "analysis_summary.json").exists() and (corpus / "topic_emphasis.csv").exists():
             from .national_claim_analysis import write_report

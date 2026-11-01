@@ -304,7 +304,7 @@ class ClaimAnalysisTests(unittest.TestCase):
     def test_report_does_not_mix_expanded_and_strict_topic_rankings(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            (root / "report").mkdir()
+            (root / "docs/reports").mkdir(parents=True)
             groups = {"democratic": 1, "republican": 1, "dsa": 1}
             summary = {
                 "corpus": {"status": "reviewed_sample_not_full_corpus"},
@@ -391,7 +391,7 @@ class ClaimAnalysisTests(unittest.TestCase):
     def test_completed_report_explains_dsa_source_mix_sensitivity(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            (root / "report").mkdir()
+            (root / "docs/reports").mkdir(parents=True)
             groups = {"democratic": 7, "republican": 6, "dsa": 122}
             summary = {
                 "corpus": {

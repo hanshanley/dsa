@@ -28,7 +28,7 @@ class ExecutionAuditTests(unittest.TestCase):
             root = Path(directory)
             analysis = root / "data/analysis"
             policy = analysis / "policy_evidence"
-            (root / "report").mkdir()
+            (root / "docs/reports").mkdir(parents=True)
 
             def csv(name, rows):
                 write_csv(root / name, rows, list(rows[0]))
@@ -55,7 +55,7 @@ class ExecutionAuditTests(unittest.TestCase):
                 csv(name, [{"id": "one"}])
             save("config/cap_topics.json", {})
             save("config/sources.json", {"research_cutoff": "2026-09-22"})
-            save("outputs/tables/text_analysis/analysis_manifest.json", {
+            save("data/analysis/text_analysis/analysis_manifest.json", {
                 "screening_version": CANDIDATE_SCREENING_VERSION,
                 "candidate_documents": 1,
                 "input_hashes": {
@@ -121,7 +121,7 @@ class ExecutionAuditTests(unittest.TestCase):
             self.assertEqual(receipt["coverage_by_year"]["2020"]["without_reviewed_statements"], 1)
             self.assertEqual(receipt["jev_pilots"][0]["input_status"], "stale_or_missing")
             self.assertTrue((analysis / "execution_audit.json").is_file())
-            self.assertIn("No prepared pilot matches", (root / "report/analysis_execution.md").read_text())
+            self.assertIn("No prepared pilot matches", (root / "docs/reports/analysis_execution.md").read_text())
 
             csv(metadata, [{"id": "changed"}])
             receipt = write_execution_audit(root)

@@ -100,7 +100,7 @@ form the Democratic group. At analysis time, at least one contributing context e
 have `verification_status=verified` in the current organizational inventory; stale extraction
 artifacts from unavailable or invalidated sources are excluded.
 
-### `outputs/tables/text_analysis/official_platform_document_prevalence.csv`
+### `data/analysis/text_analysis/official_platform_document_prevalence.csv`
 
 One row per canonical policy feature. Counts and shares record how many analyzed DSA and
 Democratic platform documents mention the feature; `difference` is DSA share minus Democratic
@@ -187,7 +187,7 @@ The expanded comparison layer includes:
   not population prevalence or campaign-message frequency.
 - `supported_cross_race_findings.csv`: substantive conclusions linked to their exact
   supporting comparison IDs.
-- `platform_comparison_briefs.md` and `report/platform_comparison.html`: readable
+- `platform_comparison_briefs.md` and `docs/reports/platform_comparison.html`: readable
   election-by-election comparisons; the HTML browser runs offline.
 - `national_platform_applicability.csv`: transparent reuse of national campaign
   evidence for other applicable primary fields, without adding independent observations.

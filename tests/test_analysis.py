@@ -43,8 +43,8 @@ class AnalysisTests(unittest.TestCase):
             root = Path(temp_dir)
             processed = root / "processed"
             analysis = root / "analysis"
-            output = root / "outputs"
-            (output / "tables" / "text_analysis").mkdir(parents=True)
+            output = root / "data/analysis"
+            (output / "text_analysis").mkdir(parents=True)
             (analysis / "provisional_gte_kde").mkdir(parents=True)
             (analysis / "official_platform_gte_kde").mkdir(parents=True)
             processed.mkdir()
@@ -89,7 +89,7 @@ class AnalysisTests(unittest.TestCase):
                     "successful_documents": 7,
                     "extraction_errors": 1,
                 },
-                output / "tables" / "text_analysis" / "analysis_manifest.json": {
+                output / "text_analysis" / "analysis_manifest.json": {
                     "official_documents": 4,
                     "official_documents_by_group": {"dsa": 1, "democratic": 3},
                     "official_source_segments": 40,
@@ -162,7 +162,7 @@ class AnalysisTests(unittest.TestCase):
             ):
                 kde[key] = hashlib.sha256(path.read_bytes()).hexdigest()
             kde_path.write_text(json.dumps(kde), encoding="utf-8")
-            lexical_path = output / "tables" / "text_analysis" / "analysis_manifest.json"
+            lexical_path = output / "text_analysis" / "analysis_manifest.json"
             lexical = fixtures[lexical_path]
             lexical["screening_version"] = CANDIDATE_SCREENING_VERSION
             lexical["input_hashes"] = {

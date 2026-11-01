@@ -54,7 +54,7 @@ keeps unreviewed candidates and races visible instead of silently dropping them.
 retains the actual short quotations, topics, campaign frames, sources, and timing qualifications
 for each reviewed candidate/race record.
 
-Open [`report/platform_comparison.html`](../report/platform_comparison.html) for the offline,
+Open [`docs/reports/platform_comparison.html`](reports/platform_comparison.html) for the offline,
 searchable comparison browser. It shows actual claims and short quotations side by side,
 with source links, date qualifications, agreements, disagreements, and missing-candidate
 warnings. Filter by election year or search for a candidate, office, or policy.
@@ -78,10 +78,10 @@ document the restoration of original campaign pages without substituting later c
 The prose counterpart is
 [`platform_comparison_briefs.md`](../data/analysis/policy_evidence/platform_comparison_briefs.md).
 For the substantive answer to what differed and how candidates presented their campaigns,
-start with [`policy_comparison_findings.md`](../report/policy_comparison_findings.md).
+start with [`policy_comparison_findings.md`](reports/policy_comparison_findings.md).
 
 For a complete common-question comparison, open
-[`report/mayor_same_question_comparison.html`](../report/mayor_same_question_comparison.html).
+[`docs/reports/mayor_same_question_comparison.html`](reports/mayor_same_question_comparison.html).
 It preserves **18 questions × 9 Democratic candidates** from THE CITY and Gothamist's
 published 2025 mayoral survey at a pre-primary source commit. Every option, original
 explanation and missing code is retained. Publisher-coded choices are distinguished from
@@ -90,7 +90,7 @@ These 162 response records and 144 matched-question rows do **not** inflate inde
 reviewed statement or comparison counts. Source attribution and the publisher's license
 are retained with the complete data download.
 
-[`report/complete_questionnaire_comparison.html`](../report/complete_questionnaire_comparison.html)
+[`docs/reports/complete_questionnaire_comparison.html`](reports/complete_questionnaire_comparison.html)
 adds complete, candidate-authored answers rather than selected quote anchors. The initial
 Hawaii 2018 collection contains **12 questions across six candidates**, with all 72 answers
 and 60 focal-versus-other-Democrat question pairs downloadable in full. Original prompts,
@@ -267,16 +267,16 @@ The cleanup also checks false positives: whole-page theme classes containing the
 do not qualify as navigation. Verified policy text from those pages remains in the accepted run.
 
 The previous unscreened map is superseded, not reinterpreted as valid evidence.
-The current [map and region report](../report/provisional_kde_analysis.md) remain exploratory:
+The current [map and region report](reports/provisional_kde_analysis.md) remain exploratory:
 names, geography, office, year, and source format can affect the geometry. A cluster is not a
 policy stance or an estimate of nationwide agreement. Classification does not verify attribution.
-The [execution audit](../report/analysis_execution.md) records completed stages, exact input
+The [execution audit](reports/analysis_execution.md) records completed stages, exact input
 fingerprints, coverage by year, and the prepared-only status of Jev.
 
 ## What the campaigns emphasize
 
 <p align="center">
-  <img src="../outputs/figures/text_analysis/policy_language_difference.svg" width="1100" alt="Comparison of policy-language prevalence in DSA-endorsed and other Democratic campaign documents">
+  <img src="../figures/text_analysis/policy_language_difference.svg" width="1100" alt="Comparison of policy-language prevalence in DSA-endorsed and other Democratic campaign documents">
 </p>
 
 These exploratory document-level mention rates use the screened source subset. They are not
@@ -286,7 +286,7 @@ and automatic screening is not semantic verification of every passage.
 ## Where the agendas overlap
 
 <p align="center">
-  <img src="../outputs/figures/text_analysis/policy_language_overlap.svg" width="1050" alt="Issues discussed by both DSA-endorsed candidates and other Democrats">
+  <img src="../figures/text_analysis/policy_language_overlap.svg" width="1050" alt="Issues discussed by both DSA-endorsed candidates and other Democrats">
 </p>
 
 Shared attention does not establish agreement: candidates may diagnose the same problem while
@@ -297,7 +297,7 @@ The automated review aid below counts primaries where both sides use the same po
 after a local-negation screen. Matching phrases can conceal different policy designs.
 
 <p align="center">
-  <img src="../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg" width="980" alt="Shared named-policy language within Democratic primaries, not verified agreement">
+  <img src="../figures/text_analysis/shared_affirmative_policy_mechanisms.svg" width="980" alt="Shared named-policy language within Democratic primaries, not verified agreement">
 </p>
 
 Negated or explicitly oppositional mentions are excluded; exact paired passages remain available
@@ -341,7 +341,7 @@ The complete accounting is in
 [`clustering_sensitivity.csv`](../data/analysis/official_platform_gte_kde/clustering_sensitivity.csv).
 
 <p align="center">
-  <img src="../outputs/figures/text_analysis/official_platform_document_prevalence.svg" width="1050" alt="Document-level policy language prevalence in official DSA and Democratic platforms">
+  <img src="../figures/text_analysis/official_platform_document_prevalence.svg" width="1050" alt="Document-level policy language prevalence in official DSA and Democratic platforms">
 </p>
 
 | DSA / DSA-endorsed emphasis | Democratic platform / other-Democrat emphasis |
@@ -353,7 +353,7 @@ The complete accounting is in
 | Collective or public ownership and decommodification | Regulated, competitive capitalism |
 
 <p align="center">
-  <img src="../outputs/figures/text_analysis/official_policy_contrasts.svg" width="1050" alt="Reviewed contrasts between official DSA and Democratic Party policy language">
+  <img src="../figures/text_analysis/official_policy_contrasts.svg" width="1050" alt="Reviewed contrasts between official DSA and Democratic Party policy language">
 </p>
 
 ## Data and coverage
@@ -504,21 +504,21 @@ Full details are in [`docs/methodology.md`](../docs/methodology.md), with field 
 - [`data/analysis/provisional_gte_kde/density_regions.csv`](../data/analysis/provisional_gte_kde/density_regions.csv)
   — all substantive semantic regions (up to six per category), terms, counts, representative
   evidence, and an indicator for the two per category displayed on the map
-- [`outputs/tables/text_analysis/candidate_feature_prevalence.csv`](../outputs/tables/text_analysis/candidate_feature_prevalence.csv)
+- [`data/analysis/text_analysis/candidate_feature_prevalence.csv`](../data/analysis/text_analysis/candidate_feature_prevalence.csv)
   — document-level phrase prevalence by candidate group
-- [`outputs/tables/text_analysis/official_platform_document_prevalence.csv`](../outputs/tables/text_analysis/official_platform_document_prevalence.csv)
+- [`data/analysis/text_analysis/official_platform_document_prevalence.csv`](../data/analysis/text_analysis/official_platform_document_prevalence.csv)
   — document-balanced policy-feature prevalence across official DSA and Democratic platforms
 - [`data/analysis/official_platform_gte_kde/density_regions.csv`](../data/analysis/official_platform_gte_kde/density_regions.csv)
   — HDBSCAN regions underlying the balanced official-platform KDE map
-- [`report/official_platform_kde_analysis.md`](../report/official_platform_kde_analysis.md)
+- [`docs/reports/official_platform_kde_analysis.md`](reports/official_platform_kde_analysis.md)
   — official-platform KDE dimensions, balancing, region table, and limitations
-- [`outputs/tables/text_analysis/shared_affirmative_policy_mechanisms.csv`](../outputs/tables/text_analysis/shared_affirmative_policy_mechanisms.csv)
+- [`data/analysis/text_analysis/shared_affirmative_policy_mechanisms.csv`](../data/analysis/text_analysis/shared_affirmative_policy_mechanisms.csv)
   — exact paired passages for reviewing shared phrases, not independently verified stance labels
-- [`report/text_analysis.md`](../report/text_analysis.md) — lexical, overlap, and agreement analysis
-- [`report/provisional_kde_analysis.md`](../report/provisional_kde_analysis.md) — region-by-region
+- [`docs/reports/text_analysis.md`](reports/text_analysis.md) — lexical, overlap, and agreement analysis
+- [`docs/reports/provisional_kde_analysis.md`](reports/provisional_kde_analysis.md) — region-by-region
   semantic interpretation
-- [`report/draft.md`](../report/draft.md) — generated canonical research report
-- [`report/analysis_execution.md`](../report/analysis_execution.md) and
+- [`docs/reports/draft.md`](reports/draft.md) — generated canonical research report
+- [`docs/reports/analysis_execution.md`](reports/analysis_execution.md) and
   [`execution_audit.json`](../data/analysis/execution_audit.json) — actual stage completion,
   input freshness, selected policy relationships, and explicit remaining coverage gaps
 
@@ -613,7 +613,8 @@ uv run python -m unittest discover -s tests
 - `data/manual/` — reviewed source registrations and adjudications
 - `data/processed/` — generated corpora, coverage queues, and audit outputs
 - `data/analysis/` — analysis-ready snapshots and model outputs
-- `outputs/` — reproducible tables and SVG figures
-- `figures/` — semantic-density visualization
+- `data/analysis/text_analysis/` — reproducible text-analysis tables
+- `figures/` — semantic-density and text-analysis figures
+- `docs/reports/` — generated analytical reports
 - `docs/` — methodology, codebook, completeness criteria, and data dictionary
 - `tests/` — regression and validation tests

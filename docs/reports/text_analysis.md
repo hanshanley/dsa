@@ -120,11 +120,11 @@ language visible; they are not a representative sample of all platform differenc
 recoverable DSA state/local platforms and 154
 explicit platform-gap rows limit generalization beyond the documents actually collected.
 
-![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
+![Difference in policy language](../../figures/text_analysis/policy_language_difference.svg)
 
-![Official policy mechanism contrasts](../outputs/figures/text_analysis/official_policy_contrasts.svg)
+![Official policy mechanism contrasts](../../figures/text_analysis/official_policy_contrasts.svg)
 
-![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
+![Official-platform document prevalence](../../figures/text_analysis/official_platform_document_prevalence.svg)
 
 The separate [official-platform semantic-density report](official_platform_kde_analysis.md)
 applies a separate platform-coverage and text-quality gate, then uses equal-size,
@@ -145,7 +145,7 @@ percentage points. Shared emphasis is reported separately rather than displaying
 - Highest shared-emphasis features:
   Healthcare, Worker, Climate Change, Affordable Housing, Business, Union, Corporate, Human Right.
 
-![Shared policy emphasis](../outputs/figures/text_analysis/policy_language_overlap.svg)
+![Shared policy emphasis](../../figures/text_analysis/policy_language_overlap.svg)
 
 Both groups discussing a feature does not establish identical policy positions. This chart
 identifies common agenda space; the exact texts and reviewed mechanism comparisons are required
@@ -164,7 +164,7 @@ The most common shared phrases are:
 - **Single Payer:** 29 races
 - **Living Wage:** 1 races
 
-![Shared named-policy language](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
+![Shared named-policy language](../../figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
 
 This is stronger evidence of common policy language than topic overlap, but it is still not a
 complete stance classifier. The generated table retains both sides' exact source excerpts for
@@ -196,7 +196,7 @@ The largest differences in the kinds of real sources recovered are:
 Positive values indicate a larger share of DSA-endorsed excerpts; negative values indicate a
 larger share of other-Democrat excerpts.
 
-![Source type difference](../outputs/figures/text_analysis/source_type_difference.svg)
+![Source type difference](../../figures/text_analysis/source_type_difference.svg)
 
 ## Evidence volume by election cycle
 
@@ -206,7 +206,7 @@ larger share of other-Democrat excerpts.
 - **2024:** 130 DSA-endorsed and 140 other-Democrat passages
 - **2026:** 43 DSA-endorsed and 167 other-Democrat passages
 
-![Verified evidence by cycle](../outputs/figures/text_analysis/verified_evidence_by_cycle.svg)
+![Verified evidence by cycle](../../figures/text_analysis/verified_evidence_by_cycle.svg)
 
 These are direct counts of eligible exact-text segments, not estimates of issue importance.
 
@@ -214,7 +214,7 @@ These are direct counts of eligible exact-text segments, not estimates of issue 
 
 
 
-![Explicit conflicts by cycle](../outputs/figures/text_analysis/explicit_conflicts_by_cycle.svg)
+![Explicit conflicts by cycle](../../figures/text_analysis/explicit_conflicts_by_cycle.svg)
 
 This chart excludes analyst-coded divergences and retains only direct, source-supported conflict
 records.

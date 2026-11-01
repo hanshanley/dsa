@@ -248,14 +248,14 @@ def build_policy_findings() -> dict:
         "THE CITY/Gothamist's pre-primary survey, with original qualifications and uncoded answers preserved.",
         "- `complete_questionnaire_comparison.html`: complete candidate-authored answers from the reviewed multi-state "
         "questionnaires, with original prompts, answer boundaries, timing limits and full-answer downloads.",
-        "- `../data/analysis/policy_evidence/race_policy_comparison_matrix.csv`: every registry case, including gaps.",
-        "- `../data/analysis/policy_evidence/documented_campaign_positions.csv`: actual candidate claims and quotation anchors.", "",
-        "- `../data/analysis/policy_evidence/excluded_candidate_statements.csv`: preserved historical statements excluded "
+        "- `../../data/analysis/policy_evidence/race_policy_comparison_matrix.csv`: every registry case, including gaps.",
+        "- `../../data/analysis/policy_evidence/documented_campaign_positions.csv`: actual candidate claims and quotation anchors.", "",
+        "- `../../data/analysis/policy_evidence/excluded_candidate_statements.csv`: preserved historical statements excluded "
         "from active-endorsement comparisons, including a documented pre-primary revocation.", "",
         "Missing source material remains an explicit research gap. The dated and timing-qualified "
         "exports must not be silently pooled into a claim of complete pre-primary coverage.", "",
     ])
-    (ROOT / "report" / "policy_comparison_findings.md").write_text("\n".join(overview), encoding="utf-8")
+    (ROOT / "docs/reports" / "policy_comparison_findings.md").write_text("\n".join(overview), encoding="utf-8")
     summary = {
         "registry_cases_accounted_for": len(cases),
         "cases_with_comparisons": sum(row["comparison_count"] > 0 for row in cases),

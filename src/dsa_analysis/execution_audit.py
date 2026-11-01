@@ -30,7 +30,7 @@ def input_check(root: Path, expected: dict[str, str | None]) -> dict:
 def write_execution_audit(root: Path = ROOT) -> dict:
     analysis = root / "data/analysis"
     policy = analysis / "policy_evidence"
-    lexical = read_json(root / "outputs/tables/text_analysis/analysis_manifest.json")
+    lexical = read_json(root / "data/analysis/text_analysis/analysis_manifest.json")
     model = read_json(analysis / "model_topic_validation.json")
     kde = read_json(analysis / "provisional_gte_kde/summary.json")
     coverage = read_json(policy / "historical_inventory_summary.json")
@@ -217,7 +217,7 @@ def write_execution_audit(root: Path = ROOT) -> dict:
         f'{row["live_requests_in_recorded_run"]} live requests in the recorded run.'
         for row in current_jev
     ]
-    (root / "report/analysis_execution.md").write_text(
+    (root / "docs/reports/analysis_execution.md").write_text(
         f"""# Analysis execution and source coverage
 
 Audit observed at **{receipt["audited_at"]}**. Research cutoff: **{receipt["research_cutoff"]}**.

@@ -738,8 +738,8 @@ class PlatformPublicationTest(unittest.TestCase):
             "topics/balanced_refits.csv",
         ):
             (self.data / name).write_text("{}\n" if name.endswith(".json") else "")
-        (self.source / "report").mkdir()
-        (self.source / "report/national_claim_analysis.md").write_text("Fixture methods.")
+        (self.source / "docs/reports").mkdir(parents=True)
+        (self.source / "docs/reports/national_claim_analysis.md").write_text("Fixture methods.")
         self.archive()
 
     def test_issue_figures_export_with_originals_and_hashes(self):
@@ -768,7 +768,7 @@ class PlatformPublicationTest(unittest.TestCase):
         bundle(
             self.data,
             figures=self.source / FIGURES.parent,
-            report=self.source / "report/national_claim_analysis.md",
+            report=self.source / "docs/reports/national_claim_analysis.md",
         )
         original = (self.data / "claim_documents.zip").read_bytes()
         (self.data / "claim_documents.zip").unlink()
@@ -779,6 +779,24 @@ class PlatformPublicationTest(unittest.TestCase):
         self.write_json("claim_documents.download.json", metadata)
         with self.assertRaisesRegex(ValueError, "archive checksum"):
             validate(self.source)
+
+    def test_report_relocation_preserves_complete_archive_bytes(self):
+        from dsa_analysis.national_claim_corpus import bundle
+
+        self.prepare_export()
+        legacy = self.source / "legacy-reports/report.md"
+        legacy.parent.mkdir()
+        legacy.write_text(
+            "# Methods\n\n"
+            "[Claims](../data/analysis/national_claims/full/analysis_claims.csv)\n"
+            "![Map](../figures/national_claims/full/topics/expanded/map.png)\n"
+        )
+        bundle(self.data, figures=self.source / FIGURES.parent, report=legacy)
+        original = (self.data / "claim_documents.zip").read_bytes()
+        relocated = self.source / "docs/reports/national_claim_analysis.md"
+        relocated.write_text(legacy.read_text().replace("(../", "(../../"))
+        bundle(self.data, figures=self.source / FIGURES.parent, report=relocated)
+        self.assertEqual((self.data / "claim_documents.zip").read_bytes(), original)
 
     def test_excluded_labels_stay_in_downloads_but_not_publication_topics(self):
         self.prepare_export()

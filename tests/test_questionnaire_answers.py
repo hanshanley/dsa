@@ -267,7 +267,7 @@ class CompleteQuestionnaireTests(unittest.TestCase):
     def _fixture(self, root, *, timing_supported=True):
         body = b"<p>1. Priorities?</p><p>Public housing and affordable transport.</p><p>Subscribe</p>"
         (root / "source.html").write_bytes(body)
-        (root / "report").mkdir()
+        (root / "docs/reports").mkdir(parents=True)
         race = {
             "race_id": "r", "scope_kind": "tracked_dsa_endorsed_democratic_primary",
             "election_date": "2020-06-01", "endorsed_candidate": "Focal", "endorsed_candidates": "Focal",

@@ -44,7 +44,7 @@ independent validation. Every classification remains inspectable at row level.
 - **Science, technology and communications:** -1.7% (5 endorsed-candidate segments; 37 other-Democrat segments; mean similarity 0.30; mean margin 0.07)
 - **Transportation:** +1.5% (50 endorsed-candidate segments; 66 other-Democrat segments; mean similarity 0.34; mean margin 0.09)
 
-![Model-classified policy emphasis](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
+![Model-classified policy emphasis](../../figures/text_analysis/model_topic_emphasis_difference.svg)
 
 Positive differences indicate a larger share of classified DSA-endorsed segments. Negative
 differences indicate a larger share of classified other-Democrat segments.

@@ -10,7 +10,6 @@ from .paths import (
     ANALYSIS_DATA_DIR,
     CONFIG_DIR,
     MANUAL_DIR,
-    OUTPUT_DIR,
     PROCESSED_DIR,
     RAW_DIR,
     REPORT_DIR,
@@ -65,7 +64,7 @@ def analyze() -> dict[str, object]:
         for topic, count in sorted(topic_counts.items())
     ]
     write_csv(
-        OUTPUT_DIR / "tables" / "reviewed_excerpt_topics.csv",
+        ANALYSIS_DATA_DIR / "reviewed_excerpt_topics.csv",
         topic_rows,
         ["topic", "reviewed_excerpt_count"],
     )
@@ -75,7 +74,7 @@ def analyze() -> dict[str, object]:
         for cycle, count in sorted(year_counts.items())
     ]
     write_csv(
-        OUTPUT_DIR / "tables" / "national_endorsements_by_cycle.csv",
+        ANALYSIS_DATA_DIR / "national_endorsements_by_cycle.csv",
         year_rows,
         ["endorsement_cycle", "campaign_count"],
     )
@@ -84,7 +83,7 @@ def analyze() -> dict[str, object]:
         for row in local_verified
     )
     write_csv(
-        OUTPUT_DIR / "tables" / "local_endorsements_by_cycle_chapter.csv",
+        ANALYSIS_DATA_DIR / "local_endorsements_by_cycle_chapter.csv",
         [
             {
                 "election_year": year,
@@ -100,7 +99,7 @@ def analyze() -> dict[str, object]:
         for row in sticking_points
     )
     write_csv(
-        OUTPUT_DIR / "tables" / "primary_sticking_points_summary.csv",
+        ANALYSIS_DATA_DIR / "primary_sticking_points_summary.csv",
         [
             {
                 "topic": topic,
@@ -115,7 +114,7 @@ def analyze() -> dict[str, object]:
         ["topic", "contrast_type", "relationship_code", "count"],
     )
     write_csv(
-        OUTPUT_DIR / "tables" / "canonical_analysis_overview.csv",
+        ANALYSIS_DATA_DIR / "canonical_analysis_overview.csv",
         [
             {"section": section, "metric": metric, "value": value}
             for section, metrics in canonical["overview"].items()
@@ -383,17 +382,17 @@ TF-IDF, MPIF, document prevalence, source mix, cycle volume, explicit-conflict, 
 topic outputs are generated from the full eligible segment snapshots, not from the legacy manual
 excerpt table.
 
-![Difference in policy language](../outputs/figures/text_analysis/policy_language_difference.svg)
+![Difference in policy language](../../figures/text_analysis/policy_language_difference.svg)
 
-![Shared policy emphasis](../outputs/figures/text_analysis/policy_language_overlap.svg)
+![Shared policy emphasis](../../figures/text_analysis/policy_language_overlap.svg)
 
-![Shared affirmative policy mechanisms](../outputs/figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
+![Shared affirmative policy mechanisms](../../figures/text_analysis/shared_affirmative_policy_mechanisms.svg)
 
-![Official contrast](../outputs/figures/text_analysis/official_policy_contrasts.svg)
+![Official contrast](../../figures/text_analysis/official_policy_contrasts.svg)
 
-![Official-platform document prevalence](../outputs/figures/text_analysis/official_platform_document_prevalence.svg)
+![Official-platform document prevalence](../../figures/text_analysis/official_platform_document_prevalence.svg)
 
-![Modeled topics](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)
+![Modeled topics](../../figures/text_analysis/model_topic_emphasis_difference.svg)
 
 ## 6. Provisional KDE
 
@@ -411,7 +410,7 @@ regions are derived from the underlying segments in each locally overrepresented
 high-density area; each label reports distinctive terms, an extractive representative passage,
 and candidate support.
 
-![Provisional GTE KDE](../figures/provisional_gte_kde.png)
+![Provisional GTE KDE](../../figures/provisional_gte_kde.png)
 
 ## 7. Official-platform KDE
 
@@ -439,7 +438,7 @@ HDBSCAN regions report distinctive terms and exact representative passages, but 
 parameter sensitivity makes them exploratory evidence summaries rather than a stable topic
 taxonomy.
 
-![Official-platform GTE KDE](../figures/official_platform_gte_kde.png)
+![Official-platform GTE KDE](../../figures/official_platform_gte_kde.png)
 
 ## 8. Small reviewed qualitative examples
 
@@ -482,12 +481,12 @@ Generated {date.today().isoformat()}. See `docs/methodology.md` for evidence rul
 """
     if stats["model_input_status"] == "stale_input":
         text = text.replace(
-            "![Modeled topics](../outputs/figures/text_analysis/model_topic_emphasis_difference.svg)",
+            "![Modeled topics](../../figures/text_analysis/model_topic_emphasis_difference.svg)",
             "**Withheld:** the model-topic figure was produced from a superseded candidate corpus.",
         )
     if stats["kde_status"] == "stale_input":
         text = text.replace(
-            "![Provisional GTE KDE](../figures/provisional_gte_kde.png)",
+            "![Provisional GTE KDE](../../figures/provisional_gte_kde.png)",
             "**Withheld:** the candidate KDE was produced from a superseded candidate corpus. "
             "The retained counts above describe that older run, not the current screened input.",
         )
@@ -506,7 +505,7 @@ def _optional_csv(name: str) -> list[dict[str, str]]:
 def _load_canonical_metrics(
     processed_dir: Path = PROCESSED_DIR,
     analysis_data_dir: Path = ANALYSIS_DATA_DIR,
-    output_dir: Path = OUTPUT_DIR,
+    output_dir: Path = ANALYSIS_DATA_DIR,
 ) -> dict[str, dict[str, object]]:
     race = read_json(processed_dir / "race_registry_summary.json")
     full_text = read_json(processed_dir / "full_text_audit_summary.json")
@@ -514,7 +513,7 @@ def _load_canonical_metrics(
     extraction = read_json(
         processed_dir / "organizational_context_extraction_summary.json"
     )
-    lexical = read_json(output_dir / "tables" / "text_analysis" / "analysis_manifest.json")
+    lexical = read_json(output_dir / "text_analysis" / "analysis_manifest.json")
     model = read_json(analysis_data_dir / "model_topic_validation.json")
     kde = read_json(analysis_data_dir / "provisional_gte_kde" / "summary.json")
     corpus_path = analysis_data_dir / "candidate_text_corpus.csv"

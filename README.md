@@ -27,7 +27,7 @@ The analysis also tracks observed four-year periods and independently discovers
 74 period-specific topics within seven periods.
 
 **[Explore the live analysis](https://www.themarginoferror.com/party-platforms/)** ·
-[Read the report](report/national_claim_analysis.md) ·
+[Read the report](docs/reports/national_claim_analysis.md) ·
 [Get publication images](figures/README.md)
 
 ### Finding the right files
@@ -147,7 +147,7 @@ provide original context and a smaller starting point for reading.
 | Relative emphasis | [Ranked contrasts and support warnings](data/analysis/national_claims/full/topics/contrasts.csv) |
 | Topics over time | [Period shares](data/analysis/national_claims/full/topics/temporal_shares.csv) · [Observed coverage](data/analysis/national_claims/full/topics/temporal_coverage.csv) |
 | Independently discovered period themes | [Shares](data/analysis/national_claims/full/topics/evolution/shares.csv) · [Fit diagnostics](data/analysis/national_claims/full/topics/evolution/period_fits.json) · [Source examples](data/analysis/national_claims/full/topics/evolution/representatives.csv) |
-| Reviewed names and positions | [Label provenance](data/analysis/national_claims/full/topics/label_review.json) · [Source-linked group positions and distinctions](report/national_claim_analysis.md#group-positions-on-the-shared-clustering) |
+| Reviewed names and positions | [Label provenance](data/analysis/national_claims/full/topics/label_review.json) · [Source-linked group positions and distinctions](docs/reports/national_claim_analysis.md#group-positions-on-the-shared-clustering) |
 
 The [chart guide](figures/README.md) links all 21 individual issues, six selected
 article graphics, position atlases, supporting density maps, and alternate
@@ -174,7 +174,7 @@ individualized positions: [all three groups](figures/substack/positions/all-grou
 Pairwise atlases also state documented policy distinctions. Their colors show
 topic-share gaps, not ideological distance.
 
-[Detailed density comparisons](report/national_claim_analysis.md#detailed-density-comparisons)
+[Detailed density comparisons](docs/reports/national_claim_analysis.md#detailed-density-comparisons)
 retain larger maps and numbered, source-linked examples.
 
 </details>
@@ -330,13 +330,13 @@ uv run python -m unittest tests.test_national_claim_corpus tests.test_national_c
 <details>
 <summary>Earlier analyses and deferred work</summary>
 
-The [199-claim pilot](report/national_claim_analysis_sample.md) covers 25 documents;
+The [199-claim pilot](docs/reports/national_claim_analysis_sample.md) covers 25 documents;
 it is neither representative nor the current dataset. Its
 [claims and complete sources](data/analysis/national_claims/reviewed_sample/claim_documents.zip)
 are retained. Reproduce it with:
 `uv run python -m dsa_analysis.national_claim_analysis --reviewed-sample --download-model`.
 
-The [passage-based baseline](report/national_platform_analysis.md) predates the
+The [passage-based baseline](docs/reports/national_platform_analysis.md) predates the
 claim-based comparison. Its [complete source archive](data/analysis/national_platforms/source_documents.zip)
 and [offline audit](data/analysis/national_platforms/reproducibility_audit.json)
 remain separate. Reproduce it with:
@@ -357,9 +357,15 @@ is also separate from the national comparison.
 | [`src/dsa_analysis/`](src/dsa_analysis/) | Extraction, corpus preparation, analysis and CLI |
 | [`data/manual/`](data/manual/) | Curated source ledgers and qualifications |
 | [`data/analysis/`](data/analysis/) | Complete texts, claims, provenance and result tables |
-| [`report/`](report/) | Analytical reports, separated by analysis |
+| [`docs/reports/`](docs/reports/README.md) | Current national report and retained earlier reports |
 | [`docs/`](docs/) · [`tests/`](tests/) | Methods, reproduction guides and regression tests |
-| [`files/research_archive/`](files/research_archive/) | Preserved legacy research captures and working artifacts |
+| [`data/archive/research_archive/`](data/archive/research_archive/) | Preserved legacy research captures and working artifacts |
+
+Generated charts live only under `figures/`, result tables under `data/analysis/`,
+and reports under `docs/reports/`. The former root-level `outputs/`, `report/`
+and `files/` folders have been consolidated; no original research was discarded.
+Historical audit snapshots and complete archives retain their original bytes
+and may name paths from the layout used when they were created.
 
 Original authors and publishers retain their rights. GitHub hosts the research
 artifacts; [The Margin of Error](https://www.themarginoferror.com/party-platforms/)

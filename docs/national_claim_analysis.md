@@ -126,7 +126,7 @@ minimum cosine threshold is unchanged; unclassified claims remain in the
 denominator. Topic shares assign equal aggregate weight to each document/bundle,
 so splitting more claims does not create another independent document.
 
-The [full eligible-claim comparison](../report/national_claim_analysis.md) analyzes
+The [full eligible-claim comparison](reports/national_claim_analysis.md) analyzes
 **26,069 claims**: 11,811 Democratic, 9,150 Republican, and 5,108 DSA. The original
 model outcomes remain 2,596 normalized and 27 failed chunks. Effective dispositions
 are 2,461 model-normalized and 162 source-repaired chunks, including all 27 model
@@ -172,7 +172,7 @@ combined-archive member. The earlier
 is historical, not a certification of the current cleaned input's hashes.
 The passage baseline and selected sample remain unchanged.
 
-The [earlier selected claim analysis](../report/national_claim_analysis_sample.md)
+The [earlier selected claim analysis](reports/national_claim_analysis_sample.md)
 uses **199 individually unflagged pilot candidates**: 59 Democratic, 82 Republican,
 and 58 DSA, representing 25 documents. Both KDE views and topic classification have
 actually run. This is a selected, assistant-reviewed sample, **not full-document

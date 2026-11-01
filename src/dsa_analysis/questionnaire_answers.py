@@ -445,7 +445,7 @@ def build_questionnaire_answers() -> dict:
         "coverage": coverage,
     }
     (output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
-    (ROOT / "report" / "complete_questionnaire_comparison.html").write_text(
+    (ROOT / "docs/reports" / "complete_questionnaire_comparison.html").write_text(
         render_questionnaires(rows, coverage), encoding="utf-8",
     )
     return summary
@@ -506,6 +506,6 @@ thead th{position:sticky;top:0;background:#eaf0f5;z-index:2}tbody th{position:st
 Publisher prompts remain separate. Questionnaires preserve complete published answers; edited interview rounds preserve complete published response blocks, not necessarily the full unedited answers or identical original interview questions.
 Matching a question or topic does not classify agreement or disagreement. These are not every campaign statement. Factual assertions and embedded quotations remain the speaker's statements, not independently verified facts.</p>
 <p>Nonpolicy questions and answers with unresolved attribution concerns remain in the complete download, but are excluded from policy-model inputs.</p>
-<p><a href="../data/analysis/policy_evidence/complete_questionnaires/complete_candidate_answers.csv" download>Download every complete answer</a> |
-<a href="../data/analysis/policy_evidence/complete_questionnaires/same_question_pairs.csv" download>Download all full-answer pairs</a> |
+<p><a href="../../data/analysis/policy_evidence/complete_questionnaires/complete_candidate_answers.csv" download>Download every complete answer</a> |
+<a href="../../data/analysis/policy_evidence/complete_questionnaires/same_question_pairs.csv" download>Download all full-answer pairs</a> |
 <a href="platform_comparison.html">Source-reviewed policy comparisons</a></p>""" + "".join(sections) + "</html>\n"

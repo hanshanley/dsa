@@ -7,7 +7,7 @@ within each candidate and election year:
 **5 dimensions**; the two-dimensional map is used only for
 visualization.
 
-![Labeled KDE regions](../figures/provisional_gte_kde.png)
+![Labeled KDE regions](../../figures/provisional_gte_kde.png)
 
 ## Interpreting the labeled regions
 
