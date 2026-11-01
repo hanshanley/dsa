@@ -1,0 +1,102 @@
+{
+  "caucuses_and_networks": 13,
+  "counts_are_documents_not_membership_or_influence": true,
+  "discovery_sources_excluded_from_denominators": [
+    {
+      "document_id": "city-state-guide",
+      "role": "journalistic_discovery_only",
+      "source_url": "https://www.cityandstateny.com/politics/2026/01/get-know-dsas-internal-caucuses/410951/",
+      "title": "Get to know DSA's internal caucuses"
+    },
+    {
+      "document_id": "lsc-guide",
+      "publication_date": "2025-01-31",
+      "qualification": "The page explicitly disclaims representing LSC consensus.",
+      "role": "author_pamphlet_discovery_only",
+      "source_url": "https://dsa-lsc.org/2025/01/31/a-guide-to-dsa-politics/",
+      "title": "A Guide to DSA Politics"
+    }
+  ],
+  "documents": 13,
+  "roster_disposition": [
+    {
+      "group": "Anti-Zionist Slate",
+      "reason": "LSC links an archived 2023 slate. Springs of Revolution is independently sourced; do not count the old slate again as a current caucus.",
+      "status": "historical_slate"
+    },
+    {
+      "group": "Constellation",
+      "reason": "The linked site redirects to a Google Drive sign-in page; no primary text collected.",
+      "status": "unrecovered_primary"
+    },
+    {
+      "document_id": "mass-action-program",
+      "group": "Mass Action Caucus",
+      "status": "recovered_local_supplement"
+    },
+    {
+      "document_id": "mass-work-unity",
+      "group": "Mass Work Caucus",
+      "status": "recovered_local_draft_supplement"
+    },
+    {
+      "group": "Red Labor",
+      "reason": "The guide's redlabor.org link now serves unrelated gambling content, not a caucus document.",
+      "status": "stale_domain_excluded"
+    },
+    {
+      "document_id": "red-line-program",
+      "group": "Red Line",
+      "status": "recovered_regional_supplement"
+    },
+    {
+      "group": "Socialist Alternative",
+      "reason": "Do not treat the whole external organization's publication as the collective program of a DSA caucus without verifying caucus-specific attribution.",
+      "status": "separate_organization"
+    },
+    {
+      "group": "Tempest Collective",
+      "reason": "The LSC guide describes Tempest as mostly outside DSA; preserve as discovery context, not a current caucus denominator.",
+      "status": "outside_comparison"
+    }
+  ],
+  "scope": "Flagship political statements available on November 1, 2026; not membership, influence, or a historical census.",
+  "scoped_words": 25687,
+  "status": "primary_corpus_prepared",
+  "supplemental_sources_excluded_from_primary_denominators": [
+    {
+      "document_id": "mass-action-program",
+      "download_url": "https://docs.google.com/document/d/1z4txJ317Wco7gnkgnn-dNefQz7PkHi_kJl23A_ai1pQ/export?format=txt",
+      "format": "text",
+      "group": "mass-action",
+      "organization": "Mass Action Caucus",
+      "qualification": "This document explicitly addresses Champlain Valley and statewide Vermont organizing; not a national caucus platform.",
+      "role": "local_caucus_supplement",
+      "source_url": "https://docs.google.com/document/d/1z4txJ317Wco7gnkgnn-dNefQz7PkHi_kJl23A_ai1pQ/edit",
+      "title": "Political program for Champlain Valley and Vermont DSA"
+    },
+    {
+      "document_id": "mass-work-unity",
+      "download_url": "https://drive.google.com/uc?export=download&id=1Ks62o0DLV5DT28aVkowg7OT2-ukJSRkG",
+      "format": "pdf",
+      "group": "mass-work",
+      "organization": "Mass Work Caucus",
+      "qualification": "The PDF metadata says Points of Unity Draft; the text addresses restructuring Twin Cities DSA. Do not promote it to an adopted national statement.",
+      "role": "local_caucus_draft_supplement",
+      "source_url": "https://drive.google.com/file/d/1Ks62o0DLV5DT28aVkowg7OT2-ukJSRkG/view",
+      "title": "Mass Work Points of Unity"
+    },
+    {
+      "document_id": "red-line-program",
+      "download_url": "https://docs.google.com/document/d/19IezBa6dGdPqnAp93savOIl5VQj44frdThk1QlaRt0c/export?format=txt",
+      "format": "text",
+      "group": "red-line",
+      "organization": "Red Line",
+      "publication_date": "2023-04",
+      "qualification": "Ratified April 2023; the document self-describes a regional coalition rather than a distinct national caucus and accepts dual caucus membership.",
+      "role": "regional_coalition_supplement",
+      "source_url": "https://docs.google.com/document/d/19IezBa6dGdPqnAp93savOIl5VQj44frdThk1QlaRt0c/edit",
+      "title": "Red Line Program"
+    }
+  ]
+}
