@@ -9,23 +9,30 @@ maps measure concentration in the fitted semantic space, not policy distance.
 ## Article graphics
 
 The [article lead: Where DSA stands apart](article/dsa_vs_major_parties_lead.png)
-highlights five substantive issues with the largest positive source-balanced
-mean DSA density contrasts against the 50/50 Democratic–Republican mixture.
+highlights five substantive issues with the largest positive weighted attention-share
+gaps between DSA and the equal-weight Democratic–Republican average.
 The map uses all 26,069 eligible claims; numbered markers locate reviewed
 central examples, not region boundaries.
-[Exact contrasts and source anchors](article/dsa_vs_major_parties_lead.json)
+[Exact attention shares and source anchors](article/dsa_vs_major_parties_lead.json)
 retain the full reviewed topic names behind the shorter display labels.
 Three article-only layouts retain that original embedding graph and add dated,
-source-backed DSA paraphrases and density multipliers. The side-column layouts
+source-backed DSA paraphrases, attention shares and share ratios. The side-column layouts
 align the issue list with the title, separate source dates from statements, and
-use compact right-aligned multipliers with subtle dividers. The multipliers are geometric
-mean density ratios at DSA claims, using the original bundle-balanced log contrasts;
-they are not attention-share ratios:
+use compact right-aligned multipliers with subtle dividers. Attention shares are
+policy-claim proportions with equal source-bundle mass within each organization.
+Each multiplier divides DSA's unrounded share by the average of the Democratic
+and Republican unrounded shares. Map colors retain the original density contrast;
+they do not encode attention shares:
 [A: five statements beside the map](article/dsa_lead_option_a-map-five.png),
 [B: three statements below the map](article/dsa_lead_option_b-map-bottom.png), and
 [C: three larger statements beside the map](article/dsa_lead_option_c-map-three.png).
 Each has an adjacent JSON with the original claims, source evidence, dates and
 original map limits and color bound. Option A is also the updated current lead.
+[All attention-share ratios](article/dsa_attention_share_ratios.csv) contains
+all 21 substantive subjects and the three excluded identity clusters, with
+individual party shares, the comparison average, gaps and all four directed
+ratios: Democratic / Republican, DSA / Democratic, DSA / Republican, and
+DSA / the equal-weight Democratic–Republican average. Zero baselines have blank ratios.
 The earlier graph-free alternatives are retired from this guide.
 The earlier [absolute attention-gap bars](article/dsa_vs_major_parties_attention_gaps.png)
 remain separately available and use a different ranking.

@@ -1,11 +1,23 @@
 {
   "article_only": true,
-  "presentation": "original embedding map with five dated central DSA paraphrases",
+  "attention_share_ratios_csv": "dsa_attention_share_ratios.csv",
+  "presentation": "original density map with five dated DSA paraphrases and attention-share comparisons",
   "snippets": [
     {
       "topic_id": "topic-020",
       "title": "Institutional Power, Oppression, and Social Conflict",
-      "mean_log_density_contrast": 2.731510464635039,
+      "displayed": true,
+      "shares": {
+        "dsa": 0.09294009293158682,
+        "democratic": 0.010803563702554605,
+        "republican": 0.02291314387590643
+      },
+      "combined_share": 0.016858353789230517,
+      "gap": 0.0760817391423563,
+      "attention_ratio": 5.51299931734491,
+      "democratic_republican_ratio": 0.4715007142217066,
+      "dsa_democratic_ratio": 8.602725497847553,
+      "dsa_republican_ratio": 4.056191216488408,
       "dsa_claims": 569,
       "dsa_bundles": 9,
       "anchor_claim_id": "dsa-2021-adopted-normalized-6b522fa83bc9-003",
@@ -13,7 +25,6 @@
         2.027747631072998,
         8.028314590454102
       ],
-      "anchor_log_density_contrast": 2.543075913972702,
       "anchor_source_url": "https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/",
       "snippet": "DSA links militarized borders, racist immigration laws and the prison industrial complex to wage suppression and working-class division.",
       "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
@@ -23,61 +34,23 @@
       "document_id": "dsa-2021-adopted",
       "document_title": "2021 adopted DSA Political Platform - immutable December 2021 snapshot",
       "document_type": "platform",
-      "source_date": "2021-11-09",
-      "density_ratio": 15.356064303330701
-    },
-    {
-      "topic_id": "topic-010",
-      "title": "Criminal Justice, Policing, and Incarceration",
-      "mean_log_density_contrast": 2.162864068260026,
-      "dsa_claims": 265,
-      "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2024-program-normalized-b789b4710c28-006",
-      "anchor_coordinates": [
-        0.3083289563655853,
-        7.323701858520508
-      ],
-      "anchor_log_density_contrast": 1.78555834293274,
-      "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf",
-      "snippet": "Demilitarize police departments.",
-      "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
-      "source_claim_text": "Support for demilitarizing police departments.",
-      "source_evidence": "[PDF page 6] MEDICARE FOR ALL Universal healthcare with no premiums, co-pays, or deductibles. Guarantees for reproductive and gender-affirming care. END THE WAR ON DRUGS Treat drug addiction as a health issue, not a criminal one. FIGHT MASS INCARCERATION AND POLICE BRUTALITY Abolish mandatory minimums and cash bail, and demilitarize police departments. COLLEGE FOR ALL Make all public higher education tuition-free with no out-of-pocket cost for room and board and cancel all student loan debt. WE FIGHT FOR... THRIVING WORKING CLASS COMMUNITIES HOUSING FOR ALL Establish universal rent-control and the guaranteed right to counsel for all tenants. Public investment in building quality multi-income social housing. SUPPORT WORKING FAMILIES Expansive paid family leave for all workers, and free public universal childcare and pre-K. 10 WORKERS DESERVE MORE! WORKERS DESERVE MORE! 11",
-      "source_sha256": "1df072bea27e396db57415984a903dbadfac9677ab1187173a06474b33fee13a",
-      "document_id": "dsa-2024-program",
-      "document_title": "Workers Deserve More 2024",
-      "document_type": "program",
-      "source_date": "2024-08",
-      "density_ratio": 8.696007986767627
-    },
-    {
-      "topic_id": "topic-002",
-      "title": "Community Investment, Housing, and Social Support",
-      "mean_log_density_contrast": 2.1067152007732477,
-      "dsa_claims": 279,
-      "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2010-social-economic-rights-normalized-edb91d554823-010",
-      "anchor_coordinates": [
-        -1.7371121644973755,
-        10.09671401977539
-      ],
-      "anchor_log_density_contrast": 0.48345489819100607,
-      "anchor_source_url": "https://www.dsausa.org/wp-json/wp/v2/strategy/617",
-      "snippet": "Government should promote housing co-ops and nonprofit/community development corporations committed to revitalizing communities.",
-      "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
-      "source_claim_text": "Government should promote alternative forms of housing ownership\u2014co-ops, nonprofit and community development corporations\u2014that would also be committed to revitalizing communities.",
-      "source_evidence": "A progressive approach to housing affordability, in contrast, would treat housing as a social good rather than as a profit-producing commodity. Government should promote alternative forms of housing owner- ship \u2014 co-ops, nonprofit and community development corporations \u2014 that would also be committed to revitalizing communities. Despite being much maligned, public housing has served more low income tenants than any single program and should therefore remain a core element of housing policy. In order to meet the housing affordability crisis, all public housing units should be replaced with new units at no less than a one-to-one basis.",
-      "source_sha256": "fdd96cea6b3d9b15699ab397b01726fe75b2e8cf20263549a3a18b47bdbb8ecf",
-      "document_id": "dsa-2010-social-economic-rights",
-      "document_title": "A Social and Economic Bill of Rights",
-      "document_type": "statement",
-      "source_date": "2012-12-23",
-      "density_ratio": 8.221191918223449
+      "source_date": "2021-11-09"
     },
     {
       "topic_id": "topic-022",
       "title": "Israel-Palestine Peace, Security, and Palestinian Rights",
-      "mean_log_density_contrast": 1.887871498456339,
+      "displayed": true,
+      "shares": {
+        "dsa": 0.06135244587941502,
+        "democratic": 0.012310610301032891,
+        "republican": 0.014352120844555614
+      },
+      "combined_share": 0.013331365572794253,
+      "gap": 0.048021080306620764,
+      "attention_ratio": 4.602112630128374,
+      "democratic_republican_ratio": 0.8577554797904898,
+      "dsa_democratic_ratio": 4.983704656321335,
+      "dsa_republican_ratio": 4.274799978617006,
       "dsa_claims": 243,
       "dsa_bundles": 9,
       "anchor_claim_id": "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002",
@@ -85,7 +58,6 @@
         6.591990947723389,
         8.097929000854492
       ],
-      "anchor_log_density_contrast": 2.1820456020218124,
       "anchor_source_url": "https://dlarchive.dsausa.org/wp-content/uploads/2018/12/DL_2004_V032_02.pdf",
       "snippet": "The U.S. and EU should pressure the Palestinian Authority to do all it can to stop attacks on Israeli civilians.",
       "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
@@ -95,47 +67,121 @@
       "document_id": "dsa-2004-israel-palestine",
       "document_title": "NPC resolution on Israel's occupation of the West Bank and Gaza",
       "document_type": "resolution",
-      "source_date": "2004",
-      "density_ratio": 6.605294328541604
+      "source_date": "2004"
     },
     {
-      "topic_id": "topic-004",
-      "title": "Economic Prosperity Narratives and Development Models",
-      "mean_log_density_contrast": 1.6315800388797923,
-      "dsa_claims": 281,
+      "topic_id": "topic-003",
+      "title": "Labor Rights, Unionization, and Worker Protections",
+      "displayed": true,
+      "shares": {
+        "dsa": 0.07087242633362638,
+        "democratic": 0.033744211395212824,
+        "republican": 0.015733366760538308
+      },
+      "combined_share": 0.024738789077875564,
+      "gap": 0.046133637255750815,
+      "attention_ratio": 2.8648300493013674,
+      "democratic_republican_ratio": 2.1447546420800707,
+      "dsa_democratic_ratio": 2.10028397177718,
+      "dsa_republican_ratio": 4.504593798155477,
+      "dsa_claims": 336,
       "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2024-program-normalized-c0035893561c-004",
+      "anchor_claim_id": "dsa-2010-social-economic-rights-normalized-b973e3114edd-001",
       "anchor_coordinates": [
-        1.2130087614059448,
-        8.046652793884277
+        0.44057944416999817,
+        6.732009410858154
       ],
-      "anchor_log_density_contrast": 2.612386977320071,
-      "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf",
-      "snippet": "DSA argues that billionaires profit from controlling access to housing, healthcare and education.",
+      "anchor_source_url": "https://www.dsausa.org/wp-json/wp/v2/strategy/617",
+      "snippet": "DSA argues that the Employee Free Choice Act would let workers choose union representation without fear or intimidation.",
       "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
-      "source_claim_text": "Billionaires control access to basic human needs like housing, healthcare, and education and make a profit off of them.",
-      "source_evidence": "[PDF page 4] 6 PROGRAM FOR 2024 The US political and economic system is failing the working class. Millions struggle with low wages, dangerous working conditions, and limited control over our own lives, all while the top one percent has gotten richer and richer. Billionaires control access to basic human needs like housing, healthcare, and education and make a profit off of them...This capitalist economic system is the cause of violence, unemployment, and a climate crisis that poses an existential threat to life on earth. Black and brown workers in racially segregated communities bear the brunt of capitalism\u2019s cruelties, suffering especially from poverty wages, discrimination, deportation, and unemployment, often pushing workers into illegal activity to survive. Instead of investing in working-class communities, capitalists prefer to police and incarcerate workers they consider expendable to protect their wealth. Accelerating declines in living standards are exploited by the Christian nationalist right and figures like Donald Trump. Americans rejected the far- right agenda in the 2020 elections and watched a failed coup attempt to overturn the election results.... The far-right threatens Americans\u2019 civil liberties. They attack the right of people to decide whether to have a kid by overturning Roe v. Wade and continue to restrict abortion access. Now they attack the rights of queer and transgender people by banning gender-affirming care. These culture wars are intended to pit workers against each other to empower a right- wing government.",
-      "source_sha256": "1df072bea27e396db57415984a903dbadfac9677ab1187173a06474b33fee13a",
-      "document_id": "dsa-2024-program",
-      "document_title": "Workers Deserve More 2024",
-      "document_type": "program",
-      "source_date": "2024-08",
-      "density_ratio": 5.111945413356348
+      "source_claim_text": "The Employee Free Choice Act (EFCA) would restore the original intent of the National Labor Relations Board (NLRB) by permitting workers to choose union representation without fear and intimidation.",
+      "source_evidence": "The Employee Free Choice Act (EFCA) would restore the original intent of the NLRB by permitting workers to choose union representation without fear and intimidation. If a majority of workers demonstrated their choice to form a union, it would be certified without a delay-ridden and coercive election process. Employer stonewalling on negotiating a first collective agreement could trigger an arbitration process. Penalties for serious abuses of workers\u2019 rights to organize would be stiffened.",
+      "source_sha256": "fdd96cea6b3d9b15699ab397b01726fe75b2e8cf20263549a3a18b47bdbb8ecf",
+      "document_id": "dsa-2010-social-economic-rights",
+      "document_title": "A Social and Economic Bill of Rights",
+      "document_type": "statement",
+      "source_date": "2012-12-23"
+    },
+    {
+      "topic_id": "topic-005",
+      "title": "Voting Rights, Election Rules, and Representation",
+      "displayed": true,
+      "shares": {
+        "dsa": 0.06300109769429978,
+        "democratic": 0.0332728847769005,
+        "republican": 0.049903738961635025
+      },
+      "combined_share": 0.04158831186926776,
+      "gap": 0.02141278582503202,
+      "attention_ratio": 1.5148750902018526,
+      "democratic_republican_ratio": 0.6667413197732541,
+      "dsa_democratic_ratio": 1.8934666505994668,
+      "dsa_republican_ratio": 1.2624524535673316,
+      "dsa_claims": 210,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2016-strategy-normalized-48e0bdf87f39-010",
+      "anchor_coordinates": [
+        0.5619819164276123,
+        8.310309410095215
+      ],
+      "anchor_source_url": "https://www.dsausa.org/files/2016/06/Resistance_Rising.pdf",
+      "snippet": "DSA's envisioned democratic socialist system would use proportional representation so Congress reflects the electorate's political will.",
+      "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
+      "source_claim_text": "A system of proportional representation would be established for Congress so that Congress actually reflects the political will of the electorate.",
+      "source_evidence": "[PDF page 6] Vitalservicessuchashealthcare, childcare, education (from pre-K through higher education),shelterandtransportationwould be publicly provided to everyone on demand, free ofcharge. Further, in order to ensurethattheenjoymentoffullcitizenship was not tied to ups and downs in the labor market, everyone would also receive a universal basic income \u2014 that is, a base salary for every member of society, regardless of the person\u2019s employment status. Finally, the work week would be gradually reduced and vacation time would be expanded to guarantee that everyone in society benefited from increasingly efficient technologies that decrease the overall amount of labor needed in the economy (andalso to ensurethatallwho wishto find employmentareabletodoso). Economic democracy would be complemented in the political sphere by a new system that combined an overhauled form of representative democracy (our current system) with direct democracy, a system in which individuals participate directly in the making ofpolitical decisions that affect them. In this system, the Senate (an extremely unrepresentative political body in which states with very small populations have the same level of representation as the most populous states) would be abolished, and a system of proportional representation would be establishedsothatCongressactuallyreflects the political will of the electorate. A democratic socialist government would also implement new referenda and recall mechanisms to hold elected officials accountable during their tenure in office, and a vast system of local participatory institutions would be set up to ensure individuals had a direct voice in political decision-making beyond the ballot box.",
+      "source_sha256": "7fab89cf4c9250cf928ce3764caf6ffe831c3decc28ff90c480faa80ef460f02",
+      "document_id": "dsa-2016-strategy",
+      "document_title": "Resistance Rising - published summary of DSA strategy",
+      "document_type": "statement",
+      "source_date": "2016-06"
+    },
+    {
+      "topic_id": "topic-019",
+      "title": "Economic Hardship, Poverty, and Housing Insecurity",
+      "displayed": true,
+      "shares": {
+        "dsa": 0.06293800138350478,
+        "democratic": 0.043175763763827174,
+        "republican": 0.04369176158200625
+      },
+      "combined_share": 0.04343376267291671,
+      "gap": 0.019504238710588068,
+      "attention_ratio": 1.4490570816410067,
+      "democratic_republican_ratio": 0.9881900431684223,
+      "dsa_democratic_ratio": 1.4577159938102702,
+      "dsa_republican_ratio": 1.4405004308506704,
+      "dsa_claims": 360,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2021-adopted-normalized-1870bd662c8e-005",
+      "anchor_coordinates": [
+        -0.7959396243095398,
+        9.750175476074219
+      ],
+      "anchor_source_url": "https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/",
+      "snippet": "DSA argues that public austerity and incarceration endanger communities and make rent, food, childcare and housing harder to afford.",
+      "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
+      "source_claim_text": "Public austerity and incarceration endanger communities and make it difficult for many people to pay for rent, food, childcare, or housing.",
+      "source_evidence": "Over the past half century, wealth, and therefore economic and political power, have consolidated in fewer and fewer hands even as the conditions of most people\u2019s lives deteriorate. These changes resulted from governments\u2019 and corporations\u2019 response to a crisis of pro\ufb01tability that culminated in attacks on labor and social and economic protections. Private debt is growing; wages have declined in real terms or failed to increase with productivity; and public austerity and incarceration endanger communities and make it di\ufb03cult for many of us to pay for rent, food, childcare, or housing. As class and regional disparities in health, education, and infrastructure have widened, the fundamental divides of racial capitalism have also deepened.",
+      "source_sha256": "c926acfcab2a5dd27e2bc9aad3524414a716cdbc5ae1d59e3c95c046b1694283",
+      "document_id": "dsa-2021-adopted",
+      "document_title": "2021 adopted DSA Political Platform - immutable December 2021 snapshot",
+      "document_type": "platform",
+      "source_date": "2021-11-09"
     }
   ],
-  "ranking": "largest positive source-balanced mean combined log density contrast at DSA claims",
-  "contrast": "log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
-  "density_ratio_basis": "exp(bundle-balanced mean log density contrast at DSA claims); geometric mean density ratio, not attention share",
-  "weighting": "equal DSA bundle mass, equal eligible claim mass within each bundle",
+  "ranking": "largest positive weighted attention-share gap; DSA minus equal-weight Democratic/Republican average",
+  "map_contrast": "log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+  "attention_ratio_basis": "DSA subject share / ((Democratic subject share + Republican subject share) / 2); null when the baseline share is zero",
+  "weighting": "equal bundle mass within each organization, equal eligible claim mass within each bundle",
   "minimum_dsa_bundles": 2,
-  "anchor_selection": "reviewed positive-contrast DSA example nearest the weighted 2D issue center",
+  "anchor_selection": "reviewed DSA example nearest the bundle-balanced weighted 2D issue center; marker does not encode an attention share",
   "map_claims": 26069,
   "display_labels": {
     "topic-020": "Power, oppression & social conflict",
-    "topic-010": "Policing & incarceration",
-    "topic-002": "Housing & community support",
     "topic-022": "Israel\u2013Palestine",
-    "topic-004": "Prosperity & development models"
+    "topic-003": "Labor & unions",
+    "topic-005": "Voting & elections",
+    "topic-019": "Poverty & housing insecurity"
   },
   "color_bound": 3.7983298842754825,
   "color_palette": [
@@ -145,6 +191,7 @@
   ],
   "input_sha256": {
     "data/analysis/national_claims/full/topics/topic_labels.json": "26adea64a0d34038fd77348c4b19567b374b04d0e0139501cace8dbddbaecf1a",
+    "data/analysis/national_claims/full/topics/shares.csv": "cb64c180deec980e8093fd751dd6271f0a4c09ba0fead4c56fd6896b1e459906",
     "data/analysis/national_claims/full/topics/representatives.csv": "bcc583a5a49409bf0b473cea20a3dad539372e433b349adb0078a214d0a8739b",
     "data/analysis/national_claims/full/analysis_claims.csv": "500d691de84433e462f2b980ee3511577c00d1656fc3d0b384c48338e176d35a",
     "data/analysis/national_claims/full/expanded/scored_passages.csv": "0a5cb66b68d69ad1cc89894f4a934fb155e486904d2b748cec013749ee368462",
@@ -156,7 +203,18 @@
     {
       "topic_id": "topic-020",
       "title": "Institutional Power, Oppression, and Social Conflict",
-      "mean_log_density_contrast": 2.731510464635039,
+      "displayed": true,
+      "shares": {
+        "dsa": 0.09294009293158682,
+        "democratic": 0.010803563702554605,
+        "republican": 0.02291314387590643
+      },
+      "combined_share": 0.016858353789230517,
+      "gap": 0.0760817391423563,
+      "attention_ratio": 5.51299931734491,
+      "democratic_republican_ratio": 0.4715007142217066,
+      "dsa_democratic_ratio": 8.602725497847553,
+      "dsa_republican_ratio": 4.056191216488408,
       "dsa_claims": 569,
       "dsa_bundles": 9,
       "anchor_claim_id": "dsa-2021-adopted-normalized-6b522fa83bc9-003",
@@ -164,41 +222,23 @@
         2.027747631072998,
         8.028314590454102
       ],
-      "anchor_log_density_contrast": 2.543075913972702,
       "anchor_source_url": "https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/"
-    },
-    {
-      "topic_id": "topic-010",
-      "title": "Criminal Justice, Policing, and Incarceration",
-      "mean_log_density_contrast": 2.162864068260026,
-      "dsa_claims": 265,
-      "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2024-program-normalized-b789b4710c28-006",
-      "anchor_coordinates": [
-        0.3083289563655853,
-        7.323701858520508
-      ],
-      "anchor_log_density_contrast": 1.78555834293274,
-      "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf"
-    },
-    {
-      "topic_id": "topic-002",
-      "title": "Community Investment, Housing, and Social Support",
-      "mean_log_density_contrast": 2.1067152007732477,
-      "dsa_claims": 279,
-      "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2010-social-economic-rights-normalized-edb91d554823-010",
-      "anchor_coordinates": [
-        -1.7371121644973755,
-        10.09671401977539
-      ],
-      "anchor_log_density_contrast": 0.48345489819100607,
-      "anchor_source_url": "https://www.dsausa.org/wp-json/wp/v2/strategy/617"
     },
     {
       "topic_id": "topic-022",
       "title": "Israel-Palestine Peace, Security, and Palestinian Rights",
-      "mean_log_density_contrast": 1.887871498456339,
+      "displayed": true,
+      "shares": {
+        "dsa": 0.06135244587941502,
+        "democratic": 0.012310610301032891,
+        "republican": 0.014352120844555614
+      },
+      "combined_share": 0.013331365572794253,
+      "gap": 0.048021080306620764,
+      "attention_ratio": 4.602112630128374,
+      "democratic_republican_ratio": 0.8577554797904898,
+      "dsa_democratic_ratio": 4.983704656321335,
+      "dsa_republican_ratio": 4.274799978617006,
       "dsa_claims": 243,
       "dsa_bundles": 9,
       "anchor_claim_id": "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002",
@@ -206,23 +246,80 @@
         6.591990947723389,
         8.097929000854492
       ],
-      "anchor_log_density_contrast": 2.1820456020218124,
       "anchor_source_url": "https://dlarchive.dsausa.org/wp-content/uploads/2018/12/DL_2004_V032_02.pdf"
     },
     {
-      "topic_id": "topic-004",
-      "title": "Economic Prosperity Narratives and Development Models",
-      "mean_log_density_contrast": 1.6315800388797923,
-      "dsa_claims": 281,
+      "topic_id": "topic-003",
+      "title": "Labor Rights, Unionization, and Worker Protections",
+      "displayed": true,
+      "shares": {
+        "dsa": 0.07087242633362638,
+        "democratic": 0.033744211395212824,
+        "republican": 0.015733366760538308
+      },
+      "combined_share": 0.024738789077875564,
+      "gap": 0.046133637255750815,
+      "attention_ratio": 2.8648300493013674,
+      "democratic_republican_ratio": 2.1447546420800707,
+      "dsa_democratic_ratio": 2.10028397177718,
+      "dsa_republican_ratio": 4.504593798155477,
+      "dsa_claims": 336,
       "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2024-program-normalized-c0035893561c-004",
+      "anchor_claim_id": "dsa-2010-social-economic-rights-normalized-b973e3114edd-001",
       "anchor_coordinates": [
-        1.2130087614059448,
-        8.046652793884277
+        0.44057944416999817,
+        6.732009410858154
       ],
-      "anchor_log_density_contrast": 2.612386977320071,
-      "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf"
+      "anchor_source_url": "https://www.dsausa.org/wp-json/wp/v2/strategy/617"
+    },
+    {
+      "topic_id": "topic-005",
+      "title": "Voting Rights, Election Rules, and Representation",
+      "displayed": true,
+      "shares": {
+        "dsa": 0.06300109769429978,
+        "democratic": 0.0332728847769005,
+        "republican": 0.049903738961635025
+      },
+      "combined_share": 0.04158831186926776,
+      "gap": 0.02141278582503202,
+      "attention_ratio": 1.5148750902018526,
+      "democratic_republican_ratio": 0.6667413197732541,
+      "dsa_democratic_ratio": 1.8934666505994668,
+      "dsa_republican_ratio": 1.2624524535673316,
+      "dsa_claims": 210,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2016-strategy-normalized-48e0bdf87f39-010",
+      "anchor_coordinates": [
+        0.5619819164276123,
+        8.310309410095215
+      ],
+      "anchor_source_url": "https://www.dsausa.org/files/2016/06/Resistance_Rising.pdf"
+    },
+    {
+      "topic_id": "topic-019",
+      "title": "Economic Hardship, Poverty, and Housing Insecurity",
+      "displayed": true,
+      "shares": {
+        "dsa": 0.06293800138350478,
+        "democratic": 0.043175763763827174,
+        "republican": 0.04369176158200625
+      },
+      "combined_share": 0.04343376267291671,
+      "gap": 0.019504238710588068,
+      "attention_ratio": 1.4490570816410067,
+      "democratic_republican_ratio": 0.9881900431684223,
+      "dsa_democratic_ratio": 1.4577159938102702,
+      "dsa_republican_ratio": 1.4405004308506704,
+      "dsa_claims": 360,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2021-adopted-normalized-1870bd662c8e-005",
+      "anchor_coordinates": [
+        -0.7959396243095398,
+        9.750175476074219
+      ],
+      "anchor_source_url": "https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/"
     }
   ],
-  "image_sha256": "43315b4beca1e57a8f60f2d2c4dbfd9309b572e1e58db76818aa924e0f512a1f"
+  "image_sha256": "7b023e5aa340b1c3a0e3140c2700e3423d8344396d2592156fd3d19d0bb3299e"
 }

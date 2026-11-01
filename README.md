@@ -51,21 +51,31 @@ review is not a representative sample or corpus-wide semantic certification. Ear
 and passage-based results are retained below as historical references.
 
 <p align="center">
-  <a href="figures/article/dsa_lead_option_a-map-five.png?rev=top-aligned-issues">
-    <img src="figures/article/dsa_lead_option_a-map-five.png?rev=top-aligned-issues" width="1100" alt="Original embedding graph with five numbered DSA-heavy areas, density multipliers and dated DSA statements beside it">
+  <a href="figures/article/dsa_lead_option_a-map-five.png?rev=attention-shares">
+    <img src="figures/article/dsa_lead_option_a-map-five.png?rev=attention-shares" width="1100" alt="Original embedding graph with five numbered issues, attention-share comparisons and dated DSA statements beside it">
   </a>
 </p>
 
-*Article lead: five issues with the largest positive source-balanced mean density
-contrasts at DSA claims. Light purple marks denser combined major-party language;
+*Article lead: five issues with the largest positive weighted attention-share gaps
+between DSA and the equal-weight Democratic–Republican average.
+Map colors still show language density: light purple marks denser combined Democrat & Republican language;
 gold marks denser DSA language. [Full-size PNG](figures/article/dsa_vs_major_parties_lead.png)
-and [exact contrasts, dated DSA snippets and source anchors](figures/article/dsa_vs_major_parties_lead.json).
+and [exact shares, dated DSA snippets and source anchors](figures/article/dsa_vs_major_parties_lead.json).
 The original embedding map is retained, with clearer points and source-backed
 statements beside the five numbered examples. The issue column starts alongside the
 title, with compact multipliers, separate source dates and subtle row dividers.
-Multipliers exponentiate each issue's
-bundle-balanced mean log density contrast at DSA claims: geometric mean density
-ratios against the equal-weight Democratic–Republican mixture, not attention shares.*
+Each callout shows DSA's attention share, the Democratic–Republican average share,
+and their ratio. Attention shares are proportions of policy claims with equal
+source-bundle contributions within each party. Ratios use the unrounded shares;
+they do not measure language density, voter support, spending, or policy agreement.*
+
+[Complete attention-share ratios (CSV)](figures/article/dsa_attention_share_ratios.csv)
+contains all 21 substantive subjects plus the three identity clusters, explicitly
+marked as excluded from issue rankings. It includes every party's share, the
+Democratic–Republican average, percentage-point gaps and four unrounded ratios:
+Democratic / Republican, DSA / Democratic, DSA / Republican, and
+DSA / the equal-weight Democratic–Republican average. A zero baseline leaves
+the ratio blank rather than inventing an infinite value.
 
 ### Alternative article leads with DSA statements
 
@@ -86,15 +96,15 @@ rejected graph-free options, not the underlying analysis.
 
 **A — Original map and five statements**
 
-<img src="figures/article/dsa_lead_option_a-map-five.png?rev=top-aligned-issues" width="1100" alt="Original embedding graph with five numbered DSA examples, density multipliers and dated statements beside it">
+<img src="figures/article/dsa_lead_option_a-map-five.png?rev=attention-shares" width="1100" alt="Original embedding graph with five numbered DSA examples, attention shares and dated statements beside it">
 
 **B — Wide map with statements below**
 
-<img src="figures/article/dsa_lead_option_b-map-bottom.png?rev=top-aligned-issues" width="1100" alt="Original embedding graph above three density multipliers and dated DSA statements">
+<img src="figures/article/dsa_lead_option_b-map-bottom.png?rev=attention-shares" width="1100" alt="Original embedding graph above three attention-share comparisons and dated DSA statements">
 
 **C — Original map and three larger statements**
 
-<img src="figures/article/dsa_lead_option_c-map-three.png?rev=top-aligned-issues" width="1100" alt="Original embedding graph beside three density multipliers and larger dated DSA statements">
+<img src="figures/article/dsa_lead_option_c-map-three.png?rev=attention-shares" width="1100" alt="Original embedding graph beside three attention-share comparisons and larger dated DSA statements">
 
 </details>
 
@@ -144,13 +154,13 @@ not an average of their log densities or a merged political platform. All three
 reviewed party positions remain separate alongside the two DSA pairwise summaries.
 
 **Article-only lead:** [Where DSA stands apart](figures/article/dsa_vs_major_parties_lead.png)
-is a large map highlighting five DSA-heavy substantive issues against the 50/50
-Democratic–Republican density mixture. Issues rank by positive source-balanced mean
-log density contrast at DSA claims, requiring at least two DSA bundles. Markers locate
-reviewed positive-contrast examples near each issue's weighted projected center,
+is a large map highlighting the five largest positive DSA attention-share gaps
+against the equal-weight Democratic–Republican average, requiring at least two
+DSA bundles. Callouts show both weighted shares and their ratio. Markers locate
+reviewed DSA examples near each issue's weighted projected center,
 not region boundaries. Original coordinates, densities and the common color scale
-are unchanged; this is not an attention-share or policy-disagreement ranking.
-[Exact contrasts, source anchors and input hashes](figures/article/dsa_vs_major_parties_lead.json)
+are unchanged; map colors still measure language density, not attention share.
+[Exact shares, source anchors and input hashes](figures/article/dsa_vs_major_parties_lead.json)
 are preserved alongside the PNG. The previous
 [absolute attention-gap bars](figures/article/dsa_vs_major_parties_attention_gaps.png)
 remain separately available. Rebuild both with `python scripts/build_dsa_article_lead.py`;

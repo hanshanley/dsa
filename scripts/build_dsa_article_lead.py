@@ -19,6 +19,9 @@ DISPLAY_LABELS = {
     "Community Investment, Housing, and Social Support": "Housing &\ncommunity support",
     "Israel-Palestine Peace, Security, and Palestinian Rights": "Israel\u2013Palestine",
     "Economic Prosperity Narratives and Development Models": "Prosperity &\ndevelopment models",
+    "Labor Rights, Unionization, and Worker Protections": "Labor & unions",
+    "Voting Rights, Election Rules, and Representation": "Voting & elections",
+    "Economic Hardship, Poverty, and Housing Insecurity": "Poverty & housing\ninsecurity",
 }
 SNIPPETS = {
     "dsa-2021-adopted-normalized-6b522fa83bc9-003": (
@@ -38,6 +41,18 @@ SNIPPETS = {
         "DSA argues that billionaires profit from controlling access to housing, "
         "healthcare and education."
     ),
+    "dsa-2010-social-economic-rights-normalized-b973e3114edd-001": (
+        "DSA argues that the Employee Free Choice Act would let workers choose "
+        "union representation without fear or intimidation."
+    ),
+    "dsa-2016-strategy-normalized-48e0bdf87f39-010": (
+        "DSA's envisioned democratic socialist system would use proportional representation "
+        "so Congress reflects the electorate's political will."
+    ),
+    "dsa-2021-adopted-normalized-1870bd662c8e-005": (
+        "DSA argues that public austerity and incarceration endanger communities and "
+        "make rent, food, childcare and housing harder to afford."
+    ),
 }
 SNIPPET_CLAIM_SHA256 = {
     "dsa-2021-adopted-normalized-6b522fa83bc9-003": (
@@ -54,6 +69,15 @@ SNIPPET_CLAIM_SHA256 = {
     ),
     "dsa-2024-program-normalized-c0035893561c-004": (
         "dbc13771670910116c140bc5a9dae53ab9eb28a42d02b362fce7ed2424ae40d9"
+    ),
+    "dsa-2010-social-economic-rights-normalized-b973e3114edd-001": (
+        "41ed33757f8cd4c3310dede2413d6570844eb6364a460b09a9d48c6de12a4992"
+    ),
+    "dsa-2016-strategy-normalized-48e0bdf87f39-010": (
+        "bbe876731a61f8d13a467ef9786d9458c9e69e590eb95ac3e358d467409930c3"
+    ),
+    "dsa-2021-adopted-normalized-1870bd662c8e-005": (
+        "c921e2644406cda04c28317997bf92fb88d53310daf1d5dc4142ea8b6963a97f"
     ),
 }
 
@@ -84,7 +108,6 @@ def snippet_records(records: list[dict], claims: list[dict]) -> list[dict]:
                 document_title=claim["title"],
                 document_type=claim["document_type"],
                 source_date=claim["publication_date"],
-                density_ratio=math.exp(record["mean_log_density_contrast"]),
             )
         )
     return result
@@ -121,7 +144,7 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
     fig.text(
         0.045,
         0.837,
-        f"{'Five' if five else 'Three'} DSA-heavy areas vs. Democrats + Republicans",
+        f"{'Five' if five else 'Three'} issues with higher DSA attention shares",
         fontsize=17,
         color="#625d53",
     )
@@ -153,7 +176,7 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
     )
     axis.set_axis_off()
     if not bottom:
-        fig.text(0.655, 0.950, "DSA LANGUAGE CONCENTRATION", fontsize=11, color="#625d53")
+        fig.text(0.655, 0.950, "POLICY ATTENTION SHARES", fontsize=11, color="#625d53")
     next_top = 0.918
     renderer = fig.canvas.get_renderer()
     for number, record in enumerate(selected, 1):
@@ -195,7 +218,9 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
         ratio = fig.text(
             x if bottom else 0.955,
             ratio_top,
-            f"{record['density_ratio']:.1f}\u00d7",
+            f"{record['attention_ratio']:.1f}\u00d7"
+            if record["attention_ratio"] is not None
+            else "n/a",
             fontsize=15 if bottom else 25,
             fontweight="bold",
             va="top",
@@ -203,16 +228,13 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
             color="#8d6c25",
         )
         if bottom:
-            body_top = (
+            comparison_top = (
                 ratio_top
                 - ratio.get_window_extent(renderer).height / fig.bbox.height
                 - 5 / (fig.get_figheight() * 72)
             )
-            body = (
-                f"{record['source_date'][:4]} {record['document_type']} \u2014 {record['snippet']}"
-            )
         else:
-            source_top = (
+            comparison_top = (
                 top
                 - max(
                     heading.get_window_extent(renderer).height,
@@ -221,6 +243,26 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
                 / fig.bbox.height
                 - 7 / (fig.get_figheight() * 72)
             )
+        comparison = fig.text(
+            x,
+            comparison_top,
+            f"DSA {100 * record['shares']['dsa']:.2f}%  \u00b7  "
+            f"Democrat & Republican {100 * record['combined_share']:.2f}%",
+            fontsize=13.5,
+            va="top",
+            color="#8d6c25",
+        )
+        source_top = (
+            comparison_top
+            - comparison.get_window_extent(renderer).height / fig.bbox.height
+            - 5 / (fig.get_figheight() * 72)
+        )
+        if bottom:
+            body_top = source_top
+            body = (
+                f"{record['source_date'][:4]} {record['document_type']} \u2014 {record['snippet']}"
+            )
+        else:
             source = fig.text(
                 x,
                 source_top,
@@ -248,9 +290,9 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
             statement_bottom = (
                 body_top - statement.get_window_extent(renderer).height / fig.bbox.height
             )
-            next_top = statement_bottom - 28 / (fig.get_figheight() * 72)
+            next_top = statement_bottom - 22 / (fig.get_figheight() * 72)
             if number < len(selected):
-                divider_y = statement_bottom - 13 / (fig.get_figheight() * 72)
+                divider_y = statement_bottom - 10 / (fig.get_figheight() * 72)
                 fig.add_artist(
                     Line2D(
                         [x, 0.955],
@@ -289,23 +331,24 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
     fig.text(
         0.045,
         0.059,
-        "Original embedding map \u00b7 equal-weight Democrat & Republican baseline "
-        "\u00b7 numbered examples, not region boundaries",
+        "Original embedding map: colors show language density, not attention shares; "
+        "numbered markers locate examples.",
         fontsize=10.5,
         color="#625d53",
     )
     fig.text(
         0.045,
         0.034,
-        "Dated DSA statements are paraphrased. Language concentration is not policy agreement.",
+        "Dated DSA statements are paraphrased. Attention shares are bundle-balanced "
+        "proportions of policy claims.",
         fontsize=10.5,
         color="#625d53",
     )
     fig.text(
         0.045,
         0.014,
-        "Multipliers: bundle-balanced geometric mean density ratios at DSA claims, "
-        "not attention shares.",
+        "Multipliers: DSA attention share / the equal-weight Democrat & Republican "
+        "average; not policy agreement.",
         fontsize=10.5,
         color="#625d53",
     )
@@ -353,6 +396,113 @@ def combined_density_contrast(point: list) -> float:
         (math.exp(democratic - maximum) + math.exp(republican - maximum)) / 2
     )
     return dsa - mixture
+
+
+def attention_share_records(labels: list[dict], rows: list[dict]) -> list[dict]:
+    shares = {}
+    for row in rows:
+        if row["view"] != "expanded" or row["available"] != "True":
+            continue
+        key = row["topic_id"], row["group"]
+        value = float(row["share"])
+        if key in shares or not math.isfinite(value) or not 0 <= value <= 1:
+            raise ValueError("Invalid or duplicate observed attention share")
+        shares[key] = value
+    result = []
+    for label in labels:
+        topic_id = label["topic_id"]
+        if any((topic_id, group) not in shares for group in GROUPS):
+            raise ValueError(f"Missing observed party shares for {topic_id}")
+        values = {group: shares[topic_id, group] for group in GROUPS}
+        combined = (values["democratic"] + values["republican"]) / 2
+        result.append(
+            dict(
+                topic_id=topic_id,
+                title=label["title"],
+                displayed=label.get("displayed", True),
+                shares=values,
+                combined_share=combined,
+                gap=values["dsa"] - combined,
+                attention_ratio=values["dsa"] / combined if combined else None,
+                democratic_republican_ratio=(
+                    values["democratic"] / values["republican"] if values["republican"] else None
+                ),
+                dsa_democratic_ratio=(
+                    values["dsa"] / values["democratic"] if values["democratic"] else None
+                ),
+                dsa_republican_ratio=(
+                    values["dsa"] / values["republican"] if values["republican"] else None
+                ),
+            )
+        )
+    return result
+
+
+def rank_attention_areas(data: dict, claims: list[dict], rows: list[dict]) -> list[dict]:
+    lookup = {claim["claim_id"]: claim for claim in claims}
+    points = {point[0]: point for point in data["points"]}
+    if (
+        len(lookup) != len(claims)
+        or len(points) != len(data["points"])
+        or set(lookup) != set(points)
+    ):
+        raise ValueError("Attention examples require exact unique claim membership")
+    for point in points.values():
+        if data["groups"][point[4]] != lookup[point[0]]["group"]:
+            raise ValueError("Attention example claim group mismatch")
+    metrics = {r["topic_id"]: r for r in attention_share_records(data["topics"], rows)}
+    bundles = {
+        claim_id: claim.get("bundle_id") or claim.get("document_id")
+        for claim_id, claim in lookup.items()
+        if claim["group"] == "dsa"
+    }
+    if any(not bundle for bundle in bundles.values()):
+        raise ValueError("Missing DSA source bundle")
+    counts = Counter(bundles.values())
+    dsa_group = data["groups"].index("dsa")
+    ranked = []
+    for index, topic in enumerate(data["topics"]):
+        if not topic["displayed"]:
+            continue
+        topic_id = topic["topic_id"]
+        if metrics[topic_id]["gap"] <= 0:
+            continue
+        members = [
+            point for point in points.values() if point[3] == index and point[4] == dsa_group
+        ]
+        bundle_count = len({bundles[point[0]] for point in members})
+        if bundle_count < 2:
+            continue
+        weights = [1 / counts[bundles[point[0]]] for point in members]
+        mass = sum(weights)
+        center = [
+            sum(weight * point[column] for point, weight in zip(members, weights)) / mass
+            for column in (1, 2)
+        ]
+        examples = [points[e["claim_id"]] for e in topic["examples"] if e["group"] == "dsa"]
+        if not examples:
+            raise ValueError(f"No reviewed DSA example for {topic_id}")
+        anchor = min(
+            examples,
+            key=lambda point: (
+                sum(
+                    ((point[column] - center[column - 1]) / (limits[1] - limits[0])) ** 2
+                    for column, limits in zip((1, 2), data["limits"])
+                ),
+                point[0],
+            ),
+        )
+        ranked.append(
+            dict(
+                **metrics[topic_id],
+                dsa_claims=len(members),
+                dsa_bundles=bundle_count,
+                anchor_claim_id=anchor[0],
+                anchor_coordinates=anchor[1:3],
+                anchor_source_url=lookup[anchor[0]]["source_url"],
+            )
+        )
+    return sorted(ranked, key=lambda record: (-record["gap"], record["topic_id"]))[:5]
 
 
 def rank_density_areas(data: dict, claims: list[dict]) -> list[dict]:
@@ -675,7 +825,57 @@ def main() -> None:
     labels_path, shares_path = data / "topic_labels.json", data / "shares.csv"
     labels = json.loads(labels_path.read_text())
     with shares_path.open(newline="") as handle:
-        records = rank_attention_gaps(labels, list(csv.DictReader(handle)))
+        share_rows = list(csv.DictReader(handle))
+    ratios_path = ROOT / "figures/article/dsa_attention_share_ratios.csv"
+    ratios_path.parent.mkdir(parents=True, exist_ok=True)
+    with ratios_path.open("w", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            lineterminator="\n",
+            fieldnames=(
+                "topic_id",
+                "topic_title",
+                "substantive_issue",
+                "dsa_share_pct",
+                "democratic_share_pct",
+                "republican_share_pct",
+                "democrat_republican_average_share_pct",
+                "attention_gap_pp",
+                "dsa_attention_share_ratio",
+                "democratic_republican_attention_share_ratio",
+                "dsa_democratic_attention_share_ratio",
+                "dsa_republican_attention_share_ratio",
+            ),
+        )
+        writer.writeheader()
+        for record in sorted(
+            attention_share_records(labels, share_rows),
+            key=lambda r: (
+                not r["displayed"],
+                r["attention_ratio"] is None,
+                -(r["attention_ratio"] or 0),
+                r["topic_id"],
+            ),
+        ):
+            writer.writerow(
+                dict(
+                    topic_id=record["topic_id"],
+                    topic_title=record["title"],
+                    substantive_issue=record["displayed"],
+                    dsa_share_pct=100 * record["shares"]["dsa"],
+                    democratic_share_pct=100 * record["shares"]["democratic"],
+                    republican_share_pct=100 * record["shares"]["republican"],
+                    democrat_republican_average_share_pct=100 * record["combined_share"],
+                    attention_gap_pp=100 * record["gap"],
+                    dsa_attention_share_ratio=record["attention_ratio"],
+                    democratic_republican_attention_share_ratio=record[
+                        "democratic_republican_ratio"
+                    ],
+                    dsa_democratic_attention_share_ratio=record["dsa_democratic_ratio"],
+                    dsa_republican_attention_share_ratio=record["dsa_republican_ratio"],
+                )
+            )
+    records = rank_attention_gaps(labels, share_rows)
     output = ROOT / "figures/article/dsa_vs_major_parties_attention_gaps.png"
     if not args.variants_only:
         render_attention_gaps(records, output)
@@ -702,9 +902,9 @@ def main() -> None:
     with claims_path.open(newline="") as handle:
         claims = list(csv.DictReader(handle))
     density = density_map_data(ROOT, labels, representatives)
-    records = rank_density_areas(density, claims)
+    records = rank_attention_areas(density, claims, share_rows)
     if len(records) != 5:
-        raise ValueError("The article lead requires five supported DSA-heavy issues")
+        raise ValueError("The article lead requires five supported positive DSA attention gaps")
     if args.variants_only:
         variants = snippet_records(records, claims)
         for name, layout in (
@@ -718,15 +918,19 @@ def main() -> None:
                 article_only=True,
                 draft_option=layout,
                 ranking=(
-                    "largest positive source-balanced mean "
-                    "combined log density contrast at DSA claims"
+                    "largest positive weighted attention-share gap; "
+                    "DSA minus equal-weight Democratic/Republican average"
                 ),
-                contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
-                density_ratio_basis=(
-                    "exp(bundle-balanced mean log density contrast at DSA claims); "
-                    "geometric mean density ratio, not attention share"
+                map_contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+                attention_ratio_basis=(
+                    "DSA subject share / "
+                    "((Democratic subject share + Republican subject share) / 2); "
+                    "null when the baseline share is zero"
                 ),
-                presentation="original embedding map with dated central DSA paraphrases",
+                presentation=(
+                    "original density map with dated DSA paraphrases "
+                    "and attention-share comparisons"
+                ),
                 map_claims=len(density["points"]),
                 map_limits=density["limits"],
                 color_bound=density["color_bound"],
@@ -734,7 +938,12 @@ def main() -> None:
                 map_points_sha256=hashlib.sha256(
                     json.dumps(density["points"], separators=(",", ":")).encode()
                 ).hexdigest(),
-                weighting="equal DSA bundle mass, equal eligible claim mass within each bundle",
+                weighting=(
+                    "equal bundle mass within each organization, "
+                    "equal eligible claim mass within each bundle"
+                ),
+                shares_sha256=hashlib.sha256(shares_path.read_bytes()).hexdigest(),
+                attention_share_ratios_csv=ratios_path.name,
                 topics=variants if layout == "map-five" else variants[:3],
                 source_lead_sha256=hashlib.sha256(
                     (ROOT / "figures/article/dsa_vs_major_parties_lead.json").read_bytes()
@@ -748,6 +957,7 @@ def main() -> None:
     render_variant(density, snippet_records(records, claims), output, "map-five")
     inputs = [
         labels_path,
+        shares_path,
         representatives_path,
         claims_path,
         full / "expanded/scored_passages.csv",
@@ -757,18 +967,28 @@ def main() -> None:
     ]
     metadata = dict(
         article_only=True,
-        presentation="original embedding map with five dated central DSA paraphrases",
-        snippets=snippet_records(records, claims),
-        ranking="largest positive source-balanced mean combined log density contrast at DSA claims",
-        contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
-        density_ratio_basis=(
-            "exp(bundle-balanced mean log density contrast at DSA claims); "
-            "geometric mean density ratio, not attention share"
+        attention_share_ratios_csv=ratios_path.name,
+        presentation=(
+            "original density map with five dated DSA paraphrases and attention-share comparisons"
         ),
-        weighting="equal DSA bundle mass, equal eligible claim mass within each bundle",
+        snippets=snippet_records(records, claims),
+        ranking=(
+            "largest positive weighted attention-share gap; "
+            "DSA minus equal-weight Democratic/Republican average"
+        ),
+        map_contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+        attention_ratio_basis=(
+            "DSA subject share / ((Democratic subject share + Republican subject share) / 2); "
+            "null when the baseline share is zero"
+        ),
+        weighting=(
+            "equal bundle mass within each organization, "
+            "equal eligible claim mass within each bundle"
+        ),
         minimum_dsa_bundles=2,
         anchor_selection=(
-            "reviewed positive-contrast DSA example nearest the weighted 2D issue center"
+            "reviewed DSA example nearest the bundle-balanced weighted 2D issue center; "
+            "marker does not encode an attention share"
         ),
         map_claims=len(density["points"]),
         display_labels={

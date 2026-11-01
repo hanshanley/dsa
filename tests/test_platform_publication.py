@@ -8,7 +8,9 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scripts.build_dsa_article_lead import (
+    attention_share_records,
     combined_density_contrast,
+    rank_attention_areas,
     rank_attention_gaps,
     rank_density_areas,
     render_variant,
@@ -37,7 +39,9 @@ class ArticleLeadTest(unittest.TestCase):
                 snippet="Demilitarize police departments.",
                 source_date="2024-08",
                 document_type="program",
-                density_ratio=15.356064303330701 if index == 0 else 8.696007986767627,
+                attention_ratio=5.51299931734491 if index == 0 else 4.602112630128374,
+                shares={"dsa": 0.09294009293158682 if index == 0 else 0.06135244587941502},
+                combined_share=0.016858353789230517 if index == 0 else 0.013331365572794253,
             )
             for index, title in enumerate(
                 (
@@ -66,11 +70,17 @@ class ArticleLeadTest(unittest.TestCase):
             self.assertEqual([text.get_position() for text in axis.texts], [(0, 0), (1, 1)])
             self.assertFalse(axis.patches)
             labels = [text.get_text() for text in figure.texts]
-            self.assertIn("15.4\u00d7", labels)
-            self.assertIn("8.7\u00d7", labels)
-            self.assertTrue(any("not attention shares" in label for label in labels))
+            self.assertIn("5.5\u00d7", labels)
+            self.assertIn("4.6\u00d7", labels)
+            self.assertIn("DSA 9.29%  \u00b7  Democrat & Republican 1.69%", labels)
+            self.assertTrue(
+                any(
+                    "colors show language density, not attention shares" in label
+                    for label in labels
+                )
+            )
             if layout != "map-bottom":
-                self.assertIn("DSA LANGUAGE CONCENTRATION", labels)
+                self.assertIn("POLICY ATTENTION SHARES", labels)
                 headings = [text for text in figure.texts if text.get_text().startswith("1  ")]
                 self.assertGreater(headings[0].get_position()[1], 0.9)
                 figure.canvas.draw()
@@ -92,6 +102,94 @@ class ArticleLeadTest(unittest.TestCase):
                 for layout in ("map-five", "map-bottom", "map-three"):
                     with self.subTest(layout=layout):
                         render_variant(data, records, Path(directory) / "lead.png", layout)
+
+    def test_attention_areas_rank_positive_share_gaps_not_density_or_ratios(self):
+        groups = ["democratic", "republican", "dsa"]
+        cases = [
+            ("large", 0.3, 0.1, True, 2),
+            ("small", 0.2, 0.15, True, 2),
+            ("ratio", 0.04, 0.001, True, 2),
+            ("lower", 0.02, 0.1, True, 2),
+            ("identity", 0.9, 0.0001, False, 2),
+            ("sparse", 0.99, 0, True, 1),
+            ("zero", 0.1, 0, True, 2),
+        ]
+        claims, points, topics, rows = [], [], [], []
+        for index, (topic_id, dsa, baseline, displayed, bundles) in enumerate(cases):
+            examples = []
+            for bundle in range(bundles):
+                claim_id = f"{topic_id}-{bundle}"
+                claims.append(
+                    dict(
+                        claim_id=claim_id, group="dsa", bundle_id=f"b{bundle}", source_url="source"
+                    )
+                )
+                points.append(
+                    [claim_id, bundle, index, index, 2, 0, 0, -100 if topic_id == "large" else 100]
+                )
+                examples.append(dict(claim_id=claim_id, group="dsa"))
+            topics.append(
+                dict(topic_id=topic_id, title=topic_id, displayed=displayed, examples=examples)
+            )
+            rows.extend(
+                dict(
+                    topic_id=topic_id,
+                    group=group,
+                    share=str(dsa if group == "dsa" else baseline),
+                    view="expanded",
+                    available="True",
+                )
+                for group in groups
+            )
+        data = dict(groups=groups, points=points, topics=topics, limits=[[-1, 2], [-1, 8]])
+        records = rank_attention_areas(data, claims, rows)
+        all_records = attention_share_records(topics, rows)
+        self.assertEqual(len(all_records), len(cases))
+        self.assertFalse(next(r for r in all_records if r["topic_id"] == "identity")["displayed"])
+        self.assertIsNone(
+            next(r for r in all_records if r["topic_id"] == "zero")["attention_ratio"]
+        )
+        self.assertEqual(
+            [record["topic_id"] for record in records], ["large", "zero", "small", "ratio"]
+        )
+        self.assertAlmostEqual(records[0]["attention_ratio"], 3)
+        self.assertAlmostEqual(records[0]["gap"], 0.2)
+        self.assertIsNone(records[1]["attention_ratio"])
+        self.assertEqual(records[0]["anchor_claim_id"], "large-1")
+        with self.assertRaisesRegex(ValueError, "Missing observed party shares"):
+            rank_attention_areas(data, claims, rows[1:])
+        with self.assertRaisesRegex(ValueError, "Invalid or duplicate"):
+            rank_attention_areas(data, claims, rows + [rows[0]])
+        for value in ("nan", "-0.1", "1.1"):
+            with self.subTest(invalid_share=value):
+                invalid = [dict(row) for row in rows]
+                invalid[0]["share"] = value
+                with self.assertRaisesRegex(ValueError, "Invalid or duplicate"):
+                    rank_attention_areas(data, claims, invalid)
+
+    def test_all_attention_comparisons_use_unrounded_shares_and_explicit_directions(self):
+        labels = [dict(topic_id="issue", title="Issue")]
+        values = {"democratic": 0.012345, "republican": 0.034567, "dsa": 0.056789}
+        rows = [
+            dict(topic_id="issue", group=group, share=str(value), view="expanded", available="True")
+            for group, value in values.items()
+        ]
+        record = attention_share_records(labels, rows)[0]
+        self.assertEqual(record["democratic_republican_ratio"], 0.012345 / 0.034567)
+        self.assertEqual(record["dsa_democratic_ratio"], 0.056789 / 0.012345)
+        self.assertEqual(record["dsa_republican_ratio"], 0.056789 / 0.034567)
+        self.assertEqual(record["attention_ratio"], 0.056789 / ((0.012345 + 0.034567) / 2))
+        for row in rows:
+            if row["group"] != "dsa":
+                row["share"] = "0"
+        zero = attention_share_records(labels, rows)[0]
+        for field in (
+            "democratic_republican_ratio",
+            "dsa_democratic_ratio",
+            "dsa_republican_ratio",
+            "attention_ratio",
+        ):
+            self.assertIsNone(zero[field])
 
     def test_snippets_reject_changed_central_claim_wording(self):
         claim = dict(

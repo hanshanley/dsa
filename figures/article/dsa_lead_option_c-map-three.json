@@ -1,10 +1,10 @@
 {
   "article_only": true,
   "draft_option": "map-three",
-  "ranking": "largest positive source-balanced mean combined log density contrast at DSA claims",
-  "contrast": "log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
-  "density_ratio_basis": "exp(bundle-balanced mean log density contrast at DSA claims); geometric mean density ratio, not attention share",
-  "presentation": "original embedding map with dated central DSA paraphrases",
+  "ranking": "largest positive weighted attention-share gap; DSA minus equal-weight Democratic/Republican average",
+  "map_contrast": "log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+  "attention_ratio_basis": "DSA subject share / ((Democratic subject share + Republican subject share) / 2); null when the baseline share is zero",
+  "presentation": "original density map with dated DSA paraphrases and attention-share comparisons",
   "map_claims": 26069,
   "map_limits": [
     [
@@ -23,12 +23,25 @@
     "#c2993e"
   ],
   "map_points_sha256": "3f6ff98b97ddb9c7ef6ca3a77e0116128510afe7483a4bfc011febdff5020f1d",
-  "weighting": "equal DSA bundle mass, equal eligible claim mass within each bundle",
+  "weighting": "equal bundle mass within each organization, equal eligible claim mass within each bundle",
+  "shares_sha256": "cb64c180deec980e8093fd751dd6271f0a4c09ba0fead4c56fd6896b1e459906",
+  "attention_share_ratios_csv": "dsa_attention_share_ratios.csv",
   "topics": [
     {
       "topic_id": "topic-020",
       "title": "Institutional Power, Oppression, and Social Conflict",
-      "mean_log_density_contrast": 2.731510464635039,
+      "displayed": true,
+      "shares": {
+        "dsa": 0.09294009293158682,
+        "democratic": 0.010803563702554605,
+        "republican": 0.02291314387590643
+      },
+      "combined_share": 0.016858353789230517,
+      "gap": 0.0760817391423563,
+      "attention_ratio": 5.51299931734491,
+      "democratic_republican_ratio": 0.4715007142217066,
+      "dsa_democratic_ratio": 8.602725497847553,
+      "dsa_republican_ratio": 4.056191216488408,
       "dsa_claims": 569,
       "dsa_bundles": 9,
       "anchor_claim_id": "dsa-2021-adopted-normalized-6b522fa83bc9-003",
@@ -36,7 +49,6 @@
         2.027747631072998,
         8.028314590454102
       ],
-      "anchor_log_density_contrast": 2.543075913972702,
       "anchor_source_url": "https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/",
       "snippet": "DSA links militarized borders, racist immigration laws and the prison industrial complex to wage suppression and working-class division.",
       "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
@@ -46,58 +58,75 @@
       "document_id": "dsa-2021-adopted",
       "document_title": "2021 adopted DSA Political Platform - immutable December 2021 snapshot",
       "document_type": "platform",
-      "source_date": "2021-11-09",
-      "density_ratio": 15.356064303330701
+      "source_date": "2021-11-09"
     },
     {
-      "topic_id": "topic-010",
-      "title": "Criminal Justice, Policing, and Incarceration",
-      "mean_log_density_contrast": 2.162864068260026,
-      "dsa_claims": 265,
+      "topic_id": "topic-022",
+      "title": "Israel-Palestine Peace, Security, and Palestinian Rights",
+      "displayed": true,
+      "shares": {
+        "dsa": 0.06135244587941502,
+        "democratic": 0.012310610301032891,
+        "republican": 0.014352120844555614
+      },
+      "combined_share": 0.013331365572794253,
+      "gap": 0.048021080306620764,
+      "attention_ratio": 4.602112630128374,
+      "democratic_republican_ratio": 0.8577554797904898,
+      "dsa_democratic_ratio": 4.983704656321335,
+      "dsa_republican_ratio": 4.274799978617006,
+      "dsa_claims": 243,
       "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2024-program-normalized-b789b4710c28-006",
+      "anchor_claim_id": "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002",
       "anchor_coordinates": [
-        0.3083289563655853,
-        7.323701858520508
+        6.591990947723389,
+        8.097929000854492
       ],
-      "anchor_log_density_contrast": 1.78555834293274,
-      "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf",
-      "snippet": "Demilitarize police departments.",
+      "anchor_source_url": "https://dlarchive.dsausa.org/wp-content/uploads/2018/12/DL_2004_V032_02.pdf",
+      "snippet": "The U.S. and EU should pressure the Palestinian Authority to do all it can to stop attacks on Israeli civilians.",
       "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
-      "source_claim_text": "Support for demilitarizing police departments.",
-      "source_evidence": "[PDF page 6] MEDICARE FOR ALL Universal healthcare with no premiums, co-pays, or deductibles. Guarantees for reproductive and gender-affirming care. END THE WAR ON DRUGS Treat drug addiction as a health issue, not a criminal one. FIGHT MASS INCARCERATION AND POLICE BRUTALITY Abolish mandatory minimums and cash bail, and demilitarize police departments. COLLEGE FOR ALL Make all public higher education tuition-free with no out-of-pocket cost for room and board and cancel all student loan debt. WE FIGHT FOR... THRIVING WORKING CLASS COMMUNITIES HOUSING FOR ALL Establish universal rent-control and the guaranteed right to counsel for all tenants. Public investment in building quality multi-income social housing. SUPPORT WORKING FAMILIES Expansive paid family leave for all workers, and free public universal childcare and pre-K. 10 WORKERS DESERVE MORE! WORKERS DESERVE MORE! 11",
-      "source_sha256": "1df072bea27e396db57415984a903dbadfac9677ab1187173a06474b33fee13a",
-      "document_id": "dsa-2024-program",
-      "document_title": "Workers Deserve More 2024",
-      "document_type": "program",
-      "source_date": "2024-08",
-      "density_ratio": 8.696007986767627
+      "source_claim_text": "The U.S. and the European Union should pressure the Palestinian Authority to do all in its power to cease attacks on Israeli civilians.",
+      "source_evidence": "government willing to take a forthright stand against Israel\u2019s occupation policies by threatening to cut off military aid can move Israeli policy in a pro-peace direction.At the same time, the U.S. and the European Union (the main provider of aid to the Palestinian Authority) should pressure the Palestinian Authority to do all in its power to cease attacks on Israeli civilians. In addition, the United States, the European Union and the United Nations must station a permanent international armed peace-keeping force to separate the parties now. Such a force must be maintained during what will be, by its nature, an initially fragile peace. Only years of peaceful coexistence between a viable Palestinian state and a secure, but non-expansionist Israel can bring a durable, self-sustaining peace to the Middle East. The outline of a just peace settlement has been visible since the nearly suc- cessful secret talks between Israel and the Palestinian Authority in 1995. In return for a just peace, there must be an abandonment of all Israeli settlements on the West Bank and Gaza Strip, except those that a peace treaty might exempt through a mutual exchange of territory. In addition, the capital of the Palestinian state must be sited in the Palestinian parts of Jerusalem, as the Palestine National Council argues.",
+      "source_sha256": "5aee3453d7e64c3f5778e206ca65f552791df4fa39b1aed2a88328bd51a4d2a2",
+      "document_id": "dsa-2004-israel-palestine",
+      "document_title": "NPC resolution on Israel's occupation of the West Bank and Gaza",
+      "document_type": "resolution",
+      "source_date": "2004"
     },
     {
-      "topic_id": "topic-002",
-      "title": "Community Investment, Housing, and Social Support",
-      "mean_log_density_contrast": 2.1067152007732477,
-      "dsa_claims": 279,
+      "topic_id": "topic-003",
+      "title": "Labor Rights, Unionization, and Worker Protections",
+      "displayed": true,
+      "shares": {
+        "dsa": 0.07087242633362638,
+        "democratic": 0.033744211395212824,
+        "republican": 0.015733366760538308
+      },
+      "combined_share": 0.024738789077875564,
+      "gap": 0.046133637255750815,
+      "attention_ratio": 2.8648300493013674,
+      "democratic_republican_ratio": 2.1447546420800707,
+      "dsa_democratic_ratio": 2.10028397177718,
+      "dsa_republican_ratio": 4.504593798155477,
+      "dsa_claims": 336,
       "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2010-social-economic-rights-normalized-edb91d554823-010",
+      "anchor_claim_id": "dsa-2010-social-economic-rights-normalized-b973e3114edd-001",
       "anchor_coordinates": [
-        -1.7371121644973755,
-        10.09671401977539
+        0.44057944416999817,
+        6.732009410858154
       ],
-      "anchor_log_density_contrast": 0.48345489819100607,
       "anchor_source_url": "https://www.dsausa.org/wp-json/wp/v2/strategy/617",
-      "snippet": "Government should promote housing co-ops and nonprofit/community development corporations committed to revitalizing communities.",
+      "snippet": "DSA argues that the Employee Free Choice Act would let workers choose union representation without fear or intimidation.",
       "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
-      "source_claim_text": "Government should promote alternative forms of housing ownership\u2014co-ops, nonprofit and community development corporations\u2014that would also be committed to revitalizing communities.",
-      "source_evidence": "A progressive approach to housing affordability, in contrast, would treat housing as a social good rather than as a profit-producing commodity. Government should promote alternative forms of housing owner- ship \u2014 co-ops, nonprofit and community development corporations \u2014 that would also be committed to revitalizing communities. Despite being much maligned, public housing has served more low income tenants than any single program and should therefore remain a core element of housing policy. In order to meet the housing affordability crisis, all public housing units should be replaced with new units at no less than a one-to-one basis.",
+      "source_claim_text": "The Employee Free Choice Act (EFCA) would restore the original intent of the National Labor Relations Board (NLRB) by permitting workers to choose union representation without fear and intimidation.",
+      "source_evidence": "The Employee Free Choice Act (EFCA) would restore the original intent of the NLRB by permitting workers to choose union representation without fear and intimidation. If a majority of workers demonstrated their choice to form a union, it would be certified without a delay-ridden and coercive election process. Employer stonewalling on negotiating a first collective agreement could trigger an arbitration process. Penalties for serious abuses of workers\u2019 rights to organize would be stiffened.",
       "source_sha256": "fdd96cea6b3d9b15699ab397b01726fe75b2e8cf20263549a3a18b47bdbb8ecf",
       "document_id": "dsa-2010-social-economic-rights",
       "document_title": "A Social and Economic Bill of Rights",
       "document_type": "statement",
-      "source_date": "2012-12-23",
-      "density_ratio": 8.221191918223449
+      "source_date": "2012-12-23"
     }
   ],
-  "source_lead_sha256": "149a234fc71e771746c291835fe65a83765bb0d95cfe8fae6cfd2063bb391450",
-  "image_sha256": "28b9632c6f1530a3fb79fec1fd6ceb3cee865500e5da49ebb23ebe98ae128804"
+  "source_lead_sha256": "fca50e87cbaf361a3d4c5a59ff8c615637d170a3dc79c461f0f003b3cd60c2ef",
+  "image_sha256": "6c9861a8e2cc0aee610d7655c1e58dd82e83ccc858ba6e251f8ac0fc01949378"
 }
