@@ -15,6 +15,12 @@ The map uses all 26,069 eligible claims; numbered markers locate reviewed
 central examples, not region boundaries.
 [Exact contrasts and source anchors](article/dsa_vs_major_parties_lead.json)
 retain the full reviewed topic names behind the shorter display labels.
+Three alternative article-only drafts add dated, source-backed DSA paraphrases:
+[A: ranked bars](article/dsa_lead_option_a-ranked.png),
+[B: editorial layout](article/dsa_lead_option_b-editorial.png), and
+[C: three-issue cover](article/dsa_lead_option_c-three.png).
+Each has an adjacent JSON with the original claims, source evidence, dates and
+geometric mean density ratios. These drafts do not replace the current lead.
 The earlier [absolute attention-gap bars](article/dsa_vs_major_parties_attention_gaps.png)
 remain separately available and use a different ranking.
 

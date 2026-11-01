@@ -1,5 +1,6 @@
-"""Render article-only density and attention figures from published results."""
+"""Render article-only concentration and attention figures from published results."""
 
+import argparse
 import csv
 import hashlib
 import json
@@ -19,6 +20,261 @@ DISPLAY_LABELS = {
     "Israel-Palestine Peace, Security, and Palestinian Rights": "Israel\u2013Palestine",
     "Economic Prosperity Narratives and Development Models": "Prosperity &\ndevelopment models",
 }
+SNIPPETS = {
+    "dsa-2021-adopted-normalized-6b522fa83bc9-003": (
+        "DSA links militarized borders, racist immigration laws and the prison industrial "
+        "complex to wage suppression and working-class division."
+    ),
+    "dsa-2024-program-normalized-b789b4710c28-006": "Demilitarize police departments.",
+    "dsa-2010-social-economic-rights-normalized-edb91d554823-010": (
+        "Government should promote housing co-ops and nonprofit/community development "
+        "corporations committed to revitalizing communities."
+    ),
+    "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002": (
+        "The U.S. and EU should pressure the Palestinian Authority to do all it can "
+        "to stop attacks on Israeli civilians."
+    ),
+    "dsa-2024-program-normalized-c0035893561c-004": (
+        "DSA argues that billionaires profit from controlling access to housing, "
+        "healthcare and education."
+    ),
+}
+SNIPPET_CLAIM_SHA256 = {
+    "dsa-2021-adopted-normalized-6b522fa83bc9-003": (
+        "26fa3be04ecf60cbb9fe65e35909214ee52771e60b1d7baaf74906239a4a5e8a"
+    ),
+    "dsa-2024-program-normalized-b789b4710c28-006": (
+        "a59081c2ed74563e4a740892cc83abbfdc5d6cef4b80ec69b7b3acf5f754ff4b"
+    ),
+    "dsa-2010-social-economic-rights-normalized-edb91d554823-010": (
+        "2d58601570c156dda97942c85ccd5d89bbfdb4ae938b9e4508ba254733135bfd"
+    ),
+    "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002": (
+        "d362a42551c1fc975e5d572794351931e51c2b8152a22cdd18231516b604220a"
+    ),
+    "dsa-2024-program-normalized-c0035893561c-004": (
+        "dbc13771670910116c140bc5a9dae53ab9eb28a42d02b362fce7ed2424ae40d9"
+    ),
+}
+
+
+def snippet_records(records: list[dict], claims: list[dict]) -> list[dict]:
+    lookup = {claim["claim_id"]: claim for claim in claims}
+    result = []
+    for record in records:
+        claim = lookup[record["anchor_claim_id"]]
+        if claim["group"] != "dsa" or claim["analysis_eligible"] != "True":
+            raise ValueError("Article snippets require eligible central DSA anchors")
+        if claim["claim_id"] not in SNIPPETS:
+            raise ValueError("Changed article anchor requires a new source-bound paraphrase")
+        if (
+            hashlib.sha256(claim["claim_text"].encode()).hexdigest()
+            != SNIPPET_CLAIM_SHA256[claim["claim_id"]]
+        ):
+            raise ValueError("Changed claim text requires a new source-bound paraphrase")
+        result.append(
+            dict(
+                **record,
+                snippet=SNIPPETS[claim["claim_id"]],
+                snippet_basis="assistant paraphrase of the preserved reviewed central claim",
+                source_claim_text=claim["claim_text"],
+                source_evidence=claim["evidence"],
+                source_sha256=claim["source_sha256"],
+                document_id=claim["document_id"],
+                document_title=claim["title"],
+                document_type=claim["document_type"],
+                source_date=claim["publication_date"],
+                density_ratio=math.exp(record["mean_log_density_contrast"]),
+            )
+        )
+    return result
+
+
+def render_variant(records: list[dict], output: Path, layout: str) -> None:
+    import textwrap
+
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.lines import Line2D
+
+    plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK})
+    cards = layout == "three"
+    selected = records[:3] if cards else records
+    fig = plt.figure(figsize=(16, 9 if cards else 11), facecolor=PAPER)
+    fig.text(
+        0.055, 0.940, "NATIONAL PARTY DOCUMENTS  /  2000\u20132026", fontsize=11, color="#625d53"
+    )
+    fig.text(
+        0.055,
+        0.864,
+        "Where DSA stands apart",
+        fontsize=34,
+        fontfamily="DejaVu Serif",
+        fontweight="bold",
+    )
+    fig.text(
+        0.055,
+        0.808,
+        f"{'Three' if cards else 'Five'} DSA-heavy issues vs. Democrats + Republicans",
+        fontsize=17,
+        color="#625d53",
+    )
+    if layout == "bars":
+        axis = fig.add_axes((0.59, 0.205, 0.31, 0.51), facecolor=PAPER)
+        values = [record["density_ratio"] for record in selected]
+        axis.barh(range(len(selected)), values, height=0.28, color="#c2993e", zorder=3)
+        axis.axvline(1, color="#b19cd9", linewidth=2, zorder=4)
+        axis.set_xlim(0, 18)
+        axis.set_ylim(len(selected) - 0.5, -0.5)
+        axis.set_yticks([])
+        axis.set_xticks([4, 8, 12, 16], ["4\u00d7", "8\u00d7", "12\u00d7", "16\u00d7"])
+        axis.tick_params(length=0, pad=10, labelsize=12, colors="#625d53")
+        axis.grid(axis="x", color="#ded9ce", linewidth=0.7, zorder=0)
+        for spine in axis.spines.values():
+            spine.set_visible(False)
+        fig.text(0.59, 0.751, "DSA / major-party density", fontsize=12, color="#625d53")
+        for index, record in enumerate(selected):
+            y = 0.205 + 0.51 * (1 - (index + 0.5) / len(selected))
+            title = DISPLAY_LABELS[record["title"]].replace("\n", " ")
+            fig.text(0.055, y + 0.035, title, fontsize=17, fontweight="bold", va="center")
+            fig.text(
+                0.055,
+                y + 0.007,
+                textwrap.fill(
+                    f"{record['source_date'][:4]} {record['document_type']} "
+                    f"\u2014 {record['snippet']}",
+                    65,
+                ),
+                fontsize=12.5,
+                color="#4f4b44",
+                va="top",
+                linespacing=1.3,
+            )
+            axis.text(
+                record["density_ratio"] + 0.4,
+                index,
+                f"{record['density_ratio']:.1f}\u00d7",
+                fontsize=18,
+                fontweight="bold",
+                va="center",
+            )
+        fig.text(
+            0.59,
+            0.137,
+            "Purple line: major-party baseline = 1\u00d7",
+            fontsize=11,
+            color="#625d53",
+        )
+    elif layout == "editorial":
+        fig.text(0.055, 0.749, "ISSUE", fontsize=11, color="#625d53")
+        fig.text(0.39, 0.749, "FROM DSA DOCUMENTS", fontsize=11, color="#625d53")
+        fig.text(0.935, 0.749, "DENSITY RATIO", fontsize=11, color="#625d53", ha="right")
+        for index, record in enumerate(selected):
+            y = 0.69 - index * 0.112
+            fig.add_artist(
+                Line2D(
+                    [0.055, 0.935],
+                    [y + 0.038, y + 0.038],
+                    transform=fig.transFigure,
+                    color="#ded9ce",
+                    linewidth=0.8,
+                )
+            )
+            fig.text(
+                0.055,
+                y,
+                textwrap.fill(DISPLAY_LABELS[record["title"]].replace("\n", " "), 28),
+                fontsize=18,
+                fontweight="bold",
+                va="top",
+                linespacing=1.25,
+            )
+            fig.text(
+                0.39,
+                y,
+                textwrap.fill(
+                    f"{record['source_date'][:4]} {record['document_type']} "
+                    f"\u2014 {record['snippet']}",
+                    55,
+                ),
+                fontsize=14,
+                va="top",
+                linespacing=1.35,
+            )
+            fig.text(
+                0.935,
+                y - 0.022,
+                f"{record['density_ratio']:.1f}\u00d7",
+                fontsize=27,
+                color="#8d6c25",
+                ha="right",
+            )
+    elif cards:
+        for index, record in enumerate(selected):
+            x = 0.055 + index * 0.307
+            if index:
+                fig.add_artist(
+                    Line2D(
+                        [x - 0.023, x - 0.023],
+                        [0.22, 0.72],
+                        transform=fig.transFigure,
+                        color="#ded9ce",
+                        linewidth=0.8,
+                    )
+                )
+            fig.text(
+                x,
+                0.700,
+                textwrap.fill(DISPLAY_LABELS[record["title"]].replace("\n", " "), 23),
+                fontsize=22,
+                fontweight="bold",
+                va="top",
+                linespacing=1.25,
+            )
+            fig.text(x, 0.513, f"{record['density_ratio']:.1f}\u00d7", fontsize=45, color="#8d6c25")
+            fig.text(x, 0.468, "major-party language density", fontsize=12, color="#625d53")
+            fig.text(
+                x,
+                0.397,
+                textwrap.fill(record["snippet"], 34),
+                fontsize=16,
+                va="top",
+                linespacing=1.4,
+            )
+            fig.text(
+                x,
+                0.160,
+                f"DSA {record['source_date'][:4]} {record['document_type']}",
+                fontsize=11,
+                color="#777167",
+            )
+    else:
+        raise ValueError(f"Unknown article layout: {layout}")
+    fig.text(
+        0.055,
+        0.083 if not cards else 0.075,
+        "Examples are paraphrased from dated DSA sources, not exhaustive or timeless positions.",
+        fontsize=11,
+        color="#625d53",
+    )
+    fig.text(
+        0.055,
+        0.053 if not cards else 0.041,
+        "Geometric mean density ratios; equal-weight major-party baseline. "
+        "Concentration is not attention share or policy agreement.",
+        fontsize=10.5,
+        color="#625d53",
+    )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(
+        output,
+        dpi=225,
+        facecolor=PAPER,
+        metadata={"Title": "Where DSA stands apart", "Software": "dsa-analysis"},
+    )
+    plt.close(fig)
 
 
 def rank_attention_gaps(labels: list[dict], rows: list[dict]) -> list[dict]:
@@ -366,13 +622,21 @@ def render_attention_gaps(records: list[dict], output: Path) -> None:
 def main() -> None:
     from build_platform_publication import DATA, density_map_data
 
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--variants-only",
+        action="store_true",
+        help="Render three source-backed draft options without replacing the published lead",
+    )
+    args = parser.parse_args()
     data = ROOT / "data/analysis/national_claims/full/topics"
     labels_path, shares_path = data / "topic_labels.json", data / "shares.csv"
     labels = json.loads(labels_path.read_text())
     with shares_path.open(newline="") as handle:
         records = rank_attention_gaps(labels, list(csv.DictReader(handle)))
     output = ROOT / "figures/article/dsa_vs_major_parties_attention_gaps.png"
-    render_attention_gaps(records, output)
+    if not args.variants_only:
+        render_attention_gaps(records, output)
     metadata = dict(
         article_only=True,
         ranking=(
@@ -386,7 +650,8 @@ def main() -> None:
         topics=records,
         image_sha256=hashlib.sha256(output.read_bytes()).hexdigest(),
     )
-    output.with_suffix(".json").write_text(json.dumps(metadata, indent=2) + "\n")
+    if not args.variants_only:
+        output.with_suffix(".json").write_text(json.dumps(metadata, indent=2) + "\n")
     full = ROOT / DATA
     representatives_path = data / "representatives.csv"
     claims_path = full / "analysis_claims.csv"
@@ -398,6 +663,36 @@ def main() -> None:
     records = rank_density_areas(density, claims)
     if len(records) != 5:
         raise ValueError("The article lead requires five supported DSA-heavy issues")
+    if args.variants_only:
+        variants = snippet_records(records, claims)
+        for name, layout in (
+            ("a-ranked", "bars"),
+            ("b-editorial", "editorial"),
+            ("c-three", "three"),
+        ):
+            output = ROOT / f"figures/article/dsa_lead_option_{name}.png"
+            render_variant(variants, output, layout)
+            metadata = dict(
+                article_only=True,
+                draft_option=layout,
+                ranking=(
+                    "largest positive source-balanced mean "
+                    "combined log density contrast at DSA claims"
+                ),
+                contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+                displayed_measure=(
+                    "exp(source-balanced mean combined log density contrast at DSA claims)"
+                ),
+                weighting="equal DSA bundle mass, equal eligible claim mass within each bundle",
+                topics=variants[:3] if layout == "three" else variants,
+                source_lead_sha256=hashlib.sha256(
+                    (ROOT / "figures/article/dsa_vs_major_parties_lead.json").read_bytes()
+                ).hexdigest(),
+                image_sha256=hashlib.sha256(output.read_bytes()).hexdigest(),
+            )
+            output.with_suffix(".json").write_text(json.dumps(metadata, indent=2) + "\n")
+            print(output)
+        return
     output = ROOT / "figures/article/dsa_vs_major_parties_lead.png"
     render_density(density, records, output)
     inputs = [

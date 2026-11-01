@@ -61,6 +61,40 @@ contrasts at DSA claims. Light purple marks denser combined major-party language
 gold marks denser DSA language. [Full-size PNG](figures/article/dsa_vs_major_parties_lead.png)
 and [exact contrasts and source anchors](figures/article/dsa_vs_major_parties_lead.json).*
 
+### Alternative article leads with DSA statements
+
+Three draft layouts use the same source-balanced density ranking, with
+paraphrases of the actual reviewed central DSA claims and their source dates.
+They do not replace the published lead yet. Values are geometric mean language-density
+ratios against the equal-weight Democratic–Republican mixture, not attention shares
+or measures of policy disagreement.
+
+| Option | Layout | Full-size image and exact sources |
+|---|---|---|
+| A | Five ranked bars with short DSA statements | [PNG](figures/article/dsa_lead_option_a-ranked.png) · [Data](figures/article/dsa_lead_option_a-ranked.json) |
+| B | Five-issue editorial layout, emphasizing what DSA says | [PNG](figures/article/dsa_lead_option_b-editorial.png) · [Data](figures/article/dsa_lead_option_b-editorial.json) |
+| C | Three spacious issue columns for an article cover | [PNG](figures/article/dsa_lead_option_c-three.png) · [Data](figures/article/dsa_lead_option_c-three.json) |
+
+<details>
+<summary>Preview all three alternatives</summary>
+
+**A — Ranked chart and statements**
+
+<img src="figures/article/dsa_lead_option_a-ranked.png" width="1100" alt="Five ranked DSA language-density bars with dated source-backed statements">
+
+**B — Editorial issue and statement layout**
+
+<img src="figures/article/dsa_lead_option_b-editorial.png" width="1100" alt="Five DSA-heavy issues beside dated DSA statements and density ratios">
+
+**C — Three-issue cover**
+
+<img src="figures/article/dsa_lead_option_c-three.png" width="1100" alt="Three DSA-heavy issues in spacious columns with dated DSA statements">
+
+</details>
+
+Rebuild the alternatives without changing the current lead:
+`python scripts/build_dsa_article_lead.py --variants-only`.
+
 <details>
 <summary>More overview figures</summary>
 

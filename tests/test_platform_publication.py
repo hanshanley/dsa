@@ -11,6 +11,8 @@ from scripts.build_dsa_article_lead import (
     combined_density_contrast,
     rank_attention_gaps,
     rank_density_areas,
+    render_variant,
+    snippet_records,
 )
 from scripts.build_platform_publication import (
     DATA,
@@ -25,6 +27,49 @@ from scripts.build_platform_publication import (
 
 
 class ArticleLeadTest(unittest.TestCase):
+    def test_lead_bars_show_geometric_density_ratios_in_ranked_order(self):
+        import math
+
+        from matplotlib.figure import Figure
+
+        records = [
+            dict(
+                title=title,
+                mean_log_density_contrast=math.log(value),
+                density_ratio=value,
+                snippet="Demilitarize police departments.",
+                source_date="2024-08",
+                document_type="program",
+            )
+            for title, value in (
+                ("Institutional Power, Oppression, and Social Conflict", 8),
+                ("Criminal Justice, Policing, and Incarceration", 4),
+            )
+        ]
+
+        def check_figure(figure, *args, **kwargs):
+            axis = figure.axes[0]
+            self.assertEqual(len(axis.patches), 2)
+            for bar, expected in zip(axis.patches, (8, 4)):
+                self.assertAlmostEqual(bar.get_width(), expected)
+            self.assertTrue(axis.yaxis_inverted())
+            self.assertEqual(list(axis.lines[0].get_xdata()), [1, 1])
+            self.assertEqual([text.get_text() for text in axis.texts], ["8.0×", "4.0×"])
+
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.object(Figure, "savefig", autospec=True, side_effect=check_figure):
+                render_variant(records, Path(directory) / "lead.png", "bars")
+
+    def test_snippets_reject_changed_central_claim_wording(self):
+        claim = dict(
+            claim_id="dsa-2024-program-normalized-b789b4710c28-006",
+            group="dsa",
+            analysis_eligible="True",
+            claim_text="Support for militarizing police departments.",
+        )
+        with self.assertRaisesRegex(ValueError, "Changed claim text"):
+            snippet_records([dict(anchor_claim_id=claim["claim_id"])], [claim])
+
     def test_combined_density_uses_arithmetic_mixture_and_stays_finite(self):
         import math
 
