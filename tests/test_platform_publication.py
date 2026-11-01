@@ -27,38 +27,49 @@ from scripts.build_platform_publication import (
 
 
 class ArticleLeadTest(unittest.TestCase):
-    def test_lead_bars_show_geometric_density_ratios_in_ranked_order(self):
-        import math
-
+    def test_every_lead_layout_keeps_full_embedding_map_and_central_anchors(self):
         from matplotlib.figure import Figure
 
         records = [
             dict(
                 title=title,
-                mean_log_density_contrast=math.log(value),
-                density_ratio=value,
+                anchor_coordinates=[index, index],
                 snippet="Demilitarize police departments.",
                 source_date="2024-08",
                 document_type="program",
             )
-            for title, value in (
-                ("Institutional Power, Oppression, and Social Conflict", 8),
-                ("Criminal Justice, Policing, and Incarceration", 4),
+            for index, title in enumerate(
+                (
+                    "Institutional Power, Oppression, and Social Conflict",
+                    "Criminal Justice, Policing, and Incarceration",
+                )
             )
         ]
+        data = dict(
+            points=[
+                [f"claim-{index}", index, index + 0.5, 0, index, 0, 0, index] for index in range(3)
+            ],
+            limits=[[-2, 3], [-1, 4]],
+            color_bound=2,
+        )
 
         def check_figure(figure, *args, **kwargs):
             axis = figure.axes[0]
-            self.assertEqual(len(axis.patches), 2)
-            for bar, expected in zip(axis.patches, (8, 4)):
-                self.assertAlmostEqual(bar.get_width(), expected)
-            self.assertTrue(axis.yaxis_inverted())
-            self.assertEqual(list(axis.lines[0].get_xdata()), [1, 1])
-            self.assertEqual([text.get_text() for text in axis.texts], ["8.0×", "4.0×"])
+            scatter = axis.collections[0]
+            self.assertEqual(scatter.get_offsets().tolist(), [[0, 0.5], [1, 1.5], [2, 2.5]])
+            self.assertEqual(scatter.get_array().tolist(), [0, 1, 2])
+            self.assertEqual(scatter.get_clim(), (-2, 2))
+            self.assertEqual(axis.get_xlim(), (-2, 3))
+            self.assertEqual(axis.get_ylim(), (-1, 4))
+            self.assertEqual([text.get_text() for text in axis.texts], ["1", "2"])
+            self.assertEqual([text.get_position() for text in axis.texts], [(0, 0), (1, 1)])
+            self.assertFalse(axis.patches)
 
         with tempfile.TemporaryDirectory() as directory:
             with patch.object(Figure, "savefig", autospec=True, side_effect=check_figure):
-                render_variant(records, Path(directory) / "lead.png", "bars")
+                for layout in ("map-five", "map-bottom", "map-three"):
+                    with self.subTest(layout=layout):
+                        render_variant(data, records, Path(directory) / "lead.png", layout)
 
     def test_snippets_reject_changed_central_claim_wording(self):
         claim = dict(

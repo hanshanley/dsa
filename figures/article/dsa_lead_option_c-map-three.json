@@ -1,9 +1,27 @@
 {
   "article_only": true,
-  "draft_option": "bars",
+  "draft_option": "map-three",
   "ranking": "largest positive source-balanced mean combined log density contrast at DSA claims",
   "contrast": "log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
-  "displayed_measure": "exp(source-balanced mean combined log density contrast at DSA claims)",
+  "presentation": "original embedding map with dated central DSA paraphrases",
+  "map_claims": 26069,
+  "map_limits": [
+    [
+      -6.167981791496277,
+      7.680537390708923
+    ],
+    [
+      3.221630108356476,
+      16.733439671993256
+    ]
+  ],
+  "color_bound": 3.7983298842754825,
+  "color_palette": [
+    "#b19cd9",
+    "#e0d6c4",
+    "#c2993e"
+  ],
+  "map_points_sha256": "3f6ff98b97ddb9c7ef6ca3a77e0116128510afe7483a4bfc011febdff5020f1d",
   "weighting": "equal DSA bundle mass, equal eligible claim mass within each bundle",
   "topics": [
     {
@@ -77,56 +95,8 @@
       "document_type": "statement",
       "source_date": "2012-12-23",
       "density_ratio": 8.221191918223449
-    },
-    {
-      "topic_id": "topic-022",
-      "title": "Israel-Palestine Peace, Security, and Palestinian Rights",
-      "mean_log_density_contrast": 1.887871498456339,
-      "dsa_claims": 243,
-      "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002",
-      "anchor_coordinates": [
-        6.591990947723389,
-        8.097929000854492
-      ],
-      "anchor_log_density_contrast": 2.1820456020218124,
-      "anchor_source_url": "https://dlarchive.dsausa.org/wp-content/uploads/2018/12/DL_2004_V032_02.pdf",
-      "snippet": "The U.S. and EU should pressure the Palestinian Authority to do all it can to stop attacks on Israeli civilians.",
-      "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
-      "source_claim_text": "The U.S. and the European Union should pressure the Palestinian Authority to do all in its power to cease attacks on Israeli civilians.",
-      "source_evidence": "government willing to take a forthright stand against Israel\u2019s occupation policies by threatening to cut off military aid can move Israeli policy in a pro-peace direction.At the same time, the U.S. and the European Union (the main provider of aid to the Palestinian Authority) should pressure the Palestinian Authority to do all in its power to cease attacks on Israeli civilians. In addition, the United States, the European Union and the United Nations must station a permanent international armed peace-keeping force to separate the parties now. Such a force must be maintained during what will be, by its nature, an initially fragile peace. Only years of peaceful coexistence between a viable Palestinian state and a secure, but non-expansionist Israel can bring a durable, self-sustaining peace to the Middle East. The outline of a just peace settlement has been visible since the nearly suc- cessful secret talks between Israel and the Palestinian Authority in 1995. In return for a just peace, there must be an abandonment of all Israeli settlements on the West Bank and Gaza Strip, except those that a peace treaty might exempt through a mutual exchange of territory. In addition, the capital of the Palestinian state must be sited in the Palestinian parts of Jerusalem, as the Palestine National Council argues.",
-      "source_sha256": "5aee3453d7e64c3f5778e206ca65f552791df4fa39b1aed2a88328bd51a4d2a2",
-      "document_id": "dsa-2004-israel-palestine",
-      "document_title": "NPC resolution on Israel's occupation of the West Bank and Gaza",
-      "document_type": "resolution",
-      "source_date": "2004",
-      "density_ratio": 6.605294328541604
-    },
-    {
-      "topic_id": "topic-004",
-      "title": "Economic Prosperity Narratives and Development Models",
-      "mean_log_density_contrast": 1.6315800388797923,
-      "dsa_claims": 281,
-      "dsa_bundles": 9,
-      "anchor_claim_id": "dsa-2024-program-normalized-c0035893561c-004",
-      "anchor_coordinates": [
-        1.2130087614059448,
-        8.046652793884277
-      ],
-      "anchor_log_density_contrast": 2.612386977320071,
-      "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf",
-      "snippet": "DSA argues that billionaires profit from controlling access to housing, healthcare and education.",
-      "snippet_basis": "assistant paraphrase of the preserved reviewed central claim",
-      "source_claim_text": "Billionaires control access to basic human needs like housing, healthcare, and education and make a profit off of them.",
-      "source_evidence": "[PDF page 4] 6 PROGRAM FOR 2024 The US political and economic system is failing the working class. Millions struggle with low wages, dangerous working conditions, and limited control over our own lives, all while the top one percent has gotten richer and richer. Billionaires control access to basic human needs like housing, healthcare, and education and make a profit off of them...This capitalist economic system is the cause of violence, unemployment, and a climate crisis that poses an existential threat to life on earth. Black and brown workers in racially segregated communities bear the brunt of capitalism\u2019s cruelties, suffering especially from poverty wages, discrimination, deportation, and unemployment, often pushing workers into illegal activity to survive. Instead of investing in working-class communities, capitalists prefer to police and incarcerate workers they consider expendable to protect their wealth. Accelerating declines in living standards are exploited by the Christian nationalist right and figures like Donald Trump. Americans rejected the far- right agenda in the 2020 elections and watched a failed coup attempt to overturn the election results.... The far-right threatens Americans\u2019 civil liberties. They attack the right of people to decide whether to have a kid by overturning Roe v. Wade and continue to restrict abortion access. Now they attack the rights of queer and transgender people by banning gender-affirming care. These culture wars are intended to pit workers against each other to empower a right- wing government.",
-      "source_sha256": "1df072bea27e396db57415984a903dbadfac9677ab1187173a06474b33fee13a",
-      "document_id": "dsa-2024-program",
-      "document_title": "Workers Deserve More 2024",
-      "document_type": "program",
-      "source_date": "2024-08",
-      "density_ratio": 5.111945413356348
     }
   ],
-  "source_lead_sha256": "bf5caafea6879b574acc411a02538c12e7cc2eddcd1987d7b79d7621013c7f1b",
-  "image_sha256": "5eb6179b13a98dff9ea1b058118a971ef07b345803f6ee0e0b86e21b745fa0bf"
+  "source_lead_sha256": "29c57717acff9f1b8c9d517981f87db0f5715e74600d01deeaae8ff97304c4a2",
+  "image_sha256": "e4532634082b3b1c32983402c27d49a41cdbd8e0fa7181d5d4c470e5bad42cbd"
 }

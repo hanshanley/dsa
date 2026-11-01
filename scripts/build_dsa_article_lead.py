@@ -90,180 +90,141 @@ def snippet_records(records: list[dict], claims: list[dict]) -> list[dict]:
     return result
 
 
-def render_variant(records: list[dict], output: Path, layout: str) -> None:
+def render_variant(data: dict, records: list[dict], output: Path, layout: str) -> None:
     import textwrap
 
     import matplotlib
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    from matplotlib.lines import Line2D
+    from matplotlib.colors import LinearSegmentedColormap, Normalize
 
     plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK})
-    cards = layout == "three"
-    selected = records[:3] if cards else records
-    fig = plt.figure(figsize=(16, 9 if cards else 11), facecolor=PAPER)
+    if layout not in ("map-five", "map-bottom", "map-three"):
+        raise ValueError(f"Unknown article layout: {layout}")
+    bottom = layout == "map-bottom"
+    five = layout == "map-five"
+    selected = records if five else records[:3]
+    fig = plt.figure(figsize=(18, 12 if five or bottom else 10), facecolor=PAPER)
     fig.text(
-        0.055, 0.940, "NATIONAL PARTY DOCUMENTS  /  2000\u20132026", fontsize=11, color="#625d53"
+        0.045, 0.950, "NATIONAL PARTY DOCUMENTS  /  2000\u20132026", fontsize=11, color="#625d53"
     )
     fig.text(
-        0.055,
-        0.864,
+        0.045,
+        0.885,
         "Where DSA stands apart",
         fontsize=34,
         fontfamily="DejaVu Serif",
         fontweight="bold",
     )
     fig.text(
-        0.055,
-        0.808,
-        f"{'Three' if cards else 'Five'} DSA-heavy issues vs. Democrats + Republicans",
+        0.045,
+        0.837,
+        f"{'Five' if five else 'Three'} DSA-heavy areas vs. Democrats + Republicans",
         fontsize=17,
         color="#625d53",
     )
-    if layout == "bars":
-        axis = fig.add_axes((0.59, 0.205, 0.31, 0.51), facecolor=PAPER)
-        values = [record["density_ratio"] for record in selected]
-        axis.barh(range(len(selected)), values, height=0.28, color="#c2993e", zorder=3)
-        axis.axvline(1, color="#b19cd9", linewidth=2, zorder=4)
-        axis.set_xlim(0, 18)
-        axis.set_ylim(len(selected) - 0.5, -0.5)
-        axis.set_yticks([])
-        axis.set_xticks([4, 8, 12, 16], ["4\u00d7", "8\u00d7", "12\u00d7", "16\u00d7"])
-        axis.tick_params(length=0, pad=10, labelsize=12, colors="#625d53")
-        axis.grid(axis="x", color="#ded9ce", linewidth=0.7, zorder=0)
-        for spine in axis.spines.values():
-            spine.set_visible(False)
-        fig.text(0.59, 0.751, "DSA / major-party density", fontsize=12, color="#625d53")
-        for index, record in enumerate(selected):
-            y = 0.205 + 0.51 * (1 - (index + 0.5) / len(selected))
-            title = DISPLAY_LABELS[record["title"]].replace("\n", " ")
-            fig.text(0.055, y + 0.035, title, fontsize=17, fontweight="bold", va="center")
-            fig.text(
-                0.055,
-                y + 0.007,
-                textwrap.fill(
-                    f"{record['source_date'][:4]} {record['document_type']} "
-                    f"\u2014 {record['snippet']}",
-                    65,
-                ),
-                fontsize=12.5,
-                color="#4f4b44",
-                va="top",
-                linespacing=1.3,
-            )
-            axis.text(
-                record["density_ratio"] + 0.4,
-                index,
-                f"{record['density_ratio']:.1f}\u00d7",
-                fontsize=18,
-                fontweight="bold",
-                va="center",
-            )
-        fig.text(
-            0.59,
-            0.137,
-            "Purple line: major-party baseline = 1\u00d7",
-            fontsize=11,
-            color="#625d53",
+    map_box = (0.08, 0.365, 0.84, 0.445) if bottom else (0.035, 0.185, 0.625, 0.625)
+    axis = fig.add_axes(map_box, facecolor=PAPER)
+    palette = LinearSegmentedColormap.from_list(
+        "combined_density", ["#b19cd9", "#e0d6c4", "#c2993e"]
+    )
+    bound = data["color_bound"]
+    normalization = Normalize(-bound, bound, clip=True)
+    axis.scatter(
+        [point[1] for point in data["points"]],
+        [point[2] for point in data["points"]],
+        c=[combined_density_contrast(point) for point in data["points"]],
+        cmap=palette,
+        norm=normalization,
+        s=4.5,
+        alpha=1,
+        linewidths=0,
+        rasterized=True,
+    )
+    axis.set_xlim(data["limits"][0])
+    axis.set_ylim(data["limits"][1])
+    original_panel_ratio = (16 * 0.69) / (10 * 0.61)
+    axis.set_aspect(
+        (data["limits"][0][1] - data["limits"][0][0])
+        / (data["limits"][1][1] - data["limits"][1][0])
+        / original_panel_ratio
+    )
+    axis.set_axis_off()
+    for number, record in enumerate(selected, 1):
+        axis.text(
+            *record["anchor_coordinates"],
+            str(number),
+            fontsize=15,
+            fontweight="bold",
+            ha="center",
+            va="center",
+            bbox=dict(boxstyle="circle,pad=0.35", facecolor=PAPER, edgecolor=INK, linewidth=0.8),
+            zorder=5,
         )
-    elif layout == "editorial":
-        fig.text(0.055, 0.749, "ISSUE", fontsize=11, color="#625d53")
-        fig.text(0.39, 0.749, "FROM DSA DOCUMENTS", fontsize=11, color="#625d53")
-        fig.text(0.935, 0.749, "DENSITY RATIO", fontsize=11, color="#625d53", ha="right")
-        for index, record in enumerate(selected):
-            y = 0.69 - index * 0.112
-            fig.add_artist(
-                Line2D(
-                    [0.055, 0.935],
-                    [y + 0.038, y + 0.038],
-                    transform=fig.transFigure,
-                    color="#ded9ce",
-                    linewidth=0.8,
-                )
-            )
-            fig.text(
-                0.055,
-                y,
-                textwrap.fill(DISPLAY_LABELS[record["title"]].replace("\n", " "), 28),
-                fontsize=18,
-                fontweight="bold",
-                va="top",
-                linespacing=1.25,
-            )
-            fig.text(
-                0.39,
-                y,
-                textwrap.fill(
-                    f"{record['source_date'][:4]} {record['document_type']} "
-                    f"\u2014 {record['snippet']}",
-                    55,
-                ),
-                fontsize=14,
-                va="top",
-                linespacing=1.35,
-            )
-            fig.text(
-                0.935,
-                y - 0.022,
-                f"{record['density_ratio']:.1f}\u00d7",
-                fontsize=27,
-                color="#8d6c25",
-                ha="right",
-            )
-    elif cards:
-        for index, record in enumerate(selected):
-            x = 0.055 + index * 0.307
-            if index:
-                fig.add_artist(
-                    Line2D(
-                        [x - 0.023, x - 0.023],
-                        [0.22, 0.72],
-                        transform=fig.transFigure,
-                        color="#ded9ce",
-                        linewidth=0.8,
-                    )
-                )
-            fig.text(
-                x,
-                0.700,
-                textwrap.fill(DISPLAY_LABELS[record["title"]].replace("\n", " "), 23),
-                fontsize=22,
-                fontweight="bold",
-                va="top",
-                linespacing=1.25,
-            )
-            fig.text(x, 0.513, f"{record['density_ratio']:.1f}\u00d7", fontsize=45, color="#8d6c25")
-            fig.text(x, 0.468, "major-party language density", fontsize=12, color="#625d53")
-            fig.text(
-                x,
-                0.397,
-                textwrap.fill(record["snippet"], 34),
-                fontsize=16,
-                va="top",
-                linespacing=1.4,
-            )
-            fig.text(
-                x,
-                0.160,
-                f"DSA {record['source_date'][:4]} {record['document_type']}",
-                fontsize=11,
-                color="#777167",
-            )
-    else:
-        raise ValueError(f"Unknown article layout: {layout}")
+        x = 0.045 + (number - 1) * 0.312 if bottom else 0.705
+        top = 0.29 if bottom else 0.77 - (number - 1) * (0.131 if five else 0.205)
+        fig.text(
+            x,
+            top,
+            f"{number}  " + textwrap.fill(DISPLAY_LABELS[record["title"]].replace("\n", " "), 28)
+            if bottom
+            else f"{number}  {DISPLAY_LABELS[record['title']]}",
+            fontsize=18 if five or bottom else 21,
+            fontweight="bold",
+            va="top",
+            linespacing=1.2,
+        )
+        fig.text(
+            x,
+            top - (0.053 if five or bottom else 0.073),
+            textwrap.fill(
+                f"{record['source_date'][:4]} {record['document_type']} \u2014 {record['snippet']}",
+                46 if five else 43,
+            ),
+            fontsize=13 if five or bottom else 15,
+            va="top",
+            linespacing=1.3,
+            color="#4f4b44",
+        )
+    legend_box = (0.25, 0.331, 0.5, 0.007) if bottom else (0.045, 0.138, 0.605, 0.007)
+    color_axis = fig.add_axes(legend_box)
+    bar = fig.colorbar(
+        plt.cm.ScalarMappable(norm=normalization, cmap=palette),
+        cax=color_axis,
+        orientation="horizontal",
+        ticks=[],
+    )
+    bar.outline.set_visible(False)
     fig.text(
-        0.055,
-        0.083 if not cards else 0.075,
-        "Examples are paraphrased from dated DSA sources, not exhaustive or timeless positions.",
-        fontsize=11,
+        legend_box[0],
+        legend_box[1] - 0.019,
+        "Denser major-party language",
+        fontsize=11.5,
+        va="top",
         color="#625d53",
     )
     fig.text(
-        0.055,
-        0.053 if not cards else 0.041,
-        "Geometric mean density ratios; equal-weight major-party baseline. "
-        "Concentration is not attention share or policy agreement.",
+        legend_box[0] + legend_box[2],
+        legend_box[1] - 0.019,
+        "Denser DSA language",
+        fontsize=11.5,
+        va="top",
+        ha="right",
+        color="#625d53",
+    )
+    fig.text(
+        0.045,
+        0.059,
+        "Original embedding map \u00b7 equal-weight major-party baseline "
+        "\u00b7 numbered examples, not region boundaries",
+        fontsize=10.5,
+        color="#625d53",
+    )
+    fig.text(
+        0.045,
+        0.034,
+        "Dated DSA statements are paraphrased. Language concentration is not policy agreement.",
         fontsize=10.5,
         color="#625d53",
     )
@@ -666,12 +627,12 @@ def main() -> None:
     if args.variants_only:
         variants = snippet_records(records, claims)
         for name, layout in (
-            ("a-ranked", "bars"),
-            ("b-editorial", "editorial"),
-            ("c-three", "three"),
+            ("a-map-five", "map-five"),
+            ("b-map-bottom", "map-bottom"),
+            ("c-map-three", "map-three"),
         ):
             output = ROOT / f"figures/article/dsa_lead_option_{name}.png"
-            render_variant(variants, output, layout)
+            render_variant(density, variants, output, layout)
             metadata = dict(
                 article_only=True,
                 draft_option=layout,
@@ -680,11 +641,16 @@ def main() -> None:
                     "combined log density contrast at DSA claims"
                 ),
                 contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
-                displayed_measure=(
-                    "exp(source-balanced mean combined log density contrast at DSA claims)"
-                ),
+                presentation="original embedding map with dated central DSA paraphrases",
+                map_claims=len(density["points"]),
+                map_limits=density["limits"],
+                color_bound=density["color_bound"],
+                color_palette=["#b19cd9", "#e0d6c4", "#c2993e"],
+                map_points_sha256=hashlib.sha256(
+                    json.dumps(density["points"], separators=(",", ":")).encode()
+                ).hexdigest(),
                 weighting="equal DSA bundle mass, equal eligible claim mass within each bundle",
-                topics=variants[:3] if layout == "three" else variants,
+                topics=variants if layout == "map-five" else variants[:3],
                 source_lead_sha256=hashlib.sha256(
                     (ROOT / "figures/article/dsa_vs_major_parties_lead.json").read_bytes()
                 ).hexdigest(),
@@ -694,7 +660,7 @@ def main() -> None:
             print(output)
         return
     output = ROOT / "figures/article/dsa_vs_major_parties_lead.png"
-    render_density(density, records, output)
+    render_variant(density, snippet_records(records, claims), output, "map-five")
     inputs = [
         labels_path,
         representatives_path,
@@ -706,6 +672,8 @@ def main() -> None:
     ]
     metadata = dict(
         article_only=True,
+        presentation="original embedding map with five dated central DSA paraphrases",
+        snippets=snippet_records(records, claims),
         ranking="largest positive source-balanced mean combined log density contrast at DSA claims",
         contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
         weighting="equal DSA bundle mass, equal eligible claim mass within each bundle",
@@ -721,6 +689,7 @@ def main() -> None:
             for record in records
         },
         color_bound=density["color_bound"],
+        color_palette=["#b19cd9", "#e0d6c4", "#c2993e"],
         input_sha256={
             path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in inputs

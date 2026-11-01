@@ -1,9 +1,27 @@
 {
   "article_only": true,
-  "draft_option": "three",
+  "draft_option": "map-bottom",
   "ranking": "largest positive source-balanced mean combined log density contrast at DSA claims",
   "contrast": "log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
-  "displayed_measure": "exp(source-balanced mean combined log density contrast at DSA claims)",
+  "presentation": "original embedding map with dated central DSA paraphrases",
+  "map_claims": 26069,
+  "map_limits": [
+    [
+      -6.167981791496277,
+      7.680537390708923
+    ],
+    [
+      3.221630108356476,
+      16.733439671993256
+    ]
+  ],
+  "color_bound": 3.7983298842754825,
+  "color_palette": [
+    "#b19cd9",
+    "#e0d6c4",
+    "#c2993e"
+  ],
+  "map_points_sha256": "3f6ff98b97ddb9c7ef6ca3a77e0116128510afe7483a4bfc011febdff5020f1d",
   "weighting": "equal DSA bundle mass, equal eligible claim mass within each bundle",
   "topics": [
     {
@@ -79,6 +97,6 @@
       "density_ratio": 8.221191918223449
     }
   ],
-  "source_lead_sha256": "bf5caafea6879b574acc411a02538c12e7cc2eddcd1987d7b79d7621013c7f1b",
-  "image_sha256": "dd645bd082d94d6dbfff9ed8771e23ca40ad406ca40c918449e1dc8ce9a09047"
+  "source_lead_sha256": "29c57717acff9f1b8c9d517981f87db0f5715e74600d01deeaae8ff97304c4a2",
+  "image_sha256": "9f03182fc7f47bc99085eae8fa24f623697945a05649d06344b96de8f949472b"
 }

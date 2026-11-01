@@ -59,36 +59,38 @@ and passage-based results are retained below as historical references.
 *Article lead: five issues with the largest positive source-balanced mean density
 contrasts at DSA claims. Light purple marks denser combined major-party language;
 gold marks denser DSA language. [Full-size PNG](figures/article/dsa_vs_major_parties_lead.png)
-and [exact contrasts and source anchors](figures/article/dsa_vs_major_parties_lead.json).*
+and [exact contrasts, dated DSA snippets and source anchors](figures/article/dsa_vs_major_parties_lead.json).
+The original embedding map is retained, with clearer points and source-backed
+statements beside the five numbered examples.*
 
 ### Alternative article leads with DSA statements
 
-Three draft layouts use the same source-balanced density ranking, with
-paraphrases of the actual reviewed central DSA claims and their source dates.
-They do not replace the published lead yet. Values are geometric mean language-density
-ratios against the equal-weight Democratic–Republican mixture, not attention shares
-or measures of policy disagreement.
+Every option retains the original embedding graph: all 26,069 points, identical
+coordinates, fitted densities and common color bound. The layouts add paraphrases
+of the same reviewed central DSA claims with their source dates. Option A is the
+updated lead; B and C offer roomier three-example arrangements. These replace the
+rejected graph-free options, not the underlying analysis.
 
 | Option | Layout | Full-size image and exact sources |
 |---|---|---|
-| A | Five ranked bars with short DSA statements | [PNG](figures/article/dsa_lead_option_a-ranked.png) · [Data](figures/article/dsa_lead_option_a-ranked.json) |
-| B | Five-issue editorial layout, emphasizing what DSA says | [PNG](figures/article/dsa_lead_option_b-editorial.png) · [Data](figures/article/dsa_lead_option_b-editorial.json) |
-| C | Three spacious issue columns for an article cover | [PNG](figures/article/dsa_lead_option_c-three.png) · [Data](figures/article/dsa_lead_option_c-three.json) |
+| A | Original map with five DSA statements beside it | [PNG](figures/article/dsa_lead_option_a-map-five.png) · [Data](figures/article/dsa_lead_option_a-map-five.json) |
+| B | Wide original map with three statements below | [PNG](figures/article/dsa_lead_option_b-map-bottom.png) · [Data](figures/article/dsa_lead_option_b-map-bottom.json) |
+| C | Original map with three larger statements beside it | [PNG](figures/article/dsa_lead_option_c-map-three.png) · [Data](figures/article/dsa_lead_option_c-map-three.json) |
 
 <details>
 <summary>Preview all three alternatives</summary>
 
-**A — Ranked chart and statements**
+**A — Original map and five statements**
 
-<img src="figures/article/dsa_lead_option_a-ranked.png" width="1100" alt="Five ranked DSA language-density bars with dated source-backed statements">
+<img src="figures/article/dsa_lead_option_a-map-five.png" width="1100" alt="Original embedding graph with five numbered DSA examples and dated statements beside it">
 
-**B — Editorial issue and statement layout**
+**B — Wide map with statements below**
 
-<img src="figures/article/dsa_lead_option_b-editorial.png" width="1100" alt="Five DSA-heavy issues beside dated DSA statements and density ratios">
+<img src="figures/article/dsa_lead_option_b-map-bottom.png" width="1100" alt="Original embedding graph above three dated DSA statements">
 
-**C — Three-issue cover**
+**C — Original map and three larger statements**
 
-<img src="figures/article/dsa_lead_option_c-three.png" width="1100" alt="Three DSA-heavy issues in spacious columns with dated DSA statements">
+<img src="figures/article/dsa_lead_option_c-map-three.png" width="1100" alt="Original embedding graph beside three larger dated DSA statements">
 
 </details>
 
