@@ -2,14 +2,27 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from dsa_analysis.national_platforms import digest, read_rows
+from scripts import build_caucus_publication
 from scripts.dsa_caucus_analysis import caucus_claim_rows, prepare_sources, scoped_text
 from scripts.dsa_caucus_comparison import attention_tables
 from scripts.publish_dsa_caucuses import review_basis, validated_labels
 
 
 class CaucusSourceTest(unittest.TestCase):
+    def test_website_export_rejects_stale_numerical_results(self):
+        with tempfile.TemporaryDirectory() as directory:
+            results = Path(directory)
+            (results / "shares.csv").write_text("changed")
+            (results / "summary.json").write_text(json.dumps({
+                "result_hashes": {"shares.csv": digest("original")},
+            }))
+            with patch.object(build_caucus_publication, "RESULTS", results):
+                with self.assertRaisesRegex(ValueError, "Caucus result changed"):
+                    build_caucus_publication.publication_data()
+
     def test_scope_uses_actual_section_not_contents_and_preserves_offsets(self):
         policy = " ".join(["Policy"] * 120)
         text = f"Contents\nStart\nEnd\n\nStart\n {policy} \nEnd\nJoin"
