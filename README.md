@@ -51,8 +51,8 @@ review is not a representative sample or corpus-wide semantic certification. Ear
 and passage-based results are retained below as historical references.
 
 <p align="center">
-  <a href="figures/article/dsa_lead_option_a-map-five.png">
-    <img src="figures/article/dsa_lead_option_a-map-five.png" width="1100" alt="Original embedding graph with five numbered DSA-heavy areas and dated DSA statements beside it">
+  <a href="figures/article/dsa_lead_option_a-map-five.png?rev=readable-right">
+    <img src="figures/article/dsa_lead_option_a-map-five.png?rev=readable-right" width="1100" alt="Original embedding graph with five numbered DSA-heavy areas and dated DSA statements beside it">
   </a>
 </p>
 
@@ -82,15 +82,15 @@ rejected graph-free options, not the underlying analysis.
 
 **A — Original map and five statements**
 
-<img src="figures/article/dsa_lead_option_a-map-five.png" width="1100" alt="Original embedding graph with five numbered DSA examples and dated statements beside it">
+<img src="figures/article/dsa_lead_option_a-map-five.png?rev=readable-right" width="1100" alt="Original embedding graph with five numbered DSA examples and dated statements beside it">
 
 **B — Wide map with statements below**
 
-<img src="figures/article/dsa_lead_option_b-map-bottom.png" width="1100" alt="Original embedding graph above three dated DSA statements">
+<img src="figures/article/dsa_lead_option_b-map-bottom.png?rev=readable-right" width="1100" alt="Original embedding graph above three dated DSA statements">
 
 **C — Original map and three larger statements**
 
-<img src="figures/article/dsa_lead_option_c-map-three.png" width="1100" alt="Original embedding graph beside three larger dated DSA statements">
+<img src="figures/article/dsa_lead_option_c-map-three.png?rev=readable-right" width="1100" alt="Original embedding graph beside three larger dated DSA statements">
 
 </details>
 

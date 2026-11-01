@@ -105,7 +105,7 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
     bottom = layout == "map-bottom"
     five = layout == "map-five"
     selected = records if five else records[:3]
-    fig = plt.figure(figsize=(18, 12 if five or bottom else 10), facecolor=PAPER)
+    fig = plt.figure(figsize=(18, 13.5 if five else 12 if bottom else 10), facecolor=PAPER)
     fig.text(
         0.045, 0.950, "NATIONAL PARTY DOCUMENTS  /  2000\u20132026", fontsize=11, color="#625d53"
     )
@@ -151,6 +151,8 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
         / original_panel_ratio
     )
     axis.set_axis_off()
+    next_top = 0.79
+    renderer = fig.canvas.get_renderer()
     for number, record in enumerate(selected, 1):
         axis.text(
             *record["anchor_coordinates"],
@@ -162,31 +164,47 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
             bbox=dict(boxstyle="circle,pad=0.35", facecolor=PAPER, edgecolor=INK, linewidth=0.8),
             zorder=5,
         )
-        x = 0.045 + (number - 1) * 0.312 if bottom else 0.705
-        top = 0.29 if bottom else 0.77 - (number - 1) * (0.131 if five else 0.205)
-        fig.text(
-            x,
-            top,
+        x = 0.045 + (number - 1) * 0.312 if bottom else 0.68 if five else 0.705
+        top = 0.29 if bottom else next_top if five else 0.77 - (number - 1) * 0.205
+        title = (
             f"{number}  " + textwrap.fill(DISPLAY_LABELS[record["title"]].replace("\n", " "), 28)
             if bottom
-            else f"{number}  {DISPLAY_LABELS[record['title']]}",
-            fontsize=18 if five or bottom else 21,
+            else f"{number}  {DISPLAY_LABELS[record['title']]}"
+        )
+        heading = fig.text(
+            x,
+            top,
+            title,
+            fontsize=20 if five else 18 if bottom else 21,
             fontweight="bold",
             va="top",
             linespacing=1.2,
         )
-        fig.text(
+        body_top = (
+            top
+            - heading.get_window_extent(renderer).height / fig.bbox.height
+            - 8 / (fig.get_figheight() * 72)
+            if five
+            else top - (0.053 if bottom else 0.073)
+        )
+        statement = fig.text(
             x,
-            top - (0.053 if five or bottom else 0.073),
+            body_top,
             textwrap.fill(
                 f"{record['source_date'][:4]} {record['document_type']} \u2014 {record['snippet']}",
                 46 if five else 43,
             ),
-            fontsize=13 if five or bottom else 15,
+            fontsize=13 if bottom else 15,
             va="top",
-            linespacing=1.3,
-            color="#4f4b44",
+            linespacing=1.35,
+            color=INK,
         )
+        if five:
+            next_top = (
+                body_top
+                - statement.get_window_extent(renderer).height / fig.bbox.height
+                - 20 / (fig.get_figheight() * 72)
+            )
     legend_box = (0.25, 0.331, 0.5, 0.007) if bottom else (0.045, 0.138, 0.605, 0.007)
     color_axis = fig.add_axes(legend_box)
     bar = fig.colorbar(
@@ -199,7 +217,7 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
     fig.text(
         legend_box[0],
         legend_box[1] - 0.019,
-        "Denser major-party language",
+        "Denser Democrat & Republican language",
         fontsize=11.5,
         va="top",
         color="#625d53",
@@ -216,7 +234,7 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
     fig.text(
         0.045,
         0.059,
-        "Original embedding map \u00b7 equal-weight major-party baseline "
+        "Original embedding map \u00b7 equal-weight Democrat & Republican baseline "
         "\u00b7 numbered examples, not region boundaries",
         fontsize=10.5,
         color="#625d53",
