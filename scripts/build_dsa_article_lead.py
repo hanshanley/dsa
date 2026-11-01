@@ -23,92 +23,124 @@ DISPLAY_LABELS = {
     "Voting Rights, Election Rules, and Representation": "Voting & elections",
     "Economic Hardship, Poverty, and Housing Insecurity": "Poverty & housing\ninsecurity",
 }
+CURRENT_PROGRAM = "dsa-2026-program"
+CURRENT_PROGRAM_SHA256 = "d32e0662f983d42ace583b3804ab0b3cc9ca31d4a49926c08ab562d7c9cf45fb"
+CURRENT_SNIPPET_CLAIMS = {
+    "topic-020": "dsa-2026-program-normalized-40060dd6f6dd-repair-d40710b9eecc-007",
+    "topic-022": "dsa-2026-program-normalized-40060dd6f6dd-010",
+    "topic-003": "dsa-2026-program-normalized-f85f1b0f20e0-004",
+    "topic-005": "dsa-2026-program-normalized-d326f1020c4f-repair-94c56feee2ed-006",
+    "topic-019": "dsa-2026-program-normalized-3ba469ba4e69-011",
+}
 SNIPPETS = {
-    "dsa-2021-adopted-normalized-6b522fa83bc9-003": (
-        "DSA links militarized borders, racist immigration laws and the prison industrial "
-        "complex to wage suppression and working-class division."
+    CURRENT_SNIPPET_CLAIMS["topic-020"]: (
+        "DSA calls for ending ICE detention and deportations, amnesty for immigrants "
+        "regardless of status, and a path to citizenship for permanent residents."
     ),
-    "dsa-2024-program-normalized-b789b4710c28-006": "Demilitarize police departments.",
-    "dsa-2010-social-economic-rights-normalized-edb91d554823-010": (
-        "Government should promote housing co-ops and nonprofit/community development "
-        "corporations committed to revitalizing communities."
+    CURRENT_SNIPPET_CLAIMS["topic-022"]: (
+        "DSA calls for ending military and economic aid to Israel and Palestinian "
+        "self-determination in a free Palestine with Jerusalem as its capital."
     ),
-    "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002": (
-        "The U.S. and EU should pressure the Palestinian Authority to do all it can "
-        "to stop attacks on Israeli civilians."
+    CURRENT_SNIPPET_CLAIMS["topic-003"]: (
+        "DSA calls for protecting every worker's right to unionize and strike, "
+        "in every industry, and backing members who organize to democratize their unions."
     ),
-    "dsa-2024-program-normalized-c0035893561c-004": (
-        "DSA argues that billionaires profit from controlling access to housing, "
-        "healthcare and education."
+    CURRENT_SNIPPET_CLAIMS["topic-005"]: (
+        "DSA calls for proportional representation and ranked-choice voting in all "
+        "elections, expanding the House and abolishing the Senate."
     ),
-    "dsa-2010-social-economic-rights-normalized-b973e3114edd-001": (
-        "DSA argues that the Employee Free Choice Act would let workers choose "
-        "union representation without fear or intimidation."
-    ),
-    "dsa-2016-strategy-normalized-48e0bdf87f39-010": (
-        "DSA's envisioned democratic socialist system would use proportional representation "
-        "so Congress reflects the electorate's political will."
-    ),
-    "dsa-2021-adopted-normalized-1870bd662c8e-005": (
-        "DSA argues that public austerity and incarceration endanger communities and "
-        "make rent, food, childcare and housing harder to afford."
+    CURRENT_SNIPPET_CLAIMS["topic-019"]: (
+        "DSA calls for new publicly owned social housing, universal rent control "
+        "and guaranteed legal counsel for every tenant."
     ),
 }
 SNIPPET_CLAIM_SHA256 = {
-    "dsa-2021-adopted-normalized-6b522fa83bc9-003": (
-        "26fa3be04ecf60cbb9fe65e35909214ee52771e60b1d7baaf74906239a4a5e8a"
+    CURRENT_SNIPPET_CLAIMS["topic-020"]: (
+        "7272037af02dcbb6cfeda826496b4caf0a7819d01888e5a36684642355f5cce6"
     ),
-    "dsa-2024-program-normalized-b789b4710c28-006": (
-        "a59081c2ed74563e4a740892cc83abbfdc5d6cef4b80ec69b7b3acf5f754ff4b"
+    CURRENT_SNIPPET_CLAIMS["topic-022"]: (
+        "796836cea12f6afb62de353831a884b2cd2328dc92aa4720859aba65f5c94781"
     ),
-    "dsa-2010-social-economic-rights-normalized-edb91d554823-010": (
-        "2d58601570c156dda97942c85ccd5d89bbfdb4ae938b9e4508ba254733135bfd"
+    CURRENT_SNIPPET_CLAIMS["topic-003"]: (
+        "2048ab20154644381130fa08384ec4d998bcf9e70ab112518601d8e4ade58fca"
     ),
-    "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002": (
-        "d362a42551c1fc975e5d572794351931e51c2b8152a22cdd18231516b604220a"
+    CURRENT_SNIPPET_CLAIMS["topic-005"]: (
+        "56daa564d0efdc2427ee3c4e21a269a5e0118ae027a08bf9cd8dbc23572e556d"
     ),
-    "dsa-2024-program-normalized-c0035893561c-004": (
-        "dbc13771670910116c140bc5a9dae53ab9eb28a42d02b362fce7ed2424ae40d9"
+    CURRENT_SNIPPET_CLAIMS["topic-019"]: (
+        "9b20c1fe3c4416e746790ecec8e2f0aaa7eef50065d45751ac9f9cda5520b2c1"
     ),
-    "dsa-2010-social-economic-rights-normalized-b973e3114edd-001": (
-        "41ed33757f8cd4c3310dede2413d6570844eb6364a460b09a9d48c6de12a4992"
+}
+SNIPPET_EVIDENCE_SHA256 = {
+    CURRENT_SNIPPET_CLAIMS["topic-020"]: (
+        "f36ca0d1521d31258fb2d3fdc6d6e17042b4888b8c58f66aafcd7695e273d7cf"
     ),
-    "dsa-2016-strategy-normalized-48e0bdf87f39-010": (
-        "bbe876731a61f8d13a467ef9786d9458c9e69e590eb95ac3e358d467409930c3"
+    CURRENT_SNIPPET_CLAIMS["topic-022"]: (
+        "f36ca0d1521d31258fb2d3fdc6d6e17042b4888b8c58f66aafcd7695e273d7cf"
     ),
-    "dsa-2021-adopted-normalized-1870bd662c8e-005": (
-        "c921e2644406cda04c28317997bf92fb88d53310daf1d5dc4142ea8b6963a97f"
+    CURRENT_SNIPPET_CLAIMS["topic-003"]: (
+        "ad95644e6821595473dd78c1b5ac16bb23f501991ed7329d4b6a8cde82b3faa2"
+    ),
+    CURRENT_SNIPPET_CLAIMS["topic-005"]: (
+        "08ff669e10b8430aacb68743740269ab0e0e504d32dd34a5180bceb16384a717"
+    ),
+    CURRENT_SNIPPET_CLAIMS["topic-019"]: (
+        "2c6195d6247207ca392f887cfbae949a4186b9ac73a22b600e92e2b988bb1343"
     ),
 }
 
 
-def snippet_records(records: list[dict], claims: list[dict]) -> list[dict]:
+def snippet_records(records: list[dict], claims: list[dict], data: dict) -> list[dict]:
     lookup = {claim["claim_id"]: claim for claim in claims}
+    points = {point[0]: point for point in data["points"]}
     result = []
     for record in records:
-        claim = lookup[record["anchor_claim_id"]]
+        claim_id = CURRENT_SNIPPET_CLAIMS.get(record["topic_id"])
+        if claim_id not in lookup or claim_id not in points:
+            raise ValueError("Article issue requires a preserved current-program claim")
+        claim, point = lookup[claim_id], points[claim_id]
         if claim["group"] != "dsa" or claim["analysis_eligible"] != "True":
-            raise ValueError("Article snippets require eligible central DSA anchors")
-        if claim["claim_id"] not in SNIPPETS:
-            raise ValueError("Changed article anchor requires a new source-bound paraphrase")
+            raise ValueError("Article snippets require eligible DSA program claims")
+        if (
+            claim["document_id"] != CURRENT_PROGRAM
+            or claim["document_type"] != "program"
+            or claim["publication_date"] != "2026-09"
+            or claim["source_sha256"] != CURRENT_PROGRAM_SHA256
+        ):
+            raise ValueError("Changed program source requires a new source-bound paraphrase")
+        if data["groups"][point[4]] != "dsa":
+            raise ValueError("Current-program policy must belong to DSA")
         if (
             hashlib.sha256(claim["claim_text"].encode()).hexdigest()
             != SNIPPET_CLAIM_SHA256[claim["claim_id"]]
         ):
             raise ValueError("Changed claim text requires a new source-bound paraphrase")
+        if (
+            hashlib.sha256(claim["evidence"].encode()).hexdigest()
+            != SNIPPET_EVIDENCE_SHA256[claim_id]
+        ):
+            raise ValueError("Changed program evidence requires a new source-bound paraphrase")
         result.append(
-            dict(
+            {
                 **record,
-                snippet=SNIPPETS[claim["claim_id"]],
-                snippet_basis="assistant paraphrase of the preserved reviewed central claim",
-                source_claim_text=claim["claim_text"],
-                source_evidence=claim["evidence"],
-                source_sha256=claim["source_sha256"],
-                document_id=claim["document_id"],
-                document_title=claim["title"],
-                document_type=claim["document_type"],
-                source_date=claim["publication_date"],
-            )
+                "anchor_scope": "central historical issue example, not the current policy passage",
+                "policy_source_claim_id": claim_id,
+                "policy_source_topic_id": data["topics"][point[3]]["topic_id"],
+                "policy_source_coordinates": point[1:3],
+                "source_url": claim["source_url"],
+                "snippet": SNIPPETS[claim_id],
+                "snippet_basis": (
+                    "assistant paraphrase of the source-bound September 2026 national "
+                    "program passage; historical map anchors and topic assignments unchanged"
+                ),
+                "source_claim_text": claim["claim_text"],
+                "source_evidence": claim["evidence"],
+                "source_sha256": claim["source_sha256"],
+                "document_id": claim["document_id"],
+                "document_title": claim["title"],
+                "document_type": claim["document_type"],
+                "source_date": claim["publication_date"],
+            }
         )
     return result
 
@@ -332,15 +364,15 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
         0.045,
         0.059,
         "Original embedding map: colors show language density, not attention shares; "
-        "numbered markers locate examples.",
+        "numbers locate historical issue examples.",
         fontsize=10.5,
         color="#625d53",
     )
     fig.text(
         0.045,
         0.034,
-        "Dated DSA statements are paraphrased. Attention shares are bundle-balanced "
-        "proportions of policy claims.",
+        "Statements: DSA's September 2026 program, paraphrased. "
+        "Attention shares: bundle-balanced claims across 2000\u20132026.",
         fontsize=10.5,
         color="#625d53",
     )
@@ -906,7 +938,7 @@ def main() -> None:
     if len(records) != 5:
         raise ValueError("The article lead requires five supported positive DSA attention gaps")
     if args.variants_only:
-        variants = snippet_records(records, claims)
+        variants = snippet_records(records, claims, density)
         for name, layout in (
             ("a-map-five", "map-five"),
             ("b-map-bottom", "map-bottom"),
@@ -928,8 +960,8 @@ def main() -> None:
                     "null when the baseline share is zero"
                 ),
                 presentation=(
-                    "original density map with dated DSA paraphrases "
-                    "and attention-share comparisons"
+                    "original density map with September 2026 national DSA policy paraphrases "
+                    "and full-period attention-share comparisons"
                 ),
                 map_claims=len(density["points"]),
                 map_limits=density["limits"],
@@ -954,7 +986,7 @@ def main() -> None:
             print(output)
         return
     output = ROOT / "figures/article/dsa_vs_major_parties_lead.png"
-    render_variant(density, snippet_records(records, claims), output, "map-five")
+    render_variant(density, snippet_records(records, claims, density), output, "map-five")
     inputs = [
         labels_path,
         shares_path,
@@ -969,9 +1001,10 @@ def main() -> None:
         article_only=True,
         attention_share_ratios_csv=ratios_path.name,
         presentation=(
-            "original density map with five dated DSA paraphrases and attention-share comparisons"
+            "original density map with five September 2026 DSA program paraphrases "
+            "and full-period attention-share comparisons"
         ),
-        snippets=snippet_records(records, claims),
+        snippets=snippet_records(records, claims, density),
         ranking=(
             "largest positive weighted attention-share gap; "
             "DSA minus equal-weight Democratic/Republican average"

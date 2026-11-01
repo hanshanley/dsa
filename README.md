@@ -64,7 +64,9 @@ attention, not a measure of agreement or independent human certification.
 
 *Five issues with the largest positive DSA attention-share gaps against the
 equal-weight Democratic–Republican average, with at least two DSA source bundles.
-Callouts show both shares, their ratio, and dated DSA paraphrases.
+Callouts show both shares, their ratio, and statements from DSA's **September 2026
+Workers Deserve More program**. The statements describe the current program;
+the attention shares and multipliers still compare the full **2000–2026** corpus.
 [Full-size PNG](figures/substack/where-dsa-stands-apart.png) ·
 [Exact values and source anchors](figures/article/dsa_vs_major_parties_lead.json).*
 
@@ -77,8 +79,9 @@ not measure spending, voter support, or agreement.
 **Map colors measure something different:** light purple indicates denser
 combined Democrat & Republican language; gold indicates denser DSA language.
 The original 26,069 embedding points, coordinates, fitted densities and common
-color scale are unchanged. Numbered markers locate reviewed examples, not
-issue boundaries.
+color scale are unchanged. Numbered markers locate central historical issue
+examples, not issue boundaries. The contemporary callouts illustrate policies
+from the official national program; they do not reassign claims to new topics.
 
 [Complete attention-share ratios (CSV)](figures/article/dsa_attention_share_ratios.csv)
 includes all 24 topics, every party's share, the combined average, percentage-point

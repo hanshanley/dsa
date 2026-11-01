@@ -369,15 +369,93 @@ class ArticleLeadTest(unittest.TestCase):
         ):
             self.assertIsNone(zero[field])
 
-    def test_snippets_reject_changed_central_claim_wording(self):
+    def current_snippet_fixture(self):
         claim = dict(
-            claim_id="dsa-2024-program-normalized-b789b4710c28-006",
+            claim_id="dsa-2026-program-normalized-40060dd6f6dd-010",
             group="dsa",
             analysis_eligible="True",
-            claim_text="Support for militarizing police departments.",
+            claim_text="Support for ending all military and economic aid to Israel.",
+            evidence="End all military and economic aid to Israel.",
+            source_sha256="d32e0662f983d42ace583b3804ab0b3cc9ca31d4a49926c08ab562d7c9cf45fb",
+            document_id="dsa-2026-program",
+            document_type="program",
+            publication_date="2026-09",
+            title="Workers Deserve More 2026",
+            source_url="current-program.pdf",
         )
-        with self.assertRaisesRegex(ValueError, "Changed claim text"):
-            snippet_records([dict(anchor_claim_id=claim["claim_id"])], [claim])
+        record = dict(
+            topic_id="topic-022",
+            anchor_claim_id="historical-2004-claim",
+            anchor_coordinates=[9, 8],
+            anchor_source_url="historical-source.pdf",
+            gap=0.048,
+            attention_ratio=4.6,
+            shares={"dsa": 0.061, "democratic": 0.012, "republican": 0.014},
+        )
+        data = dict(
+            groups=["democratic", "republican", "dsa"],
+            topics=[dict(topic_id="topic-022"), dict(topic_id="another-issue")],
+            points=[[claim["claim_id"], 2, 3, 0, 2]],
+        )
+        return record, claim, data
+
+    @patch.dict(
+        "scripts.build_dsa_article_lead.SNIPPET_EVIDENCE_SHA256",
+        {
+            "dsa-2026-program-normalized-40060dd6f6dd-010": (
+                "92086954792c22ed00938a9fa38bf8074ba30fbe3a138b0320764cb9d08e893a"
+            )
+        },
+    )
+    def test_snippets_use_current_policies_without_reassigning_historical_map_anchors(self):
+        record, claim, data = self.current_snippet_fixture()
+        data["points"][0][3] = 1
+        result = snippet_records([record], [claim], data)[0]
+        self.assertEqual(result["anchor_claim_id"], record["anchor_claim_id"])
+        self.assertEqual(result["anchor_coordinates"], [9, 8])
+        self.assertEqual(result["anchor_source_url"], "historical-source.pdf")
+        self.assertEqual(result["policy_source_claim_id"], claim["claim_id"])
+        self.assertEqual(result["policy_source_coordinates"], [2, 3])
+        self.assertEqual(result["policy_source_topic_id"], "another-issue")
+        self.assertEqual(result["source_url"], "current-program.pdf")
+        self.assertEqual(result["source_date"], "2026-09")
+        self.assertEqual(result["source_claim_text"], claim["claim_text"])
+        for field in ("gap", "attention_ratio", "shares"):
+            self.assertEqual(result[field], record[field])
+        self.assertEqual(record["anchor_coordinates"], [9, 8])
+
+    @patch.dict(
+        "scripts.build_dsa_article_lead.SNIPPET_EVIDENCE_SHA256",
+        {
+            "dsa-2026-program-normalized-40060dd6f6dd-010": (
+                "92086954792c22ed00938a9fa38bf8074ba30fbe3a138b0320764cb9d08e893a"
+            )
+        },
+    )
+    def test_snippets_reject_changed_wording_sources_or_ineligible_program_claims(self):
+        for field, value, error in (
+            ("claim_text", "Support for increasing military aid to Israel.", "Changed claim text"),
+            ("evidence", "Increase military aid to Israel.", "Changed program evidence"),
+            ("source_sha256", "changed", "Changed program source"),
+            ("document_id", "dsa-2004-israel-palestine", "Changed program source"),
+            ("publication_date", "2004", "Changed program source"),
+            ("document_type", "statement", "Changed program source"),
+            ("analysis_eligible", "False", "eligible DSA program"),
+            ("group", "republican", "eligible DSA program"),
+        ):
+            with self.subTest(field=field):
+                record, claim, data = self.current_snippet_fixture()
+                claim[field] = value
+                with self.assertRaisesRegex(ValueError, error):
+                    snippet_records([record], [claim], data)
+
+    def test_snippets_reject_missing_current_claims_and_wrong_group_coordinates(self):
+        record, claim, data = self.current_snippet_fixture()
+        with self.assertRaisesRegex(ValueError, "preserved current-program claim"):
+            snippet_records([record], [], data)
+        data["points"][0][4] = 1
+        with self.assertRaisesRegex(ValueError, "policy must belong to DSA"):
+            snippet_records([record], [claim], data)
 
     def test_combined_density_uses_arithmetic_mixture_and_stays_finite(self):
         import math
