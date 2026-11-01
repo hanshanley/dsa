@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 334,
+      "generation_tps": 16.91556833808135,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1463,
+      "prompt_tps": 560.4498525442056,
+      "request_sha256": "5bbfab7f5ae6991ffbba8926846cfc9be438e749fac7456ea0b7a7d470896b66",
+      "seconds": 22.36467962502502,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Identity politics are a project of an elite political class.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"An elite political class seeks to maintain its role as brokers, purporting to represent the interests of groups, but actually protecting and benefiting from their position as gatekeepers.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Movement non-profits use radical and even socialist rhetoric and spectacle, but financially depend on and serve the interests of Democratic Party machines.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reliance on Democratic Party machines closes off potential for mass working class organization that can fundamentally challenge the social and economic order.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Uniting as a whole class, people can someday own and run the bakery, not just fight for a bigger piece of the pie.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"We will prioritize outward-facing organizing at points of class conflict.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"We will build member-funded and -directed organizations.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"We will directly engage with people in the places we live and work.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 325,
+      "generation_tps": 16.653708729292166,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 2087,
+      "prompt_tps": 598.1436552972236,
+      "request_sha256": "1604f2f548f74d3520f1680746bc9d1546d1617554aea540359dae40cee23b91",
+      "seconds": 23.013688249979168,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Identity politics are a project of an elite political class that seeks to maintain its role as brokers, purporting to represent the interests of groups but actually protecting and benefiting from their position as gatekeepers.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Movement non-profits use radical rhetoric and spectacle but financially depend on and serve the interests of Democratic Party machines.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reliance on movement non-profits closes off potential for mass working class organization that can fundamentally challenge the social and economic order.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Uniting as a whole class, people can someday own and run the bakery, rather than just fight for a bigger piece of the pie.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America (DSA) will prioritize outward-facing organizing at points of class conflict.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America (DSA) will build member-funded and -directed organizations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America (DSA) will directly engage with people in the places they live and work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 329,
+      "generation_tps": 16.638131197102346,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1956,
+      "prompt_tps": 461.7381204445088,
+      "request_sha256": "38b6df353dfd3e04bdfbdb842b5a84a7015980248088a628df61d72aada61fda",
+      "seconds": 24.02006304101087,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Identity politics are a project of an elite political class that seeks to maintain its role as brokers, purporting to represent the interests of groups but actually protecting and benefiting from their position as gatekeepers.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Some movement non-profits use radical rhetoric and spectacle but financially depend on and serve the interests of Democratic Party machines.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Reliance on these movement non-profits closes off potential for the kind of mass working class organization that can fundamentally challenge the social and economic order.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Uniting as a whole class, people can someday own and run the bakery, not just fight for a bigger piece of the pie.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America (DSA) will prioritize outward-facing organizing at points of class conflict.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America (DSA) will build member-funded and -directed organizations.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The Democratic Socialists of America (DSA) will directly engage with people in the places they live and work.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "5bbfab7f5ae6991ffbba8926846cfc9be438e749fac7456ea0b7a7d470896b66"
+}

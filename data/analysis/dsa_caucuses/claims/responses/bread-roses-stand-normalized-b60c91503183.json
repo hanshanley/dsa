@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 412,
+      "generation_tps": 11.417612750705496,
+      "peak_memory": 33.592363386,
+      "prompt_tokens": 1426,
+      "prompt_tps": 385.7077559922432,
+      "request_sha256": "b0d168072ed42da2e43a6c757d0e644051e992ff48448bd0a6f50a4e162088a7",
+      "seconds": 39.79200687492266,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"We do not pretend to know exactly how a transition from capitalism to socialism will ultimately play out.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"We want to build a socialist party that can take advantage of a crisis of legitimacy of capitalism when it surely arrives.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A party can help foment a crisis through helping to build powerful movements from below, including strikes, workplace takeovers, student occupations, and mass demonstrations.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Electing a socialist government can help foment a crisis.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"Such mobilizations and such a government would together be able to create a rupture with the capitalist system.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a transitional period, a socialist government backed by popular mobilizations will have to do everything necessary to defend the mandate they have won to carry out a program of redistribution.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a transitional period, a socialist government backed by popular mobilizations will have to do everything necessary to defend the mandate they have won to carry out a program of expropriation.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a transitional period, a socialist government backed by popular mobilizations will have to do everything necessary to defend the mandate they have won to carry out a program of democratic reform of state institutions.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"No ruling class has ever peacefully ceded power.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 276,
+      "generation_tps": 16.8293138293712,
+      "peak_memory": 33.685638922,
+      "prompt_tokens": 1944,
+      "prompt_tps": 496.80728166421596,
+      "request_sha256": "2719d4591f22978236a3fe3c831a25f054d7c03b5848653c37d55559af3266df",
+      "seconds": 20.32670129206963,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America (DSA) does not claim to know exactly how a transition from capitalism to socialism will ultimately play out.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America (DSA) wants to build a socialist party that can take advantage of a crisis of legitimacy of capitalism when it arrives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A party can help foment a crisis by building powerful movements from below, including strikes, workplace takeovers, student occupations, and mass demonstrations, and by electing a socialist government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Such mobilizations and a socialist government together would be able to create a rupture with the capitalist system.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a transitional period, a socialist government backed by popular mobilizations will have to do everything necessary to defend the mandate to carry out a program of redistribution, expropriation, and democratic reform of state institutions, since no ruling class has ever peacefully ceded power.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 291,
+      "generation_tps": 16.831830854964473,
+      "peak_memory": 33.685638922,
+      "prompt_tokens": 1870,
+      "prompt_tps": 497.6111229339111,
+      "request_sha256": "2aac57896ff1c1065cdf967ab894f2afc1604863a9c6cab293d0f6ac796a4603",
+      "seconds": 21.056478207930923,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America (DSA) does not pretend to know exactly how a transition from capitalism to socialism will ultimately play out.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The Democratic Socialists of America (DSA) wants to build a socialist party that can take advantage of a crisis of legitimacy of capitalism when it surely arrives.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A party can help foment a crisis by helping to build powerful movements from below\u2014millions of people acting on their own behalf in strikes, workplace takeovers, student occupations, and mass demonstrations\u2014and by electing a socialist government.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Such mobilizations and such a government would together be able to create a rupture with the capitalist system.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"In a transitional period, a socialist government backed by popular mobilizations will have to do everything necessary to defend the mandate they have won to carry out a program of redistribution, expropriation, and democratic reform of state institutions, since no ruling class has ever peacefully ceded power.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "b0d168072ed42da2e43a6c757d0e644051e992ff48448bd0a6f50a4e162088a7"
+}

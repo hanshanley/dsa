@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 315,
+      "generation_tps": 16.59478567203893,
+      "peak_memory": 33.806241546,
+      "prompt_tokens": 2236,
+      "prompt_tps": 531.2652426464954,
+      "request_sha256": "d4f4bfc3a55cb40c724f33cf1c08ac4e7417a3e2379c3345e2c79eb813694a83",
+      "seconds": 23.20233270805329,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By \u201cequality,\u201d the Democratic Socialists of America mean equal protection under the law, the prohibition of discrimination based on race, sex, ethnicity, national origin, religion, sexual orientation, gender expression, age, profession and ability status as called for in the DSA\u2019s Constitution, Bylaws and Resolution 33 on harassment, equal representation in legislative bodies, full voting rights for citizens on the basis of one person, one vote, which means the abolition of the U.S. Senate, and the right of working people to organize collectively in unions.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[1, 2]}, {\"claim_text\":\"The Democratic Socialists of America believe that equality is the basis of democratic citizenship.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Socialists of America believe that the principles of liberty and equality are indispensable to the self-government of a free people and that denial of them renders a government a tyranny.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[3]}, {\"claim_text\":\"The Democratic Socialists of America defend the principles of liberty and equality as the product of hard-fought struggles waged by working people, especially African-Americans and other people of color, women, and other popular forces, against the powerful and wealthy who seek to limit democracy.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 313,
+      "generation_tps": 16.92117667691756,
+      "peak_memory": 33.806241546,
+      "prompt_tokens": 2027,
+      "prompt_tps": 486.6319166961831,
+      "request_sha256": "8f06e81a5bb71c55c8387c06032b98e1d13cb675f6ea16b5f84b4b0a6893cea8",
+      "seconds": 22.67386870807968,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"By \u201cequality,\u201d the Democratic Socialists of America mean equal protection under the law, the prohibition of discrimination based on race, sex, ethnicity, national origin, religion, sexual orientation, gender expression, age, profession and ability status as called for in the DSA\u2019s Constitution, Bylaws and Resolution 33 on harassment, equal representation in legislative bodies, full voting rights for citizens on the basis of one person, one vote, which means the abolition of the U.S. Senate, and the right of working people to organize collectively in unions.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[2]}, {\"claim_text\":\"Equality is the basis of democratic citizenship, according to the Democratic Socialists of America.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[2]}, {\"claim_text\":\"The Democratic Socialists of America believe that the principles of liberty and equality are indispensable to the self-government of a free people and that denial of them renders a government a tyranny.\", \"claim_types\":[\"evaluation\"], \"evidence_ids\":[3]}, {\"claim_text\":\"The Democratic Socialists of America defend the principles of liberty and equality as the product of hard-fought struggles waged by working people, especially African-Americans and other people of color, women, and other popular forces, against the powerful and wealthy who seek to limit democracy.\", \"claim_types\":[\"policy_position\"], \"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "f523a0f1b005f221105fad4a2b076173999bf6f4ce705bf3ac265d0868963651"
+}

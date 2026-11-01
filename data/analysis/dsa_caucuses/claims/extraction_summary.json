@@ -1,0 +1,38 @@
+{
+  "analysis_claims": 1357,
+  "assistant_flagged_claims": 123,
+  "assistant_source_repaired_blocks": 34,
+  "assistant_source_repaired_claims": 162,
+  "baseline_modified": false,
+  "blocks": 144,
+  "blocks_by_status": {
+    "normalized": 110,
+    "source_repaired": 34
+  },
+  "blocks_with_unresolved_references": 1,
+  "claim_text_standardization": {
+    "original_field": "model_claim_text",
+    "scope": "Recognized source-organization prefixes in policy-position-only claims",
+    "standardized_claims": 1,
+    "version": 1
+  },
+  "claims": 1481,
+  "claims_by_group": {
+    "dsa": 1481
+  },
+  "documents": 13,
+  "exact_within_document_duplicates": 10,
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "generation_tokens": 132133,
+  "inference_seconds": 9160.411299580242,
+  "maximum_reported_peak_memory_gb": 33.816399626,
+  "model_blocks_by_status": {
+    "normalized": 136,
+    "validation_failed": 8
+  },
+  "quality": "Automated screening with targeted assistant source repairs; not independent human gold or fact-checking",
+  "source_words": 25687,
+  "status": "complete",
+  "superseded_model_claims": 75,
+  "unrepaired_flagged_model_claims": 48
+}

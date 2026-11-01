@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 246,
+      "generation_tps": 16.685832481916194,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1490,
+      "prompt_tps": 489.9825022585888,
+      "request_sha256": "9fd263324928a1403c913bac2f45a3bf1886244d7beabf080d22ec7de1f3954d",
+      "seconds": 17.7931543327868,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Workers can overcome divisions, develop class consciousness, and build supermajorities for material gains through collective action on the shop floor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group is cohering the left pole in a revived labor movement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Socialists should work to build alliances to cohere a pole of the labor movement that can build power on the shop floor, coordinate a working-class electoral strategy, and win democratic control of the economy and society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Unions need to invest the resources required to organize the unorganized to avoid being outflanked by employers.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The group is building a multiracial movement for socialism by advancing a popular, anti-racist politics.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 255,
+      "generation_tps": 16.679649356658004,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1904,
+      "prompt_tps": 488.8658492257353,
+      "request_sha256": "dc854dc3e5e344344062798112c4a5e40c2fc0b3a965868b3779d1cb32588e26",
+      "seconds": 19.1921968748793,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Workers can overcome divisions, develop class consciousness, and build supermajorities that win material gains through collective action on the shop floor.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The group is cohering the left pole in a revived labor movement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Socialists should work to build the alliances necessary to cohere a pole of the labor movement that can build power on the shop floor, coordinate a working-class electoral strategy, and win democratic control of the economy and society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Unions need to invest the resources required to organize the unorganized so that they do not continue to be outflanked by the bosses.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"The group is building a multiracial movement for socialism by advancing a popular, anti-racist politics.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "9fd263324928a1403c913bac2f45a3bf1886244d7beabf080d22ec7de1f3954d"
+}

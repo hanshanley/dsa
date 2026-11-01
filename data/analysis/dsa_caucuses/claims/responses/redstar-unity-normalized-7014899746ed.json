@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 266,
+      "generation_tps": 16.98235920954851,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1414,
+      "prompt_tps": 506.27262759847736,
+      "request_sha256": "2925d411234beb0c542c733074b670e0a93f28c684b2d797c66cb751d4ab180b",
+      "seconds": 18.46523433388211,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA does not currently meet standards for a revolutionary party, but has potential.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA is divided between incompatible visions for the organization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA does not represent the entire working class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA does not have the confidence of the entire working class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only the working class can decide who the party is.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA can be made into an organization capable of fulfilling the historical role of an organization that empowers the U.S. left and working class to be capable of Party formation.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The collective, organized activity of DSA member-actors is the basis of the Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 270,
+      "generation_tps": 16.963706357606252,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1848,
+      "prompt_tps": 539.2727062781994,
+      "request_sha256": "b0f703d27cad26b9adef4b5ca6cdabe8cdce071b1b7429e0da3a35203bfe5105",
+      "seconds": 19.352467249846086,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"At present, DSA does not meet standards for a revolutionary party, but it has potential.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA is divided between incompatible visions for the organization.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA does not represent the entire working class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA does not have the confidence of the entire working class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only the working class itself can decide who the party is.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA can be made into an organization capable of fulfilling the historical role of an organization that empowers the U.S. left and working class to be capable of Party formation.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The collective, organized activity of DSA member-actors is the basis of the Party.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "2925d411234beb0c542c733074b670e0a93f28c684b2d797c66cb751d4ab180b"
+}

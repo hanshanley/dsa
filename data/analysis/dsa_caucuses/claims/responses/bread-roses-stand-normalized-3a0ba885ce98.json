@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 292,
+      "generation_tps": 9.04099010764623,
+      "peak_memory": 33.807175362,
+      "prompt_tokens": 2039,
+      "prompt_tps": 236.34102481097847,
+      "request_sha256": "a7dddcb35a23e1cbb50a0d2cd0391aaffe21359bc69589973c383cff109643b6",
+      "seconds": 43.163887792034075,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for building a democratic socialist world that ends exploitation and oppression and guarantees the right to live freely and creatively.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In a socialist society, a democratically managed economy will empower people to confront climate change and build a sustainable future.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"In a socialist society, real democracy\u2014in which people, not money, rule\u2014will define politics and extend to workplaces and communities.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Capitalism is a system built on exploitation.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"Capitalism divides people into classes that determine what they get and what they have to do to survive.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"The capitalist class\u2014a tiny minority made up of owners of major corporations and powerful managers\u2014dominates society.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"The profit and rent of the capitalist class comes from the vast majority of the population: the working class.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 295,
+      "generation_tps": 9.10456432411418,
+      "peak_memory": 33.807175362,
+      "prompt_tokens": 2499,
+      "prompt_tps": 430.89130584561696,
+      "request_sha256": "1d4958af350a8357550618e4cc28ebbfcf374dddae9c534a42d15322880c546f",
+      "seconds": 38.21747375000268,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Support for building a democratic socialist world that ends exploitation and oppression and guarantees everyone the right to live freely and creatively.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In a socialist society, a democratically managed economy will empower people to confront climate change and build a sustainable future.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"In a socialist society, real democracy\u2014in which people, not money, rule\u2014will define politics and extend to workplaces and communities.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Capitalism is a system built on exploitation.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"Capitalism divides people into classes that determine what they get and what they have to do to survive.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"The capitalist class\u2014a tiny minority made up of owners of major corporations and powerful managers\u2014dominates society.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[5]},{\"claim_text\":\"The profit and rent the capitalist class lives off of comes from the vast majority of the population: the working class.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "a7dddcb35a23e1cbb50a0d2cd0391aaffe21359bc69589973c383cff109643b6"
+}

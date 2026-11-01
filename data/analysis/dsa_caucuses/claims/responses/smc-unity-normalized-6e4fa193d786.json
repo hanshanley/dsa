@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 357,
+      "generation_tps": 16.909717041527504,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1512,
+      "prompt_tps": 472.0779512391228,
+      "request_sha256": "a84bc578e95d0fcb96afc56e7774446389b9f69992cab099179157a83c15f7b8",
+      "seconds": 24.325133542064577,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Race and racism exist as a material reality in the U.S. rooted in the enslavement of African people, the dispossession of Indigenous people from their land, the exploitation of generations of migrants, and the role of the United States as a colonial and imperial superpower.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialists must engage seriously in the struggle against racism, even when anti-racist movements exhibit heterogeneous politics or a contradictory class character.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ultimate goal is the development of a popular anti-racism in the United States\u2014a working-class ideology that makes ending racism an animating force in the struggle for working-class power.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Intentional recruitment of leaders and building of teams that reflect the diversity of the working class is necessary.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Gender is used to divide and exploit the working class under capitalism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Capitalism relies on the unpaid and under-paid work historically done by women (and disproportionately women of color) in order to function.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The labor of reproducing, caring for, and educating human beings is necessary for capitalism to function.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 388,
+      "generation_tps": 16.659253102277745,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 2037,
+      "prompt_tps": 494.1427137812713,
+      "request_sha256": "6822cd694e071167216c0eda7382d21d26f3fe5474bba094afd77b63222ddb66",
+      "seconds": 27.42258954094723,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Race and racism don\u2019t exist purely as ideology, but also as a material reality rooted in how capitalism developed in the U.S.\u2014particularly through the enslavement of African people, the dispossession of Indigenous people from their land, the exploitation of generations of migrants, and the role of the United States as a colonial and imperial superpower.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialists must engage seriously in the struggle against racism, even when anti-racist movements exhibit heterogeneous politics or a contradictory class character.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The ultimate goal is the development of a popular anti-racism in the United States\u2014a working-class ideology that makes ending racism an animating force in the struggle for working-class power.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"In all of their work, leaders and teams must intentionally be recruited and built to reflect the diversity of the working class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Gender is used to divide and exploit the working class under capitalism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Capitalism relies on the unpaid and under-paid work historically done by women (and disproportionately women of color) in order to function.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The labor of reproducing, caring for, and educating human beings is necessary for capitalism to function and provides workers that are exploited by capital.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "a84bc578e95d0fcb96afc56e7774446389b9f69992cab099179157a83c15f7b8"
+}

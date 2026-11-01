@@ -87,18 +87,21 @@ def make_figures(
     groups = sorted(organizations, key=lambda group: organizations[group])
     topics = sorted(labels, key=lambda topic: labels[topic]["title"])
     values = {(row["group"], row["topic_id"]): float(row["attention_share"]) for row in shares}
-    matrix = np.array([[values[group, topic] for topic in topics] for group in groups])
+    matrix = np.array([[values[group, topic] for group in groups] for topic in topics])
     cmap = LinearSegmentedColormap.from_list("attention", [background, "#b79a61"])
-    figure, axis = plt.subplots(figsize=(max(12, len(topics) * 1.35), 8.5))
+    figure, axis = plt.subplots(figsize=(16, max(8.5, len(topics) * 0.52 + 1.6)))
     axis.imshow(matrix, cmap=cmap, vmin=0, vmax=max(float(matrix.max()), 0.01), aspect="auto")
     axis.set_xticks(
-        range(len(topics)), [textwrap.fill(labels[topic]["title"], 18) for topic in topics]
+        range(len(groups)), [textwrap.fill(organizations[group], 14) for group in groups]
     )
     axis.xaxis.tick_top()
     axis.tick_params(axis="both", length=0, pad=10)
-    axis.set_yticks(range(len(groups)), [organizations[group] for group in groups])
-    for row in range(len(groups)):
-        for column in range(len(topics)):
+    axis.tick_params(axis="x", labelsize=9)
+    axis.set_yticks(
+        range(len(topics)), [textwrap.fill(labels[topic]["title"], 29) for topic in topics]
+    )
+    for row in range(len(topics)):
+        for column in range(len(groups)):
             axis.text(column, row, f"{matrix[row, column]:.1%}", ha="center", va="center")
     for spine in axis.spines.values():
         spine.set_visible(False)
@@ -112,7 +115,7 @@ def make_figures(
         "not membership, policy agreement or a timeline.",
         fontsize=10,
     )
-    figure.tight_layout(rect=(0, 0.07, 1, 0.94))
+    figure.tight_layout(rect=(0, 0.07, 1, 0.92))
     figure.savefig(output / "caucus-attention-shares.png", dpi=160)
     plt.close(figure)
 
@@ -179,7 +182,11 @@ def make_figures(
             norm=TwoSlopeNorm(vmin=-4, vcenter=0, vmax=4),
         )
         axis.set_xticks(
-            range(len(groups)), [textwrap.fill(organizations[group], 15) for group in groups]
+            range(len(groups)),
+            [organizations[group] for group in groups],
+            rotation=55,
+            ha="right",
+            rotation_mode="anchor",
         )
         axis.tick_params(axis="x", labelsize=8, length=0, pad=8)
         axis.set_yticks(range(len(groups)), [organizations[group] for group in groups])
@@ -245,7 +252,7 @@ def make_figures(
             axis.set_yticks([])
             for spine in axis.spines.values():
                 spine.set_visible(False)
-        figure.suptitle("Six major DSA caucuses and networks", x=0.05, ha="left", fontsize=19)
+        figure.suptitle("Selected DSA caucuses and networks", x=0.05, ha="left", fontsize=19)
         figure.subplots_adjust(left=0.05, right=0.90, bottom=0.10, top=0.93, hspace=0.12)
         color_axis = figure.add_axes((0.92, 0.20, 0.015, 0.60))
         figure.colorbar(image, cax=color_axis).set_label(
@@ -313,6 +320,37 @@ def publish() -> dict:
         "![Shared language-density map]"
         "(../../figures/substack/caucuses/major-caucus-language-density.png)",
         "",
+        "## Largest attention share in each subject",
+        "",
+        "These are shares of extracted claims, not measures of support or caucus size. "
+        "The baseline gives each of the other twelve groups equal weight. "
+        "Small claim counts and different statement styles can produce large contrasts.",
+        "",
+        "| Subject | Highest-share caucus/network | Attention share | "
+        "Other groups, averaged | Ratio |",
+        "|---|---|---:|---:|---:|",
+    ]
+    for topic, label in sorted(labels.items(), key=lambda item: item[1]["title"]):
+        highest = max(
+            (row for row in shares if row["topic_id"] == topic),
+            key=lambda row: float(row["attention_share"]),
+        )
+        comparison = next(
+            row
+            for row in ratios
+            if row["topic_id"] == topic
+            and row["group"] == highest["group"]
+            and row["comparison"] == "equal_caucus_rest"
+        )
+        ratio = comparison["attention_share_ratio"]
+        multiplier = f"{ratio:.2f}×" if ratio != "" else "undefined"
+        lines.append(
+            f"| {label['title']} | {organizations[highest['group']]} | "
+            f"{float(highest['attention_share']):.1%} | "
+            f"{float(comparison['baseline_attention_share']):.1%} | {multiplier} |"
+        )
+    lines += [
+        "",
         "## Source-backed subjects",
         "",
     ]
@@ -372,10 +410,15 @@ def publish() -> dict:
         "an adoption-uncertain draft, and unrecovered groups.",
         "",
         f"Extraction attempted all {summary['extraction']['blocks']} bounded chunks. "
-        f"{summary['extraction']['blocks_by_status'].get('validation_failed', 0)} chunks "
-        "failed validation; "
+        f"{summary['extraction']['model_blocks_by_status'].get('validation_failed', 0)} "
+        "model chunks failed validation; "
+        f"{summary['extraction']['blocks_by_status'].get('validation_failed', 0)} "
+        "remain without usable recovery. "
         f"{summary['extraction']['assistant_flagged_claims']} candidate claims were flagged "
-        "in targeted source review. Neither enters attention-share denominators. "
+        "in targeted source review. Failed chunks and flagged originals do not enter "
+        "attention-share denominators. "
+        f"{summary['extraction']['assistant_source_repaired_claims']} source-bound "
+        "assistant corrections are separately identified and included when eligible. "
         "Original responses, failed dispositions, evidence and retry history are retained. "
         "Source-fidelity revision and targeted assistant review are not independent human gold.",
         "",
@@ -384,6 +427,13 @@ def publish() -> dict:
         "the shares. Statement dates and writing styles differ; this is not a contemporaneous "
         "roster or a ranking of caucus strength. Learned topics summarize overlapping language, "
         "not mutually exclusive ideological camps.",
+        "",
+        f"The selected {summary['topic_fit']['selected_parameters']['clusters']}-topic model "
+        "has an original-embedding cosine silhouette of "
+        f"{summary['topic_fit']['selected_parameters']['cosine_silhouette']:.3f}. "
+        "That weak separation calls for coarse, overlapping interpretations, not precise "
+        "ideological boundaries; the complete download includes the candidate fits and "
+        "balanced-refit sensitivity results.",
         "",
         "[Methods](../../docs/dsa_caucus_analysis.md) · "
         "[Complete claims and evidence]"

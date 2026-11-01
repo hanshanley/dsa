@@ -9,6 +9,7 @@ for the current national comparison.
 
 | Analysis | Report |
 |---|---|
+| DSA internal caucuses and networks: thirteen primary statements | [Caucus analysis](dsa_caucus_analysis.md) |
 | Reviewed 199-claim pilot | [Claim sample](national_claim_analysis_sample.md) |
 | National passage-based baseline | [National platforms](national_platform_analysis.md) |
 | Candidate-study overview | [Draft](draft.md) |

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 451,
+      "generation_tps": 16.889960348088554,
+      "peak_memory": 33.80789633,
+      "prompt_tokens": 1495,
+      "prompt_tps": 485.30979566815597,
+      "request_sha256": "09e71a860fae0d08c1a930716cac4d7a6e7c4329512325aac23fe51c96c0c901",
+      "seconds": 29.79184054187499,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Prisons and the police do not keep communities safe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Systemic violence is self-perpetuating.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The police state will never uproot the conditions of violence because police thrive in oppressive, hierarchical power structures that fuel violence.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The carceral approach ignores the violence of the oppressor until it is too late.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The carceral approach often leads to disproportionately poor and marginalized abuse survivors being incarcerated for acting in self-defense.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To build safe communities, communities must learn skills to address interpersonal violence themselves.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Communities must practice proactive mediation to resolve conflict before it turns into harm.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Communities must practice transformative justice to create community accountability mechanisms and uproot oppressive conditions.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Supporting survivors\u2019 healing, listening to them, pursuing rehabilitation through accountability \u2013 whenever possible and desirable \u2013 and healing communities are central to building a world without prisons, police, or violence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abolition is a movement to end systemic violence, including interpersonal vulnerabilities and displacements that keep the system going.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The goal of abolition is to change how people interact with each other and the planet by prioritizing people over profits, welfare over warfare, and life over death.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 445,
+      "generation_tps": 16.931112331051047,
+      "peak_memory": 33.80789633,
+      "prompt_tokens": 2114,
+      "prompt_tps": 527.2863241020633,
+      "request_sha256": "ca0550d2a0c17b73ccc6c9207164c5ef94341b07464a0d6e64d79f2df874c14e",
+      "seconds": 30.30147095792927,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Prisons and the police do not keep communities safe; communities keep communities safe.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Systemic violence is self-perpetuating.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The police state will never uproot the conditions of violence because police thrive in the same oppressive, hierarchical power structures that fuel them.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[1]},{\"claim_text\":\"The carceral approach ignores the violence of the oppressor until it is too late and often leads to disproportionately poor and marginalized abuse survivors being locked up for acting in self-defense.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"To build truly safe communities, communities must learn the skills to address interpersonal violence themselves.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Communities must practice proactive mediation to resolve conflict before it turns into harm.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Communities must practice transformative justice to create community accountability mechanisms and uproot the oppressive conditions in communities which foster violence and abuse.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Supporting survivors\u2019 healing, listening to them, pursuing rehabilitation through accountability \u2013 whenever possible and desirable \u2013 and healing communities are central to building a world without prisons, police, or violence.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Abolition is a movement to end systemic violence, including interpersonal vulnerabilities and displacements that keep the system going.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"The goal of abolition is to change how people interact with each other and the planet by putting people before profits, welfare before warfare, and life over death.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "09e71a860fae0d08c1a930716cac4d7a6e7c4329512325aac23fe51c96c0c901"
+}

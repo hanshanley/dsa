@@ -301,6 +301,22 @@ class ClaimAnalysisTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "refusing silent truncation"):
                     audit_claim_lengths(rows, output)
 
+    def test_named_length_audit_reuses_cache_without_loading_tokenizers(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary)
+            rows = [{"claim_id": "short", "text": "A complete claim."}]
+            with patch("transformers.AutoTokenizer.from_pretrained") as loader:
+                loader.return_value.return_value = {"input_ids": [[1, 2, 3, 4]]}
+                first = audit_claim_lengths(rows, output, lengths_filename="claim_lengths.csv")
+            self.assertTrue((output / "claim_lengths.csv").exists())
+            self.assertFalse((output / "claim_token_lengths.csv").exists())
+            with patch(
+                "transformers.AutoTokenizer.from_pretrained",
+                side_effect=AssertionError("cached length checks must not reload tokenizers"),
+            ):
+                second = audit_claim_lengths(rows, output, lengths_filename="claim_lengths.csv")
+            self.assertEqual(first, second)
+
     def test_report_does_not_mix_expanded_and_strict_topic_rankings(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

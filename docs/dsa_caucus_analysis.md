@@ -59,6 +59,14 @@ source-backed evidence before publication; automated extraction is not human gol
 Targeted assistant review checks central topic examples, their cited source
 passages, and narrator attributions. Its exclusions are recorded in
 `claims/semantic_review.csv`; original claims and replies remain available.
+Source-bound records in `claims/source_repairs/` recover narrowly correctable
+actors, qualifications, references, proposal modality, and evidence IDs. They
+bind the exact source block, model response bytes, and extraction fingerprint.
+These records are identified as assistant corrections, not successful model
+generation; failed-model replies are never silently rewritten.
+The `source_review_*` files preserve initial-fit review material and its exact
+basis, including subsequently excluded wording; they are audit history, not
+the current eligible claim set.
 This is not an exhaustive independent human audit. Failed chunks and excluded
 claims do not enter attention-share denominators, and their absence can affect
 the results. The report states both counts. Differences in statement dates,

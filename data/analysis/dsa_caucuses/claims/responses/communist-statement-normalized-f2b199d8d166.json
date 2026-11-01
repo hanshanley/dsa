@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 400,
+      "generation_tps": 16.79900708583107,
+      "peak_memory": 33.786744586,
+      "prompt_tokens": 1233,
+      "prompt_tps": 460.9661434923302,
+      "request_sha256": "198240d0b0a8c08e7569ca684c7f5ecdc196937658fc1eb8550a6319a6d00891",
+      "seconds": 26.494334666989744,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The group identifies as part of the working class.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group recognizes itself as part of the working class because it has no meaningful ownership of institutions that produce everyday essentials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group recognizes itself as part of the working class because it has not inherited large sums of compounding wealth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group is compelled to carry out unfulfilling jobs, work long hours, piece together dangerous hustles, or else suffer precarity and deprivation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group\u2019s lives are dominated by capitalism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Only capitalists and the upper strata of society benefit from the current arrangement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group\u2019s freedom will only come from collective ownership, access, and control over the means of life.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The DSA\u2019s objective should be to end capitalist exploitation and domination for good.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Class struggle is the struggle against racism, patriarchy, and other divisions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]},{\"claim_text\":\"The group is of the working class and does not stand apart from it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 370,
+      "generation_tps": 16.866831254267886,
+      "peak_memory": 33.786744586,
+      "prompt_tokens": 1801,
+      "prompt_tps": 512.6390843188719,
+      "request_sha256": "d2bd56c1b2a78d481cb35d731ec8c048cd56ff0d681ae52404449d1cc9f0565d",
+      "seconds": 25.45986345806159,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The group is of the working class and does not stand apart from it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The group recognizes itself as part of the working class because it has no meaningful ownership of the institutions that produce everyday essentials.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group recognizes itself as part of the working class because it has not inherited large sums of compounding wealth.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group is compelled to carry out unfulfilling jobs, work long hours, piece together dangerous hustles, or else suffer precarity and deprivation.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group\u2019s lives are dominated by capitalism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Only capitalists and the upper strata of society benefit from the current arrangement.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"The group\u2019s freedom will only come from collective ownership, access, and control over the means of life.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"The DSA\u2019s objective should be to end capitalist exploitation and domination for good.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Class struggle is the struggle against racism, patriarchy, and other divisions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "198240d0b0a8c08e7569ca684c7f5ecdc196937658fc1eb8550a6319a6d00891"
+}

@@ -167,6 +167,9 @@ def publication_guide(files: dict[str, Path], issues: list[dict]) -> str:
         "[Browse](margin-of-error/README.md#issue-charts) |",
         "| Positions, overview pages, density maps and supporting figures | "
         "[Browse](substack/README.md) | [Browse](margin-of-error/README.md) |",
+        "| Separate DSA caucus comparison: overview, issue shares, "
+        "all pair ratios and shared map | "
+        "[Browse](substack/caucuses/) | [Browse](margin-of-error/caucuses/) |",
         "",
         "[All four attention-share ratios, including flagged identity clusters]"
         "(data/attention-share-ratios.csv).",

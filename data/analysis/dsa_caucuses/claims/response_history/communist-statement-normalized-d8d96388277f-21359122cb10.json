@@ -1,0 +1,51 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 404,
+      "generation_tps": 17.03292601774826,
+      "peak_memory": 33.786744586,
+      "prompt_tokens": 1459,
+      "prompt_tps": 503.3116066752349,
+      "request_sha256": "3ec0e7d651574c36dad736300369d716320416b4f049ddbd8ee98daab5fc18b2",
+      "seconds": 26.626377874985337,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Working class power is international or it is nothing.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of capital confronts us and is thoroughly global, reaching beyond the boundaries of the United States.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalist exploitation involves extraction in Africa, exploitation in Asia, and the propagation of urban slums throughout the Global South.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of global capitalism is not natural.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of global capitalism is enforced by the military might of the United States government.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The history of the US state is riddled with imperialism, slavery, genocide, and colonialism.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American state developed as a terroristic capitalist formation.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today\u2019s working class crosses all national borders.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalism is a global threat.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only a globally organized working class is sufficient for fighting capitalism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Collective opposition to the US government\u2019s capacity to build empire and inflict imperialist violence stems from the development of class power through international solidarities.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 407,
+      "generation_tps": 16.70766913051765,
+      "peak_memory": 33.786744586,
+      "prompt_tokens": 1845,
+      "prompt_tps": 523.4276425134459,
+      "request_sha256": "a608a7f3789dddc2b2914a07c7c5e522813bcaffd0eadd6419a904e85ee6e34a",
+      "seconds": 27.894103209022433,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Working class power is international or it is nothing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of capital confronts the Democratic Socialists of America and is thoroughly global, reaching beyond the boundaries of the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalist exploitation means extraction in Africa, exploitation in Asia, and the propagation of urban slums throughout the Global South.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of global capitalism is not natural.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of global capitalism is enforced by the military might of the United States government.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The development of class power through international solidarities stems from collective opposition to the U.S. government\u2019s capacity to build empire and inflict imperialist violence.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The history of the U.S. state is riddled with imperialism, slavery, genocide, and colonialism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American state developed as a terroristic capitalist formation.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today\u2019s working class crosses all national borders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalism is a global threat.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only a globally organized working class is sufficient for fighting capitalism.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 402,
+      "generation_tps": 16.825999916247614,
+      "peak_memory": 33.801146122,
+      "prompt_tokens": 2034,
+      "prompt_tps": 511.7750834112456,
+      "request_sha256": "1a0a0c3bf922a13febcc590d7bfe8148fd523a1cb28659b3a4e9f5013cca4534",
+      "seconds": 27.8753385420423,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Working class power is international or it is nothing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of capital that confronts us is thoroughly global, reaching beyond the boundaries of the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalist exploitation means extraction in Africa, exploitation in Asia, and the propagation of urban slums throughout the Global South.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of global capitalism is not natural.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of global capitalism is enforced by the military might of the United States government.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The development of class power through international solidarities stems from collective opposition to the U.S. government\u2019s capacity to build empire and inflict imperialist violence.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The history of the U.S. state is riddled with imperialism, slavery, genocide, and colonialism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American state developed as a terroristic capitalist formation.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today\u2019s working class crosses all national borders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalism is a global threat.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only a globally organized working class is sufficient for fighting capitalism.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 402,
+      "generation_tps": 16.852923436735445,
+      "peak_memory": 33.801146122,
+      "prompt_tokens": 2427,
+      "prompt_tps": 540.6143740976529,
+      "request_sha256": "a6a923d715dd02810da87abf71c329bbd11499f6bac8068f288839c183f73dac",
+      "seconds": 28.352303666062653,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Working class power is international or it is nothing.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of capital that confronts us is thoroughly global, reaching beyond the boundaries of the United States.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalist exploitation means extraction in Africa, exploitation in Asia, and the propagation of urban slums throughout the Global South.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of global capitalism is not natural.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The system of global capitalism is enforced by the military might of the United States government.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The development of class power through international solidarities stems from collective opposition to the U.S. government\u2019s capacity to build empire and inflict imperialist violence.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The history of the U.S. state is riddled with imperialism, slavery, genocide, and colonialism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The American state developed as a terroristic capitalist formation.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"Today\u2019s working class crosses all national borders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalism is a global threat.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only a globally organized working class is sufficient for fighting capitalism.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "3ec0e7d651574c36dad736300369d716320416b4f049ddbd8ee98daab5fc18b2"
+}

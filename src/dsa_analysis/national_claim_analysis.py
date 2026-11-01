@@ -114,7 +114,13 @@ def analysis_rows(claims: list[dict], sources: list[dict]) -> list[dict]:
     return rows
 
 
-def audit_claim_lengths(rows: list[dict], output: Path, *, download_model: bool = False) -> dict:
+def audit_claim_lengths(
+    rows: list[dict],
+    output: Path,
+    *,
+    download_model: bool = False,
+    lengths_filename: str = "claim_token_lengths.csv",
+) -> dict:
     config = json.loads(TOPIC_CONFIG.read_text())
     models = {
         "gte": (MODEL_NAME, MODEL_REVISION),
@@ -129,7 +135,7 @@ def audit_claim_lengths(rows: list[dict], output: Path, *, download_model: bool 
         "limit": MAX_LENGTH,
     }
     manifest_path = output / "claim_tokenization_manifest.json"
-    path = output / "claim_token_lengths.csv"
+    path = output / lengths_filename
     audited = None
     if path.exists() and manifest_path.exists():
         try:

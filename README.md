@@ -39,6 +39,7 @@ The analysis also tracks observed four-year periods and independently discovers
 | All The Margin of Error figures | [figures/margin-of-error/](figures/margin-of-error/README.md) |
 | Choose a destination | [Figure index](figures/README.md) |
 | Ratios for every issue | [attention-share-ratios.csv](figures/data/attention-share-ratios.csv) |
+| DSA's internal caucuses and networks | [Caucus report](docs/reports/dsa_caucus_analysis.md) · [Substack figures](figures/substack/caucuses/) · [Website figures](figures/margin-of-error/caucuses/) |
 | Full analytical data and sources | [Results and downloads](#results-and-downloads) |
 | Code and reproduction | [Methods](#methods) · [Reproduce](#reproduce) |
 
@@ -180,6 +181,14 @@ retain larger maps and numbered, source-linked examples.
 </details>
 
 ## Sources and coverage
+
+**Separate caucus analysis:** [Thirteen primary caucus/network statements](docs/reports/dsa_caucus_analysis.md),
+with independently learned topics, attention shares, every directed caucus-pair
+ratio, and an equal-caucus rest-of-groups baseline.
+[Complete caucus analysis download](data/analysis/dsa_caucuses/dsa_caucus_analysis.zip)
+includes actual claims, complete source texts, responses, corrections, fitted
+outputs, and both figure themes. This snapshot does not measure membership or
+influence and is not mixed into the national-party denominators.
 
 | Organization | Eligible claims | Expanded documents | Strict documents |
 |---|---:|---:|---:|

@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 204,
+      "generation_tps": 16.931586864896868,
+      "peak_memory": 33.80789633,
+      "prompt_tokens": 1335,
+      "prompt_tps": 473.94285424521746,
+      "request_sha256": "5857e25e81b3810112db69076c270a6dd2637847ec1320ef7daaac0c1574ed23",
+      "seconds": 14.87531604198739,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The potential of today\u2019s DSA is vast.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DSA has a great potential for promoting and unifying working class struggles.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The DSA can promote and unify working class struggles by supporting self-organized power in all parts of the working class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Comrades far and wide are hoped to join in the effort to support self-organized power in all parts of the working class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Together, the DSA and its comrades can win the world and forever cast off their chains.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 209,
+      "generation_tps": 16.899457422999873,
+      "peak_memory": 33.80789633,
+      "prompt_tokens": 1707,
+      "prompt_tps": 498.9723311219172,
+      "request_sha256": "e55e056d8e581daea5e73d2df434149bde1dbc9d69421e554a7d0d0c9b4e73f6",
+      "seconds": 15.797296582954004,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The potential of today\u2019s DSA is vast.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The DSA has a great potential for promoting and unifying working class struggles.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The DSA can promote and unify working class struggles by supporting self-organized power in all parts of the working class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"The DSA hopes comrades far and wide will join in the effort to support self-organized power in all parts of the working class.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Together, the DSA and its comrades can win the world and forever cast off their chains.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "5857e25e81b3810112db69076c270a6dd2637847ec1320ef7daaac0c1574ed23"
+}

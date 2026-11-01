@@ -204,7 +204,7 @@ def analyze() -> dict:
         raise ValueError("An authoring caucus has no eligible claims; do not silently omit it")
     RESULTS.mkdir(parents=True, exist_ok=True)
     write_rows(RESULTS / "analysis_claims.csv", rows)
-    tokens = audit_claim_lengths(rows, RESULTS)
+    tokens = audit_claim_lengths(rows, RESULTS, lengths_filename="claim_lengths.csv")
     embeddings, reused = encode(rows, RESULTS, batch_size=16)
     assignments, coordinates, summary, candidates, sensitivity = fit_topics(
         rows, embeddings, SETTINGS

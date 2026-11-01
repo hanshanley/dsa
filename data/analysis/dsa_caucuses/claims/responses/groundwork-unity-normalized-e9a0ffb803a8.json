@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 193,
+      "generation_tps": 16.940207682877404,
+      "peak_memory": 33.80789633,
+      "prompt_tokens": 1377,
+      "prompt_tps": 476.79112302319135,
+      "request_sha256": "692e224f1e8de8d94b9de2134b96c9aafe218e177e275df833494a828d02f2a4",
+      "seconds": 14.289923667209223,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Only a DSA that prioritizes pushing for real change can build party power.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Deference to nonprofit groups, spokespeople, or elected officials\u2014even those within DSA\u2014cannot build party power.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only true, bottom-up member buy-in can change DSA from patchwork to party.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Building democratic mechanisms can change DSA from patchwork to party.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Enabling rank and file members to make defining political decisions through votes can change DSA from patchwork to party.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 206,
+      "generation_tps": 16.86263695218707,
+      "peak_memory": 33.80789633,
+      "prompt_tokens": 1738,
+      "prompt_tps": 501.4503675777897,
+      "request_sha256": "7a8ac14c46f045adf42f71d48257d529ed7b1b655b5434c6df4fa1188f2d3e7e",
+      "seconds": 15.691357917152345,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Only a DSA that prioritizes pushing for real change can build party power.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Deference to nonprofit groups, spokespeople, or elected officials\u2014even those within DSA\u2014cannot build party power.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Only true, bottom-up member buy-in can change DSA from patchwork to party.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Building the democratic mechanisms whose lack has paralyzed DSA for years can change DSA from patchwork to party.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Enabling rank and file members to make defining political decisions through votes can change DSA from patchwork to party.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "692e224f1e8de8d94b9de2134b96c9aafe218e177e275df833494a828d02f2a4"
+}

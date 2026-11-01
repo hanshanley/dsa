@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 260,
+      "generation_tps": 16.62858755613395,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1347,
+      "prompt_tps": 452.8820927516975,
+      "request_sha256": "4e1bf3cc67c90c6d26026de9593f82e7a5d6ac96843e5afa757ed78e4f5e9bcd",
+      "seconds": 18.619293291820213,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Society is currently organized with a division between the ruling class, who own the means of production, and the working class, who live by the sale of their labor and their bodies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalists are constantly working to lower wages to increase their profits.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The working class organizes into unions and political parties to fight for better wages and working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"History is viewed as the unfolding of class struggle.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Marxists work to expand working class struggle beyond the fight for immediate material interests into the realm of revolutionary politics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Marxists fight to bring about the end of not only capitalism, but all forms of class society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 318,
+      "generation_tps": 16.856956496915785,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1775,
+      "prompt_tps": 478.7338232795326,
+      "request_sha256": "cb5495cda1596b549214e5d6ba6082c647f3bf7943c2e2c71068d24029251a6e",
+      "seconds": 22.58181304205209,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Society is currently organized with a division between the ruling class, who own the means of production, and the working class, who live by the sale of their labor and their bodies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalists are constantly working to lower wages so that they can make even larger profits for themselves.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The working class organizes into unions and political parties to fight for its immediate interests, including better wages and working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"History is viewed as the unfolding of class struggle.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Marxists work to expand working class struggle beyond the fight for immediate material interests into the realm of revolutionary politics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Marxists fight to bring about the end of not only capitalism, but all forms of class society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"This is how society is currently organized, but it has not always been this way, and it will not be this way forever.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 313,
+      "generation_tps": 16.827773896862045,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 2129,
+      "prompt_tps": 520.2840626561092,
+      "request_sha256": "47748143481238bee9d8db1bc1ba0d3c6db29141f90b7f2f44c7f577dbf68a89",
+      "seconds": 22.70167891611345,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Society is currently organized with a division between the ruling class, who own the means of production, and the working class, who live by the sale of their labor and their bodies.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalists are constantly working to lower wages so that they can make even larger profits for themselves.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The working class organizes into unions and political parties to fight for better wages and working conditions.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"History is viewed as the unfolding of class struggle.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Marxists work to expand working class struggle beyond the fight for immediate material interests into the realm of revolutionary politics.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Marxists fight to bring about the end of not only capitalism, but all forms of class society.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Society is currently organized in a particular way, but this has not always been the case, and will not be the case forever.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "4e1bf3cc67c90c6d26026de9593f82e7a5d6ac96843e5afa757ed78e4f5e9bcd"
+}

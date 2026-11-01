@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 42,
+      "generation_tps": 16.911404437975996,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1284,
+      "prompt_tps": 460.34625508131967,
+      "request_sha256": "75173cc580c09891ade4cccdcda10d6e5389784acea3f991b006e1ade5f0aecf",
+      "seconds": 5.283136249985546,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"We are sowing the seeds of an international socialist future.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 51,
+      "generation_tps": 17.044347027474526,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1666,
+      "prompt_tps": 523.7330556842419,
+      "request_sha256": "d2c4572c82f57eafc5730dd399ab3ff0edff87e65ed932b138193229de0fba79",
+      "seconds": 6.18259545811452,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America are sowing the seeds of an international socialist future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 51,
+      "generation_tps": 17.208968743010054,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1503,
+      "prompt_tps": 522.720783656367,
+      "request_sha256": "dda9338c5c398c7cab085a5a652ced8c426eedbc3d435d17be3bf5f5f3942cd6",
+      "seconds": 5.8494549579918385,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America are sowing the seeds of an international socialist future.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "75173cc580c09891ade4cccdcda10d6e5389784acea3f991b006e1ade5f0aecf"
+}

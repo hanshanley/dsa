@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 445,
+      "generation_tps": 16.955353844630093,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1301,
+      "prompt_tps": 529.3883524927257,
+      "request_sha256": "74076c75945ca1fba54eb878775e963b41858017daa1fbdd262831b5e30ae8f6",
+      "seconds": 28.711992792086676,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"Red Star is a Marxist-Leninist caucus in DSA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The primary goal of Red Star is to abolish capitalism and ultimately achieve communism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Red Star does not believe that capitalism can be reformed into socialism; it must be overthrown and replaced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Red Star conceives of itself as an ideological center in DSA.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"As a center, Red Star works from a practical and coherent position to push DSA toward a shared vision through organizing, developing DSA members, polemics, and engagement with DSA\u2019s internal democratic processes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Red Star seeks to cohere a vanguard party.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Red Star believes DSA can foster the creation of a vanguard party.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"DSA\u2019s resources, broad membership, organizing ethic, and robust democratic processes make it, out of all existing US socialist organizations, the best incubator for a vanguard party.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Red Star is Marxist-Leninist.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Red Star understands Marxism as a living, breathing theoretical framework that is not and never can be a static set of dogmas.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]},{\"claim_text\":\"Red Star sees Marxism as the foundational and most informative lens through which to understand the workings of capitalism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 467,
+      "generation_tps": 16.920528821942725,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1914,
+      "prompt_tps": 551.2922164312325,
+      "request_sha256": "8f394bfa33401d73963d812d136901656f6d4e75ff4bad01ddef3366b366d28d",
+      "seconds": 31.080713083036244,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Red Star is a Marxist-Leninist caucus in DSA.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The primary goal of Red Star, which informs all of its organizing work, is to abolish capitalism and, ultimately, to achieve communism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Red Star does not believe that capitalism can be reformed into socialism \u2013 it must be overthrown and replaced.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"Red Star conceives of itself as an ideological center in DSA.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"As an ideological center, Red Star works from a practical and coherent position to push DSA toward a shared vision through organizing, through developing DSA members, through polemics, and by engaging with DSA\u2019s internal democratic processes.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Red Star seeks to cohere a vanguard party.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[4]},{\"claim_text\":\"Red Star believes DSA can foster the creation of a vanguard party.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[4]},{\"claim_text\":\"DSA\u2019s resources, broad membership, organizing ethic, and robust democratic processes make it, out of all existing US socialist organizations, the best incubator for a vanguard party.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[4]},{\"claim_text\":\"Red Star is Marxist-Leninist.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]},{\"claim_text\":\"Red Star understands Marxism as a living, breathing theoretical framework, which is not and never can be a static set of dogmas.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]},{\"claim_text\":\"Red Star sees Marxism as the foundational and most informative lens through which to understand the workings of capitalism.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[6]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "74076c75945ca1fba54eb878775e963b41858017daa1fbdd262831b5e30ae8f6"
+}

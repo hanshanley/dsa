@@ -1,0 +1,40 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 341,
+      "generation_tps": 16.922751170583574,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1420,
+      "prompt_tps": 469.59466200583256,
+      "request_sha256": "6878f4199ba579eba77da9869f499aa2ce72ec98aa7572aac3de723d661da61c",
+      "seconds": 23.18383549991995,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA must prioritize one-on-one organizing and on-the-ground activism.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA must promote an internal organizational culture that embodies democratic socialist principles and values.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA must promote comradely treatment of one another and respect for the human dignity of each person.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA must reject bigotry and oppression within its ranks.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA has suffered from a long-standing failure of political education.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"This failure of political education is understandable given DSA's rapid growth.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA must define the moral underpinning of its ideology to potential recruits.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"The goal is building a better society where respect for human life and human dignity reigns.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Eugene V. Debs affirmed, \u201cI am for Socialism because I am for humanity.\u201d\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 223,
+      "generation_tps": 16.765115673509282,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1751,
+      "prompt_tps": 506.01697709986377,
+      "request_sha256": "22c4eb9cd8eaf8971580a66243d00c4849919a3d8bd8f558e7d5c4879012ce3a",
+      "seconds": 16.77118591684848,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA must prioritize one-on-one organizing and on-the-ground activism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA has suffered from a long-standing failure of political education, understandable given its rapid growth, to define the moral underpinning of its ideology to potential recruits: building a better society where respect for human life and human dignity reigns.\", \"claim_types\":[\"factual_assertion\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA must promote an internal organizational culture that embodies democratic socialist principles and values, promoting comradely treatment of one another and respect for the human dignity of each person while rejecting bigotry and oppression within its ranks.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA affirms, as Eugene V. Debs did, \u201cI am for Socialism because I am for humanity.\u201d\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 223,
+      "generation_tps": 16.807253806356655,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1811,
+      "prompt_tps": 464.9502957499743,
+      "request_sha256": "3443e873fa8ef191fb2a05a0ef4c97d21b433a4fca148b61677131a4fa99ce59",
+      "seconds": 17.172587167005986,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA must prioritize one-on-one organizing and on-the-ground activism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA has suffered from a long-standing failure of political education, understandable given its rapid growth, to define the moral underpinning of its ideology to potential recruits: building a better society where respect for human life and human dignity reigns.\", \"claim_types\":[\"factual_assertion\",\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA must promote an internal organizational culture that embodies democratic socialist principles and values, promoting comradely treatment of one another and respect for the human dignity of each person while rejecting bigotry and oppression within its ranks.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA affirms, as Eugene V. Debs did, \u201cI am for Socialism because I am for humanity.\u201d\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "6878f4199ba579eba77da9869f499aa2ce72ec98aa7572aac3de723d661da61c"
+}

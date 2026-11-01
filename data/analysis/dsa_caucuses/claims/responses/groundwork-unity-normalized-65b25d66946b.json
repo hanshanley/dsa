@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 372,
+      "generation_tps": 16.963861949560087,
+      "peak_memory": 33.80789633,
+      "prompt_tokens": 1297,
+      "prompt_tps": 468.89411448171063,
+      "request_sha256": "a89e2b54f1c13f91fb2bc5eda4406f0721e1c7fbc6369727a996aa3f4147b5d0",
+      "seconds": 24.70373195805587,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Groundwork is a group of Democratic Socialists of America members organizing to change the Democratic Socialists of America into a force strong enough to meaningfully influence politics on the scale of the next presidential election, potential general strike, and other national ruptures.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Becoming a genuine mass political party is the only way to achieve this influence.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A mass political party would be an organization with millions of members that anyone whose values align with Groundwork's can easily hear about, understand, support, join, and learn to organize in.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Such a mass political party can transform and run nations.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democratic Socialists of America built the only mass socialist organization in the United States because of things only Democratic Socialists of America can do.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Democratic Socialists of America's public reach, formal political power, and ability to turn ordinary people into organizers give it the unique potential to build a mass party.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"All decisions and analysis must start from the existential threat of the climate crisis and the rise of fascist power.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"Urgency is not optional.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 413,
+      "generation_tps": 16.59269308614175,
+      "peak_memory": 33.80789633,
+      "prompt_tokens": 1837,
+      "prompt_tps": 514.0848377812873,
+      "request_sha256": "1a5b86b05845ba53d1dbe25e8d247b07e7fafda538b6d92690069edba876aba7",
+      "seconds": 28.473415999906138,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Groundwork is a group of Democratic Socialists of America members organizing to change the Democratic Socialists of America into a force strong enough to meaningfully influence politics on the scale of the next presidential election, potential general strike, and whatever other national ruptures may come.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"Becoming a genuine mass political party is the only way to become a force strong enough to meaningfully influence politics on the scale of the next presidential election, potential general strike, and whatever other national ruptures may come.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"A mass political party would be an organization in the millions, that anyone whose values align with Groundwork's can easily hear about, understand, support, join, and learn to organize in.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"Such a mass political party can transform and run nations.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Democratic Socialists of America built the only mass socialist organization in the United States because of things only Democratic Socialists of America can do, not in spite of them.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[6]},{\"claim_text\":\"Democratic Socialists of America's public reach, formal political power, and ability to turn ordinary people into organizers now give it the unique potential to build the mass party.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[6]},{\"claim_text\":\"All decisions and analysis must start from the fundamental reality of the existential threat of the climate crisis and the rise of fascist power.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]},{\"claim_text\":\"Urgency is not optional.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[7]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "a89e2b54f1c13f91fb2bc5eda4406f0721e1c7fbc6369727a996aa3f4147b5d0"
+}

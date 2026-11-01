@@ -1,0 +1,145 @@
+{
+  "attention_estimand": "Equal documents within caucus; all eligible claims in denominator",
+  "claims_by_caucus": {
+    "bread-and-roses": 111,
+    "caracol": 144,
+    "communist-caucus": 118,
+    "emerge": 79,
+    "groundwork": 28,
+    "libertarian-socialist": 199,
+    "marxist-unity": 162,
+    "north-star": 178,
+    "red-star": 110,
+    "reform-and-revolution": 28,
+    "socialist-majority": 79,
+    "springs-of-revolution": 40,
+    "winter": 81
+  },
+  "density_fit": {
+    "bandwidth": 0.7881911772156921,
+    "density_space": "Common standardized selected-dimensional UMAP; 2D is display only",
+    "dimensions": 10,
+    "interpretation": "Language density, not agreement, ideological distance or membership",
+    "sampled_claims_per_caucus": 28,
+    "seed": 1729
+  },
+  "documents": 13,
+  "eligible_claims": 1357,
+  "embeddings_reused": true,
+  "extraction": {
+    "analysis_claims": 1357,
+    "assistant_flagged_claims": 123,
+    "assistant_source_repaired_blocks": 34,
+    "assistant_source_repaired_claims": 162,
+    "baseline_modified": false,
+    "blocks": 144,
+    "blocks_by_status": {
+      "normalized": 110,
+      "source_repaired": 34
+    },
+    "blocks_with_unresolved_references": 1,
+    "claim_text_standardization": {
+      "original_field": "model_claim_text",
+      "scope": "Recognized source-organization prefixes in policy-position-only claims",
+      "standardized_claims": 1,
+      "version": 1
+    },
+    "claims": 1481,
+    "claims_by_group": {
+      "dsa": 1481
+    },
+    "documents": 13,
+    "exact_within_document_duplicates": 10,
+    "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+    "generation_tokens": 132133,
+    "inference_seconds": 9160.411299580242,
+    "maximum_reported_peak_memory_gb": 33.816399626,
+    "model_blocks_by_status": {
+      "normalized": 136,
+      "validation_failed": 8
+    },
+    "quality": "Automated screening with targeted assistant source repairs; not independent human gold or fact-checking",
+    "source_words": 25687,
+    "status": "complete",
+    "superseded_model_claims": 75,
+    "unrepaired_flagged_model_claims": 48
+  },
+  "input_hashes": {
+    "claims": "54ddc4904b381ebd20e1d92acc9ad1f545c4ce0be0c07255e0a2d7bf8689d52f",
+    "comparison_implementation": "264254d1e29f4cd9d02c617c14ea1375e50e2a5697d971fc3571a88c57739907",
+    "embeddings": "a9241b3d8aa2b2ff3117227de512074702548df88065f892456f91308c95c472",
+    "sources": "450b9225c55a0ea6f2208964180970b2cee068eb18cfc5103d2ceebd46aff7fe"
+  },
+  "ratio_estimand": "Unrounded attention shares; no smoothing; zero denominator undefined",
+  "result_hashes": {
+    "analysis_claims.csv": "68447c3544882a4d0d87ac4a70791fe88a0bc24e75937b94c2ac2cba28446805",
+    "attention_share_ratios.csv": "4b5a7a5210d57b2e0fe36be562f56cee5fa44df1b2fe368ecfc110c7f99e56fa",
+    "attention_shares.csv": "e88acc5b90727db4bc727980c334d5889f174936dc5a22ce447c6309e8dd6734",
+    "claim_lengths.csv": "cc5c5bd61b39d8ac3938920bf4e8740d84fdbd991f65414af8e12f13e5e1ec97",
+    "density_coordinates.csv": "e688b562ccfea96b4eec1f883b047e2320f5caf82edf5c6d42ac774c616ebb94",
+    "density_sampling.csv": "d8cf7886a206d982e5857b1437c63b166c785068ec1f3772505cba62910bbeca",
+    "density_space.npz": "e86f4aeeed3b62fd4e339eeb00708bdd67cd54bad820cdc24c5f53ae13594039",
+    "dimension_sweep.csv": "e7c7aedfde037d3d3d72cd90dbcd473e382fc321e70b34c208b038308c28d9a4",
+    "embeddings.npy": "a9241b3d8aa2b2ff3117227de512074702548df88065f892456f91308c95c472",
+    "topic_assignments.csv": "0377072bb300606136dea04ada794bef5cc0f1bd6bdf3fcbd040d40f88853709",
+    "topic_balanced_sensitivity.csv": "f897f8e53bf2e80c9d85f4a71343e5401cd8eddaefeef34caef4f1553352f79a",
+    "topic_keywords.csv": "28a762475ec8695bccb8e3b1e5f1f5d500138bad51dfb94be03e70eb20bd30db",
+    "topic_pca_coordinates.npy": "aed8a13f22dfa2d64880aeb788986eb0e18282c95f534bd9452f93e0b46bdd31",
+    "topic_representatives.csv": "1517cfcf49707ec548f8f874d8dfea3d786b73797d5b2332644e3f18bb7c5385",
+    "topic_selection.csv": "b7b7361369c377489875305a79b623ffd858e89f3049efb96982a09c0ef3c73a"
+  },
+  "settings": {
+    "balanced_refits": 2,
+    "keywords": 10,
+    "kmeans_clusters": [
+      6,
+      9,
+      12,
+      15
+    ],
+    "max_claims_per_bundle": 2,
+    "min_cluster_sizes": [
+      30,
+      50,
+      100
+    ],
+    "min_samples": [
+      5,
+      10
+    ],
+    "minimum_density_coverage": 0.5,
+    "pca_components": 50,
+    "representatives": 26,
+    "seed": 1729,
+    "silhouette_sample": 2000
+  },
+  "status": "numerical_fit_complete_labels_and_source_review_pending",
+  "tokenization": {
+    "limit": 256,
+    "maximum_tokens": {
+      "gte": 131,
+      "topics": 110
+    },
+    "truncated_claims": 0
+  },
+  "topic_fit": {
+    "discovery_weighting": "Weighted K-means gives equal group and within-group bundle mass; HDBSCAN is unweighted. Density coverage below 50% triggers the K-means candidate grid. Balanced refits diagnose sampling/initialization sensitivity.",
+    "metric": "Euclidean on unwhitened PCA; original cosine silhouette diagnostics",
+    "pca_dimensions": 50,
+    "pca_variance_retained": 0.6816732287406921,
+    "selected_parameters": {
+      "adjusted_rand_vs_selected": 1.0,
+      "clusters": 12,
+      "cosine_silhouette": 0.06839919090270996,
+      "coverage": 1.0,
+      "largest_topic_share": 0.1518054532056006,
+      "method": "weighted_kmeans",
+      "min_cluster_size": "",
+      "min_samples": "",
+      "selected": true,
+      "selection_score": 0.05801582072882768
+    },
+    "selection": "max(0, cosine silhouette) * coverage * (1-largest topic share) * min(cluster count/10, 1); fixed candidate-order tie break",
+    "status": "complete"
+  }
+}

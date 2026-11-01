@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 327,
+      "generation_tps": 16.91602806078337,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1511,
+      "prompt_tps": 594.8678084796084,
+      "request_sha256": "81ee183da151d06294aefb18d8ef442738d8f07a076c693385bde8e46f6f293d",
+      "seconds": 21.88011849997565,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The socialist movement takes a leading role in expressing its international character through coordinated international strike action, combating anti-immigrant chauvinism, and organizing to defend and extend the civil liberties of the migrant working class.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The party should commit to building fraternal ties with class-independent socialist parties towards the horizon of a new International.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affirmative votes by DSA-endorsed electeds for military and cop budgets, arms shipments to U.S. vassal states, and the legal condemnation of anti-Zionism weaken the socialist project for human emancipation.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"It is insufficient for socialist legislators to rhetorically criticize excessive military spending.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Socialist legislators should be bound by the program to force a genuine public confrontation over military spending by refusing to vote for military, police, national security and intelligence budgets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA legislators and councilors would be on the forefront of a nation-wide confrontation with the imperialist state by building a genuine and disciplined party infrastructure, exposing the interconnectedness of police and military brutality.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 346,
+      "generation_tps": 16.88308055627526,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 2006,
+      "prompt_tps": 572.7193516454535,
+      "request_sha256": "fda48ce66f2468e553d77587a803292d5f0c06d170c5c076391921276b37a670",
+      "seconds": 24.006286583142355,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The socialist movement takes a leading role in expressing its international character in several ways, such as coordinated international strike action \u2014 like the historic May Day strikes \u2014fiercely combating anti-immigrant chauvinism, and organizing to defend and extend the civil liberties of the migrant working class.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"The party should commit to building fraternal ties with class-independent socialist parties towards the horizon of a new International.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Affirmative votes by DSA-endorsed electeds for military and cop budgets, arms shipments to U.S. vassal states, and the legal condemnation of anti-Zionism all serve to weaken the socialist project for human emancipation.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"It is insufficient for socialist legislators to rhetorically criticize excessive military spending.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[2]},{\"claim_text\":\"Socialist legislators should be bound by the program to force a genuine public confrontation over the matter by refusing to vote for military, police, national security and intelligence budgets.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[2]},{\"claim_text\":\"By building a genuine and disciplined party infrastructure, DSA legislators and councilors would be on the forefront of a nation-wide confrontation with the imperialist state, exposing the interconnectedness of police and military brutality.\", \"claim_types\":[\"prediction\"],\"evidence_ids\":[2]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "81ee183da151d06294aefb18d8ef442738d8f07a076c693385bde8e46f6f293d"
+}

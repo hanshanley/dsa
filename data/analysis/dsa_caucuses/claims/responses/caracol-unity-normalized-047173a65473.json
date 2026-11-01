@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 323,
+      "generation_tps": 16.907694112522186,
+      "peak_memory": 33.777291018,
+      "prompt_tokens": 1532,
+      "prompt_tps": 449.9793404306894,
+      "request_sha256": "0fea26db7327934e1edc65020c3edc82eb75a081b6b57097de24d1226f901ba2",
+      "seconds": 22.517968292115256,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The scientific literature overwhelmingly fails to provide evidence for absolute decoupling of material use, greenhouse gas emissions, and energy use from economic growth (Hickel and Kallis, 2020).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for rejecting arguments that so-called \u201cgreen growth\u201d is a viable way to avert climate catastrophe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Global heating can only be kept well below 2C above pre-industrial levels this century by degrowing the Global North.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Climate change is best understood as a global cataclysm in the making because it is causing fundamental, widespread, drastic, and lasting changes to Earth systems over extremely fast timescales in terms of Earth\u2019s history.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Some of the worst effects of climate change are potentially preventable (IPCC, 2022).\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Shifting economies in the Global North to run on much lower levels of energy and resource use makes it easier for humanity to decarbonize energy systems and meet climate targets in the short time left.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 366,
+      "generation_tps": 16.68276269680734,
+      "peak_memory": 33.786744586,
+      "prompt_tokens": 2023,
+      "prompt_tps": 525.5714452513678,
+      "request_sha256": "4cc1baf602ecea510e5baf31878513156ed24db6f51226d0766d20b05e2c2494",
+      "seconds": 25.797765750205144,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The scientific literature overwhelmingly fails to provide evidence for absolute decoupling of material use, greenhouse gas emissions, and energy use from economic growth (Hickel and Kallis, 2020).\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Support for rejecting arguments that so-called \u201cgreen growth\u201d is a viable way to avert climate catastrophe.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Global heating can only be kept well below 2C above pre-industrial levels this century by degrowing the Global North.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[2]},{\"claim_text\":\"Climate change is best understood as a global cataclysm in the making because it is causing fundamental, widespread, drastic, and lasting changes to Earth systems over extremely fast timescales in terms of Earth\u2019s history.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[3]},{\"claim_text\":\"Some of the worst effects of climate change are potentially preventable (IPCC, 2022).\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[3]},{\"claim_text\":\"Shifting economies in the Global North to run on much lower levels of energy and resource use makes it easier for humanity to decarbonize energy systems and meet climate targets in the short time left.\",\n\"claim_types\":[\"characterization\"],\"evidence_ids\":[4]},{\"claim_text\":\"The first rule of an emergency is that you do what it takes to end the emergency and get to safety.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[5]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "0fea26db7327934e1edc65020c3edc82eb75a081b6b57097de24d1226f901ba2"
+}

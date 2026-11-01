@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 225,
+      "generation_tps": 16.81844713091776,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1395,
+      "prompt_tps": 478.1972887639882,
+      "request_sha256": "b969b74eb4abde0cd7da74672a4b2ba08a772e60c3372fb54e5905c89fccedc6",
+      "seconds": 16.30512316687964,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Class struggle is a global struggle.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalism and the struggle against it are not constrained by borders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialists must organize as a global movement if they are to confront capitalism and imperialism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Establishing relationships with socialist and workers\u2019 parties around the world is essential to the common fight against global capitalism and neoliberalism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialists abroad have invaluable perspectives and experience that cannot be ignored.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A common understanding and movement as a single working class across all borders and languages is desired.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 239,
+      "generation_tps": 16.81412846921671,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1788,
+      "prompt_tps": 479.93061401170013,
+      "request_sha256": "5d466b286e7cbab95794b382da9387e54247feb94983c8e7ac2000dd1d3656cc",
+      "seconds": 17.949066041968763,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"Class struggle is a global struggle.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"Capitalism and the struggle against it are not constrained by borders.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"If socialists are to confront capitalism and imperialism, then socialists must organize as a global movement.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Establishing relationships with socialist and workers\u2019 parties around the world is essential to the common fight against global capitalism and neoliberalism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Socialists abroad, many of whom are leading successful movements in their own nations, have invaluable perspectives and experience that cannot be ignored.\", \"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"A common understanding and movement as a single working class across all borders and languages is desired.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "b969b74eb4abde0cd7da74672a4b2ba08a772e60c3372fb54e5905c89fccedc6"
+}

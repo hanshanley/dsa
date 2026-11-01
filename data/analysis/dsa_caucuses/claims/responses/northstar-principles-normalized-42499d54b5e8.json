@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 291,
+      "generation_tps": 16.703630504536083,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1447,
+      "prompt_tps": 505.984076083396,
+      "request_sha256": "b3962fb810a50f658e52dcad6845d0a231a2086772365a68065f9e85075d3d3f",
+      "seconds": 20.29317129193805,
+      "stage": "extraction",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America (DSA) must be organized on the basis of the principles and values of democratic socialism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals are members of the Democratic Socialists of America.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The organizational name \u201cdemocratic socialist\u201d has an important political meaning.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA\u2019s notion of democratic socialism is rooted in its origin as a multi-tendency organization and in its conception of socialism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA must be a multi-tendency organization with healthy dialogue and debate over different strategic perspectives on how to advance and achieve democratic socialism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA allows for diverse strategies, tactics, and points of view.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"The notion of DSA as an inclusive democratic socialist organization is given life by diverse strategies, tactics, and points of view.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    },
+    {
+      "generation_tokens": 290,
+      "generation_tps": 16.917163308898253,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1906,
+      "prompt_tps": 541.1948494034752,
+      "request_sha256": "b2b528200465c44f65ea299641de0064f92201f564c811c9a76da1bd2d99a6c9",
+      "seconds": 20.67406683298759,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The Democratic Socialists of America (DSA) must be organized on the basis of the principles and values of democratic socialism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"Individuals are members of the Democratic Socialists of America.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[2]},{\"claim_text\":\"The organizational name \u201cdemocratic socialist\u201d has an important political meaning.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[2]},{\"claim_text\":\"DSA\u2019s notion of democratic socialism is rooted in its origin as a multi-tendency organization and in its conception of socialism.\", \"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA must be a multi-tendency organization with healthy dialogue and debate over different strategic perspectives on how to advance and achieve democratic socialism.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"DSA allows for diverse strategies, tactics, and points of view.\", \"claim_types\":[\"policy_position\"],\"evidence_ids\":[3]},{\"claim_text\":\"Diverse strategies, tactics, and points of view give life to the notion of DSA as an inclusive democratic socialist organization.\", \"claim_types\":[\"characterization\"],\"evidence_ids\":[3]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "b3962fb810a50f658e52dcad6845d0a231a2086772365a68065f9e85075d3d3f"
+}

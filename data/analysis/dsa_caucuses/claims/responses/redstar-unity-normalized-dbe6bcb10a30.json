@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 43,
+      "generation_tps": 17.411345881554993,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1283,
+      "prompt_tps": 535.9022389944853,
+      "request_sha256": "6cf46c6068bc6ce9d8fc4f001f70cecd0f7dc389785f2014ff637efb6e1a31f9",
+      "seconds": 4.872513292124495,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"The party cannot be declared, it can only be built.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 48,
+      "generation_tps": 17.341482144158498,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1494,
+      "prompt_tps": 605.0911597594225,
+      "request_sha256": "2251655c3e5004721f7e9eb32c9257115a43e8e924b6ca89587555d1ac12de3e",
+      "seconds": 5.245691542048007,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"The party cannot be declared, it can only be built.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "6cf46c6068bc6ce9d8fc4f001f70cecd0f7dc389785f2014ff637efb6e1a31f9"
+}

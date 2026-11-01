@@ -1,0 +1,29 @@
+{
+  "attempts": [
+    {
+      "generation_tokens": 281,
+      "generation_tps": 16.92924050940857,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1424,
+      "prompt_tps": 502.5946952356361,
+      "request_sha256": "40d2d19b16e2c8b49cdfb7f34775797458d03a058a48ae488c8cecb97bd10d5d",
+      "seconds": 19.44067725003697,
+      "stage": "extraction",
+      "text": "{\"claims\":[{\"claim_text\":\"DSA previously had the ability to act without imposing a course of action upon members who were uncomfortable with it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"A commitment to the democratic demands placed on society as a whole should be modeled within DSA's own structure and practices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A democratic organization prioritizes consensus-building as a central principle of organization and governance.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"More formal rules and procedures should be used only in the case of serious disagreement, and not to stifle dissent or silence different points of view.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA\u2019s effectiveness as a broad-based organization that encourages participation depends upon the extent to which it reflects democratic principles in its own structure.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Any DSA member should be able to draw on their own experience in similar community-based structures\u2014from neighborhood associations to local unions\u2014to understand and participate in DSA.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}"
+    },
+    {
+      "generation_tokens": 287,
+      "generation_tps": 16.87564694045621,
+      "peak_memory": 33.816399626,
+      "prompt_tokens": 1873,
+      "prompt_tps": 511.2961100186099,
+      "request_sha256": "a2d67cb43fb66d1aad651f318c5ef85e8aac7fb6aaf177f7aaddfada283d2229",
+      "seconds": 20.679118582978845,
+      "stage": "source_fidelity_revision",
+      "text": "```json\n{\"claims\":[{\"claim_text\":\"DSA previously had the ability to act without imposing a course of action upon members who were uncomfortable with it.\",\n\"claim_types\":[\"factual_assertion\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA must go back to modeling a commitment to the democratic demands placed on society as a whole within its own structure and practices.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"A democratic organization prioritizes consensus-building as a central principle of organization and governance.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"More formal rules and procedures should be used only in the case of serious disagreement, and not to stifle dissent or silence different points of view.\",\n\"claim_types\":[\"policy_position\"],\"evidence_ids\":[1]},{\"claim_text\":\"DSA\u2019s effectiveness as a broad-based organization that encourages participation depends upon the extent to which it reflects democratic principles in its own structure.\",\n\"claim_types\":[\"evaluation\"],\"evidence_ids\":[1]},{\"claim_text\":\"Any DSA member should be able to draw on their own experience in similar community-based structures\u2014from neighborhood associations to local unions\u2014to understand and participate in DSA.\",\n\"claim_types\":[\"prediction\"],\"evidence_ids\":[1]}],\"unresolved_references\":[]}\n```"
+    }
+  ],
+  "fingerprint": "d4bb6f4a122b1a90bb1f49697b54232a5ae7ed5e79bbb6aab50fb377d115de46",
+  "implementation_version": 7,
+  "prompt_sha256": "40d2d19b16e2c8b49cdfb7f34775797458d03a058a48ae488c8cecb97bd10d5d"
+}
