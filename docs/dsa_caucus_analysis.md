@@ -71,6 +71,12 @@ PYTHONPATH=src:scripts python scripts/dsa_caucus_analysis.py extract --retry-fai
 PYTHONPATH=src:scripts python scripts/dsa_caucus_analysis.py analyze
 ```
 
+After the current topic evidence has been read and source-bound labels recorded
+in `comparison/reviewed_topic_labels.json`, publish with
+`PYTHONPATH=src:scripts python scripts/publish_dsa_caucuses.py`. The review's
+basis hash binds exact claims, sources, assignments, shares, and fitted outputs;
+stale or unsupported labels fail rather than silently following new topic IDs.
+
 The browser collector accepts `PLAYWRIGHT_MODULE_PATH` for an existing Playwright
 installation. PDF recovery reuses the project's optional pypdf reader or native
 macOS PDFKit fallback. Keep the same prepared corpus fingerprint when resuming

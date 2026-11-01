@@ -248,6 +248,11 @@ def analyze() -> dict:
             "embeddings": digest((RESULTS / "embeddings.npy").read_bytes()),
             "comparison_implementation": digest(Path(__file__).read_bytes()),
         },
+        "result_hashes": {
+            path.name: digest(path.read_bytes())
+            for path in sorted(RESULTS.iterdir())
+            if path.suffix in {".csv", ".npy", ".npz"}
+        },
     }
     write_json(RESULTS / "summary.json", result)
     return result

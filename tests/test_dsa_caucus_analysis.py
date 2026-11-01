@@ -6,6 +6,7 @@ from pathlib import Path
 from dsa_analysis.national_platforms import digest, read_rows
 from scripts.dsa_caucus_analysis import caucus_claim_rows, prepare_sources, scoped_text
 from scripts.dsa_caucus_comparison import attention_tables
+from scripts.publish_dsa_caucuses import review_basis, validated_labels
 
 
 class CaucusSourceTest(unittest.TestCase):
@@ -147,6 +148,34 @@ class CaucusSourceTest(unittest.TestCase):
         self.assertEqual(issue["a", "b"]["attention_share_ratio"], "")
         self.assertEqual(issue["b", "a"]["attention_share_ratio"], 0)
         self.assertEqual(issue["a", "b,c"]["attention_share_ratio"], 1.5)
+
+    def test_labels_require_current_membership_and_actual_source_support(self):
+        summary = {
+            "input_hashes": {"claims": "original"},
+            "result_hashes": {"topic_assignments.csv": "original-membership"},
+        }
+        examples = [
+            {"topic_id": "topic-001", "claim_id": "one"},
+            {"topic_id": "topic-001", "claim_id": "two"},
+        ]
+        review = {
+            "basis_hash": review_basis(summary),
+            "topics": {
+                "topic-001": {
+                    "title": "Labor",
+                    "summary": "Labor organizing proposals.",
+                    "supporting_claim_ids": ["one", "two"],
+                }
+            },
+        }
+        self.assertEqual(validated_labels(summary, review, examples), review["topics"])
+        summary["result_hashes"]["topic_assignments.csv"] = "different-membership"
+        with self.assertRaisesRegex(ValueError, "do not match"):
+            validated_labels(summary, review, examples)
+        review["basis_hash"] = review_basis(summary)
+        review["topics"]["topic-001"]["supporting_claim_ids"] = ["one", "invented"]
+        with self.assertRaisesRegex(ValueError, "Unsupported"):
+            validated_labels(summary, review, examples)
 
 
 if __name__ == "__main__":
