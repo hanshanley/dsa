@@ -56,6 +56,14 @@ No error bars, historical trajectories, membership weights, or ideological-dista
 claims are inferred. Topic labels and reported positions require review of actual
 source-backed evidence before publication; automated extraction is not human gold.
 
+Targeted assistant review checks central topic examples, their cited source
+passages, and narrator attributions. Its exclusions are recorded in
+`claims/semantic_review.csv`; original claims and replies remain available.
+This is not an exhaustive independent human audit. Failed chunks and excluded
+claims do not enter attention-share denominators, and their absence can affect
+the results. The report states both counts. Differences in statement dates,
+writing style, and normalization granularity also limit comparisons.
+
 ## Commands
 
 Run from the repository root using the corresponding installed browser, local

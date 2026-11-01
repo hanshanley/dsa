@@ -664,6 +664,9 @@ class ClaimCorpusTests(unittest.TestCase):
         self.assertIn(digest(previous), request)
         self.assertNotIn(previous, request)
         self.assertIn("received_evidence_ids=[6]", request)
+        self.assertIn("JSON INTEGER arrays: [1] or [1,2]", request)
+        for invalid in (["1"], ["[1]"]):
+            self.assertTrue(validate_response(response(evidence_ids=invalid), block)[1])
         self.assertLess(request.index(digest(previous)), request.index(base))
         accepted, errors, _ = validate_response(
             response(claim_text='Support for the "Protect Our Workers" Act.'), block

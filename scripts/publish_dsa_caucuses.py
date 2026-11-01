@@ -372,8 +372,18 @@ def publish() -> dict:
         "an adoption-uncertain draft, and unrecovered groups.",
         "",
         f"Extraction attempted all {summary['extraction']['blocks']} bounded chunks. "
+        f"{summary['extraction']['blocks_by_status'].get('validation_failed', 0)} chunks "
+        "failed validation; "
+        f"{summary['extraction']['assistant_flagged_claims']} candidate claims were flagged "
+        "in targeted source review. Neither enters attention-share denominators. "
         "Original responses, failed dispositions, evidence and retry history are retained. "
         "Source-fidelity revision and targeted assistant review are not independent human gold.",
+        "",
+        "Attention is measured only among eligible extracted claims, not all words or every "
+        "position in the original statements. Extraction failures and exclusions can change "
+        "the shares. Statement dates and writing styles differ; this is not a contemporaneous "
+        "roster or a ranking of caucus strength. Learned topics summarize overlapping language, "
+        "not mutually exclusive ideological camps.",
         "",
         "[Methods](../../docs/dsa_caucus_analysis.md) · "
         "[Complete claims and evidence]"

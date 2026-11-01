@@ -263,6 +263,9 @@ def repair_request(
         "Correct every failed check. evidence_ids must use the bracketed SOURCE UNIT IDs, "
         "never list numbers within a unit. For JSON-encoded source units, the bracketed "
         "object keys identify units; numbers inside text values do not. "
+        "Output evidence_ids as JSON INTEGER arrays: [1] or [1,2], "
+        'never strings such as ["1"] or ["[1]"]. The brackets in source keys '
+        "are labels, not part of an output value. "
         "If the only SOURCE UNIT is [1], EVERY claim "
         "must have evidence_ids [1]. Resolve demonstratives and narrator pronouns from "
         "SOURCE/CONTEXT without discarding qualifications or changing actors. "
@@ -964,7 +967,7 @@ def extract_corpus(
         record = {
             "fingerprint": manifest["fingerprint"],
             "prompt_sha256": digest(prompt),
-            "implementation_version": 7,
+            "implementation_version": 8,
             "attempts": attempts,
         }
         if path.exists():
