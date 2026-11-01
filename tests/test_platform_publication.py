@@ -7,6 +7,7 @@ import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
+from scripts.build_dsa_article_lead import rank_attention_gaps
 from scripts.build_platform_publication import (
     DATA,
     FIGURES,
@@ -17,6 +18,39 @@ from scripts.build_platform_publication import (
     export,
     validate,
 )
+
+
+class ArticleLeadTest(unittest.TestCase):
+    def test_largest_absolute_gaps_include_less_attention_and_exclude_identity(self):
+        labels = [
+            dict(topic_id=topic, title=topic, displayed=topic != "identity")
+            for topic in ("one", "two", "three", "identity")
+        ]
+        values = {
+            "one": (0.02, 0.04, 0.20),
+            "two": (0.20, 0.20, 0.05),
+            "three": (0.02, 0.02, 0.08),
+            "identity": (0.001, 0.001, 0.99),
+        }
+        rows = [
+            dict(view="expanded", group=group, topic_id=topic, available="True", share=str(value))
+            for topic, shares in values.items()
+            for group, value in zip(("democratic", "republican", "dsa"), shares)
+        ]
+        rows.append(dict(view="strict", group="dsa", topic_id="three", available="True", share="1"))
+        ranked = rank_attention_gaps(labels, rows)
+        self.assertEqual([row["topic_id"] for row in ranked], ["one", "two", "three"])
+        self.assertAlmostEqual(ranked[0]["combined_share"], 0.03)
+        for record, gap in zip(ranked, (0.17, -0.15, 0.06)):
+            self.assertAlmostEqual(record["gap"], gap)
+        self.assertEqual(ranked[0]["shares"]["dsa"], 0.20)
+
+    def test_missing_party_cannot_be_silently_ranked(self):
+        with self.assertRaisesRegex(ValueError, "Missing observed party shares"):
+            rank_attention_gaps(
+                [dict(topic_id="one", title="One")],
+                [dict(view="expanded", group="dsa", topic_id="one", available="True", share="0.2")],
+            )
 
 
 class PlatformPublicationTest(unittest.TestCase):
