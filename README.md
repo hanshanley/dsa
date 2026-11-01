@@ -51,8 +51,8 @@ review is not a representative sample or corpus-wide semantic certification. Ear
 and passage-based results are retained below as historical references.
 
 <p align="center">
-  <a href="figures/article/dsa_lead_option_a-map-five.png?rev=density-ratios">
-    <img src="figures/article/dsa_lead_option_a-map-five.png?rev=density-ratios" width="1100" alt="Original embedding graph with five numbered DSA-heavy areas, density multipliers and dated DSA statements beside it">
+  <a href="figures/article/dsa_lead_option_a-map-five.png?rev=top-aligned-issues">
+    <img src="figures/article/dsa_lead_option_a-map-five.png?rev=top-aligned-issues" width="1100" alt="Original embedding graph with five numbered DSA-heavy areas, density multipliers and dated DSA statements beside it">
   </a>
 </p>
 
@@ -61,7 +61,9 @@ contrasts at DSA claims. Light purple marks denser combined major-party language
 gold marks denser DSA language. [Full-size PNG](figures/article/dsa_vs_major_parties_lead.png)
 and [exact contrasts, dated DSA snippets and source anchors](figures/article/dsa_vs_major_parties_lead.json).
 The original embedding map is retained, with clearer points and source-backed
-statements beside the five numbered examples. Multipliers exponentiate each issue's
+statements beside the five numbered examples. The issue column starts alongside the
+title, with compact multipliers, separate source dates and subtle row dividers.
+Multipliers exponentiate each issue's
 bundle-balanced mean log density contrast at DSA claims: geometric mean density
 ratios against the equal-weight Democratic–Republican mixture, not attention shares.*
 
@@ -84,15 +86,15 @@ rejected graph-free options, not the underlying analysis.
 
 **A — Original map and five statements**
 
-<img src="figures/article/dsa_lead_option_a-map-five.png?rev=density-ratios" width="1100" alt="Original embedding graph with five numbered DSA examples, density multipliers and dated statements beside it">
+<img src="figures/article/dsa_lead_option_a-map-five.png?rev=top-aligned-issues" width="1100" alt="Original embedding graph with five numbered DSA examples, density multipliers and dated statements beside it">
 
 **B — Wide map with statements below**
 
-<img src="figures/article/dsa_lead_option_b-map-bottom.png?rev=density-ratios" width="1100" alt="Original embedding graph above three density multipliers and dated DSA statements">
+<img src="figures/article/dsa_lead_option_b-map-bottom.png?rev=top-aligned-issues" width="1100" alt="Original embedding graph above three density multipliers and dated DSA statements">
 
 **C — Original map and three larger statements**
 
-<img src="figures/article/dsa_lead_option_c-map-three.png?rev=density-ratios" width="1100" alt="Original embedding graph beside three density multipliers and larger dated DSA statements">
+<img src="figures/article/dsa_lead_option_c-map-three.png?rev=top-aligned-issues" width="1100" alt="Original embedding graph beside three density multipliers and larger dated DSA statements">
 
 </details>
 

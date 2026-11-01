@@ -66,9 +66,26 @@ class ArticleLeadTest(unittest.TestCase):
             self.assertEqual([text.get_position() for text in axis.texts], [(0, 0), (1, 1)])
             self.assertFalse(axis.patches)
             labels = [text.get_text() for text in figure.texts]
-            self.assertIn("15.4\u00d7 the baseline density", labels)
-            self.assertIn("8.7\u00d7 the baseline density", labels)
+            self.assertIn("15.4\u00d7", labels)
+            self.assertIn("8.7\u00d7", labels)
             self.assertTrue(any("not attention shares" in label for label in labels))
+            if layout != "map-bottom":
+                self.assertIn("DSA LANGUAGE CONCENTRATION", labels)
+                headings = [text for text in figure.texts if text.get_text().startswith("1  ")]
+                self.assertGreater(headings[0].get_position()[1], 0.9)
+                figure.canvas.draw()
+                renderer = figure.canvas.get_renderer()
+                boxes = [text.get_window_extent(renderer) for text in figure.texts]
+                for index, box in enumerate(boxes):
+                    self.assertGreaterEqual(box.x0, 0)
+                    self.assertGreaterEqual(box.y0, 0)
+                    self.assertLessEqual(box.x1, figure.bbox.width)
+                    self.assertLessEqual(box.y1, figure.bbox.height)
+                    for other in boxes[index + 1 :]:
+                        self.assertFalse(
+                            min(box.x1, other.x1) - max(box.x0, other.x0) > 1
+                            and min(box.y1, other.y1) - max(box.y0, other.y0) > 1
+                        )
 
         with tempfile.TemporaryDirectory() as directory:
             with patch.object(Figure, "savefig", autospec=True, side_effect=check_figure):

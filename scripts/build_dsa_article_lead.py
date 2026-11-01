@@ -98,6 +98,7 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     from matplotlib.colors import LinearSegmentedColormap, Normalize
+    from matplotlib.lines import Line2D
 
     plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK})
     if layout not in ("map-five", "map-bottom", "map-three"):
@@ -151,7 +152,9 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
         / original_panel_ratio
     )
     axis.set_axis_off()
-    next_top = 0.805 if five else 0.77
+    if not bottom:
+        fig.text(0.655, 0.950, "DSA LANGUAGE CONCENTRATION", fontsize=11, color="#625d53")
+    next_top = 0.918
     renderer = fig.canvas.get_renderer()
     for number, record in enumerate(selected, 1):
         axis.text(
@@ -181,42 +184,82 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
             linespacing=1.2,
         )
         ratio_top = (
-            top
-            - heading.get_window_extent(renderer).height / fig.bbox.height
-            - 5 / (fig.get_figheight() * 72)
+            (
+                top
+                - heading.get_window_extent(renderer).height / fig.bbox.height
+                - 5 / (fig.get_figheight() * 72)
+            )
+            if bottom
+            else top
         )
         ratio = fig.text(
-            x,
+            x if bottom else 0.955,
             ratio_top,
-            f"{record['density_ratio']:.1f}\u00d7 the baseline density",
-            fontsize=15 if bottom else 16.5,
+            f"{record['density_ratio']:.1f}\u00d7",
+            fontsize=15 if bottom else 25,
             fontweight="bold",
             va="top",
+            ha="left" if bottom else "right",
             color="#8d6c25",
         )
-        body_top = (
-            ratio_top
-            - ratio.get_window_extent(renderer).height / fig.bbox.height
-            - 5 / (fig.get_figheight() * 72)
-        )
+        if bottom:
+            body_top = (
+                ratio_top
+                - ratio.get_window_extent(renderer).height / fig.bbox.height
+                - 5 / (fig.get_figheight() * 72)
+            )
+            body = (
+                f"{record['source_date'][:4]} {record['document_type']} \u2014 {record['snippet']}"
+            )
+        else:
+            source_top = (
+                top
+                - max(
+                    heading.get_window_extent(renderer).height,
+                    ratio.get_window_extent(renderer).height,
+                )
+                / fig.bbox.height
+                - 7 / (fig.get_figheight() * 72)
+            )
+            source = fig.text(
+                x,
+                source_top,
+                f"{record['source_date'][:4]} {record['document_type']}",
+                fontsize=11.5,
+                va="top",
+                color="#625d53",
+            )
+            body_top = (
+                source_top
+                - source.get_window_extent(renderer).height / fig.bbox.height
+                - 5 / (fig.get_figheight() * 72)
+            )
+            body = record["snippet"]
         statement = fig.text(
             x,
             body_top,
-            textwrap.fill(
-                f"{record['source_date'][:4]} {record['document_type']} \u2014 {record['snippet']}",
-                43 if bottom else 52,
-            ),
-            fontsize=13 if bottom else 15,
+            textwrap.fill(body, 43 if bottom else 49),
+            fontsize=13 if bottom else 16.5,
             va="top",
             linespacing=1.25,
             color=INK,
         )
         if not bottom:
-            next_top = (
-                body_top
-                - statement.get_window_extent(renderer).height / fig.bbox.height
-                - 12 / (fig.get_figheight() * 72)
+            statement_bottom = (
+                body_top - statement.get_window_extent(renderer).height / fig.bbox.height
             )
+            next_top = statement_bottom - 28 / (fig.get_figheight() * 72)
+            if number < len(selected):
+                divider_y = statement_bottom - 13 / (fig.get_figheight() * 72)
+                fig.add_artist(
+                    Line2D(
+                        [x, 0.955],
+                        [divider_y, divider_y],
+                        transform=fig.transFigure,
+                        color="#d7d1c5",
+                        linewidth=0.6,
+                    )
+                )
     legend_box = (0.25, 0.331, 0.5, 0.007) if bottom else (0.045, 0.138, 0.605, 0.007)
     color_axis = fig.add_axes(legend_box)
     bar = fig.colorbar(
