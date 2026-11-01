@@ -165,7 +165,7 @@ def render_density(data: dict, records: list[dict], output: Path) -> None:
     fig.text(
         0.045,
         0.844,
-        "Five areas of denser language vs. Democrats + Republicans",
+        "Five DSA-heavy issues vs. Democrats + Republicans",
         fontsize=14.5,
         color="#625d53",
     )

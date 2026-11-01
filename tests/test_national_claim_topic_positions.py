@@ -11,6 +11,7 @@ from dsa_analysis.national_claim_topic_positions import (
     NO_POSITION,
     generate,
     plot_atlases,
+    report_section,
     reviewed_positions,
     select_examples,
 )
@@ -103,6 +104,43 @@ class PositionAtlasTests(unittest.TestCase):
     def test_unprepared_positions_do_not_start_inference(self):
         with tempfile.TemporaryDirectory() as temporary:
             self.assertEqual(generate(Path(temporary), Path(temporary)), {"status": "not_prepared"})
+
+    def test_report_uses_actual_topic_counts_and_central_selection(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            directory, review = self.fixture(root)
+            write_json(directory / "summary.json", {})
+            write_json(
+                root / "topics/topic_labels.json",
+                [
+                    {"topic_id": "topic-001", "title": "A concrete policy subject"},
+                    {"topic_id": "topic-002", "title": "An excluded identity subject"},
+                ],
+            )
+            write_rows(
+                directory / "evidence.csv",
+                [
+                    {
+                        "claim_id": claim,
+                        "claim_text": "Support for a policy.",
+                        "title": "Source document",
+                        "source_url": "https://example.com/source",
+                        "publication_date": "2024",
+                        "locator": "page 1",
+                    }
+                    for position in review["groups"].values()
+                    for claim in position["supporting_claim_ids"]
+                ],
+            )
+            manifest_path = directory / "selection_manifest.json"
+            manifest = json.loads(manifest_path.read_text())
+            manifest["evidence_sha256"] = digest((directory / "evidence.csv").read_bytes())
+            write_json(manifest_path, manifest)
+            text = report_section(root, root / "figures")
+            self.assertIn("all 1 substantive pooled clusters", text)
+            self.assertIn("all 2 fitted topics", text)
+            self.assertIn("There is no peripheral or stance-based sampling.", text)
+            self.assertNotIn("including central and peripheral claims", text)
 
     def test_absent_group_cannot_receive_an_inferred_position(self):
         with tempfile.TemporaryDirectory() as temporary:

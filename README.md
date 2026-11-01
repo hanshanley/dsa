@@ -38,8 +38,10 @@ four-year observed-document trends covering **2000–2026**. The figures use nam
 topics reviewed against their representative claims. All 24 labels are reviewed;
 all have current source-bound assistant reviews, with original Gemma replies
 preserved. All 74 period-specific labels also have source-bound reviews.
-The current pooled review includes 3,311 central evidence records. This bounded
-evidence review is not independent human certification.
+The current pooled label review includes 3,311 distinct central claims across
+all 24 topics. The separate position-summary sample contains 2,971 distinct claims
+across the 21 displayed subjects; these are different review denominators, not
+corpus totals. This bounded evidence review is not independent human certification.
 
 All 2,623 extraction chunks have effective dispositions:
 162 source-bound corrections address reviewed errors and all 27 failed model
@@ -374,7 +376,7 @@ includes original and cleaned claims, complete sources, raw replies/history,
 reviews, assignments, frozen coordinates, weights and density scores. This
 historical sensitivity is separate from the current source-cleaned primary refit;
 the primary retains existing bundle/claim weights, not chunk-balanced weights.
-Its net reduction of 414 eligible claims from the 26,483 baseline reflects
+The current primary refit's net reduction of 414 eligible claims from the 26,483 baseline reflects
 source-quality dispositions and exact-duplicate eligibility, not accepted
 semantic merges.
 The [validation manifest](data/analysis/national_claims/chunk_sensitivity/validation.json)

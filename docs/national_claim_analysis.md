@@ -526,8 +526,10 @@ uv run python -m dsa_analysis.national_claim_topics audit
 Evidence selection interleaves observed four-year periods, bundles and documents,
 ranking claims nearest the frozen weighted topic centroid within each document.
 There is no peripheral or stance-based sampling. Up to 48 examples per
-group/topic yield 2,971 selected
-claims retain complete wording, source excerpts, offsets, dates and provenance.
+group/topic yield 2,971 distinct selected claims across the 21 displayed subjects.
+These retain complete wording, source excerpts, offsets, dates and provenance.
+The separate pooled label review covers 3,311 distinct central claims across all
+24 fitted topics; neither review count is the 26,069-claim analytical corpus.
 All 63 group summaries and 63 pairwise distinctions were assistant-reviewed
 against those actual packets, with ambiguous attribution checked in source
 evidence. Hash-bound reviews require every sampled example to be reviewed,

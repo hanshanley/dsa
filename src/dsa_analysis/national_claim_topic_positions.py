@@ -641,17 +641,20 @@ def report_section(corpus: Path, figures: Path) -> str:
         "### Cluster maps with individualized group positions",
         "",
         "One large atlas combines all three groups; three further atlases compare each pair. "
-        "Each shows all 21 substantive pooled clusters, with separately reviewed position "
+        f"Each shows all {len(manifest['topics'])} substantive pooled clusters, "
+        "with separately reviewed position "
         "summaries and explicit documented differences. These use the expanded corpus only. "
         "The frozen clusters are projected onto the saved expanded display, not refitted in 2D.",
         "",
         "The combined map colors claims by organization. Pairwise map colors show the "
         "unsmoothed weighted **topic-share gap**, not KDE density or policy distance. "
         "Numbered markers locate weighted projected topic centres, not boundaries. "
-        "All original denominators and all 24 assignments remain in downloads.",
+        f"All original denominators and all {len(labels)} fitted topics remain in downloads.",
         "",
-        f"**Review scope:** {QUALIFICATION} The packet selection cycles across bundles, "
-        "including central and peripheral claims; it is not a random sample or exhaustive "
+        f"**Review scope:** {QUALIFICATION} The packet selection interleaves observed "
+        "four-year periods, bundles and documents, ranking claims nearest each document's "
+        "frozen weighted topic centre first. There is no peripheral or stance-based sampling. "
+        "It is not a random sample or exhaustive "
         "coding of all within-topic policy positions. Contradictions and scope cautions "
         "are retained below. Read the sources before describing a present-day group belief.",
         "",

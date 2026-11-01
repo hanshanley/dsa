@@ -2,10 +2,21 @@
 
 **Start with the current, expanded-source comparisons below.** They cover
 Democratic, Republican and DSA national documents across 2000–2026.
-All linked current charts are PNGs. Shares measure document-weighted attention,
-not agreement or how many people hold a position.
+All linked current charts are PNGs. Share charts measure document-weighted
+attention, not agreement or how many people hold a position. Language-density
+maps measure concentration in the fitted semantic space, not policy distance.
 
 ## Article graphics
+
+The [article lead: Where DSA stands apart](article/dsa_vs_major_parties_lead.png)
+highlights five substantive issues with the largest positive source-balanced
+mean DSA density contrasts against the 50/50 Democratic–Republican mixture.
+The map uses all 26,069 eligible claims; numbered markers locate reviewed
+central examples, not region boundaries.
+[Exact contrasts and source anchors](article/dsa_vs_major_parties_lead.json)
+retain the full reviewed topic names behind the shorter display labels.
+The earlier [absolute attention-gap bars](article/dsa_vs_major_parties_attention_gaps.png)
+remain separately available and use a different ranking.
 
 The [standalone Substack overview](national_claims/full/topics/expanded/substack_overview.png)
 compares all 21 substantive subjects in one image, using the current reviewed
