@@ -124,7 +124,7 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
         fontsize=17,
         color="#625d53",
     )
-    map_box = (0.08, 0.365, 0.84, 0.445) if bottom else (0.035, 0.185, 0.625, 0.625)
+    map_box = (0.08, 0.365, 0.84, 0.445) if bottom else (0.035, 0.185, 0.605, 0.625)
     axis = fig.add_axes(map_box, facecolor=PAPER)
     palette = LinearSegmentedColormap.from_list(
         "combined_density", ["#b19cd9", "#e0d6c4", "#c2993e"]
@@ -151,7 +151,7 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
         / original_panel_ratio
     )
     axis.set_axis_off()
-    next_top = 0.79
+    next_top = 0.805 if five else 0.77
     renderer = fig.canvas.get_renderer()
     for number, record in enumerate(selected, 1):
         axis.text(
@@ -164,8 +164,8 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
             bbox=dict(boxstyle="circle,pad=0.35", facecolor=PAPER, edgecolor=INK, linewidth=0.8),
             zorder=5,
         )
-        x = 0.045 + (number - 1) * 0.312 if bottom else 0.68 if five else 0.705
-        top = 0.29 if bottom else next_top if five else 0.77 - (number - 1) * 0.205
+        x = 0.045 + (number - 1) * 0.312 if bottom else 0.655
+        top = 0.29 if bottom else next_top
         title = (
             f"{number}  " + textwrap.fill(DISPLAY_LABELS[record["title"]].replace("\n", " "), 28)
             if bottom
@@ -180,30 +180,42 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
             va="top",
             linespacing=1.2,
         )
-        body_top = (
+        ratio_top = (
             top
             - heading.get_window_extent(renderer).height / fig.bbox.height
-            - 8 / (fig.get_figheight() * 72)
-            if five
-            else top - (0.053 if bottom else 0.073)
+            - 5 / (fig.get_figheight() * 72)
+        )
+        ratio = fig.text(
+            x,
+            ratio_top,
+            f"{record['density_ratio']:.1f}\u00d7 the baseline density",
+            fontsize=15 if bottom else 16.5,
+            fontweight="bold",
+            va="top",
+            color="#8d6c25",
+        )
+        body_top = (
+            ratio_top
+            - ratio.get_window_extent(renderer).height / fig.bbox.height
+            - 5 / (fig.get_figheight() * 72)
         )
         statement = fig.text(
             x,
             body_top,
             textwrap.fill(
                 f"{record['source_date'][:4]} {record['document_type']} \u2014 {record['snippet']}",
-                46 if five else 43,
+                43 if bottom else 52,
             ),
             fontsize=13 if bottom else 15,
             va="top",
-            linespacing=1.35,
+            linespacing=1.25,
             color=INK,
         )
-        if five:
+        if not bottom:
             next_top = (
                 body_top
                 - statement.get_window_extent(renderer).height / fig.bbox.height
-                - 20 / (fig.get_figheight() * 72)
+                - 12 / (fig.get_figheight() * 72)
             )
     legend_box = (0.25, 0.331, 0.5, 0.007) if bottom else (0.045, 0.138, 0.605, 0.007)
     color_axis = fig.add_axes(legend_box)
@@ -243,6 +255,14 @@ def render_variant(data: dict, records: list[dict], output: Path, layout: str) -
         0.045,
         0.034,
         "Dated DSA statements are paraphrased. Language concentration is not policy agreement.",
+        fontsize=10.5,
+        color="#625d53",
+    )
+    fig.text(
+        0.045,
+        0.014,
+        "Multipliers: bundle-balanced geometric mean density ratios at DSA claims, "
+        "not attention shares.",
         fontsize=10.5,
         color="#625d53",
     )
@@ -659,6 +679,10 @@ def main() -> None:
                     "combined log density contrast at DSA claims"
                 ),
                 contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+                density_ratio_basis=(
+                    "exp(bundle-balanced mean log density contrast at DSA claims); "
+                    "geometric mean density ratio, not attention share"
+                ),
                 presentation="original embedding map with dated central DSA paraphrases",
                 map_claims=len(density["points"]),
                 map_limits=density["limits"],
@@ -694,6 +718,10 @@ def main() -> None:
         snippets=snippet_records(records, claims),
         ranking="largest positive source-balanced mean combined log density contrast at DSA claims",
         contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+        density_ratio_basis=(
+            "exp(bundle-balanced mean log density contrast at DSA claims); "
+            "geometric mean density ratio, not attention share"
+        ),
         weighting="equal DSA bundle mass, equal eligible claim mass within each bundle",
         minimum_dsa_bundles=2,
         anchor_selection=(

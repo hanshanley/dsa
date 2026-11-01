@@ -125,6 +125,7 @@
   ],
   "ranking": "largest positive source-balanced mean combined log density contrast at DSA claims",
   "contrast": "log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+  "density_ratio_basis": "exp(bundle-balanced mean log density contrast at DSA claims); geometric mean density ratio, not attention share",
   "weighting": "equal DSA bundle mass, equal eligible claim mass within each bundle",
   "minimum_dsa_bundles": 2,
   "anchor_selection": "reviewed positive-contrast DSA example nearest the weighted 2D issue center",
@@ -223,5 +224,5 @@
       "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf"
     }
   ],
-  "image_sha256": "f2a96d408f1174bd659e6d8357b89032965c70f7c4329f9c8c441d6360707796"
+  "image_sha256": "869379a40d62495a4162e29caacd26e6390e8a8edec16ffb71588ed8d401c0e4"
 }

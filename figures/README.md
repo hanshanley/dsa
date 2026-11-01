@@ -16,7 +16,9 @@ central examples, not region boundaries.
 [Exact contrasts and source anchors](article/dsa_vs_major_parties_lead.json)
 retain the full reviewed topic names behind the shorter display labels.
 Three article-only layouts retain that original embedding graph and add dated,
-source-backed DSA paraphrases:
+source-backed DSA paraphrases and density multipliers. The multipliers are geometric
+mean density ratios at DSA claims, using the original bundle-balanced log contrasts;
+they are not attention-share ratios:
 [A: five statements beside the map](article/dsa_lead_option_a-map-five.png),
 [B: three statements below the map](article/dsa_lead_option_b-map-bottom.png), and
 [C: three larger statements beside the map](article/dsa_lead_option_c-map-three.png).

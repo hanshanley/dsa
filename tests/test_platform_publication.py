@@ -37,6 +37,7 @@ class ArticleLeadTest(unittest.TestCase):
                 snippet="Demilitarize police departments.",
                 source_date="2024-08",
                 document_type="program",
+                density_ratio=15.356064303330701 if index == 0 else 8.696007986767627,
             )
             for index, title in enumerate(
                 (
@@ -64,6 +65,10 @@ class ArticleLeadTest(unittest.TestCase):
             self.assertEqual([text.get_text() for text in axis.texts], ["1", "2"])
             self.assertEqual([text.get_position() for text in axis.texts], [(0, 0), (1, 1)])
             self.assertFalse(axis.patches)
+            labels = [text.get_text() for text in figure.texts]
+            self.assertIn("15.4\u00d7 the baseline density", labels)
+            self.assertIn("8.7\u00d7 the baseline density", labels)
+            self.assertTrue(any("not attention shares" in label for label in labels))
 
         with tempfile.TemporaryDirectory() as directory:
             with patch.object(Figure, "savefig", autospec=True, side_effect=check_figure):
