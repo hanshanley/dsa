@@ -80,6 +80,11 @@ The [detailed density comparisons](report/national_claim_analysis.md#detailed-de
 pair larger individual maps with numbered, source-linked claim examples and exact
 representative density contrasts—not vague floating keyword labels.
 
+The interactive website also offers **DSA vs. Democrats + Republicans**. Its
+combined side is a 50/50 mixture of the two parties' already-fitted KDE densities,
+not an average of their log densities or a merged political platform. All three
+reviewed party positions remain separate alongside the two DSA pairwise summaries.
+
 **Wider clustering and positions:** four large, source-linked atlases cover all
 21 substantive subjects: [all three groups](figures/national_claims/full/topics/positions/all_groups.png),
 [Democratic–Republican](figures/national_claims/full/topics/positions/democratic_vs_republican.png),

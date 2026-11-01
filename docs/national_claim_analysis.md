@@ -322,6 +322,16 @@ aids, not reviewed subjects or evidence of policy agreement. Density PNGs
 remain 200 DPI. All publication images are PNG-only, without dropping claims
 or source evidence from the complete combined archive.
 
+The interactive website additionally compares DSA with a combined Democratic
+and Republican baseline. At each saved claim coordinate its contrast is
+`log p(DSA) - log((p(Democratic) + p(Republican)) / 2)`, computed with a stable
+log-sum-exp from the existing higher-dimensional KDE scores. The equal-weight
+mixture does not let the larger party corpus dominate and is not an average of
+log densities. It retains the existing color bound, coordinates, claims, and
+issue assignments; no embeddings, topics, or KDEs are refitted. The issue panel
+keeps all three reviewed positions separate and shows the two existing
+DSA pairwise summaries, rather than asserting a unified major-party position.
+
 The `render` stage verifies the current source, embedding, numerical-code and
 output hashes before using labels. Stale or failed labels remain explicitly
 provisional. Cached labels can replay without generating new responses.
