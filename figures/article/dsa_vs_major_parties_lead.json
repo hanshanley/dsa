@@ -1,44 +1,92 @@
 {
   "article_only": true,
-  "ranking": "largest absolute weighted attention gap; DSA minus equal-weight Democratic/Republican average",
+  "ranking": "largest positive source-balanced mean combined log density contrast at DSA claims",
+  "contrast": "log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+  "weighting": "equal DSA bundle mass, equal eligible claim mass within each bundle",
+  "minimum_dsa_bundles": 2,
+  "anchor_selection": "reviewed positive-contrast DSA example nearest the weighted 2D issue center",
+  "map_claims": 26069,
+  "color_bound": 3.7983298842754825,
   "input_sha256": {
-    "topic_labels.json": "26adea64a0d34038fd77348c4b19567b374b04d0e0139501cace8dbddbaecf1a",
-    "shares.csv": "cb64c180deec980e8093fd751dd6271f0a4c09ba0fead4c56fd6896b1e459906"
+    "data/analysis/national_claims/full/topics/topic_labels.json": "26adea64a0d34038fd77348c4b19567b374b04d0e0139501cace8dbddbaecf1a",
+    "data/analysis/national_claims/full/topics/representatives.csv": "bcc583a5a49409bf0b473cea20a3dad539372e433b349adb0078a214d0a8739b",
+    "data/analysis/national_claims/full/analysis_claims.csv": "500d691de84433e462f2b980ee3511577c00d1656fc3d0b384c48338e176d35a",
+    "data/analysis/national_claims/full/expanded/scored_passages.csv": "0a5cb66b68d69ad1cc89894f4a934fb155e486904d2b748cec013749ee368462",
+    "data/analysis/national_claims/full/expanded/density_region_evidence.csv": "afb53e6eb4bbff5bd134c0bfac7bd9eac1d498a0eb869ce4128f92f2927904d2",
+    "data/analysis/national_claims/full/topics/assignments.csv": "e1245fc5cad745f6b741dffbbd7a0206e88a4a16510b91c89b266ac6ed097503",
+    "data/analysis/national_claims/full/topics/positions/group_positions.json": "a925f44f15f4040aa1cd84ac8fc2132338da89bab0d85512485e3cc02cac1e76"
   },
   "topics": [
     {
       "topic_id": "topic-020",
       "title": "Institutional Power, Oppression, and Social Conflict",
-      "shares": {
-        "dsa": 0.09294009293158682,
-        "democratic": 0.010803563702554605,
-        "republican": 0.02291314387590643
-      },
-      "combined_share": 0.016858353789230517,
-      "gap": 0.0760817391423563
+      "mean_log_density_contrast": 2.731510464635039,
+      "dsa_claims": 569,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2021-adopted-normalized-6b522fa83bc9-003",
+      "anchor_coordinates": [
+        2.027747631072998,
+        8.028314590454102
+      ],
+      "anchor_log_density_contrast": 2.543075913972702,
+      "anchor_source_url": "https://web.archive.org/web/20211230205416id_/https://www.dsausa.org/dsa-political-platform-from-2021-convention/"
     },
     {
-      "topic_id": "topic-006",
-      "title": "American Power, Leadership, and National Purpose",
-      "shares": {
-        "dsa": 0.010764507997875716,
-        "democratic": 0.06503563581672249,
-        "republican": 0.07603287957087637
-      },
-      "combined_share": 0.07053425769379942,
-      "gap": -0.059769749695923705
+      "topic_id": "topic-010",
+      "title": "Criminal Justice, Policing, and Incarceration",
+      "mean_log_density_contrast": 2.162864068260026,
+      "dsa_claims": 265,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2024-program-normalized-b789b4710c28-006",
+      "anchor_coordinates": [
+        0.3083289563655853,
+        7.323701858520508
+      ],
+      "anchor_log_density_contrast": 1.78555834293274,
+      "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf"
+    },
+    {
+      "topic_id": "topic-002",
+      "title": "Community Investment, Housing, and Social Support",
+      "mean_log_density_contrast": 2.1067152007732477,
+      "dsa_claims": 279,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2010-social-economic-rights-normalized-edb91d554823-010",
+      "anchor_coordinates": [
+        -1.7371121644973755,
+        10.09671401977539
+      ],
+      "anchor_log_density_contrast": 0.48345489819100607,
+      "anchor_source_url": "https://www.dsausa.org/wp-json/wp/v2/strategy/617"
     },
     {
       "topic_id": "topic-022",
       "title": "Israel-Palestine Peace, Security, and Palestinian Rights",
-      "shares": {
-        "dsa": 0.06135244587941502,
-        "democratic": 0.012310610301032891,
-        "republican": 0.014352120844555614
-      },
-      "combined_share": 0.013331365572794253,
-      "gap": 0.048021080306620764
+      "mean_log_density_contrast": 1.887871498456339,
+      "dsa_claims": 243,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2004-israel-palestine-normalized-3bb1d6b334dc-002",
+      "anchor_coordinates": [
+        6.591990947723389,
+        8.097929000854492
+      ],
+      "anchor_log_density_contrast": 2.1820456020218124,
+      "anchor_source_url": "https://dlarchive.dsausa.org/wp-content/uploads/2018/12/DL_2004_V032_02.pdf"
+    },
+    {
+      "topic_id": "topic-004",
+      "title": "Economic Prosperity Narratives and Development Models",
+      "mean_log_density_contrast": 1.6315800388797923,
+      "dsa_claims": 281,
+      "dsa_bundles": 9,
+      "anchor_claim_id": "dsa-2024-program-normalized-c0035893561c-004",
+      "anchor_coordinates": [
+        1.2130087614059448,
+        8.046652793884277
+      ],
+      "anchor_log_density_contrast": 2.612386977320071,
+      "anchor_source_url": "https://program.dsausa.org/wp-content/uploads/2024/08/DSA_2024Program.pdf"
     }
   ],
-  "image_sha256": "065a3984e3b1866077e500b5a4554761bcf9288ba4707ba541f92252e73eea69"
+  "image_sha256": "1e6c725b080fee22a590fded6499266ceddd6c1957b892f21d12d6ea076dc872"
 }

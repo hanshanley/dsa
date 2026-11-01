@@ -85,13 +85,18 @@ combined side is a 50/50 mixture of the two parties' already-fitted KDE densitie
 not an average of their log densities or a merged political platform. All three
 reviewed party positions remain separate alongside the two DSA pairwise summaries.
 
-**Article-only lead:** [Where DSA stands apart](figures/article/dsa_vs_major_parties_lead.png)
-shows the three largest absolute weighted attention gaps against the 50/50
-Democratic–Republican average. It includes both positive and negative gaps, excludes
-identity subjects without renormalizing shares, and does not measure policy
-disagreement. [Exact values and input hashes](figures/article/dsa_vs_major_parties_lead.json)
-are preserved alongside the PNG. Rebuild with
-`python scripts/build_dsa_article_lead.py`; this asset is not added to the website.
+**Article-only lead:** [Where DSA's language is more concentrated](figures/article/dsa_vs_major_parties_lead.png)
+is a large map highlighting five DSA-heavy substantive issues against the 50/50
+Democratic–Republican density mixture. Issues rank by positive source-balanced mean
+log density contrast at DSA claims, requiring at least two DSA bundles. Markers locate
+reviewed positive-contrast examples near each issue's weighted projected center,
+not region boundaries. Original coordinates, densities and the common color scale
+are unchanged; this is not an attention-share or policy-disagreement ranking.
+[Exact contrasts, source anchors and input hashes](figures/article/dsa_vs_major_parties_lead.json)
+are preserved alongside the PNG. The previous
+[absolute attention-gap bars](figures/article/dsa_vs_major_parties_attention_gaps.png)
+remain separately available. Rebuild both with `python scripts/build_dsa_article_lead.py`;
+neither asset is added to the website.
 
 **Wider clustering and positions:** four large, source-linked atlases cover all
 21 substantive subjects: [all three groups](figures/national_claims/full/topics/positions/all_groups.png),

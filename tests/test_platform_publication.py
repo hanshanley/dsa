@@ -7,7 +7,11 @@ import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
-from scripts.build_dsa_article_lead import rank_attention_gaps
+from scripts.build_dsa_article_lead import (
+    combined_density_contrast,
+    rank_attention_gaps,
+    rank_density_areas,
+)
 from scripts.build_platform_publication import (
     DATA,
     FIGURES,
@@ -21,6 +25,65 @@ from scripts.build_platform_publication import (
 
 
 class ArticleLeadTest(unittest.TestCase):
+    def test_combined_density_uses_arithmetic_mixture_and_stays_finite(self):
+        import math
+
+        self.assertAlmostEqual(
+            combined_density_contrast([None, 0, 0, 0, 2, math.log(2), math.log(8), math.log(5)]),
+            0,
+        )
+        self.assertAlmostEqual(
+            combined_density_contrast([None, 0, 0, 0, 2, -10000, -10002, -9999]),
+            1 + math.log(2) - math.log1p(math.exp(-2)),
+        )
+
+    def test_density_ranking_keeps_original_bundle_weights_and_only_supported_positive_issues(self):
+        records = [
+            ("a1", 0, "large", 4),
+            ("a2", 0, "small", 0),
+            ("b1", 1, "large", 100),
+            ("b2", 1, "large", 100),
+            ("b3", 1, "large", 100),
+            ("i1", 2, "identity-one", 200),
+            ("i2", 2, "identity-two", 200),
+            ("n1", 3, "negative-one", -2),
+            ("n2", 3, "negative-two", -2),
+        ]
+        claims = [
+            dict(claim_id=claim, group="dsa", bundle_id=bundle, source_url="https://www.dsausa.org")
+            for claim, _, bundle, _ in records
+        ]
+        data = dict(
+            groups=["democratic", "republican", "dsa"],
+            limits=[[0, 10], [0, 10]],
+            points=[
+                [claim, index, index, topic, 2, 0, 0, contrast]
+                for index, (claim, topic, _, contrast) in enumerate(records)
+            ],
+            topics=[
+                dict(
+                    topic_id=name,
+                    title=name,
+                    displayed=name != "identity",
+                    examples=[
+                        dict(claim_id=claim, group="dsa")
+                        for claim, topic, _, _ in records
+                        if topic == index
+                    ],
+                )
+                for index, name in enumerate(("balanced", "single-bundle", "identity", "negative"))
+            ],
+        )
+        ranked = rank_density_areas(data, claims)
+        self.assertEqual([record["topic_id"] for record in ranked], ["balanced"])
+        self.assertAlmostEqual(ranked[0]["mean_log_density_contrast"], 0.8)
+        self.assertEqual(ranked[0]["dsa_bundles"], 2)
+        self.assertEqual(ranked[0]["anchor_claim_id"], "a1")
+        self.assertGreater(ranked[0]["anchor_log_density_contrast"], 0)
+        data["points"][0][0] = "foreign"
+        with self.assertRaisesRegex(ValueError, "exact unique claim membership"):
+            rank_density_areas(data, claims)
+
     def test_largest_absolute_gaps_include_less_attention_and_exclude_identity(self):
         labels = [
             dict(topic_id=topic, title=topic, displayed=topic != "identity")

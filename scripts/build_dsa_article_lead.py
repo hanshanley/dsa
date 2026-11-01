@@ -1,9 +1,10 @@
-"""Render the article-only lead from reviewed, weighted subject shares."""
+"""Render article-only density and attention figures from published results."""
 
 import csv
 import hashlib
 import json
 import math
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,7 +41,206 @@ def rank_attention_gaps(labels: list[dict], rows: list[dict]) -> list[dict]:
     return sorted(ranked, key=lambda row: (-abs(row["gap"]), row["topic_id"]))[:3]
 
 
-def render(records: list[dict], output: Path) -> None:
+def combined_density_contrast(point: list) -> float:
+    democratic, republican, dsa = point[5:8]
+    maximum = max(democratic, republican)
+    mixture = maximum + math.log(
+        (math.exp(democratic - maximum) + math.exp(republican - maximum)) / 2
+    )
+    return dsa - mixture
+
+
+def rank_density_areas(data: dict, claims: list[dict]) -> list[dict]:
+    lookup = {claim["claim_id"]: claim for claim in claims}
+    points = {point[0]: point for point in data["points"]}
+    if (
+        len(lookup) != len(claims)
+        or len(points) != len(data["points"])
+        or set(lookup) != set(points)
+    ):
+        raise ValueError("Density ranking requires exact unique claim membership")
+    dsa_group = data["groups"].index("dsa")
+    for point in points.values():
+        if data["groups"][point[4]] != lookup[point[0]]["group"]:
+            raise ValueError("Density ranking claim group mismatch")
+        if not all(math.isfinite(value) for value in point[1:]):
+            raise ValueError("Non-finite density ranking input")
+    bundles = {
+        claim_id: claim.get("bundle_id") or claim.get("document_id")
+        for claim_id, claim in lookup.items()
+        if claim["group"] == "dsa"
+    }
+    if any(not bundle for bundle in bundles.values()):
+        raise ValueError("Missing DSA source bundle")
+    counts = Counter(bundles.values())
+    ranked = []
+    for index, topic in enumerate(data["topics"]):
+        if not topic["displayed"]:
+            continue
+        members = [
+            point for point in points.values() if point[3] == index and point[4] == dsa_group
+        ]
+        bundle_count = len({bundles[point[0]] for point in members})
+        if bundle_count < 2:
+            continue
+        weights = [1 / counts[bundles[point[0]]] for point in members]
+        mass = sum(weights)
+        contrast = (
+            sum(
+                weight * combined_density_contrast(point) for point, weight in zip(members, weights)
+            )
+            / mass
+        )
+        if contrast <= 0:
+            continue
+        center = [
+            sum(weight * point[column] for point, weight in zip(members, weights)) / mass
+            for column in (1, 2)
+        ]
+        examples = [
+            points[example["claim_id"]]
+            for example in topic["examples"]
+            if example["group"] == "dsa"
+            and combined_density_contrast(points[example["claim_id"]]) > 0
+        ]
+        if not examples:
+            raise ValueError(f"No reviewed DSA-heavy example for {topic['topic_id']}")
+        anchor = min(
+            examples,
+            key=lambda point: (
+                sum(
+                    ((point[column] - center[column - 1]) / (limits[1] - limits[0])) ** 2
+                    for column, limits in zip((1, 2), data["limits"])
+                ),
+                point[0],
+            ),
+        )
+        ranked.append(
+            dict(
+                topic_id=topic["topic_id"],
+                title=topic["title"],
+                mean_log_density_contrast=contrast,
+                dsa_claims=len(members),
+                dsa_bundles=bundle_count,
+                anchor_claim_id=anchor[0],
+                anchor_coordinates=anchor[1:3],
+                anchor_log_density_contrast=combined_density_contrast(anchor),
+                anchor_source_url=lookup[anchor[0]]["source_url"],
+            )
+        )
+    return sorted(
+        ranked, key=lambda record: (-record["mean_log_density_contrast"], record["topic_id"])
+    )[:5]
+
+
+def render_density(data: dict, records: list[dict], output: Path) -> None:
+    import textwrap
+
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.colors import LinearSegmentedColormap, Normalize
+
+    plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK})
+    fig = plt.figure(figsize=(18, 12), facecolor=PAPER)
+    fig.text(0.045, 0.948, "NATIONAL PARTY DOCUMENTS  /  2000\u20132026", fontsize=11)
+    fig.text(
+        0.045,
+        0.888,
+        "Where DSA's language is more concentrated",
+        fontsize=30,
+        fontfamily="DejaVu Serif",
+        fontweight="bold",
+    )
+    fig.text(
+        0.045,
+        0.844,
+        "Five DSA-heavy issues versus the 50/50 Democratic\u2013Republican mixture",
+        fontsize=14,
+    )
+    axis = fig.add_axes((0.045, 0.205, 0.68, 0.595), facecolor=PAPER)
+    palette = LinearSegmentedColormap.from_list("combined_density", ["#b19cd9", PAPER, "#c2993e"])
+    bound = data["color_bound"]
+    normalization = Normalize(-bound, bound, clip=True)
+    points = data["points"]
+    axis.scatter(
+        [point[1] for point in points],
+        [point[2] for point in points],
+        c=[combined_density_contrast(point) for point in points],
+        cmap=palette,
+        norm=normalization,
+        s=2.2,
+        alpha=0.58,
+        linewidths=0,
+        rasterized=True,
+    )
+    axis.set_xlim(data["limits"][0])
+    axis.set_ylim(data["limits"][1])
+    axis.set_axis_off()
+    for number, record in enumerate(records, 1):
+        x, y = record["anchor_coordinates"]
+        axis.text(
+            x,
+            y,
+            str(number),
+            fontsize=12,
+            ha="center",
+            va="center",
+            color=INK,
+            bbox=dict(boxstyle="circle,pad=0.35", facecolor=PAPER, edgecolor=INK, linewidth=0.8),
+            zorder=5,
+        )
+        top = 0.773 - (number - 1) * 0.118
+        fig.text(0.77, top, f"{number:02d}", fontsize=12, color="#8d6c25", fontweight="bold")
+        fig.text(
+            0.77,
+            top - 0.022,
+            textwrap.fill(record["title"], width=28),
+            fontsize=15,
+            fontfamily="DejaVu Serif",
+            va="top",
+            linespacing=1.3,
+        )
+    color_axis = fig.add_axes((0.045, 0.161, 0.68, 0.012))
+    bar = fig.colorbar(
+        plt.cm.ScalarMappable(norm=normalization, cmap=palette),
+        cax=color_axis,
+        orientation="horizontal",
+        ticks=[-bound, 0, bound],
+    )
+    bar.outline.set_visible(False)
+    bar.ax.set_xticklabels([f"{-bound:.2f}", "0", f"+{bound:.2f}"])
+    bar.ax.tick_params(length=0, labelsize=10, pad=6, colors="#625d53")
+    fig.text(
+        0.045, 0.117, "Denser combined Democratic + Republican language", fontsize=10, color=INK
+    )
+    fig.text(0.725, 0.117, "Denser DSA language", fontsize=10, color=INK, ha="right")
+    fig.text(
+        0.045,
+        0.071,
+        "Ranked by source-balanced mean log density contrast at DSA claims within each issue; "
+        "at least two DSA source bundles.",
+        fontsize=10,
+    )
+    fig.text(
+        0.045,
+        0.041,
+        "The map is a 2D projection of higher-dimensional language densities. "
+        "Markers locate reviewed examples, not region boundaries or policy agreement.",
+        fontsize=10,
+    )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(
+        output,
+        dpi=200,
+        facecolor=PAPER,
+        metadata={"Title": "Where DSA's language is more concentrated", "Software": "dsa-analysis"},
+    )
+    plt.close(fig)
+
+
+def render_attention_gaps(records: list[dict], output: Path) -> None:
     import matplotlib
 
     matplotlib.use("Agg")
@@ -161,13 +361,15 @@ def render(records: list[dict], output: Path) -> None:
 
 
 def main() -> None:
+    from build_platform_publication import DATA, density_map_data
+
     data = ROOT / "data/analysis/national_claims/full/topics"
     labels_path, shares_path = data / "topic_labels.json", data / "shares.csv"
     labels = json.loads(labels_path.read_text())
     with shares_path.open(newline="") as handle:
         records = rank_attention_gaps(labels, list(csv.DictReader(handle)))
-    output = ROOT / "figures/article/dsa_vs_major_parties_lead.png"
-    render(records, output)
+    output = ROOT / "figures/article/dsa_vs_major_parties_attention_gaps.png"
+    render_attention_gaps(records, output)
     metadata = dict(
         article_only=True,
         ranking=(
@@ -177,6 +379,47 @@ def main() -> None:
         input_sha256={
             path.name: hashlib.sha256(path.read_bytes()).hexdigest()
             for path in (labels_path, shares_path)
+        },
+        topics=records,
+        image_sha256=hashlib.sha256(output.read_bytes()).hexdigest(),
+    )
+    output.with_suffix(".json").write_text(json.dumps(metadata, indent=2) + "\n")
+    full = ROOT / DATA
+    representatives_path = data / "representatives.csv"
+    claims_path = full / "analysis_claims.csv"
+    with representatives_path.open(newline="") as handle:
+        representatives = list(csv.DictReader(handle))
+    with claims_path.open(newline="") as handle:
+        claims = list(csv.DictReader(handle))
+    density = density_map_data(ROOT, labels, representatives)
+    records = rank_density_areas(density, claims)
+    if len(records) != 5:
+        raise ValueError("The article lead requires five supported DSA-heavy issues")
+    output = ROOT / "figures/article/dsa_vs_major_parties_lead.png"
+    render_density(density, records, output)
+    inputs = [
+        labels_path,
+        representatives_path,
+        claims_path,
+        full / "expanded/scored_passages.csv",
+        full / "expanded/density_region_evidence.csv",
+        data / "assignments.csv",
+        data / "positions/group_positions.json",
+    ]
+    metadata = dict(
+        article_only=True,
+        ranking="largest positive source-balanced mean combined log density contrast at DSA claims",
+        contrast="log p(DSA) - log((p(Democratic) + p(Republican)) / 2)",
+        weighting="equal DSA bundle mass, equal eligible claim mass within each bundle",
+        minimum_dsa_bundles=2,
+        anchor_selection=(
+            "reviewed positive-contrast DSA example nearest the weighted 2D issue center"
+        ),
+        map_claims=len(density["points"]),
+        color_bound=density["color_bound"],
+        input_sha256={
+            path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in inputs
         },
         topics=records,
         image_sha256=hashlib.sha256(output.read_bytes()).hexdigest(),
