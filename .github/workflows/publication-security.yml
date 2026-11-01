@@ -34,3 +34,5 @@ jobs:
             --ignore-gitleaks-allow --max-decode-depth=3 --max-archive-depth=2 --no-banner
       - name: Check signed URLs and encoded publication artifacts
         run: python3 src/dsa_analysis/publication_security.py --ref HEAD
+      - name: Verify current publishing copies
+        run: python3 scripts/build_publication_folder.py --check

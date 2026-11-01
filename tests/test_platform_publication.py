@@ -26,6 +26,92 @@ from scripts.build_platform_publication import (
     export,
     validate,
 )
+from scripts.build_publication_folder import export_publishing, publication_files
+
+
+class PublishingFolderTest(unittest.TestCase):
+    def make_source(self, root):
+        labels = [
+            {"topic_id": "topic-003", "title": "Labor & unions", "displayed": True},
+            {"topic_id": "topic-008", "title": "Party identity", "displayed": False},
+        ]
+        path = root / "data/analysis/national_claims/full/topics/topic_labels.json"
+        path.parent.mkdir(parents=True)
+        path.write_text(json.dumps(labels))
+        sources = [
+            "figures/article/dsa_vs_major_parties_lead.png",
+            "figures/article/dsa_attention_share_ratios.csv",
+            "figures/national_claims/full/topics/expanded/substack_overview.png",
+            "figures/national_claims/full/topics/expanded/issues/topic-003_overall.png",
+            "figures/national_claims/full/topics/expanded/issues/topic-003_time.png",
+            "figures/national_claims/full/topics/expanded/piece/topic-003.png",
+        ]
+        sources.extend(
+            f"figures/national_claims/full/topics/positions/{name}.png"
+            for name in (
+                "all_groups",
+                "democratic_vs_republican",
+                "democratic_vs_dsa",
+                "republican_vs_dsa",
+            )
+        )
+        for source in sources:
+            path = root / source
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(source.encode())
+        return root / "figures/article/dsa_vs_major_parties_lead.png"
+
+    def test_publishing_copies_preserve_original_bytes_and_detect_stale_sources(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            lead = self.make_source(root)
+            manifest = export_publishing(root)
+            self.assertEqual(export_publishing(root, check=True), manifest)
+            self.assertEqual(
+                (root / "publication/substack/where-dsa-stands-apart.png").read_bytes(),
+                lead.read_bytes(),
+            )
+            self.assertIn("substack/issues/labor-unions-combined.png", manifest)
+            self.assertFalse(any("identity" in name or "topic-" in name for name in manifest))
+            lead.write_bytes(b"updated lead")
+            with self.assertRaisesRegex(ValueError, "stale publishing file"):
+                export_publishing(root, check=True)
+            export_publishing(root)
+            export_publishing(root, check=True)
+
+    def test_missing_inputs_and_colliding_issue_names_are_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            lead = self.make_source(root)
+            lead.unlink()
+            with self.assertRaisesRegex(ValueError, "existing current figures"):
+                export_publishing(root)
+            self.assertFalse((root / "publication").exists())
+            lead.write_bytes(b"lead")
+            path = root / "data/analysis/national_claims/full/topics/topic_labels.json"
+            labels = json.loads(path.read_text())
+            labels.append({"topic_id": "topic-009", "title": "Labor-unions", "displayed": True})
+            path.write_text(json.dumps(labels))
+            with self.assertRaisesRegex(ValueError, "Duplicate publishing filename"):
+                publication_files(root)
+
+    def test_refresh_removes_only_previously_managed_obsolete_files(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.make_source(root)
+            export_publishing(root)
+            old = root / "publication/substack/issues/labor-unions-overall.png"
+            unowned = old.with_name("my-draft.png")
+            unowned.write_bytes(b"keep my draft")
+            path = root / "data/analysis/national_claims/full/topics/topic_labels.json"
+            labels = json.loads(path.read_text())
+            labels[0]["title"] = "Worker protections"
+            path.write_text(json.dumps(labels))
+            export_publishing(root)
+            self.assertFalse(old.exists())
+            self.assertEqual(unowned.read_bytes(), b"keep my draft")
+            self.assertTrue(old.with_name("worker-protections-overall.png").exists())
+            export_publishing(root, check=True)
 
 
 class ArticleLeadTest(unittest.TestCase):

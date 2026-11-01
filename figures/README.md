@@ -1,5 +1,10 @@
 # Chart guide
 
+**Looking for the image to put in Substack?**
+[Download the DSA lead](../publication/substack/where-dsa-stands-apart.png), or
+open the [publishing folder](../publication/README.md) for issue charts with
+readable filenames. This guide keeps the original analytical paths for reference.
+
 **Start with the current, expanded-source comparisons below.** They cover
 Democratic, Republican and DSA national documents across 2000–2026.
 All linked current charts are PNGs. Share charts measure document-weighted

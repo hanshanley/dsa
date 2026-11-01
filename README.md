@@ -28,7 +28,21 @@ The analysis also tracks observed four-year periods and independently discovers
 
 **[Explore the live analysis](https://www.themarginoferror.com/party-platforms/)** ·
 [Read the report](report/national_claim_analysis.md) ·
-[Browse the charts](figures/README.md)
+[Get images for Substack](publication/README.md)
+
+### Finding the right files
+
+| Need | Start here |
+|---|---|
+| This DSA image for Substack | [where-dsa-stands-apart.png](publication/substack/where-dsa-stands-apart.png) |
+| Other publication-ready images | [Publishing folder: named issues, overview and positions](publication/README.md) |
+| Ratios for every issue | [attention-share-ratios.csv](publication/data/attention-share-ratios.csv) |
+| Full analytical data and sources | [Results and downloads](#results-and-downloads) |
+| Code and reproduction | [Methods](#methods) · [Reproduce](#reproduce) |
+
+Use `publication/` for final deliverables. The deeper `figures/`, `data/` and
+`report/` paths retain canonical research outputs and history; you do not need
+to browse them to find a Substack image.
 
 Claims come from local Gemma extraction with separately identified, source-bound
 assistant corrections. Topic names and position summaries are reviewed against
@@ -38,8 +52,8 @@ attention, not a measure of agreement or independent human certification.
 ### Where DSA gives more attention
 
 <p align="center">
-  <a href="figures/article/dsa_lead_option_a-map-five.png?rev=attention-shares">
-    <img src="figures/article/dsa_lead_option_a-map-five.png?rev=attention-shares" width="1100" alt="Original embedding graph with five numbered issues, attention-share comparisons and dated DSA statements beside it">
+  <a href="publication/substack/where-dsa-stands-apart.png?rev=attention-shares">
+    <img src="publication/substack/where-dsa-stands-apart.png?rev=attention-shares" width="1100" alt="Original embedding graph with five numbered issues, attention-share comparisons and dated DSA statements beside it">
   </a>
 </p>
 
@@ -331,6 +345,7 @@ is also separate from the national comparison.
 
 | Location | Contents |
 |---|---|
+| [`publication/`](publication/) | Ready-to-use Substack images by name and complete attention ratios |
 | [`src/dsa_analysis/`](src/dsa_analysis/) | Extraction, corpus preparation, analysis and CLI |
 | [`data/manual/`](data/manual/) | Curated source ledgers and qualifications |
 | [`data/analysis/`](data/analysis/) | Complete texts, claims, provenance and result tables |
