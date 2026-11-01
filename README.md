@@ -49,6 +49,17 @@ review is not a representative sample or corpus-wide semantic certification. Ear
 and passage-based results are retained below as historical references.
 
 <p align="center">
+  <a href="figures/article/dsa_vs_major_parties_lead.png">
+    <img src="figures/article/dsa_vs_major_parties_lead.png" width="1100" alt="Five DSA-heavy issues highlighted on a density map against the equal-weight Democratic-Republican mixture">
+  </a>
+</p>
+
+*Article lead: five issues with the largest positive source-balanced mean density
+contrasts at DSA claims. Light purple marks denser combined major-party language;
+gold marks denser DSA language. [Full-size PNG](figures/article/dsa_vs_major_parties_lead.png)
+and [exact contrasts and source anchors](figures/article/dsa_vs_major_parties_lead.json).*
+
+<p align="center">
   <img src="figures/national_claims/full/topics/expanded/substack_overview.png" width="1100" alt="All 21 substantive subjects compared across Democratic, Republican and DSA national documents">
 </p>
 
