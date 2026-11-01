@@ -99,7 +99,7 @@ def make_figures(
     axis.set_yticks(range(len(groups)), [organizations[group] for group in groups])
     for row in range(len(groups)):
         for column in range(len(topics)):
-            axis.text(column, row, f"{matrix[row, column]:.0%}", ha="center", va="center")
+            axis.text(column, row, f"{matrix[row, column]:.1%}", ha="center", va="center")
     for spine in axis.spines.values():
         spine.set_visible(False)
     figure.suptitle("What DSA caucuses give attention to", x=0.03, ha="left", fontsize=20)
