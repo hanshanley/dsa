@@ -28,21 +28,26 @@ The analysis also tracks observed four-year periods and independently discovers
 
 **[Explore the live analysis](https://www.themarginoferror.com/party-platforms/)** ·
 [Read the report](report/national_claim_analysis.md) ·
-[Get images for Substack](publication/README.md)
+[Get publication images](figures/README.md)
 
 ### Finding the right files
 
 | Need | Start here |
 |---|---|
-| This DSA image for Substack | [where-dsa-stands-apart.png](publication/substack/where-dsa-stands-apart.png) |
-| Other publication-ready images | [Publishing folder: named issues, overview and positions](publication/README.md) |
-| Ratios for every issue | [attention-share-ratios.csv](publication/data/attention-share-ratios.csv) |
+| This DSA image for Substack | [where-dsa-stands-apart.png](figures/substack/where-dsa-stands-apart.png) |
+| All Substack figures | [figures/substack/](figures/substack/README.md) |
+| All The Margin of Error figures | [figures/margin-of-error/](figures/margin-of-error/README.md) |
+| Choose a destination | [Figure index](figures/README.md) |
+| Ratios for every issue | [attention-share-ratios.csv](figures/data/attention-share-ratios.csv) |
 | Full analytical data and sources | [Results and downloads](#results-and-downloads) |
 | Code and reproduction | [Methods](#methods) · [Reproduce](#reproduce) |
 
-Use `publication/` for final deliverables. The deeper `figures/`, `data/` and
-`report/` paths retain canonical research outputs and history; you do not need
-to browse them to find a Substack image.
+All current publishing figures are browsable under **`figures/substack/`**
+or **`figures/margin-of-error/`**, with the same named issue folders.
+Substack exports use light gray (`#F5F5F5`); The Margin of Error exports use
+warm off-white (`#F7F5F0`), matching the reference project's destination themes.
+The deeper research paths remain for reproducibility and old links, not as
+additional places to look for publication images.
 
 Claims come from local Gemma extraction with separately identified, source-bound
 assistant corrections. Topic names and position summaries are reviewed against
@@ -52,15 +57,15 @@ attention, not a measure of agreement or independent human certification.
 ### Where DSA gives more attention
 
 <p align="center">
-  <a href="publication/substack/where-dsa-stands-apart.png?rev=attention-shares">
-    <img src="publication/substack/where-dsa-stands-apart.png?rev=attention-shares" width="1100" alt="Original embedding graph with five numbered issues, attention-share comparisons and dated DSA statements beside it">
+  <a href="figures/substack/where-dsa-stands-apart.png">
+    <img src="figures/substack/where-dsa-stands-apart.png" width="1100" alt="Original embedding graph with five numbered issues, attention-share comparisons and dated DSA statements beside it">
   </a>
 </p>
 
 *Five issues with the largest positive DSA attention-share gaps against the
 equal-weight Democratic–Republican average, with at least two DSA source bundles.
 Callouts show both shares, their ratio, and dated DSA paraphrases.
-[Full-size PNG](figures/article/dsa_vs_major_parties_lead.png) ·
+[Full-size PNG](figures/substack/where-dsa-stands-apart.png) ·
 [Exact values and source anchors](figures/article/dsa_vs_major_parties_lead.json).*
 
 **Attention share** is an issue's proportion of weighted policy claims, giving
@@ -91,14 +96,14 @@ A is the current lead; B and C show three examples.
 
 | Option | Layout | Image and source data |
 |---|---|---|
-| A | Map with five statements beside it | [PNG](figures/article/dsa_lead_option_a-map-five.png) · [Data](figures/article/dsa_lead_option_a-map-five.json) |
-| B | Wide map with three statements below | [PNG](figures/article/dsa_lead_option_b-map-bottom.png) · [Data](figures/article/dsa_lead_option_b-map-bottom.json) |
-| C | Map with three larger statements beside it | [PNG](figures/article/dsa_lead_option_c-map-three.png) · [Data](figures/article/dsa_lead_option_c-map-three.json) |
+| A | Map with five statements beside it | [PNG](figures/substack/where-dsa-stands-apart.png) · [Data](figures/article/dsa_lead_option_a-map-five.json) |
+| B | Wide map with three statements below | [PNG](figures/substack/alternatives/where-dsa-stands-apart-bottom.png) · [Data](figures/article/dsa_lead_option_b-map-bottom.json) |
+| C | Map with three larger statements beside it | [PNG](figures/substack/alternatives/where-dsa-stands-apart-three.png) · [Data](figures/article/dsa_lead_option_c-map-three.json) |
 
 Rebuild alternatives without changing the current lead:
 `python scripts/build_dsa_article_lead.py --variants-only`.
 Rebuild the lead and separate
-[absolute attention-gap bars](figures/article/dsa_vs_major_parties_attention_gaps.png)
+[absolute attention-gap bars](figures/substack/supporting/dsa-attention-gaps.png)
 with `python scripts/build_dsa_article_lead.py`.
 These standalone article images are not embedded in the website.
 
@@ -150,19 +155,19 @@ unsmoothed percentage-point gaps. Identity-cluster shares are not renormalized a
 <summary>Overview and position atlases</summary>
 
 <p align="center">
-  <img src="figures/national_claims/full/topics/expanded/substack_overview.png" width="1100" alt="All 21 substantive subjects compared across Democratic, Republican and DSA national documents">
+  <img src="figures/substack/all-issues-overview.png" width="1100" alt="All 21 substantive subjects compared across Democratic, Republican and DSA national documents">
 </p>
 
-[Overview PNG](figures/national_claims/full/topics/expanded/substack_overview.png) ·
-[Individual issue charts](figures/national_claims/full/topics/expanded/issues/) ·
-[Selected article charts](figures/national_claims/full/topics/expanded/piece/) ·
-[Website versions](figures/national_claims/full/themarginoferror/)
+[Overview PNG](figures/substack/all-issues-overview.png) ·
+[Individual issue charts](figures/substack/README.md#issue-charts) ·
+[Selected article charts](figures/substack/README.md#issue-charts) ·
+[Website versions](figures/margin-of-error/README.md)
 
 Four source-linked atlases pair semantic maps with weighted shares and
-individualized positions: [all three groups](figures/national_claims/full/topics/positions/all_groups.png),
-[Democratic–Republican](figures/national_claims/full/topics/positions/democratic_vs_republican.png),
-[Democratic–DSA](figures/national_claims/full/topics/positions/democratic_vs_dsa.png), and
-[Republican–DSA](figures/national_claims/full/topics/positions/republican_vs_dsa.png).
+individualized positions: [all three groups](figures/substack/positions/all-groups.png),
+[Democratic–Republican](figures/substack/positions/democratic-vs-republican.png),
+[Democratic–DSA](figures/substack/positions/democratic-vs-dsa.png), and
+[Republican–DSA](figures/substack/positions/republican-vs-dsa.png).
 Pairwise atlases also state documented policy distinctions. Their colors show
 topic-share gaps, not ideological distance.
 
@@ -345,11 +350,11 @@ is also separate from the national comparison.
 
 | Location | Contents |
 |---|---|
-| [`publication/`](publication/) | Ready-to-use Substack images by name and complete attention ratios |
+| [`figures/`](figures/README.md) | Current Substack and Margin of Error publishing folders, chart values and preserved research originals |
 | [`src/dsa_analysis/`](src/dsa_analysis/) | Extraction, corpus preparation, analysis and CLI |
 | [`data/manual/`](data/manual/) | Curated source ledgers and qualifications |
 | [`data/analysis/`](data/analysis/) | Complete texts, claims, provenance and result tables |
-| [`report/`](report/) · [`figures/`](figures/) | Reports and charts, separated by analysis |
+| [`report/`](report/) | Analytical reports, separated by analysis |
 | [`docs/`](docs/) · [`tests/`](tests/) | Methods, reproduction guides and regression tests |
 | [`files/research_archive/`](files/research_archive/) | Preserved legacy research captures and working artifacts |
 

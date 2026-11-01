@@ -1,134 +1,58 @@
-# Chart guide
+# Figures
 
-**Looking for the image to put in Substack?**
-[Download the DSA lead](../publication/substack/where-dsa-stands-apart.png), or
-open the [publishing folder](../publication/README.md) for issue charts with
-readable filenames. This guide keeps the original analytical paths for reference.
+**Two destinations, one home for current figures.** Choose Substack or
+The Margin of Error, then use the same readable issue filenames.
+Substack uses `#F5F5F5`; The Margin of Error uses `#F7F5F0`,
+matching the destination themes in `hanshanley/china-us-relation-change`.
+Only background pixels change; chart marks, text, dimensions and values stay intact.
 
-**Start with the current, expanded-source comparisons below.** They cover
-Democratic, Republican and DSA national documents across 2000–2026.
-All linked current charts are PNGs. Share charts measure document-weighted
-attention, not agreement or how many people hold a position. Language-density
-maps measure concentration in the fitted semantic space, not policy distance.
+```text
+figures/
+  substack/          Article images and Substack-background charts
+  margin-of-error/   Website-background charts
+  data/              Complete attention-share ratios
+```
 
-## Article graphics
-
-The [article lead: Where DSA stands apart](article/dsa_vs_major_parties_lead.png)
-highlights five substantive issues with the largest positive weighted attention-share
-gaps between DSA and the equal-weight Democratic–Republican average.
-The map uses all 26,069 eligible claims; numbered markers locate reviewed
-central examples, not region boundaries.
-[Exact attention shares and source anchors](article/dsa_vs_major_parties_lead.json)
-retain the full reviewed topic names behind the shorter display labels.
-Three article-only layouts retain that original embedding graph and add dated,
-source-backed DSA paraphrases, attention shares and share ratios. The side-column layouts
-align the issue list with the title, separate source dates from statements, and
-use compact right-aligned multipliers with subtle dividers. Attention shares are
-policy-claim proportions with equal source-bundle mass within each organization.
-Each multiplier divides DSA's unrounded share by the average of the Democratic
-and Republican unrounded shares. Map colors retain the original density contrast;
-they do not encode attention shares:
-[A: five statements beside the map](article/dsa_lead_option_a-map-five.png),
-[B: three statements below the map](article/dsa_lead_option_b-map-bottom.png), and
-[C: three larger statements beside the map](article/dsa_lead_option_c-map-three.png).
-Each has an adjacent JSON with the original claims, source evidence, dates and
-original map limits and color bound. Option A is also the updated current lead.
-[All attention-share ratios](article/dsa_attention_share_ratios.csv) contains
-all 21 substantive subjects and the three excluded identity clusters, with
-individual party shares, the comparison average, gaps and all four directed
-ratios: Democratic / Republican, DSA / Democratic, DSA / Republican, and
-DSA / the equal-weight Democratic–Republican average. Zero baselines have blank ratios.
-The earlier graph-free alternatives are retired from this guide.
-The earlier [absolute attention-gap bars](article/dsa_vs_major_parties_attention_gaps.png)
-remain separately available and use a different ranking.
-
-The [standalone Substack overview](national_claims/full/topics/expanded/substack_overview.png)
-compares all 21 substantive subjects in one image, using the current reviewed
-names and exact weighted shares.
-
-These six graphics put the overall comparison and timeline together.
-
-| Subject | Combined graphic |
-|---|---|
-| Labor and unions | [PNG](national_claims/full/topics/expanded/piece/topic-003.png) |
-| Taxes | [PNG](national_claims/full/topics/expanded/piece/topic-011.png) |
-| Public education | [PNG](national_claims/full/topics/expanded/piece/topic-012.png) |
-| Reproductive rights, gender equality and family policy | [PNG](national_claims/full/topics/expanded/piece/topic-013.png) |
-| Healthcare | [PNG](national_claims/full/topics/expanded/piece/topic-018.png) |
-| Israel–Palestine | [PNG](national_claims/full/topics/expanded/piece/topic-022.png) |
-
-## Every issue, by name
-
-The overall chart compares all three groups. The timeline follows the same
-subject through observed four-year periods; missing documents remain gaps.
-Use the names here instead of browsing numbered filenames.
-
-| Issue | Overall | Over time |
+| Use | Substack | The Margin of Error |
 |---|---|---|
-| American Power, Leadership, and National Purpose | [PNG](national_claims/full/topics/expanded/issues/topic-006_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-006_time.png) |
-| Community Investment, Housing, and Social Support | [PNG](national_claims/full/topics/expanded/issues/topic-002_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-002_time.png) |
-| Counterterrorism, Military Readiness, and War Strategy | [PNG](national_claims/full/topics/expanded/issues/topic-014_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-014_time.png) |
-| Criminal Justice, Policing, and Incarceration | [PNG](national_claims/full/topics/expanded/issues/topic-010_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-010_time.png) |
-| Cross-Policy Opposition and Institutional Critiques | [PNG](national_claims/full/topics/expanded/issues/topic-015_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-015_time.png) |
-| Diplomacy, Alliances, Trade, and International Cooperation | [PNG](national_claims/full/topics/expanded/issues/topic-009_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-009_time.png) |
-| Economic Hardship, Poverty, and Housing Insecurity | [PNG](national_claims/full/topics/expanded/issues/topic-019_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-019_time.png) |
-| Economic Prosperity Narratives and Development Models | [PNG](national_claims/full/topics/expanded/issues/topic-004_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-004_time.png) |
-| Energy Production, Transition, and Investment | [PNG](national_claims/full/topics/expanded/issues/topic-001_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-001_time.png) |
-| Healthcare Coverage, Affordability, and System Design | [PNG](national_claims/full/topics/expanded/issues/topic-018_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-018_time.png) |
-| Immigration Reform, Enforcement, and Migrant Rights | [PNG](national_claims/full/topics/expanded/issues/topic-021_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-021_time.png) |
-| Institutional Power, Oppression, and Social Conflict | [PNG](national_claims/full/topics/expanded/issues/topic-020_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-020_time.png) |
-| Israel-Palestine Peace, Security, and Palestinian Rights | [PNG](national_claims/full/topics/expanded/issues/topic-022_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-022_time.png) |
-| Labor Rights, Unionization, and Worker Protections | [PNG](national_claims/full/topics/expanded/issues/topic-003_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-003_time.png) |
-| Presidential Leadership, Records, and Policy Commitments | [PNG](national_claims/full/topics/expanded/issues/topic-016_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-016_time.png) |
-| Public Education Access, Funding, and School Choice | [PNG](national_claims/full/topics/expanded/issues/topic-012_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-012_time.png) |
-| Public Protections and National Commitments | [PNG](national_claims/full/topics/expanded/issues/topic-007_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-007_time.png) |
-| Reproductive Rights, Gender Equality, and Family Policy | [PNG](national_claims/full/topics/expanded/issues/topic-013_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-013_time.png) |
-| Tax Relief, Progressive Revenue, and Corporate Taxation | [PNG](national_claims/full/topics/expanded/issues/topic-011_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-011_time.png) |
-| Trump Administration Records and Partisan Critiques | [PNG](national_claims/full/topics/expanded/issues/topic-024_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-024_time.png) |
-| Voting Rights, Election Rules, and Representation | [PNG](national_claims/full/topics/expanded/issues/topic-005_overall.png) | [PNG](national_claims/full/topics/expanded/issues/topic-005_time.png) |
+| The DSA map with five attention ratios and dated statements | [where-dsa-stands-apart.png](substack/where-dsa-stands-apart.png) | [where-dsa-stands-apart.png](margin-of-error/where-dsa-stands-apart.png) |
+| All 21 substantive issues in one chart | [PNG](substack/all-issues-overview.png) | [PNG](margin-of-error/all-issues-overview.png) |
+| Named issue charts and combined article graphics | [Browse](substack/README.md#issue-charts) | [Browse](margin-of-error/README.md#issue-charts) |
+| Positions, overview pages, density maps and supporting figures | [Browse](substack/README.md) | [Browse](margin-of-error/README.md) |
 
-## Wider maps and group positions
+[All four attention-share ratios, including flagged identity clusters](data/attention-share-ratios.csv).
 
-Large atlases combine shared issue clusters with evidence-reviewed summaries.
-Pairwise versions explain documented differences, not ideological distance.
+[Download the Substack lead PNG directly](https://raw.githubusercontent.com/hanshanley/dsa/main/figures/substack/where-dsa-stands-apart.png). The [lead's exact values, dated statements and source anchors](article/dsa_vs_major_parties_lead.json) remain alongside the original.
 
-| Groups | Atlas |
-|---|---|
-| All three | [PNG](national_claims/full/topics/positions/all_groups.png) |
-| Democratic and Republican | [PNG](national_claims/full/topics/positions/democratic_vs_republican.png) |
-| Democratic and DSA | [PNG](national_claims/full/topics/positions/democratic_vs_dsa.png) |
-| Republican and DSA | [PNG](national_claims/full/topics/positions/republican_vs_dsa.png) |
+## What goes where
 
-## All-issue overview pages
+Both destinations use `issues/`, `positions/`, `overviews/`, and `supporting/`.
+Main folders contain the expanded comparison; `supporting/adopted-only/`
+contains strict-view sensitivity figures. `supporting/period-themes/`
+contains independently discovered period topics. Article alternatives
+are under each destination's `alternatives/`, not mixed with final lead images.
 
-Pages follow the combined overall-attention order, not the alphabetical index above.
-Share pages include each group's reviewed position summary. Difference pages
-compare attention in percentage points.
+The website uses its [live interactive map](https://www.themarginoferror.com/party-platforms/) rather than the article lead.
+Complete claims, source texts and the analytical archive remain linked from
+[results and downloads](../README.md#results-and-downloads).
 
-| Subjects | Shares and positions | Each group minus the others | Party-to-party gaps |
-|---|---|---|---|
-| 1–8 | [PNG](national_claims/full/topics/expanded/topic_distribution.png) | [PNG](national_claims/full/topics/expanded/vs_rest_emphasis.png) | [PNG](national_claims/full/topics/expanded/pairwise_emphasis.png) |
-| 9–16 | [PNG](national_claims/full/topics/expanded/topic_distribution_2.png) | [PNG](national_claims/full/topics/expanded/vs_rest_emphasis_2.png) | [PNG](national_claims/full/topics/expanded/pairwise_emphasis_2.png) |
-| 17–21 | [PNG](national_claims/full/topics/expanded/topic_distribution_3.png) | [PNG](national_claims/full/topics/expanded/vs_rest_emphasis_3.png) | [PNG](national_claims/full/topics/expanded/pairwise_emphasis_3.png) |
+## Refreshing this folder
 
-## Supporting and alternate outputs
+After regenerating canonical figures, run:
 
-| Collection | What differs |
-|---|---|
-| [Adopted-platform-only issues](national_claims/full/topics/strict/issues/) | Narrower source eligibility; topic IDs match the named issue index |
-| [Independent period themes](national_claims/full/topics/evolution/expanded/) | Separately discovered topics within each period, not the fixed-topic timelines |
-| [Detailed language maps](national_claims/full/expanded/density_details/) | Numbered examples and source-linked language-density comparisons |
-| [Broad CAP topics: page 1](national_claims/full/topic_emphasis.png), [page 2](national_claims/full/topic_emphasis_2.png) | Supporting reference taxonomy, not the learned issue clusters |
-| [Website backgrounds](national_claims/full/themarginoferror/) | Matching PNGs on a different paper color, not additional findings |
+```bash
+python scripts/build_publication_folder.py
+python scripts/build_publication_folder.py --check
+```
 
-## Historical work
+`manifest.json` records original paths, source and export SHA-256 hashes,
+and destination backgrounds. The check rejects missing or stale exports;
+CI runs it too.
 
-[Reviewed-sample claims](national_claims/reviewed_sample/),
-[passage-based comparisons](national_platforms/), and the earlier
-[official-platform](official_platform_gte_kde.png) and
-[provisional](provisional_gte_kde.png) maps are retained as historical outputs.
-They are not the current full-corpus comparison.
+## Research originals and history
 
-For the source evidence, interpretation and complete download, return to the
-[repository guide](../README.md#results-and-downloads) or the
-[full report](../report/national_claim_analysis.md).
+`national_claims/full/` and `article/` retain the original analytical bytes
+for report links, replay hashes, releases and the website's pinned inputs.
+They are research inputs, not additional places to find publishing images.
+Earlier [reviewed-sample](national_claims/reviewed_sample/) and
+[passage-based](national_platforms/) figures remain historical.

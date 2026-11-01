@@ -35,4 +35,6 @@ jobs:
       - name: Check signed URLs and encoded publication artifacts
         run: python3 src/dsa_analysis/publication_security.py --ref HEAD
       - name: Verify current publishing copies
-        run: python3 scripts/build_publication_folder.py --check
+        run: |
+          python3 -m pip install 'pillow>=10'
+          python3 scripts/build_publication_folder.py --check

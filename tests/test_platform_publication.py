@@ -31,6 +31,8 @@ from scripts.build_publication_folder import export_publishing, publication_file
 
 class PublishingFolderTest(unittest.TestCase):
     def make_source(self, root):
+        from PIL import Image
+
         labels = [
             {"topic_id": "topic-003", "title": "Labor & unions", "displayed": True},
             {"topic_id": "topic-008", "title": "Party identity", "displayed": False},
@@ -55,25 +57,76 @@ class PublishingFolderTest(unittest.TestCase):
                 "republican_vs_dsa",
             )
         )
+        sources.extend(
+            [
+                "figures/national_claims/full/expanded/density_details/democratic_vs_dsa_1.png",
+                "figures/national_claims/full/strict/density_details/democratic_vs_dsa_1.png",
+                "figures/national_claims/full/topics/strict/issues/topic-003_overall.png",
+                "figures/national_claims/full/strict/coverage.png",
+            ]
+        )
         for source in sources:
             path = root / source
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(source.encode())
+            if path.suffix == ".csv":
+                path.write_bytes(b"topic,ratio\nlabor,5.5\n")
+                continue
+            background = "#F2EFE7" if "/article/" in source else "#F7F5F0"
+            image = Image.new("RGBA", (4, 4), background)
+            image.putpixel((1, 1), (200, 90, 61, 255))
+            image.putpixel((2, 2), (247, 245, 240, 128))
+            image.save(path)
         return root / "figures/article/dsa_vs_major_parties_lead.png"
 
-    def test_publishing_copies_preserve_original_bytes_and_detect_stale_sources(self):
+    def test_publishing_backgrounds_preserve_chart_pixels_and_detect_stale_sources(self):
+        from PIL import Image
+
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             lead = self.make_source(root)
+            original = lead.read_bytes()
             manifest = export_publishing(root)
             self.assertEqual(export_publishing(root, check=True), manifest)
-            self.assertEqual(
-                (root / "publication/substack/where-dsa-stands-apart.png").read_bytes(),
-                lead.read_bytes(),
-            )
+            self.assertEqual(lead.read_bytes(), original)
             self.assertIn("substack/issues/labor-unions-combined.png", manifest)
+            self.assertIn("margin-of-error/issues/labor-unions-combined.png", manifest)
+            for destination, background in (
+                ("substack", (245, 245, 245, 255)),
+                ("margin-of-error", (247, 245, 240, 255)),
+            ):
+                for name in ("where-dsa-stands-apart.png", "issues/labor-unions-overall.png"):
+                    with Image.open(root / "figures" / destination / name) as image:
+                        self.assertEqual(image.getpixel((0, 0)), background)
+                        self.assertEqual(image.getpixel((1, 1)), (200, 90, 61, 255))
+                        self.assertEqual(image.getpixel((2, 2)), (247, 245, 240, 128))
+            website = root / "figures/margin-of-error/issues/labor-unions-overall.png"
+            self.assertEqual(
+                website.read_bytes(),
+                (
+                    root
+                    / "figures/national_claims/full/topics/expanded/issues/topic-003_overall.png"
+                ).read_bytes(),
+            )
+            self.assertIn("margin-of-error/supporting/density/democratic-vs-dsa-1.png", manifest)
+            self.assertIn(
+                "margin-of-error/supporting/adopted-only/issues/labor-unions-overall.png",
+                manifest,
+            )
+            self.assertIn(
+                "margin-of-error/supporting/adopted-only/density/democratic-vs-dsa-1.png",
+                manifest,
+            )
+            self.assertIn("margin-of-error/supporting/adopted-only/coverage.png", manifest)
+            self.assertFalse(any("adopted-only/supporting/" in name for name in manifest))
             self.assertFalse(any("identity" in name or "topic-" in name for name in manifest))
-            lead.write_bytes(b"updated lead")
+            ratios = root / "figures/data/attention-share-ratios.csv"
+            self.assertEqual(
+                ratios.read_bytes(),
+                (root / "figures/article/dsa_attention_share_ratios.csv").read_bytes(),
+            )
+            with Image.open(lead) as image:
+                image.putpixel((1, 1), (61, 111, 140, 255))
+                image.save(lead)
             with self.assertRaisesRegex(ValueError, "stale publishing file"):
                 export_publishing(root, check=True)
             export_publishing(root)
@@ -83,11 +136,12 @@ class PublishingFolderTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             lead = self.make_source(root)
+            original = lead.read_bytes()
             lead.unlink()
             with self.assertRaisesRegex(ValueError, "existing current figures"):
                 export_publishing(root)
-            self.assertFalse((root / "publication").exists())
-            lead.write_bytes(b"lead")
+            self.assertFalse((root / "figures/substack").exists())
+            lead.write_bytes(original)
             path = root / "data/analysis/national_claims/full/topics/topic_labels.json"
             labels = json.loads(path.read_text())
             labels.append({"topic_id": "topic-009", "title": "Labor-unions", "displayed": True})
@@ -100,7 +154,7 @@ class PublishingFolderTest(unittest.TestCase):
             root = Path(directory)
             self.make_source(root)
             export_publishing(root)
-            old = root / "publication/substack/issues/labor-unions-overall.png"
+            old = root / "figures/substack/issues/labor-unions-overall.png"
             unowned = old.with_name("my-draft.png")
             unowned.write_bytes(b"keep my draft")
             path = root / "data/analysis/national_claims/full/topics/topic_labels.json"
@@ -112,6 +166,44 @@ class PublishingFolderTest(unittest.TestCase):
             self.assertEqual(unowned.read_bytes(), b"keep my draft")
             self.assertTrue(old.with_name("worker-protections-overall.png").exists())
             export_publishing(root, check=True)
+
+    def test_unrecognized_source_background_is_rejected(self):
+        from PIL import Image
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            lead = self.make_source(root)
+            Image.new("RGBA", (4, 4), "#FFFFFF").save(lead)
+            with self.assertRaisesRegex(ValueError, "Unrecognized publication background"):
+                export_publishing(root)
+
+    def test_checks_pixels_across_png_encodings_not_just_manifest_hashes(self):
+        import hashlib
+
+        from PIL import Image
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.make_source(root)
+            manifest = export_publishing(root)
+            name = "substack/where-dsa-stands-apart.png"
+            target = root / "figures" / name
+            index = root / "figures/manifest.json"
+
+            def update_hash():
+                manifest[name]["sha256"] = hashlib.sha256(target.read_bytes()).hexdigest()
+                index.write_text(json.dumps({"files": manifest}, indent=2) + "\n")
+
+            with Image.open(target) as image:
+                image.save(target, compress_level=0)
+            update_hash()
+            export_publishing(root, check=True)
+            with Image.open(target) as image:
+                image.putpixel((1, 1), (0, 0, 0, 255))
+                image.save(target)
+            update_hash()
+            with self.assertRaisesRegex(ValueError, "stale publishing file"):
+                export_publishing(root, check=True)
 
 
 class ArticleLeadTest(unittest.TestCase):
