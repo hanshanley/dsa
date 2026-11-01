@@ -51,8 +51,8 @@ review is not a representative sample or corpus-wide semantic certification. Ear
 and passage-based results are retained below as historical references.
 
 <p align="center">
-  <a href="figures/article/dsa_vs_major_parties_lead.png">
-    <img src="figures/article/dsa_vs_major_parties_lead.png" width="1100" alt="Five DSA-heavy issues highlighted on a density map against the equal-weight Democratic-Republican mixture">
+  <a href="figures/article/dsa_lead_option_a-map-five.png">
+    <img src="figures/article/dsa_lead_option_a-map-five.png" width="1100" alt="Original embedding graph with five numbered DSA-heavy areas and dated DSA statements beside it">
   </a>
 </p>
 
