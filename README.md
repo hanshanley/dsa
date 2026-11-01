@@ -59,6 +59,9 @@ contrasts at DSA claims. Light purple marks denser combined major-party language
 gold marks denser DSA language. [Full-size PNG](figures/article/dsa_vs_major_parties_lead.png)
 and [exact contrasts and source anchors](figures/article/dsa_vs_major_parties_lead.json).*
 
+<details>
+<summary>More overview figures</summary>
+
 <p align="center">
   <img src="figures/national_claims/full/topics/expanded/substack_overview.png" width="1100" alt="All 21 substantive subjects compared across Democratic, Republican and DSA national documents">
 </p>
@@ -74,6 +77,8 @@ Identity-cluster claims remain in the denominators.*
 *For the piece: labor and unions, with the overall comparison and timeline
 together. Shares use equal document/fallback-bundle weights and describe
 language emphasis, not policy agreement.*
+
+</details>
 
 The article figure set covers **labor, taxes, public education, reproductive
 rights, gender equality and family policy, healthcare, and Israel-Palestine**. These are
@@ -96,7 +101,7 @@ combined side is a 50/50 mixture of the two parties' already-fitted KDE densitie
 not an average of their log densities or a merged political platform. All three
 reviewed party positions remain separate alongside the two DSA pairwise summaries.
 
-**Article-only lead:** [Where DSA's language is more concentrated](figures/article/dsa_vs_major_parties_lead.png)
+**Article-only lead:** [Where DSA stands apart](figures/article/dsa_vs_major_parties_lead.png)
 is a large map highlighting five DSA-heavy substantive issues against the 50/50
 Democratic–Republican density mixture. Issues rank by positive source-balanced mean
 log density contrast at DSA claims, requiring at least two DSA bundles. Markers locate

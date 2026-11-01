@@ -12,6 +12,13 @@ GROUPS = ("dsa", "democratic", "republican")
 COLORS = ("#c39a36", "#3d7699", "#c65a3b")
 PAPER = "#f2efe7"
 INK = "#242321"
+DISPLAY_LABELS = {
+    "Institutional Power, Oppression, and Social Conflict": "Power, oppression\n& social conflict",
+    "Criminal Justice, Policing, and Incarceration": "Policing &\nincarceration",
+    "Community Investment, Housing, and Social Support": "Housing &\ncommunity support",
+    "Israel-Palestine Peace, Security, and Palestinian Rights": "Israel\u2013Palestine",
+    "Economic Prosperity Narratives and Development Models": "Prosperity &\ndevelopment models",
+}
 
 
 def rank_attention_gaps(labels: list[dict], rows: list[dict]) -> list[dict]:
@@ -143,23 +150,26 @@ def render_density(data: dict, records: list[dict], output: Path) -> None:
     from matplotlib.colors import LinearSegmentedColormap, Normalize
 
     plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK})
-    fig = plt.figure(figsize=(18, 12), facecolor=PAPER)
-    fig.text(0.045, 0.948, "NATIONAL PARTY DOCUMENTS  /  2000\u20132026", fontsize=11)
+    fig = plt.figure(figsize=(16, 10), facecolor=PAPER)
+    fig.text(
+        0.045, 0.946, "NATIONAL PARTY DOCUMENTS  /  2000\u20132026", fontsize=10.5, color="#625d53"
+    )
     fig.text(
         0.045,
         0.888,
-        "Where DSA's language is more concentrated",
-        fontsize=30,
+        "Where DSA stands apart",
+        fontsize=27,
         fontfamily="DejaVu Serif",
         fontweight="bold",
     )
     fig.text(
         0.045,
         0.844,
-        "Five DSA-heavy issues versus the 50/50 Democratic\u2013Republican mixture",
-        fontsize=14,
+        "Five areas of denser language vs. Democrats + Republicans",
+        fontsize=14.5,
+        color="#625d53",
     )
-    axis = fig.add_axes((0.045, 0.205, 0.68, 0.595), facecolor=PAPER)
+    axis = fig.add_axes((0.035, 0.19, 0.69, 0.61), facecolor=PAPER)
     palette = LinearSegmentedColormap.from_list("combined_density", ["#b19cd9", PAPER, "#c2993e"])
     bound = data["color_bound"]
     normalization = Normalize(-bound, bound, clip=True)
@@ -170,8 +180,8 @@ def render_density(data: dict, records: list[dict], output: Path) -> None:
         c=[combined_density_contrast(point) for point in points],
         cmap=palette,
         norm=normalization,
-        s=2.2,
-        alpha=0.58,
+        s=1.8,
+        alpha=0.78,
         linewidths=0,
         rasterized=True,
     )
@@ -184,25 +194,26 @@ def render_density(data: dict, records: list[dict], output: Path) -> None:
             x,
             y,
             str(number),
-            fontsize=12,
+            fontsize=12.5,
             ha="center",
             va="center",
             color=INK,
-            bbox=dict(boxstyle="circle,pad=0.35", facecolor=PAPER, edgecolor=INK, linewidth=0.8),
+            bbox=dict(boxstyle="circle,pad=0.3", facecolor=PAPER, edgecolor=INK, linewidth=0.65),
             zorder=5,
         )
-        top = 0.773 - (number - 1) * 0.118
-        fig.text(0.77, top, f"{number:02d}", fontsize=12, color="#8d6c25", fontweight="bold")
+        top = 0.748 - (number - 1) * 0.11
         fig.text(
-            0.77,
-            top - 0.022,
-            textwrap.fill(record["title"], width=28),
-            fontsize=15,
-            fontfamily="DejaVu Serif",
-            va="top",
-            linespacing=1.3,
+            0.755, top, str(number), fontsize=12.5, color="#8d6c25", fontweight="bold", va="top"
         )
-    color_axis = fig.add_axes((0.045, 0.161, 0.68, 0.012))
+        fig.text(
+            0.785,
+            top,
+            DISPLAY_LABELS.get(record["title"], textwrap.fill(record["title"], width=22)),
+            fontsize=17,
+            va="top",
+            linespacing=1.35,
+        )
+    color_axis = fig.add_axes((0.045, 0.143, 0.68, 0.008))
     bar = fig.colorbar(
         plt.cm.ScalarMappable(norm=normalization, cmap=palette),
         cax=color_axis,
@@ -211,31 +222,23 @@ def render_density(data: dict, records: list[dict], output: Path) -> None:
     )
     bar.outline.set_visible(False)
     bar.ax.set_xticklabels([f"{-bound:.2f}", "0", f"+{bound:.2f}"])
-    bar.ax.tick_params(length=0, labelsize=10, pad=6, colors="#625d53")
-    fig.text(
-        0.045, 0.117, "Denser combined Democratic + Republican language", fontsize=10, color=INK
-    )
-    fig.text(0.725, 0.117, "Denser DSA language", fontsize=10, color=INK, ha="right")
+    bar.ax.tick_params(length=0, labelsize=11, pad=6, colors="#625d53")
+    fig.text(0.045, 0.094, "Denser Democratic + Republican language", fontsize=12, color=INK)
+    fig.text(0.725, 0.094, "Denser DSA language", fontsize=12, color=INK, ha="right")
     fig.text(
         0.045,
-        0.071,
-        "Ranked by source-balanced mean log density contrast at DSA claims within each issue; "
-        "at least two DSA source bundles.",
-        fontsize=10,
-    )
-    fig.text(
-        0.045,
-        0.041,
-        "The map is a 2D projection of higher-dimensional language densities. "
-        "Markers locate reviewed examples, not region boundaries or policy agreement.",
-        fontsize=10,
+        0.035,
+        "Equal-weight major-party baseline. Numbers locate examples, not boundaries. "
+        "Concentration is not policy agreement.",
+        fontsize=10.5,
+        color="#625d53",
     )
     output.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(
         output,
-        dpi=200,
+        dpi=225,
         facecolor=PAPER,
-        metadata={"Title": "Where DSA's language is more concentrated", "Software": "dsa-analysis"},
+        metadata={"Title": "Where DSA stands apart", "Software": "dsa-analysis"},
     )
     plt.close(fig)
 
@@ -416,6 +419,12 @@ def main() -> None:
             "reviewed positive-contrast DSA example nearest the weighted 2D issue center"
         ),
         map_claims=len(density["points"]),
+        display_labels={
+            record["topic_id"]: DISPLAY_LABELS.get(record["title"], record["title"]).replace(
+                "\n", " "
+            )
+            for record in records
+        },
         color_bound=density["color_bound"],
         input_sha256={
             path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
