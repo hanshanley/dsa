@@ -17,7 +17,11 @@ from dsa_analysis.national_claim_topic_evolution import (
 from dsa_analysis.national_claim_topic_evolution import (
     prepare as prepare_evolution,
 )
-from dsa_analysis.national_claim_topic_time import plot_temporal, temporal_tables
+from dsa_analysis.national_claim_topic_time import (
+    draw_issue_timeline,
+    plot_temporal,
+    temporal_tables,
+)
 from dsa_analysis.national_claim_topics import (
     NOISE,
     audit,
@@ -308,6 +312,40 @@ class ClaimTopicsTests(unittest.TestCase):
             [(r["view"], r["group"], r["topic_id"], r["share"]) for r in shares],
             [(r["view"], r["group"], r["topic_id"], r["share"]) for r in other],
         )
+
+    def test_timeline_dots_bridge_only_republican_2020_reuse_without_observation(self):
+        import matplotlib.pyplot as plt
+
+        periods = ["2016-19", "2020-23", "2024-26*"]
+        missing = np.array([0.02, np.nan, 0.04])
+        for labels, republican, expected in (
+            (periods, missing, 1),
+            (periods, np.array([0.02, 0.03, 0.04]), 0),
+            (periods, np.array([np.nan, np.nan, 0.04]), 0),
+            (periods, np.array([0.02, np.nan, np.nan]), 0),
+            (["2000-03", "2004-07", "2008-11"], missing, 0),
+        ):
+            with self.subTest(labels=labels, republican=republican):
+                fig, axis = plt.subplots()
+                try:
+                    series = {"democratic": missing, "republican": republican, "dsa": missing}
+                    draw_issue_timeline(axis, series, labels, 0.05)
+                    connectors = [
+                        line
+                        for line in axis.lines
+                        if line.get_gid() == "republican-2020-reuse-connector"
+                    ]
+                    self.assertEqual(len(connectors), expected)
+                    if expected:
+                        connector = connectors[0]
+                        np.testing.assert_array_equal(connector.get_xdata(), [0, 2])
+                        np.testing.assert_allclose(connector.get_ydata(), [0.02, 0.04])
+                        self.assertEqual(connector.get_marker(), "None")
+                        self.assertTrue(connector.is_dashed())
+                    observed = next(line for line in axis.lines if line.get_marker() == "s")
+                    np.testing.assert_allclose(observed.get_ydata(), republican, equal_nan=True)
+                finally:
+                    plt.close(fig)
 
     def test_individual_issue_charts_preserve_values_gaps_and_common_view_scales(self):
         labels = {topic: {"title": topic.capitalize()} for topic in ("health", "labor")}
@@ -907,9 +945,7 @@ class ClaimTopicsTests(unittest.TestCase):
                 "(../../figures/topics/expanded/substack_overview.png)",
                 section,
             )
-            self.assertIn(
-                "(../figures/topics/expanded/substack_overview.png)", custom_section
-            )
+            self.assertIn("(../figures/topics/expanded/substack_overview.png)", custom_section)
 
     def test_render_uses_preserved_remapped_model_record(self):
         from contextlib import ExitStack

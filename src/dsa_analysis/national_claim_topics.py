@@ -1358,7 +1358,8 @@ def plot_piece(directory: Path, figures: Path, labels: dict, groups: tuple[str, 
             fig.text(
                 0.46,
                 0.17,
-                f"Gaps mean no documents. *Final period ends {DEFAULT_CUTOFF}.",
+                "Dots bridge Republican 2020 reuse, not an observation.\n"
+                f"Other gaps: no documents. *Final period ends {DEFAULT_CUTOFF}.",
                 fontsize=7.5,
                 color="#6B6B6B",
             )

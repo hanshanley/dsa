@@ -196,6 +196,23 @@ def draw_issue_timeline(
             linewidth=1.7,
             color=COLORS[group],
         )
+        gap = next((i for i, label in enumerate(period_labels) if label.startswith("2020")), -1)
+        if (
+            group == "republican"
+            and 0 < gap < len(values) - 1
+            and not np.isfinite(values[gap])
+            and np.isfinite(values[gap - 1])
+            and np.isfinite(values[gap + 1])
+        ):
+            axis.plot(
+                [gap - 1, gap + 1],
+                values[[gap - 1, gap + 1]],
+                linestyle=(0, (1, 3)),
+                dash_capstyle="round",
+                linewidth=1.7,
+                color=COLORS[group],
+                gid="republican-2020-reuse-connector",
+            )
         observed = np.flatnonzero(np.isfinite(values))
         if len(observed):
             last = observed[-1]
@@ -316,8 +333,8 @@ def plot_temporal(
             fig.text(
                 0.08,
                 0.13,
-                "Four-year periods. Gaps mean no observed documents; "
-                "labels show the last observation.",
+                "Dots bridge Republican 2020 reuse, not an observation. "
+                "Other gaps mean no documents.",
                 fontsize=7.5,
                 color="#6B6B6B",
             )
